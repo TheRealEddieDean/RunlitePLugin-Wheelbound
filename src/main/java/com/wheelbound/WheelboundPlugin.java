@@ -1,6 +1,8 @@
 package com.wheelbound;
 
 import com.google.inject.Provides;
+import java.awt.Color;
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
@@ -16,7 +18,6 @@ import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.ui.ClientToolbar;
 import net.runelite.client.ui.NavigationButton;
-import net.runelite.client.util.ImageUtil;
 
 @Slf4j
 @PluginDescriptor(
@@ -54,11 +55,9 @@ public class WheelboundPlugin extends Plugin
 	@Override
 	protected void startUp()
 	{
-		BufferedImage icon = ImageUtil.loadImageResource(getClass(), "wheelbound_icon.png");
-
 		navigationButton = NavigationButton.builder()
 			.tooltip("Wheelbound")
-			.icon(icon)
+			.icon(createIcon())
 			.priority(5)
 			.panel(panel)
 			.build();
@@ -116,6 +115,20 @@ public class WheelboundPlugin extends Plugin
 	public String getLastResult()
 	{
 		return lastResult;
+	}
+
+	private BufferedImage createIcon()
+	{
+		BufferedImage image = new BufferedImage(32, 32, BufferedImage.TYPE_INT_ARGB);
+		Graphics2D graphics = image.createGraphics();
+		graphics.setColor(Color.WHITE);
+		graphics.fillOval(3, 3, 26, 26);
+		graphics.setColor(Color.DARK_GRAY);
+		graphics.drawOval(3, 3, 26, 26);
+		graphics.drawLine(16, 5, 16, 27);
+		graphics.drawLine(5, 16, 27, 16);
+		graphics.dispose();
+		return image;
 	}
 
 	@Provides
