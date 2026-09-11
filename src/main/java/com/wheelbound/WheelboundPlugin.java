@@ -62,6 +62,7 @@ public class WheelboundPlugin extends Plugin
 			.panel(panel)
 			.build();
 
+		panel.setSpinAction(ignored -> spin());
 		clientToolbar.addNavigation(navigationButton);
 		loginSpinPending = config.spinOnLogin();
 	}
@@ -95,26 +96,29 @@ public class WheelboundPlugin extends Plugin
 
 	public void spin()
 	{
-		int index = ThreadLocalRandom.current().nextInt(DEFAULT_ACTIVITIES.size());
-		lastResult = DEFAULT_ACTIVITIES.get(index);
-		panel.setResult(lastResult);
+		int selectedIndex = ThreadLocalRandom.current().nextInt(DEFAULT_ACTIVITIES.size());
+		lastResult = DEFAULT_ACTIVITIES.get(selectedIndex);
 
-		if (config.showResultInChat() && client.getGameState() == GameState.LOGGED_IN)
-		{
-			client.addChatMessage(
-				ChatMessageType.GAMEMESSAGE,
-				"",
-				"Wheelbound chose: " + lastResult,
-				null
-			);
-		}
-
+		panel.animate(DEFAULT_ACTIVITIES, selectedIndex, () -> announceResult(lastResult));
 		log.info("Wheelbound selected activity: {}", lastResult);
 	}
 
 	public String getLastResult()
 	{
 		return lastResult;
+	}
+
+	private void announceResult(String result)
+	{
+		if (config.showResultInChat() && client.getGameState() == GameState.LOGGED_IN)
+		{
+			client.addChatMessage(
+				ChatMessageType.GAMEMESSAGE,
+				"",
+				"Wheelbound chose: " + result,
+				null
+			);
+		}
 	}
 
 	private BufferedImage createIcon()
