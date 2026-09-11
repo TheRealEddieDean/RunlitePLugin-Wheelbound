@@ -26,7 +26,7 @@ This is intentionally a small first milestone. The activity system will be expan
 
 ## Development
 
-The project follows the current official RuneLite example-plugin structure. The build targets Java 11, matching the example plugin's current compiler configuration. citeturn3file0turn4file0
+The project follows the current official RuneLite example-plugin structure and targets Java 11.
 
 Install Java 11 and Gradle, then run:
 
