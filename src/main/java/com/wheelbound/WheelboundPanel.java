@@ -94,6 +94,8 @@ public class WheelboundPanel extends PluginPanel
 		private double angle;
 		private double targetAngle;
 		private long animationStart;
+		private int selectedIndex;
+		private double previousEase;
 		private Timer timer;
 		private Runnable completed;
 
@@ -107,7 +109,10 @@ public class WheelboundPanel extends PluginPanel
 		void animate(List<String> activities, int selectedIndex, Runnable completed)
 		{
 			this.activities = List.copyOf(activities);
+			this.selectedIndex = selectedIndex;
 			this.completed = completed;
+			this.previousEase = 0.0;
+
 			int count = this.activities.size();
 			double segment = 360.0 / count;
 			double desired = 90.0 - (selectedIndex + 0.5) * segment;
@@ -144,15 +149,13 @@ public class WheelboundPanel extends PluginPanel
 			{
 				timer.stop();
 				previousEase = 0.0;
-				finishAnimation(activities.get(selectedIndex()));
+				finishAnimation(activities.get(selectedIndex));
 				if (completed != null)
 				{
 					completed.run();
 				}
 			}
 		}
-
-		private double previousEase;
 
 		@Override
 		protected void paintComponent(Graphics graphics)
@@ -201,7 +204,6 @@ public class WheelboundPanel extends PluginPanel
 			g.setStroke(new BasicStroke(2f));
 			g.drawOval(centerX - 22, centerY - 22, 44, 44);
 
-			// Fixed pointer at the top of the wheel.
 			int[] xPoints = {centerX - 10, centerX + 10, centerX};
 			int[] yPoints = {y - 4, y - 4, y + 16};
 			g.fillPolygon(xPoints, yPoints, 3);
