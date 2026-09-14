@@ -1,0 +1,142 @@
+package com.wheelbound;
+
+import java.awt.*;
+import java.awt.geom.Arc2D;
+import java.awt.image.BufferedImage;
+import java.util.List;
+import net.runelite.client.ui.ColorScheme;
+import net.runelite.client.ui.FontManager;
+
+/** Custom wheel artwork within RuneLite's normal panel palette. */
+final class WheelStyle
+{
+    static final Color GOLD = new Color(219, 180, 94);
+    static int hubSize(int size) { return Math.max(54, size / 5); }
+    private static final Color[] SEGMENTS = {
+        new Color(79, 43, 40), new Color(45, 73, 39), new Color(73, 58, 34),
+        new Color(49, 39, 70), new Color(32, 56, 68), new Color(62, 63, 45)
+    };
+
+    static void drawWheel(Graphics2D graphics, int width, int height, List<WheelEntry> entries,
+        double angle, boolean enabled, boolean hover, boolean pressed, boolean busy)
+    {
+        Graphics2D g = (Graphics2D) graphics.create();
+        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC);
+        int size = Math.min(width, height) - 24;
+        int x = (width - size) / 2, y = (height - size) / 2;
+        double cx = width / 2.0, cy = height / 2.0;
+        int total = WheelSelection.totalWeight(entries);
+        double before = 0;
+        g.setColor(ColorScheme.DARKER_GRAY_COLOR);
+        g.fillOval(x, y, size, size);
+        for (int i = 0; i < entries.size(); i++)
+        {
+            WheelEntry entry = entries.get(i);
+            double extent = entry.weight * 360.0 / total;
+            g.setPaint(new GradientPaint(x, y, SEGMENTS[i % SEGMENTS.length].brighter(),
+                x + size, y + size, SEGMENTS[i % SEGMENTS.length]));
+            Arc2D arc = new Arc2D.Double(x, y, size, size, before - angle, extent, Arc2D.PIE);
+            g.fill(arc);
+            g.setColor(ColorScheme.BORDER_COLOR);
+            g.setStroke(new BasicStroke(1));
+            g.draw(arc);
+            double a = Math.toRadians(before + extent / 2 - angle);
+            // All icons share a single outer ring; dense pools scale down to avoid overlap.
+            double radius = .45;
+            int tx = (int) (cx + Math.cos(a) * size * radius);
+            int ty = (int) (cy - Math.sin(a) * size * radius);
+            if (entry.icon != null)
+            {
+                int box = Math.min(30, Math.max(6, (int)(2 * size * radius * Math.sin(Math.toRadians(Math.min(90, extent) / 2)) * .82)));
+                double scale = Math.min((double) box / entry.icon.getWidth(), (double) box / entry.icon.getHeight());
+                int iw = (int) Math.round(entry.icon.getWidth() * scale);
+                int ih = (int) Math.round(entry.icon.getHeight() * scale);
+                g.drawImage(entry.icon, tx - iw / 2, ty - ih / 2, iw, ih, null);
+                drawRadialLabel(g, entry.label, cx, cy, a, extent, size, box);
+            }
+            else if (extent >= 14)
+            {
+                g.setFont(FontManager.getRunescapeSmallFont());
+                g.setColor(ColorScheme.TEXT_COLOR);
+                String label = entry.label.startsWith("Gain ") ? compactXp(entry.label) : entry.label.substring(0, 1);
+                centered(g, label, tx, ty + 4);
+            }
+            before += extent;
+        }
+        g.setStroke(new BasicStroke(7));
+        g.setPaint(new GradientPaint(x, y, GOLD.brighter(), x + size, y + size, GOLD.darker()));
+        g.drawOval(x, y, size, size);
+        int hub = hubSize(size), hx = width / 2 - hub / 2, hy = height / 2 - hub / 2;
+        g.setColor(pressed ? ColorScheme.MEDIUM_GRAY_COLOR
+            : hover && enabled ? ColorScheme.DARKER_GRAY_HOVER_COLOR : ColorScheme.DARKER_GRAY_COLOR);
+        g.fillOval(hx, hy, hub, hub);
+        g.setColor(enabled ? GOLD : ColorScheme.LIGHT_GRAY_COLOR);
+        g.setStroke(new BasicStroke(2));
+        g.drawOval(hx, hy, hub, hub);
+        g.setFont(FontManager.getRunescapeBoldFont());
+        centered(g, busy ? "..." : "SPIN", width / 2, height / 2 + 5 + (pressed ? 1 : 0));
+        if (hover && enabled)
+        {
+            g.setColor(GOLD);
+            g.drawOval(hx - 3, hy - 3, hub + 6, hub + 6);
+        }
+        g.setColor(GOLD);
+        g.fillPolygon(new int[]{width / 2 - 9, width / 2 + 9, width / 2},
+            new int[]{y - 8, y - 8, y + 13}, 3);
+        g.dispose();
+    }
+
+    private static String compactXp(String label)
+    {
+        return label.replace("Gain ", "").replace(" XP", "").replace(",000,000", "m").replace(",000", "k");
+    }
+
+    private static void drawRadialLabel(Graphics2D graphics, String label, double cx, double cy,
+        double angle, double extent, int size, int iconSize)
+    {
+        double outer = size * .45 - iconSize / 2.0 - 8;
+        double inner = Math.max(hubSize(size) / 2.0 + 9, size * .20);
+        for (int fontSize = 13; fontSize >= 9; fontSize--)
+        {
+            Font font = FontManager.getDefaultFont().deriveFont(Font.BOLD, (float)fontSize);
+            FontMetrics metrics = graphics.getFontMetrics(font);
+            int length = metrics.stringWidth(label);
+            double start = outer - length;
+            double thickness = 2 * start * Math.sin(Math.toRadians(Math.min(90, extent) / 2));
+            if (start < inner || thickness < metrics.getHeight() + 2) { continue; }
+            Graphics2D g = (Graphics2D)graphics.create();
+            g.translate(cx, cy); g.rotate(-angle);
+            g.setFont(font); g.setColor(ColorScheme.TEXT_COLOR);
+            if (Math.cos(angle) < 0)
+            {
+                g.rotate(Math.PI);
+                g.drawString(label, (float)-outer, (metrics.getAscent() - metrics.getDescent()) / 2f);
+            }
+            else { g.drawString(label, (float)start, (metrics.getAscent() - metrics.getDescent()) / 2f); }
+            g.dispose();
+            return;
+        }
+    }
+
+    static void centered(Graphics2D g, String text, int x, int y)
+    {
+        g.drawString(text, x - g.getFontMetrics().stringWidth(text) / 2, y);
+    }
+
+    static BufferedImage createIcon()
+    {
+        BufferedImage icon = new BufferedImage(32, 32, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g = icon.createGraphics();
+        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        for (int i = 0; i < 8; i++)
+        {
+            g.setColor(Color.getHSBColor(i / 8f, .65f, .9f));
+            g.fill(new Arc2D.Double(3, 3, 26, 26, i * 45, 45, Arc2D.PIE));
+        }
+        g.setColor(GOLD); g.drawOval(3, 3, 26, 26); g.fillOval(12, 12, 8, 8);
+        g.fillPolygon(new int[]{12, 20, 16}, new int[]{0, 0, 7}, 3);
+        g.dispose();
+        return icon;
+    }
+}
