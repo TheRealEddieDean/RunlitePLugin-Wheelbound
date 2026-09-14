@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicLong;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import javax.swing.SwingUtilities;
@@ -24,7 +25,7 @@ public class WheelPopup extends Overlay implements KeyListener
     private volatile Result selectedResult;
     private volatile Layout bounds;
     private volatile Runnable spin = () -> {}, dismiss = () -> {};
-    private volatile long generation;
+    private final AtomicLong generation = new AtomicLong();
     private volatile boolean hover, pressed;
     private boolean consumeClick;
 
@@ -64,7 +65,7 @@ public class WheelPopup extends Overlay implements KeyListener
     }
     void clearResult() { selectedResult = null; }
     boolean hasResult() { return selectedResult != null; }
-    int entryCount() { return view == null ? 0 : view.entries.size(); }
+    int entryCount() { View current = view; return current == null ? 0 : current.entries.size(); }
 
     static final class Layout
     {
@@ -86,7 +87,7 @@ public class WheelPopup extends Overlay implements KeyListener
 
     void show(String title, WheelComponent wheel, String result, Runnable onSpin, Runnable onDismiss)
     {
-        generation++; spin = onSpin; dismiss = onDismiss; hover = false; pressed = false; mousePoint = null;
+        generation.incrementAndGet(); spin = onSpin; dismiss = onDismiss; hover = false; pressed = false; mousePoint = null;
         selectedResult = null;
         view = snapshot(title, wheel, result);
     }
@@ -101,23 +102,23 @@ public class WheelPopup extends Overlay implements KeyListener
         return new View(title, wheel.entries(), wheel.angle(), result, wheel.canSpin(), wheel.busy());
     }
 
-    void hide() { generation++; view = null; selectedResult = null; hover = false; pressed = false; }
+    void hide() { generation.incrementAndGet(); view = null; selectedResult = null; hover = false; pressed = false; }
     boolean isOpen() { return view != null; }
 
     private void close()
     {
         Runnable callback = dismiss;
         hide();
-        long epoch = generation;
-        SwingUtilities.invokeLater(() -> { if (generation == epoch) { callback.run(); } });
+        long epoch = generation.get();
+        SwingUtilities.invokeLater(() -> { if (generation.get() == epoch) { callback.run(); } });
     }
 
     private void requestSpin()
     {
         View current = view;
         if (current == null || selectedResult != null || !current.available || current.busy) { return; }
-        long epoch = generation;
-        SwingUtilities.invokeLater(() -> { if (view != null && generation == epoch) { spin.run(); } });
+        long epoch = generation.get();
+        SwingUtilities.invokeLater(() -> { if (view != null && generation.get() == epoch) { spin.run(); } });
     }
 
     @Override public Dimension render(Graphics2D graphics)

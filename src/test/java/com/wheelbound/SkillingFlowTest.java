@@ -35,7 +35,7 @@ public class SkillingFlowTest
             button(panel, "Obor").doClick();
             assertEquals(1, popup.entryCount()); assertTrue(button(panel, "SPIN").isEnabled());
             panel.setAction(spin -> panel.updatePool(entries, "refreshed", panel.generation()));
-            button(panel, "Include raids").doClick();
+            button(panel, "Exclude raids").doClick();
             assertTrue(popup.isOpen()); assertEquals(1, popup.entryCount());
             WheelboundPanel restored = new WheelboundPanel(saved::get, (k, v) -> {});
             restored.updatePool(entries, "test", restored.generation());
@@ -105,17 +105,17 @@ public class SkillingFlowTest
             Map<String, String> preferences = new HashMap<>();
             WheelboundPanel panel = new WheelboundPanel(preferences::get, (k, v) -> preferences.put(k, v.toString()));
             long revision = panel.generation();
-            button(panel, "Only bosses").doClick();
-            assertTrue(panel.incompleteOnly());
+            button(panel, "Exclude raids").doClick();
+            assertTrue(panel.selected(WheelFilter.BOSS_RAIDS));
             assertFalse(button(panel, "All bosses").isSelected());
-            assertEquals("true", preferences.get("unfinishedOnly"));
+            assertEquals("true", preferences.get("bossExcludeRaids"));
             panel.updatePool(List.of(new WheelEntry("a", "A", null, 1)), "stale", revision);
             assertFalse(panel.primaryWheel().canSpin());
             panel.updatePool(List.of(), "No matches", panel.generation());
             assertFalse(panel.primaryWheel().canSpin());
-            button(panel, "Include raids").doClick();
+            button(panel, "Exclude Mimic").doClick();
             WheelboundPanel restored = new WheelboundPanel(preferences::get, (k, v) -> {});
-            assertTrue(restored.includeRaids()); assertTrue(restored.incompleteOnly());
+            assertTrue(restored.selected(WheelFilter.BOSS_RAIDS)); assertTrue(restored.selected(WheelFilter.MIMIC));
             assertFalse(button(restored, "Include XP goal").isSelected());
         });
     }
@@ -173,13 +173,32 @@ public class SkillingFlowTest
                 Graphics2D g = image.createGraphics(); panel.paint(g); g.dispose();
                 File file = new File("build/reports/wheelbound-skilling.png");
                 file.getParentFile().mkdirs(); ImageIO.write(image, "png", file);
-                button(panel, "Bossing").doClick();
-                panel.updatePool(entries.subList(0, 12), "12 sample entries. Boss sprites load from the game cache.", panel.generation());
+                panel.selectWheel(WheelType.BOSSING);
+                List<WheelEntry> bosses = new ArrayList<>();
+                for (BossDefinition boss : BossCatalog.ALL.subList(0, 12))
+                { bosses.add(new WheelEntry(boss.hiscore.name(), boss.name, null, 1)); }
+                panel.updatePool(bosses, "12 sample entries. Boss sprites load from the game cache.", panel.generation());
                 assertTrue("The sidebar must never contain a wheel", wheels(panel).isEmpty());
                 panel.setSize(225, panel.getPreferredSize().height); layout(panel);
                 image = new BufferedImage(225, panel.getHeight(), BufferedImage.TYPE_INT_RGB);
                 g = image.createGraphics(); panel.paint(g); g.dispose();
                 ImageIO.write(image, "png", new File("build/reports/wheelbound-bossing-layout.png"));
+                panel.selectWheel(WheelType.COMBAT_ACHIEVEMENTS);
+                panel.updatePool(List.of(new WheelEntry("CA_1", "Bloodveld", null, 1),
+                    new WheelEntry("CA_2", "Obor", null, 1), new WheelEntry("CA_3", "Vorkath", null, 1)),
+                    "3 encounters with unfinished tasks.", panel.generation());
+                panel.setSize(225, panel.getPreferredSize().height); layout(panel);
+                image = new BufferedImage(225, panel.getHeight(), BufferedImage.TYPE_INT_RGB);
+                g = image.createGraphics(); panel.paint(g); g.dispose();
+                ImageIO.write(image, "png", new File("build/reports/wheelbound-combat-achievements.png"));
+                for (WheelFilter filter : WheelFilter.values())
+                {
+                    if (filter.wheel != WheelType.COMBAT_ACHIEVEMENTS) { continue; }
+                    AbstractButton box = button(panel, filter.title);
+                    assertNotNull(box);
+                    assertTrue("Filter must fit its card: " + filter.title,
+                        box.getY() + box.getHeight() <= box.getParent().getHeight());
+                }
                 panel.reset();
             }
             catch (Exception e) { throw new AssertionError(e); }
@@ -203,12 +222,18 @@ public class SkillingFlowTest
     }
     private static AbstractButton button(Container parent, String text)
     {
+        AbstractButton found = findButton(parent, text);
+        if (found == null) { throw new AssertionError("Missing button: " + text); }
+        return found;
+    }
+    private static AbstractButton findButton(Container parent, String text)
+    {
         for (Component c : parent.getComponents())
         {
             if (c instanceof AbstractButton && ((AbstractButton)c).getText().contains(text)) { return (AbstractButton)c; }
             if (c instanceof Container)
             {
-                AbstractButton found = button((Container)c, text);
+                AbstractButton found = findButton((Container)c, text);
                 if (found != null) { return found; }
             }
         }

@@ -25,7 +25,10 @@ final class BossCatalog
             switch (boss)
             {
                 case BARROWS_CHESTS: aliases = List.of("Barrows"); break;
-                case LUNAR_CHESTS: aliases = List.of("Moons of Peril", "Lunar Chests"); break;
+                case LUNAR_CHESTS: aliases = List.of("Moons of Peril", "Perilous Moons", "Lunar Chests"); break;
+                case THE_GAUNTLET: aliases = List.of(name, "Crystalline Hunllef"); break;
+                case THE_CORRUPTED_GAUNTLET: aliases = List.of(name, "Corrupted Gauntlet", "Corrupted Hunllef"); break;
+                case MIMIC: aliases = List.of(name, "The Mimic"); break;
                 case DAGANNOTH_PRIME: case DAGANNOTH_REX: case DAGANNOTH_SUPREME:
                     aliases = List.of(name, "Dagannoth Kings"); break;
                 case TZTOK_JAD: aliases = List.of("TzTok-Jad", "The Fight Caves"); break;

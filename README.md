@@ -1,184 +1,205 @@
 # Wheelbound
 
-A local RuneLite utility for two questions: **What boss should I do?** and
-**What skill should I train?** Open the Wheelbound sidebar and choose **Bossing**
-or **Skilling**, click **Open wheel**, then click the **SPIN** center in the popup.
-Space or Enter also spins while the popup is open. Hover a wedge for its name
-and probability. Escape or the close button dismisses it and cancels any spin.
+A local RuneLite utility with three wheels: **Bossing**, **Skilling**, and
+**Combat Achievements**. Choose a wheel in the sidebar, adjust its filters and
+checklist, then press the green **SPIN** button. The existing centered popup,
+boss sprites, wheel animation, and result celebration are retained.
 
-**UI constraint: wheels belong only in the centered game-canvas popup, never in
-the sidebar.** The sidebar contains controls, an Open wheel button, and results.
-The popup restores the charcoal-and-gold card and dimmed game backdrop. It consumes
-game-canvas input while open; the game itself continues running.
+**Wheels belong only in the centered game-canvas popup, never in the sidebar.**
+The sidebar contains the wheel selector, filters, results, and editable lists.
+The popup consumes game-canvas input while open; the game continues running.
+Escape or the close button dismisses it and cancels the spin. Space or Enter
+spins an available wheel. Hover a wedge to see its name and probability.
 
 ## Bossing
 
-- **All bosses** and **Only bosses with incomplete Combat Achievements** are
-  complementary choices. Selecting either deselects the other; there is always
-  one pool mode. All bosses still respects the raid and master level settings.
-- **Include raids** defaults off and includes all six supported hiscore raid modes
-  when enabled. Gauntlet is not classified as a raid.
-- **Limit bosses to my level**, in RuneLite's main Wheelbound configuration,
-  defaults on. It checks real stats, relevant combat styles, Slayer requirements,
-  and a few additional skill prerequisites. These are tunable recommendations,
-  not an assurance that your account can access or defeat an encounter.
-- Empty pools disable the hub and explain how to adjust the filters. Account
-  filters require login; turn them off for an offline preview.
+**Account**
 
-The catalog follows **every BOSS entry in RuneLite 1.12.38 HiscoreSkill**, including
-separate raid modes. Each has its canonical name and sprite plus Wheelbound
-metadata. Bosses without reviewed stat recommendations are excluded with the
-level limit enabled: **Mad Angel, Maggot King, and Shellbane Gryphon**. They can
-appear with the master limit disabled. No requirements have been guessed for them.
+- **Account for skill level** defaults on. It checks real skill levels using the
+  existing combat-style recommendations, Slayer and other skill prerequisites,
+  and reviewed quest/access requirements. Login is required for this option.
+- **Match my Slayer task** defaults on. Task-only encounters are excluded unless
+  the current assignment, remaining count, and task location permit them. This
+  is independent of the level/quest option and leaves other bosses unaffected.
 
-The centered wheel includes **every eligible boss**, with equal probability;
-there is no sampled shortlist. Staggered icon positions use the larger canvas
-space for the full 71-entry catalog. The popup scales to fixed and resizable
-clients; icons are smaller on fixed-size clients, with names available on hover.
+**Boss pool**
 
-## Skilling and XP targets
+- **All bosses** selects the whole boss list and clears raid, Mimic, and manual
+  exclusions. Account options still apply. Unchecking it deselects the current
+  eligible list; individual bosses can then be checked again.
+- **Exclude raids** removes all six supported hiscore raid modes.
+- **Exclude Mimic** removes Mimic.
+- **Included bosses** lets you manually remove or restore eligible bosses.
+  Unchecked bosses stay in the checklist. Filtering a boss out temporarily does
+  not erase its saved selection.
 
-All 24 trainable RuneLite skills are included, including combat skills, Slayer
-as a skill, and Sailing. There is no separate Slayer/activity wheel.
+Both category exclusions default off for new settings. An existing Include raids
+preference is migrated to its inverse. Bossing no longer uses CA completion as a
+filter; that now has its own wheel.
 
-**Exclude level 99 skills**, in the main configuration, defaults on and checks
-real levels. With it off, maxed skills can appear. There are no virtual-level,
-200m, training-activity, membership, or quest filters in the skill wheel.
+The catalog includes every BOSS entry in RuneLite 1.12.38 HiscoreSkill. Every
+eligible, checked boss appears with equal probability; there is no shortlist.
+Mad Angel, Maggot King, and Shellbane Gryphon still lack reviewed level
+recommendations and are excluded when the account option is on.
 
-**Include XP goal** defaults off. With it enabled, the skill wheel finishes and a
-second actual wheel automatically appears and spins in the same centered popup. The final result shows,
-for example, **Mining — Gain 50,000 XP**. Both animations run five or more rotations
-with the prototype's 3.5-second quartic easing. Controls stay disabled throughout
-both spins; logout, profile changes, or plugin shutdown cancel outstanding spins.
+### Access checks and Slayer tasks
 
-| XP target | Probability / wedge share |
-| --- | ---: |
-| 10,000 | 35% |
-| 25,000 | 27% |
-| 50,000 | 20% |
-| 100,000 | 10% |
-| 250,000 | 5% |
-| 500,000 | 2% |
-| 1,000,000 | 1% |
+Reviewed quest gates cover Zulrah, Vorkath, Phantom Muspah, Gauntlet, Zalcano,
+the Desert Treasure II bosses, Morytania encounters, Moons of Peril, Amoxliatl,
+Doom of Mokhaiotl, Brutus, God Wars, Nex, and Tombs of Amascut. Grotesque Guardians
+also requires the unlocked rooftop. Quest checks deliberately require completion
+of the mapped quest, so access available partway through a quest can be excluded.
 
-The same integer weights determine selection and rendered wedge angles. Tiny
-wedges remain tiny; hover them or read the compact legend for their amounts.
-XP targets are suggestions only: no progress tracking, saved challenges, overlays,
-account mode, rewards, or unlock system is implemented.
+These are useful eligibility checks, not a complete guarantee of access: keys,
+gear, supplies, teams, membership/world restrictions, planted Hespori, and every
+possible diary or quest-stage exception are not verified. Turn off the account
+option and use the checklist when making an exception.
 
-## Local Combat Achievement state
+Task matching covers Abyssal Sire, Kraken (and the CA cave kraken encounter),
+Cerberus, Grotesque Guardians, Alchemical Hydra, Araxxor, and Thermonuclear Smoke
+Devil. It reads current Slayer varps and local database rows, including direct
+boss assignments, Konar location restrictions, and Wilderness assignments.
+Unknown or exhausted tasks exclude task-only encounters. The one-off off-task
+Thermonuclear Smoke Devil diary exception is not inferred; the task checkbox
+can be turned off for that case. No Slayer plugin dependency or chat parsing is
+needed. Task changes refresh the pool automatically. **Refresh list** rechecks
+quest/access changes and retries unavailable account data.
 
-`BossData` retains the existing local game-cache schema: tier enums 3981–3986
-contain task structs; parameter 1306 is the task ID, parameter 1312 identifies its
-encounter, and enum 3971 supplies encounter names. It builds the local immutable
-encounter-to-task-ID mapping once per plugin lifetime. This is static game
-metadata, not player completion data or a downloaded task list. Explicit aliases
-in `BossCatalog` connect canonical hiscore entries to CA encounters. Shared
-encounters such as Dagannoth Kings apply to each supported member; raid modes
-are matched separately rather than borrowing normal-mode tasks.
+## Skilling
 
-`CombatAchievementCache` snapshots the 21 exposed `CA_TASK_COMPLETED_0` through
-`CA_TASK_COMPLETED_20` varps. Task ID / 32 selects the completion word and ID % 32
-selects its bit, including the signed high bit. A boss is open if **any mapped,
-supported task is incomplete**. Unmapped encounters and unknown task IDs are
-excluded by the incomplete-CA filter rather than treated as unfinished.
+- **Exclude combat skills** removes Attack, Strength, Defence, Hitpoints, Ranged,
+  Magic, and Prayer. Slayer remains a training skill. Defaults off.
+- **Exclude skills with 99** uses real levels and defaults on. Requires login;
+  turn it off for an offline preview.
+- **Include XP goal** retains the optional second weighted XP wheel. Defaults off.
+- **Included skills** is a separate saved checklist covering all 24 skills,
+  including Sailing, before filters and manual exclusions are applied.
 
-A full snapshot refresh is queued on startup (including already logged in),
-LOGGED_IN, RuneScape profile changes, RuneLite profile changes, and
-`VarbitChanged` events identifying those completion varps. Event bursts are
-coalesced. There is **no game-tick polling, per-spin CA read, chat parsing, or
-remote account lookup**. Cache identity includes account hash and RS profile key;
-logout, hopping, connection loss, and profile changes invalidate state and pending
-UI responses. Completion changes refresh the next eligible pool without erasing
-the previous displayed result. Updates received during animation are deferred
-until the complete spin sequence ends.
+The XP wheel automatically follows the skill wheel in the same popup. Both retain
+five or more rotations with 3.5-second quartic easing. Controls stay disabled
+until the entire sequence ends. Logout, profile changes, or plugin shutdown
+cancel outstanding spins.
 
-RuneLite does not supply a stable typed boss-to-CA-task catalog API. The local
-cache schema and explicit encounter aliases can need maintenance after game
-updates. If loading fails, the CA filter safely returns an empty pool with an
-explanation; All bosses works independently. This version does not verify quest
-unlocks, keys, gear, active Slayer tasks, teams, or actual encounter access.
+| XP target | Probability |
+|-----------|------------:|
+| 10,000    |         35% |
+| 25,000    |         27% |
+| 50,000    |         20% |
+| 100,000   |         10% |
+| 250,000   |          5% |
+| 500,000   |          2% |
+| 1,000,000 |          1% |
 
-Schema reference: the existing approach was checked against the
-[CA Tracker loader](https://github.com/ehubbartt/combat-achievements-tracker/blob/main/src/main/java/com/catracker/util/CombatAchievementsDataLoader.java).
-Canonical sprite use follows RuneLite's
-[Hiscore panel](https://github.com/runelite/runelite/blob/master/runelite-client/src/main/java/net/runelite/client/plugins/hiscore/HiscorePanel.java).
-These are development references, not runtime dependencies.
+Weights determine both selection and wedge angles. XP targets are suggestions;
+there is no goal tracking, reward, unlock, or saved challenge system.
 
-## Architecture
+## Combat Achievements
 
-- `BossDefinition`, `BossCatalog`, `BossProfile`: canonical boss identity, raid
-  classification, CA aliases, and tunable style-specific stat recommendations.
-- `BossData`, `CombatAchievementCache`: static local task metadata and separate
-  account-local completion/eligibility snapshots.
-- `WheelEligibility`: pure boss and skill filtering; no Swing or client calls.
-- `WheelEntry`, `WheelSelection`, `XpGoal`: immutable weighted presentation data,
-  random selection and landing geometry.
-- `WheelIconProvider`: client-thread boss sprite loading through `SpriteManager`
-  and skill artwork through `SkillIconManager`. Every catalog boss has a RuneLite
-  sprite mapping; **no custom icon resources are needed**. An initial stands-in
-  letter is used if a sprite is not yet loaded; subsequent pool updates retry it.
-- `WheelComponent`, `WheelStyle`, `WheelPopup`: one reusable icon/weighted renderer, interactive
-  hub, tooltips, animation, and cancellation.
-- `WheelboundPanel`: normal RuneLite Swing controls, two views, results, and
-  skill-to-XP sequencing. Uses RuneLite ColorScheme, FontManager, and installed
-  look and feel; no additional UI framework.
-- `WheelboundPlugin`: lifecycle, events, client-thread reads, and guarded EDT
-  updates. Side-panel preferences use ConfigManager; only the two master settings
-  appear in the main configuration.
+This wheel includes **bosses and ordinary monsters with unfinished CAs**, using
+the local CA encounter/task catalog rather than limiting it to boss hiscores.
+There is one equally weighted wedge per encounter, not per task. Shared CA
+encounters such as Dagannoth Kings remain a single encounter.
+
+- **Exclude bosses** removes boss encounters. Raids are a separate category.
+- **Exclude raids** removes raid encounters, including their individual modes.
+- **Match my Slayer task** applies the task-only encounter rules above.
+- Each of **Easy, Medium, Hard, Elite, Master, and Grandmaster** has an independent
+  exclusion checkbox. All tiers start included.
+- **Included encounters** is its own saved checklist, independent of Bossing.
+
+An encounter appears only if it has at least one unfinished, supported task in an
+included tier. For example, if all your Easy through Hard tasks are complete and
+only Master tasks remain, excluding Master removes that encounter. Completed
+encounters, excluded tiers, unsupported task IDs, and non-encounter General tasks
+do not enter the wheel. Excluding every tier gives an empty pool and disables SPIN.
+Login is required; account completion state is never assumed while offline.
+
+Mapped bosses retain their existing canonical sprites. Other encounters use
+small thumbnails of the actual local CA models; these are static model previews,
+not new boss artwork. They use flat face colors without textures or animation.
+Missing assets use the existing initial-letter fallback and retry on later pool
+updates. Live model appearance still needs verification in RuneLite.
+
+## Settings and architecture
+
+All controls live in the sidebar. The two former master configuration items have
+been removed; their saved values provide defaults for the replacement sidebar
+options until a new value is saved. Wheel choice, filters, and each wheel's manual
+exclusions persist through ConfigManager. Old unfinished-only Bossing settings
+are no longer used. RuneLite profile changes reload the sidebar preferences.
+
+- `WheelType` registers wheel names and their independent checklist keys.
+- `WheelFilter` declares each wheel's checkbox labels, sections, defaults, and
+  persistence keys. The sidebar builds its cards and selector from this registry.
+- `WheelboundPanel` coordinates the shared popup, checklists, and optional XP spin.
+- `WheelEligibility` implements pure skill/boss/encounter filtering.
+- `AccountAccess` handles reviewed quests and current Slayer assignment rules.
+- `BossData`, `CaEncounter`, `CaTier`, and `CombatAchievementCache` separate static
+  task metadata from account completion state and retain per-task tiers.
+- `WheelIconProvider` and `MonsterThumbnail` load local artwork. The existing
+  `WheelComponent`, `WheelStyle`, and popup wheel rendering are retained.
+
+Adding a wheel means registering its type and filters and supplying its eligible
+entries; it reuses the selector, saved checklist, spin, cancellation, and popup.
+The selector scales without squeezing additional tabs into the sidebar width.
+
+Task enums 3981-3986 supply the six tiers; task parameters 1306 and 1312 identify
+the completion bit and encounter, and enum 3971 supplies names. CA model enum
+3987 provides encounter models and viewing angles. The 21 exposed completion
+varps are snapshotted on login/startup, profile changes, completion events, and
+manual refresh. Bursts are coalesced. There is no game-tick CA polling, per-spin
+CA read, remote task list, or remote account lookup. Unknown task IDs fail closed.
+Logout, hopping, and connection loss invalidate account results. Pool updates
+during animation wait until the spin sequence ends and preserve the last result.
+
+Development references: [RuneLite Slayer assignment reader](https://github.com/runelite/runelite/blob/master/runelite-client/src/main/java/net/runelite/client/plugins/slayer/SlayerPlugin.java),
+[CA task loader schema](https://github.com/ehubbartt/combat-achievements-tracker/blob/main/src/main/java/com/catracker/util/CombatAchievementsDataLoader.java),
+and [CA model interface script](https://github.com/runelite/cs2-scripts/blob/master/scripts/%5Bproc%2Cca_boss_init_image%5D.cs2).
+These are development references, not runtime dependencies. Game-cache schemas
+and reviewed access rules can require maintenance after game updates.
 
 ## Build and launch
 
-Use **JDK 17** for the Gradle 9.6 wrapper. Java compilation targets **Java 11**.
-RuneLite dependencies are pinned to **1.12.38** for reproducible API compatibility.
+Use **JDK 17** for the Gradle 9.6 wrapper. Compilation targets **Java 11**.
+RuneLite dependencies are pinned to **1.12.38**.
 
 ```powershell
 .\gradlew.bat build
 .\gradlew.bat run
 ```
 
-On Unix use `bash ./gradlew build` and `bash ./gradlew run`.
-`WheelboundPluginTest` remains the development launcher. The optional existing
-`shadowJar` task builds a standalone development client jar. CI uses JDK 17 and
-the same wrapper. Close the development client before rebuilding/relaunching.
+If your terminal defaults to Java 8, point `JAVA_HOME` at your JDK 17 installation
+for the command. On Unix use `bash ./gradlew build` and `bash ./gradlew run`.
+Close the development client before rebuilding/relaunching. `WheelboundPluginTest`
+is the development launcher; `shadowJar` builds the optional development client jar.
 
-Automated tests cover filters and combinations, raid modes, style/Slayer levels,
-local metadata loading and failure recovery, CA completion words, account reset,
-event routing/coalescing, all 24 skills, empty pools, exact weighted probabilities,
-animation landing, sampled-pool fairness, hub interaction, cancellation, stale
-UI responses, and automatic skill/XP sequencing. Non-pixel Swing smoke tests also
-write review images under `build/reports/`; boss layout previews in tests use skill
-icons as stand-ins because the live game sprite cache is unavailable in unit tests.
+Tests cover filtering, tiers and completion bits, quest rules, Slayer task/location
+rules, independent checklist persistence, profile resets, stale callbacks, input
+handling, cancellation, and sequential skill/XP spins. Swing review images are
+written under `build/reports/`, including a preview for each of the three sidebars.
+Mocked tests do not verify live CA models, quest scripts, or account game-cache data.
 
 ## Manual RuneLite checks
 
-1. Enable Wheelbound and click Open wheel in either view. Confirm the wheel is
-   centered over the game and never displayed in the sidebar. Try fixed and
-   resizable clients. Hover and press the center; double-click repeatedly and verify
-   that only one spin runs. Check wedge tooltips and final pointer alignment.
-2. Log in and confirm real boss sprites load. Toggle All bosses / incomplete CAs
-   and Include raids. Compare eligible pools with the master level limit on/off.
-3. Compare a known boss's CA eligibility against the in-game CA interface. Finish
-   a CA (especially the last for a boss) and verify the next pool changes while
-   the previous result remains displayed.
-4. Log out and switch accounts or RS profiles. Verify old CA results disappear,
-   account filters wait for login, and the second account uses its own completion.
-   Also try hopping, reconnecting, and disabling/re-enabling during a spin.
-5. Check a level-99 skill is absent with the master exclusion enabled and present
-   when disabled. Check all-maxed and low-level/empty-pool cases if available.
-6. Enable Include XP goal. Verify two sequential animations, a skill and XP result,
-   unequal wedge sizes, and no third spin or tracked goal. Disable the option and
-   verify only the skill wheel runs. Confirm side-panel choices survive restart.
+1. Switch among all three wheels. Confirm filters fit, checkboxes retain the
+   existing look, and no wheel appears in the sidebar. Check fixed/resizable clients.
+2. In Bossing, toggle account checks, raid/Mimic exclusions, and All bosses.
+   Uncheck individual entries and verify they stay unchecked after switching wheels.
+3. Compare a quest-locked boss with your account. Test a current Slayer assignment,
+   a completed task, a direct boss assignment, and a location-restricted task.
+4. In Skilling, check combat exclusions and level-99 exclusions separately and
+   together. Verify Slayer/Sailing and the optional second XP spin.
+5. In CAs, compare an encounter with the in-game CA list. Exclude its only remaining
+   tier and confirm it disappears. Check ordinary monster icons and raid categories.
+6. Exclude all tiers or all checklist entries. Confirm SPIN is disabled with an
+   explanation. Reinclude an entry and confirm it can spin again.
+7. Log out, hop, switch accounts/profiles, and disable the plugin during a spin.
+   Confirm no stale account result or second XP spin survives cancellation.
 
 ## Privacy and migration
 
-No analytics, telemetry, third-party API, Wiki scraping, cloud state, or Wheelbound
-server is used. Sprites come from the RuneLite/game cache and skill icons from
-RuneLite resources. Only normal RuneLite/Gradle dependency retrieval is needed
-for development. Wheelbound never generates game inputs or handles credentials.
-
-The previous activity categories, activity catalog, persistent skilling
-goals, and progress overlay have been removed. Existing saved goal/config keys
-are left inert, not read or resumed. The login-cleanup batch/PowerShell scripts
-remain unchanged and are unrelated to plugin operation. No Plugin Hub approval
-is implied.
+No analytics, third-party API, Wiki scraping, cloud account state, or Wheelbound
+server is used at runtime. Artwork comes from local RuneLite/game resources.
+Wheelbound never generates game inputs or handles credentials. Previous persistent
+skilling goal/config keys remain inert. Login-cleanup scripts are unrelated and
+unchanged. No Plugin Hub approval is implied.

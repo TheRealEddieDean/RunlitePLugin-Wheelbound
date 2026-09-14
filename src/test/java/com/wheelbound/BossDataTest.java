@@ -22,6 +22,12 @@ public class BossDataTest
         assertEquals(7, reads.get());
         data.load(client);
         assertEquals(7, reads.get());
+        List<CaEncounter> encounters = data.encounters(client);
+        assertEquals(1, encounters.size());
+        assertEquals("Obor", encounters.get(0).name);
+        for (int i = 0; i < CaTier.values().length; i++)
+        { assertEquals(CaTier.values()[i], encounters.get(0).tasks.get(i).tier); }
+        assertEquals(7, reads.get());
         data.clear(); data.load(client);
         assertEquals(14, reads.get());
         try { mapping.put("Fake", List.of(3)); fail(); }

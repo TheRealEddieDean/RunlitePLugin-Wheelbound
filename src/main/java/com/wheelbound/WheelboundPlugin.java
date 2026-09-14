@@ -2,7 +2,11 @@ package com.wheelbound;
 
 import com.google.inject.Provides;
 import java.util.List;
+import java.util.Set;
+import java.util.EnumSet;
+import java.util.function.Predicate;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 import javax.inject.Inject;
 import javax.swing.SwingUtilities;
@@ -15,7 +19,6 @@ import net.runelite.api.events.VarbitChanged;
 import net.runelite.client.callback.ClientThread;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.Subscribe;
-import net.runelite.client.events.ConfigChanged;
 import net.runelite.client.events.ProfileChanged;
 import net.runelite.client.events.RuneScapeProfileChanged;
 import net.runelite.client.plugins.Plugin;
@@ -24,14 +27,13 @@ import net.runelite.client.ui.ClientToolbar;
 import net.runelite.client.ui.NavigationButton;
 
 @Slf4j
-@PluginDescriptor(name = "Wheelbound", description = "Choose a boss or skill with icon wheels and optional XP targets.",
-    tags = {"wheel", "randomizer", "bossing", "skilling"})
+@PluginDescriptor(name = "Wheelbound", description = "Choose a boss, skill or unfinished Combat Achievement encounter.",
+    tags = {"wheel", "randomizer", "bossing", "skilling", "combat achievements"})
 public class WheelboundPlugin extends Plugin
 {
     @Inject private Client client;
     @Inject private ClientThread clientThread;
     @Inject private ClientToolbar toolbar;
-    @Inject private WheelboundConfig config;
     @Inject private ConfigManager settings;
     @Inject private WheelIconProvider icons;
     @Inject private WheelPopup popup;
@@ -45,16 +47,18 @@ public class WheelboundPlugin extends Plugin
     private WheelboundPanel panel;
     private NavigationButton navigation;
     private volatile boolean active;
-    private volatile long session;
+    private final AtomicLong session = new AtomicLong();
     private final java.util.Map<net.runelite.api.Skill, Integer> levels = new java.util.EnumMap<>(net.runelite.api.Skill.class);
 
-    @Override protected void startUp() throws Exception
+    @Override protected void startUp()
     {
-        active = true; session++;
+        long epoch = session.incrementAndGet();
+        active = true;
         // RuneLite invokes plugin lifecycle methods on the EDT already.
         panel = new WheelboundPanel(key -> settings.getConfiguration("wheelbound", key),
             (key, value) -> settings.setConfiguration("wheelbound", key, value));
         panel.setAction(this::request);
+        panel.setRefreshAction(this::queueCaRefresh);
         panel.setPopup(popup);
         overlays.add(popup);
         mouseManager.registerMouseListener(popup.mouse);
@@ -63,13 +67,17 @@ public class WheelboundPlugin extends Plugin
         navigation = NavigationButton.builder().tooltip("Wheelbound").icon(WheelStyle.createIcon())
             .priority(5).panel(panel).build();
         toolbar.addNavigation(navigation);
-        clientThread.invokeLater(() -> { if (active) { resetAccount(); queueCaRefresh(); } });
+        clientThread.invokeLater(() -> { if (active && session.get() == epoch) { resetAccount(); queueCaRefresh(); } });
     }
 
-    @Override protected void shutDown() throws Exception
+    @Override protected void shutDown()
     {
-        active = false; session++;
-        achievements.reset(); bossData.clear(); levels.clear();
+        active = false;
+        long epoch = session.incrementAndGet();
+        clientThread.invokeLater(() -> {
+            if (!active && session.get() == epoch)
+            { achievements.reset(); bossData.clear(); levels.clear(); }
+        });
         caRefreshQueued.set(false); poolRefreshQueued.set(false);
         popup.hide();
         overlays.remove(popup);
@@ -100,32 +108,29 @@ public class WheelboundPlugin extends Plugin
     @Subscribe public void onRuneScapeProfileChanged(RuneScapeProfileChanged event)
     {
         // Invalidate outstanding UI responses immediately, before the queued local read.
-        session++;
+        session.incrementAndGet();
         clientThread.invokeLater(() -> { if (active) { resetAccount(); queueCaRefresh(); } });
     }
 
     @Subscribe public void onProfileChanged(ProfileChanged event)
     {
-        session++;
+        session.incrementAndGet();
+        SwingUtilities.invokeLater(() -> {
+            if (active) { panel.reloadPreferences(key -> settings.getConfiguration("wheelbound", key)); request(false); }
+        });
         clientThread.invokeLater(() -> { if (active) { resetAccount(); queueCaRefresh(); } });
     }
 
     @Subscribe public void onVarbitChanged(VarbitChanged event)
     {
         if (CombatAchievementCache.isCompletionVarp(event.getVarpId())) { queueCaRefresh(); }
+        else if (AccountAccess.slayerChanged(event)) { queuePoolRefresh(); }
     }
 
     @Subscribe public void onStatChanged(StatChanged event)
     {
         Integer previous = levels.put(event.getSkill(), event.getLevel());
         if (previous == null || previous != event.getLevel()) { queuePoolRefresh(); }
-    }
-
-    @Subscribe public void onConfigChanged(ConfigChanged event)
-    {
-        if ("wheelbound".equals(event.getGroup()) &&
-            ("limitBossesToMyLevel".equals(event.getKey()) || "excludeLevel99Skills".equals(event.getKey())))
-        { queuePoolRefresh(); }
     }
 
     private boolean loggedIn() { return client.getGameState() == GameState.LOGGED_IN && client.getLocalPlayer() != null; }
@@ -137,10 +142,10 @@ public class WheelboundPlugin extends Plugin
 
     private void resetAccount()
     {
-        session++; achievements.reset(); levels.clear();
-        long epoch = session;
+        long epoch = session.incrementAndGet();
+        achievements.reset(); levels.clear();
         SwingUtilities.invokeLater(() -> {
-            if (active && session == epoch) { panel.reset(); request(false); }
+            if (active && session.get() == epoch) { panel.reset(); request(false); }
         });
     }
 
@@ -174,46 +179,74 @@ public class WheelboundPlugin extends Plugin
     private void request(boolean spin)
     {
         if (!active) { return; }
-        String mode = panel.mode();
-        boolean raids = panel.includeRaids(), incomplete = panel.incompleteOnly();
-        long revision = panel.generation(), epoch = session;
+        WheelType type = panel.wheelType();
+        Set<WheelFilter> filters = panel.selectedFilters();
+        long revision = panel.generation(), epoch = session.get();
         clientThread.invokeLater(() -> {
-            if (!active || session != epoch) { return; }
+            if (!active || session.get() != epoch) { return; }
             List<WheelEntry> entries;
             String message;
             boolean loggedIn = loggedIn();
-            if (mode.equals("Bossing"))
+            boolean matchTask = filters.contains(type == WheelType.BOSSING ? WheelFilter.BOSS_TASK : WheelFilter.CA_TASK);
+            AccountAccess.SlayerTask task = AccountAccess.SlayerTask.unavailable();
+            if (loggedIn && type != WheelType.SKILLING && matchTask)
             {
-                String account = identity();
-                List<BossDefinition> eligible = WheelEligibility.bosses(BossCatalog.ALL, raids, incomplete,
-                    config.limitBossesToMyLevel(), loggedIn, client::getRealSkillLevel,
-                    boss -> achievements.hasIncomplete(account, boss));
+                try { task = AccountAccess.slayerTask(client); }
+                catch (RuntimeException ex) { log.debug("Slayer assignment is unavailable", ex); }
+            }
+            AccountAccess.SlayerTask assignment = task;
+            if (type == WheelType.BOSSING)
+            {
+                boolean accountFilter = filters.contains(WheelFilter.ACCOUNT);
+                Predicate<BossDefinition> access = AccountAccess.requirements(client);
+                List<BossDefinition> eligible = WheelEligibility.bosses(BossCatalog.ALL,
+                    !filters.contains(WheelFilter.BOSS_RAIDS), false, accountFilter, loggedIn,
+                    client::getRealSkillLevel, boss -> true).stream()
+                    .filter(b -> !filters.contains(WheelFilter.MIMIC) || !b.name.equals("Mimic"))
+                    .filter(b -> !matchTask || AccountAccess.taskAllows(b.name, assignment))
+                    .filter(b -> {
+                        if (!accountFilter) { return true; }
+                        try { return access.test(b); }
+                        catch (RuntimeException ex) { log.debug("Access data is unavailable for {}", b.name, ex); return false; }
+                    }).collect(Collectors.toUnmodifiableList());
                 entries = eligible.stream().map(icons::boss).collect(Collectors.toList());
                 message = eligible.size() + " eligible bosses. All appear in the centered wheel with equal odds.";
-                if (config.limitBossesToMyLevel())
-                {
-                    long unknown = BossCatalog.ALL.stream().filter(b -> b.profile == null && (raids || !b.raid)).count();
-                    if (unknown > 0) { message += " " + unknown + " lack reviewed level recommendations."; }
-                }
-                if (!loggedIn && (config.limitBossesToMyLevel() || incomplete))
-                { message = "Log in to check your levels and Combat Achievements."; }
-                else if (incomplete && !achievements.isReady(account))
-                { message = "Local Combat Achievement data is unavailable. Try All bosses or log in again."; }
+                if (!loggedIn && accountFilter)
+                { message = "Log in to check your levels and quest access, or turn off Account for skill level."; }
                 else if (entries.isEmpty())
-                { message = "No bosses match the current filters. Try All bosses, include raids, or adjust the master level setting."; }
+                { message = "No bosses match. Adjust the account or pool filters."; }
+            }
+            else if (type == WheelType.SKILLING)
+            {
+                boolean exclude99 = filters.contains(WheelFilter.MAXED_SKILLS);
+                entries = WheelEligibility.skills(filters.contains(WheelFilter.COMBAT_SKILLS), exclude99, loggedIn, client::getRealSkillLevel)
+                    .stream().map(icons::skill).collect(Collectors.toList());
+                message = entries.size() + " eligible skills. Open the centered wheel to spin.";
+                if (!loggedIn && exclude99) { message = "Log in to exclude level 99 skills."; }
+                else if (entries.isEmpty()) { message = "No skills match. Adjust the combat or level-99 filters."; }
             }
             else
             {
-                entries = WheelEligibility.skills(config.excludeLevel99Skills(), loggedIn, client::getRealSkillLevel)
-                    .stream().map(icons::skill).collect(Collectors.toList());
-                message = entries.size() + " eligible skills. Open the centered wheel to spin.";
-                if (!loggedIn && config.excludeLevel99Skills()) { message = "Log in to exclude level 99 skills."; }
-                else if (entries.isEmpty()) { message = "All skills are level 99! Turn off Exclude level 99 skills to include them."; }
+                String account = identity();
+                Set<CaTier> excluded = EnumSet.noneOf(CaTier.class);
+                for (WheelFilter filter : filters) { if (filter.tier != null) { excluded.add(filter.tier); } }
+                entries = List.of();
+                if (!loggedIn) { message = "Log in to load your unfinished Combat Achievements."; }
+                else if (!achievements.isReady(account)) { message = "Local Combat Achievement data is unavailable. Click Refresh list to retry."; }
+                else
+                {
+                    entries = WheelEligibility.achievements(bossData.encounters(client), filters.contains(WheelFilter.CA_BOSSES),
+                        filters.contains(WheelFilter.CA_RAIDS), e -> achievements.hasIncomplete(account, e, excluded),
+                        e -> !matchTask || AccountAccess.taskAllows(e.name, assignment))
+                        .stream().map(icons::encounter).collect(Collectors.toUnmodifiableList());
+                    message = entries.isEmpty() ? "No unfinished tasks match. Include another tier or encounter category."
+                        : entries.size() + " encounters with unfinished tasks in your included tiers.";
+                }
             }
             List<WheelEntry> snapshot = List.copyOf(entries);
             String info = message;
             SwingUtilities.invokeLater(() -> {
-                if (!active || epoch != session || revision != panel.generation()) { return; }
+                if (!active || epoch != session.get() || revision != panel.generation()) { return; }
                 if (spin) { panel.spinResponse(snapshot, info, revision); }
                 else { panel.updatePool(snapshot, info, revision); }
             });

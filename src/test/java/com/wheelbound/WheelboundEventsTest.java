@@ -23,7 +23,8 @@ public class WheelboundEventsTest
                 net.runelite.client.ui.ClientToolbar toolbar = org.mockito.Mockito.mock(net.runelite.client.ui.ClientToolbar.class);
                 set(plugin, "toolbar", toolbar);
                 set(plugin, "settings", org.mockito.Mockito.mock(net.runelite.client.config.ConfigManager.class));
-                set(plugin, "clientThread", new QueuedThread());
+                QueuedThread thread = new QueuedThread();
+                set(plugin, "clientThread", thread);
                 set(plugin, "popup", new WheelPopup(null));
                 set(plugin, "overlays", org.mockito.Mockito.mock(net.runelite.client.ui.overlay.OverlayManager.class));
                 set(plugin, "mouseManager", org.mockito.Mockito.mock(net.runelite.client.input.MouseManager.class));
@@ -35,7 +36,13 @@ public class WheelboundEventsTest
                     assertNotNull(button.getIcon());
                     assertSame(get(plugin, "panel"), button.getPanel());
                     org.mockito.Mockito.verify(toolbar).addNavigation(button);
+                    CombatAchievementCache cache = (CombatAchievementCache)get(plugin, "achievements");
+                    cache.refresh("A", BossCatalog.ALL, java.util.Map.of("Obor", List.of(0)), id -> 0);
                     plugin.shutDown();
+                    assertTrue("Cleanup waits for the client thread", cache.isReady("A"));
+                    thread.work.forEach(Runnable::run);
+                    thread.work.clear();
+                    assertFalse("Client-thread cleanup clears account data", cache.isReady("A"));
                     org.mockito.Mockito.verify(toolbar).removeNavigation(button);
                     assertNull(get(plugin, "panel"));
                     assertNull(get(plugin, "navigation"));
@@ -72,9 +79,9 @@ public class WheelboundEventsTest
         GameStateChanged login = new GameStateChanged(); login.setGameState(GameState.LOGGED_IN);
         plugin.onGameStateChanged(login);
         assertEquals(1, thread.work.size());
-        long before = (Long)get(plugin, "session");
+        long before = ((java.util.concurrent.atomic.AtomicLong)get(plugin, "session")).get();
         plugin.onRuneScapeProfileChanged(new RuneScapeProfileChanged("A", "B"));
-        assertTrue((Long)get(plugin, "session") > before);
+        assertTrue(((java.util.concurrent.atomic.AtomicLong)get(plugin, "session")).get() > before);
         assertEquals(2, thread.work.size());
         set(plugin, "active", false);
         thread.work.forEach(Runnable::run);

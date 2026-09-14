@@ -31,11 +31,15 @@ final class BossData
 		VarPlayerID.CA_TASK_COMPLETED_20
 	};
 	private final Map<String, List<Integer>> tasks = new TreeMap<>();
+	private List<CaEncounter> encounters = List.of();
 
 	void clear()
 	{
 		tasks.clear();
+		encounters = List.of();
 	}
+
+	List<CaEncounter> encounters(Client client) { load(client); return encounters; }
 
 	Map<String, List<Integer>> load(Client client)
 	{
@@ -44,11 +48,13 @@ final class BossData
 			return java.util.Collections.unmodifiableMap(tasks);
 		}
 		Map<String, List<Integer>> loaded = new TreeMap<>();
+		Map<Integer, List<CaEncounter.Task>> tiered = new TreeMap<>();
+		Map<Integer, String> encounterNames = new TreeMap<>();
 		EnumComposition names = client.getEnum(BOSS_NAMES);
 		if (names == null) { throw new IllegalStateException("Encounter names unavailable"); }
-		for (int tier = 3981; tier <= 3986; tier++)
+		for (CaTier tier : CaTier.values())
 		{
-			EnumComposition entries = client.getEnum(tier);
+			EnumComposition entries = client.getEnum(tier.enumId);
 			if (entries == null || entries.getIntVals() == null || entries.getIntVals().length == 0)
 			{
 				throw new IllegalStateException("Achievement tier unavailable");
@@ -58,13 +64,20 @@ final class BossData
 				StructComposition task = client.getStructComposition(structId);
 				if (task == null) { throw new IllegalStateException("Achievement unavailable"); }
 				int id = task.getIntValue(TASK_ID);
-				String name = names.getStringValue(task.getIntValue(TASK_BOSS));
+				int encounterId = task.getIntValue(TASK_BOSS);
+				String name = names.getStringValue(encounterId);
 				if (name == null || name.isBlank() || name.equalsIgnoreCase("null") || name.equalsIgnoreCase("General")) { continue; }
 				loaded.computeIfAbsent(name, ignored -> new ArrayList<>()).add(id);
+				tiered.computeIfAbsent(encounterId, ignored -> new ArrayList<>()).add(new CaEncounter.Task(id, tier));
+				encounterNames.put(encounterId, name);
 			}
 		}
 		if (loaded.isEmpty()) { throw new IllegalStateException("Achievement catalogue unavailable"); }
 		loaded.replaceAll((name, ids) -> List.copyOf(ids));
+		List<CaEncounter> result = new ArrayList<>();
+		tiered.forEach((id, values) -> result.add(new CaEncounter(id, encounterNames.get(id), values)));
+		result.sort(java.util.Comparator.comparing(e -> e.name));
+		encounters = List.copyOf(result);
 		tasks.putAll(loaded);
 		return java.util.Collections.unmodifiableMap(tasks);
 	}

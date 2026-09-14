@@ -12,12 +12,14 @@ final class CombatAchievementCache
     private String account;
     private boolean ready;
     private Set<String> incomplete = Set.of();
+    private int[] completion = new int[0];
 
     void reset()
     {
         account = null;
         ready = false;
         incomplete = Set.of();
+        completion = new int[0];
     }
 
     void refresh(String identity, List<BossDefinition> bosses, Map<String, List<Integer>> tasks,
@@ -42,6 +44,7 @@ final class CombatAchievementCache
             }
         }
         incomplete = Set.copyOf(open);
+        completion = flags;
         account = identity;
         ready = true;
     }
@@ -50,6 +53,14 @@ final class CombatAchievementCache
     boolean hasIncomplete(String identity, BossDefinition boss)
     {
         return isReady(identity) && incomplete.contains(boss.hiscore.name());
+    }
+
+    boolean hasIncomplete(String identity, CaEncounter encounter, Set<CaTier> excludedTiers)
+    {
+        if (!isReady(identity)) { return false; }
+        return encounter.tasks.stream().anyMatch(task -> !excludedTiers.contains(task.tier)
+            && task.id >= 0 && task.id / 32 < completion.length
+            && !BossData.isComplete(completion[task.id / 32], task.id % 32));
     }
 
     static boolean isCompletionVarp(int id)

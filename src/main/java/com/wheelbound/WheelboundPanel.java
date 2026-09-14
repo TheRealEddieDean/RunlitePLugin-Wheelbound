@@ -4,6 +4,9 @@ import java.awt.*;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.EnumMap;
+import java.util.EnumSet;
+import java.util.Set;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -21,22 +24,23 @@ public class WheelboundPanel extends PluginPanel
     private final JLabel xpResult = label("", false);
     private final JLabel status = label("Loading eligible entries...", false);
     private final JButton open = new JButton("SPIN");
-    private final BossChecklist bossChecklist;
+    private final EnumMap<WheelType, BossChecklist> checklists = new EnumMap<>(WheelType.class);
+    private final EnumMap<WheelFilter, JCheckBox> filters = new EnumMap<>(WheelFilter.class);
+    private final JPanel checklistCards = new JPanel(new CardLayout());
+    private final JComboBox<WheelType> selector = new JComboBox<>(WheelType.values());
     private List<WheelEntry> availablePool = List.of();
     private String poolMessage = "";
     private WheelPopup popup;
     private WheelComponent displayed = wheel;
     private String popupTitle, popupResult;
     private final JPanel options = new JPanel(new CardLayout());
-    private final JCheckBox all = check("All bosses", "Use the broad pool; raid and master level settings still apply.");
-    private final JCheckBox raids = check("Include raids", "Include raid modes from the boss catalog.");
-    private final JCheckBox incomplete = check("<html><div style='width:125px'>Only bosses with incomplete Combat Achievements</div></html>", "Only mapped encounters with at least one incomplete local CA.");
-    private final JCheckBox xp = check("Include XP goal", "Automatically spin a second, weighted XP wheel after selecting a skill.");
+    private final JCheckBox all = check("All bosses", "Select all bosses and clear pool exclusions, or deselect the current list. Account options still apply.");
     private final List<AbstractButton> controls = new ArrayList<>();
     private final BiConsumer<String, Object> save;
     private final Random random = new Random();
     private Consumer<Boolean> action = ignored -> {};
-    private String mode;
+    private Runnable refreshAction = () -> action.accept(false);
+    private WheelType type;
     private boolean busy;
     private long generation;
     private List<WheelEntry> deferred;
@@ -45,18 +49,21 @@ public class WheelboundPanel extends PluginPanel
     WheelboundPanel(Function<String, String> load, BiConsumer<String, Object> save)
     {
         this.save = save;
-        bossChecklist = new BossChecklist(load.apply("excludedBosses"), value -> {
-            save.accept("excludedBosses", value);
-            generation++;
-            popupResult = "Click the center to spin";
-            if (popup != null) { popup.clearResult(); }
-            updatePool(availablePool, poolMessage, generation);
-        });
-        mode = "Skilling".equals(load.apply("selectedWheel")) ? "Skilling" : "Bossing";
-        incomplete.setSelected(Boolean.parseBoolean(load.apply("unfinishedOnly")));
-        all.setSelected(!incomplete.isSelected());
-        raids.setSelected(Boolean.parseBoolean(load.apply("includeRaids")));
-        xp.setSelected(Boolean.parseBoolean(load.apply("includeXpGoal")));
+        type = WheelType.fromSaved(load.apply("selectedWheel"));
+        for (WheelType wheelType : WheelType.values())
+        {
+            BossChecklist checklist = new BossChecklist(wheelType == WheelType.SKILLING ? "Included skills"
+                : wheelType == WheelType.BOSSING ? "Included bosses" : "Included encounters",
+                load.apply(wheelType.exclusionKey), value -> {
+                    save.accept(wheelType.exclusionKey, value);
+                    generation++;
+                    popupResult = "Click the center to spin";
+                    if (popup != null) { popup.clearResult(); }
+                    syncAll(); updatePool(availablePool, poolMessage, generation);
+                });
+            checklists.put(wheelType, checklist);
+            checklistCards.add(checklist, wheelType.name());
+        }
         setLayout(new BorderLayout());
         setBackground(ColorScheme.DARK_GRAY_COLOR);
         setBorder(BorderFactory.createEmptyBorder(10, 8, 10, 8));
@@ -65,24 +72,12 @@ public class WheelboundPanel extends PluginPanel
         title.setFont(FontManager.getRunescapeBoldFont().deriveFont(22f));
         content.add(title);
         content.add(Box.createVerticalStrut(10));
-        JPanel tabs = new JPanel(new GridLayout(1, 2, 4, 0));
-        tabs.setOpaque(false);
-        ButtonGroup group = new ButtonGroup();
-        for (String name : List.of("Bossing", "Skilling"))
-        {
-            JToggleButton tab = new JToggleButton(name, mode.equals(name));
-            tab.setFont(FontManager.getDefaultBoldFont().deriveFont(12f));
-            tab.setFocusPainted(false);
-            tab.setToolTipText(name.equals("Bossing") ? "What boss should I do?" : "What skill should I train?");
-            tab.addActionListener(e -> {
-                mode = name; save.accept("selectedWheel", mode);
-                ((CardLayout) options.getLayout()).show(options, mode);
-                reset(false); bossChecklist.setVisible(mode.equals("Bossing")); action.accept(false);
-            });
-            group.add(tab); tabs.add(tab); controls.add(tab);
-        }
-        tabs.setMaximumSize(new Dimension(Integer.MAX_VALUE, 32));
-        content.add(tabs);
+        selector.setSelectedItem(type);
+        selector.setFont(FontManager.getDefaultBoldFont().deriveFont(12f));
+        selector.setMaximumSize(new Dimension(Integer.MAX_VALUE, 32));
+        selector.setToolTipText("Choose a wheel");
+        selector.addActionListener(e -> selectWheel((WheelType)selector.getSelectedItem()));
+        content.add(selector);
         content.add(Box.createVerticalStrut(8));
         open.setAlignmentX(Component.CENTER_ALIGNMENT);
         open.setMaximumSize(new Dimension(Integer.MAX_VALUE, 36));
@@ -98,25 +93,60 @@ public class WheelboundPanel extends PluginPanel
         content.add(result);
         content.add(xpResult);
         content.add(Box.createVerticalStrut(10));
-        JPanel bossOptions = column();
-        bossOptions.add(all); bossOptions.add(raids); bossOptions.add(incomplete);
-        JPanel skillOptions = column(); skillOptions.add(xp);
         options.setOpaque(false);
-        options.add(bossOptions, "Bossing"); options.add(skillOptions, "Skilling");
-        options.setMaximumSize(new Dimension(Integer.MAX_VALUE, 120));
-        ((CardLayout) options.getLayout()).show(options, mode);
+        for (WheelType wheelType : WheelType.values())
+        {
+            JPanel wheelOptions = column();
+            String section = "";
+            for (WheelFilter filter : WheelFilter.values())
+            {
+                if (filter.wheel != wheelType) { continue; }
+                if (!section.equals(filter.section))
+                {
+                    section = filter.section;
+                    wheelOptions.add(Box.createVerticalStrut(8));
+                    JLabel heading = new JLabel(section);
+                    heading.setForeground(ColorScheme.BRAND_ORANGE);
+                    heading.setFont(FontManager.getDefaultBoldFont());
+                    heading.setAlignmentX(Component.LEFT_ALIGNMENT);
+                    wheelOptions.add(heading);
+                    if (wheelType == WheelType.BOSSING && section.equals("Boss pool")) { wheelOptions.add(all); }
+                }
+                JCheckBox box = check(filter.title, filter.tip);
+                String saved = load.apply(filter.key);
+                // Migrate the two removed master options once through the new sidebar defaults.
+                if (saved == null && filter == WheelFilter.ACCOUNT) { saved = load.apply("limitBossesToMyLevel"); }
+                if (saved == null && filter == WheelFilter.MAXED_SKILLS) { saved = load.apply("excludeLevel99Skills"); }
+                if (saved == null && filter == WheelFilter.BOSS_RAIDS && load.apply("includeRaids") != null)
+                { saved = Boolean.toString(!Boolean.parseBoolean(load.apply("includeRaids"))); }
+                box.setSelected(saved == null ? filter.defaultValue : Boolean.parseBoolean(saved));
+                box.addActionListener(e -> { save.accept(filter.key, box.isSelected()); syncAll(); filtersChanged(); });
+                filters.put(filter, box); controls.add(box); wheelOptions.add(box);
+            }
+            options.add(wheelOptions, wheelType.name());
+        }
+        showCards();
         content.add(options);
         content.add(Box.createVerticalStrut(8));
         content.add(status);
+        JButton refresh = new JButton("Refresh list");
+        refresh.setAlignmentX(Component.CENTER_ALIGNMENT);
+        refresh.setFont(FontManager.getDefaultFont().deriveFont(11f));
+        refresh.setToolTipText("Reload account access, your current Slayer task and Combat Achievements.");
+        refresh.addActionListener(e -> { filtersChanged(); refreshAction.run(); });
+        content.add(Box.createVerticalStrut(5)); content.add(refresh);
         content.add(Box.createVerticalStrut(12));
-        bossChecklist.setVisible(mode.equals("Bossing"));
-        content.add(bossChecklist);
+        checklistCards.setOpaque(false);
+        content.add(checklistCards);
         add(content, BorderLayout.NORTH);
-        controls.addAll(List.of(all, raids, incomplete, xp, open));
-        all.addActionListener(e -> { incomplete.setSelected(!all.isSelected()); filtersChanged(); });
-        incomplete.addActionListener(e -> { all.setSelected(!incomplete.isSelected()); filtersChanged(); });
-        raids.addActionListener(e -> filtersChanged());
-        xp.addActionListener(e -> { save.accept("includeXpGoal", xp.isSelected());  revalidate(); });
+        controls.addAll(List.of(all, open, refresh));
+        all.addActionListener(e -> {
+            if (!all.isSelected()) { checklist().excludeAll(); syncAll(); return; }
+            for (WheelFilter filter : List.of(WheelFilter.BOSS_RAIDS, WheelFilter.MIMIC))
+            { filters.get(filter).setSelected(false); save.accept(filter.key, false); }
+            checklist().includeAll(); syncAll(); filtersChanged();
+        });
+        syncAll();
         wheel.setSpinAction(() -> {
             if (busy) { return; }
             busy = true; enableControls(false); wheel.setAvailable(false);
@@ -128,12 +158,63 @@ public class WheelboundPanel extends PluginPanel
     }
 
     void setPopup(WheelPopup value) { popup = value; }
+    void setRefreshAction(Runnable value) { refreshAction = value; }
     WheelComponent primaryWheel() { return wheel; }
+
+    void selectWheel(WheelType value)
+    {
+        if (value == null || type == value) { return; }
+        type = value; selector.setSelectedItem(value); save.accept("selectedWheel", type.title);
+        showCards(); reset(); action.accept(false);
+    }
+    private void showCards()
+    {
+        ((CardLayout)options.getLayout()).show(options, type.name());
+        ((CardLayout)checklistCards.getLayout()).show(checklistCards, type.name());
+        for (Component card : options.getComponents())
+        {
+            if (card.isVisible())
+            {
+                card.invalidate();
+                Dimension size = card.getPreferredSize();
+                options.setPreferredSize(size);
+                options.setMinimumSize(new Dimension(0, size.height));
+                options.setMaximumSize(new Dimension(Integer.MAX_VALUE, size.height));
+            }
+        }
+        if (options.getParent() != null) { options.getParent().invalidate(); }
+        invalidate();
+        revalidate();
+    }
+    private BossChecklist checklist() { return checklists.get(type); }
+    private void syncAll()
+    { all.setSelected(!selected(WheelFilter.BOSS_RAIDS) && !selected(WheelFilter.MIMIC) && checklists.get(WheelType.BOSSING).allIncluded()); }
+    boolean selected(WheelFilter filter) { return filters.get(filter).isSelected(); }
+    void reloadPreferences(Function<String, String> load)
+    {
+        filters.forEach((filter, box) -> {
+            String value = load.apply(filter.key);
+            if (value == null && filter == WheelFilter.ACCOUNT) { value = load.apply("limitBossesToMyLevel"); }
+            if (value == null && filter == WheelFilter.MAXED_SKILLS) { value = load.apply("excludeLevel99Skills"); }
+            if (value == null && filter == WheelFilter.BOSS_RAIDS && load.apply("includeRaids") != null)
+            { value = Boolean.toString(!Boolean.parseBoolean(load.apply("includeRaids"))); }
+            box.setSelected(value == null ? filter.defaultValue : Boolean.parseBoolean(value));
+        });
+        checklists.forEach((wheelType, checklist) -> checklist.restore(load.apply(wheelType.exclusionKey)));
+        type = WheelType.fromSaved(load.apply("selectedWheel")); selector.setSelectedItem(type);
+        syncAll(); showCards(); reset();
+    }
+    Set<WheelFilter> selectedFilters()
+    {
+        Set<WheelFilter> result = EnumSet.noneOf(WheelFilter.class);
+        filters.forEach((filter, box) -> { if (box.isSelected()) { result.add(filter); } });
+        return Set.copyOf(result);
+    }
 
     void openWheel()
     {
         if (popup == null || busy || wheel.entries().isEmpty()) { return; }
-        displayed = wheel; popupTitle = mode; popupResult = "Click the center to spin";
+        displayed = wheel; popupTitle = type.title; popupResult = "Click the center to spin";
         popup.show(popupTitle, displayed, popupResult, wheel::requestSpin, () -> {
             generation++;
             wheel.cancel(); xpWheel.cancel();
@@ -148,15 +229,12 @@ public class WheelboundPanel extends PluginPanel
     }
     private void filtersChanged()
     {
-        save.accept("unfinishedOnly", incomplete.isSelected()); save.accept("includeRaids", raids.isSelected());
         generation++; wheel.setAvailable(false); open.setEnabled(false);
         if (popup != null) { popup.clearResult(); }
         action.accept(false);
     }
     void setAction(Consumer<Boolean> value) { action = value; }
-    String mode() { return mode; }
-    boolean includeRaids() { return raids.isSelected(); }
-    boolean incompleteOnly() { return incomplete.isSelected(); }
+    WheelType wheelType() { return type; }
     long generation() { return generation; }
     boolean busy() { return busy; }
 
@@ -165,29 +243,30 @@ public class WheelboundPanel extends PluginPanel
         if (revision != generation) { return; }
         if (busy) { deferred = entries; deferredMessage = message; return; }
         availablePool = List.copyOf(entries); poolMessage = message;
-        if (mode.equals("Bossing")) { bossChecklist.updateEntries(entries); }
-        List<WheelEntry> included = mode.equals("Bossing") ? bossChecklist.included(entries) : entries;
-        displayed = wheel; popupTitle = mode;
+        checklist().updateEntries(entries);
+        List<WheelEntry> included = checklist().included(entries);
+        displayed = wheel; popupTitle = type.title;
         wheel.setEntries(included); wheel.setAvailable(!included.isEmpty());
         open.setEnabled(!included.isEmpty());
         status.setToolTipText(message);
-        status.setText(html(mode.equals("Bossing") && !entries.isEmpty()
-            ? included.size() + " of " + entries.size() + " eligible bosses included."
-                + (included.isEmpty() ? " Check a boss below to spin." : "")
+        status.setText(html(!entries.isEmpty()
+            ? included.size() + " of " + entries.size() + " eligible entries included."
+                + (included.isEmpty() ? " Check an entry below to spin." : "")
+                + (type == WheelType.COMBAT_ACHIEVEMENTS ? " Unfinished tasks only." : "")
             : message));
     }
 
     void spinResponse(List<WheelEntry> entries, String message, long revision)
     {
         if (revision != generation) { return; }
-        List<WheelEntry> choices = mode.equals("Bossing") ? bossChecklist.included(entries) : entries;
+        List<WheelEntry> choices = checklist().included(entries);
         status.setText(html(message));
         if (choices.isEmpty()) { finish(); updatePool(entries, message, revision); return; }
         int selected = WheelSelection.select(choices, random);
-        displayed = wheel; popupTitle = mode; popupResult = "Spinning...";
+        displayed = wheel; popupTitle = type.title; popupResult = "Spinning...";
         if (popup != null) { popup.clearResult(); }
         result.setIcon(null); result.setText(html("Spinning...")); xpResult.setText("");
-        boolean withXp = mode.equals("Skilling") && xp.isSelected();
+        boolean withXp = type == WheelType.SKILLING && selected(WheelFilter.XP);
         wheel.animate(choices, selected, () -> {
             popupResult = choices.get(selected).label;
             result.setText(html(popupResult));
@@ -220,13 +299,14 @@ public class WheelboundPanel extends PluginPanel
             updatePool(entries, deferredMessage, generation);
         }
     }
-    private void enableControls(boolean enabled) { controls.forEach(c -> c.setEnabled(enabled)); bossChecklist.setEnabled(enabled); }
-    void reset() { reset(true); }
-    private void reset(boolean hide)
+    private void enableControls(boolean enabled)
+    { controls.forEach(c -> c.setEnabled(enabled)); selector.setEnabled(enabled); checklists.values().forEach(c -> c.setEnabled(enabled)); }
+    void reset()
     {
-        if (popup != null) { if (hide) { popup.hide(); } else { popup.clearResult(); } }
+        if (popup != null) { popup.hide(); }
         generation++; wheel.cancel(); xpWheel.cancel(); busy = false; deferred = null;
-        displayed = wheel; popupTitle = mode; availablePool = List.of();
+        displayed = wheel; popupTitle = type.title; availablePool = List.of();
+        checklist().updateEntries(List.of()); status.setText(html("Loading eligible entries..."));
         wheel.setEntries(List.of());
         result.setIcon(null); result.setText(html("Spin the wheel")); xpResult.setText("");
         enableControls(true); open.setEnabled(false); revalidate();

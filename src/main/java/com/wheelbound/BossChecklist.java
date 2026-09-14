@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import javax.swing.*;
 import net.runelite.client.ui.ColorScheme;
 
-/** Eligible bosses remain listed when unchecked so they can be included again. EDT only. */
+/** Reusable manual selection for any wheel. Eligible unchecked entries remain listed. EDT only. */
 final class BossChecklist extends JPanel
 {
     private final Set<String> excluded = new TreeSet<>();
@@ -15,12 +15,12 @@ final class BossChecklist extends JPanel
     private final Consumer<String> changed;
     private List<WheelEntry> entries = List.of();
 
-    BossChecklist(String saved, Consumer<String> changed)
+    BossChecklist(String heading, String saved, Consumer<String> changed)
     {
         this.changed = changed;
         if (saved != null && !saved.isBlank()) { excluded.addAll(Arrays.asList(saved.split(","))); }
         setLayout(new BorderLayout(0, 5)); setOpaque(false);
-        JLabel title = new JLabel("Included bosses");
+        JLabel title = new JLabel(heading);
         title.setForeground(ColorScheme.TEXT_COLOR);
         add(title, BorderLayout.NORTH);
         rows.setLayout(new BoxLayout(rows, BoxLayout.Y_AXIS));
@@ -63,6 +63,26 @@ final class BossChecklist extends JPanel
         List<WheelEntry> result = new ArrayList<>();
         for (WheelEntry entry : values) { if (!excluded.contains(entry.id)) { result.add(entry); } }
         return List.copyOf(result);
+    }
+
+    boolean allIncluded() { return excluded.isEmpty(); }
+    void restore(String saved)
+    {
+        excluded.clear();
+        if (saved != null && !saved.isBlank()) { excluded.addAll(Arrays.asList(saved.split(","))); }
+        List<WheelEntry> current = entries; entries = List.of(); updateEntries(current);
+    }
+    void includeAll()
+    {
+        excluded.clear();
+        List<WheelEntry> current = entries; entries = List.of(); updateEntries(current);
+        changed.accept("");
+    }
+    void excludeAll()
+    {
+        entries.forEach(entry -> excluded.add(entry.id));
+        List<WheelEntry> current = entries; entries = List.of(); updateEntries(current);
+        changed.accept(String.join(",", excluded));
     }
 
     @Override public void setEnabled(boolean enabled)
