@@ -50,6 +50,7 @@ final class WheelEntry
 
     String wheelLabel()
     {
+        if (id.startsWith("CUSTOM_")) { return label; }
         switch (label)
         {
             case "Chambers of Xeric": return "CoX";

@@ -35,7 +35,7 @@ public class SkillingFlowTest
             button(panel, "Obor").doClick();
             assertEquals(1, popup.entryCount()); assertTrue(panel.primaryWheel().canSpin());
             panel.setAction(spin -> panel.updatePool(entries, "refreshed", panel.generation()));
-            button(panel, "Exclude raids").doClick();
+            button(panel, "Include raids").doClick();
             assertTrue(popup.isOpen()); assertEquals(1, popup.entryCount());
             WheelboundPanel restored = new WheelboundPanel(saved::get, (k, v) -> {});
             restored.updatePool(entries, "test", restored.generation());
@@ -120,17 +120,17 @@ public class SkillingFlowTest
             Map<String, String> preferences = new HashMap<>();
             WheelboundPanel panel = new WheelboundPanel(preferences::get, (k, v) -> preferences.put(k, v.toString()));
             long revision = panel.generation();
-            button(panel, "Exclude raids").doClick();
-            assertTrue(panel.selected(WheelFilter.BOSS_RAIDS));
-            assertFalse(button(panel, "All bosses").isSelected());
-            assertEquals("true", preferences.get("bossExcludeRaids"));
+            button(panel, "Include raids").doClick();
+            assertFalse(panel.selected(WheelFilter.BOSS_RAIDS));
+            assertTrue(panel.selected(WheelFilter.BOSS_EASY));
+            assertEquals("false", preferences.get("bossIncludeRaids"));
             panel.updatePool(List.of(new WheelEntry("a", "A", null, 1)), "stale", revision);
             assertFalse(panel.primaryWheel().canSpin());
             panel.updatePool(List.of(), "No matches", panel.generation());
             assertFalse(panel.primaryWheel().canSpin());
-            button(panel, "Exclude Mimic").doClick();
+            button(panel, "Include Mimic").doClick();
             WheelboundPanel restored = new WheelboundPanel(preferences::get, (k, v) -> {});
-            assertTrue(restored.selected(WheelFilter.BOSS_RAIDS)); assertTrue(restored.selected(WheelFilter.MIMIC));
+            assertFalse(restored.selected(WheelFilter.BOSS_RAIDS)); assertFalse(restored.selected(WheelFilter.MIMIC));
             assertFalse(button(restored, "Include XP goal").isSelected());
         });
     }
@@ -266,6 +266,20 @@ public class SkillingFlowTest
                     assertTrue("Filter must fit its card: " + filter.title,
                         box.getY() + box.getHeight() <= box.getParent().getHeight());
                 }
+                panel.selectWheel(WheelType.QUESTING);
+                panel.updatePool(List.of(new WheelEntry("QUEST_1", "Cook's Assistant", null, 1),
+                    new WheelEntry("QUEST_2", "Dragon Slayer I", null, 1)), "2 unfinished quests.", panel.generation());
+                panel.setSize(242, 900); layout(panel);
+                image = new BufferedImage(242, panel.getHeight(), BufferedImage.TYPE_INT_RGB);
+                g = image.createGraphics(); panel.paint(g); g.dispose();
+                ImageIO.write(image, "png", new File("build/reports/wheelbound-questing.png"));
+                assertTrue("The sidebar must never contain a wheel", wheels(panel).isEmpty());
+                for (WheelFilter filter : WheelFilter.values())
+                {
+                    if (filter.wheel != WheelType.QUESTING) { continue; }
+                    AbstractButton box = visibleButton(panel, filter.title);
+                    assertTrue(box.getY() + box.getHeight() <= box.getParent().getHeight());
+                }
                 panel.reset();
             }
             catch (Exception e) { throw new AssertionError(e); }
@@ -306,6 +320,22 @@ public class SkillingFlowTest
         }
         return null;
     }
+    private static AbstractButton visibleButton(Container parent, String text)
+    {
+        for (Component child : parent.getComponents())
+        {
+            if (!child.isVisible()) { continue; }
+            if (child instanceof AbstractButton && text.equals(((AbstractButton)child).getText()))
+            { return (AbstractButton)child; }
+            if (child instanceof Container)
+            {
+                AbstractButton found = visibleButton((Container)child, text);
+                if (found != null) { return found; }
+            }
+        }
+        return null;
+    }
+
     private static boolean hasLabel(Container parent, String text)
     {
         for (Component c : parent.getComponents())

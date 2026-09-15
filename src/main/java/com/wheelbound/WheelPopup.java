@@ -105,6 +105,7 @@ public class WheelPopup extends Overlay implements KeyListener
 
     void hide() { generation.incrementAndGet(); view = null; selectedResult = null; hover = false; pressed = false; }
     boolean isOpen() { return view != null; }
+    Component creationAnchor(Component fallback) { return client == null ? fallback : client.getCanvas(); }
 
     private void close()
     {
@@ -173,7 +174,7 @@ public class WheelPopup extends Overlay implements KeyListener
         g.setColor(WheelStyle.GOLD); g.setFont(new Font(Font.SERIF, Font.BOLD, 27));
         WheelStyle.centered(g, "Wheelbound", width / 2, card.y + 34);
         g.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 13)); g.setColor(new Color(225, 221, 207));
-        WheelStyle.centered(g, current.title, width / 2, card.y + 60);
+        WheelStyle.centered(g, fitText(g.getFontMetrics(), current.title, card.width - 40), width / 2, card.y + 60);
         g.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 22));
         g.drawString("\u00d7", layout.close.x + 6, layout.close.y + 22);
         Graphics2D wg = (Graphics2D)g.create(wheel.x, wheel.y, wheel.width, wheel.height);
@@ -224,7 +225,7 @@ public class WheelPopup extends Overlay implements KeyListener
             WheelStyle.centered(g, entry.label.substring(0, 1), box.x + 34, box.y + 41);
         }
         g.setFont(nameFont);
-        g.drawString(entry.label, textX, box.y + (subtitle == null ? 39 : 27));
+        g.drawString(fitText(g.getFontMetrics(), entry.label, box.x + box.width - textX - 12), textX, box.y + (subtitle == null ? 39 : 27));
         if (subtitle != null)
         {
             if (entry.source != null)
@@ -249,6 +250,15 @@ public class WheelPopup extends Overlay implements KeyListener
         }
         g.dispose();
         return box;
+    }
+
+    private static String fitText(FontMetrics metrics, String text, int width)
+    {
+        if (metrics.stringWidth(text) <= width) { return text; }
+        int end = text.length();
+        while (end > 0 && metrics.stringWidth(text.substring(0, end) + "?") > width)
+        { end = text.offsetByCodePoints(end, -1); }
+        return text.substring(0, end) + "?";
     }
 
     private volatile Point mousePoint;
@@ -295,11 +305,17 @@ public class WheelPopup extends Overlay implements KeyListener
     @Override public boolean isEnabledOnLoginScreen() { return true; }
     @Override public void keyPressed(KeyEvent event)
     {
-        if (!isOpen()) { return; }
+        if (!isOpen() || typing(event)) { return; }
         event.consume();
         if (event.getKeyCode() == KeyEvent.VK_ESCAPE) { close(); }
         else if (event.getKeyCode() == KeyEvent.VK_SPACE || event.getKeyCode() == KeyEvent.VK_ENTER) { requestSpin(); }
     }
-    @Override public void keyReleased(KeyEvent event) { if (isOpen()) { event.consume(); } }
-    @Override public void keyTyped(KeyEvent event) { if (isOpen()) { event.consume(); } }
+    @Override public void keyReleased(KeyEvent event) { if (isOpen() && !typing(event)) { event.consume(); } }
+    @Override public void keyTyped(KeyEvent event) { if (isOpen() && !typing(event)) { event.consume(); } }
+
+    private static boolean typing(KeyEvent event)
+    {
+        return event.getComponent() instanceof javax.swing.text.JTextComponent
+            || KeyboardFocusManager.getCurrentKeyboardFocusManager().getFocusOwner() instanceof javax.swing.text.JTextComponent;
+    }
 }

@@ -6,7 +6,9 @@ enum WheelType
     BOSSING("Bossing", "excludedBosses"),
     SKILLING("Skilling", "excludedSkills"),
     COMBAT_ACHIEVEMENTS("Combat Achievements", "excludedCaEncounters"),
-    PET_HUNTING("Pet Hunting", "excludedPets");
+    QUESTING("Questing", "excludedQuests"),
+    PET_HUNTING("Pet Hunting", "excludedPets"),
+    CUSTOM("Custom", "excludedCustomEntries");
 
     final String title, exclusionKey;
     WheelType(String title, String exclusionKey) { this.title = title; this.exclusionKey = exclusionKey; }

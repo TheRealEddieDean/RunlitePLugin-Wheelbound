@@ -70,6 +70,7 @@ final class BossProfile
 		add(profiles, Skill.RANGED, 90, 85, 77, 1, "Nex", "TzKal-Zuk", "The Inferno");
 		add(profiles, Skill.ATTACK, 90, 85, 77, 1, "Sol Heredit", "Fortis Colosseum");
 		add(profiles, Skill.ATTACK, 90, 85, 77, 90, "Doom of Mokhaiotl");
+		add(profiles, Skill.ATTACK, 60, 60, 43, 51, "Shellbane Gryphon");
 		for (String name : new String[]{"Chambers of Xeric", "Chambers of Xeric: Challenge Mode",
 			"Theatre of Blood", "Theatre of Blood: Hard Mode", "Tombs of Amascut", "Tombs of Amascut: Expert Mode"})
 		{

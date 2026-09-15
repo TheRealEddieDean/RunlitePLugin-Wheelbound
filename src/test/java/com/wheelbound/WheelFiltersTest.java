@@ -124,7 +124,7 @@ public class WheelFiltersTest
         assertFalse(AccountAccess.taskAllows("Cerberus", AccountAccess.slayerTask(client)));
     }
 
-    @Test public void checklistsAreSeparatePersistAndAllBossesRestoresOnlyBossPool() throws Exception
+    @Test public void checklistsAreSeparateAndDifficultyChangesPreserveManualExclusions() throws Exception
     {
         SwingUtilities.invokeAndWait(() -> {
             Map<String, String> saved = new HashMap<>();
@@ -132,6 +132,7 @@ public class WheelFiltersTest
             List<WheelEntry> entries = List.of(new WheelEntry("shared", "Example", null, 1));
             for (WheelType type : WheelType.values())
             {
+                if (type == WheelType.CUSTOM) { continue; }
                 panel.selectWheel(type); panel.updatePool(entries, "test", panel.generation());
                 assertEquals(1, panel.primaryWheel().entries().size());
                 button(panel, "Example").doClick();
@@ -139,12 +140,13 @@ public class WheelFiltersTest
                 assertEquals("shared", saved.get(type.exclusionKey));
             }
             panel.selectWheel(WheelType.BOSSING);
-            button(panel, "Exclude raids").doClick(); button(panel, "Exclude Mimic").doClick();
-            button(panel, "All bosses").doClick();
+            button(panel, "Include raids").doClick(); button(panel, "Include Mimic").doClick();
+            button(panel, "Easy").doClick();
             assertFalse(panel.selected(WheelFilter.BOSS_RAIDS)); assertFalse(panel.selected(WheelFilter.MIMIC));
+            assertFalse(panel.selected(WheelFilter.BOSS_EASY));
             assertTrue(panel.selected(WheelFilter.ACCOUNT)); assertTrue(panel.selected(WheelFilter.BOSS_TASK));
             panel.updatePool(entries, "test", panel.generation());
-            assertEquals(1, panel.primaryWheel().entries().size());
+            assertTrue(panel.primaryWheel().entries().isEmpty());
             WheelboundPanel restored = new WheelboundPanel(saved::get, (k, v) -> {});
             for (WheelType type : List.of(WheelType.SKILLING, WheelType.COMBAT_ACHIEVEMENTS))
             {

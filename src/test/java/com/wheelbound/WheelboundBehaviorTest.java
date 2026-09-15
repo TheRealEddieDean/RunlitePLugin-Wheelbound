@@ -20,7 +20,7 @@ public class WheelboundBehaviorTest
         long count = Arrays.stream(HiscoreSkill.values()).filter(s -> s.getType() == HiscoreSkillType.BOSS).count();
         assertEquals(count, BossCatalog.ALL.size());
         assertEquals(count, BossCatalog.ALL.stream().map(b -> b.hiscore).distinct().count());
-        assertEquals(Set.of("Mad Angel", "Maggot King", "Shellbane Gryphon"),
+        assertEquals(Set.of("Mad Angel", "Maggot King"),
             BossCatalog.ALL.stream().filter(b -> b.profile == null).map(b -> b.name).collect(java.util.stream.Collectors.toSet()));
         for (BossDefinition boss : BossCatalog.ALL)
         {

@@ -3,12 +3,21 @@ package com.wheelbound;
 /** Declarative sidebar sections; new wheels can register their own filter controls here. */
 enum WheelFilter
 {
-    ACCOUNT(WheelType.BOSSING, "Account", "bossAccount", "Account for skill level", true,
+    ACCOUNT(WheelType.BOSSING, "Account", "bossAccount", "Filter by Skill Level", true,
         "Check recommended real levels and known quest/access requirements."),
-    BOSS_TASK(WheelType.BOSSING, "Account", "bossSlayerTask", "Match my Slayer task", true,
-        "Task-only bosses need a matching active task and location. Other bosses are unaffected."),
-    BOSS_RAIDS(WheelType.BOSSING, "Boss pool", "bossExcludeRaids", "Exclude raids", false, "Remove every raid mode."),
-    MIMIC(WheelType.BOSSING, "Boss pool", "bossExcludeMimic", "Exclude Mimic", false, "Remove the Mimic encounter."),
+    BOSS_TASK(WheelType.BOSSING, "Account", "bossIncludeSlayerTask", "Include Slayer-task bosses", true,
+        "Include task-only bosses only with a matching active assignment and location."),
+    BOSS_RAIDS(WheelType.BOSSING, "Boss pool", "bossIncludeRaids", "Include raids", true, "Include raids within the selected difficulty tiers."),
+    MIMIC(WheelType.BOSSING, "Boss pool", "bossIncludeMimic", "Include Mimic", true, "Include Mimic within the selected difficulty tiers."),
+    BOSS_EASY(BossDifficulty.EASY), BOSS_MEDIUM(BossDifficulty.MEDIUM), BOSS_HARD(BossDifficulty.HARD),
+    BOSS_ELITE(BossDifficulty.ELITE), BOSS_MASTER(BossDifficulty.MASTER), BOSS_GRANDMASTER(BossDifficulty.GRANDMASTER),
+    BOSS_UNRATED(BossDifficulty.UNRATED),
+    QUEST_NOVICE("Novice"), QUEST_INTERMEDIATE("Intermediate"), QUEST_EXPERIENCED("Experienced"),
+    QUEST_MASTER("Master"), QUEST_GRANDMASTER("Grandmaster"), QUEST_SPECIAL("Special"),
+    QUEST_ELIGIBLE(WheelType.QUESTING, "Requirements", "questEligibleOnly", "Exclude ineligible quests", true,
+        "Use the game's quest requirement checks, including real levels and prerequisite quests."),
+    PET_OWNED(WheelType.PET_HUNTING, "Account", "petExcludeOwned", "Exclude pets already owned", true,
+        "Exclude unlocked pets, including lost pets that can be reclaimed. Requires login."),
     COMBAT_SKILLS(WheelType.SKILLING, "Skills", "skillExcludeCombat", "Exclude combat skills", false,
         "Remove Attack, Strength, Defence, Hitpoints, Ranged, Magic and Prayer. Slayer remains a training skill."),
     MAXED_SKILLS(WheelType.SKILLING, "Skills", "skillExclude99", "Exclude skills with 99", true, "Use real levels, not boosted or virtual levels."),
@@ -38,9 +47,22 @@ enum WheelFilter
         tip = "Include unfinished " + tier.title + " tasks when deciding which encounters to include.";
         this.tier = tier;
     }
+    WheelFilter(BossDifficulty difficulty)
+    { this(WheelType.BOSSING, "Boss difficulty", "bossInclude" + difficulty.title, difficulty.title, true,
+        "Bossing Ladder difficulty; independent of your account levels. Unrated covers unlisted bosses."); }
+    WheelFilter(String difficulty)
+    { this(WheelType.QUESTING, "Quest difficulty", "questInclude" + difficulty, difficulty, true,
+        "Include unfinished " + difficulty.toLowerCase() + " quests."); }
     String savedValue(java.util.function.Function<String, String> load)
     {
         String value = load.apply(key);
+        if (value == null && this == BOSS_RAIDS)
+        {
+            String previous = load.apply("bossExcludeRaids");
+            value = previous != null ? Boolean.toString(!Boolean.parseBoolean(previous)) : load.apply("includeRaids");
+        }
+        if (value == null && this == MIMIC && load.apply("bossExcludeMimic") != null)
+        { value = Boolean.toString(!Boolean.parseBoolean(load.apply("bossExcludeMimic"))); }
         if (value == null && key.startsWith("caInclude"))
         {
             String previous = load.apply(key.replace("caInclude", "caExclude"));

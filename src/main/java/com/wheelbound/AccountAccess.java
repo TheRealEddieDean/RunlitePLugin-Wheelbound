@@ -35,7 +35,8 @@ final class AccountAccess
         Map.entry("Lunar Chests", Quest.PERILOUS_MOONS),
         Map.entry("Amoxliatl", Quest.THE_HEART_OF_DARKNESS),
         Map.entry("Doom of Mokhaiotl", Quest.THE_FINAL_DAWN),
-        Map.entry("Brutus", Quest.THE_RIBBITING_TALE_OF_A_LILY_PAD_LABOUR_DISPUTE),
+        Map.entry("Brutus", Quest.THE_IDES_OF_MILK),
+        Map.entry("Shellbane Gryphon", Quest.TROUBLED_TORTUGANS),
         Map.entry("Nex", Quest.THE_FROZEN_DOOR));
     private static final Set<String> GOD_WARS = Set.of("General Graardor", "Kree'Arra", "Commander Zilyana", "K'ril Tsutsaroth", "Nex");
 
@@ -94,6 +95,7 @@ final class AccountAccess
         String assignment, location;
         switch (name)
         {
+            case "shellbanegryphon": assignment = "gryphons"; location = "greatconch"; break;
             case "abyssalsire": assignment = "abyssaldemons"; location = "abyss"; break;
             case "kraken": case "cavekraken": assignment = "cavekraken"; location = "krakencove"; break;
             case "cerberus": assignment = "hellhounds"; location = "taverleydungeon"; break;

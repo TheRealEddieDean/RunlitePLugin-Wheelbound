@@ -27,8 +27,8 @@ import net.runelite.client.ui.ClientToolbar;
 import net.runelite.client.ui.NavigationButton;
 
 @Slf4j
-@PluginDescriptor(name = "Wheelbound", description = "Choose a boss, skill, pet hunt or unfinished Combat Achievement encounter.",
-    tags = {"wheel", "randomizer", "bossing", "skilling", "combat achievements", "pets"})
+@PluginDescriptor(name = "Wheelbound", description = "Choose a boss, skill, quest, pet hunt or unfinished Combat Achievement encounter.",
+    tags = {"wheel", "randomizer", "bossing", "skilling", "combat achievements", "pets", "quests"})
 public class WheelboundPlugin extends Plugin
 {
     @Inject private Client client;
@@ -124,7 +124,7 @@ public class WheelboundPlugin extends Plugin
     @Subscribe public void onVarbitChanged(VarbitChanged event)
     {
         if (CombatAchievementCache.isCompletionVarp(event.getVarpId())) { queueCaRefresh(); }
-        else if (AccountAccess.slayerChanged(event)) { queuePoolRefresh(); }
+        else { queuePoolRefresh(); }
     }
 
     @Subscribe public void onStatChanged(StatChanged event)
@@ -179,6 +179,7 @@ public class WheelboundPlugin extends Plugin
     private void request(boolean spin)
     {
         if (!active) { return; }
+        if (panel.wheelType() == WheelType.CUSTOM) { panel.refreshCustomPool(spin); return; }
         WheelType type = panel.wheelType();
         Set<WheelFilter> filters = panel.selectedFilters();
         long revision = panel.generation(), epoch = session.get();
@@ -186,6 +187,7 @@ public class WheelboundPlugin extends Plugin
             if (!active || session.get() != epoch) { return; }
             List<WheelEntry> entries;
             String message;
+            WheelEntry completion = null;
             boolean loggedIn = loggedIn();
             boolean matchTask = filters.contains(type == WheelType.BOSSING ? WheelFilter.BOSS_TASK : WheelFilter.CA_TASK);
             AccountAccess.SlayerTask task = AccountAccess.SlayerTask.unavailable();
@@ -200,10 +202,12 @@ public class WheelboundPlugin extends Plugin
                 boolean accountFilter = filters.contains(WheelFilter.ACCOUNT);
                 Predicate<BossDefinition> access = AccountAccess.requirements(client);
                 List<BossDefinition> eligible = WheelEligibility.bosses(BossCatalog.ALL,
-                    !filters.contains(WheelFilter.BOSS_RAIDS), false, accountFilter, loggedIn,
+                    filters.contains(WheelFilter.BOSS_RAIDS), false, accountFilter, loggedIn,
                     client::getRealSkillLevel, boss -> true).stream()
-                    .filter(b -> !filters.contains(WheelFilter.MIMIC) || !b.name.equals("Mimic"))
-                    .filter(b -> !matchTask || AccountAccess.taskAllows(b.name, assignment))
+                    .filter(b -> BossDifficulty.included(b, filters))
+                    .filter(b -> filters.contains(WheelFilter.MIMIC) || !b.name.equals("Mimic"))
+                    .filter(b -> AccountAccess.taskAllows(b.name,
+                        matchTask ? assignment : AccountAccess.SlayerTask.unavailable()))
                     .filter(b -> {
                         if (!accountFilter) { return true; }
                         try { return access.test(b); }
@@ -212,7 +216,7 @@ public class WheelboundPlugin extends Plugin
                 entries = eligible.stream().map(icons::boss).collect(Collectors.toList());
                 message = eligible.size() + " eligible bosses. All appear in the centered wheel with equal odds.";
                 if (!loggedIn && accountFilter)
-                { message = "Log in to check your levels and quest access, or turn off Account for skill level."; }
+                { message = "Log in to check your levels and quest access, or turn off Filter by Skill Level."; }
                 else if (entries.isEmpty())
                 { message = "No bosses match. Adjust the account or pool filters."; }
             }
@@ -227,9 +231,42 @@ public class WheelboundPlugin extends Plugin
             }
             else if (type == WheelType.PET_HUNTING)
             {
-                entries = WheelEligibility.pets(filters).stream().map(icons::pet).collect(Collectors.toList());
-                message = entries.isEmpty() ? "Include a pet source to build your wheel."
-                    : entries.size() + " pets. Uncheck pets you already own or do not want to hunt.";
+                entries = List.of();
+                boolean excludeOwned = filters.contains(WheelFilter.PET_OWNED);
+                if (excludeOwned && !loggedIn) { message = "Log in to exclude pets already owned."; }
+                else
+                {
+                    try
+                    {
+                        Set<Integer> owned = excludeOwned ? OwnedPets.read(client) : Set.of();
+                        entries = WheelEligibility.pets(filters).stream()
+                            .filter(pet -> !excludeOwned || !OwnedPets.contains(owned, pet))
+                            .map(icons::pet).collect(Collectors.toList());
+                        message = entries.isEmpty() ? "No pets match your ownership and source filters."
+                            : entries.size() + " eligible pets. Each has equal wheel odds.";
+                    }
+                    catch (RuntimeException ex)
+                    { log.debug("Pet ownership data is unavailable", ex); message = "Pet data unavailable. Change a checkbox to retry."; }
+                }
+            }
+            else if (type == WheelType.QUESTING)
+            {
+                entries = List.of();
+                if (!loggedIn) { message = "Log in to load your unfinished quests."; }
+                else
+                {
+                    try
+                    {
+                        QuestPool quests = QuestPool.read(client, filters, icons);
+                        entries = quests.entries;
+                        message = quests.allComplete ? QuestPool.COMPLETE : entries.isEmpty()
+                            ? "No unfinished quests match. Adjust difficulty or requirement filters."
+                            : entries.size() + " unfinished quests. Each has equal wheel odds.";
+                        if (quests.allComplete) { completion = icons.quest(-1, "All quests completed!"); }
+                    }
+                    catch (RuntimeException ex)
+                    { log.debug("Quest data unavailable", ex); message = "Quest data unavailable. Change a checkbox to retry."; }
+                }
             }
             else
             {
@@ -251,10 +288,12 @@ public class WheelboundPlugin extends Plugin
             }
             List<WheelEntry> snapshot = WheelEntry.groupRaids(entries);
             String info = message;
+            WheelEntry completedQuests = completion;
             SwingUtilities.invokeLater(() -> {
                 if (!active || epoch != session.get() || revision != panel.generation()) { return; }
                 if (spin) { panel.spinResponse(snapshot, info, revision); }
                 else { panel.updatePool(snapshot, info, revision); }
+                panel.setQuestCompletion(completedQuests);
             });
         });
     }

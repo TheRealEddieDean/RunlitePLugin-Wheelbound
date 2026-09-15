@@ -37,6 +37,14 @@ final class WheelIconProvider
         return new WheelEntry(boss.hiscore.name(), boss.name, image, 1);
     }
 
+    WheelEntry quest(int row, String name)
+    {
+        BufferedImage image = null;
+        try { image = sprites.getSprite(net.runelite.api.gameval.SpriteID.AchievementDiaryIcons.BLUE_QUESTS, 0); }
+        catch (RuntimeException ex) { log.debug("Quest artwork is unavailable", ex); }
+        return new WheelEntry("QUEST_" + row, name, image, 1);
+    }
+
     WheelEntry skill(Skill skill)
     {
         return new WheelEntry(skill.name(), skill.getName(), skills.getSkillImage(skill), 1);
