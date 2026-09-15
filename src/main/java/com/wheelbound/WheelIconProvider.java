@@ -9,6 +9,7 @@ import net.runelite.api.EnumComposition;
 import net.runelite.api.StructComposition;
 import net.runelite.api.Skill;
 import net.runelite.client.game.SkillIconManager;
+import net.runelite.client.game.ItemManager;
 import net.runelite.client.game.SpriteManager;
 import lombok.extern.slf4j.Slf4j;
 
@@ -16,13 +17,15 @@ import lombok.extern.slf4j.Slf4j;
 final class WheelIconProvider
 {
     private final SpriteManager sprites;
+    private final ItemManager items;
     private final SkillIconManager skills;
     private final Client client;
     private final Map<Integer, BufferedImage> encounterIcons = new HashMap<>();
 
-    @Inject WheelIconProvider(Client client, SpriteManager sprites, SkillIconManager skills)
+    @Inject WheelIconProvider(Client client, SpriteManager sprites, SkillIconManager skills, ItemManager items)
     {
         this.client = client;
+        this.items = items;
         this.sprites = sprites;
         this.skills = skills;
     }
@@ -49,6 +52,25 @@ final class WheelIconProvider
         }
         catch (RuntimeException ex) { log.debug("CA artwork is unavailable for {}", encounter.name, ex); }
         return new WheelEntry("CA_" + encounter.id, encounter.name, image, 1);
+    }
+
+    WheelEntry pet(PetDefinition pet)
+    {
+        BufferedImage image = itemIcon(pet.itemId);
+        BufferedImage source = null;
+        try
+        {
+            source = pet.boss != null ? sprites.getSprite(pet.boss.getSpriteId(), 0)
+                : pet.skill != null ? skills.getSkillImage(pet.skill) : itemIcon(pet.sourceItemId);
+        }
+        catch (RuntimeException ex) { log.debug("Pet source artwork is unavailable for {}", pet.name, ex); }
+        return new WheelEntry("PET_" + pet.itemId, pet.name, image, 1, pet.source, source);
+    }
+
+    private BufferedImage itemIcon(int itemId)
+    {
+        try { return items.getImage(itemId); }
+        catch (RuntimeException ex) { log.debug("Item artwork is unavailable for {}", itemId, ex); return null; }
     }
 
     private BufferedImage monster(int id)

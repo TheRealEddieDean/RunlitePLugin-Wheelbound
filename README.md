@@ -1,14 +1,19 @@
 # Wheelbound
 
-A local RuneLite utility with three wheels: **Bossing**, **Skilling**, and
-**Combat Achievements**. Choose a wheel in the sidebar, adjust its filters and
-checklist, then press the green **SPIN** button. The existing centered popup,
-boss sprites, wheel animation, and result celebration are retained.
+A local RuneLite utility with four wheels: **Bossing**, **Skilling**,
+**Combat Achievements**, and **Pet Hunting**. Choose a wheel in the sidebar, adjust its filters and
+checklist, then click **SPIN** in the center of the wheel. Selecting the Wheelbound
+sidebar opens the current wheel on the game canvas. Switching modes updates the
+popup; leaving the sidebar closes it and cancels any spin. The checklist expands
+to fill available sidebar height, with scrolling for smaller windows.
 
 **Wheels belong only in the centered game-canvas popup, never in the sidebar.**
 The sidebar contains the wheel selector, filters, results, and editable lists.
 The popup consumes game-canvas input while open; the game continues running.
-Escape or the close button dismisses it and cancels the spin. Space or Enter
+The results box stays hidden until a spin finishes. Results appear in a compact, centered box below the wheel, sized to the encounter icon and name
+(and an XP target when enabled). The wheel stays visible and its center returns
+to **SPIN** for another roll. Escape or the close button dismisses it and cancels
+the spin; select the sidebar again to reopen it. Space or Enter
 spins an available wheel. Hover a wedge to see its name and probability.
 
 ## Bossing
@@ -27,7 +32,7 @@ spins an available wheel. Hover a wedge to see its name and probability.
 - **All bosses** selects the whole boss list and clears raid, Mimic, and manual
   exclusions. Account options still apply. Unchecking it deselects the current
   eligible list; individual bosses can then be checked again.
-- **Exclude raids** removes all six supported hiscore raid modes.
+- **Exclude raids** removes all three raids.
 - **Exclude Mimic** removes Mimic.
 - **Included bosses** lets you manually remove or restore eligible bosses.
   Unchecked bosses stay in the checklist. Filtering a boss out temporarily does
@@ -37,8 +42,10 @@ Both category exclusions default off for new settings. An existing Include raids
 preference is migrated to its inverse. Bossing no longer uses CA completion as a
 filter; that now has its own wheel.
 
-The catalog includes every BOSS entry in RuneLite 1.12.38 HiscoreSkill. Every
-eligible, checked boss appears with equal probability; there is no shortlist.
+The catalog includes every BOSS entry in RuneLite 1.12.38 HiscoreSkill. Raid modes are grouped into one entry each for Chambers of Xeric, Theatre of Blood,
+and Tombs of Amascut. Every eligible, checked boss or raid appears with equal
+probability; there is no shortlist. Wheel labels use abbreviations such as CoX,
+ToB, ToA, and shorter boss names; hover text, checklists, and results retain full names.
 Mad Angel, Maggot King, and Shellbane Gryphon still lack reviewed level
 recommendations and are excluded when the account option is on.
 
@@ -62,8 +69,10 @@ boss assignments, Konar location restrictions, and Wilderness assignments.
 Unknown or exhausted tasks exclude task-only encounters. The one-off off-task
 Thermonuclear Smoke Devil diary exception is not inferred; the task checkbox
 can be turned off for that case. No Slayer plugin dependency or chat parsing is
-needed. Task changes refresh the pool automatically. **Refresh list** rechecks
-quest/access changes and retries unavailable account data.
+needed. Task changes and checkbox changes refresh the pool automatically,
+rechecking quest/access changes and retrying unavailable account data. The included
+entry count stays pinned to the bottom of the sidebar, outside the scrolling
+content. The checklist uses the checkbox background color and padding below the rows.
 
 ## Skilling
 
@@ -75,9 +84,10 @@ quest/access changes and retries unavailable account data.
 - **Included skills** is a separate saved checklist covering all 24 skills,
   including Sailing, before filters and manual exclusions are applied.
 
-The XP wheel automatically follows the skill wheel in the same popup. Both retain
+The XP wheel appears after the skill wheel in the same popup and waits for the
+user to click its center **SPIN** button (or press Space/Enter). Both retain
 five or more rotations with 3.5-second quartic easing. Controls stay disabled
-until the entire sequence ends. Logout, profile changes, or plugin shutdown
+while waiting for the XP spin and until the entire sequence ends. Logout, profile changes, or plugin shutdown
 cancel outstanding spins.
 
 | XP target | Probability |
@@ -90,6 +100,8 @@ cancel outstanding spins.
 | 500,000   |          2% |
 | 1,000,000 |          1% |
 
+XP colors progress from green (10k), blue (25k), yellow-green (50k), gold
+(100k), orange (250k), red-orange (500k), to red (1m).
 Weights determine both selection and wedge angles. XP targets are suggestions;
 there is no goal tracking, reward, unlock, or saved challenge system.
 
@@ -97,21 +109,23 @@ there is no goal tracking, reward, unlock, or saved challenge system.
 
 This wheel includes **bosses and ordinary monsters with unfinished CAs**, using
 the local CA encounter/task catalog rather than limiting it to boss hiscores.
-There is one equally weighted wedge per encounter, not per task. Shared CA
+There is one equally weighted wedge per encounter, not per task. Raid modes are
+filtered for unfinished tasks first, then grouped; any qualifying mode keeps the raid eligible. Shared CA
 encounters such as Dagannoth Kings remain a single encounter.
 
-- **Exclude bosses** removes boss encounters. Raids are a separate category.
-- **Exclude raids** removes raid encounters, including their individual modes.
+- **Include bosses** includes boss encounters. Raids are a separate category.
+- **Include raids** includes raid encounters, with all their modes grouped under one entry per raid.
 - **Match my Slayer task** applies the task-only encounter rules above.
 - Each of **Easy, Medium, Hard, Elite, Master, and Grandmaster** has an independent
-  exclusion checkbox. All tiers start included.
+  inclusion checkbox. All tiers start checked and included. Saved exclusion settings
+  migrate to the equivalent include selection.
 - **Included encounters** is its own saved checklist, independent of Bossing.
 
 An encounter appears only if it has at least one unfinished, supported task in an
 included tier. For example, if all your Easy through Hard tasks are complete and
-only Master tasks remain, excluding Master removes that encounter. Completed
+only Master tasks remain, unchecking Include Master removes that encounter. Completed
 encounters, excluded tiers, unsupported task IDs, and non-encounter General tasks
-do not enter the wheel. Excluding every tier gives an empty pool and disables SPIN.
+do not enter the wheel. Unchecking every tier gives an empty pool and disables SPIN.
 Login is required; account completion state is never assumed while offline.
 
 Mapped bosses retain their existing canonical sprites. Other encounters use
@@ -119,6 +133,36 @@ small thumbnails of the actual local CA models; these are static model previews,
 not new boss artwork. They use flat face colors without textures or animation.
 Missing assets use the existing initial-letter fallback and retry on later pool
 updates. Live model appearance still needs verification in RuneLite.
+
+## Pet Hunting
+
+The pet wheel includes **71 huntable base pets** supported by the pinned RuneLite
+1.12.38 data, covering bosses, raids, skills, and other activities. It uses one
+entry per base pet: cosmetic morphs and alternate raid modes do not add wedges.
+Every included pet has equal selection odds; these are wheel odds, not pet drop rates.
+
+- **Include bosses**, **Include raids**, **Include skilling**, and **Include other
+  activities** all default on. Skilling bosses such as Wintertodt and Tempoross
+  are under bosses; Hunter activities are under skilling. Other activities cover
+  master clues, Barbarian Assault, Soul Wars, Guardians of the Rift, and chompy hunting.
+- **Included pets** is an independent saved checklist. Uncheck pets you already
+  own or do not want to hunt. Category changes preserve individual selections.
+- The compact result box shows the **pet icon on the left**, the **pet name at the
+  upper right**, and a **source icon and name below** (for example, Vorki / Vorkath,
+  Heron / Fishing, or Olmlet / Chambers of Xeric). It stays hidden before a result.
+- Pet artwork comes from local item sprites. Sources use boss/raid sprites,
+  skill icons, or representative activity items. Unavailable artwork falls back
+  to initials and retries on subsequent pool refreshes.
+
+This is a manual hunting planner: it does not detect owned pets or apply the
+Bossing wheel's account, quest, or Slayer checks. The list can be used offline;
+live item artwork requires game-cache data. Ordinary companions and cosmetic
+pet transformations are not separate hunt targets. New pets require catalog updates.
+
+Pet item IDs and names are defined in RuneLite's `gameval.ItemID` for the pinned
+version. Source mappings are maintained in `PetDefinition`; the
+[OSRS Wiki pet catalog](https://oldschool.runescape.wiki/w/Pet) is a development
+reference, not a runtime dependency.
 
 ## Settings and architecture
 
@@ -134,6 +178,7 @@ are no longer used. RuneLite profile changes reload the sidebar preferences.
 - `WheelboundPanel` coordinates the shared popup, checklists, and optional XP spin.
 - `WheelEligibility` implements pure skill/boss/encounter filtering.
 - `AccountAccess` handles reviewed quests and current Slayer assignment rules.
+- `PetDefinition` registers base pets, source categories, and local icon IDs.
 - `BossData`, `CaEncounter`, `CaTier`, and `CombatAchievementCache` separate static
   task metadata from account completion state and retain per-task tiers.
 - `WheelIconProvider` and `MonsterThumbnail` load local artwork. The existing
@@ -147,7 +192,7 @@ Task enums 3981-3986 supply the six tiers; task parameters 1306 and 1312 identif
 the completion bit and encounter, and enum 3971 supplies names. CA model enum
 3987 provides encounter models and viewing angles. The 21 exposed completion
 varps are snapshotted on login/startup, profile changes, completion events, and
-manual refresh. Bursts are coalesced. There is no game-tick CA polling, per-spin
+checkbox changes. Bursts are coalesced. There is no game-tick CA polling, per-spin
 CA read, remote task list, or remote account lookup. Unknown task IDs fail closed.
 Logout, hopping, and connection loss invalidate account results. Pool updates
 during animation wait until the spin sequence ends and preserve the last result.
@@ -176,12 +221,12 @@ is the development launcher; `shadowJar` builds the optional development client 
 Tests cover filtering, tiers and completion bits, quest rules, Slayer task/location
 rules, independent checklist persistence, profile resets, stale callbacks, input
 handling, cancellation, and sequential skill/XP spins. Swing review images are
-written under `build/reports/`, including a preview for each of the three sidebars.
+written under `build/reports/`, including a preview for each of the four sidebars.
 Mocked tests do not verify live CA models, quest scripts, or account game-cache data.
 
 ## Manual RuneLite checks
 
-1. Switch among all three wheels. Confirm filters fit, checkboxes retain the
+1. Switch among all four wheels. Confirm filters fit, checkboxes retain the
    existing look, and no wheel appears in the sidebar. Check fixed/resizable clients.
 2. In Bossing, toggle account checks, raid/Mimic exclusions, and All bosses.
    Uncheck individual entries and verify they stay unchecked after switching wheels.
@@ -189,11 +234,14 @@ Mocked tests do not verify live CA models, quest scripts, or account game-cache 
    a completed task, a direct boss assignment, and a location-restricted task.
 4. In Skilling, check combat exclusions and level-99 exclusions separately and
    together. Verify Slayer/Sailing and the optional second XP spin.
-5. In CAs, compare an encounter with the in-game CA list. Exclude its only remaining
+5. In CAs, compare an encounter with the in-game CA list. Uncheck its only remaining
    tier and confirm it disappears. Check ordinary monster icons and raid categories.
-6. Exclude all tiers or all checklist entries. Confirm SPIN is disabled with an
+6. Uncheck all tiers or all checklist entries. Confirm SPIN is disabled with an
    explanation. Reinclude an entry and confirm it can spin again.
-7. Log out, hop, switch accounts/profiles, and disable the plugin during a spin.
+7. In Pet Hunting, toggle each source category, uncheck a pet, and switch modes.
+   Confirm selections persist and results show the pet and source icons with both names.
+   Check live item sprites for boss, raid, skilling, and activity pets.
+8. Log out, hop, switch accounts/profiles, and disable the plugin during a spin.
    Confirm no stale account result or second XP spin survives cancellation.
 
 ## Privacy and migration

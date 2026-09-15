@@ -32,7 +32,7 @@ public class MonsterThumbnailTest
         when(model.getFaceIndices3()).thenReturn(new int[]{2}); when(model.getFaceColors1()).thenReturn(new int[]{5000});
         when(model.getFaceColors3()).thenReturn(new int[]{5000});
         when(client.loadModel(200)).thenReturn(null, model);
-        WheelIconProvider provider = new WheelIconProvider(client, mock(SpriteManager.class), new SkillIconManager());
+        WheelIconProvider provider = new WheelIconProvider(client, mock(SpriteManager.class), new SkillIconManager(), mock(net.runelite.client.game.ItemManager.class));
         CaEncounter monster = new CaEncounter(42, "Bloodveld", List.of());
         assertNull(provider.encounter(monster).icon);
         BufferedImage image = provider.encounter(monster).icon;
@@ -52,7 +52,7 @@ public class MonsterThumbnailTest
         CaEncounter obor = new CaEncounter(1, "Obor", List.of());
         BufferedImage sprite = new BufferedImage(25, 25, BufferedImage.TYPE_INT_ARGB);
         when(sprites.getSprite(obor.boss.spriteId, 0)).thenReturn(sprite);
-        WheelIconProvider provider = new WheelIconProvider(client, sprites, new SkillIconManager());
+        WheelIconProvider provider = new WheelIconProvider(client, sprites, new SkillIconManager(), mock(net.runelite.client.game.ItemManager.class));
         assertSame(sprite, provider.encounter(obor).icon);
         verifyNoInteractions(client);
     }

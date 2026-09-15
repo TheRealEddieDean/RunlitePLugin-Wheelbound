@@ -69,14 +69,15 @@ public class WheelPopup extends Overlay implements KeyListener
 
     static final class Layout
     {
-        final Rectangle card, wheel, close;
+        final Rectangle card, wheel, close, results;
         Layout(int width, int height)
         {
             int w = Math.max(160, Math.min(740, width - 24));
             int h = Math.max(200, Math.min(820, height - 24));
             card = new Rectangle((width - w) / 2, (height - h) / 2, w, h);
-            int size = Math.max(80, Math.min(w - 28, h - 160));
+            int size = Math.max(80, Math.min(w - 28, h - 184));
             wheel = new Rectangle((width - size) / 2, card.y + 78, size, size);
+            results = new Rectangle(card.x + 20, wheel.y + size + 18, w - 40, 64);
             close = new Rectangle(card.x + w - 36, card.y + 8, 28, 28);
         }
         boolean hub(Point point)
@@ -116,7 +117,7 @@ public class WheelPopup extends Overlay implements KeyListener
     private void requestSpin()
     {
         View current = view;
-        if (current == null || selectedResult != null || !current.available || current.busy) { return; }
+        if (current == null || !current.available || current.busy) { return; }
         long epoch = generation.get();
         SwingUtilities.invokeLater(() -> { if (view != null && generation.get() == epoch) { spin.run(); } });
     }
@@ -126,13 +127,14 @@ public class WheelPopup extends Overlay implements KeyListener
         View current = view;
         if (current == null) { return null; }
         Result result = selectedResult;
+        bounds = paint(graphics, client.getCanvasWidth(), client.getCanvasHeight(), current, hover, pressed);
         if (result != null)
         {
-            bounds = paintResult(graphics, client.getCanvasWidth(), client.getCanvasHeight(),
-                result.entry, result.detail, (System.nanoTime() - result.started) / 1_000_000_000.0);
-            return null;
+            paintResultRow(graphics, bounds, result.entry, result.detail);
+            Graphics2D celebration = (Graphics2D)graphics.create();
+            Confetti.paint(celebration, bounds.card, (System.nanoTime() - result.started) / 1_000_000_000.0);
+            celebration.dispose();
         }
-        bounds = paint(graphics, client.getCanvasWidth(), client.getCanvasHeight(), current, hover, pressed);
         Point point = mousePoint;
         if (point != null && bounds.wheel.contains(point) && !bounds.hub(point) && !current.busy)
         {
@@ -178,56 +180,75 @@ public class WheelPopup extends Overlay implements KeyListener
         WheelStyle.drawWheel(wg, wheel.width, wheel.height, current.entries, current.angle,
             current.available, hover, pressed, current.busy);
         wg.dispose();
-        g.setFont(new Font(Font.SERIF, Font.BOLD, 19)); g.setColor(WheelStyle.GOLD);
-        String result = current.result == null ? "Let the wheel decide..." : current.result;
-        while (g.getFontMetrics().stringWidth(result) > card.width - 28 && g.getFont().getSize() > 11)
-        { g.setFont(g.getFont().deriveFont((float)g.getFont().getSize() - 1)); }
-        WheelStyle.centered(g, result, width / 2, card.y + card.height - 48);
-        g.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 11)); g.setColor(new Color(158, 151, 130));
-        String hint = current.title.endsWith("XP target")
-            ? "10k 35% | 25k 27% | 50k 20% | 100k 10% | 250k 5% | 500k 2% | 1m 1%"
-            : current.entries.size() + " entries - hover a slice for its name";
-        WheelStyle.centered(g, hint, width / 2, card.y + card.height - 30);
-        WheelStyle.centered(g, "Esc or \u00d7 to close - The game is still running", width / 2, card.y + card.height - 13);
         g.dispose();
         return layout;
     }
 
-    static Layout paintResult(Graphics2D graphics, int width, int height, WheelEntry entry, String detail, double seconds)
+    static Rectangle paintResultRow(Graphics2D graphics, Layout layout, WheelEntry entry, String detail)
     {
-        Layout layout = new Layout(width, height);
-        Rectangle card = layout.card;
+        if (entry == null) { return null; }
         Graphics2D g = (Graphics2D)graphics.create();
+        Font nameFont = new Font(Font.SERIF, Font.BOLD, 20);
+        while (g.getFontMetrics(nameFont).stringWidth(entry.label) > layout.results.width - 80 && nameFont.getSize() > 10)
+        { nameFont = nameFont.deriveFont((float)nameFont.getSize() - 1); }
+        String subtitle = entry.source != null ? entry.source : detail;
+        int sourceIconSpace = entry.source != null ? 24 : 0;
+        Font detailFont = new Font(Font.SANS_SERIF, Font.PLAIN, 12);
+        while (subtitle != null && g.getFontMetrics(detailFont).stringWidth(subtitle) + sourceIconSpace > layout.results.width - 80
+            && detailFont.getSize() > 8)
+        { detailFont = detailFont.deriveFont((float)detailFont.getSize() - 1); }
+        int textWidth = g.getFontMetrics(nameFont).stringWidth(entry.label);
+        if (subtitle != null)
+        { textWidth = Math.max(textWidth, g.getFontMetrics(detailFont).stringWidth(subtitle) + sourceIconSpace); }
+        int boxWidth = Math.min(layout.results.width, textWidth + 80);
+        Rectangle box = new Rectangle((int)layout.card.getCenterX() - boxWidth / 2,
+            layout.results.y, boxWidth, layout.results.height);
         g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        g.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR);
-        g.setColor(new Color(0, 0, 0, 155)); g.fillRect(0, 0, width, height);
-        g.setPaint(new GradientPaint(card.x, card.y, new Color(28, 31, 32),
-            card.x + card.width, card.y + card.height, new Color(19, 22, 23)));
-        g.fillRoundRect(card.x, card.y, card.width, card.height, 18, 18);
-        g.setColor(WheelStyle.GOLD.darker()); g.drawRoundRect(card.x, card.y, card.width, card.height, 18, 18);
-        Confetti.paint(g, card, seconds);
-        int iconSize = Math.min(144, card.height / 4);
-        int centerY = (int)card.getCenterY();
+        g.setColor(new Color(35, 38, 39));
+        g.fillRoundRect(box.x, box.y, box.width, box.height, 10, 10);
+        g.setColor(WheelStyle.GOLD.darker());
+        g.drawRoundRect(box.x, box.y, box.width, box.height, 10, 10);
+        int iconSize = 40;
+        int textX = box.x + 66;
+        g.setColor(WheelStyle.GOLD);
         if (entry.icon != null)
         {
             double scale = Math.min((double)iconSize / entry.icon.getWidth(), (double)iconSize / entry.icon.getHeight());
             int iw = (int)Math.round(entry.icon.getWidth() * scale), ih = (int)Math.round(entry.icon.getHeight() * scale);
-            g.drawImage(entry.icon, (width - iw) / 2, centerY - ih - 16, iw, ih, null);
+            g.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR);
+            g.drawImage(entry.icon, box.x + 14 + (iconSize - iw) / 2, box.y + (box.height - ih) / 2, iw, ih, null);
         }
-        g.setColor(WheelStyle.GOLD);
-        g.setFont(new Font(Font.SERIF, Font.BOLD, 36));
-        while (g.getFontMetrics().stringWidth(entry.label) > card.width - 40 && g.getFont().getSize() > 14)
-        { g.setFont(g.getFont().deriveFont((float)g.getFont().getSize() - 1)); }
-        WheelStyle.centered(g, entry.label, width / 2, centerY + 36);
-        if (detail != null)
+        else
         {
-            g.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 20));
-            WheelStyle.centered(g, detail, width / 2, centerY + 70);
+            g.setFont(new Font(Font.SERIF, Font.BOLD, 26));
+            WheelStyle.centered(g, entry.label.substring(0, 1), box.x + 34, box.y + 41);
         }
-        g.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 22));
-        g.drawString("\u00d7", layout.close.x + 6, layout.close.y + 22);
+        g.setFont(nameFont);
+        g.drawString(entry.label, textX, box.y + (subtitle == null ? 39 : 27));
+        if (subtitle != null)
+        {
+            if (entry.source != null)
+            {
+                if (entry.sourceIcon != null)
+                {
+                    double scale = Math.min(18.0 / entry.sourceIcon.getWidth(), 18.0 / entry.sourceIcon.getHeight());
+                    int iw = (int)Math.round(entry.sourceIcon.getWidth() * scale);
+                    int ih = (int)Math.round(entry.sourceIcon.getHeight() * scale);
+                    g.drawImage(entry.sourceIcon, textX + (18 - iw) / 2, box.y + 34 + (18 - ih) / 2, iw, ih, null);
+                }
+                else
+                {
+                    g.setFont(detailFont);
+                    g.drawRoundRect(textX, box.y + 34, 18, 18, 4, 4);
+                    WheelStyle.centered(g, entry.source.substring(0, 1), textX + 9, box.y + 47);
+                }
+            }
+            g.setFont(detailFont);
+            g.setColor(new Color(225, 221, 207));
+            g.drawString(subtitle, textX + sourceIconSpace, box.y + 47);
+        }
         g.dispose();
-        return layout;
+        return box;
     }
 
     private volatile Point mousePoint;
@@ -250,7 +271,7 @@ public class WheelPopup extends Overlay implements KeyListener
                 if (e.getButton() == MouseEvent.BUTTON1 && layout != null)
                 {
                     if (layout.close.contains(e.getPoint())) { close(); }
-                    else { pressed = selectedResult == null && view != null && view.available && layout.hub(e.getPoint()); }
+                    else { pressed = view != null && view.available && layout.hub(e.getPoint()); }
                 }
             }
             return e;

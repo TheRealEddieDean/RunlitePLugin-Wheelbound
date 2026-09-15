@@ -49,7 +49,9 @@ public class WheelPopupTest
             g.dispose();
             ImageIO.write(image, "png", new File("build/reports/wheelbound-labels-" + size[0] + ".png"));
             g = image.createGraphics();
-            WheelPopup.paintResult(g, size[0], size[1], entries.get(0), null, .8);
+            WheelPopup.paintResultRow(g, layout, entries.get(0), null);
+            assertTrue(layout.card.contains(layout.results));
+            assertTrue(layout.results.y > layout.wheel.y + layout.wheel.height);
             g.dispose();
             ImageIO.write(image, "png", new File("build/reports/wheelbound-result-" + size[0] + ".png"));
         }

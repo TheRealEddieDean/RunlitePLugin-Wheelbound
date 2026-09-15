@@ -35,6 +35,20 @@ final class WheelEligibility
             .collect(Collectors.toUnmodifiableList());
     }
 
+    static List<PetDefinition> pets(Set<WheelFilter> filters)
+    {
+        return PetDefinition.ALL.stream().filter(pet -> {
+            switch (pet.kind)
+            {
+                case BOSS: return filters.contains(WheelFilter.PET_BOSSES);
+                case RAID: return filters.contains(WheelFilter.PET_RAIDS);
+                case SKILL: return filters.contains(WheelFilter.PET_SKILLS);
+                case ACTIVITY: return filters.contains(WheelFilter.PET_ACTIVITIES);
+                default: throw new IllegalStateException("Unknown pet source");
+            }
+        }).collect(Collectors.toUnmodifiableList());
+    }
+
     private static final Set<Skill> COMBAT_SKILLS = Set.of(Skill.ATTACK, Skill.STRENGTH, Skill.DEFENCE,
         Skill.HITPOINTS, Skill.RANGED, Skill.MAGIC, Skill.PRAYER);
 

@@ -5,7 +5,8 @@ enum WheelType
 {
     BOSSING("Bossing", "excludedBosses"),
     SKILLING("Skilling", "excludedSkills"),
-    COMBAT_ACHIEVEMENTS("Combat Achievements", "excludedCaEncounters");
+    COMBAT_ACHIEVEMENTS("Combat Achievements", "excludedCaEncounters"),
+    PET_HUNTING("Pet Hunting", "excludedPets");
 
     final String title, exclusionKey;
     WheelType(String title, String exclusionKey) { this.title = title; this.exclusionKey = exclusionKey; }

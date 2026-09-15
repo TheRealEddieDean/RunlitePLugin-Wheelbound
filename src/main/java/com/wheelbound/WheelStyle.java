@@ -34,8 +34,9 @@ final class WheelStyle
         {
             WheelEntry entry = entries.get(i);
             double extent = entry.weight * 360.0 / total;
-            g.setPaint(new GradientPaint(x, y, SEGMENTS[i % SEGMENTS.length].brighter(),
-                x + size, y + size, SEGMENTS[i % SEGMENTS.length]));
+            Color segment = SEGMENTS[i % SEGMENTS.length];
+            if (entry.label.startsWith("Gain ")) { segment = XpGoal.valueOf(entry.id).color; }
+            g.setPaint(new GradientPaint(x, y, segment.brighter(), x + size, y + size, segment));
             Arc2D arc = new Arc2D.Double(x, y, size, size, before - angle, extent, Arc2D.PIE);
             g.fill(arc);
             g.setColor(ColorScheme.BORDER_COLOR);
@@ -53,15 +54,16 @@ final class WheelStyle
                 int iw = (int) Math.round(entry.icon.getWidth() * scale);
                 int ih = (int) Math.round(entry.icon.getHeight() * scale);
                 g.drawImage(entry.icon, tx - iw / 2, ty - ih / 2, iw, ih, null);
-                drawRadialLabel(g, entry.label, cx, cy, a, extent, size, box);
+                drawRadialLabel(g, entry.wheelLabel(), cx, cy, a, extent, size, box);
             }
-            else if (extent >= 14)
+            else if (entry.label.startsWith("Gain ") && extent >= 14)
             {
                 g.setFont(FontManager.getRunescapeSmallFont());
                 g.setColor(ColorScheme.TEXT_COLOR);
                 String label = entry.label.startsWith("Gain ") ? compactXp(entry.label) : entry.label.substring(0, 1);
                 centered(g, label, tx, ty + 4);
             }
+            else { drawRadialLabel(g, entry.label.startsWith("Gain ") ? compactXp(entry.label) : entry.wheelLabel(), cx, cy, a, extent, size, 0); }
             before += extent;
         }
         g.setStroke(new BasicStroke(7));
@@ -97,25 +99,32 @@ final class WheelStyle
     {
         double outer = size * .45 - iconSize / 2.0 - 8;
         double inner = Math.max(hubSize(size) / 2.0 + 9, size * .20);
-        for (int fontSize = 13; fontSize >= 9; fontSize--)
+        String initials = java.util.Arrays.stream(label.split("[\\s-]+"))
+            .filter(word -> !word.isEmpty()).map(word -> word.substring(0, 1))
+            .collect(java.util.stream.Collectors.joining());
+        String compact = initials.length() > 1 ? initials : label.substring(0, Math.min(4, label.length()));
+        for (String candidate : new String[]{label, compact})
         {
-            Font font = FontManager.getDefaultFont().deriveFont(Font.BOLD, (float)fontSize);
-            FontMetrics metrics = graphics.getFontMetrics(font);
-            int length = metrics.stringWidth(label);
-            double start = outer - length;
-            double thickness = 2 * start * Math.sin(Math.toRadians(Math.min(90, extent) / 2));
-            if (start < inner || thickness < metrics.getHeight() + 2) { continue; }
-            Graphics2D g = (Graphics2D)graphics.create();
-            g.translate(cx, cy); g.rotate(-angle);
-            g.setFont(font); g.setColor(ColorScheme.TEXT_COLOR);
-            if (Math.cos(angle) < 0)
+            for (int fontSize = 13; fontSize >= 7; fontSize--)
             {
-                g.rotate(Math.PI);
-                g.drawString(label, (float)-outer, (metrics.getAscent() - metrics.getDescent()) / 2f);
+                Font font = FontManager.getDefaultFont().deriveFont(Font.BOLD, (float)fontSize);
+                FontMetrics metrics = graphics.getFontMetrics(font);
+                int length = metrics.stringWidth(candidate);
+                double start = outer - length;
+                double thickness = 2 * start * Math.sin(Math.toRadians(Math.min(90, extent) / 2));
+                if (start < inner || thickness < metrics.getHeight() + 2) { continue; }
+                Graphics2D g = (Graphics2D)graphics.create();
+                g.translate(cx, cy); g.rotate(-angle);
+                g.setFont(font); g.setColor(ColorScheme.TEXT_COLOR);
+                if (Math.cos(angle) < 0)
+                {
+                    g.rotate(Math.PI);
+                    g.drawString(candidate, (float)-outer, (metrics.getAscent() - metrics.getDescent()) / 2f);
+                }
+                else { g.drawString(candidate, (float)start, (metrics.getAscent() - metrics.getDescent()) / 2f); }
+                g.dispose();
+                return;
             }
-            else { g.drawString(label, (float)start, (metrics.getAscent() - metrics.getDescent()) / 2f); }
-            g.dispose();
-            return;
         }
     }
 

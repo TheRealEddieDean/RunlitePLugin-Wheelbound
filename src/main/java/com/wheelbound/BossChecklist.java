@@ -24,13 +24,16 @@ final class BossChecklist extends JPanel
         title.setForeground(ColorScheme.TEXT_COLOR);
         add(title, BorderLayout.NORTH);
         rows.setLayout(new BoxLayout(rows, BoxLayout.Y_AXIS));
-        rows.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+        rows.setBackground(ColorScheme.DARK_GRAY_COLOR);
+        rows.setBorder(BorderFactory.createEmptyBorder(0, 0, 12, 0));
         JScrollPane scroll = new JScrollPane(rows);
+        scroll.getViewport().setBackground(ColorScheme.DARK_GRAY_COLOR);
+        scroll.setBorder(BorderFactory.createLineBorder(ColorScheme.MEDIUM_GRAY_COLOR));
         scroll.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         scroll.getVerticalScrollBar().setUnitIncrement(24);
         scroll.setPreferredSize(new Dimension(200, 170));
         add(scroll, BorderLayout.CENTER);
-        setMaximumSize(new Dimension(Integer.MAX_VALUE, 200));
+
     }
 
     void updateEntries(List<WheelEntry> values)

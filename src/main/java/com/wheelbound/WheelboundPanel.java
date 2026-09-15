@@ -16,14 +16,13 @@ import net.runelite.client.ui.FontManager;
 import net.runelite.client.ui.PluginPanel;
 
 /** Layout and two-stage spin coordination. Game reads and eligibility live outside Swing. */
-public class WheelboundPanel extends PluginPanel
+public class WheelboundPanel extends PluginPanel implements Scrollable
 {
     private final WheelComponent wheel = new WheelComponent();
     private final WheelComponent xpWheel = new WheelComponent();
     private final JLabel result = label("Spin the wheel", true);
     private final JLabel xpResult = label("", false);
     private final JLabel status = label("Loading eligible entries...", false);
-    private final JButton open = new JButton("SPIN");
     private final EnumMap<WheelType, BossChecklist> checklists = new EnumMap<>(WheelType.class);
     private final EnumMap<WheelFilter, JCheckBox> filters = new EnumMap<>(WheelFilter.class);
     private final JPanel checklistCards = new JPanel(new CardLayout());
@@ -42,24 +41,29 @@ public class WheelboundPanel extends PluginPanel
     private Runnable refreshAction = () -> action.accept(false);
     private WheelType type;
     private boolean busy;
+    private boolean sidebarActive;
     private long generation;
     private List<WheelEntry> deferred;
     private String deferredMessage;
 
     WheelboundPanel(Function<String, String> load, BiConsumer<String, Object> save)
     {
+        super();
+        getScrollPane().setViewportView(this);
         this.save = save;
         type = WheelType.fromSaved(load.apply("selectedWheel"));
         for (WheelType wheelType : WheelType.values())
         {
             BossChecklist checklist = new BossChecklist(wheelType == WheelType.SKILLING ? "Included skills"
-                : wheelType == WheelType.BOSSING ? "Included bosses" : "Included encounters",
+                : wheelType == WheelType.BOSSING ? "Included bosses"
+                : wheelType == WheelType.PET_HUNTING ? "Included pets" : "Included encounters",
                 load.apply(wheelType.exclusionKey), value -> {
                     save.accept(wheelType.exclusionKey, value);
                     generation++;
                     popupResult = "Click the center to spin";
                     if (popup != null) { popup.clearResult(); }
                     syncAll(); updatePool(availablePool, poolMessage, generation);
+                    refreshAction.run();
                 });
             checklists.put(wheelType, checklist);
             checklistCards.add(checklist, wheelType.name());
@@ -79,17 +83,6 @@ public class WheelboundPanel extends PluginPanel
         selector.addActionListener(e -> selectWheel((WheelType)selector.getSelectedItem()));
         content.add(selector);
         content.add(Box.createVerticalStrut(8));
-        open.setAlignmentX(Component.CENTER_ALIGNMENT);
-        open.setMaximumSize(new Dimension(Integer.MAX_VALUE, 36));
-        open.setEnabled(false);
-        open.setBackground(new Color(35, 125, 63));
-        open.setForeground(Color.WHITE);
-        open.setFont(FontManager.getDefaultBoldFont().deriveFont(14f));
-        open.setOpaque(true);
-        open.setToolTipText("Open the centered wheel and start spinning");
-        open.addActionListener(e -> { openWheel(); wheel.requestSpin(); });
-        content.add(open);
-        content.add(Box.createVerticalStrut(12));
         content.add(result);
         content.add(xpResult);
         content.add(Box.createVerticalStrut(10));
@@ -113,7 +106,7 @@ public class WheelboundPanel extends PluginPanel
                     if (wheelType == WheelType.BOSSING && section.equals("Boss pool")) { wheelOptions.add(all); }
                 }
                 JCheckBox box = check(filter.title, filter.tip);
-                String saved = load.apply(filter.key);
+                String saved = filter.savedValue(load);
                 // Migrate the two removed master options once through the new sidebar defaults.
                 if (saved == null && filter == WheelFilter.ACCOUNT) { saved = load.apply("limitBossesToMyLevel"); }
                 if (saved == null && filter == WheelFilter.MAXED_SKILLS) { saved = load.apply("excludeLevel99Skills"); }
@@ -128,23 +121,20 @@ public class WheelboundPanel extends PluginPanel
         showCards();
         content.add(options);
         content.add(Box.createVerticalStrut(8));
-        content.add(status);
-        JButton refresh = new JButton("Refresh list");
-        refresh.setAlignmentX(Component.CENTER_ALIGNMENT);
-        refresh.setFont(FontManager.getDefaultFont().deriveFont(11f));
-        refresh.setToolTipText("Reload account access, your current Slayer task and Combat Achievements.");
-        refresh.addActionListener(e -> { filtersChanged(); refreshAction.run(); });
-        content.add(Box.createVerticalStrut(5)); content.add(refresh);
-        content.add(Box.createVerticalStrut(12));
         checklistCards.setOpaque(false);
-        content.add(checklistCards);
+        add(checklistCards, BorderLayout.CENTER);
         add(content, BorderLayout.NORTH);
-        controls.addAll(List.of(all, open, refresh));
+        JPanel footer = new JPanel(new BorderLayout());
+        footer.setOpaque(false);
+        footer.setBorder(BorderFactory.createEmptyBorder(12, 0, 8, 0));
+        footer.add(status, BorderLayout.CENTER);
+        getWrappedPanel().add(footer, BorderLayout.SOUTH);
+        controls.add(all);
         all.addActionListener(e -> {
             if (!all.isSelected()) { checklist().excludeAll(); syncAll(); return; }
             for (WheelFilter filter : List.of(WheelFilter.BOSS_RAIDS, WheelFilter.MIMIC))
             { filters.get(filter).setSelected(false); save.accept(filter.key, false); }
-            checklist().includeAll(); syncAll(); filtersChanged();
+            checklist().includeAll(); syncAll();
         });
         syncAll();
         wheel.setSpinAction(() -> {
@@ -157,15 +147,38 @@ public class WheelboundPanel extends PluginPanel
         xpWheel.setFrameListener(this::refreshPopup);
     }
 
+    @Override public Dimension getPreferredScrollableViewportSize() { return getPreferredSize(); }
+    @Override public int getScrollableUnitIncrement(Rectangle visible, int orientation, int direction) { return 24; }
+    @Override public int getScrollableBlockIncrement(Rectangle visible, int orientation, int direction)
+    { return Math.max(24, visible.height - 24); }
+    @Override public boolean getScrollableTracksViewportWidth() { return true; }
+    @Override public boolean getScrollableTracksViewportHeight()
+    { return getParent() instanceof JViewport && getParent().getHeight() >= getPreferredSize().height; }
+
+    @Override public void onActivate()
+    {
+        sidebarActive = true;
+        openWheel();
+    }
+
+    @Override public void onDeactivate()
+    {
+        sidebarActive = false;
+        if (popup != null) { popup.hide(); }
+        generation++; wheel.cancel(); xpWheel.cancel(); finish();
+    }
+
     void setPopup(WheelPopup value) { popup = value; }
     void setRefreshAction(Runnable value) { refreshAction = value; }
     WheelComponent primaryWheel() { return wheel; }
+    WheelComponent secondaryWheel() { return xpWheel; }
 
     void selectWheel(WheelType value)
     {
         if (value == null || type == value) { return; }
         type = value; selector.setSelectedItem(value); save.accept("selectedWheel", type.title);
         showCards(); reset(); action.accept(false);
+        if (sidebarActive) { openWheel(); }
     }
     private void showCards()
     {
@@ -193,7 +206,7 @@ public class WheelboundPanel extends PluginPanel
     void reloadPreferences(Function<String, String> load)
     {
         filters.forEach((filter, box) -> {
-            String value = load.apply(filter.key);
+            String value = filter.savedValue(load);
             if (value == null && filter == WheelFilter.ACCOUNT) { value = load.apply("limitBossesToMyLevel"); }
             if (value == null && filter == WheelFilter.MAXED_SKILLS) { value = load.apply("excludeLevel99Skills"); }
             if (value == null && filter == WheelFilter.BOSS_RAIDS && load.apply("includeRaids") != null)
@@ -213,9 +226,9 @@ public class WheelboundPanel extends PluginPanel
 
     void openWheel()
     {
-        if (popup == null || busy || wheel.entries().isEmpty()) { return; }
+        if (popup == null || busy || popup.isOpen()) { return; }
         displayed = wheel; popupTitle = type.title; popupResult = "Click the center to spin";
-        popup.show(popupTitle, displayed, popupResult, wheel::requestSpin, () -> {
+        popup.show(popupTitle, displayed, popupResult, () -> displayed.requestSpin(), () -> {
             generation++;
             wheel.cancel(); xpWheel.cancel();
             if (busy) { result.setText(html("Spin cancelled")); xpResult.setText(""); }
@@ -229,9 +242,9 @@ public class WheelboundPanel extends PluginPanel
     }
     private void filtersChanged()
     {
-        generation++; wheel.setAvailable(false); open.setEnabled(false);
+        generation++; wheel.setAvailable(false);
         if (popup != null) { popup.clearResult(); }
-        action.accept(false);
+        refreshAction.run();
     }
     void setAction(Consumer<Boolean> value) { action = value; }
     WheelType wheelType() { return type; }
@@ -247,11 +260,10 @@ public class WheelboundPanel extends PluginPanel
         List<WheelEntry> included = checklist().included(entries);
         displayed = wheel; popupTitle = type.title;
         wheel.setEntries(included); wheel.setAvailable(!included.isEmpty());
-        open.setEnabled(!included.isEmpty());
         status.setToolTipText(message);
         status.setText(html(!entries.isEmpty()
             ? included.size() + " of " + entries.size() + " eligible entries included."
-                + (included.isEmpty() ? " Check an entry below to spin." : "")
+                + (included.isEmpty() ? " Check an entry above to spin." : "")
                 + (type == WheelType.COMBAT_ACHIEVEMENTS ? " Unfinished tasks only." : "")
             : message));
     }
@@ -260,7 +272,6 @@ public class WheelboundPanel extends PluginPanel
     {
         if (revision != generation) { return; }
         List<WheelEntry> choices = checklist().included(entries);
-        status.setText(html(message));
         if (choices.isEmpty()) { finish(); updatePool(entries, message, revision); return; }
         int selected = WheelSelection.select(choices, random);
         displayed = wheel; popupTitle = type.title; popupResult = "Spinning...";
@@ -276,13 +287,26 @@ public class WheelboundPanel extends PluginPanel
                 result.setHorizontalTextPosition(SwingConstants.CENTER);
                 result.setVerticalTextPosition(SwingConstants.BOTTOM);
             }
+            if (choices.get(selected).source != null) { xpResult.setText(html(choices.get(selected).source)); }
             if (withXp)
             {
-                xpResult.setText(html("Choosing an XP target...")); revalidate();
+                xpResult.setText(html("Click SPIN to choose your XP target")); revalidate();
                 displayed = xpWheel; popupTitle = choices.get(selected).label + " - XP target";
                 List<WheelEntry> goals = XpGoal.entries();
-                int goal = WheelSelection.select(goals, random);
-                xpWheel.animate(goals, goal, () -> { popupResult = choices.get(selected).label + " - " + goals.get(goal).label; xpResult.setText(html(goals.get(goal).label)); finish(); if (popup != null) { popup.complete(choices.get(selected), goals.get(goal).label); } });
+                xpWheel.setEntries(goals);
+                xpWheel.setSpinAction(() -> {
+                    xpWheel.setAvailable(false);
+                    xpResult.setText(html("Choosing an XP target..."));
+                    int goal = WheelSelection.select(goals, random);
+                    xpWheel.animate(goals, goal, () -> {
+                        popupResult = choices.get(selected).label + " - " + goals.get(goal).label;
+                        xpResult.setText(html(goals.get(goal).label));
+                        finish();
+                        if (popup != null) { popup.complete(choices.get(selected), goals.get(goal).label); }
+                    });
+                });
+                xpWheel.setAvailable(true);
+
             }
             else { finish(); if (popup != null) { popup.complete(choices.get(selected), null); } }
         });
@@ -291,8 +315,9 @@ public class WheelboundPanel extends PluginPanel
 
     private void finish()
     {
+        xpWheel.setAvailable(false);
         busy = false; enableControls(true); wheel.setAvailable(!wheel.entries().isEmpty());
-        open.setEnabled(!wheel.entries().isEmpty()); refreshPopup();
+        displayed = wheel; popupTitle = type.title; refreshPopup();
         if (deferred != null)
         {
             List<WheelEntry> entries = deferred; deferred = null;
@@ -309,7 +334,7 @@ public class WheelboundPanel extends PluginPanel
         checklist().updateEntries(List.of()); status.setText(html("Loading eligible entries..."));
         wheel.setEntries(List.of());
         result.setIcon(null); result.setText(html("Spin the wheel")); xpResult.setText("");
-        enableControls(true); open.setEnabled(false); revalidate();
+        enableControls(true); revalidate();
     }
     private static JPanel column()
     {

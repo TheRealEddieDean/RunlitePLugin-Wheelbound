@@ -31,9 +31,9 @@ public class SkillingFlowTest
             assertEquals("OBOR", saved.get("excludedBosses"));
             button(panel, "Bryophyta").doClick();
             assertTrue(popup.isOpen()); assertEquals(0, popup.entryCount());
-            assertFalse(button(panel, "SPIN").isEnabled());
+            assertFalse(panel.primaryWheel().canSpin());
             button(panel, "Obor").doClick();
-            assertEquals(1, popup.entryCount()); assertTrue(button(panel, "SPIN").isEnabled());
+            assertEquals(1, popup.entryCount()); assertTrue(panel.primaryWheel().canSpin());
             panel.setAction(spin -> panel.updatePool(entries, "refreshed", panel.generation()));
             button(panel, "Exclude raids").doClick();
             assertTrue(popup.isOpen()); assertEquals(1, popup.entryCount());
@@ -44,7 +44,7 @@ public class SkillingFlowTest
         });
     }
 
-    @Test public void greenSidebarSpinStartsImmediatelyAndShowsOnlySelectedResult() throws Exception
+    @Test public void sidebarActivationOpensWheelAndHubCanSpinAgain() throws Exception
     {
         WheelboundPanel[] panel = new WheelboundPanel[1];
         WheelPopup popup = new WheelPopup(null);
@@ -55,9 +55,13 @@ public class SkillingFlowTest
                 new SkillIconManager().getSkillImage(Skill.ATTACK), 1), new WheelEntry("BRYOPHYTA", "Bryophyta", null, 1));
             panel[0].setAction(spin -> { if (spin) { panel[0].spinResponse(entries, "test", panel[0].generation()); } });
             panel[0].updatePool(entries, "test", panel[0].generation());
-            AbstractButton spin = button(panel[0], "SPIN");
-            assertTrue(spin.getBackground().getGreen() > spin.getBackground().getRed());
-            spin.doClick();
+            assertNull(findButton(panel[0], "SPIN"));
+            panel[0].onActivate();
+            assertTrue(popup.isOpen()); assertFalse(panel[0].busy());
+            popup.keyPressed(new java.awt.event.KeyEvent(new Canvas(), java.awt.event.KeyEvent.KEY_PRESSED,
+                0, 0, java.awt.event.KeyEvent.VK_SPACE, ' '));
+        });
+        SwingUtilities.invokeAndWait(() -> {
             assertTrue(popup.isOpen()); assertTrue(panel[0].busy());
             assertFalse(button(panel[0], "Obor").isEnabled());
             assertEquals(1, panel[0].primaryWheel().entries().size());
@@ -72,8 +76,19 @@ public class SkillingFlowTest
         SwingUtilities.invokeAndWait(() -> {
             assertFalse(panel[0].busy()); assertTrue(popup.hasResult());
             assertTrue(hasLabel(panel[0], "Obor"));
+            popup.keyPressed(new java.awt.event.KeyEvent(new Canvas(), java.awt.event.KeyEvent.KEY_PRESSED,
+                0, 0, java.awt.event.KeyEvent.VK_ENTER, '\n'));
+        });
+        SwingUtilities.invokeAndWait(() -> {
+            assertTrue(panel[0].busy());
+            panel[0].onDeactivate();
+            assertFalse(popup.isOpen()); assertFalse(panel[0].busy());
+            panel[0].onActivate();
+            assertTrue(popup.isOpen());
+            panel[0].selectWheel(WheelType.SKILLING);
+            assertTrue(popup.isOpen()); assertEquals(0, popup.entryCount());
             panel[0].updatePool(List.of(), "empty", panel[0].generation());
-            assertTrue(popup.hasResult()); // Eligibility refresh must preserve the displayed result.
+            assertFalse(panel[0].primaryWheel().canSpin());
             panel[0].reset(); assertFalse(popup.hasResult());
         });
     }
@@ -120,13 +135,14 @@ public class SkillingFlowTest
         });
     }
 
-    @Test public void automaticXpWheelCompletesBothResultsAndPreservesResultOnPoolRefresh() throws Exception
+    @Test public void manualXpWheelWaitsForUserAndPreservesResultOnPoolRefresh() throws Exception
     {
         WheelboundPanel[] holder = new WheelboundPanel[1];
+        WheelPopup popup = new WheelPopup(null);
         SwingUtilities.invokeAndWait(() -> {
             WheelboundPanel panel = new WheelboundPanel(k -> k.equals("selectedWheel") ? "Skilling" : k.equals("includeXpGoal") ? "true" : null, (k, v) -> {});
             holder[0] = panel;
-            panel.setPopup(new WheelPopup(null));
+            panel.setPopup(popup);
             List<WheelEntry> entries = List.of(new WheelEntry("MINING", "Mining", null, 1));
             panel.setAction(spin -> { if (spin) { panel.spinResponse(entries, "test", panel.generation()); } });
             panel.updatePool(entries, "test", panel.generation());
@@ -135,8 +151,26 @@ public class SkillingFlowTest
             assertTrue(panel.busy());
             panel.updatePool(List.of(), "No eligible skills", panel.generation());
         });
-        // Real timers, no pixel assertions. The two retained 3.5s animations must complete sequentially.
         long deadline = System.nanoTime() + 12_000_000_000L;
+        boolean[] waiting = {false};
+        while (!waiting[0] && System.nanoTime() < deadline)
+        {
+            Thread.sleep(100);
+            SwingUtilities.invokeAndWait(() -> waiting[0] = holder[0].secondaryWheel().canSpin());
+        }
+        assertTrue("XP wheel must wait for a user spin", waiting[0]);
+        Thread.sleep(250);
+        SwingUtilities.invokeAndWait(() -> {
+            assertTrue(holder[0].busy());
+            assertFalse(holder[0].secondaryWheel().busy());
+            assertTrue(holder[0].secondaryWheel().canSpin());
+            popup.keyPressed(new java.awt.event.KeyEvent(new Canvas(), java.awt.event.KeyEvent.KEY_PRESSED,
+                0, 0, java.awt.event.KeyEvent.VK_SPACE, ' '));
+        });
+        SwingUtilities.invokeAndWait(() -> {
+            assertTrue(holder[0].secondaryWheel().busy());
+            assertFalse(holder[0].secondaryWheel().canSpin());
+        });
         boolean[] busy = {true};
         while (busy[0] && System.nanoTime() < deadline)
         {
@@ -151,6 +185,39 @@ public class SkillingFlowTest
             holder[0].reset();
             assertFalse(hasLabel(holder[0], "Mining"));
         });
+    }
+
+    @Test public void checklistGrowsWithViewportAndSmallWindowsCanScroll() throws Exception
+    {
+        SwingUtilities.invokeAndWait(() -> {
+            WheelboundPanel panel = new WheelboundPanel(k -> null, (k, v) -> {});
+            JViewport viewport = new JViewport(); viewport.setView(panel);
+            viewport.setSize(242, 900); viewport.doLayout(); layout(panel);
+            BossChecklist list = checklist(panel);
+            int tall = list.getHeight();
+            assertTrue(tall > 200);
+            viewport.setSize(242, 1100); viewport.doLayout(); layout(panel);
+            assertEquals(tall + 200, list.getHeight());
+            panel.selectWheel(WheelType.COMBAT_ACHIEVEMENTS);
+            viewport.setSize(242, 350); viewport.doLayout(); layout(panel);
+            assertFalse(panel.getScrollableTracksViewportHeight());
+            assertTrue(panel.getHeight() > viewport.getHeight());
+        });
+    }
+
+    private static BossChecklist checklist(Container parent)
+    {
+        for (Component child : parent.getComponents())
+        {
+            if (!child.isVisible()) { continue; }
+            if (child instanceof BossChecklist) { return (BossChecklist)child; }
+            if (child instanceof Container)
+            {
+                BossChecklist found = checklist((Container)child);
+                if (found != null) { return found; }
+            }
+        }
+        return null;
     }
 
     @Test public void renderSidebarForReview() throws Exception
@@ -168,7 +235,7 @@ public class SkillingFlowTest
                 }
                 panel.updatePool(entries, "24 eligible skills. Click the center to spin.", panel.generation());
                 assertTrue("The sidebar must never contain a wheel", wheels(panel).isEmpty());
-                panel.setSize(225, panel.getPreferredSize().height); layout(panel);
+                panel.setSize(242, 900); layout(panel);
                 BufferedImage image = new BufferedImage(225, panel.getHeight(), BufferedImage.TYPE_INT_RGB);
                 Graphics2D g = image.createGraphics(); panel.paint(g); g.dispose();
                 File file = new File("build/reports/wheelbound-skilling.png");
@@ -179,7 +246,7 @@ public class SkillingFlowTest
                 { bosses.add(new WheelEntry(boss.hiscore.name(), boss.name, null, 1)); }
                 panel.updatePool(bosses, "12 sample entries. Boss sprites load from the game cache.", panel.generation());
                 assertTrue("The sidebar must never contain a wheel", wheels(panel).isEmpty());
-                panel.setSize(225, panel.getPreferredSize().height); layout(panel);
+                panel.setSize(242, 900); layout(panel);
                 image = new BufferedImage(225, panel.getHeight(), BufferedImage.TYPE_INT_RGB);
                 g = image.createGraphics(); panel.paint(g); g.dispose();
                 ImageIO.write(image, "png", new File("build/reports/wheelbound-bossing-layout.png"));
@@ -187,7 +254,7 @@ public class SkillingFlowTest
                 panel.updatePool(List.of(new WheelEntry("CA_1", "Bloodveld", null, 1),
                     new WheelEntry("CA_2", "Obor", null, 1), new WheelEntry("CA_3", "Vorkath", null, 1)),
                     "3 encounters with unfinished tasks.", panel.generation());
-                panel.setSize(225, panel.getPreferredSize().height); layout(panel);
+                panel.setSize(242, 900); layout(panel);
                 image = new BufferedImage(225, panel.getHeight(), BufferedImage.TYPE_INT_RGB);
                 g = image.createGraphics(); panel.paint(g); g.dispose();
                 ImageIO.write(image, "png", new File("build/reports/wheelbound-combat-achievements.png"));

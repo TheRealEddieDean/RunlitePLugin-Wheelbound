@@ -27,8 +27,8 @@ import net.runelite.client.ui.ClientToolbar;
 import net.runelite.client.ui.NavigationButton;
 
 @Slf4j
-@PluginDescriptor(name = "Wheelbound", description = "Choose a boss, skill or unfinished Combat Achievement encounter.",
-    tags = {"wheel", "randomizer", "bossing", "skilling", "combat achievements"})
+@PluginDescriptor(name = "Wheelbound", description = "Choose a boss, skill, pet hunt or unfinished Combat Achievement encounter.",
+    tags = {"wheel", "randomizer", "bossing", "skilling", "combat achievements", "pets"})
 public class WheelboundPlugin extends Plugin
 {
     @Inject private Client client;
@@ -225,25 +225,31 @@ public class WheelboundPlugin extends Plugin
                 if (!loggedIn && exclude99) { message = "Log in to exclude level 99 skills."; }
                 else if (entries.isEmpty()) { message = "No skills match. Adjust the combat or level-99 filters."; }
             }
+            else if (type == WheelType.PET_HUNTING)
+            {
+                entries = WheelEligibility.pets(filters).stream().map(icons::pet).collect(Collectors.toList());
+                message = entries.isEmpty() ? "Include a pet source to build your wheel."
+                    : entries.size() + " pets. Uncheck pets you already own or do not want to hunt.";
+            }
             else
             {
                 String account = identity();
                 Set<CaTier> excluded = EnumSet.noneOf(CaTier.class);
-                for (WheelFilter filter : filters) { if (filter.tier != null) { excluded.add(filter.tier); } }
+                for (WheelFilter filter : WheelFilter.values()) { if (filter.tier != null && !filters.contains(filter)) { excluded.add(filter.tier); } }
                 entries = List.of();
                 if (!loggedIn) { message = "Log in to load your unfinished Combat Achievements."; }
-                else if (!achievements.isReady(account)) { message = "Local Combat Achievement data is unavailable. Click Refresh list to retry."; }
+                else if (!achievements.isReady(account)) { message = "Local Combat Achievement data is unavailable. Change a checkbox to retry."; }
                 else
                 {
-                    entries = WheelEligibility.achievements(bossData.encounters(client), filters.contains(WheelFilter.CA_BOSSES),
-                        filters.contains(WheelFilter.CA_RAIDS), e -> achievements.hasIncomplete(account, e, excluded),
+                    entries = WheelEligibility.achievements(bossData.encounters(client), !filters.contains(WheelFilter.CA_BOSSES),
+                        !filters.contains(WheelFilter.CA_RAIDS), e -> achievements.hasIncomplete(account, e, excluded),
                         e -> !matchTask || AccountAccess.taskAllows(e.name, assignment))
                         .stream().map(icons::encounter).collect(Collectors.toUnmodifiableList());
                     message = entries.isEmpty() ? "No unfinished tasks match. Include another tier or encounter category."
                         : entries.size() + " encounters with unfinished tasks in your included tiers.";
                 }
             }
-            List<WheelEntry> snapshot = List.copyOf(entries);
+            List<WheelEntry> snapshot = WheelEntry.groupRaids(entries);
             String info = message;
             SwingUtilities.invokeLater(() -> {
                 if (!active || epoch != session.get() || revision != panel.generation()) { return; }
