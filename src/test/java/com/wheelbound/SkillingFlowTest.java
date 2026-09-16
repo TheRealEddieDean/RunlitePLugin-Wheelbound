@@ -340,7 +340,7 @@ public class SkillingFlowTest
     {
         for (Component c : parent.getComponents())
         {
-            if (c instanceof JLabel && ((JLabel)c).getText().contains(text)) { return true; }
+            if (c instanceof JLabel && ((JLabel)c).getText() != null && ((JLabel)c).getText().contains(text)) { return true; }
             if (c instanceof Container && hasLabel((Container)c, text)) { return true; }
         }
         return false;

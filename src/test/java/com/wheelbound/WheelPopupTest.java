@@ -54,6 +54,10 @@ public class WheelPopupTest
             assertTrue(layout.results.y > layout.wheel.y + layout.wheel.height);
             g.dispose();
             ImageIO.write(image, "png", new File("build/reports/wheelbound-result-" + size[0] + ".png"));
+            g = image.createGraphics();
+            WheelPopup.paintResultRow(g, layout, new WheelEntry("CUSTOM_preview", "Your next adventure", null, 1), null);
+            g.dispose();
+            ImageIO.write(image, "png", new File("build/reports/wheelbound-custom-result-" + size[0] + ".png"));
         }
     }
 

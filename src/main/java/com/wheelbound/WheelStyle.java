@@ -133,19 +133,40 @@ final class WheelStyle
         g.drawString(text, x - g.getFontMetrics().stringWidth(text) / 2, y);
     }
 
-    static BufferedImage createIcon()
+    private static final BufferedImage CLASSIC_ICON = loadArtwork("classic-wheel.png");
+    private static final BufferedImage HEADER = loadArtwork("wheelbound-header.png");
+
+    static BufferedImage createIcon() { return scaledArtwork(CLASSIC_ICON, 32); }
+    static BufferedImage headerImage() { return scaledArtwork(HEADER, 210); }
+
+    private static BufferedImage loadArtwork(String name)
     {
-        BufferedImage icon = new BufferedImage(32, 32, BufferedImage.TYPE_INT_ARGB);
-        Graphics2D g = icon.createGraphics();
-        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        for (int i = 0; i < 8; i++)
+        try (java.io.InputStream stream = WheelStyle.class.getResourceAsStream(name))
         {
-            g.setColor(Color.getHSBColor(i / 8f, .65f, .9f));
-            g.fill(new Arc2D.Double(3, 3, 26, 26, i * 45, 45, Arc2D.PIE));
+            if (stream == null) { throw new IllegalStateException("Missing artwork: " + name); }
+            BufferedImage image = javax.imageio.ImageIO.read(stream);
+            // Remove transparent export margins so each asset fits its UI slot.
+            int left = image.getWidth(), top = image.getHeight(), right = -1, bottom = -1;
+            for (int y = 0; y < image.getHeight(); y++)
+            {
+                for (int x = 0; x < image.getWidth(); x++)
+                {
+                    if ((image.getRGB(x, y) >>> 24) > 16)
+                    { left = Math.min(left, x); top = Math.min(top, y); right = Math.max(right, x); bottom = Math.max(bottom, y); }
+                }
+            }
+            return right < left ? image : image.getSubimage(left, top, right - left + 1, bottom - top + 1);
         }
-        g.setColor(GOLD); g.drawOval(3, 3, 26, 26); g.fillOval(12, 12, 8, 8);
-        g.fillPolygon(new int[]{12, 20, 16}, new int[]{0, 0, 7}, 3);
-        g.dispose();
-        return icon;
+        catch (java.io.IOException ex) { throw new IllegalStateException("Cannot load artwork: " + name, ex); }
+    }
+
+    private static BufferedImage scaledArtwork(BufferedImage source, int width)
+    {
+        int height = Math.max(1, (int)Math.round(source.getHeight() * (double)width / source.getWidth()));
+        BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g = image.createGraphics();
+        g.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC);
+        g.drawImage(source, 0, 0, width, height, null); g.dispose();
+        return image;
     }
 }

@@ -15,6 +15,26 @@ import static org.junit.Assert.*;
 
 public class CustomWheelsTest
 {
+    @Test public void customTooltipTreatsEmbeddedImagesAsText() throws Exception
+    {
+        SwingUtilities.invokeAndWait(() -> {
+            WheelboundPanel panel = panel(new HashMap<>());
+            panel.selectWheel(WheelType.CUSTOM); panel.createCustomWheel("Tooltip safety");
+            panel.addCustomEntry("<html><img src='https://example.invalid/tracker'>");
+            JToolTip tooltip = checkboxes(panel).get(0).createToolTip();
+            tooltip.setTipText(checkboxes(panel).get(0).getToolTipText());
+            javax.swing.text.View view = (javax.swing.text.View)tooltip.getClientProperty(javax.swing.plaf.basic.BasicHTML.propertyKey);
+            assertNotNull(view);
+            javax.swing.text.html.HTMLDocument document = (javax.swing.text.html.HTMLDocument)view.getDocument();
+            assertFalse(document.getIterator(javax.swing.text.html.HTML.Tag.IMG).isValid());
+            try
+            {
+                assertTrue(document.getText(0, document.getLength()).contains("<img src="));
+            }
+            catch (javax.swing.text.BadLocationException ex) { throw new AssertionError(ex); }
+        });
+    }
+
     @Test public void storagePreservesUnicodeDuplicatesAndEnabledState()
     {
         CustomWheels data = new CustomWheels();
@@ -48,7 +68,7 @@ public class CustomWheelsTest
             WheelboundPanel panel = panel(saved);
             panel.createCustomWheel("Do not overwrite");
             assertEquals("broken JSON", saved.get(CustomWheels.KEY));
-            assertFalse(button(panel, "Create wheel").isEnabled());
+            assertNull(saved.get("selectedCustomWheel"));
         });
     }
 
@@ -58,7 +78,14 @@ public class CustomWheelsTest
             Map<String, String> saved = new HashMap<>(); WheelboundPanel panel = panel(saved);
             WheelPopup popup = new WheelPopup(null); panel.setPopup(popup); panel.onActivate();
             panel.selectWheel(WheelType.CUSTOM);
-            field(panel, "customWheelName").setText("Weekend"); button(panel, "Create wheel").doClick();
+            assertTrue(panel.nameDialog().isOpen()); assertFalse(popup.isOpen());
+            button(panel.nameDialog().content(), "Create").doClick();
+            assertTrue(panel.nameDialog().isOpen()); assertFalse(popup.isOpen());
+            assertNull(saved.get(CustomWheels.KEY));
+            field(panel.nameDialog().content(), "customWheelName").setText("Weekend");
+            button(panel.nameDialog().content(), "Create").doClick();
+            assertFalse(panel.nameDialog().isOpen()); assertTrue(popup.isOpen());
+            assertEquals(0, popup.entryCount());
             String firstId = saved.get("selectedCustomWheel");
             JTextField entry = field(panel.getWrappedPanel(), "customEntryName");
             entry.setText("Theatre of Blood: Hard Mode"); entry.postActionEvent();
@@ -174,6 +201,14 @@ public class CustomWheelsTest
                 for (int height : new int[]{450, 800})
                 {
                     wrapped.setSize(242, height); layout(wrapped);
+                    JTextField entry = field(wrapped, "customEntryName");
+                    Rectangle entryBounds = SwingUtilities.convertRectangle(entry.getParent(), entry.getBounds(), wrapped);
+                    JCheckBox firstRow = checkboxes(panel).get(0);
+                    Rectangle rowBounds = SwingUtilities.convertRectangle(firstRow.getParent(), firstRow.getBounds(), wrapped);
+                    assertTrue(entryBounds.y + entryBounds.height < rowBounds.y);
+                    assertTrue(entryBounds.x >= 12);
+                    AbstractButton trash = byTooltip(panel, "Delete entry: Try a new recipe");
+                    assertFalse(trash.isContentAreaFilled()); assertFalse(trash.isOpaque());
                     AbstractButton delete = button(wrapped, "Delete wheel");
                     Rectangle bounds = SwingUtilities.convertRectangle(delete.getParent(), delete.getBounds(), wrapped);
                     assertTrue(bounds.y > height / 2); assertTrue(bounds.y + bounds.height <= height);

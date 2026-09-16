@@ -28,3 +28,7 @@ Thumbs.db
 
 # RuneLite
 runelite.log
+
+# Local account-security review and development login files
+/SECURITY_REVIEW.md
+credentials.properties

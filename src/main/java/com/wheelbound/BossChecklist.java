@@ -53,7 +53,7 @@ final class BossChecklist extends JPanel
         {
             JCheckBox box = new JCheckBox("<html><div style='width:" + (delete == null ? 120 : 100)
                 + "px'>" + escape(entry.label) + "</div></html>", !excluded.contains(entry.id));
-            box.setToolTipText(entry.label);
+            box.setToolTipText("<html>" + escape(entry.label) + "</html>");
             box.setOpaque(false); box.setForeground(ColorScheme.TEXT_COLOR);
             box.setFont(net.runelite.client.ui.FontManager.getDefaultFont().deriveFont(12f));
             box.setBorder(BorderFactory.createEmptyBorder(5, 3, 5, 3));

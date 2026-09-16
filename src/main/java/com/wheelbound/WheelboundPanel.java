@@ -31,11 +31,9 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
     private CustomWheels.CustomWheel custom;
     private String customLoadError;
     private boolean rebuildingSelector;
-    private final JPanel customCreator = new JPanel(new BorderLayout(0, 5));
+    private final WheelNameDialog nameDialog = new WheelNameDialog();
     private final JPanel customEntryEditor = new JPanel(new BorderLayout(0, 5));
-    private final JTextField wheelName = new JTextField();
     private final JTextField entryName = new JTextField();
-    private final JButton createWheel = new JButton("Create wheel");
     private final JButton addEntry = new JButton("Add");
     private final JButton deleteWheel = new JButton("Delete wheel");
     private java.util.function.Predicate<String> confirmDelete = name -> JOptionPane.showConfirmDialog(this,
@@ -91,8 +89,9 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
         setBackground(ColorScheme.DARK_GRAY_COLOR);
         setBorder(BorderFactory.createEmptyBorder(10, 8, 10, 8));
         JPanel content = column();
-        JLabel title = label("Wheelbound", true);
-        title.setFont(FontManager.getRunescapeBoldFont().deriveFont(22f));
+        JLabel title = new JLabel(new ImageIcon(WheelStyle.headerImage()));
+        title.setAlignmentX(Component.CENTER_ALIGNMENT);
+        title.getAccessibleContext().setAccessibleName("Wheelbound ? Spin your destiny");
         content.add(title);
         content.add(Box.createVerticalStrut(10));
         rebuildSelector();
@@ -147,20 +146,12 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
                 box.addActionListener(e -> { save.accept(filter.key, box.isSelected()); filtersChanged(); });
                 filters.put(filter, box); controls.add(box); wheelOptions.add(box);
             }
-            if (wheelType == WheelType.CUSTOM)
-            {
-                customCreator.setOpaque(false);
-                JLabel heading = new JLabel("Custom wheel name"); heading.setLabelFor(wheelName);
-                customCreator.add(heading, BorderLayout.NORTH);
-                customCreator.add(wheelName, BorderLayout.CENTER);
-                customCreator.add(createWheel, BorderLayout.SOUTH);
-                wheelOptions.add(customCreator);
-            }
             options.add(wheelOptions, wheelType.name());
         }
         setupCustomControls();
         showCards();
         content.add(options);
+        content.add(customEntryEditor);
         content.add(Box.createVerticalStrut(8));
         checklistCards.setOpaque(false);
         add(checklistCards, BorderLayout.CENTER);
@@ -168,7 +159,7 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
         JPanel footer = new JPanel(new BorderLayout());
         footer.setOpaque(false);
         footer.setBorder(BorderFactory.createEmptyBorder(12, 0, 8, 0));
-        footer.add(customEntryEditor, BorderLayout.NORTH);
+        status.setBorder(BorderFactory.createEmptyBorder(0, 8, 12, 8));
         footer.add(status, BorderLayout.CENTER);
         footer.add(deleteWheel, BorderLayout.SOUTH);
         getWrappedPanel().add(footer, BorderLayout.SOUTH);
@@ -200,6 +191,7 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
     @Override public void onDeactivate()
     {
         sidebarActive = false;
+        nameDialog.hide();
         if (popup != null) { popup.hide(); }
         generation++; wheel.cancel(); xpWheel.cancel(); finish();
     }
@@ -211,7 +203,9 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
 
     void selectWheel(WheelType value)
     {
-        if (busy || value == null || type == value && custom == null) { return; }
+        if (busy || value == null) { return; }
+        if (type == value && custom == null)
+        { if (value == WheelType.CUSTOM) { showNameDialog(); } return; }
         type = value; custom = null; selectionChanged();
     }
 
@@ -224,11 +218,13 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
 
     private void selectionChanged()
     {
-        entryName.setText(""); wheelName.setText("");
+        nameDialog.hide();
+        entryName.setText("");
         save.accept("selectedWheel", type.title);
         save.accept("selectedCustomWheel", custom == null ? "" : custom.id);
         rebuildSelector(); showCards(); reset(); bindCustomChecklist(); requestCurrent(false);
-        if (sidebarActive) { openWheel(); }
+        if (type == WheelType.CUSTOM && custom == null) { showNameDialog(); }
+        else if (sidebarActive) { openWheel(); }
     }
 
     private void requestCurrent(boolean spin)
@@ -238,12 +234,11 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
 
     private void setupCustomControls()
     {
-        wheelName.setName("customWheelName"); entryName.setName("customEntryName");
-        wheelName.getAccessibleContext().setAccessibleName("Custom wheel name");
+        entryName.setName("customEntryName");
         entryName.getAccessibleContext().setAccessibleName("New entry");
         customEntryEditor.setOpaque(false);
-        customEntryEditor.setBorder(BorderFactory.createEmptyBorder(0, 0, 8, 0));
-        JLabel heading = new JLabel("New entry"); heading.setLabelFor(entryName);
+        customEntryEditor.setBorder(BorderFactory.createEmptyBorder(10, 6, 12, 6));
+        JLabel heading = new JLabel("New Entry"); heading.setLabelFor(entryName);
         customEntryEditor.add(heading, BorderLayout.NORTH);
         JPanel input = new JPanel(new BorderLayout(5, 0)); input.setOpaque(false);
         input.add(entryName, BorderLayout.CENTER); input.add(addEntry, BorderLayout.EAST);
@@ -252,9 +247,7 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
         deleteWheel.setOpaque(true);
         deleteWheel.setBorder(BorderFactory.createEmptyBorder(8, 5, 8, 5));
         deleteWheel.setToolTipText("Delete this custom wheel and all of its entries");
-        controls.add(createWheel); controls.add(addEntry); controls.add(deleteWheel);
-        createWheel.addActionListener(e -> createCustomWheel(wheelName.getText()));
-        wheelName.addActionListener(e -> createCustomWheel(wheelName.getText()));
+        controls.add(addEntry); controls.add(deleteWheel);
         addEntry.addActionListener(e -> addCustomEntry(entryName.getText()));
         entryName.addActionListener(e -> addCustomEntry(entryName.getText()));
         deleteWheel.addActionListener(e -> deleteSelectedCustomWheel());
@@ -283,16 +276,29 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
         finally { rebuildingSelector = false; }
     }
 
-    void createCustomWheel(String name)
+    WheelNameDialog nameDialog() { return nameDialog; }
+
+    private void showNameDialog()
     {
-        if (busy || customLoadError != null || type != WheelType.CUSTOM || custom != null) { return; }
+        if (busy) { return; }
+        nameDialog.show(popup == null ? SwingUtilities.getWindowAncestor(this) : popup.creationAnchor(this), name -> {
+            if (customLoadError != null) { return customLoadError; }
+            return createCustomWheel(name);
+        });
+    }
+
+    String createCustomWheel(String name)
+    {
+        if (busy || customLoadError != null || type != WheelType.CUSTOM || custom != null)
+        { return customLoadError == null ? "Select New custom wheel to create a wheel." : customLoadError; }
         try
         {
             CustomWheels.CustomWheel created = customWheels.create(name);
             save.accept(CustomWheels.KEY, customWheels.save());
-            wheelName.setText(""); selectCustomWheel(created.id); entryName.requestFocusInWindow();
+            nameDialog.hide(); selectCustomWheel(created.id); entryName.requestFocusInWindow();
+            return null;
         }
-        catch (IllegalArgumentException ex) { status.setText(html(ex.getMessage())); }
+        catch (IllegalArgumentException ex) { status.setText(html(ex.getMessage())); return ex.getMessage(); }
     }
 
     void addCustomEntry(String name)
@@ -338,7 +344,7 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
         if (type != WheelType.CUSTOM) { return; }
         List<WheelEntry> entries = custom == null ? List.of() : custom.entries();
         String message = customLoadError != null ? customLoadError : custom == null
-            ? "Name your custom wheel and click Create wheel." : "Add entries below to build your wheel.";
+            ? "Name your custom wheel and click Create." : "Add entries above to build your wheel.";
         if (spin) { spinResponse(entries, message, generation); }
         else { updatePool(entries, message, generation); }
     }
@@ -360,7 +366,6 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
 
     private void showCards()
     {
-        customCreator.setVisible(type == WheelType.CUSTOM && custom == null);
         customEntryEditor.setVisible(type == WheelType.CUSTOM && custom != null);
         deleteWheel.setVisible(type == WheelType.CUSTOM && custom != null);
         ((CardLayout)options.getLayout()).show(options, type.name());
@@ -384,7 +389,8 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
     boolean selected(WheelFilter filter) { return filters.get(filter).isSelected(); }
     void reloadPreferences(Function<String, String> load)
     {
-        entryName.setText(""); wheelName.setText("");
+        nameDialog.hide();
+        entryName.setText("");
         filters.forEach((filter, box) -> {
             String value = filter.savedValue(load);
             if (value == null && filter == WheelFilter.ACCOUNT) { value = load.apply("limitBossesToMyLevel"); }
@@ -405,6 +411,7 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
 
     void openWheel()
     {
+        if (type == WheelType.CUSTOM && custom == null) { showNameDialog(); return; }
         if (popup == null || busy || popup.isOpen()) { return; }
         displayed = wheel; popupTitle = wheelTitle(); popupResult = "Click the center to spin";
         popup.show(popupTitle, displayed, popupResult, () -> displayed.requestSpin(), () -> {
@@ -538,8 +545,7 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
     {
         controls.forEach(c -> c.setEnabled(enabled)); selector.setEnabled(enabled);
         checklists.values().forEach(c -> c.setEnabled(enabled));
-        wheelName.setEnabled(enabled && customLoadError == null); entryName.setEnabled(enabled && custom != null);
-        createWheel.setEnabled(enabled && customLoadError == null);
+        entryName.setEnabled(enabled && custom != null);
         addEntry.setEnabled(enabled && custom != null); deleteWheel.setEnabled(enabled && custom != null);
     }
     void reset()

@@ -189,19 +189,21 @@ public class WheelPopup extends Overlay implements KeyListener
     {
         if (entry == null) { return null; }
         Graphics2D g = (Graphics2D)graphics.create();
+        boolean custom = entry.id.startsWith("CUSTOM_");
+        int padding = custom ? 28 : 80;
         Font nameFont = new Font(Font.SERIF, Font.BOLD, 20);
-        while (g.getFontMetrics(nameFont).stringWidth(entry.label) > layout.results.width - 80 && nameFont.getSize() > 10)
+        while (g.getFontMetrics(nameFont).stringWidth(entry.label) > layout.results.width - padding && nameFont.getSize() > 10)
         { nameFont = nameFont.deriveFont((float)nameFont.getSize() - 1); }
         String subtitle = entry.source != null ? entry.source : detail;
         int sourceIconSpace = entry.source != null ? 24 : 0;
         Font detailFont = new Font(Font.SANS_SERIF, Font.PLAIN, 12);
-        while (subtitle != null && g.getFontMetrics(detailFont).stringWidth(subtitle) + sourceIconSpace > layout.results.width - 80
+        while (subtitle != null && g.getFontMetrics(detailFont).stringWidth(subtitle) + sourceIconSpace > layout.results.width - padding
             && detailFont.getSize() > 8)
         { detailFont = detailFont.deriveFont((float)detailFont.getSize() - 1); }
         int textWidth = g.getFontMetrics(nameFont).stringWidth(entry.label);
         if (subtitle != null)
         { textWidth = Math.max(textWidth, g.getFontMetrics(detailFont).stringWidth(subtitle) + sourceIconSpace); }
-        int boxWidth = Math.min(layout.results.width, textWidth + 80);
+        int boxWidth = Math.min(layout.results.width, textWidth + padding);
         Rectangle box = new Rectangle((int)layout.card.getCenterX() - boxWidth / 2,
             layout.results.y, boxWidth, layout.results.height);
         g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
@@ -210,16 +212,17 @@ public class WheelPopup extends Overlay implements KeyListener
         g.setColor(WheelStyle.GOLD.darker());
         g.drawRoundRect(box.x, box.y, box.width, box.height, 10, 10);
         int iconSize = 40;
-        int textX = box.x + 66;
+        int textX = box.x + (custom ? 14 : 66);
         g.setColor(WheelStyle.GOLD);
-        if (entry.icon != null)
+        java.awt.image.BufferedImage resultIcon = custom ? null : entry.icon;
+        if (resultIcon != null)
         {
-            double scale = Math.min((double)iconSize / entry.icon.getWidth(), (double)iconSize / entry.icon.getHeight());
-            int iw = (int)Math.round(entry.icon.getWidth() * scale), ih = (int)Math.round(entry.icon.getHeight() * scale);
+            double scale = Math.min((double)iconSize / resultIcon.getWidth(), (double)iconSize / resultIcon.getHeight());
+            int iw = (int)Math.round(resultIcon.getWidth() * scale), ih = (int)Math.round(resultIcon.getHeight() * scale);
             g.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR);
-            g.drawImage(entry.icon, box.x + 14 + (iconSize - iw) / 2, box.y + (box.height - ih) / 2, iw, ih, null);
+            g.drawImage(resultIcon, box.x + 14 + (iconSize - iw) / 2, box.y + (box.height - ih) / 2, iw, ih, null);
         }
-        else
+        else if (!custom)
         {
             g.setFont(new Font(Font.SERIF, Font.BOLD, 26));
             WheelStyle.centered(g, entry.label.substring(0, 1), box.x + 34, box.y + 41);
