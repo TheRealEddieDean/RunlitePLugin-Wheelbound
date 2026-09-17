@@ -66,13 +66,7 @@ public class SkillingFlowTest
             assertFalse(button(panel[0], "Obor").isEnabled());
             assertEquals(1, panel[0].primaryWheel().entries().size());
         });
-        long deadline = System.nanoTime() + 8_000_000_000L;
-        boolean[] busy = {true};
-        while (busy[0] && System.nanoTime() < deadline)
-        {
-            Thread.sleep(100);
-            SwingUtilities.invokeAndWait(() -> busy[0] = panel[0].busy());
-        }
+        awaitEdtCondition(() -> !panel[0].busy());
         SwingUtilities.invokeAndWait(() -> {
             assertFalse(panel[0].busy()); assertTrue(popup.hasResult());
             assertTrue(hasLabel(panel[0], "Obor"));
@@ -151,14 +145,7 @@ public class SkillingFlowTest
             assertTrue(panel.busy());
             panel.updatePool(List.of(), "No eligible skills", panel.generation());
         });
-        long deadline = System.nanoTime() + 12_000_000_000L;
-        boolean[] waiting = {false};
-        while (!waiting[0] && System.nanoTime() < deadline)
-        {
-            Thread.sleep(100);
-            SwingUtilities.invokeAndWait(() -> waiting[0] = holder[0].secondaryWheel().canSpin());
-        }
-        assertTrue("XP wheel must wait for a user spin", waiting[0]);
+        awaitEdtCondition(() -> holder[0].secondaryWheel().canSpin());
         Thread.sleep(250);
         SwingUtilities.invokeAndWait(() -> {
             assertTrue(holder[0].busy());
@@ -171,12 +158,7 @@ public class SkillingFlowTest
             assertTrue(holder[0].secondaryWheel().busy());
             assertFalse(holder[0].secondaryWheel().canSpin());
         });
-        boolean[] busy = {true};
-        while (busy[0] && System.nanoTime() < deadline)
-        {
-            Thread.sleep(100);
-            SwingUtilities.invokeAndWait(() -> busy[0] = holder[0].busy());
-        }
+        awaitEdtCondition(() -> !holder[0].busy());
         SwingUtilities.invokeAndWait(() -> {
             assertFalse(holder[0].busy());
             assertTrue(hasLabel(holder[0], "Mining"));
@@ -194,6 +176,7 @@ public class SkillingFlowTest
             JViewport viewport = new JViewport(); viewport.setView(panel);
             viewport.setSize(242, 900); viewport.doLayout(); layout(panel);
             BossChecklist list = checklist(panel);
+            assertNotNull(list);
             int tall = list.getHeight();
             assertTrue(tall > 200);
             viewport.setSize(242, 1100); viewport.doLayout(); layout(panel);
@@ -239,7 +222,7 @@ public class SkillingFlowTest
                 BufferedImage image = new BufferedImage(225, panel.getHeight(), BufferedImage.TYPE_INT_RGB);
                 Graphics2D g = image.createGraphics(); panel.paint(g); g.dispose();
                 File file = new File("build/reports/wheelbound-skilling.png");
-                file.getParentFile().mkdirs(); ImageIO.write(image, "png", file);
+                java.nio.file.Files.createDirectories(file.toPath().getParent()); ImageIO.write(image, "png", file);
                 panel.selectWheel(WheelType.BOSSING);
                 List<WheelEntry> bosses = new ArrayList<>();
                 for (BossDefinition boss : BossCatalog.ALL.subList(0, 12))
@@ -278,12 +261,25 @@ public class SkillingFlowTest
                 {
                     if (filter.wheel != WheelType.QUESTING) { continue; }
                     AbstractButton box = visibleButton(panel, filter.title);
+                    assertNotNull(box);
                     assertTrue(box.getY() + box.getHeight() <= box.getParent().getHeight());
                 }
                 panel.reset();
             }
             catch (Exception e) { throw new AssertionError(e); }
         });
+    }
+
+    /** Check Swing state on the EDT while the test thread waits with a bounded timeout. */
+    private static void awaitEdtCondition(java.util.function.BooleanSupplier condition) throws Exception
+    {
+        java.util.concurrent.CountDownLatch ready = new java.util.concurrent.CountDownLatch(1);
+        javax.swing.Timer timer = new javax.swing.Timer(25, event -> {
+            if (condition.getAsBoolean()) { ready.countDown(); }
+        });
+        SwingUtilities.invokeAndWait(timer::start);
+        try { assertTrue("Timed out waiting for the wheel", ready.await(8, java.util.concurrent.TimeUnit.SECONDS)); }
+        finally { SwingUtilities.invokeAndWait(timer::stop); }
     }
 
     private static void click(WheelComponent wheel, int x, int y)

@@ -8,7 +8,6 @@ import java.util.function.Predicate;
 import net.runelite.api.Client;
 import net.runelite.api.Quest;
 import net.runelite.api.QuestState;
-import net.runelite.api.events.VarbitChanged;
 import net.runelite.api.gameval.DBTableID;
 import net.runelite.api.gameval.VarPlayerID;
 import net.runelite.api.gameval.VarbitID;
@@ -112,10 +111,4 @@ final class AccountAccess
             && (task.area.isEmpty() || task.area.contains(location));
     }
 
-    static boolean slayerChanged(VarbitChanged event)
-    {
-        int varp = event.getVarpId(), varbit = event.getVarbitId();
-        return varp == VarPlayerID.SLAYER_COUNT || varp == VarPlayerID.SLAYER_TARGET || varp == VarPlayerID.SLAYER_AREA
-            || varbit == VarbitID.SLAYER_TARGET_BOSSID || varbit == VarbitID.SLAYER_MASTER;
-    }
 }

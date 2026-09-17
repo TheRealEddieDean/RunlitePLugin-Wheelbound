@@ -59,7 +59,7 @@ public class WheelboundEventsTest
                     assertSame(get(plugin, "panel"), button.getPanel());
                     org.mockito.Mockito.verify(toolbar).addNavigation(button);
                     CombatAchievementCache cache = (CombatAchievementCache)get(plugin, "achievements");
-                    cache.refresh("A", BossCatalog.ALL, java.util.Map.of("Obor", List.of(0)), id -> 0);
+                    cache.refresh("A", java.util.Map.of("Obor", List.of(0)), id -> 0);
                     plugin.shutDown();
                     assertTrue("Cleanup waits for the client thread", cache.isReady("A"));
                     thread.work.forEach(Runnable::run);
@@ -118,7 +118,7 @@ public class WheelboundEventsTest
                 set(plugin, "clientThread", new QueuedThread()); set(plugin, "active", true);
                 set(plugin, "panel", new WheelboundPanel(k -> null, (k, v) -> {}));
                 CombatAchievementCache cache = (CombatAchievementCache)get(plugin, "achievements");
-                cache.refresh("A", BossCatalog.ALL, java.util.Map.of("Obor", List.of(0)), id -> 0);
+                cache.refresh("A", java.util.Map.of("Obor", List.of(0)), id -> 0);
                 assertTrue(cache.isReady("A"));
                 GameStateChanged logout = new GameStateChanged(); logout.setGameState(GameState.LOGIN_SCREEN);
                 plugin.onGameStateChanged(logout);

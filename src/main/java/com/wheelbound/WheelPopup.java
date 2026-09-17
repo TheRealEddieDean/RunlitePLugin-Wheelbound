@@ -176,7 +176,7 @@ public class WheelPopup extends Overlay implements KeyListener
         g.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 13)); g.setColor(new Color(225, 221, 207));
         WheelStyle.centered(g, fitText(g.getFontMetrics(), current.title, card.width - 40), width / 2, card.y + 60);
         g.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 22));
-        g.drawString("\u00d7", layout.close.x + 6, layout.close.y + 22);
+        g.drawString("?", layout.close.x + 6, layout.close.y + 22);
         Graphics2D wg = (Graphics2D)g.create(wheel.x, wheel.y, wheel.width, wheel.height);
         WheelStyle.drawWheel(wg, wheel.width, wheel.height, current.entries, current.angle,
             current.available, hover, pressed, current.busy);

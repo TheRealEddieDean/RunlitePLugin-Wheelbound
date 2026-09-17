@@ -12,7 +12,10 @@ import java.util.stream.Collectors;
 final class CustomWheels
 {
     static final String KEY = "customWheels";
+    // Gson restores these fields from saved JSON; keep them writable.
+    @SuppressWarnings("FieldMayBeFinal")
     private int version = 1;
+    @SuppressWarnings("FieldMayBeFinal")
     private List<CustomWheel> wheels = new ArrayList<>();
 
     static final class Item
@@ -59,12 +62,12 @@ final class CustomWheels
             Set<String> ids = new HashSet<>();
             for (CustomWheel wheel : data.wheels)
             {
-                if (wheel == null || wheel.items == null || !validId(wheel.id) || !ids.add(wheel.id))
+                if (wheel == null || wheel.items == null || invalidId(wheel.id) || !ids.add(wheel.id))
                 { throw new IllegalArgumentException(); }
                 wheel.name = text(wheel.name, 80);
                 for (Item item : wheel.items)
                 {
-                    if (item == null || !validId(item.id) || !ids.add(item.id)) { throw new IllegalArgumentException(); }
+                    if (item == null || invalidId(item.id) || !ids.add(item.id)) { throw new IllegalArgumentException(); }
                     item.name = text(item.name, 200);
                 }
             }
@@ -74,8 +77,8 @@ final class CustomWheels
         { throw new IllegalArgumentException("Saved custom wheels could not be read. Your saved data has been kept.", ex); }
     }
 
-    private static boolean validId(String id)
-    { return id != null && id.matches("[a-zA-Z0-9-]+") && id.length() <= 80; }
+    private static boolean invalidId(String id)
+    { return id == null || !id.matches("[a-zA-Z0-9-]+") || id.length() > 80; }
     private static String text(String name, int limit)
     {
         if (name == null || name.isBlank()) { throw new IllegalArgumentException("Enter a name first."); }

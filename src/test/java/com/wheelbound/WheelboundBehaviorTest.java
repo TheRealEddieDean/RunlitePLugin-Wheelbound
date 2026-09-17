@@ -44,14 +44,18 @@ public class WheelboundBehaviorTest
         BossDefinition hydra = boss(HiscoreSkill.ALCHEMICAL_HYDRA);
         List<BossDefinition> catalog = List.of(obor, raid, hydra);
         for (boolean raids : new boolean[]{false, true})
-        for (boolean incomplete : new boolean[]{false, true})
-        for (boolean levels : new boolean[]{false, true})
         {
-            List<BossDefinition> result = WheelEligibility.bosses(catalog, raids, incomplete, levels, true,
-                s -> 80, b -> b != obor);
-            assertEquals(!incomplete, result.contains(obor));
-            assertEquals(raids, result.contains(raid));
-            assertEquals(!levels, result.contains(hydra));
+            for (boolean incomplete : new boolean[]{false, true})
+            {
+                for (boolean levels : new boolean[]{false, true})
+                {
+                    List<BossDefinition> result = WheelEligibility.bosses(catalog, raids, incomplete, levels, true,
+                        s -> 80, b -> b != obor);
+                    assertEquals(!incomplete, result.contains(obor));
+                    assertEquals(raids, result.contains(raid));
+                    assertEquals(!levels, result.contains(hydra));
+                }
+            }
         }
     }
 
@@ -92,15 +96,15 @@ public class WheelboundBehaviorTest
         BossDefinition obor = boss(HiscoreSkill.OBOR);
         Map<String, List<Integer>> mapping = Map.of("Obor", List.of(0, 31, 32));
         AtomicInteger reads = new AtomicInteger();
-        cache.refresh("A", BossCatalog.ALL, mapping, varp -> { reads.incrementAndGet(); return 0; });
+        cache.refresh("A", mapping, varp -> { reads.incrementAndGet(); return 0; });
         assertEquals(BossData.COMPLETION.length, reads.get());
         assertTrue(cache.hasIncomplete("A", obor));
         assertFalse(cache.hasIncomplete("B", obor));
         for (int i = 0; i < 10; i++) { cache.hasIncomplete("A", obor); }
         assertEquals(BossData.COMPLETION.length, reads.get());
-        cache.refresh("A", BossCatalog.ALL, mapping, varp -> -1);
+        cache.refresh("A", mapping, varp -> -1);
         assertFalse(cache.hasIncomplete("A", obor));
-        cache.refresh("B", BossCatalog.ALL, mapping, varp -> 0);
+        cache.refresh("B", mapping, varp -> 0);
         assertFalse(cache.hasIncomplete("A", obor));
         assertTrue(cache.hasIncomplete("B", obor));
         cache.reset();
@@ -112,13 +116,13 @@ public class WheelboundBehaviorTest
     {
         CombatAchievementCache cache = new CombatAchievementCache();
         BossDefinition obor = boss(HiscoreSkill.OBOR);
-        cache.refresh("A", BossCatalog.ALL, Map.of("Obor", List.of(0, 31)), varp -> 1);
+        cache.refresh("A", Map.of("Obor", List.of(0, 31)), varp -> 1);
         assertTrue(cache.hasIncomplete("A", obor));
-        cache.refresh("A", BossCatalog.ALL, Map.of("Obor", List.of(-1, 100000)), varp -> 0);
+        cache.refresh("A", Map.of("Obor", List.of(-1, 100000)), varp -> 0);
         assertFalse(cache.hasIncomplete("A", obor));
-        cache.refresh("A", BossCatalog.ALL, Map.of("Unknown encounter", List.of(0)), varp -> 0);
+        cache.refresh("A", Map.of("Unknown encounter", List.of(0)), varp -> 0);
         assertFalse(cache.hasIncomplete("A", obor));
-        cache.refresh(null, BossCatalog.ALL, Map.of("Obor", List.of(0)), varp -> { fail(); return 0; });
+        cache.refresh(null, Map.of("Obor", List.of(0)), varp -> { fail(); return 0; });
         assertFalse(cache.isReady(null));
     }
 
@@ -172,19 +176,14 @@ public class WheelboundBehaviorTest
         }
     }
 
-    @Test public void sampledBossPoolHasNoDuplicatesAndUniformOverallOdds()
+    @Test public void fullBossPoolGivesEachGroupedEncounterOneTicket()
     {
-        Random random = new Random(1234);
-        List<Integer> pool = new ArrayList<>();
-        for (int i = 0; i < 70; i++) { pool.add(i); }
-        int[] selected = new int[70];
-        for (int i = 0; i < 70000; i++)
-        {
-            List<Integer> sample = WheelSelection.sample(pool, 12, random);
-            assertEquals(12, new HashSet<>(sample).size());
-            selected[sample.get(random.nextInt(sample.size()))]++;
-        }
-        for (int count : selected) { assertTrue(count > 800 && count < 1200); }
-        assertTrue(WheelSelection.sample(List.of(), 12, random).isEmpty());
+        List<WheelEntry> entries = WheelEntry.groupRaids(BossCatalog.ALL.stream()
+            .map(b -> new WheelEntry(b.hiscore.name(), b.name, null, 1))
+            .collect(java.util.stream.Collectors.toList()));
+        assertEquals(entries.size(), WheelSelection.totalWeight(entries));
+        assertEquals(entries.size(), entries.stream().map(e -> e.id).distinct().count());
+        for (int ticket = 0; ticket < entries.size(); ticket++)
+        { assertEquals(ticket, WheelSelection.indexAt(entries, ticket)); }
     }
 }

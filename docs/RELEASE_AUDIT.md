@@ -137,6 +137,25 @@ The previous CA request additionally modified `BossData.java`, `CaEncounter.java
 
 ## Before submission
 
+### Follow-up source-warning cleanup
+
+IntelliJ inspections of all 42 production/test Java files report no warnings or
+errors after removing unused helpers, tightening test lookup assertions and
+directory creation, and replacing sleep-loop animation waits with bounded
+EDT timer/latch waits. The obsolete shortlist sampling test now checks the actual
+full grouped encounter pool. Framework-invoked callbacks and Gson-restored fields
+have narrowly documented inspection suppressions; their behavior is preserved.
+The Java 11 clean build still passes all 68 tests.
+
+The IDE also flags nine RuneLite transitive dependency security advisories in
+`build.gradle` (Logback Classic/Core, Guava, Gson, Commons Text/Lang, Protobuf,
+OkHttp and Okio). Their versions were confirmed in the resolved RuneLite 1.12.39
+test runtime graph. These advisories were not suppressed and do not establish
+that Wheelbound exercises the vulnerable paths. No dependency overrides were
+introduced: the Plugin Hub standard build and installed client supply these
+libraries. They require upstream review/updates, separate from Java code warnings.
+The previously documented Gradle Java 11 deprecation notice also remains.
+
 Run the live checks in [SUBMISSION.md](SUBMISSION.md), especially account/profile
 changes during either spin stage, CA task/tier accuracy, quest requirements,
 pet ownership, fixed/resizable layout, native-dialog cleanup, and restart

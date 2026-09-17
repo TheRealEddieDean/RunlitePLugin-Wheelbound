@@ -41,7 +41,7 @@ public class WheelPopupTest
             assertEquals(size[1] / 2.0, layout.card.getCenterY(), 1);
             assertTrue(new Rectangle(0, 0, size[0], size[1]).contains(layout.card));
             assertTrue(layout.card.contains(layout.wheel));
-            new File("build/reports").mkdirs();
+            java.nio.file.Files.createDirectories(java.nio.file.Path.of("build/reports"));
             ImageIO.write(image, "png", new File("build/reports/wheelbound-centered-" + size[0] + ".png"));
             g = image.createGraphics();
             WheelPopup.paint(g, size[0], size[1],

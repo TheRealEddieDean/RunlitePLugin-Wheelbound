@@ -33,6 +33,7 @@ public class CustomWheelsTest
             wheel.setEntries(List.of(new WheelEntry("CUSTOM_one", "<html><img src='https://example.invalid/'>", null, 1)));
             String tip = wheel.getToolTipText(new java.awt.event.MouseEvent(wheel,
                 java.awt.event.MouseEvent.MOUSE_MOVED, 0, 0, 350, 200, 0, false));
+            assertNotNull(tip);
             assertTrue(tip.contains("&lt;img"));
             assertFalse(tip.contains("<img"));
         });
@@ -105,13 +106,16 @@ public class CustomWheelsTest
             button(panel.nameDialog().content(), "Create").doClick();
             assertTrue(panel.nameDialog().isOpen()); assertFalse(popup.isOpen());
             assertNull(saved.get(CustomWheels.KEY));
-            field(panel.nameDialog().content(), "customWheelName").setText("Weekend");
+            JTextField wheelName = field(panel.nameDialog().content(), "customWheelName");
+            assertNotNull(wheelName); wheelName.setText("Weekend");
             button(panel.nameDialog().content(), "Create").doClick();
             assertFalse(panel.nameDialog().isOpen()); assertTrue(popup.isOpen());
             assertEquals(0, popup.entryCount());
             String firstId = saved.get("selectedCustomWheel");
             JTextField entry = field(panel.getWrappedPanel(), "customEntryName");
+            assertNotNull(entry);
             entry.setText("Theatre of Blood: Hard Mode"); entry.postActionEvent();
+            assertNotNull(entry);
             entry.setText("Theatre of Blood: Hard Mode"); button(panel.getWrappedPanel(), "Add").doClick();
             panel.addCustomEntry("<html>Go for a walk & relax");
             assertEquals(3, popup.entryCount());
@@ -121,7 +125,8 @@ public class CustomWheelsTest
             CustomWheels data = CustomWheels.load(saved.get(CustomWheels.KEY));
             assertFalse(data.find(firstId).items.get(0).enabled);
             String deleteTip = "Delete entry: <html>Go for a walk & relax";
-            byTooltip(panel, deleteTip).doClick(); assertEquals(1, popup.entryCount());
+            AbstractButton remove = byTooltip(panel, deleteTip);
+            assertNotNull(remove); remove.doClick(); assertEquals(1, popup.entryCount());
             assertEquals(2, CustomWheels.load(saved.get(CustomWheels.KEY)).find(firstId).items.size());
             panel.selectWheel(WheelType.CUSTOM); panel.createCustomWheel("Chores"); panel.addCustomEntry("Dishes");
             assertEquals(1, popup.entryCount());
@@ -225,19 +230,21 @@ public class CustomWheelsTest
                 {
                     wrapped.setSize(242, height); layout(wrapped);
                     JTextField entry = field(wrapped, "customEntryName");
+                    assertNotNull(entry);
                     Rectangle entryBounds = SwingUtilities.convertRectangle(entry.getParent(), entry.getBounds(), wrapped);
                     JCheckBox firstRow = checkboxes(panel).get(0);
                     Rectangle rowBounds = SwingUtilities.convertRectangle(firstRow.getParent(), firstRow.getBounds(), wrapped);
                     assertTrue(entryBounds.y + entryBounds.height < rowBounds.y);
                     assertTrue(entryBounds.x >= 12);
                     AbstractButton trash = byTooltip(panel, "Delete entry: Try a new recipe");
+                    assertNotNull(trash);
                     assertFalse(trash.isContentAreaFilled()); assertFalse(trash.isOpaque());
                     AbstractButton delete = button(wrapped, "Delete wheel");
                     Rectangle bounds = SwingUtilities.convertRectangle(delete.getParent(), delete.getBounds(), wrapped);
                     assertTrue(bounds.y > height / 2); assertTrue(bounds.y + bounds.height <= height);
                     BufferedImage image = new BufferedImage(242, height, BufferedImage.TYPE_INT_RGB);
                     Graphics2D g = image.createGraphics(); wrapped.paint(g); g.dispose();
-                    new File("build/reports").mkdirs();
+                    java.nio.file.Files.createDirectories(java.nio.file.Path.of("build/reports"));
                     ImageIO.write(image, "png", new File("build/reports/wheelbound-custom-" + height + ".png"));
                 }
             }

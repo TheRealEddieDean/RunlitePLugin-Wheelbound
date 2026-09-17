@@ -81,16 +81,16 @@ public class PetHuntingTest
             });
             panel.selectWheel(WheelType.PET_HUNTING); panel.onActivate();
             assertEquals(71, popup.entryCount());
-            find(panel, "Include raids").doClick(); assertEquals(68, popup.entryCount());
-            find(panel, "Vorki").doClick(); assertEquals(67, popup.entryCount());
+            button(panel, "Include raids").doClick(); assertEquals(68, popup.entryCount());
+            button(panel, "Vorki").doClick(); assertEquals(67, popup.entryCount());
             assertEquals("PET_" + ItemID.VORKATHPET, preferences.get("excludedPets"));
             assertNull(preferences.get("excludedBosses"));
             panel.selectWheel(WheelType.BOSSING); panel.selectWheel(WheelType.PET_HUNTING);
             assertEquals(67, popup.entryCount());
             for (String category : List.of("Include bosses", "Include skilling", "Include other activities"))
-            { find(panel, category).doClick(); }
+            { button(panel, category).doClick(); }
             assertEquals(0, popup.entryCount()); assertFalse(panel.primaryWheel().canSpin());
-            find(panel, "Include raids").doClick(); assertEquals(3, popup.entryCount());
+            button(panel, "Include raids").doClick(); assertEquals(3, popup.entryCount());
             panel.reset(); assertFalse(popup.isOpen());
             WheelboundPanel restored = new WheelboundPanel(preferences::get, (k, v) -> {});
             assertEquals(WheelType.PET_HUNTING, restored.wheelType());
@@ -124,7 +124,7 @@ public class PetHuntingTest
             WheelPopup.paint(g, size[0], size[1],
                 new WheelPopup.View("Pet Hunting", List.of(pet), 0, "", true, false), false, false);
             WheelPopup.paintResultRow(g, layout, pet, null); g.dispose();
-            new File("build/reports").mkdirs();
+            java.nio.file.Files.createDirectories(java.nio.file.Path.of("build/reports"));
             ImageIO.write(image, "png", new File("build/reports/wheelbound-pet-result-" + size[0] + ".png"));
         }
         SwingUtilities.invokeAndWait(() -> {
@@ -150,6 +150,13 @@ public class PetHuntingTest
             .map(p -> new WheelEntry("PET_" + p.itemId, p.name, null, 1, p.source, null))
             .collect(java.util.stream.Collectors.toList());
     }
+    private static AbstractButton button(Container parent, String text)
+    {
+        AbstractButton found = find(parent, text);
+        assertNotNull("Missing button: " + text, found);
+        return found;
+    }
+
     private static AbstractButton find(Container parent, String text)
     {
         for (Component c : parent.getComponents())

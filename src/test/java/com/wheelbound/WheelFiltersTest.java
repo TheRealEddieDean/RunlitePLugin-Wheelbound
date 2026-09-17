@@ -27,7 +27,7 @@ public class WheelFiltersTest
         CaEncounter.Task master = new CaEncounter.Task(2, CaTier.MASTER, "Master task");
         CaEncounter boss = encounter(1, "Obor", done, open, master);
         CombatAchievementCache cache = new CombatAchievementCache();
-        cache.refresh("A", BossCatalog.ALL, Map.of("Obor", List.of(0, 1, 2)),
+        cache.refresh("A", Map.of("Obor", List.of(0, 1, 2)),
             id -> id == BossData.COMPLETION[0] ? 1 : 0);
         List<CaEncounter.Task> tasks = cache.incompleteTasks("A", boss, Set.of(CaTier.MASTER));
         assertEquals(List.of(open), tasks);
@@ -57,11 +57,11 @@ public class WheelFiltersTest
     {
         CaEncounter obor = encounter(1, "Obor", new CaEncounter.Task(0, CaTier.EASY), new CaEncounter.Task(31, CaTier.MASTER));
         CombatAchievementCache cache = new CombatAchievementCache();
-        cache.refresh("A", BossCatalog.ALL, Map.of("Obor", List.of(0, 31)), id -> id == BossData.COMPLETION[0] ? 1 : 0);
+        cache.refresh("A", Map.of("Obor", List.of(0, 31)), id -> id == BossData.COMPLETION[0] ? 1 : 0);
         assertTrue(cache.hasIncomplete("A", obor, Set.of()));
         assertFalse("The only unfinished task is Master", cache.hasIncomplete("A", obor, Set.of(CaTier.MASTER)));
         assertFalse(cache.hasIncomplete("B", obor, Set.of()));
-        cache.refresh("A", BossCatalog.ALL, Map.of("Obor", List.of(0, 31)), id -> -1);
+        cache.refresh("A", Map.of("Obor", List.of(0, 31)), id -> -1);
         assertFalse(cache.hasIncomplete("A", obor, Set.of()));
         cache.reset();
         assertFalse(cache.hasIncomplete("A", obor, Set.of()));
@@ -70,7 +70,7 @@ public class WheelFiltersTest
     @Test public void everyTierCanBeExcludedAndUnknownTaskIdsAreNotUnfinished()
     {
         CombatAchievementCache cache = new CombatAchievementCache();
-        cache.refresh("A", BossCatalog.ALL, Map.of("Bloodveld", List.of(1)), id -> 0);
+        cache.refresh("A", Map.of("Bloodveld", List.of(1)), id -> 0);
         for (CaTier tier : CaTier.values())
         {
             CaEncounter monster = encounter(2, "Bloodveld", new CaEncounter.Task(1, tier));

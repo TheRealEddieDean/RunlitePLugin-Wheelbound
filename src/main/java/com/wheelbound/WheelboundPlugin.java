@@ -107,7 +107,7 @@ public class WheelboundPlugin extends Plugin
         }
     }
 
-    @Subscribe public void onRuneScapeProfileChanged(RuneScapeProfileChanged event)
+    @Subscribe public void onRuneScapeProfileChanged(RuneScapeProfileChanged ignored)
     {
         // Invalidate outstanding UI responses immediately, before the queued local read.
         session.incrementAndGet();
@@ -115,7 +115,9 @@ public class WheelboundPlugin extends Plugin
         clientThread.invokeLater(() -> { if (active && target != null && panel == target) { resetAccount(); queueCaRefresh(); } });
     }
 
-    @Subscribe public void onProfileChanged(ProfileChanged event)
+    // Invoked by RuneLite's event bus.
+    @SuppressWarnings("unused")
+    @Subscribe public void onProfileChanged(ProfileChanged ignored)
     {
         session.incrementAndGet();
         WheelboundPanel target = panel;
@@ -132,11 +134,13 @@ public class WheelboundPlugin extends Plugin
         else { poolDirty = true; }
     }
 
-    @Subscribe public void onGameTick(GameTick event)
+    @Subscribe public void onGameTick(GameTick ignored)
     {
         if (poolDirty) { poolDirty = false; queuePoolRefresh(); }
     }
 
+    // Invoked by RuneLite's event bus.
+    @SuppressWarnings("unused")
     @Subscribe public void onStatChanged(StatChanged event)
     {
         Integer previous = levels.put(event.getSkill(), event.getLevel());
@@ -169,7 +173,7 @@ public class WheelboundPlugin extends Plugin
             achievements.reset();
             if (loggedIn())
             {
-                try { achievements.refresh(identity(), BossCatalog.ALL, bossData.load(client), client::getVarpValue); }
+                try { achievements.refresh(identity(), bossData.load(client), client::getVarpValue); }
                 catch (RuntimeException ex) { log.debug("Local combat achievement data is unavailable", ex); }
             }
             queuePoolRefresh();
@@ -312,5 +316,7 @@ public class WheelboundPlugin extends Plugin
         });
     }
 
+    // Invoked by Guice when resolving the configuration binding.
+    @SuppressWarnings("unused")
     @Provides WheelboundConfig provideConfig(ConfigManager manager) { return manager.getConfig(WheelboundConfig.class); }
 }

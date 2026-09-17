@@ -89,26 +89,12 @@ final class BossChecklist extends JPanel
         return List.copyOf(result);
     }
 
-    boolean allIncluded() { return excluded.isEmpty(); }
     void restore(String saved)
     {
         excluded.clear();
         if (saved != null && !saved.isBlank()) { excluded.addAll(Arrays.asList(saved.split(","))); }
         List<WheelEntry> current = entries; entries = List.of(); updateEntries(current);
     }
-    void includeAll()
-    {
-        excluded.clear();
-        List<WheelEntry> current = entries; entries = List.of(); updateEntries(current);
-        changed.accept("");
-    }
-    void excludeAll()
-    {
-        entries.forEach(entry -> excluded.add(entry.id));
-        List<WheelEntry> current = entries; entries = List.of(); updateEntries(current);
-        changed.accept(String.join(",", excluded));
-    }
-
     @Override public void setEnabled(boolean enabled)
     {
         super.setEnabled(enabled);

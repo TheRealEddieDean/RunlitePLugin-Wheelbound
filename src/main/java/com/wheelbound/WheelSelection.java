@@ -1,7 +1,5 @@
 package com.wheelbound;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -31,15 +29,6 @@ final class WheelSelection
             if (ticket < 0) { return i; }
         }
         return -1;
-    }
-
-    /** Uniform sampling without replacement, then uniform selection gives each boss 1/N odds. */
-    static <T> List<T> sample(List<T> entries, int maximum, Random random)
-    {
-        if (maximum <= 0) { throw new IllegalArgumentException("Invalid sample size"); }
-        List<T> copy = new ArrayList<>(entries);
-        Collections.shuffle(copy, random);
-        return List.copyOf(copy.subList(0, Math.min(maximum, copy.size())));
     }
 
     static double center(List<WheelEntry> entries, int selected)

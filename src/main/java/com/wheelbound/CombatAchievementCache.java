@@ -22,7 +22,7 @@ final class CombatAchievementCache
         completion = new int[0];
     }
 
-    void refresh(String identity, List<BossDefinition> bosses, Map<String, List<Integer>> tasks,
+    void refresh(String identity, Map<String, List<Integer>> tasks,
         IntUnaryOperator readVarp)
     {
         reset();
@@ -30,7 +30,7 @@ final class CombatAchievementCache
         int[] flags = new int[BossData.COMPLETION.length];
         for (int i = 0; i < flags.length; i++) { flags[i] = readVarp.applyAsInt(BossData.COMPLETION[i]); }
         Set<String> open = new HashSet<>();
-        for (BossDefinition boss : bosses)
+        for (BossDefinition boss : BossCatalog.ALL)
         {
             for (String encounter : boss.caEncounters)
             {

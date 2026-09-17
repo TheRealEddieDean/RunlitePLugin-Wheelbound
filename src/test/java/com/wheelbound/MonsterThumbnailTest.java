@@ -51,6 +51,7 @@ public class MonsterThumbnailTest
         Client client = mock(Client.class);
         CaEncounter obor = new CaEncounter(1, "Obor", List.of());
         BufferedImage sprite = new BufferedImage(25, 25, BufferedImage.TYPE_INT_ARGB);
+        assertNotNull(obor.boss);
         when(sprites.getSprite(obor.boss.spriteId, 0)).thenReturn(sprite);
         WheelIconProvider provider = new WheelIconProvider(client, sprites, new SkillIconManager(), mock(net.runelite.client.game.ItemManager.class));
         assertSame(sprite, provider.encounter(obor).icon);
