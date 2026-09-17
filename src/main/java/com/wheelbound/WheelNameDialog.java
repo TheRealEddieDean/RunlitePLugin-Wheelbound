@@ -34,7 +34,9 @@ final class WheelNameDialog
         JPanel header = new JPanel(new BorderLayout()); header.setOpaque(false);
         JLabel title = new JLabel("New custom wheel", SwingConstants.CENTER);
         title.setFont(new Font(Font.SERIF, Font.BOLD, 24)); title.setForeground(WheelStyle.GOLD);
-        JButton close = new JButton("?"); close.setForeground(WheelStyle.GOLD);
+        // Keep the close glyph ASCII-encoded to survive Windows text tooling.
+        //noinspection UnnecessaryUnicodeEscape
+        JButton close = new JButton("\u00d7"); close.setForeground(WheelStyle.GOLD);
         close.setContentAreaFilled(false); close.setBorderPainted(false);
         close.setToolTipText("Cancel"); close.getAccessibleContext().setAccessibleName("Cancel creation");
         close.addActionListener(e -> hide());
