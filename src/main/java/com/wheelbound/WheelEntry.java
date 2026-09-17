@@ -12,6 +12,7 @@ final class WheelEntry
     final int weight;
     final String source;
     final BufferedImage sourceIcon;
+    final java.util.List<CaEncounter.Task> tasks;
 
     WheelEntry(String id, String label, BufferedImage icon, int weight)
     {
@@ -20,12 +21,29 @@ final class WheelEntry
 
     WheelEntry(String id, String label, BufferedImage icon, int weight, String source, BufferedImage sourceIcon)
     {
+        this(id, label, icon, weight, source, sourceIcon, java.util.List.of());
+    }
+
+    private WheelEntry(String id, String label, BufferedImage icon, int weight, String source,
+        BufferedImage sourceIcon, java.util.List<CaEncounter.Task> tasks)
+    {
+        this.tasks = java.util.List.copyOf(tasks);
         this.source = source; this.sourceIcon = sourceIcon;
         if (weight <= 0) { throw new IllegalArgumentException("Weight must be positive"); }
         this.id = Objects.requireNonNull(id);
         this.label = Objects.requireNonNull(label);
         this.icon = icon;
         this.weight = weight;
+    }
+
+    WheelEntry withTasks(java.util.List<CaEncounter.Task> tasks)
+    { return new WheelEntry(id, label, icon, weight, source, sourceIcon, tasks); }
+
+    String pickAchievement(java.util.Random random)
+    {
+        if (tasks.isEmpty()) { return null; }
+        CaEncounter.Task task = tasks.get(random.nextInt(tasks.size()));
+        return task.name + " (" + task.tier.title + ")";
     }
 
     /** Presentation grouping happens after mode-specific eligibility and CA task filtering. */
@@ -42,8 +60,18 @@ final class WheelEntry
             String id = name.equals("Chambers of Xeric") ? "CHAMBERS_OF_XERIC"
                 : name.equals("Theatre of Blood") ? "THEATRE_OF_BLOOD"
                 : name.equals("Tombs of Amascut") ? "TOMBS_OF_AMASCUT" : entry.id;
-            grouped.putIfAbsent(id, id.equals(entry.id) && name.equals(entry.label) ? entry
-                : new WheelEntry(id, name, entry.icon, entry.weight, entry.source, entry.sourceIcon));
+            WheelEntry previous = grouped.get(id);
+            if (previous == null && id.equals(entry.id) && name.equals(entry.label))
+            {
+                grouped.put(id, entry);
+                continue;
+            }
+            java.util.Map<Integer, CaEncounter.Task> tasks = new java.util.LinkedHashMap<>();
+            if (previous != null) { previous.tasks.forEach(task -> tasks.put(task.id, task)); }
+            entry.tasks.forEach(task -> tasks.putIfAbsent(task.id, task));
+            WheelEntry base = previous != null ? previous : new WheelEntry(id, name, entry.icon,
+                entry.weight, entry.source, entry.sourceIcon);
+            grouped.put(id, base.withTasks(java.util.List.copyOf(tasks.values())));
         }
         return java.util.List.copyOf(grouped.values());
     }

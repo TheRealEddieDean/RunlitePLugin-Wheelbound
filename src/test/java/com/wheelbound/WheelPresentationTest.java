@@ -8,6 +8,33 @@ import static org.junit.Assert.*;
 
 public class WheelPresentationTest
 {
+    @Test public void customGainLabelsAndLargeWheelsRenderSafely()
+    {
+        java.awt.image.BufferedImage image = new java.awt.image.BufferedImage(765, 503,
+            java.awt.image.BufferedImage.TYPE_INT_ARGB);
+        Graphics2D graphics = image.createGraphics();
+        try
+        {
+            java.util.ArrayList<WheelEntry> entries = new java.util.ArrayList<>();
+            entries.add(new WheelEntry("CUSTOM_one", "Gain 10,000 XP", null, 1));
+            WheelStyle.drawWheel(graphics, 400, 400, entries, 0, true, false, false, false);
+            for (int i = 0; i < 1000; i++)
+            { entries.add(new WheelEntry("CUSTOM_" + i, "Gain " + "x".repeat(195), null, 1)); }
+            WheelStyle.drawWheel(graphics, 400, 400, entries, 0, true, false, false, false);
+            assertEquals(1001, WheelSelection.totalWeight(entries));
+            Rectangle box = WheelPopup.paintResultRow(graphics, new WheelPopup.Layout(765, 503), entries.get(1), null);
+            assertTrue(new WheelPopup.Layout(765, 503).results.contains(box));
+        }
+        finally { graphics.dispose(); }
+    }
+
+    @Test public void missingArtworkHasAUsableFallback()
+    {
+        java.awt.image.BufferedImage image = WheelStyle.loadArtwork("missing-artwork.png");
+        assertNotNull(image);
+        assertEquals(64, image.getWidth());
+    }
+
     @Test public void raidsGroupAfterFilteringWithEqualOddsAndFullNames()
     {
         List<WheelEntry> entries = WheelEntry.groupRaids(List.of(

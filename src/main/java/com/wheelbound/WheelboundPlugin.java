@@ -14,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.Client;
 import net.runelite.api.GameState;
 import net.runelite.api.events.GameStateChanged;
+import net.runelite.api.events.GameTick;
 import net.runelite.api.events.StatChanged;
 import net.runelite.api.events.VarbitChanged;
 import net.runelite.client.callback.ClientThread;
@@ -44,7 +45,8 @@ public class WheelboundPlugin extends Plugin
     private final CombatAchievementCache achievements = new CombatAchievementCache();
     private final AtomicBoolean caRefreshQueued = new AtomicBoolean();
     private final AtomicBoolean poolRefreshQueued = new AtomicBoolean();
-    private WheelboundPanel panel;
+    private boolean poolDirty;
+    private volatile WheelboundPanel panel;
     private NavigationButton navigation;
     private volatile boolean active;
     private final AtomicLong session = new AtomicLong();
@@ -76,7 +78,7 @@ public class WheelboundPlugin extends Plugin
         long epoch = session.incrementAndGet();
         clientThread.invokeLater(() -> {
             if (!active && session.get() == epoch)
-            { achievements.reset(); bossData.clear(); levels.clear(); }
+            { achievements.reset(); bossData.clear(); levels.clear(); poolDirty = false; }
         });
         caRefreshQueued.set(false); poolRefreshQueued.set(false);
         popup.hide();
@@ -86,7 +88,7 @@ public class WheelboundPlugin extends Plugin
         keyManager.unregisterKeyListener(popup);
         if (panel != null)
         {
-            panel.setAction(ignored -> {}); panel.reset(); panel = null;
+            panel.setAction(ignored -> {}); panel.setRefreshAction(() -> {}); panel.reset(); panel = null;
         }
         if (navigation != null)
         {
@@ -109,28 +111,36 @@ public class WheelboundPlugin extends Plugin
     {
         // Invalidate outstanding UI responses immediately, before the queued local read.
         session.incrementAndGet();
-        clientThread.invokeLater(() -> { if (active) { resetAccount(); queueCaRefresh(); } });
+        WheelboundPanel target = panel;
+        clientThread.invokeLater(() -> { if (active && target != null && panel == target) { resetAccount(); queueCaRefresh(); } });
     }
 
     @Subscribe public void onProfileChanged(ProfileChanged event)
     {
         session.incrementAndGet();
+        WheelboundPanel target = panel;
         SwingUtilities.invokeLater(() -> {
-            if (active) { panel.reloadPreferences(key -> settings.getConfiguration("wheelbound", key)); request(false); }
+            if (active && target != null && panel == target)
+            { target.reloadPreferences(key -> settings.getConfiguration("wheelbound", key)); request(false); }
         });
-        clientThread.invokeLater(() -> { if (active) { resetAccount(); queueCaRefresh(); } });
+        clientThread.invokeLater(() -> { if (active && target != null && panel == target) { resetAccount(); queueCaRefresh(); } });
     }
 
     @Subscribe public void onVarbitChanged(VarbitChanged event)
     {
         if (CombatAchievementCache.isCompletionVarp(event.getVarpId())) { queueCaRefresh(); }
-        else { queuePoolRefresh(); }
+        else { poolDirty = true; }
+    }
+
+    @Subscribe public void onGameTick(GameTick event)
+    {
+        if (poolDirty) { poolDirty = false; queuePoolRefresh(); }
     }
 
     @Subscribe public void onStatChanged(StatChanged event)
     {
         Integer previous = levels.put(event.getSkill(), event.getLevel());
-        if (previous == null || previous != event.getLevel()) { queuePoolRefresh(); }
+        if (previous == null || previous != event.getLevel()) { poolDirty = true; }
     }
 
     private boolean loggedIn() { return client.getGameState() == GameState.LOGGED_IN && client.getLocalPlayer() != null; }
@@ -143,7 +153,7 @@ public class WheelboundPlugin extends Plugin
     private void resetAccount()
     {
         long epoch = session.incrementAndGet();
-        achievements.reset(); levels.clear();
+        achievements.reset(); levels.clear(); poolDirty = false;
         SwingUtilities.invokeLater(() -> {
             if (active && session.get() == epoch) { panel.reset(); request(false); }
         });
@@ -171,14 +181,14 @@ public class WheelboundPlugin extends Plugin
         if (!active || !poolRefreshQueued.compareAndSet(false, true)) { return; }
         SwingUtilities.invokeLater(() -> {
             poolRefreshQueued.set(false);
-            if (active) { request(false); }
+            if (active && panel != null) { request(false); }
         });
     }
 
     /** Preferences are captured on the EDT; all player reads and sprite loading use the client thread. */
     private void request(boolean spin)
     {
-        if (!active) { return; }
+        if (!active || panel == null) { return; }
         if (panel.wheelType() == WheelType.CUSTOM) { panel.refreshCustomPool(spin); return; }
         WheelType type = panel.wheelType();
         Set<WheelFilter> filters = panel.selectedFilters();
@@ -281,7 +291,11 @@ public class WheelboundPlugin extends Plugin
                     entries = WheelEligibility.achievements(bossData.encounters(client), !filters.contains(WheelFilter.CA_BOSSES),
                         !filters.contains(WheelFilter.CA_RAIDS), e -> achievements.hasIncomplete(account, e, excluded),
                         e -> !matchTask || AccountAccess.taskAllows(e.name, assignment))
-                        .stream().map(icons::encounter).collect(Collectors.toUnmodifiableList());
+                        .stream().map(e -> {
+                            WheelEntry entry = icons.encounter(e);
+                            return filters.contains(WheelFilter.CA_SPECIFIC)
+                                ? entry.withTasks(achievements.incompleteTasks(account, e, excluded)) : entry;
+                        }).collect(Collectors.toUnmodifiableList());
                     message = entries.isEmpty() ? "No unfinished tasks match. Include another tier or encounter category."
                         : entries.size() + " encounters with unfinished tasks in your included tiers.";
                 }

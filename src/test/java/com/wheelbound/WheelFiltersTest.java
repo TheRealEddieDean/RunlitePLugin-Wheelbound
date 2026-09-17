@@ -20,6 +20,39 @@ import static org.mockito.Mockito.*;
 
 public class WheelFiltersTest
 {
+    @Test public void specificAchievementUsesOnlyOpenTasksInIncludedTiers()
+    {
+        CaEncounter.Task done = new CaEncounter.Task(0, CaTier.EASY, "Already done");
+        CaEncounter.Task open = new CaEncounter.Task(1, CaTier.HARD, "Open task");
+        CaEncounter.Task master = new CaEncounter.Task(2, CaTier.MASTER, "Master task");
+        CaEncounter boss = encounter(1, "Obor", done, open, master);
+        CombatAchievementCache cache = new CombatAchievementCache();
+        cache.refresh("A", BossCatalog.ALL, Map.of("Obor", List.of(0, 1, 2)),
+            id -> id == BossData.COMPLETION[0] ? 1 : 0);
+        List<CaEncounter.Task> tasks = cache.incompleteTasks("A", boss, Set.of(CaTier.MASTER));
+        assertEquals(List.of(open), tasks);
+        WheelEntry entry = new WheelEntry("CA_1", "Obor", null, 1).withTasks(tasks);
+        assertEquals("Open task (Hard)", entry.pickAchievement(new java.util.Random(0)));
+        assertTrue(cache.incompleteTasks("B", boss, Set.of()).isEmpty());
+        assertNull(new WheelEntry("CA_1", "Obor", null, 1).pickAchievement(new java.util.Random()));
+    }
+
+    @Test public void groupedRaidsPreserveAllEligibleTasksWithoutDuplicates()
+    {
+        CaEncounter.Task normal = new CaEncounter.Task(1, CaTier.HARD, "Normal task");
+        CaEncounter.Task expert = new CaEncounter.Task(2, CaTier.ELITE, "Expert task");
+        List<WheelEntry> grouped = WheelEntry.groupRaids(List.of(
+            new WheelEntry("CA_1", "Tombs of Amascut", null, 1).withTasks(List.of(normal)),
+            new WheelEntry("CA_2", "Tombs of Amascut: Expert Mode", null, 1).withTasks(List.of(normal, expert))));
+        assertEquals(1, grouped.size());
+        assertEquals(1, grouped.get(0).weight);
+        assertEquals(List.of(normal, expert), grouped.get(0).tasks);
+        java.util.Set<String> picked = new java.util.HashSet<>();
+        java.util.Random random = new java.util.Random(7);
+        for (int i = 0; i < 100; i++) { picked.add(grouped.get(0).pickAchievement(random)); }
+        assertEquals(Set.of("Normal task (Hard)", "Expert task (Elite)"), picked);
+    }
+
     @Test public void onlyUnfinishedTasksInIncludedTiersKeepAnEncounterEligible()
     {
         CaEncounter obor = encounter(1, "Obor", new CaEncounter.Task(0, CaTier.EASY), new CaEncounter.Task(31, CaTier.MASTER));

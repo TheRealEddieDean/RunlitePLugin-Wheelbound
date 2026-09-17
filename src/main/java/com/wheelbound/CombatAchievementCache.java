@@ -57,10 +57,16 @@ final class CombatAchievementCache
 
     boolean hasIncomplete(String identity, CaEncounter encounter, Set<CaTier> excludedTiers)
     {
-        if (!isReady(identity)) { return false; }
-        return encounter.tasks.stream().anyMatch(task -> !excludedTiers.contains(task.tier)
+        return !incompleteTasks(identity, encounter, excludedTiers).isEmpty();
+    }
+
+    List<CaEncounter.Task> incompleteTasks(String identity, CaEncounter encounter, Set<CaTier> excludedTiers)
+    {
+        if (!isReady(identity)) { return List.of(); }
+        return encounter.tasks.stream().filter(task -> !excludedTiers.contains(task.tier)
             && task.id >= 0 && task.id / 32 < completion.length
-            && !BossData.isComplete(completion[task.id / 32], task.id % 32));
+            && !BossData.isComplete(completion[task.id / 32], task.id % 32))
+            .collect(java.util.stream.Collectors.toUnmodifiableList());
     }
 
     static boolean isCompletionVarp(int id)

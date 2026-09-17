@@ -249,7 +249,8 @@ public class WheelPopup extends Overlay implements KeyListener
             }
             g.setFont(detailFont);
             g.setColor(new Color(225, 221, 207));
-            g.drawString(subtitle, textX + sourceIconSpace, box.y + 47);
+            g.drawString(fitText(g.getFontMetrics(), subtitle,
+                box.x + box.width - textX - sourceIconSpace - 12), textX + sourceIconSpace, box.y + 47);
         }
         g.dispose();
         return box;

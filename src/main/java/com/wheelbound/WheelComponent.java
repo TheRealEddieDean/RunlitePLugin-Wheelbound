@@ -115,7 +115,7 @@ final class WheelComponent extends JComponent
         int index = WheelSelection.indexAt(entries, degrees / 360 * WheelSelection.totalWeight(entries));
         if (index < 0) { return null; }
         WheelEntry entry = entries.get(index);
-        return entry.label + String.format(java.util.Locale.US, " (%.1f%% of this wheel)",
+        return "<html>" + BossChecklist.escape(entry.label) + String.format(java.util.Locale.US, " (%.1f%% of this wheel)</html>",
             entry.weight * 100.0 / WheelSelection.totalWeight(entries));
     }
 

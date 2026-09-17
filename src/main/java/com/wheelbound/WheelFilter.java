@@ -22,6 +22,8 @@ enum WheelFilter
         "Remove Attack, Strength, Defence, Hitpoints, Ranged, Magic and Prayer. Slayer remains a training skill."),
     MAXED_SKILLS(WheelType.SKILLING, "Skills", "skillExclude99", "Exclude skills with 99", true, "Use real levels, not boosted or virtual levels."),
     XP(WheelType.SKILLING, "XP target", "includeXpGoal", "Include XP goal", false, "Spin the existing second XP wheel after choosing a skill."),
+    CA_SPECIFIC(WheelType.COMBAT_ACHIEVEMENTS, "Result", "caSpecificAchievement", "Pick a specific achievement", false,
+        "Show a random unfinished achievement below the selected encounter, using your included tiers."),
     CA_BOSSES(WheelType.COMBAT_ACHIEVEMENTS, "Encounters", "caIncludeBosses", "Include bosses", true,
         "Include boss encounters. Raids have their own separate filter."),
     CA_RAIDS(WheelType.COMBAT_ACHIEVEMENTS, "Encounters", "caIncludeRaids", "Include raids", true, "Include raid encounters across all modes."),

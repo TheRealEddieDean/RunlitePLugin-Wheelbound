@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="src/main/resources/com/wheelbound/wheelbound-header.png" alt="Wheelbound ? Spin your destiny" width="440">
+  <img src="src/main/resources/com/wheelbound/wheelbound-header.png" alt="Wheelbound - Spin your destiny" width="440">
 </p>
 
 Not sure what to do next in Old School RuneScape? Let the wheel choose.
@@ -13,7 +13,7 @@ what you feel like doing, and spin for your next adventure.
 | --- | --- |
 | **Bossing** | Find your next boss or raid, with difficulty, skill-level and access filters. |
 | **Skilling** | Choose a skill to train, with an optional second spin for an XP target. |
-| **Combat Achievements** | Pick an encounter with unfinished tasks in your selected tiers. |
+| **Combat Achievements** | Pick an encounter with unfinished tasks in your selected tiers. Enable **Pick a specific achievement** to show a random unfinished task and its tier below the boss or monster, respecting your filters. |
 | **Pet Hunting** | Choose a pet to chase across bosses, raids, skilling and other activities. Optionally exclude pets you already own. |
 | **Questing** | Pick an unfinished quest, with difficulty and eligibility filters. |
 | **Custom wheels** | Create your own named wheels for any activities or challenges you have in mind. |
@@ -27,7 +27,7 @@ Open the Wheelbound sidebar, choose a wheel, and adjust its options. The wheel
 opens in the game area; click **SPIN** to reveal your choice. Press **Escape** or
 use the close button to dismiss it.
 
-To make your own wheel, select **New custom wheel?**, enter a name, and click
+To make your own wheel, select **New custom wheel...**, enter a name, and click
 **Create**. Add choices using **New Entry** above the list. You can toggle entries,
 remove them with the trash icon, or delete a whole custom wheel after confirming.
 

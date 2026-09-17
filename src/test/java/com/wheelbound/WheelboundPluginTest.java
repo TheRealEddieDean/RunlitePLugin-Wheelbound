@@ -3,6 +3,7 @@ package com.wheelbound;
 import net.runelite.client.RuneLite;
 import net.runelite.client.externalplugins.ExternalPluginManager;
 
+/** Development client launcher used by Gradle run; not a JUnit test. */
 public class WheelboundPluginTest
 {
 	// RuneLite's loadBuiltin API uses a generic varargs array.

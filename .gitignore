@@ -32,3 +32,17 @@ runelite.log
 # Local account-security review and development login files
 /SECURITY_REVIEW.md
 credentials.properties
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+.runelite/
+credentials*.properties
+credentials*.json
+tokens.json
+cookies.txt
+cookies.json
+/cleanup-jagex-login.bat
+/scripts/cleanup-jagex-login.ps1

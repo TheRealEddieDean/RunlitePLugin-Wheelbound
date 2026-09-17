@@ -33,9 +33,10 @@ final class WheelStyle
         for (int i = 0; i < entries.size(); i++)
         {
             WheelEntry entry = entries.get(i);
+            boolean xp = !entry.id.startsWith("CUSTOM_") && entry.label.startsWith("Gain ");
             double extent = entry.weight * 360.0 / total;
             Color segment = SEGMENTS[i % SEGMENTS.length];
-            if (entry.label.startsWith("Gain ")) { segment = XpGoal.valueOf(entry.id).color; }
+            if (xp) { segment = XpGoal.valueOf(entry.id).color; }
             g.setPaint(new GradientPaint(x, y, segment.brighter(), x + size, y + size, segment));
             Arc2D arc = new Arc2D.Double(x, y, size, size, before - angle, extent, Arc2D.PIE);
             g.fill(arc);
@@ -56,14 +57,14 @@ final class WheelStyle
                 g.drawImage(entry.icon, tx - iw / 2, ty - ih / 2, iw, ih, null);
                 drawRadialLabel(g, entry.wheelLabel(), cx, cy, a, extent, size, box);
             }
-            else if (entry.label.startsWith("Gain ") && extent >= 14)
+            else if (xp && extent >= 14)
             {
                 g.setFont(FontManager.getRunescapeSmallFont());
                 g.setColor(ColorScheme.TEXT_COLOR);
-                String label = entry.label.startsWith("Gain ") ? compactXp(entry.label) : entry.label.substring(0, 1);
+                String label = compactXp(entry.label);
                 centered(g, label, tx, ty + 4);
             }
-            else { drawRadialLabel(g, entry.label.startsWith("Gain ") ? compactXp(entry.label) : entry.wheelLabel(), cx, cy, a, extent, size, 0); }
+            else { drawRadialLabel(g, xp ? compactXp(entry.label) : entry.wheelLabel(), cx, cy, a, extent, size, 0); }
             before += extent;
         }
         g.setStroke(new BasicStroke(7));
@@ -139,12 +140,13 @@ final class WheelStyle
     static BufferedImage createIcon() { return scaledArtwork(CLASSIC_ICON, 32); }
     static BufferedImage headerImage() { return scaledArtwork(HEADER, 210); }
 
-    private static BufferedImage loadArtwork(String name)
+    static BufferedImage loadArtwork(String name)
     {
         try (java.io.InputStream stream = WheelStyle.class.getResourceAsStream(name))
         {
-            if (stream == null) { throw new IllegalStateException("Missing artwork: " + name); }
+            if (stream == null) { return fallbackArtwork(); }
             BufferedImage image = javax.imageio.ImageIO.read(stream);
+            if (image == null) { return fallbackArtwork(); }
             // Remove transparent export margins so each asset fits its UI slot.
             int left = image.getWidth(), top = image.getHeight(), right = -1, bottom = -1;
             for (int y = 0; y < image.getHeight(); y++)
@@ -157,7 +159,16 @@ final class WheelStyle
             }
             return right < left ? image : image.getSubimage(left, top, right - left + 1, bottom - top + 1);
         }
-        catch (java.io.IOException ex) { throw new IllegalStateException("Cannot load artwork: " + name, ex); }
+        catch (java.io.IOException ex) { return fallbackArtwork(); }
+    }
+
+    private static BufferedImage fallbackArtwork()
+    {
+        BufferedImage image = new BufferedImage(64, 64, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g = image.createGraphics();
+        g.setColor(GOLD); g.setStroke(new BasicStroke(4)); g.drawOval(4, 4, 56, 56);
+        g.setFont(new Font(Font.SERIF, Font.BOLD, 32)); centered(g, "W", 32, 44);
+        g.dispose(); return image;
     }
 
     private static BufferedImage scaledArtwork(BufferedImage source, int width)

@@ -11,7 +11,14 @@ final class CaEncounter
     {
         final int id;
         final CaTier tier;
-        Task(int id, CaTier tier) { this.id = id; this.tier = tier; }
+        final String name;
+        Task(int id, CaTier tier) { this(id, tier, null); }
+        Task(int id, CaTier tier, String name)
+        {
+            this.id = id; this.tier = tier;
+            this.name = name == null || name.isBlank() || name.equalsIgnoreCase("null")
+                ? "Combat Achievement #" + id : name;
+        }
     }
     final int id;
     final String name;

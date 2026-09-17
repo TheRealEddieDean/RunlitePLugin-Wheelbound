@@ -68,7 +68,8 @@ final class BossData
 				String name = names.getStringValue(encounterId);
 				if (name == null || name.isBlank() || name.equalsIgnoreCase("null") || name.equalsIgnoreCase("General")) { continue; }
 				loaded.computeIfAbsent(name, ignored -> new ArrayList<>()).add(id);
-				tiered.computeIfAbsent(encounterId, ignored -> new ArrayList<>()).add(new CaEncounter.Task(id, tier));
+				tiered.computeIfAbsent(encounterId, ignored -> new ArrayList<>())
+					.add(new CaEncounter.Task(id, tier, task.getStringValue(1308)));
 				encounterNames.put(encounterId, name);
 			}
 		}

@@ -1,4 +1,4 @@
-# Plugin Hub submission ? Wheelbound 1.0.0
+# Plugin Hub submission - Wheelbound 1.0.0
 
 ## Prepared metadata
 
@@ -58,16 +58,26 @@ by this preparation step.
 
 ## Validation completed
 
-- Clean offline build passed on JDK 17 with Java 11 bytecode target.
-- All 61 automated tests passed.
+- Clean online build passed on Temurin JDK 11 with Java 11 API/bytecode enforcement.
+- `latest.release` resolved to RuneLite 1.12.39 during this audit.
+- All 68 automated tests passed; the development launcher is not counted as a test.
 - wheelbound-1.0.0.jar contains production classes and both branding PNGs.
 - No development launcher, cleanup scripts or unfinished challenge classes are in the plugin JAR.
 - Listing icon is 32x33 pixels, within the Hub limit.
 - Personal security review notes and development credentials are ignored by Git.
+- The personal login-cleanup script has been removed from the release working tree.
+- See [the release audit](RELEASE_AUDIT.md) for scope, fixes, remaining reviewer
+  considerations and the exact changed-file list.
+
+Gradle 8.10 is aligned with the official example plugin and supports Java 11.
+Its warning about Java 16 and older being unsupported in Gradle 9 is expected;
+it does not indicate a Java 11 compilation or runtime incompatibility here.
 
 ## Live-client smoke checks
 
 - Open each built-in wheel; confirm account filters and current game icons load.
+- Enable specific Combat Achievements, exclude Master, and verify the selected
+  unfinished task against the in-game list, including grouped raid modes.
 - Spin a skill and its optional XP wheel; cancel with Escape.
 - Create, edit, delete and reload a custom wheel; check names and saved settings.
 - Check the sidebar/header and popup in fixed and resizable windows.

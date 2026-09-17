@@ -44,7 +44,7 @@ mode use Grandmaster; ToA Expert remains Elite because its hiscore category star
 at 300 invocation and cannot identify the guide's 500+ category. Grouped raid
 results name the raid, without prescribing a mode or invocation level.
 
-The catalog includes every BOSS entry in RuneLite 1.12.38 HiscoreSkill. Raid modes are grouped into one entry each for Chambers of Xeric, Theatre of Blood,
+The catalog includes every BOSS entry in the resolved RuneLite HiscoreSkill. Raid modes are grouped into one entry each for Chambers of Xeric, Theatre of Blood,
 and Tombs of Amascut. Every eligible, checked boss or raid appears with equal
 probability; there is no shortlist. Wheel labels use abbreviations such as CoX,
 ToB, ToA, and shorter boss names; hover text, checklists, and results retain full names.
@@ -118,6 +118,9 @@ encounters such as Dagannoth Kings remain a single encounter.
 - **Include bosses** includes boss encounters. Raids are a separate category.
 - **Include raids** includes raid encounters, with all their modes grouped under one entry per raid.
 - **Match my Slayer task** applies the task-only encounter rules above.
+- **Pick a specific achievement** defaults off. When enabled, the result shows
+  the encounter above a uniformly selected unfinished task and its tier. Tasks
+  from qualifying raid modes are combined without changing encounter odds.
 - Each of **Easy, Medium, Hard, Elite, Master, and Grandmaster** has an independent
   inclusion checkbox. All tiers start checked and included. Saved exclusion settings
   migrate to the equivalent include selection.
@@ -138,7 +141,7 @@ updates. Live model appearance still needs verification in RuneLite.
 
 ## Pet Hunting
 
-The pet wheel includes **71 huntable base pets** supported by the pinned RuneLite
+The pet wheel includes **71 huntable base pets**, originally mapped against RuneLite
 1.12.38 data, covering bosses, raids, skills, and other activities. It uses one
 entry per base pet: cosmetic morphs and alternate raid modes do not add wedges.
 Every included pet has equal selection odds; these are wheel odds, not pet drop rates.
@@ -164,8 +167,7 @@ Turn off ownership filtering to use the list offline;
 live item artwork requires game-cache data. Ordinary companions and cosmetic
 pet transformations are not separate hunt targets. New pets require catalog updates.
 
-Pet item IDs and names are defined in RuneLite's `gameval.ItemID` for the pinned
-version. Source mappings are maintained in `PetDefinition`; the
+Pet item IDs and names are defined in RuneLite's `gameval.ItemID`. Source mappings are maintained in `PetDefinition`; the
 [OSRS Wiki pet catalog](https://oldschool.runescape.wiki/w/Pet) is a development
 reference, not a runtime dependency.
 
@@ -187,7 +189,7 @@ reference, not a runtime dependency.
   manual exclusions, missing data, and logout never produce that congratulations.
 
 Login is required. Quest, pet, and access changes refresh the current pool through
-coalesced varp/varbit events; no remote account requests are made. Missing quest or
+varp/varbit events, batched to at most one pool refresh per game tick; no remote account requests are made. Missing quest or
 pet metadata gives an unavailable-data message and can be retried with a checkbox.
 
 ## Custom wheels
@@ -250,8 +252,8 @@ Adding a wheel means registering its type and filters and supplying its eligible
 entries; it reuses the selector, saved checklist, spin, cancellation, and popup.
 The selector scales without squeezing additional tabs into the sidebar width.
 
-Task enums 3981-3986 supply the six tiers; task parameters 1306 and 1312 identify
-the completion bit and encounter, and enum 3971 supplies names. CA model enum
+Task enums 3981-3986 supply the six tiers; task parameters 1306, 1308 and 1312 identify
+the completion bit, task name and encounter, and enum 3971 supplies names. CA model enum
 3987 provides encounter models and viewing angles. The 21 exposed completion
 varps are snapshotted on login/startup, profile changes, completion events, and
 checkbox changes. Bursts are coalesced. There is no game-tick CA polling, per-spin
@@ -269,15 +271,16 @@ and reviewed access rules can require maintenance after game updates.
 
 ## Build and launch
 
-Use **JDK 17** for the Gradle 9.6 wrapper. Compilation targets **Java 11**.
-RuneLite dependencies are pinned to **1.12.38**.
+Use **Temurin JDK 11** with the official example plugin's Gradle 8.10 wrapper.
+Compilation enforces **Java 11** APIs and bytecode through `options.release.set(11)`.
+RuneLite dependencies use **latest.release**; reload Gradle dependencies after client updates.
 
 ```powershell
-.\gradlew.bat build
+.\gradlew.bat clean build
 .\gradlew.bat run
 ```
 
-If your terminal defaults to Java 8, point `JAVA_HOME` at your JDK 17 installation
+If your terminal defaults to Java 8, point `JAVA_HOME` at your JDK 11 installation
 for the command. On Unix use `bash ./gradlew build` and `bash ./gradlew run`.
 Close the development client before rebuilding/relaunching. `WheelboundPluginTest`
 is the development launcher; `shadowJar` builds the optional development client jar.
@@ -327,4 +330,4 @@ live CA models, quest scripts, or account game-cache data.
 No analytics, third-party API, Wiki scraping, cloud account state, or Wheelbound
 server is used at runtime. Artwork comes from local RuneLite/game resources.
 Wheelbound never generates game inputs or handles credentials. Previous persistent
-skilling goal/config keys remain inert. The remaining PowerShell login-cleanup helper is unrelated to plugin runtime. No Plugin Hub approval is implied.
+skilling goal/config keys remain inert. No Plugin Hub approval is implied.

@@ -13,7 +13,7 @@ repositories {
 	mavenCentral()
 }
 
-def runeLiteVersion = '1.12.38'
+def runeLiteVersion = 'latest.release'
 def pluginMainClass = 'com.wheelbound.WheelboundPluginTest'
 
 dependencies {

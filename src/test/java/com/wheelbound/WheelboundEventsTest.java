@@ -14,6 +14,28 @@ import static org.junit.Assert.*;
 
 public class WheelboundEventsTest
 {
+    @Test public void ordinaryVarbitBurstsWaitForOneGameTick() throws Exception
+    {
+        SwingUtilities.invokeAndWait(() -> {
+            try
+            {
+                WheelboundPlugin plugin = new WheelboundPlugin();
+                set(plugin, "active", true);
+                VarbitChanged event = new VarbitChanged(); event.setVarpId(3138);
+                for (int i = 0; i < 100; i++) { plugin.onVarbitChanged(event); }
+                java.util.concurrent.atomic.AtomicBoolean queued =
+                    (java.util.concurrent.atomic.AtomicBoolean)get(plugin, "poolRefreshQueued");
+                assertFalse(queued.get()); assertEquals(true, get(plugin, "poolDirty"));
+                plugin.onGameTick(new net.runelite.api.events.GameTick());
+                assertTrue(queued.get()); assertEquals(false, get(plugin, "poolDirty"));
+                plugin.onGameTick(new net.runelite.api.events.GameTick());
+                assertEquals(false, get(plugin, "poolDirty"));
+                set(plugin, "active", false);
+            }
+            catch (Exception ex) { throw new AssertionError(ex); }
+        });
+    }
+
     @Test public void enablingAndDisablingOnEdtAddsAndRemovesSidebar() throws Exception
     {
         SwingUtilities.invokeAndWait(() -> {

@@ -1,10 +1,14 @@
 # Changelog
 
-## 1.0.0 ? Initial release candidate
+## 1.0.0 - Initial release candidate
 
 - Bossing, Skilling, Combat Achievements, Pet Hunting and Questing wheels.
 - Filters and individual entry checklists, with saved preferences.
 - Optional XP-target wheel after a skill spin.
+- Optional specific unfinished Combat Achievement result, respecting included tiers.
+- Java 11 CI and the official example Gradle wrapper.
+- Release fixes for custom-label rendering, dialog cleanup, tooltip escaping,
+  missing artwork, and batched account-state refreshes.
 - Named custom wheels with entry creation, toggles and deletion.
 - Centered animated wheels, result cards and Wheelbound artwork.
 - Account-aware pool updates and cancellation on account/session changes.

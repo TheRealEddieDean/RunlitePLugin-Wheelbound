@@ -26,7 +26,10 @@ public class BossDataTest
         assertEquals(1, encounters.size());
         assertEquals("Obor", encounters.get(0).name);
         for (int i = 0; i < CaTier.values().length; i++)
-        { assertEquals(CaTier.values()[i], encounters.get(0).tasks.get(i).tier); }
+        {
+            assertEquals(CaTier.values()[i], encounters.get(0).tasks.get(i).tier);
+            assertEquals("Task " + i, encounters.get(0).tasks.get(i).name);
+        }
         assertEquals(7, reads.get());
         data.clear(); data.load(client);
         assertEquals(14, reads.get());
@@ -61,6 +64,7 @@ public class BossDataTest
                 int id = (Integer)args[0];
                 return Proxy.newProxyInstance(StructComposition.class.getClassLoader(), new Class<?>[]{StructComposition.class}, (sp, sm, sa) -> {
                     if (sm.getName().equals("getIntValue")) { return (Integer)sa[0] == 1306 ? id : 1; }
+                    if (sm.getName().equals("getStringValue") && (Integer)sa[0] == 1308) { return "Task " + id; }
                     throw new AssertionError(sm.getName());
                 });
             }

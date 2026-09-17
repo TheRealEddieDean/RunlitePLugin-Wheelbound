@@ -15,6 +15,29 @@ import static org.junit.Assert.*;
 
 public class CustomWheelsTest
 {
+    @Test public void accountResetClosesTheNameForm() throws Exception
+    {
+        SwingUtilities.invokeAndWait(() -> {
+            WheelboundPanel panel = panel(new HashMap<>());
+            panel.selectWheel(WheelType.CUSTOM);
+            assertTrue(panel.nameDialog().isOpen());
+            panel.reset();
+            assertFalse(panel.nameDialog().isOpen());
+        });
+    }
+
+    @Test public void wheelTooltipEscapesCustomMarkup() throws Exception
+    {
+        SwingUtilities.invokeAndWait(() -> {
+            WheelComponent wheel = new WheelComponent(); wheel.setSize(400, 400);
+            wheel.setEntries(List.of(new WheelEntry("CUSTOM_one", "<html><img src='https://example.invalid/'>", null, 1)));
+            String tip = wheel.getToolTipText(new java.awt.event.MouseEvent(wheel,
+                java.awt.event.MouseEvent.MOUSE_MOVED, 0, 0, 350, 200, 0, false));
+            assertTrue(tip.contains("&lt;img"));
+            assertFalse(tip.contains("<img"));
+        });
+    }
+
     @Test public void customTooltipTreatsEmbeddedImagesAsText() throws Exception
     {
         SwingUtilities.invokeAndWait(() -> {

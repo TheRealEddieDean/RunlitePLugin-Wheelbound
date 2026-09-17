@@ -37,7 +37,7 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
     private final JButton addEntry = new JButton("Add");
     private final JButton deleteWheel = new JButton("Delete wheel");
     private java.util.function.Predicate<String> confirmDelete = name -> JOptionPane.showConfirmDialog(this,
-        html("Delete the custom wheel ?" + name + "? and all its entries? This cannot be undone."),
+        html("Delete the custom wheel \"" + name + "\" and all its entries? This cannot be undone."),
         "Delete custom wheel", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE) == JOptionPane.YES_OPTION;
     private List<WheelEntry> availablePool = List.of();
     private String poolMessage = "";
@@ -91,7 +91,7 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
         JPanel content = column();
         JLabel title = new JLabel(new ImageIcon(WheelStyle.headerImage()));
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
-        title.getAccessibleContext().setAccessibleName("Wheelbound ? Spin your destiny");
+        title.getAccessibleContext().setAccessibleName("Wheelbound - Spin your destiny");
         content.add(title);
         content.add(Box.createVerticalStrut(10));
         rebuildSelector();
@@ -484,6 +484,8 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
         if (popup != null) { popup.clearResult(); }
         result.setIcon(null); result.setText(html("Spinning...")); xpResult.setText("");
         boolean withXp = type == WheelType.SKILLING && selected(WheelFilter.XP);
+        String achievement = type == WheelType.COMBAT_ACHIEVEMENTS && selected(WheelFilter.CA_SPECIFIC)
+            ? choices.get(selected).pickAchievement(random) : null;
         wheel.animate(choices, selected, () -> {
             popupResult = choices.get(selected).label;
             result.setText(html(popupResult));
@@ -494,6 +496,7 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
                 result.setVerticalTextPosition(SwingConstants.BOTTOM);
             }
             if (choices.get(selected).source != null) { xpResult.setText(html(choices.get(selected).source)); }
+            if (achievement != null) { xpResult.setText(html(achievement)); }
             if (withXp)
             {
                 xpResult.setText(html("Click SPIN to choose your XP target")); revalidate();
@@ -519,7 +522,7 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
                 finish();
                 if (popup != null)
                 { popup.complete(questCompletion != null ? questCompletion : choices.get(selected),
-                    questCompletion != null ? QuestPool.COMPLETE : null); }
+                    questCompletion != null ? QuestPool.COMPLETE : achievement); }
             }
         });
         revalidate();
@@ -550,6 +553,7 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
     }
     void reset()
     {
+        nameDialog.hide();
         if (popup != null) { popup.hide(); }
         generation++; wheel.cancel(); xpWheel.cancel(); busy = false; deferred = null; questCompletion = null; deferredQuestCompletion = null; hasDeferredQuestCompletion = false;
         displayed = wheel; popupTitle = wheelTitle(); availablePool = List.of();
