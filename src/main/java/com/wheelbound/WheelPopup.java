@@ -321,7 +321,6 @@ public class WheelPopup extends Overlay implements KeyListener
 
     private static boolean typing(KeyEvent event)
     {
-        return event.getComponent() instanceof javax.swing.text.JTextComponent
-            || KeyboardFocusManager.getCurrentKeyboardFocusManager().getFocusOwner() instanceof javax.swing.text.JTextComponent;
+        return event.getComponent() instanceof javax.swing.text.JTextComponent;
     }
 }
