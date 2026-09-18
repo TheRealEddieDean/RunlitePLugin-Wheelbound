@@ -61,7 +61,7 @@ public class QuestAndAccountFiltersTest
     @Test public void questCompletionShowsIconResultAndClearsOnAccountReset() throws Exception
     {
         SwingUtilities.invokeAndWait(() -> {
-            WheelboundPanel panel = new WheelboundPanel(k -> null, (k, v) -> {});
+            WheelboundPanel panel = new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, k -> null, (k, v) -> {});
             WheelPopup popup = new WheelPopup(null); panel.setPopup(popup);
             panel.selectWheel(WheelType.QUESTING);
             panel.updatePool(List.of(), QuestPool.COMPLETE, panel.generation());
@@ -125,7 +125,7 @@ public class QuestAndAccountFiltersTest
     @Test public void mimicMigrationAndNewDefaultsPersistAcrossProfiles() throws Exception
     {
         SwingUtilities.invokeAndWait(() -> {
-            WheelboundPanel panel = new WheelboundPanel(k -> k.equals("bossExcludeMimic") ? "true" : null, (k, v) -> {});
+            WheelboundPanel panel = new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, k -> k.equals("bossExcludeMimic") ? "true" : null, (k, v) -> {});
             assertFalse(panel.selected(WheelFilter.MIMIC));
             for (WheelFilter filter : WheelFilter.values())
             { if (filter.section.equals("Boss difficulty")) { assertTrue(panel.selected(filter)); } }

@@ -74,7 +74,7 @@ public class PetHuntingTest
     {
         SwingUtilities.invokeAndWait(() -> {
             Map<String, String> preferences = new HashMap<>();
-            WheelboundPanel panel = new WheelboundPanel(preferences::get, (k, v) -> preferences.put(k, v.toString()));
+            WheelboundPanel panel = new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, preferences::get, (k, v) -> preferences.put(k, v.toString()));
             WheelPopup popup = new WheelPopup(null); panel.setPopup(popup);
             panel.setAction(spin -> {
                 if (!spin) { panel.updatePool(entries(panel), "test", panel.generation()); }
@@ -92,7 +92,7 @@ public class PetHuntingTest
             assertEquals(0, popup.entryCount()); assertFalse(panel.primaryWheel().canSpin());
             button(panel, "Include raids").doClick(); assertEquals(3, popup.entryCount());
             panel.reset(); assertFalse(popup.isOpen());
-            WheelboundPanel restored = new WheelboundPanel(preferences::get, (k, v) -> {});
+            WheelboundPanel restored = new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, preferences::get, (k, v) -> {});
             assertEquals(WheelType.PET_HUNTING, restored.wheelType());
             assertTrue(restored.selected(WheelFilter.PET_RAIDS));
             assertFalse(restored.selected(WheelFilter.PET_BOSSES));
@@ -131,7 +131,7 @@ public class PetHuntingTest
             try
             {
                 net.runelite.client.ui.laf.RuneLiteLAF.setup();
-                WheelboundPanel panel = new WheelboundPanel(k -> "selectedWheel".equals(k) ? "Pet Hunting" : null, (k, v) -> {});
+                WheelboundPanel panel = new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, k -> "selectedWheel".equals(k) ? "Pet Hunting" : null, (k, v) -> {});
                 panel.updatePool(entries(panel), "test", panel.generation());
                 JPanel wrapped = panel.getWrappedPanel(); wrapped.setSize(242, 900); layout(wrapped);
                 BufferedImage image = new BufferedImage(242, 900, BufferedImage.TYPE_INT_RGB);

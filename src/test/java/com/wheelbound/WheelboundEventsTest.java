@@ -44,6 +44,7 @@ public class WheelboundEventsTest
                 WheelboundPlugin plugin = new WheelboundPlugin();
                 net.runelite.client.ui.ClientToolbar toolbar = org.mockito.Mockito.mock(net.runelite.client.ui.ClientToolbar.class);
                 set(plugin, "toolbar", toolbar);
+                set(plugin, "gson", net.runelite.http.api.RuneLiteAPI.GSON);
                 set(plugin, "settings", org.mockito.Mockito.mock(net.runelite.client.config.ConfigManager.class));
                 QueuedThread thread = new QueuedThread();
                 set(plugin, "clientThread", thread);
@@ -116,7 +117,7 @@ public class WheelboundEventsTest
             {
                 WheelboundPlugin plugin = new WheelboundPlugin();
                 set(plugin, "clientThread", new QueuedThread()); set(plugin, "active", true);
-                set(plugin, "panel", new WheelboundPanel(k -> null, (k, v) -> {}));
+                set(plugin, "panel", new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, k -> null, (k, v) -> {}));
                 CombatAchievementCache cache = (CombatAchievementCache)get(plugin, "achievements");
                 cache.refresh("A", java.util.Map.of("Obor", List.of(0)), id -> 0);
                 assertTrue(cache.isReady("A"));

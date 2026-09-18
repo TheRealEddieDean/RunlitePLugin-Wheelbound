@@ -20,7 +20,7 @@ public class SkillingFlowTest
     {
         SwingUtilities.invokeAndWait(() -> {
             Map<String, String> saved = new HashMap<>();
-            WheelboundPanel panel = new WheelboundPanel(saved::get, (k, v) -> saved.put(k, v.toString()));
+            WheelboundPanel panel = new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, saved::get, (k, v) -> saved.put(k, v.toString()));
             WheelPopup popup = new WheelPopup(null); panel.setPopup(popup);
             List<WheelEntry> entries = List.of(new WheelEntry("OBOR", "Obor", null, 1),
                 new WheelEntry("BRYOPHYTA", "Bryophyta", null, 1));
@@ -37,7 +37,7 @@ public class SkillingFlowTest
             panel.setAction(spin -> panel.updatePool(entries, "refreshed", panel.generation()));
             button(panel, "Include raids").doClick();
             assertTrue(popup.isOpen()); assertEquals(1, popup.entryCount());
-            WheelboundPanel restored = new WheelboundPanel(saved::get, (k, v) -> {});
+            WheelboundPanel restored = new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, saved::get, (k, v) -> {});
             restored.updatePool(entries, "test", restored.generation());
             assertEquals("OBOR", restored.primaryWheel().entries().get(0).id);
             panel.reset();
@@ -49,7 +49,7 @@ public class SkillingFlowTest
         WheelboundPanel[] panel = new WheelboundPanel[1];
         WheelPopup popup = new WheelPopup(null);
         SwingUtilities.invokeAndWait(() -> {
-            panel[0] = new WheelboundPanel(k -> k.equals("excludedBosses") ? "BRYOPHYTA" : null, (k, v) -> {});
+            panel[0] = new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, k -> k.equals("excludedBosses") ? "BRYOPHYTA" : null, (k, v) -> {});
             panel[0].setPopup(popup);
             List<WheelEntry> entries = List.of(new WheelEntry("OBOR", "Obor",
                 new SkillIconManager().getSkillImage(Skill.ATTACK), 1), new WheelEntry("BRYOPHYTA", "Bryophyta", null, 1));
@@ -112,7 +112,7 @@ public class SkillingFlowTest
     {
         SwingUtilities.invokeAndWait(() -> {
             Map<String, String> preferences = new HashMap<>();
-            WheelboundPanel panel = new WheelboundPanel(preferences::get, (k, v) -> preferences.put(k, v.toString()));
+            WheelboundPanel panel = new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, preferences::get, (k, v) -> preferences.put(k, v.toString()));
             long revision = panel.generation();
             button(panel, "Include raids").doClick();
             assertFalse(panel.selected(WheelFilter.BOSS_RAIDS));
@@ -123,7 +123,7 @@ public class SkillingFlowTest
             panel.updatePool(List.of(), "No matches", panel.generation());
             assertFalse(panel.primaryWheel().canSpin());
             button(panel, "Include Mimic").doClick();
-            WheelboundPanel restored = new WheelboundPanel(preferences::get, (k, v) -> {});
+            WheelboundPanel restored = new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, preferences::get, (k, v) -> {});
             assertFalse(restored.selected(WheelFilter.BOSS_RAIDS)); assertFalse(restored.selected(WheelFilter.MIMIC));
             assertFalse(button(restored, "Include XP goal").isSelected());
         });
@@ -134,7 +134,7 @@ public class SkillingFlowTest
         WheelboundPanel[] holder = new WheelboundPanel[1];
         WheelPopup popup = new WheelPopup(null);
         SwingUtilities.invokeAndWait(() -> {
-            WheelboundPanel panel = new WheelboundPanel(k -> k.equals("selectedWheel") ? "Skilling" : k.equals("includeXpGoal") ? "true" : null, (k, v) -> {});
+            WheelboundPanel panel = new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, k -> k.equals("selectedWheel") ? "Skilling" : k.equals("includeXpGoal") ? "true" : null, (k, v) -> {});
             holder[0] = panel;
             panel.setPopup(popup);
             List<WheelEntry> entries = List.of(new WheelEntry("MINING", "Mining", null, 1));
@@ -172,7 +172,7 @@ public class SkillingFlowTest
     @Test public void checklistGrowsWithViewportAndSmallWindowsCanScroll() throws Exception
     {
         SwingUtilities.invokeAndWait(() -> {
-            WheelboundPanel panel = new WheelboundPanel(k -> null, (k, v) -> {});
+            WheelboundPanel panel = new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, k -> null, (k, v) -> {});
             JViewport viewport = new JViewport(); viewport.setView(panel);
             viewport.setSize(242, 900); viewport.doLayout(); layout(panel);
             BossChecklist list = checklist(panel);
@@ -209,7 +209,7 @@ public class SkillingFlowTest
             try
             {
                 net.runelite.client.ui.laf.RuneLiteLAF.setup();
-                WheelboundPanel panel = new WheelboundPanel(k -> "selectedWheel".equals(k) ? "Skilling" : null, (k, v) -> {});
+                WheelboundPanel panel = new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, k -> "selectedWheel".equals(k) ? "Skilling" : null, (k, v) -> {});
                 SkillIconManager icons = new SkillIconManager();
                 List<WheelEntry> entries = new ArrayList<>();
                 for (Skill skill : Skill.values())

@@ -15,6 +15,58 @@ import static org.junit.Assert.*;
 
 public class CustomWheelsTest
 {
+    @Test public void existingJsonLoadsAndRoundTripsWithClientGson()
+    {
+        com.google.gson.Gson gson = net.runelite.http.api.RuneLiteAPI.GSON;
+        String saved = "{\"version\":1,\"wheels\":[{\"id\":\"legacy-wheel\",\"name\":\"Plans & goals\","
+            + "\"items\":[{\"id\":\"legacy-item\",\"name\":\"A, B <C> \\\"quoted\\\"\",\"enabled\":false}]}]}";
+        CustomWheels restored = CustomWheels.load(gson, saved);
+        CustomWheels.CustomWheel wheel = restored.find("legacy-wheel");
+        assertNotNull(wheel);
+        assertEquals("Plans & goals", wheel.name);
+        assertEquals("A, B <C> \"quoted\"", wheel.items.get(0).name);
+        assertFalse(wheel.items.get(0).enabled);
+        assertEquals(gson.fromJson(saved, com.google.gson.JsonElement.class),
+            gson.fromJson(restored.save(gson), com.google.gson.JsonElement.class));
+    }
+
+    @Test public void panelUsesSuppliedGsonForSavingAndProfileReloads() throws Exception
+    {
+        AtomicInteger reads = new AtomicInteger(), writes = new AtomicInteger();
+        class CountingAdapter implements com.google.gson.JsonSerializer<CustomWheels>,
+            com.google.gson.JsonDeserializer<CustomWheels>
+        {
+            @Override public com.google.gson.JsonElement serialize(CustomWheels value, java.lang.reflect.Type type,
+                com.google.gson.JsonSerializationContext context)
+            {
+                writes.incrementAndGet();
+                return net.runelite.http.api.RuneLiteAPI.GSON.toJsonTree(value);
+            }
+            @Override public CustomWheels deserialize(com.google.gson.JsonElement value, java.lang.reflect.Type type,
+                com.google.gson.JsonDeserializationContext context)
+            {
+                reads.incrementAndGet();
+                return net.runelite.http.api.RuneLiteAPI.GSON.fromJson(value, CustomWheels.class);
+            }
+        }
+        com.google.gson.Gson gson = net.runelite.http.api.RuneLiteAPI.GSON.newBuilder()
+            .registerTypeAdapter(CustomWheels.class, new CountingAdapter()).create();
+        SwingUtilities.invokeAndWait(() -> {
+            Map<String, String> saved = new HashMap<>();
+            saved.put(CustomWheels.KEY, "{\"version\":1,\"wheels\":[]}");
+            WheelboundPanel panel = new WheelboundPanel(gson, saved::get, (k, v) -> saved.put(k, v.toString()));
+            assertEquals(1, reads.get());
+            panel.selectWheel(WheelType.CUSTOM);
+            assertNull(panel.createCustomWheel("Saved with client Gson"));
+            panel.addCustomEntry("Same JSON format");
+            assertEquals(2, writes.get());
+            panel.reloadPreferences(saved::get);
+            assertEquals(2, reads.get());
+            assertEquals("Same JSON format", panel.primaryWheel().entries().get(0).label);
+            panel.reset();
+        });
+    }
+
     @Test public void accountResetClosesTheNameForm() throws Exception
     {
         SwingUtilities.invokeAndWait(() -> {
@@ -66,7 +118,7 @@ public class CustomWheelsTest
         data.add(first, "A, B & <C> \"quoted\" ☕"); data.add(first, "A, B & <C> \"quoted\" ☕");
         first.items.get(0).enabled = false;
         CustomWheels.CustomWheel second = data.create("Bossing"); data.add(second, "Theatre of Blood: Hard Mode");
-        CustomWheels restored = CustomWheels.load(data.save());
+        CustomWheels restored = CustomWheels.load(net.runelite.http.api.RuneLiteAPI.GSON, data.save(net.runelite.http.api.RuneLiteAPI.GSON));
         assertEquals("Evening plans", restored.find(first.id).name);
         assertEquals(2, restored.find(first.id).items.size());
         assertFalse(restored.find(first.id).items.get(0).enabled);
@@ -74,8 +126,8 @@ public class CustomWheelsTest
         assertNotEquals(first.items.get(0).id, first.items.get(1).id);
         assertEquals(second.items.get(0).name, restored.find(second.id).entries().get(0).wheelLabel());
         restored.remove(restored.find(first.id));
-        assertNull(CustomWheels.load(restored.save()).find(first.id));
-        assertNotNull(CustomWheels.load(restored.save()).find(second.id));
+        assertNull(CustomWheels.load(net.runelite.http.api.RuneLiteAPI.GSON, restored.save(net.runelite.http.api.RuneLiteAPI.GSON)).find(first.id));
+        assertNotNull(CustomWheels.load(net.runelite.http.api.RuneLiteAPI.GSON, restored.save(net.runelite.http.api.RuneLiteAPI.GSON)).find(second.id));
     }
 
     @Test public void invalidInputAndUnreadableStorageDoNotOverwriteSavedLists() throws Exception
@@ -122,12 +174,12 @@ public class CustomWheelsTest
             List<JCheckBox> rows = checkboxes(panel);
             rows.get(0).doClick(); assertEquals(2, popup.entryCount());
             assertTrue(checkboxes(panel).get(2).getText().contains("&lt;html&gt;"));
-            CustomWheels data = CustomWheels.load(saved.get(CustomWheels.KEY));
+            CustomWheels data = CustomWheels.load(net.runelite.http.api.RuneLiteAPI.GSON, saved.get(CustomWheels.KEY));
             assertFalse(data.find(firstId).items.get(0).enabled);
             String deleteTip = "Delete entry: <html>Go for a walk & relax";
             AbstractButton remove = byTooltip(panel, deleteTip);
             assertNotNull(remove); remove.doClick(); assertEquals(1, popup.entryCount());
-            assertEquals(2, CustomWheels.load(saved.get(CustomWheels.KEY)).find(firstId).items.size());
+            assertEquals(2, CustomWheels.load(net.runelite.http.api.RuneLiteAPI.GSON, saved.get(CustomWheels.KEY)).find(firstId).items.size());
             panel.selectWheel(WheelType.CUSTOM); panel.createCustomWheel("Chores"); panel.addCustomEntry("Dishes");
             assertEquals(1, popup.entryCount());
             panel.selectCustomWheel(firstId); assertEquals(1, popup.entryCount());
@@ -156,7 +208,7 @@ public class CustomWheelsTest
             assertEquals(first, saved.get("selectedCustomWheel")); assertEquals(1, panel.primaryWheel().entries().size());
             panel.deleteSelectedCustomWheel();
             assertEquals(WheelType.BOSSING, panel.wheelType()); assertEquals("", saved.get("selectedCustomWheel"));
-            assertTrue(CustomWheels.load(saved.get(CustomWheels.KEY)).wheels().isEmpty());
+            assertTrue(CustomWheels.load(net.runelite.http.api.RuneLiteAPI.GSON, saved.get(CustomWheels.KEY)).wheels().isEmpty());
             assertNull(findButton(panel.getWrappedPanel(), "Delete wheel"));
             panel.selectWheel(WheelType.CUSTOM); panel.createCustomWheel("Keep");
             before = saved.get(CustomWheels.KEY);
@@ -253,7 +305,7 @@ public class CustomWheelsTest
     }
 
     private static WheelboundPanel panel(Map<String, String> saved)
-    { return new WheelboundPanel(saved::get, (k, v) -> saved.put(k, v.toString())); }
+    { return new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, saved::get, (k, v) -> saved.put(k, v.toString())); }
     private static JTextField field(Container parent, String name)
     {
         for (Component child : parent.getComponents())

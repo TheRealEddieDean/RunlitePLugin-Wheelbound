@@ -1,6 +1,7 @@
 package com.wheelbound;
 
 import com.google.inject.Provides;
+import com.google.gson.Gson;
 import java.util.List;
 import java.util.Set;
 import java.util.EnumSet;
@@ -36,6 +37,7 @@ public class WheelboundPlugin extends Plugin
     @Inject private ClientThread clientThread;
     @Inject private ClientToolbar toolbar;
     @Inject private ConfigManager settings;
+    @Inject private Gson gson;
     @Inject private WheelIconProvider icons;
     @Inject private WheelPopup popup;
     @Inject private net.runelite.client.ui.overlay.OverlayManager overlays;
@@ -57,7 +59,7 @@ public class WheelboundPlugin extends Plugin
         long epoch = session.incrementAndGet();
         active = true;
         // RuneLite invokes plugin lifecycle methods on the EDT already.
-        panel = new WheelboundPanel(key -> settings.getConfiguration("wheelbound", key),
+        panel = new WheelboundPanel(gson, key -> settings.getConfiguration("wheelbound", key),
             (key, value) -> settings.setConfiguration("wheelbound", key, value));
         panel.setAction(this::request);
         panel.setRefreshAction(this::queueCaRefresh);

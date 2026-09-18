@@ -1,5 +1,6 @@
 package com.wheelbound;
 
+import com.google.gson.Gson;
 import java.awt.*;
 import java.util.List;
 import java.util.ArrayList;
@@ -47,6 +48,7 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
     private final JPanel options = new JPanel(new CardLayout());
     private final List<AbstractButton> controls = new ArrayList<>();
     private final BiConsumer<String, Object> save;
+    private final Gson gson;
     private final Random random = new Random();
     private Consumer<Boolean> action = ignored -> {};
     private Runnable refreshAction = () -> action.accept(false);
@@ -59,9 +61,10 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
     private WheelEntry questCompletion, deferredQuestCompletion;
     private boolean hasDeferredQuestCompletion;
 
-    WheelboundPanel(Function<String, String> load, BiConsumer<String, Object> save)
+    WheelboundPanel(Gson gson, Function<String, String> load, BiConsumer<String, Object> save)
     {
         super();
+        this.gson = java.util.Objects.requireNonNull(gson);
         getScrollPane().setViewportView(this);
         this.save = save;
         type = WheelType.fromSaved(load.apply("selectedWheel"));
@@ -257,7 +260,7 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
     private void loadCustomWheels(Function<String, String> load)
     {
         customLoadError = null;
-        try { customWheels = CustomWheels.load(load.apply(CustomWheels.KEY)); }
+        try { customWheels = CustomWheels.load(gson, load.apply(CustomWheels.KEY)); }
         catch (IllegalArgumentException ex) { customLoadError = ex.getMessage(); customWheels = new CustomWheels(); }
         custom = type == WheelType.CUSTOM ? customWheels.find(load.apply("selectedCustomWheel")) : null;
     }
@@ -294,7 +297,7 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
         try
         {
             CustomWheels.CustomWheel created = customWheels.create(name);
-            save.accept(CustomWheels.KEY, customWheels.save());
+            save.accept(CustomWheels.KEY, customWheels.save(gson));
             nameDialog.hide(); selectCustomWheel(created.id); entryName.requestFocusInWindow();
             return null;
         }
@@ -329,7 +332,7 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
 
     private void customEdited()
     {
-        save.accept(CustomWheels.KEY, customWheels.save());
+        save.accept(CustomWheels.KEY, customWheels.save(gson));
         generation++; bindCustomChecklist();
         result.setText(html("Spin the wheel")); result.setIcon(null); xpResult.setText("");
         if (popup != null) { popup.clearResult(); }
@@ -357,7 +360,7 @@ public class WheelboundPanel extends PluginPanel implements Scrollable
         CustomWheels.CustomWheel target = custom;
         CustomWheels store = customWheels;
         if (!confirmDelete.test(target.name) || busy || custom != target || customWheels != store) { return; }
-        customWheels.remove(target); save.accept(CustomWheels.KEY, customWheels.save());
+        customWheels.remove(target); save.accept(CustomWheels.KEY, customWheels.save(gson));
         custom = null;
         if (customWheels.wheels().isEmpty()) { type = WheelType.BOSSING; }
         else { custom = customWheels.wheels().get(0); type = WheelType.CUSTOM; }

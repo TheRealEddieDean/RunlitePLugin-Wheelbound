@@ -50,14 +50,14 @@ final class CustomWheels
     }
     void add(CustomWheel wheel, String name) { wheel.items.add(new Item(text(name, 200))); }
     void remove(CustomWheel wheel) { wheels.remove(wheel); }
-    String save() { return new Gson().toJson(this); }
+    String save(Gson gson) { return gson.toJson(this); }
 
-    static CustomWheels load(String saved)
+    static CustomWheels load(Gson gson, String saved)
     {
         if (saved == null || saved.isBlank()) { return new CustomWheels(); }
         try
         {
-            CustomWheels data = new Gson().fromJson(saved, CustomWheels.class);
+            CustomWheels data = gson.fromJson(saved, CustomWheels.class);
             if (data == null || data.version != 1 || data.wheels == null) { throw new IllegalArgumentException(); }
             Set<String> ids = new HashSet<>();
             for (CustomWheel wheel : data.wheels)

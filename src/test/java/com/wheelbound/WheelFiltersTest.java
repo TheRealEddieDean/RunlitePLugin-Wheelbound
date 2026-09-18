@@ -161,7 +161,7 @@ public class WheelFiltersTest
     {
         SwingUtilities.invokeAndWait(() -> {
             Map<String, String> saved = new HashMap<>();
-            WheelboundPanel panel = new WheelboundPanel(saved::get, (k, v) -> saved.put(k, v.toString()));
+            WheelboundPanel panel = new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, saved::get, (k, v) -> saved.put(k, v.toString()));
             List<WheelEntry> entries = List.of(new WheelEntry("shared", "Example", null, 1));
             for (WheelType type : WheelType.values())
             {
@@ -180,7 +180,7 @@ public class WheelFiltersTest
             assertTrue(panel.selected(WheelFilter.ACCOUNT)); assertTrue(panel.selected(WheelFilter.BOSS_TASK));
             panel.updatePool(entries, "test", panel.generation());
             assertTrue(panel.primaryWheel().entries().isEmpty());
-            WheelboundPanel restored = new WheelboundPanel(saved::get, (k, v) -> {});
+            WheelboundPanel restored = new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, saved::get, (k, v) -> {});
             for (WheelType type : List.of(WheelType.SKILLING, WheelType.COMBAT_ACHIEVEMENTS))
             {
                 restored.selectWheel(type); restored.updatePool(entries, "test", restored.generation());

@@ -60,7 +60,7 @@ public class WheelPresentationTest
             saved.put("caExcludeBosses", "true");
             saved.put("caExcludeEasy", "false");
             saved.put("caExcludeMaster", "true");
-            WheelboundPanel panel = new WheelboundPanel(saved::get, (k, v) -> saved.put(k, v.toString()));
+            WheelboundPanel panel = new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, saved::get, (k, v) -> saved.put(k, v.toString()));
             assertFalse(panel.selected(WheelFilter.CA_BOSSES));
             assertTrue(panel.selected(WheelFilter.CA_RAIDS));
             assertTrue(panel.selected(WheelFilter.EASY));
@@ -83,7 +83,7 @@ public class WheelPresentationTest
     @Test public void countStaysOutsideScrollingContentAtBottom() throws Exception
     {
         SwingUtilities.invokeAndWait(() -> {
-            WheelboundPanel panel = new WheelboundPanel(k -> null, (k, v) -> {});
+            WheelboundPanel panel = new WheelboundPanel(net.runelite.http.api.RuneLiteAPI.GSON, k -> null, (k, v) -> {});
             panel.updatePool(List.of(new WheelEntry("VORKATH", "Vorkath", null, 1)), "test", panel.generation());
             JPanel wrapped = panel.getWrappedPanel();
             Component footer = ((BorderLayout)wrapped.getLayout()).getLayoutComponent(BorderLayout.SOUTH);
