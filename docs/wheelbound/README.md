@@ -48,3 +48,6 @@ Read [technical specifications](TECHNICAL_SPECIFICATIONS.md), [major questions](
 
 ## Historical recovery breakthrough
 S8: the original shared Game Design & Progression conversation is now recovered by direct HTTPS fetch: 436 visible user/assistant messages with timestamps and stable locators. See [extraction record](research/TRANSCRIPT_EXTRACTION.md) and [transcript](research/SHARED_CONVERSATION_TRANSCRIPT.md). The earlier failed web-reader assessment is superseded; reconciliation is in progress. Newly authored catalogs remain separate until actual historical approvals are compared.
+
+## Autonomous checkpoints
+Use [task queue](../../automation/TASK_QUEUE.md), [session ownership and exact resume](../../automation/SESSION_STATE.md), [verified progress](../../automation/PROGRESS.md), [blockers](../../automation/BLOCKERS.md) and [pending decisions](../../automation/DECISIONS_PENDING.md). [Protocol](../../automation/PROTOCOL.md) governs guarded startup, approximately 70/30 effort allocation and clean stopping. Approved gameplay remains in DECISIONS.md.

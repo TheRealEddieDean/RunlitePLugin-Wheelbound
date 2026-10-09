@@ -19,3 +19,6 @@ Next executable actions:
 Resume prompt: “Continue Wheelbound from docs/wheelbound/WORK_STATUS.md on wheelbound-mode. First verify current branch head and main baseline, read DECISIONS, OPEN_QUESTIONS and the weekend master assignment. Preserve later approvals, finish listed independent work, commit coherent documentation/simulation batches, and refresh the PDF from committed Markdown. Do not change production plugin behavior, main or submit to Plugin Hub. No automatic restart is promised.”
 
 The platform runs work only while this session and quotas permit. No weekend background execution or automatic relaunch has been established.
+
+## Active continuation protocol
+The user activated the incremental 70/30 effort protocol on 2026-10-09. Read [automation/SESSION_STATE](../../automation/SESSION_STATE.md) and [TASK_QUEUE](../../automation/TASK_QUEUE.md) first for ownership, actual checkpoints and the highest-priority task. This supersedes ad hoc continuation steps while preserving the master assignment and canonical design rules. No scheduled restart has been created.

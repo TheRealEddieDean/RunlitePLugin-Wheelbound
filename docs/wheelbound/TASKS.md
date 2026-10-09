@@ -1,3 +1,7 @@
+# Task navigation
+
+The maintained execution queue is [automation/TASK_QUEUE](../../automation/TASK_QUEUE.md). It splits remaining recovery, catalog validation, next model, pipeline and PDF work into bounded tasks with dependency/effort/done criteria. [SESSION_STATE](../../automation/SESSION_STATE.md) records ownership and exact resume. This file retains earlier project checklist evidence below; outdated access failures are superseded by the preserved S8 transcript and recovery register.
+
 # Task checklist
 - [x] Read current addendum, pasted assignment, full extracted PDF and repository design/release docs.
 - [x] Search available history; record access limits.
@@ -18,7 +22,7 @@
 - [x] WB-D058: Taint task consumes one spin, explicitly approved.
 - [x] WB-D058: Sacrifice also consumes one spin, explicitly approved.
 - [x] Revise simulation recovery and rerun current-rule baseline/sensitivity; synthetic acquisition remains explicitly provisional.
-- [ ] Historical full catalogs remain unavailable; do not fabricate them as recovered.
+- [ ] Complete S8 approval/catalog reconciliation remains unfinished; distinguish promised catalogs from actual delivered lists.
 
 - [x] Current-rule H2: 12,000 baseline plus 36,000 sensitivity trajectories, historical H1 outputs preserved; no RuneLite implementation.
 
@@ -31,14 +35,14 @@
 
 
 ## Weekend handoff
-- [x] Master assignment preserved; shared conversation access attempted and failure documented.
+- [x] Master assignment preserved; 436 visible shared-conversation messages recovered and committed after initial reader failure.
 - [x] Pipeline configuration inspected: JDK 11, Gradle 8.10; build attempted but wrapper download failed before compilation; see pipeline.
 - [x] Concrete detector contracts, state/crash specification, traceability and major-question register populated.
 - [ ] Exact real-content end-to-end account progression model; current simulations remain synthetic/incomplete.
 - [ ] Source-history catalogs recovered; newly authored replacements must be labeled separately.
 - [ ] Live detector traces and exact restrictive-policy acceptance; deferred until implementation/review.
 
-- [x] New separately labeled 100-bounty/50-punishment drafts and source snapshots created. Historical catalogs still missing.
+- [x] New separately labeled 100-bounty/50-punishment drafts and source snapshots created. Catalog authority review remains pending; S8-M0172 states the actual punishment list was deferred.
 - [x] H3 eight-policy 12,000-trajectory experiment executed and offline checks passed. Exact real-content progression still incomplete.
 - [x] Balance candidate and detailed recovery UX authored; no numeric approval invented.
 
