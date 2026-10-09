@@ -15,8 +15,6 @@ If no genuinely eligible item exists, the player must acquire an eligible item w
 ## Forced-sacrifice evidence and acquisition recovery
 Trigger commits obligation ID, blessings and known ownership. Candidate identity/quantity/value persists before display. Opening a bank may refresh unknown data; unknown is never equivalent to empty. Selection locks the selected unit. Donation must correlate selected item/quantity, accepted Coffer interaction, container decrease and actual receipt/value signal. A click or item disappearance is insufficient. Account/session mismatch prevents credit.
 
-WB-D057 confirms acquisition recovery. Keep the obligation pending and show the 10,000 GP minimum. In this case only, newly acquired eligible ownership may be added after the original snapshot; validate and freeze the selected item/quantity/value before donation. Do not waive Blessed protection, Coffer eligibility or existing account-access rules. No ordinary assignment may start before verified sacrifice. Exact acquisition-progress auditing remains a technical specification dependency.
-
 WB-D058 confirms one spin for a Taint task, with no second charge for the resulting Punishment. Proposed transaction timing: debit once when the Taint outcome and obligation commit; persist the receipt across restarts. Sacrifice also consumes exactly one spin (explicit user approval, 2026-10-09). H1 and the prior all-special-debit sensitivity predate this approval and are not final balance evidence.
 
 ## Acquisition recovery specification
