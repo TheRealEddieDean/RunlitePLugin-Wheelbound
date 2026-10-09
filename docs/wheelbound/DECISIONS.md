@@ -573,25 +573,25 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Affects: [BOUNTIES](BOUNTIES.md), [PERSISTENCE](PERSISTENCE.md).
 - Exceptions/dependencies: Not recovered historical approval; H1 excludes daily economy.
 
-## WB-D057 - No eligible forced-sacrifice candidate fallback
+## WB-D057 - Acquire an item when forced Sacrifice has no eligible candidate
 
-- Status: OPEN - significant decision required
-- Authority: Unresolved historical mechanic; simulated risk
-- Evidence: new work dated 2026-10-09; see referenced specs and recorded sources.
-- Decision: No implicit fallback selected. Forced Sacrifice with genuinely empty candidates stops normal progression pending rule, while free Pause remains.
-- Rationale: Avoid silently weakening mandatory sacrifice or creating a deadlock.
-- Affects: [DEFY_FATE](DEFY_FATE.md), [EDGE_CASES](EDGE_CASES.md), [SIMULATION_RESULTS](SIMULATION_RESULTS.md).
-- Exceptions/dependencies: Baseline synthetic stop .75%-1.60%; low reserve58.65%-76.78%. No live-player risk estimate.
+- Status: CONFIRMED - new explicit user approval, 2026-10-09
+- Authority: User explicitly selected post-trigger acquisition; not recovered historical approval.
+- Evidence: "if they do not have an eligible item they will have to get one"; minimum "something worth at least 10k".
+- Decision: A genuinely empty eligible set keeps the mandatory Sacrifice pending. The player must acquire an eligible item worth at least 10,000 GP and sacrifice it. No replacement Punishment or waived obligation.
+- Rationale: Preserve the cost of Sacrifice while providing a route out of an empty candidate set.
+- Affects: DEFY_FATE, EDGE_CASES, GAME_RULES, UI_UX, PERSISTENCE, TESTING, ECONOMY and SIMULATION_RESULTS.
+- Exceptions/dependencies: Explicit exception to the frozen ownership snapshot: permit a newly acquired eligible item in this recovery case, validate and freeze it before donation. Unknown bank contents are not an empty set. Blessed protections and actual Coffer eligibility still apply. Game acceptance/value detector and GP-to-spin conversion remain technical/balance work. The acquisition route must respect existing account access; no automatic vendor/GE unlock is approved.
 
 ## WB-D058 - Special slice spin accounting
 
-- Status: OPEN - significant balance decision
-- Authority: Not specified in available approval history
-- Evidence: new work dated 2026-10-09; see referenced specs and recorded sources.
-- Decision: Resolve whether Taint/Sacrifice landing consumes a Master spin; ordinary completion/rejection spends one and Grand Fate attempts none remain confirmed.
-- Rationale: Final spin economy depends on special debit.
-- Affects: [DEFY_FATE](DEFY_FATE.md), [ECONOMY](ECONOMY.md), [SIMULATION_RESULTS](SIMULATION_RESULTS.md).
-- Exceptions/dependencies: H1 no special charge; sensitivity charges one on landing.
+- Status: PARTIALLY RESOLVED - Taint CONFIRMED; Sacrifice OPEN
+- Authority: Explicit user approval, 2026-10-09, limited to Taint.
+- Evidence: "yes a tainted task should eat up a spin".
+- Decision: A Taint task consumes exactly one Master Wheel spin. Its resulting mandatory Punishment does not create a second spin charge. Sacrifice spin consumption has not been explicitly answered. Ordinary completion/rejection spends one and Grand Fate attempts none remain confirmed.
+- Rationale: Taint spends the finite progression resource in addition to imposing a Punishment.
+- Affects: DEFY_FATE, GAME_RULES, PUNISHMENTS, ECONOMY, PERSISTENCE, TESTING and SIMULATION_RESULTS.
+- Exceptions/dependencies: Charge exactly once across restart/replay. Proposed debit timing is when the Taint outcome and obligation are durably committed. H1 charges neither special and the prior sensitivity charges both; neither is a final model of the newly confirmed mixed rule.
 
 ## WB-D059 - RuneLite API availability versus feasibility
 

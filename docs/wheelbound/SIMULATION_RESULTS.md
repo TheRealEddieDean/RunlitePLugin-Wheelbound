@@ -42,10 +42,10 @@ low_reserve changes initial spins and refill from 100/50 to 25/25. special_debit
 
 ## Findings and proposed adjustments
 
-1. Do not finalize a small reserve/refill while forced Sacrifice can produce an empty candidate set. H1 low-reserve no-item stop rates are 58.65%-76.78%; these are synthetic model rates, not measured player outcomes. Fallback requires a core gameplay decision.
+1. Do not finalize a small reserve/refill while forced Sacrifice can produce an empty candidate set. H1 low-reserve no-item stop rates are 58.65%-76.78%; these are synthetic model rates, not measured player outcomes. WB-D057 subsequently approved acquisition recovery with a 10,000 GP minimum; these historical stop rates describe entry into recovery, not deadlocks under the current rule. Recovery time/cost has not yet been simulated.
 2. H1 produces large end-horizon FP surpluses. Income/spending sinks are incomplete (daily/CA/diary rewards and blessings not modeled). Raising prices alone is not enough evidence for final balance; keep numeric tables BALANCE_TBD.
 3. Lesser Bossing pays base FP for fewer kills by confirmed rule. Optimal efficiency choice tends to select it when offered; preserve that benefit while examining unlock timing and target bands.
-4. Special spin debit changes corruption/stop exposure; decide rule before final spin recommendations.
+4. Special spin debit changes corruption/stop exposure. WB-D058 subsequently confirms Taint costs one spin; Sacrifice remains OPEN. Separate the two charges and model acquisition recovery before final spin recommendations.
 5. FP debt does not itself prevent valid earnings in the model. No optional purchase creates debt. All trajectories repeatedly assert wheel five/three/24 constraints and normalized probabilities.
 
 ## Scope and limitations

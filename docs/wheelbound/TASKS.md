@@ -14,6 +14,7 @@
 - [x] main verified unchanged at c8cc38ac9a7ab74d9bc10125388da7cc75af99fa after research commit 4d19ac225c22f2a0be0cb9349e45737c1d661fc1.
 
 ## Current core blockers
-- [ ] WB-D057: forced Sacrifice without eligible candidates; decide post-trigger acquisition exception or other fallback.
-- [ ] WB-D058: spin debit on Taint/Sacrifice landing.
+- [x] WB-D057: user approved post-trigger acquisition of an eligible item worth at least 10,000 GP; mandatory Sacrifice remains pending.
+- [x] WB-D058: Taint task consumes one spin, explicitly approved.
+- [ ] WB-D058: clarify Sacrifice spin debit; revise simulation recovery and separate special debit parameters.
 - [ ] Historical full catalogs remain unavailable; do not fabricate them as recovered.

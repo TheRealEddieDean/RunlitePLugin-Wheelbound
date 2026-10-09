@@ -18,3 +18,6 @@ Use RS-profile identity for account run data; user-facing preferences may remain
 For durable journal files, use Plugin.getPluginDirectory() and RuneLite Filepath APIs, not unrestricted java.io file paths. Write a temporary snapshot, flush through supported FileChannel, then move atomically where supported. Keep journal and last-good snapshot. API existence does not prove fsync/atomic moves across every platform; test actual crash boundaries before claiming exactly-once durability.
 
 If configuration sync can reintroduce an older run revision, reconcile by retained receipts and run ID; do not choose greater FP or regenerate outcomes. Concurrent device mutation policy is TECHNICAL_TBD. No competitive integrity claim is added.
+
+## Confirmed recovery and Taint accounting
+WB-D057 recovery persists the pending Sacrifice ID and original evidence plus a separately validated post-trigger acquisition candidate; never overwrite the original snapshot. WB-D058 persists the Taint spin debit receipt with its mandatory Punishment ID; restart/replay must not spend a second spin. Atomic debit timing is a technical proposal, not a newly approved gameplay rule.

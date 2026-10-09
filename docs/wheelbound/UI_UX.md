@@ -19,3 +19,6 @@ Use RuneLite sidebar container width with wrapping text. Top strip: mode/Pause, 
 Canvas popup shows spins using committed pool. Skip animation reveals same result; Escape closes view without cancelling assignment. Builder detail shows UUID, activity, current/projected weight and activity odds; draft validates five/three/24 together. Defy previews both first-Defy special inserts and stored/destroyed upgrade losses.
 
 Keyboard labels include card type/target/reward/restrictions. Avoid KeyboardFocusManager/window-focus manipulation. Reduced-motion preference. Ban/debt/Taint use text/icons, never color alone. Pending verification includes reason/retry; no sacrifice candidate must not silently waive obligation.
+
+## Confirmed recovery and Taint accounting
+Empty forced-Sacrifice recovery must show: "Acquire an eligible item worth at least 10,000 GP to complete your Sacrifice." Show why known items are excluded; unknown bank state requests evidence refresh rather than acquisition. Keep the pending obligation visible and disable new ordinary assignments. Taint confirmation previews a one-spin cost; Punishment completion shows no additional spin cost. Sacrifice spin cost remains unresolved.

@@ -10,7 +10,7 @@
 | No eligible boss/quest/cards | Do not commit impossible objective; Standard default doesn't bypass activity prerequisites |
 | Level 99 cap | Skill-specific target generation/end-state policy OPEN |
 | Quest incidental XP | Attribution/exemptions need explicit mapping |
-| No eligible sacrifice items | OPEN, no invented substitute; pause available |
+| No eligible sacrifice items | Keep obligation pending; acquire an eligible item worth at least 10,000 GP; permit post-trigger ownership exception and verify donation |
 | Partial bank visibility | Unknown is not empty or verified ownership |
 | All shops required for quest locked | Fate selection must detect dependency or document permitted recovery |
 | Existing completed Grand Fate | Starting-account credit policy OPEN |

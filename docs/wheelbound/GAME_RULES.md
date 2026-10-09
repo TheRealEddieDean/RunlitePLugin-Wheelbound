@@ -11,3 +11,6 @@ Reject ordinary Fate: explicit warning -> FP loss (can become negative) -> consu
 
 ## Proposed audit formula
 Maintain allowed skill/method/location predicates and one cumulative unauthorized XP bucket. Ignore only verified permitted by-products. At first crossing 1000 unauthorized XP, propose one 100 FP charge times min(3,1+prior violation-Fate streak). Record further XP without charging every tick. Legitimate completion resets streak. Pause creates no charge or credit. This NEW PROPOSED calculation differs from H1's flat per-Fate probabilistic charge; attribution/streak not simulated.
+
+## Confirmed recovery and Taint accounting
+Confirmed 2026-10-09: Taint tasks consume one spin, exactly once; their Punishment adds no second charge. Sacrifice spin debit remains OPEN. If forced Sacrifice has no eligible item, keep the obligation pending while the player acquires an eligible item worth at least 10,000 GP. This is an explicit exception to frozen ownership, not a waived Sacrifice.

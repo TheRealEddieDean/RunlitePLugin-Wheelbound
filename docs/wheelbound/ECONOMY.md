@@ -38,7 +38,7 @@ All following numbers are PROPOSED/BALANCE_TBD, chosen under delegated design au
 | Vendor class base | 100 FP | H1 linear cost 100*(prior paid class unlocks+1) |
 | GE | 2500 FP and 25 completed Fates | One-time, non-gamble |
 | Sacrifice conversion | max(1,floor(verified item value/100000)) spins | H1 hypothesis; minimum-one rule NOT confirmed |
-| Special landing spin debit | None | H1 sensitivity parameter; final rule OPEN |
+| Special landing spin debit | Historical H1: none | Current confirmed rule: Taint costs one spin; Sacrifice remains OPEN. Old sensitivity charges both |
 
 H1 ordinary Skilling/Combat reward = round(40 + 80*estimated hours), Greater quantity 1.6x, Lesser 0.6x, Challenge quantity 1.25x with 20% reward premium. Boss reference FP = 90 + 20*eligible synthetic boss tier; Lesser keeps it, Greater pays 1.6x. Quest proxy FP = 70 + 30*tier + 30*hours. These formulas are trial economy tools, not normative final reward tables.
 

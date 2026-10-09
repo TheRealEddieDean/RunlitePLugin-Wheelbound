@@ -11,3 +11,6 @@ Simulate >=10,000 seeded accounts across focused/balanced/inefficient strategies
 
 ## Correction acceptance
 Bossing Lesser/Standard/Greater: selected before random boss, no boss choice/reroll, Lesser retains base FP, Greater increases count/reward. Assert starting Standard default, two distinct targets, same-type permitted, purchased pool persists, third upgrade yields three. Restore pending offers/card/boss across crash boundaries. Assert repeated Pardons at same price with no account/run cap, Banned -> Locked only, and independent vendor unlock/gamble afterward.
+
+## Confirmed recovery and Taint accounting
+Verify empty-set Sacrifice enters acquisition recovery, accepts a newly obtained eligible item worth at least 10,000 GP, rejects below-minimum/ineligible/protected items, and blocks ordinary progression until verified donation. Unknown bank contents must not trigger empty-set recovery. Verify one Taint spin charge across completion/restart/replay, with no second Punishment debit. Do not assume a Sacrifice spin charge.

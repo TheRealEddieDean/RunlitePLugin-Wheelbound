@@ -10,11 +10,11 @@ Blessed slots protect item TYPES, not slice instances. Maximum three; first free
 Voluntary sacrifice: choose eligible actual item/quantity, preview conversion, verify actual Coffer donation. Forced: commit owned inventory/equipment/bank snapshot and roughly twelve eligible meaningful diverse candidates; player selects from forced choices (S3). Actual bank snapshot may be stale/incomplete; do not assume API sees unopened bank.
 Stackables use selected snapshotted stack, nonstackables generally one copy. Same conversion voluntary/forced. No spins for a click or unverified item disappearance. Exact GP rules and conversion OPEN. PDF says per-unit >=10,000; live boundary must be checked.
 
-No eligible candidates, all blessed, bank unavailable and selected item lost are OPEN recovery cases; pause remains free. Never replace this silently with death sacrifice or mandatory item purchase.
+If no genuinely eligible item exists, the player must acquire an eligible item worth at least 10,000 GP and sacrifice it. This includes a genuinely empty unprotected candidate set. Bank unavailable and selected item lost still require recovery handling; pause remains free. Acquisition is required, but purchasing is not the only permitted source.
 
-## Forced-sacrifice evidence and unresolved fallback
+## Forced-sacrifice evidence and acquisition recovery
 Trigger commits obligation ID, blessings and known ownership. Candidate identity/quantity/value persists before display. Opening a bank may refresh unknown data; unknown is never equivalent to empty. Selection locks the selected unit. Donation must correlate selected item/quantity, accepted Coffer interaction, container decrease and actual receipt/value signal. A click or item disappearance is insufficient. Account/session mismatch prevents credit.
 
-Baseline H1 finds genuine no-eligible-item stops. There is no confirmed fallback. Permitting acquisition after trigger requires an exception to the frozen snapshot; converting to Punishment changes mandatory Sacrifice. Do not select either without user input.
+WB-D057 confirms acquisition recovery. Keep the obligation pending and show the 10,000 GP minimum. In this case only, newly acquired eligible ownership may be added after the original snapshot; validate and freeze the selected item/quantity/value before donation. Do not waive Blessed protection, Coffer eligibility or existing account-access rules. No ordinary assignment may start before verified sacrifice. Exact acquisition-progress auditing remains a technical specification dependency.
 
-Special-spin accounting is also OPEN: ordinary completion/rejection consumes one; Grand Fate none. H1 assumes no debit for Taint/Sacrifice, and sensitivity charges one at landing. Finalize neither as historically approved.
+WB-D058 confirms one spin for a Taint task, with no second charge for the resulting Punishment. Proposed transaction timing: debit once when the Taint outcome and obligation commit; persist the receipt across restarts. Sacrifice spin consumption remains OPEN. H1 and the prior all-special-debit sensitivity predate this approval and are not final balance evidence.
