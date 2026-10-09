@@ -36,3 +36,7 @@ S7: [Weekend master instructions](research/WEEKEND_MASTER_INSTRUCTIONS.md), dire
 Read [technical specifications](TECHNICAL_SPECIFICATIONS.md), [major questions](OPEN_QUESTIONS.md), [work status and resume](WORK_STATUS.md), [pipeline](DEVELOPMENT_PIPELINE.md), [traceability](TRACEABILITY.md), and [sources](SOURCES.md).
 
 [STATE_CONTRACT](STATE_CONTRACT.md) specifies aggregate fields, stage transitions, transaction boundaries and crash fixtures for the first coding slice (WB-D077).
+
+[CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACCEPTANCE.md) separate new drafts, source metadata and runtime evidence. H3 adds 12,000 executed synthetic trials across eight policies; total recorded is 126,000.
+
+[BALANCE_CANDIDATE](BALANCE_CANDIDATE.md) and [UX_RECOVERY_FLOWS](UX_RECOVERY_FLOWS.md) specify provisional first-implementation parameters and detailed error/recovery journeys.

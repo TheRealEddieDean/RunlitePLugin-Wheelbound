@@ -21,3 +21,7 @@
 | No main or production changes | WB-D076 | All | GitHub compare restricted to docs/design tooling |
 
 The register remains authoritative for exact established IDs. This mapping is a handoff index, not evidence that future implementation tests have already passed.
+
+## Catalog drafting checkpoint
+
+See [CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACCEPTANCE.md) for newly authored drafts (WB-D079/080), distinct from missing historical catalogs. Machine-readable 100 bounty candidates, 50 punishments, 67 repository boss categories and 213 quest enum records are in catalogs/. Source metadata is not runtime eligibility. All unvalidated bounty/punishment entries remain disabled. H3 exercises named bounty/reward and plain-XP punishment drafts in synthetic trials only; exact quest/boss access remains unmodeled.

@@ -796,3 +796,58 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Exceptions/dependencies: Guaranteed synthetic acquisition, simplified access and incomplete sinks remain model assumptions. Profiles are parameter variants, not new quest/combat-rush decision policies. Floor/denominator are not approved.
 - Supersession: None; historical H1 and corrected H2 outputs retained.
 - Acceptance criteria: Record exact count, seed, source hashes and ledger assertions; publish only actually executed results.
+
+## WB-D079 - New content drafts remain separate from historical recovery
+
+- Status: DELEGATED
+- Authority/source: Weekend master assignment authorizes new gameplay/content design; 2026-10-09 source inspection of RuneLite ItemID/Quest and repository BossDifficulty.
+- Decision: Author a new 100-entry item bounty draft and 50 punishment templates; preserve stable WB-B/WB-P IDs, proposed rewards and detector gates. Retain 67 repository boss category mappings and 213 quest enum records as source metadata, not an approved mode roster or main-quest pool.
+- Rationale: Continue independent work without inventing the missing historical catalogs or misclassifying runtime metadata.
+- Affects: CONTENT_CATALOGS, CATALOG_ACCEPTANCE, BOUNTIES, PUNISHMENTS, PROGRESSION, TRACEABILITY.
+- Exceptions/dependencies: Item identities are source-checked; rarity, source routes and live detectors require entry-level review. All unvalidated entries runtime-disabled. New FP/duration bands BALANCE_TBD. No claim that new content is historically approved.
+- Supersession: None; missing original catalogs remain documented.
+- Acceptance criteria: Unique stable IDs; source identity checks; runtime gates; positive/negative/paused traces before enabling an entry.
+
+## WB-D080 - Punishment pool can contain fewer than twelve valid outcomes
+
+- Status: DELEGATED
+- Authority/source: Master assignment says roughly twelve eligible outcomes; new catalog eligibility analysis 2026-10-09.
+- Decision: Show up to twelve distinct eligible templates, using a smaller honest pool where necessary. Unsupported methods and impossible routes do not fill the wheel. Zero eligibility is a generator failure and pending obligation, not a player penalty.
+- Rationale: Early starting skills alone do not guarantee twelve verifiable distinct templates; prevent artificial repetition and deadlocks.
+- Affects: PUNISHMENTS, WHEELS, UI_UX, TESTING, H3 simulation.
+- Exceptions/dependencies: No reroll or automatic committed-outcome relaxation. Pause remains immediate/free. Exact recovery from an already committed defective template remains a significant unresolved choice.
+- Supersession: Refines roughly-twelve display count, not fifty-template intent or spin costs.
+- Acceptance criteria: Test pool sizes zero, one, eleven, twelve and above twelve; persist chosen candidate set and outcome; never enable an unverified detector to inflate size.
+
+## WB-D081 - Correct current Sailing and Master CA facts
+
+- Status: CONFIRMED source evidence, not a new gameplay approval
+- Authority/source: Jagex Sailing launch statement 2025-11-19; RuneLite Skill API checked 2026-10-09; Jagex Combat Achievements reward list 2022-11-01.
+- Decision: Sailing is live and exposed as Skill.SAILING. Master CA reward is Ghommal's Hilt 5; Hilt 4 is Elite. Use current client threshold, not an old hardcoded points total.
+- Rationale: Resolve obsolete future-skill and incorrect reward-number wording through primary sources.
+- Affects: PROGRESSION, GRAND_FATES, SOURCES and integration catalog.
+- Exceptions/dependencies: Sailing methods, by-products and access routes still require per-template validation. Hilt possession alone is not a fresh Master-tier receipt.
+- Supersession: Any older future-Sailing/Hilt-4 interpretation is superseded by checked facts; Grand Fate goal unchanged.
+- Acceptance criteria: Client supports Sailing enum; Master threshold detector distinguishes preexisting reward, active earned progress and retroactive task updates.
+
+## WB-D082 - H3 catalog-aware policy comparison
+
+- Status: DELEGATED experiment; BALANCE_TBD
+- Authority/source: Weekend master assignment; catalog_model.py and catalog_trials.py executed 2026-10-09.
+- Decision: Execute 12,000 synthetic trajectories across eight distinct policies using named bounty/reward and plain-XP punishment catalogs. Preserve H1/H2/sweep outputs, source hashes and explicit limitations.
+- Rationale: Test minimal-bounty, combat/quest preferences and catalog generation independently of missing original history.
+- Affects: ECONOMY, SIMULATION_RESULTS, TESTING and catalog acceptance.
+- Exceptions/dependencies: Acquisition/drop rates, supply routes, boss/quest durations and tier advancement remain proxies. No full real-content or Grand Fate progression claim; no live detector is enabled. H3 duration bands differ from H2, so comparisons are not single-variable effects.
+- Supersession: None; no final balance promoted.
+- Acceptance criteria: Exact count/seed/hash recorded; ledger and replay checks pass; no-bounty policy has zero bounty income; unsupported punishment families excluded.
+
+## WB-D083 - Provisional balance and recovery journeys
+
+- Status: DELEGATED specification; numerical values BALANCE_TBD
+- Authority/source: Weekend master assignment, 2026-10-09; H2/H3 evidence and preserved confirmed pricing structures.
+- Decision: Publish BALANCE_CANDIDATE and UX_RECOVERY_FLOWS with explicit provisional costs/targets, local-only trust boundary, irreversible-action readiness and honest unavailable/pending states.
+- Rationale: Supply a configurable implementation starting point without overfitting incomplete models or concealing telemetry failures.
+- Affects: ECONOMY, UI_UX, FATE_CARDS, ACCOUNT_ACCESS, PERSISTENCE, TESTING.
+- Exceptions/dependencies: New boss target/reward candidates not yet run in H3; GP conversion, exhausted activity policy and full-Coffer escape remain OPEN. Current confirmed pause and Pardon rules unchanged.
+- Supersession: No approved mechanics overwritten; provisional table does not rewrite historical simulation parameters.
+- Acceptance criteria: Display correct price/odds and state-specific recovery; never fabricate detection, backfill paused credit, replay a trade or ask for another ambiguous donation.

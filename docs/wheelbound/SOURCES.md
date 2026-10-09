@@ -14,3 +14,11 @@ Checked 2026-10-09. Current user approvals outrank master-assignment reconstruct
 
 ## Source-confidence rules
 Current game constants identify possible signals, not tested completion receipts. Historical RuneStar cache scripts are explicitly dated 2021; generic IF-variable mappings require live validation. Listed Hub peers demonstrate observed implementation precedent, not comprehensive transaction coverage or blanket policy approval. Unknown telemetry is not evidence of player misconduct. Wiki access failures must not be hidden behind guessed current facts.
+
+## Catalog sources checked 2026-10-09
+
+RuneLite ItemID blob 1bb88f6044f84f89cbe1a5e99ccc688d43ff631c verifies draft item identity; Quest blob b40a73187f514fa5abdfe93db0e76203c20c5acb supplies 213 metadata records. Repository BossDifficulty blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141 supplies 67 normal-wheel category mappings. These do not verify loot ownership, drop rarity, main-quest eligibility or mode-tier approval.
+
+- [Jagex Sailing launch](https://www.jagex.com/news/set-sail-in-old-school-runescape-explore-gielinor-like-never-before-in-massive-sailing-update-available-today), 2025-11-19.
+- [RuneLite Skill API](https://static.runelite.net/runelite-api/apidocs/net/runelite/api/Skill.html), SAILING checked 2026-10-09.
+- [Jagex CA reward list](https://secure.runescape.com/m=news/combat-achievements-expansion-rewards?oldschool=1), 2022-11-01 current-rewards list identifies Master Hilt 5. New proposed rewards elsewhere on that page are not assumed accepted.

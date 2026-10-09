@@ -17,3 +17,7 @@ DT2 awakened kill totals have separate varps for each boss (3971-3974). Proposed
 ## Detailed technical resolution checkpoint
 
 [TECHNICAL_SPECIFICATIONS](TECHNICAL_SPECIFICATIONS.md) supplies current detector contracts, route coverage, initialization rules, source evidence and explicit live-validation gates (WB-D069–075). Its refined Coffer route uses visible initialized UI/server quote and balance as primary evidence; the old IF-variable mapping is optional pending validation. Method-specific templates require a supported catalog. Vendor inspection does not unlock transactions. Existing-account Grand Fate credit, full Coffer recovery and exact restrictive policy acceptance remain in [OPEN_QUESTIONS](OPEN_QUESTIONS.md). No live test or production implementation is claimed.
+
+## Master reward correction
+
+WB-D081: Master tier corresponds to Ghommal's Hilt 5, not Elite Hilt 4. Use the current initialized threshold and fresh active evidence; do not substitute possession of the reward for completion proof.

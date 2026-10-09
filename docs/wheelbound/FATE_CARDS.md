@@ -20,3 +20,7 @@ Each offering carries a Standard reference target; fresh duplicate Standard offe
 Lesser reduces kill count and retains base FP. Standard uses normal count/reward. Greater increases count and FP. Exact multipliers and boss-tier target bands are BALANCE_TBD. Boss is not chosen or rerolled by player. Card/target choice occurs before boss selection. Boss wheel eligibility must be frozen before offers so changing access midway cannot manipulate the random pool; commit the selected boss durably before animation.
 
 Quest choices are distinct quests, separate from same-type card offerings. C01 is RESOLVED: current user confirmation supersedes prior contradictory PDF text. See [PROGRESSION](PROGRESSION.md), [PERSISTENCE](PERSISTENCE.md).
+
+## Catalog drafting checkpoint
+
+See [CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACCEPTANCE.md) for newly authored drafts (WB-D079/080), distinct from missing historical catalogs. Machine-readable 100 bounty candidates, 50 punishments, 67 repository boss categories and 213 quest enum records are in catalogs/. Source metadata is not runtime eligibility. All unvalidated bounty/punishment entries remain disabled. H3 exercises named bounty/reward and plain-XP punishment drafts in synthetic trials only; exact quest/boss access remains unmodeled.

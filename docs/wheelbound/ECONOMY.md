@@ -53,3 +53,7 @@ H1 does not confirm real account progression duration. Quest chains, gear prereq
 
 ## Current-rule recovery hypothesis H2
 Both special tasks spend one spin before the modeled reward. A missing item triggers synthetic acquisition of a 10,000 GP eligible item, with 1-3 hours divided by efficiency (3-9-hour sensitivity). Acquisition has no normal Fate/FP reward and grants no account unlock. Durations and guaranteed item availability are modeling hypotheses, not game rules. The H1 minimum-one-spin conversion remains unapproved: under that hypothesis the minimum recovery item nets zero spins after the Sacrifice debit; this must not be treated as an approved conversion formula.
+
+## Detailed delegated specification
+
+[BALANCE_CANDIDATE](BALANCE_CANDIDATE.md) expands this chapter with provisional numeric/UX detail (WB-D083). Explicit user decisions still prevail.

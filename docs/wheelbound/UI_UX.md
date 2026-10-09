@@ -28,3 +28,7 @@ Keep event-component text-entry detection; never use KeyboardFocusManager to fin
 
 Warn clearly when policy/coverage prevents guaranteeing an access restriction. WB-D066 requires retaining Trade with and showing a local Fate restriction notice on attempted trading. Proposed consume-and-notice enforcement has current Hub precedent (WB-D067), with review/coverage outstanding. Dismiss does not replay the action. Do not replace established locks or introduce penalties. Do not show successful donation, Grand Fate or unlock based on ambiguous evidence. Policy/source detail: [POLICY_AND_FEASIBILITY](POLICY_AND_FEASIBILITY.md).
 
+
+## Detailed delegated specification
+
+[UX_RECOVERY_FLOWS](UX_RECOVERY_FLOWS.md) expands this chapter with provisional numeric/UX detail (WB-D083). Explicit user decisions still prevail.

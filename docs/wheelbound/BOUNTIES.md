@@ -14,3 +14,7 @@ Permanent key = runId+bountyId; daily key includes immutable daily offer ID. NEW
 NEW PROPOSED schedule: rolling 24h epoch anchored at first board creation, seeded by run/epoch; three distinct eligible targets. Offline time creates no accumulated boards. Pre-expiry qualifying evidence remains claimable afterward; expired board receives no new progress. This is delegated design, not historical approval.
 
 Historical 100-item catalog and payouts remain missing. Do not generate 100 speculative items and call them recovered. Import the original catalog or review a separately labelled new one before implementation. Diary/CA events need active permitted evidence; paused completion is not retroactive progress.
+
+## Catalog drafting checkpoint
+
+See [CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACCEPTANCE.md) for newly authored drafts (WB-D079/080), distinct from missing historical catalogs. Machine-readable 100 bounty candidates, 50 punishments, 67 repository boss categories and 213 quest enum records are in catalogs/. Source metadata is not runtime eligibility. All unvalidated bounty/punishment entries remain disabled. H3 exercises named bounty/reward and plain-XP punishment drafts in synthetic trials only; exact quest/boss access remains unmodeled.

@@ -24,3 +24,9 @@ Proposed quest mapping: Low=Novice, Medium=Intermediate, Hard=Experienced, Maste
 Boss pools require a reviewed versioned catalog. Do not manufacture encounters to reach historical counts. H1's six synthetic tiers are not the historical 64-entry catalog. Task-only bosses require enough remaining assignment kills for the selected target.
 
 Completed quests/inaccessible bosses cannot become valid merely to keep a slice usable. Eligibility conditioning changes wheel odds and must be explicit. Whether an exhausted activity slice can suspend without paid storage is OPEN; do not grant an undocumented free wheel edit.
+
+## Catalog drafting checkpoint
+
+See [CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACCEPTANCE.md) for newly authored drafts (WB-D079/080), distinct from missing historical catalogs. Machine-readable 100 bounty candidates, 50 punishments, 67 repository boss categories and 213 quest enum records are in catalogs/. Source metadata is not runtime eligibility. All unvalidated bounty/punishment entries remain disabled. H3 exercises named bounty/reward and plain-XP punishment drafts in synthetic trials only; exact quest/boss access remains unmodeled.
+
+WB-D081 source check: Sailing is live (Jagex launch 2025-11-19) and exposed in RuneLite Skill.SAILING. Keep the proposed Tier II placement; method-specific assignments still need access/by-product evidence.

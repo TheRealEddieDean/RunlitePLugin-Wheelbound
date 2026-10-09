@@ -1,0 +1,1711 @@
+{
+  "source_commit": "42a6f17a6a2e8e478aa763890ecd0181a59dad38",
+  "source_blob": "b40a73187f514fa5abdfe93db0e76203c20c5acb",
+  "note": "All 213 enum entries retained, including miniquests/subquests. Not the released main-quest assignment pool.",
+  "entries": [
+    {
+      "symbol": "ANIMAL_MAGNETISM",
+      "quest_id": 0,
+      "name": "Animal Magnetism",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "ANOTHER_SLICE_OF_HAM",
+      "quest_id": 1,
+      "name": "Another Slice of H.A.M.",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_ASCENT_OF_ARCEUUS",
+      "quest_id": 3,
+      "name": "The Ascent of Arceuus",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "ALFRED_GRIMHANDS_BARCRAWL",
+      "quest_id": 4,
+      "name": "Alfred Grimhand's Barcrawl",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "BEAR_YOUR_SOUL",
+      "quest_id": 5,
+      "name": "Bear Your Soul",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "BELOW_ICE_MOUNTAIN",
+      "quest_id": 6,
+      "name": "Below Ice Mountain",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "BETWEEN_A_ROCK",
+      "quest_id": 7,
+      "name": "Between a Rock...",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "BIG_CHOMPY_BIRD_HUNTING",
+      "quest_id": 8,
+      "name": "Big Chompy Bird Hunting",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "BIOHAZARD",
+      "quest_id": 9,
+      "name": "Biohazard",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "BLACK_KNIGHTS_FORTRESS",
+      "quest_id": 10,
+      "name": "Black Knights' Fortress",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "BONE_VOYAGE",
+      "quest_id": 11,
+      "name": "Bone Voyage",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "CABIN_FEVER",
+      "quest_id": 12,
+      "name": "Cabin Fever",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "CLIENT_OF_KOUREND",
+      "quest_id": 13,
+      "name": "Client of Kourend",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "CLOCK_TOWER",
+      "quest_id": 14,
+      "name": "Clock Tower",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "COLD_WAR",
+      "quest_id": 15,
+      "name": "Cold War",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "CONTACT",
+      "quest_id": 16,
+      "name": "Contact!",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "COOKS_ASSISTANT",
+      "quest_id": 17,
+      "name": "Cook's Assistant",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_CORSAIR_CURSE",
+      "quest_id": 18,
+      "name": "The Corsair Curse",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "CREATURE_OF_FENKENSTRAIN",
+      "quest_id": 19,
+      "name": "Creature of Fenkenstrain",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "CURSE_OF_THE_EMPTY_LORD",
+      "quest_id": 20,
+      "name": "Curse of the Empty Lord",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "DADDYS_HOME",
+      "quest_id": 21,
+      "name": "Daddy's Home",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "DARKNESS_OF_HALLOWVALE",
+      "quest_id": 22,
+      "name": "Darkness of Hallowvale",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "DEATH_PLATEAU",
+      "quest_id": 23,
+      "name": "Death Plateau",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "DEATH_TO_THE_DORGESHUUN",
+      "quest_id": 24,
+      "name": "Death to the Dorgeshuun",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "DEMON_SLAYER",
+      "quest_id": 25,
+      "name": "Demon Slayer",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_DEPTHS_OF_DESPAIR",
+      "quest_id": 26,
+      "name": "The Depths of Despair",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "DESERT_TREASURE_I",
+      "quest_id": 27,
+      "name": "Desert Treasure I",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "DEVIOUS_MINDS",
+      "quest_id": 28,
+      "name": "Devious Minds",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_DIG_SITE",
+      "quest_id": 29,
+      "name": "The Dig Site",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "DORICS_QUEST",
+      "quest_id": 30,
+      "name": "Doric's Quest",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "DRAGON_SLAYER_I",
+      "quest_id": 31,
+      "name": "Dragon Slayer I",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "DRAGON_SLAYER_II",
+      "quest_id": 32,
+      "name": "Dragon Slayer II",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "DREAM_MENTOR",
+      "quest_id": 33,
+      "name": "Dream Mentor",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "DRUIDIC_RITUAL",
+      "quest_id": 34,
+      "name": "Druidic Ritual",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "DWARF_CANNON",
+      "quest_id": 35,
+      "name": "Dwarf Cannon",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "EADGARS_RUSE",
+      "quest_id": 36,
+      "name": "Eadgar's Ruse",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "EAGLES_PEAK",
+      "quest_id": 37,
+      "name": "Eagles' Peak",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "ELEMENTAL_WORKSHOP_I",
+      "quest_id": 38,
+      "name": "Elemental Workshop I",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "ELEMENTAL_WORKSHOP_II",
+      "quest_id": 39,
+      "name": "Elemental Workshop II",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "ENAKHRAS_LAMENT",
+      "quest_id": 40,
+      "name": "Enakhra's Lament",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_ENCHANTED_KEY",
+      "quest_id": 41,
+      "name": "The Enchanted Key",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "ENLIGHTENED_JOURNEY",
+      "quest_id": 42,
+      "name": "Enlightened Journey",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "ENTER_THE_ABYSS",
+      "quest_id": 43,
+      "name": "Enter the Abyss",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "ERNEST_THE_CHICKEN",
+      "quest_id": 44,
+      "name": "Ernest the Chicken",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_EYES_OF_GLOUPHRIE",
+      "quest_id": 45,
+      "name": "The Eyes of Glouphrie",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "FAIRYTALE_I__GROWING_PAINS",
+      "quest_id": 46,
+      "name": "Fairytale I - Growing Pains",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "FAIRYTALE_II__CURE_A_QUEEN",
+      "quest_id": 47,
+      "name": "Fairytale II - Cure a Queen",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "FAMILY_CREST",
+      "quest_id": 48,
+      "name": "Family Crest",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "FAMILY_PEST",
+      "quest_id": 49,
+      "name": "Family Pest",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_FEUD",
+      "quest_id": 50,
+      "name": "The Feud",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "FIGHT_ARENA",
+      "quest_id": 51,
+      "name": "Fight Arena",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "FISHING_CONTEST",
+      "quest_id": 52,
+      "name": "Fishing Contest",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "FORGETTABLE_TALE",
+      "quest_id": 53,
+      "name": "Forgettable Tale...",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_FORSAKEN_TOWER",
+      "quest_id": 54,
+      "name": "The Forsaken Tower",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_FREMENNIK_EXILES",
+      "quest_id": 55,
+      "name": "The Fremennik Exiles",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_FREMENNIK_ISLES",
+      "quest_id": 56,
+      "name": "The Fremennik Isles",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_FREMENNIK_TRIALS",
+      "quest_id": 57,
+      "name": "The Fremennik Trials",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "GARDEN_OF_TRANQUILLITY",
+      "quest_id": 58,
+      "name": "Garden of Tranquillity",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_GENERALS_SHADOW",
+      "quest_id": 59,
+      "name": "The General's Shadow",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "GERTRUDES_CAT",
+      "quest_id": 60,
+      "name": "Gertrude's Cat",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "GETTING_AHEAD",
+      "quest_id": 61,
+      "name": "Getting Ahead",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "GHOSTS_AHOY",
+      "quest_id": 62,
+      "name": "Ghosts Ahoy",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_GIANT_DWARF",
+      "quest_id": 63,
+      "name": "The Giant Dwarf",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "GOBLIN_DIPLOMACY",
+      "quest_id": 64,
+      "name": "Goblin Diplomacy",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_GOLEM",
+      "quest_id": 65,
+      "name": "The Golem",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_GRAND_TREE",
+      "quest_id": 66,
+      "name": "The Grand Tree",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_GREAT_BRAIN_ROBBERY",
+      "quest_id": 67,
+      "name": "The Great Brain Robbery",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "GRIM_TALES",
+      "quest_id": 68,
+      "name": "Grim Tales",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_HAND_IN_THE_SAND",
+      "quest_id": 69,
+      "name": "The Hand in the Sand",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "HAUNTED_MINE",
+      "quest_id": 70,
+      "name": "Haunted Mine",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "HAZEEL_CULT",
+      "quest_id": 71,
+      "name": "Hazeel Cult",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "HEROES_QUEST",
+      "quest_id": 72,
+      "name": "Heroes' Quest",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "HOLY_GRAIL",
+      "quest_id": 73,
+      "name": "Holy Grail",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "HORROR_FROM_THE_DEEP",
+      "quest_id": 74,
+      "name": "Horror from the Deep",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "ICTHLARINS_LITTLE_HELPER",
+      "quest_id": 75,
+      "name": "Icthlarin's Little Helper",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "IMP_CATCHER",
+      "quest_id": 76,
+      "name": "Imp Catcher",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "IN_AID_OF_THE_MYREQUE",
+      "quest_id": 77,
+      "name": "In Aid of the Myreque",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "IN_SEARCH_OF_KNOWLEDGE",
+      "quest_id": 78,
+      "name": "In Search of Knowledge",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "IN_SEARCH_OF_THE_MYREQUE",
+      "quest_id": 79,
+      "name": "In Search of the Myreque",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "JUNGLE_POTION",
+      "quest_id": 80,
+      "name": "Jungle Potion",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "A_KINGDOM_DIVIDED",
+      "quest_id": 81,
+      "name": "A Kingdom Divided",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "KINGS_RANSOM",
+      "quest_id": 82,
+      "name": "King's Ransom",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_KNIGHTS_SWORD",
+      "quest_id": 83,
+      "name": "The Knight's Sword",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "LAIR_OF_TARN_RAZORLOR",
+      "quest_id": 84,
+      "name": "Lair of Tarn Razorlor",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "LEGENDS_QUEST",
+      "quest_id": 85,
+      "name": "Legends' Quest",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "LOST_CITY",
+      "quest_id": 86,
+      "name": "Lost City",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_LOST_TRIBE",
+      "quest_id": 87,
+      "name": "The Lost Tribe",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "LUNAR_DIPLOMACY",
+      "quest_id": 88,
+      "name": "Lunar Diplomacy",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "MAGE_ARENA_I",
+      "quest_id": 89,
+      "name": "Mage Arena I",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "MAGE_ARENA_II",
+      "quest_id": 90,
+      "name": "Mage Arena II",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "MAKING_FRIENDS_WITH_MY_ARM",
+      "quest_id": 91,
+      "name": "Making Friends with My Arm",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "MAKING_HISTORY",
+      "quest_id": 92,
+      "name": "Making History",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "MERLINS_CRYSTAL",
+      "quest_id": 93,
+      "name": "Merlin's Crystal",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "MISTHALIN_MYSTERY",
+      "quest_id": 94,
+      "name": "Misthalin Mystery",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "MONKEY_MADNESS_I",
+      "quest_id": 95,
+      "name": "Monkey Madness I",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "MONKEY_MADNESS_II",
+      "quest_id": 96,
+      "name": "Monkey Madness II",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "MONKS_FRIEND",
+      "quest_id": 97,
+      "name": "Monk's Friend",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "MOUNTAIN_DAUGHTER",
+      "quest_id": 98,
+      "name": "Mountain Daughter",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "MOURNINGS_END_PART_I",
+      "quest_id": 99,
+      "name": "Mourning's End Part I",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "MOURNINGS_END_PART_II",
+      "quest_id": 100,
+      "name": "Mourning's End Part II",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "MURDER_MYSTERY",
+      "quest_id": 101,
+      "name": "Murder Mystery",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "MY_ARMS_BIG_ADVENTURE",
+      "quest_id": 102,
+      "name": "My Arm's Big Adventure",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "NATURE_SPIRIT",
+      "quest_id": 103,
+      "name": "Nature Spirit",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "A_NIGHT_AT_THE_THEATRE",
+      "quest_id": 104,
+      "name": "A Night at the Theatre",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "OBSERVATORY_QUEST",
+      "quest_id": 105,
+      "name": "Observatory Quest",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "OLAFS_QUEST",
+      "quest_id": 106,
+      "name": "Olaf's Quest",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "ONE_SMALL_FAVOUR",
+      "quest_id": 107,
+      "name": "One Small Favour",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "PIRATES_TREASURE",
+      "quest_id": 108,
+      "name": "Pirate's Treasure",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "PLAGUE_CITY",
+      "quest_id": 109,
+      "name": "Plague City",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "A_PORCINE_OF_INTEREST",
+      "quest_id": 110,
+      "name": "A Porcine of Interest",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "PRIEST_IN_PERIL",
+      "quest_id": 111,
+      "name": "Priest in Peril",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "PRINCE_ALI_RESCUE",
+      "quest_id": 112,
+      "name": "Prince Ali Rescue",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_QUEEN_OF_THIEVES",
+      "quest_id": 113,
+      "name": "The Queen of Thieves",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "RAG_AND_BONE_MAN_I",
+      "quest_id": 114,
+      "name": "Rag and Bone Man I",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "RAG_AND_BONE_MAN_II",
+      "quest_id": 115,
+      "name": "Rag and Bone Man II",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "RATCATCHERS",
+      "quest_id": 116,
+      "name": "Ratcatchers",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "RECIPE_FOR_DISASTER",
+      "quest_id": 117,
+      "name": "Recipe for Disaster",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "RECRUITMENT_DRIVE",
+      "quest_id": 118,
+      "name": "Recruitment Drive",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "REGICIDE",
+      "quest_id": 119,
+      "name": "Regicide",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_RESTLESS_GHOST",
+      "quest_id": 120,
+      "name": "The Restless Ghost",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "ROMEO__JULIET",
+      "quest_id": 121,
+      "name": "Romeo & Juliet",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "ROVING_ELVES",
+      "quest_id": 122,
+      "name": "Roving Elves",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "ROYAL_TROUBLE",
+      "quest_id": 123,
+      "name": "Royal Trouble",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "RUM_DEAL",
+      "quest_id": 124,
+      "name": "Rum Deal",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "RUNE_MYSTERIES",
+      "quest_id": 125,
+      "name": "Rune Mysteries",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "SCORPION_CATCHER",
+      "quest_id": 126,
+      "name": "Scorpion Catcher",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "SEA_SLUG",
+      "quest_id": 127,
+      "name": "Sea Slug",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "SHADES_OF_MORTTON",
+      "quest_id": 128,
+      "name": "Shades of Mort'ton",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "SHADOW_OF_THE_STORM",
+      "quest_id": 129,
+      "name": "Shadow of the Storm",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "SHEEP_HERDER",
+      "quest_id": 130,
+      "name": "Sheep Herder",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "SHEEP_SHEARER",
+      "quest_id": 131,
+      "name": "Sheep Shearer",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "SHIELD_OF_ARRAV",
+      "quest_id": 132,
+      "name": "Shield of Arrav",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "SHILO_VILLAGE",
+      "quest_id": 133,
+      "name": "Shilo Village",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "SINS_OF_THE_FATHER",
+      "quest_id": 134,
+      "name": "Sins of the Father",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "SKIPPY_AND_THE_MOGRES",
+      "quest_id": 135,
+      "name": "Skippy and the Mogres",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_SLUG_MENACE",
+      "quest_id": 136,
+      "name": "The Slug Menace",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "SONG_OF_THE_ELVES",
+      "quest_id": 137,
+      "name": "Song of the Elves",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "A_SOULS_BANE",
+      "quest_id": 138,
+      "name": "A Soul's Bane",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "SPIRITS_OF_THE_ELID",
+      "quest_id": 139,
+      "name": "Spirits of the Elid",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "SWAN_SONG",
+      "quest_id": 140,
+      "name": "Swan Song",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "TAI_BWO_WANNAI_TRIO",
+      "quest_id": 141,
+      "name": "Tai Bwo Wannai Trio",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "A_TAIL_OF_TWO_CATS",
+      "quest_id": 142,
+      "name": "A Tail of Two Cats",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "TALE_OF_THE_RIGHTEOUS",
+      "quest_id": 143,
+      "name": "Tale of the Righteous",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "A_TASTE_OF_HOPE",
+      "quest_id": 144,
+      "name": "A Taste of Hope",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "TEARS_OF_GUTHIX",
+      "quest_id": 145,
+      "name": "Tears of Guthix",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "TEMPLE_OF_IKOV",
+      "quest_id": 146,
+      "name": "Temple of Ikov",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THRONE_OF_MISCELLANIA",
+      "quest_id": 147,
+      "name": "Throne of Miscellania",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_TOURIST_TRAP",
+      "quest_id": 148,
+      "name": "The Tourist Trap",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "TOWER_OF_LIFE",
+      "quest_id": 149,
+      "name": "Tower of Life",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "TREE_GNOME_VILLAGE",
+      "quest_id": 150,
+      "name": "Tree Gnome Village",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "TRIBAL_TOTEM",
+      "quest_id": 151,
+      "name": "Tribal Totem",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "TROLL_ROMANCE",
+      "quest_id": 152,
+      "name": "Troll Romance",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "TROLL_STRONGHOLD",
+      "quest_id": 153,
+      "name": "Troll Stronghold",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "UNDERGROUND_PASS",
+      "quest_id": 154,
+      "name": "Underground Pass",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "VAMPYRE_SLAYER",
+      "quest_id": 155,
+      "name": "Vampyre Slayer",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "WANTED",
+      "quest_id": 156,
+      "name": "Wanted!",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "WATCHTOWER",
+      "quest_id": 157,
+      "name": "Watchtower",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "WATERFALL_QUEST",
+      "quest_id": 158,
+      "name": "Waterfall Quest",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "WHAT_LIES_BELOW",
+      "quest_id": 159,
+      "name": "What Lies Below",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "WITCHS_HOUSE",
+      "quest_id": 160,
+      "name": "Witch's House",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "WITCHS_POTION",
+      "quest_id": 161,
+      "name": "Witch's Potion",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "X_MARKS_THE_SPOT",
+      "quest_id": 162,
+      "name": "X Marks the Spot",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "ZOGRE_FLESH_EATERS",
+      "quest_id": 163,
+      "name": "Zogre Flesh Eaters",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_FROZEN_DOOR",
+      "quest_id": 164,
+      "name": "The Frozen Door",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "LAND_OF_THE_GOBLINS",
+      "quest_id": 165,
+      "name": "Land of the Goblins",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "HOPESPEARS_WILL",
+      "quest_id": 166,
+      "name": "Hopespear's Will",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "TEMPLE_OF_THE_EYE",
+      "quest_id": 167,
+      "name": "Temple of the Eye",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "BENEATH_CURSED_SANDS",
+      "quest_id": 168,
+      "name": "Beneath Cursed Sands",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "SLEEPING_GIANTS",
+      "quest_id": 169,
+      "name": "Sleeping Giants",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_GARDEN_OF_DEATH",
+      "quest_id": 180,
+      "name": "The Garden of Death",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "INTO_THE_TOMBS",
+      "quest_id": 2306,
+      "name": "Into the Tombs",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "RECIPE_FOR_DISASTER__ANOTHER_COOKS_QUEST",
+      "quest_id": 2307,
+      "name": "Recipe for Disaster - Another Cook's Quest",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "RECIPE_FOR_DISASTER__MOUNTAIN_DWARF",
+      "quest_id": 2308,
+      "name": "Recipe for Disaster - Mountain Dwarf",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "RECIPE_FOR_DISASTER__WARTFACE__BENTNOZE",
+      "quest_id": 2309,
+      "name": "Recipe for Disaster - Wartface & Bentnoze",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "RECIPE_FOR_DISASTER__PIRATE_PETE",
+      "quest_id": 2310,
+      "name": "Recipe for Disaster - Pirate Pete",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "RECIPE_FOR_DISASTER__LUMBRIDGE_GUIDE",
+      "quest_id": 2311,
+      "name": "Recipe for Disaster - Lumbridge Guide",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "RECIPE_FOR_DISASTER__EVIL_DAVE",
+      "quest_id": 2312,
+      "name": "Recipe for Disaster - Evil Dave",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "RECIPE_FOR_DISASTER__SKRACH_UGLOGWEE",
+      "quest_id": 2313,
+      "name": "Recipe for Disaster - Skrach Uglogwee",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "RECIPE_FOR_DISASTER__SIR_AMIK_VARZE",
+      "quest_id": 2314,
+      "name": "Recipe for Disaster - Sir Amik Varze",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "RECIPE_FOR_DISASTER__KING_AWOWOGEI",
+      "quest_id": 2315,
+      "name": "Recipe for Disaster - King Awowogei",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "RECIPE_FOR_DISASTER__CULINAROMANCER",
+      "quest_id": 2316,
+      "name": "Recipe for Disaster - Culinaromancer",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "SECRETS_OF_THE_NORTH",
+      "quest_id": 2338,
+      "name": "Secrets of the North",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "DESERT_TREASURE_II__THE_FALLEN_EMPIRE",
+      "quest_id": 2343,
+      "name": "Desert Treasure II - The Fallen Empire",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "HIS_FAITHFUL_SERVANTS",
+      "quest_id": 3250,
+      "name": "His Faithful Servants",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_PATH_OF_GLOUPHRIE",
+      "quest_id": 3425,
+      "name": "The Path of Glouphrie",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "CHILDREN_OF_THE_SUN",
+      "quest_id": 3450,
+      "name": "Children of the Sun",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "BARBARIAN_TRAINING",
+      "quest_id": 3451,
+      "name": "Barbarian Training",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "DEFENDER_OF_VARROCK",
+      "quest_id": 3466,
+      "name": "Defender of Varrock",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "WHILE_GUTHIX_SLEEPS",
+      "quest_id": 3467,
+      "name": "While Guthix Sleeps",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "TWILIGHTS_PROMISE",
+      "quest_id": 3512,
+      "name": "Twilight's Promise",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "AT_FIRST_LIGHT",
+      "quest_id": 3513,
+      "name": "At First Light",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "PERILOUS_MOONS",
+      "quest_id": 3514,
+      "name": "Perilous Moons",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_RIBBITING_TALE_OF_A_LILY_PAD_LABOUR_DISPUTE",
+      "quest_id": 3515,
+      "name": "The Ribbiting Tale of a Lily Pad Labour Dispute",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_HEART_OF_DARKNESS",
+      "quest_id": 3710,
+      "name": "The Heart of Darkness",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "DEATH_ON_THE_ISLE",
+      "quest_id": 3711,
+      "name": "Death on the Isle",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "MEAT_AND_GREET",
+      "quest_id": 3712,
+      "name": "Meat and Greet",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "ETHICALLY_ACQUIRED_ANTIQUITIES",
+      "quest_id": 3713,
+      "name": "Ethically Acquired Antiquities",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_CURSE_OF_ARRAV",
+      "quest_id": 3937,
+      "name": "The Curse of Arrav",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_FINAL_DAWN",
+      "quest_id": 5189,
+      "name": "The Final Dawn",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "SHADOWS_OF_CUSTODIA",
+      "quest_id": 5190,
+      "name": "Shadows of Custodia",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "SCRAMBLED",
+      "quest_id": 5191,
+      "name": "Scrambled!",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "VALE_TOTEMS",
+      "quest_id": 5194,
+      "name": "Vale Totems",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "PANDEMONIUM",
+      "quest_id": 7103,
+      "name": "Pandemonium",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "PRYING_TIMES",
+      "quest_id": 7104,
+      "name": "Prying Times",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "CURRENT_AFFAIRS",
+      "quest_id": 7105,
+      "name": "Current Affairs",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "TROUBLED_TORTUGANS",
+      "quest_id": 7106,
+      "name": "Troubled Tortugans",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_RED_REEF",
+      "quest_id": 7107,
+      "name": "The Red Reef",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "FALLEN_FROM_GRACE",
+      "quest_id": 7133,
+      "name": "Fallen From Grace",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "LEARNING_THE_ROPES",
+      "quest_id": 9643,
+      "name": "Learning the Ropes",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_IDES_OF_MILK",
+      "quest_id": 9645,
+      "name": "The Ides of Milk",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "THE_BLOOD_MOON_RISES",
+      "quest_id": 16414,
+      "name": "The Blood Moon Rises",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "A_RUFF_SITUATION",
+      "quest_id": 16971,
+      "name": "A Ruff Situation",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    },
+    {
+      "symbol": "CRAB_QUEST",
+      "quest_id": 16972,
+      "name": "Crab Quest",
+      "status": "SOURCE_METADATA_ONLY",
+      "main_quest_eligibility": "REQUIRES_CURRENT_DB_TYPE_RELEASE_PARENT_AND_REQUIREMENT_CHECK",
+      "access_route": "AUTHORING_REQUIRED"
+    }
+  ]
+}

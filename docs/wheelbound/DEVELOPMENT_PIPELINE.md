@@ -39,3 +39,6 @@ Acceptance: five ordinary/three activities; 24 total including specials; exact d
 | WB-I10 | All; packaging/manual review | Complete detector traces and route matrix, regression build, minimal dependency/package audit, explicit Hub review | Large; external |
 
 No production implementation authorized in this assignment. Policy contact/submission and real-game detector tests require a later implementation/review session.
+
+## Executed environment check, 2026-10-09
+An isolated shallow wheelbound-mode checkout at a8526ef315dc8b32db2304cb28ee7734b4f0670b was obtained through Git. It contains 12 test source files and remained clean. Host is OpenJDK 17.0.20; compilation target is still release 11, and repo CI selects JDK11. Executed bash ./gradlew clean build: wrapper failed downloading Gradle 8.10 with java.net.SocketException: Network is unreachable, before configuration/compilation/tests. Configuring the existing noncredential proxy and IPv4 preference did not resolve Java connectivity. A curl HEAD reached the official distribution redirect, but that is not a successful Java build. No build/test pass is claimed. Run the first I00 ticket on an environment with the wrapper/dependency endpoints reachable and the recommended JDK11.

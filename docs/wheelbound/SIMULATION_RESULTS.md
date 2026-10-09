@@ -129,3 +129,24 @@ Executed 18,000 additional trajectories: 3 conversions × 6 parameter profiles �
 | 250000 | voluntary_heavy_proxy | 9189 | 4 | 89.4% | 201.249 |
 
 Interpretation: the denominator affects reserve relief for valuable donations, while a 10k recovery donation always returns the one-spin floor and nets zero against its forced spin debit. The sweep cannot decide a fair recovery reward because acquisition is guaranteed and loot/access are synthetic. No conversion is locked. Risk/resource profiles alter existing policies and parameters; they do not establish full quest-rush/combat-rush behavior, minimal-bounty strategy or Grand Fate win times. Zero modeled item stops follow the guaranteed recovery assumption, not proof of real-game feasibility.
+
+## H3 catalog-aware policy trials (WB-D082)
+
+Executed 12,000 further trajectories: eight policies × 1,500 seeds, 300 events, seed 20261011. Recorded total across H1/H2/conversion sweep/H3: 126,000. Reproduce: python3 docs/wheelbound/simulation/catalog_trials.py. Validate: python3 docs/wheelbound/simulation/catalog_checks.py. Machine-readable outputs contain parameters and model/catalog hashes.
+
+| Policy | FP p50 | Hours p50 | Completed Fates p50 | Quests proxy p50 | Boss tier p50 | Any FP debt |
+| --- | --- | --- | --- | --- | --- | --- |
+| balanced | 14356 | 292.265 | 280 | 14 | 5 | 72.6% |
+| combat_rush | 10051 | 177.609 | 276 | 15 | 5 | 53.6% |
+| efficient | 9673 | 175.872 | 276 | 15 | 5 | 52.1% |
+| minimal_bounty | 11873 | 289.857 | 280 | 15 | 5 | 76.9% |
+| quest_rush | 15590 | 318.883 | 280 | 53 | 5 | 73.1% |
+| resource_constrained | 5158 | 248.733 | 249 | 17 | 5 | 97.8% |
+| risk_averse | 17478 | 293.274 | 288 | 15 | 5 | 0.0% |
+| voluntary_heavy | 9744 | 180.863 | 277 | 15 | 5 | 52.3% |
+
+H3 uses stable bounty catalog IDs and draft FP bands, plus eligible plain-XP punishment templates with frozen duration bands; all restricted-method/location/KC templates remain withheld. Smaller early punishment pools are counted. Combat-rush explicitly favors Combat duplicates and buys Bossing earlier; quest-rush favors Questing duplicates; minimal-bounty has zero bounty acquisition; other policies change risk/resource behavior. None requires dailies.
+
+Critical limits: bounty occurrence/source selection is a synthetic 3% acquisition proxy, not an actual drop-rate or legal-source simulation. Quest tasks/durations and boss tiers remain synthetic, not real quest-chain or 67-category progression. Supply routes are assumed. The model never validates live detector flags or enables game content. Duration changed from generic 1–4-hour punishment proxy to proposed 30/60/90 minutes, so H3/H2 differences include both catalog and duration changes; they are not a controlled estimate of catalog effects alone.
+
+No numeric price or conversion is finalized. An unchanged six-tier boss proxy does not prove the reviewed roster is affordable; high end balances still reflect incomplete sinks, all-quest exhaustion and real access are absent, and Grand Fate learning/win probability remains unmodeled. Risk-averse settings reduce violations/rejections by assumption; this is not evidence that actual users behave that way.

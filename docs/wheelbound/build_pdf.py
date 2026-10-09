@@ -15,9 +15,9 @@ from reportlab.platypus.tableofcontents import TableOfContents
 
 ROOT=Path(__file__).resolve().parent
 ORDER=["README","BLUEPRINT","GAME_RULES","DECISIONS","PROGRESSION","WHEELS",
-       "FATE_CARDS","FATE_SHOP","ECONOMY","GRAND_FATES","DEFY_FATE","PUNISHMENTS",
-       "BOUNTIES","ACCOUNT_ACCESS","UI_UX","PERSISTENCE","ARCHITECTURE",
-       "RUNELITE_INTEGRATION","POLICY_AND_FEASIBILITY","TECHNICAL_SPECIFICATIONS","STATE_CONTRACT","EDGE_CASES","TESTING","SIMULATION_RESULTS",
+       "FATE_CARDS","FATE_SHOP","ECONOMY","BALANCE_CANDIDATE","GRAND_FATES","DEFY_FATE","PUNISHMENTS",
+       "BOUNTIES","ACCOUNT_ACCESS","UI_UX","UX_RECOVERY_FLOWS","PERSISTENCE","ARCHITECTURE",
+       "RUNELITE_INTEGRATION","POLICY_AND_FEASIBILITY","TECHNICAL_SPECIFICATIONS","CONTENT_CATALOGS","CATALOG_ACCEPTANCE","STATE_CONTRACT","EDGE_CASES","TESTING","SIMULATION_RESULTS",
        "IMPLEMENTATION_PLAN","DEVELOPMENT_PIPELINE","TRACEABILITY","SOURCES","OPEN_QUESTIONS","WORK_STATUS","TASKS"]
 parser=argparse.ArgumentParser()
 parser.add_argument("--commit",required=True)
@@ -73,7 +73,7 @@ story=[Spacer(1,94),Paragraph("WHEELBOUND",styles["WBCover"]),Spacer(1,18),
        Paragraph("Recovered design, technical research<br/>and economy simulation checkpoint",styles["WBH1"]),Spacer(1,24),
        Paragraph("9 October 2026 | wheelbound-mode | Documentation only",styles["WBBody"]),
        Paragraph("Confirmed user rules, unverified historical details, new proposals and open decisions are explicitly distinguished. This is a checkpoint, not a final implementation-ready specification.",styles["WBBody"]),
-       Paragraph("Executed models: 114,000 synthetic account trajectories across historical, corrected and sensitivity runs. Live RuneLite enforcement and Death's Coffer verification remain untested.",styles["WBBody"]),
+       Paragraph("Executed models: 126,000 synthetic account trajectories across historical, corrected and sensitivity runs. Live RuneLite enforcement and Death's Coffer verification remain untested.",styles["WBBody"]),
        Spacer(1,22),Paragraph("Markdown source commit: "+args.commit,styles["WBBody"]),
        Paragraph("Repository: TheRealEddieDean/RunlitePLugin-Wheelbound<br/>Source: docs/wheelbound/",styles["WBBody"]),PageBreak()]
 story.append(Paragraph("Contents",styles["WBH1"]))

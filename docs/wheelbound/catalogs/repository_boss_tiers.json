@@ -1,0 +1,407 @@
+{
+  "version": "source-snapshot-a8526ef3",
+  "entries": [
+    {
+      "hiscore": "BRUTUS",
+      "repository_tier": "EASY",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "WINTERTODT",
+      "repository_tier": "EASY",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "TEMPOROSS",
+      "repository_tier": "EASY",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "BARROWS_CHESTS",
+      "repository_tier": "EASY",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "OBOR",
+      "repository_tier": "EASY",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "BRYOPHYTA",
+      "repository_tier": "EASY",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "GIANT_MOLE",
+      "repository_tier": "EASY",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "DERANGED_ARCHAEOLOGIST",
+      "repository_tier": "EASY",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "SCURRIUS",
+      "repository_tier": "EASY",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "AMOXLIATL",
+      "repository_tier": "MEDIUM",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "THE_HUEYCOATL",
+      "repository_tier": "MEDIUM",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "HESPORI",
+      "repository_tier": "MEDIUM",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "CRAZY_ARCHAEOLOGIST",
+      "repository_tier": "MEDIUM",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "CHAOS_FANATIC",
+      "repository_tier": "MEDIUM",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "KRAKEN",
+      "repository_tier": "MEDIUM",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "SARACHNIS",
+      "repository_tier": "MEDIUM",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "KING_BLACK_DRAGON",
+      "repository_tier": "MEDIUM",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "ZALCANO",
+      "repository_tier": "MEDIUM",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "THERMONUCLEAR_SMOKE_DEVIL",
+      "repository_tier": "MEDIUM",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "MIMIC",
+      "repository_tier": "MEDIUM",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "THE_ROYAL_TITANS",
+      "repository_tier": "MEDIUM",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "LUNAR_CHESTS",
+      "repository_tier": "MEDIUM",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "SCORPIA",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "CHAOS_ELEMENTAL",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "VETION",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "CALVARION",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "VENENATIS",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "SPINDEL",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "CALLISTO",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "ARTIO",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "DAGANNOTH_PRIME",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "DAGANNOTH_REX",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "DAGANNOTH_SUPREME",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "GROTESQUE_GUARDIANS",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "SKOTIZO",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "TZTOK_JAD",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "THE_GAUNTLET",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "ABYSSAL_SIRE",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "CERBERUS",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "ARAXXOR",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "ALCHEMICAL_HYDRA",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "KALPHITE_QUEEN",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "KRIL_TSUTSAROTH",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "COMMANDER_ZILYANA",
+      "repository_tier": "HARD",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "ZULRAH",
+      "repository_tier": "ELITE",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "VORKATH",
+      "repository_tier": "ELITE",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "PHANTOM_MUSPAH",
+      "repository_tier": "ELITE",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "THE_CORRUPTED_GAUNTLET",
+      "repository_tier": "ELITE",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "GENERAL_GRAARDOR",
+      "repository_tier": "ELITE",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "KREEARRA",
+      "repository_tier": "ELITE",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "DUKE_SUCELLUS",
+      "repository_tier": "ELITE",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "THE_WHISPERER",
+      "repository_tier": "ELITE",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "THE_LEVIATHAN",
+      "repository_tier": "ELITE",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "VARDORVIS",
+      "repository_tier": "ELITE",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "NEX",
+      "repository_tier": "ELITE",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "TOMBS_OF_AMASCUT",
+      "repository_tier": "ELITE",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "TOMBS_OF_AMASCUT_EXPERT",
+      "repository_tier": "ELITE",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "CHAMBERS_OF_XERIC",
+      "repository_tier": "MASTER",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "NIGHTMARE",
+      "repository_tier": "MASTER",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "PHOSANIS_NIGHTMARE",
+      "repository_tier": "MASTER",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "YAMA",
+      "repository_tier": "MASTER",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "DOOM_OF_MOKHAIOTL",
+      "repository_tier": "MASTER",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "THEATRE_OF_BLOOD",
+      "repository_tier": "MASTER",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "TZKAL_ZUK",
+      "repository_tier": "MASTER",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "SOL_HEREDIT",
+      "repository_tier": "MASTER",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "CHAMBERS_OF_XERIC_CHALLENGE_MODE",
+      "repository_tier": "GRANDMASTER",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    },
+    {
+      "hiscore": "THEATRE_OF_BLOOD_HARD_MODE",
+      "repository_tier": "GRANDMASTER",
+      "mode_tier_status": "UNVERIFIED_HISTORICAL_MAPPING",
+      "source": "BossDifficulty.java blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141"
+    }
+  ]
+}

@@ -37,3 +37,7 @@
 - [ ] Exact real-content end-to-end account progression model; current simulations remain synthetic/incomplete.
 - [ ] Source-history catalogs recovered; newly authored replacements must be labeled separately.
 - [ ] Live detector traces and exact restrictive-policy acceptance; deferred until implementation/review.
+
+- [x] New separately labeled 100-bounty/50-punishment drafts and source snapshots created. Historical catalogs still missing.
+- [x] H3 eight-policy 12,000-trajectory experiment executed and offline checks passed. Exact real-content progression still incomplete.
+- [x] Balance candidate and detailed recovery UX authored; no numeric approval invented.

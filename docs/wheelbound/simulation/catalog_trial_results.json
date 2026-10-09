@@ -1,0 +1,966 @@
+{
+  "accounts_per_profile": 1500,
+  "catalog_hashes": {
+    "item_bounties.json": "97a1ce17b6ff01e174fad180f9484c67bb4574fae2ffdd41f7ea8e13d6af4e88",
+    "punishments.json": "af387fce6cb928cef5bd4c6232b29fe8000344676c3c6ab359102f7e17ca5a7f"
+  },
+  "events": 300,
+  "profiles": {
+    "balanced": {
+      "acquisition_incidence": 0.006,
+      "any_fp_debt": 0.726,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "boss_tier": {
+          "10": 5,
+          "50": 5,
+          "90": 5
+        },
+        "bounty_income": {
+          "10": 1200,
+          "50": 2250,
+          "90": 3500
+        },
+        "completions": {
+          "10": 274,
+          "50": 280,
+          "90": 286
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 12356,
+          "50": 14356,
+          "90": 16392
+        },
+        "hours": {
+          "10": 283.793,
+          "50": 292.265,
+          "90": 300.858
+        },
+        "punishment_template_count": {
+          "10": 4,
+          "50": 7,
+          "90": 10
+        },
+        "quests": {
+          "10": 10,
+          "50": 14,
+          "90": 19
+        },
+        "small_punishment_pools": {
+          "10": 0,
+          "50": 0,
+          "90": 1
+        },
+        "special_share": {
+          "10": 0.071,
+          "50": 0.071,
+          "90": 0.071
+        }
+      },
+      "policy": "balanced"
+    },
+    "combat_rush": {
+      "acquisition_incidence": 0.018,
+      "any_fp_debt": 0.536,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "boss_access_after": 5,
+        "boss_purchase_interval": 10,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "preference": "combat_rush",
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "boss_tier": {
+          "10": 5,
+          "50": 5,
+          "90": 5
+        },
+        "bounty_income": {
+          "10": 1300,
+          "50": 2250,
+          "90": 3450
+        },
+        "completions": {
+          "10": 270,
+          "50": 276,
+          "90": 282
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 8617,
+          "50": 10051,
+          "90": 11537
+        },
+        "hours": {
+          "10": 171.108,
+          "50": 177.609,
+          "90": 184.917
+        },
+        "punishment_template_count": {
+          "10": 7,
+          "50": 11,
+          "90": 13
+        },
+        "quests": {
+          "10": 10,
+          "50": 15,
+          "90": 20
+        },
+        "small_punishment_pools": {
+          "10": 0,
+          "50": 0,
+          "90": 1
+        },
+        "special_share": {
+          "10": 0.14,
+          "50": 0.14,
+          "90": 0.14
+        }
+      },
+      "policy": "focused"
+    },
+    "efficient": {
+      "acquisition_incidence": 0.025333333333333333,
+      "any_fp_debt": 0.5213333333333333,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "boss_tier": {
+          "10": 5,
+          "50": 5,
+          "90": 5
+        },
+        "bounty_income": {
+          "10": 1250,
+          "50": 2250,
+          "90": 3450
+        },
+        "completions": {
+          "10": 270,
+          "50": 276,
+          "90": 282
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 8272,
+          "50": 9673,
+          "90": 11180
+        },
+        "hours": {
+          "10": 169.553,
+          "50": 175.872,
+          "90": 182.864
+        },
+        "punishment_template_count": {
+          "10": 7,
+          "50": 10,
+          "90": 13
+        },
+        "quests": {
+          "10": 10,
+          "50": 15,
+          "90": 20
+        },
+        "small_punishment_pools": {
+          "10": 0,
+          "50": 0,
+          "90": 1
+        },
+        "special_share": {
+          "10": 0.14,
+          "50": 0.14,
+          "90": 0.14
+        }
+      },
+      "policy": "focused"
+    },
+    "minimal_bounty": {
+      "acquisition_incidence": 0.014,
+      "any_fp_debt": 0.7686666666666667,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "bounty_chance": 0,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "boss_tier": {
+          "10": 5,
+          "50": 5,
+          "90": 5
+        },
+        "bounty_income": {
+          "10": 0,
+          "50": 0,
+          "90": 0
+        },
+        "completions": {
+          "10": 273,
+          "50": 280,
+          "90": 285
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 10191,
+          "50": 11873,
+          "90": 13275
+        },
+        "hours": {
+          "10": 281.931,
+          "50": 289.857,
+          "90": 297.51
+        },
+        "punishment_template_count": {
+          "10": 5,
+          "50": 8,
+          "90": 10
+        },
+        "quests": {
+          "10": 10,
+          "50": 15,
+          "90": 19
+        },
+        "small_punishment_pools": {
+          "10": 0,
+          "50": 0,
+          "90": 1
+        },
+        "special_share": {
+          "10": 0.071,
+          "50": 0.071,
+          "90": 0.071
+        }
+      },
+      "policy": "balanced"
+    },
+    "quest_rush": {
+      "acquisition_incidence": 0.006,
+      "any_fp_debt": 0.7306666666666667,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "preference": "quest_rush",
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "boss_tier": {
+          "10": 5,
+          "50": 5,
+          "90": 5
+        },
+        "bounty_income": {
+          "10": 1200,
+          "50": 2300,
+          "90": 3500
+        },
+        "completions": {
+          "10": 274,
+          "50": 280,
+          "90": 286
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 13050,
+          "50": 15590,
+          "90": 17911
+        },
+        "hours": {
+          "10": 306.766,
+          "50": 318.883,
+          "90": 330.848
+        },
+        "punishment_template_count": {
+          "10": 4,
+          "50": 7,
+          "90": 10
+        },
+        "quests": {
+          "10": 44,
+          "50": 53,
+          "90": 62
+        },
+        "small_punishment_pools": {
+          "10": 0,
+          "50": 0,
+          "90": 1
+        },
+        "special_share": {
+          "10": 0.071,
+          "50": 0.071,
+          "90": 0.071
+        }
+      },
+      "policy": "balanced"
+    },
+    "resource_constrained": {
+      "acquisition_incidence": 0.024,
+      "any_fp_debt": 0.978,
+      "parameters": {
+        "acquisition_hours": [
+          3,
+          9
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "boss_tier": {
+          "10": 5,
+          "50": 5,
+          "90": 5
+        },
+        "bounty_income": {
+          "10": 1050,
+          "50": 2050,
+          "90": 3200
+        },
+        "completions": {
+          "10": 240,
+          "50": 249,
+          "90": 257
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 2877,
+          "50": 5158,
+          "90": 7529
+        },
+        "hours": {
+          "10": 238.053,
+          "50": 248.733,
+          "90": 261.775
+        },
+        "punishment_template_count": {
+          "10": 16,
+          "50": 18,
+          "90": 20
+        },
+        "quests": {
+          "10": 12,
+          "50": 17,
+          "90": 22
+        },
+        "small_punishment_pools": {
+          "10": 1,
+          "50": 3,
+          "90": 7
+        },
+        "special_share": {
+          "10": 0.152,
+          "50": 0.152,
+          "90": 0.152
+        }
+      },
+      "policy": "inefficient"
+    },
+    "risk_averse": {
+      "acquisition_incidence": 0.004,
+      "any_fp_debt": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "boss_tier": {
+          "10": 5,
+          "50": 5,
+          "90": 5
+        },
+        "bounty_income": {
+          "10": 1300,
+          "50": 2350,
+          "90": 3600
+        },
+        "completions": {
+          "10": 283,
+          "50": 288,
+          "90": 292
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 15998,
+          "50": 17478,
+          "90": 18995
+        },
+        "hours": {
+          "10": 285.36,
+          "50": 293.274,
+          "90": 301.808
+        },
+        "punishment_template_count": {
+          "10": 0,
+          "50": 1,
+          "90": 3
+        },
+        "quests": {
+          "10": 10,
+          "50": 15,
+          "90": 19
+        },
+        "small_punishment_pools": {
+          "10": 0,
+          "50": 0,
+          "90": 0
+        },
+        "special_share": {
+          "10": 0.071,
+          "50": 0.071,
+          "90": 0.071
+        }
+      },
+      "policy": "balanced"
+    },
+    "voluntary_heavy": {
+      "acquisition_incidence": 0.9026666666666666,
+      "any_fp_debt": 0.5233333333333333,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 1,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "boss_tier": {
+          "10": 5,
+          "50": 5,
+          "90": 5
+        },
+        "bounty_income": {
+          "10": 1250,
+          "50": 2200,
+          "90": 3450
+        },
+        "completions": {
+          "10": 271,
+          "50": 277,
+          "90": 283
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 8335,
+          "50": 9744,
+          "90": 11320
+        },
+        "hours": {
+          "10": 173.472,
+          "50": 180.863,
+          "90": 189.174
+        },
+        "punishment_template_count": {
+          "10": 7,
+          "50": 10,
+          "90": 13
+        },
+        "quests": {
+          "10": 10,
+          "50": 15,
+          "90": 19
+        },
+        "small_punishment_pools": {
+          "10": 0,
+          "50": 0,
+          "90": 0
+        },
+        "special_share": {
+          "10": 0.14,
+          "50": 0.14,
+          "90": 0.14
+        }
+      },
+      "policy": "focused"
+    }
+  },
+  "scope": "H3 synthetic policy comparison. Named bounty IDs/rewards and plain-XP punishment catalog are exercised; acquisition rates, real quest chains, actual boss access/kill rates, GP and resource routes remain proxies. Not full OSRS account/Grand Fate trials.",
+  "seed": 20261011,
+  "source_hashes": {
+    "catalog_model.py": "5910c09ab6892937fd4abded2f34109e6074661d37910d9c11e9471b2e015df0",
+    "catalog_trials.py": "bf3a373394014cd8ba4386fa4b8618be924858e300fa41ce965c2166ff37e681"
+  },
+  "total_trajectories": 12000
+}
