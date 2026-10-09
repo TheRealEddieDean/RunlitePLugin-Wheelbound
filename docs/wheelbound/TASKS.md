@@ -16,5 +16,8 @@
 ## Current core blockers
 - [x] WB-D057: user approved post-trigger acquisition of an eligible item worth at least 10,000 GP; mandatory Sacrifice remains pending.
 - [x] WB-D058: Taint task consumes one spin, explicitly approved.
-- [ ] WB-D058: clarify Sacrifice spin debit; revise simulation recovery and separate special debit parameters.
+- [x] WB-D058: Sacrifice also consumes one spin, explicitly approved.
+- [x] Revise simulation recovery and rerun current-rule baseline/sensitivity; synthetic acquisition remains explicitly provisional.
 - [ ] Historical full catalogs remain unavailable; do not fabricate them as recovered.
+
+- [x] Current-rule H2: 12,000 baseline plus 36,000 sensitivity trajectories, historical H1 outputs preserved; no RuneLite implementation.

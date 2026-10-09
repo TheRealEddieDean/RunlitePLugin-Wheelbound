@@ -618,7 +618,7 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 
 - Status: PROPOSED modeling assumptions; not approved gameplay numbers
 - Authority: Assistant under delegated simulation authority, 2026-10-09.
-- Decision: Charge one spin for both Taint and Sacrifice, following WB-D058. Model WB-D057 as acquiring an eligible 10,000 GP item before donation. Use a synthetic earned-item route with no vendor unlock, normal Fate reward or FP reward; acquisition duration is 1-3 hours divided by strategy efficiency, with 3-9 hours in a sensitivity. Preserve H1 results as historical evidence.
+- Decision: Charge one spin for both Taint and Sacrifice, following WB-D058. Model WB-D057 as acquiring an eligible 10,000 GP item before donation. Use a synthetic earned-item route with no vendor unlock, normal Fate reward or FP reward; acquisition duration is 1-3 hours divided by strategy efficiency, with 3-9 hours in a sensitivity. Preserve H1 results as historical evidence. Sort unlocked activities before seeded choice so output is reproducible across process hash seeds.
 - Rationale: Test recovery burden without inventing automatic account unlocks or treating an empty set as a waived obligation.
 - Affects: SIMULATION_RESULTS, ECONOMY, TESTING and offline simulation files.
 - Exceptions/dependencies: Duration, item availability and legal acquisition route are unvalidated hypotheses. Real access, skill/tool prerequisites, Blessed exclusions and acquisition XP tolerance require catalog/detector validation. Zero simulated stops follow from guaranteed synthetic acquisition and do not prove real-account deadlock freedom. GP-to-spin conversion still uses H1's unapproved minimum-one hypothesis.

@@ -74,6 +74,8 @@ def simulate(seed, strategy, params):
     income, spend, penalties, hours = 0, 0, 0, 0.0
     defies = exhaustions = completions = rejects = 0
     forced = punishments = no_items = negative = 0
+    acquisition_recoveries = 0
+    recovery_hours = 0.0
     unlocked = set()
     dup_count = {}
     card_types = ["Standard"]
@@ -144,8 +146,16 @@ def simulate(seed, strategy, params):
                 forced+=1
                 if not item_values:
                     no_items += 1
-                    # Stop here: fallback is a significant unresolved gameplay decision.
-                    break
+                    if not params.get("acquisition_recovery", False):
+                        break  # Historical H1 only; current rule requires acquisition.
+                    acquisition_recoveries += 1
+                    duration = rng.uniform(*params["acquisition_hours"]) / params["efficiency"][strategy]
+                    recovery_hours += duration
+                    hours += duration
+                    # Synthetic earned-item route: no vendor/GE unlock, FP or normal Fate reward.
+                    # Duration and availability are hypotheses, not a verified legal OSRS route.
+                    item_values.append(params["minimum_recovery_item_gp"])
+                    gp += params["minimum_recovery_item_gp"]
                 value=item_values.pop(0)
                 gp=max(0,gp-value)
                 spins += max(1,value//params["gp_per_spin"])
@@ -268,7 +278,7 @@ def simulate(seed, strategy, params):
                     selected["tier"]+=1
                     selected["weight"]=[1,1.25,1.5,2,3][selected["tier"]]
             elif len(wheel)<24 and rng.random()<.3:
-                a="Mining" if strategy!="balanced" else rng.choice(list(unlocked)+["Mining"])
+                a="Mining" if strategy!="balanced" else rng.choice(sorted(unlocked)+["Mining"])
                 count=dup_count.get(a,0)
                 price=params["duplicates"][min(count,6)]
                 if count>=7: price=math.ceil(price*1.4**(count-6)/50)*50
@@ -292,7 +302,8 @@ def simulate(seed, strategy, params):
     special_share=sum(s["weight"] for s in wheel if s["kind"]!="ordinary")/sum(s["weight"] for s in wheel)
     return dict(fp=fp,income=income,spend=spend,penalties=penalties,hours=hours,completions=completions,
                 defies=defies,exhaustions=exhaustions,rejects=rejects,forced=forced,
-                punishments=punishments,no_eligible_item_stop=no_items,negative_events=negative,
+                punishments=punishments,no_eligible_item_stop=(no_items if not params.get("acquisition_recovery", False) else 0),
+                acquisition_recoveries=acquisition_recoveries,recovery_hours=recovery_hours,negative_events=negative,
                 unlocked=len(unlocked),max_level=max(map(skill_level,xp.values())),
                 quests=quests,boss_tier=boss_tier,vendors=vendors,pardons=pardons,bans=bans,
                 ge=int(ge),special_share=special_share,special_landings=special_landings,
@@ -321,6 +332,7 @@ def main():
             if key!="spent_by": metrics[key]=percentiles([a[key] for a in accounts])
         result["strategies"][strategy]={"percentiles":metrics,
             "item_stop_rate":sum(a["no_eligible_item_stop"]>0 for a in accounts)/len(accounts),
+            "acquisition_rate":sum(a["acquisition_recoveries"]>0 for a in accounts)/len(accounts),
             "ge_rate":sum(a["ge"] for a in accounts)/len(accounts),
             "negative_account_rate":sum(a["negative_events"]>0 for a in accounts)/len(accounts),
             "spent_by":{k:round(sum(a["spent_by"].get(k,0) for a in accounts)/len(accounts),2)

@@ -4,9 +4,13 @@
   "starting_fp": 0,
   "starting_spins": 100,
   "defy_refill": 50,
-  "special_consumes_spin": false,
+  "special_consumes_spin": true,
   "gp_per_spin": 100000,
-  "gear_costs": [100000,500000,1500000],
+  "gear_costs": [
+    100000,
+    500000,
+    1500000
+  ],
   "punishment_fp": 25,
   "reject_penalty": 250,
   "violation_penalty": 100,
@@ -19,9 +23,39 @@
   "ge_fates": 25,
   "pardon": 2000,
   "cleansing": 2500,
-  "duplicates": [100,250,500,900,1500,2300,3300],
-  "efficiency": {"focused": 1.0,"balanced": 0.8,"inefficient": 0.55},
-  "reject_probability": {"focused": 0.01,"balanced": 0.025,"inefficient": 0.10},
-  "violation_probability": {"focused": 0.005,"balanced": 0.015,"inefficient": 0.07},
-  "voluntary_probability": {"focused": 0.5,"balanced": 0.3,"inefficient": 0.1}
+  "duplicates": [
+    100,
+    250,
+    500,
+    900,
+    1500,
+    2300,
+    3300
+  ],
+  "efficiency": {
+    "focused": 1.0,
+    "balanced": 0.8,
+    "inefficient": 0.55
+  },
+  "reject_probability": {
+    "focused": 0.01,
+    "balanced": 0.025,
+    "inefficient": 0.1
+  },
+  "violation_probability": {
+    "focused": 0.005,
+    "balanced": 0.015,
+    "inefficient": 0.07
+  },
+  "voluntary_probability": {
+    "focused": 0.5,
+    "balanced": 0.3,
+    "inefficient": 0.1
+  },
+  "acquisition_recovery": true,
+  "minimum_recovery_item_gp": 10000,
+  "acquisition_hours": [
+    1,
+    3
+  ]
 }

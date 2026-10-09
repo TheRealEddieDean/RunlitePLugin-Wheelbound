@@ -1,0 +1,516 @@
+{
+  "accounts_per_strategy": 4000,
+  "model_sha256": "bead3d23e8309c2e14804f5119de574b766e1fd224a823eb0d1cbb61afa6da26",
+  "scenarios": {
+    "higher_selected_prices": {
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 5000,
+        "deactivate": 300,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 5000,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 4000,
+        "punishment_fp": 25,
+        "reactivate": 50,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 300,
+        "t2_unlock": 700,
+        "vendor_base": 200,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "strategies": {
+        "balanced": {
+          "acquisition_rate": 0.0105,
+          "completions": {
+            "10": 266,
+            "50": 272,
+            "90": 279
+          },
+          "defies": {
+            "10": 4,
+            "50": 4,
+            "90": 4
+          },
+          "fp": {
+            "10": 276,
+            "50": 1825,
+            "90": 4517
+          },
+          "hours": {
+            "10": 306.026,
+            "50": 317.43,
+            "90": 329.532
+          },
+          "item_stop_rate": 0.0,
+          "negative_rate": 0.7645,
+          "recovery_hours": {
+            "10": 0.0,
+            "50": 0.0,
+            "90": 0.0
+          },
+          "special_share": {
+            "10": 0.071,
+            "50": 0.071,
+            "90": 0.111
+          }
+        },
+        "focused": {
+          "acquisition_rate": 0.01875,
+          "completions": {
+            "10": 269,
+            "50": 276,
+            "90": 282
+          },
+          "defies": {
+            "10": 4,
+            "50": 4,
+            "90": 4
+          },
+          "fp": {
+            "10": 1211,
+            "50": 2480,
+            "90": 3951
+          },
+          "hours": {
+            "10": 189.908,
+            "50": 201.349,
+            "90": 214.038
+          },
+          "item_stop_rate": 0.0,
+          "negative_rate": 0.5245,
+          "recovery_hours": {
+            "10": 0.0,
+            "50": 0.0,
+            "90": 0.0
+          },
+          "special_share": {
+            "10": 0.14,
+            "50": 0.14,
+            "90": 0.14
+          }
+        },
+        "inefficient": {
+          "acquisition_rate": 0.03875,
+          "completions": {
+            "10": 238,
+            "50": 247,
+            "90": 256
+          },
+          "defies": {
+            "10": 4,
+            "50": 4,
+            "90": 4
+          },
+          "fp": {
+            "10": 846,
+            "50": 2713,
+            "90": 4209
+          },
+          "hours": {
+            "10": 294.064,
+            "50": 311.83,
+            "90": 330.227
+          },
+          "item_stop_rate": 0.0,
+          "negative_rate": 0.99475,
+          "recovery_hours": {
+            "10": 0.0,
+            "50": 0.0,
+            "90": 0.0
+          },
+          "special_share": {
+            "10": 0.152,
+            "50": 0.152,
+            "90": 0.152
+          }
+        }
+      }
+    },
+    "low_reserve": {
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 25,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 25,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "strategies": {
+        "balanced": {
+          "acquisition_rate": 0.696,
+          "completions": {
+            "10": 245,
+            "50": 255,
+            "90": 264
+          },
+          "defies": {
+            "10": 10,
+            "50": 10,
+            "90": 11
+          },
+          "fp": {
+            "10": 871,
+            "50": 2769,
+            "90": 5006
+          },
+          "hours": {
+            "10": 306.056,
+            "50": 321.811,
+            "90": 341.977
+          },
+          "item_stop_rate": 0.0,
+          "negative_rate": 0.77625,
+          "recovery_hours": {
+            "10": 0.0,
+            "50": 7.416,
+            "90": 26.423
+          },
+          "special_share": {
+            "10": 0.124,
+            "50": 0.124,
+            "90": 0.137
+          }
+        },
+        "focused": {
+          "acquisition_rate": 0.829,
+          "completions": {
+            "10": 238,
+            "50": 247,
+            "90": 255
+          },
+          "defies": {
+            "10": 10,
+            "50": 10,
+            "90": 11
+          },
+          "fp": {
+            "10": 6578,
+            "50": 7863,
+            "90": 9322
+          },
+          "hours": {
+            "10": 218.026,
+            "50": 235.367,
+            "90": 254.487
+          },
+          "item_stop_rate": 0.0,
+          "negative_rate": 0.49425,
+          "recovery_hours": {
+            "10": 0.0,
+            "50": 9.446,
+            "90": 23.267
+          },
+          "special_share": {
+            "10": 0.261,
+            "50": 0.261,
+            "90": 0.285
+          }
+        },
+        "inefficient": {
+          "acquisition_rate": 0.839,
+          "completions": {
+            "10": 206,
+            "50": 218,
+            "90": 228
+          },
+          "defies": {
+            "10": 10,
+            "50": 10,
+            "90": 11
+          },
+          "fp": {
+            "10": 1767,
+            "50": 3808,
+            "90": 5977
+          },
+          "hours": {
+            "10": 321.353,
+            "50": 349.406,
+            "90": 382.874
+          },
+          "item_stop_rate": 0.0,
+          "negative_rate": 0.9755,
+          "recovery_hours": {
+            "10": 0.0,
+            "50": 20.661,
+            "90": 50.93
+          },
+          "special_share": {
+            "10": 0.279,
+            "50": 0.279,
+            "90": 0.304
+          }
+        }
+      }
+    },
+    "slow_acquisition": {
+      "parameters": {
+        "acquisition_hours": [
+          3,
+          9
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "strategies": {
+        "balanced": {
+          "acquisition_rate": 0.01175,
+          "completions": {
+            "10": 274,
+            "50": 280,
+            "90": 285
+          },
+          "defies": {
+            "10": 4,
+            "50": 4,
+            "90": 4
+          },
+          "fp": {
+            "10": 11797,
+            "50": 13721,
+            "90": 15571
+          },
+          "hours": {
+            "10": 295.284,
+            "50": 304.811,
+            "90": 315.879
+          },
+          "item_stop_rate": 0.0,
+          "negative_rate": 0.73575,
+          "recovery_hours": {
+            "10": 0.0,
+            "50": 0.0,
+            "90": 0.0
+          },
+          "special_share": {
+            "10": 0.071,
+            "50": 0.071,
+            "90": 0.071
+          }
+        },
+        "focused": {
+          "acquisition_rate": 0.02075,
+          "completions": {
+            "10": 270,
+            "50": 276,
+            "90": 282
+          },
+          "defies": {
+            "10": 4,
+            "50": 4,
+            "90": 4
+          },
+          "fp": {
+            "10": 7767,
+            "50": 9113,
+            "90": 10555
+          },
+          "hours": {
+            "10": 185.668,
+            "50": 196.644,
+            "90": 208.592
+          },
+          "item_stop_rate": 0.0,
+          "negative_rate": 0.52775,
+          "recovery_hours": {
+            "10": 0.0,
+            "50": 0.0,
+            "90": 0.0
+          },
+          "special_share": {
+            "10": 0.14,
+            "50": 0.14,
+            "90": 0.14
+          }
+        },
+        "inefficient": {
+          "acquisition_rate": 0.02225,
+          "completions": {
+            "10": 240,
+            "50": 249,
+            "90": 257
+          },
+          "defies": {
+            "10": 4,
+            "50": 4,
+            "90": 4
+          },
+          "fp": {
+            "10": 2393,
+            "50": 4671,
+            "90": 6943
+          },
+          "hours": {
+            "10": 291.359,
+            "50": 308.881,
+            "90": 327.212
+          },
+          "item_stop_rate": 0.0,
+          "negative_rate": 0.98,
+          "recovery_hours": {
+            "10": 0.0,
+            "50": 0.0,
+            "90": 0.0
+          },
+          "special_share": {
+            "10": 0.152,
+            "50": 0.152,
+            "90": 0.152
+          }
+        }
+      }
+    }
+  }
+}

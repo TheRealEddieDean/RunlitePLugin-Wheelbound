@@ -14,8 +14,8 @@ params=json.loads((base/"parameters.json").read_text())
 variants={}
 low=copy.deepcopy(params); low["starting_spins"]=25; low["defy_refill"]=25
 variants["low_reserve"]=low
-debit=copy.deepcopy(params); debit["special_consumes_spin"]=True
-variants["special_debit"]=debit
+slow=copy.deepcopy(params); slow["acquisition_hours"]=[3,9]
+variants["slow_acquisition"]=slow
 prices=copy.deepcopy(params)
 for key in ("t1_unlock","t2_unlock","ge","vendor_base","cleansing","pardon","deactivate","reactivate"):
     prices[key]*=2
@@ -34,9 +34,11 @@ for scenario,config in variants.items():
             "defies":percentiles([a["defies"] for a in accounts]),
             "completions":percentiles([a["completions"] for a in accounts]),
             "special_share":percentiles([a["special_share"] for a in accounts]),
+            "acquisition_rate":sum(a["acquisition_recoveries"]>0 for a in accounts)/len(accounts),
+            "recovery_hours":percentiles([a["recovery_hours"] for a in accounts]),
             "item_stop_rate":sum(a["no_eligible_item_stop"]>0 for a in accounts)/len(accounts),
             "negative_rate":sum(a["negative_events"]>0 for a in accounts)/len(accounts),
         }
     output["scenarios"][scenario]={"parameters":config,"strategies":groups}
     print(scenario, json.dumps({s:round(v["item_stop_rate"],4) for s,v in groups.items()}),flush=True)
-(base/"sensitivity_results.json").write_text(json.dumps(output,indent=2,sort_keys=True)+"\n")
+(base/"recovery_sensitivity_results.json").write_text(json.dumps(output,indent=2,sort_keys=True)+"\n")

@@ -1,5 +1,51 @@
 # Executed simulation results
 
+Status: current-rule H2 offline hypothesis model, not final OSRS account balance. Historical H1 results are preserved below and in their original JSON files.
+
+## Current-rule H2 reproduction
+
+`python3 docs/wheelbound/simulation/checks.py`
+`python3 docs/wheelbound/simulation/model.py --accounts-per-strategy 4000 --output recovery_results.json`
+`python3 docs/wheelbound/simulation/sensitivity.py --accounts-per-strategy 4000`
+
+H2: 12,000 baseline accounts plus 36,000 matched-seed sensitivity accounts; 48,000 new trajectories, in addition to the 48,000 historical H1 trajectories. Seed 20261009, 300-event horizon. Both special tasks consume one spin; empty forced Sacrifice acquires a synthetic eligible 10,000 GP item then donates it. Acquisition duration is 1-3 hours divided by strategy efficiency; no normal Fate/FP reward or vendor unlock. Duration and guaranteed availability are hypotheses. Parameters/results are in recovery_results.json and recovery_sensitivity_results.json; source hashes match the executed model.
+
+| Strategy | Completions p50 | Hours p50 | FP p50 | Defies p50 | Acquisition recovery incidence | No-item termination |
+| --- | --- | --- | --- | --- | --- | --- |
+| balanced | 280 | 304.76 | 13721 | 4 | 1.18% | 0.00% |
+| focused | 276 | 196.556 | 9113 | 4 | 2.08% | 0.00% |
+| inefficient | 249 | 308.716 | 4671 | 4 | 2.23% | 0.00% |
+
+## H2 sensitivity
+
+| Scenario | Strategy | FP p50 | Defies p50 | Acquisition incidence | Recovery hours p50 / p90 |
+| --- | --- | --- | --- | --- | --- |
+| higher_selected_prices | balanced | 1825 | 4 | 1.05% | 0.0 / 0.0 |
+| higher_selected_prices | focused | 2480 | 4 | 1.88% | 0.0 / 0.0 |
+| higher_selected_prices | inefficient | 2713 | 4 | 3.88% | 0.0 / 0.0 |
+| low_reserve | balanced | 2769 | 10 | 69.60% | 7.416 / 26.423 |
+| low_reserve | focused | 7863 | 10 | 82.90% | 9.446 / 23.267 |
+| low_reserve | inefficient | 3808 | 10 | 83.90% | 20.661 / 50.93 |
+| slow_acquisition | balanced | 13721 | 4 | 1.18% | 0.0 / 0.0 |
+| slow_acquisition | focused | 9113 | 4 | 2.08% | 0.0 / 0.0 |
+| slow_acquisition | inefficient | 4671 | 4 | 2.23% | 0.0 / 0.0 |
+
+low_reserve uses 25 starting/25 refill spins; slow_acquisition uses a 3-9-hour base recovery duration; higher_selected_prices doubles the same selected H1 prices. Every H2 scenario retains the confirmed one-spin cost for both specials and minimum-item recovery. No scenario tests removing an approved cost.
+
+## H2 findings and limits
+
+- Empty candidates now enter mandatory acquisition recovery, rather than terminate. Zero modeled no-item terminations follow from guaranteed synthetic acquisition; they do not prove feasible real-game access, bank completeness or legal item routes.
+- Low reserve raises recovery burden and Defy frequency substantially. Keep starting/refill numbers provisional until real acquisition routes and player duration data are validated.
+- Slow acquisition changes time cost; this 300-event model does not feed fatigue/abandonment back into player decisions. It cannot establish player retention.
+- FP surpluses remain under incomplete sinks/rewards. The tested prices and minimum-one-spin conversion remain hypotheses. A 10,000 GP recovery sacrifice nets zero spins under that conversion after its one-spin debit; the conversion itself is not approved.
+- Seeded choice pools are sorted; replay passes across two process hash seeds. Slow acquisition preserves matched-seed FP/completion/Defy results exactly and changes only duration.
+- Focused checks pass wheel invariants, seeded replay, ledger identity, debt earnings, empty-item recovery and reserve-exhaustion sensitivity. No RuneLite code, persistence or live game detectors were tested.
+
+## Historical H1 evidence (superseded mechanics)
+
+The following runs predate WB-D057/WB-D058. H1's no-item terminations and no-special-debit baseline are historical diagnostics, not current game rules. Original results.json and sensitivity_results.json are preserved. H1 used an unordered set for one seeded choice pool: its cross-process replay is not guaranteed. H2 fixes this ordering and adds a cross-process hash-seed check; H1 numbers remain historical diagnostics. To reproduce H1 exactly, use source and parameters from commit f5137e9ecdbf18ea8136907e36d17e7e7f464ee1; the commands below in the historical section describe that revision.
+
+
 Status: executed offline hypothesis model, not final OSRS account balance.
 
 ## Reproduction
@@ -45,7 +91,7 @@ low_reserve changes initial spins and refill from 100/50 to 25/25. special_debit
 1. Do not finalize a small reserve/refill while forced Sacrifice can produce an empty candidate set. H1 low-reserve no-item stop rates are 58.65%-76.78%; these are synthetic model rates, not measured player outcomes. WB-D057 subsequently approved acquisition recovery with a 10,000 GP minimum; these historical stop rates describe entry into recovery, not deadlocks under the current rule. Recovery time/cost has not yet been simulated.
 2. H1 produces large end-horizon FP surpluses. Income/spending sinks are incomplete (daily/CA/diary rewards and blessings not modeled). Raising prices alone is not enough evidence for final balance; keep numeric tables BALANCE_TBD.
 3. Lesser Bossing pays base FP for fewer kills by confirmed rule. Optimal efficiency choice tends to select it when offered; preserve that benefit while examining unlock timing and target bands.
-4. Special spin debit changes corruption/stop exposure. WB-D058 subsequently confirms Taint costs one spin; Sacrifice remains OPEN. Separate the two charges and model acquisition recovery before final spin recommendations.
+4. Special spin debit changes corruption/stop exposure. WB-D058 subsequently confirms Taint and Sacrifice each cost one spin. Model acquisition recovery with those charges before final spin recommendations.
 5. FP debt does not itself prevent valid earnings in the model. No optional purchase creates debt. All trajectories repeatedly assert wheel five/three/24 constraints and normalized probabilities.
 
 ## Scope and limitations
