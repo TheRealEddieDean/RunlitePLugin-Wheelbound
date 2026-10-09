@@ -686,3 +686,91 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Rationale: Disappearance or a click cannot distinguish donation from banking, dropping, consuming or trading. A matching credited balance supplies evidence of acceptance while the selection/delta identifies the item.
 - Affects: PUNISHMENTS/Sacrifice, WHEELS, ECONOMY, PERSISTENCE, RUNELITE_INTEGRATION, policy audit and TESTING.
 - Exceptions/dependencies: IF variables are shared interface state, not permanent Coffer counters. Current mapping, rounding, quote meaning, update order, confirmation route, eligibility and overflow/failure require live verification. No exact success chat line verified. Ambiguous/reconnected transactions remain pending; no invented reward or manual verified fallback. One-spin cost and >=10k acquisition rule remain confirmed; GP-to-spin conversion remains OPEN.
+
+## WB-D069 - Restrict method-specific content to verifiable templates
+
+- Status: DELEGATED
+- Authority/source: Current weekend master assignment and delegated technical research, 2026-10-09; source links and detector evidence in TECHNICAL_SPECIFICATIONS.md. WB-D076 is direct user instruction; other selections are not historical user approval.
+- Decision: Challenge and Punishment templates require a versioned method/tool/location detector; possession or animation alone is insufficient. Unsupported templates are excluded before assignment, not waived after selection.
+- Rationale: Preserve confirmed gameplay while defining honest, implementable observation boundaries.
+- Affects: XP, cards, punishments, audit.
+- Exceptions/dependencies: No new penalties for unknown telemetry; live traces required.
+- Supersession: Refines WB-D059/063/064/068 where applicable; does not supersede explicit gameplay approvals.
+- Acceptance criteria: Pass the relevant detector and invariant cases in TECHNICAL_SPECIFICATIONS.md and TESTING.md before release.
+
+## WB-D070 - Quest eligibility includes an authored access route
+
+- Status: DELEGATED
+- Authority/source: Current weekend master assignment and delegated technical research, 2026-10-09; source links and detector evidence in TECHNICAL_SPECIFICATIONS.md. WB-D076 is direct user instruction; other selections are not historical user approval.
+- Decision: Use current quest state and prerequisite checks plus a route compatible with account access. Journal eligibility alone does not prove all required vendor interactions are permitted.
+- Rationale: Preserve confirmed gameplay while defining honest, implementable observation boundaries.
+- Affects: Questing, account access, incidental XP.
+- Exceptions/dependencies: Do not invent a universal quest exemption.
+- Supersession: Refines WB-D059/063/064/068 where applicable; does not supersede explicit gameplay approvals.
+- Acceptance criteria: Pass the relevant detector and invariant cases in TECHNICAL_SPECIFICATIONS.md and TESTING.md before release.
+
+## WB-D071 - Use fresh correlated Grand Fate receipts
+
+- Status: DELEGATED
+- Authority/source: Current weekend master assignment and delegated technical research, 2026-10-09; source links and detector evidence in TECHNICAL_SPECIFICATIONS.md. WB-D076 is direct user instruction; other selections are not historical user approval.
+- Decision: Use active-run encounter/reward evidence, four independent awakened counters and initialized Master point thresholds. Radiant completion requires full-set creation receipts; current official cost is 2,500 aether runes per piece.
+- Rationale: Preserve confirmed gameplay while defining honest, implementable observation boundaries.
+- Affects: Grand Fates, CA, persistence.
+- Exceptions/dependencies: Existing-account credit policy remains OPEN; retrospective CA changes are not fresh gameplay.
+- Supersession: Refines WB-D059/063/064/068 where applicable; does not supersede explicit gameplay approvals.
+- Acceptance criteria: Pass the relevant detector and invariant cases in TECHNICAL_SPECIFICATIONS.md and TESTING.md before release.
+
+## WB-D072 - Vendor inspection is separate from transaction access
+
+- Status: DELEGATED
+- Authority/source: Current weekend master assignment and delegated technical research, 2026-10-09; source links and detector evidence in TECHNICAL_SPECIFICATIONS.md. WB-D076 is direct user instruction; other selections are not historical user approval.
+- Decision: Permit observing shop identity while Locked/Banned; guard purchases and sales. Unlock/Tempt Fate still requires resolved vendor interaction, actual location and matching interface.
+- Rationale: Preserve confirmed gameplay while defining honest, implementable observation boundaries.
+- Affects: Account access, shop UI.
+- Exceptions/dependencies: No proximity-only unlock or shared-stock automatic unlock.
+- Supersession: Refines WB-D059/063/064/068 where applicable; does not supersede explicit gameplay approvals.
+- Acceptance criteria: Pass the relevant detector and invariant cases in TECHNICAL_SPECIFICATIONS.md and TESTING.md before release.
+
+## WB-D073 - Guard exact transactions and account for existing GE offers
+
+- Status: PROPOSED
+- Authority/source: Current weekend master assignment and delegated technical research, 2026-10-09; source links and detector evidence in TECHNICAL_SPECIFICATIONS.md. WB-D076 is direct user instruction; other selections are not historical user approval.
+- Decision: Cover shop quantity routes, GE new/repeat/modify offers, incoming/outgoing player trade and both acceptance screens. Recommend manual cancellation/cleanup of live GE offers before entering or resuming a GE-locked active run.
+- Rationale: Preserve confirmed gameplay while defining honest, implementable observation boundaries.
+- Affects: Account access, pause, UI.
+- Exceptions/dependencies: Pause stays immediate and free. Resume prerequisite is provisional; no automatic cancellation, server guarantee or new punishment. Specific policy review required.
+- Supersession: Refines WB-D059/063/064/068 where applicable; does not supersede explicit gameplay approvals.
+- Acceptance criteria: Pass the relevant detector and invariant cases in TECHNICAL_SPECIFICATIONS.md and TESTING.md before release.
+
+## WB-D074 - Gate irreversible actions on observation readiness
+
+- Status: DELEGATED
+- Authority/source: Current weekend master assignment and delegated technical research, 2026-10-09; source links and detector evidence in TECHNICAL_SPECIFICATIONS.md. WB-D076 is direct user instruction; other selections are not historical user approval.
+- Decision: Validate initialized Coffer selection, server quote, balance and headroom before donation; correlate confirmation, inventory reduction and credited balance. Treat ambiguous receipts as pending.
+- Rationale: Preserve confirmed gameplay while defining honest, implementable observation boundaries.
+- Affects: Sacrifice, persistence, UI.
+- Exceptions/dependencies: Historical IF1–IF4 mapping is optional evidence, not a hard dependency. Full Coffer and account scope remain OPEN.
+- Supersession: Refines WB-D059/063/064/068 where applicable; does not supersede explicit gameplay approvals.
+- Acceptance criteria: Pass the relevant detector and invariant cases in TECHNICAL_SPECIFICATIONS.md and TESTING.md before release.
+
+## WB-D075 - One writable session per run
+
+- Status: DELEGATED
+- Authority/source: Current weekend master assignment and delegated technical research, 2026-10-09; source links and detector evidence in TECHNICAL_SPECIFICATIONS.md. WB-D076 is direct user instruction; other selections are not historical user approval.
+- Decision: Use one writable account/run session with idempotent transaction receipts and explicit conflict recovery. Never merge conflicting saves by taking the greater FP balance.
+- Rationale: Preserve confirmed gameplay while defining honest, implementable observation boundaries.
+- Affects: Persistence, architecture.
+- Exceptions/dependencies: Local trust boundary only; cloud synchronization is not implied.
+- Supersession: Refines WB-D059/063/064/068 where applicable; does not supersede explicit gameplay approvals.
+- Acceptance criteria: Pass the relevant detector and invariant cases in TECHNICAL_SPECIFICATIONS.md and TESTING.md before release.
+
+## WB-D076 - Weekend assignment and inaccessible shared conversation
+
+- Status: CONFIRMED
+- Authority/source: Current weekend master assignment and delegated technical research, 2026-10-09; source links and detector evidence in TECHNICAL_SPECIFICATIONS.md. WB-D076 is direct user instruction; other selections are not historical user approval.
+- Decision: User authorizes documentation, reproducible simulations, research and pipeline planning, without production plugin behavior changes or Plugin Hub submission. Canonical branch remains wheelbound-mode. Shared conversation fetch failed; preserve missing history.
+- Rationale: Preserve confirmed gameplay while defining honest, implementable observation boundaries.
+- Affects: All specifications and handoff.
+- Exceptions/dependencies: Routine choices delegated; major questions collected for return. No automatic restart claimed.
+- Supersession: Refines WB-D059/063/064/068 where applicable; does not supersede explicit gameplay approvals.
+- Acceptance criteria: Pass the relevant detector and invariant cases in TECHNICAL_SPECIFICATIONS.md and TESTING.md before release.

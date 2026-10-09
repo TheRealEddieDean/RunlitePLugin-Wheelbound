@@ -46,3 +46,7 @@ New candidate signals: VarPlayerID awakened kill totals 3971-3974 and VarbitID C
 
 Preserve Trade with and show a local restriction notice on attempts (WB-D066). Current Hub-pinned Bronzeman Unleashed now provides connected consume-and-message precedent (WB-D067); retain feature-specific review and coverage checks, particularly existing-open trade/final Accept. Current InterfaceID identifies Coffer groups 670/671 and Confirm 0x029e000d. Historical cache 199.1 scripts map displayed balance to generic IF1=261, selection/quantity/quote to IF2-IF4; these are context-sensitive candidates, not live-verified permanent counters. Proposed donation proof correlates selection, Confirm, exact inventory delta and refreshed credited balance (WB-D068). Details and pinned sources are in POLICY_AND_FEASIBILITY.md.
 
+
+## Detailed technical resolution checkpoint
+
+[TECHNICAL_SPECIFICATIONS](TECHNICAL_SPECIFICATIONS.md) supplies current detector contracts, route coverage, initialization rules, source evidence and explicit live-validation gates (WB-D069–075). Its refined Coffer route uses visible initialized UI/server quote and balance as primary evidence; the old IF-variable mapping is optional pending validation. Method-specific templates require a supported catalog. Vendor inspection does not unlock transactions. Existing-account Grand Fate credit, full Coffer recovery and exact restrictive policy acceptance remain in [OPEN_QUESTIONS](OPEN_QUESTIONS.md). No live test or production implementation is claimed.

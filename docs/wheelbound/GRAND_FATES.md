@@ -13,3 +13,7 @@ Tutorial Island may introduce/seal Grand Fate, ordinary Fate starts mainland (S3
 ## Candidate completion signals from current RuneLite source
 DT2 awakened kill totals have separate varps for each boss (3971-3974). Proposed detector snapshots values per account/attempt and requires qualifying increases; normal kills and existing armour do not prove a fresh awakened kill. Master-tier predicate can read CA_POINTS=14815 and CA_THRESHOLD_MASTER=14813, provided initialized threshold is positive. These are source-confirmed APIs, not live-tested receipts; pre-run credit rules remain unresolved. Inferno, Colosseum and Radiant-set evidence still need individual mappings. No combat mechanic, prayer or positional assistance is part of Grand Fate tracking.
 
+
+## Detailed technical resolution checkpoint
+
+[TECHNICAL_SPECIFICATIONS](TECHNICAL_SPECIFICATIONS.md) supplies current detector contracts, route coverage, initialization rules, source evidence and explicit live-validation gates (WB-D069–075). Its refined Coffer route uses visible initialized UI/server quote and balance as primary evidence; the old IF-variable mapping is optional pending validation. Method-specific templates require a supported catalog. Vendor inspection does not unlock transactions. Existing-account Grand Fate credit, full Coffer recovery and exact restrictive policy acceptance remain in [OPEN_QUESTIONS](OPEN_QUESTIONS.md). No live test or production implementation is claimed.

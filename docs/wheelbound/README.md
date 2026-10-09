@@ -28,3 +28,9 @@ User corrections committed at 647f71e1bc877a5b64210458a441ec5dc9b2b094. 48,000 o
 WB-D057 now confirms post-trigger acquisition of an eligible item worth at least 10,000 GP. WB-D058 confirms Taint and Sacrifice each cost one spin. H2 now models these approvals with explicitly provisional acquisition duration/availability; H1 remains historical. Reserve economics are not finalized. Final catalogs/implementation-ready PDF cannot be truthfully marked complete yet. Checkpoint PDF reflects all current Markdown, not an independent source.
 
 Current source/policy findings and original submission blockers: [POLICY_AND_FEASIBILITY](POLICY_AND_FEASIBILITY.md). Passive detectors have promising APIs; trade restrictions and shop/GE/Coffer enforcement remain unresolved.
+
+## Weekend assignment checkpoint
+
+S7: [Weekend master instructions](research/WEEKEND_MASTER_INSTRUCTIONS.md), direct user assignment 2026-10-09. Later explicit gameplay approvals prevail over its reconstruction seed. Shared transcript fetch failed; partial history search remains secondary.
+
+Read [technical specifications](TECHNICAL_SPECIFICATIONS.md), [major questions](OPEN_QUESTIONS.md), [work status and resume](WORK_STATUS.md), [pipeline](DEVELOPMENT_PIPELINE.md), [traceability](TRACEABILITY.md), and [sources](SOURCES.md).
