@@ -1,0 +1,8 @@
+# Punishments and Reject Fate
+Taint landing and Reject Fate lead to punishment obligations. Display roughly twelve eligible results selected from roughly fifty curated templates (S3); full historical catalog missing. Dynamic quantity/gear/location targets must be achievable with unlocked access and observed progress.
+
+Committed result persists; restart not reroll. Punishments cannot themselves be rejected (S3, UNVERIFIED historical approval). Small FP completion reward, exact value BALANCE_TBD. Rejection penalty, spin charge and punishment outcome in one durable transaction; no normal completion reward. Mandatory finish before next ordinary Fate.
+
+Recovered illustrative examples only: mine 100 runite with bronze pick, kill 5000 goblins. Neither is a universal eligible outcome; check Mining level/access/equipment and scale duration. These are examples, not approved numeric defaults.
+
+Template fields: ID, eligibility, skill/access requirements, method/equipment restrictions, target rule, detector, fallback, frozen reward. Missing approval of fifty exact templates must be reported, not fabricated as recovered.

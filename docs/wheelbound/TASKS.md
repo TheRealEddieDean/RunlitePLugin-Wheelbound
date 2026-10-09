@@ -1,0 +1,13 @@
+# Task checklist
+- [x] Read current addendum, pasted assignment, full extracted PDF and repository design/release docs.
+- [x] Search available history; record access limits.
+- [x] Reconstruct rules and contradiction register.
+- [x] Create all 23 requested Markdown files.
+- [x] Validate all local Markdown links and decision IDs; recovery commit prepared for wheelbound-mode (verify branch update receipt).
+- [ ] Research primary technical sources and exact current game mechanics.
+- [ ] Resolve major historical conflicts with evidence or user input.
+- [ ] Execute reproducible 10,000+ account model and stress cases.
+- [ ] Finalize catalogs and economy with remaining uncertainty clearly marked.
+- [ ] Expand specifications and commit logical batches.
+- [ ] Generate and visually verify PDF from current Markdown.
+- [ ] Verify main head unchanged and report commit links.
