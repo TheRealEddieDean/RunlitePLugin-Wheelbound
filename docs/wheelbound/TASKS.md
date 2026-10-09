@@ -3,7 +3,7 @@
 - [x] Search available history; record access limits.
 - [x] Reconstruct rules and contradiction register.
 - [x] Create all 23 requested Markdown files.
-- [ ] Validate and commit recovery checkpoint on wheelbound-mode.
+- [x] Recovery checkpoint committed: 7b8b7766a653f98c2fedf5c33600b75b1d0229d0; recovery revision: 97f1520c95d2ffedb912a4d74ef308885099b06d.
 - [x] Initial primary API research: account config, XP, containers, menu consumption, Hub review. Full live feasibility remains open.
 - [ ] Verify exact current OSRS facts; direct Wiki access blocked.
 - [x] Resolve initial blockers with current user decisions WB-D049/050/051; correct all affected docs.
@@ -11,7 +11,7 @@
 - [ ] Finalize catalogs and economy with remaining uncertainty clearly marked.
 - [x] Expand specifications, record WB-D052-060 and prepare research/simulation checkpoint commit.
 - [x] Checkpoint PDF generation and visual QA completed; final pass regenerated from committed Markdown. Final design PDF pending core resolutions.
-- [x] main checked unchanged at correction checkpoint; repeat after final documentation commit.
+- [x] main verified unchanged at c8cc38ac9a7ab74d9bc10125388da7cc75af99fa after research commit 4d19ac225c22f2a0be0cb9349e45737c1d661fc1.
 
 ## Current core blockers
 - [ ] WB-D057: forced Sacrifice without eligible candidates; decide post-trigger acquisition exception or other fallback.

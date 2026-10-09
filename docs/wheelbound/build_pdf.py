@@ -124,9 +124,14 @@ for name in ORDER:
             story.append(Paragraph(markup(line[4:]),styles["WBH3"]))
         elif line.startswith("- "):
             story.append(Paragraph(markup(line[2:]),styles["WBBody"],bulletText="-"))
+        elif re.match(r"^\d+\. ",line):
+            number,body=line.split(". ",1)
+            story.append(Paragraph(markup(body),styles["WBBody"],bulletText=number+"."))
+        elif line.startswith("`") and line.endswith("`"):
+            story.append(Paragraph(markup(line),styles["WBBody"]))
         else:
             paragraph=[line]
-            while i+1<len(lines) and lines[i+1].strip() and not lines[i+1].lstrip().startswith(("#","|","- ")):
+            while i+1<len(lines) and lines[i+1].strip() and not lines[i+1].lstrip().startswith(("#","|","- ","`")) and not re.match(r"^\d+\. ",lines[i+1].strip()):
                 i+=1;paragraph.append(lines[i].strip())
             story.append(Paragraph(markup(" ".join(paragraph)),styles["WBBody"]))
         i+=1
