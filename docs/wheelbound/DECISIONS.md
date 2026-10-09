@@ -874,3 +874,14 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Supersession: Refines earlier proposed recovery attribution; historical blanket paused-item exclusion is not introduced.
 - Acceptance criteria: Paused acquisition gives zero XP/drop/bounty FP, then one active verified donation settles once; nonempty snapshot cannot be overwritten through the exception.
 
+
+## WB-D086 - Grand attempts while mandatory obligations are pending
+
+- Status: OPEN; recommendation PROPOSED
+- Authority/source: Reconciliation of confirmed between-normal-Fates Grand attempts and mandatory Punishment/Sacrifice rules, 2026-10-09.
+- Decision: Historical approval does not resolve whether a Grand attempt may interrupt a mandatory obligation. Recommend finish that obligation first; collect Q8 for user return without silently imposing the recommendation.
+- Rationale: Preserve both no-artificial-readiness-gate intent and the mandatory consequence without inventing prior approval.
+- Affects: GRAND_FATES, GAME_RULES, OPEN_QUESTIONS, MONDAY_HANDOFF, state/attempt contracts.
+- Exceptions/dependencies: No level/playtime gate, additional spin charge, checklist reset or automatic rejection introduced. Independent implementation can represent obligation and attempt separately.
+- Supersession: None; unresolved interaction explicitly retained.
+- Acceptance criteria: User-selected policy recorded before coding the transition; preserve evidence and one-spin accounting under either policy.

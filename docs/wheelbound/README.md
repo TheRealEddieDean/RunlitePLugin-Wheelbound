@@ -43,3 +43,5 @@ Read [technical specifications](TECHNICAL_SPECIFICATIONS.md), [major questions](
 [ACQUISITION_EVIDENCE](ACQUISITION_EVIDENCE.md) expands the acquisition contract and distinct repeatable daily pool (WB-D084); no live adapter is claimed validated.
 
 [BALANCE_CANDIDATE](BALANCE_CANDIDATE.md) and [UX_RECOVERY_FLOWS](UX_RECOVERY_FLOWS.md) specify provisional first-implementation parameters and detailed error/recovery journeys.
+
+[MONDAY_HANDOFF](MONDAY_HANDOFF.md) consolidates readiness, external proof and major decisions. [FIRST_CODING_TASK](FIRST_CODING_TASK.md) is the next-session prompt after explicit implementation authorization.
