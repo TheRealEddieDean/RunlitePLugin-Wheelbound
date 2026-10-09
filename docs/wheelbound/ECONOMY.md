@@ -18,3 +18,6 @@ Missing numeric tables: duplicate 8+, deactivation/reactivation, starting FP/spi
 Duplicate cost counters are per activity lifetime; enhancement prices independent of counters. Repeated Defy changes special probabilities, not fixed enhancement pricing. Bounty and sacrifice income must not be counted twice. Cash/gear budget must stay separate from FP. No fixed target playthrough duration.
 
 See [SIMULATION_RESULTS](SIMULATION_RESULTS.md).
+
+## User resolutions 2026-10-09
+Bossing Lesser pays base FP despite reduced kills; Greater increases kills and FP. Include duration/reward differences in simulation rather than charge identical FP-per-hour. Standard starts unlocked and two independently generated different targets offer choice; model choice policy rather than one random target. Pardon has an unlimited supply at a single expensive fixed price; no lifetime cap, no escalation. Vendor class escalation remains a separate rule.

@@ -1,5 +1,5 @@
 # Account access
-Vendors Locked, Unlocked, Banned. Physically visit NPC to pay FP or Tempt Fate; directory is read-only for remote unlock. Tempt 50/50 unlock/ban, explicitly warned. Pardon fixed expensive FP returns Banned to Locked, not directly Unlocked. Historical roughly three restoration items versus PDF repeat purchasable Pardon is conflict C02; cap policy UNVERIFIED.
+Vendors Locked, Unlocked, Banned. Physically visit NPC to pay FP or Tempt Fate; directory is read-only for remote unlock. Tempt 50/50 unlock/ban, explicitly warned. Fate's Pardon is infinitely purchasable at a very expensive fixed FP price, with no per-run or per-account limit and no price escalation (WB-D051). Each purchase restores one Banned vendor to Locked, never directly Unlocked. Players must then pay the ordinary vendor unlock price or attempt Tempt Fate again. The earlier three-Pardon cap is superseded; C02 is resolved. The numeric fixed price remains BALANCE_TBD.
 
 Classes in S3: General; Rune/Magic; Food/Drink; Weapons/Armour/Tools; Other. Price escalation within class, not enhancements. Exact price counters and whether gamble advances count OPEN.
 

@@ -282,15 +282,15 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 - Affects: [PROGRESSION](PROGRESSION.md).
 - Exceptions/dependencies: Older memory 1-3 superseded in summary, actual approval missing.
 
-## WB-D029 - Dedicated boss path kill target before wheel, no cards/rerolls/selection
+## WB-D029 - Historical dedicated boss path
 
-- Status: UNVERIFIED
+- Status: SUPERSEDED by WB-D049; retain only as provenance
 - Authority: Historical authority unknown
 - Evidence: S3 §6, conflicts §5
-- Decision: Dedicated boss path kill target before wheel, no cards/rerolls/selection.
+- Decision: Historical no-card proposal is superseded. Current Bossing includes cards before random boss selection, with no boss choice/reroll.
 - Rationale: Commit boss difficulty, inferred rationale.
 - Affects: [FATE_CARDS](FATE_CARDS.md), [PROGRESSION](PROGRESSION.md).
-- Exceptions/dependencies: C01 cannot settle chronology by section order.
+- Exceptions/dependencies: C01 resolved by explicit current user confirmation, WB-D049.
 
 ## WB-D030 - Default 1000 XP tolerance/Fate, unavoidable by-products exempt, penalties escalate
 
@@ -370,7 +370,7 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 - Decision: Vendor class escalating prices, fixed Pardon; GE no gamble/ban/escalation.
 - Rationale: Different access cost mechanisms.
 - Affects: [ACCOUNT_ACCESS](ACCOUNT_ACCESS.md), [ECONOMY](ECONOMY.md).
-- Exceptions/dependencies: C02 limited restoration versus repeat purchase.
+- Exceptions/dependencies: C02 resolved by WB-D051; repeat fixed-price purchase, unlimited.
 
 ## WB-D038 - Polished native RuneLite style, boss icons and functional spin
 
@@ -454,8 +454,8 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 
 ## Contradictions and superseded proposals
 
-C01 Bossing cards versus no cards: newly retrieved user 2026-10-01 17:16:22Z explicitly supports Lesser/Standard/Greater Bossing cards. This is the latest retrieved explicit evidence. S3 no-card path has no dated approval and cannot supersede it. Final current rule OPEN until later discussion recovered.
-C02 Pardon restoration cap: S4 roughly three/account versus S3 fixed-price purchase, cap unverified. Do not assume unlimited or exactly three.
+C01 RESOLVED 2026-10-09: user confirms Bossing Lesser/Standard/Greater and target -> cards -> card selection -> random boss sequence. Contradictory PDF no-card wording superseded (WB-D049).
+C02 RESOLVED 2026-10-09: unlimited fixed-price Pardon; no run/account cap or price escalation. Earlier three-Pardon limit superseded (WB-D051).
 C03 Wheel sidebar versus canvas popup, and top-down tree versus skill ring: latest explicit confirmation unavailable; preserve existing renderer provisionally.
 C04 Prior one-card offering versus current two-to-three: S2 current confirmed overrides old memory.
 C05 Old 1-3 quest choices superseded by retrieved user 2026-10-01 17:16:22Z: confirmed three -> four -> five. Gate numbers remain unverified.
@@ -465,13 +465,13 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 
 ## WB-D046 - Bossing card types in dated user evidence
 
-- Status: CONFIRMED as user decision on 2026-10-01; current final status OPEN due C01.
+- Status: CONFIRMED historical and current by WB-D049; C01 resolved.
 - Authority: Explicit user, retrieved summary rather than full transcript.
 - Evidence: S4 user 2026-10-01 17:16:22Z.
 - Decision: Bossing supports Lesser/Standard/Greater category-specific cards; purchased Skilling cards; Questing starts three options upgraded four/five.
 - Rationale: Category-specific difficulty choices (reconstructed explanation).
 - Affects: [FATE_CARDS](FATE_CARDS.md), [PROGRESSION](PROGRESSION.md).
-- Exceptions/dependencies: Cannot establish whether later user approval removed Bossing cards. No-card PDF cannot by itself reverse this.
+- Exceptions/dependencies: Current user explicitly preserves Bossing cards; historical no-card PDF statement superseded.
 
 ## WB-D047 - General challenge slice avoids dwindling boss CA pool
 
@@ -485,10 +485,40 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 
 ## WB-D048 - Preserve unresolved history before final balance
 
-- Status: OPEN checkpoint blocker.
+- Status: RESOLVED by WB-D049, WB-D050, WB-D051.
 - Authority: User instruction requires latest explicit approval precedence and input for core contradictions.
 - Evidence: S1 contradiction rule; S2 §2 core-gameplay stop rule.
-- Decision: Do not declare final balance or generate final implementation specification while C01 Bossing cards, fresh two-card offer rules, and C02 Pardon limits lack authoritative resolution.
+- Decision: Initial blockers have authoritative resolution; continue remaining research/design/simulation autonomously.
 - Rationale: Choosing silently would reinterpret previously established mechanics.
 - Affects: [TASKS](TASKS.md), [SIMULATION_RESULTS](SIMULATION_RESULTS.md), [FATE_CARDS](FATE_CARDS.md), [ACCOUNT_ACCESS](ACCOUNT_ACCESS.md).
 - Exceptions/dependencies: Independent technical research can proceed; no plugin implementation authorized.
+
+## WB-D049 - Bossing Fate Cards and assignment sequence
+
+- Status: CONFIRMED - established rule reaffirmed
+- Authority: Explicit user current message
+- Evidence: S6, current user resolution, 2026-10-09.
+- Decision: Bossing selects Standard target, offers Lesser/Standard/Greater, card selected before random Bossing Wheel. Lesser reduces kills with base FP; Standard normal; Greater increases kills and FP. No boss choice/reroll.
+- Rationale: Preserve category-specific card choice while boss remains random. (design explanation; not quoted historical rationale).
+- Affects: [FATE_CARDS](FATE_CARDS.md), [PROGRESSION](PROGRESSION.md), [ECONOMY](ECONOMY.md), [UI_UX](UI_UX.md), [PERSISTENCE](PERSISTENCE.md).
+- Exceptions/dependencies: Supersedes WB-D029 no-card proposal and C01; multipliers BALANCE_TBD.
+
+## WB-D050 - Fresh Standard offerings
+
+- Status: CONFIRMED - NEW DESIGN DECISION, 2026-10-09
+- Authority: Explicit user; new approval, not historical recovery
+- Evidence: S6, current user resolution, 2026-10-09.
+- Decision: Standard unlocked by default; two independently generated Standard offerings with different targets, same-type allowed. Purchased types permanently enter respective pools. Third offering upgrade yields three.
+- Rationale: Makes two-offer starting experience meaningful before additional card unlocks. (design explanation; not quoted historical rationale).
+- Affects: [FATE_CARDS](FATE_CARDS.md), [FATE_SHOP](FATE_SHOP.md), [ECONOMY](ECONOMY.md), [UI_UX](UI_UX.md), [PERSISTENCE](PERSISTENCE.md).
+- Exceptions/dependencies: Collision handling and legal target-domain size must validate; don't relabel historical approval.
+
+## WB-D051 - Unlimited fixed-price Fate's Pardon
+
+- Status: CONFIRMED - established rule reaffirmed
+- Authority: Explicit user current message
+- Evidence: S6, current user resolution, 2026-10-09.
+- Decision: Infinitely purchasable at very expensive fixed FP price, no per-run/account cap or price escalation. Banned -> Locked; separate paid unlock or Tempt Fate afterward.
+- Rationale: Maintain expensive recovery without permanent vendor lockout. (design explanation; not quoted historical rationale).
+- Affects: [ACCOUNT_ACCESS](ACCOUNT_ACCESS.md), [FATE_SHOP](FATE_SHOP.md), [ECONOMY](ECONOMY.md), [UI_UX](UI_UX.md), [PERSISTENCE](PERSISTENCE.md).
+- Exceptions/dependencies: Earlier three-Pardon limit superseded; numeric price BALANCE_TBD.

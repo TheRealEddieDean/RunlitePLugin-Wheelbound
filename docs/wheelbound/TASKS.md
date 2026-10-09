@@ -6,7 +6,7 @@
 - [ ] Validate and commit recovery checkpoint on wheelbound-mode.
 - [x] Initial primary API research: account config, XP, containers, menu consumption, Hub review. Full live feasibility remains open.
 - [ ] Verify exact current OSRS facts; direct Wiki access blocked.
-- [ ] BLOCKED pending later approval history or explicit resolution: Bossing cards/no cards, fresh two-card offers, Pardon cap. See WB-D048.
+- [x] Resolve initial blockers with current user decisions WB-D049/050/051; correct all affected docs.
 - [ ] Execute reproducible 10,000+ account model and stress cases.
 - [ ] Finalize catalogs and economy with remaining uncertainty clearly marked.
 - [ ] Expand specifications and commit logical batches.

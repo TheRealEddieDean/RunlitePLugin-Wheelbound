@@ -9,3 +9,6 @@ Cards: result rises, eligible offerings appear, select then freeze; noneligible 
 Grand Fate: red/black wheel, spikes/skull/chains, seal outcome, multipart checklist.
 Defy: preview slot displacement, Taint/Sacrifice probabilities and spin refill together. No extra slots.
 Reject: show FP loss/debt, spin loss, reward forfeiture and mandatory punishment. Restart restores exact obligation.
+
+## Card and Pardon correction
+Bossing UI shows Standard kill count before card choice; each card previews count/reward, then selected card advances to random Bossing Wheel. Do not show Choose Boss or Reroll. Two starting Standard cards need distinct displayed targets, even with matching type labels; display three after upgrade. Pardon shows fixed price and Banned -> Locked preview, with no remaining-use counter. After restoration explain the separate unlock/gamble action.

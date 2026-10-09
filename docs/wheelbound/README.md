@@ -19,3 +19,5 @@ Append a stable decision ID; record authority, source, rationale, dependencies a
 
 ## Recovery revision
 A focused third history query recovered dated user approval for Questing 3 -> 4 -> 5 choices and Bossing Lesser/Standard/Greater cards, plus the general Challenge slice. Updated WB-D028 and added WB-D046/047. The dated user card decision takes precedence over an undated PDF claim until a later explicit approval is recovered. Never infer chronology from PDF section order.
+
+S6: explicit current user resolutions dated 2026-10-09. Bossing cards and unlimited fixed-price Pardon reaffirmed; two independently generated distinct Standard targets are a NEW design decision. WB-D049/050/051 override contradictory older records. Initial core blockers resolved.

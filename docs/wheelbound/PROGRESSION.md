@@ -12,3 +12,6 @@ Questing: CONFIRMED by retrieved user message 2026-10-01 17:16:22Z: three distin
 Bossing: separate eligible boss wheel; individual boss unlocks and peer gates. S3 pool counts Easy 9, Medium 13, Hard 22, Elite 11, Master 6, Raids/Grandmaster 3 (ToA/CoX/ToB). Counts are recovered targets, not verified catalogs. Exact boss lists and peer thresholds missing. Retrieved user 2026-10-01 17:19:57Z approved a general Challenge slice concept so challenges do not depend on a boss's dwindling incomplete CAs. Exact placement, pool and interaction with cards are UNVERIFIED. CA mastery rewards in Bounties rather than boss-roll eligibility.
 
 No assignment can unlock its own access prerequisites implicitly. See [ACCOUNT_ACCESS](ACCOUNT_ACCESS.md).
+
+## Confirmed Bossing card sequence
+WB-D049 resolves earlier conflicting summaries: generate/show Standard kills, offer eligible Lesser/Standard/Greater, select a card, then randomly determine the unlocked eligible boss. No player boss choice or reroll. A card unlock never unlocks a boss. Standard default/two distinct targets and third offering follow WB-D050.
