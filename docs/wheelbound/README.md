@@ -16,3 +16,6 @@ Existing release has Bossing, Skilling, CA, Pet Hunting, Questing and Custom whe
 
 ## Change protocol
 Append a stable decision ID; record authority, source, rationale, dependencies and exceptions. Update related specifications together. Never silently promote proposals. Validate links and rule invariants; commit only wheelbound-mode. Derive the PDF from these Markdown files. No PR or merge authorized.
+
+## Recovery revision
+A focused third history query recovered dated user approval for Questing 3 -> 4 -> 5 choices and Bossing Lesser/Standard/Greater cards, plus the general Challenge slice. Updated WB-D028 and added WB-D046/047. The dated user card decision takes precedence over an undated PDF claim until a later explicit approval is recovered. Never infer chronology from PDF section order.

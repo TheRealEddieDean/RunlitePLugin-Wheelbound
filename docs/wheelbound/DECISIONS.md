@@ -274,9 +274,9 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 
 ## WB-D028 - Quest choices three/four/five, difficulty/completion/FP gates
 
-- Status: UNVERIFIED
+- Status: CONFIRMED choice counts; UNVERIFIED gate thresholds
 - Authority: Historical authority unknown
-- Evidence: S3 §6
+- Evidence: S3 §6; S4 retrieved user 2026-10-01 17:16:22Z
 - Decision: Quest choices three/four/five, difficulty/completion/FP gates.
 - Rationale: Agency after quest roll.
 - Affects: [PROGRESSION](PROGRESSION.md).
@@ -454,11 +454,41 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 
 ## Contradictions and superseded proposals
 
-C01 Bossing cards versus no cards: unresolved historical chronology; dedicated no-card path provisionally preserved with UNVERIFIED status, not claimed latest approval.
+C01 Bossing cards versus no cards: newly retrieved user 2026-10-01 17:16:22Z explicitly supports Lesser/Standard/Greater Bossing cards. This is the latest retrieved explicit evidence. S3 no-card path has no dated approval and cannot supersede it. Final current rule OPEN until later discussion recovered.
 C02 Pardon restoration cap: S4 roughly three/account versus S3 fixed-price purchase, cap unverified. Do not assume unlimited or exactly three.
 C03 Wheel sidebar versus canvas popup, and top-down tree versus skill ring: latest explicit confirmation unavailable; preserve existing renderer provisionally.
 C04 Prior one-card offering versus current two-to-three: S2 current confirmed overrides old memory.
-C05 Old 1-3 quest choices versus S3 three-to-five: later summary retained as UNVERIFIED, not falsely confirmed.
+C05 Old 1-3 quest choices superseded by retrieved user 2026-10-01 17:16:22Z: confirmed three -> four -> five. Gate numbers remain unverified.
 
 Superseded/rejected under S1: lifetime enhancement-price escalation; special slots beyond 24; protected original slice instances; system-selected Taint replacement; pause penalty/Assisted labels; artificial Grand Fate readiness gates; rejecting without punishment. Never reintroduce as confirmed.
 S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% CP defy price are proposals, not final FP design.
+
+## WB-D046 - Bossing card types in dated user evidence
+
+- Status: CONFIRMED as user decision on 2026-10-01; current final status OPEN due C01.
+- Authority: Explicit user, retrieved summary rather than full transcript.
+- Evidence: S4 user 2026-10-01 17:16:22Z.
+- Decision: Bossing supports Lesser/Standard/Greater category-specific cards; purchased Skilling cards; Questing starts three options upgraded four/five.
+- Rationale: Category-specific difficulty choices (reconstructed explanation).
+- Affects: [FATE_CARDS](FATE_CARDS.md), [PROGRESSION](PROGRESSION.md).
+- Exceptions/dependencies: Cannot establish whether later user approval removed Bossing cards. No-card PDF cannot by itself reverse this.
+
+## WB-D047 - General challenge slice avoids dwindling boss CA pool
+
+- Status: CONFIRMED concept; detailed implementation UNVERIFIED.
+- Authority: Explicit user, retrieved summary.
+- Evidence: S4 user 2026-10-01 17:19:57Z.
+- Decision: General challenge slice concept accepted; challenge must not depend on a single boss's remaining incomplete CAs.
+- Rationale: Avoid shrinking challenge availability.
+- Affects: [PROGRESSION](PROGRESSION.md), [FATE_CARDS](FATE_CARDS.md), [BOUNTIES](BOUNTIES.md).
+- Exceptions/dependencies: Slice location, pool and card interactions not recovered.
+
+## WB-D048 - Preserve unresolved history before final balance
+
+- Status: OPEN checkpoint blocker.
+- Authority: User instruction requires latest explicit approval precedence and input for core contradictions.
+- Evidence: S1 contradiction rule; S2 §2 core-gameplay stop rule.
+- Decision: Do not declare final balance or generate final implementation specification while C01 Bossing cards, fresh two-card offer rules, and C02 Pardon limits lack authoritative resolution.
+- Rationale: Choosing silently would reinterpret previously established mechanics.
+- Affects: [TASKS](TASKS.md), [SIMULATION_RESULTS](SIMULATION_RESULTS.md), [FATE_CARDS](FATE_CARDS.md), [ACCOUNT_ACCESS](ACCOUNT_ACCESS.md).
+- Exceptions/dependencies: Independent technical research can proceed; no plugin implementation authorized.

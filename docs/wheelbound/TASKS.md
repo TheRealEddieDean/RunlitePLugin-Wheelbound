@@ -3,9 +3,10 @@
 - [x] Search available history; record access limits.
 - [x] Reconstruct rules and contradiction register.
 - [x] Create all 23 requested Markdown files.
-- [x] Validate all local Markdown links and decision IDs; recovery commit prepared for wheelbound-mode (verify branch update receipt).
-- [ ] Research primary technical sources and exact current game mechanics.
-- [ ] Resolve major historical conflicts with evidence or user input.
+- [ ] Validate and commit recovery checkpoint on wheelbound-mode.
+- [x] Initial primary API research: account config, XP, containers, menu consumption, Hub review. Full live feasibility remains open.
+- [ ] Verify exact current OSRS facts; direct Wiki access blocked.
+- [ ] BLOCKED pending later approval history or explicit resolution: Bossing cards/no cards, fresh two-card offers, Pardon cap. See WB-D048.
 - [ ] Execute reproducible 10,000+ account model and stress cases.
 - [ ] Finalize catalogs and economy with remaining uncertainty clearly marked.
 - [ ] Expand specifications and commit logical batches.

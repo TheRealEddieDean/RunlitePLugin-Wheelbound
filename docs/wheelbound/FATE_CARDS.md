@@ -7,6 +7,6 @@ S3 provisional combat Standard ranges: 1-29: 1,000-3,000; 30-49: 4,000-10,000; 5
 
 Lesser skilling reduces XP and FP; Greater increases both. Challenge must be achievable and observable. Wilderness has separate opt-in pool and abuse-resistant reward rules, exact multipliers OPEN.
 
-Conflict C01: PDF section 5 discusses Bossing Lesser/Greater; section 6 explicitly says no Bossing Fate Cards. Historical chronology cannot be established from section order. Provisional recovery treatment: dedicated Bossing path follows section 6, with kill-count roll before eligible boss wheel and no cards/rerolls/player boss selection; requires historical confirmation. No simulation may claim this resolved by user approval.
+Conflict C01: retrieved user decision dated 2026-10-01 17:16:22Z supports Lesser/Standard/Greater Bossing cards. PDF section 5 echoes cards; section 6 says no Bossing Fate Cards, kill-count before boss wheel, no reroll/selection. The PDF has no decision-specific timestamps or approval turns. Latest retrieved explicit user evidence supports cards; do not override it with the condensed no-card statement. Current final rule remains OPEN pending later historical context; do not simulate either path as the confirmed final design.
 
 Quest choice count is separate from card offer count. See [PROGRESSION](PROGRESSION.md).
