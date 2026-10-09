@@ -6,3 +6,12 @@ Classes in S3: General; Rune/Magic; Food/Drink; Weapons/Armour/Tools; Other. Pri
 GE: one-time large FP plus completed-Fate gate, no gamble/ban/escalation. Vendor quests do not bypass restrictions. Player trading block intent recovered, exact unlock policy OPEN.
 
 Hard menu blocking is intent, not verified full enforcement. Client cannot enforce server restrictions. Document each covered interaction and limitation after research; locked/banned messages distinct. Pause disables all restrictions immediately.
+
+## Proposed transaction specification
+Normal unlock requires confirmed nearby vendor identity, Locked state, current class-price quote and sufficient FP. Commit debit, Unlocked state and paid-class-unlock counter in one receipt. Display the result before allowing covered trade menus.
+
+Tempt Fate requires the same physical visit and Locked state. Persist 50/50 result before animation, then transition to Unlocked or Banned. Proposed accounting: only paid vendor unlocks advance class price count; gambling does not. This is NEW PROPOSED detail, not an earlier approval. A Banned vendor cannot be gambled or normally purchased until restored.
+
+Pardon requires Banned state and affordable fixed price. Receipt restores Locked without changing paid-class counts. Pardon access itself need not imply remote vendor unlocking; whether restoration must also happen beside the vendor is unverified. UI may prepare the purchase remotely, but keep actual unlock/Tempt strictly in-world.
+
+Detect vendor with stable NPC/shop identity, region/instance and shop widget association; NPC display name alone is insufficient where duplicated. Unknown vendor remains unavailable-data until catalog resolved, not silently Unlocked. Warn about quest-essential vendors before committing an assignment. No free vendor exemption is introduced.

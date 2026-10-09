@@ -15,3 +15,12 @@ No assignment can unlock its own access prerequisites implicitly. See [ACCOUNT_A
 
 ## Confirmed Bossing card sequence
 WB-D049 resolves earlier conflicting summaries: generate/show Standard kills, offer eligible Lesser/Standard/Greater, select a card, then randomly determine the unlocked eligible boss. No player boss choice or reroll. A card unlock never unlocks a boss. Standard default/two distinct targets and third offering follow WB-D050.
+
+## Proposed prerequisite representation
+Node = stable ID, unlock, FP quote, prerequisite expression, real game prerequisites, purchase state. Explicit allOf/anyOf/countOf expressions; screen placement never implies an undocumented prerequisite. Skill count gates count unique purchased skill unlocks, not duplicate slices.
+
+Proposed quest mapping: Low=Novice, Medium=Intermediate, Hard=Experienced, Master=Master, Grandmaster=Grandmaster; Special individually reviewed. H1 uses eight completions per tier proxy, not real quest-chain eligibility. Exact purchased gate prices remain BALANCE_TBD.
+
+Boss pools require a reviewed versioned catalog. Do not manufacture encounters to reach historical counts. H1's six synthetic tiers are not the historical 64-entry catalog. Task-only bosses require enough remaining assignment kills for the selected target.
+
+Completed quests/inaccessible bosses cannot become valid merely to keep a slice usable. Eligibility conditioning changes wheel odds and must be explicit. Whether an exhausted activity slice can suspend without paid storage is OPEN; do not grant an undocumented free wheel edit.

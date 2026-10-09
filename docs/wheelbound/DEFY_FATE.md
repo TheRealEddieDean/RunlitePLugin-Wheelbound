@@ -11,3 +11,10 @@ Voluntary sacrifice: choose eligible actual item/quantity, preview conversion, v
 Stackables use selected snapshotted stack, nonstackables generally one copy. Same conversion voluntary/forced. No spins for a click or unverified item disappearance. Exact GP rules and conversion OPEN. PDF says per-unit >=10,000; live boundary must be checked.
 
 No eligible candidates, all blessed, bank unavailable and selected item lost are OPEN recovery cases; pause remains free. Never replace this silently with death sacrifice or mandatory item purchase.
+
+## Forced-sacrifice evidence and unresolved fallback
+Trigger commits obligation ID, blessings and known ownership. Candidate identity/quantity/value persists before display. Opening a bank may refresh unknown data; unknown is never equivalent to empty. Selection locks the selected unit. Donation must correlate selected item/quantity, accepted Coffer interaction, container decrease and actual receipt/value signal. A click or item disappearance is insufficient. Account/session mismatch prevents credit.
+
+Baseline H1 finds genuine no-eligible-item stops. There is no confirmed fallback. Permitting acquisition after trigger requires an exception to the frozen snapshot; converting to Punishment changes mandatory Sacrifice. Do not select either without user input.
+
+Special-spin accounting is also OPEN: ordinary completion/rejection consumes one; Grand Fate none. H1 assumes no debit for Taint/Sacrifice, and sensitivity charges one at landing. Finalize neither as historically approved.

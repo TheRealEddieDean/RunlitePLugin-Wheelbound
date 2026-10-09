@@ -12,3 +12,10 @@ Reject: show FP loss/debt, spin loss, reward forfeiture and mandatory punishment
 
 ## Card and Pardon correction
 Bossing UI shows Standard kill count before card choice; each card previews count/reward, then selected card advances to random Bossing Wheel. Do not show Choose Boss or Reroll. Two starting Standard cards need distinct displayed targets, even with matching type labels; display three after upgrade. Pardon shows fixed price and Banned -> Locked preview, with no remaining-use counter. After restoration explain the separate unlock/gamble action.
+
+## Layout and interaction contract
+Use RuneLite sidebar container width with wrapping text. Top strip: mode/Pause, FP with debt text, spins. Next: obligation/quantity/restrictions/progress, Complete/Reject. Grand Fate collapsible checklist stays reachable. Navigation: Tree, Builder, Shop, Bounties, Account; unclaimed text badge.
+
+Canvas popup shows spins using committed pool. Skip animation reveals same result; Escape closes view without cancelling assignment. Builder detail shows UUID, activity, current/projected weight and activity odds; draft validates five/three/24 together. Defy previews both first-Defy special inserts and stored/destroyed upgrade losses.
+
+Keyboard labels include card type/target/reward/restrictions. Avoid KeyboardFocusManager/window-focus manipulation. Reduced-motion preference. Ban/debt/Taint use text/icons, never color alone. Pending verification includes reason/retry; no sacrifice candidate must not silently waive obligation.

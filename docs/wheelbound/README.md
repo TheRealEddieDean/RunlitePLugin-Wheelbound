@@ -21,3 +21,8 @@ Append a stable decision ID; record authority, source, rationale, dependencies a
 A focused third history query recovered dated user approval for Questing 3 -> 4 -> 5 choices and Bossing Lesser/Standard/Greater cards, plus the general Challenge slice. Updated WB-D028 and added WB-D046/047. The dated user card decision takes precedence over an undated PDF claim until a later explicit approval is recovered. Never infer chronology from PDF section order.
 
 S6: explicit current user resolutions dated 2026-10-09. Bossing cards and unlimited fixed-price Pardon reaffirmed; two independently generated distinct Standard targets are a NEW design decision. WB-D049/050/051 override contradictory older records. Initial core blockers resolved.
+
+## Research and simulation checkpoint
+User corrections committed at 647f71e1bc877a5b64210458a441ec5dc9b2b094. 48,000 offline hypothesis trajectories executed; raw results, model and parameters in simulation/. Current specifications include NEW PROPOSED transaction, audit and daily-board details, clearly separate from approvals. This is not final balance or live feasibility confirmation.
+
+Next significant rules: no-eligible-item forced Sacrifice fallback (WB-D057), and Taint/Sacrifice spin debit (WB-D058). They affect deadlocks and reserve economics. Final catalogs/implementation-ready PDF cannot be truthfully marked complete yet. Checkpoint PDF reflects all current Markdown, not an independent source.

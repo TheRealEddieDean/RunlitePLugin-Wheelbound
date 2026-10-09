@@ -1,0 +1,444 @@
+{
+  "accounts_per_strategy": 4000,
+  "model_sha256": "a7bc1878f8307eb2f3bcce810b327e81e0edf2001f3b9e2051f0d6b3a48406dc",
+  "scenarios": {
+    "higher_selected_prices": {
+      "parameters": {
+        "cleansing": 5000,
+        "deactivate": 300,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 5000,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "pardon": 4000,
+        "punishment_fp": 25,
+        "reactivate": 50,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": false,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 300,
+        "t2_unlock": 700,
+        "vendor_base": 200,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "strategies": {
+        "balanced": {
+          "completions": {
+            "10": 266,
+            "50": 273,
+            "90": 280
+          },
+          "defies": {
+            "10": 4,
+            "50": 4,
+            "90": 4
+          },
+          "fp": {
+            "10": 276,
+            "50": 1838,
+            "90": 4537
+          },
+          "hours": {
+            "10": 305.286,
+            "50": 317.052,
+            "90": 329.475
+          },
+          "item_stop_rate": 0.01,
+          "negative_rate": 0.76575,
+          "special_share": {
+            "10": 0.071,
+            "50": 0.071,
+            "90": 0.111
+          }
+        },
+        "focused": {
+          "completions": {
+            "10": 270,
+            "50": 276,
+            "90": 282
+          },
+          "defies": {
+            "10": 4,
+            "50": 4,
+            "90": 4
+          },
+          "fp": {
+            "10": 1173,
+            "50": 2546,
+            "90": 3989
+          },
+          "hours": {
+            "10": 189.333,
+            "50": 200.818,
+            "90": 213.206
+          },
+          "item_stop_rate": 0.014,
+          "negative_rate": 0.522,
+          "special_share": {
+            "10": 0.14,
+            "50": 0.14,
+            "90": 0.14
+          }
+        },
+        "inefficient": {
+          "completions": {
+            "10": 238,
+            "50": 248,
+            "90": 256
+          },
+          "defies": {
+            "10": 4,
+            "50": 4,
+            "90": 4
+          },
+          "fp": {
+            "10": 801,
+            "50": 2649,
+            "90": 4142
+          },
+          "hours": {
+            "10": 291.537,
+            "50": 310.688,
+            "90": 328.794
+          },
+          "item_stop_rate": 0.031,
+          "negative_rate": 0.994,
+          "special_share": {
+            "10": 0.152,
+            "50": 0.152,
+            "90": 0.152
+          }
+        }
+      }
+    },
+    "low_reserve": {
+      "parameters": {
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 25,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": false,
+        "starting_fp": 0,
+        "starting_spins": 25,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "strategies": {
+        "balanced": {
+          "completions": {
+            "10": 51,
+            "50": 222,
+            "90": 265
+          },
+          "defies": {
+            "10": 2,
+            "50": 8,
+            "90": 9
+          },
+          "fp": {
+            "10": 189,
+            "50": 2141,
+            "90": 5348
+          },
+          "hours": {
+            "10": 48.899,
+            "50": 268.648,
+            "90": 318.633
+          },
+          "item_stop_rate": 0.5865,
+          "negative_rate": 0.72175,
+          "special_share": {
+            "10": 0.097,
+            "50": 0.115,
+            "90": 0.152
+          }
+        },
+        "focused": {
+          "completions": {
+            "10": 39,
+            "50": 167,
+            "90": 255
+          },
+          "defies": {
+            "10": 1,
+            "50": 6,
+            "90": 9
+          },
+          "fp": {
+            "10": 107,
+            "50": 1778,
+            "90": 8786
+          },
+          "hours": {
+            "10": 27.087,
+            "50": 134.542,
+            "90": 226.848
+          },
+          "item_stop_rate": 0.73825,
+          "negative_rate": 0.466,
+          "special_share": {
+            "10": 0.108,
+            "50": 0.193,
+            "90": 0.254
+          }
+        },
+        "inefficient": {
+          "completions": {
+            "10": 28,
+            "50": 94,
+            "90": 227
+          },
+          "defies": {
+            "10": 1,
+            "50": 3,
+            "90": 9
+          },
+          "fp": {
+            "10": 71,
+            "50": 724,
+            "90": 4819
+          },
+          "hours": {
+            "10": 32.066,
+            "50": 122.857,
+            "90": 330.973
+          },
+          "item_stop_rate": 0.76775,
+          "negative_rate": 0.93175,
+          "special_share": {
+            "10": 0.143,
+            "50": 0.2,
+            "90": 0.273
+          }
+        }
+      }
+    },
+    "special_debit": {
+      "parameters": {
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "strategies": {
+        "balanced": {
+          "completions": {
+            "10": 274,
+            "50": 280,
+            "90": 286
+          },
+          "defies": {
+            "10": 4,
+            "50": 4,
+            "90": 4
+          },
+          "fp": {
+            "10": 11672,
+            "50": 13718,
+            "90": 15561
+          },
+          "hours": {
+            "10": 294.613,
+            "50": 304.583,
+            "90": 315.429
+          },
+          "item_stop_rate": 0.01125,
+          "negative_rate": 0.73025,
+          "special_share": {
+            "10": 0.071,
+            "50": 0.071,
+            "90": 0.071
+          }
+        },
+        "focused": {
+          "completions": {
+            "10": 270,
+            "50": 276,
+            "90": 282
+          },
+          "defies": {
+            "10": 4,
+            "50": 4,
+            "90": 4
+          },
+          "fp": {
+            "10": 7689,
+            "50": 9102,
+            "90": 10545
+          },
+          "hours": {
+            "10": 184.949,
+            "50": 196.298,
+            "90": 208.123
+          },
+          "item_stop_rate": 0.02075,
+          "negative_rate": 0.52775,
+          "special_share": {
+            "10": 0.14,
+            "50": 0.14,
+            "90": 0.14
+          }
+        },
+        "inefficient": {
+          "completions": {
+            "10": 240,
+            "50": 249,
+            "90": 257
+          },
+          "defies": {
+            "10": 4,
+            "50": 4,
+            "90": 4
+          },
+          "fp": {
+            "10": 2294,
+            "50": 4640,
+            "90": 6917
+          },
+          "hours": {
+            "10": 290.174,
+            "50": 308.15,
+            "90": 326.294
+          },
+          "item_stop_rate": 0.02225,
+          "negative_rate": 0.98,
+          "special_share": {
+            "10": 0.152,
+            "50": 0.152,
+            "90": 0.152
+          }
+        }
+      }
+    }
+  }
+}

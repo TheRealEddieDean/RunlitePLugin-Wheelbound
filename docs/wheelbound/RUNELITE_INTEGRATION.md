@@ -18,3 +18,23 @@ For every detector record API/source URL, retrieved date, known coverage, unreso
 API documentation currently presents 1.13.1; repository's older 1.12.39 audit is not current release evidence. No API spike or live game testing performed. These are API availability findings, not full technical feasibility confirmation.
 
 OSRS Wiki direct access was blocked by robots.txt. Search excerpts for Radiant Oathplate conflict on 2,500 versus 10,000 aether runes per piece. Keep exact rune cost unresolved rather than pick an excerpt. Coffer excerpts support per-item 10,000-or-more and 105% GE valuation, but live exclusions and boundary still need reliable current verification. No game-fact correction promoted to confirmed from blocked/stale pages.
+
+## Additional primary sources checked 2026-10-09
+| Area | Source | Evidence and implementation limit |
+| --- | --- | --- |
+| Quest completion | [Quest API](https://static.runelite.net/runelite-api/apidocs/net/runelite/api/Quest.html) | getState(Client) exposes quest state; not complete material/team/access eligibility |
+| NPC drops | [NpcLootReceived](https://static.runelite.net/runelite-client/apidocs/net/runelite/client/events/NpcLootReceived.html) and [LootManager source](https://github.com/runelite/runelite/blob/master/runelite-client/src/main/java/net/runelite/client/game/LootManager.java) | NPC/item association exists; group loot, raid reward chests and no-loot kills need separate detectors |
+| Login lifecycle | [GameStateChanged](https://static.runelite.net/runelite-api/apidocs/net/runelite/api/events/GameStateChanged.html) | Game-state event exists; account token and reconnect baselines still needed |
+| CA points | [generated VarbitID](https://github.com/runelite/runelite/blob/master/runelite-api/src/main/java/net/runelite/api/gameval/VarbitID.java) | CA_POINTS constant found; thresholds and task/catalog mapping still require current cache validation |
+| Durable local files | [Filepath API](https://static.runelite.net/runelite-client/apidocs/net/runelite/client/util/Filepath.html) | Scoped plugin directory, file channels and moves available; cross-platform atomic persistence needs actual tests |
+| Review constraints | [Rejected features](https://github.com/runelite/runelite/wiki/Rejected-or-Rolled-Back-Features) | Use Java, injected Gson, scoped Filepath; avoid generated game inputs, focus manipulation and forbidden menuAction calls |
+
+RuneLite policy checked after page edit 2026-10-06. It flags conditional menu removal and content simulation; do not assume voluntary challenge blocking is automatically accepted. Offline economy Python harness is design tooling, never a shipped in-client OSRS encounter simulator. Developer mode must manipulate local test fixtures only and must not issue server actions.
+
+Pinned source blobs inspected: ConfigManager 6bdd1cf40c47252d35e05217ffc3089d569fc8b8; LootManager dcec3f84c3d5dc5eedcac695aef16bb1c289c5e1; VarbitID 0a90c1426122a9fbf32c3002fc66b77dac8d0fc4. Paths above resolve current master; use blob hashes to reproduce the inspected revision.
+
+Official game updates show Coffer eligibility changes:
+[Sailing Changes and Gem Bag Expansion](https://secure.runescape.com/m=news/sailing-changes-and-gem-bag-expansion?oldschool=1) reports unblocking Sailing items.
+[More from the Getting Around Poll](https://secure.runescape.com/m=news/a=13/more-from-the-getting-around-poll?oldschool=1) adds named Deadman items.
+[Bank Tags and Trouver Rework](https://secure.runescape.com/m=news/bank-tags-trouver-system-rework--more?oldschool=1) adjusts item values relevant to Coffer.
+Therefore price threshold alone is not an authoritative eligibility detector; validate donation UI acceptance and actual receipt. No live Coffer verification was performed.

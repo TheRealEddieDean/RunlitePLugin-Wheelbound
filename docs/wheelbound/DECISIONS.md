@@ -200,7 +200,7 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 - Decision: Tempt Fate 50/50 unlock or ban; Pardon returns ban to Locked.
 - Rationale: Risk/recovery access choice.
 - Affects: [ACCOUNT_ACCESS](ACCOUNT_ACCESS.md).
-- Exceptions/dependencies: Pardon cap conflict OPEN.
+- Exceptions/dependencies: Pardon unlimited fixed-price purchases confirmed by WB-D051; earlier cap superseded.
 
 ## WB-D021 - GE permanent special unlock with completion count and FP gate
 
@@ -240,7 +240,7 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 - Decision: Permanent card pools; two eligible offerings upgraded to three.
 - Rationale: Purchases improve opportunity.
 - Affects: [FATE_CARDS](FATE_CARDS.md).
-- Exceptions/dependencies: Initial two-type availability unresolved.
+- Exceptions/dependencies: WB-D050 confirms two distinct Standard targets; card types need not differ.
 
 ## WB-D025 - 100 permanent items, three daily, Combat Mastery and Diary bounties
 
@@ -522,3 +522,94 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Rationale: Maintain expensive recovery without permanent vendor lockout. (design explanation; not quoted historical rationale).
 - Affects: [ACCOUNT_ACCESS](ACCOUNT_ACCESS.md), [FATE_SHOP](FATE_SHOP.md), [ECONOMY](ECONOMY.md), [UI_UX](UI_UX.md), [PERSISTENCE](PERSISTENCE.md).
 - Exceptions/dependencies: Earlier three-Pardon limit superseded; numeric price BALANCE_TBD.
+
+## WB-D052 - H1 economy and progression parameters
+
+- Status: PROPOSED / BALANCE_TBD
+- Authority: Assistant under delegated design authority
+- Evidence: new work dated 2026-10-09; see referenced specs and recorded sources.
+- Decision: Adopt H1 solely as an executable test hypothesis; parameters.json and ECONOMY.md document starting reserve/refill, fees, penalties, reward formulas, conversion and duplicate 8+ extrapolation.
+- Rationale: Test interacting systems without claiming recovered approval.
+- Affects: [ECONOMY](ECONOMY.md), [SIMULATION_RESULTS](SIMULATION_RESULTS.md).
+- Exceptions/dependencies: No numeric final balance acceptance. Actual catalogs/rates unverified.
+
+## WB-D053 - Distinct target generation and durable card stages
+
+- Status: PROPOSED technical detail
+- Authority: Assistant under delegated technical authority
+- Evidence: new work dated 2026-10-09; see referenced specs and recorded sources.
+- Decision: Independently propose targets, resample target collisions within legal domain, persist complete offers; initial Bossing displayed Standard reference is first offer, second shows its own. Freeze eligibility before selecting random boss after card choice.
+- Rationale: Respect distinct starting targets and avoid restart/pool manipulation.
+- Affects: [FATE_CARDS](FATE_CARDS.md), [PERSISTENCE](PERSISTENCE.md), [UI_UX](UI_UX.md).
+- Exceptions/dependencies: Rejection sampling conditions independence on uniqueness; undersized target domain gives error.
+
+## WB-D054 - Audit charge schedule
+
+- Status: PROPOSED / BALANCE_TBD
+- Authority: Assistant under delegated design authority
+- Evidence: new work dated 2026-10-09; see referenced specs and recorded sources.
+- Decision: One charge per Fate at tolerance crossing, base100 times capped prior violation streak; legitimate completion resets. Extra ticks don't incur extra charges.
+- Rationale: Avoid unbounded event-driven fines.
+- Affects: [GAME_RULES](GAME_RULES.md), [ECONOMY](ECONOMY.md).
+- Exceptions/dependencies: Attribution must be observable; H1 only flat per-Fate probabilistic charge, not full proposed audit.
+
+## WB-D055 - Vendor price counters and transactions
+
+- Status: PROPOSED detail
+- Authority: Assistant under delegated authority
+- Evidence: new work dated 2026-10-09; see referenced specs and recorded sources.
+- Decision: Paid class unlocks advance class-price counter; gamble does not. Normal unlock/Tempt in-world; Pardon Locked transition never grants access or increments paid counter.
+- Rationale: Separate access purchases from recovery/gambling.
+- Affects: [ACCOUNT_ACCESS](ACCOUNT_ACCESS.md), [PERSISTENCE](PERSISTENCE.md).
+- Exceptions/dependencies: Pardon location policy and exact vendor catalog unverified.
+
+## WB-D056 - Daily board schedule and overlap claims
+
+- Status: PROPOSED detail
+- Authority: Assistant under delegated authority
+- Evidence: new work dated 2026-10-09; see referenced specs and recorded sources.
+- Decision: Rolling24h board from first generation; three distinct eligible targets, no offline backlogs, pre-expiry evidence remains claimable. One event may satisfy permanent and daily keys once each.
+- Rationale: Predictable optional rewards and durable evidence.
+- Affects: [BOUNTIES](BOUNTIES.md), [PERSISTENCE](PERSISTENCE.md).
+- Exceptions/dependencies: Not recovered historical approval; H1 excludes daily economy.
+
+## WB-D057 - No eligible forced-sacrifice candidate fallback
+
+- Status: OPEN - significant decision required
+- Authority: Unresolved historical mechanic; simulated risk
+- Evidence: new work dated 2026-10-09; see referenced specs and recorded sources.
+- Decision: No implicit fallback selected. Forced Sacrifice with genuinely empty candidates stops normal progression pending rule, while free Pause remains.
+- Rationale: Avoid silently weakening mandatory sacrifice or creating a deadlock.
+- Affects: [DEFY_FATE](DEFY_FATE.md), [EDGE_CASES](EDGE_CASES.md), [SIMULATION_RESULTS](SIMULATION_RESULTS.md).
+- Exceptions/dependencies: Baseline synthetic stop .75%-1.60%; low reserve58.65%-76.78%. No live-player risk estimate.
+
+## WB-D058 - Special slice spin accounting
+
+- Status: OPEN - significant balance decision
+- Authority: Not specified in available approval history
+- Evidence: new work dated 2026-10-09; see referenced specs and recorded sources.
+- Decision: Resolve whether Taint/Sacrifice landing consumes a Master spin; ordinary completion/rejection spends one and Grand Fate attempts none remain confirmed.
+- Rationale: Final spin economy depends on special debit.
+- Affects: [DEFY_FATE](DEFY_FATE.md), [ECONOMY](ECONOMY.md), [SIMULATION_RESULTS](SIMULATION_RESULTS.md).
+- Exceptions/dependencies: H1 no special charge; sensitivity charges one on landing.
+
+## WB-D059 - RuneLite API availability versus feasibility
+
+- Status: TECHNICAL_TBD; evidence-backed API availability
+- Authority: Primary source inspection, not live test
+- Evidence: new work dated 2026-10-09; see referenced specs and recorded sources.
+- Decision: Use per-account RS profile API, StatChanged, quest state, NPC loot/container/menu events and scoped Filepath. Avoid claiming full menu prevention or verified Coffer donation; use injected Gson and review-sensitive scripts only.
+- Rationale: Respect current platform limits and honest detector coverage.
+- Affects: [RUNELITE_INTEGRATION](RUNELITE_INTEGRATION.md), [ARCHITECTURE](ARCHITECTURE.md), [PERSISTENCE](PERSISTENCE.md).
+- Exceptions/dependencies: No gameplay spike/Hub acceptance. Offline economy harness not in-client content simulation.
+
+## WB-D060 - Checkpoint PDF and missing catalogs
+
+- Status: PROPOSED documentation process
+- Authority: Assistant following source-of-truth mandate
+- Evidence: new work dated 2026-10-09; see referenced specs and recorded sources.
+- Decision: Generate checkpoint PDF from committed Markdown, clearly retaining unresolved core rules and missing original catalogs. Do not label it final implementation-ready design.
+- Rationale: Preserve recoverable design without inventing prior approvals.
+- Affects: [README](README.md), [TASKS](TASKS.md), [IMPLEMENTATION_PLAN](IMPLEMENTATION_PLAN.md).
+- Exceptions/dependencies: Final PDF/catalog economy deferred until significant OPEN decisions resolved.
+
