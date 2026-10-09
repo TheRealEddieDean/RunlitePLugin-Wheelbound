@@ -29,3 +29,11 @@
 - [ ] Obtain shop/GE interception clarification and live detector evidence once implementation is authorized.
 - [ ] Validate WB-D068 Coffer groups/Confirm plus context-sensitive IF1-IF4 mapping in current client; verify matching inventory and balance receipt, update order, rounding, failures and real acquisition routes.
 
+
+## Weekend handoff
+- [x] Master assignment preserved; shared conversation access attempted and failure documented.
+- [x] Pipeline configuration inspected: JDK 11, Gradle 8.10; commands source-reviewed, not build-executed.
+- [x] Concrete detector contracts, state/crash specification, traceability and major-question register populated.
+- [ ] Exact real-content end-to-end account progression model; current simulations remain synthetic/incomplete.
+- [ ] Source-history catalogs recovered; newly authored replacements must be labeled separately.
+- [ ] Live detector traces and exact restrictive-policy acceptance; deferred until implementation/review.

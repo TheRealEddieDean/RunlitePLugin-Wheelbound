@@ -6,7 +6,7 @@ Last successful predecessor: dc76720971c3e15c2e831a27b1505dd25054267f. This file
 
 Completed: initial recovered Markdown committed; explicit corrections preserved; original Hub rejection investigated; 12,000 H1 and 36,000 H1 sensitivity trajectories plus 12,000 H2 and 36,000 H2 sensitivity trajectories recorded; detailed detector specifications written. These synthetic trajectories are not measured OSRS playtime or complete verified game-content progression. No production plugin code changed.
 
-Current workstream: integrate weekend master assignment, concrete telemetry specs and handoff. Shared conversation inaccessible through web fetch; partial Personal Context excerpts do not replace it. PDF publication must be refreshed from the latest committed Markdown.
+Current workstream: integrate weekend master assignment, concrete telemetry specs and handoff. Shared conversation inaccessible through web fetch; partial Personal Context excerpts do not replace it. Additional conversion/risk sweep executed: 18,000 trajectories, bringing recorded total to 114,000. State/crash contract and pipeline handoff completed. PDF publication must be refreshed from the latest committed Markdown.
 
 Next executable actions:
 1. Read DEVELOPMENT_PIPELINE and inspect pinned repository build files; record exact Java/Gradle dependencies and CI. Validate build commands only if the actual build can execute; otherwise say source-reviewed.

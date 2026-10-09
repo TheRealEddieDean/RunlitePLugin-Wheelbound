@@ -774,3 +774,25 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Exceptions/dependencies: Routine choices delegated; major questions collected for return. No automatic restart claimed.
 - Supersession: Refines WB-D059/063/064/068 where applicable; does not supersede explicit gameplay approvals.
 - Acceptance criteria: Pass the relevant detector and invariant cases in TECHNICAL_SPECIFICATIONS.md and TESTING.md before release.
+
+## WB-D077 - Specify aggregate and crash boundaries before implementation
+
+- Status: DELEGATED
+- Authority/source: Weekend master assignment, 2026-10-09; STATE_CONTRACT.md and existing persistence decisions.
+- Decision: One versioned account/run aggregate, explicit obligation stages, revision-checked commands and durable idempotent receipts. Distinguish committed outcome from animation; ambiguous irreversible actions remain pending.
+- Rationale: Remove implementation ambiguity around repeated debit/reward and account/session swaps.
+- Affects: PERSISTENCE, ARCHITECTURE, TESTING, DEVELOPMENT_PIPELINE.
+- Exceptions/dependencies: Supported filesystem durability still requires cross-platform crash tests. No production implementation or anti-cheat guarantee.
+- Supersession: Refines proposed persistence contract; changes no confirmed gameplay.
+- Acceptance criteria: Pass every crash fixture in STATE_CONTRACT before accepting persistence as durable.
+
+## WB-D078 - Compare conversion hypotheses without locking balance
+
+- Status: BALANCE_TBD; delegated experiment
+- Authority/source: Weekend master assignment, 2026-10-09; simulation/weekend_sweep.py.
+- Decision: Compare 25k, 100k and 250k GP per spin with the existing minimum-one-spin floor across six documented parameter profiles. Preserve all confirmed special-task charges and minimum-item acquisition rules.
+- Rationale: Separate economy sensitivity from a user-approved conversion schedule.
+- Affects: ECONOMY, SIMULATION_RESULTS, OPEN_QUESTIONS.
+- Exceptions/dependencies: Guaranteed synthetic acquisition, simplified access and incomplete sinks remain model assumptions. Profiles are parameter variants, not new quest/combat-rush decision policies. Floor/denominator are not approved.
+- Supersession: None; historical H1 and corrected H2 outputs retained.
+- Acceptance criteria: Record exact count, seed, source hashes and ledger assertions; publish only actually executed results.

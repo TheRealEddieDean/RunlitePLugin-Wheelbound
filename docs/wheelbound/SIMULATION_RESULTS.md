@@ -102,3 +102,30 @@ Includes two distinct independent-proposal targets, same-type offers, unlocked c
 
 Not simulated: complete skill-method requirements; exact boss/quest catalogs; all 100 item bounty definitions; 50 punishments (generic duration proxy instead); daily, CA and diary payouts; blessings; Satchel upgrades; pause/logout/live event attribution; crash-safe receipts; Grand Fate learning/win probability; hard menu blocking. These require additional data/live tests. No Coffer acceptance is inferred from this script.
 
+
+## Weekend conversion/risk sensitivity (WB-D078)
+
+Executed 18,000 additional trajectories: 3 conversions × 6 parameter profiles × 1,000 accounts, seed 20261010, 300 events. Total recorded across H1, H2 and this sweep: 114,000 synthetic trajectories. Source hashes and full configs are in simulation/weekend_sweep_results.json. Reproduce with python3 docs/wheelbound/simulation/weekend_sweep.py. Ledger identities asserted for every run.
+
+| GP/spin | Profile | FP p50 | Defies p50 | Recovery incidence | Hours p50 |
+| --- | --- | --- | --- | --- | --- |
+| 100000 | balanced_reference | 13702 | 4 | 1.2% | 304.846 |
+| 100000 | efficient_reference | 9121 | 4 | 1.9% | 196.558 |
+| 100000 | high_violation_proxy | 1203 | 4 | 5.6% | 328.364 |
+| 100000 | resource_constrained_proxy | 4515 | 4 | 1.9% | 308.539 |
+| 100000 | risk_averse_proxy | 16789 | 4 | 0.4% | 294.282 |
+| 100000 | voluntary_heavy_proxy | 9189 | 4 | 89.4% | 201.249 |
+| 25000 | balanced_reference | 13647 | 4 | 0.8% | 304.908 |
+| 25000 | efficient_reference | 9109 | 4 | 1.5% | 195.074 |
+| 25000 | high_violation_proxy | 1188 | 4 | 5.8% | 328.7 |
+| 25000 | resource_constrained_proxy | 4642 | 4 | 1.5% | 307.675 |
+| 25000 | risk_averse_proxy | 16841 | 4 | 0.6% | 294.694 |
+| 25000 | voluntary_heavy_proxy | 9363 | 3 | 75.1% | 196.243 |
+| 250000 | balanced_reference | 13702 | 4 | 1.2% | 304.846 |
+| 250000 | efficient_reference | 9121 | 4 | 1.9% | 196.558 |
+| 250000 | high_violation_proxy | 1203 | 4 | 5.6% | 328.364 |
+| 250000 | resource_constrained_proxy | 4515 | 4 | 1.9% | 308.539 |
+| 250000 | risk_averse_proxy | 16789 | 4 | 0.4% | 294.282 |
+| 250000 | voluntary_heavy_proxy | 9189 | 4 | 89.4% | 201.249 |
+
+Interpretation: the denominator affects reserve relief for valuable donations, while a 10k recovery donation always returns the one-spin floor and nets zero against its forced spin debit. The sweep cannot decide a fair recovery reward because acquisition is guaranteed and loot/access are synthetic. No conversion is locked. Risk/resource profiles alter existing policies and parameters; they do not establish full quest-rush/combat-rush behavior, minimal-bounty strategy or Grand Fate win times. Zero modeled item stops follow the guaranteed recovery assumption, not proof of real-game feasibility.

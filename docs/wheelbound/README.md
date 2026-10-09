@@ -34,3 +34,5 @@ Current source/policy findings and original submission blockers: [POLICY_AND_FEA
 S7: [Weekend master instructions](research/WEEKEND_MASTER_INSTRUCTIONS.md), direct user assignment 2026-10-09. Later explicit gameplay approvals prevail over its reconstruction seed. Shared transcript fetch failed; partial history search remains secondary.
 
 Read [technical specifications](TECHNICAL_SPECIFICATIONS.md), [major questions](OPEN_QUESTIONS.md), [work status and resume](WORK_STATUS.md), [pipeline](DEVELOPMENT_PIPELINE.md), [traceability](TRACEABILITY.md), and [sources](SOURCES.md).
+
+[STATE_CONTRACT](STATE_CONTRACT.md) specifies aggregate fields, stage transitions, transaction boundaries and crash fixtures for the first coding slice (WB-D077).

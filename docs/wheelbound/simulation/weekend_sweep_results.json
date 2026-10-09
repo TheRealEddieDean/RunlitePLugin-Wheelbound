@@ -1,0 +1,1775 @@
+{
+  "accounts_per_cell": 1000,
+  "cells": {
+    "100000/balanced_reference": {
+      "acquisition_incidence": 0.012,
+      "modeled_item_stop_rate": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "completions": {
+          "10": 274,
+          "50": 280,
+          "90": 286
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 11678,
+          "50": 13702,
+          "90": 15513
+        },
+        "hours": {
+          "10": 294.992,
+          "50": 304.846,
+          "90": 314.911
+        },
+        "recovery_hours": {
+          "10": 0.0,
+          "50": 0.0,
+          "90": 0.0
+        },
+        "special_share": {
+          "10": 0.071,
+          "50": 0.071,
+          "90": 0.071
+        }
+      },
+      "policy": "balanced"
+    },
+    "100000/efficient_reference": {
+      "acquisition_incidence": 0.019,
+      "modeled_item_stop_rate": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "completions": {
+          "10": 270,
+          "50": 276,
+          "90": 282
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 7839,
+          "50": 9121,
+          "90": 10532
+        },
+        "hours": {
+          "10": 185.591,
+          "50": 196.558,
+          "90": 207.827
+        },
+        "recovery_hours": {
+          "10": 0.0,
+          "50": 0.0,
+          "90": 0.0
+        },
+        "special_share": {
+          "10": 0.14,
+          "50": 0.14,
+          "90": 0.14
+        }
+      },
+      "policy": "focused"
+    },
+    "100000/high_violation_proxy": {
+      "acquisition_incidence": 0.056,
+      "modeled_item_stop_rate": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.15
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.12
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "completions": {
+          "10": 224,
+          "50": 234,
+          "90": 244
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 207,
+          "50": 1203,
+          "90": 2314
+        },
+        "hours": {
+          "10": 311.042,
+          "50": 328.364,
+          "90": 348.871
+        },
+        "recovery_hours": {
+          "10": 0.0,
+          "50": 0.0,
+          "90": 0.0
+        },
+        "special_share": {
+          "10": 0.152,
+          "50": 0.152,
+          "90": 0.152
+        }
+      },
+      "policy": "inefficient"
+    },
+    "100000/resource_constrained_proxy": {
+      "acquisition_incidence": 0.019,
+      "modeled_item_stop_rate": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          3,
+          9
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.4
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "completions": {
+          "10": 240,
+          "50": 248,
+          "90": 257
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 2161,
+          "50": 4515,
+          "90": 6953
+        },
+        "hours": {
+          "10": 290.88,
+          "50": 308.539,
+          "90": 326.916
+        },
+        "recovery_hours": {
+          "10": 0.0,
+          "50": 0.0,
+          "90": 0.0
+        },
+        "special_share": {
+          "10": 0.152,
+          "50": 0.152,
+          "90": 0.152
+        }
+      },
+      "policy": "inefficient"
+    },
+    "100000/risk_averse_proxy": {
+      "acquisition_incidence": 0.004,
+      "modeled_item_stop_rate": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "completions": {
+          "10": 283,
+          "50": 288,
+          "90": 292
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 15439,
+          "50": 16789,
+          "90": 18108
+        },
+        "hours": {
+          "10": 286.17,
+          "50": 294.282,
+          "90": 303.033
+        },
+        "recovery_hours": {
+          "10": 0.0,
+          "50": 0.0,
+          "90": 0.0
+        },
+        "special_share": {
+          "10": 0.071,
+          "50": 0.071,
+          "90": 0.071
+        }
+      },
+      "policy": "balanced"
+    },
+    "100000/voluntary_heavy_proxy": {
+      "acquisition_incidence": 0.894,
+      "modeled_item_stop_rate": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 100000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 1,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "completions": {
+          "10": 271,
+          "50": 277,
+          "90": 283
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 7789,
+          "50": 9189,
+          "90": 10760
+        },
+        "hours": {
+          "10": 189.945,
+          "50": 201.249,
+          "90": 215.005
+        },
+        "recovery_hours": {
+          "10": 0.0,
+          "50": 4.872,
+          "90": 11.379
+        },
+        "special_share": {
+          "10": 0.14,
+          "50": 0.14,
+          "90": 0.14
+        }
+      },
+      "policy": "focused"
+    },
+    "25000/balanced_reference": {
+      "acquisition_incidence": 0.008,
+      "modeled_item_stop_rate": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 25000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "completions": {
+          "10": 275,
+          "50": 281,
+          "90": 286
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 11852,
+          "50": 13647,
+          "90": 15685
+        },
+        "hours": {
+          "10": 295.688,
+          "50": 304.908,
+          "90": 315.496
+        },
+        "recovery_hours": {
+          "10": 0.0,
+          "50": 0.0,
+          "90": 0.0
+        },
+        "special_share": {
+          "10": 0.071,
+          "50": 0.071,
+          "90": 0.071
+        }
+      },
+      "policy": "balanced"
+    },
+    "25000/efficient_reference": {
+      "acquisition_incidence": 0.015,
+      "modeled_item_stop_rate": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 25000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "completions": {
+          "10": 271,
+          "50": 277,
+          "90": 282
+        },
+        "defies": {
+          "10": 3,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 7912,
+          "50": 9109,
+          "90": 10562
+        },
+        "hours": {
+          "10": 184.516,
+          "50": 195.074,
+          "90": 208.057
+        },
+        "recovery_hours": {
+          "10": 0.0,
+          "50": 0.0,
+          "90": 0.0
+        },
+        "special_share": {
+          "10": 0.132,
+          "50": 0.14,
+          "90": 0.14
+        }
+      },
+      "policy": "focused"
+    },
+    "25000/high_violation_proxy": {
+      "acquisition_incidence": 0.058,
+      "modeled_item_stop_rate": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 25000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.15
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.12
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "completions": {
+          "10": 224,
+          "50": 235,
+          "90": 244
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 188,
+          "50": 1188,
+          "90": 2331
+        },
+        "hours": {
+          "10": 310.514,
+          "50": 328.7,
+          "90": 348.339
+        },
+        "recovery_hours": {
+          "10": 0.0,
+          "50": 0.0,
+          "90": 0.0
+        },
+        "special_share": {
+          "10": 0.152,
+          "50": 0.152,
+          "90": 0.152
+        }
+      },
+      "policy": "inefficient"
+    },
+    "25000/resource_constrained_proxy": {
+      "acquisition_incidence": 0.015,
+      "modeled_item_stop_rate": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          3,
+          9
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.4
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 25000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "completions": {
+          "10": 241,
+          "50": 249,
+          "90": 257
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 2327,
+          "50": 4642,
+          "90": 6856
+        },
+        "hours": {
+          "10": 290.8,
+          "50": 307.675,
+          "90": 326.997
+        },
+        "recovery_hours": {
+          "10": 0.0,
+          "50": 0.0,
+          "90": 0.0
+        },
+        "special_share": {
+          "10": 0.152,
+          "50": 0.152,
+          "90": 0.152
+        }
+      },
+      "policy": "inefficient"
+    },
+    "25000/risk_averse_proxy": {
+      "acquisition_incidence": 0.006,
+      "modeled_item_stop_rate": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 25000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "completions": {
+          "10": 284,
+          "50": 288,
+          "90": 292
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 15525,
+          "50": 16841,
+          "90": 18303
+        },
+        "hours": {
+          "10": 286.194,
+          "50": 294.694,
+          "90": 302.944
+        },
+        "recovery_hours": {
+          "10": 0.0,
+          "50": 0.0,
+          "90": 0.0
+        },
+        "special_share": {
+          "10": 0.071,
+          "50": 0.071,
+          "90": 0.071
+        }
+      },
+      "policy": "balanced"
+    },
+    "25000/voluntary_heavy_proxy": {
+      "acquisition_incidence": 0.751,
+      "modeled_item_stop_rate": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 25000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 1,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "completions": {
+          "10": 274,
+          "50": 280,
+          "90": 285
+        },
+        "defies": {
+          "10": 3,
+          "50": 3,
+          "90": 3
+        },
+        "fp": {
+          "10": 8043,
+          "50": 9363,
+          "90": 10758
+        },
+        "hours": {
+          "10": 185.401,
+          "50": 196.243,
+          "90": 207.898
+        },
+        "recovery_hours": {
+          "10": 0.0,
+          "50": 2.987,
+          "90": 8.506
+        },
+        "special_share": {
+          "10": 0.132,
+          "50": 0.132,
+          "90": 0.132
+        }
+      },
+      "policy": "focused"
+    },
+    "250000/balanced_reference": {
+      "acquisition_incidence": 0.012,
+      "modeled_item_stop_rate": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 250000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "completions": {
+          "10": 274,
+          "50": 280,
+          "90": 286
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 11678,
+          "50": 13702,
+          "90": 15513
+        },
+        "hours": {
+          "10": 294.992,
+          "50": 304.846,
+          "90": 314.911
+        },
+        "recovery_hours": {
+          "10": 0.0,
+          "50": 0.0,
+          "90": 0.0
+        },
+        "special_share": {
+          "10": 0.071,
+          "50": 0.071,
+          "90": 0.071
+        }
+      },
+      "policy": "balanced"
+    },
+    "250000/efficient_reference": {
+      "acquisition_incidence": 0.019,
+      "modeled_item_stop_rate": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 250000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "completions": {
+          "10": 270,
+          "50": 276,
+          "90": 282
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 7839,
+          "50": 9121,
+          "90": 10532
+        },
+        "hours": {
+          "10": 185.591,
+          "50": 196.558,
+          "90": 207.827
+        },
+        "recovery_hours": {
+          "10": 0.0,
+          "50": 0.0,
+          "90": 0.0
+        },
+        "special_share": {
+          "10": 0.14,
+          "50": 0.14,
+          "90": 0.14
+        }
+      },
+      "policy": "focused"
+    },
+    "250000/high_violation_proxy": {
+      "acquisition_incidence": 0.056,
+      "modeled_item_stop_rate": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 250000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.15
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.12
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "completions": {
+          "10": 224,
+          "50": 234,
+          "90": 244
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 207,
+          "50": 1203,
+          "90": 2314
+        },
+        "hours": {
+          "10": 311.042,
+          "50": 328.364,
+          "90": 348.871
+        },
+        "recovery_hours": {
+          "10": 0.0,
+          "50": 0.0,
+          "90": 0.0
+        },
+        "special_share": {
+          "10": 0.152,
+          "50": 0.152,
+          "90": 0.152
+        }
+      },
+      "policy": "inefficient"
+    },
+    "250000/resource_constrained_proxy": {
+      "acquisition_incidence": 0.019,
+      "modeled_item_stop_rate": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          3,
+          9
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.4
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 250000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "completions": {
+          "10": 240,
+          "50": 248,
+          "90": 257
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 2161,
+          "50": 4515,
+          "90": 6953
+        },
+        "hours": {
+          "10": 290.88,
+          "50": 308.539,
+          "90": 326.916
+        },
+        "recovery_hours": {
+          "10": 0.0,
+          "50": 0.0,
+          "90": 0.0
+        },
+        "special_share": {
+          "10": 0.152,
+          "50": 0.152,
+          "90": 0.152
+        }
+      },
+      "policy": "inefficient"
+    },
+    "250000/risk_averse_proxy": {
+      "acquisition_incidence": 0.004,
+      "modeled_item_stop_rate": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 250000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0,
+          "focused": 0.5,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "completions": {
+          "10": 283,
+          "50": 288,
+          "90": 292
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 15439,
+          "50": 16789,
+          "90": 18108
+        },
+        "hours": {
+          "10": 286.17,
+          "50": 294.282,
+          "90": 303.033
+        },
+        "recovery_hours": {
+          "10": 0.0,
+          "50": 0.0,
+          "90": 0.0
+        },
+        "special_share": {
+          "10": 0.071,
+          "50": 0.071,
+          "90": 0.071
+        }
+      },
+      "policy": "balanced"
+    },
+    "250000/voluntary_heavy_proxy": {
+      "acquisition_incidence": 0.894,
+      "modeled_item_stop_rate": 0.0,
+      "parameters": {
+        "acquisition_hours": [
+          1,
+          3
+        ],
+        "acquisition_recovery": true,
+        "cleansing": 2500,
+        "deactivate": 150,
+        "defy_refill": 50,
+        "duplicates": [
+          100,
+          250,
+          500,
+          900,
+          1500,
+          2300,
+          3300
+        ],
+        "efficiency": {
+          "balanced": 0.8,
+          "focused": 1.0,
+          "inefficient": 0.55
+        },
+        "events": 300,
+        "ge": 2500,
+        "ge_fates": 25,
+        "gear_costs": [
+          100000,
+          500000,
+          1500000
+        ],
+        "gp_per_spin": 250000,
+        "minimum_recovery_item_gp": 10000,
+        "pardon": 2000,
+        "punishment_fp": 25,
+        "reactivate": 25,
+        "reject_penalty": 250,
+        "reject_probability": {
+          "balanced": 0.025,
+          "focused": 0.01,
+          "inefficient": 0.1
+        },
+        "seed": 20261009,
+        "special_consumes_spin": true,
+        "starting_fp": 0,
+        "starting_spins": 100,
+        "t1_unlock": 150,
+        "t2_unlock": 350,
+        "vendor_base": 100,
+        "violation_penalty": 100,
+        "violation_probability": {
+          "balanced": 0.015,
+          "focused": 0.005,
+          "inefficient": 0.07
+        },
+        "voluntary_probability": {
+          "balanced": 0.3,
+          "focused": 1,
+          "inefficient": 0.1
+        }
+      },
+      "percentiles": {
+        "completions": {
+          "10": 271,
+          "50": 277,
+          "90": 283
+        },
+        "defies": {
+          "10": 4,
+          "50": 4,
+          "90": 4
+        },
+        "fp": {
+          "10": 7789,
+          "50": 9189,
+          "90": 10760
+        },
+        "hours": {
+          "10": 189.945,
+          "50": 201.249,
+          "90": 215.005
+        },
+        "recovery_hours": {
+          "10": 0.0,
+          "50": 4.872,
+          "90": 11.379
+        },
+        "special_share": {
+          "10": 0.14,
+          "50": 0.14,
+          "90": 0.14
+        }
+      },
+      "policy": "focused"
+    }
+  },
+  "horizon_events": 300,
+  "model_sha256": "bead3d23e8309c2e14804f5119de574b766e1fd224a823eb0d1cbb61afa6da26",
+  "runner_sha256": "b2f3ea0210b97917a588974f59e4170e4a79b45d978305db46b3374209eea11f",
+  "scope": "Parameter profiles only. No new combat-rush/quest-rush policy, exact content or full Grand Fate endgame simulation. Minimum reward floor remains one spin; not approved.",
+  "seed": 20261010,
+  "total_trajectories": 18000
+}
