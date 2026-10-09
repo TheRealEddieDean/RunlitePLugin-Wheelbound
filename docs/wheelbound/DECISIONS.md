@@ -322,15 +322,15 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 - Affects: [DEFY_FATE](DEFY_FATE.md).
 - Exceptions/dependencies: Refill cleared slices before weight escalation.
 
-## WB-D033 - Forced sacrifice ~12 snapshot candidates; player chooses; stacks vs single copy
+## WB-D033 - Forced sacrifice uses a random Death’s Wheel
 
-- Status: UNVERIFIED
-- Authority: Historical authority unknown
-- Evidence: S3 §9
-- Decision: Forced sacrifice ~12 snapshot candidates; player chooses; stacks vs single copy.
-- Rationale: Meaningful value/diversity cost.
-- Affects: [DEFY_FATE](DEFY_FATE.md).
-- Exceptions/dependencies: Incomplete bank, no candidates fallback missing.
+- Status: CONFIRMED; prior PDF player-choice interpretation superseded by recovered approval.
+- Authority: Explicit user approval.
+- Evidence: S8-M0296 proposal approved at S8-M0297; earlier user wheel proposal S8-M0269 and S8-M0295; candidate scope S8-M0299.
+- Decision: Freeze eligible owned candidates, then randomly spin Death’s Wheel to select the demanded possession. The player cannot choose the forced item. Stackable candidates demand the snapshotted stack; nonstackables use one copy. Voluntary sacrifice remains player-selected with a conversion preview.
+- Rationale: Forced randomness creates loss and suspense; voluntary sacrifice is a strategic economic choice.
+- Affects: [DEFY_FATE](DEFY_FATE.md), [STATE_CONTRACT](STATE_CONTRACT.md), [UX_RECOVERY_FLOWS](UX_RECOVERY_FLOWS.md).
+- Exceptions/dependencies: Candidate bank/inventory/equipment evidence must be current; unopened bank is unknown. Roughly twelve candidates and a preferred 100k threshold are tuning proposals, not guaranteed eligibility gates. Current explicit empty-set recovery requires obtaining an eligible item worth at least 10k. Blessings and verified Coffer donation still apply. GP conversion remains BALANCE_TBD.
 
 ## WB-D034 - Blessings reassign outside forced event; locked at trigger
 
@@ -543,15 +543,15 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Affects: [FATE_CARDS](FATE_CARDS.md), [PERSISTENCE](PERSISTENCE.md), [UI_UX](UI_UX.md).
 - Exceptions/dependencies: Rejection sampling conditions independence on uniqueness; undersized target domain gives error.
 
-## WB-D054 - Audit charge schedule
+## WB-D054 - Immediate tolerance-crossing charge proposal superseded
 
-- Status: PROPOSED / BALANCE_TBD
-- Authority: Assistant under delegated design authority
-- Evidence: new work dated 2026-10-09; see referenced specs and recorded sources.
-- Decision: One charge per Fate at tolerance crossing, base100 times capped prior violation streak; legitimate completion resets. Extra ticks don't incur extra charges.
-- Rationale: Avoid unbounded event-driven fines.
-- Affects: [GAME_RULES](GAME_RULES.md), [ECONOMY](ECONOMY.md).
-- Exceptions/dependencies: Attribution must be observable; H1 only flat per-Fate probabilistic charge, not full proposed audit.
+- Status: SUPERSEDED by recovered WB-D087; not an approved gameplay rule.
+- Authority: Earlier assistant proposal, subsequently found inconsistent with explicit historical approval.
+- Evidence: Earlier 2026-10-09 modeling proposal; S8-M0289 and S8-M0291–0293.
+- Decision: Do not charge at the first tolerance crossing. Judge applicable Fates at completion using objective-specific evidence and the consecutive-violation system in WB-D087.
+- Rationale: Recover the actual end-of-Fate design instead of silently substituting an event-driven fine.
+- Affects: [GAME_RULES](GAME_RULES.md), [ECONOMY](ECONOMY.md), simulation interpretation.
+- Exceptions/dependencies: Existing H1–H3 probabilistic fine experiments remain historical hypotheses, not faithful validation of the recovered audit. Exact thresholds, FP consequences and settlement ordering require specification; no third-offense level-99 rule is confirmed.
 
 ## WB-D055 - Vendor price counters and transactions
 
@@ -875,13 +875,52 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Acceptance criteria: Paused acquisition gives zero XP/drop/bounty FP, then one active verified donation settles once; nonempty snapshot cannot be overwritten through the exception.
 
 
-## WB-D086 - Grand attempts while mandatory obligations are pending
+## WB-D086 - Earlier unresolved Grand obligation assessment
 
-- Status: OPEN; recommendation PROPOSED
-- Authority/source: Reconciliation of confirmed between-normal-Fates Grand attempts and mandatory Punishment/Sacrifice rules, 2026-10-09.
-- Decision: Historical approval does not resolve whether a Grand attempt may interrupt a mandatory obligation. Recommend finish that obligation first; collect Q8 for user return without silently imposing the recommendation.
-- Rationale: Preserve both no-artificial-readiness-gate intent and the mandatory consequence without inventing prior approval.
-- Affects: GRAND_FATES, GAME_RULES, OPEN_QUESTIONS, MONDAY_HANDOFF, state/attempt contracts.
-- Exceptions/dependencies: No level/playtime gate, additional spin charge, checklist reset or automatic rejection introduced. Independent implementation can represent obligation and attempt separately.
-- Supersession: None; unresolved interaction explicitly retained.
-- Acceptance criteria: User-selected policy recorded before coding the transition; preserve evidence and one-spin accounting under either policy.
+- Status: SUPERSEDED by recovered WB-D089.
+- Authority: Earlier assistant reconciliation based on incomplete history.
+- Evidence: S8-M0321 now recovered.
+- Decision: The earlier Q8 ambiguity is resolved by the explicit no-active-Fate precondition. Complete pending mandatory obligations before Grand activation.
+- Rationale: Preserve the changed provenance rather than retain an inaccurate open question.
+- Affects: Grand Fates, state contract and recovery UX.
+- Exceptions/dependencies: No level/playtime gate or additional spin cost.
+
+## WB-D087 - End-of-Fate Audit and consecutive Penance escalation
+
+- Status: CONFIRMED mechanism; numeric thresholds BALANCE_TBD.
+- Authority: Explicit user approval.
+- Evidence: S8-M0289 (judge everything at end; objective-specific tolerance), S8-M0291–0293 (consecutive escalation and lock-in).
+- Decision: Record observable unauthorized activity during the Fate and judge it at completion. Skilling uses unauthorized XP; kill objectives use unauthorized kills and permit their legitimate combat XP. Broader unrelated progression can generate Penance even when outside the visible metric. Cheating during Penance escalates the next punishment. A clean assigned Fate/Penance resets the consecutive streak completely.
+- Rationale: Prevent exploiting a narrow visible counter while allowing normal collateral activity; escalation is consecutive rather than a permanent lifetime label.
+- Affects: [GAME_RULES](GAME_RULES.md), [PUNISHMENTS](PUNISHMENTS.md), UX, detector contracts, balance models and persistence.
+- Exceptions/dependencies: Only supported observable evidence may be judged; incidental/required by-products are exempt. Extreme deterministic multi-day goals may be used when feasible; third offense does not automatically mean level 99. A universal two-hour punishment cap is not confirmed. Exact audit/reward/FP settlement ordering and broad-audit thresholds remain UNVERIFIED. No pause observation or retrospective paused credit.
+
+## WB-D088 - New-account mode scope
+
+- Status: CONFIRMED scope; exact onboarding eligibility TECH_TBD.
+- Authority: Explicit user approval.
+- Evidence: S8-M0327.
+- Decision: Wheelbound is designed for new accounts, not activation halfway through an existing account. Existing-Master grandfathering and pre-owned Grand Fate auto-credit are outside the supported initial scope.
+- Rationale: The run’s progression starts with Wheelbound rather than reconstructing a midgame history.
+- Affects: [GRAND_FATES](GRAND_FATES.md), onboarding, account access and development pipeline.
+- Exceptions/dependencies: Do not invent a level/playtime prerequisite for Grand attempts. Exact fresh-account activation predicate and Tutorial Island/mainland onboarding require documented technical validation. Scope does not authorize silently rejecting legitimate tutorial progress.
+
+## WB-D089 - Grand attempts require no active Fate
+
+- Status: CONFIRMED precondition; obligation-state mapping is delegated implementation detail.
+- Authority: Explicit user approval.
+- Evidence: S8-M0321.
+- Decision: Activate a Grand attempt only after finishing the current Fate, with no active Fate, at the point the player would otherwise spin again. A pending mandatory Punishment or forced Sacrifice has not finished and must settle first.
+- Rationale: Grand attempts replace the next ordinary assignment opportunity; they do not bypass the current assignment.
+- Affects: [GRAND_FATES](GRAND_FATES.md), [STATE_CONTRACT](STATE_CONTRACT.md), [BLUEPRINT](BLUEPRINT.md).
+- Exceptions/dependencies: Zero spins does not prevent a valid Grand attempt; no minimum level/playtime and no Master spin charge. Preserve checklist progress across failed attempts. Supersedes WB-D086’s missing-history assessment.
+
+## WB-D090 - Separate purchased Fate Card pools and verifiable Challenge eligibility
+
+- Status: CONFIRMED historical pool separation and verification rule; Bossing Challenge reconciliation UNVERIFIED.
+- Authority: Explicit user approval.
+- Evidence: S8-M0227 and S8-M0231; current-session Bossing L/S/G and initial offering approvals remain controlling.
+- Decision: Skilling and Bossing purchase their own card types/pools, even where card names match. Purchased types can appear among the limited offerings. A Challenge is eligible only when qualification can be established beforehand and correct completion reliably detected afterward.
+- Rationale: Additional progression sinks and implementable challenges without ambiguous completion.
+- Affects: [FATE_CARDS](FATE_CARDS.md), [FATE_SHOP](FATE_SHOP.md), method detectors and catalog acceptance.
+- Exceptions/dependencies: Initial two independently generated Standard targets and third-offering upgrade remain current new approvals. Historical user also named a Bossing Challenge card; the current L/S/G clarification does not explicitly resolve whether that additional type remains intended. Keep it disabled and flag the ambiguity rather than silently declaring it rejected. Boss selection is always random, with no choices/rerolls.

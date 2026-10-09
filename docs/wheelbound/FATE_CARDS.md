@@ -24,3 +24,6 @@ Quest choices are distinct quests, separate from same-type card offerings. C01 i
 ## Catalog drafting checkpoint
 
 See [CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACCEPTANCE.md) for newly authored drafts (WB-D079/080), distinct from missing historical catalogs. Machine-readable 100 bounty candidates, 50 punishments, 67 repository boss categories and 213 quest enum records are in catalogs/. Source metadata is not runtime eligibility. All unvalidated bounty/punishment entries remain disabled. H3 exercises named bounty/reward and plain-XP punishment drafts in synthetic trials only; exact quest/boss access remains unmodeled.
+
+## Recovered purchase-pool separation
+S8-M0227 explicitly locks separate Skilling and Bossing Fate Card purchases/pools, with shared names permitted and different artwork suggested. Buying a Skilling card does not automatically buy its Bossing namesake. S8-M0231 explicitly confirms qualification-before-generation and reliable completion verification for Challenge cards. Current default Standard/two distinct targets/third offering approvals remain controlling. Historical Bossing Challenge intent is preserved as Q9; do not enable it or call it rejected without resolving the later wording.

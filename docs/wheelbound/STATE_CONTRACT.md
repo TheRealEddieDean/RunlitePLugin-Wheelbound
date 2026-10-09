@@ -36,3 +36,8 @@ Duplicate commandId returns its existing result. Duplicate evidence key cannot p
 Version-specific migration is a pure transformation on a copy; validate schema, IDs, ledger sum and gameplay invariants before replacing a snapshot. Retain the original on any failure. Unknown future schemas are read-only. Never delete a save to resolve an error, import paused progress or merge accounts by display name. Single writable session is the delegated policy; synchronization support is not promised.
 
 Manual recovery/export may include local game/run state, never credentials. A self-attested action, if later approved, must carry a distinct evidence classification and cannot be presented as automatically verified.
+
+## Recovered draw and audit constraints
+Forced Sacrifice freezes candidate identities/quantities and then durably commits a random Death’s Wheel outcome before animation (WB-D033). The player cannot select the forced possession. Persist candidates, outcome and donation receipt separately; restart never draws again. Voluntary item/quantity selection remains explicit. Grand activation requires ObligationStage NONE, with no pending mandatory settlement (WB-D089). Card unlocks are keyed by their separate Skilling/Bossing purchase pool, not a global shared name (WB-D090).
+
+Audit evidence accumulates during active observation and is judged at Fate completion (WB-D087). Persist the consecutive violation streak and any resulting Penance obligation atomically; a clean completion resets it. Exact reward/FP ordering is not yet recovered, so no adapter may invent completion forfeiture or tick-by-tick charges.

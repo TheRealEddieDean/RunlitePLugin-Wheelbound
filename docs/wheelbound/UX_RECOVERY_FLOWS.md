@@ -10,7 +10,7 @@ Always display actual odds based on all active weights, including Taint/Sacrific
 ## Fate lifecycle
 | State | Primary content/action | Recovery and constraints |
 | --- | --- | --- |
-| Not Started | Explain self-imposed local observation and sealed five-way Grand Fate | Existing-account goal policy must be resolved before supporting that account scope |
+| Not Started | Explain self-imposed local observation and sealed five-way Grand Fate | New-account scope confirmed; validate fresh-account onboarding without Grand level/playtime gates |
 | Tutorial Island | Onboard and seal Grand Fate when appropriate | No ordinary mainland task started prematurely |
 | Active, no obligation | Spin Master Wheel | Zero spins shows Defy/eligible Grand Fate options, not run failure |
 | Combat selected | Choose Attack/Strength/Defence/Ranged/Magic | Choice before target generation; HP by-product displayed |

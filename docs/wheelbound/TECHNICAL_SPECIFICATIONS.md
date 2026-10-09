@@ -77,7 +77,7 @@ Jagex's 2025-06-04 update explicitly reduced Aether Runes to 2,500 per radiant p
 
 VALIDATION GATES: exact current server completion strings, normal/variant encounter identities, counter transmission timing, quiver claim routes and radiant creation/fragment receipt sequence. Source availability supports this design but no runtime trace was captured. Item/loot and chat must join to one receipt; if only part survives a disconnect, keep evidence pending without awarding or accusing the player.
 
-Significant unresolved gameplay decision: how existing-account Grand Fate progress counts. Repeatable Inferno/Colosseum/Awakened completions can require a fresh run; an account already at Master tier cannot normally earn that first transition again. No technical adapter decides this policy. Five equal outcomes and no reroll remain confirmed until the user selects an explicit existing-account rule. Do not silently exclude outcomes, auto-win or invent a new minimum playtime.
+Recovered S8-M0327 confirms new-account mode scope (WB-D088), so existing-Master grandfathering is outside initial support. The exact fresh-account activation predicate remains TECH_TBD; technical adapters must not invent Grand level/playtime gates, exclude sealed outcomes or auto-win. S8-M0321 requires no active Fate for Grand activation (WB-D089).
 
 ## Physical vendor visit and unlock transaction
 

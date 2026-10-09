@@ -14,7 +14,7 @@
 | Partial bank visibility | Unknown is not empty or verified ownership |
 | All shops required for quest locked | Fate selection must detect dependency or document permitted recovery |
 | Existing completed Grand Fate | Starting-account credit policy OPEN |
-| Grand Fate during mandatory obligation | OPEN; ordinary lock confirmed |
+| Grand Fate during mandatory obligation | Finish the obligation first; recovered no-active-Fate precondition WB-D089 |
 | Server update changes catalog | Freeze old objective and preserve evidence; migration review |
 
 | Corrected case | Required result |

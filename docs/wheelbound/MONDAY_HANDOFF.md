@@ -21,15 +21,14 @@ First task is WB-I00: obtain recommended JDK11 environment, resolve wrapper/depe
 
 ## Major decisions for return
 See OPEN_QUESTIONS for options and rationale. Priority:
-1. Existing-account Grand Fate baseline (already-Master/fresh receipt problem).
-2. Full-Coffer/unsupported-account forced donation escape.
-3. Forced Sacrifice selection: player choice versus random Death’s Wheel historical conflict.
-4. Exhausted/unavailable ordinary slice policy, especially completed Questing with five remaining slices.
-5. Whether Grand Fate attempts may interrupt a mandatory Punishment/Sacrifice obligation.
-6. GP→spins conversion and minimum donation reward.
-7. Missing historical transcript/catalogs and new-draft adoption.
-8. Restrictive-policy fallback only if exact proposed controls fail review.
+1. Full-Coffer/unsupported-account forced donation escape.
+2. Exhausted/unavailable ordinary slice policy, especially completed Questing with five remaining slices.
+3. GP→spins conversion and minimum donation reward.
+4. Bossing Challenge card ambiguity after current L/S/G clarification.
+5. Complete source reconciliation and adoption of new catalog drafts.
+6. Restrictive-policy fallback only if exact proposed controls fail review.
 
+Recovered first batch resolves new-account scope, random forced Death’s Wheel and no-active-Fate Grand precondition. End-of-Fate audit and severe consecutive Penance require a new faithful model; H1–H3 remain preserved hypothesis experiments.
 No artificial Grand Fate level/time gate, new pause penalty, Pardon cap, lifetime enhancement price or extra special slot is introduced. Old assistant excerpts remain secondary evidence.
 
 ## External proof before release
@@ -38,4 +37,4 @@ Live detector traces: initialized XP/quest/CA, method/tool attribution, four awa
 Before calling balance final, add reviewed real boss/quest access, resource routes, all remaining sinks/rewards and user decisions. Before enabling a catalog item, supply source/access and positive/negative/paused traces. Until then content is disabled and figures remain BALANCE_TBD.
 
 ## Resume
-Use WORK_STATUS for the precise resume prompt. Shared conversation could not be fetched; request an export when the user returns. Checkpoint commits and PDF are durable; no automatic relaunch or weekend background execution is claimed.
+Use WORK_STATUS for the precise resume prompt. The shared conversation is now preserved as 436 visible messages with stable S8 locators; finish reconciliation before publishing an updated PDF. Separate Brainstorming chat and original nontext attachments remain inaccessible. Checkpoint commits and PDF are durable; no automatic relaunch or weekend background execution is claimed.

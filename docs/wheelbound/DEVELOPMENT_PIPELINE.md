@@ -34,7 +34,7 @@ Acceptance: five ordinary/three activities; 24 total including specials; exact d
 | WB-I05 | I03; telemetry/audit | Initialized XP/quest/CA deltas; pause/offline no backfill; supported method templates only | Large; client evidence |
 | WB-I06 | I04/I05; access adapters | Exact transaction route tests and specific policy gate before controls; physical visit proof | Large; review |
 | WB-I07 | I02/I05; defiance/punishments/coffer | One spin exactly once, 24-slot displacement, no fake donation receipt, full-Coffer policy resolved | Large; irreversible action |
-| WB-I08 | I05; Grand Fate ledger | Five-way sealed outcome; fresh receipts; four awakened checks; existing-account policy resolved | Large |
+| WB-I08 | I05; Grand Fate ledger | Five-way sealed outcome; fresh receipts; four awakened checks; new-account scope and validated activation predicate | Large |
 | WB-I09 | I01–I08; UI | Accessibility, small layouts, error recovery and no focus hooks/game input generation | Medium |
 | WB-I10 | All; packaging/manual review | Complete detector traces and route matrix, regression build, minimal dependency/package audit, explicit Hub review | Large; external |
 

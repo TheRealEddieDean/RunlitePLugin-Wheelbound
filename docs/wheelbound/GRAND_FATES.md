@@ -8,7 +8,7 @@ Master Combat Achievements: attain Master CA tier; S3 associates Ghommal's hilt 
 
 Attempts between ordinary Fates, no Master spin charge, no artificial level or playtime threshold. Exit/failure ends attempt, not run. Preserve legitimately verified multipart progress. S3 allows permitted active CA progress before explicit activation; event eligibility and pre-run historical progress policy OPEN.
 
-Tutorial Island may introduce/seal Grand Fate, ordinary Fate starts mainland (S3, UNVERIFIED). Existing account welcome flow and pre-owned reward evidence require explicit design.
+Tutorial Island may introduce/seal Grand Fate, ordinary Fate starts mainland (S3, UNVERIFIED). New-account mode scope is explicitly confirmed at S8-M0327 (WB-D088). Midpoint activation and existing-Master grandfathering are outside initial support; exact fresh-account onboarding predicate remains TECH_TBD, without artificial Grand level/playtime gates.
 
 ## Candidate completion signals from current RuneLite source
 DT2 awakened kill totals have separate varps for each boss (3971-3974). Proposed detector snapshots values per account/attempt and requires qualifying increases; normal kills and existing armour do not prove a fresh awakened kill. Master-tier predicate can read CA_POINTS=14815 and CA_THRESHOLD_MASTER=14813, provided initialized threshold is positive. These are source-confirmed APIs, not live-tested receipts; pre-run credit rules remain unresolved. Inferno, Colosseum and Radiant-set evidence still need individual mappings. No combat mechanic, prayer or positional assistance is part of Grand Fate tracking.
@@ -16,7 +16,7 @@ DT2 awakened kill totals have separate varps for each boss (3971-3974). Proposed
 
 ## Detailed technical resolution checkpoint
 
-[TECHNICAL_SPECIFICATIONS](TECHNICAL_SPECIFICATIONS.md) supplies current detector contracts, route coverage, initialization rules, source evidence and explicit live-validation gates (WB-D069–075). Its refined Coffer route uses visible initialized UI/server quote and balance as primary evidence; the old IF-variable mapping is optional pending validation. Method-specific templates require a supported catalog. Vendor inspection does not unlock transactions. Existing-account Grand Fate credit, full Coffer recovery and exact restrictive policy acceptance remain in [OPEN_QUESTIONS](OPEN_QUESTIONS.md). No live test or production implementation is claimed.
+[TECHNICAL_SPECIFICATIONS](TECHNICAL_SPECIFICATIONS.md) supplies current detector contracts, route coverage, initialization rules, source evidence and explicit live-validation gates (WB-D069–075). Its refined Coffer route uses visible initialized UI/server quote and balance as primary evidence; the old IF-variable mapping is optional pending validation. Method-specific templates require a supported catalog. Vendor inspection does not unlock transactions. New-account scope is confirmed by WB-D088; full Coffer recovery and exact restrictive policy acceptance remain in [OPEN_QUESTIONS](OPEN_QUESTIONS.md). No live test or production implementation is claimed.
 
 ## Master reward correction
 
