@@ -1,7 +1,7 @@
 # Wheelbound source of truth
 Recovery checkpoint: 2026-10-09. Branch: wheelbound-mode. Documentation only; implementation is not authorized.
 
-Read [DECISIONS](DECISIONS.md) before changing mechanics, then [BLUEPRINT](BLUEPRINT.md). Current user instructions override historical proposals. CONFIRMED means supported by direct current instruction or retrieved user decision. UNVERIFIED means recoverable intent without accessible approval evidence. BALANCE_TBD and TECHNICAL_TBD remain open, not implementation defaults.
+Read [DECISIONS](DECISIONS.md) before changing mechanics, then [BLUEPRINT](BLUEPRINT.md). Current user instructions override historical proposals. CONFIRMED gameplay means supported by direct current instruction or retrieved user decision. Technical-evidence records explicitly identify source inspection and must not be mistaken for user approval. UNVERIFIED means recoverable intent without accessible approval evidence. BALANCE_TBD and TECHNICAL_TBD remain open, not implementation defaults.
 
 ## Sources and limits
 S1: current user addendum, explicitly confirming final rules.
@@ -10,7 +10,7 @@ S3: attached Wheelbound Game Design and Implementation Guide, version 1.0, nine 
 S4: Personal Context search summaries of dated user/assistant messages, not full transcripts.
 S5: existing repository README, docs/DEVELOPMENT.md, RELEASE_AUDIT.md and SUBMISSION.md at c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
 
-Full named conversations were not accessible. Missing: complete approval turns, exact boss membership and gates, curated 100 item/50 punishment lists, earlier economy iterations, daily reset rules, sacrifice fallback and progression exceptions. Preserve these as UNVERIFIED/OPEN. No docs/wheelbound directory existed in the inspected recursive branch tree.
+Full named conversations were not accessible. Missing: complete approval turns, exact boss membership and gates, curated 100 item/50 punishment lists, earlier economy iterations, daily reset rules and older progression discussion beyond the current explicit recovery resolutions. Preserve these as UNVERIFIED/OPEN. No docs/wheelbound directory existed in the inspected recursive branch tree.
 
 Existing release has Bossing, Skilling, CA, Pet Hunting, Questing and Custom wheels. Earlier two-wheel restriction was superseded in release documentation; do not remove shipped wheels as part of design recovery.
 
@@ -26,3 +26,7 @@ S6: explicit current user resolutions dated 2026-10-09. Bossing cards and unlimi
 User corrections committed at 647f71e1bc877a5b64210458a441ec5dc9b2b094. 48,000 offline hypothesis trajectories executed; raw results, model and parameters in simulation/. Current specifications include NEW PROPOSED transaction, audit and daily-board details, clearly separate from approvals. This is not final balance or live feasibility confirmation.
 
 WB-D057 now confirms post-trigger acquisition of an eligible item worth at least 10,000 GP. WB-D058 confirms Taint and Sacrifice each cost one spin. H2 now models these approvals with explicitly provisional acquisition duration/availability; H1 remains historical. Reserve economics are not finalized. Final catalogs/implementation-ready PDF cannot be truthfully marked complete yet. Checkpoint PDF reflects all current Markdown, not an independent source.
+
+## Policy and feasibility checkpoint
+[POLICY_AND_FEASIBILITY](POLICY_AND_FEASIBILITY.md) adds the original submission's actual blockers and a current capability/policy matrix. Current source research supports many passive detectors but does not approve trade-menu restrictions or prove shop/GE blocking/Coffer receipts. Twenty-three requested system documents remain, plus this supplemental audit. Markdown remains authoritative; older checkpoint PDFs predate this audit until regenerated.
+

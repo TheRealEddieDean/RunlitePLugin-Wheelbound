@@ -622,3 +622,40 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Rationale: Test recovery burden without inventing automatic account unlocks or treating an empty set as a waived obligation.
 - Affects: SIMULATION_RESULTS, ECONOMY, TESTING and offline simulation files.
 - Exceptions/dependencies: Duration, item availability and legal acquisition route are unvalidated hypotheses. Real access, skill/tool prerequisites, Blessed exclusions and acquisition XP tolerance require catalog/detector validation. Zero simulated stops follow from guaranteed synthetic acquisition and do not prove real-account deadlock freedom. GP-to-spin conversion still uses H1's unapproved minimum-one hypothesis.
+
+## WB-D062 - Preserve the actual original Hub review blockers
+
+- Status: CONFIRMED historical technical evidence, checked 2026-10-09
+- Authority: Public Hub comments, CI log and accepted source; not a user gameplay approval.
+- Decision: Initial build rejected fresh Gson construction; later reviewer rejected KeyboardFocusManager. Keep injected Gson and event-component text-input checks. PR 16702 merged on 2026-09-24 at c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
+- Rationale: Prevent repeating real blockers or mistaking a failed packaging scan for rejection of Wheelbound's basic wheel concept.
+- Affects: POLICY_AND_FEASIBILITY, RUNELITE_INTEGRATION, ARCHITECTURE, UI_UX and TESTING.
+- Exceptions/dependencies: Private reviewer discussions inaccessible. Existing acceptance does not approve future mode features. CI/source details and links are preserved in POLICY_AND_FEASIBILITY.md.
+
+## WB-D063 - Access enforcement has unresolved policy constraints
+
+- Status: TECHNICAL CONSTRAINT; advisory replacement PROPOSED, gameplay decision unresolved
+- Authority: Jagex client guidelines and RuneLite rules; assistant assessment under delegated research authority.
+- Decision: Do not remove/reorder player Trade with options. Do not treat click consumption as an approved workaround. Shop/GE state-dependent interception has API support but needs specific policy and coverage review. Preserve established access-lock intent; do not silently replace it with new penalties.
+- Rationale: API availability is not permission or comprehensive enforcement.
+- Affects: ACCOUNT_ACCESS, GAME_RULES, UI_UX, ARCHITECTURE, RUNELITE_INTEGRATION and implementation plan.
+- Exceptions/dependencies: Warning/activity-log alternative is a recommendation, not user-approved gameplay. No maintainer contact or new submission authorized/performed. Exact interception behavior and alternate routes need review.
+
+## WB-D064 - Grand Fate candidate counters and thresholds
+
+- Status: API evidence CONFIRMED; detector design PROPOSED; live verification outstanding
+- Authority: Primary RuneLite generated source, inspected 2026-10-09.
+- Decision: Explore four awakened kill varps (3971-3974) for the DT2 checklist and CA_POINTS (14815) versus CA_THRESHOLD_MASTER (14813) for Master tier. Use account/session baselines and qualifying deltas; do not assume a fixed threshold or pre-owned items prove a fresh completion.
+- Rationale: Specific transmitted account signals are stronger candidates than generic item possession or NPC despawn.
+- Affects: GRAND_FATES, BOUNTIES, RUNELITE_INTEGRATION and TESTING.
+- Exceptions/dependencies: Transmission timing, initial zeros, pause/pre-run credit and threshold updates require live/catalog validation. This does not settle gameplay credit for existing progress.
+
+## WB-D065 - Keep future mode within local observation and explicit player actions
+
+- Status: CONFIRMED platform constraints; assistant implementation boundary
+- Authority: Current Jagex rules and RuneLite Hub policy, not a new user gameplay approval.
+- Decision: Do not automate OSRS actions, add boss attack/prayer/safe-position assistance, simulate encounters in-client, restore forbidden focus/Gson behavior or access credentials. Use Java-compatible Hub build, scoped persistence and injected services. Offline design tools stay outside the production JAR.
+- Rationale: Preserve player control and reviewable plugin behavior.
+- Affects: ARCHITECTURE, RUNELITE_INTEGRATION, UI_UX and IMPLEMENTATION_PLAN.
+- Exceptions/dependencies: Passive completion tracking is a policy interpretation pending specific review; accepted existing plugins are not blanket precedent. Coffer, trade and method attribution remain incomplete. FP randomness does not authorize OSRS staking or real-money sales.
+

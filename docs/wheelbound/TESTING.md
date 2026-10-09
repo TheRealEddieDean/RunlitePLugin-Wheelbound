@@ -16,3 +16,9 @@ Bossing Lesser/Standard/Greater: selected before random boss, no boss choice/rer
 Verify empty-set Sacrifice enters acquisition recovery, accepts a newly obtained eligible item worth at least 10,000 GP, rejects below-minimum/ineligible/protected items, and blocks ordinary progression until verified donation. Unknown bank contents must not trigger empty-set recovery. Verify one Taint spin charge across completion/restart/replay, with no second Punishment debit. Verify one Sacrifice spin charge before its spin reward, including acquisition recovery and restart; donation completion must not charge another spin.
 
 Current offline simulation replay must also agree across process hash seeds, not merely two calls in one interpreter. Preserve historical results with their source revisions; do not relabel them as current-rule runs.
+
+## Submission regression and future live verification
+Static production review must catch fresh Gson/OkHttp construction, KeyboardFocusManager, forbidden input/server actions, restricted scripts, unsafe persistence and unexpected packaged dependencies. Reproduce the Hub standard packaging scan, not merely local Java compilation: the initial Gson failure happened during packaging. Current official example/standard target is Java 11; align actual Hub tooling when implementation is authorized.
+
+Future controlled live cases: CA points/threshold initialization and change; four awakened counters on ordinary versus awakened kills; paused/pre-run/reconnected completions; NPC loot/server loot/chests/no-loot; vendor identity and bank completeness; Coffer donation receipt versus drop/bank/consume. GE initial EMPTY states must not create penalties. Do not test a prohibited menu-removal workaround in production. No such live tests were performed now.
+

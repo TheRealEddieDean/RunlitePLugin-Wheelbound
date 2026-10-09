@@ -22,3 +22,9 @@ Keyboard labels include card type/target/reward/restrictions. Avoid KeyboardFocu
 
 ## Confirmed recovery and Taint accounting
 Empty forced-Sacrifice recovery must show: "Acquire an eligible item worth at least 10,000 GP to complete your Sacrifice." Show why known items are excluded; unknown bank state requests evidence refresh rather than acquisition. Keep the pending obligation visible and disable new ordinary assignments. Taint confirmation previews a one-spin cost; Punishment completion shows no additional spin cost. Sacrifice confirmation also previews a one-spin cost.
+
+## Original rejection and access-policy implications
+Keep event-component text-entry detection; never use KeyboardFocusManager to find the global focus owner. Avoid forcing focus/window state. Existing local popup key consumption is accepted at the old submitted revision, not permission to intercept ordinary gameplay globally.
+
+Warn clearly when policy/coverage prevents guaranteeing an access restriction. A PROPOSED advisory design leaves player Trade with entries intact and records only verified observed activity; new penalties or removal of established locks require a separate gameplay decision. Do not show successful donation, Grand Fate or unlock based on ambiguous evidence. Policy/source detail: [POLICY_AND_FEASIBILITY](POLICY_AND_FEASIBILITY.md).
+

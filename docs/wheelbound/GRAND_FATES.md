@@ -9,3 +9,7 @@ Master Combat Achievements: attain Master CA tier; S3 associates Ghommal's hilt 
 Attempts between ordinary Fates, no Master spin charge, no artificial level or playtime threshold. Exit/failure ends attempt, not run. Preserve legitimately verified multipart progress. S3 allows permitted active CA progress before explicit activation; event eligibility and pre-run historical progress policy OPEN.
 
 Tutorial Island may introduce/seal Grand Fate, ordinary Fate starts mainland (S3, UNVERIFIED). Existing account welcome flow and pre-owned reward evidence require explicit design.
+
+## Candidate completion signals from current RuneLite source
+DT2 awakened kill totals have separate varps for each boss (3971-3974). Proposed detector snapshots values per account/attempt and requires qualifying increases; normal kills and existing armour do not prove a fresh awakened kill. Master-tier predicate can read CA_POINTS=14815 and CA_THRESHOLD_MASTER=14813, provided initialized threshold is positive. These are source-confirmed APIs, not live-tested receipts; pre-run credit rules remain unresolved. Inferno, Colosseum and Radiant-set evidence still need individual mappings. No combat mechanic, prayer or positional assistance is part of Grand Fate tracking.
+

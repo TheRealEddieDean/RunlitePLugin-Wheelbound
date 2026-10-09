@@ -15,3 +15,9 @@ Tempt Fate requires the same physical visit and Locked state. Persist 50/50 resu
 Pardon requires Banned state and affordable fixed price. Receipt restores Locked without changing paid-class counts. Pardon access itself need not imply remote vendor unlocking; whether restoration must also happen beside the vendor is unverified. UI may prepare the purchase remotely, but keep actual unlock/Tempt strictly in-world.
 
 Detect vendor with stable NPC/shop identity, region/instance and shop widget association; NPC display name alone is insufficient where duplicated. Unknown vendor remains unavailable-data until catalog resolved, not silently Unlocked. Warn about quest-essential vendors before committing an assignment. No free vendor exemption is introduced.
+
+## Policy constraint discovered 2026-10-09
+The gameplay intent above remains recorded. Jagex explicitly prohibits removing/reordering player-based menu options, including Trade with. An alternate cancellation mechanism is not established as compliant. NPC-shop/GE interception must receive feature-specific review and live coverage checks; a consume method alone is insufficient.
+
+Proposed policy-compatible fallback: keep local Locked/Unlocked/Banned state, physical vendor unlock and visible restriction warnings with a verified activity log. This is not an approved replacement for hard blocking. No new trading/shop FP penalty is introduced. Preserve this unresolved design dependency rather than promise impossible or unapproved enforcement. See [POLICY_AND_FEASIBILITY](POLICY_AND_FEASIBILITY.md).
+

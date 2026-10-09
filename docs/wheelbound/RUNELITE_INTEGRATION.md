@@ -38,3 +38,11 @@ Official game updates show Coffer eligibility changes:
 [More from the Getting Around Poll](https://secure.runescape.com/m=news/a=13/more-from-the-getting-around-poll?oldschool=1) adds named Deadman items.
 [Bank Tags and Trouver Rework](https://secure.runescape.com/m=news/bank-tags-trouver-system-rework--more?oldschool=1) adjusts item values relevant to Coffer.
 Therefore price threshold alone is not an authoritative eligibility detector; validate donation UI acceptance and actual receipt. No live Coffer verification was performed.
+
+## Original Hub review and current capability audit
+See [POLICY_AND_FEASIBILITY](POLICY_AND_FEASIBILITY.md) for PR 16702 comments, original build log root cause (fresh Gson), accepted focus-manager fix, current Jagex rules, and a per-system capability matrix. Research is complete at the source-inspection level; no live-client proof or approval of new mode enforcement was obtained.
+
+New candidate signals: VarPlayerID awakened kill totals 3971-3974 and VarbitID CA_THRESHOLD_MASTER=14813 with CA_POINTS=14815. A zero/uninitialized threshold must not trigger win. Account/session/attempt eligibility and threshold changes need validation. Diary completion flags exist but do not prove reward claim. ServerNpcLoot supplements loot evidence; raid chests and lootless kills are not covered universally.
+
+MenuOptionClicked.consume availability does not authorize removing Trade with or prove safe equivalent cancellation. Jagex expressly disallows removing/reordering player-based options. Treat trade hard-blocking and shop/GE interception as unresolved policy/coverage work; do not implement a workaround. Coffer award still requires an actual donation receipt; no reliable Coffer balance/widget mapping was verified.
+

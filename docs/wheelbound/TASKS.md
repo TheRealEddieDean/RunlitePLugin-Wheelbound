@@ -21,3 +21,11 @@
 - [ ] Historical full catalogs remain unavailable; do not fabricate them as recovered.
 
 - [x] Current-rule H2: 12,000 baseline plus 36,000 sensitivity trajectories, historical H1 outputs preserved; no RuneLite implementation.
+
+## Policy/capability audit checkpoint
+- [x] Retrieve PR 16702 comments, failed build log and accepted source; identify fresh-Gson packaging failure and forbidden KeyboardFocusManager use.
+- [x] Review current primary Jagex rules and RuneLite policy; document capability matrix and exact candidate awakened/Master-CA signals.
+- [ ] Resolve WB-D063 trade/access enforcement policy conflict; no new gameplay penalty approved.
+- [ ] Obtain shop/GE interception clarification and live detector evidence once implementation is authorized.
+- [ ] Verify Coffer acceptance/value receipt and real acquisition routes; do not infer from item disappearance.
+

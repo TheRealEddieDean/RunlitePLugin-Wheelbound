@@ -15,3 +15,7 @@ Each task references decision IDs; unresolved core conflicts cannot be silently 
 Confirmed mechanics are implementable requirements; UNVERIFIED history needs source recovery, and PROPOSED details remain distinct. Implement the approved 10,000 GP acquisition recovery and one-spin Taint/Sacrifice rules in future design tooling; apply the confirmed one-spin Sacrifice charge before final balance acceptance. Import/approve item, punishment, quest and boss catalogs. Current technical report establishes API availability, not tested Coffer proof or policy acceptance.
 
 Each phase ends with domain invariants plus live detector evidence where applicable. Do not claim Plugin Hub approval from existing code or available consume API. PDF generated from this directory is a checkpoint while major OPEN items remain.
+
+## Research checkpoint 2026-10-09
+Source/API and original-rejection audit is recorded in [POLICY_AND_FEASIBILITY](POLICY_AND_FEASIBILITY.md). Begin future implementation with passive observation/local domain state. Restrictive player menus have a policy conflict; shop/GE interception and Coffer proof remain unresolved. Obtain specific policy clarification before implementing controls. No code, live-client test, maintainer message or submission is included in this research phase. Final acceptance requires more than the existing randomizer's prior merge.
+

@@ -14,3 +14,7 @@ Maintain allowed skill/method/location predicates and one cumulative unauthorize
 
 ## Confirmed recovery and Taint accounting
 Confirmed 2026-10-09: Taint tasks consume one spin, exactly once; their Punishment adds no second charge. Sacrifice also consumes one spin, explicitly confirmed. If forced Sacrifice has no eligible item, keep the obligation pending while the player acquires an eligible item worth at least 10,000 GP. This is an explicit exception to frozen ownership, not a waived Sacrifice.
+
+## Enforcement-policy dependency
+Logical access restrictions remain documented. Their implementation cannot remove/reorder player Trade with options under current Jagex guidelines. Warning/log alternatives and any replacement penalty remain PROPOSED until explicitly decided; no research finding silently changes the gameplay rule. Shop/GE cancellation likewise requires feature-specific review. Completion tracking never automates the underlying OSRS task.
+
