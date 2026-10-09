@@ -7,3 +7,5 @@ Defiance: Cleansing removes exactly one Taint; Pardon has unlimited purchases at
 Account: vendor directory and GE permanent access.
 
 Show eligibility, current FP, exact price, resulting odds and irreversible loss before confirmation. Optional purchases cannot create debt. All receipts persist atomically with inventory/unlock changes. Relevant Defy tabs reveal after encounter (S3, historical approval UNVERIFIED).
+
+S8-M0343/0345 explicitly confirms the central shop versus content tree distinction (WB-D106). S8-M0394 selects progressively surfaced Defiance/Protection after first Defy under delegated authority; Pardon introduction follows shop banning. This does not permit remote NPC unlock. Satchel capacities 3/6/10/15 were selected under user’s numeric delegation, not individually quoted numeric approvals. Slice protection was rejected at M0365; item Blessings remain.

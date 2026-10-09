@@ -28,11 +28,11 @@ source=json.loads((p/'catalogs/repository_boss_tiers.json').read_text())['entrie
 variants=[v for r in mode['entries'] for v in r['source_variants']]
 assert len(variants)==len(set(variants))==67 and set(variants)=={r['hiscore'] for r in source}
 assert all(r['runtime_enabled'] is False for r in mode['entries'])
-for label,start in [('A02',1),('A03',101),('A04',201)]:
+for label,start,size,users in [('A02',1,100,50),('A03',101,100,50),('A04',201,100,50),('A05',301,136,68)]:
  review=json.loads((p/'research'/('RECOVERY_REVIEW_'+label+'.json')).read_text());rows=review['entries']
- assert [r['locator'] for r in rows]==['S8-M'+str(n).zfill(4) for n in range(start,start+100)]
- assert sum(r['review_status']=='USER_REVIEWED' for r in rows)==50
+ assert [r['locator'] for r in rows]==['S8-M'+str(n).zfill(4) for n in range(start,start+size)]
+ assert sum(r['review_status']=='USER_REVIEWED' for r in rows)==users
 a=p.parent.parent/'automation'
 assert all((a/(n+'.md')).is_file() for n in ['TASK_QUEUE','PROGRESS','SESSION_STATE','BLOCKERS','DECISIONS_PENDING'])
 queue=re.findall(r'^\| (WB-A\d+) \|',(a/'TASK_QUEUE.md').read_text(),re.M);assert len(queue)==len(set(queue))==19
-print('PASS: approved 64-node mode grouping; 300 contiguous indexed messages/150 reviewed user turns; 19 unique queued tasks and five checkpoints')
+print('PASS: approved 64-node mode grouping; 436 contiguous indexed messages/218 reviewed user turns; 19 unique queued tasks and five checkpoints')

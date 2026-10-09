@@ -105,7 +105,8 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 ## WB-D011 - Satchel 3/6/10/15; paid deactivate/reactivate preserves upgrade; free destruction loses upgrade
 
 - Status: CONFIRMED
-- Authority: Explicit user
+- Authority: Explicit user storage/modifier rules; assistant-selected capacities under delegated numeric instruction S8-M0355.
+- Recovered evidence: S8-M0349–0359; M0355 requests three upgrade tiers and delegates slot counts, M0356 proposes 3/6/10/15.
 - Evidence: S2 §7
 - Decision: Satchel 3/6/10/15; paid deactivate/reactivate preserves upgrade; free destruction loses upgrade.
 - Rationale: Storage versus permanent loss tradeoff.
@@ -166,11 +167,11 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 
 - Status: CONFIRMED
 - Authority: Explicit user
-- Evidence: S2 §10
+- Evidence: S2 §10; S8-M0301–0307 and accepted adjacent onboarding M0306/0308; M0365 limits protection to sacrifice items.
 - Decision: Blessed types protect forced sacrifice, maximum three.
 - Rationale: Limited equipment protection.
 - Affects: [DEFY_FATE](DEFY_FATE.md).
-- Exceptions/dependencies: Reassignment timing from S3 unverified.
+- Exceptions/dependencies: Reassignment allowed outside forced event; frozen at trigger per accepted M0306 onboarding interpretation and current master instructions.
 
 ## WB-D018 - Reject ordinary Fate: FP loss/debt, spin consumed, no completion reward, mandatory punishment
 
@@ -304,9 +305,9 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 
 ## WB-D031 - No Fate timer; rewards/objectives freeze
 
-- Status: UNVERIFIED
-- Authority: Historical authority unknown
-- Evidence: S3 §5
+- Status: DELEGATED recovered no-expiry/lifecycle rule; committed target details remain technical specification.
+- Authority: Assistant-selected routine rule under explicit S8-M0391/M0397 delegation.
+- Evidence: S8-M0400 explicitly selects no normal Fate time limits and persistence/no disconnect penalty. S8-M0408 selects displayed rewards and once-only payout.
 - Decision: No Fate timer; rewards/objectives freeze.
 - Rationale: Avoid shifting tasks on level-up/restart.
 - Affects: [FATE_CARDS](FATE_CARDS.md), [PERSISTENCE](PERSISTENCE.md).
@@ -314,9 +315,9 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 
 ## WB-D032 - Taint later adds 0.25 each at cap; Cleansing removes one fixed expensive price
 
-- Status: UNVERIFIED
-- Authority: Historical authority unknown
-- Evidence: S3 §9
+- Status: CONFIRMED fixed unlimited Cleansing and Taint growth; numeric growth increment retained as balance candidate.
+- Authority: User M0313 fixes Cleansing; M0367/0369 approves growth and three-slice cap; assistant M0368 proposes +0.25 growth.
+- Evidence: S8-M0313, M0367–0369; current master assignment retains +0.25 working increment.
 - Decision: Taint later adds 0.25 each at cap; Cleansing removes one fixed expensive price.
 - Rationale: Escalation persists through cleansing.
 - Affects: [DEFY_FATE](DEFY_FATE.md).
@@ -334,13 +335,13 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 
 ## WB-D034 - Blessings reassign outside forced event; locked at trigger
 
-- Status: UNVERIFIED
-- Authority: Historical authority unknown
-- Evidence: S3 §9
+- Status: CONFIRMED accepted onboarding specification; exact original lock wording is assistant interpretation.
+- Authority: User Blessing/onboarding decisions M0301/0305/0307, interpreted in adjacent M0306 and preserved in current master assignment.
+- Evidence: S8-M0306 accepted First Defy onboarding, M0307 agreement; current master instructions.
 - Decision: Blessings reassign outside forced event; locked at trigger.
 - Rationale: Prevent protecting after candidates revealed.
 - Affects: [DEFY_FATE](DEFY_FATE.md).
-- Exceptions/dependencies: No direct approval recovered.
+- Exceptions/dependencies: Do not claim a verbatim user lock for the timing: adjacent accepted onboarding specifies reassignment outside forced event and freeze through its resolution.
 
 ## WB-D035 - Punishment wheel ~12 from ~50, cannot reject, small FP reward
 
@@ -1056,3 +1057,33 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Rationale: Let the player deliberately opt into that risk while adding progression choices.
 - Affects: [FATE_CARDS](FATE_CARDS.md), [FATE_SHOP](FATE_SHOP.md), Challenge eligibility.
 - Exceptions/dependencies: Qualification and reliable completion verification (WB-D090) still required. Buying a card is not a vendor/region/boss unlock or permission to depart from the active objective. Exact Wilderness target/reward/PvP proof catalog remains unfinished.
+
+## WB-D104 - Grand attempt checklists, audit and completion semantics
+
+- Status: CONFIRMED attempt/checklist structure; game-data mapping TECH_TBD/live gated.
+- Authority: Explicit user decisions and adjacent accepted interpretation.
+- Evidence: S8-M0319–0323; M0327–0337; M0339–0341 accepts completion structures.
+- Decision: Attempt Grand Fate activates an unfinished objective as the current Fate; normal off-task audit still applies. Failure/exit ends that attempt and requires explicit reactivation, preserving earlier completed checklist components. Awakened DT2 permits selecting one unfinished boss, marks a verified success, then returns to no-active-Fate. Completing four bosses is the goal; Blood Torva ownership is not an extra requirement. Radiant goal is the full set through its actual contract/sigil/upgrade path, not random armor drops. Master CA progress accepts legitimate active CA evidence and uses the real Master-tier points threshold, without a separate attempt for every CA.
+- Rationale: Persistent endgame progress while each attempt is deliberately chosen and observed.
+- Affects: [GRAND_FATES](GRAND_FATES.md), telemetry, state, UI and attempt fixtures.
+- Exceptions/dependencies: No active obligation precondition WB-D089 and no artificial level/time gate remain. Historical assistant Hilt 4 and three-contract examples were factual mistakes/illustrations, not alternate approved goals; source-checked Hilt 5 and real Yama requirements control. User’s hilt suggestion was tentative; item possession alone cannot substitute for earned Master threshold proof. Grand goals grant no free ordinary unlocks/dedicated slices. Active-mode legitimate CA credit is broader than explicit Grand-attempt-only evidence; paused/offline/pre-run events are not backfilled.
+
+## WB-D105 - Historical delegated lifecycle and economy safeguards
+
+- Status: DELEGATED recovered working rules; Reject/bounty interaction OPEN (Q10).
+- Authority: Assistant decisions selected after explicit user delegation S8-M0391/M0397, not claimed as individually user-approved.
+- Evidence: S8-M0400, M0402, M0408, M0410, M0412; M0414 withdraws extra-slot proposal.
+- Decision: Active Fates persist across logout/crash without disconnect penalty or reroll; normal Fates do not expire. Abandon requires confirmation and ends only local run restrictions/progression, not OSRS state. No unobserved offline credit reconstruction. Rewards are displayed before acceptance and paid once; no passive logged-in FP, no arbitrary FP cap, no forced dailies, no direct XP purchases. Negative FP does not prevent earning from legitimate Fate completion; discretionary purchases need funds. Destroy gives no refund/counter reset. Purchases are atomic, irreversible costs warned, and balance patches do not automatically refund purchases. Display actual active-weight odds and before/after previews; final edit state must preserve five/three/24.
+- Rationale: Stable self-imposed progression and recoverable purchases without policing paused play.
+- Affects: [GAME_RULES](GAME_RULES.md), [ECONOMY](ECONOMY.md), [PERSISTENCE](PERSISTENCE.md), UI and verification.
+- Exceptions/dependencies: M0402 also says no bounty credit for a rejected Fate; earlier always-active bounty/manual-claim rules and current user’s completion-reward-only wording leave earned receipt forfeiture unclear. Preserve this as Q10; do not silently erase accepted bounty evidence or enable rejection farming as a settled policy. Extra special slots proposed at M0412 were withdrawn at M0414 and are rejected. Historical assistant simulation counts/hours are not newly executed experiments in this project.
+
+## WB-D106 - Central Fate Shop, modifier-preserving Satchel and explicit price supersession
+
+- Status: CONFIRMED structure and item-only protection; capacities/prices selected under delegated balancing.
+- Authority: Explicit user decisions, with delegated slot/value selection.
+- Evidence: S8-M0343–0345, M0349–0365, M0373–0389, M0391.
+- Decision: One central categorized Fate Shop modifies/manipulates/protects/recovers; Progression Tree unlocks content. Only active slices occupy wheel capacity. Deactivation stores the same unique instance and modifiers; free destruction loses those modifiers, retains underlying unlocks and gives no refund. Slices have no protection; Blessings protect sacrifice item types only. Enhancements are sequential and visible before purchase. Duplicates may fill available capacity; their per-activity lifetime escalation persists. Enhancement costs depend only on tier, with all purchase-count enhancement escalation explicitly withdrawn at M0385–0387. Rearrangement is free and does not alter odds.
+- Rationale: Preserve invested instances while making irreversible disposal and independent pricing clear.
+- Affects: [FATE_SHOP](FATE_SHOP.md), [WHEELS](WHEELS.md), Satchel/purchase state and UX.
+- Exceptions/dependencies: 3/6/10/15 Satchel capacities were assistant-selected after user instructed it to choose counts, not a quoted user numeric approval. All FP values remain balance candidates. Taint cannot be stored; only Cleansing removes it. Current 24 total slots and ordinary minimum rules govern every edit.

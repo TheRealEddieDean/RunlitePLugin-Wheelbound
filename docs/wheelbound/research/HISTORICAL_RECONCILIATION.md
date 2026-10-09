@@ -66,3 +66,19 @@ Fifty user turns reviewed and 100 visible turns indexed in [A04 ledger](RECOVERY
 | M0269–0299 | Defy cadence, random forced sacrifice, small punishment FP, objective-specific end audit and consecutive escalation | Existing D033/087 authority strengthened; numeric examples not locked |
 
 No automatic boss-erasure purchase, hidden bounty option, full collection-log grind, first-free vendor rule, extra GE character gate, or boss-specific shrinking-CA assignment has been silently added. Next A05 covers S8-M0301–0436 and delegated safeguards before final cross-file reconciliation.
+
+## WB-A05 — remaining 136 visible turns reviewed
+
+All 68 user turns S8-M0301–0436 reviewed; 136 visible turns indexed in [A05 ledger](RECOVERY_REVIEW_A05.json). Across A02–A05: all 436 visible turns indexed and all 218 visible user turns reviewed, with named adjacent proposals consulted. This does not mean every assistant factual assertion was reverified, every historical attachment recovered, or every later cross-system detail finalized. A06 must still check consistency and unresolved interactions.
+
+| Sources | Recovered rule | Register/spec consequence |
+| --- | --- | --- |
+| M0301–0313 | Item-type protection, same forced/voluntary value conversion, initial Blessing onboarding, sequential extra slots, per-unit 10k, fixed unlimited Cleansing | Existing D017/032/034 provenance; exact numeric values retain delegated/balance status |
+| M0319–0341 | Active Grand attempt, persistent checklist, one unfinished Awakened objective; Master points; full Radiant set/real contracts | WB-D104; historical Hilt4/three-contract factual mistakes do not redefine goals |
+| M0343–0365 | Central shop vs content tree; deactivation/modifier-preserving storage; free destroy; no slice protection | WB-D106; 3/6/10/15 capacities selected under explicit numeric delegation |
+| M0367–0389 | Three Taints/growth, sequential visible enhancements, unlimited-with-cap duplicates, tier-only price correction | Preserve latest price/slot rules; old both-price escalation superseded |
+| M0391–0414 | Explicit routine delegation; free pause; Reject; no Grand time gate; five/three minimum; no extra special slots | WB-D105 distinguishes delegated safeguards from explicit locks; extra-slot proposal withdrawn |
+| M0402 vs earlier bounty rules | Reject’s completion-reward forfeiture versus historical delegated no-bounty-credit wording | Q10 recorded, no silent evidence clawback |
+| M0417–0436 | Durable Markdown/commit expectations, source recovery and weekend work | Current checkpoint protocol controls execution; no background/auto-reset capability inferred |
+
+Separate Brainstorming full transcript and historical nontext attachments remain missing. New catalogs were produced independently and are not proven historical lists; S8-M0172 deferred actual punishment catalog. Exact Challenge library, minimum classification, exhausted-slice policy, Coffer impossible-donation recovery, Bossing Challenge intent and Reject/bounty settlement still need targeted specification or major input. Proceed to A06 cross-file consistency and deduplication before claiming recovery complete or publishing latest PDF.

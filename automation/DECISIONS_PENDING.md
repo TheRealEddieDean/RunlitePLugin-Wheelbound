@@ -12,3 +12,5 @@ Approved design authority remains [DECISIONS](../docs/wheelbound/DECISIONS.md); 
 Q3 GP→spins values are delegated balance work; produce a tested candidate and explain trade-offs before treating final adoption as a major choice. Do not ask the user to choose arbitrary isolated numbers.
 
 Resolved and must not be re-asked: Q1 new-account scope (S8-M0327/WB-D088); Q7 random forced Death’s Wheel (S8-M0296–0297/WB-D033); Q8 no-active-Fate Grand precondition (S8-M0321/WB-D089). Current explicit approvals also settle Bossing L/S/G sequence, two Standard offerings, unlimited fixed-price Pardon, 24 total slots, five ordinary/three activities, player-selected ordinary displacement, free pause, Reject Fate, physical vendor visit, no artificial Grand gates, minimum eligible-item acquisition, and one spin per special landing.
+
+Q10 — Reject and earned bounty receipts: S8-M0402 delegated forfeiture wording conflicts with unqualified always-active/manual claim interpretation. Resolve which receipt/reward types survive Reject before runtime reward settlement. See OPEN_QUESTIONS; no silent evidence deletion or FP clawback.

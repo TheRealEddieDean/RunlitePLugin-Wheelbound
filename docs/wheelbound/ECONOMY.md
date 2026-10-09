@@ -57,3 +57,5 @@ Both special tasks spend one spin before the modeled reward. A missing item trig
 ## Detailed delegated specification
 
 [BALANCE_CANDIDATE](BALANCE_CANDIDATE.md) expands this chapter with provisional numeric/UX detail (WB-D083). Explicit user decisions still prevail.
+
+Recovered S8-M0408/0410/0412 safeguards (WB-D105): no passive FP, no arbitrary balance cap, no direct XP sales, optional dailies, legitimate earnings while in debt, atomic purchases and no automatic refunds for balance patches. Destruction does not refund/restart duplicate counters. These were assistant selections under explicit delegation; old proposed FP values and claimed historical simulations are not final numbers or additional executed runs. Universal forced/voluntary GP conversion is explicitly approved at M0303.

@@ -28,3 +28,6 @@ Commit links: prepend https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbou
 
 - dde32e9fd9d131cfc936adccfddeecc7b24a6f25: A03 skill gates/layout and peer boss progression committed.
 - A04 in this checkpoint: 300 total indexed visible turns/150 reviewed user turns; D100–103, sourced daily/vendor/Challenge details and separate approved 64-node raid-grouped roster. Design checks verify source coverage and disabled runtime entries; H3 inputs unchanged. Next A05: remaining S8-M0301–0436.
+
+- b4c0de1b6fd7e017bd2408d9850ba2753a8c3a63: A04 committed recovered 64-node Bossing progression, grouped bounty identity and transparent vendor rules.
+- A05 in this checkpoint: all 436 visible turns indexed/218 user turns reviewed; D104–106, recovered Grand/checklist/shop/delegated lifecycle and Q10 Reject/bounty ambiguity. No claim all assistant facts or missing attachments verified. Next A06 cross-file consistency.
