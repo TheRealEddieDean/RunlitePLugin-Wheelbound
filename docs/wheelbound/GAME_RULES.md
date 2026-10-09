@@ -9,7 +9,7 @@ Grand Fate has no artificial level/playtime gate. Real game prerequisites still 
 
 Reject ordinary Fate: explicit warning -> FP loss (can become negative) -> consume spin -> no reward -> mandatory committed punishment -> complete before another normal Fate. Restart never rerolls outcomes. See [PUNISHMENTS](PUNISHMENTS.md).
 
-## Proposed audit formula
+## Recovered end-of-Fate Audit
 WB-D087 restores the explicitly approved end-of-Fate Audit (S8-M0289, S8-M0291–0293). Record supported evidence during the Fate; judge it at completion, not at tolerance crossing. Skilling displays unauthorized XP; kill objectives display unauthorized kills and allow legitimate combat XP. Broader observable unrelated progression is also audited, with incidental/required by-products exempt. Violations generate mandatory Penance; violating Penance escalates the next punishment. Clean completion resets the consecutive streak. Exact thresholds, FP settlement and reward ordering remain UNVERIFIED/BALANCE_TBD. Pause records no activity or credit. H1–H3 flat/probabilistic fine experiments do not validate this recovered mechanism.
 
 ## Confirmed recovery and Taint accounting
@@ -18,3 +18,6 @@ Confirmed 2026-10-09: Taint tasks consume one spin, exactly once; their Punishme
 ## Enforcement-policy dependency
 Logical access restrictions remain documented. Their implementation cannot remove/reorder player Trade with options under current Jagex guidelines. Warning/log alternatives and any replacement penalty remain PROPOSED until explicitly decided; no research finding silently changes the gameplay rule. Shop/GE cancellation likewise requires feature-specific review. Completion tracking never automates the underlying OSRS task.
 
+
+## Protected onboarding and initial tolerance provenance
+WB-D092 confirms that Tutorial Island remains permitted onboarding and the first ordinary Fate waits for mainland. Fresh mainland activation seals Grand Fate first. This does not backfill ordinary or bounty rewards. S8-M0039–0043 explicitly establishes per-Fate tolerance, FP loss that may create debt, a warning on first becoming negative, and an initial 1,000-XP value. Later WB-D087 changes judging to completion and uses the objective’s appropriate metric; it does not establish 1,000 kills or an immediate tick fine. Further debt/audit escalation amounts remain balance work.

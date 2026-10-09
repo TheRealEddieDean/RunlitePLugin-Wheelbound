@@ -32,3 +32,6 @@ Warn clearly when policy/coverage prevents guaranteeing an access restriction. W
 ## Detailed delegated specification
 
 [UX_RECOVERY_FLOWS](UX_RECOVERY_FLOWS.md) expands this chapter with provisional numeric/UX detail (WB-D083). Explicit user decisions still prevail.
+
+## Recovered onboarding and tree interactions
+WB-D092/093 confirms protected Tutorial Island onboarding, Grand-first mainland flow, illuminated root, free introductory child and square icon nodes. Hover shows highlight/name; click opens a Fate-style detail card with cost/benefit and explicit AND/OR requirements. Unlock animation sends gold down the eligible path. Bounty list uses item sprites, name search, rarity/FP sorting and persistent unclaimed indication (WB-D094). Ordinary Skilling target details explain bracket, skill modifier and clean increment (WB-D091). Specific starter FP amount/timing and eventual skill-branch layout remain provisional.

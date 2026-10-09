@@ -29,3 +29,16 @@ The register remains authoritative for exact established IDs. This mapping is a 
 ## Catalog drafting checkpoint
 
 See [CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACCEPTANCE.md) for newly authored drafts (WB-D079/080), distinct from missing historical catalogs. Machine-readable 100 bounty candidates, 50 punishments, 67 repository boss categories and 213 quest enum records are in catalogs/. Source metadata is not runtime eligibility. All unvalidated bounty/punishment entries remain disabled. H3 exercises named bounty/reward and plain-XP punishment drafts in synthetic trials only; exact quest/boss access remains unmodeled.
+
+## Restored historical contracts
+
+| Requirement | Decisions | Ticket | Acceptance evidence |
+| --- | --- | --- | --- |
+| Random forced Death’s Wheel, voluntary choice | WB-D033 | I02/I07 | Frozen candidates/outcome; crash restores demand; no item choice/reroll |
+| Completion-time objective-specific audit and clean streak reset | WB-D087 | I01/I05/I07 | No immediate tolerance charge; supported by-products; Penance escalation/reset fixtures |
+| Fresh-account scope and no-active-Fate Grand activation | WB-D088/089 | I01/I08 | Valid onboarding; pending obligations block activation; no artificial time/level gate |
+| Separate card purchase pools | WB-D090 | I03/I04 | Skilling purchase does not unlock Bossing namesake; Challenge evidence gates |
+| Skill modifiers, clean XP targets | WB-D091 | I03 | Bracket/modifier/increment bounds and distinct Standard offers; provisional values explicit |
+| Protected tutorial and qualified starting quests | WB-D092 | I01/I03/I09 | Mainland-first ordinary assignment; no tutorial violation/credit backfill |
+| Introductory child and meaningful AND/OR nodes | WB-D093 | I04/I09 | FP cannot bypass prerequisites; node benefit survives alternate route |
+| Active bounty notifications and independent rarity/reward | WB-D094 | I05/I09 | Unclaimed evidence retained; manual idempotent claims; paused negative fixtures |

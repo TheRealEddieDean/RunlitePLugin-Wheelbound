@@ -16,3 +16,9 @@ Activate [protocol](PROTOCOL.md) and [task queue](TASK_QUEUE.md), then complete 
 Protected main baseline: c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. No production gameplay implementation or Plugin Hub submission authorized.
 
 Commit links: prepend https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound/commit/ to the recorded full SHA. Subsequent session entries must report actual commit/validation, not intended work.
+
+## Protocol and first bounded recovery task
+
+- 1bd0e93c82afe12c97eae6d75da4962f49cd53e9: five checkpoint files plus protocol/navigation committed and remote head verified.
+- WB-A02 deliverables in this checkpoint: indexed first 100 visible turns, reviewed 50 user turns plus named proposal contexts, restored WB-D091–094 and relevant specs/traceability. Read-only checks passed: 94 unique decisions, required docs, links and immutable experiment hashes. Resolve this entry’s owning SHA through file history rather than embedding a circular hash.
+- Next bounded task: WB-A03, S8-M0101–0200 progression/punishment/boss approvals.

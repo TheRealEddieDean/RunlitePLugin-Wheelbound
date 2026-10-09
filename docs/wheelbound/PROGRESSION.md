@@ -1,5 +1,5 @@
 # Progression
-Four branches: Skilling, Questing, Combat/Bossing, Fate Manipulation. Free tutorial node beneath root (S3/S4). AND/OR connections explicit. Unlocks persist for run. Skill prerequisites and FP purchase both required.
+Four branches: Skilling, Questing, Combat/Bossing, Fate Manipulation. Free introductory node beneath illuminated root (S8-M0081–0083; WB-D093). AND/OR connections explicit (S8-M0063–0065): nodes have their own benefits and FP alone cannot bypass prerequisites. Unlocks persist for run. Skill prerequisites and FP purchase both required.
 
 Recovered S3 groups, historical approval UNVERIFIED:
 Tier I: Cooking, Firemaking, Smithing, Crafting, Fletching, Agility, Thieving, Runecraft, Prayer. Unlock five of nine for Tier II.
@@ -30,3 +30,6 @@ Completed quests/inaccessible bosses cannot become valid merely to keep a slice 
 See [CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACCEPTANCE.md) for newly authored drafts (WB-D079/080), distinct from missing historical catalogs. Machine-readable 100 bounty candidates, 50 punishments, 67 repository boss categories and 213 quest enum records are in catalogs/. Source metadata is not runtime eligibility. All unvalidated bounty/punishment entries remain disabled. H3 exercises named bounty/reward and plain-XP punishment drafts in synthetic trials only; exact quest/boss access remains unmodeled.
 
 WB-D081 source check: Sailing is live (Jagex launch 2025-11-19) and exposed in RuneLite Skill.SAILING. Keep the proposed Tier II placement; method-specific assignments still need access/by-product evidence.
+
+## First historical batch provenance
+S8-M0087 explicitly approves the four branches; S8-M0089 explicitly separates permanent content unlock from cheap wheel addition. S8-M0099 moves Prayer to Tier I and Hunter to Tier II; this placement is explicitly approved, not merely PDF inference. Earlier 5/9 and 4/6 gate proposals are identified as balance targets in S8-M0096/0098; inspect later approval before treating their original proposal wording as a permanent numerical lock. The current weekend assignment’s working gate counts are retained pending that review. Starting FP grant, free-child name and first-completion timing remain provisional.

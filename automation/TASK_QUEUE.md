@@ -4,9 +4,9 @@ Authoritative design: [decision register](../docs/wheelbound/DECISIONS.md). Oper
 
 | ID | Deliverable | Priority | Dependencies | Size | Status | Documentation | Completion criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WB-A00 | Activate protocol/checkpoint files and session ownership | P0 | Current head/main verification | S | READY_TO_COMMIT | automation/* | Five required files, full operating rules, queue and ownership committed; main unchanged |
+| WB-A00 | Activate protocol/checkpoint files and session ownership | P0 | Current head/main verification | S | DONE | automation/* | 1bd0e93c protocol/checkpoints committed and remote head verified; main baseline unchanged |
 | WB-A01 | Reconcile first historical forced Sacrifice/audit/scope/Grand/card pool batch | P0 | Recovered S8 transcript | S | DONE | DECISIONS WB-D033/054/086–090; historical report | b1f9249e corrections committed; 90 unique decisions and preserved model hashes checked |
-| WB-A02 | Review S8-M0001–0100 approvals and onboarding/progression | P0 | A00, A01 | S | TODO | research/HISTORICAL_RECONCILIATION.md; DECISIONS; relevant specs | Every visible turn in range indexed; adjacent proposals read; approved/superseded/unverified outcomes mapped |
+| WB-A02 | Review S8-M0001–0100 approvals and onboarding/progression | P0 | A00, A01 | S | DONE_IN_CHECKPOINT | research/HISTORICAL_RECONCILIATION.md; DECISIONS; relevant specs | 100 visible turns indexed, 50 user turns reviewed, named adjacent proposals read; WB-D091–094 and affected specs verified; owning checkpoint must be reachable from remote head |
 | WB-A03 | Review S8-M0101–0200 progression/punishment/boss approvals | P0 | A02 | S | TODO | Historical report; PROGRESSION; PUNISHMENTS | Coverage logged and approved mechanics reconciled; no nonexistent historical catalog claimed |
 | WB-A04 | Review S8-M0201–0300 card/bounty/vendor/audit approvals | P0 | A03 | S | TODO | Historical report; FATE_CARDS; BOUNTIES; ACCOUNT_ACCESS | Grouped bounties, separate pools and vendor rules sourced; changes commit-ready |
 | WB-A05 | Review S8-M0301–0436 Grand/shop/delegated safeguards | P0 | A04 | S | TODO | Historical report; GRAND_FATES; FATE_SHOP | Full S8 coverage indexed; historical delegation distinguished from explicit approvals |

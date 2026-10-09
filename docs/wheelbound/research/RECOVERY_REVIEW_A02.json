@@ -1,0 +1,721 @@
+{
+  "source": "S8 preserved selected-chain visible transcript",
+  "range": "S8-M0001\u2013S8-M0100",
+  "user_turns_reviewed": 50,
+  "visible_turns_indexed": 100,
+  "proposal_context_reviewed": [
+    "S8-M0048",
+    "S8-M0050",
+    "S8-M0062",
+    "S8-M0070",
+    "S8-M0080",
+    "S8-M0082",
+    "S8-M0086",
+    "S8-M0096",
+    "S8-M0098",
+    "S8-M0100"
+  ],
+  "limitations": "Historical nontext attachments not recovered. All user turns reviewed; only named assistant proposal contexts fully consulted. Later approvals/current explicit instructions control supersession. No claim that every assistant technical assertion was reverified.",
+  "entries": [
+    {
+      "locator": "S8-M0001",
+      "message_id": "9dd4a2f0-e4b6-498f-82d7-af2fac87d07a",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Repository branching question; no gameplay decision"
+    },
+    {
+      "locator": "S8-M0002",
+      "message_id": "16a26a06-f889-45c4-ab4f-943c4b68ce33",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0003",
+      "message_id": "729830d6-19aa-442e-884a-7b0d06cebe0b",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Repository supplied"
+    },
+    {
+      "locator": "S8-M0004",
+      "message_id": "95205238-72d7-4ddb-9df5-fad04198b731",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0005",
+      "message_id": "82fdfe8f-826b-4a37-8844-72944026d8e1",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Main protected and Wheelbound feature branch requested"
+    },
+    {
+      "locator": "S8-M0006",
+      "message_id": "32feda5b-5fab-4903-9845-548e74f861f9",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0007",
+      "message_id": "37cf6465-bb5e-4cb4-99a3-c6bee2ca9879",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Tooling trial question; historical image unavailable"
+    },
+    {
+      "locator": "S8-M0008",
+      "message_id": "1d11533d-1762-49a9-80cf-3333f5833a82",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0009",
+      "message_id": "9c7d48ee-e306-4dde-970d-639597206483",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Tooling comparison"
+    },
+    {
+      "locator": "S8-M0010",
+      "message_id": "1c3570b3-26af-4cf7-961e-dcb0876e6bc0",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0011",
+      "message_id": "3076612e-8886-41fd-b8ef-3881d8861d8c",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Codex tooling question"
+    },
+    {
+      "locator": "S8-M0012",
+      "message_id": "81faa2b7-531f-4a17-a3a4-4256dff3be30",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0013",
+      "message_id": "fa2a1fa5-b092-4855-933a-24cf701cd6d0",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Allowance question; not gameplay"
+    },
+    {
+      "locator": "S8-M0014",
+      "message_id": "97060223-aa01-4035-b9ce-e4063d12c1ed",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0015",
+      "message_id": "4f5a5659-a5cc-4481-9196-9faa083094f0",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Credits question; not gameplay"
+    },
+    {
+      "locator": "S8-M0016",
+      "message_id": "2d140268-1709-4d12-bd01-c2d38f272981",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0017",
+      "message_id": "103f07ab-387d-4dba-8f5e-6636a90af750",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Other tooling/credits question"
+    },
+    {
+      "locator": "S8-M0018",
+      "message_id": "469e2b13-8536-4988-aaaa-43c7f2e3a2bd",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0019",
+      "message_id": "4faa7dc7-e719-4385-afd9-46dc8fb30971",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Other AI tooling"
+    },
+    {
+      "locator": "S8-M0020",
+      "message_id": "79a15202-1eb8-4da8-8af4-380d6b47595a",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0021",
+      "message_id": "d5cb766b-e469-4f00-97cb-62ce9314dd4d",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Tooling limits"
+    },
+    {
+      "locator": "S8-M0022",
+      "message_id": "43edc289-b79f-4c7f-aaa9-226acae69659",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0023",
+      "message_id": "55e6b0af-e0a1-41d5-af52-30f9dced9e92",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Autonomy question; current protocol controls capabilities"
+    },
+    {
+      "locator": "S8-M0024",
+      "message_id": "268917e1-81a1-4520-9537-a8430b8efc20",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0025",
+      "message_id": "7ec68781-1c51-49d0-bd9b-125338aa4cb5",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Long autonomous execution question; no verified automation capability"
+    },
+    {
+      "locator": "S8-M0026",
+      "message_id": "44b4b8a6-b147-4475-8525-afb91a203a56",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0027",
+      "message_id": "cd335ed2-337f-4757-8b75-6e2783141a70",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Codex app question"
+    },
+    {
+      "locator": "S8-M0028",
+      "message_id": "5b985e39-851c-456e-b868-e5827df9a249",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0029",
+      "message_id": "9d62bb81-8ab4-409a-885e-73c6cf37152f",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Computer/auto-resume question; not a scheduling capability proof"
+    },
+    {
+      "locator": "S8-M0030",
+      "message_id": "8691ed0b-b6db-4ddf-8615-06db9753ad73",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0031",
+      "message_id": "1796ce5f-f7f1-45f3-8104-a5287b78618e",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Markdown blueprint/recovery requested"
+    },
+    {
+      "locator": "S8-M0032",
+      "message_id": "87432496-6cf1-4dd0-82e1-f513ba4f5e0b",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0033",
+      "message_id": "6504053d-b373-4f63-bfc2-c56fdfb273a9",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Enforcement possibilities proposed, not approved"
+    },
+    {
+      "locator": "S8-M0034",
+      "message_id": "dee6f59d-0252-470d-9961-652d73e979ef",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0035",
+      "message_id": "89120f97-904a-4727-9ba1-37dd9f6de0c2",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Earlier one-decision-at-a-time workflow later superseded by delegation"
+    },
+    {
+      "locator": "S8-M0036",
+      "message_id": "e4d70a84-e18e-4cac-911f-2adde6b6e08a",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0037",
+      "message_id": "f2498e72-92b3-4d6f-805e-3d60104620eb",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Option C hybrid proposal superseded by M0039 tolerance"
+    },
+    {
+      "locator": "S8-M0038",
+      "message_id": "e91efa65-25f9-4086-bd70-83a3a5ac5a2f",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0039",
+      "message_id": "6288a8f9-2ab1-4769-ac9d-829436737094",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Confirmed per-Fate tolerance/FP debt/first-negative warning"
+    },
+    {
+      "locator": "S8-M0040",
+      "message_id": "e3288466-2f50-4582-8681-e58e02300983",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0041",
+      "message_id": "e02144f8-7898-4111-8606-157cea8c14af",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Initial 1000 XP approved"
+    },
+    {
+      "locator": "S8-M0042",
+      "message_id": "d93e49fe-bd31-4562-b9f7-ea5e68c51c10",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0043",
+      "message_id": "722e933b-e5fa-4bfd-b54c-8bdd0d33b770",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "FP deduction amount not settled"
+    },
+    {
+      "locator": "S8-M0044",
+      "message_id": "e032d87b-e4be-42fa-b32a-c8c5567882ce",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0045",
+      "message_id": "bbb21341-ad26-4ed6-8450-951c7708ddeb",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "XP-based ordinary skilling and critical review requested"
+    },
+    {
+      "locator": "S8-M0046",
+      "message_id": "cad8cb0c-f3db-496a-a487-592e2598a00f",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0047",
+      "message_id": "2cb7228a-2d60-41d8-82c2-e76b24d529f2",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Level brackets and randomization; numerical examples not locked"
+    },
+    {
+      "locator": "S8-M0048",
+      "message_id": "d692d691-60c8-43da-880d-2fb7c025fb9b",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0049",
+      "message_id": "34b20854-44bb-4281-9a10-1afe8efa7c53",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Option B skill modifiers and clean increments approved: D091"
+    },
+    {
+      "locator": "S8-M0050",
+      "message_id": "e55c3dce-d43b-4aa7-aeef-6b5b654f0508",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0051",
+      "message_id": "a61c828e-59c6-4a3d-922e-a8ad71cdf364",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Cards/animation proposed; current offerings approval supersedes count"
+    },
+    {
+      "locator": "S8-M0052",
+      "message_id": "6230de17-245f-4e8a-85cb-59db134e8719",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0053",
+      "message_id": "99d83ffe-262f-435e-8d84-90391d42f90b",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Early one starting card superseded by current two offerings; heart reward example"
+    },
+    {
+      "locator": "S8-M0054",
+      "message_id": "eee06bad-177e-4514-8bcd-42a48eb84a04",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0055",
+      "message_id": "df270235-b156-4e86-80d0-4588eb53f5b3",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Bounty activation and notification approved: D094; shop structure later evolves"
+    },
+    {
+      "locator": "S8-M0056",
+      "message_id": "70767e22-e71c-4b46-af4e-4952c4b4256c",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0057",
+      "message_id": "264b178d-eb0c-4011-a60a-29dbf5f28eb2",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Manual claims approved; hidden option later superseded visible-only"
+    },
+    {
+      "locator": "S8-M0058",
+      "message_id": "5888ca48-1aeb-4716-86bb-b6a92922448d",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0059",
+      "message_id": "14c2326f-8e39-48f5-9deb-73370f7fbfaa",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Search/filter/sort list; tree navigation approved"
+    },
+    {
+      "locator": "S8-M0060",
+      "message_id": "39828365-75aa-4c1e-8691-8f1124fed3a8",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0061",
+      "message_id": "45935e5e-9bac-47af-92f0-7be8ffc3f88b",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Item sprites and rarity classification approved"
+    },
+    {
+      "locator": "S8-M0062",
+      "message_id": "eedcf7d4-7a66-4c9b-a225-58ee026982d1",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0063",
+      "message_id": "1eda7071-da5a-48f3-935f-2d3b4ca3a6f1",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Provisional rarity tiers, real AND/OR prerequisites and gold paths approved"
+    },
+    {
+      "locator": "S8-M0064",
+      "message_id": "4d1a6c7c-2d5a-42c2-afed-b079600973b4",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0065",
+      "message_id": "6ae5a3a9-1624-4ce2-83ee-d1934bd4e037",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Gold paths and independent OR-node benefits approved"
+    },
+    {
+      "locator": "S8-M0066",
+      "message_id": "92fdada0-2f1a-4d39-8dd4-db4144aa1fa7",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0067",
+      "message_id": "57b06899-0fdf-4050-a338-3d09e1ec4d69",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Square icon nodes approved"
+    },
+    {
+      "locator": "S8-M0068",
+      "message_id": "506c7b61-2f37-473a-a51b-fbbea7ff52b5",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0069",
+      "message_id": "3aeda57b-8e74-4de4-b26a-0c84fd452e58",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Hover/click; tutorial/mainland; starting pool and qualified quests described"
+    },
+    {
+      "locator": "S8-M0070",
+      "message_id": "bb60e110-f52d-4d10-947f-2db61e566cab",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0071",
+      "message_id": "dab45866-488b-4519-b748-b9e410e18aed",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Starting flow/pool/quest sections explicitly approved: D092; three Pardons superseded"
+    },
+    {
+      "locator": "S8-M0072",
+      "message_id": "60fbed3f-fafb-4e8c-9555-98a39790ee92",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0073",
+      "message_id": "f2569690-2ffc-4dfc-a4c1-eea4fe1f228e",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Optional mode/pause/uninstall restriction reset; trade policy still technical gate"
+    },
+    {
+      "locator": "S8-M0074",
+      "message_id": "22af9147-a313-4bc5-8a15-d5fdfed6bc0b",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0075",
+      "message_id": "06e95059-bff2-426c-ba28-f66f6cef4092",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Uninstall is not abandon; paused drops/XP no credit; developer/testing requested"
+    },
+    {
+      "locator": "S8-M0076",
+      "message_id": "baf44889-06b1-46ba-9eab-77fc51f0ed5a",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0077",
+      "message_id": "36dfc9a8-46d0-4bf6-983a-ffea55465340",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Developer mode must be unavailable in release; simulation does not prove fun"
+    },
+    {
+      "locator": "S8-M0078",
+      "message_id": "42e02506-cdef-4181-b9b3-d3dd0dd41d9d",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0079",
+      "message_id": "5c5e904a-fba8-4f2d-a381-c18d302ff1ef",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Free introductory-node/starting FP suggestion; grant not finalized"
+    },
+    {
+      "locator": "S8-M0080",
+      "message_id": "1b96d6cb-9c48-4088-a372-1e63f11d2ca3",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0081",
+      "message_id": "e86e6f37-d5f4-4c4c-afed-72e17dee5e3e",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "One free child below root approved: D093"
+    },
+    {
+      "locator": "S8-M0082",
+      "message_id": "bd03c239-4cb2-4c6a-b097-d7fb029ae077",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0083",
+      "message_id": "91f6e604-ad0f-41ae-8186-ac96a01468a2",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Lit root/free child/gold activation approved"
+    },
+    {
+      "locator": "S8-M0084",
+      "message_id": "490c3fb2-1c40-44e0-93e4-76bffdccadb1",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0085",
+      "message_id": "5f976d39-e2ea-4ecc-8303-10e5111a348c",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Requests branch suggestions"
+    },
+    {
+      "locator": "S8-M0086",
+      "message_id": "6fa1396f-d205-47e5-b38f-b235c2efab35",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0087",
+      "message_id": "975343a8-94b1-48de-8ab1-47090c1e47b1",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Four progression branches approved: D022/D093"
+    },
+    {
+      "locator": "S8-M0088",
+      "message_id": "827d2d4d-6333-4dae-8953-c757b50f4033",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0089",
+      "message_id": "5cdb69fe-da47-47f4-a316-f0263b83edff",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Separate permanent unlock and cheap wheel addition approved; removal proposal superseded"
+    },
+    {
+      "locator": "S8-M0090",
+      "message_id": "aca725a4-c08d-4d1b-8150-380d7e0ca6b0",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0091",
+      "message_id": "1fb9f4a3-a285-4a3e-b1f4-12db08cc323a",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Requests skill tree proposal"
+    },
+    {
+      "locator": "S8-M0092",
+      "message_id": "b361c9aa-96fd-424d-8a0f-65d367375393",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0093",
+      "message_id": "1ce638ed-ad4f-419c-b970-428eadf2fb9f",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Queries forced full unlock before Slayer"
+    },
+    {
+      "locator": "S8-M0094",
+      "message_id": "06fae2e4-7351-4661-a8b8-e3fab50622ca",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0095",
+      "message_id": "905c57e2-680c-4704-97fa-e11f95ff8989",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Count-based tier-gate concept proposed; 5 or 6 of 9"
+    },
+    {
+      "locator": "S8-M0096",
+      "message_id": "fb446e9a-c71c-4e0c-8cef-f8716ac5c812",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0097",
+      "message_id": "fd7a09de-5c7b-4551-93c4-83cf250548ec",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Requests full 24-skill representation"
+    },
+    {
+      "locator": "S8-M0098",
+      "message_id": "d1580de3-74b4-44f1-8c17-dde8afb7b56d",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    },
+    {
+      "locator": "S8-M0099",
+      "message_id": "fa547edd-c028-4a52-a836-145f3ddfb387",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Prayer Tier I/Hunter Tier II swap approved; tree layout question"
+    },
+    {
+      "locator": "S8-M0100",
+      "message_id": "2461b8d4-e933-478d-928e-5a8101d20158",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone historical user approval inferred"
+    }
+  ]
+}

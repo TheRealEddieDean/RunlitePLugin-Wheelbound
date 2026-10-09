@@ -1,6 +1,6 @@
 # Bounties
 Confirmed assignment: 100 curated permanent item bounties; three randomized daily item bounties; Combat Mastery; Achievement Diaries.
-Permanent one-time rarity-based payouts; daily optional, not progression requirement. Combat Mastery rewards all CAs for a boss; diary region/tier rewards. Active legitimate event evidence required. Manual claim where specified; S3 says all manually claimed. Paused events never retroactively qualify.
+Permanent one-time independently balanced payouts with rarity presentation; daily optional, not progression requirement. Combat Mastery rewards all CAs for a boss; diary region/tier rewards. Active legitimate event evidence required. Manual claim where specified; S3 says all manually claimed. Paused events never retroactively qualify.
 
 Claim transaction validates evidence and claim key before ledger credit; rerun does not repay. Historical 100 item catalog and reward tiers missing. Imbued heart +500 FP was an earlier example in memory, not final payout.
 
@@ -20,3 +20,6 @@ Historical 100-item catalog and payouts remain missing. Do not generate 100 spec
 See [CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACCEPTANCE.md) for newly authored drafts (WB-D079/080), distinct from missing historical catalogs. Machine-readable 100 bounty candidates, 50 punishments, 67 repository boss categories and 213 quest enum records are in catalogs/. Source metadata is not runtime eligibility. All unvalidated bounty/punishment entries remain disabled. H3 exercises named bounty/reward and plain-XP punishment drafts in synthetic trials only; exact quest/boss access remains unmodeled.
 
 [ACQUISITION_EVIDENCE](ACQUISITION_EVIDENCE.md) specifies the separate 18-entry repeatable daily draft, owned receipt deduplication, reward-exchange provenance and clock/expiry cases (WB-D084). Rare permanent targets are not implicitly daily candidates. H3 does not include daily payouts.
+
+## Recovered presentation and activation rule — WB-D094
+Eligible bounties are monitored automatically while the mode is active; visiting the catalog is not a prerequisite for credit. Persist unclaimed evidence, show sidebar/category indication and completion animation/message, and require manual claim. Use actual item sprites, name search, rarity filters and FP sorting. Common/Uncommon/Rare/Epic/Legendary are the historically accepted provisional labels; balance each reward independently rather than forcing a fixed FP amount by label. Paused progress remains excluded.

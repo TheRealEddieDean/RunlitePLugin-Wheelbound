@@ -5,6 +5,9 @@ Standard is unlocked by default. Fresh players receive two independently generat
 
 Purchased types permanently enter their respective eligible pools; an unlock does not guarantee that type in a draw. The third-card upgrade changes two offerings to three. Skilling pools support Lesser/Standard/Greater/Challenge/Wilderness Challenge as unlocked and eligible. Bossing pool supports Lesser/Standard/Greater. Do not silently introduce Bossing Challenge cards.
 
+## Skilling XP target generation — WB-D091
+Ordinary Skilling objectives use XP, not mandatory material quotas. Determine current level bracket, apply the skill-specific requirement modifier, randomize and round to a documented clean increment. Explain resulting range and modifiers. Exact tables/increments remain BALANCE_TBD; the old illustrative brackets are not approved constants. There is no second XP wheel. The current two independently generated Standard targets remain distinct and committed before display. A future faithful model must represent skill modifiers explicitly; prior synthetic experiments are not proof of these rates.
+
 ## Assignment commitment
 Snapshot real skill level and eligibility. Independently generate each offered objective. Persist the complete offering set before display. Different targets are mandatory for the two starting Standard cards; collision resolution must not resample the whole set or reroll an accepted objective. A technical proposal is independently seeded draws followed by rejection sampling of duplicate targets; this conditions the final distribution on uniqueness and must be disclosed in simulations. Use at least two legal target values or report catalog error without consuming a completed-Fate spin.
 

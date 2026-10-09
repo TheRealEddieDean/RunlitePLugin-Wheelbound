@@ -924,3 +924,43 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Rationale: Additional progression sinks and implementable challenges without ambiguous completion.
 - Affects: [FATE_CARDS](FATE_CARDS.md), [FATE_SHOP](FATE_SHOP.md), method detectors and catalog acceptance.
 - Exceptions/dependencies: Initial two independently generated Standard targets and third-offering upgrade remain current new approvals. Historical user also named a Bossing Challenge card; the current L/S/G clarification does not explicitly resolve whether that additional type remains intended. Keep it disabled and flag the ambiguity rather than silently declaring it rejected. Boss selection is always random, with no choices/rerolls.
+
+## WB-D091 - Skilling XP generation uses skill modifiers and clean increments
+
+- Status: CONFIRMED mechanism; bracket values, modifiers and increments BALANCE_TBD.
+- Authority: Explicit user approval of option B and clean increments.
+- Evidence: S8-M0045–0049; option B defined in S8-M0048; interpretation S8-M0050.
+- Decision: Ordinary Skilling Fates use XP objectives rather than default material-collection quotas. Generate a target from the current skill-level bracket with an individual skill modifier and randomization, rounded to clean increments. Do not present a second XP wheel. Explain the bracket/modifier calculation in the UI.
+- Rationale: Let the player train useful available resources; account for different skills’ training rates while keeping objectives legible.
+- Affects: [FATE_CARDS](FATE_CARDS.md), [ECONOMY](ECONOMY.md), [UI_UX](UI_UX.md), future models.
+- Exceptions/dependencies: Historical 25k–40k level-1 examples were not locked values; assistant bracket tables explicitly provisional. This does not grant specific permanent XP-reduction, widened-tolerance or lower-roll upgrades mentioned only as ideas in S8-M0050. Challenge/collection punishments may impose additional approved restrictions. Real method/access rates still require validation.
+
+## WB-D092 - Grand selection and protected Tutorial Island onboarding
+
+- Status: CONFIRMED flow; exact new-account activation predicate TECH_TBD.
+- Authority: Explicit user description and section approval.
+- Evidence: S8-M0069; S8-M0070 Starting Wheelbound flow and Starting Fate pool explicitly approved at S8-M0071.
+- Decision: Activation on Tutorial Island may seal the Grand Fate, but ordinary Fate assignment waits for mainland. Tutorial actions are permitted onboarding, not unauthorized progress. Fresh mainland activation selects/confirms Grand Fate before the first ordinary Fate. Starting ordinary activities are Mining, Fishing, Woodcutting, Combat and low-tier Questing. Mode quests must be currently qualified, rather than demanding training locked skills as prerequisites.
+- Rationale: Preserve the starting ritual without obstructing the game tutorial or creating impossible quest assignments.
+- Affects: [GAME_RULES](GAME_RULES.md), [GRAND_FATES](GRAND_FATES.md), [PROGRESSION](PROGRESSION.md), [UI_UX](UI_UX.md).
+- Exceptions/dependencies: WB-D088 new-account scope still applies to mainland activation. Tutorial observations are not retroactive ordinary-Fate or bounty credit. Exact non-mode quest toggle work is future implementation scope, not authorization to modify existing production code now. Historical combat inclusion of selectable Hitpoints is superseded by later by-product-only decision, to be sourced in A03.
+
+## WB-D093 - Progression node interaction, prerequisites and introductory child
+
+- Status: CONFIRMED structure and presentation; starting grant/timing UNVERIFIED.
+- Authority: Explicit user approvals.
+- Evidence: S8-M0063–0069 (AND/OR and square icon/hover/click); S8-M0081–0083 (free child/root animation); S8-M0087 (four branches); S8-M0089 (unlock/add separation).
+- Decision: Use one illuminated root with one free introductory child before branching into Skilling, Questing, Combat/Bossing and Fate Manipulation. Square icon nodes highlight/name on hover and open a Fate-style detail card on click. Gold paths communicate unlocked prerequisites; AND requires all named prerequisites, OR requires one eligible path. Nodes retain their own benefits even when another OR path opened a downstream node. Wheel Builder is a separate experience; unlocking content does not automatically add its slice.
+- Rationale: Teach progression interaction and make branching/purchase consequences explicit.
+- Affects: [PROGRESSION](PROGRESSION.md), [UI_UX](UI_UX.md), [FATE_SHOP](FATE_SHOP.md).
+- Exceptions/dependencies: Arbitrary FP cannot bypass prerequisites. A starting FP grant and opening after first ordinary Fate were assistant suggestions, not explicit lock-ins in this reviewed range; keep amount/timing provisional. Early expensive removal/removal-Fate proposals are superseded by current free destruction and paid Satchel rules. Exact skill branch ring/tree layout requires later-context review; this approval does not silently settle that later evolution.
+
+## WB-D094 - Active bounty manual claims, rarity labels and notification UI
+
+- Status: CONFIRMED interaction; rarity names approved as current provisional set.
+- Authority: Explicit user approval.
+- Evidence: S8-M0055–0063; S8-M0062 proposed Common/Uncommon/Rare/Epic/Legendary and independent reward balancing; S8-M0063 accepts tiers for now.
+- Decision: Bounties monitor eligible activity while mode is active; a qualifying drop creates an unclaimed reward, prominent category/sidebar indication and completion message/animation. Claims are manual. Use item sprites, name search, filters and reward sorting. Current rarity labels are Common, Uncommon, Rare, Epic and Legendary; rarity is presentation/classification rather than a mandatory fixed FP payout table.
+- Rationale: Do not miss a qualifying rare drop because the player failed to open a bounty screen; make earned rewards discoverable and controllable.
+- Affects: [BOUNTIES](BOUNTIES.md), [UI_UX](UI_UX.md), acquisition receipts and catalog metadata.
+- Exceptions/dependencies: Paused events never earn retrospective credit (S8-M0075 and current user approval). Early hidden-bounty option is superseded by later visible-only decision, to be reconciled in A04. Imbued Heart +500 and other sample rewards are balance examples, not final numbers. Eligibility still requires supported owned acquisition evidence; simply possessing the item does not prove a drop.
