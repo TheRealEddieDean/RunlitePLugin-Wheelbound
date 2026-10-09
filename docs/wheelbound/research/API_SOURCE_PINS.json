@@ -42,6 +42,17 @@
       "path": "runelite-api/src/main/java/net/runelite/api/gameval/VarbitID.java",
       "blob_sha": "0a90c1426122a9fbf32c3002fc66b77dac8d0fc4",
       "url": "https://github.com/runelite/runelite/blob/master/runelite-api/src/main/java/net/runelite/api/gameval/VarbitID.java"
+    },
+    {
+      "path": "runelite-api/src/main/java/net/runelite/api/gameval/InterfaceID.java",
+      "blob_sha": "f4daad3ea3bc34403ad21f5c539110cfefd2e683",
+      "url": "https://github.com/runelite/runelite/blob/42a6f17a6a2e8e478aa763890ecd0181a59dad38/runelite-api/src/main/java/net/runelite/api/gameval/InterfaceID.java"
     }
-  ]
+  ],
+  "peer_revisions": {
+    "bronzeman_unleashed": "99a6b77ef9bbd20c84b72f014fd49144f982a865",
+    "trade_tracker": "1d25f068b8085405f0356e94e36cbbdc0736794b",
+    "deaths_coffer_advisor": "27f709792e701935069ad69ce6c48317d4adef6e",
+    "runestar_cs2_historical_2021_09_16": "7da6c1fbab51b7528ff13b15a532a44208bf75d6"
+  }
 }

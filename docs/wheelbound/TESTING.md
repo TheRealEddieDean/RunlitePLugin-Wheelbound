@@ -22,3 +22,8 @@ Static production review must catch fresh Gson/OkHttp construction, KeyboardFocu
 
 Future controlled live cases: CA points/threshold initialization and change; four awakened counters on ordinary versus awakened kills; paused/pre-run/reconnected completions; NPC loot/server loot/chests/no-loot; vendor identity and bank completeness; Coffer donation receipt versus drop/bank/consume. GE initial EMPTY states must not create penalties. Do not test a prohibited menu-removal workaround in production. No such live tests were performed now.
 
+
+## Focused future detector acceptance cases (WB-D066-068)
+Trade: outgoing left/right click; incoming chat and alternate acceptance; first/final window Accept; already-open trade when activation or restriction changes; pause/resume; character switch; unknown target; duplicate attempts; interaction with other menu plugins. Verify option text/order stays intact, restricted request is not sent on covered routes, notice does not steal focus, and dismiss sends no action. Warning-only mode, if used for testing, must clearly say it does not block. Do not introduce gameplay penalties from attempt logs.
+
+Coffer: initialized zero/nonzero balance; one item, stack, noted variants; quantity 1/5/X/All; selected slot changes; actual final confirmation; failed/full/ineligible donation; quote/base-value/credit rounding; Blessed exclusion; inventory delta before/after balance event; UI closure; login/reconnect and shared IF1 reuse; repeated callbacks; two identical successive donations. Capture current group/widget tree, varp values, server-displayed quote and event order. Expected: only a matched confirmed donation settles once; drop/bank/consume/player trade and ambiguous reconnect do not award. No live results are claimed.

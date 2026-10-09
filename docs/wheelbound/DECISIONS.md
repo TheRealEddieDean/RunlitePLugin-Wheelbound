@@ -634,12 +634,12 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 
 ## WB-D063 - Access enforcement has unresolved policy constraints
 
-- Status: TECHNICAL CONSTRAINT; advisory replacement PROPOSED, gameplay decision unresolved
+- Status: TECHNICAL CONSTRAINT; later evidence/clarification in WB-D066/067 supersedes absence-of-precedent assessment
 - Authority: Jagex client guidelines and RuneLite rules; assistant assessment under delegated research authority.
-- Decision: Do not remove/reorder player Trade with options. Do not treat click consumption as an approved workaround. Shop/GE state-dependent interception has API support but needs specific policy and coverage review. Preserve established access-lock intent; do not silently replace it with new penalties.
+- Decision: Do not remove/reorder player Trade with options. API availability alone does not approve click consumption; current Hub precedent was subsequently recovered in WB-D067. Shop/GE state-dependent interception has API support but needs specific policy and coverage review. Preserve established access-lock intent; do not silently replace it with new penalties.
 - Rationale: API availability is not permission or comprehensive enforcement.
 - Affects: ACCOUNT_ACCESS, GAME_RULES, UI_UX, ARCHITECTURE, RUNELITE_INTEGRATION and implementation plan.
-- Exceptions/dependencies: Warning/activity-log alternative is a recommendation, not user-approved gameplay. No maintainer contact or new submission authorized/performed. Exact interception behavior and alternate routes need review.
+- Exceptions/dependencies: The earlier advisory replacement remains unapproved; user instead clarified retain-menu attempt warning in WB-D066. No maintainer contact or new submission authorized/performed. Exact interception behavior and alternate routes need review.
 
 ## WB-D064 - Grand Fate candidate counters and thresholds
 
@@ -659,3 +659,30 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Affects: ARCHITECTURE, RUNELITE_INTEGRATION, UI_UX and IMPLEMENTATION_PLAN.
 - Exceptions/dependencies: Passive completion tracking is a policy interpretation pending specific review; accepted existing plugins are not blanket precedent. Coffer, trade and method attribution remain incomplete. FP randomness does not authorize OSRS staking or real-money sales.
 
+
+## WB-D066 - Retain Trade with and show Fate restriction on attempts
+
+- Status: CONFIRMED new user clarification; exact implementation/coverage pending
+- Authority: User explicitly requested the menu option remain and a popup when trading is attempted, 2026-10-09. Not a claim of historical approval or Jagex approval.
+- Decision: Preserve player Trade with text/order. Show a local Fate restriction notice when an active Wheelbound access rule disallows an observed trading attempt. Preserve the hard-restriction intent rather than silently substituting an advisory-only rule.
+- Rationale: Communicate Fate's restriction at the action without deleting the menu entry.
+- Affects: ACCOUNT_ACCESS, UI_UX, POLICY_AND_FEASIBILITY, RUNELITE_INTEGRATION and TESTING.
+- Exceptions/dependencies: Warning alone does not block; consume-and-notice is the proposed technical route. Exact modality and all acceptance routes need review/testing. Pause disables restrictions. Player trading unlock policy remains OPEN; vendor Banned/Locked states and Pardon semantics remain unchanged. No new FP loss or gameplay penalty approved.
+
+## WB-D067 - Current Hub trade interception precedent recovered
+
+- Status: CONFIRMED source/manifest evidence; Wheelbound feature-specific approval outstanding
+- Authority: Assistant technical research, inspected 2026-10-09; current Hub manifest, pinned peer source and merged update.
+- Decision: Bronzeman Unleashed at Hub-pinned 99a6b77ef9bbd20c84b72f014fd49144f982a865 consumes restricted Trade with/Accept trade events and issues local restriction messages, with BUPlugin forwarding the event. Revise the earlier unsupported-interception assessment to feasible with concrete current Hub precedent. Do not classify click cancellation as explicitly prohibited menu deletion.
+- Rationale: Ground the feasibility assessment in actual connected, listed plugin behavior instead of API existence or README claims alone.
+- Affects: WB-D063, ACCOUNT_ACCESS, UI_UX, policy audit and integration/tests.
+- Exceptions/dependencies: Peer final-window Accept handler is commented out. Local chat/sound precedent is not exact modal-popup approval. Jagex removal/reordering prohibition and similar-feature caveat still apply. No reviewer contact performed. ShopPolicy is visual only; peer GE search filtering does not prove comprehensive GE coverage.
+
+## WB-D068 - Correlated Death's Coffer receipt candidate
+
+- Status: Current widget constants CONFIRMED; historical mapping and detector PROVISIONAL; live verification required
+- Authority: Assistant delegated technical research, 2026-10-09, current RuneLite InterfaceID/VarPlayerID and explicitly dated 2021 RuneStar cache script dump.
+- Decision: Investigate Coffer groups 670/671, Confirm 0x029e000d and dynamic display children. Historical scripts use generic IF1=261 for displayed balance and IF2-IF4 for slot/quantity/unit quote. Proposed completion requires frozen eligible selection, actual confirm attempt, matching inventory reduction and refreshed credit increase in one account/run/obligation context, then one durable settlement receipt.
+- Rationale: Disappearance or a click cannot distinguish donation from banking, dropping, consuming or trading. A matching credited balance supplies evidence of acceptance while the selection/delta identifies the item.
+- Affects: PUNISHMENTS/Sacrifice, WHEELS, ECONOMY, PERSISTENCE, RUNELITE_INTEGRATION, policy audit and TESTING.
+- Exceptions/dependencies: IF variables are shared interface state, not permanent Coffer counters. Current mapping, rounding, quote meaning, update order, confirmation route, eligibility and overflow/failure require live verification. No exact success chat line verified. Ambiguous/reconnected transactions remain pending; no invented reward or manual verified fallback. One-spin cost and >=10k acquisition rule remain confirmed; GP-to-spin conversion remains OPEN.

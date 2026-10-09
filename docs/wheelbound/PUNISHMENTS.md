@@ -9,3 +9,6 @@ Template fields: ID, eligibility, skill/access requirements, method/equipment re
 
 ## Confirmed recovery and Taint accounting
 Taint tasks consume one Master spin (WB-D058). Persist that debit with the obligation so completing or replaying the Punishment never charges another spin. Forced Sacrifice without an eligible item requires acquisition and donation of an eligible item worth at least 10,000 GP (WB-D057); it is not replaced by a Punishment.
+
+## Sacrifice verification dependency
+WB-D068 proposes a correlated Coffer receipt using selected eligible item/quantity, Confirm, matching inventory reduction and refreshed Coffer credit. Current widget IDs are known; historical IF1-IF4 mapping needs current-client validation. Never settle from disappearance, selection, click or UI closure alone. Keep ambiguous obligations pending without another spin debit or invented reward. See POLICY_AND_FEASIBILITY.md.

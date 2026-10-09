@@ -25,7 +25,7 @@
 ## Policy/capability audit checkpoint
 - [x] Retrieve PR 16702 comments, failed build log and accepted source; identify fresh-Gson packaging failure and forbidden KeyboardFocusManager use.
 - [x] Review current primary Jagex rules and RuneLite policy; document capability matrix and exact candidate awakened/Master-CA signals.
-- [ ] Resolve WB-D063 trade/access enforcement policy conflict; no new gameplay penalty approved.
+- [ ] Validate WB-D066/067 preserve-menu attempt interception against current Hub precedent; review exact popup and cover incoming/existing-open/final Accept routes. No new penalty approved.
 - [ ] Obtain shop/GE interception clarification and live detector evidence once implementation is authorized.
-- [ ] Verify Coffer acceptance/value receipt and real acquisition routes; do not infer from item disappearance.
+- [ ] Validate WB-D068 Coffer groups/Confirm plus context-sensitive IF1-IF4 mapping in current client; verify matching inventory and balance receipt, update order, rounding, failures and real acquisition routes.
 
