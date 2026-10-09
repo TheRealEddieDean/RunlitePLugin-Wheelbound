@@ -30,3 +30,5 @@ See [CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACC
 
 ## Recovered purchase-pool separation
 S8-M0227 explicitly locks separate Skilling and Bossing Fate Card purchases/pools, with shared names permitted and different artwork suggested. Buying a Skilling card does not automatically buy its Bossing namesake. S8-M0231 explicitly confirms qualification-before-generation and reliable completion verification for Challenge cards. Current default Standard/two distinct targets/third offering approvals remain controlling. Historical Bossing Challenge intent is preserved as Q9; do not enable it or call it rejected without resolving the later wording.
+
+WB-D098 confirms five Combat primary skills and Hitpoints by-product-only. Slayer permits combat XP only while legitimately completing its assigned objective; this is not a blanket other-training exemption. Use explicit observable permission profiles. WB-D096 preserves the distinction between choosing an activity through wheel odds and eligible card offerings after selection.

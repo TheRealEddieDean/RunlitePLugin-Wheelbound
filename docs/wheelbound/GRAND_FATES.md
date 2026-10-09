@@ -21,3 +21,5 @@ DT2 awakened kill totals have separate varps for each boss (3971-3974). Proposed
 ## Master reward correction
 
 WB-D081: Master tier corresponds to Ghommal's Hilt 5, not Elite Hilt 4. Use the current initialized threshold and fresh active evidence; do not substitute possession of the reward for completion proof.
+
+S8-M0144–0145 confirms that the no-reroll warning and confirmation occur before the Grand draw. After the committed reveal, the result is binding; closing the view or declining a result cannot redraw destiny.

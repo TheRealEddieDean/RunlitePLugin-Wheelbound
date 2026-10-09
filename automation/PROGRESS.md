@@ -22,3 +22,6 @@ Commit links: prepend https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbou
 - 1bd0e93c82afe12c97eae6d75da4962f49cd53e9: five checkpoint files plus protocol/navigation committed and remote head verified.
 - WB-A02 deliverables in this checkpoint: indexed first 100 visible turns, reviewed 50 user turns plus named proposal contexts, restored WB-D091–094 and relevant specs/traceability. Read-only checks passed: 94 unique decisions, required docs, links and immutable experiment hashes. Resolve this entry’s owning SHA through file history rather than embedding a circular hash.
 - Next bounded task: WB-A03, S8-M0101–0200 progression/punishment/boss approvals.
+
+- 4a5702256cd378d1d0ee41d01e6ea45ef4604568: A02 recovery deliverables committed.
+- A03 in this checkpoint: second contiguous 100 visible turns indexed, 50 user turns reviewed; gate counts/layout and punishment provenance restored, WB-D095–099 added. Check passed: 99 unique IDs, immutable experiment hashes and both review-ledger counts. Next A04: S8-M0201–0300.

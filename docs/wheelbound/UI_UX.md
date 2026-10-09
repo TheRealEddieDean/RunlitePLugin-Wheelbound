@@ -4,7 +4,7 @@ Use polished RuneLite-compatible Swing/overlay style, local skill/boss icons, re
 Sidebar hierarchy: run mode/pause, FP/spins, active obligation and progress, Grand Fate checklist/banner, navigation to Tree/Builder/Shop/Bounties/Account. Use text + icon status, never color alone. Unclaimed indicator and search/filter bounty list.
 
 Builder: 24-slot grid, weight and probability per instance, total activity odds, Satchel with capacity, price previews, draft undo/cancel before durable commit.
-Tree: pan/zoom; square icons, hover name, click detail, root lit, free tutorial child, gold purchased paths, distinct AND/OR gates. Earlier skill ring vs PDF top-down tree layout is UNVERIFIED; do not claim latest approval.
+Tree: pan/zoom; square icons, hover name, click detail, root lit, free tutorial child, gold purchased paths, distinct AND/OR gates. Recovered WB-D095 confirms circular peer skill clusters within the broader progression tree; square icons and meaningful AND/OR remain. Exact unavailable reference artwork is not reconstructed.
 Cards: result rises, eligible offerings appear, select then freeze; noneligible options explain dependencies.
 Grand Fate: red/black wheel, spikes/skull/chains, seal outcome, multipart checklist.
 Defy: preview slot displacement, Taint/Sacrifice probabilities and spin refill together. No extra slots.
@@ -35,3 +35,5 @@ Warn clearly when policy/coverage prevents guaranteeing an access restriction. W
 
 ## Recovered onboarding and tree interactions
 WB-D092/093 confirms protected Tutorial Island onboarding, Grand-first mainland flow, illuminated root, free introductory child and square icon nodes. Hover shows highlight/name; click opens a Fate-style detail card with cost/benefit and explicit AND/OR requirements. Unlock animation sends gold down the eligible path. Bounty list uses item sprites, name search, rarity/FP sorting and persistent unclaimed indication (WB-D094). Ordinary Skilling target details explain bracket, skill modifier and clean increment (WB-D091). Specific starter FP amount/timing and eventual skill-branch layout remain provisional.
+
+Gold milestone progress shows purchased count/required count separately from owned count/total choices. At five of nine skills, show milestone 5/5 and owned 5/9; later purchases light their nodes without extending an already-complete line. Quest tier purchase itself carries the milestone animation. Boss peers show equal progression value within a tier (WB-D095/097/099).

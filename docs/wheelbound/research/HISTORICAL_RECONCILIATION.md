@@ -31,3 +31,21 @@ All 50 user turns in S8-M0001–0100 reviewed; all 100 visible turns indexed in 
 | M0095–0099 | Count-gate concept and Prayer/Hunter placement | Placement approved; exact numerical gates require next batch’s context |
 
 Explicit supersessions retained: one starting card (M0053), three Pardons (M0071), removal-Fate/expensive destruction proposal (M0071/0089), and selectable Hitpoints starting description must not override current later rules. Hidden-bounty option and skill-branch layout will be resolved from later batches. No repeated policy research or simulation was performed for this source-recovery task.
+
+## WB-A03 — second 100 visible turns reviewed
+
+All 50 user turns S8-M0101–0200 reviewed; 100 visible turns indexed in [A03 review ledger](RECOVERY_REVIEW_A03.json), with named adjacent contexts consulted. Combined bounded review: 200 indexed visible turns, 100 reviewed user turns. This is source recovery, not full revalidation of assistant research claims.
+
+| Source | Recovery | Consequence |
+| --- | --- | --- |
+| M0106–0107; M0110–0111 | 5/9 then 4/6 gate approvals; circular clusters and gold milestone progress | WB-D027 now sourced CONFIRMED; WB-D095 resolves ring/tree ambiguity |
+| M0113–0121 | Per-instance weights/duplicates; no Favored; Mastery vs post-selection cards | WB-D096; later fixed prices/unlimited-with-cap rules remain controlling |
+| M0127–0129; M0130 | Small Quest branch; completion+FP tier node carries milestone | WB-D097; highest-tier preference remains unanswered |
+| M0133–0137 | One Master activity wheel with Questing slice and choices | Preserve current three/four/five choices and qualified eligibility |
+| M0141; M0144–0145 | Five endings; warning/confirmation before binding Grand draw | No reroll/decline-after-result mechanism |
+| M0151; M0155–0157 | One completed Fate spin; Death’s Coffer chosen to prevent drop/trade-back cheese | Actual server receipt still requires live validation |
+| M0167–0171 | Dedicated Taint/Punishment wheel; dynamic validated fifty-template system, twelve varied locked outcomes | WB-D035 provenance restored; actual fifty-list deferred at M0172; random ordinary displacement superseded |
+| M0175–0179 | Five Combat skills; HP by-product; legitimate Slayer combat exemption | WB-D098; earlier selectable HP superseded |
+| M0183–0185; M0189–0199 | Separate random Boss wheel; equal peers per tier; raids capstone | WB-D099; normal 67-entry map not normative mode roster |
+
+Do not promote old Favored/Echo names, protected slices, artificial maximum skill probability, after-result Grand acceptance, default Quest weight increase, or arbitrary punishment quantities from proposals. Current explicit rules govern. Next batch A04 reviews S8-M0201–0300 including final raid counts, card pools, grouped bounty families, transparent vendor prices and completion-time audit context.

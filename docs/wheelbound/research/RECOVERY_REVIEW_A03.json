@@ -1,0 +1,725 @@
+{
+  "source": "S8 preserved selected-chain visible transcript",
+  "range": "S8-M0101\u2013S8-M0200",
+  "user_turns_reviewed": 50,
+  "visible_turns_indexed": 100,
+  "proposal_context_reviewed": [
+    "S8-M0106",
+    "S8-M0110",
+    "S8-M0114",
+    "S8-M0118",
+    "S8-M0128",
+    "S8-M0130",
+    "S8-M0144",
+    "S8-M0170",
+    "S8-M0172",
+    "S8-M0178",
+    "S8-M0180",
+    "S8-M0192",
+    "S8-M0196",
+    "S8-M0200"
+  ],
+  "limitations": "All user turns reviewed; named adjacent assistant contexts consulted. Other assistant text indexed without promoting assertions. Historical images unavailable. Normal 67-entry source map is not final mode roster approval.",
+  "entries": [
+    {
+      "locator": "S8-M0101",
+      "message_id": "a7e2278f-65ef-4871-8cc7-0871d6429593",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Peer skill level/layout avoids arbitrary dependency; reference image missing"
+    },
+    {
+      "locator": "S8-M0102",
+      "message_id": "cb893ab1-f259-4117-9c65-70aa1e0b3068",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0103",
+      "message_id": "050b1c62-3eb3-4474-9283-5aed434600d2",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Circular cluster suggestion; later M0107 approval"
+    },
+    {
+      "locator": "S8-M0104",
+      "message_id": "d101ae84-4058-4c65-bb63-a9e6105f7dbf",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0105",
+      "message_id": "2a4b69d9-4295-4417-be36-d86b09630543",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Gold progression line concept"
+    },
+    {
+      "locator": "S8-M0106",
+      "message_id": "1a70f3c3-3dc5-4fc2-9fca-58dbbf69e955",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0107",
+      "message_id": "c7c6ca62-e941-4224-b28f-0381bd457975",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Approves M0106 5-of-9 gold milestone/cluster: D027/D095"
+    },
+    {
+      "locator": "S8-M0108",
+      "message_id": "897e1225-d036-42f8-a8b7-63d1ad2478db",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0109",
+      "message_id": "b7d9b224-d7a6-4b7b-9f23-ee1b4579c253",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Next question"
+    },
+    {
+      "locator": "S8-M0110",
+      "message_id": "2bf34f6c-4a63-40bb-9299-edbf9647dc9b",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0111",
+      "message_id": "e836281e-dbb9-466b-b21d-9d9efc1c5688",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Approves M0110 4-of-6 Mastery and Tier-II cluster: D027/D095"
+    },
+    {
+      "locator": "S8-M0112",
+      "message_id": "5a5ce78b-b635-4c07-8398-dc606f471159",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0113",
+      "message_id": "e6bc99a1-567d-4190-a815-3702b533d838",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Mastery odds versus Fate Manipulation card split: D096"
+    },
+    {
+      "locator": "S8-M0114",
+      "message_id": "fc1cb5b1-5520-44c0-b6d8-6984843181b6",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0115",
+      "message_id": "09537ba4-4f75-447b-8e01-06224533ab05",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Larger slice/duplicate proposal"
+    },
+    {
+      "locator": "S8-M0116",
+      "message_id": "60a5d10c-2943-4aaf-94c9-4171c3e717f9",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0117",
+      "message_id": "e0d59530-1d22-4e85-b667-c81f4e09bfbc",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Both weight and duplicate mechanisms approved"
+    },
+    {
+      "locator": "S8-M0118",
+      "message_id": "929f3ffb-17d4-43f1-8fc6-59a302f5b793",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0119",
+      "message_id": "d56581eb-1d68-4ae3-ab26-1c33dd694806",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Per-instance independent enhancements"
+    },
+    {
+      "locator": "S8-M0120",
+      "message_id": "a4bd3744-5a0c-413f-b966-231d6fc99411",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0121",
+      "message_id": "564f0dd2-b8bc-47ce-8874-3461f988aaf5",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "No Favored Skill system"
+    },
+    {
+      "locator": "S8-M0122",
+      "message_id": "728d97f1-33ce-4d18-8ec7-72e70ec4eabc",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0123",
+      "message_id": "1ad0fcee-c575-4192-9600-ec5d03e0c42b",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Delegates integrated numeric balancing"
+    },
+    {
+      "locator": "S8-M0124",
+      "message_id": "f68b0064-ae5d-4c6e-88d1-97dbca65ceae",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0125",
+      "message_id": "7b80762d-e084-4247-a8fd-51ff68ff74b0",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Next subject request"
+    },
+    {
+      "locator": "S8-M0126",
+      "message_id": "d997a66c-9a17-4259-be85-d627dde6a34e",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0127",
+      "message_id": "da142cd4-639c-48f7-90ed-f9da39a7270b",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Compact Questing branch, not filler"
+    },
+    {
+      "locator": "S8-M0128",
+      "message_id": "88c812d8-e8c0-4612-adde-5b13ca0e7fc4",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0129",
+      "message_id": "097bf84b-c8aa-4efb-8a55-304afb78a45a",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Completion counts and milestone built into tier unlock: D097"
+    },
+    {
+      "locator": "S8-M0130",
+      "message_id": "c1506965-7618-4ad9-89fa-4db77cc4ffe6",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0131",
+      "message_id": "97f9d5be-8cb6-420b-981d-ad22acd4f830",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Access prerequisite concerns; does not approve M0130 highest-tier preference"
+    },
+    {
+      "locator": "S8-M0132",
+      "message_id": "fa12edef-d319-4961-97e2-e14b2697697d",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0133",
+      "message_id": "a7dbb0f6-ebdb-4a92-bc75-f0dd2dd42a65",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Questing slice with quest choices; default three/current later count controls"
+    },
+    {
+      "locator": "S8-M0134",
+      "message_id": "e06305c2-440c-4cec-8a67-5f7b2dd39777",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0135",
+      "message_id": "187d735d-741b-4d9e-8255-4801a3b44f06",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "One Master activity wheel; no category wheel plus skill wheel"
+    },
+    {
+      "locator": "S8-M0136",
+      "message_id": "ef3c20e2-f94a-4012-8b7a-f017a949ba23",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0137",
+      "message_id": "f7b5d366-dcd1-4389-8053-ac283e631f1b",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Separate Wheel Builder confirmed"
+    },
+    {
+      "locator": "S8-M0138",
+      "message_id": "e0513c13-de86-4752-81aa-587fd0fcdede",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0139",
+      "message_id": "8b30ba78-3a18-4b7a-bd93-407ed0961820",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Grand wheel red/skull/chains/spikes theme"
+    },
+    {
+      "locator": "S8-M0140",
+      "message_id": "e6580607-38ec-4dab-80de-5dc8478751e2",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0141",
+      "message_id": "c0a25d01-96bc-4050-b1e7-0d2d35070a8f",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Five Grand Fate outcomes named"
+    },
+    {
+      "locator": "S8-M0142",
+      "message_id": "c9e3e895-04a1-411f-a6e9-23ef152b552e",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0143",
+      "message_id": "ce23e87b-4a40-4920-b097-7aa9f4b1b390",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Decline-result question"
+    },
+    {
+      "locator": "S8-M0144",
+      "message_id": "44d96d80-5412-422e-a878-c87b677b5f77",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0145",
+      "message_id": "9e9dd8dc-10d0-495a-b2b9-616b5645fddc",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Approves binding pre-spin Grand confirmation M0144, no reroll"
+    },
+    {
+      "locator": "S8-M0146",
+      "message_id": "fdc48db8-867c-4215-96ca-659b72799c34",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0147",
+      "message_id": "0ef33c4b-4f37-4eb8-9ce5-de31d4cc14cf",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Next subject"
+    },
+    {
+      "locator": "S8-M0148",
+      "message_id": "4e82a1e1-049a-4b7f-816f-458fac21b8f9",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0149",
+      "message_id": "35ed1a5a-219d-403b-baeb-b0e4f9e20eca",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Finite spin/Defy/Taint/sacrifice concepts; larger Questing suggestion not final locked starting weight"
+    },
+    {
+      "locator": "S8-M0150",
+      "message_id": "3223a634-ee3a-4422-b0ea-d6d8faa2e085",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0151",
+      "message_id": "cc25f0eb-ec16-468c-881c-3a6e3e538e41",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "One per completed Fate and zero-spin choice approved"
+    },
+    {
+      "locator": "S8-M0152",
+      "message_id": "17840577-ced8-4908-ab64-8f2aea8cad43",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0153",
+      "message_id": "f53748b9-8d14-4e88-9ee4-99ab5a41ca4e",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Drop/pickup evidence question, not approved settlement"
+    },
+    {
+      "locator": "S8-M0154",
+      "message_id": "4c75aa87-96e9-4448-aa5e-6bf2d462e76e",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0155",
+      "message_id": "f5701ea5-cf7d-41f9-b99e-4c2001b27404",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Offer/destroy integrity concern; return trade not acceptable proof"
+    },
+    {
+      "locator": "S8-M0156",
+      "message_id": "4079729d-6122-4771-8ee0-83b15365c54b",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0157",
+      "message_id": "da1bd88a-a7ba-4aca-a248-f471ef3c756b",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Death\u2019s Coffer sacrifice selected"
+    },
+    {
+      "locator": "S8-M0158",
+      "message_id": "ddf7228f-3c08-4957-ac13-90160c1e9662",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0159",
+      "message_id": "259eb2c6-cdba-4c53-8139-fbf3d137cd08",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Next subject"
+    },
+    {
+      "locator": "S8-M0160",
+      "message_id": "4483e0a2-a4ab-4161-b686-7cb081543f9a",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0161",
+      "message_id": "09af9706-63db-49e3-8a10-3b04003ce3b0",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Increasing Defy danger approved; exact numbers explicitly not locked"
+    },
+    {
+      "locator": "S8-M0162",
+      "message_id": "8b726462-a3a6-488a-9c3b-b80407fcd2e8",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0163",
+      "message_id": "08c32668-51e3-4687-8aa7-6fc40229239f",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Cleansing removes Taint"
+    },
+    {
+      "locator": "S8-M0164",
+      "message_id": "bd68ccf1-9b01-4870-b844-d3f9eacf2675",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0165",
+      "message_id": "604f911b-4d85-4d59-ab23-e14603c93ad1",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Long miserable punishment examples, not verified tool/quantity compatibility"
+    },
+    {
+      "locator": "S8-M0166",
+      "message_id": "b895bfe1-1303-4934-baa3-c4630c867aa1",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0167",
+      "message_id": "154848d0-52bd-4500-82c4-c06a22dbab08",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Dedicated Taint/Punishment wheel, 50/12 concept; random ordinary displacement superseded"
+    },
+    {
+      "locator": "S8-M0168",
+      "message_id": "3cc4e88d-9b21-4b5a-bc0f-cd9e8248fef5",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0169",
+      "message_id": "2590ced4-9857-4dc6-8e5e-dae68c4954f5",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Dynamic feasible fifty-template library requested"
+    },
+    {
+      "locator": "S8-M0170",
+      "message_id": "42dc1ef8-98f4-4c52-a140-2695190111da",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0171",
+      "message_id": "e2147017-c9d8-4e4b-a51e-d266296ee076",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Approves dynamic template mechanism M0170; actual list deferred M0172"
+    },
+    {
+      "locator": "S8-M0172",
+      "message_id": "2ed538ef-45c6-42dd-b551-c7519cedd52d",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0173",
+      "message_id": "96cadb49-c8cf-41b9-8626-a4b22b285501",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Next subject"
+    },
+    {
+      "locator": "S8-M0174",
+      "message_id": "b0d86f96-1c0b-4fe0-bf7a-f76069c55bf4",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0175",
+      "message_id": "49689338-9535-446d-9864-a55feaed620f",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Combat choice initially includes HP; superseded M0179"
+    },
+    {
+      "locator": "S8-M0176",
+      "message_id": "c2184ffc-54e6-4f35-b239-a84cc9c6e4de",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0177",
+      "message_id": "0108b677-8ccd-4786-85b3-5409b4e144b8",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Slayer legitimate combat by-products exempt"
+    },
+    {
+      "locator": "S8-M0178",
+      "message_id": "844427dc-ba81-4b9c-a22c-a65d5fe631c1",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0179",
+      "message_id": "dbdd36ac-8f05-4e4f-b41c-15d72d0e67cd",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Remove selectable Hitpoints: D098"
+    },
+    {
+      "locator": "S8-M0180",
+      "message_id": "7c001cbd-f8bb-47be-bb8e-ce7ecc6e3afd",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0181",
+      "message_id": "7cb4f82a-1146-418d-a492-68f72018e8be",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Next subject"
+    },
+    {
+      "locator": "S8-M0182",
+      "message_id": "afd12cb6-5224-4c6d-b2da-8de1d94c93a7",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0183",
+      "message_id": "9150c5a3-a213-4312-af80-c7b830baec4d",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "One Bossing slice and transition to separate random boss wheel"
+    },
+    {
+      "locator": "S8-M0184",
+      "message_id": "c7b96e89-a0d2-47e5-8ab3-eeefdc22d5cb",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0185",
+      "message_id": "d9f49643-eda9-4233-a932-1d5bcc82fc23",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "No boss choice; Questing leniency through choice"
+    },
+    {
+      "locator": "S8-M0186",
+      "message_id": "f34e41e2-1d0b-41f9-8fa5-18efc3337904",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0187",
+      "message_id": "71e17cd9-900b-4bee-a4a9-d850aa1cf433",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Boss tier image missing; text request recoverable"
+    },
+    {
+      "locator": "S8-M0188",
+      "message_id": "53acd051-6b91-41dd-b88d-0e0c0caee09a",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0189",
+      "message_id": "74f55256-e5c7-4df8-a4c4-87d48fed5ab7",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Peer count-based boss tier gates"
+    },
+    {
+      "locator": "S8-M0190",
+      "message_id": "ae6bc2fe-c9c0-41a6-a8e6-2465f22ca0a4",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0191",
+      "message_id": "eef25127-9a7d-4d82-ad3f-58903279b203",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "All within-tier bosses equal: D099"
+    },
+    {
+      "locator": "S8-M0192",
+      "message_id": "26c7406f-103c-4272-a0fe-0d0ff23f3b8b",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0193",
+      "message_id": "6063ad69-4025-4486-af95-9d25f561b0ad",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Source roster lookup request"
+    },
+    {
+      "locator": "S8-M0194",
+      "message_id": "ea07ecd6-14c8-407d-9e2e-6fcfd8c6feae",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0195",
+      "message_id": "38ae57d6-80ea-4be1-bb94-e6e8d16b69a6",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Requests list; M0196 normal source map not mode approval"
+    },
+    {
+      "locator": "S8-M0196",
+      "message_id": "353ebf56-073d-46fb-bdbd-483f32c80f8c",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0197",
+      "message_id": "3837c72e-dbde-4db1-84b5-18382b87bf6c",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Raids capstone desired"
+    },
+    {
+      "locator": "S8-M0198",
+      "message_id": "55098c36-d95d-41d0-93ce-87afc580a2c2",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    },
+    {
+      "locator": "S8-M0199",
+      "message_id": "ebdf7eac-2a2d-42ac-b23b-5edff67b04a1",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Grandmaster equals raids; no extra nonraid Grandmaster tier"
+    },
+    {
+      "locator": "S8-M0200",
+      "message_id": "aee3f52c-04c4-45f9-91af-4045ddab39c9",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant text indexed; no standalone user approval inferred"
+    }
+  ]
+}

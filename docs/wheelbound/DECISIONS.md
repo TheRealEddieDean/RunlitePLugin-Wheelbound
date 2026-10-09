@@ -264,13 +264,13 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 
 ## WB-D027 - Tier I nine skills 5/9; Tier II six 4/6; Mastery
 
-- Status: UNVERIFIED
-- Authority: Historical authority unknown
-- Evidence: S3 §7
-- Decision: Tier I nine skills 5/9; Tier II six 4/6; Mastery.
-- Rationale: Staged unlock progression inferred from summary.
-- Affects: [PROGRESSION](PROGRESSION.md).
-- Exceptions/dependencies: Exact approval unavailable; Sailing current facts unverified.
+- Status: CONFIRMED working gate counts and tier placement; prices BALANCE_TBD.
+- Authority: Explicit user approvals, now recovered.
+- Evidence: S8-M0099/0100 Prayer/Hunter placement; S8-M0106–0107 confirms 5-of-9 progress/milestone; S8-M0110 asks 4-of-6 Mastery gate, S8-M0111 answers yes.
+- Decision: Tier I Cooking, Firemaking, Smithing, Crafting, Fletching, Agility, Thieving, Runecraft, Prayer; buy five distinct Tier-I unlocks to open Tier II. Tier II Slayer, Herblore, Farming, Construction, Sailing, Hunter; buy four distinct Tier-II unlocks to reach Skilling Mastery. Remaining earlier-tier skills stay purchasable.
+- Rationale: Meaningful account investment without forcing every skill or arbitrary skill-to-skill dependencies.
+- Affects: [PROGRESSION](PROGRESSION.md), [UI_UX](UI_UX.md), economy and gate fixtures.
+- Exceptions/dependencies: Count purchased skill access, not active slices/duplicates. Starting free skills are outside these specified tier-node sets. Original assistant first called counts provisional, then user approved the concrete milestone/gate; preserve that evolution. Sailing’s current availability was separately verified at WB-D081. No silent numerical retuning; proposed changes remain documented balance candidates.
 
 ## WB-D028 - Quest choices three/four/five, difficulty/completion/FP gates
 
@@ -344,14 +344,15 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 
 ## WB-D035 - Punishment wheel ~12 from ~50, cannot reject, small FP reward
 
-- Status: UNVERIFIED
-- Authority: Historical authority unknown
-- Evidence: S3 §10
+- Status: CONFIRMED template/pool mechanism; exact quantities BALANCE_TBD
+- Authority: Explicit user approval; current mandatory rules also apply.
+- Evidence: S8-M0167–0171; dynamic proposal S8-M0170 approved at M0171; committed Taint pool confirmed at M0293. Small-FP reward source M0283.
 - Decision: Punishment wheel ~12 from ~50, cannot reject, small FP reward.
 - Rationale: Committed punishment obligation.
 - Affects: [PUNISHMENTS](PUNISHMENTS.md).
 - Exceptions/dependencies: Catalog/payout unknown.
 
+- Recovered detail: Roughly fifty templates produce account-valid concrete objectives; select roughly twelve varied eligible outcomes and lock them before display/spin. Validate actual level, access and usable tools before inclusion. Dynamic severity need not rise linearly with account level; some tasks become easier with development. The actual fifty-entry list was deferred at S8-M0172, so new drafts are not a recovered list. Older random ordinary displacement is superseded by player choice, and assistant no-FP reward suggestion is superseded by small FP rewards.
 ## WB-D036 - Daily 24h refresh; manual claims and one-time permanent bounties
 
 - Status: UNVERIFIED
@@ -964,3 +965,53 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Rationale: Do not miss a qualifying rare drop because the player failed to open a bounty screen; make earned rewards discoverable and controllable.
 - Affects: [BOUNTIES](BOUNTIES.md), [UI_UX](UI_UX.md), acquisition receipts and catalog metadata.
 - Exceptions/dependencies: Paused events never earn retrospective credit (S8-M0075 and current user approval). Early hidden-bounty option is superseded by later visible-only decision, to be reconciled in A04. Imbued Heart +500 and other sample rewards are balance examples, not final numbers. Eligibility still requires supported owned acquisition evidence; simply possessing the item does not prove a drop.
+
+## WB-D095 - Circular peer skill clusters and gold milestone progress
+
+- Status: CONFIRMED layout concept; original reference images unavailable.
+- Authority: Explicit user approval.
+- Evidence: S8-M0101–0107; M0106 proposal approved at M0107; Tier-II cluster proposal M0110 approved at M0111.
+- Decision: Skills within a tier are peer choices presented as circular clusters inside the broader progression tree. The Master Progression Line fills gold toward the next milestone as qualifying unlocks are purchased. At five of nine, that milestone line is complete even though only five of nine skills are owned. Remaining skills illuminate their own nodes but do not overfill the completed milestone.
+- Rationale: Show real count-based progress without implying arbitrary Cooking→Crafting prerequisites.
+- Affects: [PROGRESSION](PROGRESSION.md), [UI_UX](UI_UX.md).
+- Exceptions/dependencies: Square icon nodes and meaningful AND/OR elsewhere remain confirmed. This resolves the skill-cluster versus vertical-tree misunderstanding: clusters sit within the larger tree, rather than replacing all branches with one ring. Exact artwork remains a later UI selection; do not reconstruct unavailable images as if inspected.
+
+## WB-D096 - Mastery modifies slice odds; Fate Manipulation modifies selected activity offerings
+
+- Status: CONFIRMED split and per-instance manipulation; numbers BALANCE_TBD.
+- Authority: Explicit user decisions.
+- Evidence: S8-M0113–0121.
+- Decision: Skilling Mastery unlocks increased slice weights and additional real slices; each slice starts at normal weight and can be enhanced independently. Two instances of Slayer may have different weights. Fate Manipulation concerns the Lesser/Greater/etc. offerings after the activity is selected. There is no separate Favored Skill system.
+- Rationale: Visible wheel-building control while the random wheel still determines the activity.
+- Affects: [WHEELS](WHEELS.md), [PROGRESSION](PROGRESSION.md), [FATE_SHOP](FATE_SHOP.md), card pools.
+- Exceptions/dependencies: Earlier Favored/Echo terminology and probability-cap suggestions are not additional approved systems. Current unlimited duplicates within 24 slots and fixed tier-only enhancement prices control later detail. Exact Mastery unlock prices/prerequisite placement remain balancing/specification work; position does not change odds.
+
+## WB-D097 - Quest tier purchase is the completion milestone
+
+- Status: CONFIRMED milestone structure; thresholds/reward values BALANCE_TBD; highest-tier preference UNVERIFIED.
+- Authority: User proposal accepted in adjacent design interpretation.
+- Evidence: S8-M0127–0129; S8-M0130 interprets completion count plus FP and built-in milestone.
+- Decision: Keep Questing compact. Advance by completing X assigned Quest Fates of the preceding tier plus paying the next-tier unlock cost. The tier purchase itself celebrates/grants its milestone benefit rather than a separate filler gate node. Questing is one Master Wheel slice with eligible quest choices, not a Skilling-vs-Questing category wheel followed by another skill wheel.
+- Rationale: Actual quest progress opens harder quests while retaining leniency through choices.
+- Affects: [PROGRESSION](PROGRESSION.md), [FATE_CARDS](FATE_CARDS.md), quest receipts and progression ledger.
+- Exceptions/dependencies: Only qualifying active assigned Quest Fates count; paused/general quest completion does not. This assigned-only detail is the adjacent assistant specification, consistent with current no-paused-credit rules, not a separate quoted user lock-in. Exact bonus content is not an approved free FP amount. M0130 asks whether to prefer highest tier; the next user turn changes topic, so that preference is not confirmed by this exchange. Current three/four/five offerings remain controlling.
+
+## WB-D098 - Combat has five selectable skills; legitimate Slayer/combat by-products exempt
+
+- Status: CONFIRMED.
+- Authority: Explicit user decisions.
+- Evidence: S8-M0175–0179; Hitpoints removal at M0179 supersedes its earlier selectable description.
+- Decision: Combat bundles Attack, Strength, Defence, Ranged and Magic as selectable primary objectives. Hitpoints is by-product-only. Combat XP legitimately earned while completing a Slayer Fate is permitted and does not consume unauthorized tolerance; similarly permit verified inherent by-products of the assigned objective.
+- Rationale: Avoid penalizing XP the game naturally couples to legitimate task completion.
+- Affects: [FATE_CARDS](FATE_CARDS.md), [GAME_RULES](GAME_RULES.md), [TECHNICAL_SPECIFICATIONS](TECHNICAL_SPECIFICATIONS.md), XP evidence profiles.
+- Exceptions/dependencies: Exemption is context-specific, not permission to train arbitrary other combat outside the Slayer task. When attribution is unavailable, the template needs conservative documented supported evidence rather than invented tool/method proof. Current primary-skill-before-target flow remains controlling.
+
+## WB-D099 - Peer boss unlocks within tiers; Grandmaster capstone is raids
+
+- Status: CONFIRMED structure; exact peer thresholds BALANCE_TBD.
+- Authority: Explicit user decisions.
+- Evidence: S8-M0183/0185 (one Bossing slice/random boss), M0189/0191 (peer count gates), M0197/0199 (raids capstone).
+- Decision: Bossing is one Master slice leading to its separate random Bossing Wheel. Bosses within a difficulty tier are equal unlock choices, without boss-to-boss prerequisite ordering. Purchase any X peers to open the next tier. Grandmaster is the raid capstone: CoX, ToB and ToA, with variants grouped rather than separate progression tiers.
+- Rationale: Nonlinear choice within tiers and easier catalog expansion without arbitrary chains.
+- Affects: [PROGRESSION](PROGRESSION.md), [WHEELS](WHEELS.md), boss eligibility/catalogs.
+- Exceptions/dependencies: One unlocked boss is one Bossing-wheel eligible outcome, subject to real access; purchasing a boss does not create another ordinary Master slice. Current cards-before-random-boss sequence overrides early direct-roll/no-card summaries. S8-M0196 reports the normal 67-entry map, which is not yet the final 64-node mode grouping; later count approvals are reviewed in A04. Do not relabel normal plugin tiers as approved mode tiers.
