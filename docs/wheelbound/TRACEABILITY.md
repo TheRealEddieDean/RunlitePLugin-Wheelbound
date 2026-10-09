@@ -42,3 +42,7 @@ See [CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACC
 | Protected tutorial and qualified starting quests | WB-D092 | I01/I03/I09 | Mainland-first ordinary assignment; no tutorial violation/credit backfill |
 | Introductory child and meaningful AND/OR nodes | WB-D093 | I04/I09 | FP cannot bypass prerequisites; node benefit survives alternate route |
 | Active bounty notifications and independent rarity/reward | WB-D094 | I05/I09 | Unclaimed evidence retained; manual idempotent claims; paused negative fixtures |
+
+| Recovered peer gates/clusters/64 boss nodes and pool commitment | WB-D027/095/099/100 | I03/I04/I09 | 5/9 and 4/6 unique unlocks; mode roster covers all67 source categories; no ordinary boss removal |
+| Visible grouped bounties, vendor transparency, Wilderness opt-in | WB-D101/102/103 | I03/I04/I05/I06/I09 | Family acquisition/claim provenance; current/next class quotes; no implicit access permission |
+| Grand checklists and delegated lifecycle/economy | WB-D104/105/106 | I01/I04/I07/I08/I09 | Failed attempt preserves checks; no offline credit, timer or passive FP; Q10 settlement held |

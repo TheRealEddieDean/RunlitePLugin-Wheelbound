@@ -31,3 +31,6 @@ Commit links: prepend https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbou
 
 - b4c0de1b6fd7e017bd2408d9850ba2753a8c3a63: A04 committed recovered 64-node Bossing progression, grouped bounty identity and transparent vendor rules.
 - A05 in this checkpoint: all 436 visible turns indexed/218 user turns reviewed; D104–106, recovered Grand/checklist/shop/delegated lifecycle and Q10 Reject/bounty ambiguity. No claim all assistant facts or missing attachments verified. Next A06 cross-file consistency.
+
+- aa7d7f8cad6713b6c48188d8dbb7605fa71589ba: A05 committed full visible-user-turn review, Grand/checklist/shop and delegated authority records.
+- A06 in this checkpoint: scoped consistency corrections; design checks and existing H2/H3 invariant/replay checks passed. Main baseline preserved; all changes limited to automation/ and docs/wheelbound/. Session ends IDLE with no completed deliverable omitted from checkpoint. Next A07 catalog authority manifest; A13 recovered-rule backlog review can follow independently. PDF refresh remains queued, not claimed current.

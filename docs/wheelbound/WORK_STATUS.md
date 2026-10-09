@@ -2,7 +2,7 @@
 
 Checkpoint date: 2026-10-09. Branch wheelbound-mode; protected main baseline c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
 
-Last successful predecessor: 1bd0e93c82afe12c97eae6d75da4962f49cd53e9. This file is part of the next coherent checkpoint; resolve its own commit via GitHub file history rather than embedding a circular self-hash.
+Last successful predecessor: aa7d7f8cad6713b6c48188d8dbb7605fa71589ba. This file is part of the next coherent checkpoint; resolve its own commit via GitHub file history rather than embedding a circular self-hash.
 
 Completed: initial recovered Markdown committed; explicit corrections preserved; original Hub rejection investigated; 12,000 H1 and 36,000 H1 sensitivity trajectories plus 12,000 H2 and 36,000 H2 sensitivity trajectories recorded; detailed detector specifications written. These synthetic trajectories are not measured OSRS playtime or complete verified game-content progression. No production plugin code changed.
 
@@ -24,3 +24,6 @@ The platform runs work only while this session and quotas permit. No weekend bac
 The user activated the incremental 70/30 effort protocol on 2026-10-09. Read [automation/SESSION_STATE](../../automation/SESSION_STATE.md) and [TASK_QUEUE](../../automation/TASK_QUEUE.md) first for ownership, actual checkpoints and the highest-priority task. This supersedes ad hoc continuation steps while preserving the master assignment and canonical design rules. No scheduled restart has been created.
 
 Historical batch A02 complete in this checkpoint: 100 visible turns indexed, 50 user turns and named adjacent proposal contexts reviewed; WB-D091–094 added. Next A03 covers S8-M0101–0200. Read automation ownership before continuing.
+
+## Planned-session recovery checkpoint
+Protocol plus A02–A05 source review completed and committed in bounded batches. A06 consistency updates in this checkpoint align random Sacrifice stages/UX, completion-time audits, Master active CA evidence, boss pool commitment and archived punishment/fine hypotheses. All436 visible turns indexed/218 users reviewed;106 unique decisions. Offline model checks passed without rerunning/relabeling historical experiments. Read automation/SESSION_STATE for IDLE ownership and exact A07 continuation. Latest PDF remains stale relative to recovered rules and is explicitly queued for regeneration, not published as current.

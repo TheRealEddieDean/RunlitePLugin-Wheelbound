@@ -1,3 +1,7 @@
+# Historical reconciliation — reviewed source checkpoint
+
+Current status: A02–A05 reviewed all218 visible user turns and indexed all436 visible turns. A06 cross-file pass aligns the resulting rules; named assistant proposal contexts were consulted, not every historical factual assertion reverified. Missing sources/catalog authority and major interactions remain explicitly tracked.
+
 # Historical reconciliation — first confirmed corrections
 
 Source: [preserved visible transcript](SHARED_CONVERSATION_TRANSCRIPT.md), S8, retrieved 2026-10-09. This report records a first recovery batch, not a claim that all 436 messages have been reconciled. Current explicit approvals override older proposals.
@@ -82,3 +86,6 @@ All 68 user turns S8-M0301–0436 reviewed; 136 visible turns indexed in [A05 le
 | M0417–0436 | Durable Markdown/commit expectations, source recovery and weekend work | Current checkpoint protocol controls execution; no background/auto-reset capability inferred |
 
 Separate Brainstorming full transcript and historical nontext attachments remain missing. New catalogs were produced independently and are not proven historical lists; S8-M0172 deferred actual punishment catalog. Exact Challenge library, minimum classification, exhausted-slice policy, Coffer impossible-donation recovery, Bossing Challenge intent and Reject/bounty settlement still need targeted specification or major input. Proceed to A06 cross-file consistency and deduplication before claiming recovery complete or publishing latest PDF.
+
+## WB-A06 — consistency pass
+Scoped scans/readbacks across gameplay, state, UX, detector contracts, traceability and handoff found/corrected: old forced-selection state/view wording; immediate-fine and initial tolerance provenance; obsolete existing-account-open labels; punishment120-minute cap treated beyond its experiment; bounty manual-claim ambiguity; and card/boss/Grand context propagation. Source locators, unique IDs, local links, all four review ranges,64-node source coverage and immutable experiment hashes pass read-only checks. Existing H2/H3 offline invariant/replay checks pass. Major Q2/Q5/Q6/Q9/Q10 remain open; catalog families and exact audit/Reject settlement are not invented. This is a documentation consistency checkpoint, not live runtime acceptance.

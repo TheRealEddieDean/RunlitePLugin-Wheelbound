@@ -1,6 +1,6 @@
 # Bounties
 Confirmed assignment: 100 curated permanent item bounties; three randomized daily item bounties; Combat Mastery; Achievement Diaries.
-Permanent one-time independently balanced payouts with rarity presentation; daily optional, not progression requirement. Combat Mastery rewards all CAs for a boss; diary region/tier rewards. Active legitimate event evidence required. Manual claim where specified; S3 says all manually claimed. Paused events never retroactively qualify.
+Permanent one-time independently balanced payouts with rarity presentation; daily optional, not progression requirement. Combat Mastery rewards all CAs for a boss; diary region/tier rewards. Active legitimate event evidence required. Awards are manually claimed (S8-M0057/WB-D094); evidence is retained as unclaimed before ledger credit. Paused events never retroactively qualify.
 
 Claim transaction validates evidence and claim key before ledger credit; rerun does not repay. Historical 100 item catalog and reward tiers missing. Imbued heart +500 FP was an earlier example in memory, not final payout.
 

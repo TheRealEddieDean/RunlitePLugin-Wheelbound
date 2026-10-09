@@ -38,3 +38,6 @@ Before calling balance final, add reviewed real boss/quest access, resource rout
 
 ## Resume
 Use WORK_STATUS for the precise resume prompt. The shared conversation is now preserved as 436 visible messages with stable S8 locators; finish reconciliation before publishing an updated PDF. Separate Brainstorming chat and original nontext attachments remain inaccessible. Checkpoint commits and PDF are durable; no automatic relaunch or weekend background execution is claimed.
+
+## Recovery update
+All436 visible source turns are indexed; all218 user turns reviewed with named adjacent proposals. Register now contains106 stable decisions, including sourced gates/circular clusters,64 boss progression nodes, committed purchased boss pool, grouped visible bounty goals and delegated lifecycle safeguards. Normal-source/H1–H3 hashes are preserved. Q10 Reject/bounty settlement joins Q2/Q5/Q6/Q9 as a material interaction to resolve. A07 must distinguish normative catalog revisions from experimental drafts before the next faithful model/PDF publication. No full real-content model or live detector proof is claimed.

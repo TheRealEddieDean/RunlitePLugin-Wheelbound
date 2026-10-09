@@ -20,7 +20,7 @@ Always display actual odds based on all active weights, including Taint/Sacrific
 | Taint/Reject pending | Show supported Punishment wheel and exact eligible outcome count | Fewer than twelve legitimate candidates allowed; no unsupported fillers |
 | Punishment active | Target/restriction/progress/reward | No reject or silent relaxation; pause remains free |
 | Sacrifice acquisition | Explain eligible item ≥10k and permitted acquisition route | Pending obligation persists; no automatic shop/GE unlock or new task reward |
-| Sacrifice selection | Snapshot candidate, quantity, Blessed exclusions and server quote | Verify detector health/headroom before irreversible player action |
+| Forced Death’s Wheel | Freeze candidates, quantities and Blessed exclusions; commit random demanded item before animation | No player item choice/reroll; restore same outcome after restart; validate server quote/headroom before donation |
 | Donation pending | “Waiting for matching Coffer credit” with evidence status | No award from disappearance; no prompt to donate again after ambiguity |
 | Completed | Completion receipt and preserved run history | Existing OSRS progress unchanged; no automatic abandon/delete |
 

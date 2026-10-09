@@ -719,7 +719,7 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Decision: Use active-run encounter/reward evidence, four independent awakened counters and initialized Master point thresholds. Radiant completion requires full-set creation receipts; current official cost is 2,500 aether runes per piece.
 - Rationale: Preserve confirmed gameplay while defining honest, implementable observation boundaries.
 - Affects: Grand Fates, CA, persistence.
-- Exceptions/dependencies: Existing-account credit policy remains OPEN; retrospective CA changes are not fresh gameplay.
+- Exceptions/dependencies: New-account scope is confirmed at WB-D088; retrospective CA changes are not fresh gameplay and cannot backfill run evidence.
 - Supersession: Refines WB-D059/063/064/068 where applicable; does not supersede explicit gameplay approvals.
 - Acceptance criteria: Pass the relevant detector and invariant cases in TECHNICAL_SPECIFICATIONS.md and TESTING.md before release.
 

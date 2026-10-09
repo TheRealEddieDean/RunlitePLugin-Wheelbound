@@ -21,7 +21,7 @@ Status: DELEGATED working candidate / BALANCE_TBD, 2026-10-09. All numeric value
 | Additional Blessed slots | 3,000 then 6,000 FP | First free on first Defy; maximum three types |
 | GE | 2,500 FP plus 25 completed ordinary Fates | Permanent one-time unlock; no gamble |
 | Vendor category unlock | 100×(1+prior paid category unlocks) FP | Per-category counters; free first-shop interpretation remains UNVERIFIED |
-| Reject / first audit penalty | 250 / 100 FP | Negative allowed; no reward for rejected Fate |
+| Reject / archived first audit fine hypothesis | 250 / 100 FP | BALANCE_TBD; 100 FP is a prior experiment assumption, not restored end-audit settlement; Reject forfeits completion reward |
 | Punishment reward | 25 FP | Below ordinary reference, enough recovery income without replacing normal progression |
 
 Special-task accounting is confirmed: Taint and Sacrifice consume exactly one spin; derived Punishment consumes no additional spin. Voluntary sacrifice receives no invented task debit. GP→spin formula remains consequential OPEN; do not finalize the floor from this sheet. Minimum 10k eligibility is a separate confirmed game/player rule.
