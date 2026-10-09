@@ -60,7 +60,7 @@ GE offer events send initial EMPTY states on login before server offer informati
 
 Representative diary flags include ARDOUGNE_DIARY_EASY_COMPLETE=4458 and medium/hard/elite 4459-4461. Do not infer reward collection or reconstruct every task from those four completion flags.
 
-Additional pinned sources: MenuOptionClicked 355d9c2ac1ce41f9c388bf29198f9da49944eca0; WidgetLoaded 24bac3fdabd46b238fa13b7d8d2d1241df90354c; LootManager dcec3f84c3d5dc5eedcac695aef16bb1c289c5e1; LootTrackerPlugin 586694b07c1b3445eabbf44d04956d3d60629a9a; ConfigManager 6bdd1cf40c47252d35e05217ffc3089d569fc8b8. Core AttackStylesPlugin hides selected combat widgets (db9a2089f22e7588542a86758e0ebb81a6ba9208); that narrower existing behavior is not blanket permission for new state-dependent restrictions. InterfaceID file retrieval returned no content, so no exact shop/Coffer widget IDs were verified in this audit.
+Additional API blob hashes are preserved in research/API_SOURCE_PINS.json. Core AttackStylesPlugin hides selected combat widgets; this is not blanket permission for new state-dependent restrictions. InterfaceID retrieval returned no content, so no shop/Coffer widget IDs were verified.
 
 ## Implementation gate and proposed route
 

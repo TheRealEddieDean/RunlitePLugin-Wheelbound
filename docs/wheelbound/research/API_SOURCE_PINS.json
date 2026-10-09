@@ -1,0 +1,47 @@
+{
+  "checked_on": "2026-10-09",
+  "repository": "runelite/runelite",
+  "note": "Blob IDs identify inspected content, not a live-client test or approval.",
+  "sources": [
+    {
+      "path": "runelite-api/src/main/java/net/runelite/api/events/MenuOptionClicked.java",
+      "blob_sha": "355d9c2ac1ce41f9c388bf29198f9da49944eca0",
+      "url": "https://github.com/runelite/runelite/blob/master/runelite-api/src/main/java/net/runelite/api/events/MenuOptionClicked.java"
+    },
+    {
+      "path": "runelite-api/src/main/java/net/runelite/api/events/WidgetLoaded.java",
+      "blob_sha": "24bac3fdabd46b238fa13b7d8d2d1241df90354c",
+      "url": "https://github.com/runelite/runelite/blob/master/runelite-api/src/main/java/net/runelite/api/events/WidgetLoaded.java"
+    },
+    {
+      "path": "runelite-client/src/main/java/net/runelite/client/game/LootManager.java",
+      "blob_sha": "dcec3f84c3d5dc5eedcac695aef16bb1c289c5e1",
+      "url": "https://github.com/runelite/runelite/blob/master/runelite-client/src/main/java/net/runelite/client/game/LootManager.java"
+    },
+    {
+      "path": "runelite-client/src/main/java/net/runelite/client/plugins/loottracker/LootTrackerPlugin.java",
+      "blob_sha": "586694b07c1b3445eabbf44d04956d3d60629a9a",
+      "url": "https://github.com/runelite/runelite/blob/master/runelite-client/src/main/java/net/runelite/client/plugins/loottracker/LootTrackerPlugin.java"
+    },
+    {
+      "path": "runelite-client/src/main/java/net/runelite/client/config/ConfigManager.java",
+      "blob_sha": "6bdd1cf40c47252d35e05217ffc3089d569fc8b8",
+      "url": "https://github.com/runelite/runelite/blob/master/runelite-client/src/main/java/net/runelite/client/config/ConfigManager.java"
+    },
+    {
+      "path": "runelite-client/src/main/java/net/runelite/client/plugins/attackstyles/AttackStylesPlugin.java",
+      "blob_sha": "db9a2089f22e7588542a86758e0ebb81a6ba9208",
+      "url": "https://github.com/runelite/runelite/blob/master/runelite-client/src/main/java/net/runelite/client/plugins/attackstyles/AttackStylesPlugin.java"
+    },
+    {
+      "path": "runelite-api/src/main/java/net/runelite/api/gameval/VarPlayerID.java",
+      "blob_sha": "752f629d4638b20d2681482970f49633fe094c52",
+      "url": "https://github.com/runelite/runelite/blob/master/runelite-api/src/main/java/net/runelite/api/gameval/VarPlayerID.java"
+    },
+    {
+      "path": "runelite-api/src/main/java/net/runelite/api/gameval/VarbitID.java",
+      "blob_sha": "0a90c1426122a9fbf32c3002fc66b77dac8d0fc4",
+      "url": "https://github.com/runelite/runelite/blob/master/runelite-api/src/main/java/net/runelite/api/gameval/VarbitID.java"
+    }
+  ]
+}

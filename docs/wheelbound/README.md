@@ -27,6 +27,4 @@ User corrections committed at 647f71e1bc877a5b64210458a441ec5dc9b2b094. 48,000 o
 
 WB-D057 now confirms post-trigger acquisition of an eligible item worth at least 10,000 GP. WB-D058 confirms Taint and Sacrifice each cost one spin. H2 now models these approvals with explicitly provisional acquisition duration/availability; H1 remains historical. Reserve economics are not finalized. Final catalogs/implementation-ready PDF cannot be truthfully marked complete yet. Checkpoint PDF reflects all current Markdown, not an independent source.
 
-## Policy and feasibility checkpoint
-[POLICY_AND_FEASIBILITY](POLICY_AND_FEASIBILITY.md) adds the original submission's actual blockers and a current capability/policy matrix. Current source research supports many passive detectors but does not approve trade-menu restrictions or prove shop/GE blocking/Coffer receipts. Twenty-three requested system documents remain, plus this supplemental audit. Markdown remains authoritative; older checkpoint PDFs predate this audit until regenerated.
-
+Current source/policy findings and original submission blockers: [POLICY_AND_FEASIBILITY](POLICY_AND_FEASIBILITY.md). Passive detectors have promising APIs; trade restrictions and shop/GE/Coffer enforcement remain unresolved.
