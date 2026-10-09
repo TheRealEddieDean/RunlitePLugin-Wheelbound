@@ -3,12 +3,12 @@
 | Requirement | Decisions | Ticket | Acceptance evidence |
 | --- | --- | --- | --- |
 | Optional mode, existing wheels preserved | WB-D065/076 | I00/I01/I09 | Existing build tests + normal-wheel regression |
-| Five ordinary, three activities, 24 total | Existing confirmed register | I02 | Offline diversity/capacity checks; future edit/crash fixtures |
-| Enhancement tier prices, lifetime activity duplicates | Existing confirmed register | I02/I04 | Ledger/price sequence and destroy/repurchase tests |
+| Five ordinary, three activities, 24 total | WB-D005/006 | I02 | Offline diversity/capacity checks; future edit/crash fixtures |
+| Enhancement tier prices, lifetime activity duplicates | WB-D009/010 | I02/I04 | Ledger/price sequence and destroy/repurchase tests |
 | Bossing cards then random boss | WB-D049 | I03 | Sequence test, no choices/rerolls, card scaling |
 | Two distinct Standard targets; third upgrade | WB-D050 | I03 | Distinct draws and eligible-pool tests |
 | Unlimited fixed-price Pardon Banned→Locked | WB-D051 | I04/I06 | Repeat purchases, normal unlock still required |
-| Free pause, no paused credit | Confirmed register; WB-D073 | I01/I05 | Baseline and reconnect fixtures; no Assisted flags |
+| Free pause, no paused credit | WB-D002/073 | I01/I05 | Baseline and reconnect fixtures; no Assisted flags |
 | Minimum 10k eligible item acquisition | WB-D057/074 | I07 | Current server quote, frozen ownership exception |
 | Taint and Sacrifice one spin | WB-D058 | I07 | Atomic debit/replay; punishment adds no debit |
 | Preserve Trade with; attempt notice | WB-D066/067/073 | I06 | Menu retained; route-specific cancellation and policy gate |
@@ -19,6 +19,10 @@
 | Coffer receipt, not disappearance | WB-D068/074 | I07 | Confirm + item delta + credit; ambiguous receipt pending |
 | Single writable session, durable receipts | WB-D075 | I01 | Conflict, crash, duplicate receipt and migration fixtures |
 | No main or production changes | WB-D076 | All | GitHub compare restricted to docs/design tooling |
+
+| New content/daily drafts | WB-D079/080/084 | I03/I05/I07 | Source identity, runtime gating, smaller pools, expiry/owned-receipt cases |
+| Paused-acquired recovery item | WB-D002/057/085 | I07 | No acquisition credit, active verified donation once, empty-set exception only |
+
 
 The register remains authoritative for exact established IDs. This mapping is a handoff index, not evidence that future implementation tests have already passed.
 

@@ -32,7 +32,7 @@
 
 ## Weekend handoff
 - [x] Master assignment preserved; shared conversation access attempted and failure documented.
-- [x] Pipeline configuration inspected: JDK 11, Gradle 8.10; commands source-reviewed, not build-executed.
+- [x] Pipeline configuration inspected: JDK 11, Gradle 8.10; build attempted but wrapper download failed before compilation; see pipeline.
 - [x] Concrete detector contracts, state/crash specification, traceability and major-question register populated.
 - [ ] Exact real-content end-to-end account progression model; current simulations remain synthetic/incomplete.
 - [ ] Source-history catalogs recovered; newly authored replacements must be labeled separately.
@@ -41,3 +41,5 @@
 - [x] New separately labeled 100-bounty/50-punishment drafts and source snapshots created. Historical catalogs still missing.
 - [x] H3 eight-policy 12,000-trajectory experiment executed and offline checks passed. Exact real-content progression still incomplete.
 - [x] Balance candidate and detailed recovery UX authored; no numeric approval invented.
+
+- [x] Separate 18-entry daily draft, exchange evidence, pause-recovery interaction and read-only consistency checks completed.

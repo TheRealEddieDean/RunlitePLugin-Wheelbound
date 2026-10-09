@@ -851,3 +851,26 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Exceptions/dependencies: New boss target/reward candidates not yet run in H3; GP conversion, exhausted activity policy and full-Coffer escape remain OPEN. Current confirmed pause and Pardon rules unchanged.
 - Supersession: No approved mechanics overwritten; provisional table does not rewrite historical simulation parameters.
 - Acceptance criteria: Display correct price/odds and state-specific recovery; never fabricate detection, backfill paused credit, replay a trade or ask for another ambiguous donation.
+
+## WB-D084 - Distinct repeatable daily pool and exchange evidence
+
+- Status: DELEGATED; quantities/rewards BALANCE_TBD; live validation required
+- Authority/source: Weekend master assignment, 2026-10-09; ItemID source and RuneLite LootTracker Font/Unsired handler.
+- Decision: Author 18 repeatable daily candidates separately from rare permanent bounty targets. Preserve proposed rolling board/once-only claim rules, no offline backlog and no mandatory daily gate. Rare reward exchange uses a distinct adapter and proposed eligible parent-drop quantity provenance.
+- Rationale: Avoid infeasible one-day rare grinds and false acquisition from inventory movement or old-item conversion.
+- Affects: ACQUISITION_EVIDENCE, BOUNTIES, PERSISTENCE, TESTING, catalogs/daily_bounties.json.
+- Exceptions/dependencies: All runtime templates disabled pending real routes/traces. Daily income not simulated in H3. Unknown provenance is not a violation; no retroactive paused credit. Parent-provenance rule is scoped to rare-drop exchanges, not universally imposed on all crafting.
+- Supersession: Refines WB-D056 daily-board proposal; no historical approval claimed.
+- Acceptance criteria: Three distinct offers, boundary/rollback/offline tests, source ownership, duplicate settlement, manual claims and no daily progression requirement.
+
+## WB-D085 - Paused item availability and empty-candidate recovery
+
+- Status: DELEGATED clarification of CONFIRMED WB-D002/057 interaction
+- Authority/source: Current user rules: pause freely, paused gains remain available without Wheelbound credit; acquire a new eligible ≥10k item when no forced-sacrifice candidate exists.
+- Decision: In that empty-candidate exception, a paused-acquired eligible item may be validated after resume and actively donated. No acquisition XP/drop/bounty credit is backfilled; the active verified donation settles the already pending obligation.
+- Rationale: Do not reinterpret free pause or actual item availability into an unapproved item-source restriction or impossible access recovery.
+- Affects: DEFY_FATE, UX_RECOVERY_FLOWS, TECHNICAL_SPECIFICATIONS, EDGE_CASES, TESTING.
+- Exceptions/dependencies: Scope limited to WB-D057, not arbitrary replacement of a nonempty frozen list. Blessed exclusions, per-item ≥10k eligibility, one debit and actual credit receipt remain required. No automatic account unlock.
+- Supersession: Refines earlier proposed recovery attribution; historical blanket paused-item exclusion is not introduced.
+- Acceptance criteria: Paused acquisition gives zero XP/drop/bounty FP, then one active verified donation settles once; nonempty snapshot cannot be overwritten through the exception.
+

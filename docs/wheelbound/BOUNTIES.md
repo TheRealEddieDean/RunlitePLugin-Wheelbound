@@ -18,3 +18,5 @@ Historical 100-item catalog and payouts remain missing. Do not generate 100 spec
 ## Catalog drafting checkpoint
 
 See [CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACCEPTANCE.md) for newly authored drafts (WB-D079/080), distinct from missing historical catalogs. Machine-readable 100 bounty candidates, 50 punishments, 67 repository boss categories and 213 quest enum records are in catalogs/. Source metadata is not runtime eligibility. All unvalidated bounty/punishment entries remain disabled. H3 exercises named bounty/reward and plain-XP punishment drafts in synthetic trials only; exact quest/boss access remains unmodeled.
+
+[ACQUISITION_EVIDENCE](ACQUISITION_EVIDENCE.md) specifies the separate 18-entry repeatable daily draft, owned receipt deduplication, reward-exchange provenance and clock/expiry cases (WB-D084). Rare permanent targets are not implicitly daily candidates. H3 does not include daily payouts.

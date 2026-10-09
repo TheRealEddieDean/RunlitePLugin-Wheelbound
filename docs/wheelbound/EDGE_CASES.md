@@ -8,7 +8,7 @@
 | Pause mid-Fate | Keep assignment; exclude all paused progress and refresh baselines |
 | Crash while rejecting | Restore same FP/spin transaction and mandatory punishment |
 | No eligible boss/quest/cards | Do not commit impossible objective; Standard default doesn't bypass activity prerequisites |
-| Level 99 cap | Skill-specific target generation/end-state policy OPEN |
+| Level 99 | Level 99 alone is not XP cap; require legal XP headroom and distinct target values. Actual exhausted activity handling remains OPEN |
 | Quest incidental XP | Attribution/exemptions need explicit mapping |
 | No eligible sacrifice items | Keep obligation pending; acquire an eligible item worth at least 10,000 GP; permit post-trigger ownership exception and verify donation |
 | Partial bank visibility | Unknown is not empty or verified ownership |
@@ -24,3 +24,5 @@
 | Restart after Bossing card selection | Resume same card and target, then same committed random boss |
 | Pardon purchase 4th/100th time | Same fixed price, eligible if FP sufficient and vendor Banned |
 | Pardon then Tempt loses again | Vendor Banned again; another same-price Pardon permitted |
+
+WB-D085: paused-acquired items remain available in the approved empty-candidate Sacrifice recovery exception, with no retroactive acquisition credit. An active verified donation may settle it; never replace a nonempty frozen list arbitrarily.

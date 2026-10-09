@@ -35,3 +35,7 @@ Coffer: initialized zero/nonzero balance; one item, stack, noted variants; quant
 ## Catalog drafting checkpoint
 
 See [CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACCEPTANCE.md) for newly authored drafts (WB-D079/080), distinct from missing historical catalogs. Machine-readable 100 bounty candidates, 50 punishments, 67 repository boss categories and 213 quest enum records are in catalogs/. Source metadata is not runtime eligibility. All unvalidated bounty/punishment entries remain disabled. H3 exercises named bounty/reward and plain-XP punishment drafts in synthetic trials only; exact quest/boss access remains unmodeled.
+
+## Acquisition-recovery pause case
+
+WB-D085: trigger empty-candidate recovery, pause, acquire eligible item, resume and validate donation. Paused acquisition awards no XP/drop/bounty credit; active verified donation settles once. Reject using this exception to overwrite a nonempty frozen candidate list. Specific forced-item player-choice versus random-wheel history remains UNVERIFIED (Q7).

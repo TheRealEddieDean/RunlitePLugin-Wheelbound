@@ -2,9 +2,9 @@
 Five equally weighted outcomes (20% each), sealed once at run creation, no reroll:
 Inferno: earn Infernal Cape through completion.
 Fortis Colosseum: complete and earn Dizana's Quiver.
-Radiant Oathplate: obtain full radiant cosmetic armour set via Yama challenge path; exact requirements TECHNICAL_TBD.
+Radiant Oathplate: obtain full radiant cosmetic armour set via Yama challenge path; current source-checked upgrade cost 2,500 aether runes per piece (7,500 for the full set); fresh contract/sigil/set creation evidence remains live-validation-gated.
 Awakened DT2: awakened Leviathan, Duke Sucellus, Vardorvis, Whisperer; persistent four-part checklist.
-Master Combat Achievements: attain Master CA tier; S3 associates Ghommal's hilt 5. Current point threshold requires lookup.
+Master Combat Achievements: attain Master CA tier; S3 associates Ghommal's hilt 5. Read current initialized CA_THRESHOLD_MASTER; do not hardcode an obsolete total.
 
 Attempts between ordinary Fates, no Master spin charge, no artificial level or playtime threshold. Exit/failure ends attempt, not run. Preserve legitimately verified multipart progress. S3 allows permitted active CA progress before explicit activation; event eligibility and pre-run historical progress policy OPEN.
 

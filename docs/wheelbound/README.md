@@ -39,4 +39,7 @@ Read [technical specifications](TECHNICAL_SPECIFICATIONS.md), [major questions](
 
 [CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACCEPTANCE.md) separate new drafts, source metadata and runtime evidence. H3 adds 12,000 executed synthetic trials across eight policies; total recorded is 126,000.
 
+
+[ACQUISITION_EVIDENCE](ACQUISITION_EVIDENCE.md) expands the acquisition contract and distinct repeatable daily pool (WB-D084); no live adapter is claimed validated.
+
 [BALANCE_CANDIDATE](BALANCE_CANDIDATE.md) and [UX_RECOVERY_FLOWS](UX_RECOVERY_FLOWS.md) specify provisional first-implementation parameters and detailed error/recovery journeys.
