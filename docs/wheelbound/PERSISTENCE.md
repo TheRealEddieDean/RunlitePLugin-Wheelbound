@@ -21,3 +21,5 @@ If configuration sync can reintroduce an older run revision, reconcile by retain
 
 ## Confirmed recovery and Taint accounting
 WB-D057 recovery persists the pending Sacrifice ID and original evidence plus a separately validated post-trigger acquisition candidate; never overwrite the original snapshot. WB-D058 persists the Taint spin debit receipt with its mandatory Punishment ID; restart/replay must not spend a second spin. Atomic debit timing is a technical proposal, not a newly approved gameplay rule.
+
+Sacrifice's confirmed one-spin debit is recorded separately from verified donation's spin award. Proposed sequence: commit special outcome, obligation and debit receipt; persist acquisition recovery if needed; freeze validated candidate; verify donation; settle the reward exactly once. Crash/replay cannot repeat either debit or reward. Voluntary sacrifice is an action rather than landing on a task; this approval does not add a voluntary-sacrifice spin charge.

@@ -585,13 +585,13 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 
 ## WB-D058 - Special slice spin accounting
 
-- Status: PARTIALLY RESOLVED - Taint CONFIRMED; Sacrifice OPEN
-- Authority: Explicit user approval, 2026-10-09, limited to Taint.
-- Evidence: "yes a tainted task should eat up a spin".
-- Decision: A Taint task consumes exactly one Master Wheel spin. Its resulting mandatory Punishment does not create a second spin charge. Sacrifice spin consumption has not been explicitly answered. Ordinary completion/rejection spends one and Grand Fate attempts none remain confirmed.
+- Status: CONFIRMED - Taint and Sacrifice each consume one spin
+- Authority: Explicit user approval, 2026-10-09, separately confirming Taint and then Sacrifice.
+- Evidence: "yes a tainted task should eat up a spin", followed by "yes" to "does landing on Sacrifice also consume one spin?".
+- Decision: A Taint task consumes exactly one Master Wheel spin. Its resulting mandatory Punishment does not create a second spin charge. Sacrifice likewise consumes exactly one spin, explicitly confirmed by the user's subsequent "yes" to that specific question. Ordinary completion/rejection spends one and Grand Fate attempts none remain confirmed.
 - Rationale: Taint spends the finite progression resource in addition to imposing a Punishment.
 - Affects: DEFY_FATE, GAME_RULES, PUNISHMENTS, ECONOMY, PERSISTENCE, TESTING and SIMULATION_RESULTS.
-- Exceptions/dependencies: Charge exactly once across restart/replay. Proposed debit timing is when the Taint outcome and obligation are durably committed. H1 charges neither special and the prior sensitivity charges both; neither is a final model of the newly confirmed mixed rule.
+- Exceptions/dependencies: Charge exactly once across restart/replay. Proposed debit timing is when the Taint outcome and obligation are durably committed. H1 charges neither special and the prior sensitivity charges both; the all-special-debit sensitivity models the approved charge rule but lacks approved acquisition recovery.
 
 ## WB-D059 - RuneLite API availability versus feasibility
 
@@ -613,3 +613,12 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Affects: [README](README.md), [TASKS](TASKS.md), [IMPLEMENTATION_PLAN](IMPLEMENTATION_PLAN.md).
 - Exceptions/dependencies: Final PDF/catalog economy deferred until significant OPEN decisions resolved.
 
+
+## WB-D061 - Current-rule recovery simulation H2
+
+- Status: PROPOSED modeling assumptions; not approved gameplay numbers
+- Authority: Assistant under delegated simulation authority, 2026-10-09.
+- Decision: Charge one spin for both Taint and Sacrifice, following WB-D058. Model WB-D057 as acquiring an eligible 10,000 GP item before donation. Use a synthetic earned-item route with no vendor unlock, normal Fate reward or FP reward; acquisition duration is 1-3 hours divided by strategy efficiency, with 3-9 hours in a sensitivity. Preserve H1 results as historical evidence.
+- Rationale: Test recovery burden without inventing automatic account unlocks or treating an empty set as a waived obligation.
+- Affects: SIMULATION_RESULTS, ECONOMY, TESTING and offline simulation files.
+- Exceptions/dependencies: Duration, item availability and legal acquisition route are unvalidated hypotheses. Real access, skill/tool prerequisites, Blessed exclusions and acquisition XP tolerance require catalog/detector validation. Zero simulated stops follow from guaranteed synthetic acquisition and do not prove real-account deadlock freedom. GP-to-spin conversion still uses H1's unapproved minimum-one hypothesis.

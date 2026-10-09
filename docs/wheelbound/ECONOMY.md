@@ -38,7 +38,7 @@ All following numbers are PROPOSED/BALANCE_TBD, chosen under delegated design au
 | Vendor class base | 100 FP | H1 linear cost 100*(prior paid class unlocks+1) |
 | GE | 2500 FP and 25 completed Fates | One-time, non-gamble |
 | Sacrifice conversion | max(1,floor(verified item value/100000)) spins | H1 hypothesis; minimum-one rule NOT confirmed |
-| Special landing spin debit | Historical H1: none | Current confirmed rule: Taint costs one spin; Sacrifice remains OPEN. Old sensitivity charges both |
+| Special landing spin debit | Historical H1: none | Current confirmed rule: Taint and Sacrifice each cost one spin. Old H1 lacks both charges |
 
 H1 ordinary Skilling/Combat reward = round(40 + 80*estimated hours), Greater quantity 1.6x, Lesser 0.6x, Challenge quantity 1.25x with 20% reward premium. Boss reference FP = 90 + 20*eligible synthetic boss tier; Lesser keeps it, Greater pays 1.6x. Quest proxy FP = 70 + 30*tier + 30*hours. These formulas are trial economy tools, not normative final reward tables.
 
@@ -50,3 +50,6 @@ Duplicate 8+ extrapolation is a new hypothesis: round up to nearest 50 of 3300*1
 Compare FP per hour, earnings/spending and content-unlock counts across strategies, not just final balance. Watch Lesser Bossing's premium FP/hour: it is an intentional user-confirmed benefit; tune pool availability, counts and fixed base reward rather than remove the rule. Greater can favor XP/kills/progress even when FP/hour is lower.
 
 H1 does not confirm real account progression duration. Quest chains, gear prerequisites, actual drop tables, diaries, CAs and skill methods are proxies. H1 models permanent-item bounty income only; daily/CA/diary schedules, blessings and full Satchel upgrade purchases need a catalog-backed second model. No simulation outcome promotes an unverified historical choice to CONFIRMED.
+
+## Current-rule recovery hypothesis H2
+Both special tasks spend one spin before the modeled reward. A missing item triggers synthetic acquisition of a 10,000 GP eligible item, with 1-3 hours divided by efficiency (3-9-hour sensitivity). Acquisition has no normal Fate/FP reward and grants no account unlock. Durations and guaranteed item availability are modeling hypotheses, not game rules. The H1 minimum-one-spin conversion remains unapproved: under that hypothesis the minimum recovery item nets zero spins after the Sacrifice debit; this must not be treated as an approved conversion formula.
