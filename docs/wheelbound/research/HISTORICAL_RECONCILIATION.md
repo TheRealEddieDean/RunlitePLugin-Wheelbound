@@ -49,3 +49,20 @@ All 50 user turns S8-M0101–0200 reviewed; 100 visible turns indexed in [A03 re
 | M0183–0185; M0189–0199 | Separate random Boss wheel; equal peers per tier; raids capstone | WB-D099; normal 67-entry map not normative mode roster |
 
 Do not promote old Favored/Echo names, protected slices, artificial maximum skill probability, after-result Grand acceptance, default Quest weight increase, or arbitrary punishment quantities from proposals. Current explicit rules govern. Next batch A04 reviews S8-M0201–0300 including final raid counts, card pools, grouped bounty families, transparent vendor prices and completion-time audit context.
+
+## WB-A04 — third 100 visible turns reviewed
+
+Fifty user turns reviewed and 100 visible turns indexed in [A04 ledger](RECOVERY_REVIEW_A04.json). Cumulative 300 visible turns indexed/150 user turns reviewed. Exact user wording and named proposals distinguish approvals from maybe/example values.
+
+| Sources | Recovered rule | Consequence |
+| --- | --- | --- |
+| M0203–0207 | Three grouped raids; 9/13/22/11/6/3 roster; peer gate numbers delegated | WB-D100 and separate 64-node mode roster, normal/H3 snapshots unchanged |
+| M0209–0211 | Purchased bosses remain in Bossing pool; player judges readiness | No normal boss-removal or plugin readiness level gate; Fate Erasure not enabled |
+| M0219–0221 | Broad Challenge slice avoids boss-CA exhaustion hardlocks | WB-D047 concept confirmed; exact catalog/slot accounting not invented |
+| M0227; M0231–0237 | Separate card purchases; reliable Challenge eligibility; Wilderness opt-in | WB-D090/103; Q9 narrow Boss Challenge ambiguity retained |
+| M0239–0247 | Visible finite grouped item goals; all boss CAs; diary categories; 100 permanent/3 daily/24h | WB-D101, D036 sourced; H3 draft missing grouped families identified |
+| M0249–0259 | Individual vendors, bars retained, per-class escalation, full transparent preview, no quest bypass | WB-D102/D037 sourced; first-free proposal unconfirmed |
+| M0265–0267 | Fixed expensive Pardon; GE completed-Fate count+FP, no gambling/ban | Current unlimited Pardon still controlling; arbitrary level gate superseded |
+| M0269–0299 | Defy cadence, random forced sacrifice, small punishment FP, objective-specific end audit and consecutive escalation | Existing D033/087 authority strengthened; numeric examples not locked |
+
+No automatic boss-erasure purchase, hidden bounty option, full collection-log grind, first-free vendor rule, extra GE character gate, or boss-specific shrinking-CA assignment has been silently added. Next A05 covers S8-M0301–0436 and delegated safeguards before final cross-file reconciliation.

@@ -23,3 +23,6 @@ See [CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACC
 
 ## Recovered presentation and activation rule — WB-D094
 Eligible bounties are monitored automatically while the mode is active; visiting the catalog is not a prerequisite for credit. Persist unclaimed evidence, show sidebar/category indication and completion animation/message, and require manual claim. Use actual item sprites, name search, rarity filters and FP sorting. Common/Uncommon/Rare/Epic/Legendary are the historically accepted provisional labels; balance each reward independently rather than forcing a fixed FP amount by label. Paused progress remains excluded.
+
+## Recovered final bounty identity — WB-D101
+All goals are visible. Hidden/surprise bounties were rejected at S8-M0239, superseding the earlier keep-hidden-as-option discussion. Permanent targets are finite and cross-activity; include grouped any-third-age and any-gilded goals. Combat Masteries mean all CAs for a boss, not collection-log completion. Diaries have region/difficulty categories and independent substantial rewards. Existing H3 item draft does not contain all these required families and must not be presented as final; revise in a new catalog version. Curated daily candidates are delegated content hygiene, and daily availability never overrides an active Fate.

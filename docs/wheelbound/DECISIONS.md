@@ -355,9 +355,9 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 - Recovered detail: Roughly fifty templates produce account-valid concrete objectives; select roughly twelve varied eligible outcomes and lock them before display/spin. Validate actual level, access and usable tools before inclusion. Dynamic severity need not rise linearly with account level; some tasks become easier with development. The actual fifty-entry list was deferred at S8-M0172, so new drafts are not a recovered list. Older random ordinary displacement is superseded by player choice, and assistant no-FP reward suggestion is superseded by small FP rewards.
 ## WB-D036 - Daily 24h refresh; manual claims and one-time permanent bounties
 
-- Status: UNVERIFIED
-- Authority: Historical authority unknown
-- Evidence: S3 §11
+- Status: CONFIRMED 24h/claim structure; detailed schedule DELEGATED
+- Authority: Explicit user approval of daily board and manual claims.
+- Evidence: S8-M0057 (manual claim), M0245 (three dailies/24h), M0247 (separate categories); current permanent once-only specification.
 - Decision: Daily 24h refresh; manual claims and one-time permanent bounties.
 - Rationale: Optional visible rewards.
 - Affects: [BOUNTIES](BOUNTIES.md).
@@ -365,9 +365,9 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 
 ## WB-D037 - Vendor class escalating prices, fixed Pardon; GE no gamble/ban/escalation
 
-- Status: UNVERIFIED
-- Authority: Historical authority unknown
-- Evidence: S3 §8
+- Status: CONFIRMED pricing/access mechanism; counter/bracket details DELEGATED/BALANCE_TBD
+- Authority: Explicit user decisions.
+- Evidence: S8-M0249–0259 (per-class escalation/transparency); M0265/0267 (fixed Pardon and GE gate); current WB-D051 unlimited Pardon confirmation.
 - Decision: Vendor class escalating prices, fixed Pardon; GE no gamble/ban/escalation.
 - Rationale: Different access cost mechanisms.
 - Affects: [ACCOUNT_ACCESS](ACCOUNT_ACCESS.md), [ECONOMY](ECONOMY.md).
@@ -477,12 +477,13 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 ## WB-D047 - General challenge slice avoids dwindling boss CA pool
 
 - Status: CONFIRMED concept; detailed implementation UNVERIFIED.
-- Authority: Explicit user, retrieved summary.
+- Authority: Explicit user proposal and adjacent acceptance, now directly recovered.
+- Recovered evidence: S8-M0219 proposes broad CA Challenge slice; M0220 interpretation accepted at M0221.
 - Evidence: S4 user 2026-10-01 17:19:57Z.
 - Decision: General challenge slice concept accepted; challenge must not depend on a single boss's remaining incomplete CAs.
 - Rationale: Avoid shrinking challenge availability.
 - Affects: [PROGRESSION](PROGRESSION.md), [FATE_CARDS](FATE_CARDS.md), [BOUNTIES](BOUNTIES.md).
-- Exceptions/dependencies: Slice location, pool and card interactions not recovered.
+- Exceptions/dependencies: Master Wheel Challenge slice location recovered at S8-M0220 accepted at M0221; exact library, minimum-slice classification, card interactions and payouts remain unverified.
 
 ## WB-D048 - Preserve unresolved history before final balance
 
@@ -1015,3 +1016,43 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Rationale: Nonlinear choice within tiers and easier catalog expansion without arbitrary chains.
 - Affects: [PROGRESSION](PROGRESSION.md), [WHEELS](WHEELS.md), boss eligibility/catalogs.
 - Exceptions/dependencies: One unlocked boss is one Bossing-wheel eligible outcome, subject to real access; purchasing a boss does not create another ordinary Master slice. Current cards-before-random-boss sequence overrides early direct-roll/no-card summaries. S8-M0196 reports the normal 67-entry map, which is not yet the final 64-node mode grouping; later count approvals are reviewed in A04. Do not relabel normal plugin tiers as approved mode tiers.
+
+## WB-D100 - Committed boss purchases and recovered 64-node mode roster
+
+- Status: CONFIRMED purchase commitment, tier counts and grouped raid nodes; real access TECH_TBD.
+- Authority: Explicit user approval; peer thresholds delegated.
+- Evidence: S8-M0203–0207; roster/grouping proposal M0204 explicitly locked at M0205; M0209/M0211 purchase commitment.
+- Decision: Mode tiers have 9 Easy, 13 Medium, 22 Hard, 11 Elite, 6 Master and 3 Grandmaster raid nodes (ToA/CoX/ToB). Raid variants do not receive separate unlock nodes. Boss purchases cost FP and permanently join the Bossing pool; there is no normal remove-boss operation. The user decides readiness without plugin-imposed combat-level/stat gates; actual OSRS access requirements still apply. Any-X peer progression thresholds are delegated balancing.
+- Rationale: Buying progression has lasting random-pool consequences; raids form a clear capstone.
+- Affects: [PROGRESSION](PROGRESSION.md), [CONTENT_CATALOGS](CONTENT_CATALOGS.md), Bossing pool and purchase fixtures.
+- Exceptions/dependencies: New mode_boss_roster.json derives 64 nodes from the pinned 67 normal categories by grouping six raid variants into three nodes. It does not alter normal plugin classification. Proposed expensive Fate Erasure is not an approved/present shop item. Ownership alone cannot make inaccessible content assignable. No artificial character-readiness filter based on recommended stats; no random boss rerolls.
+
+## WB-D101 - Visible grouped item bounties, boss Combat Masteries and diary categories
+
+- Status: CONFIRMED structure; exact 100-item list and FP values BALANCE_TBD.
+- Authority: Explicit user decisions.
+- Evidence: S8-M0239, M0243, M0245 and M0247.
+- Decision: Bounties are visible goals, not surprise hidden achievements. Maintain 100 finite curated permanent item targets across relevant game activities, including grouped any-third-age-piece and any-gilded-piece goals rather than a bounty for every family item. Combat Masteries reward all CAs for each boss; do not add collection-log greenlogging as the approved goal. Achievement Diaries have their own region/difficulty categories and meaningful independently balanced rewards, potentially above some item rewards. Three low-FP optional dailies refresh every 24 hours in a separate pool.
+- Rationale: Celebrate achievements without an unbounded collection-log grind or uncontrolled payout catalog.
+- Affects: [BOUNTIES](BOUNTIES.md), [CONTENT_CATALOGS](CONTENT_CATALOGS.md), evidence adapters and UI.
+- Exceptions/dependencies: Historical visage/heart targets are examples to incorporate into catalog review, not final fixed payouts. Existing new 100-entry H3 draft omits grouped third-age/gilded targets and is experimental, not the normative approved list. Preserve its hashes; review replacement in a separately versioned catalog. A daily never permits off-Fate activity. Curated eligible daily-pool implementation is delegated, not literal random selection from every game item.
+
+## WB-D102 - Transparent category shop escalation and quest vendors
+
+- Status: CONFIRMED rules; categories/brackets/counter semantics partly DELEGATED/BALANCE_TBD.
+- Authority: Explicit user decisions.
+- Evidence: S8-M0249–0259; quest-vendor stance M0253; GE/Pardon M0265–0267.
+- Decision: Individual NPC vendors, including bars and other sellers, require their own unlock. Unlocking more shops of the same class increases that class’s prices. Before pay/Tempt confirmation show class, current quote, pricing-bracket progress, next-price change and both outcome consequences. Quest need does not automatically waive a required vendor unlock. GE is a special permanent completed-Fate-count plus high one-time FP unlock, with no gamble or ban.
+- Rationale: Strategic travel/access decisions and visible costs; prevent a quest from silently bypassing purchased restrictions.
+- Affects: [ACCOUNT_ACCESS](ACCOUNT_ACCESS.md), [UI_UX](UI_UX.md), economy and quest-route feasibility.
+- Exceptions/dependencies: First shop per class free was a maybe in M0255, not a locked rule. Specific example brackets and 10/20 FP values are not final. Whether gamble/Pardon affects counters remains delegated/provisional. Lower Other-class escalation is a tuning direction, not a fixed multiplier. Quest generation must check real access routes so unaffordable/banned essential vendors do not create an undocumented bypass or impossible assignment. Physical visit is current explicit rule.
+
+## WB-D103 - Wilderness is purchased opt-in card content
+
+- Status: CONFIRMED opt-in card-pool direction; PvP rewards deferred.
+- Authority: Explicit user decisions.
+- Evidence: S8-M0233–0237.
+- Decision: Wilderness skilling enters an optional purchased Fate Card pool rather than being compulsory ordinary content. PvP-oriented rewards/content may be designed later, not enabled from a vague future promise.
+- Rationale: Let the player deliberately opt into that risk while adding progression choices.
+- Affects: [FATE_CARDS](FATE_CARDS.md), [FATE_SHOP](FATE_SHOP.md), Challenge eligibility.
+- Exceptions/dependencies: Qualification and reliable completion verification (WB-D090) still required. Buying a card is not a vendor/region/boss unlock or permission to depart from the active objective. Exact Wilderness target/reward/PvP proof catalog remains unfinished.

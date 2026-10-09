@@ -1,0 +1,724 @@
+{
+  "version": "recovered-S8-M0204-0205-v1",
+  "decision": "WB-D100",
+  "source_snapshot": "repository_boss_tiers.json; pinned BossDifficulty blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141",
+  "approval": "S8-M0204 proposal; S8-M0205 explicit user lock; M0203 three raid nodes",
+  "counts": {
+    "EASY": 9,
+    "MEDIUM": 13,
+    "HARD": 22,
+    "ELITE": 11,
+    "MASTER": 6,
+    "GRANDMASTER_RAIDS": 3
+  },
+  "limitations": "Recovered progression grouping only; not live access/assignment eligibility. Existing normal categories and H3 inputs unchanged.",
+  "entries": [
+    {
+      "id": "WB-BOSS-BRUTUS",
+      "encounter": "BRUTUS",
+      "tier": "EASY",
+      "source_variants": [
+        "BRUTUS"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-WINTERTODT",
+      "encounter": "WINTERTODT",
+      "tier": "EASY",
+      "source_variants": [
+        "WINTERTODT"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-TEMPOROSS",
+      "encounter": "TEMPOROSS",
+      "tier": "EASY",
+      "source_variants": [
+        "TEMPOROSS"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-BARROWS_CHESTS",
+      "encounter": "BARROWS_CHESTS",
+      "tier": "EASY",
+      "source_variants": [
+        "BARROWS_CHESTS"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-OBOR",
+      "encounter": "OBOR",
+      "tier": "EASY",
+      "source_variants": [
+        "OBOR"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-BRYOPHYTA",
+      "encounter": "BRYOPHYTA",
+      "tier": "EASY",
+      "source_variants": [
+        "BRYOPHYTA"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-GIANT_MOLE",
+      "encounter": "GIANT_MOLE",
+      "tier": "EASY",
+      "source_variants": [
+        "GIANT_MOLE"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-DERANGED_ARCHAEOLOGIST",
+      "encounter": "DERANGED_ARCHAEOLOGIST",
+      "tier": "EASY",
+      "source_variants": [
+        "DERANGED_ARCHAEOLOGIST"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-SCURRIUS",
+      "encounter": "SCURRIUS",
+      "tier": "EASY",
+      "source_variants": [
+        "SCURRIUS"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-AMOXLIATL",
+      "encounter": "AMOXLIATL",
+      "tier": "MEDIUM",
+      "source_variants": [
+        "AMOXLIATL"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-THE_HUEYCOATL",
+      "encounter": "THE_HUEYCOATL",
+      "tier": "MEDIUM",
+      "source_variants": [
+        "THE_HUEYCOATL"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-HESPORI",
+      "encounter": "HESPORI",
+      "tier": "MEDIUM",
+      "source_variants": [
+        "HESPORI"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-CRAZY_ARCHAEOLOGIST",
+      "encounter": "CRAZY_ARCHAEOLOGIST",
+      "tier": "MEDIUM",
+      "source_variants": [
+        "CRAZY_ARCHAEOLOGIST"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-CHAOS_FANATIC",
+      "encounter": "CHAOS_FANATIC",
+      "tier": "MEDIUM",
+      "source_variants": [
+        "CHAOS_FANATIC"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-KRAKEN",
+      "encounter": "KRAKEN",
+      "tier": "MEDIUM",
+      "source_variants": [
+        "KRAKEN"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-SARACHNIS",
+      "encounter": "SARACHNIS",
+      "tier": "MEDIUM",
+      "source_variants": [
+        "SARACHNIS"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-KING_BLACK_DRAGON",
+      "encounter": "KING_BLACK_DRAGON",
+      "tier": "MEDIUM",
+      "source_variants": [
+        "KING_BLACK_DRAGON"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-ZALCANO",
+      "encounter": "ZALCANO",
+      "tier": "MEDIUM",
+      "source_variants": [
+        "ZALCANO"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-THERMONUCLEAR_SMOKE_DEVIL",
+      "encounter": "THERMONUCLEAR_SMOKE_DEVIL",
+      "tier": "MEDIUM",
+      "source_variants": [
+        "THERMONUCLEAR_SMOKE_DEVIL"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-MIMIC",
+      "encounter": "MIMIC",
+      "tier": "MEDIUM",
+      "source_variants": [
+        "MIMIC"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-THE_ROYAL_TITANS",
+      "encounter": "THE_ROYAL_TITANS",
+      "tier": "MEDIUM",
+      "source_variants": [
+        "THE_ROYAL_TITANS"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-LUNAR_CHESTS",
+      "encounter": "LUNAR_CHESTS",
+      "tier": "MEDIUM",
+      "source_variants": [
+        "LUNAR_CHESTS"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-SCORPIA",
+      "encounter": "SCORPIA",
+      "tier": "HARD",
+      "source_variants": [
+        "SCORPIA"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-CHAOS_ELEMENTAL",
+      "encounter": "CHAOS_ELEMENTAL",
+      "tier": "HARD",
+      "source_variants": [
+        "CHAOS_ELEMENTAL"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-VETION",
+      "encounter": "VETION",
+      "tier": "HARD",
+      "source_variants": [
+        "VETION"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-CALVARION",
+      "encounter": "CALVARION",
+      "tier": "HARD",
+      "source_variants": [
+        "CALVARION"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-VENENATIS",
+      "encounter": "VENENATIS",
+      "tier": "HARD",
+      "source_variants": [
+        "VENENATIS"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-SPINDEL",
+      "encounter": "SPINDEL",
+      "tier": "HARD",
+      "source_variants": [
+        "SPINDEL"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-CALLISTO",
+      "encounter": "CALLISTO",
+      "tier": "HARD",
+      "source_variants": [
+        "CALLISTO"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-ARTIO",
+      "encounter": "ARTIO",
+      "tier": "HARD",
+      "source_variants": [
+        "ARTIO"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-DAGANNOTH_PRIME",
+      "encounter": "DAGANNOTH_PRIME",
+      "tier": "HARD",
+      "source_variants": [
+        "DAGANNOTH_PRIME"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-DAGANNOTH_REX",
+      "encounter": "DAGANNOTH_REX",
+      "tier": "HARD",
+      "source_variants": [
+        "DAGANNOTH_REX"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-DAGANNOTH_SUPREME",
+      "encounter": "DAGANNOTH_SUPREME",
+      "tier": "HARD",
+      "source_variants": [
+        "DAGANNOTH_SUPREME"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-GROTESQUE_GUARDIANS",
+      "encounter": "GROTESQUE_GUARDIANS",
+      "tier": "HARD",
+      "source_variants": [
+        "GROTESQUE_GUARDIANS"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-SKOTIZO",
+      "encounter": "SKOTIZO",
+      "tier": "HARD",
+      "source_variants": [
+        "SKOTIZO"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-TZTOK_JAD",
+      "encounter": "TZTOK_JAD",
+      "tier": "HARD",
+      "source_variants": [
+        "TZTOK_JAD"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-THE_GAUNTLET",
+      "encounter": "THE_GAUNTLET",
+      "tier": "HARD",
+      "source_variants": [
+        "THE_GAUNTLET"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-ABYSSAL_SIRE",
+      "encounter": "ABYSSAL_SIRE",
+      "tier": "HARD",
+      "source_variants": [
+        "ABYSSAL_SIRE"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-CERBERUS",
+      "encounter": "CERBERUS",
+      "tier": "HARD",
+      "source_variants": [
+        "CERBERUS"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-ARAXXOR",
+      "encounter": "ARAXXOR",
+      "tier": "HARD",
+      "source_variants": [
+        "ARAXXOR"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-ALCHEMICAL_HYDRA",
+      "encounter": "ALCHEMICAL_HYDRA",
+      "tier": "HARD",
+      "source_variants": [
+        "ALCHEMICAL_HYDRA"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-KALPHITE_QUEEN",
+      "encounter": "KALPHITE_QUEEN",
+      "tier": "HARD",
+      "source_variants": [
+        "KALPHITE_QUEEN"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-KRIL_TSUTSAROTH",
+      "encounter": "KRIL_TSUTSAROTH",
+      "tier": "HARD",
+      "source_variants": [
+        "KRIL_TSUTSAROTH"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-COMMANDER_ZILYANA",
+      "encounter": "COMMANDER_ZILYANA",
+      "tier": "HARD",
+      "source_variants": [
+        "COMMANDER_ZILYANA"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-ZULRAH",
+      "encounter": "ZULRAH",
+      "tier": "ELITE",
+      "source_variants": [
+        "ZULRAH"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-VORKATH",
+      "encounter": "VORKATH",
+      "tier": "ELITE",
+      "source_variants": [
+        "VORKATH"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-PHANTOM_MUSPAH",
+      "encounter": "PHANTOM_MUSPAH",
+      "tier": "ELITE",
+      "source_variants": [
+        "PHANTOM_MUSPAH"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-THE_CORRUPTED_GAUNTLET",
+      "encounter": "THE_CORRUPTED_GAUNTLET",
+      "tier": "ELITE",
+      "source_variants": [
+        "THE_CORRUPTED_GAUNTLET"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-GENERAL_GRAARDOR",
+      "encounter": "GENERAL_GRAARDOR",
+      "tier": "ELITE",
+      "source_variants": [
+        "GENERAL_GRAARDOR"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-KREEARRA",
+      "encounter": "KREEARRA",
+      "tier": "ELITE",
+      "source_variants": [
+        "KREEARRA"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-DUKE_SUCELLUS",
+      "encounter": "DUKE_SUCELLUS",
+      "tier": "ELITE",
+      "source_variants": [
+        "DUKE_SUCELLUS"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-THE_WHISPERER",
+      "encounter": "THE_WHISPERER",
+      "tier": "ELITE",
+      "source_variants": [
+        "THE_WHISPERER"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-THE_LEVIATHAN",
+      "encounter": "THE_LEVIATHAN",
+      "tier": "ELITE",
+      "source_variants": [
+        "THE_LEVIATHAN"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-VARDORVIS",
+      "encounter": "VARDORVIS",
+      "tier": "ELITE",
+      "source_variants": [
+        "VARDORVIS"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-NEX",
+      "encounter": "NEX",
+      "tier": "ELITE",
+      "source_variants": [
+        "NEX"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-NIGHTMARE",
+      "encounter": "NIGHTMARE",
+      "tier": "MASTER",
+      "source_variants": [
+        "NIGHTMARE"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-PHOSANIS_NIGHTMARE",
+      "encounter": "PHOSANIS_NIGHTMARE",
+      "tier": "MASTER",
+      "source_variants": [
+        "PHOSANIS_NIGHTMARE"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-YAMA",
+      "encounter": "YAMA",
+      "tier": "MASTER",
+      "source_variants": [
+        "YAMA"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-DOOM_OF_MOKHAIOTL",
+      "encounter": "DOOM_OF_MOKHAIOTL",
+      "tier": "MASTER",
+      "source_variants": [
+        "DOOM_OF_MOKHAIOTL"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-TZKAL_ZUK",
+      "encounter": "TZKAL_ZUK",
+      "tier": "MASTER",
+      "source_variants": [
+        "TZKAL_ZUK"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-SOL_HEREDIT",
+      "encounter": "SOL_HEREDIT",
+      "tier": "MASTER",
+      "source_variants": [
+        "SOL_HEREDIT"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-TOMBS_OF_AMASCUT",
+      "encounter": "TOMBS_OF_AMASCUT",
+      "tier": "GRANDMASTER_RAIDS",
+      "source_variants": [
+        "TOMBS_OF_AMASCUT",
+        "TOMBS_OF_AMASCUT_EXPERT"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-CHAMBERS_OF_XERIC",
+      "encounter": "CHAMBERS_OF_XERIC",
+      "tier": "GRANDMASTER_RAIDS",
+      "source_variants": [
+        "CHAMBERS_OF_XERIC",
+        "CHAMBERS_OF_XERIC_CHALLENGE_MODE"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    },
+    {
+      "id": "WB-BOSS-THEATRE_OF_BLOOD",
+      "encounter": "THEATRE_OF_BLOOD",
+      "tier": "GRANDMASTER_RAIDS",
+      "source_variants": [
+        "THEATRE_OF_BLOOD",
+        "THEATRE_OF_BLOOD_HARD_MODE"
+      ],
+      "authority": "CONFIRMED_ROSTER_GROUPING",
+      "runtime_enabled": false,
+      "live_access_status": "TECH_TBD"
+    }
+  ]
+}

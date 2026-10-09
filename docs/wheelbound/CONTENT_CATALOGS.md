@@ -177,3 +177,8 @@ Escalation changes duration/quantity only within feasible headroom and supply co
 ## Repository boss mapping
 
 The machine-readable source snapshot retains normal-wheel tiers and variants exactly. It is not an approved Wheelbound progression roster. Raids must be grouped into the three confirmed raid nodes in mode progression; the existing normal-wheel tier map puts their modes in different tiers. Do not alter shipped normal behavior or treat Inferno/Colosseum encounters as free Grand Fate access. Review task-only bosses, minigames, keys, entry fees and quest stages before mode assignment. Historical counts are targets, not authority to fabricate encounters.
+
+## Recovered mode roster and experimental bounty mismatch
+[mode_boss_roster.json](catalogs/mode_boss_roster.json) supplies the historically approved 64 progression nodes: 9/13/22/11/6/3, with three raid nodes grouping six normal/hard variants. Approval is S8-M0204–0205; runtime eligibility still disabled pending access traces. The existing 67-entry normal snapshot remains unchanged.
+
+WB-D101 restores visible grouped third-age/gilded targets and rejects collection-log greenlogging as the approved Combat Mastery goal. The existing new 100-entry item draft was used by H3 and does not fully reflect these recovered families. It remains an immutable experimental input; normative catalog revision must be separate, preserving original execution hashes/results. Current draft is not the final approved 100-target catalog.

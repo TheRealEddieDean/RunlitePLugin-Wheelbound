@@ -20,3 +20,19 @@ for name,sha in h3['catalog_hashes'].items():assert hashlib.sha256((p/'catalogs'
 sweep=json.loads((p/'simulation/weekend_sweep_results.json').read_text());assert sweep['total_trajectories']==18000
 assert hashlib.sha256((p/'simulation/model.py').read_bytes()).hexdigest()==sweep['model_sha256']
 print('PASS:',len(ids),'unique decisions; 28 required populated docs; local links; source/catalog execution hashes; 100/18/50/213/67 catalog counts; unverified runtime content disabled')
+
+mode=json.loads((p/'catalogs/mode_boss_roster.json').read_text());assert len(mode['entries'])==64
+from collections import Counter
+assert Counter(r['tier'] for r in mode['entries'])=={'EASY':9,'MEDIUM':13,'HARD':22,'ELITE':11,'MASTER':6,'GRANDMASTER_RAIDS':3}
+source=json.loads((p/'catalogs/repository_boss_tiers.json').read_text())['entries']
+variants=[v for r in mode['entries'] for v in r['source_variants']]
+assert len(variants)==len(set(variants))==67 and set(variants)=={r['hiscore'] for r in source}
+assert all(r['runtime_enabled'] is False for r in mode['entries'])
+for label,start in [('A02',1),('A03',101),('A04',201)]:
+ review=json.loads((p/'research'/('RECOVERY_REVIEW_'+label+'.json')).read_text());rows=review['entries']
+ assert [r['locator'] for r in rows]==['S8-M'+str(n).zfill(4) for n in range(start,start+100)]
+ assert sum(r['review_status']=='USER_REVIEWED' for r in rows)==50
+a=p.parent.parent/'automation'
+assert all((a/(n+'.md')).is_file() for n in ['TASK_QUEUE','PROGRESS','SESSION_STATE','BLOCKERS','DECISIONS_PENDING'])
+queue=re.findall(r'^\| (WB-A\d+) \|',(a/'TASK_QUEUE.md').read_text(),re.M);assert len(queue)==len(set(queue))==19
+print('PASS: approved 64-node mode grouping; 300 contiguous indexed messages/150 reviewed user turns; 19 unique queued tasks and five checkpoints')

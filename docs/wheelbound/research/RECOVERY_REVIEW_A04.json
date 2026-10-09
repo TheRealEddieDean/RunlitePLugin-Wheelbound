@@ -1,0 +1,721 @@
+{
+  "source": "S8",
+  "range": "S8-M0201\u2013S8-M0300",
+  "user_turns_reviewed": 50,
+  "visible_turns_indexed": 100,
+  "proposal_context_reviewed": [
+    "S8-M0204",
+    "S8-M0210",
+    "S8-M0218",
+    "S8-M0220",
+    "S8-M0246",
+    "S8-M0266",
+    "S8-M0290",
+    "S8-M0292",
+    "S8-M0294",
+    "S8-M0296"
+  ],
+  "limitations": "User turn M0269 reviewed untruncated in earlier recovery context; all fifty user turns covered. Named proposals consulted; other assistant claims indexed without promotion. No live evidence or technical revalidation implied.",
+  "entries": [
+    {
+      "locator": "S8-M0201",
+      "message_id": "4d793bd8-16fa-4b30-b183-e275a3534d96",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Requests roster regrouping"
+    },
+    {
+      "locator": "S8-M0202",
+      "message_id": "bfd202d1-b2bd-4a47-a590-fd1158c4e1eb",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0203",
+      "message_id": "af982b71-79a6-4aa5-8ecb-8895e5e1f574",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Exactly three raid nodes"
+    },
+    {
+      "locator": "S8-M0204",
+      "message_id": "982737cd-1b8b-4571-94c1-b4cb351928eb",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0205",
+      "message_id": "fbc88cab-d78b-4690-8b9f-5104474e112e",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Approves M0204 9/13/22/11/6/3 grouping"
+    },
+    {
+      "locator": "S8-M0206",
+      "message_id": "043bb4b5-8dc1-437b-a7d5-06fdbe3c284c",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0207",
+      "message_id": "8d7b538b-ac61-464f-b907-e2ca63a314b2",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Delegates peer unlock count balancing"
+    },
+    {
+      "locator": "S8-M0208",
+      "message_id": "ac23396e-d172-4207-adbe-36df9c86b527",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0209",
+      "message_id": "70936005-b7a2-4d89-943e-e18aba5bba9c",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "FP-only readiness; permanent boss pool consequence, no normal removal"
+    },
+    {
+      "locator": "S8-M0210",
+      "message_id": "00b90945-b8ab-4582-be17-3106fab054ca",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0211",
+      "message_id": "059a4d5f-ec3f-457b-87fc-5db12e17c4b4",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Accepts M0210 boss commitment; erasure only future idea"
+    },
+    {
+      "locator": "S8-M0212",
+      "message_id": "f8388a2f-ceae-49f7-af56-ea76661dff63",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0213",
+      "message_id": "eeb5ccf9-45df-4477-bc34-f98b57bdcaed",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Requests card ideas"
+    },
+    {
+      "locator": "S8-M0214",
+      "message_id": "48c687b3-6ed6-40a0-a721-3f2e01dd401d",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0215",
+      "message_id": "944ec214-3e9d-4473-976b-56d09c578722",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Boss Lesser fewer kills/same FP; initial global purchase idea superseded separate pools"
+    },
+    {
+      "locator": "S8-M0216",
+      "message_id": "d13a74b0-f9e1-4704-b270-649aed966d0c",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0217",
+      "message_id": "1f23b5c2-8995-43fe-9e9c-aeb1ec2370df",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Quest 3\u21925, Boss L/S/G; CA rewards/challenge exploratory"
+    },
+    {
+      "locator": "S8-M0218",
+      "message_id": "6cf636cc-aa57-44fa-a8f7-d63b652411a6",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0219",
+      "message_id": "61ea1f53-e1da-4089-a5ab-a5dd47b1c485",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Broad CA Challenge slice concept; avoid shrinking boss-specific hardlock"
+    },
+    {
+      "locator": "S8-M0220",
+      "message_id": "cefef3e4-6afe-4c4a-878b-b8b42f837a01",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0221",
+      "message_id": "0c5d3c6c-c6f8-489d-9fae-f9e4a11d2412",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Accepts broad Challenge direction; rename chat request"
+    },
+    {
+      "locator": "S8-M0222",
+      "message_id": "5910d254-0236-4f35-a90a-4807132f3c3f",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0223",
+      "message_id": "8908dddf-15e4-4689-8adf-80a91b79cf42",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Status request"
+    },
+    {
+      "locator": "S8-M0224",
+      "message_id": "441a3e3c-bb2e-4402-b355-2b52c033b756",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0225",
+      "message_id": "8928542e-e685-426f-8a20-8be9a244b045",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Level-scaled XP targets"
+    },
+    {
+      "locator": "S8-M0226",
+      "message_id": "1ddec3f4-cd2e-4214-96a5-63bc5c52b112",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0227",
+      "message_id": "e028779a-a08f-4b80-82a1-ac4900e36e88",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Separate Skilling/Bossing purchases; 2\u21923 offerings; Boss Challenge named, Q9 retained"
+    },
+    {
+      "locator": "S8-M0228",
+      "message_id": "ac1b6d52-8700-4a42-9d95-40845dfb3df2",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0229",
+      "message_id": "683d24b1-6f8c-40ae-94c9-2bb0bd544854",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Skilling challenges feasible methods/minigames; detectability concern"
+    },
+    {
+      "locator": "S8-M0230",
+      "message_id": "bcacea5b-26c5-4f13-87d3-4e227f42a68a",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0231",
+      "message_id": "0b04d7ef-e0ce-4cf3-a0d4-eed7a04c270b",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Qualification-before and reliable completion proof approved"
+    },
+    {
+      "locator": "S8-M0232",
+      "message_id": "cc68a67e-54b6-4ff9-9a9a-4d76dbaa18b1",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0233",
+      "message_id": "69ca2003-ee83-4745-bea0-5f9b9b9af1be",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Wilderness opt-in proposed"
+    },
+    {
+      "locator": "S8-M0234",
+      "message_id": "4768539b-6557-4836-afed-6adb3e14bcb0",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0235",
+      "message_id": "d8d9e879-d916-4615-9bb3-0c892dc69cfc",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Wilderness card pool approved; PvP future"
+    },
+    {
+      "locator": "S8-M0236",
+      "message_id": "a2562640-8ea9-4490-be9e-3c5cbe7f9a54",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0237",
+      "message_id": "c0b7812b-66c5-4cba-b2b1-dfec9ce66ecd",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Defers PvP elaboration"
+    },
+    {
+      "locator": "S8-M0238",
+      "message_id": "03c7a144-da5e-47da-9b7b-0ad43a133f30",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0239",
+      "message_id": "61c05ad5-6934-4f53-aad3-b4446daf1ae0",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Visible goals; grouped third-age/gilded; visage/heart; diary rewards"
+    },
+    {
+      "locator": "S8-M0240",
+      "message_id": "1c6a4f65-d0f1-4528-8d33-ac31a5b50cac",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0241",
+      "message_id": "df2e8e8e-4330-4475-a3b4-b15ca43ee4ac",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Collection-log greenlog explored, not approved"
+    },
+    {
+      "locator": "S8-M0242",
+      "message_id": "557d54aa-99a9-4c0d-8251-67cd9cbc4c60",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0243",
+      "message_id": "014cdcf0-a583-41f4-b05d-c4356db3cac2",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Rejects collection-log grind; finite items plus all boss CAs"
+    },
+    {
+      "locator": "S8-M0244",
+      "message_id": "807ef0e3-b7d6-4ec8-84f7-56ff167a2566",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0245",
+      "message_id": "c1ff08f4-f686-4c37-9fb1-28ba6a23e1ca",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "100 permanent; three low-FP daily drops; 24h"
+    },
+    {
+      "locator": "S8-M0246",
+      "message_id": "4463ae3c-fb54-4563-968a-0268cd5f6762",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0247",
+      "message_id": "f2ba42d5-86e1-413d-9fd3-ec54d8b43665",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Separate Item/Combat Mastery/Diary categories, diary meaningful payout"
+    },
+    {
+      "locator": "S8-M0248",
+      "message_id": "edd8df1f-69f3-42c1-a82f-03bf0e2b896d",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0249",
+      "message_id": "c1c39f5c-1d2d-4483-ac13-fb37688cd4b3",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Individual vendors, class escalation"
+    },
+    {
+      "locator": "S8-M0250",
+      "message_id": "70037f56-f556-42f1-9aa7-4ccc945a91d2",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0251",
+      "message_id": "99d3f34e-a670-4989-9eab-a0e95daa7c49",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Bars included; Other leniency proposal; GE never banned"
+    },
+    {
+      "locator": "S8-M0252",
+      "message_id": "bd59d6cc-9ea6-4645-8583-07867d667691",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0253",
+      "message_id": "4cf48096-792c-45b6-84e5-c154b5986616",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Quest need does not waive vendor unlock"
+    },
+    {
+      "locator": "S8-M0254",
+      "message_id": "09dedc5a-925f-47db-a7fe-98086fd4aac8",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0255",
+      "message_id": "8d2e2516-68a7-495e-8b64-e230c65d3982",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Transparent ledger; first free is maybe, not lock"
+    },
+    {
+      "locator": "S8-M0256",
+      "message_id": "6607c8fb-94a2-47e0-86a8-7e10234c625a",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0257",
+      "message_id": "e0a3002f-74ea-43e0-ac2d-269cd4431cf8",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Price change preview approved; values illustrative"
+    },
+    {
+      "locator": "S8-M0258",
+      "message_id": "7c4cf39c-94ac-4117-b7db-ce79be27d1d2",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0259",
+      "message_id": "68e5b54e-8e8c-444e-a808-d6d59bdd8000",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Class/quote/bracket/outcome transparency explicitly locked"
+    },
+    {
+      "locator": "S8-M0260",
+      "message_id": "cb7deb03-3a3b-412c-a57f-812a302d1ad2",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0261",
+      "message_id": "00f4761b-9272-4093-8abf-4701e04ac729",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Next question"
+    },
+    {
+      "locator": "S8-M0262",
+      "message_id": "864dee5a-368c-4137-92d2-4f73d3f54403",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0263",
+      "message_id": "05c1b0bc-3b30-43f8-9750-e364a5580ada",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Pardon high-FP shop concept"
+    },
+    {
+      "locator": "S8-M0264",
+      "message_id": "add8cbbf-9425-4602-a6b6-f82d057d2568",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0265",
+      "message_id": "84d2730d-012c-48f2-915f-c3879fcb596f",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Fixed very expensive Pardon, no GE gamble; character gate proposed then superseded"
+    },
+    {
+      "locator": "S8-M0266",
+      "message_id": "bf92663f-fd41-4f5e-8b8b-de4ad6490733",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0267",
+      "message_id": "6676e3eb-cddf-444a-9f31-10b83b4f153c",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Completed X Fates plus large FP GE approved"
+    },
+    {
+      "locator": "S8-M0268",
+      "message_id": "66d8e608-af3f-488f-8ccb-c793423b8cc3",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0269",
+      "message_id": "5b6a0bb4-af74-4070-b1df-90c03022d038",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Random forced item wheel; permanent Sacrifice; fixed weight later +0.25 supersession"
+    },
+    {
+      "locator": "S8-M0270",
+      "message_id": "b917385f-7863-49bc-9b7d-ddc6bf492efd",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0271",
+      "message_id": "f24da1f2-ddb0-4f9a-83e9-448868f9470e",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "One permanent real Sacrifice slice approved; later weight escalation controls"
+    },
+    {
+      "locator": "S8-M0272",
+      "message_id": "38c08f7e-a458-4c52-a1f1-a8db08e5b30a",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0273",
+      "message_id": "ee3b891d-911b-4f9c-93c7-244fd4e32f90",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "First Defy refill/Taint/Sacrifice/voluntary context; numbers illustrative"
+    },
+    {
+      "locator": "S8-M0274",
+      "message_id": "71b05e66-7276-4415-92bd-4741a5f0e522",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0275",
+      "message_id": "77d8c8bc-2235-4075-9d95-45da1c335dac",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Locks first-Defy flow"
+    },
+    {
+      "locator": "S8-M0276",
+      "message_id": "6c6b86c5-598d-44e0-8cf0-9409c0f1b746",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0277",
+      "message_id": "b4e24fe0-ccfe-4bc9-9d9b-a878f1e68631",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Subsequent Sacrifice +0.25"
+    },
+    {
+      "locator": "S8-M0278",
+      "message_id": "3396ea47-5484-4911-b339-c88a4dffac13",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0279",
+      "message_id": "79aab9ce-38c2-4be9-b7f0-76d44871948f",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Player ordinary displacement; alternate Defy Taint"
+    },
+    {
+      "locator": "S8-M0280",
+      "message_id": "53970ce1-e890-491e-80bd-f2faa2849ee5",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0281",
+      "message_id": "2be3a12f-407a-494a-81f9-62b0394d7f52",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Every other Defy Taint"
+    },
+    {
+      "locator": "S8-M0282",
+      "message_id": "fbf13f0a-143e-40ce-935a-6db0e6f57a9f",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0283",
+      "message_id": "33aa38f1-0c4f-4c4e-b015-8beed6c48a74",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Small insult FP punishment reward"
+    },
+    {
+      "locator": "S8-M0284",
+      "message_id": "fba4826a-72ea-489e-99b7-d9b8779c125f",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0285",
+      "message_id": "8b05266d-e09d-4e90-b616-71ad611546ac",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Mixed feasible miserable punishments"
+    },
+    {
+      "locator": "S8-M0286",
+      "message_id": "c3883b75-61a3-4371-bca1-945d5a2e6b5c",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0287",
+      "message_id": "41ac146b-b26e-4b1d-b4ef-94dc9dd655ca",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Objective-specific visibility; broad audit intent"
+    },
+    {
+      "locator": "S8-M0288",
+      "message_id": "01467a28-1615-440a-9971-df8f4ce6a362",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0289",
+      "message_id": "df68bea5-aa00-42b9-a177-f4fb4f86b4a9",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "All judging at completion, kill vs XP metrics"
+    },
+    {
+      "locator": "S8-M0290",
+      "message_id": "b22d6541-94f8-49f9-ae6f-754879dd9513",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0291",
+      "message_id": "8e3091fd-d49a-4439-bfe7-f4d62afd849d",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Consecutive escalation, clean reset"
+    },
+    {
+      "locator": "S8-M0292",
+      "message_id": "22717d24-beab-46c0-b806-3b6686e69f71",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0293",
+      "message_id": "5e8f1f94-d701-4dfc-b6ec-881ff6ac23fc",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Locks mechanism; no third-offense99; numbers delegated"
+    },
+    {
+      "locator": "S8-M0294",
+      "message_id": "1425e048-e875-45ae-bc13-453e5b0e5239",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0295",
+      "message_id": "8fb73bac-47a1-4c9e-a266-527a5434a9d1",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Forced random item/stack recovery concept; conversion ideas not locked"
+    },
+    {
+      "locator": "S8-M0296",
+      "message_id": "342b5c60-aea1-402a-b26b-4703a819373b",
+      "role": "assistant",
+      "review_status": "PROPOSAL_CONTEXT_REVIEWED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0297",
+      "message_id": "d28181ff-a98b-47c5-9189-534eb7f990ab",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Random forced stacks vs voluntary item selection locked"
+    },
+    {
+      "locator": "S8-M0298",
+      "message_id": "c66ca4ed-3c80-4bfa-9a38-d3bfc29b1da8",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    },
+    {
+      "locator": "S8-M0299",
+      "message_id": "5c292e68-1aeb-4c39-b978-3c19b878daa8",
+      "role": "user",
+      "review_status": "USER_REVIEWED",
+      "finding": "Current worn/inventory/bank candidates; twelve/100k priority tuning"
+    },
+    {
+      "locator": "S8-M0300",
+      "message_id": "49318252-a6d6-4e5e-8789-19cf8c9f6792",
+      "role": "assistant",
+      "review_status": "INDEXED_NOT_PROMOTED",
+      "finding": "Assistant indexed; no standalone approval inferred"
+    }
+  ]
+}

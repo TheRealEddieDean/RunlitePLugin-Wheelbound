@@ -25,3 +25,6 @@ Commit links: prepend https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbou
 
 - 4a5702256cd378d1d0ee41d01e6ea45ef4604568: A02 recovery deliverables committed.
 - A03 in this checkpoint: second contiguous 100 visible turns indexed, 50 user turns reviewed; gate counts/layout and punishment provenance restored, WB-D095–099 added. Check passed: 99 unique IDs, immutable experiment hashes and both review-ledger counts. Next A04: S8-M0201–0300.
+
+- dde32e9fd9d131cfc936adccfddeecc7b24a6f25: A03 skill gates/layout and peer boss progression committed.
+- A04 in this checkpoint: 300 total indexed visible turns/150 reviewed user turns; D100–103, sourced daily/vendor/Challenge details and separate approved 64-node raid-grouped roster. Design checks verify source coverage and disabled runtime entries; H3 inputs unchanged. Next A05: remaining S8-M0301–0436.
