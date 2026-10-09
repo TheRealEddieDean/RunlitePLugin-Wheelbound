@@ -56,4 +56,3 @@ Includes two distinct independent-proposal targets, same-type offers, unlocked c
 
 Not simulated: complete skill-method requirements; exact boss/quest catalogs; all 100 item bounty definitions; 50 punishments (generic duration proxy instead); daily, CA and diary payouts; blessings; Satchel upgrades; pause/logout/live event attribution; crash-safe receipts; Grand Fate learning/win probability; hard menu blocking. These require additional data/live tests. No Coffer acceptance is inferred from this script.
 
-Focused checks and all 48,000 reported trajectories passed after correcting full-Satchel churn handling.
