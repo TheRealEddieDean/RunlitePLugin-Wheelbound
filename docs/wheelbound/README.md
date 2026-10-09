@@ -45,3 +45,6 @@ Read [technical specifications](TECHNICAL_SPECIFICATIONS.md), [major questions](
 [BALANCE_CANDIDATE](BALANCE_CANDIDATE.md) and [UX_RECOVERY_FLOWS](UX_RECOVERY_FLOWS.md) specify provisional first-implementation parameters and detailed error/recovery journeys.
 
 [MONDAY_HANDOFF](MONDAY_HANDOFF.md) consolidates readiness, external proof and major decisions. [FIRST_CODING_TASK](FIRST_CODING_TASK.md) is the next-session prompt after explicit implementation authorization.
+
+## Historical recovery breakthrough
+S8: the original shared Game Design & Progression conversation is now recovered by direct HTTPS fetch: 436 visible user/assistant messages with timestamps and stable locators. See [extraction record](research/TRANSCRIPT_EXTRACTION.md) and [transcript](research/SHARED_CONVERSATION_TRANSCRIPT.md). The earlier failed web-reader assessment is superseded; reconciliation is in progress. Newly authored catalogs remain separate until actual historical approvals are compared.

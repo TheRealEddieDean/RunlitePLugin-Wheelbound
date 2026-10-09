@@ -22,3 +22,6 @@ RuneLite ItemID blob 1bb88f6044f84f89cbe1a5e99ccc688d43ff631c verifies draft ite
 - [Jagex Sailing launch](https://www.jagex.com/news/set-sail-in-old-school-runescape-explore-gielinor-like-never-before-in-massive-sailing-update-available-today), 2025-11-19.
 - [RuneLite Skill API](https://static.runelite.net/runelite-api/apidocs/net/runelite/api/Skill.html), SAILING checked 2026-10-09.
 - [Jagex CA reward list](https://secure.runescape.com/m=news/combat-achievements-expansion-rewards?oldschool=1), 2022-11-01 current-rewards list identifies Master Hilt 5. New proposed rewards elsewhere on that page are not assumed accepted.
+
+## S8 recovered shared conversation
+Direct HTTPS fetch succeeded after the web-reader failed. [Extraction record](research/TRANSCRIPT_EXTRACTION.md) and [visible transcript](research/SHARED_CONVERSATION_TRANSCRIPT.md) preserve the selected chain with stable S8 message locators. 436 visible messages recovered; source reconciliation is in progress. Earlier “shared link inaccessible” claims describe the failed first attempt and are superseded by this actual extraction. Separate named conversations/attachments remain unproven.
