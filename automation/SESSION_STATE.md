@@ -1,34 +1,27 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261010T012619Z-catalog-manifest
-- State: ACTIVE
-- Owner/task lease: WB-A15; wb-20261010T012619Z-catalog-manifest.
-- Lease acquired UTC: 2026-10-10T01:26:19Z
-- Lease expires UTC: 2026-10-10T01:56:19Z
+- State: IDLE
+- Owner/task lease: NONE; released after verified publication of this checkpoint.
 - Branch: wheelbound-mode
-- Last verified predecessor: 9d513360bc68ec0712f3049c5d3ef376aac2fccd
-- Latest completed checkpoint: A06 source-recovery consistency; this snapshot’s owning commit is the remote first-parent commit containing it. Resolve through file history/head rather than a circular self-hash.
+- Last verified predecessor/source commit: 13bae2b89bbf05e36e7de8516c48e30a6ed31dd0
+- Latest completed checkpoint: A07 authority, A13 backlog acceptance, A15 PDF publication; owning commit resolved through remote file history.
 - Protected main: c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
-- Completed during planned session: protocol/checkpoint queue/ownership; A02–A05 all436 visible turns indexed and218 user turns reviewed with named proposals; A06 scoped cross-file consistency;106 decisions;64-node raid-grouped roster; preserved experiment hashes; existing H2/H3 checks passed.
-- Uncommitted completed work: NONE outside the owning checkpoint tree. A failed ref update would mean this snapshot is local only; treat saved status as true only after remote head verification. Intermediate scratch scripts/read extracts are reproducible and not deliverables.
-- Remaining: A07 catalog authority, A08–A10 content/receipt review, A11–A12 faithful new model, A13 backlog pass, A14 targeted research gaps, A15 updated PDF/QA, A16 final briefing. A17 live traces and A18 actual clean build remain gated/blocked.
-- Blockers: see BLOCKERS. Major choices Q2/Q5/Q6/Q9/Q10 in DECISIONS_PENDING; do not re-ask resolved Q1/Q7/Q8.
-- Latest PDF: stale relative to source recovery; publication task remains TODO.
+- Completed this continuation: six-catalog authority manifest; I01–I10 acceptance review; 24 Barrows and 23 plain-XP conditional review records; 48 diary completion source mappings; 141-page visually checked PDF from the predecessor's Markdown, saved version 5.
+- Validation: design_checks, H2 checks and H3 catalog checks passed; original experimental source/catalog hashes unchanged; GitHub compare limited to docs/wheelbound and automation; main unchanged.
+- Uncommitted completed deliverables: NONE after guarded update and remote verification. Scratch renders/helpers are reproducible intermediates. If ref update fails, treat local saved state as unpublished until repaired.
+- Allowance: user clarified 81% REMAINING, not consumed. No authoritative current remaining metric or per-task quota cost is available. No automatic restart/background run established.
+- Remaining: A08/A09/A10 PARTIAL; A11 faithful next-model contract, A12 bounded execution, A14 targeted research and A16 final readiness synthesis unfinished. A17 live traces and A18 actual clean build gated/blocked.
+- Latest PDF: source 13bae2b89bbf05e36e7de8516c48e30a6ed31dd0, 141 pages, SHA-256 in PDF_CHECKPOINT.json. This final automation-only checkpoint does not change the PDF's gameplay Markdown. Not a final implementation-ready/playtested specification.
+- Major unresolved choices: Q2 full/unsupported Coffer escape; Q6 exhausted ordinary pools; Q9 Bossing Challenge; Q10 rejected-Fate bounty receipt disposition; Q5 conditional policy fallback. No re-asking resolved Q1/Q7/Q8.
 
 ## Exact next action
 
-1. Fetch wheelbound-mode head and main; read automation files, canonical DECISIONS and master assignment. Inspect changes since the recorded predecessor and this checkpoint. No active owner is held here, but recheck the current remote SESSION_STATE before claiming work.
-2. Claim WB-A07 with a new session ID and bounded lease using expected-head guarded update; re-fetch to verify ownership. Never force over concurrent changes.
-3. Author a catalog authority manifest separating recovered mode roster/rules, old normal metadata, H1–H3 immutable experimental catalogs, and proposed normative revisions. Record required grouped third-age/gilded bounty families, promised-versus-actually-delivered fifty templates, broad Challenge library/slot-classification gap, and severe consecutive Penance versus experimental120m cap. Include explicit source/version/hash/authority/runtime-enable gates. Do not change files hashed by H3.
-4. Verify manifest and links/counts with design_checks.py; commit to wheelbound-mode; update TASK_QUEUE/PROGRESS/SESSION_STATE with actual prior commit and next task. Then select A13 recovered-rule backlog pass or an appropriately sized A08 review batch. Do not repeat prior simulations/policy research without a changed assumption.
-5. Refresh PDF only from a verified committed Markdown SHA after appropriate catalog/backlog checkpoint; render changed pages, save actual deliverable and report limits. No production plugin implementation, main updates or Hub submission.
+1. Fetch wheelbound-mode and main. Read PROTOCOL, TASK_QUEUE, this state, BLOCKERS, DECISIONS_PENDING, DECISIONS and preserved master instructions. Inspect changes since predecessor and check current remote ownership. Do not assume an expired lease means a worker stopped.
+2. Claim a bounded A08 subtask using new session ID/lease and expected-head guarded update; verify remote ownership before edits. Preserve unreviewed concurrent changes.
+3. Review WB-B025–WB-B040 God Wars owned-loot/source/access routes against pinned primary RuneLite evidence and current game evidence where available. Record identity, acquisition boundary, source/access, variant canonicalization, duplicate key and FP status separately. All runtime entries remain disabled without live trace gates. Preserve H3 input bytes; append a separate review ledger.
+4. Check static review coverage/hashes/links, commit documentation, update progress with actual hash and select next independent batch. A08 still needs raid/mixed sources and grouped third-age/gilded membership in a separately versioned finite-100 normative catalog.
+5. A09 next batch WB-P024–WB-P035: method/tool evidence and compatibility, then location and kill-count groups; separate severity-aware Penance contract from archived 120m experiment. A10 next: CA task metadata/packing-to-boss grouping, 18 daily source/access reviews and reward sinks. Do not substitute Master CA point threshold for per-boss mastery.
+6. Only after input contracts/review dependencies are satisfied, version a faithful model before executing bounded trials. Do not relabel/rerun historical experiments without changed assumptions. Refresh PDF again after material gameplay/specification changes; preserve actual source SHA and QA/publication receipt.
 
-Use approximately70/30 execution-versus-verification/checkpoint effort targets; no authoritative quota metric is available. An expired lease prompts inspection, not proof an old worker stopped. At planned end release IDLE and record exact continuation. No background execution, automatic restart, quota reset or existing-conversation reopening capability is established.
-
-User-reported allowance clarification: 81% REMAINING, not consumed. This is not an authoritative tool reading or a measured per-task cost. Continue bounded productive tasks with verification/checkpoint reserve; no quota or automatic restart capability is inferred.
-
-A07 completed in this checkpoint: six catalog hashes/counts/authority records and promotion gates; original H3 inputs unchanged. Next bounded task: WB-A13 backlog acceptance review against the recovered rules. Current owner retains the existing lease while transitioning; recheck remote head before any further write.
-
-A13 complete: recovered-rule acceptance matrix, accurate failed-build status, shared obligation predicate and six-entry manifest verification. Next: bounded A08 grouped-family and receipt review, then A09 severity review; PDF remains stale until rebuilt from a committed SHA.
-
-A08/A09 review batches saved with 24/23 individually gated records; both tasks remain PARTIAL. A15 PDF source order now includes recovery report, catalog authority and review chapters. Commit the source checkpoint before generation; build with its exact SHA and visually verify before publication.
+Use approximately 70/30 execution-versus-verification/checkpoint effort targets, not quota measurements. No production plugin implementation, main modification, Hub submission or messages authorized. At the next planned end save a clean IDLE checkpoint with exact continuation; do not claim scheduled/background continuation.

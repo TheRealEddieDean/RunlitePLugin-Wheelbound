@@ -50,3 +50,16 @@ A13 committed at 7dd62f916c3371e8331454a63cc4d7a8b4018dc4. A08 reviewed 24 Barro
 ## A10 diary source review batch
 
 Mapped 48 region/difficulty completion signals at the pinned RuneLite source revision; resolved early Karamja generated symbols through legacy aliases. Reviewed manual/idempotent active receipt boundaries and separated per-boss Combat Mastery from Master Grand threshold. A10 remains PARTIAL; packed CA task metadata, daily source/access and sinks still require review. No live semantics or numeric rewards asserted.
+
+## Published source-derived PDF and session verification
+
+Source commit: 13bae2b89bbf05e36e7de8516c48e30a6ed31dd0. A15 delivered a 141-page checkpoint PDF, visually reviewed using full-document contact sheets and full-size selected/changed pages; zero out-of-bounds text blocks. Saved replacement version 5. Exact PDF hash and source provenance are in automation/PDF_CHECKPOINT.json. A07/A13/A15 DONE; A08/A09/A10 PARTIAL with bounded review ledgers. No additional simulations executed. Design checks, H2 checks and H3 catalog checks passed; original source/input hashes retained. GitHub compare from 37414d9 through source commit contains five commits and 21 files solely under docs/wheelbound and automation. Protected main remains c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. Final checkpoint commits automation only, leaving the PDF's gameplay Markdown source unchanged.
+
+Completed substantive commits this continuation:
+- a083d79a6835ba06f82ddb02d66411f6f15e91a5: six-catalog authority/provenance/hash manifest.
+- 7dd62f916c3371e8331454a63cc4d7a8b4018dc4: recovered-rule implementation acceptance.
+- 239fc99613770bd0fa190ebf0b60d734d138be8b: 24 Barrows/23 plain-XP review ledgers and PDF source order.
+- 31f147b99a55e6de72e552cd5d721935c02afa9e: current source-recovery/handoff wording.
+- 13bae2b89bbf05e36e7de8516c48e30a6ed31dd0: 48 diary signals and receipt boundaries.
+
+Next milestone: finish content/access/receipt review and a faithful new versioned model contract; engineering begins only after explicit implementation authorization and a successful I00 build baseline.

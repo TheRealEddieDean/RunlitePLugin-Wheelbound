@@ -1,0 +1,10 @@
+{
+  "page_count": 141,
+  "pdf_sha256": "27d6be20f9acb997e74419986cff273ee85fb79f35147f3352cf7b34cc5561de",
+  "out_of_bounds_blocks": [],
+  "source_commit_in_cover": "13bae2b89bbf05e36e7de8516c48e30a6ed31dd0",
+  "status": "CHECKPOINT_PUBLISHED",
+  "review": "All 140 predecessor pages reviewed in contact sheets; final inserted diary page and shifted ending chapters visually reviewed, with selected pages at full size. No detected layout defects.",
+  "library_version": 5,
+  "limitations": "Not final balance, live detector validation or successful build. Source Markdown authoritative."
+}
