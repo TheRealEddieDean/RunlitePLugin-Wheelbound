@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
-- Session ID: wb-20261010-build-evidence
-- State: IDLE — clean bounded-session checkpoint; no active lease retained.
+- Session ID: wb-20261010-receipt-acceptance
+- State: ACTIVE — owner /root; task WB-A24; acquired 2026-10-10; release required at session checkpoint.
 - Branch: wheelbound-mode
 - Starting verified head: e6d445c8c27847050abb07f843cfe9c9d4ab476b
 - Latest substantive Markdown/PDF source: bb723351f3e9979b246454485e1990a71484a861

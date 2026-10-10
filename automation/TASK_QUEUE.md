@@ -34,3 +34,5 @@ Authoritative design: [decision register](../docs/wheelbound/DECISIONS.md). Oper
 | WB-A23 | Draft exact restrictive-control review brief without sending | P1 | A14 policy/source limits; A20 route plan | S | DONE (draft only) | research/POLICY_REVIEW_PACKET | Current published sources rechecked; precise behavior/routes/agenda; no review contact or approval |
 
 Paths without a directory prefix above are under docs/wheelbound/. Selection policy: acquire ownership, choose highest-priority TODO or PARTIAL whose dependency is DONE, work to a bounded deliverable, verify and checkpoint. Speculative numbers are delegated candidates, not historically approved values. Questions block only affected work.
+
+| WB-A24 | Execute offline receipt/recovery acceptance fixtures | P1 | A13 state contract; A19 baseline | S | ACTIVE | automation/receipt_safety | Fault/identity/replay matrix, runnable oracle, explicit implementation limits, preserved unresolved settlements |
