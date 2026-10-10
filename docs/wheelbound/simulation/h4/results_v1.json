@@ -1,0 +1,412 @@
+{
+  "version": "H4-core-v1",
+  "scope": "Synthetic recovered-rule core; no full real-content account or Grand completion-time estimate",
+  "seed_start": 2026101001,
+  "seed_end": 2026102000,
+  "accounts_per_scenario": 1000,
+  "total_trajectories": 4000,
+  "elapsed_seconds": 301.667350124,
+  "source_hashes": {
+    "model.py": "cdbd26eaea54bf41eb4c06a059671a89ad1f72210763103eb8fd89416ae3a70c",
+    "run.py": "07f90628a254628b32db24da6fe00f3895c9cc854c32b2c72332a4dea180c815",
+    "checks.py": "54646acb014ad83424331bf60592c403e5ec9ceb0c43bddaa91e12f3ecd7c581",
+    "CONTRACT.md": "605297166acbc2359d5ef903afa01849f9f3cf0eb882e4b9d23273efccb7b242",
+    "parameters.json": "fe6cb15a3eaf5da14d4b884ee169765c60b6b8759aa02ac9b02850d9c6b232d0",
+    "INPUT_MANIFEST.json": "f7f02fcc5ddb5fa5dd710423acefeb3b625c5a6d79b3a6181e1bff1503eb501f"
+  },
+  "input_hashes": {
+    "catalogs/punishments_normative_v1.json": "f54aa4c431ea592d11c36440b7411345ad8f328fef243f618293d288880d5382",
+    "catalogs/item_bounties_normative_v1.json": "daef4932b8e6322480c822292d9c31fbadb1f2a3e448b7c378330515657ae488",
+    "catalogs/mode_boss_roster.json": "f65dedf174602881fc251111d00fc1bc96beb7d7c4877bbe5aed00aeb70d7cc5",
+    "simulation/h4/parameters.json": "fe6cb15a3eaf5da14d4b884ee169765c60b6b8759aa02ac9b02850d9c6b232d0"
+  },
+  "raw_csv_sha256": "66ff1980374339e41ae7132d948a3b3e0827d98d408aeeb58f9376f8f7fe28bf",
+  "scenarios": {
+    "careful_retain": {
+      "accounts": 1000,
+      "config": {
+        "name": "careful_retain",
+        "violation_p": 0.02,
+        "penance_violation_p": 0.02,
+        "reject_p": 0.01,
+        "audit_reward": "retain",
+        "choice": "efficiency",
+        "cleansing": true
+      },
+      "stops": {
+        "DRAW_HORIZON": 1000
+      },
+      "metrics": {
+        "fp": {
+          "p10": 919,
+          "p50": 2410,
+          "p90": 4171,
+          "max": 5741,
+          "mean": 2489.718
+        },
+        "hours": {
+          "p10": 72.81047619047621,
+          "p50": 77.31619047619051,
+          "p90": 82.31095238095249,
+          "max": 91.96380952380959,
+          "mean": 77.44891652701111
+        },
+        "ordinary": {
+          "p10": 363,
+          "p50": 370,
+          "p90": 377,
+          "max": 388,
+          "mean": 370.095
+        },
+        "special": {
+          "p10": 20,
+          "p50": 26,
+          "p90": 32,
+          "max": 43,
+          "mean": 26.088
+        },
+        "penances": {
+          "p10": 16,
+          "p50": 22,
+          "p90": 29,
+          "max": 43,
+          "mean": 22.334
+        },
+        "max_penance_hours": {
+          "p10": 0.5,
+          "p50": 0.5,
+          "p90": 1.0,
+          "max": 2.0,
+          "mean": 0.5815
+        },
+        "defies": {
+          "p10": 1,
+          "p50": 2,
+          "p90": 3,
+          "max": 5,
+          "mean": 2.347
+        },
+        "forced": {
+          "p10": 11,
+          "p50": 15,
+          "p90": 20,
+          "max": 25,
+          "mean": 15.203
+        },
+        "special_share": {
+          "p10": 0.038461538461538464,
+          "p50": 0.047619047619047616,
+          "p90": 0.06542056074766354,
+          "max": 0.1111111111111111,
+          "mean": 0.05131188470275881
+        }
+      },
+      "accounts_with_debt": 991,
+      "accounts_penance_over_2h": 0,
+      "accounts_penance_at_least_24h": 0,
+      "empty_recoveries": 31,
+      "mean_spend_by_sink": {
+        "activity_and_slice": 3825,
+        "blessing": 2766,
+        "boss_node": 17050,
+        "card_Bossing": 500,
+        "card_Skilling": 500,
+        "cleansing": 3537.5,
+        "duplicate": 505.5,
+        "enhancement": 1125,
+        "mastery": 750,
+        "satchel": 1841.25,
+        "third_card": 1000
+      }
+    },
+    "careful_withhold": {
+      "accounts": 1000,
+      "config": {
+        "name": "careful_withhold",
+        "violation_p": 0.02,
+        "penance_violation_p": 0.02,
+        "reject_p": 0.01,
+        "audit_reward": "withhold",
+        "choice": "efficiency",
+        "cleansing": true
+      },
+      "stops": {
+        "DRAW_HORIZON": 1000
+      },
+      "metrics": {
+        "fp": {
+          "p10": 781,
+          "p50": 1972,
+          "p90": 3679,
+          "max": 5736,
+          "mean": 2116.413
+        },
+        "hours": {
+          "p10": 72.89095238095247,
+          "p50": 77.60857142857141,
+          "p90": 82.54238095238107,
+          "max": 89.08714285714291,
+          "mean": 77.67149371468167
+        },
+        "ordinary": {
+          "p10": 363,
+          "p50": 370,
+          "p90": 376,
+          "max": 387,
+          "mean": 369.561
+        },
+        "special": {
+          "p10": 21,
+          "p50": 26,
+          "p90": 33,
+          "max": 44,
+          "mean": 26.669
+        },
+        "penances": {
+          "p10": 16,
+          "p50": 23,
+          "p90": 30,
+          "max": 46,
+          "mean": 22.846
+        },
+        "max_penance_hours": {
+          "p10": 0.5,
+          "p50": 0.5,
+          "p90": 1.0,
+          "max": 2.0,
+          "mean": 0.579
+        },
+        "defies": {
+          "p10": 1,
+          "p50": 2,
+          "p90": 3,
+          "max": 5,
+          "mean": 2.358
+        },
+        "forced": {
+          "p10": 11,
+          "p50": 15,
+          "p90": 19,
+          "max": 26,
+          "mean": 15.267
+        },
+        "special_share": {
+          "p10": 0.038461538461538464,
+          "p50": 0.047619047619047616,
+          "p90": 0.06542056074766354,
+          "max": 0.1111111111111111,
+          "mean": 0.05193885383008061
+        }
+      },
+      "accounts_with_debt": 992,
+      "accounts_penance_over_2h": 0,
+      "accounts_penance_at_least_24h": 0,
+      "empty_recoveries": 26,
+      "mean_spend_by_sink": {
+        "activity_and_slice": 3825,
+        "blessing": 2421,
+        "boss_node": 17050,
+        "card_Bossing": 500,
+        "card_Skilling": 500,
+        "cleansing": 3522.5,
+        "duplicate": 490.5,
+        "enhancement": 1125,
+        "mastery": 750,
+        "satchel": 1769.4,
+        "third_card": 1000
+      }
+    },
+    "risk_retain": {
+      "accounts": 1000,
+      "config": {
+        "name": "risk_retain",
+        "violation_p": 0.18,
+        "penance_violation_p": 0.12,
+        "reject_p": 0.06,
+        "audit_reward": "retain",
+        "choice": "random",
+        "cleansing": false
+      },
+      "stops": {
+        "DRAW_HORIZON": 1000
+      },
+      "metrics": {
+        "fp": {
+          "p10": 5,
+          "p50": 210,
+          "p90": 829,
+          "max": 2983,
+          "mean": 338.321
+        },
+        "hours": {
+          "p10": 129.87238095238106,
+          "p50": 137.85142857142884,
+          "p90": 148.21904761904793,
+          "max": 176.3785714285716,
+          "mean": 138.65532023391293
+        },
+        "ordinary": {
+          "p10": 335,
+          "p50": 344,
+          "p90": 353,
+          "max": 363,
+          "mean": 344.151
+        },
+        "special": {
+          "p10": 27,
+          "p50": 33,
+          "p90": 40,
+          "max": 51,
+          "mean": 33.755
+        },
+        "penances": {
+          "p10": 100,
+          "p50": 115,
+          "p90": 127,
+          "max": 147,
+          "mean": 114.138
+        },
+        "max_penance_hours": {
+          "p10": 1.0,
+          "p50": 2.0,
+          "p90": 4.0,
+          "max": 16.0,
+          "mean": 1.894
+        },
+        "defies": {
+          "p10": 1,
+          "p50": 2,
+          "p90": 3,
+          "max": 5,
+          "mean": 1.963
+        },
+        "forced": {
+          "p10": 13,
+          "p50": 17,
+          "p90": 22,
+          "max": 31,
+          "mean": 17.506
+        },
+        "special_share": {
+          "p10": 0.08163265306122448,
+          "p50": 0.09090909090909091,
+          "p90": 0.14285714285714285,
+          "max": 0.1891891891891892,
+          "mean": 0.10052127502065383
+        }
+      },
+      "accounts_with_debt": 1000,
+      "accounts_penance_over_2h": 106,
+      "accounts_penance_at_least_24h": 0,
+      "empty_recoveries": 58,
+      "mean_spend_by_sink": {
+        "activity_and_slice": 3802.875,
+        "blessing": 6,
+        "boss_node": 16437.125,
+        "card_Bossing": 500,
+        "card_Skilling": 500,
+        "duplicate": 36.2,
+        "enhancement": 409.875,
+        "mastery": 383.25,
+        "satchel": 90.6,
+        "third_card": 153
+      }
+    },
+    "risk_withhold": {
+      "accounts": 1000,
+      "config": {
+        "name": "risk_withhold",
+        "violation_p": 0.18,
+        "penance_violation_p": 0.12,
+        "reject_p": 0.06,
+        "audit_reward": "withhold",
+        "choice": "random",
+        "cleansing": false
+      },
+      "stops": {
+        "DRAW_HORIZON": 996,
+        "BLOCKED_Q6_EXHAUSTED_QUEST": 3,
+        "PENDING_FATE_HORIZON": 1
+      },
+      "metrics": {
+        "fp": {
+          "p10": -150,
+          "p50": 84,
+          "p90": 255,
+          "max": 663,
+          "mean": 65.596
+        },
+        "hours": {
+          "p10": 126.38476190476203,
+          "p50": 134.369047619048,
+          "p90": 144.30095238095257,
+          "max": 179.30857142857167,
+          "mean": 134.96187322080215
+        },
+        "ordinary": {
+          "p10": 332,
+          "p50": 341,
+          "p90": 351,
+          "max": 366,
+          "mean": 341.31
+        },
+        "special": {
+          "p10": 29,
+          "p50": 36,
+          "p90": 44,
+          "max": 57,
+          "mean": 36.537
+        },
+        "penances": {
+          "p10": 101,
+          "p50": 114,
+          "p90": 130,
+          "max": 150,
+          "mean": 114.683
+        },
+        "max_penance_hours": {
+          "p10": 1.0,
+          "p50": 2.0,
+          "p90": 4.0,
+          "max": 32.0,
+          "mean": 1.924
+        },
+        "defies": {
+          "p10": 1,
+          "p50": 2,
+          "p90": 3,
+          "max": 5,
+          "mean": 1.857
+        },
+        "forced": {
+          "p10": 14,
+          "p50": 18,
+          "p90": 24,
+          "max": 35,
+          "mean": 18.622
+        },
+        "special_share": {
+          "p10": 0.09090909090909091,
+          "p50": 0.1111111111111111,
+          "p90": 0.15151515151515152,
+          "max": 0.22727272727272727,
+          "mean": 0.11652985836418589
+        }
+      },
+      "accounts_with_debt": 1000,
+      "accounts_penance_over_2h": 106,
+      "accounts_penance_at_least_24h": 1,
+      "empty_recoveries": 77,
+      "mean_spend_by_sink": {
+        "activity_and_slice": 2789.625,
+        "boss_node": 11100.2,
+        "card_Bossing": 466.4,
+        "card_Skilling": 474.45,
+        "duplicate": 0.1,
+        "enhancement": 0.225,
+        "mastery": 0.75,
+        "satchel": 3.6
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Diary and Combat Mastery receipt review
 
-WB-A10 is PARTIAL: source mappings for all 48 region/difficulty diary objectives are recorded, but live value/timing semantics, task-to-boss Combat Achievement grouping, reward amounts and the remaining daily/sink review are unfinished. No production adapter is enabled.
+WB-A10 documentary receipt/sink review is complete with conditional gates:48 diary mappings, exact21 CA completion words/task-to-boss schema and18 daily reviews are recorded. Live value/timing semantics, actual cached task instances and reward amounts remain unverified. No production adapter is enabled.
 
 ## Diary mapping resolved
 

@@ -10,7 +10,7 @@ S3: attached Wheelbound Game Design and Implementation Guide, version 1.0, nine 
 S4: Personal Context search summaries of dated user/assistant messages, not full transcripts.
 S5: existing repository README, docs/DEVELOPMENT.md, RELEASE_AUDIT.md and SUBMISSION.md at c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
 
-S8: the supplied original shared Game Design & Progression conversation was recovered: 436 visible turns indexed, all 218 user turns reviewed with named adjacent proposals. The register now contains 106 decisions and a confirmed 64-node mode roster. The separate Brainstorming conversation and historical nontext images remain inaccessible. Complete historically approved item/punishment catalogs and exact unresolved balance/receipt rules have not been recovered. Preserve those gaps as UNVERIFIED/OPEN. No docs/wheelbound directory existed at the initial inspected branch tree.
+S8: the supplied original shared Game Design & Progression conversation was recovered: 436 visible turns indexed, all 218 user turns reviewed with named adjacent proposals. The register now contains 110 decisions and a confirmed 64-node mode roster. The separate Brainstorming conversation and historical nontext images remain inaccessible. Complete historically approved item/punishment catalogs and exact unresolved balance/receipt rules have not been recovered. Preserve those gaps as UNVERIFIED/OPEN. No docs/wheelbound directory existed at the initial inspected branch tree.
 
 Existing release has Bossing, Skilling, CA, Pet Hunting, Questing and Custom wheels. Earlier two-wheel restriction was superseded in release documentation; do not remove shipped wheels as part of design recovery.
 

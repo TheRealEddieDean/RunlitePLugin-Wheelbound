@@ -1,6 +1,6 @@
 # Sources and provenance
 
-Checked 2026-10-09. Current user approvals outrank master-assignment reconstruction, older assistant proposals and the condensed PDF. Full shared transcript is inaccessible; see OPEN_QUESTIONS. Personal Context returns partial excerpts, not a full export.
+Checked 2026-10-10. Current user approvals outrank master-assignment reconstruction, older assistant proposals and the condensed PDF. The supplied shared transcript has been recovered:436 visible turns indexed and218 user turns reviewed with named proposals. Separate Brainstorming and original nontext attachments remain incomplete; see OPEN_QUESTIONS. Personal Context returns partial excerpts, not a full export.
 
 ## Primary sources
 - [Original Wheelbound Hub review 16702](https://github.com/runelite/plugin-hub/pull/16702): Gson packaging/build failure and forbidden KeyboardFocusManager recovered; preserve these actual blockers.
@@ -24,4 +24,10 @@ RuneLite ItemID blob 1bb88f6044f84f89cbe1a5e99ccc688d43ff631c verifies draft ite
 - [Jagex CA reward list](https://secure.runescape.com/m=news/combat-achievements-expansion-rewards?oldschool=1), 2022-11-01 current-rewards list identifies Master Hilt 5. New proposed rewards elsewhere on that page are not assumed accepted.
 
 ## S8 recovered shared conversation
-Direct HTTPS fetch succeeded after the web-reader failed. [Extraction record](research/TRANSCRIPT_EXTRACTION.md) and [visible transcript](research/SHARED_CONVERSATION_TRANSCRIPT.md) preserve the selected chain with stable S8 message locators. 436 visible messages recovered; source reconciliation is in progress. Earlier “shared link inaccessible” claims describe the failed first attempt and are superseded by this actual extraction. Separate named conversations/attachments remain unproven.
+Direct HTTPS fetch succeeded after the web-reader failed. [Extraction record](research/TRANSCRIPT_EXTRACTION.md) and [visible transcript](research/SHARED_CONVERSATION_TRANSCRIPT.md) preserve the selected chain with stable S8 message locators. 436 visible messages recovered; all218 user turns reviewed, with named assistant proposals consulted. Earlier “shared link inaccessible” claims describe the failed first attempt and are superseded by this actual extraction. Separate named conversations/attachments remain unproven.
+
+## Current targeted source review, 2026-10-10
+
+RuneLite HEAD remains42a6f17a6a2e8e478aa763890ecd0181a59dad38. [Expanded source pins](research/CONTENT_REVIEW_SOURCE_PINS.json) support server-loot and method-animation contracts. [CA word/task schema](research/CA_COMPLETION_SOURCE_CONTRACT.json) is independently consistent with current repository BossData and CA Exporter blob3605aa60d12109894a4f14dcc202ed3314ad5d73. DBTableID inspection did not establish a CA task DB table; the reviewed CA route uses enums/structs, not a guessed DB schema. No live task enumeration was performed.
+
+Reopened the official2020 Death Changes post: it documents per-item minimum/105% and distinct UIM death mechanics but supplies no verified current Coffer cap/headroom or UIM donation receipt. Nonprimary calculator assertions conflicted and were not used to settle those technical questions. Q2 remains unverified pending actual current evidence; no guessed integer cap was adopted.

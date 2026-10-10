@@ -17,7 +17,7 @@ ROOT=Path(__file__).resolve().parent
 ORDER=["README","BLUEPRINT","GAME_RULES","DECISIONS","PROGRESSION","WHEELS",
        "FATE_CARDS","FATE_SHOP","ECONOMY","BALANCE_CANDIDATE","GRAND_FATES","DEFY_FATE","PUNISHMENTS",
        "BOUNTIES","ACCOUNT_ACCESS","UI_UX","UX_RECOVERY_FLOWS","PERSISTENCE","ARCHITECTURE",
-       "RUNELITE_INTEGRATION","POLICY_AND_FEASIBILITY","TECHNICAL_SPECIFICATIONS","CONTENT_CATALOGS","CATALOG_AUTHORITY","BOUNTY_CATALOG_REVIEW","PUNISHMENT_CATALOG_REVIEW","CATALOG_ACCEPTANCE","ACQUISITION_EVIDENCE","DIARY_CA_RECEIPT_REVIEW","STATE_CONTRACT","EDGE_CASES","TESTING","SIMULATION_RESULTS",
+       "RUNELITE_INTEGRATION","POLICY_AND_FEASIBILITY","TECHNICAL_SPECIFICATIONS","CONTENT_CATALOGS","CATALOG_AUTHORITY","BOUNTY_CATALOG_REVIEW","PUNISHMENT_CATALOG_REVIEW","CATALOG_ACCEPTANCE","ACQUISITION_EVIDENCE","DIARY_CA_RECEIPT_REVIEW","STATE_CONTRACT","EDGE_CASES","TESTING","SIMULATION_RESULTS","H4_RESULTS","simulation/h4/CONTRACT",
        "IMPLEMENTATION_PLAN","DEVELOPMENT_PIPELINE","TRACEABILITY","SOURCES","research/HISTORICAL_RECONCILIATION","OPEN_QUESTIONS","MONDAY_HANDOFF","FIRST_CODING_TASK","WORK_STATUS","TASKS"]
 parser=argparse.ArgumentParser()
 parser.add_argument("--commit",required=True)
@@ -73,7 +73,7 @@ story=[Spacer(1,94),Paragraph("WHEELBOUND",styles["WBCover"]),Spacer(1,18),
        Paragraph("Recovered design, technical research<br/>and economy simulation checkpoint",styles["WBH1"]),Spacer(1,24),
        Paragraph("10 October 2026 | wheelbound-mode | Documentation only",styles["WBBody"]),
        Paragraph("Confirmed user rules, unverified historical details, new proposals and open decisions are explicitly distinguished. This is a checkpoint, not a final implementation-ready specification.",styles["WBBody"]),
-       Paragraph("Executed models: 126,000 synthetic account trajectories across historical, corrected and sensitivity runs. Live RuneLite enforcement and Death's Coffer verification remain untested.",styles["WBBody"]),
+       Paragraph("Executed models: 130,080 synthetic account trajectories across historical, corrected and sensitivity runs. Live RuneLite enforcement and Death's Coffer verification remain untested.",styles["WBBody"]),
        Spacer(1,22),Paragraph("Markdown source commit: "+args.commit,styles["WBBody"]),
        Paragraph("Repository: TheRealEddieDean/RunlitePLugin-Wheelbound<br/>Source: docs/wheelbound/",styles["WBBody"]),PageBreak()]
 story.append(Paragraph("Contents",styles["WBH1"]))

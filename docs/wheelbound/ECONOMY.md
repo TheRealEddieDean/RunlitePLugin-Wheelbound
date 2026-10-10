@@ -59,3 +59,7 @@ Both special tasks spend one spin before the modeled reward. A missing item trig
 [BALANCE_CANDIDATE](BALANCE_CANDIDATE.md) expands this chapter with provisional numeric/UX detail (WB-D083). Explicit user decisions still prevail.
 
 Recovered S8-M0408/0410/0412 safeguards (WB-D105): no passive FP, no arbitrary balance cap, no direct XP sales, optional dailies, legitimate earnings while in debt, atomic purchases and no automatic refunds for balance patches. Destruction does not refund/restart duplicate counters. These were assistant selections under explicit delegation; old proposed FP values and claimed historical simulations are not final numbers or additional executed runs. Universal forced/voluntary GP conversion is explicitly approved at M0303.
+
+## H4 audit settlement sensitivity
+
+The committed H4 core reports median FP 2,410/1,972 for careful retain/withhold and 210/84 for risk retain/withhold over the synthetic observation window. Reward ordering materially affects affordability; these are candidate portfolio comparisons, not approved fines or measured player balance. Review unresolved audit/bounty settlement before retuning progression prices. See [H4 results](H4_RESULTS.md) for exact limits and excluded reward/sink systems.

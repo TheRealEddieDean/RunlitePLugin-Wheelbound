@@ -1,43 +1,31 @@
 # Return handoff
 
-Prepared 2026-10-10, wheelbound-mode only. Main protected baseline c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. No production plugin behavior changed or Plugin Hub submission made.
+Prepared 2026-10-10 on wheelbound-mode only. Protected main baseline c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. No production plugin behavior changed; no Hub submission or messages sent.
 
-## Ready for implementation planning
-Canonical Markdown contains recovered decisions, supersessions, detailed telemetry/evidence contracts, account/run state and crash boundaries, progression/purchase rules, provisional balance sheet, detailed player/recovery journeys, ticket dependencies and acceptance checks. New catalogs are separately labeled: 100 permanent bounty candidates, 18 repeatable daily targets, 50 punishment templates. Source snapshots contain 67 normal boss categories and 213 quest enum records; these are not runtime eligible pools. A separate confirmed mode roster has 64 nodes, grouping raid variants. The six-catalog authority manifest, implementation acceptance matrix, 24-entry Barrows review and 23-entry plain-XP review are saved; the two catalog reviews remain partial.
+## Completed documentation and bounded research
 
-Recorded experiments: 48,000 historical H1 + 48,000 corrected H2 + 18,000 conversion/risk sensitivity + 12,000 H3 catalog/policy trials = 126,000 synthetic trajectories. Counts, seeds, source/catalog hashes and limits are committed. These are not full real-content accounts or measured Grand Fate completion times. H3 exercises named item/reward and plain-XP punishment drafts; boss/quest access, actual supply/drop rates and daily/CA/diary income remain incomplete.
+110 stable decisions distinguish explicit approvals, delegated new candidates and unverified history. All436 visible shared-conversation turns indexed; all218 user turns reviewed with named adjacent proposals. Separate Brainstorming conversation and original nontext attachments remain missing; the condensed PDF is not treated as exhaustive authority.
 
-Read-only verification commands:
-- python3 docs/wheelbound/design_checks.py
-- python3 docs/wheelbound/simulation/checks.py
-- python3 docs/wheelbound/simulation/catalog_checks.py
+Eight catalog versions have an authority/hash manifest. All100 bounty,50 punishment and18 daily records received conditional documentation review;48 diary mappings and21 noncontiguous CA words have explicit source contracts. Runtime content remains disabled without actual evidence. The new finite100 bounty candidate contains grouped third-age and gilded families; this is a delegated candidate revision, not an invented historical catalog. H1-H3 catalog bytes remain unchanged.
 
-These passed for the checkpoint. They do not validate live detectors or exact restrictive policy acceptance.
+Architecture/state/persistence/UX contracts, implementation acceptance and source-policy research are documented. Current primary-source review distinguishes owned-loot evidence from ground-item coincidence and live verification from source availability. Trade with must remain; restrictive controls still require exact policy acceptance and route coverage. Coffer item disappearance alone never settles an obligation.
 
-## First engineering session
-Actual project: JDK11 target, Gradle8.10 wrapper, JUnit4/Mockito4, RuneLite latest.release. Existing CI specifies Temurin11. An isolated checkout was obtained and the build attempted on JDK17, but Java network access prevented wrapper download before compilation. Do not call build health verified. No runtime client or credentials were used.
+H4 adds80 smoke plus4,000 baseline trajectories, with source/config/catalog hashes and all4,000 CSV rows checked. Total recorded synthetic trajectories130,080. See H4_RESULTS for audit affordability sensitivity, severe Penance tail, three preserved Q6 Questing-exhaustion boundaries and model omissions. These are not full real-content accounts or Grand Fate completion times.
 
-First task is WB-I00: obtain recommended JDK11 environment, resolve wrapper/dependencies, record exact RuneLite version, run the existing clean build, and establish baseline reports. Keep main untouched and production features unchanged. After explicit authorization, implement WB-I01 pure domain state/receipt/RNG vertical slice with existing-wheel regression tests. Do not begin with shop interception, Coffer reward settlement or unsupported content.
+## Major decisions collected for return
 
-## Major decisions for return
-See OPEN_QUESTIONS for options and rationale. Priority:
-1. Full-Coffer/unsupported-account forced donation escape.
-2. Exhausted/unavailable ordinary slice policy, especially completed Questing with five remaining slices.
-3. GP→spins conversion and minimum donation reward.
-4. Bossing Challenge card ambiguity after current L/S/G clarification.
-5. Complete source reconciliation and adoption of new catalog drafts.
-6. Restrictive-policy fallback only if exact proposed controls fail review.
+Read OPEN_QUESTIONS and automation/DECISIONS_PENDING for exact options. Q6 exhausted ordinary pools and Q10 rejected-Fate bounty disposition affect the next model/state implementation. Q9 additional Bossing Challenge card remains ambiguous after confirmed Lesser/Standard/Greater. Q2 full/unsupported Coffer escape awaits actual account/client boundary evidence. Q5 fallback is conditional on exact restrictive-policy rejection. Numeric balance remains delegated candidate work, not an automatic reason to repeat approval questions. Resolved Q1/Q7/Q8 remain resolved.
 
-Recovered first batch resolves new-account scope, random forced Death’s Wheel and no-active-Fate Grand precondition. End-of-Fate audit and severe consecutive Penance require a new faithful model; H1–H3 remain preserved hypothesis experiments.
-No artificial Grand Fate level/time gate, new pause penalty, Pardon cap, lifetime enhancement price or extra special slot is introduced. Old assistant excerpts remain secondary evidence.
+Mixed active/paused evidence for aggregate CA mastery needs an explicit settlement contract before enabling that payout; final-task completion alone does not prove the whole set was earned while active.
 
-## External proof before release
-Live detector traces: initialized XP/quest/CA, method/tool attribution, four awakened counters, Master threshold, Inferno/Colosseum/Radiant fresh rewards, vendor identity, every GE/shop/player-trade route, Coffer confirmation/item/credit ordering and failure/headroom cases. Preserve Trade with; current peer interception is precedent, not Wheelbound-specific approval. Normalized callbacks and simulation success are not server receipts.
+## Next development milestone
 
-Before calling balance final, add reviewed real boss/quest access, resource routes, all remaining sinks/rewards and user decisions. Before enabling a catalog item, supply source/access and positive/negative/paused traces. Until then content is disabled and figures remain BALANCE_TBD.
+WB-I00: obtain recommended JDK11 environment, resolve Gradle wrapper/dependencies, pin actual RuneLite version and execute the existing clean build. Prior attempt failed before compilation because dependency download was blocked; build health is unverified. Keep main and existing production behavior unchanged.
 
-## Resume
-Use WORK_STATUS for the precise resume prompt. The shared conversation is now preserved as 436 visible messages with stable S8 locators; finish reconciliation before publishing an updated PDF. Separate Brainstorming chat and original nontext attachments remain inaccessible. Checkpoint commits and PDF are durable; no automatic relaunch or weekend background execution is claimed.
+After explicit authorization to begin coding, WB-I01 implements the pure domain state/receipt/RNG vertical slice with regression and crash-recovery checks. Live detector trials follow only in a real client with appropriate authorization. Do not begin with shop interception or guessed Coffer settlement.
 
-## Recovery update
-All436 visible source turns are indexed; all218 user turns reviewed with named adjacent proposals. Register now contains106 stable decisions, including sourced gates/circular clusters,64 boss progression nodes, committed purchased boss pool, grouped visible bounty goals and delegated lifecycle safeguards. Normal-source/H1–H3 hashes are preserved. Q10 Reject/bounty settlement joins Q2/Q5/Q6/Q9 as a material interaction to resolve. A07 must distinguish normative catalog revisions from experimental drafts before the next faithful model/PDF publication. No full real-content model or live detector proof is claimed.
+## Validation and remaining gates
+
+Documentation checks, immutable source/catalog hashes and H4 fixtures passed. Source review does not prove current-client positive/negative/paused/order traces. A17 live Coffer, method/tool, vendor, GE/trade, CA/Grand rewards and account edge cases remain blocked; A18 clean build remains blocked. Real access/supply/drop data and excluded vendor/Pardon/bounty/daily/CA/diary economies must be integrated before final balance adoption. Markdown remains authoritative; the refreshed PDF is a review checkpoint with these explicit limitations.
+
+Read automation/SESSION_STATE for the actual last commit, ownership and precise continuation. No automatic restart or background execution has been established.

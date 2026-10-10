@@ -1,6 +1,6 @@
 # Permanent bounty review: Barrows batch and grouped targets
 
-WB-A08 is PARTIAL: 24 of the experimental 100 entries received this source-route/access-gap review. No entry has passed live validation. The [review ledger](research/BOUNTY_REVIEW_A08_BARROWS.json) pins the untouched input hash and retains unresolved drop-table/access/reward status individually.
+WB-A08 documentary review now covers all100 as conditional entries, plus the separate grouped-family candidate. This first historical batch covered24 of the100 entries. No entry has passed live validation. The [review ledger](research/BOUNTY_REVIEW_A08_BARROWS.json) pins the untouched input hash and retains unresolved drop-table/access/reward status individually.
 
 ## Concrete primary-source route
 

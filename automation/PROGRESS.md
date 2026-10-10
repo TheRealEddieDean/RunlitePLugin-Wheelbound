@@ -71,3 +71,11 @@ Rechecked RuneLite HEAD unchanged. Reviewed all100 experimental bounty records w
 ## H4 contract checkpoint before execution
 
 Content/source checkpoint committed62615dda82c306079f20f1bc359ece9ab3b1b371. New50-template candidate refines ambiguous furnace/Gnome definitions and withholds Wilderness risk; all18 daily receipt records/sinks reviewed conditionally. A09/A10 documentary review complete with gates, not live access proof. H4 contract/config/input hashes saved BEFORE code/trials: corrected core/audit/random sacrifice/separate pools, no bounty income or claimed Grand time, retain/withhold sensitivity, finite-quest Q6 stop.110 decision IDs. No H4 run yet.
+
+## H4 source and smoke checkpoint
+
+Contract/config committed3d01536e830ef4d9f0e6733ea95b77c4f62fa5b8 before execution. Offline model/runner/fixtures committed3489346886b0d6debb53643f4fd6dca424da95fd.80 smoke trajectories executed successfully;4000 baseline trajectories currently running and not yet declared complete. Live/drop/access/rate gates remain. Older isolated repo/ docs edits preserved rather than overwritten. Targeted CA/loot/method source gaps resolved to source contracts; Coffer current-cap/UIM receipt remains unverified.
+
+## H4 completed baseline
+
+4,000 baseline trajectories plus80 smoke actually executed; contract3d01536e and model34893468 preceded execution. Hashes, all4,000 CSV rows/seeds/stops and aggregate metrics verified; per-run FP/spin assertions and meaningful recovery fixtures passed. See H4_RESULTS.md. A12 complete for explicitly bounded core, not full real-content balance. Total130,080 synthetic trajectories. Three Q6 exhaustion stops and one pending horizon preserved.

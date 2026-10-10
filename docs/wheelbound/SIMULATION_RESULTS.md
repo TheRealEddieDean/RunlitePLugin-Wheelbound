@@ -1,6 +1,6 @@
 # Executed simulation results
 
-Status: current-rule H2 offline hypothesis model, not final OSRS account balance. Historical H1 results are preserved below and in their original JSON files.
+Status: H4 recovered-rule core is the latest bounded offline model; see [H4 results](H4_RESULTS.md). 130,080 recorded synthetic trajectories including 80 H4 smoke trajectories. Not final OSRS account balance. Historical H1 results are preserved below and in their original JSON files.
 
 ## Current-rule H2 reproduction
 

@@ -1,6 +1,6 @@
 # Punishment review: plain XP and consecutive severity
 
-WB-A09 is PARTIAL: reviewed all 23 plain-XP entries structurally; 12 method-restricted, eight location-restricted and seven kill-count entries still need their own adapter/access reviews. The [ledger](research/PUNISHMENT_REVIEW_A09_PLAIN_XP.json) pins unchanged experimental input bytes. No live detector or exact quantity is approved by this review.
+WB-A09 documentary review now covers all50 conditionally, with exact/withheld candidate refinements below. This first historical batch reviewed23 plain-XP entries; subsequent sections cover the other27. The [ledger](research/PUNISHMENT_REVIEW_A09_PLAIN_XP.json) pins unchanged experimental input bytes. No live detector or exact quantity is approved by this review.
 
 ## Plain-XP eligibility
 

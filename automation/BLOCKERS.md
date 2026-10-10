@@ -11,3 +11,5 @@
 | WB-B07 | Incomplete real-content catalog/access/rate validation | Experimental drafts remain disabled; H1–H3 hypotheses preserve hashes | Final balancing/full-account completion claims | Recover rules, version new models, source/receipt review in bounded batches |
 
 These are limitations, not permission requests. Continue authorized independent documentation tasks. Do not invent live proof, account credentials, maintainer responses or production implementation.
+
+WB-B08: the older isolated repo/ checkout contains preexisting modified/untracked documentation from earlier work. It is not the canonical latest source. Those unreviewed files were preserved; no reset/clean or production edits were made. Current canonical docs are the verified GitHub wheelbound-mode tree and root docs/wheelbound working copy. Do not claim the older checkout currently clean or use it to publish stale documentation.

@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "rows": 4000,
+  "source_hashes_verified": true,
+  "input_hashes_verified": true,
+  "csv_sha256_verified": true,
+  "scenario_seeds_and_stops_verified": true,
+  "csv_aggregate_metrics_verified": true,
+  "live_validation": false
+}
