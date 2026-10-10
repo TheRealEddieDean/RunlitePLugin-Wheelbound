@@ -39,4 +39,4 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A25 | Focused historical pause-claim timing check | P1 | A24 newly exposed timing ambiguity | XS | DONE (focused scope) | automation/receipt_safety/PAUSE_CLAIM_RECOVERY |10 keyword-matching messages plus explicit adjacent reply; no direct prior rule identified or new approval inferred |
 
-| WB-A26 | Prepare source-pinned JUnit report reconciliation | P1 | A19 baseline declarations; A22 export proposal | S | ACTIVE | automation/test_reports | Exact declared methods and offline positive/negative XML fixtures; zero actual report claims |
+| WB-A26 | Prepare source-pinned JUnit report reconciliation | P1 | A19 baseline declarations; A22 export proposal | S | DONE (offline only) | automation/test_reports | 4df7d830 pins70 declarations/12 files and23 synthetic XML checks; actual exported reports remain missing |

@@ -118,3 +118,11 @@ Remaining milestone: export exact dependencies/test XML/package evidence in an a
 - Pre-final remote byte verification:128 canonical blobs match local bytes. Final publication must be rechecked; main protected baseline unchanged.
 
 Next useful engineering milestone remains exact dependency/test-report/package exports in the separately authorized pipeline session, then authorized I01 state/storage tests using these fixtures. Policy/live adapters remain gated. Significant Q2/Q6/Q9/Q10/CA-MIXED and the narrow PAUSE-CLAIM timing question remain; no repeated question or runtime fallback was silently adopted.
+
+## Test-report follow-up in the same bounded session
+
+- Second task ownership2fb3d50076da776403703871381a9f5e024b9eb3; A26 artifact commit4df7d830257eeb3073114ded4a4395b20ab1afb0.
+- Exact70 source method identities from12 hash-matching Java test files archived; launcher remains zero. This is declaration evidence only.
+-23 synthetic XML scenarios pass: complete/split/wrapped exports; explicit failure/error/skip; missing/extra methods; duplicate identities/files; inconsistent counts; invalid XML/DTD/UTF16/alternate statuses/oversize. Actual reported/executed counts remain unknown because no real export was obtained.
+- Reconciler rejects missing exports and always leaves execution provenance unestablished by parsing alone. No active workflow or production change. Receipt suite saved-result verification remains passing.
+- Gameplay Markdown/PDF source remains284799b1/version9; the subsequent report tooling is automation-only. Final expected-head publication and byte/main checks establish the clean owning checkpoint.
