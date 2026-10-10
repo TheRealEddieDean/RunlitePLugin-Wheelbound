@@ -1,0 +1,435 @@
+{
+  "status": "SOURCE_DECLARATIONS_ONLY",
+  "source_commit": "e6d445c8c27847050abb07f843cfe9c9d4ab476b",
+  "artifact_report_available": false,
+  "actual_executed_test_count": null,
+  "declared_method_count": 70,
+  "test_source_file_count": 12,
+  "declarations": [
+    {
+      "class": "com.wheelbound.BossDataTest",
+      "method": "localMappingLoadsAllTiersOnceAndNeverReadsCompletionState",
+      "source_path": "src/test/java/com/wheelbound/BossDataTest.java"
+    },
+    {
+      "class": "com.wheelbound.BossDataTest",
+      "method": "partialLoadIsNotPublishedAndCanRetry",
+      "source_path": "src/test/java/com/wheelbound/BossDataTest.java"
+    },
+    {
+      "class": "com.wheelbound.CustomWheelsTest",
+      "method": "existingJsonLoadsAndRoundTripsWithClientGson",
+      "source_path": "src/test/java/com/wheelbound/CustomWheelsTest.java"
+    },
+    {
+      "class": "com.wheelbound.CustomWheelsTest",
+      "method": "panelUsesSuppliedGsonForSavingAndProfileReloads",
+      "source_path": "src/test/java/com/wheelbound/CustomWheelsTest.java"
+    },
+    {
+      "class": "com.wheelbound.CustomWheelsTest",
+      "method": "accountResetClosesTheNameForm",
+      "source_path": "src/test/java/com/wheelbound/CustomWheelsTest.java"
+    },
+    {
+      "class": "com.wheelbound.CustomWheelsTest",
+      "method": "wheelTooltipEscapesCustomMarkup",
+      "source_path": "src/test/java/com/wheelbound/CustomWheelsTest.java"
+    },
+    {
+      "class": "com.wheelbound.CustomWheelsTest",
+      "method": "customTooltipTreatsEmbeddedImagesAsText",
+      "source_path": "src/test/java/com/wheelbound/CustomWheelsTest.java"
+    },
+    {
+      "class": "com.wheelbound.CustomWheelsTest",
+      "method": "storagePreservesUnicodeDuplicatesAndEnabledState",
+      "source_path": "src/test/java/com/wheelbound/CustomWheelsTest.java"
+    },
+    {
+      "class": "com.wheelbound.CustomWheelsTest",
+      "method": "invalidInputAndUnreadableStorageDoNotOverwriteSavedLists",
+      "source_path": "src/test/java/com/wheelbound/CustomWheelsTest.java"
+    },
+    {
+      "class": "com.wheelbound.CustomWheelsTest",
+      "method": "createToggleDeleteAndRestartUseIndependentPersistentEntries",
+      "source_path": "src/test/java/com/wheelbound/CustomWheelsTest.java"
+    },
+    {
+      "class": "com.wheelbound.CustomWheelsTest",
+      "method": "wheelDeletionRequiresConfirmationAndHandlesLastWheelAndProfileChanges",
+      "source_path": "src/test/java/com/wheelbound/CustomWheelsTest.java"
+    },
+    {
+      "class": "com.wheelbound.CustomWheelsTest",
+      "method": "customSpinsWorkOfflineLockEditingAndIgnoreStaleResponses",
+      "source_path": "src/test/java/com/wheelbound/CustomWheelsTest.java"
+    },
+    {
+      "class": "com.wheelbound.CustomWheelsTest",
+      "method": "textEntryDoesNotTriggerWheelKeyboardShortcuts",
+      "source_path": "src/test/java/com/wheelbound/CustomWheelsTest.java"
+    },
+    {
+      "class": "com.wheelbound.CustomWheelsTest",
+      "method": "renderCustomSidebarAndVerifyDeleteButtonStaysBelowScroll",
+      "source_path": "src/test/java/com/wheelbound/CustomWheelsTest.java"
+    },
+    {
+      "class": "com.wheelbound.MonsterThumbnailTest",
+      "method": "monsterArtworkRetriesMissingModelsAndDoesNotMutateGameGeometry",
+      "source_path": "src/test/java/com/wheelbound/MonsterThumbnailTest.java"
+    },
+    {
+      "class": "com.wheelbound.MonsterThumbnailTest",
+      "method": "bossCaEncountersKeepExistingBossSprites",
+      "source_path": "src/test/java/com/wheelbound/MonsterThumbnailTest.java"
+    },
+    {
+      "class": "com.wheelbound.PetHuntingTest",
+      "method": "catalogHasUniqueBasePetsAndEachCategoryFiltersIndependently",
+      "source_path": "src/test/java/com/wheelbound/PetHuntingTest.java"
+    },
+    {
+      "class": "com.wheelbound.PetHuntingTest",
+      "method": "localPetAndSourceIconsSurviveGroupingAndMissingAssetsRetry",
+      "source_path": "src/test/java/com/wheelbound/PetHuntingTest.java"
+    },
+    {
+      "class": "com.wheelbound.PetHuntingTest",
+      "method": "petChecklistPersistsAndCategoryChangesUpdateOpenPopup",
+      "source_path": "src/test/java/com/wheelbound/PetHuntingTest.java"
+    },
+    {
+      "class": "com.wheelbound.PetHuntingTest",
+      "method": "petResultsFitAndRenderBothNamesAndIcons",
+      "source_path": "src/test/java/com/wheelbound/PetHuntingTest.java"
+    },
+    {
+      "class": "com.wheelbound.QuestAndAccountFiltersTest",
+      "method": "questsExcludeCompletedAndRespectDifficultyAndRequirements",
+      "source_path": "src/test/java/com/wheelbound/QuestAndAccountFiltersTest.java"
+    },
+    {
+      "class": "com.wheelbound.QuestAndAccountFiltersTest",
+      "method": "congratulationsRequiresEveryReleasedMainQuestComplete",
+      "source_path": "src/test/java/com/wheelbound/QuestAndAccountFiltersTest.java"
+    },
+    {
+      "class": "com.wheelbound.QuestAndAccountFiltersTest",
+      "method": "unavailableQuestDataCannotClaimCompletion",
+      "source_path": "src/test/java/com/wheelbound/QuestAndAccountFiltersTest.java"
+    },
+    {
+      "class": "com.wheelbound.QuestAndAccountFiltersTest",
+      "method": "questCompletionShowsIconResultAndClearsOnAccountReset",
+      "source_path": "src/test/java/com/wheelbound/QuestAndAccountFiltersTest.java"
+    },
+    {
+      "class": "com.wheelbound.QuestAndAccountFiltersTest",
+      "method": "petBitsUse31BitGroupsAndIncludeReclaimablePets",
+      "source_path": "src/test/java/com/wheelbound/QuestAndAccountFiltersTest.java"
+    },
+    {
+      "class": "com.wheelbound.QuestAndAccountFiltersTest",
+      "method": "difficultyFiltersAreIndependentAndTaskOnlyBossesNeedAnAssignment",
+      "source_path": "src/test/java/com/wheelbound/QuestAndAccountFiltersTest.java"
+    },
+    {
+      "class": "com.wheelbound.QuestAndAccountFiltersTest",
+      "method": "mimicMigrationAndNewDefaultsPersistAcrossProfiles",
+      "source_path": "src/test/java/com/wheelbound/QuestAndAccountFiltersTest.java"
+    },
+    {
+      "class": "com.wheelbound.SkillingFlowTest",
+      "method": "checklistUpdatesOpenWheelInPlaceAndPersistsExclusions",
+      "source_path": "src/test/java/com/wheelbound/SkillingFlowTest.java"
+    },
+    {
+      "class": "com.wheelbound.SkillingFlowTest",
+      "method": "sidebarActivationOpensWheelAndHubCanSpinAgain",
+      "source_path": "src/test/java/com/wheelbound/SkillingFlowTest.java"
+    },
+    {
+      "class": "com.wheelbound.SkillingFlowTest",
+      "method": "hubClickStartsOnceAndCancellationDoesNotComplete",
+      "source_path": "src/test/java/com/wheelbound/SkillingFlowTest.java"
+    },
+    {
+      "class": "com.wheelbound.SkillingFlowTest",
+      "method": "filtersPersistAndStaleResponsesAreIgnored",
+      "source_path": "src/test/java/com/wheelbound/SkillingFlowTest.java"
+    },
+    {
+      "class": "com.wheelbound.SkillingFlowTest",
+      "method": "manualXpWheelWaitsForUserAndPreservesResultOnPoolRefresh",
+      "source_path": "src/test/java/com/wheelbound/SkillingFlowTest.java"
+    },
+    {
+      "class": "com.wheelbound.SkillingFlowTest",
+      "method": "checklistGrowsWithViewportAndSmallWindowsCanScroll",
+      "source_path": "src/test/java/com/wheelbound/SkillingFlowTest.java"
+    },
+    {
+      "class": "com.wheelbound.SkillingFlowTest",
+      "method": "renderSidebarForReview",
+      "source_path": "src/test/java/com/wheelbound/SkillingFlowTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelFiltersTest",
+      "method": "specificAchievementUsesOnlyOpenTasksInIncludedTiers",
+      "source_path": "src/test/java/com/wheelbound/WheelFiltersTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelFiltersTest",
+      "method": "groupedRaidsPreserveAllEligibleTasksWithoutDuplicates",
+      "source_path": "src/test/java/com/wheelbound/WheelFiltersTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelFiltersTest",
+      "method": "onlyUnfinishedTasksInIncludedTiersKeepAnEncounterEligible",
+      "source_path": "src/test/java/com/wheelbound/WheelFiltersTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelFiltersTest",
+      "method": "everyTierCanBeExcludedAndUnknownTaskIdsAreNotUnfinished",
+      "source_path": "src/test/java/com/wheelbound/WheelFiltersTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelFiltersTest",
+      "method": "bossesRaidsAndMonstersAreIndependentCategories",
+      "source_path": "src/test/java/com/wheelbound/WheelFiltersTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelFiltersTest",
+      "method": "combatAndMaxedSkillFiltersIntersectWithoutRemovingSlayerOrSailing",
+      "source_path": "src/test/java/com/wheelbound/WheelFiltersTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelFiltersTest",
+      "method": "taskOnlyEncountersNeedAnActiveMatchingAssignmentAndLocation",
+      "source_path": "src/test/java/com/wheelbound/WheelFiltersTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelFiltersTest",
+      "method": "knownQuestLocksAreIndependentOfRecommendedLevels",
+      "source_path": "src/test/java/com/wheelbound/WheelFiltersTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelFiltersTest",
+      "method": "readsLiveSlayerDatabaseForRegularAndDirectBossTasks",
+      "source_path": "src/test/java/com/wheelbound/WheelFiltersTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelFiltersTest",
+      "method": "checklistsAreSeparateAndDifficultyChangesPreserveManualExclusions",
+      "source_path": "src/test/java/com/wheelbound/WheelFiltersTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelPopupTest",
+      "method": "fullCatalogFitsCenteredPopupAtFixedAndResizableSizes",
+      "source_path": "src/test/java/com/wheelbound/WheelPopupTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelPopupTest",
+      "method": "popupHubSpinsAndEscapeCancelsWithoutClickThrough",
+      "source_path": "src/test/java/com/wheelbound/WheelPopupTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelPresentationTest",
+      "method": "customGainLabelsAndLargeWheelsRenderSafely",
+      "source_path": "src/test/java/com/wheelbound/WheelPresentationTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelPresentationTest",
+      "method": "missingArtworkHasAUsableFallback",
+      "source_path": "src/test/java/com/wheelbound/WheelPresentationTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelPresentationTest",
+      "method": "raidsGroupAfterFilteringWithEqualOddsAndFullNames",
+      "source_path": "src/test/java/com/wheelbound/WheelPresentationTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelPresentationTest",
+      "method": "includeFiltersMigrateAndPreserveExplicitNewValues",
+      "source_path": "src/test/java/com/wheelbound/WheelPresentationTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelPresentationTest",
+      "method": "xpTargetsHaveDistinctDifficultyColors",
+      "source_path": "src/test/java/com/wheelbound/WheelPresentationTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelPresentationTest",
+      "method": "countStaysOutsideScrollingContentAtBottom",
+      "source_path": "src/test/java/com/wheelbound/WheelPresentationTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelboundBehaviorTest",
+      "method": "catalogUsesCanonicalSpritesAndNames",
+      "source_path": "src/test/java/com/wheelbound/WheelboundBehaviorTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelboundBehaviorTest",
+      "method": "raidModesAreExplicitlyClassified",
+      "source_path": "src/test/java/com/wheelbound/WheelboundBehaviorTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelboundBehaviorTest",
+      "method": "allFilterCombinationsIntersect",
+      "source_path": "src/test/java/com/wheelbound/WheelboundBehaviorTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelboundBehaviorTest",
+      "method": "realStyleStatsSlayerAndAdditionalRequirements",
+      "source_path": "src/test/java/com/wheelbound/WheelboundBehaviorTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelboundBehaviorTest",
+      "method": "unknownRecommendationsAndOfflineStateFailClosed",
+      "source_path": "src/test/java/com/wheelbound/WheelboundBehaviorTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelboundBehaviorTest",
+      "method": "caAliasesKeepDifferentModesSeparate",
+      "source_path": "src/test/java/com/wheelbound/WheelboundBehaviorTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelboundBehaviorTest",
+      "method": "completionCacheRefreshesAllWordsAndResetsBetweenAccounts",
+      "source_path": "src/test/java/com/wheelbound/WheelboundBehaviorTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelboundBehaviorTest",
+      "method": "caPartialCompletionUnknownIdsAndMissingMapping",
+      "source_path": "src/test/java/com/wheelbound/WheelboundBehaviorTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelboundBehaviorTest",
+      "method": "onlyCompletionVarpsTriggerRefresh",
+      "source_path": "src/test/java/com/wheelbound/WheelboundBehaviorTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelboundBehaviorTest",
+      "method": "skillsExcludeReal99AndOverallButIncludeAllTrainableSkills",
+      "source_path": "src/test/java/com/wheelbound/WheelboundBehaviorTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelboundBehaviorTest",
+      "method": "weightedTicketsExactlyMatchVisualWedges",
+      "source_path": "src/test/java/com/wheelbound/WheelboundBehaviorTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelboundBehaviorTest",
+      "method": "weightedAndEqualWheelsLandAtChosenSliceAfterRepeatedSpins",
+      "source_path": "src/test/java/com/wheelbound/WheelboundBehaviorTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelboundBehaviorTest",
+      "method": "fullBossPoolGivesEachGroupedEncounterOneTicket",
+      "source_path": "src/test/java/com/wheelbound/WheelboundBehaviorTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelboundEventsTest",
+      "method": "ordinaryVarbitBurstsWaitForOneGameTick",
+      "source_path": "src/test/java/com/wheelbound/WheelboundEventsTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelboundEventsTest",
+      "method": "enablingAndDisablingOnEdtAddsAndRemovesSidebar",
+      "source_path": "src/test/java/com/wheelbound/WheelboundEventsTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelboundEventsTest",
+      "method": "completionEventBurstsQueueOneRefreshAndIgnoreOtherVarps",
+      "source_path": "src/test/java/com/wheelbound/WheelboundEventsTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelboundEventsTest",
+      "method": "loginRefreshesAndProfileChangeInvalidatesPendingResponses",
+      "source_path": "src/test/java/com/wheelbound/WheelboundEventsTest.java"
+    },
+    {
+      "class": "com.wheelbound.WheelboundEventsTest",
+      "method": "logoutClearsCachedEligibilityAndCancelsThePanel",
+      "source_path": "src/test/java/com/wheelbound/WheelboundEventsTest.java"
+    }
+  ],
+  "files": [
+    {
+      "path": "src/test/java/com/wheelbound/BossDataTest.java",
+      "git_blob": "d4144b591767fc422b01d08795cf088f0ac4bc21",
+      "sha256": "2194131693870bfbee3d5b959c3d02f037ad60adb219e14f42b5efdc5afcb14f",
+      "declared_methods": 2
+    },
+    {
+      "path": "src/test/java/com/wheelbound/CustomWheelsTest.java",
+      "git_blob": "343af8359e46a4bea39986a9a14719fcf6499456",
+      "sha256": "07b054c0cdd4937fc06fb41678522f8d066afd499dfdd8ea7fc8679c8885c944",
+      "declared_methods": 12
+    },
+    {
+      "path": "src/test/java/com/wheelbound/MonsterThumbnailTest.java",
+      "git_blob": "62dee77419ab17ed9b7fadfa251838dc22d325d7",
+      "sha256": "d5161eab86ec9ec61303a5bce0dadf38762e1e40428d15e93ab4a650470c09b2",
+      "declared_methods": 2
+    },
+    {
+      "path": "src/test/java/com/wheelbound/PetHuntingTest.java",
+      "git_blob": "fe8812a2e6c1547ce41e935c9fc09fd98b6d2063",
+      "sha256": "99d649cc5270cca7993f5da45f2786d9ff847bb1cd45ef455ae63746b28e0b41",
+      "declared_methods": 4
+    },
+    {
+      "path": "src/test/java/com/wheelbound/QuestAndAccountFiltersTest.java",
+      "git_blob": "b98dee070e849912fe663a27056f81d0f4f6cd08",
+      "sha256": "d7284c968d80a9395f4989fff690905938f6a444a7e689bef59baa65825faf5e",
+      "declared_methods": 7
+    },
+    {
+      "path": "src/test/java/com/wheelbound/SkillingFlowTest.java",
+      "git_blob": "2b36cfcf69347f9c3346c4548895be6eb1b605ff",
+      "sha256": "b6eb0bedd6cb0f400bd315da95934906dad4a2f26f52db00f293b5df8a7f292f",
+      "declared_methods": 7
+    },
+    {
+      "path": "src/test/java/com/wheelbound/WheelFiltersTest.java",
+      "git_blob": "d2beeff8cd8bf1b3adc80ec9699a661a04f99ae8",
+      "sha256": "3d7668b5c7ac997b8a0f9d95748b9dc4937080dbd326d26200fc6d984e01e225",
+      "declared_methods": 10
+    },
+    {
+      "path": "src/test/java/com/wheelbound/WheelPopupTest.java",
+      "git_blob": "0265bfd28c0e15a3cb064e5d0f183afe481fc7c4",
+      "sha256": "a8742f38d81016bef7dcb3375eabfc0097c263a66876b717291a404279632347",
+      "declared_methods": 2
+    },
+    {
+      "path": "src/test/java/com/wheelbound/WheelPresentationTest.java",
+      "git_blob": "29c50ff954eb0326c2a8ca8b7430a2b7e35c4f4d",
+      "sha256": "6d972c76e1af2d1dd2ba801b2bdb1918f9527bc865c46b4f7f1bd90e0a858d6f",
+      "declared_methods": 6
+    },
+    {
+      "path": "src/test/java/com/wheelbound/WheelboundBehaviorTest.java",
+      "git_blob": "7ccb776fad9ef425b020de0334c8710515bb3435",
+      "sha256": "41397065ed39908dca061d37a830f790c4b991525ed9078eb2ad811c583133d5",
+      "declared_methods": 13
+    },
+    {
+      "path": "src/test/java/com/wheelbound/WheelboundEventsTest.java",
+      "git_blob": "d106f29ab58794cbd8948ef027da3e25545806a5",
+      "sha256": "bf2f028774479d0dc0861aa787f1029ce6c3da7165e48a6f3bde69741a60f12b",
+      "declared_methods": 5
+    },
+    {
+      "path": "src/test/java/com/wheelbound/WheelboundPluginTest.java",
+      "git_blob": "f23b8d0dc4e1d8f2090e5558d6729cfcc90c5df4",
+      "sha256": "7d917b7fa956f2ad4168bd34f9e223c5f8545e98a1b4754cf2f42bbd4104b0bd",
+      "declared_methods": 0
+    }
+  ],
+  "limitations": "Scoped source parser for current plain JUnit4 @Test public-void declarations; not a general Java parser or an execution report. Launcher has zero test methods."
+}

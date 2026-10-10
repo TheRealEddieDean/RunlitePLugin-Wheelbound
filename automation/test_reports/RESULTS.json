@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "input_origin": "SYNTHETIC_XML_ONLY",
+  "source_commit": "e6d445c8c27847050abb07f843cfe9c9d4ab476b",
+  "declared_methods": 70,
+  "actual_java_tests_executed": 0,
+  "actual_exported_reports_available": false,
+  "check_count": 23,
+  "checks": [
+    {
+      "id": "complete",
+      "result": "COMPLETE_MATCH"
+    },
+    {
+      "id": "missing",
+      "result": "INVENTORY_MISMATCH"
+    },
+    {
+      "id": "extra",
+      "result": "INVENTORY_MISMATCH"
+    },
+    {
+      "id": "failure",
+      "result": "FAILED_CASES"
+    },
+    {
+      "id": "error",
+      "result": "FAILED_CASES"
+    },
+    {
+      "id": "skip",
+      "result": "SKIPPED_CASES"
+    },
+    {
+      "id": "split_files",
+      "result": "COMPLETE_MATCH"
+    },
+    {
+      "id": "aggregate_wrapper",
+      "result": "COMPLETE_MATCH"
+    },
+    {
+      "id": "duplicate_identity",
+      "result": "REJECTED"
+    },
+    {
+      "id": "duplicated_report_file",
+      "result": "REJECTED"
+    },
+    {
+      "id": "wrong_suite_count",
+      "result": "REJECTED"
+    },
+    {
+      "id": "wrong_aggregate_count",
+      "result": "REJECTED"
+    },
+    {
+      "id": "malformed_xml",
+      "result": "REJECTED"
+    },
+    {
+      "id": "unsupported_root",
+      "result": "REJECTED"
+    },
+    {
+      "id": "missing_classname",
+      "result": "REJECTED"
+    },
+    {
+      "id": "dtd_entity",
+      "result": "REJECTED"
+    },
+    {
+      "id": "utf16_dtd",
+      "result": "REJECTED"
+    },
+    {
+      "id": "multiple_outcomes",
+      "result": "REJECTED"
+    },
+    {
+      "id": "suite_level_failure",
+      "result": "REJECTED"
+    },
+    {
+      "id": "alternative_status_attribute",
+      "result": "REJECTED"
+    },
+    {
+      "id": "alternative_result_element",
+      "result": "REJECTED"
+    },
+    {
+      "id": "oversize_document",
+      "result": "REJECTED"
+    },
+    {
+      "id": "no_reports",
+      "result": "REJECTED"
+    }
+  ],
+  "input_sha256": {
+    "DECLARATIONS.json": "2a85a20836675bec782861743853aceb0802d58dc0ae04631b899017b1a23a6c",
+    "reconcile.py": "77de155aa9e145a2e54c91556c61c2d7ad06cfdd6f6fc3528a72b3e8b175ba15",
+    "checks.py": "8b7e7ceb54ab102b2dfee70deaa557138a3d412c6ae15a60633da3880424f58a"
+  }
+}
