@@ -38,3 +38,7 @@ Commit links: prepend https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbou
 ## A07 catalog authority checkpoint
 
 Added CATALOG_AUTHORITY.md and six-entry AUTHORITY_MANIFEST.json with exact file hashes, provenance, counts and runtime gates. Distinguishes confirmed 64-node mode roster from 67-node normal metadata and delegated experimental catalogs. Documents grouped-family, severity and Challenge gaps; historical inputs unchanged. User clarified 81% allowance remaining. Owning commit is resolved from file history after guarded publication.
+
+## A13 recovered-rule backlog acceptance
+
+A07 committed at a083d79a6835ba06f82ddb02d66411f6f15e91a5; branch/main verified. Reviewed I01–I10 failure/positive criteria, corrected stale build-attempt wording, separated pure-domain Grand gate from live Coffer dependency, and preserved Q2/Q6/Q9/Q10 runtime gates. Added read-only manifest hash/count/provenance checks. No production tests/build success claimed.

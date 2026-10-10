@@ -36,3 +36,17 @@ a=p.parent.parent/'automation'
 assert all((a/(n+'.md')).is_file() for n in ['TASK_QUEUE','PROGRESS','SESSION_STATE','BLOCKERS','DECISIONS_PENDING'])
 queue=re.findall(r'^\| (WB-A\d+) \|',(a/'TASK_QUEUE.md').read_text(),re.M);assert len(queue)==len(set(queue))==19
 print('PASS: approved 64-node mode grouping; 436 contiguous indexed messages/218 reviewed user turns; 19 unique queued tasks and five checkpoints')
+
+manifest=json.loads((p/'catalogs/AUTHORITY_MANIFEST.json').read_text())
+assert len(manifest['catalogs'])==6
+assert len({r['path'] for r in manifest['catalogs']})==6
+for record in manifest['catalogs']:
+ catalog=p/record['path'];data=json.loads(catalog.read_text())
+ assert hashlib.sha256(catalog.read_bytes()).hexdigest()==record['sha256']
+ assert len(data['entries'])==record['entry_count']
+ assert record['authority'] and record['approval'] and record['enable_gates']
+ assert record['runtime_enabled'] is False
+for name,sha in h3['catalog_hashes'].items():
+ record=next(r for r in manifest['catalogs'] if r['path']=='catalogs/'+name)
+ assert record['h3_pinned_input'] and record['sha256']==sha
+print('PASS: six authority manifest hashes/counts/provenance/gates; historical H3 input pins retained')
