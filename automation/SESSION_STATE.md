@@ -14,7 +14,7 @@
 - Starting H4/config/catalog/output bytes unchanged. Total synthetic trajectories remains130,080, including80 smoke. New deterministic oracle repetitions are QA, not progression simulations.
 - Verification: source hashes, receipt checks, all ten selected mutations, malformed inputs, design_checks and PDF/source/hash checks passed.128 canonical remote blobs matched at the first substantive receipt checkpoint; later report supplement and final automation publication require final byte verification.
 - Uncommitted completed canonical deliverables: NONE after successful guarded final publication and remote byte verification; a failed update invalidates this claim.
-- Earlier repo/ checkout dirty docs remain preserved; no reset/clean/publish of that stale checkout.
+- Earlier repo/ checkout dirty docs remain preserved; no reset/clean/publish of that stale checkout. A legacy local docs/wheelbound/simulation/smoke.json has no matching remote tracked path; preserved as an unreviewed intermediate, not a new completed deliverable or published trial.
 - No active workflow change, client/game login, reviewer contact, Hub submission, production code, main change, schedule or automatic restart.
 - Blockers: exact dependency/report/artifact exports; local JDK11/dependency access; legitimate current-client traces; exact restrictive-control policy review. Significant questions Q2/Q6/Q9/Q10/CA-MIXED; conditional Q5; narrow PAUSE-CLAIM timing still unspecified.
 
