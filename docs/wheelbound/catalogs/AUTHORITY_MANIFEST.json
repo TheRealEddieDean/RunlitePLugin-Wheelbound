@@ -1,5 +1,5 @@
 {
-  "version": "authority-v2-2026-10-10",
+  "version": "authority-v3-2026-10-10",
   "scope": "Documentation metadata only; does not enable gameplay",
   "decision_register": "../DECISIONS.md",
   "catalogs": [
@@ -111,6 +111,23 @@
         "Per-member source/access/receipt validation",
         "Explicit canonical membership and FP balance",
         "No H3 historical input replacement"
+      ],
+      "h3_pinned_input": false
+    },
+    {
+      "path": "catalogs/punishments_normative_v1.json",
+      "version": "normative-punishment-candidate-v1-2026-10-10",
+      "sha256": "f54aa4c431ea592d11c36440b7411345ad8f328fef243f618293d288880d5382",
+      "entry_count": 50,
+      "authority": "DELEGATED_NORMATIVE_CANDIDATE",
+      "approval": "WB-D109 new concrete definitions; WB-D035/087 approved architecture/severity; not final template access/rate approval",
+      "source_blob": null,
+      "runtime_enabled": false,
+      "enable_gates": [
+        "Method/location/kill live traces",
+        "Account feasibility and positive headroom",
+        "WB-P043 withheld pending explicit risk policy",
+        "Severity constants balanced separately"
       ],
       "h3_pinned_input": false
     }

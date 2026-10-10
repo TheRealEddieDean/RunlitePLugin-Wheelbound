@@ -67,3 +67,7 @@ Next milestone: finish content/access/receipt review and a faithful new versione
 ## Resumed content coverage checkpoint
 
 Rechecked RuneLite HEAD unchanged. Reviewed all100 experimental bounty records with conditional access/drop/receipt status; introduced a separate finite100 normative candidate with explicit grouped family identity candidates (D107). All50 punishment records reviewed structurally; ambiguous bronze-forge/Yanille/Wilderness-risk definitions and live detector gates remain, so A09 stays PARTIAL. D108 records source-correlated loot/CA state contract. Seven-entry authority manifest preserves all H3 inputs. No live proof or production edits.
+
+## H4 contract checkpoint before execution
+
+Content/source checkpoint committed62615dda82c306079f20f1bc359ece9ab3b1b371. New50-template candidate refines ambiguous furnace/Gnome definitions and withholds Wilderness risk; all18 daily receipt records/sinks reviewed conditionally. A09/A10 documentary review complete with gates, not live access proof. H4 contract/config/input hashes saved BEFORE code/trials: corrected core/audit/random sacrifice/separate pools, no bounty income or claimed Grand time, retain/withhold sensitivity, finite-quest Q6 stop.110 decision IDs. No H4 run yet.

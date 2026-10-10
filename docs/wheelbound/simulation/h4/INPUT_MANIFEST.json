@@ -1,0 +1,20 @@
+{
+  "version": "h4-core-inputs-v1",
+  "authoritative_decisions": [
+    "WB-D033",
+    "WB-D049",
+    "WB-D050",
+    "WB-D058",
+    "WB-D087",
+    "WB-D089",
+    "WB-D090",
+    "WB-D100"
+  ],
+  "scope": "Synthetic core mechanics; source identities not real access/rates",
+  "hashes": {
+    "catalogs/punishments_normative_v1.json": "f54aa4c431ea592d11c36440b7411345ad8f328fef243f618293d288880d5382",
+    "catalogs/item_bounties_normative_v1.json": "daef4932b8e6322480c822292d9c31fbadb1f2a3e448b7c378330515657ae488",
+    "catalogs/mode_boss_roster.json": "f65dedf174602881fc251111d00fc1bc96beb7d7c4877bbe5aed00aeb70d7cc5",
+    "simulation/h4/parameters.json": "fe6cb15a3eaf5da14d4b884ee169765c60b6b8759aa02ac9b02850d9c6b232d0"
+  }
+}

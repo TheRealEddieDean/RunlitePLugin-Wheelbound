@@ -1107,3 +1107,23 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Rationale: Prevent false ownership, duplicate payouts and use of unrelated packed achievement state.
 - Affects: [acquisition evidence](ACQUISITION_EVIDENCE.md), [technical specifications](TECHNICAL_SPECIFICATIONS.md), [diary/CA review](DIARY_CA_RECEIPT_REVIEW.md).
 - Exceptions/dependencies: Pickpocket loot is not kill proof; zero-loot kills need separate evidence; unknown IDs/baselines stay unavailable. No private-field reflection, production adapter, input generation, exact policy acceptance or live trace claimed.
+
+## WB-D109 - Refine new punishment candidate definitions without rewriting history
+
+- Status: DELEGATED_NEW_CONTENT; LIVE_VALIDATION_REQUIRED
+- Authority: Assistant under routine autonomous design/catalog delegation; no historical user approval of these exact templates.
+- Evidence: Current catalog review; RuneLite MiningAnimation/WoodcuttingPlugin/Agility Obstacles primary sources at pinned HEAD.
+- Decision: In a separate50-entry version, define WB-P032 as bronze furnace smelting; replace WB-P042's ambiguous Yanille-course label with a concretely bounded Gnome obstacle candidate; keep WB-P043 withheld pending compatible Wilderness risk authority. Remove the archived experiment's universal maximum_minutes field from the new catalog.
+- Rationale: Make generated objectives unambiguous and keep severe consecutive Penance available without implying that optional Wilderness cards authorize forced risk.
+- Affects: [PUNISHMENTS](PUNISHMENTS.md), [template review](PUNISHMENT_CATALOG_REVIEW.md), next model input contract.
+- Exceptions/dependencies: All runtime entries disabled; exact obstacle/action/prerequisites still need trace/access validation. Regular-duration candidates are not severe-task caps. Existing H3 bytes/IDs/history retained; no new numeric severity adopted as historical approval.
+
+## WB-D110 - Version H4 as a recovered-rule core experiment, not final balance
+
+- Status: DELEGATED_EXPERIMENT; NUMERICAL_CONSTANTS_BALANCE_TBD
+- Authority: Assistant under authorized simulation/balancing mandate; user has not approved experiment constants as production values.
+- Evidence: Recovered rules D033/049/050/058/087/089/090/100 and source/candidate review; [H4 contract](simulation/h4/CONTRACT.md).
+- Decision: Save a new contract/input manifest before execution; model end-completion audit, consecutive Penance, random frozen sacrifice, separate cards and optional sinks. Compare audit reward retain/withhold scenarios without deciding the unresolved rule. Exclude bounty/daily/CA/diary income and Bossing Challenge; record finite-quest blockage rather than auto-editing the wheel.
+- Rationale: Isolate corrected mechanics and preserve experiment history without filling evidence gaps with claimed approvals.
+- Affects: [simulation results](SIMULATION_RESULTS.md), [economy](ECONOMY.md), [H4 contract](simulation/h4/CONTRACT.md).
+- Exceptions/dependencies: Base severity30min/doubling, monetary prices, quest tokens, rates, conversion and access are synthetic candidates.180h/400 draws are experiment windows, not gameplay expiry/minima. Derived audit Penance no-extra-spin is an explicit modeled transaction interpretation. No final Grand time, real-account feasibility or live detector proof.

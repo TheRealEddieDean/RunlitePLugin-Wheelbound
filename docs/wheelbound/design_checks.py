@@ -38,8 +38,8 @@ queue=re.findall(r'^\| (WB-A\d+) \|',(a/'TASK_QUEUE.md').read_text(),re.M);asser
 print('PASS: approved 64-node mode grouping; 436 contiguous indexed messages/218 reviewed user turns; 19 unique queued tasks and five checkpoints')
 
 manifest=json.loads((p/'catalogs/AUTHORITY_MANIFEST.json').read_text())
-assert len(manifest['catalogs'])==7
-assert len({r['path'] for r in manifest['catalogs']})==7
+assert len(manifest['catalogs'])==8
+assert len({r['path'] for r in manifest['catalogs']})==8
 for record in manifest['catalogs']:
  catalog=p/record['path'];data=json.loads(catalog.read_text())
  assert hashlib.sha256(catalog.read_bytes()).hexdigest()==record['sha256']
@@ -49,7 +49,7 @@ for record in manifest['catalogs']:
 for name,sha in h3['catalog_hashes'].items():
  record=next(r for r in manifest['catalogs'] if r['path']=='catalogs/'+name)
  assert record['h3_pinned_input'] and record['sha256']==sha
-print('PASS: seven authority manifest hashes/counts/provenance/gates; historical H3 input pins retained')
+print('PASS: eight authority manifest hashes/counts/provenance/gates; historical H3 input pins retained')
 
 diary=json.loads((p/'research/DIARY_COMPLETION_SOURCE_MAP.json').read_text())
 assert len(diary['entries'])==len({x['varbit_id'] for x in diary['entries']})==48
@@ -73,3 +73,11 @@ assert len({x['varp_id'] for x in ca['completion_words']})==21
 assert ca['completion_words'][13]['varp_id']==3387 and ca['struct_params']['boss']==1312
 assert ca['task_tier_enums']==list(range(3981,3987)) and not ca['runtime_enabled']
 print('PASS: explicit21 noncontiguous CA completion words and source-mapped task/boss schema')
+
+newp=json.loads((p/'catalogs/punishments_normative_v1.json').read_text())
+assert len(newp['entries'])==50 and all(not x['runtime_enabled'] for x in newp['entries'])
+assert all('maximum_minutes' not in x['target'] for x in newp['entries'])
+assert 'WITHHOLD' in next(x for x in newp['entries'] if x['id']=='WB-P043')['eligibility'][-1]
+daily=json.loads((p/'research/DAILY_REVIEW_A10_ALL.json').read_text())
+assert len(daily['entries'])==18 and all(not x['runtime_enabled'] for x in daily['entries'])
+print('PASS: new50-template candidate removes global cap; risk withheld;18 daily conditional records')

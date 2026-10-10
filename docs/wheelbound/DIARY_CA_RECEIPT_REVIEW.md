@@ -29,3 +29,11 @@ Receipt fixtures: final qualifying active CA completes the boss set; paused fina
 ## Economy and remaining work
 
 Diary/CA payouts remain independently balanced candidates and are absent from current H3 income. Do not introduce fixed rarity payouts or assume these rewards are required to keep spins solvent. Dailies remain optional, with three targets and no offline backlog under the delegated rolling-board proposal. Keep Blessing, Satchel, mastery and vendor sinks distinct from mandatory income assumptions. Finish the 18 daily source/access reviews and sink definitions before versioning a faithful next-model economy.
+
+## Daily/sink review completion
+
+[All18 daily conditional records](research/DAILY_REVIEW_A10_ALL.json) pin the unchanged input and require source-action/new-quantity evidence, actual access and frozen manual claim keys. FishingSpot's SHRIMP grouping includes other species and SALMON includes trout/pike: a fishing-spot label or animation alone cannot decide the target. Require the actual authored species receipt. Logs/ores need positive gather evidence; combat items need owned loot; bronze bars/bow strings need actual authored processing receipts, not buying outputs. No additional broad off-task permission is granted by an optional bounty.
+
+Sink contract: activity unlock and slice add are separate purchases; duplicate costs escalate per activity lifetime; enhancement quote depends only on next tier; card pools separate; third offer upgrade applies to offered count; Satchel expansions sequential; Cleansing and Pardon unlimited fixed expensive prices; Pardon returns Locked; Blessed slots first free then two sequential paid slots; GE uses completion count+FP, no mandatory bounty/diary/daily gate. Freeze current purchase quotes and journal debits atomically. Debt may receive earned/manual-claim FP but cannot fund discretionary purchases. All numbers in BALANCE_CANDIDATE remain delegated candidates.
+
+A10's documentary receipt/sink review is complete with conditional real-source gates; actual client traces, current cached CA task instances, live diary timing and numeric reward balancing remain outside this completion claim. A mixed paused/active CA-set reward policy remains unverified; next model excludes CA/daily/diary income rather than inventing that answer.

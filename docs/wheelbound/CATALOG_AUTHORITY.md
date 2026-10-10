@@ -32,3 +32,5 @@ Promotion requires source/access evidence, objective feasibility, positive and n
 ## Separately versioned normative candidate
 
 The manifest now has seven catalog records. item_bounties_normative_v1.json preserves exactly 100 targets including two grouped families; it is a new delegated candidate (WB-D107), not an enabled or historically approved full catalog. All per-member reward routes and family FP remain gated. Existing six catalog files and H3 pins are untouched.
+
+The authority-v3 manifest contains eight records, including separately versioned50-template punishment candidate. Its disabled/withheld method/location/risk gates remain explicit; original six snapshots and H3 hashes are unchanged.

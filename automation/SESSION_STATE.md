@@ -31,3 +31,5 @@ Use approximately 70/30 execution-versus-verification/checkpoint effort targets,
 ## Current resumed checkpoint
 
 A08 all100 source-route/access/receipt records conditionally reviewed, with separately versioned finite100 grouped-family candidate. A09 all50 structural reviews recorded; three ambiguous/risk definitions and severity inputs remain. CA task/boss/word metadata mapped and prior generic-achievement candidate wording corrected.108 decisions. Seven catalog hashes and21 CA word mappings validated; H3 inputs unchanged. PDF publication from13bae is now stale relative to these material documentation changes and must be refreshed. Next bounded deliverable: exact punishment definitions/severity input contract and daily/sink receipt review, then version next model contract before execution.
+
+Next current task: WB-A12 after H4 contract checkpoint publication. Implement only offline simulation/tooling, run meaningful fixtures/smoke before bounded1000×4 core trials, record exact inputs/source hashes and stop reasons. No production changes.

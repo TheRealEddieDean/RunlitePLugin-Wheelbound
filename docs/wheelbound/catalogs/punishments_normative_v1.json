@@ -1,0 +1,1561 @@
+{
+  "version": "normative-punishment-candidate-v1-2026-10-10",
+  "provenance": "New delegated concrete template refinement; WB-D109; source/feasibility gates still apply",
+  "entries": [
+    {
+      "id": "WB-P001",
+      "title": "Mining debt",
+      "skill": "Mining",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P002",
+      "title": "Fishing debt",
+      "skill": "Fishing",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P003",
+      "title": "Woodcutting debt",
+      "skill": "Woodcutting",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P004",
+      "title": "Attack debt",
+      "skill": "Attack",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P005",
+      "title": "Strength debt",
+      "skill": "Strength",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P006",
+      "title": "Defence debt",
+      "skill": "Defence",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P007",
+      "title": "Ranged debt",
+      "skill": "Ranged",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P008",
+      "title": "Magic debt",
+      "skill": "Magic",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P009",
+      "title": "Cooking debt",
+      "skill": "Cooking",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P010",
+      "title": "Firemaking debt",
+      "skill": "Firemaking",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P011",
+      "title": "Smithing debt",
+      "skill": "Smithing",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P012",
+      "title": "Crafting debt",
+      "skill": "Crafting",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P013",
+      "title": "Fletching debt",
+      "skill": "Fletching",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P014",
+      "title": "Agility debt",
+      "skill": "Agility",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P015",
+      "title": "Thieving debt",
+      "skill": "Thieving",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P016",
+      "title": "Runecraft debt",
+      "skill": "Runecraft",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P017",
+      "title": "Prayer debt",
+      "skill": "Prayer",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P018",
+      "title": "Slayer debt",
+      "skill": "Slayer",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P019",
+      "title": "Herblore debt",
+      "skill": "Herblore",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P020",
+      "title": "Farming debt",
+      "skill": "Farming",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P021",
+      "title": "Construction debt",
+      "skill": "Construction",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P022",
+      "title": "Hunter debt",
+      "skill": "Hunter",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P023",
+      "title": "Sailing debt",
+      "skill": "Sailing",
+      "family": "plain_xp",
+      "restriction": "Extra XP obligation; normal legal methods permitted. No invented tool limitation.",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P024",
+      "title": "Bronze pick sentence",
+      "skill": "Mining",
+      "family": "restricted_method",
+      "restriction": "bronze pickaxe only; a positive method receipt required, not possession",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P025",
+      "title": "Bronze axe sentence",
+      "skill": "Woodcutting",
+      "family": "restricted_method",
+      "restriction": "bronze axe only; a positive method receipt required, not possession",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P026",
+      "title": "Net penance",
+      "skill": "Fishing",
+      "family": "restricted_method",
+      "restriction": "small-net fish only; a positive method receipt required, not possession",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P027",
+      "title": "Copper grind",
+      "skill": "Mining",
+      "family": "restricted_method",
+      "restriction": "copper ore only; a positive method receipt required, not possession",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P028",
+      "title": "Tin grind",
+      "skill": "Mining",
+      "family": "restricted_method",
+      "restriction": "tin ore only; a positive method receipt required, not possession",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P029",
+      "title": "Oak grind",
+      "skill": "Woodcutting",
+      "family": "restricted_method",
+      "restriction": "oak trees only; a positive method receipt required, not possession",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P030",
+      "title": "Willow grind",
+      "skill": "Woodcutting",
+      "family": "restricted_method",
+      "restriction": "willow trees only; a positive method receipt required, not possession",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P031",
+      "title": "Shrimp kitchen",
+      "skill": "Cooking",
+      "family": "restricted_method",
+      "restriction": "raw shrimp cooking only; a positive method receipt required, not possession",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P032",
+      "title": "Bronze forge",
+      "skill": "Smithing",
+      "family": "restricted_method",
+      "restriction": "Smelt bronze bars at a legally accessible furnace from copper and tin; actual resulting bars + Smithing XP required; smithing equipment or spell routes excluded from this candidate",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED",
+      "definition_status": "DELEGATED_CONCRETE_REPLACEMENT_NOT_HISTORICAL"
+    },
+    {
+      "id": "WB-P033",
+      "title": "Bone penance",
+      "skill": "Prayer",
+      "family": "restricted_method",
+      "restriction": "bury ordinary bones only; a positive method receipt required, not possession",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P034",
+      "title": "Air-rune debt",
+      "skill": "Runecraft",
+      "family": "restricted_method",
+      "restriction": "air altar crafting only; a positive method receipt required, not possession",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P035",
+      "title": "Log fire march",
+      "skill": "Firemaking",
+      "family": "restricted_method",
+      "restriction": "ordinary logs firemaking only; a positive method receipt required, not possession",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P036",
+      "title": "Lumbridge wood debt",
+      "skill": "Woodcutting",
+      "family": "location_xp",
+      "restriction": "reviewed Lumbridge bounds; instance-aware XP position correlation",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P037",
+      "title": "Draynor fishing debt",
+      "skill": "Fishing",
+      "family": "location_xp",
+      "restriction": "reviewed Draynor bounds; instance-aware XP position correlation",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P038",
+      "title": "Al Kharid mine debt",
+      "skill": "Mining",
+      "family": "location_xp",
+      "restriction": "reviewed Al Kharid mine bounds; instance-aware XP position correlation",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P039",
+      "title": "Varrock forge debt",
+      "skill": "Smithing",
+      "family": "location_xp",
+      "restriction": "reviewed Varrock anvil bounds; instance-aware XP position correlation",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P040",
+      "title": "Ardougne theft debt",
+      "skill": "Thieving",
+      "family": "location_xp",
+      "restriction": "reviewed East Ardougne bounds; instance-aware XP position correlation",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P041",
+      "title": "Seers wood debt",
+      "skill": "Woodcutting",
+      "family": "location_xp",
+      "restriction": "reviewed Seers village bounds; instance-aware XP position correlation",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P042",
+      "title": "Gnome obstacle debt",
+      "skill": "Agility",
+      "family": "location_xp",
+      "restriction": "Specific reviewed Gnome Stronghold obstacle/course action context with actual Agility XP; exact legal route/prerequisites must be verified",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED",
+      "definition_status": "DELEGATED_REPLACEMENT_OF_AMBIGUOUS_YANILLE_LABEL_NOT_HISTORICAL"
+    },
+    {
+      "id": "WB-P043",
+      "title": "Wilderness mining debt",
+      "skill": "Mining",
+      "family": "location_xp",
+      "restriction": "reviewed Wilderness mine bounds; eligible risk/access must be known; instance-aware XP position correlation",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "xp",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom",
+        "EXPLICIT_RISK_POLICY_UNRESOLVED_WITHHOLD"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED",
+      "definition_status": "WITHHELD_WILDERNESS_RISK_NOT_AUTHORIZED_BY_CARD_RULE"
+    },
+    {
+      "id": "WB-P044",
+      "title": "Goblin sentence",
+      "skill": "Combat",
+      "family": "kill_count",
+      "restriction": "Reviewed NPC ID variants and owned kill receipt; nearby deaths never suffice",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "kills",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P045",
+      "title": "Cow sentence",
+      "skill": "Combat",
+      "family": "kill_count",
+      "restriction": "Reviewed NPC ID variants and owned kill receipt; nearby deaths never suffice",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "kills",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P046",
+      "title": "Chicken sentence",
+      "skill": "Combat",
+      "family": "kill_count",
+      "restriction": "Reviewed NPC ID variants and owned kill receipt; nearby deaths never suffice",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "kills",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P047",
+      "title": "Hill giant sentence",
+      "skill": "Combat",
+      "family": "kill_count",
+      "restriction": "Reviewed NPC ID variants and owned kill receipt; nearby deaths never suffice",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "kills",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P048",
+      "title": "Moss giant sentence",
+      "skill": "Combat",
+      "family": "kill_count",
+      "restriction": "Reviewed NPC ID variants and owned kill receipt; nearby deaths never suffice",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "kills",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P049",
+      "title": "Skeleton sentence",
+      "skill": "Combat",
+      "family": "kill_count",
+      "restriction": "Reviewed NPC ID variants and owned kill receipt; nearby deaths never suffice",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "kills",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    },
+    {
+      "id": "WB-P050",
+      "title": "Zombie sentence",
+      "skill": "Combat",
+      "family": "kill_count",
+      "restriction": "Reviewed NPC ID variants and owned kill receipt; nearby deaths never suffice",
+      "status": "DELEGATED_NEW_CONTENT",
+      "runtime_enabled": false,
+      "detector_status": "LIVE_VALIDATION_REQUIRED",
+      "target": {
+        "kind": "kills",
+        "scale": "duration_scaled_then_frozen",
+        "planned_minutes": [
+          30,
+          60,
+          90
+        ],
+        "duration_scope": "Regular-duration candidate only; consecutive Penance uses a separate versioned severity function"
+      },
+      "eligibility": [
+        "activity_unlock_or_starting_combat_permission",
+        "current_game_prerequisites",
+        "legal_resource_and_access_route",
+        "detector_supported",
+        "positive_target_headroom"
+      ],
+      "reward_fp": 25,
+      "reward_status": "BALANCE_TBD",
+      "reroll": false,
+      "source_validation": "CONDITIONAL; LIVE_VALIDATION_REQUIRED"
+    }
+  ],
+  "archived_input": "punishments.json"
+}

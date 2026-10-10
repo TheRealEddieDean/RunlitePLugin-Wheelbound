@@ -1,0 +1,94 @@
+{
+  "version": "h4-core-v1",
+  "seed": 2026101001,
+  "accounts_per_scenario": 1000,
+  "max_master_draws": 400,
+  "horizon_hours": 180,
+  "starting_fp": 0,
+  "starting_spins": 100,
+  "defy_refill": 50,
+  "base_penance_hours": 0.5,
+  "severity_multiplier": 2,
+  "audit_fp_penalty": 100,
+  "punishment_fp": 25,
+  "reject_penalty": 250,
+  "gp_per_spin": 10000,
+  "minimum_item_gp": 10000,
+  "recovery_hours": [
+    0.25,
+    1.5
+  ],
+  "ordinary_reward": 100,
+  "boss_base_fp": 120,
+  "third_card_price": 1000,
+  "card_prices": {
+    "Lesser": 150,
+    "Greater": 350
+  },
+  "enhancement_prices": [
+    75,
+    150,
+    300,
+    600
+  ],
+  "duplicate_prices": [
+    100,
+    250,
+    500,
+    900,
+    1500,
+    2300,
+    3300
+  ],
+  "cleansing_price": 2500,
+  "satchel_prices": [
+    300,
+    750,
+    1500
+  ],
+  "blessing_prices": [
+    3000,
+    6000
+  ],
+  "mastery_price": 750,
+  "quest_tokens": 40,
+  "synthetic_owned_item_probability": 0.1,
+  "scenarios": [
+    {
+      "name": "careful_retain",
+      "violation_p": 0.02,
+      "penance_violation_p": 0.02,
+      "reject_p": 0.01,
+      "audit_reward": "retain",
+      "choice": "efficiency",
+      "cleansing": true
+    },
+    {
+      "name": "careful_withhold",
+      "violation_p": 0.02,
+      "penance_violation_p": 0.02,
+      "reject_p": 0.01,
+      "audit_reward": "withhold",
+      "choice": "efficiency",
+      "cleansing": true
+    },
+    {
+      "name": "risk_retain",
+      "violation_p": 0.18,
+      "penance_violation_p": 0.12,
+      "reject_p": 0.06,
+      "audit_reward": "retain",
+      "choice": "random",
+      "cleansing": false
+    },
+    {
+      "name": "risk_withhold",
+      "violation_p": 0.18,
+      "penance_violation_p": 0.12,
+      "reject_p": 0.06,
+      "audit_reward": "withhold",
+      "choice": "random",
+      "cleansing": false
+    }
+  ]
+}
