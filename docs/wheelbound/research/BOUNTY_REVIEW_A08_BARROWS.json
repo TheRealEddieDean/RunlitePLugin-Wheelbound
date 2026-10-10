@@ -1,0 +1,272 @@
+{
+  "version": "review-v1-2026-10-10",
+  "catalog_sha256": "97a1ce17b6ff01e174fad180f9484c67bb4574fae2ffdd41f7ea8e13d6af4e88",
+  "scope": "WB-B001\u2013WB-B024; source adapter design review, not live validation or drop-table approval",
+  "primary_source": "https://github.com/runelite/runelite/blob/42a6f17a6a2e8e478aa763890ecd0181a59dad38/runelite-client/src/main/java/net/runelite/client/plugins/loottracker/LootTrackerPlugin.java",
+  "entries": [
+    {
+      "id": "WB-B001",
+      "item_id": 4708,
+      "name": "Ahrim's hood",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B002",
+      "item_id": 4710,
+      "name": "Ahrim's staff",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B003",
+      "item_id": 4712,
+      "name": "Ahrim's robetop",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B004",
+      "item_id": 4714,
+      "name": "Ahrim's robeskirt",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B005",
+      "item_id": 4716,
+      "name": "Dharok's helm",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B006",
+      "item_id": 4718,
+      "name": "Dharok's greataxe",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B007",
+      "item_id": 4720,
+      "name": "Dharok's platebody",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B008",
+      "item_id": 4722,
+      "name": "Dharok's platelegs",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B009",
+      "item_id": 4724,
+      "name": "Guthan's helm",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B010",
+      "item_id": 4726,
+      "name": "Guthan's warspear",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B011",
+      "item_id": 4728,
+      "name": "Guthan's platebody",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B012",
+      "item_id": 4730,
+      "name": "Guthan's chainskirt",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B013",
+      "item_id": 4732,
+      "name": "Karil's coif",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B014",
+      "item_id": 4734,
+      "name": "Karil's crossbow",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B015",
+      "item_id": 4736,
+      "name": "Karil's leathertop",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B016",
+      "item_id": 4738,
+      "name": "Karil's leatherskirt",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B017",
+      "item_id": 4745,
+      "name": "Torag's helm",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B018",
+      "item_id": 4747,
+      "name": "Torag's hammers",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B019",
+      "item_id": 4749,
+      "name": "Torag's platebody",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B020",
+      "item_id": 4751,
+      "name": "Torag's platelegs",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B021",
+      "item_id": 4753,
+      "name": "Verac's helm",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B022",
+      "item_id": 4755,
+      "name": "Verac's flail",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B023",
+      "item_id": 4757,
+      "name": "Verac's brassard",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-B024",
+      "item_id": 4759,
+      "name": "Verac's plateskirt",
+      "identity_status": "SOURCE_ID_VERIFIED_AT_EXISTING_ITEMID_PIN",
+      "source_route_status": "RUNELITE_REWARD_WIDGET_CONTAINER_PRECEDENT_REVIEWED",
+      "drop_table_access_status": "UNVERIFIED_CURRENT_GAME_SOURCE_AND_ACCOUNT_ROUTE",
+      "live_receipt_status": "LIVE_VALIDATION_REQUIRED",
+      "reward_status": "BALANCE_TBD",
+      "runtime_enabled": false
+    }
+  ]
+}

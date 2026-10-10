@@ -26,3 +26,5 @@ Eligible bounties are monitored automatically while the mode is active; visiting
 
 ## Recovered final bounty identity — WB-D101
 All goals are visible. Hidden/surprise bounties were rejected at S8-M0239, superseding the earlier keep-hidden-as-option discussion. Permanent targets are finite and cross-activity; include grouped any-third-age and any-gilded goals. Combat Masteries mean all CAs for a boss, not collection-log completion. Diaries have region/difficulty categories and independent substantial rewards. Existing H3 item draft does not contain all these required families and must not be presented as final; revise in a new catalog version. Curated daily candidates are delegated content hygiene, and daily availability never overrides an active Fate.
+
+Bounded catalog review and exact continuation: [BOUNTY_CATALOG_REVIEW](BOUNTY_CATALOG_REVIEW.md).

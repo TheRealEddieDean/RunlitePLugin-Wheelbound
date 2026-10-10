@@ -2,7 +2,7 @@
 
 - Session ID: wb-20261010T012619Z-catalog-manifest
 - State: ACTIVE
-- Owner/task lease: WB-A13; wb-20261010T012619Z-catalog-manifest.
+- Owner/task lease: WB-A15; wb-20261010T012619Z-catalog-manifest.
 - Lease acquired UTC: 2026-10-10T01:26:19Z
 - Lease expires UTC: 2026-10-10T01:56:19Z
 - Branch: wheelbound-mode
@@ -30,3 +30,5 @@ User-reported allowance clarification: 81% REMAINING, not consumed. This is not 
 A07 completed in this checkpoint: six catalog hashes/counts/authority records and promotion gates; original H3 inputs unchanged. Next bounded task: WB-A13 backlog acceptance review against the recovered rules. Current owner retains the existing lease while transitioning; recheck remote head before any further write.
 
 A13 complete: recovered-rule acceptance matrix, accurate failed-build status, shared obligation predicate and six-entry manifest verification. Next: bounded A08 grouped-family and receipt review, then A09 severity review; PDF remains stale until rebuilt from a committed SHA.
+
+A08/A09 review batches saved with 24/23 individually gated records; both tasks remain PARTIAL. A15 PDF source order now includes recovery report, catalog authority and review chapters. Commit the source checkpoint before generation; build with its exact SHA and visually verify before publication.

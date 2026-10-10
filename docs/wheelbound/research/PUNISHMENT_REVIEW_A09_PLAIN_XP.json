@@ -1,0 +1,214 @@
+{
+  "version": "review-v1-2026-10-10",
+  "catalog_sha256": "af387fce6cb928cef5bd4c6232b29fe8000344676c3c6ab359102f7e17ca5a7f",
+  "scope": "23 plain-XP structural reviews; no live trace or approved quantity claim",
+  "entries": [
+    {
+      "id": "WB-P001",
+      "skill": "Mining",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P002",
+      "skill": "Fishing",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P003",
+      "skill": "Woodcutting",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P004",
+      "skill": "Attack",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P005",
+      "skill": "Strength",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P006",
+      "skill": "Defence",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P007",
+      "skill": "Ranged",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P008",
+      "skill": "Magic",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P009",
+      "skill": "Cooking",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P010",
+      "skill": "Firemaking",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P011",
+      "skill": "Smithing",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P012",
+      "skill": "Crafting",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P013",
+      "skill": "Fletching",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P014",
+      "skill": "Agility",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P015",
+      "skill": "Thieving",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P016",
+      "skill": "Runecraft",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P017",
+      "skill": "Prayer",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P018",
+      "skill": "Slayer",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P019",
+      "skill": "Herblore",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P020",
+      "skill": "Farming",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P021",
+      "skill": "Construction",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P022",
+      "skill": "Hunter",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P023",
+      "skill": "Sailing",
+      "structural_status": "NO_ADDITIONAL_METHOD_RESTRICTION; POSITIVE_HEADROOM_GATE_PRESENT",
+      "account_feasibility_status": "REQUIRES_REAL_UNLOCK_RESOURCE_ACCESS_AND_RATE",
+      "detector_status": "INITIALIZED_ACTIVE_XP_BASELINE_AND_LIVE_TRACE_REQUIRED",
+      "severity_status": "DRAFT_DURATION_NOT_NORMATIVE_PENANCE_CAP",
+      "runtime_enabled": false
+    }
+  ]
+}
