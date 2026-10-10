@@ -106,3 +106,15 @@ Final byte-for-byte remote check detected universal-newline normalization of the
 - Final161-page PDF from bb723351f3e9979b246454485e1990a71484a861 checked and saved version8. Automation-only publication receipt records SHA-256/source. Main and all production source unchanged.
 
 Remaining milestone: export exact dependencies/test XML/package evidence in an authorized pipeline session; resolve Q6/Q10/Q9 and evidence-dependent Q2/Q5/CA-MIXED; authorize coding separately before I01 or live adapters. No automatic continuation is established.
+
+## Receipt acceptance continuation, 2026-10-10
+
+- Ownership checkpoint4777e15043f684d575fd88ee7f8bbb638f1049c3; substantive284799b19ec945112239217c898a06871501ffa5.
+- WB-A24:44 independently authored expected traces and32 operation/crash combinations pass;10 intentional oracle defects detected,6 malformed packets rejected. Python3.12.14, no network/dependency installation needed. Saved result verification passes without rewriting.
+- No production/Java/live/disk-I/O test and no additional balance trajectory. Receipt sealing is an in-memory premise; real storage/compaction/ownership/migration tests remain pending I01.
+- Corrected WB-D004 obsolete mandatory-obligation OPEN wording using the already approved WB-D089; register remains110 IDs. No approval changed.
+- Paused claim of earlier active-earned evidence is distinct from paused acquisition/backfill. Preserved evidence and recorded timing as unspecified. Focused existing-transcript keyword scan:10 matched messages plus explicit adjacent S8-M0399; no direct claim-timing rule identified, not a new full historical review.
+- PDF refreshed from284799b1,162 pages/version9, exact SHA in PDF_CHECKPOINT; all contact sheets and changed pages visually checked.
+- Pre-final remote byte verification:128 canonical blobs match local bytes. Final publication must be rechecked; main protected baseline unchanged.
+
+Next useful engineering milestone remains exact dependency/test-report/package exports in the separately authorized pipeline session, then authorized I01 state/storage tests using these fixtures. Policy/live adapters remain gated. Significant Q2/Q6/Q9/Q10/CA-MIXED and the narrow PAUSE-CLAIM timing question remain; no repeated question or runtime fallback was silently adopted.

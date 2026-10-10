@@ -1,0 +1,81 @@
+{
+  "status": "FOCUSED_RECOVERY_ONLY",
+  "source_path": "docs/wheelbound/research/SHARED_CONVERSATION_TRANSCRIPT.md",
+  "source_sha256": "5ac84c9bf78f0fe95bfe1dad7e1a79e0779e96d220d4073f9aaf92c16a024388",
+  "indexed_message_count": 436,
+  "matching_messages": [
+    {
+      "id": "S8-M0057",
+      "role": "user",
+      "match": "user pause-or-claim"
+    },
+    {
+      "id": "S8-M0073",
+      "role": "user",
+      "match": "user pause-or-claim"
+    },
+    {
+      "id": "S8-M0075",
+      "role": "user",
+      "match": "user pause-or-claim"
+    },
+    {
+      "id": "S8-M0076",
+      "role": "assistant",
+      "match": "assistant pause-and-claim"
+    },
+    {
+      "id": "S8-M0078",
+      "role": "assistant",
+      "match": "assistant pause-and-claim"
+    },
+    {
+      "id": "S8-M0083",
+      "role": "user",
+      "match": "user pause-or-claim"
+    },
+    {
+      "id": "S8-M0398",
+      "role": "assistant",
+      "match": "assistant pause-and-claim"
+    },
+    {
+      "id": "S8-M0424",
+      "role": "assistant",
+      "match": "assistant pause-and-claim"
+    },
+    {
+      "id": "S8-M0430",
+      "role": "assistant",
+      "match": "assistant pause-and-claim"
+    },
+    {
+      "id": "S8-M0436",
+      "role": "assistant",
+      "match": "assistant pause-and-claim"
+    }
+  ],
+  "adjacent_explicit_reply_reviewed": "S8-M0399",
+  "scope": "Literal keyword snippets plus existing approved-rule context; not another full transcript review",
+  "finding": "No direct rule for claim timing of previously active-earned evidence during pause identified in this focused scan. Absence is not proof of rejection or approval. Separate inaccessible history could resolve it.",
+  "explicit_support": [
+    {
+      "id": "S8-M0057",
+      "summary": "User selects manual bounty claim and unclaimed notification."
+    },
+    {
+      "id": "S8-M0075",
+      "summary": "User says gains while paused do not count; rare paused drop example."
+    },
+    {
+      "id": "S8-M0399",
+      "summary": "User selects unrestricted pausing without highscore/integrity policing."
+    }
+  ],
+  "preserved_conflict": {
+    "id": "S8-M0402",
+    "summary": "Assistant Reject-forfeiture bounty wording remains Q10; not a resolution of paused claim timing."
+  },
+  "new_approval_count": 0,
+  "runtime_enabled": false
+}

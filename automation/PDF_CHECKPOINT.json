@@ -1,21 +1,18 @@
 {
-  "page_count": 161,
-  "pdf_sha256": "2f0167ec3c3aeaf113e0eb62d79334654ea02b29cef350dd19dc7f1ed96376d3",
+  "page_count": 162,
+  "pdf_sha256": "a2e6141cbab400236235bc321a1ccaba725162cabd083c05d304d1737c5ef56e",
   "out_of_bounds_blocks": [],
-  "source_commit_in_cover": "bb723351f3e9979b246454485e1990a71484a861",
+  "source_commit_in_cover": "284799b19ec945112239217c898a06871501ffa5",
   "important_pages": [
-    2,
-    3,
-    88,
-    129,
-    138,
-    140,
-    142,
-    143
+    10,
+    119,
+    122,
+    148,
+    156
   ],
   "status": "CHECKPOINT_PUBLISHED",
   "is_current": true,
-  "library_version": 8,
-  "review": "158-page predecessor inspected in all contact sheets; final161-page refresh has changed cover/navigation/policy/shifted new and end chapters inspected, including policy pages87\u201389 at full size and baseline/capture tables. No detected layout defects; zero out-of-bounds blocks.",
-  "limitations": "Actual remote build/task pass; exact dependency/version/test-report exports missing. Planned captures and offline replay only, no live detector or exact restrictive-policy approval."
+  "library_version": 9,
+  "review": "All162 pages inspected in contact sheets; cover and all seven changed body/navigation pages inspected at full size. Prior unchanged chapter bodies matched the previous PDF after normalizing source/footer/page numbers. No detected clipping or overlap; zero out-of-bounds blocks.",
+  "limitations": "Receipt acceptance is in-memory only: zero Java/production/live/disk-I/O tests. Exact dependencies/reports, live detector evidence and specific restrictive-policy approval remain unavailable; gameplay questions remain open."
 }

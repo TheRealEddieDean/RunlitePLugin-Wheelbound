@@ -35,4 +35,6 @@ Authoritative design: [decision register](../docs/wheelbound/DECISIONS.md). Oper
 
 Paths without a directory prefix above are under docs/wheelbound/. Selection policy: acquire ownership, choose highest-priority TODO or PARTIAL whose dependency is DONE, work to a bounded deliverable, verify and checkpoint. Speculative numbers are delegated candidates, not historically approved values. Questions block only affected work.
 
-| WB-A24 | Execute offline receipt/recovery acceptance fixtures | P1 | A13 state contract; A19 baseline | S | ACTIVE | automation/receipt_safety | Fault/identity/replay matrix, runnable oracle, explicit implementation limits, preserved unresolved settlements |
+| WB-A24 | Execute offline receipt/recovery acceptance fixtures | P1 | A13 state contract; A19 baseline | S | DONE (offline only) | automation/receipt_safety | 284799b1 saved44 fixtures/32 crash combinations,10 detected mutants/6 malformed packets; no production/live/disk proof |
+
+| WB-A25 | Focused historical pause-claim timing check | P1 | A24 newly exposed timing ambiguity | XS | DONE (focused scope) | automation/receipt_safety/PAUSE_CLAIM_RECOVERY |10 keyword-matching messages plus explicit adjacent reply; no direct prior rule identified or new approval inferred |

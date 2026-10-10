@@ -1,29 +1,30 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261010-receipt-acceptance
-- State: ACTIVE — owner /root; task WB-A24; acquired 2026-10-10; release required at session checkpoint.
+- State: IDLE — clean bounded checkpoint; owner released; no active lease.
 - Branch: wheelbound-mode
-- Starting verified head: e6d445c8c27847050abb07f843cfe9c9d4ab476b
-- Latest substantive Markdown/PDF source: bb723351f3e9979b246454485e1990a71484a861
-- This final publication/diagnostic checkpoint: obtain owning SHA from branch head/file history; no circular self-hash.
-- Protected main: c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
-- Session work: A19 verified actual remote compilation/test task and48 source/test/config hashes; A20 authored46 NOT_RUN capture cases, schema and meaningful offline fixtures; A21 verified23 existing H4 cases across4 processes/92 replays; A22 drafted source-pinned unactivated CI evidence proposal; A23 drafted unsent restrictive-control review brief; A15 refreshed161-page PDF/version8. Corrected stale Q7 and blanket build-blocked wording without changing approvals.
-- Relevant substantive commits:7fb1f483eb64e9ddde68f55592f58c4fb44fcb63; bd7535c5b2f66abf6289947c5587989e816c063e;5717fd0b540c5b95cdc3e950c5ddad014ec72b34; f891fa45d1a653fc7ea29f60b3272a185ad1b77a;bb723351f3e9979b246454485e1990a71484a861.
-- Actual CI run:38025748732/job114136109526, Temurin11.0.32+1/Gradle8.10, clean build succeeded with compileJava/compileTestJava/test/check/build. Exact RuneLite version and test XML/counts were not exported. Local isolated retry on52 verified inputs still failed at wrapper download on JDK17; no local compilation/test success. See research/LOCAL_BUILD_RETRY.json.
-- Validation: design_checks, capture-schema fixtures, source/config/catalog pins and cross-process replay passed. Original H4 source/config/catalog/output bytes unchanged;130,080 synthetic trial count unchanged. PDF final source/hash/version in PDF_CHECKPOINT; changed policy/CI/capture tables visually reviewed. No live case passed or detector enabled.
-- Uncommitted completed canonical deliverables: NONE after guarded publication and byte verification; failed update would invalidate this publication claim. Scratch renders/dependencies/isolated retry are reproducible intermediates.
-- Older repo checkout: preexisting modified/untracked docs preserved; not canonical current documentation and not cleaned/reset.
-- Remaining: exact dependency/test-report/jar export; local JDK11/connectivity; live detector/route evidence; exact restrictive-policy acceptance; Q2/Q6/Q9/Q10/conditionalQ5 and CA-MIXED. Production code and workflow activation still unauthorized.
-- No authoritative remaining usage reading or automatic/background continuation established.
+- Starting head: ee188e84a6bbc27da224e3e13c705b63d8da9f75
+- Ownership commit:4777e15043f684d575fd88ee7f8bbb638f1049c3
+- Latest substantive documentation/PDF source:284799b19ec945112239217c898a06871501ffa5
+- Owning final publication commit: resolve from branch/file history, not a circular self-hash.
+- Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
+- Completed: A24 offline receipt oracle44 expected traces +32 crash combinations,10 detected defective variants,6 rejected malformed packets; exact saved-result verification. Corrected stale D004 Grand obligation reference using confirmed D089. A25 focused history scan for newly exposed paused claim timing. A15 refreshed162-page PDF from substantive commit, saved version9 and visually reviewed.
+- Existing successful remote CI run38025748732 remains verified; exact resolved client/dependency versions, XML counts and package evidence still not exported. No new Java/production/live/disk-I/O tests or balance trajectories.
+- Starting H4/config/catalog/output bytes unchanged. Total synthetic trajectories remains130,080, including80 smoke. New deterministic oracle repetitions are QA, not progression simulations.
+- Verification: source hashes, receipt checks, all ten selected mutations, malformed inputs, design_checks and PDF/source/hash checks passed.128 canonical remote blobs matched local bytes before final automation publication; recheck owning final commit.
+- Uncommitted completed canonical deliverables: NONE after successful guarded final publication and remote byte verification; a failed update invalidates this claim.
+- Earlier repo/ checkout dirty docs remain preserved; no reset/clean/publish of that stale checkout.
+- No active workflow change, client/game login, reviewer contact, Hub submission, production code, main change, schedule or automatic restart.
+- Blockers: exact dependency/report/artifact exports; local JDK11/dependency access; legitimate current-client traces; exact restrictive-control policy review. Significant questions Q2/Q6/Q9/Q10/CA-MIXED; conditional Q5; narrow PAUSE-CLAIM timing still unspecified.
 
-## Exact continuation
+## Exact next action
 
-1. Fetch wheelbound-mode/main and read this state, PROTOCOL,TASK_QUEUE,BLOCKERS,DECISIONS_PENDING, authoritative DECISIONS and master instructions. Inspect commits after bb723351 and any active owner; preserve concurrent/unreviewed changes. Do not assume expiry means a worker stopped.
-2. Use the verified remote build evidence rather than repeating the old claim that compilation is globally blocked. Local wrapper failure remains distinct. I00 next needs exact resolved client/artifact metadata and exported XML/package evidence, not another uninstrumented identical Java run.
-3. Review research/CI_PROPOSAL.md/YAML and pinned official action metadata in a later authorized pipeline session. They are not installed workflows; runtime/Groovy execution remains untested. Observe actual reports/run/commit after activation. Do not touch main.
-4. Review research/TRACE_CAPTURE_PROTOCOL and46 NOT_RUN cases. A17 needs a legitimate current client and separately authorized passive adapter/actions; synthetic schema checks never establish receipt semantics. jsonschema was installed only in scratch tmp/trace-validation-deps; recreate a compatible environment if absent. Do not claim traces exist.
-5. For policy review use research/POLICY_REVIEW_PACKET: it is NOT SENT. No reviewer contact is authorized. Preserve Trade with, pause and all approved mechanics; Q5 becomes material only with a specific rejection/limitation. Do not silently adopt warning-only fallback.
-6. Collect material Q6/Q10/Q9 and CA-MIXED choices; Q2 requires actual Coffer/account boundary first. Never re-ask resolved Q1/Q7/Q8. No production implementation until explicitly authorized; first coding slice remains I01 pure state/receipt/RNG after pipeline evidence.
-7. Update decision register/specs only for actual new decisions, validate, commit bounded tasks and refresh derived PDF after material Markdown changes. Preserve H1–H4 executed bytes and source versions.
+1. Read remote branch/main, this state, PROTOCOL/TASK_QUEUE/BLOCKERS/DECISIONS_PENDING and authoritative DECISIONS/master instructions. Inspect any newer commit or active owner. Preserve unreviewed/concurrent work; never blindly retry a head mismatch.
+2. Read automation/receipt_safety/README and RESULTS. Run checks.py --verify if modifying these artifacts; its hash manifest is exact and fixtures are not production code. Do not count replays as new simulations or infer durability from mock journal.append.
+3. Do not re-run unchanged H4 trials or repeat the global build-blocked claim. Existing remote build succeeded. In a separately authorized pipeline session, review the unactivated CI proposal and export exact dependency versions, XML results and package contents.
+4. Before enabled runtime settlement, resolve PAUSE-CLAIM timing for earlier active-earned evidence, Q10 Reject-related bounty disposition and CA-MIXED. Preserve receipt provenance. Paused acquisition still provides no backfill; free pause remains confirmed.
+5. I01 still needs separately authorized production implementation. Port independently authored expected values to actual Java/domain/storage tests rather than copy the Python oracle into the plugin. Add real file interruption, checkpoint rollover, concurrent ownership, unknown-schema/migration and actual serialization coverage.
+6. A17 still needs separately authorized passive adapters and real current-client traces. Exact policy brief is unsent; no reviewer contact is authorized. Trade with stays unchanged. No warning-only fallback, new penalties or guessed Coffer escape.
+7. Update decisions/specs for actual decisions, validate/commit bounded work, refresh the derived PDF after material doc changes, release ownership at a clean checkpoint.
 
-Stop reason: end of requested bounded session at a clean checkpoint. Dependent live/design/implementation gates remain explicit. No production code, main change, game-client login, reviewer message, Hub submission or schedule activation occurred.
+Stop reason: bounded useful documentation/verification batch complete. Dependent implementation/live/policy/design gates remain explicit; no background continuation promised.
