@@ -1,0 +1,457 @@
+{
+  "version": "review-v2-2026-10-10",
+  "scope": "50 structurally reviewed conditional entries; ambiguous or unsupported outcomes withheld",
+  "input_sha256": "af387fce6cb928cef5bd4c6232b29fe8000344676c3c6ab359102f7e17ca5a7f",
+  "entries": [
+    {
+      "id": "WB-P001",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P002",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P003",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P004",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P005",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P006",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P007",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P008",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P009",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P010",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P011",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P012",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P013",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P014",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P015",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P016",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P017",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P018",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P019",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P020",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P021",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P022",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P023",
+      "family": "plain_xp",
+      "review_note": "Plain initialized active XP with headroom/access gates",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P024",
+      "family": "restricted_method",
+      "review_note": "MiningAnimation has bronze mining variants; correlate actual XP/action context, not inventory possession; power swing is not automatically the same ordinary method",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P025",
+      "family": "restricted_method",
+      "review_note": "WoodcuttingPlugin separates bronze standard and bronze two-handed animation; two-handed variant is not automatically ordinary bronze axe permission",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P026",
+      "family": "restricted_method",
+      "review_note": "Small-net spot/action and actual catch required; shared fishing animation alone insufficient",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P027",
+      "family": "restricted_method",
+      "review_note": "Copper object/action + fresh ore + Mining XP; old ore movement and unrelated XP rejected",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P028",
+      "family": "restricted_method",
+      "review_note": "Tin object/action + fresh ore + Mining XP; old ore movement and unrelated XP rejected",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P029",
+      "family": "restricted_method",
+      "review_note": "Reviewed oak tree object variant + cut result + XP; Forestry bonus XP policy must be explicit",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P030",
+      "family": "restricted_method",
+      "review_note": "Reviewed willow tree object variant + cut result + XP; Forestry bonus XP policy must be explicit",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P031",
+      "family": "restricted_method",
+      "review_note": "Raw shrimp consumption/cooking result correlated; generic cooking animation does not identify recipe",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P032",
+      "family": "restricted_method",
+      "review_note": "AMBIGUOUS smelt bronze bars versus smith from bronze bars; WITHHELD until new template has exact operation/product rule",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P033",
+      "family": "restricted_method",
+      "review_note": "Ordinary bones burial interaction + consumption + Prayer XP; altar/ecto/blessing routes do not qualify by item possession",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P034",
+      "family": "restricted_method",
+      "review_note": "Actual Air altar region/object action + essence/resource + rune result; other crafting/combination/GOTR paths not implicitly included",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P035",
+      "family": "restricted_method",
+      "review_note": "Ordinary logs consumption/fire action + Firemaking XP; Wintertodt and higher logs do not qualify by carrying normal logs",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P036",
+      "family": "location_xp",
+      "review_note": "Source/action + actual XP location boundary, not final player position",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P037",
+      "family": "location_xp",
+      "review_note": "Source/action + actual XP location boundary, not final player position",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P038",
+      "family": "location_xp",
+      "review_note": "Source/action + actual XP location boundary, not final player position",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P039",
+      "family": "location_xp",
+      "review_note": "Source/action + actual XP location boundary, not final player position",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P040",
+      "family": "location_xp",
+      "review_note": "Source/action + actual XP location boundary, not final player position",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P041",
+      "family": "location_xp",
+      "review_note": "Source/action + actual XP location boundary, not final player position",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P042",
+      "family": "location_xp",
+      "review_note": "Yanille course label is insufficient; exact dungeon obstacle/path and prerequisites must be authored and validated; WITHHELD",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P043",
+      "family": "location_xp",
+      "review_note": "Risk permission for Wilderness punishment not established merely by Wilderness card purchase rule; WITHHELD pending compatible authored eligibility",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P044",
+      "family": "kill_count",
+      "review_note": "Owned kill proof; nearby death, hit splat or item possession insufficient; zero-loot kills need their own completion adapter",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P045",
+      "family": "kill_count",
+      "review_note": "Owned kill proof; nearby death, hit splat or item possession insufficient; zero-loot kills need their own completion adapter",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P046",
+      "family": "kill_count",
+      "review_note": "Owned kill proof; nearby death, hit splat or item possession insufficient; zero-loot kills need their own completion adapter",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P047",
+      "family": "kill_count",
+      "review_note": "Owned kill proof; nearby death, hit splat or item possession insufficient; zero-loot kills need their own completion adapter",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P048",
+      "family": "kill_count",
+      "review_note": "Owned kill proof; nearby death, hit splat or item possession insufficient; zero-loot kills need their own completion adapter",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P049",
+      "family": "kill_count",
+      "review_note": "Owned kill proof; nearby death, hit splat or item possession insufficient; zero-loot kills need their own completion adapter",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-P050",
+      "family": "kill_count",
+      "review_note": "Owned kill proof; nearby death, hit splat or item possession insufficient; zero-loot kills need their own completion adapter",
+      "feasibility": "CONDITIONAL_ACCOUNT_ACCESS_HEADROOM_REQUIRED",
+      "detector": "LIVE_VALIDATION_REQUIRED",
+      "severity": "NEW_VERSION_NEEDED; NO_UNIVERSAL_120M_CAP",
+      "runtime_enabled": false
+    }
+  ]
+}

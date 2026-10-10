@@ -6,5 +6,7 @@
   "status": "CHECKPOINT_PUBLISHED",
   "review": "All 140 predecessor pages reviewed in contact sheets; final inserted diary page and shifted ending chapters visually reviewed, with selected pages at full size. No detected layout defects.",
   "library_version": 5,
-  "limitations": "Not final balance, live detector validation or successful build. Source Markdown authoritative."
+  "limitations": "Not final balance, live detector validation or successful build. Source Markdown authoritative.",
+  "is_current": false,
+  "superseded_by": "New content/CA source review not yet published in refreshed PDF"
 }

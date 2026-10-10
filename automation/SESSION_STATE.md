@@ -27,3 +27,7 @@
 6. Only after input contracts/review dependencies are satisfied, version a faithful model before executing bounded trials. Do not relabel/rerun historical experiments without changed assumptions. Refresh PDF again after material gameplay/specification changes; preserve actual source SHA and QA/publication receipt.
 
 Use approximately 70/30 execution-versus-verification/checkpoint effort targets, not quota measurements. No production plugin implementation, main modification, Hub submission or messages authorized. At the next planned end save a clean IDLE checkpoint with exact continuation; do not claim scheduled/background continuation.
+
+## Current resumed checkpoint
+
+A08 all100 source-route/access/receipt records conditionally reviewed, with separately versioned finite100 grouped-family candidate. A09 all50 structural reviews recorded; three ambiguous/risk definitions and severity inputs remain. CA task/boss/word metadata mapped and prior generic-achievement candidate wording corrected.108 decisions. Seven catalog hashes and21 CA word mappings validated; H3 inputs unchanged. PDF publication from13bae is now stale relative to these material documentation changes and must be refreshed. Next bounded deliverable: exact punishment definitions/severity input contract and daily/sink receipt review, then version next model contract before execution.

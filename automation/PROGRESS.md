@@ -63,3 +63,7 @@ Completed substantive commits this continuation:
 - 13bae2b89bbf05e36e7de8516c48e30a6ed31dd0: 48 diary signals and receipt boundaries.
 
 Next milestone: finish content/access/receipt review and a faithful new versioned model contract; engineering begins only after explicit implementation authorization and a successful I00 build baseline.
+
+## Resumed content coverage checkpoint
+
+Rechecked RuneLite HEAD unchanged. Reviewed all100 experimental bounty records with conditional access/drop/receipt status; introduced a separate finite100 normative candidate with explicit grouped family identity candidates (D107). All50 punishment records reviewed structurally; ambiguous bronze-forge/Yanille/Wilderness-risk definitions and live detector gates remain, so A09 stays PARTIAL. D108 records source-correlated loot/CA state contract. Seven-entry authority manifest preserves all H3 inputs. No live proof or production edits.

@@ -28,3 +28,7 @@ The broad Challenge task library and ordinary-slice classification need explicit
 ## Promotion and verification
 
 Promotion requires source/access evidence, objective feasibility, positive and negative receipt fixtures, paused/relogged/account-swap behavior, idempotent settlement, and the relevant policy gate. Source inspection is distinct from live validation. Update affected specifications and DECISIONS when a new mechanic is authorized; routine catalog review does not invent prior approval. Persist a new manifest version and immutable model inputs before executing a changed simulation.
+
+## Separately versioned normative candidate
+
+The manifest now has seven catalog records. item_bounties_normative_v1.json preserves exactly 100 targets including two grouped families; it is a new delegated candidate (WB-D107), not an enabled or historically approved full catalog. All per-member reward routes and family FP remain gated. Existing six catalog files and H3 pins are untouched.

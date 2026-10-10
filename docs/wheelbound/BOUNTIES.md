@@ -30,3 +30,5 @@ All goals are visible. Hidden/surprise bounties were rejected at S8-M0239, super
 Bounded catalog review and exact continuation: [BOUNTY_CATALOG_REVIEW](BOUNTY_CATALOG_REVIEW.md).
 
 [Diary/CA source and receipt review](DIARY_CA_RECEIPT_REVIEW.md) maps all 48 diary tier signals, including legacy Karamja aliases; live semantics and boss task-set mapping remain gated.
+
+The separate [finite-100 normative candidate](catalogs/item_bounties_normative_v1.json) restores grouped third-age/gilded intent while preserving H3 inputs. It is a new delegated candidate, not an approved final member/reward list. All runtime entries remain disabled.

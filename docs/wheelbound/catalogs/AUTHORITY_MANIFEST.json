@@ -1,5 +1,5 @@
 {
-  "version": "authority-v1-2026-10-10",
+  "version": "authority-v2-2026-10-10",
   "scope": "Documentation metadata only; does not enable gameplay",
   "decision_register": "../DECISIONS.md",
   "catalogs": [
@@ -95,6 +95,22 @@
         "Map grouped raid variants to distinct kill receipts",
         "Real encounter prerequisites and initialized counters",
         "Permanent purchased boss eligibility; no additional plugin stat gate"
+      ],
+      "h3_pinned_input": false
+    },
+    {
+      "path": "catalogs/item_bounties_normative_v1.json",
+      "version": "normative-candidate-v1-2026-10-10",
+      "sha256": "daef4932b8e6322480c822292d9c31fbadb1f2a3e448b7c378330515657ae488",
+      "entry_count": 100,
+      "authority": "DELEGATED_NORMATIVE_CANDIDATE",
+      "approval": "WB-D101 confirmed family intent; WB-D107 new delegated composition; not final membership/reward approval",
+      "source_blob": null,
+      "runtime_enabled": false,
+      "enable_gates": [
+        "Per-member source/access/receipt validation",
+        "Explicit canonical membership and FP balance",
+        "No H3 historical input replacement"
       ],
       "h3_pinned_input": false
     }

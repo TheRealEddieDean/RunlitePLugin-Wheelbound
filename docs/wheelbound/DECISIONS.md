@@ -1087,3 +1087,23 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Rationale: Preserve invested instances while making irreversible disposal and independent pricing clear.
 - Affects: [FATE_SHOP](FATE_SHOP.md), [WHEELS](WHEELS.md), Satchel/purchase state and UX.
 - Exceptions/dependencies: 3/6/10/15 Satchel capacities were assistant-selected after user instructed it to choose counts, not a quoted user numeric approval. All FP values remain balance candidates. Taint cannot be stored; only Cleansing removes it. Current 24 total slots and ordinary minimum rules govern every edit.
+
+## WB-D107 - New finite-100 normative bounty candidate includes grouped families
+
+- Status: DELEGATED; FINAL_MEMBER_ROUTES_AND_REWARDS_TBD
+- Authority: Assistant selection under user's autonomous catalog/design delegation; not historical explicit approval.
+- Evidence: Current user go-wild continuation and weekend assignment; WB-D101/S8 grouped-family approval controls intent; RuneLite ItemID at pinned HEAD supplies candidate identities.
+- Decision: Author a separate normative candidate containing 98 prior single-item candidates plus any-third-age and any-gilded, keeping exactly 100. Replace experimental WB-B093/WB-B100 only in the new candidate, preserve stable retained IDs and introduce WB-BF001/002. Do not edit archived H3 inputs.
+- Rationale: Restore confirmed family coverage without expanding the finite target count or falsifying old simulation inputs. Replacement choices are provisional composition choices, not approved historical removals.
+- Affects: [BOUNTIES](BOUNTIES.md), [catalog review](BOUNTY_CATALOG_REVIEW.md), [authority](CATALOG_AUTHORITY.md).
+- Exceptions/dependencies: Candidate identity does not prove reward route; exclude obvious furniture/sets/transform-only variants pending canonicalization. All runtime entries disabled; family FP unset; later member/drop/access review required.
+
+## WB-D108 - Source-correlated loot and exact CA state precede runtime credit
+
+- Status: DELEGATED_TECHNICAL_SPECIFICATION; LIVE_VALIDATION_REQUIRED
+- Authority: Assistant technical choice under autonomous research mandate; source inspection is not user approval or live proof.
+- Evidence: RuneLite LootManager/ServerNpcLoot/core animation sources at 42a6f17a6a2e8e478aa763890ecd0181a59dad38; existing repository BossData and independently inspected CA Exporter source.
+- Decision: Prefer reviewed game-reported loot context over legacy ground-coincidence inference; persist a source event key because ServerNpcLoot does not expose its internal event ID. For CA task state use CA_TASK_COMPLETED words and task ID/32 packing, with initialized catalogue/range/bit validation; never substitute generic ACHIEVEMENT_TASK fields or Master point totals for per-boss task completion.
+- Rationale: Prevent false ownership, duplicate payouts and use of unrelated packed achievement state.
+- Affects: [acquisition evidence](ACQUISITION_EVIDENCE.md), [technical specifications](TECHNICAL_SPECIFICATIONS.md), [diary/CA review](DIARY_CA_RECEIPT_REVIEW.md).
+- Exceptions/dependencies: Pickpocket loot is not kill proof; zero-loot kills need separate evidence; unknown IDs/baselines stay unavailable. No private-field reflection, production adapter, input generation, exact policy acceptance or live trace claimed.

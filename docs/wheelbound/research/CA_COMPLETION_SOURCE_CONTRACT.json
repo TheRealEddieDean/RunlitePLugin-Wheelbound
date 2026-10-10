@@ -1,0 +1,134 @@
+{
+  "version": "ca-source-contract-v1-2026-10-10",
+  "source_commit": "42a6f17a6a2e8e478aa763890ecd0181a59dad38",
+  "source_blob": "752f629d4638b20d2681482970f49633fe094c52",
+  "task_tier_enums": [
+    3981,
+    3982,
+    3983,
+    3984,
+    3985,
+    3986
+  ],
+  "boss_names_enum": 3971,
+  "struct_params": {
+    "task_id": 1306,
+    "name": 1308,
+    "description": 1309,
+    "boss": 1312
+  },
+  "completion_words": [
+    {
+      "symbol": "CA_TASK_COMPLETED_0",
+      "word_index": 0,
+      "varp_id": 3116
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_1",
+      "word_index": 1,
+      "varp_id": 3117
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_2",
+      "word_index": 2,
+      "varp_id": 3118
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_3",
+      "word_index": 3,
+      "varp_id": 3119
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_4",
+      "word_index": 4,
+      "varp_id": 3120
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_5",
+      "word_index": 5,
+      "varp_id": 3121
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_6",
+      "word_index": 6,
+      "varp_id": 3122
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_7",
+      "word_index": 7,
+      "varp_id": 3123
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_8",
+      "word_index": 8,
+      "varp_id": 3124
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_9",
+      "word_index": 9,
+      "varp_id": 3125
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_10",
+      "word_index": 10,
+      "varp_id": 3126
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_11",
+      "word_index": 11,
+      "varp_id": 3127
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_12",
+      "word_index": 12,
+      "varp_id": 3128
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_13",
+      "word_index": 13,
+      "varp_id": 3387
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_14",
+      "word_index": 14,
+      "varp_id": 3718
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_15",
+      "word_index": 15,
+      "varp_id": 3773
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_16",
+      "word_index": 16,
+      "varp_id": 3774
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_17",
+      "word_index": 17,
+      "varp_id": 4204
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_18",
+      "word_index": 18,
+      "varp_id": 4496
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_19",
+      "word_index": 19,
+      "varp_id": 4721
+    },
+    {
+      "symbol": "CA_TASK_COMPLETED_20",
+      "word_index": 20,
+      "varp_id": 5673
+    }
+  ],
+  "limitations": [
+    "Task metadata values require current client-cache initialization",
+    "Explicit ordered varp IDs are noncontiguous; no base-plus-index mapping",
+    "Per-boss membership and grouped raid variants must be frozen/versioned",
+    "Live active/pause transition trace gates remain"
+  ],
+  "runtime_enabled": false
+}

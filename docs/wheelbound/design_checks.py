@@ -38,8 +38,8 @@ queue=re.findall(r'^\| (WB-A\d+) \|',(a/'TASK_QUEUE.md').read_text(),re.M);asser
 print('PASS: approved 64-node mode grouping; 436 contiguous indexed messages/218 reviewed user turns; 19 unique queued tasks and five checkpoints')
 
 manifest=json.loads((p/'catalogs/AUTHORITY_MANIFEST.json').read_text())
-assert len(manifest['catalogs'])==6
-assert len({r['path'] for r in manifest['catalogs']})==6
+assert len(manifest['catalogs'])==7
+assert len({r['path'] for r in manifest['catalogs']})==7
 for record in manifest['catalogs']:
  catalog=p/record['path'];data=json.loads(catalog.read_text())
  assert hashlib.sha256(catalog.read_bytes()).hexdigest()==record['sha256']
@@ -49,10 +49,27 @@ for record in manifest['catalogs']:
 for name,sha in h3['catalog_hashes'].items():
  record=next(r for r in manifest['catalogs'] if r['path']=='catalogs/'+name)
  assert record['h3_pinned_input'] and record['sha256']==sha
-print('PASS: six authority manifest hashes/counts/provenance/gates; historical H3 input pins retained')
+print('PASS: seven authority manifest hashes/counts/provenance/gates; historical H3 input pins retained')
 
 diary=json.loads((p/'research/DIARY_COMPLETION_SOURCE_MAP.json').read_text())
 assert len(diary['entries'])==len({x['varbit_id'] for x in diary['entries']})==48
 assert not diary['runtime_enabled']
 assert {x['symbol']:x['varbit_id'] for x in diary['entries'] if x['symbol'].startswith('ATJUN_')}=={'ATJUN_EASY_DONE':3578,'ATJUN_MED_DONE':3599,'ATJUN_HARD_DONE':3611}
 print('PASS: 48 distinct diary source mappings, legacy Karamja aliases, disabled runtime status')
+
+for name,n in [('BOUNTY_REVIEW_A08_ALL',100),('PUNISHMENT_REVIEW_A09_ALL',50)]:
+ review=json.loads((p/'research'/(name+'.json')).read_text());assert len(review['entries'])==n
+ assert len({x['id'] for x in review['entries']})==n and all(not x['runtime_enabled'] for x in review['entries'])
+norm=json.loads((p/'catalogs/item_bounties_normative_v1.json').read_text())
+assert len(norm['entries'])==100 and all(not x['runtime_enabled'] for x in norm['entries'])
+family=[x for x in norm['entries'] if x.get('kind')=='grouped_family']
+assert len(family)==2 and all(x['fp'] is None and x['claim_limit']==1 for x in family)
+assert not {'WB-B093','WB-B100'} & {x['id'] for x in norm['entries']}
+print('PASS: conditional reviews cover100 bounty/50 punishment records; separate finite100 family candidate; old inputs intact')
+
+ca=json.loads((p/'research/CA_COMPLETION_SOURCE_CONTRACT.json').read_text())
+assert [x['word_index'] for x in ca['completion_words']]==list(range(21))
+assert len({x['varp_id'] for x in ca['completion_words']})==21
+assert ca['completion_words'][13]['varp_id']==3387 and ca['struct_params']['boss']==1312
+assert ca['task_tier_enums']==list(range(3981,3987)) and not ca['runtime_enabled']
+print('PASS: explicit21 noncontiguous CA completion words and source-mapped task/boss schema')

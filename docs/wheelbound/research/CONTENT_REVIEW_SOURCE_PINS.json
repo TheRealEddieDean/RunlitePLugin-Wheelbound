@@ -1,0 +1,46 @@
+{
+  "checked_on": "2026-10-10",
+  "commit": "42a6f17a6a2e8e478aa763890ecd0181a59dad38",
+  "sources": [
+    {
+      "path": "runelite-client/src/main/java/net/runelite/client/game/LootManager.java",
+      "blob_sha": "dcec3f84c3d5dc5eedcac695aef16bb1c289c5e1",
+      "url": "https://github.com/runelite/runelite/blob/42a6f17a6a2e8e478aa763890ecd0181a59dad38/runelite-client/src/main/java/net/runelite/client/game/LootManager.java"
+    },
+    {
+      "path": "runelite-client/src/main/java/net/runelite/client/events/ServerNpcLoot.java",
+      "blob_sha": "5f413e4e49d25b75af540396b25cdfee263158f6",
+      "url": "https://github.com/runelite/runelite/blob/42a6f17a6a2e8e478aa763890ecd0181a59dad38/runelite-client/src/main/java/net/runelite/client/events/ServerNpcLoot.java"
+    },
+    {
+      "path": "runelite-client/src/main/java/net/runelite/client/plugins/loottracker/LootTrackerPlugin.java",
+      "blob_sha": "586694b07c1b3445eabbf44d04956d3d60629a9a",
+      "url": "https://github.com/runelite/runelite/blob/42a6f17a6a2e8e478aa763890ecd0181a59dad38/runelite-client/src/main/java/net/runelite/client/plugins/loottracker/LootTrackerPlugin.java"
+    },
+    {
+      "path": "runelite-client/src/main/java/net/runelite/client/plugins/mining/MiningAnimation.java",
+      "blob_sha": "ceb292f4da5afa95c4fcd5e084782fbf1e43c047",
+      "url": "https://github.com/runelite/runelite/blob/42a6f17a6a2e8e478aa763890ecd0181a59dad38/runelite-client/src/main/java/net/runelite/client/plugins/mining/MiningAnimation.java"
+    },
+    {
+      "path": "runelite-client/src/main/java/net/runelite/client/plugins/woodcutting/WoodcuttingPlugin.java",
+      "blob_sha": "a7c235358b0e8732bf0d86942e929e928d207439",
+      "url": "https://github.com/runelite/runelite/blob/42a6f17a6a2e8e478aa763890ecd0181a59dad38/runelite-client/src/main/java/net/runelite/client/plugins/woodcutting/WoodcuttingPlugin.java"
+    },
+    {
+      "path": "runelite-api/src/main/java/net/runelite/api/gameval/VarPlayerID.java",
+      "blob_sha": "752f629d4638b20d2681482970f49633fe094c52",
+      "url": "https://github.com/runelite/runelite/blob/42a6f17a6a2e8e478aa763890ecd0181a59dad38/runelite-api/src/main/java/net/runelite/api/gameval/VarPlayerID.java"
+    },
+    {
+      "path": "runelite-api/src/main/java/net/runelite/api/gameval/AnimationID.java",
+      "blob_sha": "359b346c865e2c25f7acce7a0d354094723e6656",
+      "url": "https://github.com/runelite/runelite/blob/42a6f17a6a2e8e478aa763890ecd0181a59dad38/runelite-api/src/main/java/net/runelite/api/gameval/AnimationID.java"
+    },
+    {
+      "path": "runelite-api/src/main/java/net/runelite/api/ItemID.java",
+      "blob_sha": "94e0f019f66c572419461f12decc6535f5f1dfd8",
+      "url": "https://github.com/runelite/runelite/blob/42a6f17a6a2e8e478aa763890ecd0181a59dad38/runelite-api/src/main/java/net/runelite/api/ItemID.java"
+    }
+  ]
+}

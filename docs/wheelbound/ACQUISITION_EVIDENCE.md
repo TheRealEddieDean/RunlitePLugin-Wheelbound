@@ -44,3 +44,7 @@ Clock rollback must not restore an older board or double-pay. Persist the greate
 9. Daily absence and zero daily income never block normal progression (H3 minimal-bounty policy already exercises zero permanent bounty income, not daily implementation).
 
 Daily schedules, quantities and clock policy are delegated proposals, not historically confirmed behavior. No daily income is included in the current H3 result totals.
+
+## Stronger loot source and remaining boundaries
+
+Current source verification found game-loot-script-backed ServerNpcLoot and legacy ground-coincidence NpcLootReceived. Prefer reviewed server-reported source context; neither a raw plugin event nor ground spawn alone supplies a durable unique receipt. ServerNpcLoot does not expose its internal event identifier, so source-specific deduplication must be validated. Pickpocket events are not owned kills. Each reward widget/container route needs independent earning/collection/reopening evidence. See [complete conditional bounty review](BOUNTY_CATALOG_REVIEW.md) and WB-D108; no adapter is enabled here.

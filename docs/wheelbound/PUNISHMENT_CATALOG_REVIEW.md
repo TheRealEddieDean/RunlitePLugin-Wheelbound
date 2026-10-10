@@ -21,3 +21,15 @@ Required future fixtures: near-XP-ceiling target; unknown XP baseline; locked sk
 ## Exact continuation
 
 Review WB-P024–WB-P035 tool/method attribution and real compatibility, then WB-P036–WB-P043 location boundaries/access (including Wilderness opt-in), then WB-P044–WB-P050 owned kill receipts. Author new severity-aware model inputs separately; preserve H3's old duration-capped experiment.
+
+## Remaining 27 templates reviewed
+
+[All 50 review records](research/PUNISHMENT_REVIEW_A09_ALL.json) now distinguish candidate proofs and unresolved feasibility. WB-A09 remains PARTIAL until exact ambiguous templates and severity-aware inputs are authored. The draft files remain unchanged and disabled.
+
+Bronze mining and bronze woodcutting have distinct generated animation symbols used by official core plugins; this improves method attribution over possession tests. Animation is an attempted action, not proof of successful XP. Correlate the actual skill delta, action window and allowed source; do not award XP from another action on the same tick. The general mining list includes ordinary, wall/no-reach and special power-swing contexts: whitelist only those verified for the authored objective. Standard bronze axe is distinct from a bronze two-handed Forestry animation. Better tools present in inventory do not prove or disprove the actual observed tool.
+
+Small-net/copper/tin/oak/willow/raw-shrimp/bones/air-altar/log-fire tasks require species/object/recipe evidence alongside XP; shared generic animations alone fail. WB-P032 is ambiguous between smelting bars and smithing from bars and stays withheld. WB-P042 needs a specific valid Yanille obstacle route, not a claimed generic course. WB-P043 needs approved risk eligibility compatible with Wilderness opt-in; do not silently turn an optional card feature into forced risk. Location templates need actual action/XP timing and instance-aware boundaries, not merely the player position when a delayed event arrives.
+
+Seven kill-count outcomes need owned kill proof even when no item drops. ServerNpcLoot is promising for rewards, but a loot event cannot count every zero-drop kill and pickpocket loot is not a kill. Nearby NPC death, a damage tick, animation, or ground loot coincidence is insufficient on its own. Match a reviewed NPC variant and encounter/account context; disabled unsupported outcomes stay out of the roughly twelve varied frozen offers. Feasibility filtering happens before the draw and cannot provide a post-draw reroll.
+
+Consecutive Penance remains a separate versioned severity function. Preserve feasible multi-day escalation and clean completion reset. No exact multipliers, XP rates, reward ordering or universal cap are promoted to historical approval. Next contract must state assumptions and expose sensitivity before execution.
