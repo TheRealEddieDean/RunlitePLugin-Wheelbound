@@ -1,5 +1,5 @@
 # Wheelbound source of truth
-Recovery checkpoint: 2026-10-09. Branch: wheelbound-mode. Documentation only; implementation is not authorized.
+Recovery checkpoint: 2026-10-10. Branch: wheelbound-mode. Documentation only; implementation is not authorized.
 
 Read [DECISIONS](DECISIONS.md) before changing mechanics, then [BLUEPRINT](BLUEPRINT.md). Current user instructions override historical proposals. CONFIRMED gameplay means supported by direct current instruction or retrieved user decision. Technical-evidence records explicitly identify source inspection and must not be mistaken for user approval. UNVERIFIED means recoverable intent without accessible approval evidence. BALANCE_TBD and TECHNICAL_TBD remain open, not implementation defaults.
 
@@ -10,7 +10,7 @@ S3: attached Wheelbound Game Design and Implementation Guide, version 1.0, nine 
 S4: Personal Context search summaries of dated user/assistant messages, not full transcripts.
 S5: existing repository README, docs/DEVELOPMENT.md, RELEASE_AUDIT.md and SUBMISSION.md at c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
 
-Full named conversations were not accessible. Missing: complete approval turns, exact boss membership and gates, curated 100 item/50 punishment lists, earlier economy iterations, daily reset rules and older progression discussion beyond the current explicit recovery resolutions. Preserve these as UNVERIFIED/OPEN. No docs/wheelbound directory existed in the inspected recursive branch tree.
+S8: the supplied original shared Game Design & Progression conversation was recovered: 436 visible turns indexed, all 218 user turns reviewed with named adjacent proposals. The register now contains 106 decisions and a confirmed 64-node mode roster. The separate Brainstorming conversation and historical nontext images remain inaccessible. Complete historically approved item/punishment catalogs and exact unresolved balance/receipt rules have not been recovered. Preserve those gaps as UNVERIFIED/OPEN. No docs/wheelbound directory existed at the initial inspected branch tree.
 
 Existing release has Bossing, Skilling, CA, Pet Hunting, Questing and Custom wheels. Earlier two-wheel restriction was superseded in release documentation; do not remove shipped wheels as part of design recovery.
 
@@ -31,7 +31,7 @@ Current source/policy findings and original submission blockers: [POLICY_AND_FEA
 
 ## Weekend assignment checkpoint
 
-S7: [Weekend master instructions](research/WEEKEND_MASTER_INSTRUCTIONS.md), direct user assignment 2026-10-09. Later explicit gameplay approvals prevail over its reconstruction seed. Shared transcript fetch failed; partial history search remains secondary.
+S7: [Weekend master instructions](research/WEEKEND_MASTER_INSTRUCTIONS.md), direct user assignment 2026-10-09. Later explicit gameplay approvals prevail over its reconstruction seed. The initial web-reader fetch failed; later direct retrieval recovered S8. Partial history-search summaries remain secondary.
 
 Read [technical specifications](TECHNICAL_SPECIFICATIONS.md), [major questions](OPEN_QUESTIONS.md), [work status and resume](WORK_STATUS.md), [pipeline](DEVELOPMENT_PIPELINE.md), [traceability](TRACEABILITY.md), and [sources](SOURCES.md).
 
@@ -47,7 +47,7 @@ Read [technical specifications](TECHNICAL_SPECIFICATIONS.md), [major questions](
 [MONDAY_HANDOFF](MONDAY_HANDOFF.md) consolidates readiness, external proof and major decisions. [FIRST_CODING_TASK](FIRST_CODING_TASK.md) is the next-session prompt after explicit implementation authorization.
 
 ## Historical recovery breakthrough
-S8: the original shared Game Design & Progression conversation is now recovered by direct HTTPS fetch: 436 visible user/assistant messages with timestamps and stable locators. See [extraction record](research/TRANSCRIPT_EXTRACTION.md) and [transcript](research/SHARED_CONVERSATION_TRANSCRIPT.md). The earlier failed web-reader assessment is superseded; reconciliation is in progress. Newly authored catalogs remain separate until actual historical approvals are compared.
+S8: the original shared Game Design & Progression conversation is now recovered by direct HTTPS fetch: 436 visible user/assistant messages with timestamps and stable locators. See [extraction record](research/TRANSCRIPT_EXTRACTION.md) and [transcript](research/SHARED_CONVERSATION_TRANSCRIPT.md). The earlier failed web-reader assessment is superseded; all visible user turns have now been reviewed. Named assistant proposals were consulted; not every assistant factual claim was independently reverified. Newly authored catalogs remain separate until actual historical approvals are compared.
 
 ## Autonomous checkpoints
 Use [task queue](../../automation/TASK_QUEUE.md), [session ownership and exact resume](../../automation/SESSION_STATE.md), [verified progress](../../automation/PROGRESS.md), [blockers](../../automation/BLOCKERS.md) and [pending decisions](../../automation/DECISIONS_PENDING.md). [Protocol](../../automation/PROTOCOL.md) governs guarded startup, approximately 70/30 effort allocation and clean stopping. Approved gameplay remains in DECISIONS.md.

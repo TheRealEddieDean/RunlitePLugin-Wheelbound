@@ -1,9 +1,9 @@
 # Return handoff
 
-Prepared 2026-10-09, wheelbound-mode only. Main protected baseline c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. No production plugin behavior changed or Plugin Hub submission made.
+Prepared 2026-10-10, wheelbound-mode only. Main protected baseline c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. No production plugin behavior changed or Plugin Hub submission made.
 
 ## Ready for implementation planning
-Canonical Markdown contains recovered decisions, supersessions, detailed telemetry/evidence contracts, account/run state and crash boundaries, progression/purchase rules, provisional balance sheet, detailed player/recovery journeys, ticket dependencies and acceptance checks. New catalogs are separately labeled: 100 permanent bounty candidates, 18 repeatable daily targets, 50 punishment templates. Source snapshots contain 67 normal boss categories and 213 quest enum records; these are not approved mode rosters or live eligible pools.
+Canonical Markdown contains recovered decisions, supersessions, detailed telemetry/evidence contracts, account/run state and crash boundaries, progression/purchase rules, provisional balance sheet, detailed player/recovery journeys, ticket dependencies and acceptance checks. New catalogs are separately labeled: 100 permanent bounty candidates, 18 repeatable daily targets, 50 punishment templates. Source snapshots contain 67 normal boss categories and 213 quest enum records; these are not runtime eligible pools. A separate confirmed mode roster has 64 nodes, grouping raid variants. The six-catalog authority manifest, implementation acceptance matrix, 24-entry Barrows review and 23-entry plain-XP review are saved; the two catalog reviews remain partial.
 
 Recorded experiments: 48,000 historical H1 + 48,000 corrected H2 + 18,000 conversion/risk sensitivity + 12,000 H3 catalog/policy trials = 126,000 synthetic trajectories. Counts, seeds, source/catalog hashes and limits are committed. These are not full real-content accounts or measured Grand Fate completion times. H3 exercises named item/reward and plain-XP punishment drafts; boss/quest access, actual supply/drop rates and daily/CA/diary income remain incomplete.
 
