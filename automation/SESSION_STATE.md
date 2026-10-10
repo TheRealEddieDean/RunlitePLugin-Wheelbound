@@ -3,7 +3,8 @@
 - Session ID: wb-20261010T042822Z-content-research
 - State: IDLE — clean planned checkpoint; no active ownership lease retained.
 - Branch: wheelbound-mode
-- Last successfully verified substantive commit/PDF source: c606660ed501f2f666fb59314b57912e552e9bc3
+- Gameplay Markdown/PDF source: c606660ed501f2f666fb59314b57912e552e9bc3
+- Subsequent checkpoint b84f377888da9fc6a1b2e757d5201dd409e3f4bc published PDF receipt/IDLE state. This later CSV-only repair preserves exact executed CRLF bytes matching recorded hashes; resolve latest successfully verified commit from branch head.
 - This automation-only checkpoint: resolve owning commit through current branch head/file history; no circular self-hash.
 - Protected main: c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
 - Completed this session: A08 all100 bounty conditional records; A09 all50 punishment conditional records and concrete versioned candidate; A10 all18 daily reviews,48 diary mappings and21 explicit CA word/schema contract; eight-catalog authority;110 decisions; A11 saved H4 contract; A12 offline fixtures/80 smoke/4,000 baseline plus checked CSV/hash aggregates; A14 targeted primary-source gaps; A16 documentary readiness synthesis; A15 149-page committed-Markdown PDF visually checked and published as version6.
