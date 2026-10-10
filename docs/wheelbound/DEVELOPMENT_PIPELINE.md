@@ -1,7 +1,7 @@
 # Development pipeline
 
 ## Verified repository configuration
-Source inspected at dc76720971c3e15c2e831a27b1505dd25054267f on 2026-10-09. Source review is complete; an isolated wrapper build was attempted and failed before compilation/tests, as recorded below.
+Source inspected at dc76720971c3e15c2e831a27b1505dd25054267f on 2026-10-09. Source review is complete. The earlier local wrapper attempt failed; successful remote CI at e6d445c8 is now verified in [build baseline](research/BUILD_BASELINE.md). These are distinct environments.
 
 - Temurin JDK 11; compiler release 11. Gradle wrapper 8.10-all with SHA-256 verification. Do not switch arbitrarily to Java 17 or Gradle 9.
 - Java plugin; RuneLite client/jshell latest.release; Lombok 1.18.30; JUnit 4.13.2; Mockito 4.11.0.
@@ -45,7 +45,7 @@ An isolated shallow wheelbound-mode checkout at a8526ef315dc8b32db2304cb28ee7734
 
 ## Recovered-rule acceptance review (WB-A13)
 
-These are future implementation fixtures, not tests already executed against a client. [Catalog authority](CATALOG_AUTHORITY.md) supplies version/enable gates. Synthetic design checks validate only the documented model and static records. WB-I00 remains blocked by dependency connectivity; all production tickets await implementation authorization.
+These are future implementation fixtures, not tests already executed against a client. [Catalog authority](CATALOG_AUTHORITY.md) supplies version/enable gates. Synthetic design checks validate only the documented model and static records. WB-I00 now has verified remote compilation and test-task success; exact resolved dependency metadata and exported test reports remain. Local dependency connectivity is still blocked; all production tickets await implementation authorization.
 
 | Ticket | Required positive and failure fixtures | Blocking condition |
 | --- | --- | --- |
@@ -61,3 +61,7 @@ These are future implementation fixtures, not tests already executed against a c
 | I10 release | Real successful build/regressions; every enabled adapter has positive/negative/paused/relogin/order traces; minimal packaging with supported RuneLite serialization; original Hub Gson/focus-manager rejection addressed; policy approval distinguished from peer precedent | No Hub submission authorized; missing build/live traces prohibit readiness claim |
 
 Reject commits its FP/spin/mandatory Punishment transaction without inventing disposition of independently earned bounty receipts. Preserve provenance and leave affected reward settlement gated by Q10. Completing a synthetic fixture is not permission to enable a production detector.
+
+## Verified remote baseline,2026-10-10
+
+Run38025748732 at e6d445c8c27847050abb07f843cfe9c9d4ab476b executed clean build successfully on Temurin11.0.32+1/Gradle8.10, including compileJava,compileTestJava,test,check and build. See [baseline evidence](research/BUILD_BASELINE.md).70 declared methods are a source count, not exported executed-case count. No artifact or exact latest.release version was exported. The older local attempt still failed before compilation; do not conflate it with this remote pass. No production implementation or new workflow was added.

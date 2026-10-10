@@ -1,0 +1,46 @@
+{
+  "verified_at": "2026-10-10",
+  "repository": "TheRealEddieDean/RunlitePLugin-Wheelbound",
+  "branch": "wheelbound-mode",
+  "commit": "e6d445c8c27847050abb07f843cfe9c9d4ab476b",
+  "run_id": 38025748732,
+  "job_id": 114136109526,
+  "run_url": "https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound/actions/runs/38025748732",
+  "conclusion": "success",
+  "command": "bash ./gradlew clean build",
+  "java": "Temurin 11.0.32+1",
+  "gradle": "8.10",
+  "build_seconds": 59,
+  "successful_tasks": [
+    "clean",
+    "compileJava",
+    "processResources",
+    "classes",
+    "jar",
+    "assemble",
+    "compileTestJava",
+    "testClasses",
+    "test",
+    "check",
+    "build"
+  ],
+  "no_source_tasks": [
+    "processTestResources"
+  ],
+  "test_sources": 12,
+  "declared_test_methods": 70,
+  "executed_test_count": null,
+  "runtime_dependency_version": null,
+  "exported_artifact_count": 0,
+  "shadowJar_executed": false,
+  "live_client_started": false,
+  "log_excerpt_sha256": "ea776c9bebe4e31bcf4f686c62dded3d165bde44e761f1b14d3a3f668ad20aea",
+  "source_manifest_sha256": "9211f5a088901429c3ff7940cf50ced3d004f0af03f76611c2cc0983e96ba7d7",
+  "limitations": [
+    "No XML test results exported: declaration count is not execution count",
+    "latest.release exact dependency version not in available build log",
+    "CI does not execute Python design/H4 checks",
+    "No package archive downloaded or byte inspected",
+    "No live detector or policy acceptance evidence"
+  ]
+}

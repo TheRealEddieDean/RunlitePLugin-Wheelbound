@@ -1,0 +1,223 @@
+{
+  "commit": "e6d445c8c27847050abb07f843cfe9c9d4ab476b",
+  "verified_local_production_and_test_source_matches": true,
+  "git_blobs": {
+    ".github/workflows/build.yml": "2279d5a513dd3a45e4137586cbb9ccd1d7551967",
+    "build.gradle": "1136cb0951395967627463c3e5a6faf436192606",
+    "gradle/wrapper/gradle-wrapper.properties": "9036682bf0f0c268bcaa0729187a05e3f41e642d",
+    "settings.gradle": "9423156c4f804e4632143fbd3b524c54a9e530ab",
+    "src/main/java/com/wheelbound/AccountAccess.java": "94c86e56a1a745decb62f31ac3439d44fbd2cf98",
+    "src/main/java/com/wheelbound/BossCatalog.java": "2e740d6ec2bfd563aa9d87ba8e500385279a15db",
+    "src/main/java/com/wheelbound/BossChecklist.java": "fbb4a34049bc4f6770dd0f06c8be892e1cd95104",
+    "src/main/java/com/wheelbound/BossData.java": "e17d60ecd8c91f6e63108a6f32f8e019f5f73daf",
+    "src/main/java/com/wheelbound/BossDefinition.java": "d32909403026312d98cd835539a79a35853fda68",
+    "src/main/java/com/wheelbound/BossDifficulty.java": "50dd6bdfffa56f4f3b96274bcb2d07d92fe90141",
+    "src/main/java/com/wheelbound/BossProfile.java": "e955405b0f0dcdd470a43a42929fc103ace6b697",
+    "src/main/java/com/wheelbound/CaEncounter.java": "919c74f61edf2c8a3f79d8c6236aed9c93492937",
+    "src/main/java/com/wheelbound/CaTier.java": "e13e3e371cd6ddcb823f6ac145f0b4b1a8190a28",
+    "src/main/java/com/wheelbound/CombatAchievementCache.java": "dd383d3760a95eeea96532e86fe3492c8546088e",
+    "src/main/java/com/wheelbound/Confetti.java": "24868ebd240eae94dabc947597ba20ce1e000135",
+    "src/main/java/com/wheelbound/CustomWheels.java": "cdfe5c2fea1e87ef8fdcda25d84bed87aeb7a511",
+    "src/main/java/com/wheelbound/MonsterThumbnail.java": "9fc8bc4db7597bf14d066a8e9cce477c55efc74c",
+    "src/main/java/com/wheelbound/OwnedPets.java": "1e10f5f359c0a33638fbea6e7320e75f0334077b",
+    "src/main/java/com/wheelbound/PetDefinition.java": "ff528772abc22abaf7d4aa590d0a4d06faa16283",
+    "src/main/java/com/wheelbound/QuestPool.java": "9afef29c5bb403091fefd0f41a50a5c2e91391ba",
+    "src/main/java/com/wheelbound/WheelComponent.java": "9712c38a1b7a059419e0724bfed02e121fdd0bf6",
+    "src/main/java/com/wheelbound/WheelEligibility.java": "2027f54b0f0118c01140d2ce34ebd2389dba434a",
+    "src/main/java/com/wheelbound/WheelEntry.java": "61ece82480ff4638c6387fa2eefbf85c11b85ef1",
+    "src/main/java/com/wheelbound/WheelFilter.java": "a086eb26736e6230be045eecd65d93b47719888e",
+    "src/main/java/com/wheelbound/WheelIconProvider.java": "0dab59a854cc54cfa84a5e28c6ed74d39cb63e7d",
+    "src/main/java/com/wheelbound/WheelNameDialog.java": "60396eded51c2b708c52c308fa573bcdd436da9f",
+    "src/main/java/com/wheelbound/WheelPopup.java": "16c1e23bdcc1fd20af4cf2f63876d8f93d8598d2",
+    "src/main/java/com/wheelbound/WheelSelection.java": "83841e8f20433053b9458df1bec2b871d5fc49dd",
+    "src/main/java/com/wheelbound/WheelStyle.java": "ef7ae68133abb3568050eba32997f43dcea99482",
+    "src/main/java/com/wheelbound/WheelType.java": "efa247d1da003a6bf4aa22dcf7e99302faf0fb7a",
+    "src/main/java/com/wheelbound/WheelboundConfig.java": "33ae2986517334801200837a59aeaab2de8069f9",
+    "src/main/java/com/wheelbound/WheelboundPanel.java": "896afb9ae6dc77f8497abc4115b12af6aad56d55",
+    "src/main/java/com/wheelbound/WheelboundPlugin.java": "ce227f3a2ec321dd3af86c71b79befbca78439dc",
+    "src/main/java/com/wheelbound/XpGoal.java": "b1aa48de44c39d4617ef5f63f89e97bcff87b398",
+    "src/main/resources/com/wheelbound/classic-wheel.png": "0247b53ba7f4e2a441eaa181020e144ca2e7d99b",
+    "src/main/resources/com/wheelbound/wheelbound-header.png": "a1af91d883802def2b8573948a0a3ec0c55c88dd",
+    "src/test/java/com/wheelbound/BossDataTest.java": "d4144b591767fc422b01d08795cf088f0ac4bc21",
+    "src/test/java/com/wheelbound/CustomWheelsTest.java": "343af8359e46a4bea39986a9a14719fcf6499456",
+    "src/test/java/com/wheelbound/MonsterThumbnailTest.java": "62dee77419ab17ed9b7fadfa251838dc22d325d7",
+    "src/test/java/com/wheelbound/PetHuntingTest.java": "fe8812a2e6c1547ce41e935c9fc09fd98b6d2063",
+    "src/test/java/com/wheelbound/QuestAndAccountFiltersTest.java": "b98dee070e849912fe663a27056f81d0f4f6cd08",
+    "src/test/java/com/wheelbound/SkillingFlowTest.java": "2b36cfcf69347f9c3346c4548895be6eb1b605ff",
+    "src/test/java/com/wheelbound/WheelFiltersTest.java": "d2beeff8cd8bf1b3adc80ec9699a661a04f99ae8",
+    "src/test/java/com/wheelbound/WheelPopupTest.java": "0265bfd28c0e15a3cb064e5d0f183afe481fc7c4",
+    "src/test/java/com/wheelbound/WheelPresentationTest.java": "29c50ff954eb0326c2a8ca8b7430a2b7e35c4f4d",
+    "src/test/java/com/wheelbound/WheelboundBehaviorTest.java": "7ccb776fad9ef425b020de0334c8710515bb3435",
+    "src/test/java/com/wheelbound/WheelboundEventsTest.java": "d106f29ab58794cbd8948ef027da3e25545806a5",
+    "src/test/java/com/wheelbound/WheelboundPluginTest.java": "f23b8d0dc4e1d8f2090e5558d6729cfcc90c5df4"
+  },
+  "tests": [
+    {
+      "path": "src/test/java/com/wheelbound/BossDataTest.java",
+      "git_blob_sha": "d4144b591767fc422b01d08795cf088f0ac4bc21",
+      "declared_tests": [
+        "localMappingLoadsAllTiersOnceAndNeverReadsCompletionState",
+        "partialLoadIsNotPublishedAndCanRetry"
+      ],
+      "ignore_annotations": 0,
+      "conditional_assume_calls": 0
+    },
+    {
+      "path": "src/test/java/com/wheelbound/CustomWheelsTest.java",
+      "git_blob_sha": "343af8359e46a4bea39986a9a14719fcf6499456",
+      "declared_tests": [
+        "existingJsonLoadsAndRoundTripsWithClientGson",
+        "panelUsesSuppliedGsonForSavingAndProfileReloads",
+        "accountResetClosesTheNameForm",
+        "wheelTooltipEscapesCustomMarkup",
+        "customTooltipTreatsEmbeddedImagesAsText",
+        "storagePreservesUnicodeDuplicatesAndEnabledState",
+        "invalidInputAndUnreadableStorageDoNotOverwriteSavedLists",
+        "createToggleDeleteAndRestartUseIndependentPersistentEntries",
+        "wheelDeletionRequiresConfirmationAndHandlesLastWheelAndProfileChanges",
+        "customSpinsWorkOfflineLockEditingAndIgnoreStaleResponses",
+        "textEntryDoesNotTriggerWheelKeyboardShortcuts",
+        "renderCustomSidebarAndVerifyDeleteButtonStaysBelowScroll"
+      ],
+      "ignore_annotations": 0,
+      "conditional_assume_calls": 0
+    },
+    {
+      "path": "src/test/java/com/wheelbound/MonsterThumbnailTest.java",
+      "git_blob_sha": "62dee77419ab17ed9b7fadfa251838dc22d325d7",
+      "declared_tests": [
+        "monsterArtworkRetriesMissingModelsAndDoesNotMutateGameGeometry",
+        "bossCaEncountersKeepExistingBossSprites"
+      ],
+      "ignore_annotations": 0,
+      "conditional_assume_calls": 0
+    },
+    {
+      "path": "src/test/java/com/wheelbound/PetHuntingTest.java",
+      "git_blob_sha": "fe8812a2e6c1547ce41e935c9fc09fd98b6d2063",
+      "declared_tests": [
+        "catalogHasUniqueBasePetsAndEachCategoryFiltersIndependently",
+        "localPetAndSourceIconsSurviveGroupingAndMissingAssetsRetry",
+        "petChecklistPersistsAndCategoryChangesUpdateOpenPopup",
+        "petResultsFitAndRenderBothNamesAndIcons"
+      ],
+      "ignore_annotations": 0,
+      "conditional_assume_calls": 0
+    },
+    {
+      "path": "src/test/java/com/wheelbound/QuestAndAccountFiltersTest.java",
+      "git_blob_sha": "b98dee070e849912fe663a27056f81d0f4f6cd08",
+      "declared_tests": [
+        "questsExcludeCompletedAndRespectDifficultyAndRequirements",
+        "congratulationsRequiresEveryReleasedMainQuestComplete",
+        "unavailableQuestDataCannotClaimCompletion",
+        "questCompletionShowsIconResultAndClearsOnAccountReset",
+        "petBitsUse31BitGroupsAndIncludeReclaimablePets",
+        "difficultyFiltersAreIndependentAndTaskOnlyBossesNeedAnAssignment",
+        "mimicMigrationAndNewDefaultsPersistAcrossProfiles"
+      ],
+      "ignore_annotations": 0,
+      "conditional_assume_calls": 0
+    },
+    {
+      "path": "src/test/java/com/wheelbound/SkillingFlowTest.java",
+      "git_blob_sha": "2b36cfcf69347f9c3346c4548895be6eb1b605ff",
+      "declared_tests": [
+        "checklistUpdatesOpenWheelInPlaceAndPersistsExclusions",
+        "sidebarActivationOpensWheelAndHubCanSpinAgain",
+        "hubClickStartsOnceAndCancellationDoesNotComplete",
+        "filtersPersistAndStaleResponsesAreIgnored",
+        "manualXpWheelWaitsForUserAndPreservesResultOnPoolRefresh",
+        "checklistGrowsWithViewportAndSmallWindowsCanScroll",
+        "renderSidebarForReview"
+      ],
+      "ignore_annotations": 0,
+      "conditional_assume_calls": 0
+    },
+    {
+      "path": "src/test/java/com/wheelbound/WheelFiltersTest.java",
+      "git_blob_sha": "d2beeff8cd8bf1b3adc80ec9699a661a04f99ae8",
+      "declared_tests": [
+        "specificAchievementUsesOnlyOpenTasksInIncludedTiers",
+        "groupedRaidsPreserveAllEligibleTasksWithoutDuplicates",
+        "onlyUnfinishedTasksInIncludedTiersKeepAnEncounterEligible",
+        "everyTierCanBeExcludedAndUnknownTaskIdsAreNotUnfinished",
+        "bossesRaidsAndMonstersAreIndependentCategories",
+        "combatAndMaxedSkillFiltersIntersectWithoutRemovingSlayerOrSailing",
+        "taskOnlyEncountersNeedAnActiveMatchingAssignmentAndLocation",
+        "knownQuestLocksAreIndependentOfRecommendedLevels",
+        "readsLiveSlayerDatabaseForRegularAndDirectBossTasks",
+        "checklistsAreSeparateAndDifficultyChangesPreserveManualExclusions"
+      ],
+      "ignore_annotations": 0,
+      "conditional_assume_calls": 0
+    },
+    {
+      "path": "src/test/java/com/wheelbound/WheelPopupTest.java",
+      "git_blob_sha": "0265bfd28c0e15a3cb064e5d0f183afe481fc7c4",
+      "declared_tests": [
+        "fullCatalogFitsCenteredPopupAtFixedAndResizableSizes",
+        "popupHubSpinsAndEscapeCancelsWithoutClickThrough"
+      ],
+      "ignore_annotations": 0,
+      "conditional_assume_calls": 0
+    },
+    {
+      "path": "src/test/java/com/wheelbound/WheelPresentationTest.java",
+      "git_blob_sha": "29c50ff954eb0326c2a8ca8b7430a2b7e35c4f4d",
+      "declared_tests": [
+        "customGainLabelsAndLargeWheelsRenderSafely",
+        "missingArtworkHasAUsableFallback",
+        "raidsGroupAfterFilteringWithEqualOddsAndFullNames",
+        "includeFiltersMigrateAndPreserveExplicitNewValues",
+        "xpTargetsHaveDistinctDifficultyColors",
+        "countStaysOutsideScrollingContentAtBottom"
+      ],
+      "ignore_annotations": 0,
+      "conditional_assume_calls": 0
+    },
+    {
+      "path": "src/test/java/com/wheelbound/WheelboundBehaviorTest.java",
+      "git_blob_sha": "7ccb776fad9ef425b020de0334c8710515bb3435",
+      "declared_tests": [
+        "catalogUsesCanonicalSpritesAndNames",
+        "raidModesAreExplicitlyClassified",
+        "allFilterCombinationsIntersect",
+        "realStyleStatsSlayerAndAdditionalRequirements",
+        "unknownRecommendationsAndOfflineStateFailClosed",
+        "caAliasesKeepDifferentModesSeparate",
+        "completionCacheRefreshesAllWordsAndResetsBetweenAccounts",
+        "caPartialCompletionUnknownIdsAndMissingMapping",
+        "onlyCompletionVarpsTriggerRefresh",
+        "skillsExcludeReal99AndOverallButIncludeAllTrainableSkills",
+        "weightedTicketsExactlyMatchVisualWedges",
+        "weightedAndEqualWheelsLandAtChosenSliceAfterRepeatedSpins",
+        "fullBossPoolGivesEachGroupedEncounterOneTicket"
+      ],
+      "ignore_annotations": 0,
+      "conditional_assume_calls": 0
+    },
+    {
+      "path": "src/test/java/com/wheelbound/WheelboundEventsTest.java",
+      "git_blob_sha": "d106f29ab58794cbd8948ef027da3e25545806a5",
+      "declared_tests": [
+        "ordinaryVarbitBurstsWaitForOneGameTick",
+        "enablingAndDisablingOnEdtAddsAndRemovesSidebar",
+        "completionEventBurstsQueueOneRefreshAndIgnoreOtherVarps",
+        "loginRefreshesAndProfileChangeInvalidatesPendingResponses",
+        "logoutClearsCachedEligibilityAndCancelsThePanel"
+      ],
+      "ignore_annotations": 0,
+      "conditional_assume_calls": 0
+    },
+    {
+      "path": "src/test/java/com/wheelbound/WheelboundPluginTest.java",
+      "git_blob_sha": "f23b8d0dc4e1d8f2090e5558d6729cfcc90c5df4",
+      "declared_tests": [],
+      "ignore_annotations": 0,
+      "conditional_assume_calls": 0
+    }
+  ],
+  "declared_test_count": 70,
+  "runtime_executed_test_count": "NOT_EXPORTED"
+}

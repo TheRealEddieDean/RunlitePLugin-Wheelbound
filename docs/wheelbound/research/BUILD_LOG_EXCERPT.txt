@@ -1,0 +1,23 @@
+2026-10-10T04:55:44.8676228Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
+2026-10-10T04:55:44.8721474Z Resolved Java 11.0.32+1 from tool-cache
+2026-10-10T04:55:44.8723256Z Setting Java 11.0.32+1 as the default
+2026-10-10T04:55:44.8734891Z (node:2324) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-10T04:55:44.8821770Z   Version: 11.0.32+1
+2026-10-10T04:55:54.8047131Z Welcome to Gradle 8.10!
+2026-10-10T04:56:05.3049139Z > Task :clean UP-TO-DATE
+2026-10-10T04:56:17.1976262Z > Task :compileJava
+2026-10-10T04:56:17.2964108Z > Task :processResources
+2026-10-10T04:56:17.2965568Z > Task :classes
+2026-10-10T04:56:17.2965953Z > Task :jar
+2026-10-10T04:56:17.2966597Z > Task :assemble
+2026-10-10T04:56:20.1976973Z > Task :compileTestJava
+2026-10-10T04:56:20.1981506Z > Task :processTestResources NO-SOURCE
+2026-10-10T04:56:20.1982273Z > Task :testClasses
+2026-10-10T04:56:45.8976294Z > Task :test
+2026-10-10T04:56:45.8976827Z > Task :check
+2026-10-10T04:56:45.8977181Z > Task :build
+2026-10-10T04:56:45.9872178Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2026-10-10T04:56:45.9877029Z BUILD SUCCESSFUL in 59s
+2026-10-10T04:56:45.9877494Z 6 actionable tasks: 5 executed, 1 up-to-date
+2026-10-10T04:56:46.7582658Z (node:2587) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-10T04:56:47.0402533Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4, gradle/actions/setup-gradle@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
