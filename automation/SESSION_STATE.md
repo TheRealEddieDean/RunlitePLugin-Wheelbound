@@ -1,12 +1,12 @@
 # Wheelbound session checkpoint and ownership
 
-- Session ID: wb-20261009T222520Z-protocol-recovery
-- State: IDLE
-- Owner/task lease: NONE; released at planned checkpoint.
-- Lease acquired UTC: 2026-10-09T22:25:20Z
-- Lease released: recorded in this checkpoint’s commit timestamp; previous expiry no longer reserves a task.
+- Session ID: wb-20261010T012619Z-catalog-manifest
+- State: ACTIVE
+- Owner/task lease: WB-A07; wb-20261010T012619Z-catalog-manifest.
+- Lease acquired UTC: 2026-10-10T01:26:19Z
+- Lease expires UTC: 2026-10-10T01:56:19Z
 - Branch: wheelbound-mode
-- Last verified predecessor: aa7d7f8cad6713b6c48188d8dbb7605fa71589ba
+- Last verified predecessor: 9d513360bc68ec0712f3049c5d3ef376aac2fccd
 - Latest completed checkpoint: A06 source-recovery consistency; this snapshot’s owning commit is the remote first-parent commit containing it. Resolve through file history/head rather than a circular self-hash.
 - Protected main: c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
 - Completed during planned session: protocol/checkpoint queue/ownership; A02–A05 all436 visible turns indexed and218 user turns reviewed with named proposals; A06 scoped cross-file consistency;106 decisions;64-node raid-grouped roster; preserved experiment hashes; existing H2/H3 checks passed.
@@ -24,3 +24,5 @@
 5. Refresh PDF only from a verified committed Markdown SHA after appropriate catalog/backlog checkpoint; render changed pages, save actual deliverable and report limits. No production plugin implementation, main updates or Hub submission.
 
 Use approximately70/30 execution-versus-verification/checkpoint effort targets; no authoritative quota metric is available. An expired lease prompts inspection, not proof an old worker stopped. At planned end release IDLE and record exact continuation. No background execution, automatic restart, quota reset or existing-conversation reopening capability is established.
+
+User-reported allowance gauge:81% at 2026-10-10T01:25Z; not an authoritative tool reading or a measured cost attributable to one work session. Limit productive scope to A07, then prioritize checks/commit/continuation; do not launch a new simulation or PDF build here.
