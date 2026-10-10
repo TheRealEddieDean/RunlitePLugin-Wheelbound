@@ -100,3 +100,13 @@ for f in [p/'research/BUILD_BASELINE.md',p/'research/TRACE_CAPTURE_PROTOCOL.md']
  for target in re.findall(r'\]\(([^)]+)\)',f.read_text()):
   if not target.startswith(('http','app:','#')):assert (f.parent/target.split('#')[0]).exists(),(f.name,target)
 print('PASS: actual successful CI task with explicit report limits;46 NOT_RUN capture cases and offline schema/origin fixtures')
+
+replay=json.loads((p/'simulation/h4/PROCESS_REPLAY_VALIDATION.json').read_text())
+assert replay['status']=='PASS' and replay['cases_per_process']==23 and replay['worker_replays']==92
+assert len({x['result_sha256'] for x in replay['hash_seed_checks']})==1
+assert hashlib.sha256((p/'simulation/h4_replay_check.py').read_bytes()).hexdigest()==replay['checker_sha256']
+assert hashlib.sha256((p/'simulation/h4/results_v1.json').read_bytes()).hexdigest()==replay['baseline_sha256']
+for f in [p/'research/CI_PROPOSAL.md']:
+ for target in re.findall(r'\]\(([^)]+)\)',f.read_text()):
+  if not target.startswith(('http','app:','#')):assert (f.parent/target.split('#')[0]).exists(),(f.name,target)
+print('PASS:23 saved H4 cases replayed across four hash-seed processes; model/input hashes remain pinned')

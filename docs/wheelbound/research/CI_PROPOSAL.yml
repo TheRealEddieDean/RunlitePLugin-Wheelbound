@@ -1,0 +1,62 @@
+# PROPOSAL ONLY: stored under docs; not an installed GitHub workflow.
+name: Wheelbound baseline and evidence proposal
+on:
+  workflow_dispatch:
+  push:
+    branches: [wheelbound-mode]
+  pull_request:
+    branches: [wheelbound-mode]
+permissions:
+  contents: read
+concurrency:
+  group: wheelbound-evidence-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout designated source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1, checked2026-10-10
+        with:
+          persist-credentials: false
+      - name: Set up recommended JDK
+        uses: actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6 # v6.0.1
+        with:
+          distribution: temurin
+          java-version: '11'
+      - name: Set up wrapper validation and cache
+        uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
+        with:
+          validate-wrappers: true
+          build-scan-publish: false
+          dependency-graph: disabled
+          cache-read-only: ${{ github.event_name == 'pull_request' }}
+      - name: Existing clean regression build
+        run: bash ./gradlew --init-script docs/wheelbound/research/dependency_manifest.init.gradle clean build wbResolvedDependencyManifest --console=plain
+      - name: Dependency and standard package evidence
+        run: |
+          mkdir -p build/reports/wheelbound
+          bash ./gradlew --version > build/reports/wheelbound/toolchain.txt
+          bash ./gradlew dependencies --configuration testRuntimeClasspath --console=plain > build/reports/wheelbound/test-runtime-dependencies.txt
+          bash ./gradlew dependencyInsight --dependency net.runelite:client --configuration testRuntimeClasspath --console=plain > build/reports/wheelbound/runelite-client-resolution.txt
+          jar tf build/libs/wheelbound-1.0.0.jar > build/reports/wheelbound/standard-jar-entries.txt
+          sha256sum build/libs/wheelbound-1.0.0.jar > build/reports/wheelbound/standard-jar-sha256.txt
+      - name: Offline documentation and saved-model integrity
+        run: |
+          python3 docs/wheelbound/design_checks.py
+          python3 docs/wheelbound/simulation/checks.py
+          python3 docs/wheelbound/simulation/catalog_checks.py
+          python3 docs/wheelbound/simulation/h4/checks.py
+      - name: Preserve test and diagnostic reports
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: wheelbound-baseline-${{ github.sha }}
+          path: |
+            build/test-results/test/*.xml
+            build/reports/tests/test/**
+            build/reports/wheelbound/**
+          if-no-files-found: warn
+          retention-days: 14
+          include-hidden-files: false

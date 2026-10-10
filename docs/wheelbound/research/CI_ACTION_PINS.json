@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-10-10",
+  "status": "PROPOSAL_ONLY_NOT_ACTIVATED",
+  "actions": [
+    {
+      "repo": "actions/checkout",
+      "tag": "v7.0.1",
+      "commit": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "path": "action.yml",
+      "node": "node24",
+      "source_url": "https://github.com/actions/checkout/blob/3d3c42e5aac5ba805825da76410c181273ba90b1/action.yml"
+    },
+    {
+      "repo": "actions/setup-java",
+      "tag": "v6.0.1",
+      "commit": "de7274f081f381c8f8158605e0321c36c376e2e6",
+      "path": "action.yml",
+      "node": "node24",
+      "source_url": "https://github.com/actions/setup-java/blob/de7274f081f381c8f8158605e0321c36c376e2e6/action.yml"
+    },
+    {
+      "repo": "gradle/actions",
+      "tag": "v6.4.0",
+      "commit": "3f5f9adaf7d9fecd50b5935e54106014257a94e6",
+      "path": "setup-gradle/action.yml",
+      "node": "node24",
+      "source_url": "https://github.com/gradle/actions/blob/3f5f9adaf7d9fecd50b5935e54106014257a94e6/setup-gradle/action.yml"
+    },
+    {
+      "repo": "actions/upload-artifact",
+      "tag": "v7.0.2",
+      "commit": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+      "path": "action.yml",
+      "node": "node24",
+      "source_url": "https://github.com/actions/upload-artifact/blob/cf430e030ddbb5b0abf93d22962f4752f3646cd9/action.yml"
+    }
+  ]
+}

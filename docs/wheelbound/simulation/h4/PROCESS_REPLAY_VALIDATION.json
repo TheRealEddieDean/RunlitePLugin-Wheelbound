@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "scope": "Replay verification of existing saved baseline, not new independent balance trajectories",
+  "baseline_sha256": "769101831e6b8dfc4547f96d5cda651461e74b2a137b4a14c4bc4566cc6a564e",
+  "csv_sha256": "66ff1980374339e41ae7132d948a3b3e0827d98d408aeeb58f9376f8f7fe28bf",
+  "checker_sha256": "1bb3531b68c75b75bc64a4086ba9159ee1c7f90ded23960a3a1aeae71a0ca919",
+  "cases": [
+    {
+      "scenario": "careful_retain",
+      "seed": 2026101001
+    },
+    {
+      "scenario": "careful_retain",
+      "seed": 2026101002
+    },
+    {
+      "scenario": "careful_retain",
+      "seed": 2026101003
+    },
+    {
+      "scenario": "careful_retain",
+      "seed": 2026101469
+    },
+    {
+      "scenario": "careful_retain",
+      "seed": 2026101866
+    },
+    {
+      "scenario": "careful_withhold",
+      "seed": 2026101001
+    },
+    {
+      "scenario": "careful_withhold",
+      "seed": 2026101002
+    },
+    {
+      "scenario": "careful_withhold",
+      "seed": 2026101003
+    },
+    {
+      "scenario": "careful_withhold",
+      "seed": 2026101469
+    },
+    {
+      "scenario": "careful_withhold",
+      "seed": 2026101792
+    },
+    {
+      "scenario": "risk_retain",
+      "seed": 2026101001
+    },
+    {
+      "scenario": "risk_retain",
+      "seed": 2026101002
+    },
+    {
+      "scenario": "risk_retain",
+      "seed": 2026101003
+    },
+    {
+      "scenario": "risk_retain",
+      "seed": 2026101360
+    },
+    {
+      "scenario": "risk_retain",
+      "seed": 2026101547
+    },
+    {
+      "scenario": "risk_withhold",
+      "seed": 2026101001
+    },
+    {
+      "scenario": "risk_withhold",
+      "seed": 2026101002
+    },
+    {
+      "scenario": "risk_withhold",
+      "seed": 2026101003
+    },
+    {
+      "scenario": "risk_withhold",
+      "seed": 2026101040
+    },
+    {
+      "scenario": "risk_withhold",
+      "seed": 2026101129
+    },
+    {
+      "scenario": "risk_withhold",
+      "seed": 2026101526
+    },
+    {
+      "scenario": "risk_withhold",
+      "seed": 2026101743
+    },
+    {
+      "scenario": "risk_withhold",
+      "seed": 2026101884
+    }
+  ],
+  "cases_per_process": 23,
+  "processes": 4,
+  "worker_replays": 92,
+  "hash_seed_checks": [
+    {
+      "hash_seed": "1",
+      "result_sha256": "6be817990ad60935b7b55d097a367ff65b9e24a9d83dc0cfc6a11519d93fcd3d"
+    },
+    {
+      "hash_seed": "77",
+      "result_sha256": "6be817990ad60935b7b55d097a367ff65b9e24a9d83dc0cfc6a11519d93fcd3d"
+    },
+    {
+      "hash_seed": "20261010",
+      "result_sha256": "6be817990ad60935b7b55d097a367ff65b9e24a9d83dc0cfc6a11519d93fcd3d"
+    },
+    {
+      "hash_seed": "random",
+      "result_sha256": "6be817990ad60935b7b55d097a367ff65b9e24a9d83dc0cfc6a11519d93fcd3d"
+    }
+  ],
+  "verified": [
+    "exact saved per-seed CSV metrics",
+    "ledger identity assertions from Engine.run",
+    "same ledger hash across processes",
+    "same final frozen snapshot hash across processes",
+    "exhaustion/pending/severity-tail cases preserved"
+  ],
+  "live_client_validation": false,
+  "changes_to_model_or_inputs": false
+}

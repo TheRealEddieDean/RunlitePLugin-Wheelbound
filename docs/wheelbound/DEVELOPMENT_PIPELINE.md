@@ -65,3 +65,7 @@ Reject commits its FP/spin/mandatory Punishment transaction without inventing di
 ## Verified remote baseline,2026-10-10
 
 Run38025748732 at e6d445c8c27847050abb07f843cfe9c9d4ab476b executed clean build successfully on Temurin11.0.32+1/Gradle8.10, including compileJava,compileTestJava,test,check and build. See [baseline evidence](research/BUILD_BASELINE.md).70 declared methods are a source count, not exported executed-case count. No artifact or exact latest.release version was exported. The older local attempt still failed before compilation; do not conflate it with this remote pass. No production implementation or new workflow was added.
+
+## Concrete evidence workflow proposal
+
+[CI proposal](research/CI_PROPOSAL.md) supplies exact inspected action pins, report-producing YAML and opt-in dependency manifest diagnostic under docs only. No workflow or production build was changed. YAML/source checks passed; action/Groovy runtime remains untested. The proposal resolves exact artifacts in the same Gradle invocation as compilation to avoid attributing a later latest.release resolution to an earlier build.

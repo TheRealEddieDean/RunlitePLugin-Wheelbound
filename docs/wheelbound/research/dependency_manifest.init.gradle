@@ -1,0 +1,55 @@
+// Diagnostic proposal only. Not installed in the production build or executed here.
+import groovy.json.JsonOutput
+import java.security.MessageDigest
+
+gradle.projectsEvaluated {
+    def root = gradle.rootProject
+    root.tasks.register('wbResolvedDependencyManifest') {
+        group = 'verification'
+        description = 'Record exact resolved diagnostic dependencies without cache paths or credentials.'
+        doLast {
+            def records = []
+            ['compileClasspath', 'testRuntimeClasspath', 'annotationProcessor'].each { configurationName ->
+                def configuration = root.configurations.findByName(configurationName)
+                if (configuration == null || !configuration.canBeResolved) {
+                    throw new GradleException("Expected resolvable configuration unavailable: ${configurationName}")
+                }
+                configuration.resolvedConfiguration.resolvedArtifacts.each { artifact ->
+                    def digest = MessageDigest.getInstance('SHA-256')
+                    artifact.file.withInputStream { stream ->
+                        byte[] buffer = new byte[65536]
+                        int length
+                        while ((length = stream.read(buffer)) != -1) {
+                            digest.update(buffer, 0, length)
+                        }
+                    }
+                    def module = artifact.moduleVersion.id
+                    records.add([
+                        configuration: configurationName,
+                        group: module.group,
+                        module: module.name,
+                        version: module.version,
+                        classifier: artifact.classifier,
+                        extension: artifact.extension,
+                        sha256: digest.digest().encodeHex().toString()
+                    ])
+                }
+            }
+            records.sort { a, b ->
+                "${a.configuration}:${a.group}:${a.module}:${a.version}:${a.classifier}" <=>
+                    "${b.configuration}:${b.group}:${b.module}:${b.version}:${b.classifier}"
+            }
+            def report = [
+                scope: 'Resolved dependency artifacts; not a lockfile, SBOM or Plugin Hub approval',
+                gradleVersion: gradle.gradleVersion,
+                javaVersion: System.getProperty('java.version'),
+                javaVendor: System.getProperty('java.vendor'),
+                artifacts: records
+            ]
+            def destination = root.layout.buildDirectory.file('reports/wheelbound/resolved-dependencies.json').get().asFile
+            destination.parentFile.mkdirs()
+            destination.text = JsonOutput.prettyPrint(JsonOutput.toJson(report)) + '\n'
+            logger.lifecycle('Wrote diagnostic resolved-dependencies.json')
+        }
+    }
+}
