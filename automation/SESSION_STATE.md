@@ -1,31 +1,29 @@
 # Wheelbound session checkpoint and ownership
 
-- Session ID: wb-20261010T042822Z-content-research
-- State: ACTIVE
-- Owner: wb-20261010-build-evidence; task WB-A19 CI evidence and packaging baseline.
-- Lease acquired UTC: 2026-10-10T15:21:00.403132+00:00
-- Lease expires UTC: 2026-10-10T16:06:00.403146+00:00
+- Session ID: wb-20261010-build-evidence
+- State: IDLE — clean bounded-session checkpoint; no active lease retained.
 - Branch: wheelbound-mode
-- Gameplay Markdown/PDF source: c606660ed501f2f666fb59314b57912e552e9bc3
-- Subsequent checkpoint b84f377888da9fc6a1b2e757d5201dd409e3f4bc published PDF receipt/IDLE state. This later CSV-only repair preserves exact executed CRLF bytes matching recorded hashes; resolve latest successfully verified commit from branch head.
-- This automation-only checkpoint: resolve owning commit through current branch head/file history; no circular self-hash.
+- Starting verified head: e6d445c8c27847050abb07f843cfe9c9d4ab476b
+- Latest substantive Markdown/PDF source: bb723351f3e9979b246454485e1990a71484a861
+- This final publication/diagnostic checkpoint: obtain owning SHA from branch head/file history; no circular self-hash.
 - Protected main: c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
-- Completed this session: A08 all100 bounty conditional records; A09 all50 punishment conditional records and concrete versioned candidate; A10 all18 daily reviews,48 diary mappings and21 explicit CA word/schema contract; eight-catalog authority;110 decisions; A11 saved H4 contract; A12 offline fixtures/80 smoke/4,000 baseline plus checked CSV/hash aggregates; A14 targeted primary-source gaps; A16 documentary readiness synthesis; A15 149-page committed-Markdown PDF visually checked and published as version6.
-- Relevant commits: 62615dda82c306079f20f1bc359ece9ab3b1b371; 3d01536e830ef4d9f0e6733ea95b77c4f62fa5b8; 3489346886b0d6debb53643f4fd6dca424da95fd; 33456514e6045554ce683fd14a64442edbc11691; c606660ed501f2f666fb59314b57912e552e9bc3.
-- Validation: design_checks and meaningful H4 fixtures passed; per-run FP/spin identities asserted; all4,000 CSV rows/seeds/stops/aggregate metrics and exact executed model/config/input hashes checked. Historical H1–H3 bytes preserved. All149 PDF pages contact reviewed; changed CA/H4 table inspected at full size; zero out-of-bounds blocks. Saved receipt in PDF_CHECKPOINT.json.
-- Total synthetic trajectories:130,080 including80 smoke; not measured OSRS progression or a full real-content balance proof.
-- Uncommitted completed canonical deliverables: NONE after guarded publication/remote verification. If ref update fails, regard this file as unpublished until repaired. Reproducible scratch renders/helpers need no repository commit.
-- Older local repo checkout: stale, with preexisting modified/untracked docs. Preserve; never reset/clean/publish its stale files over canonical current remote documentation.
-- Allowance: user reports100% remaining; no authoritative current allowance or task cost is known. No scheduled/background restart established.
-- Remaining: material Q2/Q6/Q9/Q10 and conditionalQ5; mixed active/paused CA aggregate credit. Real-content access/supply/drop/economy validation; A17 live detector/route traces and A18 successful clean build. No safely executable dependent implementation is authorized.
+- Session work: A19 verified actual remote compilation/test task and48 source/test/config hashes; A20 authored46 NOT_RUN capture cases, schema and meaningful offline fixtures; A21 verified23 existing H4 cases across4 processes/92 replays; A22 drafted source-pinned unactivated CI evidence proposal; A23 drafted unsent restrictive-control review brief; A15 refreshed161-page PDF/version8. Corrected stale Q7 and blanket build-blocked wording without changing approvals.
+- Relevant substantive commits:7fb1f483eb64e9ddde68f55592f58c4fb44fcb63; bd7535c5b2f66abf6289947c5587989e816c063e;5717fd0b540c5b95cdc3e950c5ddad014ec72b34; f891fa45d1a653fc7ea29f60b3272a185ad1b77a;bb723351f3e9979b246454485e1990a71484a861.
+- Actual CI run:38025748732/job114136109526, Temurin11.0.32+1/Gradle8.10, clean build succeeded with compileJava/compileTestJava/test/check/build. Exact RuneLite version and test XML/counts were not exported. Local isolated retry on52 verified inputs still failed at wrapper download on JDK17; no local compilation/test success. See research/LOCAL_BUILD_RETRY.json.
+- Validation: design_checks, capture-schema fixtures, source/config/catalog pins and cross-process replay passed. Original H4 source/config/catalog/output bytes unchanged;130,080 synthetic trial count unchanged. PDF final source/hash/version in PDF_CHECKPOINT; changed policy/CI/capture tables visually reviewed. No live case passed or detector enabled.
+- Uncommitted completed canonical deliverables: NONE after guarded publication and byte verification; failed update would invalidate this publication claim. Scratch renders/dependencies/isolated retry are reproducible intermediates.
+- Older repo checkout: preexisting modified/untracked docs preserved; not canonical current documentation and not cleaned/reset.
+- Remaining: exact dependency/test-report/jar export; local JDK11/connectivity; live detector/route evidence; exact restrictive-policy acceptance; Q2/Q6/Q9/Q10/conditionalQ5 and CA-MIXED. Production code and workflow activation still unauthorized.
+- No authoritative remaining usage reading or automatic/background continuation established.
 
-## Exact next action
+## Exact continuation
 
-1. Fetch wheelbound-mode and main; verify protected main and all changes since c606660. Read PROTOCOL,TASK_QUEUE,SESSION_STATE,BLOCKERS,DECISIONS_PENDING, authoritative DECISIONS and preserved master instructions. Check any newer remote owner; an expired lease is not proof another worker stopped.
-2. Inspect unreviewed changes before claiming a new bounded task with expected-head update. Do not restart completed history/source review or rerun unchanged synthetic batches.
-3. Review collected material choices with the user: Q6 empty ordinary pools and Q10 rejected-Fate bounty receipt disposition affect pure state and next balance experiment; Q9 extra Bossing Challenge remains disabled. Preserve CA mixed-history evidence until an aggregate payout rule is explicit.
-4. Q2 needs actual Coffer/account boundary evidence before an alternative escape design; Q5 is triggered only by exact policy rejection. Live client trace tasks are blocked, not replaced with mocked success.
-5. Next engineering milestone WB-I00: recommended JDK11, wrapper/dependency access, pin actual RuneLite version, execute existing clean build and report compilation/test results. Previous network failure occurred before compilation. No production code yet. Obtain explicit coding authorization before WB-I01 domain/receipt/RNG vertical slice.
-6. After choices/evidence change a contract, update DECISIONS and affected Markdown, validate consistency, commit on wheelbound-mode, then execute a separately versioned bounded experiment. Refresh PDF after material Markdown changes. Preserve main and all approved rules.
+1. Fetch wheelbound-mode/main and read this state, PROTOCOL,TASK_QUEUE,BLOCKERS,DECISIONS_PENDING, authoritative DECISIONS and master instructions. Inspect commits after bb723351 and any active owner; preserve concurrent/unreviewed changes. Do not assume expiry means a worker stopped.
+2. Use the verified remote build evidence rather than repeating the old claim that compilation is globally blocked. Local wrapper failure remains distinct. I00 next needs exact resolved client/artifact metadata and exported XML/package evidence, not another uninstrumented identical Java run.
+3. Review research/CI_PROPOSAL.md/YAML and pinned official action metadata in a later authorized pipeline session. They are not installed workflows; runtime/Groovy execution remains untested. Observe actual reports/run/commit after activation. Do not touch main.
+4. Review research/TRACE_CAPTURE_PROTOCOL and46 NOT_RUN cases. A17 needs a legitimate current client and separately authorized passive adapter/actions; synthetic schema checks never establish receipt semantics. jsonschema was installed only in scratch tmp/trace-validation-deps; recreate a compatible environment if absent. Do not claim traces exist.
+5. For policy review use research/POLICY_REVIEW_PACKET: it is NOT SENT. No reviewer contact is authorized. Preserve Trade with, pause and all approved mechanics; Q5 becomes material only with a specific rejection/limitation. Do not silently adopt warning-only fallback.
+6. Collect material Q6/Q10/Q9 and CA-MIXED choices; Q2 requires actual Coffer/account boundary first. Never re-ask resolved Q1/Q7/Q8. No production implementation until explicitly authorized; first coding slice remains I01 pure state/receipt/RNG after pipeline evidence.
+7. Update decision register/specs only for actual new decisions, validate, commit bounded tasks and refresh derived PDF after material Markdown changes. Preserve H1–H4 executed bytes and source versions.
 
-Stop reason: documentary tasks are complete within stated conditional/synthetic scope; dependent design choices and unavailable live/build evidence remain. No production plugin implementation, main modification, Hub submission or messages authorized.
+Stop reason: end of requested bounded session at a clean checkpoint. Dependent live/design/implementation gates remain explicit. No production code, main change, game-client login, reviewer message, Hub submission or schedule activation occurred.

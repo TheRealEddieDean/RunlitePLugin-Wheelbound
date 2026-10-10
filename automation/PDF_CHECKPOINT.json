@@ -1,18 +1,21 @@
 {
-  "page_count": 149,
-  "pdf_sha256": "5a7362fcd5942dc992967f4de7b9e63c6d719c50ec90437626efa918c4b93271",
+  "page_count": 161,
+  "pdf_sha256": "2f0167ec3c3aeaf113e0eb62d79334654ea02b29cef350dd19dc7f1ed96376d3",
   "out_of_bounds_blocks": [],
-  "source_commit_in_cover": "c606660ed501f2f666fb59314b57912e552e9bc3",
+  "source_commit_in_cover": "bb723351f3e9979b246454485e1990a71484a861",
   "important_pages": [
     2,
-    35,
-    112,
-    125
+    3,
+    88,
+    129,
+    138,
+    140,
+    142,
+    143
   ],
   "status": "CHECKPOINT_PUBLISHED",
-  "review": "149 pages reviewed in contact sheets; changed H4 table and CA receipt chapter inspected at full size; changed cover/end pages rechecked after final Markdown correction. No detected layout defects.",
-  "library_version": 6,
-  "limitations": "Conditional content/source review, synthetic core balance only; no live detector proof or successful build.",
-  "is_current": false,
-  "superseded_by": "Verified CI baseline and planned capture packet await PDF refresh"
+  "is_current": true,
+  "library_version": 8,
+  "review": "158-page predecessor inspected in all contact sheets; final161-page refresh has changed cover/navigation/policy/shifted new and end chapters inspected, including policy pages87\u201389 at full size and baseline/capture tables. No detected layout defects; zero out-of-bounds blocks.",
+  "limitations": "Actual remote build/task pass; exact dependency/version/test-report exports missing. Planned captures and offline replay only, no live detector or exact restrictive-policy approval."
 }

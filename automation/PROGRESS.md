@@ -95,3 +95,14 @@ Final byte-for-byte remote check detected universal-newline normalization of the
 ## Bounded continuation,2026-10-10
 
 7fb1f483eb64e9ddde68f55592f58c4fb44fcb63 verifies successful remote build run38025748732 on Temurin11.0.32+1/Gradle8.10; actual compilation/test task pass supersedes blanket build-blocked status, with no executed-case/version artifact export. bd7535c5b2f66abf6289947c5587989e816c063e saves46 NOT_RUN current-client cases and schema/origin/order offline fixtures, and corrects stale Q7 wording.5717fd0b540c5b95cdc3e950c5ddad014ec72b34 saves23-case×4-process H4 replay plus unactivated CI proposal.92 replays verify existing trajectories and do not add balance-trial counts. Model/config/catalog bytes remain unchanged. Current task: refresh derived PDF, verify repository bytes, release IDLE checkpoint.
+
+## Clean end of requested bounded continuation
+
+- Actual remote clean-build run38025748732 on e6d445c8 compiled/tested on Temurin11.0.32+1/Gradle8.10;70 is a declaration count, not an exported executed count.
+- Fresh local retry on52 hash-verified isolated files still failed at Gradle distribution download before compilation/tests; LOCAL_BUILD_RETRY.json records current evidence. Stale repo edits were preserved.
+-46 planned NOT_RUN capture cases; schema/origin/order/privacy-field fixtures passed; no live evidence.
+-23 saved H4 cases×4 processes92 replays matched CSV metrics, ledgers and snapshots; no model/input changes and no added independent balance trials.
+- Unactivated source-pinned CI report proposal and unsent exact restrictive-control review brief saved. Primary policy sources re-opened2026-10-10; no reviewer contact or new approval.
+- Final161-page PDF from bb723351f3e9979b246454485e1990a71484a861 checked and saved version8. Automation-only publication receipt records SHA-256/source. Main and all production source unchanged.
+
+Remaining milestone: export exact dependencies/test XML/package evidence in an authorized pipeline session; resolve Q6/Q10/Q9 and evidence-dependent Q2/Q5/CA-MIXED; authorize coding separately before I01 or live adapters. No automatic continuation is established.

@@ -1,0 +1,21 @@
+{
+  "checked_at_utc": "2026-10-10T15:45:38.857903+00:00",
+  "source_commit": "e6d445c8c27847050abb07f843cfe9c9d4ab476b",
+  "isolated_input_files": 52,
+  "git_blob_hashes_verified_before_copy": true,
+  "java": "OpenJDK17.0.20",
+  "preferred_java11_local_available": false,
+  "command": "bash ./gradlew --no-daemon --gradle-user-home <isolated-cache> clean build",
+  "working_directory": "tmp/build-baseline-retry",
+  "exit_code": 1,
+  "phase": "GRADLE_WRAPPER_DISTRIBUTION_DOWNLOAD",
+  "error": "java.net.SocketException: Network is unreachable",
+  "gradle_configuration_reached": false,
+  "compilation_reached": false,
+  "tests_executed": false,
+  "production_files_modified": false,
+  "older_checkout_changes_preserved": true,
+  "initial_invocation_note": "First command was issued from parent folder and exited127 before wrapper launch; corrected to isolated input directory for this recorded attempt.",
+  "remote_baseline_affected": false,
+  "remote_successful_run": 38025748732
+}
