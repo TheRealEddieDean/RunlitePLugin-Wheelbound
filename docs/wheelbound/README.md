@@ -37,7 +37,7 @@ Read [technical specifications](TECHNICAL_SPECIFICATIONS.md), [major questions](
 
 [STATE_CONTRACT](STATE_CONTRACT.md) specifies aggregate fields, stage transitions, transaction boundaries and crash fixtures for the first coding slice (WB-D077).
 
-[CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACCEPTANCE.md) separate new drafts, source metadata and runtime evidence. H3 adds 12,000 executed synthetic trials across eight policies; total recorded is 126,000.
+[CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACCEPTANCE.md) separate new drafts, source metadata and runtime evidence. H3 adds 12,000 executed synthetic trials across eight policies; historical H1–H3 total is126,000. H4 adds4,000 baseline and80 smoke trajectories for a current total130,080; later process checks replay existing cases without adding independent balance trials.
 
 
 [ACQUISITION_EVIDENCE](ACQUISITION_EVIDENCE.md) expands the acquisition contract and distinct repeatable daily pool (WB-D084); no live adapter is claimed validated.
@@ -57,3 +57,5 @@ Catalog authority: [manifest and promotion gates](CATALOG_AUTHORITY.md). Exact c
 ## Verified CI and current-client capture preparation
 
 [Build baseline](research/BUILD_BASELINE.md) records successful remote compilation/test task on JDK11/Gradle8.10; local wrapper failure remains distinct. [Capture packet](research/TRACE_CAPTURE_PROTOCOL.md) defines46 NOT_RUN cases and a schema/offline validator, not actual live evidence. No production code or workflow changed.
+
+[Restrictive-control review brief](research/POLICY_REVIEW_PACKET.md) records exact behavior/routes for later authorized review. It was not sent and grants no policy approval.
