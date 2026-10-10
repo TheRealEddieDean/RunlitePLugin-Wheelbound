@@ -1,35 +1,27 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261010T042822Z-content-research
-- State: ACTIVE
-- Owner/task lease: WB-A08/A09/A10; wb-20261010T042822Z-content-research.
-- Lease acquired UTC: 2026-10-10T04:28:22.553222+00:00
-- Lease expires UTC: 2026-10-10T05:13:22.553222+00:00
+- State: IDLE — clean planned checkpoint; no active ownership lease retained.
 - Branch: wheelbound-mode
-- Last verified predecessor/source commit: 13bae2b89bbf05e36e7de8516c48e30a6ed31dd0
-- Latest completed checkpoint: A07 authority, A13 backlog acceptance, A15 PDF publication; owning commit resolved through remote file history.
+- Last successfully verified substantive commit/PDF source: c606660ed501f2f666fb59314b57912e552e9bc3
+- This automation-only checkpoint: resolve owning commit through current branch head/file history; no circular self-hash.
 - Protected main: c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
-- Completed this continuation: six-catalog authority manifest; I01–I10 acceptance review; 24 Barrows and 23 plain-XP conditional review records; 48 diary completion source mappings; 141-page visually checked PDF from the predecessor's Markdown, saved version 5.
-- Validation: design_checks, H2 checks and H3 catalog checks passed; original experimental source/catalog hashes unchanged; GitHub compare limited to docs/wheelbound and automation; main unchanged.
-- Uncommitted completed deliverables: NONE after guarded update and remote verification. Scratch renders/helpers are reproducible intermediates. If ref update fails, treat local saved state as unpublished until repaired.
-- Allowance: user reports 100% remaining at this continuation. No authoritative current remaining metric or per-task quota cost is available. No automatic restart/background run established.
-- Remaining: A08/A09/A10 PARTIAL; A11 faithful next-model contract, A12 bounded execution, A14 targeted research and A16 final readiness synthesis unfinished. A17 live traces and A18 actual clean build gated/blocked.
-- Latest PDF: source 13bae2b89bbf05e36e7de8516c48e30a6ed31dd0, 141 pages, SHA-256 in PDF_CHECKPOINT.json. This final automation-only checkpoint does not change the PDF's gameplay Markdown. Not a final implementation-ready/playtested specification.
-- Major unresolved choices: Q2 full/unsupported Coffer escape; Q6 exhausted ordinary pools; Q9 Bossing Challenge; Q10 rejected-Fate bounty receipt disposition; Q5 conditional policy fallback. No re-asking resolved Q1/Q7/Q8.
+- Completed this session: A08 all100 bounty conditional records; A09 all50 punishment conditional records and concrete versioned candidate; A10 all18 daily reviews,48 diary mappings and21 explicit CA word/schema contract; eight-catalog authority;110 decisions; A11 saved H4 contract; A12 offline fixtures/80 smoke/4,000 baseline plus checked CSV/hash aggregates; A14 targeted primary-source gaps; A16 documentary readiness synthesis; A15 149-page committed-Markdown PDF visually checked and published as version6.
+- Relevant commits: 62615dda82c306079f20f1bc359ece9ab3b1b371; 3d01536e830ef4d9f0e6733ea95b77c4f62fa5b8; 3489346886b0d6debb53643f4fd6dca424da95fd; 33456514e6045554ce683fd14a64442edbc11691; c606660ed501f2f666fb59314b57912e552e9bc3.
+- Validation: design_checks and meaningful H4 fixtures passed; per-run FP/spin identities asserted; all4,000 CSV rows/seeds/stops/aggregate metrics and exact executed model/config/input hashes checked. Historical H1–H3 bytes preserved. All149 PDF pages contact reviewed; changed CA/H4 table inspected at full size; zero out-of-bounds blocks. Saved receipt in PDF_CHECKPOINT.json.
+- Total synthetic trajectories:130,080 including80 smoke; not measured OSRS progression or a full real-content balance proof.
+- Uncommitted completed canonical deliverables: NONE after guarded publication/remote verification. If ref update fails, regard this file as unpublished until repaired. Reproducible scratch renders/helpers need no repository commit.
+- Older local repo checkout: stale, with preexisting modified/untracked docs. Preserve; never reset/clean/publish its stale files over canonical current remote documentation.
+- Allowance: user reports100% remaining; no authoritative current allowance or task cost is known. No scheduled/background restart established.
+- Remaining: material Q2/Q6/Q9/Q10 and conditionalQ5; mixed active/paused CA aggregate credit. Real-content access/supply/drop/economy validation; A17 live detector/route traces and A18 successful clean build. No safely executable dependent implementation is authorized.
 
 ## Exact next action
 
-1. Fetch wheelbound-mode and main. Read PROTOCOL, TASK_QUEUE, this state, BLOCKERS, DECISIONS_PENDING, DECISIONS and preserved master instructions. Inspect changes since predecessor and check current remote ownership. Do not assume an expired lease means a worker stopped.
-2. Claim a bounded A08 subtask using new session ID/lease and expected-head guarded update; verify remote ownership before edits. Preserve unreviewed concurrent changes.
-3. Review WB-B025–WB-B040 God Wars owned-loot/source/access routes against pinned primary RuneLite evidence and current game evidence where available. Record identity, acquisition boundary, source/access, variant canonicalization, duplicate key and FP status separately. All runtime entries remain disabled without live trace gates. Preserve H3 input bytes; append a separate review ledger.
-4. Check static review coverage/hashes/links, commit documentation, update progress with actual hash and select next independent batch. A08 still needs raid/mixed sources and grouped third-age/gilded membership in a separately versioned finite-100 normative catalog.
-5. A09 next batch WB-P024–WB-P035: method/tool evidence and compatibility, then location and kill-count groups; separate severity-aware Penance contract from archived 120m experiment. A10 next: CA task metadata/packing-to-boss grouping, 18 daily source/access reviews and reward sinks. Do not substitute Master CA point threshold for per-boss mastery.
-6. Only after input contracts/review dependencies are satisfied, version a faithful model before executing bounded trials. Do not relabel/rerun historical experiments without changed assumptions. Refresh PDF again after material gameplay/specification changes; preserve actual source SHA and QA/publication receipt.
+1. Fetch wheelbound-mode and main; verify protected main and all changes since c606660. Read PROTOCOL,TASK_QUEUE,SESSION_STATE,BLOCKERS,DECISIONS_PENDING, authoritative DECISIONS and preserved master instructions. Check any newer remote owner; an expired lease is not proof another worker stopped.
+2. Inspect unreviewed changes before claiming a new bounded task with expected-head update. Do not restart completed history/source review or rerun unchanged synthetic batches.
+3. Review collected material choices with the user: Q6 empty ordinary pools and Q10 rejected-Fate bounty receipt disposition affect pure state and next balance experiment; Q9 extra Bossing Challenge remains disabled. Preserve CA mixed-history evidence until an aggregate payout rule is explicit.
+4. Q2 needs actual Coffer/account boundary evidence before an alternative escape design; Q5 is triggered only by exact policy rejection. Live client trace tasks are blocked, not replaced with mocked success.
+5. Next engineering milestone WB-I00: recommended JDK11, wrapper/dependency access, pin actual RuneLite version, execute existing clean build and report compilation/test results. Previous network failure occurred before compilation. No production code yet. Obtain explicit coding authorization before WB-I01 domain/receipt/RNG vertical slice.
+6. After choices/evidence change a contract, update DECISIONS and affected Markdown, validate consistency, commit on wheelbound-mode, then execute a separately versioned bounded experiment. Refresh PDF after material Markdown changes. Preserve main and all approved rules.
 
-Use approximately 70/30 execution-versus-verification/checkpoint effort targets, not quota measurements. No production plugin implementation, main modification, Hub submission or messages authorized. At the next planned end save a clean IDLE checkpoint with exact continuation; do not claim scheduled/background continuation.
-
-## Current resumed checkpoint
-
-A08 all100 source-route/access/receipt records conditionally reviewed, with separately versioned finite100 grouped-family candidate. A09 all50 structural reviews recorded; three ambiguous/risk definitions and severity inputs remain. CA task/boss/word metadata mapped and prior generic-achievement candidate wording corrected.108 decisions. Seven catalog hashes and21 CA word mappings validated; H3 inputs unchanged. PDF publication from13bae is now stale relative to these material documentation changes and must be refreshed. Next bounded deliverable: exact punishment definitions/severity input contract and daily/sink receipt review, then version next model contract before execution.
-
-Next current task: WB-A12 after H4 contract checkpoint publication. Implement only offline simulation/tooling, run meaningful fixtures/smoke before bounded1000×4 core trials, record exact inputs/source hashes and stop reasons. No production changes.
+Stop reason: documentary tasks are complete within stated conditional/synthetic scope; dependent design choices and unavailable live/build evidence remain. No production plugin implementation, main modification, Hub submission or messages authorized.

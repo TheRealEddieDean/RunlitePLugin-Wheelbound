@@ -79,3 +79,13 @@ Contract/config committed3d01536e830ef4d9f0e6733ea95b77c4f62fa5b8 before executi
 ## H4 completed baseline
 
 4,000 baseline trajectories plus80 smoke actually executed; contract3d01536e and model34893468 preceded execution. Hashes, all4,000 CSV rows/seeds/stops and aggregate metrics verified; per-run FP/spin assertions and meaningful recovery fixtures passed. See H4_RESULTS.md. A12 complete for explicitly bounded core, not full real-content balance. Total130,080 synthetic trajectories. Three Q6 exhaustion stops and one pending horizon preserved.
+
+## Published recovered-rule core checkpoint — 2026-10-10
+
+- 62615dda82c306079f20f1bc359ece9ab3b1b371: all100 bounty/all50 punishment conditional reviews, separate grouped-family catalog, exact CA schema.
+- 3d01536e830ef4d9f0e6733ea95b77c4f62fa5b8: concrete punishment candidate, all18 daily reviews, H4 input contract committed before execution.
+- 3489346886b0d6debb53643f4fd6dca424da95fd: offline H4 model and meaningful recovery fixtures.
+- 33456514e6045554ce683fd14a64442edbc11691: verified4,000 baseline plus80 smoke outputs, full CSV/hash checks and documentary handoff.
+- c606660ed501f2f666fb59314b57912e552e9bc3: final Markdown checklist/table consistency; exact PDF source.
+
+149-page PDF generated from c606660ed501f2f666fb59314b57912e552e9bc3, visually checked and saved as version6. PDF_CHECKPOINT records actual hash. A08–A10 complete for conditional documentary review; A11/A12 bounded core complete; A14 primary-source scope and A16 readiness synthesis complete. A17 live traces/A18 clean build remain blocked. All changes limited to docs/wheelbound and automation; protected main unchanged. Significant Q2/Q6/Q9/Q10 and conditional Q5 remain; actual economy/policy/live validity not final.

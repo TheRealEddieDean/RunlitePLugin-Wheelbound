@@ -1,12 +1,17 @@
 {
-  "page_count": 141,
-  "pdf_sha256": "27d6be20f9acb997e74419986cff273ee85fb79f35147f3352cf7b34cc5561de",
+  "page_count": 149,
+  "pdf_sha256": "5a7362fcd5942dc992967f4de7b9e63c6d719c50ec90437626efa918c4b93271",
   "out_of_bounds_blocks": [],
-  "source_commit_in_cover": "13bae2b89bbf05e36e7de8516c48e30a6ed31dd0",
+  "source_commit_in_cover": "c606660ed501f2f666fb59314b57912e552e9bc3",
+  "important_pages": [
+    2,
+    35,
+    112,
+    125
+  ],
   "status": "CHECKPOINT_PUBLISHED",
-  "review": "All 140 predecessor pages reviewed in contact sheets; final inserted diary page and shifted ending chapters visually reviewed, with selected pages at full size. No detected layout defects.",
-  "library_version": 5,
-  "limitations": "Not final balance, live detector validation or successful build. Source Markdown authoritative.",
-  "is_current": false,
-  "superseded_by": "New content/CA source review not yet published in refreshed PDF"
+  "review": "149 pages reviewed in contact sheets; changed H4 table and CA receipt chapter inspected at full size; changed cover/end pages rechecked after final Markdown correction. No detected layout defects.",
+  "library_version": 6,
+  "limitations": "Conditional content/source review, synthetic core balance only; no live detector proof or successful build.",
+  "is_current": true
 }
