@@ -1,0 +1,461 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wheelbound:trace-capture:v1",
+  "title": "Wheelbound passive capture envelope v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "case_id",
+    "origin",
+    "captured_at_utc",
+    "source_commit",
+    "client_version",
+    "game_revision",
+    "capture_adapter_sha256",
+    "account_alias",
+    "account_mode",
+    "policy_gate",
+    "events",
+    "limitations",
+    "assessment"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "case_id": {
+      "enum": [
+        "WB-TC-C01",
+        "WB-TC-C02",
+        "WB-TC-C03",
+        "WB-TC-C04",
+        "WB-TC-C05",
+        "WB-TC-C06",
+        "WB-TC-C07",
+        "WB-TC-C08",
+        "WB-TC-C09",
+        "WB-TC-C10",
+        "WB-TC-C11",
+        "WB-TC-C12",
+        "WB-TC-C13",
+        "WB-TC-C14",
+        "WB-TC-V01",
+        "WB-TC-V02",
+        "WB-TC-V03",
+        "WB-TC-V04",
+        "WB-TC-V05",
+        "WB-TC-V06",
+        "WB-TC-R01",
+        "WB-TC-R02",
+        "WB-TC-R03",
+        "WB-TC-R04",
+        "WB-TC-R05",
+        "WB-TC-R06",
+        "WB-TC-R07",
+        "WB-TC-R08",
+        "WB-TC-R09",
+        "WB-TC-R10",
+        "WB-TC-M01",
+        "WB-TC-M02",
+        "WB-TC-M03",
+        "WB-TC-M04",
+        "WB-TC-M05",
+        "WB-TC-M06",
+        "WB-TC-M07",
+        "WB-TC-M08",
+        "WB-TC-E01",
+        "WB-TC-E02",
+        "WB-TC-E03",
+        "WB-TC-E04",
+        "WB-TC-E05",
+        "WB-TC-E06",
+        "WB-TC-E07",
+        "WB-TC-E08"
+      ]
+    },
+    "origin": {
+      "enum": [
+        "LIVE_CAPTURE",
+        "SYNTHETIC"
+      ]
+    },
+    "captured_at_utc": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "source_commit": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "client_version": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 160
+    },
+    "game_revision": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 160
+    },
+    "capture_adapter_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "account_alias": {
+      "type": "string",
+      "pattern": "^account-[A-Za-z0-9-]{1,40}$"
+    },
+    "account_mode": {
+      "enum": [
+        "NORMAL",
+        "IRONMAN",
+        "HARDCORE_IRONMAN",
+        "ULTIMATE_IRONMAN",
+        "UNKNOWN"
+      ]
+    },
+    "policy_gate": {
+      "enum": [
+        "OBSERVE_ONLY",
+        "APPROVED_EXACT_RESTRICTION",
+        "UNREVIEWED"
+      ]
+    },
+    "events": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 20000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sequence",
+          "monotonic_ms",
+          "session_epoch",
+          "run_state",
+          "event",
+          "evidence_kind",
+          "payload"
+        ],
+        "properties": {
+          "sequence": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "monotonic_ms": {
+            "type": "number",
+            "minimum": 0
+          },
+          "game_tick": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "session_epoch": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "run_state": {
+            "enum": [
+              "NOT_STARTED",
+              "ACTIVE",
+              "PAUSED",
+              "ABANDONED",
+              "COMPLETED",
+              "UNAVAILABLE"
+            ]
+          },
+          "event": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "evidence_kind": {
+            "enum": [
+              "CLIENT_CALLBACK",
+              "INITIALIZED_SNAPSHOT",
+              "MANUAL_INTENT",
+              "OPERATOR_NOTE",
+              "SYNTHETIC"
+            ]
+          },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "npc_id": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "object_id": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "item_id": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "quantity": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "skill_id": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "xp_before": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "xp_after": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "animation_id": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "interface_group": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "component_id": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "menu_opcode": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "param0": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "param1": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "var_id": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "value_before": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "value_after": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "world_x": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "world_y": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "plane": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "quote": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "balance_before": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "balance_after": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "offer_slot": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "offer_state": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "task_id": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "boss_id": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "board_epoch": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "snapshot_initialized": {
+                "type": "boolean"
+              },
+              "source_known": {
+                "type": "boolean"
+              },
+              "instance_mapped": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "semantic_label": {
+                "type": "string",
+                "maxLength": 100
+              },
+              "redacted_message": {
+                "type": "string",
+                "maxLength": 256
+              },
+              "target_items": {
+                "type": "array",
+                "maxItems": 50,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "item_id",
+                    "quantity"
+                  ],
+                  "properties": {
+                    "item_id": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "quantity": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 300
+      }
+    },
+    "assessment": {
+      "enum": [
+        "OBSERVATIONS_ONLY",
+        "INCOMPLETE",
+        "REVIEW_REQUIRED"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "origin": {
+            "const": "LIVE_CAPTURE"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "client_version": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "game_revision": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "capture_adapter_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "events": {
+            "items": {
+              "properties": {
+                "evidence_kind": {
+                  "not": {
+                    "const": "SYNTHETIC"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

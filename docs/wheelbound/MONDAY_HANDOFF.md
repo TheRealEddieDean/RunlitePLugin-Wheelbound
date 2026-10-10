@@ -20,12 +20,16 @@ Mixed active/paused evidence for aggregate CA mastery needs an explicit settleme
 
 ## Next development milestone
 
-WB-I00: obtain recommended JDK11 environment, resolve Gradle wrapper/dependencies, pin actual RuneLite version and execute the existing clean build. Prior attempt failed before compilation because dependency download was blocked; build health is unverified. Keep main and existing production behavior unchanged.
+WB-I00 now has verified remote clean-build evidence: run38025748732 compiled and ran the test task on Temurin11.0.32+1/Gradle8.10. Finish exact RuneLite resolution metadata, test XML export and package inventory; local wrapper connectivity still fails. See research/BUILD_BASELINE.md. Keep main and existing production behavior unchanged.
 
 After explicit authorization to begin coding, WB-I01 implements the pure domain state/receipt/RNG vertical slice with regression and crash-recovery checks. Live detector trials follow only in a real client with appropriate authorization. Do not begin with shop interception or guessed Coffer settlement.
 
 ## Validation and remaining gates
 
-Documentation checks, immutable source/catalog hashes and H4 fixtures passed. Source review does not prove current-client positive/negative/paused/order traces. A17 live Coffer, method/tool, vendor, GE/trade, CA/Grand rewards and account edge cases remain blocked; A18 clean build remains blocked. Real access/supply/drop data and excluded vendor/Pardon/bounty/daily/CA/diary economies must be integrated before final balance adoption. Markdown remains authoritative; the refreshed PDF is a review checkpoint with these explicit limitations.
+Documentation checks, immutable source/catalog hashes and H4 fixtures passed. Source review does not prove current-client positive/negative/paused/order traces. A17 live Coffer, method/tool, vendor, GE/trade, CA/Grand rewards and account edge cases remain blocked; A18 remote clean build is verified, with dependency/test-report export incomplete. Real access/supply/drop data and excluded vendor/Pardon/bounty/daily/CA/diary economies must be integrated before final balance adoption. Markdown remains authoritative; the refreshed PDF is a review checkpoint with these explicit limitations.
 
 Read automation/SESSION_STATE for the actual last commit, ownership and precise continuation. No automatic restart or background execution has been established.
+
+## Concrete live capture packet
+
+[Capture protocol](research/TRACE_CAPTURE_PROTOCOL.md) and46 NOT_RUN cases specify Coffer, vendor, route, method and earning controls. A versioned envelope schema and offline validator reject synthetic-as-live and malformed order/identity fields; no detector semantics or live trace is validated. Current production/test/configuration source used for baseline review was hash-verified against e6d445c8.

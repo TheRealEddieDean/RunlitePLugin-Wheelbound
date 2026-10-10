@@ -38,4 +38,8 @@ See [CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACC
 
 ## Acquisition-recovery pause case
 
-WB-D085: trigger empty-candidate recovery, pause, acquire eligible item, resume and validate donation. Paused acquisition awards no XP/drop/bounty credit; active verified donation settles once. Reject using this exception to overwrite a nonempty frozen candidate list. Specific forced-item player-choice versus random-wheel history remains UNVERIFIED (Q7).
+WB-D085: trigger empty-candidate recovery, pause, acquire eligible item, resume and validate donation. Paused acquisition awards no XP/drop/bounty credit; active verified donation settles once. Reject using this exception to overwrite a nonempty frozen candidate list. Forced-item demand is confirmed random (WB-D033); Q7 is resolved. Empty-set acquisition recovery is a scoped exception and cannot overwrite an existing random demand.
+
+## Actual build evidence and planned trace packet
+
+Remote CI run38025748732 actually executed compileJava,compileTestJava,test and build successfully; source has70 declared test methods but the workflow exports no executed test-case count. See [build baseline](research/BUILD_BASELINE.md). [Capture protocol](research/TRACE_CAPTURE_PROTOCOL.md) defines46 NOT_RUN live cases and source-pinned evidence requirements. Schema/order/origin fixtures validate offline envelopes only; they do not create client observations or approve restrictive controls.

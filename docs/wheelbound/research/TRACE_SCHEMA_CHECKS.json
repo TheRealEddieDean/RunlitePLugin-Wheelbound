@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "scope": "Offline schema/order/origin/privacy-field fixtures only",
+  "positive_synthetic_envelope": 1,
+  "negative_fixtures": 6,
+  "live_trace_count": 0,
+  "runtime_enabled": false,
+  "negative_cases": [
+    "synthetic not live",
+    "missing sequence",
+    "unapproved identity field",
+    "missing live client/version evidence",
+    "duplicate callback sequence",
+    "non-UTC envelope"
+  ]
+}

@@ -34,8 +34,8 @@ for label,start,size,users in [('A02',1,100,50),('A03',101,100,50),('A04',201,10
  assert sum(r['review_status']=='USER_REVIEWED' for r in rows)==users
 a=p.parent.parent/'automation'
 assert all((a/(n+'.md')).is_file() for n in ['TASK_QUEUE','PROGRESS','SESSION_STATE','BLOCKERS','DECISIONS_PENDING'])
-queue=re.findall(r'^\| (WB-A\d+) \|',(a/'TASK_QUEUE.md').read_text(),re.M);assert len(queue)==len(set(queue))==19
-print('PASS: approved 64-node mode grouping; 436 contiguous indexed messages/218 reviewed user turns; 19 unique queued tasks and five checkpoints')
+queue=re.findall(r'^\| (WB-A\d+) \|',(a/'TASK_QUEUE.md').read_text(),re.M);assert len(queue)==len(set(queue)) and len(queue)>=19
+print('PASS: approved 64-node mode grouping; 436 contiguous indexed messages/218 reviewed user turns;',len(queue),'unique queued tasks and five checkpoints')
 
 manifest=json.loads((p/'catalogs/AUTHORITY_MANIFEST.json').read_text())
 assert len(manifest['catalogs'])==8
@@ -81,3 +81,22 @@ assert 'WITHHOLD' in next(x for x in newp['entries'] if x['id']=='WB-P043')['eli
 daily=json.loads((p/'research/DAILY_REVIEW_A10_ALL.json').read_text())
 assert len(daily['entries'])==18 and all(not x['runtime_enabled'] for x in daily['entries'])
 print('PASS: new50-template candidate removes global cap; risk withheld;18 daily conditional records')
+
+# Later CI/capture receipts: distinguish actual build task from planned client cases.
+baseline=json.loads((p/'research/BUILD_BASELINE.json').read_text())
+assert baseline['conclusion']=='success' and baseline['java']=='Temurin 11.0.32+1'
+assert baseline['executed_test_count'] is None and baseline['runtime_dependency_version'] is None
+assert hashlib.sha256((p/'research/BUILD_LOG_EXCERPT.txt').read_bytes()).hexdigest()==baseline['log_excerpt_sha256']
+assert hashlib.sha256((p/'research/BUILD_SOURCE_MANIFEST.json').read_bytes()).hexdigest()==baseline['source_manifest_sha256']
+traces=json.loads((p/'research/TRACE_CASES_V1.json').read_text())
+assert len(traces['cases'])==len({x['id'] for x in traces['cases']})==46
+assert traces['live_trace_count']==0 and not traces['runtime_enabled']
+assert all(x['status']=='NOT_RUN' and not x['runtime_enabled'] for x in traces['cases'])
+schema=json.loads((p/'schemas/trace_capture.schema.json').read_text())
+assert set(schema['properties']['case_id']['enum'])=={x['id'] for x in traces['cases']}
+checks=json.loads((p/'research/TRACE_SCHEMA_CHECKS.json').read_text())
+assert checks['status']=='PASS' and checks['live_trace_count']==0 and not checks['runtime_enabled']
+for f in [p/'research/BUILD_BASELINE.md',p/'research/TRACE_CAPTURE_PROTOCOL.md']:
+ for target in re.findall(r'\]\(([^)]+)\)',f.read_text()):
+  if not target.startswith(('http','app:','#')):assert (f.parent/target.split('#')[0]).exists(),(f.name,target)
+print('PASS: actual successful CI task with explicit report limits;46 NOT_RUN capture cases and offline schema/origin fixtures')

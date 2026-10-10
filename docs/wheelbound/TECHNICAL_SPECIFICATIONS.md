@@ -169,3 +169,7 @@ Method detectors feed the completion-time objective-specific audit (WB-D087), no
 [CA source contract](research/CA_COMPLETION_SOURCE_CONTRACT.json) records explicit CA_TASK_COMPLETED word IDs and existing repository task/boss schema. Generic ACHIEVEMENT_TASK fields are not the CA mapping. Word IDs are noncontiguous; unsigned bit semantics and out-of-range task failure fixtures are required. First initialized state is display/baseline, not retroactive earning. All enabled runtime adapters still require actual positive/negative/paused/relogin/order traces.
 
 Targeted Coffer boundary recheck did not recover an authoritative current capacity/headroom or UIM donation receipt. The official2020 article explains minimum/credit and UIM death differences, not those present-day boundaries. Do not hard-code a guessed2,147,483,647 cap or declare UIM donation impossible from that article. Required live headroom/unsupported-account traces remain WB-B01/Q2.
+
+## Current-client evidence handoff
+
+[Capture protocol](research/TRACE_CAPTURE_PROTOCOL.md) turns remaining source contracts into46 named NOT_RUN cases with positive/negative/paused/restart boundaries and a minimal versioned envelope. Passive route capture is separate from policy approval; envelope validity cannot establish Coffer donation ownership or enable a detector. Real-client traces remain unavailable.

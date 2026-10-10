@@ -53,3 +53,7 @@ S8: the original shared Game Design & Progression conversation is now recovered 
 Use [task queue](../../automation/TASK_QUEUE.md), [session ownership and exact resume](../../automation/SESSION_STATE.md), [verified progress](../../automation/PROGRESS.md), [blockers](../../automation/BLOCKERS.md) and [pending decisions](../../automation/DECISIONS_PENDING.md). [Protocol](../../automation/PROTOCOL.md) governs guarded startup, approximately 70/30 effort allocation and clean stopping. Approved gameplay remains in DECISIONS.md.
 
 Catalog authority: [manifest and promotion gates](CATALOG_AUTHORITY.md). Exact catalog hashes: [AUTHORITY_MANIFEST](catalogs/AUTHORITY_MANIFEST.json).
+
+## Verified CI and current-client capture preparation
+
+[Build baseline](research/BUILD_BASELINE.md) records successful remote compilation/test task on JDK11/Gradle8.10; local wrapper failure remains distinct. [Capture packet](research/TRACE_CAPTURE_PROTOCOL.md) defines46 NOT_RUN cases and a schema/offline validator, not actual live evidence. No production code or workflow changed.

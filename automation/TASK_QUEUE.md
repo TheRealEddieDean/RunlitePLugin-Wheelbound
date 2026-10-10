@@ -26,4 +26,6 @@ Authoritative design: [decision register](../docs/wheelbound/DECISIONS.md). Oper
 
 | WB-A19 | Verify successful CI build and inspect package/test baseline | P1 | A18 source configuration; current GitHub run | S | DONE (source/CI evidence) | research/BUILD_BASELINE; DEVELOPMENT_PIPELINE | Exact run/head/job/toolchain/tasks/test limits; no production changes |
 
+| WB-A20 | Define current-client capture packet and offline envelope validator | P1 | A14 source contracts; A17 live gaps | S | DONE (planned/offline only) | research/TRACE_CAPTURE_PROTOCOL; schemas/trace_capture |46 NOT_RUN cases, schema and origin/order fixtures; zero live evidence claimed |
+
 Paths without a directory prefix above are under docs/wheelbound/. Selection policy: acquire ownership, choose highest-priority TODO or PARTIAL whose dependency is DONE, work to a bounded deliverable, verify and checkpoint. Speculative numbers are delegated candidates, not historically approved values. Questions block only affected work.

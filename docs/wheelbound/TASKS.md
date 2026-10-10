@@ -50,4 +50,8 @@ The maintained execution queue is [automation/TASK_QUEUE](../../automation/TASK_
 
 ## Latest bounded checkpoint
 
-110 decisions; all100 bounty/50 punishment/18 daily conditional documentary reviews;48 diary mappings and21 CA words. H4 actually executed80 smoke and4,000 baseline trajectories, totaling130,080 recorded synthetic trajectories. Live traces, exact policy acceptance, full real-content balance and successful clean build remain incomplete. The maintained automation queue controls current status.
+110 decisions; all100 bounty/50 punishment/18 daily conditional documentary reviews;48 diary mappings and21 CA words. H4 actually executed80 smoke and4,000 baseline trajectories, totaling130,080 recorded synthetic trajectories. Live traces, exact policy acceptance and full real-content balance remain incomplete. Remote clean build is verified; exact dependency/test-report/artifact exports remain incomplete. The maintained automation queue controls current status.
+
+- [x] Read successful remote build logs at e6d445c8 and hash-verify48 source/config/test files; Temurin11.0.32+1/Gradle8.10 compilation/test task passed.
+- [x] Create46 NOT_RUN live capture cases, versioned schema, offline origin/order validator and meaningful synthetic rejection fixtures.
+- [ ] Obtain actual live traces and exact resolved dependencies/test XML/package inspection.

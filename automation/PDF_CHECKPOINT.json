@@ -13,5 +13,6 @@
   "review": "149 pages reviewed in contact sheets; changed H4 table and CA receipt chapter inspected at full size; changed cover/end pages rechecked after final Markdown correction. No detected layout defects.",
   "library_version": 6,
   "limitations": "Conditional content/source review, synthetic core balance only; no live detector proof or successful build.",
-  "is_current": true
+  "is_current": false,
+  "superseded_by": "Verified CI baseline and planned capture packet await PDF refresh"
 }

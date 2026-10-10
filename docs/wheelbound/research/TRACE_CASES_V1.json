@@ -1,0 +1,881 @@
+{
+  "version": "planned-traces-v1",
+  "authority": "Technical acceptance plan only; no gameplay changes",
+  "status": "NOT_RUN",
+  "live_trace_count": 0,
+  "runtime_enabled": false,
+  "source_branch": "wheelbound-mode",
+  "source_checkpoint": "e6d445c8c27847050abb07f843cfe9c9d4ab476b",
+  "cases": [
+    {
+      "id": "WB-TC-C01",
+      "family": "coffer",
+      "label": "Accepted single donation",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Active mandatory demand; known unblessed item, accepted game quote, initialized balance",
+      "manual_action": "Player manually confirms a donation only in a later explicitly authorized trial",
+      "required_observations": [
+        "verified Coffer interface",
+        "selected item/quantity",
+        "server quote",
+        "before balance",
+        "manual confirm intent",
+        "inventory decrease",
+        "after balance/quote correlation"
+      ],
+      "expected_interpretation": "Candidate verified donation only after complete matching transaction; Confirm alone cannot settle",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-C02",
+      "family": "coffer",
+      "label": "Cancel confirmation",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Same eligible item and initialized UI",
+      "manual_action": "Cancel/back before donating",
+      "required_observations": [
+        "selection/quote",
+        "cancel",
+        "unchanged inventory",
+        "unchanged balance"
+      ],
+      "expected_interpretation": "No donation, FP reward, spin grant or obligation settlement",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-C03",
+      "family": "coffer",
+      "label": "Item disappearance outside Coffer",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Pending obligation; observed inventory/bank",
+      "manual_action": "Drop, bank or equip a test item; no donation",
+      "required_observations": [
+        "action context",
+        "inventory movement",
+        "Coffer balance baseline"
+      ],
+      "expected_interpretation": "Disappearance is not donation; obligation remains pending",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-C04",
+      "family": "coffer",
+      "label": "Quote/selection changes",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Select eligible item A then B before confirmation",
+      "manual_action": "Change selected item or quantity",
+      "required_observations": [
+        "both selection snapshots",
+        "quote revisions",
+        "final selection",
+        "delivery delta"
+      ],
+      "expected_interpretation": "Correlate final confirmed selection; reject stale quote attribution",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-C05",
+      "family": "coffer",
+      "label": "Stack semantics",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Committed stack demand with known quantity",
+      "manual_action": "Inspect quote and optionally donate the demanded accepted stack",
+      "required_observations": [
+        "per-unit acceptance",
+        "stack count",
+        "selected count",
+        "credit delta"
+      ],
+      "expected_interpretation": "Cheap units cannot become eligible through summed stack value; demanded stack quantity remains explicit",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-C06",
+      "family": "coffer",
+      "label": "Insufficient quantity",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Frozen demanded quantity exceeds currently observed owned quantity",
+      "manual_action": "Open selection without generating an automatic action",
+      "required_observations": [
+        "snapshot knownness",
+        "owned quantity",
+        "game acceptance/quote"
+      ],
+      "expected_interpretation": "Do not substitute a smaller donation or reroll demand automatically",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-C07",
+      "family": "coffer",
+      "label": "Full/limited headroom",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Actual current Coffer balance initialized near supported game boundary",
+      "manual_action": "Inspect actual game response; no death or artificial headroom creation",
+      "required_observations": [
+        "before/after balance",
+        "quote",
+        "acceptance/rejection UI",
+        "inventory delta"
+      ],
+      "expected_interpretation": "Observe current cap/headroom behavior; no guessed cap, no settled failed donation; Q2 remains",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-C08",
+      "family": "coffer",
+      "label": "Account-mode support",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Separate normal/Ironman/Ultimate profile aliases in authorized clients",
+      "manual_action": "Inspect vendor/Coffer UI access independently per account type",
+      "required_observations": [
+        "account-mode observable",
+        "game UI availability",
+        "quote/acceptance if available"
+      ],
+      "expected_interpretation": "No universal support or UIM impossibility inferred from death-rule text",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-C09",
+      "family": "coffer",
+      "label": "Close before credit refresh",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Valid isolated confirm intent",
+      "manual_action": "Close interface before reliable credit capture",
+      "required_observations": [
+        "confirm order",
+        "item decrease",
+        "widget lifecycle",
+        "credit observation absence"
+      ],
+      "expected_interpretation": "Evidence remains pending; reopen/reconcile cannot invent transaction identity",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-C10",
+      "family": "coffer",
+      "label": "Reconnect/crash mid-receipt",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Frozen obligation/transaction journal available",
+      "manual_action": "Restart between confirm and after-state capture",
+      "required_observations": [
+        "persisted intent",
+        "session epochs",
+        "initialized new baseline",
+        "remaining before/after evidence"
+      ],
+      "expected_interpretation": "No double donation request or new reward; reconcile only supported persisted evidence",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-C11",
+      "family": "coffer",
+      "label": "Shared variable noise",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "No Coffer transaction in progress",
+      "manual_action": "Open unrelated interfaces using shared IF variables",
+      "required_observations": [
+        "active interface identity",
+        "var updates",
+        "inventory/balance context"
+      ],
+      "expected_interpretation": "Shared IF changes alone are never a Coffer receipt",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-C12",
+      "family": "coffer",
+      "label": "Blessed/random/empty recovery",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Known ownership snapshot; Blessed exclusions; separate empty-candidate case",
+      "manual_action": "Inspect committed random demand then acquire allowed minimum item if truly empty",
+      "required_observations": [
+        "snapshot knownness",
+        "eligible set",
+        "frozen demand",
+        "acquisition context",
+        "donation evidence"
+      ],
+      "expected_interpretation": "Unknown bank is not empty; recovery donation uses approved exception; no extra Master spin",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-C13",
+      "family": "coffer",
+      "label": "Pause during transaction",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Known earning boundary and open Coffer context",
+      "manual_action": "Pause immediately before confirm and separately after confirmed server evidence",
+      "required_observations": [
+        "ordered pause epochs",
+        "manual input intent",
+        "authoritative earning observations",
+        "delivery ordering"
+      ],
+      "expected_interpretation": "Separate paused earning from delayed delivery; ambiguous ordering stays unverified, no backfill/penalty",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-C14",
+      "family": "coffer",
+      "label": "Credit rounding and value changes",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Game-accepted quotes at different prices/quantities",
+      "manual_action": "Observe displayed quote and actual resulting balance",
+      "required_observations": [
+        "game quote",
+        "actual credit",
+        "unit/stack",
+        "rounding representation"
+      ],
+      "expected_interpretation": "Use actual game quote/credit; market price lookup does not replace game acceptance",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-V01",
+      "family": "vendor",
+      "label": "Physical visit positive",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Target shop identity defined; active/paused controls isolated",
+      "manual_action": "Interact with a known vendor and open its actual shop",
+      "required_observations": [
+        "NPC/object identity",
+        "world/local/instance mapping",
+        "interaction",
+        "shop group/content"
+      ],
+      "expected_interpretation": "Correlated physical interaction and shop identity can qualify visit; no proximity-only credit",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-V02",
+      "family": "vendor",
+      "label": "Nearby wrong vendor",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Target shop identity defined; active/paused controls isolated",
+      "manual_action": "Stand next to target but open another shop",
+      "required_observations": [
+        "both vendor identities",
+        "location",
+        "shop identity"
+      ],
+      "expected_interpretation": "No target unlock receipt",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-V03",
+      "family": "vendor",
+      "label": "Walk-by/proximity",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Target shop identity defined; active/paused controls isolated",
+      "manual_action": "Walk through target vendor area without interaction",
+      "required_observations": [
+        "location",
+        "absence of shop/interaction evidence"
+      ],
+      "expected_interpretation": "No unlock",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-V04",
+      "family": "vendor",
+      "label": "Alternate shop options",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Target shop identity defined; active/paused controls isolated",
+      "manual_action": "Inspect Trade/Shop/Talk route and legitimate dialogue shop path",
+      "required_observations": [
+        "menu action/opcode/param",
+        "NPC identity",
+        "dialogue",
+        "shop opening"
+      ],
+      "expected_interpretation": "Record each route separately; do not assume one menu option covers all",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-V05",
+      "family": "vendor",
+      "label": "Pause and account switch",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Target shop identity defined; active/paused controls isolated",
+      "manual_action": "Visit while paused; then switch profile with an outstanding callback",
+      "required_observations": [
+        "run state/epochs",
+        "shop/interaction ordering",
+        "new initialized profile"
+      ],
+      "expected_interpretation": "No paused credit or stale-account unlock",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-V06",
+      "family": "vendor",
+      "label": "Pardon state transition",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Target shop identity defined; active/paused controls isolated",
+      "manual_action": "Future isolated domain test buys fixed-price Pardon; live visit observes actual shop only",
+      "required_observations": [
+        "Banned\u2192Locked state",
+        "FP transaction",
+        "subsequent visit/pay/Tempt separately"
+      ],
+      "expected_interpretation": "Pardon never itself unlocks vendor; live shop UI alone proves no plugin purchase",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-R01",
+      "family": "routes",
+      "label": "Outgoing trade option",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Unmodified baseline; no new restrictive adapter enabled",
+      "manual_action": "Select retained Trade with in normal baseline client",
+      "required_observations": [
+        "menu/widget opcode/params",
+        "interface lifecycle",
+        "initialized account/run state",
+        "manual route outcome"
+      ],
+      "expected_interpretation": "Record action route; future requested Fate notice must preserve option and exact policy gate",
+      "dependency": "Actual route capture; exact policy approval required before any restrictive implementation",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-R02",
+      "family": "routes",
+      "label": "Incoming trade request",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Unmodified baseline; no new restrictive adapter enabled",
+      "manual_action": "Receive and manually accept a legitimate trade request in authorized trial",
+      "required_observations": [
+        "menu/widget opcode/params",
+        "interface lifecycle",
+        "initialized account/run state",
+        "manual route outcome"
+      ],
+      "expected_interpretation": "Incoming route must be separately covered; no claimed cancellation based on outgoing precedent",
+      "dependency": "Actual route capture; exact policy approval required before any restrictive implementation",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-R03",
+      "family": "routes",
+      "label": "Already-open first screen",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Unmodified baseline; no new restrictive adapter enabled",
+      "manual_action": "Start control session with trade already open; manually change offered test item",
+      "required_observations": [
+        "menu/widget opcode/params",
+        "interface lifecycle",
+        "initialized account/run state",
+        "manual route outcome"
+      ],
+      "expected_interpretation": "Map offer modification route and existing-open state; no removal of Trade with",
+      "dependency": "Actual route capture; exact policy approval required before any restrictive implementation",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-R04",
+      "family": "routes",
+      "label": "Second confirmation screen",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Unmodified baseline; no new restrictive adapter enabled",
+      "manual_action": "Reach second confirmation screen only in later authorized controlled trial",
+      "required_observations": [
+        "menu/widget opcode/params",
+        "interface lifecycle",
+        "initialized account/run state",
+        "manual route outcome"
+      ],
+      "expected_interpretation": "Map second Accept and widget lifecycle; first-screen interception is insufficient",
+      "dependency": "Actual route capture; exact policy approval required before any restrictive implementation",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-R05",
+      "family": "routes",
+      "label": "Repeat/context/plugin interaction",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Unmodified baseline; no new restrictive adapter enabled",
+      "manual_action": "Inspect repeat/last action and menu with other enabled menu plugins",
+      "required_observations": [
+        "menu/widget opcode/params",
+        "interface lifecycle",
+        "initialized account/run state",
+        "manual route outcome"
+      ],
+      "expected_interpretation": "Record actual ordering and opcodes; no unsupported claim of complete route coverage",
+      "dependency": "Actual route capture; exact policy approval required before any restrictive implementation",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-R06",
+      "family": "routes",
+      "label": "GE action variants",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Unmodified baseline; no new restrictive adapter enabled",
+      "manual_action": "Inspect GE search, buy/sell quantity, price and final confirmation paths",
+      "required_observations": [
+        "menu/widget opcode/params",
+        "interface lifecycle",
+        "initialized account/run state",
+        "manual route outcome"
+      ],
+      "expected_interpretation": "Each path has its own case evidence; search interception alone is incomplete",
+      "dependency": "Actual route capture; exact policy approval required before any restrictive implementation",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-R07",
+      "family": "routes",
+      "label": "Existing GE offers initialization",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Unmodified baseline; no new restrictive adapter enabled",
+      "manual_action": "Reconnect with preexisting server offers; open GE to initialize if needed",
+      "required_observations": [
+        "menu/widget opcode/params",
+        "interface lifecycle",
+        "initialized account/run state",
+        "manual route outcome"
+      ],
+      "expected_interpretation": "Initial EMPTY callbacks are not proof no offers; bind offer lifecycle, not slot alone",
+      "dependency": "Actual route capture; exact policy approval required before any restrictive implementation",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-R08",
+      "family": "routes",
+      "label": "Shop quantities/repeat/open state",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Unmodified baseline; no new restrictive adapter enabled",
+      "manual_action": "Inspect buy/sell1/5/10/50/X/repeat and an already-open shop",
+      "required_observations": [
+        "menu/widget opcode/params",
+        "interface lifecycle",
+        "initialized account/run state",
+        "manual route outcome"
+      ],
+      "expected_interpretation": "Map every applicable route; action menu and widget routes may differ",
+      "dependency": "Actual route capture; exact policy approval required before any restrictive implementation",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-R09",
+      "family": "routes",
+      "label": "Pause/offline offers fill",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Unmodified baseline; no new restrictive adapter enabled",
+      "manual_action": "Observe initialized existing offers around pause/relogin without synthetic backfill",
+      "required_observations": [
+        "menu/widget opcode/params",
+        "interface lifecycle",
+        "initialized account/run state",
+        "manual route outcome"
+      ],
+      "expected_interpretation": "Unobserved or paused fills create no Wheelbound punishment/reward; plugin cannot prevent server fills",
+      "dependency": "Actual route capture; exact policy approval required before any restrictive implementation",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-R10",
+      "family": "routes",
+      "label": "Policy review packet",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Unmodified baseline; no new restrictive adapter enabled",
+      "manual_action": "Document proposed notice/interception using captured baseline route evidence",
+      "required_observations": [
+        "menu/widget opcode/params",
+        "interface lifecycle",
+        "initialized account/run state",
+        "manual route outcome"
+      ],
+      "expected_interpretation": "Technical interception success is not Jagex/Hub approval; no maintainer contact authorized here",
+      "dependency": "Actual route capture; exact policy approval required before any restrictive implementation",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-M01",
+      "family": "method",
+      "label": "Bronze mining method",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Authored template/access and source contract pinned; future adapter disabled until tested",
+      "manual_action": "Mine actual compatible rock with bronze pickaxe",
+      "required_observations": [
+        "equipped/inventory tool availability",
+        "selected/effective animation",
+        "rock/object context",
+        "XP delta",
+        "owned output if present"
+      ],
+      "expected_interpretation": "Action+tool+XP evidence required; animation alone or inventory alone insufficient",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-M02",
+      "family": "method",
+      "label": "Wrong pick/tool swap",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Authored template/access and source contract pinned; future adapter disabled until tested",
+      "manual_action": "Use other available pick then change equipment during action",
+      "required_observations": [
+        "all usable tools",
+        "effective animation",
+        "swap order",
+        "XP timing"
+      ],
+      "expected_interpretation": "No approved bronze-method credit from merely carrying bronze; ambiguous effective tool withheld",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-M03",
+      "family": "method",
+      "label": "Woodcutting forestry variant",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Authored template/access and source contract pinned; future adapter disabled until tested",
+      "manual_action": "Compare ordinary bronze axe and bronze two-handed/felling context",
+      "required_observations": [
+        "tool identity",
+        "animation",
+        "tree/source",
+        "XP",
+        "output"
+      ],
+      "expected_interpretation": "No silent equation of all bronze animation families to one authored tool restriction",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-M04",
+      "family": "method",
+      "label": "Fishing mixed species",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Authored template/access and source contract pinned; future adapter disabled until tested",
+      "manual_action": "Catch at a spot with multiple possible species",
+      "required_observations": [
+        "spot identity",
+        "animation/equipment/bait",
+        "actual output",
+        "XP"
+      ],
+      "expected_interpretation": "Spot label alone cannot prove shrimp versus anchovy or trout versus salmon",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-M05",
+      "family": "method",
+      "label": "Bronze smelting not smithing",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Authored template/access and source contract pinned; future adapter disabled until tested",
+      "manual_action": "Smelt with copper/tin at furnace; compare smithing bought bars separately",
+      "required_observations": [
+        "furnace action",
+        "input consumption",
+        "output",
+        "XP",
+        "delivery order"
+      ],
+      "expected_interpretation": "Only authored furnace smelting receipt counts; bars appearing alone insufficient",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-M06",
+      "family": "method",
+      "label": "Zero-loot kill and Slayer",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Authored template/access and source contract pinned; future adapter disabled until tested",
+      "manual_action": "Kill supported NPC with no item drop and legitimate combat XP",
+      "required_observations": [
+        "kill/source identity",
+        "supported count signal",
+        "assignment context",
+        "combat/HP/Slayer XP"
+      ],
+      "expected_interpretation": "Do not require loot for every kill; supported kill evidence needed; legitimate byproducts exempt",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-M07",
+      "family": "method",
+      "label": "Completion audit ordering",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Authored template/access and source contract pinned; future adapter disabled until tested",
+      "manual_action": "Complete supported objective after permitted and unrelated progress",
+      "required_observations": [
+        "baseline XP",
+        "assignment profile",
+        "ordered deltas",
+        "completion boundary"
+      ],
+      "expected_interpretation": "Apply objective-specific audit at completion, not immediate automatic tick penalties",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-M08",
+      "family": "method",
+      "label": "Unsupported animation/location",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Authored template/access and source contract pinned; future adapter disabled until tested",
+      "manual_action": "Observe shared animation or instance-local location without reliable method context",
+      "required_observations": [
+        "observability health",
+        "animation",
+        "instance mapping",
+        "missing source attribution"
+      ],
+      "expected_interpretation": "Unknown method evidence stays unsupported; cannot accuse violation or fabricate credit",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-E01",
+      "family": "earning",
+      "label": "Personal loot versus ground spawn",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Source-specific receipt adapter and frozen authored definition required",
+      "manual_action": "Observe owned server loot and unrelated nearby ground item separately",
+      "required_observations": [
+        "supported script/source loot",
+        "NPC/source identity",
+        "item quantity",
+        "inventory/ground timing"
+      ],
+      "expected_interpretation": "Ground spawn or legacy coincident loot alone does not prove personal acquisition",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-E02",
+      "family": "earning",
+      "label": "Full inventory loot and delayed delivery",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Source-specific receipt adapter and frozen authored definition required",
+      "manual_action": "Earn legitimate supported loot with delivery delayed or on ground",
+      "required_observations": [
+        "owned source receipt",
+        "delivery variant",
+        "earning-state epoch"
+      ],
+      "expected_interpretation": "Do not duplicate payout or reject solely because inventory does not increase",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-E03",
+      "family": "earning",
+      "label": "Reward containers and parent exchange",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Source-specific receipt adapter and frozen authored definition required",
+      "manual_action": "Observe clue/raid chest and separate reviewed Unsired exchange",
+      "required_observations": [
+        "source session/identity",
+        "parent eligible credits",
+        "reward-container lifecycle",
+        "output"
+      ],
+      "expected_interpretation": "Shared container alone not source; consume eligible parent once; preowned parent cannot backfill",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-E04",
+      "family": "earning",
+      "label": "Fresh initialized CA state",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Source-specific receipt adapter and frozen authored definition required",
+      "manual_action": "Login with already completed task words; then a supported new task",
+      "required_observations": [
+        "21 explicit IDs",
+        "signed bit31 semantics",
+        "taskID/boss metadata",
+        "baseline then transition"
+      ],
+      "expected_interpretation": "Baseline grants no retroactive credit; malformed/out-of-range mappings disable affected aggregate",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-E05",
+      "family": "earning",
+      "label": "CA mixed active/paused set",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Source-specific receipt adapter and frozen authored definition required",
+      "manual_action": "Complete different boss CA tasks in different run states",
+      "required_observations": [
+        "per-task earning epochs",
+        "boss set/catalog freeze",
+        "completed set before/after"
+      ],
+      "expected_interpretation": "Preserve evidence; aggregate payout policy remains unverified; last task alone proves no whole-set timing",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-E06",
+      "family": "earning",
+      "label": "Diary completion versus reward collection",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Source-specific receipt adapter and frozen authored definition required",
+      "manual_action": "Compare supported diary completion transition with later reward claim",
+      "required_observations": [
+        "region/tier completion field",
+        "reward-claim field",
+        "initialized before/after",
+        "active epoch"
+      ],
+      "expected_interpretation": "Distinguish completion and reward collection; deduplicate one authored region/tier claim",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-E07",
+      "family": "earning",
+      "label": "Grand multipart/threshold",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Source-specific receipt adapter and frozen authored definition required",
+      "manual_action": "Observe individual Awakened counters and initialized current Master threshold",
+      "required_observations": [
+        "per-boss counters",
+        "task/threshold version",
+        "active attempt/earning ledger",
+        "component receipt"
+      ],
+      "expected_interpretation": "No Blood Torva possession substitution or static Master threshold; existing saves are baseline",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    },
+    {
+      "id": "WB-TC-E08",
+      "family": "earning",
+      "label": "Daily expiry and manual claim",
+      "status": "NOT_RUN",
+      "evidence_origin": "PLANNED",
+      "runtime_enabled": false,
+      "setup": "Source-specific receipt adapter and frozen authored definition required",
+      "manual_action": "Capture last eligible acquisition before epoch expiry and first after it; claim later",
+      "required_observations": [
+        "frozen board/target/version",
+        "earning epoch",
+        "quantity",
+        "once-only claim key"
+      ],
+      "expected_interpretation": "Pre-expiry earned credit remains claimable; no new expired-board credit or automatic FP payment",
+      "dependency": "WB-A17 live client/instrumentation authorization",
+      "acceptance": "Capture actual current-client ordered callbacks and independent before/after state; source precedent alone cannot pass."
+    }
+  ]
+}
