@@ -50,3 +50,9 @@ for name,sha in h3['catalog_hashes'].items():
  record=next(r for r in manifest['catalogs'] if r['path']=='catalogs/'+name)
  assert record['h3_pinned_input'] and record['sha256']==sha
 print('PASS: six authority manifest hashes/counts/provenance/gates; historical H3 input pins retained')
+
+diary=json.loads((p/'research/DIARY_COMPLETION_SOURCE_MAP.json').read_text())
+assert len(diary['entries'])==len({x['varbit_id'] for x in diary['entries']})==48
+assert not diary['runtime_enabled']
+assert {x['symbol']:x['varbit_id'] for x in diary['entries'] if x['symbol'].startswith('ATJUN_')}=={'ATJUN_EASY_DONE':3578,'ATJUN_MED_DONE':3599,'ATJUN_HARD_DONE':3611}
+print('PASS: 48 distinct diary source mappings, legacy Karamja aliases, disabled runtime status')

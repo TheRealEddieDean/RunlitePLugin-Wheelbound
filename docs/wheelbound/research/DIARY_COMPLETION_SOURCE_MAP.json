@@ -1,0 +1,258 @@
+{
+  "version": "diary-map-v1-2026-10-10",
+  "source_commit": "42a6f17a6a2e8e478aa763890ecd0181a59dad38",
+  "source_paths": [
+    "runelite-api/src/main/java/net/runelite/api/gameval/VarbitID.java",
+    "runelite-api/src/main/java/net/runelite/api/Varbits.java"
+  ],
+  "scope": "48 region/tier source mappings; value semantics and live timing remain validation gates",
+  "runtime_enabled": false,
+  "entries": [
+    {
+      "symbol": "ARDOUGNE_DIARY_EASY_COMPLETE",
+      "varbit_id": 4458,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "ARDOUGNE_DIARY_MEDIUM_COMPLETE",
+      "varbit_id": 4459,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "ARDOUGNE_DIARY_HARD_COMPLETE",
+      "varbit_id": 4460,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "ARDOUGNE_DIARY_ELITE_COMPLETE",
+      "varbit_id": 4461,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "FALADOR_DIARY_EASY_COMPLETE",
+      "varbit_id": 4462,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "FALADOR_DIARY_MEDIUM_COMPLETE",
+      "varbit_id": 4463,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "FALADOR_DIARY_HARD_COMPLETE",
+      "varbit_id": 4464,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "FALADOR_DIARY_ELITE_COMPLETE",
+      "varbit_id": 4465,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "WILDERNESS_DIARY_EASY_COMPLETE",
+      "varbit_id": 4466,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "WILDERNESS_DIARY_MEDIUM_COMPLETE",
+      "varbit_id": 4467,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "WILDERNESS_DIARY_HARD_COMPLETE",
+      "varbit_id": 4468,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "WILDERNESS_DIARY_ELITE_COMPLETE",
+      "varbit_id": 4469,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "WESTERN_DIARY_EASY_COMPLETE",
+      "varbit_id": 4471,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "WESTERN_DIARY_MEDIUM_COMPLETE",
+      "varbit_id": 4472,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "WESTERN_DIARY_HARD_COMPLETE",
+      "varbit_id": 4473,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "WESTERN_DIARY_ELITE_COMPLETE",
+      "varbit_id": 4474,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "KANDARIN_DIARY_EASY_COMPLETE",
+      "varbit_id": 4475,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "KANDARIN_DIARY_MEDIUM_COMPLETE",
+      "varbit_id": 4476,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "KANDARIN_DIARY_HARD_COMPLETE",
+      "varbit_id": 4477,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "KANDARIN_DIARY_ELITE_COMPLETE",
+      "varbit_id": 4478,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "VARROCK_DIARY_EASY_COMPLETE",
+      "varbit_id": 4479,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "VARROCK_DIARY_MEDIUM_COMPLETE",
+      "varbit_id": 4480,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "VARROCK_DIARY_HARD_COMPLETE",
+      "varbit_id": 4481,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "VARROCK_DIARY_ELITE_COMPLETE",
+      "varbit_id": 4482,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "DESERT_DIARY_EASY_COMPLETE",
+      "varbit_id": 4483,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "DESERT_DIARY_MEDIUM_COMPLETE",
+      "varbit_id": 4484,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "DESERT_DIARY_HARD_COMPLETE",
+      "varbit_id": 4485,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "DESERT_DIARY_ELITE_COMPLETE",
+      "varbit_id": 4486,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "MORYTANIA_DIARY_EASY_COMPLETE",
+      "varbit_id": 4487,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "MORYTANIA_DIARY_MEDIUM_COMPLETE",
+      "varbit_id": 4488,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "MORYTANIA_DIARY_HARD_COMPLETE",
+      "varbit_id": 4489,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "MORYTANIA_DIARY_ELITE_COMPLETE",
+      "varbit_id": 4490,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "FREMENNIK_DIARY_EASY_COMPLETE",
+      "varbit_id": 4491,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "FREMENNIK_DIARY_MEDIUM_COMPLETE",
+      "varbit_id": 4492,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "FREMENNIK_DIARY_HARD_COMPLETE",
+      "varbit_id": 4493,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "FREMENNIK_DIARY_ELITE_COMPLETE",
+      "varbit_id": 4494,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "LUMBRIDGE_DIARY_EASY_COMPLETE",
+      "varbit_id": 4495,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "LUMBRIDGE_DIARY_MEDIUM_COMPLETE",
+      "varbit_id": 4496,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "LUMBRIDGE_DIARY_HARD_COMPLETE",
+      "varbit_id": 4497,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "LUMBRIDGE_DIARY_ELITE_COMPLETE",
+      "varbit_id": 4498,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "KARAMJA_DIARY_ELITE_COMPLETE",
+      "varbit_id": 4566,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "KOUREND_DIARY_EASY_COMPLETE",
+      "varbit_id": 7925,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "KOUREND_DIARY_MEDIUM_COMPLETE",
+      "varbit_id": 7926,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "KOUREND_DIARY_HARD_COMPLETE",
+      "varbit_id": 7927,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "KOUREND_DIARY_ELITE_COMPLETE",
+      "varbit_id": 7928,
+      "mapping_authority": "GENERATED_SOURCE_NAME_ONLY"
+    },
+    {
+      "symbol": "ATJUN_EASY_DONE",
+      "varbit_id": 3578,
+      "tier": "EASY",
+      "region": "KARAMJA",
+      "mapping_authority": "GENERATED_SYMBOL_PLUS_LEGACY_DIARY_ALIAS"
+    },
+    {
+      "symbol": "ATJUN_MED_DONE",
+      "varbit_id": 3599,
+      "tier": "MEDIUM",
+      "region": "KARAMJA",
+      "mapping_authority": "GENERATED_SYMBOL_PLUS_LEGACY_DIARY_ALIAS"
+    },
+    {
+      "symbol": "ATJUN_HARD_DONE",
+      "varbit_id": 3611,
+      "tier": "HARD",
+      "region": "KARAMJA",
+      "mapping_authority": "GENERATED_SYMBOL_PLUS_LEGACY_DIARY_ALIAS"
+    }
+  ]
+}

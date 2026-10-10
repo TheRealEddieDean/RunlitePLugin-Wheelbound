@@ -46,3 +46,7 @@ A07 committed at a083d79a6835ba06f82ddb02d66411f6f15e91a5; branch/main verified.
 ## Bounded A08/A09 review batches
 
 A13 committed at 7dd62f916c3371e8331454a63cc4d7a8b4018dc4. A08 reviewed 24 Barrows candidates against pinned RuneLite reward-widget/container precedent, with explicit unresolved game access/drop/earning-boundary status and grouped-family contract. A09 reviewed 23 plain-XP candidates structurally and separated consecutive severity from H3's duration cap. Both tasks remain PARTIAL, all runtime flags false; no current drop-table/live validation or full-account simulation claimed.
+
+## A10 diary source review batch
+
+Mapped 48 region/difficulty completion signals at the pinned RuneLite source revision; resolved early Karamja generated symbols through legacy aliases. Reviewed manual/idempotent active receipt boundaries and separated per-boss Combat Mastery from Master Grand threshold. A10 remains PARTIAL; packed CA task metadata, daily source/access and sinks still require review. No live semantics or numeric rewards asserted.
