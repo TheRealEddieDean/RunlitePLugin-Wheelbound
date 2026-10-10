@@ -40,7 +40,7 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 - Decision: Grand attempts no artificial level/playtime or Master-spin charge, between ordinary Fates.
 - Rationale: Player chooses readiness.
 - Affects: [GRAND_FATES](GRAND_FATES.md), [GAME_RULES](GAME_RULES.md).
-- Exceptions/dependencies: Mandatory-obligation interaction OPEN.
+- Exceptions/dependencies: Earlier open mandatory-obligation interaction was resolved by S8-M0321/WB-D089: activation requires no active Fate and no pending mandatory Punishment/Sacrifice settlement. This adds no artificial readiness gate.
 
 ## WB-D005 - 24 active total including Taint/Sacrifice; no extra slots
 

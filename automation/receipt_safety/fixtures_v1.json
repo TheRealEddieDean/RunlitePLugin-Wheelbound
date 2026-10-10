@@ -1,0 +1,1811 @@
+{
+  "version": 1,
+  "status": "OFFLINE_ACCEPTANCE_ONLY",
+  "runtime_enabled": false,
+  "live_trace_count": 0,
+  "economy_values": "PLACEHOLDER_TEST_INPUTS",
+  "cases": [
+    {
+      "id": "R01",
+      "purpose": "Committed draw has one debit and a frozen target",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 1000,
+        "state.spins": 9,
+        "state.revision": 1,
+        "state.obligation": "ACTIVE_OBJECTIVE",
+        "state.outcome": {
+          "fixture_target": "fixed-target-A",
+          "catalog_version": "fixture-v1"
+        },
+        "results": [
+          "COMMITTED"
+        ],
+        "acknowledged": [
+          "c1"
+        ],
+        "journal_count": 1
+      }
+    },
+    {
+      "id": "R02",
+      "purpose": "Failure before durable draw leaves no debit and no acknowledgement",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          },
+          "fault": "before_commit"
+        },
+        {
+          "kind": "recover"
+        }
+      ],
+      "expect": {
+        "state.spins": 10,
+        "state.revision": 0,
+        "state.outcome": null,
+        "acknowledged": [],
+        "journal_count": 0,
+        "results": [
+          "WRITE_UNCONFIRMED",
+          "RESTORED"
+        ]
+      }
+    },
+    {
+      "id": "R03",
+      "purpose": "Durable draw survives lost acknowledgement; old revision command replays",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          },
+          "fault": "after_commit"
+        },
+        {
+          "kind": "recover"
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 1000,
+        "state.spins": 9,
+        "state.revision": 1,
+        "state.obligation": "ACTIVE_OBJECTIVE",
+        "state.outcome": {
+          "fixture_target": "fixed-target-A",
+          "catalog_version": "fixture-v1"
+        },
+        "results": [
+          "WRITE_UNCONFIRMED",
+          "RESTORED",
+          "REPLAYED"
+        ],
+        "acknowledged": [],
+        "journal_count": 1
+      }
+    },
+    {
+      "id": "R04",
+      "purpose": "Snapshot written but UI acknowledgement lost also replays once",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          },
+          "fault": "after_snapshot"
+        },
+        {
+          "kind": "recover"
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 1000,
+        "state.spins": 9,
+        "state.revision": 1,
+        "state.obligation": "ACTIVE_OBJECTIVE",
+        "state.outcome": {
+          "fixture_target": "fixed-target-A",
+          "catalog_version": "fixture-v1"
+        },
+        "results": [
+          "WRITE_UNCONFIRMED",
+          "RESTORED",
+          "REPLAYED"
+        ],
+        "acknowledged": [],
+        "journal_count": 1
+      }
+    },
+    {
+      "id": "R05",
+      "purpose": "Unparsed journal tail retained for read-only recovery",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          },
+          "fault": "partial_record"
+        },
+        {
+          "kind": "recover"
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c2",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        }
+      ],
+      "expect": {
+        "state.spins": 10,
+        "journal_count": 1,
+        "read_only": true,
+        "acknowledged": [],
+        "results": [
+          "WRITE_UNCONFIRMED",
+          "READ_ONLY",
+          "READ_ONLY"
+        ]
+      }
+    },
+    {
+      "id": "R06",
+      "purpose": "Additional mutation blocked while durable write is unconfirmed",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          },
+          "fault": "after_commit"
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c2",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        },
+        {
+          "kind": "recover"
+        }
+      ],
+      "expect": {
+        "state.fp": 1000,
+        "state.spins": 9,
+        "state.revision": 1,
+        "state.obligation": "ACTIVE_OBJECTIVE",
+        "state.outcome": {
+          "fixture_target": "fixed-target-A",
+          "catalog_version": "fixture-v1"
+        },
+        "results": [
+          "WRITE_UNCONFIRMED",
+          "PENDING_RECONCILIATION",
+          "RESTORED"
+        ],
+        "journal_count": 1
+      }
+    },
+    {
+      "id": "R07",
+      "purpose": "Changed-payload command ID reuse preserves original result without assuming a policy",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "different"
+            }
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 1000,
+        "state.spins": 9,
+        "state.revision": 1,
+        "state.obligation": "ACTIVE_OBJECTIVE",
+        "state.outcome": {
+          "fixture_target": "fixed-target-A",
+          "catalog_version": "fixture-v1"
+        },
+        "results": [
+          "COMMITTED",
+          "UNSPECIFIED_COMMAND_ID_COLLISION"
+        ],
+        "journal_count": 1
+      }
+    },
+    {
+      "id": "R08",
+      "purpose": "Reject stale or foreign identity before a write",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-B",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        }
+      ],
+      "expect": {
+        "state.spins": 10,
+        "journal_count": 0,
+        "results": [
+          "WRONG_IDENTITY"
+        ]
+      }
+    },
+    {
+      "id": "R09",
+      "purpose": "Reject stale or foreign identity before a write",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-B",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        }
+      ],
+      "expect": {
+        "state.spins": 10,
+        "journal_count": 0,
+        "results": [
+          "WRONG_IDENTITY"
+        ]
+      }
+    },
+    {
+      "id": "R10",
+      "purpose": "Reject stale or foreign identity before a write",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 0,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        }
+      ],
+      "expect": {
+        "state.spins": 10,
+        "journal_count": 0,
+        "results": [
+          "STALE_GENERATION"
+        ]
+      }
+    },
+    {
+      "id": "R11",
+      "purpose": "Competing writers using same revision cannot both spend",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "purchase",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 10
+          }
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c2",
+            "op": "purchase",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 10
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 990,
+        "state.revision": 1,
+        "journal_count": 1,
+        "results": [
+          "COMMITTED",
+          "STALE_REVISION"
+        ]
+      }
+    },
+    {
+      "id": "R12",
+      "purpose": "Different command IDs cannot settle one evidence key twice",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {
+        "obligation": "ACTIVE_OBJECTIVE",
+        "spins": 9
+      },
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "complete",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 75,
+            "evidence": "fixture-completion"
+          }
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c2",
+            "op": "complete",
+            "revision": 1,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 75,
+            "evidence": "fixture-completion"
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 1075,
+        "state.obligation": "NONE",
+        "journal_count": 1,
+        "results": [
+          "COMMITTED",
+          "DUPLICATE_EVIDENCE"
+        ]
+      }
+    },
+    {
+      "id": "R13",
+      "purpose": "Paused draw cannot allocate a spin",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {
+        "lifecycle": "PAUSED"
+      },
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        }
+      ],
+      "expect": {
+        "state.spins": 10,
+        "journal_count": 0,
+        "results": [
+          "INACTIVE"
+        ]
+      }
+    },
+    {
+      "id": "R14",
+      "purpose": "Paused claim of previously active qualified evidence stays unspecified; do not equate it with paused acquisition",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {
+        "lifecycle": "PAUSED"
+      },
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "bounty_claim",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 75,
+            "evidence": "fixture-earned-item"
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 1000,
+        "journal_count": 0,
+        "results": [
+          "UNSPECIFIED_PAUSED_CLAIM"
+        ],
+        "state.bounty_evidence": [
+          "fixture-earned-item"
+        ]
+      }
+    },
+    {
+      "id": "R15",
+      "purpose": "Free pause preserves obligation and frozen outcome",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c2",
+            "op": "pause",
+            "revision": 1,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 1000,
+        "state.spins": 9,
+        "state.revision": 2,
+        "state.obligation": "ACTIVE_OBJECTIVE",
+        "state.outcome": {
+          "fixture_target": "fixed-target-A",
+          "catalog_version": "fixture-v1"
+        },
+        "state.lifecycle": "PAUSED",
+        "results": [
+          "COMMITTED",
+          "COMMITTED"
+        ]
+      }
+    },
+    {
+      "id": "R16",
+      "purpose": "Resume retains same obligation without a new allocation",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c2",
+            "op": "pause",
+            "revision": 1,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1
+          }
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c3",
+            "op": "resume",
+            "revision": 2,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 1000,
+        "state.spins": 9,
+        "state.revision": 3,
+        "state.obligation": "ACTIVE_OBJECTIVE",
+        "state.outcome": {
+          "fixture_target": "fixed-target-A",
+          "catalog_version": "fixture-v1"
+        },
+        "state.lifecycle": "ACTIVE",
+        "journal_count": 3
+      }
+    },
+    {
+      "id": "R17",
+      "purpose": "Pardon replay charges once and restores Locked",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "pardon",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 500
+          }
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "pardon",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 500
+          }
+        },
+        {
+          "kind": "recover"
+        }
+      ],
+      "expect": {
+        "state.fp": 500,
+        "state.vendor": "LOCKED",
+        "journal_count": 1,
+        "results": [
+          "COMMITTED",
+          "REPLAYED",
+          "RESTORED"
+        ]
+      }
+    },
+    {
+      "id": "R18",
+      "purpose": "Uncommitted Pardon leaves Banned and uncharged",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "pardon",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 500
+          },
+          "fault": "before_commit"
+        },
+        {
+          "kind": "recover"
+        }
+      ],
+      "expect": {
+        "state.fp": 1000,
+        "state.vendor": "BANNED",
+        "journal_count": 0,
+        "acknowledged": []
+      }
+    },
+    {
+      "id": "R19",
+      "purpose": "Durable Pardon restores Locked before UI acknowledgement",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "pardon",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 500
+          },
+          "fault": "after_commit"
+        },
+        {
+          "kind": "recover"
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "pardon",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 500
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 500,
+        "state.vendor": "LOCKED",
+        "journal_count": 1,
+        "results": [
+          "WRITE_UNCONFIRMED",
+          "RESTORED",
+          "REPLAYED"
+        ]
+      }
+    },
+    {
+      "id": "R20",
+      "purpose": "Voluntary costs cannot create debt",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "purchase",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 1001
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 1000,
+        "state.revision": 0,
+        "journal_count": 0,
+        "results": [
+          "INSUFFICIENT_FP"
+        ]
+      }
+    },
+    {
+      "id": "R21",
+      "purpose": "Reject penalty may create debt, preserves bounty evidence and adds no derived spin",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {
+        "fp": 10,
+        "spins": 9,
+        "obligation": "ACTIVE_OBJECTIVE"
+      },
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "reject",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 50
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": -40,
+        "state.spins": 9,
+        "state.obligation": "PUNISHMENT_PENDING",
+        "state.bounty_evidence": [
+          "fixture-earned-item"
+        ],
+        "journal_count": 1
+      }
+    },
+    {
+      "id": "R22",
+      "purpose": "Taint allocation and mandatory Punishment consume one spin total",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "taint",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c2",
+            "op": "punishment_complete",
+            "revision": 1,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1
+          }
+        }
+      ],
+      "expect": {
+        "state.spins": 9,
+        "state.fp": 1000,
+        "state.obligation": "NONE",
+        "journal_count": 2
+      }
+    },
+    {
+      "id": "R23",
+      "purpose": "Verified donation earns conversion once after one Sacrifice allocation",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "sacrifice",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c2",
+            "op": "donation",
+            "revision": 1,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 5,
+            "verified": true,
+            "evidence": "fixture-coffer-receipt"
+          }
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c3",
+            "op": "donation",
+            "revision": 2,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 5,
+            "verified": true,
+            "evidence": "fixture-coffer-receipt"
+          }
+        }
+      ],
+      "expect": {
+        "state.spins": 14,
+        "state.obligation": "NONE",
+        "journal_count": 2,
+        "results": [
+          "COMMITTED",
+          "COMMITTED",
+          "DUPLICATE_EVIDENCE"
+        ]
+      }
+    },
+    {
+      "id": "R24",
+      "purpose": "Disappearance or unverified donation never awards spins",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "sacrifice",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c2",
+            "op": "donation",
+            "revision": 1,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 5,
+            "verified": false
+          }
+        }
+      ],
+      "expect": {
+        "state.spins": 9,
+        "state.obligation": "SACRIFICE_RECEIPT_PENDING",
+        "journal_count": 1,
+        "results": [
+          "COMMITTED",
+          "AMBIGUOUS_EVIDENCE"
+        ]
+      }
+    },
+    {
+      "id": "R25",
+      "purpose": "Lost donation acknowledgement restores committed settlement; retry cannot award again",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "sacrifice",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c2",
+            "op": "donation",
+            "revision": 1,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 5,
+            "verified": true,
+            "evidence": "fixture-coffer-receipt"
+          },
+          "fault": "after_commit"
+        },
+        {
+          "kind": "recover"
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c2",
+            "op": "donation",
+            "revision": 1,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 5,
+            "verified": true,
+            "evidence": "fixture-coffer-receipt"
+          }
+        }
+      ],
+      "expect": {
+        "state.spins": 14,
+        "state.obligation": "NONE",
+        "journal_count": 2,
+        "results": [
+          "COMMITTED",
+          "WRITE_UNCONFIRMED",
+          "RESTORED",
+          "REPLAYED"
+        ]
+      }
+    },
+    {
+      "id": "R26",
+      "purpose": "Grand activation at zero Master spins has no debit",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {
+        "spins": 0
+      },
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "grand",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        }
+      ],
+      "expect": {
+        "state.spins": 0,
+        "state.fp": 1000,
+        "state.grand": {
+          "fixture_target": "fixed-target-A",
+          "catalog_version": "fixture-v1"
+        },
+        "results": [
+          "COMMITTED"
+        ]
+      }
+    },
+    {
+      "id": "R27",
+      "purpose": "Grand activation fails when mandatory settlement remains",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {
+        "obligation": "SETTLEMENT_PENDING"
+      },
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "grand",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        }
+      ],
+      "expect": {
+        "state.grand": null,
+        "journal_count": 0,
+        "results": [
+          "OBLIGATION_PENDING"
+        ]
+      }
+    },
+    {
+      "id": "R28",
+      "purpose": "Malformed snapshot/receipt/sequence cannot be silently healed or deleted",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        },
+        {
+          "kind": "damage",
+          "target": "snapshot",
+          "index": 0
+        },
+        {
+          "kind": "recover"
+        }
+      ],
+      "expect": {
+        "state.spins": 9,
+        "state.fp": 1000,
+        "read_only": true,
+        "journal_count": 1,
+        "results": [
+          "COMMITTED",
+          "READ_ONLY"
+        ]
+      }
+    },
+    {
+      "id": "R29",
+      "purpose": "Malformed snapshot/receipt/sequence cannot be silently healed or deleted",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        },
+        {
+          "kind": "damage",
+          "target": "receipt",
+          "index": 0
+        },
+        {
+          "kind": "recover"
+        }
+      ],
+      "expect": {
+        "state.spins": 9,
+        "state.fp": 1000,
+        "read_only": true,
+        "journal_count": 1,
+        "results": [
+          "COMMITTED",
+          "READ_ONLY"
+        ]
+      }
+    },
+    {
+      "id": "R30",
+      "purpose": "Malformed snapshot/receipt/sequence cannot be silently healed or deleted",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        },
+        {
+          "kind": "damage",
+          "target": "sequence",
+          "index": 0
+        },
+        {
+          "kind": "recover"
+        }
+      ],
+      "expect": {
+        "state.spins": 9,
+        "state.fp": 1000,
+        "read_only": true,
+        "journal_count": 2,
+        "results": [
+          "COMMITTED",
+          "READ_ONLY"
+        ]
+      }
+    },
+    {
+      "id": "R31",
+      "purpose": "Unresolved gameplay settlement is preserved as a gate",
+      "source": "OPEN_QUESTIONS.md",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "q10_settlement",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 1000,
+        "state.spins": 10,
+        "state.bounty_evidence": [
+          "fixture-earned-item"
+        ],
+        "journal_count": 0,
+        "results": [
+          "UNRESOLVED_RULE"
+        ]
+      }
+    },
+    {
+      "id": "R32",
+      "purpose": "Unresolved gameplay settlement is preserved as a gate",
+      "source": "OPEN_QUESTIONS.md",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "mixed_ca_settlement",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 1000,
+        "state.spins": 10,
+        "state.bounty_evidence": [
+          "fixture-earned-item"
+        ],
+        "journal_count": 0,
+        "results": [
+          "UNRESOLVED_RULE"
+        ]
+      }
+    },
+    {
+      "id": "R33",
+      "purpose": "Unresolved gameplay settlement is preserved as a gate",
+      "source": "OPEN_QUESTIONS.md",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "audit_reward_order",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 1000,
+        "state.spins": 10,
+        "state.bounty_evidence": [
+          "fixture-earned-item"
+        ],
+        "journal_count": 0,
+        "results": [
+          "UNRESOLVED_RULE"
+        ]
+      }
+    },
+    {
+      "id": "R34",
+      "purpose": "Unresolved gameplay settlement is preserved as a gate",
+      "source": "OPEN_QUESTIONS.md",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "q6_suspend",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 1000,
+        "state.spins": 10,
+        "state.bounty_evidence": [
+          "fixture-earned-item"
+        ],
+        "journal_count": 0,
+        "results": [
+          "UNRESOLVED_RULE"
+        ]
+      }
+    },
+    {
+      "id": "R35",
+      "purpose": "Possession alone does not qualify an acquisition reward",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "bounty_claim",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 75,
+            "evidence": "fixture-possession-only"
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 1000,
+        "journal_count": 0,
+        "results": [
+          "UNQUALIFIED_EVIDENCE"
+        ]
+      }
+    },
+    {
+      "id": "R36",
+      "purpose": "Independent previously qualified evidence pays only on manual claim",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "bounty_claim",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 75,
+            "evidence": "fixture-earned-item"
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 1075,
+        "state.evidence": [
+          "fixture-earned-item"
+        ],
+        "journal_count": 1,
+        "results": [
+          "COMMITTED"
+        ]
+      }
+    },
+    {
+      "id": "R37",
+      "purpose": "Reject does not silently settle or delete Q10 evidence",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {
+        "obligation": "ACTIVE_OBJECTIVE",
+        "spins": 9
+      },
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "reject",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 50
+          }
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c2",
+            "op": "bounty_claim",
+            "revision": 1,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 75,
+            "evidence": "fixture-earned-item"
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 950,
+        "state.bounty_evidence": [
+          "fixture-earned-item"
+        ],
+        "state.evidence": [],
+        "journal_count": 1,
+        "results": [
+          "COMMITTED",
+          "UNRESOLVED_RULE"
+        ]
+      }
+    },
+    {
+      "id": "R38",
+      "purpose": "Recovery uses committed frozen quote/result without a new draw",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {
+        "obligation": "ACTIVE_OBJECTIVE",
+        "spins": 9,
+        "outcome": {
+          "fixture_target": "original",
+          "quote_version": "fixture-old"
+        }
+      },
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "complete",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 75,
+            "evidence": "fixture-completion"
+          },
+          "fault": "after_commit"
+        },
+        {
+          "kind": "recover"
+        }
+      ],
+      "expect": {
+        "state.fp": 1075,
+        "state.spins": 9,
+        "state.outcome": {
+          "fixture_target": "original",
+          "quote_version": "fixture-old"
+        },
+        "journal_count": 1
+      }
+    },
+    {
+      "id": "R39",
+      "purpose": "Second draw cannot discard a pending assignment",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c2",
+            "op": "draw",
+            "revision": 1,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 1000,
+        "state.spins": 9,
+        "state.revision": 1,
+        "state.obligation": "ACTIVE_OBJECTIVE",
+        "state.outcome": {
+          "fixture_target": "fixed-target-A",
+          "catalog_version": "fixture-v1"
+        },
+        "results": [
+          "COMMITTED",
+          "OBLIGATION_PENDING"
+        ],
+        "journal_count": 1
+      }
+    },
+    {
+      "id": "R40",
+      "purpose": "No ordinary draw with zero spins",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {
+        "spins": 0
+      },
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "draw",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        }
+      ],
+      "expect": {
+        "state.spins": 0,
+        "state.outcome": null,
+        "journal_count": 0,
+        "results": [
+          "INSUFFICIENT_SPINS"
+        ]
+      }
+    },
+    {
+      "id": "R41",
+      "purpose": "Stale session bounty callback cannot pay",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "bounty_claim",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 0,
+            "quote": 75,
+            "evidence": "fixture-earned-item"
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 1000,
+        "journal_count": 0,
+        "results": [
+          "STALE_GENERATION"
+        ]
+      }
+    },
+    {
+      "id": "R42",
+      "purpose": "No credit before run activation",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {
+        "lifecycle": "NOT_STARTED"
+      },
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "bounty_claim",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 75,
+            "evidence": "fixture-earned-item"
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": 1000,
+        "journal_count": 0,
+        "results": [
+          "INACTIVE"
+        ]
+      }
+    },
+    {
+      "id": "R43",
+      "purpose": "Free pause is available even in debt with a mandatory obligation",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {
+        "fp": -100,
+        "spins": 0,
+        "obligation": "PUNISHMENT_PENDING"
+      },
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "pause",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1
+          }
+        }
+      ],
+      "expect": {
+        "state.fp": -100,
+        "state.spins": 0,
+        "state.obligation": "PUNISHMENT_PENDING",
+        "state.lifecycle": "PAUSED",
+        "results": [
+          "COMMITTED"
+        ]
+      }
+    },
+    {
+      "id": "R44",
+      "purpose": "Unconfirmed donation blocks another request until reconciliation",
+      "source": "STATE_CONTRACT.md#transaction-boundary",
+      "initial": {},
+      "steps": [
+        {
+          "kind": "command",
+          "command": {
+            "id": "c1",
+            "op": "sacrifice",
+            "revision": 0,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "outcome": {
+              "fixture_target": "fixed-target-A",
+              "catalog_version": "fixture-v1"
+            }
+          }
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c2",
+            "op": "donation",
+            "revision": 1,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 5,
+            "verified": true,
+            "evidence": "fixture-coffer-receipt"
+          },
+          "fault": "after_commit"
+        },
+        {
+          "kind": "command",
+          "command": {
+            "id": "c3",
+            "op": "donation",
+            "revision": 1,
+            "account": "fixture-account-A",
+            "run": "fixture-run-A",
+            "generation": 1,
+            "quote": 5,
+            "verified": true,
+            "evidence": "fixture-other"
+          }
+        },
+        {
+          "kind": "recover"
+        }
+      ],
+      "expect": {
+        "state.spins": 14,
+        "state.obligation": "NONE",
+        "journal_count": 2,
+        "results": [
+          "COMMITTED",
+          "WRITE_UNCONFIRMED",
+          "PENDING_RECONCILIATION",
+          "RESTORED"
+        ]
+      }
+    }
+  ]
+}

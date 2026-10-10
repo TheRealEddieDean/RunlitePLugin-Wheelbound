@@ -47,3 +47,9 @@ Boss unlocks permanently join the separate Bossing pool; storing/destroying an o
 ## Acceptance boundary and dependency contract
 
 The I01 obligation domain must expose a single Grand-activation predicate covering pending mandatory settlement; I08 need not depend on a functioning live Coffer adapter to test this predicate. The client adapter can report unavailable/ambiguous evidence without mutating the committed outcome or discarding ownership snapshots. Freeze catalog and quote versions with every assignment; additional unsupported card/templates stay outside eligible runtime pools. Final Reject-related bounty settlement remains Q10-gated, with receipts preserved. Detailed future failure fixtures are in [DEVELOPMENT_PIPELINE](DEVELOPMENT_PIPELINE.md).
+
+## Offline acceptance supplement and unresolved boundary details
+
+[Receipt safety supplement](../../automation/receipt_safety/README.md) executes44 expected traces and32 operation/crash combinations against an in-memory reference oracle, with10 detected defective variants and6 rejected malformed fixture packets. It does not exercise Java, real file durability or live receipts. Mock sealed records are a test premise, never evidence that RuneLite persistence is atomic. All numeric quotes are placeholders.
+
+Keep command identity/payload-collision handling, torn-tail classification/checkpoint rollover, exact replay response shape and source evidence namespaces explicit in the eventual versioned implementation contract. Preserve failed originals and committed outcomes; do not silently truncate or regenerate. Claiming earlier active-earned bounty evidence while paused is separately UNVERIFIED; no-backfill for paused observations does not by itself settle that timing. Q10 and CA-MIXED remain independent gates.

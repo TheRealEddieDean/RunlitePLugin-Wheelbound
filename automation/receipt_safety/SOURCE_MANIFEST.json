@@ -1,0 +1,46 @@
+{
+  "authority": "Existing state/acceptance contracts only; no new gameplay approvals",
+  "files": [
+    {
+      "path": "docs/wheelbound/STATE_CONTRACT.md",
+      "sha256": "8107683a718d0c32143540dc37f90250b4aa525e80d09fc00079802e103aec88"
+    },
+    {
+      "path": "docs/wheelbound/DEVELOPMENT_PIPELINE.md",
+      "sha256": "63c0cd94c05e96bafba15cc02a99a69163d46f8c6e2621a089f3a33ad88da6a0"
+    },
+    {
+      "path": "docs/wheelbound/BOUNTIES.md",
+      "sha256": "2d34ef081d94f9e4b8bf774c981353331fa14005318fd108496421e0b973aa44"
+    },
+    {
+      "path": "docs/wheelbound/DEFY_FATE.md",
+      "sha256": "c412ff37311c18e673f0ef2941a9aa99b4056ef7a868d64569553ed6d535e383"
+    },
+    {
+      "path": "docs/wheelbound/OPEN_QUESTIONS.md",
+      "sha256": "c30b1e166886d1a2f903f4e874231ad3637e6100adb59b67314d93c240be199d"
+    },
+    {
+      "path": "automation/receipt_safety/oracle.py",
+      "sha256": "adf7cea51cd43c2a5687612e7cea5d88f04505cbbcdb0b2f0b6649483106d636"
+    },
+    {
+      "path": "automation/receipt_safety/checks.py",
+      "sha256": "02be54c2a21a80450f565b1caa8aeb2b295c49743b26f8640cab4da6752cd1c2"
+    },
+    {
+      "path": "automation/receipt_safety/fixtures_v1.json",
+      "sha256": "97653a0f149e9d6695c6480660d5a86b08b29a7d68570383312a94c33b71fc48"
+    },
+    {
+      "path": "automation/receipt_safety/fault_sweep.py",
+      "sha256": "bbd2694aa70516ecfee54c9d7578f8455aa86fc9b0724f686c25dd5aefbca3ee"
+    },
+    {
+      "path": "automation/receipt_safety/README.md",
+      "sha256": "1a94bcfe2b70bc1e1aee23d137c664f5c86520787106dfd260b690840bbd75d1"
+    }
+  ],
+  "starting_verified_branch": "ee188e84a6bbc27da224e3e13c705b63d8da9f75"
+}

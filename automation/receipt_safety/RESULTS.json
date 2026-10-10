@@ -1,0 +1,590 @@
+{
+  "status": "PASS",
+  "scope": "IN_MEMORY_OFFLINE_ACCEPTANCE_ORACLE",
+  "python": "3.12.14",
+  "fixture_count": 44,
+  "mutation_count": 10,
+  "malformed_input_count": 6,
+  "runtime_enabled": false,
+  "live_trace_count": 0,
+  "production_test_count": 0,
+  "persistence_io_test_count": 0,
+  "added_balance_trajectories": 0,
+  "source_manifest_sha256": "a6fa9b887e6dabc63ad557a1781b47ec65032f092c732a64bc9f8f4af1f9bfb8",
+  "cases": [
+    {
+      "id": "R01",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "05b5d4cd61ddedbc3a024f3a851b3cdb67b2f1b7d4f205a5f03c75b494e09d36"
+    },
+    {
+      "id": "R02",
+      "result": "PASS",
+      "step_count": 2,
+      "projection_sha256": "f87a3cfa68e663e4d443e4f8fc9e1d528f62b1aae808cd8d91a566079a692bf3"
+    },
+    {
+      "id": "R03",
+      "result": "PASS",
+      "step_count": 3,
+      "projection_sha256": "56905eed93e29b1f07abeab3cae9363b2fa6624b9c3f4be283109b836387ec70"
+    },
+    {
+      "id": "R04",
+      "result": "PASS",
+      "step_count": 3,
+      "projection_sha256": "56905eed93e29b1f07abeab3cae9363b2fa6624b9c3f4be283109b836387ec70"
+    },
+    {
+      "id": "R05",
+      "result": "PASS",
+      "step_count": 3,
+      "projection_sha256": "066b1db1a65ead0837a0f8e7ff37d3236aa2dc853e11911a6b6b1916aeab8b43"
+    },
+    {
+      "id": "R06",
+      "result": "PASS",
+      "step_count": 3,
+      "projection_sha256": "ee6a4af3c7eb49eac89d8ffbf8442661a1a1db240be520d508325e3d19be2966"
+    },
+    {
+      "id": "R07",
+      "result": "PASS",
+      "step_count": 2,
+      "projection_sha256": "a6322ba45808553589bc8483f30bf805b1665780e04aab552e9f49850f31dd3b"
+    },
+    {
+      "id": "R08",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "3225e07758535a31b78790ff71cb15c977dc9966e6970a8a03723a2ba76055a9"
+    },
+    {
+      "id": "R09",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "3225e07758535a31b78790ff71cb15c977dc9966e6970a8a03723a2ba76055a9"
+    },
+    {
+      "id": "R10",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "accbc55af8a3fc04274b71459046e44db2ddde923e297008561a321858bded0d"
+    },
+    {
+      "id": "R11",
+      "result": "PASS",
+      "step_count": 2,
+      "projection_sha256": "992d4fdcb0d7b2b5c7910eb4d848ae99d83b2588e477b4800c139f4b307aa40f"
+    },
+    {
+      "id": "R12",
+      "result": "PASS",
+      "step_count": 2,
+      "projection_sha256": "b3b4f72cc08b0901a807820de92fa66009bbe131a5e01c86daa35f349147b3c1"
+    },
+    {
+      "id": "R13",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "7c7ced3b5dca9460abd7dadd19cbe221e659d7efc3844d557b2a78ef6a2271f9"
+    },
+    {
+      "id": "R14",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "b704dca6e46c14d8488a1cc97c488c92a45465bbf964485b0d234a3dce98cf3c"
+    },
+    {
+      "id": "R15",
+      "result": "PASS",
+      "step_count": 2,
+      "projection_sha256": "df32b1a11b949051f2690e0fe49bf998ae37caa3ab5cbbd57f31416d94e8bfbf"
+    },
+    {
+      "id": "R16",
+      "result": "PASS",
+      "step_count": 3,
+      "projection_sha256": "e1f3d4e3eeaa8d6d911584ee8746c4da57afdeaa5b320588081c0a0dea5857a4"
+    },
+    {
+      "id": "R17",
+      "result": "PASS",
+      "step_count": 3,
+      "projection_sha256": "0a4a697c03feca34b591cce498279fdd57497284fdbb646db73f3e637ca59e5f"
+    },
+    {
+      "id": "R18",
+      "result": "PASS",
+      "step_count": 2,
+      "projection_sha256": "f87a3cfa68e663e4d443e4f8fc9e1d528f62b1aae808cd8d91a566079a692bf3"
+    },
+    {
+      "id": "R19",
+      "result": "PASS",
+      "step_count": 3,
+      "projection_sha256": "bd035b98d15870fe109e0a61239bc5b1a1e57cb2281c1b358fad8d964f44998b"
+    },
+    {
+      "id": "R20",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "96e029157f37295c0da50585c9cf237aa9d24d1bfcd95b8566d44c67c5807007"
+    },
+    {
+      "id": "R21",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "24c477c15e9d7592dca1d46b66f684516b404ad9677743ea9aa851428e3c8df5"
+    },
+    {
+      "id": "R22",
+      "result": "PASS",
+      "step_count": 2,
+      "projection_sha256": "5aaf4a731f915e0757adab32c921ef127ccba3b421609772fc90d8482c500535"
+    },
+    {
+      "id": "R23",
+      "result": "PASS",
+      "step_count": 3,
+      "projection_sha256": "e3c52d1326697bf8b5d6e245ab6a12b6888d8aa95c85f8ba9ec5aa6d2f3ab328"
+    },
+    {
+      "id": "R24",
+      "result": "PASS",
+      "step_count": 2,
+      "projection_sha256": "f2b0fb47fe331e08b8beb70ec0c33136730b9ec93dc2797a583162ca563b5c38"
+    },
+    {
+      "id": "R25",
+      "result": "PASS",
+      "step_count": 4,
+      "projection_sha256": "714e2a0653d29a3af77395aa820e39954a9e3e7e21786445e3f582a0b956216d"
+    },
+    {
+      "id": "R26",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "bdb610e4a7f85d8c275a0d8e8172f96e86028b36e18c33c992dfab542806c5ba"
+    },
+    {
+      "id": "R27",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "41d9d97a8bf8f40ba152fae4dae21095c872c1a9dbe640215c5b733dd5bcc477"
+    },
+    {
+      "id": "R28",
+      "result": "PASS",
+      "step_count": 3,
+      "projection_sha256": "97f3ecdfda1a3a3ee1d30c38bbc191ab1854e179b2918491fc1bf14d72949963"
+    },
+    {
+      "id": "R29",
+      "result": "PASS",
+      "step_count": 3,
+      "projection_sha256": "97f3ecdfda1a3a3ee1d30c38bbc191ab1854e179b2918491fc1bf14d72949963"
+    },
+    {
+      "id": "R30",
+      "result": "PASS",
+      "step_count": 3,
+      "projection_sha256": "49fe7c52ad6380c981934fb523f453e65cf9ce1a780c7fb306ed84a0bd02fa6c"
+    },
+    {
+      "id": "R31",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "fbd66a613969e516c7a7f85f0e86cf2b232804be0637ac76a9b4657c9718dec2"
+    },
+    {
+      "id": "R32",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "fbd66a613969e516c7a7f85f0e86cf2b232804be0637ac76a9b4657c9718dec2"
+    },
+    {
+      "id": "R33",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "fbd66a613969e516c7a7f85f0e86cf2b232804be0637ac76a9b4657c9718dec2"
+    },
+    {
+      "id": "R34",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "fbd66a613969e516c7a7f85f0e86cf2b232804be0637ac76a9b4657c9718dec2"
+    },
+    {
+      "id": "R35",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "0f1af39ed051a8b16d0c691a2a5fff42269d10193b4623b7c72b530a01b5f513"
+    },
+    {
+      "id": "R36",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "bef06e346dabe058f5942ee89f269ebd1f5062a20571d865d912e3ecf6a2a225"
+    },
+    {
+      "id": "R37",
+      "result": "PASS",
+      "step_count": 2,
+      "projection_sha256": "967d895e3fb508b37cdebfee0d90febb2af62b3cb07e302f14aae4d67f800271"
+    },
+    {
+      "id": "R38",
+      "result": "PASS",
+      "step_count": 2,
+      "projection_sha256": "a4b864bfe72b1a082d7bfcbc5f2ff0e6838e0f4d29efc903f58b745676ce5e10"
+    },
+    {
+      "id": "R39",
+      "result": "PASS",
+      "step_count": 2,
+      "projection_sha256": "cb2e06bdf22ffbabba2ebe123a0255955cbaac5ada0f6f466f1245cee7e4653c"
+    },
+    {
+      "id": "R40",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "d5ddab57b70c9ed9050a6cc39c01b1f216be411b5c6a61bd1890b0fbfa7e3d45"
+    },
+    {
+      "id": "R41",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "accbc55af8a3fc04274b71459046e44db2ddde923e297008561a321858bded0d"
+    },
+    {
+      "id": "R42",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "6c97abf781e2adf2c9cf9b8d165b69dbff7273da3b0fc8f043b5087d018beaea"
+    },
+    {
+      "id": "R43",
+      "result": "PASS",
+      "step_count": 1,
+      "projection_sha256": "163608d3cf3d39568f62bc41db7082894f1203f99dc4fae777499cc8a0ec8f1b"
+    },
+    {
+      "id": "R44",
+      "result": "PASS",
+      "step_count": 4,
+      "projection_sha256": "f98f703ed6646d2bcc27eddb34971abef1073f5c40f453bf697bc6a0dba2b1bd"
+    }
+  ],
+  "fault_sweep_count": 32,
+  "fault_sweep": [
+    {
+      "operation": "draw",
+      "fault": "before_commit",
+      "result": "PASS",
+      "projection_sha256": "6bf916c259bc5727fcb91ad5bb5d4e408e2b3638085a5c2894203f235bc82a64"
+    },
+    {
+      "operation": "draw",
+      "fault": "after_commit",
+      "result": "PASS",
+      "projection_sha256": "00faa762d48aec53b2e81d9e1b9ca4790f5325cbf07004fc7cbecb6305a68ea8"
+    },
+    {
+      "operation": "draw",
+      "fault": "after_snapshot",
+      "result": "PASS",
+      "projection_sha256": "00faa762d48aec53b2e81d9e1b9ca4790f5325cbf07004fc7cbecb6305a68ea8"
+    },
+    {
+      "operation": "draw",
+      "fault": "partial_record",
+      "result": "PASS",
+      "projection_sha256": "30bb269314a3de69b5cf79f017010f506589b5727ca0bfb5c4016bd84fb173c3"
+    },
+    {
+      "operation": "taint",
+      "fault": "before_commit",
+      "result": "PASS",
+      "projection_sha256": "59efd09c1f9a8f1e0402c1fa9c210eed688947da3a944820a51a5a68713b095f"
+    },
+    {
+      "operation": "taint",
+      "fault": "after_commit",
+      "result": "PASS",
+      "projection_sha256": "5cee53e0ca50260224d77af5e142c227899e3a2ef4975b6a835d7e14a28c6ba2"
+    },
+    {
+      "operation": "taint",
+      "fault": "after_snapshot",
+      "result": "PASS",
+      "projection_sha256": "5cee53e0ca50260224d77af5e142c227899e3a2ef4975b6a835d7e14a28c6ba2"
+    },
+    {
+      "operation": "taint",
+      "fault": "partial_record",
+      "result": "PASS",
+      "projection_sha256": "30bb269314a3de69b5cf79f017010f506589b5727ca0bfb5c4016bd84fb173c3"
+    },
+    {
+      "operation": "sacrifice",
+      "fault": "before_commit",
+      "result": "PASS",
+      "projection_sha256": "5a2a62f4459141bc101bb85c8963bcfe60d25e7c4d046505e657d5634d15669a"
+    },
+    {
+      "operation": "sacrifice",
+      "fault": "after_commit",
+      "result": "PASS",
+      "projection_sha256": "a11a1449d367cfb0f81198f867405862d2a2015d7ce02821052f2b0a35a2d041"
+    },
+    {
+      "operation": "sacrifice",
+      "fault": "after_snapshot",
+      "result": "PASS",
+      "projection_sha256": "a11a1449d367cfb0f81198f867405862d2a2015d7ce02821052f2b0a35a2d041"
+    },
+    {
+      "operation": "sacrifice",
+      "fault": "partial_record",
+      "result": "PASS",
+      "projection_sha256": "30bb269314a3de69b5cf79f017010f506589b5727ca0bfb5c4016bd84fb173c3"
+    },
+    {
+      "operation": "pardon",
+      "fault": "before_commit",
+      "result": "PASS",
+      "projection_sha256": "8cc205a58375a17b53fa9a8dae2c3003d61545074fe92fbe1bc178f7e3a6c678"
+    },
+    {
+      "operation": "pardon",
+      "fault": "after_commit",
+      "result": "PASS",
+      "projection_sha256": "e0865b52af6276fb337245786aa4a59b1881999fee84d251cd524b47e68ec1be"
+    },
+    {
+      "operation": "pardon",
+      "fault": "after_snapshot",
+      "result": "PASS",
+      "projection_sha256": "e0865b52af6276fb337245786aa4a59b1881999fee84d251cd524b47e68ec1be"
+    },
+    {
+      "operation": "pardon",
+      "fault": "partial_record",
+      "result": "PASS",
+      "projection_sha256": "30bb269314a3de69b5cf79f017010f506589b5727ca0bfb5c4016bd84fb173c3"
+    },
+    {
+      "operation": "reject",
+      "fault": "before_commit",
+      "result": "PASS",
+      "projection_sha256": "612cd05aa497ecabe6479898d6d998469bb7bc3e58077eda8f49608f065ac948"
+    },
+    {
+      "operation": "reject",
+      "fault": "after_commit",
+      "result": "PASS",
+      "projection_sha256": "c5e9db711b11a75b1d3677f5c2f5291ea54bcf16d848400724f827a46b709024"
+    },
+    {
+      "operation": "reject",
+      "fault": "after_snapshot",
+      "result": "PASS",
+      "projection_sha256": "c5e9db711b11a75b1d3677f5c2f5291ea54bcf16d848400724f827a46b709024"
+    },
+    {
+      "operation": "reject",
+      "fault": "partial_record",
+      "result": "PASS",
+      "projection_sha256": "b11cb7f720d167974e17edc15593c95b47ad5722b6d792ecf0fb1a0de2ec7f25"
+    },
+    {
+      "operation": "complete",
+      "fault": "before_commit",
+      "result": "PASS",
+      "projection_sha256": "8fc11b6d8b78122b42b99a24d13d845821ca487978ad680e22b66256fc53cf1a"
+    },
+    {
+      "operation": "complete",
+      "fault": "after_commit",
+      "result": "PASS",
+      "projection_sha256": "1edd8974f065f1e14ad314c001dde8c5d3d90e0a700ce3791277441260aa75f6"
+    },
+    {
+      "operation": "complete",
+      "fault": "after_snapshot",
+      "result": "PASS",
+      "projection_sha256": "1edd8974f065f1e14ad314c001dde8c5d3d90e0a700ce3791277441260aa75f6"
+    },
+    {
+      "operation": "complete",
+      "fault": "partial_record",
+      "result": "PASS",
+      "projection_sha256": "1685d4effb2aa325c6e7da7607e59c6490921139758732c12b162202b47c297c"
+    },
+    {
+      "operation": "donation",
+      "fault": "before_commit",
+      "result": "PASS",
+      "projection_sha256": "a034826429abd812d8812c1b7c77cbb889dc62dd90538e37e4c2145da08e9c3d"
+    },
+    {
+      "operation": "donation",
+      "fault": "after_commit",
+      "result": "PASS",
+      "projection_sha256": "5ae8a303d767f245cf0cec18e86a1744d52af679709255bd990f6afe0c08f877"
+    },
+    {
+      "operation": "donation",
+      "fault": "after_snapshot",
+      "result": "PASS",
+      "projection_sha256": "5ae8a303d767f245cf0cec18e86a1744d52af679709255bd990f6afe0c08f877"
+    },
+    {
+      "operation": "donation",
+      "fault": "partial_record",
+      "result": "PASS",
+      "projection_sha256": "530bc36a72c47aea4050029c14dd453ce0c1f1e89810ece952ff3586bc099b13"
+    },
+    {
+      "operation": "bounty_claim",
+      "fault": "before_commit",
+      "result": "PASS",
+      "projection_sha256": "6e9d8d23c7888385245ab8fcdbb15f77a43deb79d550d60fcab5002dc90d350e"
+    },
+    {
+      "operation": "bounty_claim",
+      "fault": "after_commit",
+      "result": "PASS",
+      "projection_sha256": "742c37415610dc3f367ffa90c3121926b4d384beb47ef3be47dd0f16747ef39c"
+    },
+    {
+      "operation": "bounty_claim",
+      "fault": "after_snapshot",
+      "result": "PASS",
+      "projection_sha256": "742c37415610dc3f367ffa90c3121926b4d384beb47ef3be47dd0f16747ef39c"
+    },
+    {
+      "operation": "bounty_claim",
+      "fault": "partial_record",
+      "result": "PASS",
+      "projection_sha256": "30bb269314a3de69b5cf79f017010f506589b5727ca0bfb5c4016bd84fb173c3"
+    }
+  ],
+  "mutations": [
+    {
+      "mutant": "ignore_identity",
+      "detected_by": [
+        "R08",
+        "R09"
+      ],
+      "result": "DETECTED"
+    },
+    {
+      "mutant": "forget_command",
+      "detected_by": [
+        "R03",
+        "R04",
+        "R07",
+        "R17",
+        "R19",
+        "R25"
+      ],
+      "result": "DETECTED"
+    },
+    {
+      "mutant": "ignore_generation",
+      "detected_by": [
+        "R10",
+        "R41"
+      ],
+      "result": "DETECTED"
+    },
+    {
+      "mutant": "ignore_revision",
+      "detected_by": [
+        "R11"
+      ],
+      "result": "DETECTED"
+    },
+    {
+      "mutant": "credit_paused",
+      "detected_by": [
+        "R13",
+        "R14",
+        "R42"
+      ],
+      "result": "DETECTED"
+    },
+    {
+      "mutant": "forget_evidence",
+      "detected_by": [
+        "R12",
+        "R23"
+      ],
+      "result": "DETECTED"
+    },
+    {
+      "mutant": "ack_before_commit",
+      "detected_by": [
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R18"
+      ],
+      "result": "DETECTED"
+    },
+    {
+      "mutant": "allow_overdraft",
+      "detected_by": [
+        "R20"
+      ],
+      "result": "DETECTED"
+    },
+    {
+      "mutant": "ignore_obligation",
+      "detected_by": [
+        "R27"
+      ],
+      "result": "DETECTED"
+    },
+    {
+      "mutant": "change_frozen_outcome",
+      "detected_by": [
+        "R03",
+        "R04",
+        "R06",
+        "R38"
+      ],
+      "result": "DETECTED"
+    }
+  ],
+  "malformed_inputs": [
+    {
+      "input": "runtime_enabled",
+      "result": "REJECTED"
+    },
+    {
+      "input": "negative_quote",
+      "result": "REJECTED"
+    },
+    {
+      "input": "float_quote",
+      "result": "REJECTED"
+    },
+    {
+      "input": "credential_field",
+      "result": "REJECTED"
+    },
+    {
+      "input": "empty_expect",
+      "result": "REJECTED"
+    },
+    {
+      "input": "unknown_op",
+      "result": "REJECTED"
+    }
+  ]
+}

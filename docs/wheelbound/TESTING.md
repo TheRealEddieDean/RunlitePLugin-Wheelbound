@@ -43,3 +43,7 @@ WB-D085: trigger empty-candidate recovery, pause, acquire eligible item, resume 
 ## Actual build evidence and planned trace packet
 
 Remote CI run38025748732 actually executed compileJava,compileTestJava,test and build successfully; source has70 declared test methods but the workflow exports no executed test-case count. See [build baseline](research/BUILD_BASELINE.md). [Capture protocol](research/TRACE_CAPTURE_PROTOCOL.md) defines46 NOT_RUN live cases and source-pinned evidence requirements. Schema/order/origin fixtures validate offline envelopes only; they do not create client observations or approve restrictive controls.
+
+## Executed offline receipt acceptance, WB-A24
+
+Run `python3 automation/receipt_safety/checks.py --verify` from repository root. Saved results cover44 expected traces plus32 operation/write-boundary combinations;10 intentional guarantee violations are detected and6 malformed packets rejected. Each main case is replayed for deterministic interpreter agreement. Source hashes and exact results are saved in that directory. This is zero production/client/disk-I/O tests and adds zero balance trajectories. Actual Java/OS persistence, concurrent ownership, migration and live adapter acceptance still require their separate tickets. A claim while paused of evidence earned earlier while active remains unspecified, not rejected as backfill.

@@ -46,3 +46,7 @@ See [CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACC
 | Recovered peer gates/clusters/64 boss nodes and pool commitment | WB-D027/095/099/100 | I03/I04/I09 | 5/9 and 4/6 unique unlocks; mode roster covers all67 source categories; no ordinary boss removal |
 | Visible grouped bounties, vendor transparency, Wilderness opt-in | WB-D101/102/103 | I03/I04/I05/I06/I09 | Family acquisition/claim provenance; current/next class quotes; no implicit access permission |
 | Grand checklists and delegated lifecycle/economy | WB-D104/105/106 | I01/I04/I07/I08/I09 | Failed attempt preserves checks; no offline credit, timer or passive FP; Q10 settlement held |
+
+## Offline receipt acceptance supplement
+
+WB-A24 executes the existing I01/I04/I05/I06/I07/I08 receipt boundaries in [44 expected traces and32 systematic crash combinations](../../automation/receipt_safety/README.md). The mapping includes exact case IDs, source hashes and limitations. Passing this in-memory oracle does not mark those implementation tickets complete. Unparsed mock tails are preserved, duplicate mock settlements pay once, and Q10/CA-MIXED/audit-order/Q6 remain gated.

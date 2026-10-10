@@ -16,3 +16,5 @@ Resolved and must not be re-asked: Q1 new-account scope (S8-M0327/WB-D088); Q7 r
 Q10 — Reject and earned bounty receipts: S8-M0402 delegated forfeiture wording conflicts with unqualified always-active/manual claim interpretation. Resolve which receipt/reward types survive Reject before runtime reward settlement. See OPEN_QUESTIONS; no silent evidence deletion or FP clawback.
 
 Additional aggregate receipt boundary (CA-MIXED): mixed active/paused per-boss CA completion histories cannot be settled by assuming the final task proves all tasks were earned while active. Current diary/CA review preserves evidence and marks aggregate payout unverified. Obtain an explicit credit rule before enabling that payout; do not rewrite the confirmed free-pause/no-backfill rules.
+
+PAUSE-CLAIM: claim timing for already active-earned evidence during pause is not explicitly recovered. Preserve evidence; proposed allowance affects manual claim timing only, with no paused-progress backfill. See OPEN_QUESTIONS. Do not silently adopt either prohibition or permission in runtime.
