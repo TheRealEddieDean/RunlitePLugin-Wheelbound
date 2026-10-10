@@ -14,10 +14,10 @@ The 400 Master-draw and 180-hour horizons are experimental observation limits, n
 
 | Scenario | FP median | Hours median | Ordinary completions median | Penance assignments median | Longest Penance observed | Stop counts |
 | --- | --- | --- | --- | --- | --- | --- |
-| careful_retain | 2410 | 77.32 | 370 | 22 | 2h | 1000 DRAW_HORIZON |
-| careful_withhold | 1972 | 77.61 | 370 | 23 | 2h | 1000 DRAW_HORIZON |
-| risk_retain | 210 | 137.85 | 344 | 115 | 16h | 1000 DRAW_HORIZON |
-| risk_withhold | 84 | 134.37 | 341 | 114 | 32h | 996 DRAW_HORIZON; 3 BLOCKED_Q6_EXHAUSTED_QUEST; 1 PENDING_FATE_HORIZON |
+| careful_retain | 2410 | 77.32 | 370 | 22 | 2h | 1,000 draw limit |
+| careful_withhold | 1972 | 77.61 | 370 | 23 | 2h | 1,000 draw limit |
+| risk_retain | 210 | 137.85 | 344 | 115 | 16h | 1,000 draw limit |
+| risk_withhold | 84 | 134.37 | 341 | 114 | 32h | 996 draw limit; 3 exhausted; 1 pending |
 
 ## Findings for design review
 

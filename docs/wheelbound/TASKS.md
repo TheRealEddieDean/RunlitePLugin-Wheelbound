@@ -22,7 +22,7 @@ The maintained execution queue is [automation/TASK_QUEUE](../../automation/TASK_
 - [x] WB-D058: Taint task consumes one spin, explicitly approved.
 - [x] WB-D058: Sacrifice also consumes one spin, explicitly approved.
 - [x] Revise simulation recovery and rerun current-rule baseline/sensitivity; synthetic acquisition remains explicitly provisional.
-- [ ] Complete S8 approval/catalog reconciliation remains unfinished; distinguish promised catalogs from actual delivered lists.
+- [x] S8 visible history reviewed and catalog authority reconciled; inaccessible adjacent conversations remain explicit gaps.
 
 - [x] Current-rule H2: 12,000 baseline plus 36,000 sensitivity trajectories, historical H1 outputs preserved; no RuneLite implementation.
 
@@ -39,11 +39,15 @@ The maintained execution queue is [automation/TASK_QUEUE](../../automation/TASK_
 - [x] Pipeline configuration inspected: JDK 11, Gradle 8.10; build attempted but wrapper download failed before compilation; see pipeline.
 - [x] Concrete detector contracts, state/crash specification, traceability and major-question register populated.
 - [ ] Exact real-content end-to-end account progression model; current simulations remain synthetic/incomplete.
-- [ ] Source-history catalogs recovered; newly authored replacements must be labeled separately.
+- [x] Actual recovered catalog decisions distinguished from newly authored replacements; no historical full list invented.
 - [ ] Live detector traces and exact restrictive-policy acceptance; deferred until implementation/review.
 
-- [x] New separately labeled 100-bounty/50-punishment drafts and source snapshots created. Catalog authority review remains pending; S8-M0172 states the actual punishment list was deferred.
+- [x] New separately labeled 100-bounty/50-punishment drafts and source snapshots created. Catalog authority review completed with eight versions; S8-M0172 states the historical punishment list was deferred.
 - [x] H3 eight-policy 12,000-trajectory experiment executed and offline checks passed. Exact real-content progression still incomplete.
 - [x] Balance candidate and detailed recovery UX authored; no numeric approval invented.
 
 - [x] Separate 18-entry daily draft, exchange evidence, pause-recovery interaction and read-only consistency checks completed.
+
+## Latest bounded checkpoint
+
+110 decisions; all100 bounty/50 punishment/18 daily conditional documentary reviews;48 diary mappings and21 CA words. H4 actually executed80 smoke and4,000 baseline trajectories, totaling130,080 recorded synthetic trajectories. Live traces, exact policy acceptance, full real-content balance and successful clean build remain incomplete. The maintained automation queue controls current status.
