@@ -1,7 +1,10 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261010T042822Z-content-research
-- State: IDLE — clean planned checkpoint; no active ownership lease retained.
+- State: ACTIVE
+- Owner: wb-20261010-build-evidence; task WB-A19 CI evidence and packaging baseline.
+- Lease acquired UTC: 2026-10-10T15:21:00.403132+00:00
+- Lease expires UTC: 2026-10-10T16:06:00.403146+00:00
 - Branch: wheelbound-mode
 - Gameplay Markdown/PDF source: c606660ed501f2f666fb59314b57912e552e9bc3
 - Subsequent checkpoint b84f377888da9fc6a1b2e757d5201dd409e3f4bc published PDF receipt/IDLE state. This later CSV-only repair preserves exact executed CRLF bytes matching recorded hashes; resolve latest successfully verified commit from branch head.

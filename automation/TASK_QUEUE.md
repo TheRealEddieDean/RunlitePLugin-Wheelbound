@@ -24,4 +24,6 @@ Authoritative design: [decision register](../docs/wheelbound/DECISIONS.md). Oper
 | WB-A17 | Live Coffer/method/vendor/GE/trade trace fixtures | Release gate | Explicit implementation authorization + real client | L | BLOCKED | TECHNICAL_SPECIFICATIONS; TESTING | Current-client positive/negative/paused/order/failure traces; no mocked receipt treated as live |
 | WB-A18 | Existing clean project build baseline | Engineering gate | Accessible JDK/Gradle dependencies | S | BLOCKED | DEVELOPMENT_PIPELINE | Clean build actually reaches compilation/tests; prior wrapper network failure not success |
 
+| WB-A19 | Verify successful CI build and inspect package/test baseline | P1 | A18 source configuration; current GitHub run | S | ACTIVE | research/BUILD_BASELINE; DEVELOPMENT_PIPELINE | Exact run/head/job/toolchain/tasks/test limits; no production changes |
+
 Paths without a directory prefix above are under docs/wheelbound/. Selection policy: acquire ownership, choose highest-priority TODO or PARTIAL whose dependency is DONE, work to a bounded deliverable, verify and checkpoint. Speculative numbers are delegated candidates, not historically approved values. Questions block only affected work.
