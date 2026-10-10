@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261010-receipt-acceptance
-- State: IDLE — clean bounded checkpoint; owner released; no active lease.
+- State: ACTIVE — owner /root; WB-A26 offline JUnit report reconciler; acquired2026-10-10; release required.
 - Branch: wheelbound-mode
 - Starting head: ee188e84a6bbc27da224e3e13c705b63d8da9f75
 - Ownership commit:4777e15043f684d575fd88ee7f8bbb638f1049c3
