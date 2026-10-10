@@ -31,4 +31,6 @@ Authoritative design: [decision register](../docs/wheelbound/DECISIONS.md). Oper
 | WB-A21 | Cross-process verification of saved H4 boundary cases | P1 | A12 saved outputs | S | DONE (offline replay) | simulation/h4/PROCESS_REPLAY_VALIDATION |23 cases×4 processes match CSV/ledger/snapshot; no input changes or new balance claims |
 | WB-A22 | Draft inspectable CI report/dependency pipeline proposal | P1 | A19 actual CI limits | S | DONE (proposal only) | research/CI_PROPOSAL; CI_ACTION_PINS | YAML/action source pins checked; not activated or runtime-tested |
 
+| WB-A23 | Draft exact restrictive-control review brief without sending | P1 | A14 policy/source limits; A20 route plan | S | DONE (draft only) | research/POLICY_REVIEW_PACKET | Current published sources rechecked; precise behavior/routes/agenda; no review contact or approval |
+
 Paths without a directory prefix above are under docs/wheelbound/. Selection policy: acquire ownership, choose highest-priority TODO or PARTIAL whose dependency is DONE, work to a bounded deliverable, verify and checkpoint. Speculative numbers are delegated candidates, not historically approved values. Questions block only affected work.

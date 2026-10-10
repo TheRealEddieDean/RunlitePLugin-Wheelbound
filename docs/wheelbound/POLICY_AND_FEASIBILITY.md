@@ -149,3 +149,7 @@ Primary peer sources: [TradeManager](https://github.com/botanicvelious/runelite-
 ## Detailed technical resolution checkpoint
 
 [TECHNICAL_SPECIFICATIONS](TECHNICAL_SPECIFICATIONS.md) supplies current detector contracts, route coverage, initialization rules, source evidence and explicit live-validation gates (WB-D069–075). Its refined Coffer route uses visible initialized UI/server quote and balance as primary evidence; the old IF-variable mapping is optional pending validation. Method-specific templates require a supported catalog. Vendor inspection does not unlock transactions. New-account scope is confirmed by WB-D088; full Coffer recovery and exact restrictive policy acceptance remain in [OPEN_QUESTIONS](OPEN_QUESTIONS.md). No live test or production implementation is claimed.
+
+## Exact restrictive-control review brief,2026-10-10
+
+[Draft review packet](research/POLICY_REVIEW_PACKET.md) specifies the proposed consume-and-local-notice behavior, preserved Trade with, outgoing/incoming/already-open/final/shop/GE route distinctions, original Gson/focus fixes, passive-versus-generated action boundary and questions for later exact review. Jagex guidelines and RuneLite rejected-feature pages were re-opened on2026-10-10. The packet was not sent; no restrictive code or live test/approval is claimed. Q5 stays conditional on an actual review outcome.
