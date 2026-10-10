@@ -34,3 +34,7 @@ Commit links: prepend https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbou
 
 - aa7d7f8cad6713b6c48188d8dbb7605fa71589ba: A05 committed full visible-user-turn review, Grand/checklist/shop and delegated authority records.
 - A06 in this checkpoint: scoped consistency corrections; design checks and existing H2/H3 invariant/replay checks passed. Main baseline preserved; all changes limited to automation/ and docs/wheelbound/. Session ends IDLE with no completed deliverable omitted from checkpoint. Next A07 catalog authority manifest; A13 recovered-rule backlog review can follow independently. PDF refresh remains queued, not claimed current.
+
+## A07 catalog authority checkpoint
+
+Added CATALOG_AUTHORITY.md and six-entry AUTHORITY_MANIFEST.json with exact file hashes, provenance, counts and runtime gates. Distinguishes confirmed 64-node mode roster from 67-node normal metadata and delegated experimental catalogs. Documents grouped-family, severity and Challenge gaps; historical inputs unchanged. User clarified 81% allowance remaining. Owning commit is resolved from file history after guarded publication.

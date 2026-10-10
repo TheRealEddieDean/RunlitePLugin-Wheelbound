@@ -1,0 +1,107 @@
+{
+  "version": "authority-v1-2026-10-10",
+  "scope": "Documentation metadata only; does not enable gameplay",
+  "decision_register": "../DECISIONS.md",
+  "catalogs": [
+    {
+      "path": "catalogs/item_bounties.json",
+      "version": "draft-2026-10-09",
+      "sha256": "97a1ce17b6ff01e174fad180f9484c67bb4574fae2ffdd41f7ea8e13d6af4e88",
+      "entry_count": 100,
+      "authority": "DELEGATED_EXPERIMENTAL",
+      "approval": "WB-D094/WB-D101; catalog itself is a new draft",
+      "source_blob": "1bb88f6044f84f89cbe1a5e99ccc688d43ff631c",
+      "runtime_enabled": false,
+      "enable_gates": [
+        "Independent acquisition provenance",
+        "Grouped third-age and gilded families in a separately versioned 100-target catalog",
+        "Review individual FP and account/source eligibility"
+      ],
+      "h3_pinned_input": true
+    },
+    {
+      "path": "catalogs/daily_bounties.json",
+      "version": "draft-2026-10-09",
+      "sha256": "70023ae7d659b782af1789c75271315a5fa6e14dc062d6e3b77154c6e6ec9480",
+      "entry_count": 18,
+      "authority": "DELEGATED_EXPERIMENTAL",
+      "approval": "WB-D101; quantities/rewards are candidates",
+      "source_blob": "1bb88f6044f84f89cbe1a5e99ccc688d43ff631c",
+      "runtime_enabled": false,
+      "enable_gates": [
+        "Daily reset and idempotent manual claim",
+        "Achievable account-aware source pool",
+        "Paused receipt exclusion"
+      ],
+      "h3_pinned_input": false
+    },
+    {
+      "path": "catalogs/punishments.json",
+      "version": "draft-2026-10-09",
+      "sha256": "af387fce6cb928cef5bd4c6232b29fe8000344676c3c6ab359102f7e17ca5a7f",
+      "entry_count": 50,
+      "authority": "DELEGATED_EXPERIMENTAL",
+      "approval": "WB-D035/WB-D087; individual draft templates not historical approvals",
+      "source_blob": null,
+      "runtime_enabled": false,
+      "enable_gates": [
+        "Validated dynamic eligibility and method/location evidence",
+        "Frozen varied outcomes and mandatory completion",
+        "Separate consecutive Penance severity contract without universal 120-minute cap"
+      ],
+      "h3_pinned_input": true
+    },
+    {
+      "path": "catalogs/quest_metadata.json",
+      "version": "42a6f17a6a2e8e478aa763890ecd0181a59dad38",
+      "sha256": "b2013e1ea37c18891b78eb2f7f4e149c0e109a728584dcf83d5efbc6fd96f7ef",
+      "entry_count": 213,
+      "authority": "SOURCE_METADATA",
+      "approval": "RuneLite Quest enum; source_commit/source_blob stored in catalog",
+      "source_blob": "b40a73187f514fa5abdfe93db0e76203c20c5acb",
+      "runtime_enabled": false,
+      "enable_gates": [
+        "Exclude inappropriate subquests/miniquests from assigned quest pool",
+        "Initialized completion and real prerequisites",
+        "Resolve exhausted eligible pool without violating five/three invariant"
+      ],
+      "h3_pinned_input": false
+    },
+    {
+      "path": "catalogs/repository_boss_tiers.json",
+      "version": "source-snapshot-a8526ef3",
+      "sha256": "48d687b23356e4ee6d61ed7a6b0a3aabe1cdf987571461a73e4545c1e2d64cc4",
+      "entry_count": 67,
+      "authority": "NORMAL_MODE_SOURCE_SNAPSHOT",
+      "approval": "Existing BossDifficulty metadata; preserve shipped normal wheels",
+      "source_blob": null,
+      "runtime_enabled": false,
+      "enable_gates": [
+        "Not the Wheelbound mode roster",
+        "Keep existing normal-mode regression coverage"
+      ],
+      "h3_pinned_input": false
+    },
+    {
+      "path": "catalogs/mode_boss_roster.json",
+      "version": "recovered-S8-M0204-0205-v1",
+      "sha256": "f65dedf174602881fc251111d00fc1bc96beb7d7c4877bbe5aed00aeb70d7cc5",
+      "entry_count": 64,
+      "authority": "CONFIRMED_DESIGN_ROSTER",
+      "approval": "WB-D100; S8-M0204 proposal explicitly accepted S8-M0205",
+      "source_blob": "repository_boss_tiers.json; pinned BossDifficulty blob 50dd6bdfffa56f4f3b96274bcb2d07d92fe90141",
+      "runtime_enabled": false,
+      "enable_gates": [
+        "Map grouped raid variants to distinct kill receipts",
+        "Real encounter prerequisites and initialized counters",
+        "Permanent purchased boss eligibility; no additional plugin stat gate"
+      ],
+      "h3_pinned_input": false
+    }
+  ],
+  "historical_experiments": {
+    "H1": "Outputs preserve original model hash; recover original source revision before claiming full reproducibility from the current tree.",
+    "H2": "Retained model/source and output hashes; synthetic inputs remain assumptions.",
+    "H3": "Pinned item/punishment catalog hashes remain unchanged; new normative catalogs require new paths/versions and model outputs."
+  }
+}

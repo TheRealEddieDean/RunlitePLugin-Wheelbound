@@ -1,5 +1,7 @@
 # Newly authored content catalogs
 
+See [catalog authority manifest](CATALOG_AUTHORITY.md) for approval boundaries, immutable experiment inputs and normative gaps. The 120-minute punishment cap belongs only to this experimental draft; confirmed consecutive Penance can extend to feasible multi-day tasks.
+
 Status: DELEGATED drafts, not recovered historical approvals. IDs and proposals are stable; no template is automatically enabled without its detector/access checks. Item identity is checked against RuneLite ItemID blob 1bb88f6044f84f89cbe1a5e99ccc688d43ff631c. This alone does not verify drop tables, rarity, source permissions, item variants or current loot-event behavior.
 
 ## 100 permanent item bounty candidates

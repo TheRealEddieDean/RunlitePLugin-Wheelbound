@@ -51,3 +51,5 @@ S8: the original shared Game Design & Progression conversation is now recovered 
 
 ## Autonomous checkpoints
 Use [task queue](../../automation/TASK_QUEUE.md), [session ownership and exact resume](../../automation/SESSION_STATE.md), [verified progress](../../automation/PROGRESS.md), [blockers](../../automation/BLOCKERS.md) and [pending decisions](../../automation/DECISIONS_PENDING.md). [Protocol](../../automation/PROTOCOL.md) governs guarded startup, approximately 70/30 effort allocation and clean stopping. Approved gameplay remains in DECISIONS.md.
+
+Catalog authority: [manifest and promotion gates](CATALOG_AUTHORITY.md). Exact catalog hashes: [AUTHORITY_MANIFEST](catalogs/AUTHORITY_MANIFEST.json).

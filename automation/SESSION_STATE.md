@@ -25,4 +25,6 @@
 
 Use approximately70/30 execution-versus-verification/checkpoint effort targets; no authoritative quota metric is available. An expired lease prompts inspection, not proof an old worker stopped. At planned end release IDLE and record exact continuation. No background execution, automatic restart, quota reset or existing-conversation reopening capability is established.
 
-User-reported allowance gauge:81% at 2026-10-10T01:25Z; not an authoritative tool reading or a measured cost attributable to one work session. Limit productive scope to A07, then prioritize checks/commit/continuation; do not launch a new simulation or PDF build here.
+User-reported allowance clarification: 81% REMAINING, not consumed. This is not an authoritative tool reading or a measured per-task cost. Continue bounded productive tasks with verification/checkpoint reserve; no quota or automatic restart capability is inferred.
+
+A07 completed in this checkpoint: six catalog hashes/counts/authority records and promotion gates; original H3 inputs unchanged. Next bounded task: WB-A13 backlog acceptance review against the recovered rules. Current owner retains the existing lease while transitioning; recheck remote head before any further write.
