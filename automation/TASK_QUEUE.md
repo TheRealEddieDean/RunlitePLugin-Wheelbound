@@ -45,4 +45,4 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A28 | Compare Q10 Reject bounty settlement and claim timing | P1 | ExistingQ10; A24 provenance boundaries | S | DONE (analysis only) | automation/decision_analysis |e61ed27b records72 hypothetical ledger comparisons, claim-timing difference and spent-FP consequences; no policy adopted |
 
-| WB-A29 | Specify exact build-artifact and standard-JAR acceptance packet | P1 | A19/A22/A26 source and reporting gaps | S | IN_PROGRESS | automation/pipeline_acceptance | Export checklist, provenance chain, archive/dependency/report rejection criteria and bounded I00 subtasks; no workflow activation or artifact PASS claimed |
+| WB-A29 | Specify exact build-artifact and standard-JAR acceptance packet | P1 | A19/A22/A26 source and reporting gaps | S | DONE (specification only) | automation/pipeline_acceptance | 5297ccf9/5f25897f:12 future acceptance checks, five I00 subtasks, seven source pins; byte-export/configuration gaps documented; zero new builds/artifact reviews |

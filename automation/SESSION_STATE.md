@@ -1,32 +1,30 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261011-package-acceptance
-- State: ACTIVE — wb-20261011-package-acceptance owns WB-A29; lease through2026-10-11T19:00:00Z.
+- State: IDLE — owner released; no active lease.
 - Branch: wheelbound-mode
-- Starting verified head:e5d753dc90aa159f16acd6a94f92474200072373
-- Claim9a691aafcd6750be3495fb3d696f65295c60f8f9; intermediateb62a4592ad3a8cda2550d2b8d22658dc53f86cc7.
-- Latest analysis commits: A27411ccde4964750f7649b406cec351ff696fe3ac5; A28e61ed27b145336a915c0c9047a0636f0b29a56ca.
+- Starting verified head:2a0e44eaeeae31f74ea56973ccb1f0823ccd2a38
+- Claim:db1f56794497a725a17461661cb7e42e5d4cf683
+- Deliverable commits:5297ccf990d6556481ce5537ebb93f3e85c87daf;5f25897facf984e5497e0e122f3b6189a785ee6d
 - Final owning checkpoint: resolve from branch/file history; no circular self-hash.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
-- Completed this session: exact Q6 suspension odds and conditional replacement bounds for6 examples/32,116 count compositions; Q10 four-option/claim-timing analysis with72 hypothetical ledger comparisons and a conditional spent-FP clawback example. No option adopted or approval changed.
-- Gameplay authority:110 decision IDs; current gameplay Markdown/PDF source284799b19ec945112239217c898a06871501ffa5,162-page PDF/version9. This session changes only automation research/checkpoints. PDF_CHECKPOINT remains current for that gameplay publication; new options supplements are not inserted as approved rules.
-- Verification: q6_analysis.py --verify, verify_q10.py and design_checks passed. Source/config/catalog/H4 bytes and130,080 synthetic progression trajectories unchanged. Zero new account trials, production tests or live traces.
-- Uncommitted completed canonical deliverables: NONE after successful expected-head final publication and byte verification; a failed update invalidates this claim.
-- Preserved unreviewed intermediates: older repo/ checkout dirty documentation and local docs/wheelbound/simulation/smoke.json absent from the remote tracked tree. Neither was reset, deleted or published as new trial evidence.
+- Current task: WB-A29 complete as an acceptance specification only.
+- Completed:12 future archive/report checks, five bounded I00 subtasks, seven source pins and exact dependency/export limitations. No actual new artifact accepted.
+- Verification: source Git blobs/local SHA256/lengths and check IDs/statuses inspected; design_checks passed. Remote byte/scope verification is required after final publication.
+- Gameplay authority:110 decision IDs. Current gameplay Markdown/PDF source284799b19ec945112239217c898a06871501ffa5;162 pages/version9. Automation-only supplements do not alter approved rules or PDF chapters.
+- Uncommitted completed canonical deliverables: NONE after successful final guarded publication and byte verification; failed publication invalidates this claim.
+- Preserved: older repo/ dirty documentation and local docs/wheelbound/simulation/smoke.json absent from remote tracked tree. Neither reset/deleted/published as new evidence.
 - No production implementation, workflow activation, game-client login, reviewer contact, Hub submission, main edit, automatic restart or background schedule.
-- Remaining blockers: exact dependency/XML/package export in authorized pipeline; local JDK11/connectivity; legitimate current-client traces; exact restrictive-policy review. Major choices Q6/Q10 now have quantified review packets; Q2/Q9/CA-MIXED/PAUSE-CLAIM and conditionalQ5 remain.
 
 ## Exact continuation
 
-1. Read remote head/main and current ownership, PROTOCOL/TASK_QUEUE/BLOCKERS/DECISIONS_PENDING plus authoritative DECISIONS/master instructions. Inspect later commits and preserve concurrent/unreviewed changes; no blind retry after a head mismatch.
-2. Review automation/decision_analysis/Q6_OPTIONS and Q10_OPTIONS before choosing either gameplay rule. The arithmetic is conditional, with placeholders; run the exact checks if altering inputs. Do not treat count compositions or72 ledger comparisons as progression trials.
-3. Q6 needs explicit selection/repair behavior for unavailable ordinary pools, including unaffordable replacement. Suspension renormalizes ordinary and special odds; unknown evidence is not empty; recommended boss stats cannot override permanent purchased unlocks.
-4. Q10 needs a payout/claim rule covering claimed/unclaimed/spent FP, earning versus claim assignment and aggregate rewards. Preserve raw receipts. Do not silently adopt escrow/clawback, delete provenance, reset once-only claim keys or allow unrelated/paused-earned progress.
-5. Existing remote build run38025748732 compiled/test-task passed. Actual dependency/version/XML/package exports remain missing. The unactivated CI proposal and source-pinned70-method report reconciler prepare this later authorized milestone; synthetic XML is not real execution evidence.
-6. Production coding and live adapters still need separate authorization. First coding slice remains I01 state/receipt/RNG after I00 reporting: use existing offline acceptance fixtures as expectations, not Python runtime code. A17 requires current-client positive/negative/paused/order traces; policy packet remains unsent.
-7. Resolve significant choices when the user supplies them: update DECISIONS and relevant gameplay files, validate/commit, then refresh derived PDF. Free pause,24total/fiveordinary/threeactivities, random boss/no reroll, Pardon and all prior approvals remain unchanged.
-8. Continue other independently useful tasks only with a bounded deliverable and satisfied dependencies. Do not repeat unchanged H4 trials or completed blanket policy/history research. Release owner at clean checkpoint.
+1. Read remote head/main/ownership, PROTOCOL, master instructions, TASK_QUEUE, BLOCKERS, DECISIONS_PENDING and approved DECISIONS. Inspect later commits; preserve concurrent/unreviewed changes and never force after a head mismatch.
+2. Read automation/pipeline_acceptance/ACCEPTANCE and SOURCE_MANIFEST. Future authorized I00 work starts with E1 coherent pipeline installation, then actual run-linked exports. Existing proposal does not export jar bytes and omits some configuration evidence; reconcile before treating reporting complete. Do not treat source pins or12 NOT_VERIFIED checks as artifact PASS.
+3. Existing remote run38025748732 compiled/test task passed at e6d445c8; actual XML/dependency/package exports remain missing.70 declared methods are not an executed test count. Source-matching automation/test_reports can reconcile future real XML only after provenance verification.
+4. Q6/Q10 options remain unapproved; inspect automation/decision_analysis before adopting any exhausted-pool or Reject reward rule. Q2/Q9/CA-MIXED/PAUSE-CLAIM and conditionalQ5 also remain. Preserve raw receipts, free pause, random boss/no reroll, five/three/24 and existing approvals.
+5. Production coding needs separate authorization. After I00 reporting, I01 pure-domain account/state/receipt/RNG is the smallest milestone; fresh-account activation and affected ambiguous reward paths remain gated. No Coffer/policy result is needed merely to plan that domain slice, and synthetic fixtures cannot enable adapters.
+6. A17 requires legitimate current-client traces; exact restrictive-policy review remains independent and unsent. Do not repeat unchanged H4 runs or completed broad history/policy research.130,080 saved synthetic trajectories are unchanged.
+7. Resolve explicit user choices by updating DECISIONS/relevant gameplay specs, validate/commit, then refresh derived PDF. Automation-only planning here needs no gameplay PDF refresh. No arbitrary number questions or resolved questions should be repeated.
+8. Select another task only if it has a concrete independent deliverable and satisfied dependencies. Otherwise stop at this checkpoint; do not invent live proof or silently implement major decisions.
 
-Stop reason: significant Q6/Q10 gameplay choices are prepared for user review; adopting either exceeds routine implementation-neutral authority. Technical live/policy/report gates also remain. This is not full project completion or a request to repeat already confirmed decisions.
-
-Current task: WB-A29 package/report acceptance specification. Starting head2a0e44eaeeae31f74ea56973ccb1f0823ccd2a38. No overlapping owner found.
+Stop reason: bounded artifact-acceptance work completed. Remaining execution requires authorized pipeline/client capabilities or significant gameplay choices. This is not full project completion.
