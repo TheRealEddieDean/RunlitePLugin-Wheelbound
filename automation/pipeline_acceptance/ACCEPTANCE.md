@@ -10,7 +10,15 @@ The existing unactivated proposal uploads XML/HTML and build/reports/wheelbound,
 
 runelite-plugin.properties is at repository root. No current build.gradle sourceSets/processResources rule places it into the standard jar. Its absence from the jar must not automatically be called a packaging defect: first establish whether the chosen Hub/build route consumes root metadata separately. Verify root metadata and compiled plugin entrypoint independently. Do not silently insert root files into resources or invent a Hub requirement to justify a build change.
 
-[Source manifest](SOURCE_MANIFEST.json) pins these three inspected files, the proposal, test inventory and reporting plan. Known baseline source and local scratch copies match the current Git tree. No actual archive bytes exist in this packet.
+[Source manifest](SOURCE_MANIFEST.json) pins these three inspected files, the proposal and diagnostic init script, test inventory and reporting plan. Known baseline source and local scratch copies match the current Git tree. No actual archive bytes exist in this packet.
+
+## Dependency-report completeness findings
+
+The current diagnostic script enumerates compileClasspath, testRuntimeClasspath and annotationProcessor. It does not enumerate testCompileClasspath, runtimeClasspath or testAnnotationProcessor. Before claiming a complete compile/test dependency inventory, record these separately as applicable. An empty test processor/runtime configuration is a valid result when explicitly recorded; it must not disappear from an artifact-only list. This finding does not show that the existing successful build used an incorrect dependency. It limits what the proposed report could prove.
+
+For each inspected configuration, retain configuration name, resolvability, task use, artifact count, and success/failure status, even for zero artifacts. Keep artifact hashes keyed by configuration; do not collapse identical coordinates across configurations. Compare resolved RuneLite versions across compile and test configurations rather than assuming a same-invocation build makes separate configurations identical. A divergence needs explanation, not an automatic invented version pin.
+
+The script uses module-backed resolved artifacts. If later build changes introduce local file dependencies or generated classpath directories, review whether the inventory includes those actual task inputs; module coordinates alone are not a complete task-input attestation. Current source declarations use external module dependencies, and no broader completeness claim is made. Actual byte inputs, compiler options and class/resource output remain separate evidence from dependency coordinates. No diagnostic script is changed or executed in this supplement.
 
 ## Required evidence chain
 

@@ -37,6 +37,12 @@
       "git_blob": "fe56f32dbefbb8d40129f0f81ec9c3c1c0a8db94",
       "sha256": "bf26dcb9b597925ed99bc1e9f2e721a5d487c8e79ba46d92d7ee17a25fe366f5",
       "bytes": 3638
+    },
+    {
+      "path": "docs/wheelbound/research/dependency_manifest.init.gradle",
+      "git_blob": "1f1001143780542969ec7edfc1ac04459f0f873a",
+      "sha256": "f208cc20b0ddbb049cc00393e7e2d6abf8ef6fa617b85e8cad2dae6fe61fa953",
+      "bytes": 2822
     }
   ],
   "actual_new_archive_count": 0,
