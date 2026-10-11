@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
-- Session ID: wb-20261011-decision-analysis
-- State: IDLE — owner released; no active lease.
+- Session ID: wb-20261011-package-acceptance
+- State: ACTIVE — wb-20261011-package-acceptance owns WB-A29; lease through2026-10-11T19:00:00Z.
 - Branch: wheelbound-mode
 - Starting verified head:e5d753dc90aa159f16acd6a94f92474200072373
 - Claim9a691aafcd6750be3495fb3d696f65295c60f8f9; intermediateb62a4592ad3a8cda2550d2b8d22658dc53f86cc7.
@@ -28,3 +28,5 @@
 8. Continue other independently useful tasks only with a bounded deliverable and satisfied dependencies. Do not repeat unchanged H4 trials or completed blanket policy/history research. Release owner at clean checkpoint.
 
 Stop reason: significant Q6/Q10 gameplay choices are prepared for user review; adopting either exceeds routine implementation-neutral authority. Technical live/policy/report gates also remain. This is not full project completion or a request to repeat already confirmed decisions.
+
+Current task: WB-A29 package/report acceptance specification. Starting head2a0e44eaeeae31f74ea56973ccb1f0823ccd2a38. No overlapping owner found.
