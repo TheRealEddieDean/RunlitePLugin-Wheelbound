@@ -1,0 +1,1116 @@
+{
+  "status": "EXACT_HYPOTHETICAL_ANALYSIS",
+  "option_adopted": false,
+  "runtime_enabled": false,
+  "source_branch_checkpoint": "e5d753dc90aa159f16acd6a94f92474200072373",
+  "source_sha256": {
+    "docs/wheelbound/WHEELS.md": "a0720fd6dcfe8ad642fa829baaeb61ab70dda6faab3d9c11647c5f4c419dea28",
+    "docs/wheelbound/FATE_SHOP.md": "1971f8148f97cfdcbbd767bc11cf13e2a4f212b001e9a17f770e25311ba64ab0",
+    "docs/wheelbound/OPEN_QUESTIONS.md": "c30b1e166886d1a2f903f4e874231ad3637e6100adb59b67314d93c240be199d",
+    "docs/wheelbound/DECISIONS.md": "d66b01674f70c21c482b6380bc9f9678f11969d6808bf0e420c5115d14d0ef5a"
+  },
+  "new_balance_trajectories": 0,
+  "live_trace_count": 0,
+  "scenario_inputs": [
+    {
+      "id": "initial_five",
+      "slices": [
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Fishing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Woodcutting",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Combat",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        }
+      ],
+      "unavailable": [
+        "Questing"
+      ]
+    },
+    {
+      "id": "minimum_three_activities",
+      "slices": [
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Fishing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        }
+      ],
+      "unavailable": [
+        "Questing"
+      ]
+    },
+    {
+      "id": "minimum_with_specials",
+      "slices": [
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Fishing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Taint",
+          "weight": "1",
+          "kind": "special"
+        },
+        {
+          "activity": "Sacrifice",
+          "weight": "1",
+          "kind": "special"
+        }
+      ],
+      "unavailable": [
+        "Questing"
+      ]
+    },
+    {
+      "id": "full_heavy_quest",
+      "slices": [
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Fishing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Taint",
+          "weight": "1",
+          "kind": "special"
+        },
+        {
+          "activity": "Sacrifice",
+          "weight": "1",
+          "kind": "special"
+        }
+      ],
+      "unavailable": [
+        "Questing"
+      ]
+    },
+    {
+      "id": "enhanced_unavailable",
+      "slices": [
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Fishing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Woodcutting",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Combat",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "3",
+          "kind": "ordinary"
+        }
+      ],
+      "unavailable": [
+        "Questing"
+      ]
+    },
+    {
+      "id": "full_single_unavailable_third_activity",
+      "slices": [
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Mining",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Fishing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Questing",
+          "weight": "1",
+          "kind": "ordinary"
+        },
+        {
+          "activity": "Taint",
+          "weight": "1",
+          "kind": "special"
+        },
+        {
+          "activity": "Sacrifice",
+          "weight": "1",
+          "kind": "special"
+        }
+      ],
+      "unavailable": [
+        "Questing"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "initial_five",
+      "total_slots": 5,
+      "removed_slots": 1,
+      "unavailable_probability": {
+        "exact": "1/5",
+        "percent": 20.0
+      },
+      "renormalization_multiplier": "5/4",
+      "retained_ordinary_count": 4,
+      "retained_activity_count": 4,
+      "ordinary_new_copy_lower_bound": 1,
+      "new_activity_type_lower_bound": 0,
+      "can_remove_all_unavailable_without_new_slices": false,
+      "total_special_before": {
+        "exact": "0",
+        "percent": 0.0
+      },
+      "total_special_after": {
+        "exact": "0",
+        "percent": 0.0
+      },
+      "retained_outcomes": [
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/5",
+            "percent": 20.0
+          },
+          "after": {
+            "exact": "1/4",
+            "percent": 25.0
+          }
+        },
+        {
+          "activity": "Fishing",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/5",
+            "percent": 20.0
+          },
+          "after": {
+            "exact": "1/4",
+            "percent": 25.0
+          }
+        },
+        {
+          "activity": "Woodcutting",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/5",
+            "percent": 20.0
+          },
+          "after": {
+            "exact": "1/4",
+            "percent": 25.0
+          }
+        },
+        {
+          "activity": "Combat",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/5",
+            "percent": 20.0
+          },
+          "after": {
+            "exact": "1/4",
+            "percent": 25.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "minimum_three_activities",
+      "total_slots": 5,
+      "removed_slots": 3,
+      "unavailable_probability": {
+        "exact": "3/5",
+        "percent": 60.0
+      },
+      "renormalization_multiplier": "5/2",
+      "retained_ordinary_count": 2,
+      "retained_activity_count": 2,
+      "ordinary_new_copy_lower_bound": 3,
+      "new_activity_type_lower_bound": 1,
+      "can_remove_all_unavailable_without_new_slices": false,
+      "total_special_before": {
+        "exact": "0",
+        "percent": 0.0
+      },
+      "total_special_after": {
+        "exact": "0",
+        "percent": 0.0
+      },
+      "retained_outcomes": [
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/5",
+            "percent": 20.0
+          },
+          "after": {
+            "exact": "1/2",
+            "percent": 50.0
+          }
+        },
+        {
+          "activity": "Fishing",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/5",
+            "percent": 20.0
+          },
+          "after": {
+            "exact": "1/2",
+            "percent": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "minimum_with_specials",
+      "total_slots": 7,
+      "removed_slots": 3,
+      "unavailable_probability": {
+        "exact": "3/7",
+        "percent": 42.857143
+      },
+      "renormalization_multiplier": "7/4",
+      "retained_ordinary_count": 2,
+      "retained_activity_count": 2,
+      "ordinary_new_copy_lower_bound": 3,
+      "new_activity_type_lower_bound": 1,
+      "can_remove_all_unavailable_without_new_slices": false,
+      "total_special_before": {
+        "exact": "2/7",
+        "percent": 28.571429
+      },
+      "total_special_after": {
+        "exact": "1/2",
+        "percent": 50.0
+      },
+      "retained_outcomes": [
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/7",
+            "percent": 14.285714
+          },
+          "after": {
+            "exact": "1/4",
+            "percent": 25.0
+          }
+        },
+        {
+          "activity": "Fishing",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/7",
+            "percent": 14.285714
+          },
+          "after": {
+            "exact": "1/4",
+            "percent": 25.0
+          }
+        },
+        {
+          "activity": "Taint",
+          "kind": "special",
+          "before": {
+            "exact": "1/7",
+            "percent": 14.285714
+          },
+          "after": {
+            "exact": "1/4",
+            "percent": 25.0
+          }
+        },
+        {
+          "activity": "Sacrifice",
+          "kind": "special",
+          "before": {
+            "exact": "1/7",
+            "percent": 14.285714
+          },
+          "after": {
+            "exact": "1/4",
+            "percent": 25.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "full_heavy_quest",
+      "total_slots": 24,
+      "removed_slots": 20,
+      "unavailable_probability": {
+        "exact": "5/6",
+        "percent": 83.333333
+      },
+      "renormalization_multiplier": "6",
+      "retained_ordinary_count": 2,
+      "retained_activity_count": 2,
+      "ordinary_new_copy_lower_bound": 3,
+      "new_activity_type_lower_bound": 1,
+      "can_remove_all_unavailable_without_new_slices": false,
+      "total_special_before": {
+        "exact": "1/12",
+        "percent": 8.333333
+      },
+      "total_special_after": {
+        "exact": "1/2",
+        "percent": 50.0
+      },
+      "retained_outcomes": [
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/4",
+            "percent": 25.0
+          }
+        },
+        {
+          "activity": "Fishing",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/4",
+            "percent": 25.0
+          }
+        },
+        {
+          "activity": "Taint",
+          "kind": "special",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/4",
+            "percent": 25.0
+          }
+        },
+        {
+          "activity": "Sacrifice",
+          "kind": "special",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/4",
+            "percent": 25.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "enhanced_unavailable",
+      "total_slots": 5,
+      "removed_slots": 1,
+      "unavailable_probability": {
+        "exact": "3/7",
+        "percent": 42.857143
+      },
+      "renormalization_multiplier": "7/4",
+      "retained_ordinary_count": 4,
+      "retained_activity_count": 4,
+      "ordinary_new_copy_lower_bound": 1,
+      "new_activity_type_lower_bound": 0,
+      "can_remove_all_unavailable_without_new_slices": false,
+      "total_special_before": {
+        "exact": "0",
+        "percent": 0.0
+      },
+      "total_special_after": {
+        "exact": "0",
+        "percent": 0.0
+      },
+      "retained_outcomes": [
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/7",
+            "percent": 14.285714
+          },
+          "after": {
+            "exact": "1/4",
+            "percent": 25.0
+          }
+        },
+        {
+          "activity": "Fishing",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/7",
+            "percent": 14.285714
+          },
+          "after": {
+            "exact": "1/4",
+            "percent": 25.0
+          }
+        },
+        {
+          "activity": "Woodcutting",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/7",
+            "percent": 14.285714
+          },
+          "after": {
+            "exact": "1/4",
+            "percent": 25.0
+          }
+        },
+        {
+          "activity": "Combat",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/7",
+            "percent": 14.285714
+          },
+          "after": {
+            "exact": "1/4",
+            "percent": 25.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "full_single_unavailable_third_activity",
+      "total_slots": 24,
+      "removed_slots": 1,
+      "unavailable_probability": {
+        "exact": "1/24",
+        "percent": 4.166667
+      },
+      "renormalization_multiplier": "24/23",
+      "retained_ordinary_count": 21,
+      "retained_activity_count": 2,
+      "ordinary_new_copy_lower_bound": 1,
+      "new_activity_type_lower_bound": 1,
+      "can_remove_all_unavailable_without_new_slices": false,
+      "total_special_before": {
+        "exact": "1/12",
+        "percent": 8.333333
+      },
+      "total_special_after": {
+        "exact": "2/23",
+        "percent": 8.695652
+      },
+      "retained_outcomes": [
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Mining",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Fishing",
+          "kind": "ordinary",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Taint",
+          "kind": "special",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        },
+        {
+          "activity": "Sacrifice",
+          "kind": "special",
+          "before": {
+            "exact": "1/24",
+            "percent": 4.166667
+          },
+          "after": {
+            "exact": "1/23",
+            "percent": 4.347826
+          }
+        }
+      ]
+    }
+  ],
+  "topology_groups": [
+    {
+      "ordinary_activity_types": 3,
+      "special_slots": 0,
+      "composition_count": 2020,
+      "directly_removable": 0,
+      "requires_new_copies": 2020,
+      "maximum_new_copy_lower_bound": 3
+    },
+    {
+      "ordinary_activity_types": 3,
+      "special_slots": 1,
+      "composition_count": 1767,
+      "directly_removable": 0,
+      "requires_new_copies": 1767,
+      "maximum_new_copy_lower_bound": 3
+    },
+    {
+      "ordinary_activity_types": 3,
+      "special_slots": 2,
+      "composition_count": 1536,
+      "directly_removable": 0,
+      "requires_new_copies": 1536,
+      "maximum_new_copy_lower_bound": 3
+    },
+    {
+      "ordinary_activity_types": 4,
+      "special_slots": 0,
+      "composition_count": 10625,
+      "directly_removable": 10545,
+      "requires_new_copies": 80,
+      "maximum_new_copy_lower_bound": 2
+    },
+    {
+      "ordinary_activity_types": 4,
+      "special_slots": 1,
+      "composition_count": 8854,
+      "directly_removable": 8778,
+      "requires_new_copies": 76,
+      "maximum_new_copy_lower_bound": 2
+    },
+    {
+      "ordinary_activity_types": 4,
+      "special_slots": 2,
+      "composition_count": 7314,
+      "directly_removable": 7242,
+      "requires_new_copies": 72,
+      "maximum_new_copy_lower_bound": 2
+    }
+  ],
+  "enumerated_topologies": 32116,
+  "limits": [
+    "Not account/access/economy simulation",
+    "Synthetic special weights are examples, not adopted balance",
+    "Lower bounds assume new eligible activities/copies can be acquired",
+    "Paid storage affordability/capacity and destroyed investments are not waived",
+    "Recommended stats are not grounds to disable a permanently unlocked boss"
+  ]
+}
