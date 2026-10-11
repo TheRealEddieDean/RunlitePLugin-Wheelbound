@@ -1,0 +1,94 @@
+{
+  "source_commit": "2a0e44eaeeae31f74ea56973ccb1f0823ccd2a38",
+  "scope": "SOURCE_ONLY_NOT_ARTIFACT_REVIEW",
+  "files": [
+    {
+      "path": "build.gradle",
+      "git_blob": "1136cb0951395967627463c3e5a6faf436192606",
+      "sha256": "b78bff1e9a96b69abc07ad30033755fd228fa7f110002b43fe2e68ff08c36a3e",
+      "bytes": 1649
+    },
+    {
+      "path": "settings.gradle",
+      "git_blob": "9423156c4f804e4632143fbd3b524c54a9e530ab",
+      "sha256": "2ca96e1f1d066a7ec4695bb7e3799f8afcf1edca12c2facb4755f394e6ef8686",
+      "bytes": 32
+    },
+    {
+      "path": "runelite-plugin.properties",
+      "git_blob": "92d56f1c42afffb2ec95c069446c9a7aa3439aec",
+      "sha256": "644dddc7c7887992e3ec5b83f2288c0365f047bb3164bea2c96d9212c419192e",
+      "bytes": 408
+    },
+    {
+      "path": "docs/wheelbound/research/CI_PROPOSAL.yml",
+      "git_blob": "01e6521aff6de1a2cbee3bea2bb9cc0405d306cd",
+      "sha256": "a3146b28f2497e218a27988a93739dbad92107c23f68a4b5336df98ecba45b10",
+      "bytes": 2875
+    },
+    {
+      "path": "automation/test_reports/DECLARATIONS.json",
+      "git_blob": "144111ff8bb0bc4400ccfbbc6fad247b35ec450b",
+      "sha256": "2a85a20836675bec782861743853aceb0802d58dc0ae04631b899017b1a23a6c",
+      "bytes": 18277
+    },
+    {
+      "path": "automation/test_reports/README.md",
+      "git_blob": "fe56f32dbefbb8d40129f0f81ec9c3c1c0a8db94",
+      "sha256": "bf26dcb9b597925ed99bc1e9f2e721a5d487c8e79ba46d92d7ee17a25fe366f5",
+      "bytes": 3638
+    }
+  ],
+  "actual_new_archive_count": 0,
+  "actual_new_java_build_count": 0,
+  "acceptance_checks": [
+    {
+      "id": "PA01",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "PA02",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "PA03",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "PA04",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "PA05",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "PA06",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "PA07",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "PA08",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "PA09",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "PA10",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "PA11",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "id": "PA12",
+      "status": "NOT_VERIFIED"
+    }
+  ]
+}
