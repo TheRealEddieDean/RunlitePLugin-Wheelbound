@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261010-receipt-acceptance
-- State: IDLE — clean bounded checkpoint; owner released; no active lease.
+- State: ACTIVE — owner /root; WB-A27 Q6 exact options analysis.
 - Branch: wheelbound-mode
 - Starting head: ee188e84a6bbc27da224e3e13c705b63d8da9f75
 - Ownership commit:4777e15043f684d575fd88ee7f8bbb638f1049c3
@@ -30,3 +30,5 @@
 8. Update decisions/specs for actual decisions, validate/commit bounded work, refresh the derived PDF after material doc changes, release ownership at a clean checkpoint.
 
 Stop reason: bounded useful documentation/verification batch complete. Dependent implementation/live/policy/design gates remain explicit; no background continuation promised.
+
+Ownership acquired: 2026-10-11T04:32:19.311828+00:00; review lease at 2026-10-11T05:17:19.311840+00:00. Expiry alone is not proof of worker termination.
