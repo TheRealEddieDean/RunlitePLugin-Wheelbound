@@ -18,3 +18,9 @@ Q10 — Reject and earned bounty receipts: S8-M0402 delegated forfeiture wording
 Additional aggregate receipt boundary (CA-MIXED): mixed active/paused per-boss CA completion histories cannot be settled by assuming the final task proves all tasks were earned while active. Current diary/CA review preserves evidence and marks aggregate payout unverified. Obtain an explicit credit rule before enabling that payout; do not rewrite the confirmed free-pause/no-backfill rules.
 
 PAUSE-CLAIM: claim timing for already active-earned evidence during pause is not explicitly recovered. Preserve evidence; proposed allowance affects manual claim timing only, with no paused-progress backfill. See OPEN_QUESTIONS. Do not silently adopt either prohibition or permission in runtime.
+
+## Prepared decision evidence — WB-A27/A28
+
+Q6: [Exact odds and replacement bounds](decision_analysis/Q6_OPTIONS.md) covers6 hypothetical wheels and32,116 count compositions. Suspension changes every retained probability, including specials; paid replacement may require new activity types and remains constrained by FP/access/capacity. This is an options supplement, not a new eligibility rule.
+
+Q10: [Settlement comparison](decision_analysis/Q10_OPTIONS.md) shows the unclaimed-only policy creates a claim-timing difference equal to the bounty reward. Escrow/clawback eliminate that difference but change spendability/debt behavior. Existing proposed independent-receipt preservation remains PROPOSED. Aggregate receipt attribution and later requalification must be covered by the selected policy; no automatic clawback or evidence deletion is authorized.

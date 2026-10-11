@@ -126,3 +126,12 @@ Next useful engineering milestone remains exact dependency/test-report/package e
 -23 synthetic XML scenarios pass: complete/split/wrapped exports; explicit failure/error/skip; missing/extra methods; duplicate identities/files; inconsistent counts; invalid XML/DTD/UTF16/alternate statuses/oversize. Actual reported/executed counts remain unknown because no real export was obtained.
 - Reconciler rejects missing exports and always leaves execution provenance unestablished by parsing alone. No active workflow or production change. Receipt suite saved-result verification remains passing.
 - Gameplay Markdown/PDF source remains284799b1/version9; the subsequent report tooling is automation-only. Final expected-head publication and byte/main checks establish the clean owning checkpoint.
+
+## Decision-analysis continuation,2026-10-11UTC
+
+- Started from verifiede5d753dc90aa159f16acd6a94f92474200072373; main baseline unchanged; no active owner. Claim9a691aafcd6750be3495fb3d696f65295c60f8f9.
+- A27 committed411ccde4964750f7649b406cec351ff696fe3ac5:6 exact hypothetical wheels,32,116 count compositions, conditional replacement lower bounds. Initial-five unavailable weight20% renormalizes remaining outcomes×1.25; a valid Quest-heavy full-wheel example changes combined special odds8.33%→50%. No option selected.
+- A28 ownership/checkpointb62a4592ad3a8cda2550d2b8d22658dc53f86cc7; artifacte61ed27b145336a915c0c9047a0636f0b29a56ca:72 exact hypothetical FP comparisons. Unclaimed-only forfeiture depends on claim timing by B; escrow/clawback have material spend/debt effects. No actual reward revoked or policy inferred.
+- Arithmetic/source-pin and design checks passed. An initial read-only commit fetch failed transiently, then succeeded; no failed write was counted as a commit.
+- Zero new account trajectories/live traces/production tests. Approved register110 IDs, H4/config/catalog/output hashes and130,080 progression-trial total remain unchanged. Gameplay Markdown and162-page PDF source284799b1/version9 unchanged; these later automation analyses supplement the open questions, not replace the design publication.
+- Major Q6/Q10 choices are now quantified for review; Q2/Q9/CA-MIXED/PAUSE-CLAIM and conditionalQ5 remain. Actual report/dependency exports and live/policy gates remain missing. No production code, active workflow, main edit or external message.
