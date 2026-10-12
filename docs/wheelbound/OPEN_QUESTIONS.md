@@ -18,7 +18,7 @@ Q7 — RESOLVED: S8-M0296–0297 explicitly confirms random forced Death’s Whe
 
 Q8 — RESOLVED precondition: S8-M0321 requires no active Fate. Pending mandatory Punishment/Sacrifice must finish before Grand activation (WB-D089). This adds no minimum level/playtime gate.
 
-Q9 — EXISTENCE RESOLVED by WB-D122: Bossing Challenge is a fourth card with difficult CA or significant rare creature-drop objective. Remaining: WB-D123 dedicated pool and WB-D124 AND prerequisite/starter-bundle/individual expansion confirmed; exact starter set/tiers/prices, target-generation sequence and validated catalog/detectors pending. Random target/no reroll remains. No1/400 hard cutoff or exact rate/reward approved.
+Q9 — EXISTENCE RESOLVED by WB-D122: Bossing Challenge is a fourth card with significant unique item-drop hunt only (WB-D128). Remaining: WB-D123 dedicated pool and WB-D124 AND prerequisite/starter-bundle/individual expansion confirmed; exact starter set/tiers/prices, target-generation sequence and validated catalog/detectors pending. Random target/no reroll remains. No1/400 hard cutoff or exact rate/reward approved.
 
 Q10 — RESOLVED by WB-D112,2026-10-12: supported qualifying active bounties automatically credit FP once, independent of assignment success/failure/Reject. No manual claim, escrow or clawback. Prior forfeiture/manual-claim sources remain superseded history. Qualification of mixed CA aggregate remains its own open choice.
 
@@ -39,4 +39,6 @@ WB-D123 resolves pool separation: Challenge randomly draws eligible bosses/selec
 
 WB-D124 resolves target unlock structure: owned Bossing Lesser AND Greater, then paid Challenge card including starter unlock bundle, then further individual target purchases. WB-D125 restricts drops to meaningful creature-specific uniques, excluding shared rare table. WB-D126 resolves anti-narrowing offering rule: require≥3 distinct actually eligible boss/creature targets; card/bundle remains owned belowfloor.
 
-WB-D126 eligible-target diversity resolved: minimum3 distinct actually eligible bosses/creatures before new Challenge offerings, card/bundle retained belowfloor. Starter bundle reaffirmed. WB-D127 resolves objective family as random with no player selection; weights/order remain candidate technical work. Next narrow question: incomplete-only CA targets versus supported repeat of already completed CAs.
+WB-D126 eligible-target diversity resolved: minimum3 distinct actually eligible bosses/creatures before new Challenge offerings, card/bundle retained belowfloor. Starter bundle reaffirmed. WB-D128 removes CA objectives and family draw; only random unique item hunts remain. CA incomplete/repeat question is obsolete. Target/item weighting/reveal remains technical work.
+
+WB-D128: Bossing Challenge is item-drop-only; CA family and random-family decision superseded, incomplete-versus-repeat question obsolete for this card. Bundle/AND tree/dedicated random pool/≥3 supported drop targets retained. Next narrow choice: can an already-owned item still be assigned for a fresh drop hunt? Recommend yes, with fresh active assigned-source acquisition required; prior possession never completes it.

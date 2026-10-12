@@ -45,7 +45,7 @@ WB-D116/117: label Bounties Shop as item goal→FP. Master CA Grand checklist re
 
 WB-D121: Questing offers Store/Reactivate, not Destroy. Explain storage cost/room and final active minimum. During full-wheel special displacement, Questing is selectable only for legal storage; never suggest destroying it or grant extra capacity. Other legal ordinary choices remain player-selected.
 
-WB-D122: Bossing Challenge card clearly indicates a difficult CA or significant rare-drop objective, with exact task/source/item and authored reward when determined. Do not label it merely Greater KC or permit target choice/rerolls. Objective-generation order is pending; no misleading fully specified offer before target data exists.
+WB-D122: Bossing Challenge card indicates an item-drop-only unique hunt (WB-D128), with exact source/item and authored reward when determined. Do not label it merely Greater KC or permit target choice/rerolls. Objective-generation order is pending; no misleading fully specified offer before target data exists.
 
 WB-D123: show Challenge draw as its eligible boss/creature target pool, separate from normal Bossing outcomes. Display actual committed eligible odds when specified; never offer player target selection/rerolls or suggest card purchase silently unlocked every creature. Exact offer/objective reveal timing awaits specification.
 
@@ -53,4 +53,4 @@ WB-D124: render explicit Bossing Lesser AND Greater prerequisite connections to 
 
 WB-D126: owned Challenge remains visible as unlocked; when below3 eligible distinct bosses/creatures, explain it is unavailable in new card offerings and show current eligible target count. No punishment, ownership loss/refund or forced paused status. Three targets is not a third-card upgrade. Included starter bundle remains displayed as part of purchase.
 
-WB-D127: no CA-versus-rare-drop selector for Bossing Challenge. Explain before selection that Fate determines the family and target randomly; reveal the actual committed objective without a reroll action. Exact reveal sequencing remains technical specification; never label unapproved probabilities50/50.
+WB-D128: no CA family or family selector/draw; explain random target/item hunt and reveal committed objective without reroll. Exact reveal sequencing/weights remain technical specification.

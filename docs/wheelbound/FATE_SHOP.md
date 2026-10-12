@@ -14,6 +14,6 @@ WB-D118: quote first-instance versus duplicate based on lifetime activity owners
 
 WB-D121: Questing exposes Store/Reactivate under normal prices and capacity, with no Destroy action. API/domain must reject destruction even if a stale UI or compound displacement command requests it. Other ordinary free destruction remains unchanged.
 
-WB-D122: Bossing card purchases include the distinct Challenge type for difficult CA or rare creature-drop objectives. It is separate from Skilling Challenge purchase. No new price or default unlock approved; Standard remains the default.
+WB-D122: Bossing card purchases include the distinct Challenge type for unique creature-drop hunts only (WB-D128 removes CA objectives). It is separate from Skilling Challenge purchase. No new price or default unlock approved; Standard remains the default.
 
 WB-D124: Challenge card quote includes its starter Challenge target bundle in one transaction, after the Bossing Lesser AND Greater gate. Show bundled targets and downstream expansion benefits; no separate starter target charges. Subsequent non-boss target nodes use authored individual FP prices; normal boss unlock pool is not automatically granted. Prices/member list remain candidates.

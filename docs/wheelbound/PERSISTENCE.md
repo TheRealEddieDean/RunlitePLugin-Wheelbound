@@ -37,7 +37,7 @@ WB-D118: persist per-activity ever-acquired baseline and paid subsequent-purchas
 
 WB-D121: Questing type cannot be destroyed by direct edit, forced displacement, migration or destructive recovery. Store/return preserves UUID/modifiers/lifetime state. Do not infer mandatory active Questing; normal5/3 active validation applies. No extra storage/refund/reset.
 
-WB-D122: save Bossing Challenge purchase separately from Skilling, objective family, canonical task or item/source context, catalog/version, frozen reward and selected target. Exact new pool/order schema pending; do not overwrite ordinary KC assignment semantics or use display-name matching to prove completion.
+WB-D122: save Bossing Challenge purchase separately from Skilling, item-drop objective kind, canonical item/source context (WB-D128 removes CA family), catalog/version, frozen reward and selected target. Exact new pool/order schema pending; do not overwrite ordinary KC assignment semantics or use display-name matching to prove completion.
 
 WB-D123: persist dedicated Challenge target catalog/version and selected boss/creature context; normal L/S/G pool remains separate. New creatures cannot leak into ordinary boss selection during migration/replay. Card-type purchase and target eligibility are separate fields/contracts; unlock mapping pending.
 
@@ -45,4 +45,4 @@ WB-D124: persist Challenge starter bundle version/member grant receipts alongsid
 
 WB-D126: keep permanent Challenge card/bundle grants when eligible count falls below3; record source/version/target grouping with committed offer snapshots. No revocation/refund/new draw on restore. Reevaluate current eligibility only for new offerings; preserve prior failed/ambiguous evidence as required by existing recovery contract.
 
-WB-D127: committed Challenge family/result is durable, not recalculated from a new seed/catalog on resume. Source item/task/creature identity and reward context stay attached. Duplicate selection/restore cannot redraw family or target. No half-committed family without the associated assignment accepted as successful. Exact storage schema delegated.
+WB-D128: committed Challenge is an item hunt, never recomputed into another objective on resume. Persist source item/creature and quote/context with receipt; retries cannot redraw. Retain any earlier proposed CA payload during explicit reviewed schema recovery, without marking it complete or silently generating another target.

@@ -59,7 +59,7 @@ WB-D118→I02 slice quote/counter transactions; first-instance baseline includes
 
 WB-D121→I02/I07/I09: Questing may store/remove under normal rules but cannot destroy; forced displacement respects this type exception; all other active minimum/capacity/price/history rules preserved.
 
-WB-D122→I03/I05/I09: fourth Bossing Challenge confirmed with difficult-CA or significant rare-drop hunt; separate unlock/context/receipt; pool/generation/catalog/live gates remain. Earlier Q9 existence uncertainty superseded, not the evidence gates.
+WB-D122→I03/I05/I09: fourth Bossing Challenge, now significant unique-drop hunt only under WB-D128; separate unlock/context/receipt; pool/generation/catalog/live gates remain. Earlier Q9 existence uncertainty superseded, not the evidence gates.
 
 WB-D123→I03/I05/I09: dedicated eligible random Challenge boss/creature target pool distinct from ordinary Bossing and card types; unlock mapping/order still pending. No normal-roster expansion or player reroll.
 
@@ -67,4 +67,4 @@ WB-D124→I03/I04/I09 prerequisite AND tree, atomic included starter bundle and 
 
 WB-D126→I03/I05/I09: minimum3 distinct actually eligible Challenge boss/creature targets for new offerings; permanent card/bundle retained belowfloor; knownness/grouping/current evidence count; committed selections not rerolled.
 
-WB-D127→I03/I05/I09 random Challenge family/target, no picker/reroll, durable typed result and reviewed valid eligibility; probabilities/order not numerically approved.
+WB-D127 family draw superseded by WB-D128; I03/I05/I09 uses item-drop-only typed target/result, no picker/reroll and reviewed valid eligibility.

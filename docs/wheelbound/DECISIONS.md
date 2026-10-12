@@ -1263,6 +1263,7 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 ## WB-D122 - Bossing Challenge Fate Card: difficult CA or significant rare creature drop
 
 - Status: CONFIRMED explicit correction/new detail,2026-10-12; Q9 card existence resolved.
+- Current supersession: WB-D128 removes the CA objective family; fourth card/rare-drop objective remains. Original two-family approval below is historical, not current implementation authority.
 - Authority: User expressly rejects omitting it and says definitely have the Bossing Challenge Fate Card.
 - Evidence: User specifies a mixture of a pretty hard Combat Achievement or a rare drop from a creature, roughly rarer than1-in400 as guidance, and gives Tormented Demons→Tormented Synapse as an example objective.
 - Decision: Bossing has a distinct Challenge card in addition to Lesser/Standard/Greater. Its objective is either a difficult Combat Achievement or obtaining a significant rare drop from its assigned boss/creature. This is an achievement/item hunt objective, not merely a Greater kill-count multiplier.
@@ -1298,6 +1299,7 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 ## WB-D125 - Rare-drop Challenge targets are creature-specific uniques, not shared rare table drops
 
 - Status: CONFIRMED category/exclusion and rarity direction,2026-10-12; exact threshold boundary and catalog still under review.
+- Current clarification: WB-D128 removes CA objectives from this card; unique-drop rules/three-distinct-target floor remain, now applied only to supported item hunts.
 - Authority: Explicit user design in this Work conversation.
 - Evidence: User specifies monsters with unique drops rarer than roughly1-in400 and explicitly excludes the ultra-rare standard table shared by monsters.
 - Decision: Author rare-drop Challenge objectives from significant creature/encounter-specific unique drops. Exclude shared rare-drop-table results and ordinary generic loot even when individually rare. Use the user's rarer-than1-in400 direction as the proposed catalog screen; do not invert rarity into more-common-than1/400. Difficult CA objectives remain the other Challenge family and do not need a drop rate.
@@ -1310,6 +1312,7 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 ## WB-D126 - Offer Bossing Challenge only with three distinct actually eligible targets
 
 - Status: CONFIRMED explicit recommendation approval and starter-bundle reaffirmation,2026-10-12.
+- Current clarification: WB-D128 removes CA objectives from this card; unique-drop rules/three-distinct-target floor remain, now applied only to supported item hunts.
 - Authority: User says yes go with recommended and definitely want the bundle after the minimum-three offering recommendation.
 - Decision: The permanently purchased Bossing Challenge card can appear in new offerings only when its dedicated target pool contains at least three distinct bosses/creatures with eligible supported objectives. Count actual current eligibility, not merely target ownership or NPC variants. Card stays owned/permanently unlocked if eligibility later drops below three; exclude it from new offerings until the requirement is met. Challenge purchase still includes the starter target bundle under WB-D124.
 - Rationale: Prevent the player from narrowing Challenge to one usable target despite a nominally diverse owned bundle.
@@ -1320,7 +1323,7 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 
 ## WB-D127 - Fate randomly chooses Bossing Challenge objective family
 
-- Status: CONFIRMED explicit approval,2026-10-12.
+- Status: SUPERSEDED by WB-D128: Bossing Challenge is item-drop-only; no CA-versus-drop family draw remains.
 - Authority: User replies random to CA-versus-rare-drop random or player-choice question.
 - Decision: The player chooses the Bossing Challenge card; Fate randomly determines whether the assigned objective is a difficult Combat Achievement or a significant creature-specific rare-drop hunt. Player chooses neither objective family nor target, and cannot reroll either valid committed result.
 - Rationale: Preserve Challenge unpredictability instead of allowing the player to select a preferred task family.
@@ -1328,3 +1331,14 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Exceptions/dependencies: Random selection uses supported valid eligible objectives; do not fabricate an unavailable CA family/target or provide a player reroll to recover it. Family probabilities, exact generation order/reveal animation and per-target objective weighting remain delegated candidate/technical specification, not an approved50/50 split. Approved≥3 actual distinct target diversity applies to the overall real eligible candidate set for new offerings; no separate minimum per objective family is inferred. Preserve separate Challenge/normal L/S/G pools, card prerequisites/starter grants, no artificial stat gates and source-specific completion proof. Completed-CA repeat policy remains open; no fresh repeat detector assumed. This does not change the five ordinary/three activities wheel invariant or card offering counts.
 - Supersession: WB-D126/related objective-family random-versus-player-choice ambiguity. No price/reward/type change.
 - Acceptance: Choosing Challenge invokes committed random family and target, with no family-selector/target-picker/reroll UI; unsupported objectives excluded; restore/retry retains same assignment; actual candidate diversity checked; no fake50/50 expectation in tests.
+
+## WB-D128 - Bossing Challenge is item-drop-only; remove Combat Achievement objectives
+
+- Status: CONFIRMED explicit latest correction,2026-10-12.
+- Authority: User says remove the CA bit and just make it go get an item drop.
+- Decision: Bossing Challenge assigns a significant creature/encounter-specific unique item-drop hunt only. Remove Combat Achievement objectives and the CA-versus-rare-drop family draw/choice from this card. Fate still randomly selects the boss/creature and authored item objective from the dedicated eligible Challenge pool; no player target choice or reroll.
+- Rationale: Focus the card on obtaining meaningful unique drops and eliminate CA-family eligibility/repeat complexity.
+- Affects: FATE_CARDS, Challenge catalogs, objective generator/state/persistence, UI, I03/I05 tests and pending questions.
+- Exceptions/dependencies: Retain Bossing Lesser AND Greater prerequisite, included starter target bundle, subsequent individual target expansion, dedicated pool/normal L/S/G separation,≥3 actual eligible distinct targets and permanent card ownership belowfloor. Count only targets with supported valid unique-drop hunts; CA-only objectives cannot supply eligibility. Exclude shared rare-drop-table/generic loot under WB-D125. Preserve active source-correlated fresh acquisition requirement, frozen selected objective and once-only settlement. Already-owned item eligibility remains a narrow pending policy; possession alone never completes the hunt. Exact member list/rate boundary/reward/weights/order still candidate/technical work. This removes CA objectives only from Bossing Challenge, not existing normal CA filters/source research or separate historical reward systems; Master Grand hilt5 objective unchanged.
+- Supersession: CA component of WB-D122; all of WB-D127 family randomness; incomplete-versus-repeat CA question is obsolete for this card. Historical register/source/fixtures retained; no old CA task silently enabled.
+- Acceptance: Every newly generated Bossing Challenge is a valid item hunt with frozen item/source/target; no CA family/task or family selector/draw;≥3 supported drop-target creatures for new offerings; bundle/prerequisite/random target rules intact; restore cannot convert invalid legacy CA assignment into a new random hunt without reviewed recovery. No live validation claimed.

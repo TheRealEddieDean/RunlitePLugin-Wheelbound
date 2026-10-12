@@ -61,7 +61,7 @@ WB-D118 duplicate transaction: classify from lifetime activity baseline/history,
 
 WB-D121: validate Questing destruction prohibition before all direct/compound ordinary edits. Questing removal means normal paid storage, with room and valid final5/3/24. Preserve the same instance. A failing destruction plan creates no debit, deleted instance or history reset; forced special insertion cannot bypass the rule.
 
-WB-D122 Challenge assignments need typed CA-task versus rare-item-source objectives and frozen catalog/context/receipt identity, not just KC. Restore the same committed target after restart; no valid target reroll or assumption a possession snapshot proves assigned acquisition. New Challenge pool/generation sequence still open; normal L/S/G sequence unchanged.
+WB-D122 Challenge assignments need typed unique-item-source objectives (WB-D128; CA family removed) and frozen catalog/context/receipt identity, not just KC. Restore the same committed target after restart; no valid target reroll or assumption a possession snapshot proves assigned acquisition. New Challenge pool/generation sequence still open; normal L/S/G sequence unchanged.
 
 WB-D123: record targetPoolKind/version/eligible snapshot with a Challenge commitment, distinct from the Bossing card unlock pool and ordinary L/S/G target pool (field names delegated). Restore selected target, not current recalculated pool. No target choice/reroll. WB-D124 confirms AND-gated card purchase with bundled starters and individual expansion; exact member/price/order details pending; I01 does not invent them.
 
@@ -69,4 +69,4 @@ WB-D124: gated Challenge purchase validates Bossing Lesser AND Greater ownership
 
 WB-D126: validate new-offer Challenge type eligibility against a frozen reviewed target snapshot containing≥3 distinct valid bosses/creatures. Unknown/inaccessible/unsupported targets do not count; multiple objectives/forms for one target do not inflate diversity. Count changes affect future offering eligibility, not already committed outcomes or ownership. Family-choice/generation policy and postcommit access-change recovery still need specification.
 
-WB-D127: persist random Challenge family (CA/rare-drop), actual target and typed objective, eligibility snapshot/catalog/quote and command receipt. No player-supplied family/target override in Challenge selection. Restore same complete result; no reroll from interrupted reveal. Draw only supported eligible objectives while preserving WB-D126 real-target diversity. Weighting/order technical details still pending.
+WB-D128: persist item-drop-only Challenge target, canonical item/source, eligibility/catalog/quote and full committed receipt. No CA family selector/draw or target override. Restore same item hunt; legacy proposed CA payload retained for reviewed recovery, not silently rerolled into an item.

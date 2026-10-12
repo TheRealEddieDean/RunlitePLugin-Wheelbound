@@ -59,7 +59,7 @@ WB-D120 planned acceptance (NOT_RUN): N positive spins→several known-empty Que
 
 WB-D121 new planned acceptance (NOT_RUN): ordinary Questing store with funds/room/final5/3 succeeds; direct/compound/forced-displacement destruction fails without debit or loss; no space/FP blocks its storage rather than enabling destruction; return retains instance/modifiers/history; other valid non-Questing destruction remains free. Migration cannot erase protected Questing to repair capacity.
 
-WB-D122 planned acceptance (NOT_RUN): separate permanent Bossing Challenge unlock; CA and item-hunt objective families; unsupported/completed-without-repeat-proof CA excluded; unrelated item possession/source excluded; supported assigned drop or exact task completes once; restart preserves target; L/S/G behavior unchanged. Example rates/rewards/catalog eligibility require primary/current-source review, not guessed numeric rules.
+WB-D122/128 planned acceptance (NOT_RUN): permanent Bossing Challenge unlock; item-hunt objectives only; CA excluded, unrelated item possession/source excluded; assigned supported fresh drop completes once; restart preserves target; L/S/G unchanged. Rates/rewards/catalog evidence remain reviewed candidates.
 
 WB-D123 planned acceptance (NOT_RUN): reviewed eligible non-boss creature appears only in Challenge target draw; ordinary L/S/G catalog unchanged; no choosing/reroll; invalid/unsupported targets excluded; restart restores same pool/version/target; stale changes cannot resample. Card-type unlock is not assumed equivalent to granting every target.
 
@@ -67,4 +67,4 @@ WB-D124/125 planned cases (NOT_RUN): both Bossing prerequisite keys required; Sk
 
 WB-D126 planned acceptance (NOT_RUN):2 actual targets blocks new Challenge offering;3 allows eligible owned type; three tasks on one creature still1; unknown/inaccessible/unsupported targets excluded. Eligibility loss retains card/bundle, ordinary L/S/G offerings and existing committed targets. Restored eligibility reenables new offerings without purchase/debit. No effect on initial2/upgrade3 card count. Starter bundle grant remains atomic.
 
-WB-D127 planned acceptance (NOT_RUN): player cannot supply family/target; injected random test provider can yield supported CA or rare-drop result; valid selection committed before reveal; interrupted reveal/duplicate command restores identical family/target; unsupported/empty objective family excluded; approved target diversity is not faked by multiple tasks/forms on one creature. No statistical50/50 assertion without reviewed weights. Completed-CA repeat evidence/policy remains unresolved.
+WB-D128 replaces prior family tests: no CA family/task offered, no family draw/selector, no target picker/reroll; injected random provider selects eligible creature/item; restore same objective; three-target floor counts only valid item-hunt targets. Unsupported/unknown/CA-only entries cannot qualify.
