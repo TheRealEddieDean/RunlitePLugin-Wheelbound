@@ -1132,7 +1132,7 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 
 ## WB-D111 - Questing landing with no eligible quest retries the Master Wheel
 
-- Status: CONFIRMED new explicit clarification,2026-10-12. Questing part of Q6 resolved; broader unavailable activities and retry accounting remain technical/design boundaries.
+- Status: CONFIRMED new explicit clarification,2026-10-12. Questing Q6 behavior resolved; WB-D120 resolves extra spin accounting to zero; broader unavailable activities remain technical/design boundaries.
 - Authority: Explicit user approval in this Work conversation, reply to choice1.
 - Evidence: User says the wheel still spins, lands on Questing, displays a small no-active-quest notice and spins again; the slice remains and Questing should stay there.
 - Decision: Retain the Questing slice(s), weights and enhancements when no eligible quests exist. A Questing landing with a verified empty eligible quest pool displays a brief notice and automatically respins the Master Wheel. Do not suspend/remove Questing from the displayed wheel or normalize it out of the initial draw.

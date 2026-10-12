@@ -59,4 +59,4 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A35 | Confirm slice lifetime purchase classification and continuous single-choice pacing | P0 | Explicit recommendation approval2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; WHEELS; shop/ledger/handoff/protocol | 9cf01adc: WB-D118/119;13 affected files;119 IDs checked; no numeric price change |
 
-| WB-A36 | Confirm zero extra allocation for empty-Questing retries | P0 | Explicit approval2026-10-12 | S | IN_PROGRESS | DECISIONS; wheel/assignment/store/tests/handoff | Empty retry no cost/reward/punishment; eventual valid Fate one spin; restart/repeat idempotence |
+| WB-A36 | Confirm zero extra allocation for empty-Questing retries | P0 | Explicit approval2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; wheel/assignment/store/tests/handoff | 8cb8222c: WB-D120; zero extra retry cost; eventual valid Fate one allocation;120 IDs checked |
