@@ -4,7 +4,7 @@ Authority: docs/wheelbound/DECISIONS.md. Latest explicit replies2026-10-12 are W
 
 ## Resolved current answers
 
-- Q6 Questing: retain slice and spin normally; known-empty Questing landing gives brief notice and automatically respins (WB-D111). Suspension proposal rejected for this behavior. Broader activity recovery, unknown evidence, voluntary permanent Questing protection and extra spin accounting are not inferred.
+- Q6 Questing: retain slice and spin normally; known-empty Questing landing gives brief notice and automatically respins (WB-D111). Suspension proposal rejected for this behavior. Broader activity recovery, unknown evidence, voluntary permanent Questing protection is not inferred. WB-D120 confirms no extra empty-retry cost; eventual valid Fate one spin.
 - Q10: automatic independent qualifying bounty FP survives Fate failure/Reject; no manual claim, escrow or clawback (WB-D112 supersedes WB-D094 manual flow and historical forfeiture).
 - Bossing: L/S/G requirements reaffirmed (WB-D113). Separate fourth named Challenge still not clearly answered.
 - PAUSE-CLAIM: no reward/claim processing while paused; preserve prior paid FP/active evidence; no paused earning backfill (WB-D114).
@@ -17,7 +17,7 @@ Authority: docs/wheelbound/DECISIONS.md. Latest explicit replies2026-10-12 are W
 | Separate legacy CA reward scope | Historical per-boss reward is separate from item Bounties Shop and Master Grand | Preserve evidence; no mixed-CA gate on hilt5 Grand; do not silently delete or invent a separate reward |
 | Duplicate first/reacquisition / choice6 — RESOLVED | WB-D118 first-instance baseline includes starting grants; later new purchases escalate despite destruction | Same-instance Satchel return/replay does not increment |
 | Q9 | Separate fourth named Bossing Challenge beyond confirmed L/S/G | Keep extra card disabled; no boss choices/rerolls |
-| Q6 residual | Extra allotted spin accounting for automatic Questing retries, other unavailable activity pools, all-unavailable/postcommit recovery | Persist verified-empty retry provenance; unknown is not empty; no invented cost/penalty/free edits |
+| Q6 residual | Other unavailable activity pools, all-unavailable/postcommit recovery; empty Questing retry cost resolved zero by WB-D120 | Persist verified-empty retry provenance; unknown is not empty; no invented cost/penalty/free edits |
 | Q2 | Genuinely full/unsupported Coffer forced donation | Actual current-client boundary evidence first; no forced death or invented escape |
 | Q5 conditional | Fallback only if exact restriction fails specific policy review | Preserve Trade with; route/review packet remains unsent |
 

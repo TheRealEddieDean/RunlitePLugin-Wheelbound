@@ -12,7 +12,7 @@ Routine technical selections are delegated, not historical approvals. Implementa
 
 Provisional implementation choice: inspect Locked/Banned shops to establish vendor identity while guarding transactions. Provisional GE readiness choice: player cleans up live offers before GE-locked activation/resume; pause remains unconditional, immediate and free. These do not add FP penalties.
 
-Q6 — PARTLY RESOLVED by WB-D111: known-empty Questing landing retains its slice, shows a short notice and automatically respins the Master Wheel. Do not suspend Questing. Extra allotted spin accounting, extension to other unavailable activities, all-unavailable recovery and postcommit availability changes remain unverified. Unknown evidence is not empty. The wording does not clearly establish a new ban on voluntary legal Questing edits.
+Q6 — PARTLY RESOLVED by WB-D111: known-empty Questing landing retains its slice, shows a short notice and automatically respins the Master Wheel. Do not suspend Questing. WB-D120 resolves extra spin accounting to zero; eventual valid Fate consumes one. Extension to other unavailable activities, all-unavailable recovery and postcommit availability changes remain unverified. Unknown evidence is not empty. The wording does not clearly establish a new ban on voluntary legal Questing edits.
 
 Q7 — RESOLVED: S8-M0296–0297 explicitly confirms random forced Death’s Wheel; voluntary sacrifice is player-selected. WB-D033 corrects the contradictory PDF interpretation. Candidate count/value mix remains tuning, not a new approval.
 

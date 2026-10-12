@@ -54,7 +54,7 @@ These are future Java tests, not executed fixtures. Use symbolic/versioned place
 | WE17 | Persist edit then lose UI acknowledgement | Same slice set, FP delta and counters replay; no duplicate purchase/enhancement |
 | WE18 | Storage fails before durable commit | No acknowledged edit; retain/reconcile original according to I01 store contract |
 | WE19 | Activity slice destroyed while bosses already purchased | Mode boss unlock pool retained; normal-wheel suggestions do not become artificial mode gates |
-| WE20 | Exhausted or unknown ordinary assignment pool | Known-empty Questing retains slice and retries under WB-D111; unknown evidence/other activity/extra spin accounting stay gated |
+| WE20 | Exhausted or unknown ordinary assignment pool | Known-empty Questing retains slice and retries under WB-D111; WB-D120 zero extra empty-retry cost; unknown evidence/other activity stay gated |
 
 For WE12/WE13 use an explicit valid fixture configuration with at least three activity keys. The earlier five ordinary minimum is not a requirement to preserve all initial instances. Two special arrivals consume two real slots. All chosen displacement instances must be distinct, ordinary and owned/active. A candidate storage/destruction selection is a preview until the complete mutation commits; retry must restore the same plan.
 

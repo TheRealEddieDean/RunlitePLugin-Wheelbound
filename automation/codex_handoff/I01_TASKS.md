@@ -45,7 +45,7 @@ Choose implementation-neutral policies autonomously and document/test them. Do n
 
 Keep run lifecycle separate from obligation stage; pausing does not clear the obligation. Track schema/revision, account/run identity, generation, frozen catalog/quote/outcome, signed integer FP and nonnegative integer spins. Use stable slice IDs; ordinary tier weights1/1.25/1.5/2/3, special weights derived separately. Do not use floating rounding to conceal impossible probabilities; use a representation that preserves the documented fractions, and specify boundary selection behavior.
 
-Required examples: starting five activities accepted; four ordinary rejected even with specials; five ordinary representing only two activities rejected;24 total including specials accepted;25 rejected. Distinct stored instances do not count as active. Ordinary enhancement and special weight rules must remain separate. Null/unknown pool evidence does not mean an empty pool. WB-D111 resolves verified-empty Questing with automatic Master retry and retained slice; do not invent additional spin accounting or a broader reroll policy. Preserve permanently purchased boss membership; do not adopt normal-wheel recommended-stat filters as mode eligibility.
+Required examples: starting five activities accepted; four ordinary rejected even with specials; five ordinary representing only two activities rejected;24 total including specials accepted;25 rejected. Distinct stored instances do not count as active. Ordinary enhancement and special weight rules must remain separate. Null/unknown pool evidence does not mean an empty pool. WB-D111 resolves verified-empty Questing with automatic Master retry and retained slice; WB-D120 adds no cost for empty retry and one spin for eventual valid Fate; no broader reroll policy. Preserve permanently purchased boss membership; do not adopt normal-wheel recommended-stat filters as mode eligibility.
 
 ## I01-C3/C4: commands and durable selections
 
@@ -75,7 +75,7 @@ Retain existing normal-wheel regressions. No unexplained production behavior cha
 
 ## Explicit deferred behavior
 
-- Q6: WB-D111 permits known-empty Questing automatic retry with retained slice; other activity recovery/extra spin accounting remain unverified.
+- Q6: WB-D111 permits known-empty Questing automatic retry with retained slice; WB-D120 no extra retry cost; other activity recovery remains unverified.
 - Q10 resolved: qualifying active bounty automatically pays independently and survives failure/Reject; no deletion, escrow or clawback.
 - PAUSE-CLAIM resolved: no payout while paused. CA-MIXED still unresolved; preserve evidence; no pause penalty/backfill.
 - Q9 additional Bossing Challenge: excluded until resolved; confirmed L/S/G and random boss/no reroll remain.

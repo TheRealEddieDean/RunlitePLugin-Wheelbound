@@ -37,3 +37,5 @@ WB-D103 confirms Wilderness as purchased opt-in card content. Historical broad C
 
 ## Current clarification2026-10-12
 WB-D113 reaffirms Lesser/Standard/Greater for Skilling XP and Bossing KC.5/10 kills is illustrative, not an approved multiplier. Prior Bossing Lesser base FP, Greater increased FP, separate pools and random boss/no reroll remain. The phrase Bossing challenge cards does not clearly resolve a separate fourth named Challenge card; Q9 stays narrow/unverified. WB-D111 adds automatic Master retry after a known-empty Questing landing, not boss rerolls or regeneration of already committed valid offers.
+
+WB-D120: repeated known-empty Questing landings are zero-cost Master retries; only the eventual valid Fate consumes one allotted spin. No reward/Punishment for empty attempts; no valid boss/offer rerolls. Existing zero-spin gate and durable replay apply.
