@@ -47,4 +47,6 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A29 | Specify exact build-artifact and standard-JAR acceptance packet | P1 | A19/A22/A26 source and reporting gaps | S | DONE (specification only) | automation/pipeline_acceptance | 5297ccf9/5f25897f:12 future acceptance checks, five I00 subtasks, seven source pins; byte-export/configuration gaps documented; zero new builds/artifact reviews |
 
-| WB-A30 | Split I01 into Codex-sized implementation handoffs | P1 | A13/A24/A29 existing contracts | S | IN_PROGRESS | automation/codex_handoff | Dependency-ordered subtasks, exact acceptance inputs, affected modules and prompt; no production changes |
+| WB-A30 | Split I01 into Codex-sized implementation handoffs | P1 | A13/A24/A29 existing contracts | S | DONE (handoff only) | automation/codex_handoff | 102f319f: eight tasks, ready future prompt,44 fixture dispositions and nine source pins; no coding |
+
+| WB-A31 | Split I02 wheel editing into Codex-sized transactions | P1 | Approved wheel/shop/Defy contracts; A30 handoff | S | IN_PROGRESS | automation/codex_handoff | Satchel/duplicate/enhancement/displacement tasks with negative and retry acceptance; no new prices or gameplay rules |
