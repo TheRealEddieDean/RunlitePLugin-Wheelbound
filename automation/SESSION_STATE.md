@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261012-quest-retry-cost
-- State: IDLE — owner released; no active lease.
+- State: ACTIVE — wb-20261012-quest-protection owns WB-A37; lease through2026-10-12T22:00:00Z.
 - Branch: wheelbound-mode
 - Starting head:3d62a0d9ea0326428785bb3b7ceeb39c8b179f0f
 - Claim:ca0ddfb378d9bf0e745d501bb27a53939f28fc88
@@ -24,3 +24,5 @@
 6. Separate fourth Bossing Challenge and separate historical CA/diary reward scope still need narrow reconciliation; no mixed prerequisite CA gate on hilt5 Grand. Avoid arbitrary isolated balance questions; routine technical selections delegated.
 
 Stop reason: approval checkpoint complete; next single design question pending. No full-completion/background-work claim.
+
+Current A37: Questing store/remove allowed, destruction prohibited. Starting headab3fae88eeeec00039173069a04704f67ab9be8a.
