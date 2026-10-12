@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261012-challenge-family
-- State: IDLE — owner released; no active lease.
+- State: ACTIVE — wb-20261012-challenge-item-only owns WB-A43; lease through2026-10-12T23:00:00Z.
 - Branch: wheelbound-mode
 - Starting head:740987aa84a846b5be385294654d837d7cde5cb5
 - Claim:2561658e5c5390ada0497f4e32f53d7d56ae6af4
@@ -26,3 +26,5 @@
 6. A33 PDF explicit unfinished task; coding unauthorized. Actual XML/dependency/jar exports/current-client/exact policy separate.130,080 historical synthetic trajectories unchanged; no unchanged reruns to inflate progress.
 
 Stop reason: approval checkpoint complete; next single CA eligibility question pending. No full completion/background-execution claim.
+
+Current A43 item-drop-only Challenge; starting head24596ac746f6e0f7ed7a2f7c61f32e96e1b0495e.
