@@ -77,4 +77,4 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A44 | Confirm owned items remain eligible but fresh assigned drop required | P0 | Explicit approval2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; card/evidence/store/UI/tests/handoff | beb648eb: WB-D129;12 specs; owned item eligible, fresh active assigned-source drop required;129 IDs checked |
 
-| WB-A45 | Confirm one specific Challenge item and bounded1/400–1/1500 rarity | P0 | Explicit user design2026-10-12 | S | IN_PROGRESS | DECISIONS; card/catalog/economy/state/UI/tests/handoff | One specific item; inclusive probability band; exclude outside band/shared table; no guaranteed kill cap |
+| WB-A45 | Confirm one specific Challenge item and bounded1/400–1/1500 rarity | P0 | Explicit user design2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; card/catalog/economy/state/UI/tests/handoff | 38678af1: WB-D130/131;13 specs; one exact logical item, inclusive[1/1500,1/400];131 IDs checked; no guaranteed kill cap |
