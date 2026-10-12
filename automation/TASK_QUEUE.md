@@ -69,4 +69,4 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A40 | Record Bossing Challenge prerequisite tree, starter bundle and unique-drop filter | P0 | Explicit user design2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; progression/card/shop/catalog/store/handoff | fe757959: WB-D124/125;14 specs; AND prerequisite/starter bundle/individual expansion/unique-drop exclusion;125 IDs checked; eligible-target floor proposed |
 
-| WB-A41 | Confirm three actual eligible Challenge targets and reaffirm starter bundle | P0 | Explicit user recommendation approval2026-10-12 | S | IN_PROGRESS | DECISIONS; card/tree/catalog/state/UI/tests/handoff | Three distinct eligible bosses/creatures before offering; owned card retained; starter bundle included |
+| WB-A41 | Confirm three actual eligible Challenge targets and reaffirm starter bundle | P0 | Explicit user recommendation approval2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; card/tree/catalog/state/UI/tests/handoff | c4601647: WB-D126;14 specs;≥3 actual distinct targets for offers, card/bundle retained;126 IDs checked |
