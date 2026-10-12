@@ -1,0 +1,51 @@
+{
+  "source_commit": "2d25df2c08bb251561bea10a52cef760c7cde01f",
+  "scope": "HANDOFF_INPUTS_NOT_NEW_APPROVALS",
+  "files": [
+    {
+      "path": "docs/wheelbound/STATE_CONTRACT.md",
+      "sha256": "8107683a718d0c32143540dc37f90250b4aa525e80d09fc00079802e103aec88",
+      "git_blob": "2b31caf2c4290c17f5f3858804ec89371c67cfb3"
+    },
+    {
+      "path": "docs/wheelbound/PERSISTENCE.md",
+      "sha256": "8f66dcc44d0584108ad60835922ef356a3f3ea44c750e79e201ef85a6fd516a9",
+      "git_blob": "cf1c99283496303a3663cb366a4a9e568abe546e"
+    },
+    {
+      "path": "docs/wheelbound/ARCHITECTURE.md",
+      "sha256": "2156373d2dbce47a27d11c44052d1b3862f877bf384115caa7226ba6785735d4",
+      "git_blob": "3e21a17ff0e1a99ea73cfb4affbec5558f770dda"
+    },
+    {
+      "path": "docs/wheelbound/DEVELOPMENT_PIPELINE.md",
+      "sha256": "63c0cd94c05e96bafba15cc02a99a69163d46f8c6e2621a089f3a33ad88da6a0",
+      "git_blob": "2ceaaf8e187eb7f4dac778adabfd90ace13d7eff"
+    },
+    {
+      "path": "docs/wheelbound/DECISIONS.md",
+      "sha256": "d66b01674f70c21c482b6380bc9f9678f11969d6808bf0e420c5115d14d0ef5a",
+      "git_blob": "ede7b45f5ceb7c9fd2d7b33b056bbf23d8ec28b9"
+    },
+    {
+      "path": "docs/wheelbound/OPEN_QUESTIONS.md",
+      "sha256": "c30b1e166886d1a2f903f4e874231ad3637e6100adb59b67314d93c240be199d",
+      "git_blob": "724c9d00976a5212a58ac114462e34acde9e3226"
+    },
+    {
+      "path": "automation/receipt_safety/README.md",
+      "sha256": "1a94bcfe2b70bc1e1aee23d137c664f5c86520787106dfd260b690840bbd75d1",
+      "git_blob": "fc434b32fd81f1d23500b698e823110c1abd1132"
+    },
+    {
+      "path": "automation/receipt_safety/fixtures_v1.json",
+      "sha256": "97653a0f149e9d6695c6480660d5a86b08b29a7d68570383312a94c33b71fc48",
+      "git_blob": "595d4eaad086869b1eb0f1d740463accbd9f58fb"
+    },
+    {
+      "path": "automation/pipeline_acceptance/ACCEPTANCE.md",
+      "sha256": "4e9225008701cf5045ee5bab2b0c761584f141009bbb3750e2da234a896cfaf1",
+      "git_blob": "f328c9781dbedd72010a0bb3dda068a3cd664195"
+    }
+  ]
+}

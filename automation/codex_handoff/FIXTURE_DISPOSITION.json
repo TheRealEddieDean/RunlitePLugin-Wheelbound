@@ -1,0 +1,367 @@
+{
+  "status": "IMPLEMENTATION_PLANNING_ONLY",
+  "source_fixture_path": "automation/receipt_safety/fixtures_v1.json",
+  "source_sha256": "97653a0f149e9d6695c6480660d5a86b08b29a7d68570383312a94c33b71fc48",
+  "economy_values": "PLACEHOLDER_TEST_INPUTS",
+  "actual_java_test_count": 0,
+  "live_trace_count": 0,
+  "counts": {
+    "CORE_DOMAIN": 25,
+    "CORE_PATTERN": 8,
+    "DEFERRED_SYSTEM": 11
+  },
+  "cases": [
+    {
+      "fixture_id": "R01",
+      "purpose": "Committed draw has one debit and a frozen target",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C4",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R02",
+      "purpose": "Failure before durable draw leaves no debit and no acknowledgement",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C4/C5",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R03",
+      "purpose": "Durable draw survives lost acknowledgement; old revision command replays",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C3/C4/C5",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R04",
+      "purpose": "Snapshot written but UI acknowledgement lost also replays once",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C5",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R05",
+      "purpose": "Unparsed journal tail retained for read-only recovery",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C5",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R06",
+      "purpose": "Additional mutation blocked while durable write is unconfirmed",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C3/C5",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R07",
+      "purpose": "Changed-payload command ID reuse preserves original result without assuming a policy",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C0/C3",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R08",
+      "purpose": "Reject stale or foreign identity before a write",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C3/C6",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R09",
+      "purpose": "Reject stale or foreign identity before a write",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C3/C6",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R10",
+      "purpose": "Reject stale or foreign identity before a write",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C3/C6",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R11",
+      "purpose": "Competing writers using same revision cannot both spend",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C3/C5",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R12",
+      "purpose": "Different command IDs cannot settle one evidence key twice",
+      "disposition": "CORE_PATTERN",
+      "owner": "I01-C3",
+      "acceptance_note": "Reuse evidence-once settlement pattern with a synthetic qualified receipt; real payout belongs to I04/I05.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R13",
+      "purpose": "Paused draw cannot allocate a spin",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C6",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R14",
+      "purpose": "Paused claim of previously active qualified evidence stays unspecified; do not equate it with paused acquisition",
+      "disposition": "CORE_PATTERN",
+      "owner": "I01-C1/C6",
+      "acceptance_note": "Preserve prior active evidence and unresolved claim classification; no claim policy adopted.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R15",
+      "purpose": "Free pause preserves obligation and frozen outcome",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C6",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R16",
+      "purpose": "Resume retains same obligation without a new allocation",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C6",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R17",
+      "purpose": "Pardon replay charges once and restores Locked",
+      "disposition": "DEFERRED_SYSTEM",
+      "owner": "I06",
+      "acceptance_note": "Retain fixture for later authorized system work; I01 does not implement this operation or its live evidence adapter.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R18",
+      "purpose": "Uncommitted Pardon leaves Banned and uncharged",
+      "disposition": "DEFERRED_SYSTEM",
+      "owner": "I06",
+      "acceptance_note": "Retain fixture for later authorized system work; I01 does not implement this operation or its live evidence adapter.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R19",
+      "purpose": "Durable Pardon restores Locked before UI acknowledgement",
+      "disposition": "DEFERRED_SYSTEM",
+      "owner": "I06",
+      "acceptance_note": "Retain fixture for later authorized system work; I01 does not implement this operation or its live evidence adapter.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R20",
+      "purpose": "Voluntary costs cannot create debt",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C3",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R21",
+      "purpose": "Reject penalty may create debt, preserves bounty evidence and adds no derived spin",
+      "disposition": "DEFERRED_SYSTEM",
+      "owner": "I07/Q10",
+      "acceptance_note": "Retain fixture for later authorized system work; I01 does not implement this operation or its live evidence adapter.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R22",
+      "purpose": "Taint allocation and mandatory Punishment consume one spin total",
+      "disposition": "DEFERRED_SYSTEM",
+      "owner": "I07",
+      "acceptance_note": "Retain fixture for later authorized system work; I01 does not implement this operation or its live evidence adapter.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R23",
+      "purpose": "Verified donation earns conversion once after one Sacrifice allocation",
+      "disposition": "DEFERRED_SYSTEM",
+      "owner": "I07/live Coffer",
+      "acceptance_note": "Retain fixture for later authorized system work; I01 does not implement this operation or its live evidence adapter.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R24",
+      "purpose": "Disappearance or unverified donation never awards spins",
+      "disposition": "DEFERRED_SYSTEM",
+      "owner": "I07/live Coffer",
+      "acceptance_note": "Retain fixture for later authorized system work; I01 does not implement this operation or its live evidence adapter.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R25",
+      "purpose": "Lost donation acknowledgement restores committed settlement; retry cannot award again",
+      "disposition": "DEFERRED_SYSTEM",
+      "owner": "I07/live Coffer",
+      "acceptance_note": "Retain fixture for later authorized system work; I01 does not implement this operation or its live evidence adapter.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R26",
+      "purpose": "Grand activation at zero Master spins has no debit",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C1/C3",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R27",
+      "purpose": "Grand activation fails when mandatory settlement remains",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C1/C3",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R28",
+      "purpose": "Malformed snapshot/receipt/sequence cannot be silently healed or deleted",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C5",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R29",
+      "purpose": "Malformed snapshot/receipt/sequence cannot be silently healed or deleted",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C5",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R30",
+      "purpose": "Malformed snapshot/receipt/sequence cannot be silently healed or deleted",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C5",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R31",
+      "purpose": "Unresolved gameplay settlement is preserved as a gate",
+      "disposition": "CORE_PATTERN",
+      "owner": "I01-C1/C3",
+      "acceptance_note": "Retain unresolved path without assigning a gameplay result.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R32",
+      "purpose": "Unresolved gameplay settlement is preserved as a gate",
+      "disposition": "CORE_PATTERN",
+      "owner": "I01-C1/C3",
+      "acceptance_note": "Retain unresolved path without assigning a gameplay result.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R33",
+      "purpose": "Unresolved gameplay settlement is preserved as a gate",
+      "disposition": "CORE_PATTERN",
+      "owner": "I01-C1/C3",
+      "acceptance_note": "Retain unresolved path without assigning a gameplay result.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R34",
+      "purpose": "Unresolved gameplay settlement is preserved as a gate",
+      "disposition": "CORE_PATTERN",
+      "owner": "I01-C1/C3",
+      "acceptance_note": "Retain unresolved path without assigning a gameplay result.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R35",
+      "purpose": "Possession alone does not qualify an acquisition reward",
+      "disposition": "DEFERRED_SYSTEM",
+      "owner": "I05",
+      "acceptance_note": "Retain fixture for later authorized system work; I01 does not implement this operation or its live evidence adapter.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R36",
+      "purpose": "Independent previously qualified evidence pays only on manual claim",
+      "disposition": "DEFERRED_SYSTEM",
+      "owner": "I04/I05/PAUSE-CLAIM",
+      "acceptance_note": "Retain fixture for later authorized system work; I01 does not implement this operation or its live evidence adapter.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R37",
+      "purpose": "Reject does not silently settle or delete Q10 evidence",
+      "disposition": "CORE_PATTERN",
+      "owner": "I01-C1/C3",
+      "acceptance_note": "Preserve receipt provenance and Q10 boundary; do not implement Reject reward settlement.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R38",
+      "purpose": "Recovery uses committed frozen quote/result without a new draw",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C4/C5",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R39",
+      "purpose": "Second draw cannot discard a pending assignment",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C3/C4",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R40",
+      "purpose": "No ordinary draw with zero spins",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C3/C4",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R41",
+      "purpose": "Stale session bounty callback cannot pay",
+      "disposition": "CORE_PATTERN",
+      "owner": "I01-C6",
+      "acceptance_note": "Port stale-session rejection to synthetic input, without shipping bounty detector.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R42",
+      "purpose": "No credit before run activation",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C6",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R43",
+      "purpose": "Free pause is available even in debt with a mandatory obligation",
+      "disposition": "CORE_DOMAIN",
+      "owner": "I01-C6",
+      "acceptance_note": "Port authored expectation to actual Java domain/storage implementation; mock durability is not production proof.",
+      "java_execution_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "R44",
+      "purpose": "Unconfirmed donation blocks another request until reconciliation",
+      "disposition": "DEFERRED_SYSTEM",
+      "owner": "I07/live Coffer",
+      "acceptance_note": "Retain fixture for later authorized system work; I01 does not implement this operation or its live evidence adapter.",
+      "java_execution_status": "NOT_RUN"
+    }
+  ]
+}
