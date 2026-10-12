@@ -75,4 +75,4 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A43 | Remove CA objective family from Bossing Challenge | P0 | Explicit user correction2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; card/catalog/state/store/UI/tests/handoff | 49ce5cc2: WB-D128;16 specs; CA family removed, item hunts only; bundle/tree/random pool/≥3 drop targets retained;128 IDs checked |
 
-| WB-A44 | Confirm owned items remain eligible but fresh assigned drop required | P0 | Explicit approval2026-10-12 | S | IN_PROGRESS | DECISIONS; card/evidence/store/UI/tests/handoff | Existing ownership no exclusion/no completion; fresh active postassignment source receipt; no bank/trade/buy reuse |
+| WB-A44 | Confirm owned items remain eligible but fresh assigned drop required | P0 | Explicit approval2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; card/evidence/store/UI/tests/handoff | beb648eb: WB-D129;12 specs; owned item eligible, fresh active assigned-source drop required;129 IDs checked |
