@@ -61,4 +61,4 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A36 | Confirm zero extra allocation for empty-Questing retries | P0 | Explicit approval2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; wheel/assignment/store/tests/handoff | 8cb8222c: WB-D120; zero extra retry cost; eventual valid Fate one allocation;120 IDs checked |
 
-| WB-A37 | Confirm Questing removable to storage but indestructible | P0 | Explicit user reply2026-10-12 | S | IN_PROGRESS | DECISIONS; wheel/storage/Defy/shop/tests/handoff | Questing storage/removal allowed under normal rules; every destroy path refused, including forced displacement |
+| WB-A37 | Confirm Questing removable to storage but indestructible | P0 | Explicit user reply2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; wheel/storage/Defy/shop/tests/handoff | b0300a0d: WB-D121;13 specs updated; normal paid storage/removal allowed, destruction prohibited;121 IDs checked |

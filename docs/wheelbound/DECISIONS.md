@@ -65,6 +65,7 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 ## WB-D007 - Start Mining/Fishing/Woodcutting/Combat/Questing; initial instances unprotected
 
 - Status: CONFIRMED
+- Current supersession: WB-D121 adds Questing indestructibility while allowing normal paid storage/removal; blanket no-slice-protection wording below is historical and does not override this exception. Other mechanics remain.
 - Authority: Explicit user
 - Evidence: S2 §7
 - Decision: Start Mining/Fishing/Woodcutting/Combat/Questing; initial instances unprotected.
@@ -1083,6 +1084,7 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 ## WB-D106 - Central Fate Shop, modifier-preserving Satchel and explicit price supersession
 
 - Status: CONFIRMED structure and item-only protection; capacities/prices selected under delegated balancing.
+- Current supersession: WB-D121 adds Questing indestructibility while allowing normal paid storage/removal; blanket no-slice-protection wording below is historical and does not override this exception. Other mechanics remain.
 - Authority: Explicit user decisions, with delegated slot/value selection.
 - Evidence: S8-M0343–0345, M0349–0365, M0373–0389, M0391.
 - Decision: One central categorized Fate Shop modifies/manipulates/protects/recovers; Progression Tree unlocks content. Only active slices occupy wheel capacity. Deactivation stores the same unique instance and modifiers; free destruction loses those modifiers, retains underlying unlocks and gives no refund. Slices have no protection; Blessings protect sacrifice item types only. Enhancements are sequential and visible before purchase. Duplicates may fill available capacity; their per-activity lifetime escalation persists. Enhancement costs depend only on tier, with all purchase-count enhancement escalation explicitly withdrawn at M0385–0387. Rearrangement is free and does not alter odds.
