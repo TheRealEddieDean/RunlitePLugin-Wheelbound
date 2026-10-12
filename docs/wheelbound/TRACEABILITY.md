@@ -58,3 +58,5 @@ WB-D116→item Bounties Shop terminology and I04/I05/I09 item reward flow. WB-D1
 WB-D118→I02 slice quote/counter transactions; first-instance baseline includes starting grants; later new purchased instances use activity lifetime ladder after destruction; Satchel return and retries add no count. WB-D119→workflow: automatically offer next single choice until stopped.
 
 WB-D121→I02/I07/I09: Questing may store/remove under normal rules but cannot destroy; forced displacement respects this type exception; all other active minimum/capacity/price/history rules preserved.
+
+WB-D122→I03/I05/I09: fourth Bossing Challenge confirmed with difficult-CA or significant rare-drop hunt; separate unlock/context/receipt; pool/generation/catalog/live gates remain. Earlier Q9 existence uncertainty superseded, not the evidence gates.

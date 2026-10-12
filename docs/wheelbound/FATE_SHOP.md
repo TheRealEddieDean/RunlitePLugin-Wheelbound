@@ -13,3 +13,5 @@ S8-M0343/0345 explicitly confirms the central shop versus content tree distincti
 WB-D118: quote first-instance versus duplicate based on lifetime activity ownership, not current active/storage count. Starting grants establish the first instance. Every later new purchased slice advances its activity duplicate ladder once; same-instance Satchel return does not. Destruction cannot reset or discount reacquisition. Exact price tables remain balance candidates.
 
 WB-D121: Questing exposes Store/Reactivate under normal prices and capacity, with no Destroy action. API/domain must reject destruction even if a stale UI or compound displacement command requests it. Other ordinary free destruction remains unchanged.
+
+WB-D122: Bossing card purchases include the distinct Challenge type for difficult CA or rare creature-drop objectives. It is separate from Skilling Challenge purchase. No new price or default unlock approved; Standard remains the default.

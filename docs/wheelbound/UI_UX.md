@@ -44,3 +44,5 @@ Known-empty Questing landing keeps its visible slice, shows a small lower-area n
 WB-D116/117: label Bounties Shop as item goal→FP. Master CA Grand checklist reads Obtain Ghommal's hilt 5; do not show an active-only CA-point quota as an additional requirement. Other Grand entry/lifecycle rules remain. Separately retained CA/diary reward UI must not be conflated with this trophy goal.
 
 WB-D121: Questing offers Store/Reactivate, not Destroy. Explain storage cost/room and final active minimum. During full-wheel special displacement, Questing is selectable only for legal storage; never suggest destroying it or grant extra capacity. Other legal ordinary choices remain player-selected.
+
+WB-D122: Bossing Challenge card clearly indicates a difficult CA or significant rare-drop objective, with exact task/source/item and authored reward when determined. Do not label it merely Greater KC or permit target choice/rerolls. Objective-generation order is pending; no misleading fully specified offer before target data exists.

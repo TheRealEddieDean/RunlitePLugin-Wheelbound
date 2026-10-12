@@ -922,13 +922,13 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 
 ## WB-D090 - Separate purchased Fate Card pools and verifiable Challenge eligibility
 
-- Status: CONFIRMED historical pool separation and verification rule; Bossing Challenge reconciliation UNVERIFIED.
+- Status: CONFIRMED historical pool separation and verification rule; Bossing Challenge intent now CONFIRMED by WB-D122; runtime catalog/detectors still gated.
 - Authority: Explicit user approval.
 - Evidence: S8-M0227 and S8-M0231; current-session Bossing L/S/G and initial offering approvals remain controlling.
 - Decision: Skilling and Bossing purchase their own card types/pools, even where card names match. Purchased types can appear among the limited offerings. A Challenge is eligible only when qualification can be established beforehand and correct completion reliably detected afterward.
 - Rationale: Additional progression sinks and implementable challenges without ambiguous completion.
 - Affects: [FATE_CARDS](FATE_CARDS.md), [FATE_SHOP](FATE_SHOP.md), method detectors and catalog acceptance.
-- Exceptions/dependencies: Initial two independently generated Standard targets and third-offering upgrade remain current new approvals. Historical user also named a Bossing Challenge card; the current L/S/G clarification does not explicitly resolve whether that additional type remains intended. Keep it disabled and flag the ambiguity rather than silently declaring it rejected. Boss selection is always random, with no choices/rerolls.
+- Exceptions/dependencies: Initial two independently generated Standard targets and third-offering upgrade remain current new approvals. Historical user also named a Bossing Challenge card; WB-D122 now explicitly confirms it with difficult CA/rare-drop objectives. Prior uncertainty superseded; eligibility/catalog/detector gates remain. Boss selection is always random, with no choices/rerolls.
 
 ## WB-D091 - Skilling XP generation uses skill modifiers and clean increments
 
@@ -1158,13 +1158,13 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 
 ## WB-D113 - Reaffirm Lesser/Standard/Greater objective scaling for Skilling and Bossing
 
-- Status: CONFIRMED reaffirmation,2026-10-12. Separate fourth Bossing Challenge intent remains UNVERIFIED.
+- Status: CONFIRMED reaffirmation,2026-10-12. Separate fourth Bossing Challenge confirmed later by WB-D122; retain prior uncertainty as history.
 - Authority: Explicit user reply to choice3 in this Work conversation.
 - Evidence: User describes Lesser/Standard/Greater XP amounts and corresponding boss kill counts, with5 versus10 as an example.
 - Decision: Both Skilling and Bossing use Lesser/Standard/Greater objective tiers. Lesser requires less XP/KC, Standard normal XP/KC, Greater more XP/KC. Preserve prior confirmed Bossing sequence, random boss/no reroll and reward distinctions.
 - Rationale: Parallel understandable difficulty choices across the two activity families.
 - Affects: FATE_CARDS, generators and UI acceptance.
-- Exceptions/dependencies: Example5/10 is not a fixed multiplier/table. Prior Lesser Bossing base FP and Greater increased FP remain; user did not alter Skilling reward scaling. User uses challenge descriptively for these cards and does not clearly approve a fourth named Bossing Challenge card. Keep it disabled without silently calling it rejected; ask only when user requests the next relevant choice.
+- Exceptions/dependencies: Example5/10 is not a fixed multiplier/table. Prior Lesser Bossing base FP and Greater increased FP remain; user did not alter Skilling reward scaling. The later explicit WB-D122 reply confirms a fourth named Bossing Challenge with difficult CA/rare-drop objectives; this entry's earlier ambiguity is superseded.
 - Supersession: Reaffirms WB-D049/current L/S/G, not a new card type or shared purchase pool.
 - Acceptance: Lesser<Standard<Greater requirements in supported tables; separate purchase pools; no boss choice/reroll.
 
@@ -1259,3 +1259,15 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Exceptions/dependencies: Normal storage capacity/FP cost and reactivation price apply; modifiers/UUID/lifetime history persist. No free storage, extra Satchel slot or destruction fallback for Questing when storage is full/unaffordable. Select another legally destroyable ordinary slice or obtain legal storage capacity/funds; do not automatically choose for the player. Other ordinary activities retain free no-refund destruction. Taint/Sacrifice retain their separate restrictions; no general slice-protection purchase is introduced. Known-empty active Questing retains no-cost retry under WB-D111/120.
 - Supersession: Blanket all-original-slices-unprotected/all-ordinary-destroyable wording is narrowed by this explicit Questing exception. WB-D111 voluntary protection uncertainty resolved; no change to the five/three/24 invariant or ordinary lifetime pricing.
 - Acceptance: Store/remove Questing succeeds only with funds/space and valid final active wheel; direct or compound destruction refused without debit/loss; forced displacement cannot destroy Questing; storage/return retains ID/enhancements/history; other ordinary destruction remains allowed when invariant valid.
+
+## WB-D122 - Bossing Challenge Fate Card: difficult CA or significant rare creature drop
+
+- Status: CONFIRMED explicit correction/new detail,2026-10-12; Q9 card existence resolved.
+- Authority: User expressly rejects omitting it and says definitely have the Bossing Challenge Fate Card.
+- Evidence: User specifies a mixture of a pretty hard Combat Achievement or a rare drop from a creature, roughly rarer than1-in400 as guidance, and gives Tormented Demons→Tormented Synapse as an example objective.
+- Decision: Bossing has a distinct Challenge card in addition to Lesser/Standard/Greater. Its objective is either a difficult Combat Achievement or obtaining a significant rare drop from its assigned boss/creature. This is an achievement/item hunt objective, not merely a Greater kill-count multiplier.
+- Rationale: Add difficult combat feats and meaningful rare-drop hunts to the Bossing Fate experience.
+- Affects: FATE_CARDS, Bossing/Challenge catalogs, progression purchase pool, assignment commitment, objective tracking, UI and I03/I05.
+- Exceptions/dependencies: The separate permanently purchased Bossing card pool rule remains.1-in400-ish and the Tormented Synapse example guide catalog authoring; no hard global cutoff, exact drop rate, FP reward, kill cap or additional unlock price is approved. Card offers/target generation need a reviewed CA/drop catalog and genuine observable completion. Random target/no player boss choice/reroll remains unless later explicitly changed. Whether Challenge uses a dedicated boss/creature pool or normal Bossing pool, how that pool unlocks, and when exact objective is generated remain open. Existing normal L/S/G sequence is not silently rewritten. Eligibility must distinguish actual access from recommended stats, completed/unsupported CA signals and source-correlated fresh drops. No rarity alone enables a live detector or adds compulsory off-task training.
+- Supersession: Q9 existence ambiguity, recommendation to omit fourth card, WB-D090/113 uncertainty. Earlier broad CA Challenge-slice discussion WB-D047 is a separate concept; its single-boss remaining-CA limitation does not prohibit this explicitly approved opt-in Bossing card. No automatic expansion of all64 normal boss nodes is inferred.
+- Acceptance: Bossing permanent eligible types include Challenge after its own unlock; supported Challenge objective distinguishes CA versus rare item hunt; L/S/G retain prior requirements/rewards; restart preserves committed offer/target; no valid-target reroll; runtime remains disabled until catalogs/detectors pass actual gates.

@@ -36,3 +36,5 @@ WB-D117 supersedes the Master Grand active-earned CA tally: persist the hilt5 it
 WB-D118: persist per-activity ever-acquired baseline and paid subsequent-purchase history independently of active/storage ownership. Starting granted slices establish baseline, not paid duplicates. Destroying all instances preserves history; return/replay does not increment. Migrations use retained original/receipt history and do not infer never-owned from an empty current slice list. Exact schema fields/migration are delegated technical work.
 
 WB-D121: Questing type cannot be destroyed by direct edit, forced displacement, migration or destructive recovery. Store/return preserves UUID/modifiers/lifetime state. Do not infer mandatory active Questing; normal5/3 active validation applies. No extra storage/refund/reset.
+
+WB-D122: save Bossing Challenge purchase separately from Skilling, objective family, canonical task or item/source context, catalog/version, frozen reward and selected target. Exact new pool/order schema pending; do not overwrite ordinary KC assignment semantics or use display-name matching to prove completion.

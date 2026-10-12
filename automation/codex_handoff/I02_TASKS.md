@@ -1,6 +1,6 @@
 # Wheel editing and pricing Codex packet
 
-> Current authority2026-10-12: WB-D111–115 supersede prior Questing suspension/retry prohibition, Q10/manual bounty claiming and PAUSE-CLAIM uncertainty. Known-empty Questing automatically retries with retained slice; supported active bounty automatically pays once and survives failure/Reject; paused payout forbidden. Old fixture dispositions/pins remain prior-contract evidence, not current acceptance of superseded behavior. CA-MIXED and extra Bossing Challenge remain unanswered. Read current DECISIONS before coding.
+> Current authority2026-10-12: WB-D111–115 supersede prior Questing suspension/retry prohibition, Q10/manual bounty claiming and PAUSE-CLAIM uncertainty. Known-empty Questing automatically retries with retained slice; supported active bounty automatically pays once and survives failure/Reject; paused payout forbidden. Old fixture dispositions/pins remain prior-contract evidence, not current acceptance of superseded behavior. Master Grand has hilt5 objective (WB-D117); Bossing Challenge confirmed (WB-D122), pool/catalog/detectors pending. Read current DECISIONS before coding.
 
 WB-A31,2026-10-12. Future implementation planning only; no coding authorization, adopted prices or shipped transaction. Use after I01's actual state/receipt/store boundary exists and implementation is explicitly authorized. Canonical rules are docs/wheelbound/WHEELS, FATE_SHOP, DEFY_FATE, ECONOMY and DECISIONS. Do not replace them with these planning summaries.
 

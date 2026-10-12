@@ -23,7 +23,7 @@ WB-D101 requires a finite 100-target item system including grouped any-third-age
 
 WB-D035 approves dynamic punishment architecture, not each entry of this new draft. The historical fifty-template list was deferred at S8-M0172; an approved complete historical list has not been recovered in the review. The draft's 120-minute generation cap is experimental. WB-D087 permits feasible multi-day escalation for consecutive Penance; clean assigned completion resets the sequence. No automatic third-offense level-99 task is confirmed. Review plain, method/location-restricted, and escalated templates independently.
 
-The broad Challenge task library and ordinary-slice classification need explicit versioned contracts. Additional Bossing Challenge eligibility is Q9; it stays disabled pending resolution. WB-D111 resolves known-empty Questing by retained-slice automatic Master retry; WB-D120 confirms zero extra retry cost; other unavailable pools remain Q6 boundaries. No automatic wheel edit or boss reroll. Q10 is resolved by WB-D112: qualifying bounty payouts are automatic and survive failure/Reject; no receipt erasure or FP clawback.
+The broad Challenge task library and ordinary-slice classification need explicit versioned contracts. Bossing Challenge exists under WB-D122 (Q9 resolved); its CA/rare-drop catalog, eligible creature pool and live detectors remain gated. WB-D111 resolves known-empty Questing by retained-slice automatic Master retry; WB-D120 confirms zero extra retry cost; other unavailable pools remain Q6 boundaries. No automatic wheel edit or boss reroll. Q10 is resolved by WB-D112: qualifying bounty payouts are automatic and survive failure/Reject; no receipt erasure or FP clawback.
 
 ## Promotion and verification
 

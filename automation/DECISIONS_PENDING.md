@@ -16,7 +16,7 @@ Authority: docs/wheelbound/DECISIONS.md. Latest explicit replies2026-10-12 are W
 | --- | --- | --- |
 | Separate legacy CA reward scope | Historical per-boss reward is separate from item Bounties Shop and Master Grand | Preserve evidence; no mixed-CA gate on hilt5 Grand; do not silently delete or invent a separate reward |
 | Duplicate first/reacquisition / choice6 — RESOLVED | WB-D118 first-instance baseline includes starting grants; later new purchases escalate despite destruction | Same-instance Satchel return/replay does not increment |
-| Q9 | Separate fourth named Bossing Challenge beyond confirmed L/S/G | Keep extra card disabled; no boss choices/rerolls |
+| Q9 existence — RESOLVED / Challenge pool pending | WB-D122 confirms fourth card: difficult CA or significant rare drop | Define eligible boss/creature pool/unlocks/order and validate catalog; random/no reroll remains |
 | Q6 residual | Other unavailable activity pools, all-unavailable/postcommit recovery; empty Questing retry cost resolved zero by WB-D120 | Persist verified-empty retry provenance; unknown is not empty; no invented cost/penalty/free edits |
 | Q2 | Genuinely full/unsupported Coffer forced donation | Actual current-client boundary evidence first; no forced death or invented escape |
 | Q5 conditional | Fallback only if exact restriction fails specific policy review | Preserve Trade with; route/review packet remains unsent |

@@ -1,6 +1,6 @@
 # First Wheelbound Codex implementation packet
 
-> Current authority2026-10-12: WB-D111–115 supersede prior Questing suspension/retry prohibition, Q10/manual bounty claiming and PAUSE-CLAIM uncertainty. Known-empty Questing automatically retries with retained slice; supported active bounty automatically pays once and survives failure/Reject; paused payout forbidden. Old fixture dispositions/pins remain prior-contract evidence, not current acceptance of superseded behavior. CA-MIXED and extra Bossing Challenge remain unanswered. Read current DECISIONS before coding.
+> Current authority2026-10-12: WB-D111–115 supersede prior Questing suspension/retry prohibition, Q10/manual bounty claiming and PAUSE-CLAIM uncertainty. Known-empty Questing automatically retries with retained slice; supported active bounty automatically pays once and survives failure/Reject; paused payout forbidden. Old fixture dispositions/pins remain prior-contract evidence, not current acceptance of superseded behavior. Master Grand has hilt5 objective (WB-D117); Bossing Challenge confirmed (WB-D122), pool/catalog/detectors pending. Read current DECISIONS before coding.
 
 Prepared2026-10-12, WB-A30. **Planning only. Production coding is not authorized by this packet.** Use after the user expressly starts implementation. Existing Markdown decisions remain authoritative. Suggested names, grouping and estimates below are implementation planning, not gameplay approvals.
 
@@ -78,7 +78,7 @@ Retain existing normal-wheel regressions. No unexplained production behavior cha
 - Q6: WB-D111 permits known-empty Questing automatic retry with retained slice; WB-D120 no extra retry cost; other activity recovery remains unverified.
 - Q10 resolved: qualifying active bounty automatically pays independently and survives failure/Reject; no deletion, escrow or clawback.
 - PAUSE-CLAIM resolved: no payout while paused. CA-MIXED still unresolved; preserve evidence; no pause penalty/backfill.
-- Q9 additional Bossing Challenge: excluded until resolved; confirmed L/S/G and random boss/no reroll remain.
+- WB-D122 Bossing Challenge confirmed: actual pool/generation/catalog/live adapters deferred to I03/I05; I01 pure-domain slice does not implement them. L/S/G and random target/no reroll remain.
 - Audit reward ordering: no invented withheld completion reward or per-tick charge.
 - Coffer: no guessed receipt, full-Coffer escape, market-price proof or repeated donation request.
 - Trade/shop/GE: no cancellation/removal/notice adapter shipped from this slice; exact policy and route gates independent.
