@@ -63,4 +63,4 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A37 | Confirm Questing removable to storage but indestructible | P0 | Explicit user reply2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; wheel/storage/Defy/shop/tests/handoff | b0300a0d: WB-D121;13 specs updated; normal paid storage/removal allowed, destruction prohibited;121 IDs checked |
 
-| WB-A38 | Confirm Bossing Challenge card with difficult CA or rare creature drop | P0 | Explicit user correction2026-10-12 | S | IN_PROGRESS | DECISIONS; FATE_CARDS; catalog/assignment/receipt/handoff | Fourth card confirmed; preserve example/approximate rarity as guidance; pool/generation/detector details unapproved |
+| WB-A38 | Confirm Bossing Challenge card with difficult CA or rare creature drop | P0 | Explicit user correction2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; FATE_CARDS; catalog/assignment/receipt/handoff | da1acdd4: WB-D122;19 affected specs; fourth card CA/rare drop confirmed; pool/order/catalog/evidence pending;122 IDs checked |

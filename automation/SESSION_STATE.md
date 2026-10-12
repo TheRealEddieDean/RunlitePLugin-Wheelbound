@@ -1,28 +1,28 @@
 # Wheelbound session checkpoint and ownership
 
-- Session ID: wb-20261012-quest-protection
-- State: ACTIVE — wb-20261012-boss-challenge owns WB-A38; lease through2026-10-12T22:00:00Z.
+- Session ID: wb-20261012-boss-challenge
+- State: IDLE — owner released; no active lease.
 - Branch: wheelbound-mode
-- Starting head:ab3fae88eeeec00039173069a04704f67ab9be8a
-- Claim:b5c5a921b56572fe0a0c224dce53441caec399ae
-- Latest rule commit:b0300a0d93ae5bd3e7764af3420884743a343e75; final owning checkpoint also annotates superseded historical no-protection entries, resolve from branch/file history.
+- Starting head:62c46fd8acd79740e2c320f2c8425cf094447b6e
+- Claim:1f92fb92f25b9350a02ef9d3396aa8e1d3744735
+- Latest gameplay source:da1acdd410422f348543051bb231319fdc852cb0
+- Final owning checkpoint: resolve from branch/file history; no circular self-hash.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
-- Completed A37: WB-D121 Questing removable to normal paid storage, indestructible.13 affected files,121 decision IDs. Forced displacement/storage/UI/ledger acceptance updated.
-- Verification: design_checks passed; final guarded publication requires remote byte/main/scope verification.
-- No production coding, new Java/build/live evidence, policy contact/login, model/oracle rewrite or main edit.
-- Uncommitted completed canonical deliverables: NONE after successful final publication/byte verification; failed publication invalidates claim.
+- Completed A38: WB-D122 fourth Bossing Challenge, difficult CA OR significant rare boss/creature drop objective;19 affected specs/handoffs;122 IDs.
+- User example Tormented Demons→Tormented Synapse;1/400-ish illustrative guidance, no exact rate/cutoff/reward approved. Q9 existence resolved. Normal L/S/G behavior/pools remain; no valid-target reroll introduced.
+- Verification: design_checks passed, historical source/catalog/model hashes retained; final guarded publication needs remote byte/main/scope verification.
+- No production implementation, new Java execution/build, live capture/login, policy contact, numeric adoption or historical simulation/fixture rewrite.
+- Uncommitted completed canonical deliverables: NONE after final successful publication/byte verification; failed publication invalidates claim.
 - Preserved: older repo/ dirty docs, legacy local simulation/smoke.json absent from remote, connection-test file; no reset/clean.
-- PDF version9/source284799b1 STALE; A33 TODO. Refresh from latest committed gameplay tree with render/visual QA/save guard before claiming current.
+- PDF version9/source284799b1 STALE; A33 TODO. Generate from latest gameplay commit with rendering/visual QA and guarded save before claiming current.
 
 ## Exact continuation
 
-1. Read latest remote head/main/owner, protocol, DECISIONS and checkpoints. Expected-head guard, preserve concurrent changes; never force retry.
-2. User wants continuous one-choice-at-a-time prompting until stop. Questing voluntary removal clarified: normal Satchel storage/removal allowed, destruction prohibited. Do not re-ask it. Next narrow question: separate fourth named Bossing Challenge card beyond confirmed Lesser/Standard/Greater. Recommend three for initial release; do not silently call fourth rejected until answer. Preserve random boss/no rerolls and separate card pools.
-3. Save explicit answer/specs with supersession, validate/commit, then next single relevant question. Do not re-ask duplicate history, zero empty-retry cost, item bounty independence/pause or Master hilt objective.
-4. Questing store/remove still needs cost/room/final5ordinary/3activities. No Destroy path, including special displacement/migration; other ordinary destruction unchanged. Full/unaffordable Satchel requires another legal player-selected edit or capacity/funds, not automatic deletion/free space. No general protection upgrade introduced.
-5. Broader unavailable/all-unavailable/postcommit policies and separate historical CA/diary reward scope remain distinct. Master Grand is actual hilt5 without prerequisite CA active-history policing. Coffer/policy fallback needs actual boundary/review evidence.
-6. A33 PDF explicitly unfinished/stale. Existing130,080 synthetic trajectories and receipt/capture fixtures remain historical unchanged. Coding unauthorized; real reports/dependency/jar exports/live detectors/policy separate gates.
+1. Read latest remote head/main/owner, protocol, current DECISIONS and checkpoints. Preserve concurrent changes; expected-head guard, no forced retry.
+2. User wants one-choice-at-a-time prompting automatically until stop. Do not re-ask whether Bossing Challenge exists. Next ask whether Challenge can draw from a dedicated eligible boss/creature pool, including creatures outside ordinary boss roster, versus only normal Bossing pool. Recommend dedicated eligible Challenge pool to support the stated creature example, with random/no-reroll selection. Do not adopt pool/unlock/order choices until answered.
+3. Once answered, record rule/specs with explicit approval, validate/commit, then next relevant single choice. Keep approximate rarity guidance/examples separate from verified drop rates/final catalog/reward tables. Card purchase stays separate permanent Bossing unlock; no price/default-unlock inferred.
+4. Supported CA/drop catalog and observable fresh completion needed. Broad historical CA Challenge slice is separate; it does not prohibit expressly approved Bossing CA card. Do not silently assign all remaining CAs, completed tasks without repeat evidence, or source-unproven possession. No runtime enabled from source research/synthetic tests.
+5. Previous rules retained: Questing store/removable but indestructible; known-empty active Questing retries without extra spin; eventual valid Fate one spin; duplicate lifetime history survives destruction; item Bounties Shop independent automatic active FP; no paused payouts; Master Grand actual hilt5/no prerequisite active-CA policing.
+6. A33 PDF refresh unfinished/stale. Coding still unauthorized; actual report/dependency/jar exports/live detectors/exact policy separate.130,080 historical synthetic trajectories unchanged; do not rerun unchanged inputs to inflate progress.
 
-Stop reason: current approval checkpoint complete; next single design choice pending. No full-completion/background-work claim.
-
-Current A38: Bossing Challenge card explicit approval; starting head62c46fd8acd79740e2c320f2c8425cf094447b6e.
+Stop reason: explicit card approval checkpoint complete; next single pool decision pending. No full project completion/background work claim.
