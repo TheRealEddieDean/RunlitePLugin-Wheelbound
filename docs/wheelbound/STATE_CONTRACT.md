@@ -61,7 +61,7 @@ WB-D118 duplicate transaction: classify from lifetime activity baseline/history,
 
 WB-D121: validate Questing destruction prohibition before all direct/compound ordinary edits. Questing removal means normal paid storage, with room and valid final5/3/24. Preserve the same instance. A failing destruction plan creates no debit, deleted instance or history reset; forced special insertion cannot bypass the rule.
 
-WB-D122 Challenge assignments need typed unique-item-source objectives (WB-D128; CA family removed) and frozen catalog/context/receipt identity, not just KC. Restore the same committed target after restart; no valid target reroll or assumption a possession snapshot proves assigned acquisition. New Challenge pool/generation sequence still open; normal L/S/G sequence unchanged.
+WB-D122 Challenge assignments need typed unique-item-source objectives (WB-D128; CA family removed) and frozen catalog/context/receipt identity, not just KC. Restore the same committed target after restart; no valid target reroll or assumption a possession snapshot proves assigned acquisition. Dedicated item-hunt Challenge pool is confirmed; exact generator/reveal timing still needs specification; normal L/S/G sequence unchanged.
 
 WB-D123: record targetPoolKind/version/eligible snapshot with a Challenge commitment, distinct from the Bossing card unlock pool and ordinary L/S/G target pool (field names delegated). Restore selected target, not current recalculated pool. No target choice/reroll. WB-D124 confirms AND-gated card purchase with bundled starters and individual expansion; exact member/price/order details pending; I01 does not invent them.
 

@@ -1,30 +1,27 @@
 # Wheelbound session checkpoint and ownership
 
-- Session ID: wb-20261012-challenge-family
-- State: ACTIVE — wb-20261012-challenge-item-only owns WB-A43; lease through2026-10-12T23:00:00Z.
+- Session ID: wb-20261012-challenge-item-only
+- State: IDLE — owner released; no active lease.
 - Branch: wheelbound-mode
-- Starting head:740987aa84a846b5be385294654d837d7cde5cb5
-- Claim:2561658e5c5390ada0497f4e32f53d7d56ae6af4
-- Latest gameplay source:e30da5c0b35a4d4c214508f5a4cd7be270ff7154
-- Final owning checkpoint: resolve from branch/file history; no circular self-hash.
+- Starting head:24596ac746f6e0f7ed7a2f7c61f32e96e1b0495e
+- Claim:82287267c0eba1331f6f4d1efff2bbee8e30f7dd
+- Latest rule commit:49ce5cc2dc02ea2e8c81efa6bc07992c139d29af; final owning checkpoint also contains wording cleanup, resolve from branch/file history.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
-- Completed A42: WB-D127 random Challenge CA/rare-drop family, no player family or target selection/reroll;10 specs;127 decision IDs.
-- Weighting/order/reveal not numerically approved; no50/50 split/per-family minimum/family-first algorithm inferred. Actual overall eligible pool retains≥3 distinct target floor. Completed-CA repeat policy still unresolved.
-- Verification: design_checks passed, historical source/catalog/model/oracle bytes preserved. Final guarded publication requires remote byte/main/scope verification.
-- No production code/workflow activation, new Java build/tests/live traces/login/policy contact, numeric adoption or historical fixture/model rewrite.
-- Uncommitted completed canonical deliverables: NONE after successful final publication/byte verification; failed publication invalidates claim.
+- Completed A43: WB-D128 Bossing Challenge unique item-drop hunt only, no CA family/task/draw.16 affected specs;128 IDs. Historical CA component/family-randomness superseded, not overwritten.
+- Retained: dedicated random target/item pool/no choices/rerolls, Bossing Lesser AND Greater, included starter bundle, individual expansion, specific uniques/shared-table exclusion,≥3 actual distinct supported drop-target creatures. Normal L/S/G unchanged; Master Grand hilt5 unchanged; normal CA filters/research not removed.
+- Verification: design_checks passed; catalog/model/oracle hashes preserved. Final guarded publication requires remote byte/main/scope verification.
+- No production code/workflow activation, actual new Java build/tests/live traces/login/policy contact, numeric adoption or historical fixture/model rewrite.
+- Uncommitted completed canonical deliverables: NONE after final successful publication/byte verification; failed publication invalidates claim.
 - Preserved: older repo/ dirty docs, legacy local simulation/smoke.json absent from remote, connection-test file; no reset/clean.
-- PDF version9/source284799b1 STALE; A33 TODO. Refresh latest committed gameplay tree, render/inspect/save guarded version before claiming current.
+- PDF version9/source284799b1 STALE; A33 TODO. Generate latest committed gameplay tree, render/inspect/save guarded version before claiming current.
 
 ## Exact continuation
 
-1. Read latest remote head/main/owner, protocol/current DECISIONS and checkpoints; preserve concurrent changes and expected-head guard, never force retry.
-2. User wants automatic one-choice-at-a-time prompting until stop. Random family resolved, no re-ask. Next ask whether CA Challenge can assign only incomplete CAs or repeat already-completed CAs. Recommend incomplete-only initial release, preserving new-achievement progress and avoiding unproven repeated-completion evidence; don't claim a live repeat detector or rule until approved. This concerns Challenge, not Master Grand hilt5 requirement or item Bounties Shop.
-3. Save explicit answer/specs, validate/commit, then next single relevant choice. Source/live technical verification remains independent; no fake task metadata or generic points proof. Unknown/completed/stale state cannot be silently eligible under an incomplete-only policy if approved. Actual postcommit progress/pause/access changes remain separately specified recovery boundaries.
-4. Challenge prerequisite Bossing Lesser AND Greater, purchase includes starter target bundle, later individual expansion; dedicated eligible random boss/creature pool normal L/S/G unchanged.≥3 distinct actual targets before offering, permanently owned card/bundle retained belowfloor. Creature-specific significant uniques exclude shared rare table; exact cutoff/roster/rewards/weights/order candidate work.
-5. Prior approvals preserved: Questing stored/removable not destroyed, free empty retry/one valid Fate spin; activity lifetime duplicate baseline/history; automatic independent active item bounty FP/no paused payout; Master Grand actual hilt5/no prerequisite active-CA auditing. Don't reopen these.
-6. A33 PDF explicit unfinished task; coding unauthorized. Actual XML/dependency/jar exports/current-client/exact policy separate.130,080 historical synthetic trajectories unchanged; no unchanged reruns to inflate progress.
+1. Read current remote head/main/owner, protocol/current DECISIONS and checkpoints; preserve concurrent edits and expected-head guard, never force retry.
+2. User wants automatic one-choice-at-a-time prompting until stop. Item-only correction resolved; never re-ask incomplete/repeat CA or family selection for this card. Next ask whether already-owned unique item can remain eligible for a new Challenge hunt. Recommend yes, but require a fresh active assigned-source drop after assignment; preexisting possession never completes it. Do not adopt ownership eligibility until answered.
+3. Save explicit answer/specs, validate/commit, then next single relevant choice. CA-only entries cannot satisfy target floor; authored starter roster must be item-hunt-capable. Don't silently redraw/convert legacy proposed CA payload; preserve until reviewed recovery. No production mode exists/live migration tested.
+4. All normal CA source maps/filters/possible separate rewards are distinct and retained. Master Grand actual hilt5 has no prerequisite active-CA audit. Rare Challenge source proof remains supported owned acquisition, not name match, buy/trade or unrelated identical item; paused payout forbidden. Independent qualifying item Bounties Shop reward unaffected by Fate Reject.
+5. Exact rare cutoff/roster/tiers/prices/time/rewards/weights/reveal remain delegated candidate/technical work. No new kill/time limit, free spin/reward or target choice.≥3 actual unique-drop target creatures, card/bundle permanent belowfloor; standard2/upgrade3 offering counts unchanged.
+6. Prior Questing storage/no-destroy/free-empty-retry and lifetime duplicate approvals remain. A33 PDF explicit unfinished/stale task; coding unauthorized, real artifacts/dependencies/tests/live/policy separate gates.130,080 historical synthetic trajectories unchanged.
 
-Stop reason: approval checkpoint complete; next single CA eligibility question pending. No full completion/background-execution claim.
-
-Current A43 item-drop-only Challenge; starting head24596ac746f6e0f7ed7a2f7c61f32e96e1b0495e.
+Stop reason: explicit correction checkpoint complete; next single owned-item eligibility question pending. No full completion/background-execution claim.
