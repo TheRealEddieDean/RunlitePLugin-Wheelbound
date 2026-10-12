@@ -51,4 +51,6 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A31 | Split I02 wheel editing into Codex-sized transactions | P1 | Approved wheel/shop/Defy contracts; A30 handoff | S | DONE (handoff only) | automation/codex_handoff | 457bcaf7: eight I02 tasks/20 planned acceptance examples; preserved counter/availability gates; no new prices or code |
 
-| WB-A32 | Record current user design answers and one-at-a-time choice protocol | P0 | Latest explicit replies2026-10-12 | S | IN_PROGRESS | DECISIONS; gameplay specs; automation | Questing retry, automatic independent bounty payouts, L/S/G reaffirmation and active-only reward processing; preserve unanswered questions and supersession |
+| WB-A32 | Record current user design answers and one-at-a-time choice protocol | P0 | Latest explicit replies2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; gameplay specs; automation | 908aeafe: WB-D111–115 and29 affected files; supersession/one-choice protocol checked; PDF explicitly marked stale |
+
+| WB-A33 | Refresh derived PDF after latest explicit decisions | P1 | A32 committed source; PDF rendering/storage capability | S | TODO | build_pdf; automation/PDF_CHECKPOINT | Generate from new committed Markdown, render/inspect/save next version; published version9 stays marked stale until done |

@@ -1,34 +1,31 @@
 # Wheelbound session checkpoint and ownership
 
-- Session ID: wb-20261012-codex-handoff
-- State: ACTIVE — wb-20261012-design-answers owns WB-A32; lease through2026-10-12T21:00:00Z.
+- Session ID: wb-20261012-design-answers
+- State: IDLE — owner released; no active lease.
 - Branch: wheelbound-mode
-- Starting verified head:2d25df2c08bb251561bea10a52cef760c7cde01f
-- Claim:b09a3e24bb51680153146e30a917b5cf3b9f8ee1
-- I01 handoff:102f319f972ed0e8bb4b45dd723f3ee464f33ecc
-- Intermediate checkpoint:c83dfd54f7bf1bb65ef8323cd9e7c26ab4dab4d2
-- I02 handoff:457bcaf76045ac65b9224a5e24ccdaf53f49add2
+- Starting verified head:3b7fba3cb1d97b5c4935610725fdc31d457b4b5b
+- Claim:f1fb6bae8d4e307b0b2f3be97be8efa6cbceebc9
+- Latest gameplay source:908aeafe40aa425845aa394647c16ab49c8209e4
 - Final owning checkpoint: resolve from branch/file history; no circular self-hash.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
-- Current tasks: WB-A30/A31 completed as future handoff documents only.
-- Completed:16 dependency-ordered I01/I02 tasks; future Codex start prompt;44 exact fixture dispositions (25core/8pattern/11deferred);20 planned wheel-edit cases;13 canonical input pins; navigation index.
-- Verification: fixture IDs/purposes/source hashes, task/case IDs and all13 source Git blobs matched. Final remote byte/scope/main verification required after guarded publication.
-- Gameplay authority:110 IDs. Gameplay Markdown/PDF source284799b19ec945112239217c898a06871501ffa5;162 pages/version9. No gameplay chapters/approvals changed.
-- Uncommitted completed canonical deliverables: NONE after successful final guarded publication and byte verification; failed publication invalidates this claim.
-- Preserved: older repo/ dirty documentation and local docs/wheelbound/simulation/smoke.json absent from remote tracked tree. Neither reset/deleted/published as new evidence.
-- No production coding, actual new Java tests/builds, workflow activation, login, live traces, policy contact, main edit or automatic/background continuation.
+- Current task: A32 Markdown reconciliation completed; A33 derived PDF refresh TODO.
+- Completed: WB-D111–115;29 affected specs/handoffs/checkpoints;115 stable IDs; supersession recorded rather than overwriting historical approval.
+- Exact latest rules: known-empty Questing keeps slice and automatically respins with notice, not suspension; automatic independently qualifying active bounty FP survives failure/Reject; L/S/G reaffirmed; no payout/claim processing paused; one design choice at a time.
+- Remaining narrow choices: CA-MIXED and duplicate first/reacquisition unanswered. Separate fourth Bossing Challenge not clearly resolved by descriptive L/S/G wording. Retry spin accounting/broader unavailable pools/voluntary permanent Questing protection not inferred. Coffer/policy remain evidence-dependent.
+- Verification: design_checks passed115 IDs; saved source/catalog/output hashes unchanged. Remote modified-byte/main/scope verification required after final guarded publication.
+- PDF: published162-page version9/source284799b1 is STALE; is_current false. Do not advertise it as latest. A33 requires generation from908aeafe or later canonical gameplay commit, rendering/visual QA and durable replacement with expected-version guard.
+- Uncommitted completed canonical deliverables: NONE after final successful guarded publication/byte verification; failed publication invalidates claim.
+- Preserved: older repo/ dirty docs, legacy local simulation/smoke.json absent from remote, later connection-test file. No reset/clean/overwrite of unreviewed work.
+- No production coding, actual new Java tests/builds, live capture, login, policy contact, workflow activation, main edit or automatic background work.
 
 ## Exact continuation
 
-1. Read remote head/main/current ownership, protocol, master instructions, TASK_QUEUE, BLOCKERS, DECISIONS_PENDING and canonical DECISIONS. Inspect later commits; never overwrite concurrent/unreviewed changes or force after head mismatch.
-2. Read automation/codex_handoff/README. I01/I02 now have detailed bounded tasks; I03–I10 retain broader backlog. If another documentation session is authorized, a useful independent task is splitting I03 cards/assignments using current FATE_CARDS/PROGRESSION/quest/Bossing contracts, without resolving Q6/Q9 or adopting scaling proposals. Claim a bounded task before editing.
-3. Production implementation still needs explicit authorization. Future start prompt begins I01-C0 versioned delegated contract, then dependency-ordered tasks. It is not permission to run code now. I02 awaits actual I01 state/store boundary. Document missing I00 reports before calling baseline reproducible.
-4. Actual build run38025748732 passed compilation/test task; source count70 does not establish executed-case count. I00 artifact acceptance has12 NOT_VERIFIED checks/five tasks; missing jar-byte exports and configuration coverage need coherent proposal reconciliation during authorized pipeline work.
-5. Forty-four Python oracle cases are historical offline expectations. Fixture disposition lists Java NOT_RUN. Port expectations, not oracle code; actual filesystem durability, account identity and thread/process ownership need real implementation tests. WE01–WE20 are planned examples, not executions.
-6. Q6/Q10 analyses remain unapproved; Q2/Q9/CA-MIXED/PAUSE-CLAIM and conditionalQ5 remain. WHEELS also explicitly leaves first acquisition/reacquisition counter semantics OPEN; do not silently adopt a convention while coding duplicate prices. Preserve receipts/outcomes and all approved five/three/24/free-pause/random-boss rules.
-7. A17 still needs legitimate current-client traces; exact restrictive-policy review remains independent and unsent. No guessed Coffer settlement/extra slots/menu removal may be implemented from synthetic evidence. Existing130,080 synthetic trajectories unchanged; do not repeat unchanged model runs or broad recovery research.
-8. New explicit gameplay decisions require DECISIONS plus relevant specs, validation/commit and PDF refresh. Automation-only handoff here does not change the gameplay PDF publication. Keep meaningful checkpoint scope and release owner when done.
+1. Read current remote head/main/owner, PROTOCOL, latest DECISIONS/OPEN_QUESTIONS and checkpoints. Preserve later concurrent commits; expected-head guard only, no forced retry.
+2. User requested next design choice after specifying one-at-a-time pacing. Present CA-MIXED/choice5 alone, discuss response, and wait for explicit next before choice6. Do not re-ask settled rewards/paused timing or infer approval of recommendations.
+3. Current Questing retry differs from rejected suspension recommendation. Keep actual slices/weights; unknown evidence is not empty; retain retry/result provenance. Do not decide extra allotted-spin costs or player rerolls without evidence/approval.
+4. Automatic active bounty payout supersedes manual claim UI and old Q10 forfeiture. Preserve historical source/oracle/model bytes; old R14/R36 and Q10 gates are prior-contract evidence, not current runtime acceptance. No paused payout; retain earlier evidence and paid FP. Mixed CA qualification still separate.
+5. A33 PDF refresh remains concrete unfinished work: read PDF/library skills, commit gameplay source first (already908aeafe), generate, inspect changed/all contact pages, validate, replace existing version9 with guard, update PDF_CHECKPOINT after actual save. Do not claim this turn regenerated it.
+6. All production tasks still need explicit coding authorization; I01/I02 handoffs must follow latest rules. Source pins represent old inputs, not authority over new approvals. I03–I10 still need detailed task-level decomposition as appropriate.
+7. Actual baseline build passed; XML/dependency/package exports/live adapters/exact policy remain gaps.130,080 saved synthetic trajectories unchanged. Do not repeat unchanged runs to inflate progress.
 
-Stop reason: two bounded handoff tasks complete. Detailed remaining handoff decomposition can proceed in future authorized documentation sessions; implementation/live/policy execution still needs its separate authorization and evidence. This is not full project completion.
-
-Starting verified head3b7fba3cb1d97b5c4935610725fdc31d457b4b5b. Preserve later connection-test commit. Current task: latest explicit design answers and interaction protocol.
+Stop reason: current answers committed and ready for next single-choice discussion. PDF refresh pending explicitly; no full project completion claim.
