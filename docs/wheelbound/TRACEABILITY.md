@@ -56,3 +56,5 @@ Latest requirements: WB-D111→I03/I09 known-empty Questing retry with retained 
 WB-D116→item Bounties Shop terminology and I04/I05/I09 item reward flow. WB-D117→I08/I05 supported hilt5 item detector; Master active-only CA threshold/possession-insufficient rules superseded. Do not read historical CA-MIXED fixtures as a requirement for this Grand goal. Any separate CA aggregate payout remains its own scope/receipt contract.
 
 WB-D118→I02 slice quote/counter transactions; first-instance baseline includes starting grants; later new purchased instances use activity lifetime ladder after destruction; Satchel return and retries add no count. WB-D119→workflow: automatically offer next single choice until stopped.
+
+WB-D121→I02/I07/I09: Questing may store/remove under normal rules but cannot destroy; forced displacement respects this type exception; all other active minimum/capacity/price/history rules preserved.

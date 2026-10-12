@@ -4,7 +4,7 @@ Authority: docs/wheelbound/DECISIONS.md. Latest explicit replies2026-10-12 are W
 
 ## Resolved current answers
 
-- Q6 Questing: retain slice and spin normally; known-empty Questing landing gives brief notice and automatically respins (WB-D111). Suspension proposal rejected for this behavior. Broader activity recovery, unknown evidence, voluntary permanent Questing protection is not inferred. WB-D120 confirms no extra empty-retry cost; eventual valid Fate one spin.
+- Q6 Questing: retain slice and spin normally; known-empty Questing landing gives brief notice and automatically respins (WB-D111). Suspension proposal rejected for this behavior. Broader activity recovery, unknown evidence, WB-D121 resolves Questing as removable to normal storage but indestructible. WB-D120 confirms no extra empty-retry cost; eventual valid Fate one spin.
 - Q10: automatic independent qualifying bounty FP survives Fate failure/Reject; no manual claim, escrow or clawback (WB-D112 supersedes WB-D094 manual flow and historical forfeiture).
 - Bossing: L/S/G requirements reaffirmed (WB-D113). Separate fourth named Challenge still not clearly answered.
 - PAUSE-CLAIM: no reward/claim processing while paused; preserve prior paid FP/active evidence; no paused earning backfill (WB-D114).
@@ -27,3 +27,5 @@ Earlier Q6/Q10 analysis artifacts and A24 manual-claim oracle inputs remain immu
 
 ## Latest clarification2026-10-12 — WB-D116/117
 Bounties means item objectives in the Bounties Shop. Master CA Grand Fate requires obtaining Ghommal's hilt5; no plugin-maintained active-only CA tally or anti-cheese audit. Earlier mixed-CA choice is no longer a Master Grand condition. Any historical separate boss-mastery/diary reward feature is separate and its scope is not deleted/invented by this clarification. Do not ask the same conflated question again. One-choice-at-a-time pacing remains; automatically present the next single choice until stopped.
+
+Questing voluntary edit question RESOLVED by WB-D121: removable through normal storage, never destroyable. Not mandatory active; no special storage waiver. Continue next single choice automatically until stopped.

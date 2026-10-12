@@ -12,7 +12,7 @@ Routine technical selections are delegated, not historical approvals. Implementa
 
 Provisional implementation choice: inspect Locked/Banned shops to establish vendor identity while guarding transactions. Provisional GE readiness choice: player cleans up live offers before GE-locked activation/resume; pause remains unconditional, immediate and free. These do not add FP penalties.
 
-Q6 — PARTLY RESOLVED by WB-D111: known-empty Questing landing retains its slice, shows a short notice and automatically respins the Master Wheel. Do not suspend Questing. WB-D120 resolves extra spin accounting to zero; eventual valid Fate consumes one. Extension to other unavailable activities, all-unavailable recovery and postcommit availability changes remain unverified. Unknown evidence is not empty. The wording does not clearly establish a new ban on voluntary legal Questing edits.
+Q6 — PARTLY RESOLVED by WB-D111: known-empty Questing landing retains its slice, shows a short notice and automatically respins the Master Wheel. Do not suspend Questing. WB-D120 resolves extra spin accounting to zero; eventual valid Fate consumes one. Extension to other unavailable activities, all-unavailable recovery and postcommit availability changes remain unverified. Unknown evidence is not empty. WB-D121 resolves voluntary edits: normal storage/removal allowed, destruction prohibited.
 
 Q7 — RESOLVED: S8-M0296–0297 explicitly confirms random forced Death’s Wheel; voluntary sacrifice is player-selected. WB-D033 corrects the contradictory PDF interpretation. Candidate count/value mix remains tuning, not a new approval.
 
@@ -32,3 +32,5 @@ Interaction protocol WB-D115: present one choice, handle discussion, and automat
 
 ## Latest clarification2026-10-12 — WB-D116/117
 Bounties means item objectives in the Bounties Shop. Master CA Grand Fate requires obtaining Ghommal's hilt5; no plugin-maintained active-only CA tally or anti-cheese audit. Earlier mixed-CA choice is no longer a Master Grand condition. Any historical separate boss-mastery/diary reward feature is separate and its scope is not deleted/invented by this clarification. Do not ask the same conflated question again. One-choice-at-a-time pacing remains; automatically present the next single choice until stopped.
+
+Questing voluntary edit question RESOLVED by WB-D121: removable through normal storage, never destroyable. Not mandatory active; no special storage waiver. Continue next single choice automatically until stopped.

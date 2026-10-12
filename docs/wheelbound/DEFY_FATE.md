@@ -3,7 +3,7 @@ Zero-spin SPIN opens "Your allotted Fate has run dry." Player may attempt Grand 
 
 First Defy: refill (amount BALANCE_TBD), first Taint, permanent Sacrifice at 1x, voluntary Death's Coffer access, first free Blessed Item slot. Subsequent Defy: Sacrifice +0.25 weight. Odd Defies 1/3/5/... create Taint up to three; recovered S3 says later eligible events at three add +0.25 to each existing Taint. Cleansed below three refills slices first. Initial Taint weight remains a proposed numeric value: S8-M0368 illustrates 1.0x, not a separate explicit user numeric lock.
 
-All specials occupy same 24 slots. Player chooses displaced ordinary instances and store/destroy resolution before committing full Defy transaction. Cancellation before commit changes nothing. Cleansing one Taint is fixed expensive FP; no reversal of Defy count or Sacrifice weight.
+All specials occupy same 24 slots. Player chooses displaced ordinary instances and legal store/destroy resolution before committing full Defy transaction. WB-D121: Questing can only be stored, never destroyed; normal storage cost/capacity and5/3 apply. Cancellation before commit changes nothing. Cleansing one Taint is fixed expensive FP; no reversal of Defy count or Sacrifice weight.
 
 Blessed slots protect item TYPES, not slice instances. Maximum three; first free then two expensive sequential purchases. Reassign outside forced event; lock assignments through resolution at event start (accepted First Defy onboarding S8-M0306; WB-D034).
 
