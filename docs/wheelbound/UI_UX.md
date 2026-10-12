@@ -40,3 +40,5 @@ Gold milestone progress shows purchased count/required count separately from own
 
 ## Latest user interaction clarifications
 Known-empty Questing landing keeps its visible slice, shows a small lower-area notice such as No eligible quests - Fate will spin again, and automatically respins (WB-D111). Do not silently redraw a valid boss/assignment. Bounties automatically pay once on supported qualifying active completion and show earned FP feedback; no manual Claim button. Pause disables new payout/claim processing while preserving existing FP/evidence (WB-D112/114). No active reward is erased because its assignment fails or is rejected.
+
+WB-D116/117: label Bounties Shop as item goal→FP. Master CA Grand checklist reads Obtain Ghommal's hilt 5; do not show an active-only CA-point quota as an additional requirement. Other Grand entry/lifecycle rules remain. Separately retained CA/diary reward UI must not be conflated with this trophy goal.

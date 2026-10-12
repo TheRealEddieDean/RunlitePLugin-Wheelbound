@@ -825,6 +825,7 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 ## WB-D081 - Correct current Sailing and Master CA facts
 
 - Status: CONFIRMED source evidence, not a new gameplay approval
+- Current supersession: WB-D117 on2026-10-12 replaces only the Master Grand Fate threshold/active-CA-history requirement with obtaining Ghommal's hilt 5. Historical wording below is retained; other mechanics/source facts remain.
 - Authority/source: Jagex Sailing launch statement 2025-11-19; RuneLite Skill API checked 2026-10-09; Jagex Combat Achievements reward list 2022-11-01.
 - Decision: Sailing is live and exposed as Skill.SAILING. Master CA reward is Ghommal's Hilt 5; Hilt 4 is Elite. Use current client threshold, not an old hardcoded points total.
 - Rationale: Resolve obsolete future-skill and incorrect reward-number wording through primary sources.
@@ -1061,6 +1062,7 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 ## WB-D104 - Grand attempt checklists, audit and completion semantics
 
 - Status: CONFIRMED attempt/checklist structure; game-data mapping TECH_TBD/live gated.
+- Current supersession: WB-D117 on2026-10-12 replaces only the Master Grand Fate threshold/active-CA-history requirement with obtaining Ghommal's hilt 5. Historical wording below is retained; other mechanics/source facts remain.
 - Authority: Explicit user decisions and adjacent accepted interpretation.
 - Evidence: S8-M0319–0323; M0327–0337; M0339–0341 accepts completion structures.
 - Decision: Attempt Grand Fate activates an unfinished objective as the current Fate; normal off-task audit still applies. Failure/exit ends that attempt and requires explicit reactivation, preserving earlier completed checklist components. Awakened DT2 permits selecting one unfinished boss, marks a verified success, then returns to no-active-Fate. Completing four bosses is the goal; Blood Torva ownership is not an extra requirement. Radiant goal is the full set through its actual contract/sigil/upgrade path, not random armor drops. Master CA progress accepts legitimate active CA evidence and uses the real Master-tier points threshold, without a separate attempt for every CA.
@@ -1186,3 +1188,27 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Exceptions/dependencies: Continue authorized routine documentation/verification autonomously; do not interpret this pacing preference as permission to choose unresolved major gameplay rules. Choices5/6 from the previous list remain unanswered.
 - Supersession: Earlier bundled question presentation workflow.
 - Acceptance: One substantive choice per discussion step; no next-choice prompt until user asks.
+
+## WB-D116 - Bounties denotes item objectives in the Bounties Shop
+
+- Status: CONFIRMED explicit terminology/scope clarification,2026-10-12.
+- Authority: Explicit user reply in this Work conversation.
+- Evidence: User says bounties refers to the bounties shop, e.g. get this item and receive X Fate Points.
+- Decision: Use Bounties/Bounties Shop for item acquisition goals with authored FP rewards. Do not use the term interchangeably for the Master CA Grand Fate or a per-boss CA aggregate.
+- Rationale: Avoid conflating item reward mechanics with the endgame objective and presenting the user the wrong design question.
+- Affects: BOUNTIES, UI_UX, economy terminology, CA/diary review, pending questions and Codex handoff.
+- Exceptions/dependencies: WB-D112 automatic independent active item bounty FP and WB-D114 no paused payout remain. Existing optional daily item goals fit item-goal terminology. This reply does not explicitly delete historical separate CA-mastery/diary reward systems or specify their final UI/payout rules; retain them separately as historical specifications needing scope reconciliation, not as a new Bounties Shop requirement. Do not broaden the user's tolerance of cheesing the Master objective into a new item bounty possession-only qualification rule.
+- Supersession: Broad conflation of item bounties, boss CA aggregates and Grand Fate completion in the latest choice discussion; historical WB-D101 source retained.
+- Acceptance: Bounties Shop descriptions say item goal→FP; Master hilt objective is presented separately; no extra mixed-CA condition is imposed on item bounties.
+
+## WB-D117 - Master CA Grand Fate requires Ghommal's hilt 5 item
+
+- Status: CONFIRMED new explicit final objective,2026-10-12.
+- Authority: Explicit user reply in this Work conversation.
+- Evidence: User accepts that cheesing is on the player and says the Master CA Grand Fate slot should just require getting Ghommal's hilt 5 (Master level).
+- Decision: Complete the Master CA Grand Fate by obtaining Ghommal's hilt 5. The item is the goal, not a plugin-maintained tally of CA points earned while active or proof that every contributing CA was active. Do not disqualify the objective because prerequisite CAs were earned while paused or through player-selected strategies.
+- Rationale: Simple observable trophy objective for a self-imposed mode; user does not want anti-cheese policing of CA history.
+- Affects: GRAND_FATES, TECHNICAL_SPECIFICATIONS, STATE_CONTRACT, PERSISTENCE, I08 pipeline/tests, UI and question register.
+- Exceptions/dependencies: No award while paused, no artificial level/playtime/spin minimum, sealed destiny and no-active-obligation Grand-entry rule remain. Exact item identity/observation and supported ownership surfaces still need implementation/current-client validation. Do not replace hilt5 with hilt4, invent higher-tier equivalence, require per-CA history or reintroduce the points threshold as an additional win gate. Acquiring/checking the actual item must be distinguished from a mere display-name match; no new live verification claimed. This does not alter other Grand Fate objectives or item-bounty qualification rules.
+- Supersession: WB-D081/WB-D104 Master threshold/active-progress predicate; old possession-insufficient Grand wording. Source facts about Master tier and hilt numbering remain; past raw CA mapping research remains valid for any separately scoped CA feature.
+- Acceptance: Actual validated hilt5 goal can complete when Grand verification is active/eligible without auditing how prerequisite CAs were earned; CA points alone without the item do not complete it; paused processing grants no win; other obligations still block entry.

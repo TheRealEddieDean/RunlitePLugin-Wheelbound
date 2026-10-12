@@ -30,3 +30,5 @@ Sacrifice's confirmed one-spin debit is recorded separately from verified donati
 
 ## Current clarification2026-10-12
 Persist known-empty Questing draw/retry provenance and eventual valid assignment without changing its owned slice or enabling general rerolls (WB-D111). Do not invent additional allocation rules. WB-D112 uses automatic once-only active bounty payout, superseding manual claims/unclaimed UI; independently settled bounty FP survives failure/Reject. WB-D114 forbids payout while paused, preserving prior earned evidence and credited FP. Migrations from earlier qualified-unpaid records require explicit schema/evidence reconciliation and no double credit; exact migration is technical work, not retroactive paused earning. Existing pinned source/oracle receipts document the prior contract.
+
+WB-D117 supersedes the Master Grand active-earned CA tally: persist the hilt5 item objective and once-only completion state without requiring underlying CA history. Preserve old saved evidence during reviewed schema migration; do not silently delete it or automatically mark completion from points. Exact item observation/version mapping remains technical work.

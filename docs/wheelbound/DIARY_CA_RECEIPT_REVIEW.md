@@ -14,7 +14,7 @@ Active permitted completion qualifies under WB-D101. Paused completion does not 
 
 ## Combat Mastery differs from Master Grand Fate
 
-Combat Mastery pays for all CAs of an authored boss, not collection-log green completion and not a generic CA-point threshold. Master Grand Fate uses the current Master-tier points threshold and is already specified separately. Its threshold cannot prove that one boss's complete task set is done.
+Combat Mastery pays for all CAs of an authored boss, not collection-log green completion and not a generic CA-point threshold. Master Grand Fate now requires obtaining Ghommal's hilt5 (WB-D117), without active-only CA history. Item Bounties Shop is separate (WB-D116). Neither that item nor a generic points threshold proves one boss's CA aggregate for a separately retained reward feature.
 
 The earlier candidate ACHIEVEMENT_TASK_COMPLETED_* wording is superseded: direct current source and two implementations identify **CA_TASK_COMPLETED_0–20** as Combat Achievement completion words. The generic achievement fields must not be used for CA progress. [The source contract](research/CA_COMPLETION_SOURCE_CONTRACT.json) records the explicit 21 ordered varp IDs, six task-tier enums, boss-name enum and struct parameters.
 

@@ -12,3 +12,5 @@ Prepared2026-10-12. These are future coding assignments, not production implemen
 - [I00 artifact acceptance](../pipeline_acceptance/ACCEPTANCE.md): five prerequisite reporting tasks and12 currently NOT_VERIFIED checks. Existing build success remains distinct from missing exports.
 
 This packet covers the first two milestones in detail. I03–I10 retain their existing broader backlog and should be split into bounded assignments before implementation. No card/content detector, shop restriction, live Coffer proof or Grand win detector is included. No gameplay decision register or derived gameplay PDF changed in this preparation session.
+
+Current authority WB-D116/117: Bounties Shop is item goal→FP. Master CA Grand is obtaining actual Ghommal's hilt5, with no active-only prerequisite CA tally/anti-cheese audit. Historical CA-MIXED is not a gate on this Grand objective. Preserve unrelated separate reward evidence; do not silently remove those historical systems or accept unsupported item detection. Read current DECISIONS over old source pins.

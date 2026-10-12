@@ -1,5 +1,5 @@
 # Bounties
-Confirmed assignment: 100 curated permanent item bounties; three randomized daily item bounties; Combat Mastery; Achievement Diaries.
+Current terminology (WB-D116): Bounties Shop means item goals awarding FP;100 permanent targets and optional daily item goals. Historical Combat Mastery/diary reward specifications are separate systems, not the Master CA Grand Fate objective.
 Permanent one-time independently balanced payouts with rarity presentation; daily optional, not progression requirement. Combat Mastery rewards all CAs for a boss; diary region/tier rewards. Active legitimate event evidence required. Awards automatically credit FP once on qualifying active completion (WB-D112), superseding WB-D094 manual claims. Paused events never retroactively qualify.
 
 Automatic settlement validates evidence and a once-only reward key before ledger credit; rerun does not repay. Assignment failure/Reject leaves the bounty and its FP intact. Historical 100 item catalog and reward tiers missing. Imbued heart +500 FP was an earlier example in memory, not final payout.
@@ -34,4 +34,4 @@ Bounded catalog review and exact continuation: [BOUNTY_CATALOG_REVIEW](BOUNTY_CA
 The separate [finite-100 normative candidate](catalogs/item_bounties_normative_v1.json) restores grouped third-age/gilded intent while preserving H3 inputs. It is a new delegated candidate, not an approved final member/reward list. All runtime entries remain disabled.
 
 ## Latest payout and pause authority
-WB-D112 resolves Q10: independently qualified bounties survive assignment failure/Reject, without escrow or clawback. WB-D114 forbids payout/claim processing while paused. CA-MIXED remains unresolved: no answer to choice5 was supplied. Automatic settlement does not make an unverified mixed aggregate qualify. Old manual-claim source reviews and fixtures are historical evidence only.
+WB-D112 resolves Q10: independently qualified bounties survive assignment failure/Reject, without escrow or clawback. WB-D114 forbids payout/claim processing while paused. WB-D116 separates item Bounties Shop from CA aggregates. WB-D117 makes Master Grand require hilt5, so mixed prerequisite CA timing is not a Grand disqualifier. Any separately retained boss-CA/diary reward policy remains a distinct historical scope boundary, not an extra item-shop/Grand gate. Old manual-claim source reviews and fixtures are historical evidence only.

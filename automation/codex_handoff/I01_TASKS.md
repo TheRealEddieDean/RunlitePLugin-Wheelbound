@@ -84,3 +84,5 @@ Retain existing normal-wheel regressions. No unexplained production behavior cha
 - Trade/shop/GE: no cancellation/removal/notice adapter shipped from this slice; exact policy and route gates independent.
 
 These gates block affected paths, not the entire pure-domain milestone. An implementation safety status is not a new player-facing punishment. Material gameplay changes go through DECISIONS and relevant specs; routine architecture choices need a versioned implementation contract and validation.
+
+Current authority WB-D116/117: Bounties Shop is item goal→FP. Master CA Grand is obtaining actual Ghommal's hilt5, with no active-only prerequisite CA tally/anti-cheese audit. Historical CA-MIXED is not a gate on this Grand objective. Preserve unrelated separate reward evidence; do not silently remove those historical systems or accept unsupported item detection. Read current DECISIONS over old source pins.

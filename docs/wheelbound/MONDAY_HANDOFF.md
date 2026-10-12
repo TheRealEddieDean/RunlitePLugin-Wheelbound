@@ -33,3 +33,6 @@ Read automation/SESSION_STATE for the actual last commit, ownership and precise 
 ## Concrete live capture packet
 
 [Capture protocol](research/TRACE_CAPTURE_PROTOCOL.md) and46 NOT_RUN cases specify Coffer, vendor, route, method and earning controls. A versioned envelope schema and offline validator reject synthetic-as-live and malformed order/identity fields; no detector semantics or live trace is validated. Current production/test/configuration source used for baseline review was hash-verified against e6d445c8.
+
+## Latest clarification2026-10-12 — WB-D116/117
+Bounties means item objectives in the Bounties Shop. Master CA Grand Fate requires obtaining Ghommal's hilt5; no plugin-maintained active-only CA tally or anti-cheese audit. Earlier mixed-CA choice is no longer a Master Grand condition. Any historical separate boss-mastery/diary reward feature is separate and its scope is not deleted/invented by this clarification. Do not ask the same conflated question again. One-choice-at-a-time pacing remains; wait for user request before another choice.

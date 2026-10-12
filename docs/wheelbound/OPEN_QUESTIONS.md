@@ -24,8 +24,11 @@ Q10 — RESOLVED by WB-D112,2026-10-12: supported qualifying active bounties aut
 
 PAUSE-CLAIM — RESOLVED by WB-D114: no claiming or reward payout while paused. Retain prior active evidence/paid FP; no backfill of paused earning. Delayed evidence and old unpaid-record migration require technical handling without inventing paused payout.
 
-CA-MIXED / choice5 remains unanswered: whether every boss CA must qualify active or final active aggregate completion can qualify despite earlier paused tasks. No answer inferred.
+Earlier CA-MIXED/choice5 discussion was conflated with the Master Grand objective. WB-D117 removes prerequisite-CA timing as a Master Grand gate. Any separately retained per-boss reward needs its own scope reconciliation; do not re-ask the same Master question.
 
 Duplicate first/reacquisition / choice6 remains unanswered as noted in WHEELS.
 
 Interaction protocol WB-D115: present one choice, handle discussion, and wait for user request before next. No batch/laundry list.
+
+## Latest clarification2026-10-12 — WB-D116/117
+Bounties means item objectives in the Bounties Shop. Master CA Grand Fate requires obtaining Ghommal's hilt5; no plugin-maintained active-only CA tally or anti-cheese audit. Earlier mixed-CA choice is no longer a Master Grand condition. Any historical separate boss-mastery/diary reward feature is separate and its scope is not deleted/invented by this clarification. Do not ask the same conflated question again. One-choice-at-a-time pacing remains; wait for user request before another choice.

@@ -14,7 +14,7 @@ Authority: docs/wheelbound/DECISIONS.md. Latest explicit replies2026-10-12 are W
 
 | ID | Narrow unresolved boundary | Work permitted |
 | --- | --- | --- |
-| CA-MIXED / choice5 | Aggregate boss CA bounty with some tasks earned paused | Preserve task provenance; do not qualify by final task alone until explicit answer |
+| Separate legacy CA reward scope | Historical per-boss reward is separate from item Bounties Shop and Master Grand | Preserve evidence; no mixed-CA gate on hilt5 Grand; do not silently delete or invent a separate reward |
 | Duplicate first/reacquisition / choice6 | Classification of first paid instance, starting grants and later reacquisition | Use explicit known duplicate count; no new counter convention |
 | Q9 | Separate fourth named Bossing Challenge beyond confirmed L/S/G | Keep extra card disabled; no boss choices/rerolls |
 | Q6 residual | Extra allotted spin accounting for automatic Questing retries, other unavailable activity pools, all-unavailable/postcommit recovery | Persist verified-empty retry provenance; unknown is not empty; no invented cost/penalty/free edits |
@@ -24,3 +24,6 @@ Authority: docs/wheelbound/DECISIONS.md. Latest explicit replies2026-10-12 are W
 Balance numbers remain delegated candidate research, not arbitrary isolated approval questions. Q1 new-account scope, Q7 random forced sacrifice and Q8 no active Fate/obligation for Grand remain resolved.
 
 Earlier Q6/Q10 analysis artifacts and A24 manual-claim oracle inputs remain immutable historical evidence. Their options/statuses are superseded where WB-D111/112/114 apply; they are not current implementation acceptance or automatic runtime enablement. Source pins identify prior inputs, not permission to ignore latest replies.
+
+## Latest clarification2026-10-12 — WB-D116/117
+Bounties means item objectives in the Bounties Shop. Master CA Grand Fate requires obtaining Ghommal's hilt5; no plugin-maintained active-only CA tally or anti-cheese audit. Earlier mixed-CA choice is no longer a Master Grand condition. Any historical separate boss-mastery/diary reward feature is separate and its scope is not deleted/invented by this clarification. Do not ask the same conflated question again. One-choice-at-a-time pacing remains; wait for user request before another choice.
