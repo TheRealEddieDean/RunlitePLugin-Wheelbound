@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261012-design-answers
-- State: IDLE — owner released; no active lease.
+- State: ACTIVE — wb-20261012-master-hilt owns WB-A34; lease through2026-10-12T21:00:00Z.
 - Branch: wheelbound-mode
 - Starting verified head:3b7fba3cb1d97b5c4935610725fdc31d457b4b5b
 - Claim:f1fb6bae8d4e307b0b2f3be97be8efa6cbceebc9
@@ -29,3 +29,5 @@
 7. Actual baseline build passed; XML/dependency/package exports/live adapters/exact policy remain gaps.130,080 saved synthetic trajectories unchanged. Do not repeat unchanged runs to inflate progress.
 
 Stop reason: current answers committed and ready for next single-choice discussion. PDF refresh pending explicitly; no full project completion claim.
+
+Starting verified headcc8a874a0bc87a096402ea8a3599a3a57c0627d4. New task Master hilt objective and item-shop terminology.
