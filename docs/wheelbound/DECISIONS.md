@@ -960,7 +960,7 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 
 ## WB-D094 - Active bounty manual claims, rarity labels and notification UI
 
-- Status: CONFIRMED interaction; rarity names approved as current provisional set.
+- Status: PARTLY SUPERSEDED by WB-D112 on2026-10-12: manual claiming/unclaimed UI replaced by automatic payout. Rarity labels, visibility and active eligibility remain confirmed.
 - Authority: Explicit user approval.
 - Evidence: S8-M0055–0063; S8-M0062 proposed Common/Uncommon/Rare/Epic/Legendary and independent reward balancing; S8-M0063 accepts tiers for now.
 - Decision: Bounties monitor eligible activity while mode is active; a qualifying drop creates an unclaimed reward, prominent category/sidebar indication and completion message/animation. Claims are manual. Use item sprites, name search, filters and reward sorting. Current rarity labels are Common, Uncommon, Rare, Epic and Legendary; rarity is presentation/classification rather than a mandatory fixed FP payout table.
@@ -1070,13 +1070,13 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 
 ## WB-D105 - Historical delegated lifecycle and economy safeguards
 
-- Status: DELEGATED recovered working rules; Reject/bounty interaction OPEN (Q10).
+- Status: DELEGATED recovered working rules; historical Reject/bounty forfeiture superseded by WB-D112 on2026-10-12 (Q10 resolved).
 - Authority: Assistant decisions selected after explicit user delegation S8-M0391/M0397, not claimed as individually user-approved.
 - Evidence: S8-M0400, M0402, M0408, M0410, M0412; M0414 withdraws extra-slot proposal.
 - Decision: Active Fates persist across logout/crash without disconnect penalty or reroll; normal Fates do not expire. Abandon requires confirmation and ends only local run restrictions/progression, not OSRS state. No unobserved offline credit reconstruction. Rewards are displayed before acceptance and paid once; no passive logged-in FP, no arbitrary FP cap, no forced dailies, no direct XP purchases. Negative FP does not prevent earning from legitimate Fate completion; discretionary purchases need funds. Destroy gives no refund/counter reset. Purchases are atomic, irreversible costs warned, and balance patches do not automatically refund purchases. Display actual active-weight odds and before/after previews; final edit state must preserve five/three/24.
 - Rationale: Stable self-imposed progression and recoverable purchases without policing paused play.
 - Affects: [GAME_RULES](GAME_RULES.md), [ECONOMY](ECONOMY.md), [PERSISTENCE](PERSISTENCE.md), UI and verification.
-- Exceptions/dependencies: M0402 also says no bounty credit for a rejected Fate; earlier always-active bounty/manual-claim rules and current user’s completion-reward-only wording leave earned receipt forfeiture unclear. Preserve this as Q10; do not silently erase accepted bounty evidence or enable rejection farming as a settled policy. Extra special slots proposed at M0412 were withdrawn at M0414 and are rejected. Historical assistant simulation counts/hours are not newly executed experiments in this project.
+- Exceptions/dependencies: M0402 originally said no bounty credit for a rejected Fate. WB-D112 explicitly supersedes that forfeiture: independently qualified bounty FP survives failure/Reject and is paid automatically while active. Preserve historical wording as superseded, not current authority. Extra special slots proposed at M0412 were withdrawn at M0414 and are rejected. Historical assistant simulation counts/hours are not newly executed experiments in this project.
 
 ## WB-D106 - Central Fate Shop, modifier-preserving Satchel and explicit price supersession
 
@@ -1127,3 +1127,62 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Rationale: Isolate corrected mechanics and preserve experiment history without filling evidence gaps with claimed approvals.
 - Affects: [simulation results](SIMULATION_RESULTS.md), [economy](ECONOMY.md), [H4 contract](simulation/h4/CONTRACT.md).
 - Exceptions/dependencies: Base severity30min/doubling, monetary prices, quest tokens, rates, conversion and access are synthetic candidates.180h/400 draws are experiment windows, not gameplay expiry/minima. Derived audit Penance no-extra-spin is an explicit modeled transaction interpretation. No final Grand time, real-account feasibility or live detector proof.
+
+## WB-D111 - Questing landing with no eligible quest retries the Master Wheel
+
+- Status: CONFIRMED new explicit clarification,2026-10-12. Questing part of Q6 resolved; broader unavailable activities and retry accounting remain technical/design boundaries.
+- Authority: Explicit user approval in this Work conversation, reply to choice1.
+- Evidence: User says the wheel still spins, lands on Questing, displays a small no-active-quest notice and spins again; the slice remains and Questing should stay there.
+- Decision: Retain the Questing slice(s), weights and enhancements when no eligible quests exist. A Questing landing with a verified empty eligible quest pool displays a brief notice and automatically respins the Master Wheel. Do not suspend/remove Questing from the displayed wheel or normalize it out of the initial draw.
+- Rationale: Keep the player's wheel intact while avoiding an assignment to nonexistent eligible quest content.
+- Affects: WHEELS, FATE_CARDS, PROGRESSION, UI_UX, STATE_CONTRACT, PERSISTENCE, future selection tests and new simulations.
+- Exceptions/dependencies: Unknown/uninitialized data is not an empty pool. Persist automatic retry provenance and the resulting valid assignment so restart cannot grant player-selected rerolls. This is an explicit empty-Questing exception, not a boss reroll or player reroll button. Raw per-spin odds still include Questing; terminal accepted outcome probabilities can differ through repeated retries. Whether failed Questing attempts consume additional allotted spins, postcommit availability changes, all-unavailable recovery and extension to other activities remain UNVERIFIED; do not invent charges, rewards or penalties. The user's retention wording resolves exhaustion-driven removal; it does not clearly decide a new prohibition on voluntary legal Questing edits.
+- Supersession: Replaces proposed automatic Questing suspension in Q6. Older analysis remains historical options evidence, not a current selection policy.
+- Acceptance: Known-empty Questing landing gives notice and automatic draw; slice IDs/weights/modifiers unchanged; unknown data never triggers it; retry/result restore is idempotent; normal Bossing retains random boss/no reroll.
+
+## WB-D112 - Automatic independent bounty payouts survive Fate failure or Reject
+
+- Status: CONFIRMED new explicit clarification,2026-10-12; Q10 resolved.
+- Authority: Explicit user clarification in this Work conversation, reply to choice2.
+- Evidence: Bounties are small achievements earned throughout; a qualifying drop during an assignment completes the bounty and awards FP automatically; failing that Fate does nothing to the bounty individually.
+- Decision: Supported qualifying active-mode bounty completion automatically credits its independently quoted FP once. No manual Claim button or required claim step. Fate failure/Reject does not undo bounty completion, revoke FP, escrow its reward or delete its evidence. Keep bounty and assignment settlement independently keyed.
+- Rationale: Bounties reward legitimate achievements independently of the current Fate outcome; avoid making claim timing an economic mechanic.
+- Affects: BOUNTIES, ACQUISITION_EVIDENCE, DIARY_CA_RECEIPT_REVIEW, UI_UX, STATE_CONTRACT, PERSISTENCE, ECONOMY, TESTING and Codex handoffs.
+- Exceptions/dependencies: Active legitimate evidence still required; no possession-only/paused/offline backfill or new broad off-task permission. Existing Reject penalty/spin/no-completion-reward/mandatory Punishment rules remain. Failure wording does not establish a new generic failure penalty. Aggregate CA-MIXED is still unanswered; automatic processing applies only after that aggregate actually qualifies. No numeric payout approved; the spoken grapple example is illustrative, not a newly approved catalog item/reward. Delayed evidence crossing pause and migration of old qualified-unpaid records need reviewed handling; no payout while paused under WB-D114.
+- Supersession: WB-D094 manual claiming and associated unclaimed notification workflow; conflicting delegated forfeiture in WB-D105/S8-M0402. Preserve those sources as history. Old saved offline/model inputs are immutable and no longer evidence of current manual-claim behavior.
+- Acceptance: Qualifying bounty credits once without opening a panel; duplicate callbacks/restart do not repay; failure/Reject preserves payout; no new reward while paused; rewards earned before this Fate are never attributed merely by settlement time.
+
+## WB-D113 - Reaffirm Lesser/Standard/Greater objective scaling for Skilling and Bossing
+
+- Status: CONFIRMED reaffirmation,2026-10-12. Separate fourth Bossing Challenge intent remains UNVERIFIED.
+- Authority: Explicit user reply to choice3 in this Work conversation.
+- Evidence: User describes Lesser/Standard/Greater XP amounts and corresponding boss kill counts, with5 versus10 as an example.
+- Decision: Both Skilling and Bossing use Lesser/Standard/Greater objective tiers. Lesser requires less XP/KC, Standard normal XP/KC, Greater more XP/KC. Preserve prior confirmed Bossing sequence, random boss/no reroll and reward distinctions.
+- Rationale: Parallel understandable difficulty choices across the two activity families.
+- Affects: FATE_CARDS, generators and UI acceptance.
+- Exceptions/dependencies: Example5/10 is not a fixed multiplier/table. Prior Lesser Bossing base FP and Greater increased FP remain; user did not alter Skilling reward scaling. User uses challenge descriptively for these cards and does not clearly approve a fourth named Bossing Challenge card. Keep it disabled without silently calling it rejected; ask only when user requests the next relevant choice.
+- Supersession: Reaffirms WB-D049/current L/S/G, not a new card type or shared purchase pool.
+- Acceptance: Lesser<Standard<Greater requirements in supported tables; separate purchase pools; no boss choice/reroll.
+
+## WB-D114 - No claiming or reward accrual while Wheelbound is paused
+
+- Status: CONFIRMED explicit timing clarification,2026-10-12; PAUSE-CLAIM resolved.
+- Authority: Explicit user reply to choice4 in this Work conversation.
+- Evidence: User expressly says players cannot claim previously earned rewards while paused and cannot earn anything while mode is paused.
+- Decision: Paused mode cannot claim or credit Wheelbound rewards. Progress earned while paused never qualifies later. Already credited FP remains; earlier active-earned evidence is preserved, not erased, but cannot be processed into a new payout during pause.
+- Rationale: Keep earning and reward processing within active mode.
+- Affects: BOUNTIES, GAME_RULES, lifecycle/coordinator, UI and evidence settlement.
+- Exceptions/dependencies: Pause stays immediate/free, without penalties or Assisted status; retains obligations and actual OSRS progress. This does not undo the specifically approved paused item availability for empty-candidate Sacrifice recovery (WB-D085); active verified donation remains required. Delayed active evidence needs reviewed earning-versus-delivery classification; retain unresolved evidence rather than importing paused progress or deleting an earned record.
+- Supersession: Rejects proposed permission to claim earlier active-qualified rewards while paused. WB-D112 automatic payout replaces normal manual claiming entirely.
+- Acceptance: No new FP credit while paused; active-earned paid reward survives pause; paused acquisition produces no backfill; identity/restart cannot bypass active processing.
+
+## WB-D115 - Present design choices one at a time
+
+- Status: CONFIRMED workflow preference,2026-10-12; no gameplay change.
+- Authority: Explicit user follow-up in this Work conversation.
+- Decision: Present one design choice, receive the answer and handle its follow-up; wait for the user to request another before presenting the next. Do not send a batch/laundry list.
+- Rationale: Make each choice easy to answer and discuss.
+- Affects: automation/PROTOCOL and future user-facing decision discussion.
+- Exceptions/dependencies: Continue authorized routine documentation/verification autonomously; do not interpret this pacing preference as permission to choose unresolved major gameplay rules. Choices5/6 from the previous list remain unanswered.
+- Supersession: Earlier bundled question presentation workflow.
+- Acceptance: One substantive choice per discussion step; no next-choice prompt until user asks.

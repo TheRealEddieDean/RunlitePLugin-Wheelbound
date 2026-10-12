@@ -10,9 +10,9 @@
     148,
     156
   ],
-  "status": "CHECKPOINT_PUBLISHED",
-  "is_current": true,
+  "status": "STALE_AFTER_EXPLICIT_DECISIONS_2026_10_12",
+  "is_current": false,
   "library_version": 9,
   "review": "All162 pages inspected in contact sheets; cover and all seven changed body/navigation pages inspected at full size. Prior unchanged chapter bodies matched the previous PDF after normalizing source/footer/page numbers. No detected clipping or overlap; zero out-of-bounds blocks.",
-  "limitations": "Receipt acceptance is in-memory only: zero Java/production/live/disk-I/O tests. Exact dependencies/reports, live detector evidence and specific restrictive-policy approval remain unavailable; gameplay questions remain open."
+  "limitations": "Published version9 reflects284799b1. WB-D111\u2013115 are now authoritative Markdown corrections; PDF regeneration awaits this decision reconciliation checkpoint. Do not call the old publication current. Live/policy/build export gates remain."
 }

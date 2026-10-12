@@ -1,5 +1,7 @@
 # Wheel editing and pricing Codex packet
 
+> Current authority2026-10-12: WB-D111–115 supersede prior Questing suspension/retry prohibition, Q10/manual bounty claiming and PAUSE-CLAIM uncertainty. Known-empty Questing automatically retries with retained slice; supported active bounty automatically pays once and survives failure/Reject; paused payout forbidden. Old fixture dispositions/pins remain prior-contract evidence, not current acceptance of superseded behavior. CA-MIXED and extra Bossing Challenge remain unanswered. Read current DECISIONS before coding.
+
 WB-A31,2026-10-12. Future implementation planning only; no coding authorization, adopted prices or shipped transaction. Use after I01's actual state/receipt/store boundary exists and implementation is explicitly authorized. Canonical rules are docs/wheelbound/WHEELS, FATE_SHOP, DEFY_FATE, ECONOMY and DECISIONS. Do not replace them with these planning summaries.
 
 ## Dependency-ordered assignments
@@ -52,7 +54,7 @@ These are future Java tests, not executed fixtures. Use symbolic/versioned place
 | WE17 | Persist edit then lose UI acknowledgement | Same slice set, FP delta and counters replay; no duplicate purchase/enhancement |
 | WE18 | Storage fails before durable commit | No acknowledged edit; retain/reconcile original according to I01 store contract |
 | WE19 | Activity slice destroyed while bosses already purchased | Mode boss unlock pool retained; normal-wheel suggestions do not become artificial mode gates |
-| WE20 | Exhausted or unknown ordinary assignment pool | Preserve owned slice; report unresolved availability; no free suspension/reroll or Q6 repair policy adopted |
+| WE20 | Exhausted or unknown ordinary assignment pool | Known-empty Questing retains slice and retries under WB-D111; unknown evidence/other activity/extra spin accounting stay gated |
 
 For WE12/WE13 use an explicit valid fixture configuration with at least three activity keys. The earlier five ordinary minimum is not a requirement to preserve all initial instances. Two special arrivals consume two real slots. All chosen displacement instances must be distinct, ordinary and owned/active. A candidate storage/destruction selection is a preview until the complete mutation commits; retry must restore the same plan.
 

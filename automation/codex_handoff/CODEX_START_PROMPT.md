@@ -1,5 +1,7 @@
 # Codex start prompt — use only after authorizing implementation
 
+> Current authority2026-10-12: WB-D111–115 supersede prior Questing suspension/retry prohibition, Q10/manual bounty claiming and PAUSE-CLAIM uncertainty. Known-empty Questing automatically retries with retained slice; supported active bounty automatically pays once and survives failure/Reject; paused payout forbidden. Old fixture dispositions/pins remain prior-contract evidence, not current acceptance of superseded behavior. CA-MIXED and extra Bossing Challenge remain unanswered. Read current DECISIONS before coding.
+
 This prompt is a prepared future handoff, not authorization from the current documentation assignment. Do not execute production changes merely because this file exists.
 
 ---
@@ -16,6 +18,6 @@ Keep new mode integration disabled. No game login, automatic game actions, live 
 
 Preserve five ordinary slices/three activities/24 total; tier-only enhancements and separate special weights; full frozen outcomes before animation; account/run/generation/revision isolation; one debit/settlement after retries; free pause preserving obligations; no paused/offline backfill; discretionary affordability versus penalty debt. No artificial Grand minimums; pending mandatory obligations block entry. Keep fresh-account activation integration gated until supported evidence exists.
 
-Q6, Q10, Q9, PAUSE-CLAIM, CA-MIXED and exact audit ordering remain gated as documented. Do not adopt free suspension/rerolls, bounty clawback, extra cards, a pause penalty or a guessed donation receipt. These unresolved paths do not prevent pure-domain tests of confirmed invariants. Major gameplay changes require an explicit decision update; routine architecture/API details are yours to resolve and document.
+Residual Q6/Q9/CA-MIXED and audit ordering remain gated. Apply WB-D111 known-empty Questing automatic retry, WB-D112 automatic independent bounty payout and WB-D114 no paused payout. Do not adopt free suspension/general rerolls, bounty clawback, extra cards, a pause penalty or guessed donation receipt. These unresolved paths do not prevent pure-domain tests of confirmed invariants. Major gameplay changes require an explicit decision update; routine architecture/API details are yours to resolve and document.
 
 At task completion run appropriate actual tests, inspect diff scope and commit on wheelbound-mode with a verified branch head. Update progress, task queue and exact continuation, including any uncommitted work and actual evidence gaps. Stop cleanly at a reviewable checkpoint if blocked; never overwrite concurrent changes or claim background continuation.

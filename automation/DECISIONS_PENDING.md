@@ -1,26 +1,26 @@
 # Major decisions pending
 
-Approved design authority remains [DECISIONS](../docs/wheelbound/DECISIONS.md); full alternatives in [OPEN_QUESTIONS](../docs/wheelbound/OPEN_QUESTIONS.md). This file is a deduplicated session-facing index, not a second decision register.
+Authority: docs/wheelbound/DECISIONS.md. Latest explicit replies2026-10-12 are WB-D111–115. Ask one choice at a time, discuss its answer, and wait until the user requests the next. Do not repeat approved rules.
 
-| ID | Actual unresolved choice | Dependency/impact | Recommendation and independent work |
-| --- | --- | --- | --- |
-| Q2 | Forced donation when Coffer is full or account mode unsupported | Changes Sacrifice escape behavior; requires live validity evidence | Investigate actual boundary first; explicit alternative obligation only if needed, not forced death |
-| Q6 | Exhausted/temporarily impossible ordinary activity with five/three invariant | Automatic suspension changes odds and could provide free manipulation | Recover historical availability context; specify empty-pool reasons and preserve purchased slices |
-| Q9 | Historical Bossing Challenge intent after current L/S/G clarification | S8-M0227 names separate Bossing Challenge; later clarification doesn’t expressly exclude it | Keep additional card disabled; preserve random boss/no-reroll; all visible user-turn review is complete; obtain explicit resolution |
-| Q5 — conditional | Enforcement fallback if exact requested interception fails policy review | Advisory behavior vs revised mode identity | Complete route/review evidence before asking for a hypothetical change |
+## Resolved current answers
 
-Q3 GP→spins values are delegated balance work; produce a tested candidate and explain trade-offs before treating final adoption as a major choice. Do not ask the user to choose arbitrary isolated numbers.
+- Q6 Questing: retain slice and spin normally; known-empty Questing landing gives brief notice and automatically respins (WB-D111). Suspension proposal rejected for this behavior. Broader activity recovery, unknown evidence, voluntary permanent Questing protection and extra spin accounting are not inferred.
+- Q10: automatic independent qualifying bounty FP survives Fate failure/Reject; no manual claim, escrow or clawback (WB-D112 supersedes WB-D094 manual flow and historical forfeiture).
+- Bossing: L/S/G requirements reaffirmed (WB-D113). Separate fourth named Challenge still not clearly answered.
+- PAUSE-CLAIM: no reward/claim processing while paused; preserve prior paid FP/active evidence; no paused earning backfill (WB-D114).
+- Workflow: one design choice at a time (WB-D115).
 
-Resolved and must not be re-asked: Q1 new-account scope (S8-M0327/WB-D088); Q7 random forced Death’s Wheel (S8-M0296–0297/WB-D033); Q8 no-active-Fate Grand precondition (S8-M0321/WB-D089). Current explicit approvals also settle Bossing L/S/G sequence, two Standard offerings, unlimited fixed-price Pardon, 24 total slots, five ordinary/three activities, player-selected ordinary displacement, free pause, Reject Fate, physical vendor visit, no artificial Grand gates, minimum eligible-item acquisition, and one spin per special landing.
+## Still pending
 
-Q10 — Reject and earned bounty receipts: S8-M0402 delegated forfeiture wording conflicts with unqualified always-active/manual claim interpretation. Resolve which receipt/reward types survive Reject before runtime reward settlement. See OPEN_QUESTIONS; no silent evidence deletion or FP clawback.
+| ID | Narrow unresolved boundary | Work permitted |
+| --- | --- | --- |
+| CA-MIXED / choice5 | Aggregate boss CA bounty with some tasks earned paused | Preserve task provenance; do not qualify by final task alone until explicit answer |
+| Duplicate first/reacquisition / choice6 | Classification of first paid instance, starting grants and later reacquisition | Use explicit known duplicate count; no new counter convention |
+| Q9 | Separate fourth named Bossing Challenge beyond confirmed L/S/G | Keep extra card disabled; no boss choices/rerolls |
+| Q6 residual | Extra allotted spin accounting for automatic Questing retries, other unavailable activity pools, all-unavailable/postcommit recovery | Persist verified-empty retry provenance; unknown is not empty; no invented cost/penalty/free edits |
+| Q2 | Genuinely full/unsupported Coffer forced donation | Actual current-client boundary evidence first; no forced death or invented escape |
+| Q5 conditional | Fallback only if exact restriction fails specific policy review | Preserve Trade with; route/review packet remains unsent |
 
-Additional aggregate receipt boundary (CA-MIXED): mixed active/paused per-boss CA completion histories cannot be settled by assuming the final task proves all tasks were earned while active. Current diary/CA review preserves evidence and marks aggregate payout unverified. Obtain an explicit credit rule before enabling that payout; do not rewrite the confirmed free-pause/no-backfill rules.
+Balance numbers remain delegated candidate research, not arbitrary isolated approval questions. Q1 new-account scope, Q7 random forced sacrifice and Q8 no active Fate/obligation for Grand remain resolved.
 
-PAUSE-CLAIM: claim timing for already active-earned evidence during pause is not explicitly recovered. Preserve evidence; proposed allowance affects manual claim timing only, with no paused-progress backfill. See OPEN_QUESTIONS. Do not silently adopt either prohibition or permission in runtime.
-
-## Prepared decision evidence — WB-A27/A28
-
-Q6: [Exact odds and replacement bounds](decision_analysis/Q6_OPTIONS.md) covers6 hypothetical wheels and32,116 count compositions. Suspension changes every retained probability, including specials; paid replacement may require new activity types and remains constrained by FP/access/capacity. This is an options supplement, not a new eligibility rule.
-
-Q10: [Settlement comparison](decision_analysis/Q10_OPTIONS.md) shows the unclaimed-only policy creates a claim-timing difference equal to the bounty reward. Escrow/clawback eliminate that difference but change spendability/debt behavior. Existing proposed independent-receipt preservation remains PROPOSED. Aggregate receipt attribution and later requalification must be covered by the selected policy; no automatic clawback or evidence deletion is authorized.
+Earlier Q6/Q10 analysis artifacts and A24 manual-claim oracle inputs remain immutable historical evidence. Their options/statuses are superseded where WB-D111/112/114 apply; they are not current implementation acceptance or automatic runtime enablement. Source pins identify prior inputs, not permission to ignore latest replies.

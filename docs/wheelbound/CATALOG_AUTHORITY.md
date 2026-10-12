@@ -5,7 +5,7 @@ The [decision register](DECISIONS.md) controls mechanics. The [machine-readable 
 | Catalog | Count | Authority | Remaining requirement |
 | --- | ---: | --- | --- |
 | Permanent item candidates | 100 | New delegated experimental draft | Acquisition/access review; grouped third-age and gilded targets; individual reward balance |
-| Daily candidates | 18 | New delegated experimental draft | Reset, account eligibility and manual receipt claims |
+| Daily candidates | 18 | New delegated experimental draft | Reset, account eligibility and automatic active receipt settlement (WB-D112/114 supersedes old manual review) |
 | Punishment candidates | 50 | New delegated experimental draft | Dynamic eligibility, varied frozen outcomes and escalating consecutive severity |
 | Quest enum snapshot | 213 | Source metadata | Valid assignment pool, initialized journal completion and prerequisites |
 | Normal boss snapshot | 67 | Existing release metadata | Preserve normal mode behavior; not Wheelbound tier authority |
@@ -23,7 +23,7 @@ WB-D101 requires a finite 100-target item system including grouped any-third-age
 
 WB-D035 approves dynamic punishment architecture, not each entry of this new draft. The historical fifty-template list was deferred at S8-M0172; an approved complete historical list has not been recovered in the review. The draft's 120-minute generation cap is experimental. WB-D087 permits feasible multi-day escalation for consecutive Penance; clean assigned completion resets the sequence. No automatic third-offense level-99 task is confirmed. Review plain, method/location-restricted, and escalated templates independently.
 
-The broad Challenge task library and ordinary-slice classification need explicit versioned contracts. Additional Bossing Challenge eligibility is Q9; it stays disabled pending resolution. Temporary or exhausted ordinary pools are Q6; do not assign completed quests or invent automatic free wheel edits. Rejected-Fate bounty disposition is Q10; do not silently erase receipts or claw back FP.
+The broad Challenge task library and ordinary-slice classification need explicit versioned contracts. Additional Bossing Challenge eligibility is Q9; it stays disabled pending resolution. WB-D111 resolves known-empty Questing by retained-slice automatic Master retry; other unavailable pools/additional retry accounting remain Q6 boundaries. No automatic wheel edit or boss reroll. Q10 is resolved by WB-D112: qualifying bounty payouts are automatic and survive failure/Reject; no receipt erasure or FP clawback.
 
 ## Promotion and verification
 

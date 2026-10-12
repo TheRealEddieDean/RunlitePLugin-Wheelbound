@@ -1,5 +1,7 @@
 # First Wheelbound Codex implementation packet
 
+> Current authority2026-10-12: WB-D111–115 supersede prior Questing suspension/retry prohibition, Q10/manual bounty claiming and PAUSE-CLAIM uncertainty. Known-empty Questing automatically retries with retained slice; supported active bounty automatically pays once and survives failure/Reject; paused payout forbidden. Old fixture dispositions/pins remain prior-contract evidence, not current acceptance of superseded behavior. CA-MIXED and extra Bossing Challenge remain unanswered. Read current DECISIONS before coding.
+
 Prepared2026-10-12, WB-A30. **Planning only. Production coding is not authorized by this packet.** Use after the user expressly starts implementation. Existing Markdown decisions remain authoritative. Suggested names, grouping and estimates below are implementation planning, not gameplay approvals.
 
 ## Entry checklist
@@ -43,7 +45,7 @@ Choose implementation-neutral policies autonomously and document/test them. Do n
 
 Keep run lifecycle separate from obligation stage; pausing does not clear the obligation. Track schema/revision, account/run identity, generation, frozen catalog/quote/outcome, signed integer FP and nonnegative integer spins. Use stable slice IDs; ordinary tier weights1/1.25/1.5/2/3, special weights derived separately. Do not use floating rounding to conceal impossible probabilities; use a representation that preserves the documented fractions, and specify boundary selection behavior.
 
-Required examples: starting five activities accepted; four ordinary rejected even with specials; five ordinary representing only two activities rejected;24 total including specials accepted;25 rejected. Distinct stored instances do not count as active. Ordinary enhancement and special weight rules must remain separate. Null/unknown pool evidence does not mean an empty pool. Q6 is unresolved: report unavailable selection without free suspension, replacement or reroll. Preserve permanently purchased boss membership; do not adopt normal-wheel recommended-stat filters as mode eligibility.
+Required examples: starting five activities accepted; four ordinary rejected even with specials; five ordinary representing only two activities rejected;24 total including specials accepted;25 rejected. Distinct stored instances do not count as active. Ordinary enhancement and special weight rules must remain separate. Null/unknown pool evidence does not mean an empty pool. WB-D111 resolves verified-empty Questing with automatic Master retry and retained slice; do not invent additional spin accounting or a broader reroll policy. Preserve permanently purchased boss membership; do not adopt normal-wheel recommended-stat filters as mode eligibility.
 
 ## I01-C3/C4: commands and durable selections
 
@@ -61,7 +63,7 @@ Test recovery at each storage operation the implementation actually performs. Do
 
 ## I01-C6: session and lifecycle
 
-Accept explicit account/run/generation tokens supplied by the adapter port. Account switch/logout clears stale callback delivery, not the committed run. Serialization must not merge accounts by display name. Pause is immediate, free, label-free and retains pending selection/obligation; resume establishes fresh observation baselines. Inactive observations receive no retroactive credit. Genuine earlier active evidence remains preserved: manual claim timing during pause stays PAUSE-CLAIM-gated rather than silently allowed or prohibited.
+Accept explicit account/run/generation tokens supplied by the adapter port. Account switch/logout clears stale callback delivery, not the committed run. Serialization must not merge accounts by display name. Pause is immediate, free, label-free and retains pending selection/obligation; resume establishes fresh observation baselines. Inactive observations receive no retroactive credit. Genuine earlier active evidence remains preserved: WB-D114 expressly forbids payout/claim processing during pause; retain earlier active evidence.
 
 Uninitialized/unknown XP, bank, CA or identity values do not become zero baselines. A GUI preview is not required for acceptance. If a local preview is later added, it reads immutable snapshots and cannot directly change FP or invoke OSRS actions.
 
@@ -73,9 +75,9 @@ Retain existing normal-wheel regressions. No unexplained production behavior cha
 
 ## Explicit deferred behavior
 
-- Q6 exhausted pools: preserve original slices/results; no free odds change or paid-replacement exception adopted.
-- Q10 Reject bounty disposition: preserve receipts; no implicit deletion, clawback or claim-before-Reject policy.
-- PAUSE-CLAIM/CA-MIXED: preserve evidence and explicit unresolved classification; no new pause penalty/backfill.
+- Q6: WB-D111 permits known-empty Questing automatic retry with retained slice; other activity recovery/extra spin accounting remain unverified.
+- Q10 resolved: qualifying active bounty automatically pays independently and survives failure/Reject; no deletion, escrow or clawback.
+- PAUSE-CLAIM resolved: no payout while paused. CA-MIXED still unresolved; preserve evidence; no pause penalty/backfill.
 - Q9 additional Bossing Challenge: excluded until resolved; confirmed L/S/G and random boss/no reroll remain.
 - Audit reward ordering: no invented withheld completion reward or per-tick charge.
 - Coffer: no guessed receipt, full-Coffer escape, market-price proof or repeated donation request.

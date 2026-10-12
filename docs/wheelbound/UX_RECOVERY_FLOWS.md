@@ -25,7 +25,7 @@ Always display actual odds based on all active weights, including Taint/Sacrific
 | Completed | Completion receipt and preserved run history | Existing OSRS progress unchanged; no automatic abandon/delete |
 
 ## Pause, account swap and observation failures
-Pause is immediate, unrestricted and penalty-free. Explain “Wheelbound progress is paused; OSRS progress continues.” No Assisted flag, guilt warning, penalty or delayed pause transaction. Retain assignment and earned unclaimed receipts; resume snapshots fresh baselines with no backfill. If the proposed GE readiness check is adopted, show pending offer cleanup as a resume prerequisite with no FP/status penalty; never trap assets or cancel offers automatically.
+Pause is immediate, unrestricted and penalty-free. Explain “Wheelbound progress is paused; OSRS progress continues.” No Assisted flag, guilt warning, penalty or delayed pause transaction. Retain assignment, existing FP and earlier active-earned unresolved evidence; paused reward processing is forbidden under WB-D114; resume snapshots fresh baselines with no backfill. If the proposed GE readiness check is adopted, show pending offer cleanup as a resume prerequisite with no FP/status penalty; never trap assets or cancel offers automatically.
 
 Account change shows a distinct account/run summary and rejects callbacks from the old session. Missing identity, missing initialized account data and an actual empty pool need different messages. “Data unavailable—retry after initialization” must not become “you have no eligible items/quests” or a player violation. Save failure shows a pending operation and retry/recovery guidance; disable new mutations without erasing the original.
 

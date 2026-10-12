@@ -41,12 +41,14 @@ See [CONTENT_CATALOGS](CONTENT_CATALOGS.md) and [CATALOG_ACCEPTANCE](CATALOG_ACC
 | Skill modifiers, clean XP targets | WB-D091 | I03 | Bracket/modifier/increment bounds and distinct Standard offers; provisional values explicit |
 | Protected tutorial and qualified starting quests | WB-D092 | I01/I03/I09 | Mainland-first ordinary assignment; no tutorial violation/credit backfill |
 | Introductory child and meaningful AND/OR nodes | WB-D093 | I04/I09 | FP cannot bypass prerequisites; node benefit survives alternate route |
-| Active bounty notifications and independent rarity/reward | WB-D094 | I05/I09 | Unclaimed evidence retained; manual idempotent claims; paused negative fixtures |
+| Active bounty notifications and independent rarity/reward | WB-D094 | I05/I09 | WB-D112/114: automatic once-only active payout; pause blocks processing; prior evidence retained |
 
 | Recovered peer gates/clusters/64 boss nodes and pool commitment | WB-D027/095/099/100 | I03/I04/I09 | 5/9 and 4/6 unique unlocks; mode roster covers all67 source categories; no ordinary boss removal |
 | Visible grouped bounties, vendor transparency, Wilderness opt-in | WB-D101/102/103 | I03/I04/I05/I06/I09 | Family acquisition/claim provenance; current/next class quotes; no implicit access permission |
-| Grand checklists and delegated lifecycle/economy | WB-D104/105/106 | I01/I04/I07/I08/I09 | Failed attempt preserves checks; no offline credit, timer or passive FP; Q10 settlement held |
+| Grand checklists and delegated lifecycle/economy | WB-D104/105/106 | I01/I04/I07/I08/I09 | Failed attempt preserves checks; no offline credit, timer or passive FP; WB-D112 independent bounty settlement preserved after failure/Reject |
 
 ## Offline receipt acceptance supplement
 
 WB-A24 executes the existing I01/I04/I05/I06/I07/I08 receipt boundaries in [44 expected traces and32 systematic crash combinations](../../automation/receipt_safety/README.md). The mapping includes exact case IDs, source hashes and limitations. Passing this in-memory oracle does not mark those implementation tickets complete. Unparsed mock tails are preserved, duplicate mock settlements pay once, and Q10/CA-MIXED/audit-order/Q6 remain gated.
+
+Latest requirements: WB-D111→I03/I09 known-empty Questing retry with retained wheel and persisted outcome; retry allocation remains UNVERIFIED. WB-D112→I04/I05/I09 automatic independent bounty payout; failure/Reject never revokes it. WB-D113→I03 reaffirms L/S/G without adding a fourth card. WB-D114→I01/I05 paused reward processing refused. WB-D115→workflow one choice at a time. Historic A24 cases/manual-claim sources remain pinned prior-contract evidence, not current acceptance of superseded behavior.

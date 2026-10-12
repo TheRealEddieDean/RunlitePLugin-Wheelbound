@@ -12,7 +12,7 @@ Routine technical selections are delegated, not historical approvals. Implementa
 
 Provisional implementation choice: inspect Locked/Banned shops to establish vendor identity while guarding transactions. Provisional GE readiness choice: player cleans up live offers before GE-locked activation/resume; pause remains unconditional, immediate and free. These do not add FP penalties.
 
-Q6: Exhausted or temporarily impossible ordinary activity: recommend suspend selection only under a documented availability rule while retaining its purchased slice, but this changes displayed odds and could become free wheel manipulation. Paid storage/destruction preserves existing costs but may violate five/three if five slices remain. Exact policy needs an explicit decision; do not assign completed quests or automatically grant free edits. Independent work: empty-pool detection, reason display, pause and immutable receipts.
+Q6 — PARTLY RESOLVED by WB-D111: known-empty Questing landing retains its slice, shows a short notice and automatically respins the Master Wheel. Do not suspend Questing. Extra allotted spin accounting, extension to other unavailable activities, all-unavailable recovery and postcommit availability changes remain unverified. Unknown evidence is not empty. The wording does not clearly establish a new ban on voluntary legal Questing edits.
 
 Q7 — RESOLVED: S8-M0296–0297 explicitly confirms random forced Death’s Wheel; voluntary sacrifice is player-selected. WB-D033 corrects the contradictory PDF interpretation. Candidate count/value mix remains tuning, not a new approval.
 
@@ -20,6 +20,12 @@ Q8 — RESOLVED precondition: S8-M0321 requires no active Fate. Pending mandator
 
 Q9: Historical S8-M0227 explicitly approves separate Skilling/Bossing card pools and names a Bossing Challenge type. The current L/S/G clarification confirms those three mechanics but does not explicitly approve or reject the additional Challenge type. Keep Bossing Challenge disabled pending this narrow reconciliation; random boss choice/no reroll remains mandatory.
 
-Q10: Reject Fate and already earned bounty receipts. Historical delegated S8-M0402 says a rejected Fate grants no bounty credit, while S8-M0055 establishes automatically active bounties and the current user approval expressly forfeits completion reward. Does Reject revoke qualifying item/CA/diary receipts observed during that Fate, only suppress assignment-completion rewards, or distinguish unclaimed/claimed receipts? This interaction materially affects debt recovery and rejection farming. Recommendation: preserve independently qualified acquisition receipts and forfeit the Fate completion reward, but treat that as PROPOSED until reconciled. No implementation may silently erase evidence or claw back already claimed FP. Independent work: keep receipt provenance and assignment linkage, support a versioned settlement rule.
+Q10 — RESOLVED by WB-D112,2026-10-12: supported qualifying active bounties automatically credit FP once, independent of assignment success/failure/Reject. No manual claim, escrow or clawback. Prior forfeiture/manual-claim sources remain superseded history. Qualification of mixed CA aggregate remains its own open choice.
 
-PAUSE-CLAIM — narrow timing clarification: the free-pause/no-backfill rule forbids credit for progress observed while paused. It does not expressly determine whether a player may manually claim a receipt already earned while active after pausing. Preserve that evidence; do not assume it was paused-earned or delete it. Recommend permitting claims of already qualified active-earned receipts without importing any paused progress, but this is PROPOSED until historical context or explicit approval settles it. Independent work: provenance, idempotency and active/paused acquisition fixtures. This does not reopen free pause or add an Assisted label.
+PAUSE-CLAIM — RESOLVED by WB-D114: no claiming or reward payout while paused. Retain prior active evidence/paid FP; no backfill of paused earning. Delayed evidence and old unpaid-record migration require technical handling without inventing paused payout.
+
+CA-MIXED / choice5 remains unanswered: whether every boss CA must qualify active or final active aggregate completion can qualify despite earlier paused tasks. No answer inferred.
+
+Duplicate first/reacquisition / choice6 remains unanswered as noted in WHEELS.
+
+Interaction protocol WB-D115: present one choice, handle discussion, and wait for user request before next. No batch/laundry list.

@@ -63,3 +63,6 @@ Recovered S8-M0408/0410/0412 safeguards (WB-D105): no passive FP, no arbitrary b
 ## H4 audit settlement sensitivity
 
 The committed H4 core reports median FP 2,410/1,972 for careful retain/withhold and 210/84 for risk retain/withhold over the synthetic observation window. Reward ordering materially affects affordability; these are candidate portfolio comparisons, not approved fines or measured player balance. Review unresolved audit/bounty settlement before retuning progression prices. See [H4 results](H4_RESULTS.md) for exact limits and excluded reward/sink systems.
+
+## Latest confirmed reward timing
+WB-D112: bounty FP automatically credits once on supported qualifying active completion and survives assignment failure/Reject. No manual claiming, escrow or clawback. Reject completion FP/penalty/Punishment rules remain independently applicable. WB-D114: no reward payout while paused; preserve paid balances and prior evidence. No numeric reward/price changes. Saved H1–H4 models are historical hypotheses and do not establish this latest settlement or Questing retry policy.

@@ -7,7 +7,7 @@ Every enabled entry needs canonical item IDs (including correct note/charged/orn
 
 Candidate families: 24 Barrows, 16 God Wars, 12 Chambers, seven Theatre, seven Tombs, three Zulrah, four Cerberus, four Dagannoth rings, eight mixed Slayer/PvM, eight Wilderness, three Gauntlet and four Corp. The mixed family includes Sarachnis as a PvM source, not a Slayer-only restriction. Source-based adapter boundaries must be reviewed per entry. This content mix is a new design draft, not the lost original list.
 
-Per-run permanent rewards are once-only. An active, permitted receipt can remain pending until the next active manual claim. Pausing does not erase earned receipts; it prevents new credit. Proposed overlap permanent/daily can pay once in each independently keyed ledger. No automatic payout simply because a panel opens.
+Per-run permanent rewards are once-only. A supported active permitted completion automatically pays once under WB-D112. Pausing does not erase prior receipts/FP; it forbids new payout processing under WB-D114. Delayed/ambiguous receipts retain evidence for reviewed active settlement. Proposed overlap permanent/daily can pay once in each independently keyed ledger. No automatic payout simply because a panel opens.
 
 Daily catalog must be separately authored using repeatable short-horizon legal acquisition routes. Do not sample the 100 rare permanent entries into dailies: a one-day rare-item chase can be infeasible. A daily board may be unavailable if three distinct legal targets cannot be constructed; it never blocks ordinary progress. Daily income is absent from current H3 and must not be represented as simulated.
 
