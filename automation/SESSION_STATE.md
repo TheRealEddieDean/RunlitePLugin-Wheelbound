@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261012-challenge-pool
-- State: IDLE — owner released; no active lease.
+- State: ACTIVE — wb-20261012-challenge-tree owns WB-A40; lease through2026-10-12T23:00:00Z.
 - Branch: wheelbound-mode
 - Starting head:0220707247c860bd57c6f149c1cbb863a06c519e
 - Claim:dd742d0eecafe085edadd260322d532853773984
@@ -26,3 +26,5 @@
 6. A33 PDF refresh concrete unfinished task. Coding unauthorized; report/dependency/jar exports/current-client/policy separate gates.130,080 historical synthetic trajectories unchanged; no unchanged reruns to inflate progress.
 
 Stop reason: current approval checkpoint complete; next single target-unlock question pending. No full completion/background execution claim.
+
+Current A40: Challenge AND prerequisites and bundled starter target pool. Starting head45f522db23d25cf924d519dd9970716b67b86b21.
