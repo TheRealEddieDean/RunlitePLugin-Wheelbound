@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261012-challenge-diversity
-- State: IDLE — owner released; no active lease.
+- State: ACTIVE — wb-20261012-challenge-family owns WB-A42; lease through2026-10-12T23:00:00Z.
 - Branch: wheelbound-mode
 - Starting head:9654c55dc28ad9df5be4027b36c7674bd9490ac0
 - Claim:b47870806ca7184fd4f9e116e1a98b9f959aac45
@@ -26,3 +26,5 @@
 7. A33 PDF remains concrete unfinished/stale task. Coding unauthorized; actual XML/dependency/jar exports/current-client/exact policy separate.130,080 historical synthetic trajectories unchanged; no unchanged reruns to inflate progress.
 
 Stop reason: approval checkpoint complete; next single objective-family choice pending. No full-completion/background-execution claim.
+
+Current A42: random objective family approved; starting head740987aa84a846b5be385294654d837d7cde5cb5.
