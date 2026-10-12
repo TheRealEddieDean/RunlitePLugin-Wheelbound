@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261012-codex-handoff
-- State: IDLE — owner released; no active lease.
+- State: ACTIVE — wb-20261012-design-answers owns WB-A32; lease through2026-10-12T21:00:00Z.
 - Branch: wheelbound-mode
 - Starting verified head:2d25df2c08bb251561bea10a52cef760c7cde01f
 - Claim:b09a3e24bb51680153146e30a917b5cf3b9f8ee1
@@ -30,3 +30,5 @@
 8. New explicit gameplay decisions require DECISIONS plus relevant specs, validation/commit and PDF refresh. Automation-only handoff here does not change the gameplay PDF publication. Keep meaningful checkpoint scope and release owner when done.
 
 Stop reason: two bounded handoff tasks complete. Detailed remaining handoff decomposition can proceed in future authorized documentation sessions; implementation/live/policy execution still needs its separate authorization and evidence. This is not full project completion.
+
+Starting verified head3b7fba3cb1d97b5c4935610725fdc31d457b4b5b. Preserve later connection-test commit. Current task: latest explicit design answers and interaction protocol.
