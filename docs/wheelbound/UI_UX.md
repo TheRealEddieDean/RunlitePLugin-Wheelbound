@@ -52,3 +52,5 @@ WB-D123: show Challenge draw as its eligible boss/creature target pool, separate
 WB-D124: render explicit Bossing Lesser AND Greater prerequisite connections to Challenge; show included starter target set, then downstream creature unlock branch. Owned versus currently eligible targets must be distinguishable. WB-D125 rare-drop targets describe the actual unique/source, not a generic rare-table goal. No undisclosed minimum-target gate or new target prices.
 
 WB-D126: owned Challenge remains visible as unlocked; when below3 eligible distinct bosses/creatures, explain it is unavailable in new card offerings and show current eligible target count. No punishment, ownership loss/refund or forced paused status. Three targets is not a third-card upgrade. Included starter bundle remains displayed as part of purchase.
+
+WB-D127: no CA-versus-rare-drop selector for Bossing Challenge. Explain before selection that Fate determines the family and target randomly; reveal the actual committed objective without a reroll action. Exact reveal sequencing remains technical specification; never label unapproved probabilities50/50.

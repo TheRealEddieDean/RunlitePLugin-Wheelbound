@@ -66,3 +66,5 @@ WB-D123→I03/I05/I09: dedicated eligible random Challenge boss/creature target 
 WB-D124→I03/I04/I09 prerequisite AND tree, atomic included starter bundle and paid expansion; WB-D125→I03/I05 catalog unique/shared-table classification and reviewed rate/source. Exact bundle/gates/prices/time balance pending; eligibility-diversity minimum not approved.
 
 WB-D126→I03/I05/I09: minimum3 distinct actually eligible Challenge boss/creature targets for new offerings; permanent card/bundle retained belowfloor; knownness/grouping/current evidence count; committed selections not rerolled.
+
+WB-D127→I03/I05/I09 random Challenge family/target, no picker/reroll, durable typed result and reviewed valid eligibility; probabilities/order not numerically approved.

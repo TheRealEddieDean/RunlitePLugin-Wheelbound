@@ -18,3 +18,5 @@ Current authority WB-D116/117: Bounties Shop is item goal→FP. Master CA Grand 
 Current WB-D123: dedicated random eligible Bossing Challenge boss/creature target pool, normal L/S/G pool unchanged. Target unlock/order/catalog/live evidence still pending; no new normal boss nodes/prices inferred.
 
 Current WB-D126: confirmed≥3 distinct actually eligible Challenge target bosses/creatures for new offerings. Card/bundle permanently owned belowfloor, L/S/G unchanged. Bundle required; multiple objectives/forms per creature cannot inflate count. Family/generation order/catalog/live evidence still pending.
+
+Current WB-D127: Bossing Challenge objective family is random, not player-selected; no50/50 weights or reveal order inferred. Actual family/target/result committed/restored;≥3 real target diversity applies. Completed-CA repeat policy/evidence remains open.
