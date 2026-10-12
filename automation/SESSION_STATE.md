@@ -1,30 +1,29 @@
 # Wheelbound session checkpoint and ownership
 
-- Session ID: wb-20261012-challenge-pool
-- State: ACTIVE — wb-20261012-challenge-tree owns WB-A40; lease through2026-10-12T23:00:00Z.
+- Session ID: wb-20261012-challenge-tree
+- State: IDLE — owner released; no active lease.
 - Branch: wheelbound-mode
-- Starting head:0220707247c860bd57c6f149c1cbb863a06c519e
-- Claim:dd742d0eecafe085edadd260322d532853773984
-- Latest gameplay source:053cde1a1fc36b86d1bee6ddae5892715b4362b8
+- Starting head:45f522db23d25cf924d519dd9970716b67b86b21
+- Claim:68269c24645f38f371da33a23839c16e0cfc42fe
+- Latest gameplay source:fe757959f4bc556d089a8b1ec2c1f5eecc5e0b4b
 - Final owning checkpoint: resolve from branch/file history; no circular self-hash.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
-- Completed A39: WB-D123 dedicated eligible random Bossing Challenge target pool with bosses/selected creatures; normal L/S/G target pool unchanged.14 specs,123 decision IDs.
-- Verification: design_checks passed; historical model/catalog/fixture hashes unchanged. Final guarded publication requires remote byte/main/scope verification.
-- Target purchase/unlock mapping and objective-generation order still unapproved. Do not assume card purchase grants all targets, new64-boss nodes, artificial stat gates or prices.
-- No production code/workflow activation, new Java build/tests, live traces/login/policy contact or source/model/oracle rewrite.
+- Completed A40: WB-D124 Bossing Lesser AND Greater→Challenge with automatic starter targets→paid individual expansion. WB-D125 rare creature-specific uniques exclude shared rare table/generic loot.14 affected specs;125 decision IDs.
+- Exact bundle/count/tiers/prices, rarity boundary/source variants, generation order and supported CA/drop evidence not finalized. Minimum3 actually eligible targets remains PROPOSED; no runtime gate adopted.
+- Verification: design_checks passed, prior catalog/model/oracle hashes preserved. Final guarded publication needs remote byte/main/scope verification.
+- No production code/workflow activation, actual new Java build/tests/live traces/login/policy review, numeric adoption or historical fixture/model rewrite.
 - Uncommitted completed canonical deliverables: NONE after final successful publication/byte verification; failed publication invalidates claim.
 - Preserved: older repo/ dirty docs, legacy local simulation/smoke.json absent from remote, connection-test file; no reset/clean.
-- PDF version9/source284799b1 remains STALE; A33 TODO. Generate from latest committed gameplay tree with render/visual QA/save guard before claiming current.
+- PDF version9/source284799b1 remains STALE; A33 TODO. Generate latest committed gameplay tree, render/inspect/save guarded next version before claiming current.
 
 ## Exact continuation
 
-1. Read latest remote head/main/owner, protocol/current DECISIONS and checkpoints. Preserve concurrent edits; expected-head guard, never force retry.
-2. User wants automatic one-choice-at-a-time prompting until stop. Pool approval is resolved. Next ask whether Challenge non-boss creatures require individual FP unlocks or automatically become available from actual access after buying Challenge card. Recommend existing purchased boss unlocks for boss targets plus separate individual paid Challenge creature unlocks; card purchase alone does not unlock all targets. Do not adopt until answered.
-3. Save explicit answer/specs, validate/commit, then next single relevant choice. Objective-generation/reveal order for Challenge needs reconciliation with existing cards-before-random-target L/S/G sequence; don't offer choices that effectively select a boss or regenerate a valid committed target.
-4. WB-D122 Challenge objectives difficult CA or significant rare creature drop;1/400-ish/example Tormented Synapse catalog guidance, not exact rate/cutoff/FP. Need reviewed canonical CA/task/source/item and completion evidence; no runtime enablement from source/synthetic tests. Card unlock pool separate from target pool.
-5. Prior approvals remain: Questing stored/removable not destroyed; known-empty Questing retries free, valid Fate one spin; lifetime duplicate baseline/history; automatic independent active item bounty FP, no paused payout; Master Grand actual hilt5 without active-only prerequisite CA tally. No repeated settled questions.
-6. A33 PDF refresh concrete unfinished task. Coding unauthorized; report/dependency/jar exports/current-client/policy separate gates.130,080 historical synthetic trajectories unchanged; no unchanged reruns to inflate progress.
+1. Read current remote head/main/owner, protocol/current DECISIONS and checkpoints. Preserve concurrent edits; expected-head guard, never forced retry.
+2. User wants one-choice-at-a-time prompting until stop. Current tree/filter approved, no re-ask. Explain rarity as an initial screen, with curated source/access/time/reward review rather than auto-adding every monster; no universal time/kill cap inferred. Next ask whether Challenge may appear only when at least3 distinct bosses/creatures are actually eligible (not simply purchased). Recommend3, card remains owned/permanent when temporarily absent. Do not adopt before user answer.
+3. Starter bundle prevents selectively buying one target but cannot alone guarantee actual game access/remaining supported objectives. Eligible-count gate is not an arbitrary stat/Grand level requirement. Unknown data is not eligible; one creature with many CA tasks should not be silently treated as multiple target creatures if this gate is approved.
+4. Once answered, record new rule/specs with supersession, validate/commit, then next single relevant choice automatically. Exact starter roster/count/prices are delegated candidate catalog/balance work, not arbitrary isolated numbers to ask user. Objective reveal/order needs later reconciliation with cards-before-random-target sequence/no target choice/rerolls.
+5. Existing target structure: dedicated random Challenge pool of bosses/selected creatures, normal L/S/G pool unchanged. Card purchase grants included starter Challenge targets atomically after both Bossing prerequisite types; Skilling purchases do not satisfy gate. Subsequent targets purchased individually; existing boss unlocks reused where applicable. No normal boss-node count/FP milestone waiver. Shared rare table excluded;1/400-ish direction exact definition still reviewed.
+6. Prior approvals preserved: Questing store/remove but no destroy, free empty retry/one valid Fate allocation; activity lifetime duplicate baseline; automatic independent active item bounty FP/no paused payout; Master Grand actual hilt5 without prerequisite active-CA audit. Do not re-ask settled rules.
+7. A33 PDF remains explicit unfinished task. Coding unauthorized; real artifact/dependency/test exports/live detectors/exact policy separate gates.130,080 historical synthetic trajectories unchanged; no repeat unchanged runs to inflate progress.
 
-Stop reason: current approval checkpoint complete; next single target-unlock question pending. No full completion/background execution claim.
-
-Current A40: Challenge AND prerequisites and bundled starter target pool. Starting head45f522db23d25cf924d519dd9970716b67b86b21.
+Stop reason: latest tree/filter checkpoint complete; next single eligibility-diversity choice pending. No full-completion/background-work claim.
