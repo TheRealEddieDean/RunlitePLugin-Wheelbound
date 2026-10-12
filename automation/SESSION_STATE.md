@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261012-duplicate-rule
-- State: IDLE — owner released; no active lease.
+- State: ACTIVE — wb-20261012-quest-retry-cost owns WB-A36; lease through2026-10-12T22:00:00Z.
 - Branch: wheelbound-mode
 - Starting head:c6400ea7b9f83844c5a518abeac58da7ea8b183b
 - Claim:e301d58ea7631ddd93243eb52469e1e7a61d45be
@@ -28,3 +28,5 @@
 6. Coding remains unauthorized; future I01/I02 handoffs must obey current rules over old pinned inputs. I03–I10 still need detailed decomposition. Existing build passed, but actual XML/dependency/package exports, live adapters and exact policy are separate gaps.130,080 saved synthetic trajectories unchanged.
 
 Stop reason: current approval checkpoint completed; awaiting next single decision response. No full project completion claim.
+
+Current task WB-A36; starting head3d62a0d9ea0326428785bb3b7ceeb39c8b179f0f. User confirms no extra spin cost.

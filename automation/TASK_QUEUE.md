@@ -58,3 +58,5 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 | WB-A34 | Record Bounties Shop terminology and Master hilt item objective | P0 | Explicit reply2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; GRAND_FATES; affected specs | 7415922e: WB-D116/117 and17 affected specs;117 IDs verified; item-shop scope/old source supersession retained |
 
 | WB-A35 | Confirm slice lifetime purchase classification and continuous single-choice pacing | P0 | Explicit recommendation approval2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; WHEELS; shop/ledger/handoff/protocol | 9cf01adc: WB-D118/119;13 affected files;119 IDs checked; no numeric price change |
+
+| WB-A36 | Confirm zero extra allocation for empty-Questing retries | P0 | Explicit approval2026-10-12 | S | IN_PROGRESS | DECISIONS; wheel/assignment/store/tests/handoff | Empty retry no cost/reward/punishment; eventual valid Fate one spin; restart/repeat idempotence |
