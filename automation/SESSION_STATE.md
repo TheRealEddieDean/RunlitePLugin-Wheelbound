@@ -1,11 +1,11 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261012-design-answers
-- State: ACTIVE — wb-20261012-master-hilt owns WB-A34; lease through2026-10-12T21:00:00Z.
+- State: IDLE — owner released; no active lease.
 - Branch: wheelbound-mode
 - Starting verified head:3b7fba3cb1d97b5c4935610725fdc31d457b4b5b
 - Claim:f1fb6bae8d4e307b0b2f3be97be8efa6cbceebc9
-- Latest gameplay source:908aeafe40aa425845aa394647c16ab49c8209e4
+- Latest gameplay source:7415922e9d7d939360846ee5cfa5e07f09115c34
 - Final owning checkpoint: resolve from branch/file history; no circular self-hash.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
 - Current task: A32 Markdown reconciliation completed; A33 derived PDF refresh TODO.
@@ -31,3 +31,11 @@
 Stop reason: current answers committed and ready for next single-choice discussion. PDF refresh pending explicitly; no full project completion claim.
 
 Starting verified headcc8a874a0bc87a096402ea8a3599a3a57c0627d4. New task Master hilt objective and item-shop terminology.
+
+## Superseding continuation after WB-A34
+
+Latest completed WB-A34: WB-D116/117,117 decisions;17 updated files; item Bounties Shop distinct; Master Grand obtaining hilt5 without prerequisite active-CA history. Claimbb93c9f5; rules7415922e. Earlier CA-MIXED question is not a Master Grand gate. Do not re-ask the same conflated question. Historical separate CA/diary rewards were not explicitly removed; retain their evidence separately. User has not asked for another choice after this clarification: wait for request, then present one only. Duplicate first/reacquisition still unanswered.
+
+A33 PDF refresh remains unfinished: published version9/source284799b1 is stale. Generate from7415922e or later latest gameplay commit; read skills, render/inspect/save with version guard before claiming current. Old diary/CA source maps/model/oracle receipts unchanged; these are historical research, not a current Master win gate. No production code, live item detection, Java execution or policy review occurred.
+
+Uncommitted completed canonical deliverables: NONE after final guarded publication and remote byte verification. Final owning checkpoint resolved from file history. Protected main remainsc8cc38ac9a7ab74d9bc10125388da7cc75af99fa. Preserve unreviewed older repo/ docs and legacy smoke.json; no automatic background work.

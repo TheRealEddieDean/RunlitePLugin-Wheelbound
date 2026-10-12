@@ -55,4 +55,4 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A33 | Refresh derived PDF after latest explicit decisions | P1 | A32 committed source; PDF rendering/storage capability | S | TODO | build_pdf; automation/PDF_CHECKPOINT | Generate from new committed Markdown, render/inspect/save next version; published version9 stays marked stale until done |
 
-| WB-A34 | Record Bounties Shop terminology and Master hilt item objective | P0 | Explicit reply2026-10-12 | S | IN_PROGRESS | DECISIONS; GRAND_FATES; affected specs | Preserve earlier history, replace Master active-CA threshold win with hilt5 item, avoid conflating separate CA/diary rewards |
+| WB-A34 | Record Bounties Shop terminology and Master hilt item objective | P0 | Explicit reply2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; GRAND_FATES; affected specs | 7415922e: WB-D116/117 and17 affected specs;117 IDs verified; item-shop scope/old source supersession retained |
