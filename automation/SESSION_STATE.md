@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261012-design-answers
-- State: IDLE — owner released; no active lease.
+- State: ACTIVE — wb-20261012-duplicate-rule owns WB-A35; lease through2026-10-12T22:00:00Z.
 - Branch: wheelbound-mode
 - Starting verified head:3b7fba3cb1d97b5c4935610725fdc31d457b4b5b
 - Claim:f1fb6bae8d4e307b0b2f3be97be8efa6cbceebc9
@@ -39,3 +39,5 @@ Latest completed WB-A34: WB-D116/117,117 decisions;17 updated files; item Bounti
 A33 PDF refresh remains unfinished: published version9/source284799b1 is stale. Generate from7415922e or later latest gameplay commit; read skills, render/inspect/save with version guard before claiming current. Old diary/CA source maps/model/oracle receipts unchanged; these are historical research, not a current Master win gate. No production code, live item detection, Java execution or policy review occurred.
 
 Uncommitted completed canonical deliverables: NONE after final guarded publication and remote byte verification. Final owning checkpoint resolved from file history. Protected main remainsc8cc38ac9a7ab74d9bc10125388da7cc75af99fa. Preserve unreviewed older repo/ docs and legacy smoke.json; no automatic background work.
+
+Current task WB-A35; starting headc6400ea7b9f83844c5a518abeac58da7ea8b183b; record duplicate recommendation and corrected prompt pacing.
