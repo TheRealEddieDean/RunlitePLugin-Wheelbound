@@ -46,3 +46,5 @@ WB-D116/117: label Bounties Shop as item goal→FP. Master CA Grand checklist re
 WB-D121: Questing offers Store/Reactivate, not Destroy. Explain storage cost/room and final active minimum. During full-wheel special displacement, Questing is selectable only for legal storage; never suggest destroying it or grant extra capacity. Other legal ordinary choices remain player-selected.
 
 WB-D122: Bossing Challenge card clearly indicates a difficult CA or significant rare-drop objective, with exact task/source/item and authored reward when determined. Do not label it merely Greater KC or permit target choice/rerolls. Objective-generation order is pending; no misleading fully specified offer before target data exists.
+
+WB-D123: show Challenge draw as its eligible boss/creature target pool, separate from normal Bossing outcomes. Display actual committed eligible odds when specified; never offer player target selection/rerolls or suggest card purchase silently unlocked every creature. Exact offer/objective reveal timing awaits specification.

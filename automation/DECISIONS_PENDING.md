@@ -16,7 +16,7 @@ Authority: docs/wheelbound/DECISIONS.md. Latest explicit replies2026-10-12 are W
 | --- | --- | --- |
 | Separate legacy CA reward scope | Historical per-boss reward is separate from item Bounties Shop and Master Grand | Preserve evidence; no mixed-CA gate on hilt5 Grand; do not silently delete or invent a separate reward |
 | Duplicate first/reacquisition / choice6 — RESOLVED | WB-D118 first-instance baseline includes starting grants; later new purchases escalate despite destruction | Same-instance Satchel return/replay does not increment |
-| Q9 existence — RESOLVED / Challenge pool pending | WB-D122 confirms fourth card: difficult CA or significant rare drop | Define eligible boss/creature pool/unlocks/order and validate catalog; random/no reroll remains |
+| Q9 existence — RESOLVED / Challenge pool pending | WB-D122 confirms fourth card: difficult CA or significant rare drop | WB-D123 dedicated eligible boss/creature pool confirmed; define target unlocks/order and validate catalog; random/no reroll remains |
 | Q6 residual | Other unavailable activity pools, all-unavailable/postcommit recovery; empty Questing retry cost resolved zero by WB-D120 | Persist verified-empty retry provenance; unknown is not empty; no invented cost/penalty/free edits |
 | Q2 | Genuinely full/unsupported Coffer forced donation | Actual current-client boundary evidence first; no forced death or invented escape |
 | Q5 conditional | Fallback only if exact restriction fails specific policy review | Preserve Trade with; route/review packet remains unsent |
@@ -29,3 +29,5 @@ Earlier Q6/Q10 analysis artifacts and A24 manual-claim oracle inputs remain immu
 Bounties means item objectives in the Bounties Shop. Master CA Grand Fate requires obtaining Ghommal's hilt5; no plugin-maintained active-only CA tally or anti-cheese audit. Earlier mixed-CA choice is no longer a Master Grand condition. Any historical separate boss-mastery/diary reward feature is separate and its scope is not deleted/invented by this clarification. Do not ask the same conflated question again. One-choice-at-a-time pacing remains; automatically present the next single choice until stopped.
 
 Questing voluntary edit question RESOLVED by WB-D121: removable through normal storage, never destroyable. Not mandatory active; no special storage waiver. Continue next single choice automatically until stopped.
+
+WB-D123 resolves pool separation: Challenge randomly draws eligible bosses/selected creatures from a dedicated target pool; L/S/G keeps normal Bossing pool. Remaining next choice: target unlock policy for non-boss creatures (individual paid nodes versus access-based availability); no policy inferred from pool approval.

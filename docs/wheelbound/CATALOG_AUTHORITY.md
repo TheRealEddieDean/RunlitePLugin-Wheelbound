@@ -34,3 +34,5 @@ Promotion requires source/access evidence, objective feasibility, positive and n
 The manifest now has seven catalog records. item_bounties_normative_v1.json preserves exactly 100 targets including two grouped families; it is a new delegated candidate (WB-D107), not an enabled or historically approved full catalog. All per-member reward routes and family FP remain gated. Existing six catalog files and H3 pins are untouched.
 
 The authority-v3 manifest contains eight records, including separately versioned50-template punishment candidate. Its disabled/withheld method/location/risk gates remain explicit; original six snapshots and H3 hashes are unchanged.
+
+WB-D123 requires a separately versioned Bossing Challenge boss/creature target catalog, distinct from both ordinary boss roster and purchased card types. Include only supported eligible CA/item-hunt entries. Normal64-node roster/source manifests are not rewritten to add all these creatures. Target unlock mapping/order/weights remain pending.

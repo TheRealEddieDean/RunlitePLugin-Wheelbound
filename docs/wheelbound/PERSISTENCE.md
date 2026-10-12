@@ -38,3 +38,5 @@ WB-D118: persist per-activity ever-acquired baseline and paid subsequent-purchas
 WB-D121: Questing type cannot be destroyed by direct edit, forced displacement, migration or destructive recovery. Store/return preserves UUID/modifiers/lifetime state. Do not infer mandatory active Questing; normal5/3 active validation applies. No extra storage/refund/reset.
 
 WB-D122: save Bossing Challenge purchase separately from Skilling, objective family, canonical task or item/source context, catalog/version, frozen reward and selected target. Exact new pool/order schema pending; do not overwrite ordinary KC assignment semantics or use display-name matching to prove completion.
+
+WB-D123: persist dedicated Challenge target catalog/version and selected boss/creature context; normal L/S/G pool remains separate. New creatures cannot leak into ordinary boss selection during migration/replay. Card-type purchase and target eligibility are separate fields/contracts; unlock mapping pending.

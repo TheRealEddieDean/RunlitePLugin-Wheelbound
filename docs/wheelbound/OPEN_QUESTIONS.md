@@ -18,7 +18,7 @@ Q7 — RESOLVED: S8-M0296–0297 explicitly confirms random forced Death’s Whe
 
 Q8 — RESOLVED precondition: S8-M0321 requires no active Fate. Pending mandatory Punishment/Sacrifice must finish before Grand activation (WB-D089). This adds no minimum level/playtime gate.
 
-Q9 — EXISTENCE RESOLVED by WB-D122: Bossing Challenge is a fourth card with difficult CA or significant rare creature-drop objective. Remaining: dedicated Challenge creature pool versus normal Bossing pool, unlock mapping, target-generation sequence and validated catalog/detectors. Random target/no reroll remains. No1/400 hard cutoff or exact rate/reward approved.
+Q9 — EXISTENCE RESOLVED by WB-D122: Bossing Challenge is a fourth card with difficult CA or significant rare creature-drop objective. Remaining: WB-D123 dedicated eligible boss/creature target pool confirmed; unlock mapping, target-generation sequence and validated catalog/detectors. Random target/no reroll remains. No1/400 hard cutoff or exact rate/reward approved.
 
 Q10 — RESOLVED by WB-D112,2026-10-12: supported qualifying active bounties automatically credit FP once, independent of assignment success/failure/Reject. No manual claim, escrow or clawback. Prior forfeiture/manual-claim sources remain superseded history. Qualification of mixed CA aggregate remains its own open choice.
 
@@ -34,3 +34,5 @@ Interaction protocol WB-D115: present one choice, handle discussion, and automat
 Bounties means item objectives in the Bounties Shop. Master CA Grand Fate requires obtaining Ghommal's hilt5; no plugin-maintained active-only CA tally or anti-cheese audit. Earlier mixed-CA choice is no longer a Master Grand condition. Any historical separate boss-mastery/diary reward feature is separate and its scope is not deleted/invented by this clarification. Do not ask the same conflated question again. One-choice-at-a-time pacing remains; automatically present the next single choice until stopped.
 
 Questing voluntary edit question RESOLVED by WB-D121: removable through normal storage, never destroyable. Not mandatory active; no special storage waiver. Continue next single choice automatically until stopped.
+
+WB-D123 resolves pool separation: Challenge randomly draws eligible bosses/selected creatures from a dedicated target pool; L/S/G keeps normal Bossing pool. Remaining next choice: target unlock policy for non-boss creatures (individual paid nodes versus access-based availability); no policy inferred from pool approval.

@@ -46,3 +46,5 @@ WB-D100 makes boss purchases a permanent pool commitment: do not let ordinary Ma
 WB-D111: if no eligible quests remain, a Questing Master landing retains its slice, shows a brief notice and automatically respins; tier/access rules do not become free unlocks. Unknown data is not empty. WB-D120 confirms no extra spin cost for empty retry; eventual valid Fate one spin. Wider unavailable-pool policy remains unverified.
 
 WB-D122 adds Bossing Challenge to the separate permanent Bossing card unlock pool, alongside L/S/G. Its price/prerequisite and boss/creature eligible pool mapping remain specification/balance work; do not automatically add all rare-drop creatures as normal purchased boss nodes. Existing permanent boss membership/no artificial stat gates remains.
+
+WB-D123: dedicated Challenge target pool may include selected non-boss creatures; normal L/S/G boss roster unchanged. Whether these targets require individual FP unlock nodes or another eligibility rule remains pending. Do not add nodes/prices or grant all targets automatically from card purchase before approval.
