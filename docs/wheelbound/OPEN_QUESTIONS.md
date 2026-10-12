@@ -18,7 +18,7 @@ Q7 — RESOLVED: S8-M0296–0297 explicitly confirms random forced Death’s Whe
 
 Q8 — RESOLVED precondition: S8-M0321 requires no active Fate. Pending mandatory Punishment/Sacrifice must finish before Grand activation (WB-D089). This adds no minimum level/playtime gate.
 
-Q9 — EXISTENCE RESOLVED by WB-D122: Bossing Challenge is a fourth card with significant unique item-drop hunt only (WB-D128). Remaining: WB-D123 dedicated pool and WB-D124 AND prerequisite/starter-bundle/individual expansion confirmed; exact starter set/tiers/prices, target-generation sequence and validated catalog/detectors pending. Random target/no reroll remains. No1/400 hard cutoff or exact rate/reward approved.
+Q9 — EXISTENCE RESOLVED by WB-D122: Bossing Challenge is a fourth card with significant unique item-drop hunt only (WB-D128). Remaining: WB-D123 dedicated pool and WB-D124 AND prerequisite/starter-bundle/individual expansion confirmed; exact starter set/tiers/prices, target-generation sequence and validated catalog/detectors pending. Random target/no reroll remains. WB-D131 now confirms inclusive1/400–1/1500 band; actual source rates/reward tables still unverified.
 
 Q10 — RESOLVED by WB-D112,2026-10-12: supported qualifying active bounties automatically credit FP once, independent of assignment success/failure/Reject. No manual claim, escrow or clawback. Prior forfeiture/manual-claim sources remain superseded history. Qualification of mixed CA aggregate remains its own open choice.
 
@@ -43,4 +43,6 @@ WB-D126 eligible-target diversity resolved: minimum3 distinct actually eligible 
 
 WB-D128: Bossing Challenge is item-drop-only; CA family and random-family decision superseded, incomplete-versus-repeat question obsolete for this card. Bundle/AND tree/dedicated random pool/≥3 supported drop targets retained. WB-D129 resolves ownership eligibility: owned item can still be assigned, but fresh active assigned-source drop during assignment required; old items never satisfy.
 
-WB-D129 fresh-drop rule confirmed. Next narrow objective policy: for a creature with several eligible uniques, assign one specific item versus accept any explicitly listed eligible unique from that creature. Recommend one specific frozen item; accepted-set alternative changes expected hunt time. No policy inferred yet.
+WB-D129 fresh-drop rule confirmed. WB-D130 resolves one specific item. WB-D131 fixes inclusive1/400–1/1500 specific-item band; no any-unique substitute or guaranteed kill cap.
+
+WB-D130/131 goal and rarity resolved. Next narrow rate-basis choice: for group encounters, use player's personal chance of receiving the selected item versus whole group's drop chance. Recommend personal probability to honor grind ceiling; actual source/method/contribution data still requires review. No party rule adopted yet.

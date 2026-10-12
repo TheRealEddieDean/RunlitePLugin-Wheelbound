@@ -70,3 +70,5 @@ WB-D126→I03/I05/I09: minimum3 distinct actually eligible Challenge boss/creatu
 WB-D127 family draw superseded by WB-D128; I03/I05/I09 uses item-drop-only typed target/result, no picker/reroll and reviewed valid eligibility.
 
 WB-D129→I03/I05/I09: old ownership no exclusion/no completion; fresh active assigned-source postassignment receipt required; no reuse/bank/trade/buy/re-pick; separate assignment versus permanent bounty dedup keys.
+
+WB-D130→I03/I05/I09 one specific frozen logical item, other uniques not substitutes. WB-D131→catalog/I03/I05 inclusive specific-item probability band[1/1500,1/400], reviewed source/context and normalization; no hard kill/time/pity outcome.

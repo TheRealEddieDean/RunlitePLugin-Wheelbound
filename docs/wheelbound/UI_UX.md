@@ -56,3 +56,5 @@ WB-D126: owned Challenge remains visible as unlocked; when below3 eligible disti
 WB-D128: no CA family or family selector/draw; explain random target/item hunt and reveal committed objective without reroll. Exact reveal sequencing/weights remain technical specification.
 
 WB-D129: tell player Already-owned items do not count - obtain a fresh drop during this assignment. Do not offer turn-in/withdrawal or instant completion from inventory/collection log. Keep eligible target display even if item is owned. Show supported fresh acquisition/completion once; no duplicated FP feedback on replay.
+
+WB-D130/131: show the exact target item/icon/name, assigned source and authored reward; other uniques do not count. Catalog rarity eligibility1/400–1/1500 is not a guarantee of a drop within1500 kills. Do not show pity completion/alternate-item claim; retain Pause/Reject under existing rules. Display rates only when reviewed with actual context.

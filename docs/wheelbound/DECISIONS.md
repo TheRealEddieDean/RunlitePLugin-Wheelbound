@@ -1299,6 +1299,7 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 ## WB-D125 - Rare-drop Challenge targets are creature-specific uniques, not shared rare table drops
 
 - Status: CONFIRMED category/exclusion and rarity direction,2026-10-12; exact threshold boundary and catalog still under review.
+- Later rarity supersession: WB-D131 fixes inclusive1/400 through1/1500 band; earlier exploratory cutoff wording below is historical. Creature-specific/shared-table exclusion remains current.
 - Current clarification: WB-D128 removes CA objectives from this card; unique-drop rules/three-distinct-target floor remain, now applied only to supported item hunts.
 - Authority: Explicit user design in this Work conversation.
 - Evidence: User specifies monsters with unique drops rarer than roughly1-in400 and explicitly excludes the ultra-rare standard table shared by monsters.
@@ -1350,6 +1351,28 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Decision: An item the player already owns may still be assigned as a Bossing Challenge target. Completion requires a new qualifying drop during that active assignment from its assigned boss/creature/source. Prior inventory, equipment, bank or collection history cannot complete it. The player may not reuse/withdraw/drop-and-repick, buy or trade an existing item to satisfy the hunt.
 - Rationale: Keep the Challenge pool useful as the collection grows while ensuring each assignment is a genuine new hunt.
 - Affects: FATE_CARDS, source/loot evidence contracts, catalogs, STATE_CONTRACT, PERSISTENCE, UI and I03/I05 tests.
-- Exceptions/dependencies: Prior item ownership alone does not remove an otherwise supported eligible creature from the three-target pool. Require assignment/account/run/session context, active earning boundary and unique source receipt; container gain without source proof insufficient. Paused earning/no-backfill and no payout while paused remain. Duplicate callbacks/restart pay once. Delayed loot delivery requires reviewed earning-versus-delivery evidence, not a guessed timestamp or automatic rejection. Independent Bounties Shop goal remains once-only under its own rules; repeating a Challenge hunt does not reset a previously paid permanent bounty. Exact single-item versus accepted-unique-set objective policy still pending; no live detector claimed.
+- Exceptions/dependencies: Prior item ownership alone does not remove an otherwise supported eligible creature from the three-target pool. Require assignment/account/run/session context, active earning boundary and unique source receipt; container gain without source proof insufficient. Paused earning/no-backfill and no payout while paused remain. Duplicate callbacks/restart pay once. Delayed loot delivery requires reviewed earning-versus-delivery evidence, not a guessed timestamp or automatic rejection. Independent Bounties Shop goal remains once-only under its own rules; repeating a Challenge hunt does not reset a previously paid permanent bounty. WB-D130 fixes one specific item per hunt; no live detector claimed.
 - Supersession: WB-D128 already-owned-item eligibility OPEN; no possession-based completion exception granted.
 - Acceptance: Already-owned target can be drawn; earlier/drop-and-repick/bank-withdraw/buy/trade item does not finish; new supported assigned active drop can finish once; preassignment/paused/foreign/unrelated-source evidence cannot; duplicate/restore preserves settled result without reward repetition.
+
+## WB-D130 - Bossing Challenge assigns one specific unique item
+
+- Status: CONFIRMED explicit approval,2026-10-12.
+- Authority: User says pick1 specifically after one-item versus any eligible unique question.
+- Decision: Each Bossing Challenge requires one specific authored unique item selected by Fate and clearly shown. Another unique from the same creature does not complete it, even if otherwise eligible for another Challenge. Freeze exact canonical item/source identity with the assignment; no player item choice or reroll.
+- Rationale: A precise hunt objective rather than an any-unique shortcut with different completion odds.
+- Affects: FATE_CARDS, Challenge catalogs, receipt/persistence/UI and I03/I05 tests.
+- Exceptions/dependencies: Accepted canonical ID variants of the same logical item need explicit reviewed mapping; this is not permission to accept different unique item types. Fresh active assigned-source postassignment drop remains required; prior ownership neither excludes nor completes. Picking one item type does not approve multi-copy quotas or consume/turn-in the item. Target/reward/item weighting remains candidate work.
+- Supersession: WB-D129 one-item-versus-accepted-unique-set ambiguity.
+- Acceptance: Selected item qualifies from assigned fresh active source once; a different unique/common/shared-table item does not; committed item/reward/context remains after restart; existing possession/buy/trade cannot substitute.
+
+## WB-D131 - Challenge specific-item rarity must be between1/400 and1/1500
+
+- Status: CONFIRMED explicit lower/upper rarity bounds,2026-10-12; inclusive endpoints are the ordinary interpretation of between stated in the acknowledgement.
+- Authority: User sets a ceiling between1/400 and1/1500 and excludes anything above to permit grinding without excessive rarity.
+- Decision: Eligible specific Challenge item probability p lies in inclusive[1/1500,1/400]. In normalized1-in-N notation,400≤N≤1500. Exclude more-common-than1/400 and rarer-than1/1500 targets. Apply to the selected specific item, not aggregate chance of any unique or a conditional subtable roll. Shared rare-drop-table/generic loot remains excluded even if its probability falls in-band.
+- Rationale: Bound catalog rarity while retaining significant item hunts.
+- Affects: FATE_CARDS, rate/source catalog validation, economy/time review, target pool/eligibility and I03/I05 tests.
+- Exceptions/dependencies: Published/base versus player-specific/group probability definition, method variants/boosts and variable encounters need reviewed policy/source data; do not invent live rates. Unknown/unverified rate cannot be advertised eligible. Interval uses rational probability, not a raw textual denominator when numerator differs from1. This is not a1500-kill/time cap, guaranteed drop, consolation completion or pity reward. Keep fresh-drop-only completion, free Pause and existing Reject rules. Kill speed/access/supply cost still need curated expected-time/reward review, without a new universal time cap. No concrete target rates, roster membership, FP prices/rewards or party rule approved here.
+- Supersession: WB-D125 exploratory1/400-only cutoff and all related unbounded-rarity wording; exact item/rate research remains gated.
+- Acceptance:1/400 and1/1500 pass;1/399 and1/1501 fail. Equivalent fractions normalized correctly; selected-item rate tested separately from any-unique/subtable chance. Unknown/shared-table items fail catalog enablement; no completion without the selected fresh drop.
