@@ -41,4 +41,4 @@ Each genuinely available scheduled run independently reads checkpoints, checks o
 Concise actual deliverables, commit links, remaining work, major questions, technical blockers and recommended next engineering milestone. No false full-completion, background-work or quota claims.
 
 ## Design-choice pacing — explicit user preference2026-10-12
-Present one design choice at a time. Receive its answer and handle follow-up; wait for the user to request another before presenting the next. Do not send a batch/list of questions. Continue routine authorized work and save approvals immediately in DECISIONS/specs/commits. Unanswered choices remain pending; do not infer blanket approval.
+Present one design choice at a time. Receive its answer and handle follow-up; automatically present the next relevant single choice after resolving/saving the answer, until the user says stop (WB-D119 supersedes the earlier wait-for-request rule). Do not send a batch/list of questions. Continue routine authorized work and save approvals immediately in DECISIONS/specs/commits. Unanswered choices remain pending; do not infer blanket approval.

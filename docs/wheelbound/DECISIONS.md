@@ -90,7 +90,7 @@ Sources S1-S5 and access limits are defined in [README](README.md). Approval pro
 - Decision: Duplicate costs escalate by activity lifetime purchases; deletion does not reset.
 - Rationale: Avoid cheap destructive reacquisition exploit.
 - Affects: [WHEELS](WHEELS.md), [ECONOMY](ECONOMY.md).
-- Exceptions/dependencies: First/reacquisition counting OPEN.
+- Exceptions/dependencies: First/reacquisition counting resolved by WB-D118 on2026-10-12; older open assessment superseded.
 
 ## WB-D010 - Enhancement ladder 1/1.25/1.5/2/3; fixed prices only by tier
 
@@ -1180,7 +1180,7 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 
 ## WB-D115 - Present design choices one at a time
 
-- Status: CONFIRMED workflow preference,2026-10-12; no gameplay change.
+- Status: PARTLY SUPERSEDED by WB-D119: one choice at a time remains; waiting for a request before next is replaced by automatic next prompting until user says stop.
 - Authority: Explicit user follow-up in this Work conversation.
 - Decision: Present one design choice, receive the answer and handle its follow-up; wait for the user to request another before presenting the next. Do not send a batch/laundry list.
 - Rationale: Make each choice easy to answer and discuss.
@@ -1212,3 +1212,26 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Exceptions/dependencies: No award while paused, no artificial level/playtime/spin minimum, sealed destiny and no-active-obligation Grand-entry rule remain. Exact item identity/observation and supported ownership surfaces still need implementation/current-client validation. Do not replace hilt5 with hilt4, invent higher-tier equivalence, require per-CA history or reintroduce the points threshold as an additional win gate. Acquiring/checking the actual item must be distinguished from a mere display-name match; no new live verification claimed. This does not alter other Grand Fate objectives or item-bounty qualification rules.
 - Supersession: WB-D081/WB-D104 Master threshold/active-progress predicate; old possession-insufficient Grand wording. Source facts about Master tier and hilt numbering remain; past raw CA mapping research remains valid for any separately scoped CA feature.
 - Acceptance: Actual validated hilt5 goal can complete when Grand verification is active/eligible without auditing how prerequisite CAs were earned; CA points alone without the item do not complete it; paused processing grants no win; other obligations still block entry.
+
+## WB-D118 - First slice establishes lifetime baseline; later new instances use duplicate ladder
+
+- Status: CONFIRMED explicit approval,2026-10-12.
+- Authority: User says go with the recommendation immediately after the proposed slice-price classification.
+- Evidence: Recommendation specifies lifetime ladder despite destroying prior copies; starting slices count as first instance; Satchel return does not advance ladder.
+- Decision: Per activity, the first-ever instance establishes initial ownership. A granted starting slice establishes that baseline just like a first paid acquisition. Every subsequently purchased new instance uses the next activity-specific lifetime duplicate price even if earlier instances were all destroyed. Storing/reactivating the same instance is not a new purchase and does not increment that ladder. Destruction never resets history.
+- Rationale: Prevent destruction/reacquisition from bypassing escalating duplicate costs; distinguish a new slice from movement of an existing slice.
+- Affects: WHEELS, ECONOMY, FATE_SHOP, PERSISTENCE, STATE_CONTRACT, I02 transaction handoff and acceptance tests.
+- Exceptions/dependencies: First-ever paid instance for an activity without a starting grant uses the normal first-slice price. Initial/granted baseline is not an extra paid duplicate purchase. Only committed successful new-instance purchases advance the paid duplicate count once; cancellation/failure/replay/return never does. Activity unlock alone is not a slice acquisition. Exact base/duplicate prices remain balance candidates. Old-save migration must retain lifetime evidence; current zero owned slices cannot prove never-owned.
+- Supersession: WB-D009/WHEELS first/reacquisition OPEN; no change to tier-only enhancement pricing, instance-preserving Satchel or free no-refund destruction.
+- Acceptance: Starting Mining→first bought Mining is duplicate1; never-owned new activity→first paid instance is base, next new purchase duplicate1; destroy every copy→next price continues; store/return→no increment; replay successful purchase→one increment only; other activities unaffected.
+
+## WB-D119 - Automatically prompt the next single design choice until stopped
+
+- Status: CONFIRMED explicit workflow correction,2026-10-12; no gameplay change.
+- Authority: User says keep prompting until I say stop.
+- Decision: Present one choice at a time, handle its response/follow-up, save resolved approval, then automatically present the next relevant choice until the user says stop. Do not require the user to request each next choice, and do not send a batch/laundry list.
+- Rationale: Preserve simple discussion while continuing the design decision workflow without repeated next requests.
+- Affects: automation/PROTOCOL, question discussion and resume checkpoint.
+- Exceptions/dependencies: Do not skip necessary clarification or treat an unresolved response as blanket approval. Continue routine authorized work; no production coding or automatic background continuation authorized.
+- Supersession: WB-D115 waiting-for-next-request clause; one-at-a-time requirement remains.
+- Acceptance: After a resolved answer is committed, next single choice follows unless stopped; no repeated settled questions.

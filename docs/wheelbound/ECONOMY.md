@@ -66,3 +66,5 @@ The committed H4 core reports median FP 2,410/1,972 for careful retain/withhold 
 
 ## Latest confirmed reward timing
 WB-D112: bounty FP automatically credits once on supported qualifying active completion and survives assignment failure/Reject. No manual claiming, escrow or clawback. Reject completion FP/penalty/Punishment rules remain independently applicable. WB-D114: no reward payout while paused; preserve paid balances and prior evidence. No numeric reward/price changes. Saved H1–H4 models are historical hypotheses and do not establish this latest settlement or Questing retry policy.
+
+WB-D118 fixes purchase classification: first-ever slice instance establishes baseline, including starting grants. Later new purchased instances use the next lifetime duplicate tier regardless of destruction/current ownership. Never-owned activity first paid instance uses base slice price; return of an existing Satchel instance is not a duplicate purchase. Only committed successful new-instance transactions increment once. No numeric price adoption or enhancement-price coupling.

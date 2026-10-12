@@ -27,7 +27,7 @@ Activity unlocks and purchased Bossing pool membership survive slice destruction
 
 Capacity ladder3/6/10/15 is documented delegated design; exact prices remain balance candidates. Deactivation costs FP, reactivation costs FP, destruction is free/no refund, and rearrangement is free with no odds change. Discretionary costs cannot create debt. Full storage prevents storing another slice, not legal free destruction. The final wheel must retain≥5 ordinary across≥3 activities and≤24 total, counting every special. Stored slices never satisfy active minimums.
 
-Duplicate prices depend on the activity's lifetime duplicate purchases. Enhancement prices depend only on destination tier. Neither destruction nor storage resets duplicate history. The current WHEELS document explicitly leaves first acquisition versus reacquisition counter semantics OPEN. Implement already-classified duplicate transactions using known counts; leave ambiguous first/reacquisition classification gated rather than silently choosing a counter convention. This is an existing boundary, not a new historical decision or arbitrary user number question.
+Duplicate prices depend on the activity's lifetime duplicate purchases. Enhancement prices depend only on destination tier. Neither destruction nor storage resets duplicate history. WB-D118 resolves classification: first-ever instance establishes baseline, including starting grants. First paid acquisition of a never-owned activity uses base price; all later purchased new instances use the next paid duplicate tier even after destruction. Same-instance Satchel return does not increment. Port these as actual Java transaction tests; numeric prices remain versioned candidates.
 
 ## Required acceptance examples
 

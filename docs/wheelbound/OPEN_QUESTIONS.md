@@ -26,9 +26,9 @@ PAUSE-CLAIM — RESOLVED by WB-D114: no claiming or reward payout while paused. 
 
 Earlier CA-MIXED/choice5 discussion was conflated with the Master Grand objective. WB-D117 removes prerequisite-CA timing as a Master Grand gate. Any separately retained per-boss reward needs its own scope reconciliation; do not re-ask the same Master question.
 
-Duplicate first/reacquisition / choice6 remains unanswered as noted in WHEELS.
+Duplicate first/reacquisition / choice6 RESOLVED by WB-D118: initial baseline includes grants; later new instances use lifetime ladder after destruction; Satchel return does not increment.
 
-Interaction protocol WB-D115: present one choice, handle discussion, and wait for user request before next. No batch/laundry list.
+Interaction protocol WB-D115: present one choice, handle discussion, and automatically present next until user says stop. No batch/laundry list.
 
 ## Latest clarification2026-10-12 — WB-D116/117
-Bounties means item objectives in the Bounties Shop. Master CA Grand Fate requires obtaining Ghommal's hilt5; no plugin-maintained active-only CA tally or anti-cheese audit. Earlier mixed-CA choice is no longer a Master Grand condition. Any historical separate boss-mastery/diary reward feature is separate and its scope is not deleted/invented by this clarification. Do not ask the same conflated question again. One-choice-at-a-time pacing remains; wait for user request before another choice.
+Bounties means item objectives in the Bounties Shop. Master CA Grand Fate requires obtaining Ghommal's hilt5; no plugin-maintained active-only CA tally or anti-cheese audit. Earlier mixed-CA choice is no longer a Master Grand condition. Any historical separate boss-mastery/diary reward feature is separate and its scope is not deleted/invented by this clarification. Do not ask the same conflated question again. One-choice-at-a-time pacing remains; automatically present the next single choice until stopped.

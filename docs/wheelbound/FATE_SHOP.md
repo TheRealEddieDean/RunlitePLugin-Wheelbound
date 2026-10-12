@@ -1,5 +1,5 @@
 # Fate Shop
-Categories: Wheel Manipulation; Fate Manipulation; Defiance and Protection; Account Access. Tree unlocks content; shop modifies the experience. Bounties have their own claim panel; earlier four-shop terminology was UI grouping, not authority to duplicate prices.
+Categories: Wheel Manipulation; Fate Manipulation; Defiance and Protection; Account Access. Tree unlocks content; shop modifies the experience. Bounties Shop has item goals and automatic active FP-earned feedback (WB-D112/116), not a manual claim panel; earlier four-shop terminology was UI grouping, not authority to duplicate prices.
 
 Wheel: activity slice, duplicates, fixed-tier enhancements, Satchel capacity/storage/return.
 Fate: Standard default; two different independently generated Standard targets at run start. Permanent category-specific card pools; upgrade to three offerings. Same-type offers allowed. Bossing Lesser/Standard/Greater available when unlocked/eligible.
@@ -9,3 +9,5 @@ Account: vendor directory and GE permanent access.
 Show eligibility, current FP, exact price, resulting odds and irreversible loss before confirmation. Optional purchases cannot create debt. All receipts persist atomically with inventory/unlock changes. Relevant Defy tabs reveal after encounter (S3, historical approval UNVERIFIED).
 
 S8-M0343/0345 explicitly confirms the central shop versus content tree distinction (WB-D106). S8-M0394 selects progressively surfaced Defiance/Protection after first Defy under delegated authority; Pardon introduction follows shop banning. This does not permit remote NPC unlock. Satchel capacities 3/6/10/15 were selected under user’s numeric delegation, not individually quoted numeric approvals. Slice protection was rejected at M0365; item Blessings remain.
+
+WB-D118: quote first-instance versus duplicate based on lifetime activity ownership, not current active/storage count. Starting grants establish the first instance. Every later new purchased slice advances its activity duplicate ladder once; same-instance Satchel return does not. Destruction cannot reset or discount reacquisition. Exact price tables remain balance candidates.
