@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261012-boss-challenge
-- State: IDLE — owner released; no active lease.
+- State: ACTIVE — wb-20261012-challenge-pool owns WB-A39; lease through2026-10-12T22:00:00Z.
 - Branch: wheelbound-mode
 - Starting head:62c46fd8acd79740e2c320f2c8425cf094447b6e
 - Claim:1f92fb92f25b9350a02ef9d3396aa8e1d3744735
@@ -26,3 +26,5 @@
 6. A33 PDF refresh unfinished/stale. Coding still unauthorized; actual report/dependency/jar exports/live detectors/exact policy separate.130,080 historical synthetic trajectories unchanged; do not rerun unchanged inputs to inflate progress.
 
 Stop reason: explicit card approval checkpoint complete; next single pool decision pending. No full project completion/background work claim.
+
+Current A39: dedicated eligible random Challenge boss/creature target pool; starting head0220707247c860bd57c6f149c1cbb863a06c519e.
