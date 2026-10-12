@@ -46,6 +46,26 @@
       "path": "automation/pipeline_acceptance/ACCEPTANCE.md",
       "sha256": "4e9225008701cf5045ee5bab2b0c761584f141009bbb3750e2da234a896cfaf1",
       "git_blob": "f328c9781dbedd72010a0bb3dda068a3cd664195"
+    },
+    {
+      "path": "docs/wheelbound/WHEELS.md",
+      "sha256": "a0720fd6dcfe8ad642fa829baaeb61ab70dda6faab3d9c11647c5f4c419dea28",
+      "git_blob": "eeb4fd82b27d3afa0fb49c0faf489fa38f88b70d"
+    },
+    {
+      "path": "docs/wheelbound/FATE_SHOP.md",
+      "sha256": "1971f8148f97cfdcbbd767bc11cf13e2a4f212b001e9a17f770e25311ba64ab0",
+      "git_blob": "b65934e40b93878fcfdb17c97d01826f0f5586f5"
+    },
+    {
+      "path": "docs/wheelbound/DEFY_FATE.md",
+      "sha256": "c412ff37311c18e673f0ef2941a9aa99b4056ef7a868d64569553ed6d535e383",
+      "git_blob": "a4572699627184ee777bf0993e6df8a46836e840"
+    },
+    {
+      "path": "docs/wheelbound/ECONOMY.md",
+      "sha256": "54b4853a84252d7d68cabbfe0ebf38214a420cfa57f0a4fa1a4b3f0a83d14982",
+      "git_blob": "44eda8d8cf44b7eb580316a82f5520c5a36f685a"
     }
   ]
 }
