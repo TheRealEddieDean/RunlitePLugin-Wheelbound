@@ -47,4 +47,10 @@ WB-D111: if no eligible quests remain, a Questing Master landing retains its sli
 
 WB-D122 adds Bossing Challenge to the separate permanent Bossing card unlock pool, alongside L/S/G. Its price/prerequisite and boss/creature eligible pool mapping remain specification/balance work; do not automatically add all rare-drop creatures as normal purchased boss nodes. Existing permanent boss membership/no artificial stat gates remains.
 
-WB-D123: dedicated Challenge target pool may include selected non-boss creatures; normal L/S/G boss roster unchanged. Whether these targets require individual FP unlock nodes or another eligibility rule remains pending. Do not add nodes/prices or grant all targets automatically from card purchase before approval.
+WB-D123: dedicated Challenge target pool may include selected non-boss creatures; normal L/S/G boss roster unchanged. WB-D124 now confirms individual expansion nodes after a bundled starter set. Exact starter members/tiers/prices remain pending; do not grant all targets or alter normal boss nodes.
+
+## Confirmed Bossing Challenge subtree — WB-D124
+
+Bossing Lesser AND Bossing Greater → purchase Bossing Challenge + automatic authored starter target bundle → expanded individual creature target unlock nodes. This is an explicit allOf gate, not either/or; Skilling card counterparts do not satisfy it. Standard is default. Reveal the downstream expansion branch after purchase; prerequisite previews may explain its benefits beforehand without granting access.
+
+Starter targets enter only the Challenge pool; normal L/S/G boss unlocks/64-node grouping are unchanged. Non-starter boss targets reuse existing boss unlocks where applicable; non-boss expansion targets have individual FP unlocks. Exact starter members/count, tiers and prices remain delegated catalog/balance work. Actual access/support gates remain. Ownership variety can differ from eligible variety; a minimum actual count is not yet approved.

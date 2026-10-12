@@ -48,3 +48,5 @@ WB-D121: Questing offers Store/Reactivate, not Destroy. Explain storage cost/roo
 WB-D122: Bossing Challenge card clearly indicates a difficult CA or significant rare-drop objective, with exact task/source/item and authored reward when determined. Do not label it merely Greater KC or permit target choice/rerolls. Objective-generation order is pending; no misleading fully specified offer before target data exists.
 
 WB-D123: show Challenge draw as its eligible boss/creature target pool, separate from normal Bossing outcomes. Display actual committed eligible odds when specified; never offer player target selection/rerolls or suggest card purchase silently unlocked every creature. Exact offer/objective reveal timing awaits specification.
+
+WB-D124: render explicit Bossing Lesser AND Greater prerequisite connections to Challenge; show included starter target set, then downstream creature unlock branch. Owned versus currently eligible targets must be distinguishable. WB-D125 rare-drop targets describe the actual unique/source, not a generic rare-table goal. No undisclosed minimum-target gate or new target prices.

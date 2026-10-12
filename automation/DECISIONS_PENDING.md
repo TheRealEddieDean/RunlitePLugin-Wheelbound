@@ -16,7 +16,7 @@ Authority: docs/wheelbound/DECISIONS.md. Latest explicit replies2026-10-12 are W
 | --- | --- | --- |
 | Separate legacy CA reward scope | Historical per-boss reward is separate from item Bounties Shop and Master Grand | Preserve evidence; no mixed-CA gate on hilt5 Grand; do not silently delete or invent a separate reward |
 | Duplicate first/reacquisition / choice6 — RESOLVED | WB-D118 first-instance baseline includes starting grants; later new purchases escalate despite destruction | Same-instance Satchel return/replay does not increment |
-| Q9 existence — RESOLVED / Challenge pool pending | WB-D122 confirms fourth card: difficult CA or significant rare drop | WB-D123 dedicated eligible boss/creature pool confirmed; define target unlocks/order and validate catalog; random/no reroll remains |
+| Q9 existence — RESOLVED / Challenge pool pending | WB-D122 confirms fourth card: difficult CA or significant rare drop | WB-D123 pool and WB-D124 AND gate/starter bundle/individual expansion confirmed; exact members/gates/prices/order/catalog pending; random/no reroll remains |
 | Q6 residual | Other unavailable activity pools, all-unavailable/postcommit recovery; empty Questing retry cost resolved zero by WB-D120 | Persist verified-empty retry provenance; unknown is not empty; no invented cost/penalty/free edits |
 | Q2 | Genuinely full/unsupported Coffer forced donation | Actual current-client boundary evidence first; no forced death or invented escape |
 | Q5 conditional | Fallback only if exact restriction fails specific policy review | Preserve Trade with; route/review packet remains unsent |
@@ -30,4 +30,6 @@ Bounties means item objectives in the Bounties Shop. Master CA Grand Fate requir
 
 Questing voluntary edit question RESOLVED by WB-D121: removable through normal storage, never destroyable. Not mandatory active; no special storage waiver. Continue next single choice automatically until stopped.
 
-WB-D123 resolves pool separation: Challenge randomly draws eligible bosses/selected creatures from a dedicated target pool; L/S/G keeps normal Bossing pool. Remaining next choice: target unlock policy for non-boss creatures (individual paid nodes versus access-based availability); no policy inferred from pool approval.
+WB-D123 resolves pool separation: Challenge randomly draws eligible bosses/selected creatures from a dedicated target pool; L/S/G keeps normal Bossing pool. Remaining next choice: WB-D124 target unlock policy resolved: Lesser AND Greater→Challenge with starter bundle→individual paid expansion. Exact starter set and actual eligible-count floor remain pending.
+
+WB-D124 resolves target unlock structure: owned Bossing Lesser AND Greater, then paid Challenge card including starter unlock bundle, then further individual target purchases. WB-D125 restricts drops to meaningful creature-specific uniques, excluding shared rare table. Next unresolved anti-narrowing refinement: should Challenge offerings require at least three actually eligible creatures/bosses (versus ownership only)? Recommendation three; unapproved.
