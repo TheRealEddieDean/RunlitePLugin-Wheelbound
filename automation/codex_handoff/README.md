@@ -16,3 +16,5 @@ This packet covers the first two milestones in detail. I03–I10 retain their ex
 Current authority WB-D116/117: Bounties Shop is item goal→FP. Master CA Grand is obtaining actual Ghommal's hilt5, with no active-only prerequisite CA tally/anti-cheese audit. Historical CA-MIXED is not a gate on this Grand objective. Preserve unrelated separate reward evidence; do not silently remove those historical systems or accept unsupported item detection. Read current DECISIONS over old source pins.
 
 Current WB-D123: dedicated random eligible Bossing Challenge boss/creature target pool, normal L/S/G pool unchanged. Target unlock/order/catalog/live evidence still pending; no new normal boss nodes/prices inferred.
+
+Current WB-D126: confirmed≥3 distinct actually eligible Challenge target bosses/creatures for new offerings. Card/bundle permanently owned belowfloor, L/S/G unchanged. Bundle required; multiple objectives/forms per creature cannot inflate count. Family/generation order/catalog/live evidence still pending.

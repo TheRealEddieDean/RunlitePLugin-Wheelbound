@@ -42,3 +42,5 @@ WB-D122: save Bossing Challenge purchase separately from Skilling, objective fam
 WB-D123: persist dedicated Challenge target catalog/version and selected boss/creature context; normal L/S/G pool remains separate. New creatures cannot leak into ordinary boss selection during migration/replay. Card-type purchase and target eligibility are separate fields/contracts; unlock mapping pending.
 
 WB-D124: persist Challenge starter bundle version/member grant receipts alongside card purchase and downstream target purchases. Include prerequisites and frozen quote. Preserve grant versus paid-target provenance; starter Challenge targets cannot be counted as purchased normal boss nodes or silently added to normal L/S/G pool. Migration/replay keeps complete bundled grant, not a partially unlocked card.
+
+WB-D126: keep permanent Challenge card/bundle grants when eligible count falls below3; record source/version/target grouping with committed offer snapshots. No revocation/refund/new draw on restore. Reevaluate current eligibility only for new offerings; preserve prior failed/ambiguous evidence as required by existing recovery contract.

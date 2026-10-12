@@ -64,3 +64,5 @@ WB-D122→I03/I05/I09: fourth Bossing Challenge confirmed with difficult-CA or s
 WB-D123→I03/I05/I09: dedicated eligible random Challenge boss/creature target pool distinct from ordinary Bossing and card types; unlock mapping/order still pending. No normal-roster expansion or player reroll.
 
 WB-D124→I03/I04/I09 prerequisite AND tree, atomic included starter bundle and paid expansion; WB-D125→I03/I05 catalog unique/shared-table classification and reviewed rate/source. Exact bundle/gates/prices/time balance pending; eligibility-diversity minimum not approved.
+
+WB-D126→I03/I05/I09: minimum3 distinct actually eligible Challenge boss/creature targets for new offerings; permanent card/bundle retained belowfloor; knownness/grouping/current evidence count; committed selections not rerolled.
