@@ -65,4 +65,4 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A38 | Confirm Bossing Challenge card with difficult CA or rare creature drop | P0 | Explicit user correction2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; FATE_CARDS; catalog/assignment/receipt/handoff | da1acdd4: WB-D122;19 affected specs; fourth card CA/rare drop confirmed; pool/order/catalog/evidence pending;122 IDs checked |
 
-| WB-A39 | Confirm dedicated random Bossing Challenge boss/creature target pool | P0 | User accepts recommendation2026-10-12 | S | IN_PROGRESS | DECISIONS; card/pool/progression/catalog/store/handoff | Separate eligible Challenge pool includes bosses/selected creatures; normal L/S/G pool unchanged; unlock policy still pending |
+| WB-A39 | Confirm dedicated random Bossing Challenge boss/creature target pool | P0 | User accepts recommendation2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; card/pool/progression/catalog/store/handoff | 053cde1a: WB-D123;14 specs; dedicated random eligible boss/creature pool, normal L/S/G unchanged;123 IDs checked |

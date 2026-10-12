@@ -1,30 +1,28 @@
 # Wheelbound session checkpoint and ownership
 
-- Session ID: wb-20261012-boss-challenge
-- State: ACTIVE — wb-20261012-challenge-pool owns WB-A39; lease through2026-10-12T22:00:00Z.
+- Session ID: wb-20261012-challenge-pool
+- State: IDLE — owner released; no active lease.
 - Branch: wheelbound-mode
-- Starting head:62c46fd8acd79740e2c320f2c8425cf094447b6e
-- Claim:1f92fb92f25b9350a02ef9d3396aa8e1d3744735
-- Latest gameplay source:da1acdd410422f348543051bb231319fdc852cb0
+- Starting head:0220707247c860bd57c6f149c1cbb863a06c519e
+- Claim:dd742d0eecafe085edadd260322d532853773984
+- Latest gameplay source:053cde1a1fc36b86d1bee6ddae5892715b4362b8
 - Final owning checkpoint: resolve from branch/file history; no circular self-hash.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
-- Completed A38: WB-D122 fourth Bossing Challenge, difficult CA OR significant rare boss/creature drop objective;19 affected specs/handoffs;122 IDs.
-- User example Tormented Demons→Tormented Synapse;1/400-ish illustrative guidance, no exact rate/cutoff/reward approved. Q9 existence resolved. Normal L/S/G behavior/pools remain; no valid-target reroll introduced.
-- Verification: design_checks passed, historical source/catalog/model hashes retained; final guarded publication needs remote byte/main/scope verification.
-- No production implementation, new Java execution/build, live capture/login, policy contact, numeric adoption or historical simulation/fixture rewrite.
+- Completed A39: WB-D123 dedicated eligible random Bossing Challenge target pool with bosses/selected creatures; normal L/S/G target pool unchanged.14 specs,123 decision IDs.
+- Verification: design_checks passed; historical model/catalog/fixture hashes unchanged. Final guarded publication requires remote byte/main/scope verification.
+- Target purchase/unlock mapping and objective-generation order still unapproved. Do not assume card purchase grants all targets, new64-boss nodes, artificial stat gates or prices.
+- No production code/workflow activation, new Java build/tests, live traces/login/policy contact or source/model/oracle rewrite.
 - Uncommitted completed canonical deliverables: NONE after final successful publication/byte verification; failed publication invalidates claim.
 - Preserved: older repo/ dirty docs, legacy local simulation/smoke.json absent from remote, connection-test file; no reset/clean.
-- PDF version9/source284799b1 STALE; A33 TODO. Generate from latest gameplay commit with rendering/visual QA and guarded save before claiming current.
+- PDF version9/source284799b1 remains STALE; A33 TODO. Generate from latest committed gameplay tree with render/visual QA/save guard before claiming current.
 
 ## Exact continuation
 
-1. Read latest remote head/main/owner, protocol, current DECISIONS and checkpoints. Preserve concurrent changes; expected-head guard, no forced retry.
-2. User wants one-choice-at-a-time prompting automatically until stop. Do not re-ask whether Bossing Challenge exists. Next ask whether Challenge can draw from a dedicated eligible boss/creature pool, including creatures outside ordinary boss roster, versus only normal Bossing pool. Recommend dedicated eligible Challenge pool to support the stated creature example, with random/no-reroll selection. Do not adopt pool/unlock/order choices until answered.
-3. Once answered, record rule/specs with explicit approval, validate/commit, then next relevant single choice. Keep approximate rarity guidance/examples separate from verified drop rates/final catalog/reward tables. Card purchase stays separate permanent Bossing unlock; no price/default-unlock inferred.
-4. Supported CA/drop catalog and observable fresh completion needed. Broad historical CA Challenge slice is separate; it does not prohibit expressly approved Bossing CA card. Do not silently assign all remaining CAs, completed tasks without repeat evidence, or source-unproven possession. No runtime enabled from source research/synthetic tests.
-5. Previous rules retained: Questing store/removable but indestructible; known-empty active Questing retries without extra spin; eventual valid Fate one spin; duplicate lifetime history survives destruction; item Bounties Shop independent automatic active FP; no paused payouts; Master Grand actual hilt5/no prerequisite active-CA policing.
-6. A33 PDF refresh unfinished/stale. Coding still unauthorized; actual report/dependency/jar exports/live detectors/exact policy separate.130,080 historical synthetic trajectories unchanged; do not rerun unchanged inputs to inflate progress.
+1. Read latest remote head/main/owner, protocol/current DECISIONS and checkpoints. Preserve concurrent edits; expected-head guard, never force retry.
+2. User wants automatic one-choice-at-a-time prompting until stop. Pool approval is resolved. Next ask whether Challenge non-boss creatures require individual FP unlocks or automatically become available from actual access after buying Challenge card. Recommend existing purchased boss unlocks for boss targets plus separate individual paid Challenge creature unlocks; card purchase alone does not unlock all targets. Do not adopt until answered.
+3. Save explicit answer/specs, validate/commit, then next single relevant choice. Objective-generation/reveal order for Challenge needs reconciliation with existing cards-before-random-target L/S/G sequence; don't offer choices that effectively select a boss or regenerate a valid committed target.
+4. WB-D122 Challenge objectives difficult CA or significant rare creature drop;1/400-ish/example Tormented Synapse catalog guidance, not exact rate/cutoff/FP. Need reviewed canonical CA/task/source/item and completion evidence; no runtime enablement from source/synthetic tests. Card unlock pool separate from target pool.
+5. Prior approvals remain: Questing stored/removable not destroyed; known-empty Questing retries free, valid Fate one spin; lifetime duplicate baseline/history; automatic independent active item bounty FP, no paused payout; Master Grand actual hilt5 without active-only prerequisite CA tally. No repeated settled questions.
+6. A33 PDF refresh concrete unfinished task. Coding unauthorized; report/dependency/jar exports/current-client/policy separate gates.130,080 historical synthetic trajectories unchanged; no unchanged reruns to inflate progress.
 
-Stop reason: explicit card approval checkpoint complete; next single pool decision pending. No full project completion/background work claim.
-
-Current A39: dedicated eligible random Challenge boss/creature target pool; starting head0220707247c860bd57c6f149c1cbb863a06c519e.
+Stop reason: current approval checkpoint complete; next single target-unlock question pending. No full completion/background execution claim.
