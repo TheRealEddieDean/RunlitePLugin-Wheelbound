@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261012-fresh-challenge-drop
-- State: IDLE — owner released; no active lease.
+- State: ACTIVE — wb-20261012-challenge-item-band owns WB-A45; lease through2026-10-13T00:00:00Z.
 - Branch: wheelbound-mode
 - Starting head:6fde6123940ce3b9b4019d7f26029e2790065f26
 - Claim:8502efb38407e6d75814868274977fe92ca3ec03
@@ -26,3 +26,5 @@
 6. Questing storage/no-destroy/free-empty-retry, lifetime duplicate baseline, no paused payout, Master Grand actual hilt5/no active-CA-history gate retained. A33 PDF remains concrete unfinished/stale task; coding unauthorized; actual artifacts/dependency/test exports/live/policy separate.130,080 historical synthetic trajectories unchanged.
 
 Stop reason: approval checkpoint complete; next single item-goal definition choice pending. No full completion/background-execution claim.
+
+Current A45: specific target item and rarity range; starting head8ee997d377f57fd85d4217e4c5d049b8ee7212ca.
