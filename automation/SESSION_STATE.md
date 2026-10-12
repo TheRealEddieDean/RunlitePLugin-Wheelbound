@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261012-quest-protection
-- State: IDLE — owner released; no active lease.
+- State: ACTIVE — wb-20261012-boss-challenge owns WB-A38; lease through2026-10-12T22:00:00Z.
 - Branch: wheelbound-mode
 - Starting head:ab3fae88eeeec00039173069a04704f67ab9be8a
 - Claim:b5c5a921b56572fe0a0c224dce53441caec399ae
@@ -24,3 +24,5 @@
 6. A33 PDF explicitly unfinished/stale. Existing130,080 synthetic trajectories and receipt/capture fixtures remain historical unchanged. Coding unauthorized; real reports/dependency/jar exports/live detectors/policy separate gates.
 
 Stop reason: current approval checkpoint complete; next single design choice pending. No full-completion/background-work claim.
+
+Current A38: Bossing Challenge card explicit approval; starting head62c46fd8acd79740e2c320f2c8425cf094447b6e.
