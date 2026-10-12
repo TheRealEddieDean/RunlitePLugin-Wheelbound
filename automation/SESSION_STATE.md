@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261012-challenge-item-only
-- State: IDLE — owner released; no active lease.
+- State: ACTIVE — wb-20261012-fresh-challenge-drop owns WB-A44; lease through2026-10-12T23:00:00Z.
 - Branch: wheelbound-mode
 - Starting head:24596ac746f6e0f7ed7a2f7c61f32e96e1b0495e
 - Claim:82287267c0eba1331f6f4d1efff2bbee8e30f7dd
@@ -25,3 +25,5 @@
 6. Prior Questing storage/no-destroy/free-empty-retry and lifetime duplicate approvals remain. A33 PDF explicit unfinished/stale task; coding unauthorized, real artifacts/dependencies/tests/live/policy separate gates.130,080 historical synthetic trajectories unchanged.
 
 Stop reason: explicit correction checkpoint complete; next single owned-item eligibility question pending. No full completion/background-execution claim.
+
+Current A44: already-owned target eligibility and fresh-drop requirement; starting head6fde6123940ce3b9b4019d7f26029e2790065f26.
