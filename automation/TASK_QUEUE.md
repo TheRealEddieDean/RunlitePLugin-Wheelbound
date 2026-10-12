@@ -71,4 +71,4 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A41 | Confirm three actual eligible Challenge targets and reaffirm starter bundle | P0 | Explicit user recommendation approval2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; card/tree/catalog/state/UI/tests/handoff | c4601647: WB-D126;14 specs;≥3 actual distinct targets for offers, card/bundle retained;126 IDs checked |
 
-| WB-A42 | Confirm random Bossing Challenge objective family | P0 | Explicit user reply random2026-10-12 | S | IN_PROGRESS | DECISIONS; card/state/store/UI/tests/handoff | Fate chooses CA versus rare-drop family; no player family choice; weighting/order not guessed |
+| WB-A42 | Confirm random Bossing Challenge objective family | P0 | Explicit user reply random2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; card/state/store/UI/tests/handoff | e30da5c0: WB-D127;10 specs; random family/target, no picker/reroll; probabilities/order not adopted;127 IDs checked |
