@@ -68,3 +68,5 @@ WB-D124→I03/I04/I09 prerequisite AND tree, atomic included starter bundle and 
 WB-D126→I03/I05/I09: minimum3 distinct actually eligible Challenge boss/creature targets for new offerings; permanent card/bundle retained belowfloor; knownness/grouping/current evidence count; committed selections not rerolled.
 
 WB-D127 family draw superseded by WB-D128; I03/I05/I09 uses item-drop-only typed target/result, no picker/reroll and reviewed valid eligibility.
+
+WB-D129→I03/I05/I09: old ownership no exclusion/no completion; fresh active assigned-source postassignment receipt required; no reuse/bank/trade/buy/re-pick; separate assignment versus permanent bounty dedup keys.

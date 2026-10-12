@@ -48,3 +48,6 @@ Daily schedules, quantities and clock policy are delegated proposals, not histor
 ## Stronger loot source and remaining boundaries
 
 Current source verification found game-loot-script-backed ServerNpcLoot and legacy ground-coincidence NpcLootReceived. Prefer reviewed server-reported source context; neither a raw plugin event nor ground spawn alone supplies a durable unique receipt. ServerNpcLoot does not expose its internal event identifier, so source-specific deduplication must be validated. Pickpocket events are not owned kills. Each reward widget/container route needs independent earning/collection/reopening evidence. See [complete conditional bounty review](BOUNTY_CATALOG_REVIEW.md) and WB-D108; no adapter is enabled here.
+
+## Bossing Challenge fresh-drop context — WB-D129
+Challenge target remains eligible even if already owned. A new supported active drop after assignment start from its assigned source qualifies; preassignment possession/collection history, bank withdrawal, buying/trading and drop-and-repick do not. Bind owned-source receipt to assignment/run/account/session and deduplicate callbacks, including delayed delivery review. Challenge settlement and permanent item Bounties Shop reward are separate once-only keys; repeat hunt does not reset an already-paid permanent bounty. No live trace validated here.

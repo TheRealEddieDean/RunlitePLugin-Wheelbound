@@ -20,3 +20,5 @@ Current WB-D123: dedicated random eligible Bossing Challenge boss/creature targe
 Current WB-D126: confirmed≥3 distinct actually eligible Challenge target bosses/creatures for new offerings. Card/bundle permanently owned belowfloor, L/S/G unchanged. Bundle required; multiple objectives/forms per creature cannot inflate count. Family/generation order/catalog/live evidence still pending.
 
 Current WB-D128: Bossing Challenge item-drop-only; no CA family/draw/repeat policy. Random eligible creature/item target, bundle/AND tree/≥3 supported distinct drop targets remain. Existing normal CA feature research untouched.
+
+Current WB-D129: already-owned items remain Challenge targets; require fresh active assigned-source postassignment drop. Old items/withdrawals/buy/trade/re-pick cannot satisfy. Independent permanently paid bounty does not reset. Exact one-item/accepted-unique-set goal policy still pending.

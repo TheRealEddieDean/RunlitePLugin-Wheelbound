@@ -54,3 +54,5 @@ WB-D124: render explicit Bossing Lesser AND Greater prerequisite connections to 
 WB-D126: owned Challenge remains visible as unlocked; when below3 eligible distinct bosses/creatures, explain it is unavailable in new card offerings and show current eligible target count. No punishment, ownership loss/refund or forced paused status. Three targets is not a third-card upgrade. Included starter bundle remains displayed as part of purchase.
 
 WB-D128: no CA family or family selector/draw; explain random target/item hunt and reveal committed objective without reroll. Exact reveal sequencing/weights remain technical specification.
+
+WB-D129: tell player Already-owned items do not count - obtain a fresh drop during this assignment. Do not offer turn-in/withdrawal or instant completion from inventory/collection log. Keep eligible target display even if item is owned. Show supported fresh acquisition/completion once; no duplicated FP feedback on replay.
