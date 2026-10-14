@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-real-batch-readiness
-- State: IDLE — owner released; no active lease.
+- State: ACTIVE — wb-20261014-data-parsing-handoff owns A57; acquired 2026-10-14T17:36:04.371011+00:00; expires 2026-10-14T17:51:04.371011+00:00.
 - Branch: wheelbound-mode
 - Starting remote head:04709b3e043f8b1bd29dbe07a53e0cf33992dde4
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
@@ -43,3 +43,5 @@ Committed-but-unselected offer reconciliation remains separately unresolved. Do 
 - Q2 actual full/unsupported Coffer boundary and Q5 exact restrictive-control policy review need evidence. Separate legacy CA reward scope remains open. Current-client traces/build report exports and engineering authorization remain external gates. No policy contact or production work performed.
 
 Stop reason: three bounded deliverables completed; next material design answer pending. Ownership released. No full-project completion, background execution, measured allowance or exact30-minute claim.
+
+Current bounded request A57: checkpoint for new chat to parse user-collected output archive. Upload not yet received; preserve A54–56 and unanswered Q6 choice. Documentation only.
