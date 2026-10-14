@@ -120,3 +120,5 @@ A62 completion note: all four requested finite catalog tasks complete;25 creatur
 A63 supersedes old A62 single-range future selection. Old v1 completion remains historical; the expanded four-tier catalog is not complete. Ask one material topology question recorded in SESSION_STATE; no automatic chain or opt-in control adopted.
 
 | WB-A65 | Update CHALLENGE_HUNT_TABLE with all-tier reviewed and source-candidate entries | P0 | Explicit file request; A63 rules; supplied output; guarded ownership | S | DONE (display/index; owning checkpoint) | CHALLENGE_HUNT_TABLE; review indexv2/CSV; archive; validation | All44 reviewed+202 candidate groups in four tiers,45 unresolved rows held, exact source evidence/status; no roster/FP/unlock adoption |
+
+| WB-A66 | Rename/fix current monster and boss Challenge tier drop tables | P0 | Explicit user clarification; A65 source index; guarded ownership | S | DONE (two current tables; owning checkpoint) | MONSTER_CHALLENGE_HUNT_TABLE; BOSS_CHALLENGE_HUNT_TABLE |90/156 rows exactly partitioned, source_kind evidence/links/generator/validation, no obsolete active filenames or new mechanics |

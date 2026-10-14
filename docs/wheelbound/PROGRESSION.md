@@ -63,7 +63,7 @@ WB-D140/141: prioritize repeatable task-independent starter contexts; hold finit
 
 ## Challenge starter bundle v1 — WB-D142
 
-The gated Challenge card includes Brine rat, Turoth, Cave horror, Sulphur Nagua, Kurask and Skeletal Wyvern target unlocks. See [complete hunt/access table](CHALLENGE_HUNT_TABLE.md). Actual source access/skills remain mandatory; require≥3 distinct actually supported accessible keys. Six owned grants are not a promise of six eligible targets. Other v1 creatures are individual expansions; no new numeric purchase price adopted. Dedicated pool/card-before-target and Lesser AND Greater prerequisites remain. These authored members supersede prior unfilled starter-list status, without changing normal L/S/G roster or licensing task-dependent routes.
+The gated Challenge card includes Brine rat, Turoth, Cave horror, Sulphur Nagua, Kurask and Skeletal Wyvern target unlocks. See [boss drop table](BOSS_CHALLENGE_HUNT_TABLE.md) and [monster drop table](MONSTER_CHALLENGE_HUNT_TABLE.md). Actual source access/skills remain mandatory; require≥3 distinct actually supported accessible keys. Six owned grants are not a promise of six eligible targets. Other v1 creatures are individual expansions; no new numeric purchase price adopted. Dedicated pool/card-before-target and Lesser AND Greater prerequisites remain. These authored members supersede prior unfilled starter-list status, without changing normal L/S/G roster or licensing task-dependent routes.
 
 ## Current Challenge rarity/card supersession — WB-D144/145
 

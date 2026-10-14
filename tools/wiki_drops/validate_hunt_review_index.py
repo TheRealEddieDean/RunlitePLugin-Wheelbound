@@ -2,6 +2,7 @@
 import collections,csv,hashlib,json,pathlib,sqlite3,sys
 from fractions import Fraction
 from challenge_tier_rules_v2 import scalar_rate,tier_for_probability
+from render_split_hunt_tables import TABLES,esc
 ROOT=pathlib.Path(__file__).resolve().parents[2];D=ROOT/'docs/wheelbound'
 def validate(input_dir):
  r=json.load(open(D/'catalogs/challenge_hunt_review_index_v2.json'));v1=json.load(open(D/'catalogs/challenge_hunts_v1.json'));raw=json.load(open(input_dir/'catalog.json'));by={p['source_url']:p for p in raw['creatures']+raw['unclassified_pages']};db=sqlite3.connect('file:'+str((input_dir/'drops.sqlite').resolve())+'?mode=ro',uri=True);checks=0
@@ -20,11 +21,18 @@ def validate(input_dir):
  for row in r['unresolved_rate_context_rows']:
   original=by[row['source_url']]['drops'][row['source_row_zero_based']];check(original==row['raw_record']);check(scalar_rate(original['rarity']) is None)
  check(new_raw+len(r['unresolved_rate_context_rows'])+r['outside_brackets_named_source_rows']==r['named_unreviewed_source_rows_screened'])
- md=(D/'CHALLENGE_HUNT_TABLE.md').read_text();check(all('## '+name in md for name in ['Lesser Challenge','Standard Challenge','Greater Challenge','Superior Challenge']))
+ tables={kind:(D/name).read_text() for kind,name in TABLES.items()}
+ for md in tables.values():check(all('## '+name in md for name in ['Lesser Challenge','Standard Challenge','Greater Challenge','Superior Challenge']))
+ taxonomy=json.load(open(D/'research/CHALLENGE_TAXONOMY_A60.json'));correction={x[1]:x[3] for x in taxonomy['corrections']}
+ for row in r['reviewed_hunts']+r['source_candidates']+r['unresolved_rate_context_rows']:
+  page=by[row['source_url']];kind=correction.get(row['source_url'].split('/w/',1)[1],page['classification'].upper());check(row['source_kind']==kind)
+  prefix='| '+esc(row['creature'])+' | '+esc(row['item'])+' |'
+  check(prefix in tables[kind]);check(prefix not in tables['MONSTER' if kind=='BOSS' else 'BOSS'])
+ check(not (D/'CHALLENGE_HUNT_TABLE.md').exists() and not (D/'CHALLENGE_HUNT_TABLE_V1_ARCHIVE.md').exists())
  with (D/'catalogs/challenge_hunt_review_index_v2.csv').open(newline='',encoding='utf-8') as f:rows=list(csv.DictReader(f))
  check(len(rows)==len(r['reviewed_hunts'])+len(r['source_candidates']))
  check(all(row['v2_fp']=='TBD' for row in rows))
  counts=collections.Counter(x['tier'] for x in r['reviewed_hunts']+r['source_candidates']);check(sum(counts.values())==len(rows))
- out={'status':'PASS_SOURCE_DISPLAY_ONLY_NOT_RUNTIME','assertions':checks,'reviewed_v1_hunts':44,'additional_candidate_groups':len(r['source_candidates']),'by_tier_total_display_rows':dict(counts),'unresolved_rows':len(r['unresolved_rate_context_rows']),'table_sha256':hashlib.sha256((D/'CHALLENGE_HUNT_TABLE.md').read_bytes()).hexdigest(),'index_sha256':hashlib.sha256((D/'catalogs/challenge_hunt_review_index_v2.json').read_bytes()).hexdigest(),'new_unlock_or_reward_approval':False}
- (D/'research/CHALLENGE_TABLE_VALIDATION_A65.json').write_text(json.dumps(out,indent=2)+'\n');print(out)
+ out={'status':'PASS_SOURCE_DISPLAY_ONLY_NOT_RUNTIME','assertions':checks,'reviewed_v1_hunts':44,'additional_candidate_groups':len(r['source_candidates']),'by_tier_total_display_rows':dict(counts),'unresolved_rows':len(r['unresolved_rate_context_rows']),'table_sha256_by_kind':{kind:hashlib.sha256((D/name).read_bytes()).hexdigest() for kind,name in TABLES.items()},'by_source_kind':r['counts']['by_source_kind'],'index_sha256':hashlib.sha256((D/'catalogs/challenge_hunt_review_index_v2.json').read_bytes()).hexdigest(),'new_unlock_or_reward_approval':False}
+ (D/'research/CHALLENGE_TABLE_VALIDATION_A66.json').write_text(json.dumps(out,indent=2)+'\n');print(out)
 if __name__=='__main__':validate(pathlib.Path(sys.argv[1]))

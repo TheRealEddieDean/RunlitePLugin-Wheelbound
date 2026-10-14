@@ -73,7 +73,7 @@ WB-D140/141: prioritize repeatable task-independent starter contexts; hold finit
 
 ## Concrete Bossing Challenge table v1
 
-WB-D142/143 completes [44 specific-item hunts across25 keys](CHALLENGE_HUNT_TABLE.md), with six included starter creatures and source-specific access/rates/fixed FP/receipt contracts. Use the finite versioned table for future pool construction; never raw Wiki labels. Actual accessibility/ownership/validated adapters and≥3-key floor still apply. All entries stay runtime-disabled pending engineering; no normal L/S/G change or broadened Challenge objectives.
+WB-D142/143 completes [boss drop table](BOSS_CHALLENGE_HUNT_TABLE.md) and [monster drop table](MONSTER_CHALLENGE_HUNT_TABLE.md), with six included starter creatures and source-specific access/rates/fixed FP/receipt contracts. Use the finite versioned table for future pool construction; never raw Wiki labels. Actual accessibility/ownership/validated adapters and≥3-key floor still apply. All entries stay runtime-disabled pending engineering; no normal L/S/G change or broadened Challenge objectives.
 
 ## Current Challenge rarity/card supersession — WB-D144/145
 

@@ -80,4 +80,8 @@ The classifier runs offline on the supplied cache. Exact endpoints, out-of-band 
 
 ## All-tier hunt/candidate presentation — A65
 
-[CHALLENGE_HUNT_TABLE](CHALLENGE_HUNT_TABLE.md) now displays all44 prior reviewed hunts and the complete qualifying scalar-rate groups from the explicit named unique-item review scope, split into four tiers. New candidates and unresolved expressions are visibly held, not admitted; historical FP is separate from TBD v2 quotes. The source-preserving review index/CSV defines the exact scan scope and counts. This file update does not answer unlock topology or complete a production-ready v2 catalog.
+[boss drop table](BOSS_CHALLENGE_HUNT_TABLE.md) and [monster drop table](MONSTER_CHALLENGE_HUNT_TABLE.md) now displays all44 prior reviewed hunts and the complete qualifying scalar-rate groups from the explicit named unique-item review scope, split into four tiers. New candidates and unresolved expressions are visibly held, not admitted; historical FP is separate from TBD v2 quotes. The source-preserving review index/CSV defines the exact scan scope and counts. This file update does not answer unlock topology or complete a production-ready v2 catalog.
+
+## Current two-table presentation — WB-D146 / A66
+
+Use [monster drops](MONSTER_CHALLENGE_HUNT_TABLE.md) for non-boss sources and [boss drops](BOSS_CHALLENGE_HUNT_TABLE.md) for boss-only sources. Both include all four new tiers and keep drop rates/conditions/status. The former mixed file and historical-archive filename have been renamed/replaced; historical original content remains in Git commits. The shared index/CSV now has source_kind. This display split does not decide card-family unlock topology or admit candidates.

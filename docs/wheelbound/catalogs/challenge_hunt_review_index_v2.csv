@@ -1,247 +1,247 @@
-tier,creature,item,base_rate_for_tier,raw_rates,status,historical_v1_fp,v2_fp,source_url
-greater,Brine rat,Brine sabre,1/512,1/512 [ 1 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,450,TBD,https://oldschool.runescape.wiki/w/Brine_rat
-greater,Turoth,Leaf-bladed sword,1/500,1/500,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,400,TBD,https://oldschool.runescape.wiki/w/Turoth
-greater,Cave horror,Black mask (10),1/512,1/512,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,450,TBD,https://oldschool.runescape.wiki/w/Cave_horror
-greater,Sulphur Nagua,Sulphur blades,1/450,1/450,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,325,TBD,https://oldschool.runescape.wiki/w/Sulphur_Nagua
-superior,Kurask,Leaf-bladed battleaxe,1/1026,"1/1,026 [ 3 ]",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,975,TBD,https://oldschool.runescape.wiki/w/Kurask
-greater,Skeletal Wyvern,Granite legs,1/512,1/512 [ 6 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,850,TBD,https://oldschool.runescape.wiki/w/Skeletal_Wyvern
-greater,Abyssal demon,Abyssal whip,1/512,1/512 [ 3 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,400,TBD,https://oldschool.runescape.wiki/w/Abyssal_demon
-greater,Dark beast,Dark bow,1/512,1/512,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,850,TBD,https://oldschool.runescape.wiki/w/Dark_beast
-greater,Spitting Wyvern,Granite longsword,1/512,1/512 [ 1 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,975,TBD,https://oldschool.runescape.wiki/w/Spitting_Wyvern
-superior,Adamant dragon,Dragon limbs,1/1000,"1/1,000",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1775,TBD,https://oldschool.runescape.wiki/w/Adamant_dragon
-superior,Rune dragon,Dragon limbs,1/800,1/800,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1900,TBD,https://oldschool.runescape.wiki/w/Rune_dragon
-greater,Demonic gorilla,Ballista limbs,1/500,1/500,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1225,TBD,https://oldschool.runescape.wiki/w/Demonic_gorilla
-greater,Demonic gorilla,Ballista spring,1/500,1/500,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1225,TBD,https://oldschool.runescape.wiki/w/Demonic_gorilla
-greater,Demonic gorilla,Light frame,1/750,1/750,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1775,TBD,https://oldschool.runescape.wiki/w/Demonic_gorilla
-superior,Demonic gorilla,Heavy frame,1/1500,"1/1,500",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,3450,TBD,https://oldschool.runescape.wiki/w/Demonic_gorilla
-superior,Vyrewatch Sentinel,Blood shard,1/1500,"1/1,500 [ 1 ]",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1775,TBD,https://oldschool.runescape.wiki/w/Vyrewatch_Sentinel
-greater,Tormented Demon,Burning claw,499/250000,"499/250,000",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1775,TBD,https://oldschool.runescape.wiki/w/Tormented_Demon
-greater,Tormented Demon,Tormented synapse,1/500,1/500,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1775,TBD,https://oldschool.runescape.wiki/w/Tormented_Demon
-greater,General Graardor,Bandos hilt,1/508,1/508,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2650,TBD,https://oldschool.runescape.wiki/w/General_Graardor
-greater,Kree'arra,Armadyl hilt,1/508,1/508,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2925,TBD,https://oldschool.runescape.wiki/w/Kree%27arra
-greater,Commander Zilyana,Armadyl crossbow,1/508,1/508 [ 3 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2650,TBD,https://oldschool.runescape.wiki/w/Commander_Zilyana
-greater,Commander Zilyana,Saradomin hilt,1/508,1/508 [ 3 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2650,TBD,https://oldschool.runescape.wiki/w/Commander_Zilyana
-greater,K'ril Tsutsaroth,Staff of the Dead,1/508,1/508 [ 8 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2650,TBD,https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth
-greater,K'ril Tsutsaroth,Zamorak hilt,1/508,1/508 [ 8 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2650,TBD,https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth
-superior,Zulrah,Tanzanite fang,1/1024,"2 × 1/1,024",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,4375,TBD,https://oldschool.runescape.wiki/w/Zulrah
-superior,Zulrah,Magic fang,1/1024,"2 × 1/1,024",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,4375,TBD,https://oldschool.runescape.wiki/w/Zulrah
-superior,Zulrah,Serpentine visage,1/1024,"2 × 1/1,024",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,4375,TBD,https://oldschool.runescape.wiki/w/Zulrah
-superior,Vorkath,Dragonbone necklace,1/1000,"1/1,000 [ 3 ]",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,4275,TBD,https://oldschool.runescape.wiki/w/Vorkath
-superior,Corporeal Beast,Spectral sigil,1/1365,"1/1,365",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,13750,TBD,https://oldschool.runescape.wiki/w/Corporeal_Beast
-superior,Corporeal Beast,Arcane sigil,1/1365,"1/1,365",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,13750,TBD,https://oldschool.runescape.wiki/w/Corporeal_Beast
-greater,Phosani's Nightmare,Nightmare staff,69/35000,"69/35,000",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,8575,TBD,https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare
-greater,Phosani's Nightmare,Inquisitor's great helm,1/700,1/700,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,11775,TBD,https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare
-greater,Phosani's Nightmare,Inquisitor's hauberk,1/700,1/700,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,11775,TBD,https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare
-greater,Phosani's Nightmare,Inquisitor's plateskirt,1/700,1/700,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,11775,TBD,https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare
-superior,Phosani's Nightmare,Inquisitor's mace,31/35000,"31/35,000",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,18925,TBD,https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare
-greater,Artio,Claws of Callisto,1/618,1/618 [ 2 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2175,TBD,https://oldschool.runescape.wiki/w/Artio
-greater,Artio,Tyrannical ring,1/716,1/716 [ 2 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2500,TBD,https://oldschool.runescape.wiki/w/Artio
-superior,Artio,Voidwaker hilt,1/912,1/912 [ 2 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,3150,TBD,https://oldschool.runescape.wiki/w/Artio
-greater,Spindel,Fangs of Venenatis,1/618,1/618 [ 1 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2175,TBD,https://oldschool.runescape.wiki/w/Spindel
-greater,Spindel,Treasonous ring,1/716,1/716 [ 1 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2500,TBD,https://oldschool.runescape.wiki/w/Spindel
-superior,Spindel,Voidwaker gem,1/912,1/912 [ 1 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,3150,TBD,https://oldschool.runescape.wiki/w/Spindel
-greater,Calvar'ion,Skull of Vet'ion,1/618,1/618 [ 1 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1650,TBD,https://oldschool.runescape.wiki/w/Calvar%27ion
-greater,Calvar'ion,Ring of the gods,1/716,1/716 [ 1 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1900,TBD,https://oldschool.runescape.wiki/w/Calvar%27ion
-superior,Calvar'ion,Voidwaker blade,1/912,1/912 [ 1 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2400,TBD,https://oldschool.runescape.wiki/w/Calvar%27ion
-lesser,Amoxliatl,Pendant of Ates (inert),1/25,1/25,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Amoxliatl
-lesser,Hespori,Bottomless compost bucket,1/35,1/35 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Hespori
-lesser,Magma strykewyrm,Dragon metal sheet,1/45,3 × 1/45,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Magma_strykewyrm
-lesser,Phantom Muspah,Ancient icon,1/50,2/100 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Phantom_Muspah
-lesser,Scurrius,Scurrius' spine,1/33,1/33 [ d 3 ]; 1/33 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Scurrius
-lesser,The Hueycoatl,Hueycoatl hide,11/315,11/315,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Hueycoatl
-standard,Abyssal Sire,Unsired,1/100,1/100 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Abyssal_Sire
-standard,Amoxliatl,Glacial temotli,1/100,1/100,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Amoxliatl
-standard,Branda the Fire Queen,Fire element staff crown,1/75,1/75,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Branda_the_Fire_Queen
-standard,Chaos Elemental,Dragon 2h sword,1/64,2/128,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Chaos_Elemental
-standard,Corporeal Beast,Spirit shield,1/64,8/512 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Corporeal_Beast
-standard,Cyclops,Dragon defender,1/100,1/100,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Cyclops
-standard,Eldric the Ice King,Ice element staff crown,1/75,1/75,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Eldric_the_Ice_King
-standard,Maggot King,Venator fang,2/159,2/159,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Maggot_King
-standard,Maggot King,Venator tooth,2/159,2/159,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Maggot_King
-standard,Phantom Muspah,Venator shard,1/100,1/100 [ 1 ] [ d 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Phantom_Muspah
-standard,The Hueycoatl,Dragon hunter wand,1/105,1/105,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Hueycoatl
-standard,The Hueycoatl,Tome of Earth (empty),1/90,1/90,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Hueycoatl
-greater,Alchemical Hydra,Hydra leather,1/514,1/514 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Alchemical_Hydra
-greater,Alchemical Hydra,Hydra tail,1/513,1/513 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Alchemical_Hydra
-greater,Ancient Custodian,Antler guard,1/650,1/650,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Ancient_Custodian
-greater,Ancient Wyvern,Granite boots,1/600,1/600 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Ancient_Wyvern
-greater,Ancient Wyvern,Granite longsword,1/600,1/600 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Ancient_Wyvern
-greater,Araxxor,Araxyte fang,1/600,1/600,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Araxxor
-greater,Araxxor,Noxious blade,1/200,1/200 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Araxxor
-greater,Araxxor,Noxious point,1/200,1/200 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Araxxor
-greater,Araxxor,Noxious pommel,1/200,1/200 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Araxxor
-greater,Artio,Dragon 2h sword,1/358,1/358 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Artio
-greater,Artio,Dragon pickaxe,1/358,1/358 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Artio
-greater,Bloodthirsty abomination,Black mask (10),1/512,9 × 1/512,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_abomination
-greater,Bloodthirsty abyssal demon,Abyssal whip,1/512,9 × 1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_abyssal_demon
-greater,Bloodthirsty Drake,Drake's claw,1/512,1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_Drake
-greater,Bloodthirsty Drake,Drake's tooth,1/512,1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_Drake
-greater,Bloodthirsty gargoyle,Granite maul,1/256,9 × 1/256,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_gargoyle
-greater,Bloodthirsty kurask,Leaf-bladed sword,1/384,9 × 1/384 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_kurask
-greater,Bloodthirsty Night beast,Dark bow,1/512,9 × 1/512,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_Night_beast
-greater,Bloodthirsty smoke devil,Occult necklace,1/512,9 × 1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_smoke_devil
-greater,Bloodthirsty Turoth,Leaf-bladed sword,1/500,9 × 1/500,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_Turoth
-greater,Callisto,Claws of Callisto,1/196,1/196 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Callisto
-greater,Callisto,Dragon 2h sword,1/256,1/256 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Callisto
-greater,Callisto,Dragon pickaxe,1/256,1/256 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Callisto
-greater,Callisto,Tyrannical ring,1/512,1/512 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Callisto
-greater,Callisto,Voidwaker hilt,1/360,1/360 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Callisto
-greater,Calvar'ion,Dragon 2h sword,1/358,1/358 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Calvar%27ion
-greater,Calvar'ion,Dragon pickaxe,1/358,1/358 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Calvar%27ion
-greater,Cave abomination,Black mask (10),1/512,3 × 1/512,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Cave_abomination
-greater,Cave kraken,Uncharged trident,1/200,1/200,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Cave_kraken
-greater,Cerberus,Eternal crystal,1/520,1/520,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Cerberus
-greater,Cerberus,Pegasian crystal,1/520,1/520,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Cerberus
-greater,Cerberus,Primordial crystal,1/520,1/520,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Cerberus
-greater,Cerberus,Smouldering stone,1/520,1/520,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Cerberus
-greater,Chaos Elemental,Dragon pickaxe,1/256,1/256,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Chaos_Elemental
-greater,Chaos Fanatic,Malediction shard 1,1/256,1/256 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Chaos_Fanatic
-greater,Chaos Fanatic,Odium shard 1,1/256,1/256 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Chaos_Fanatic
-greater,Commander Zilyana,Saradomin sword,1/127,1/127 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Commander_Zilyana
-greater,Commander Zilyana,Saradomin's light,1/254,1/254 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Commander_Zilyana
-greater,Corporeal Beast,Holy elixir,3/512,3/512 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Corporeal_Beast
-greater,Crazy archaeologist,Malediction shard 2,1/256,1/256 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Crazy_archaeologist
-greater,Crazy archaeologist,Odium shard 2,1/256,1/256 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Crazy_archaeologist
-greater,Dagannoth Prime,Dragon axe,1/128,1/128 [ 1 ] [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dagannoth_Prime
-greater,Dagannoth Prime,Mud battlestaff,1/128,1/128 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dagannoth_Prime
-greater,Dagannoth Prime,Seers ring,1/128,1/128 [ 1 ] [ 2 ] [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dagannoth_Prime
-greater,Dagannoth Rex,Berserker ring,1/128,1/128 [ 2 ] [ 3 ] [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dagannoth_Rex
-greater,Dagannoth Rex,Dragon axe,1/128,1/128 [ 2 ] [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dagannoth_Rex
-greater,Dagannoth Rex,Warrior ring,1/128,1/128 [ 2 ] [ 3 ] [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dagannoth_Rex
-greater,Dagannoth Supreme,Archers ring,1/128,1/128 [ 1 ] [ 2 ] [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dagannoth_Supreme
-greater,Dagannoth Supreme,Dragon axe,1/128,1/128 [ 1 ] [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dagannoth_Supreme
-greater,Dagannoth Supreme,Seercull,1/128,1/128 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dagannoth_Supreme
-greater,Demonic gorilla,Zenyte shard,1/300,1/300,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Demonic_gorilla
-greater,Dreadborn Araxyte,Aranea boots,1/400,3 × 1/400,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dreadborn_Araxyte
-greater,Duke Sucellus,Chromium ingot,1/240,3/720,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Duke_Sucellus
-greater,Duke Sucellus,Eye of the Duke,1/720,1/720,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Duke_Sucellus
-greater,Earthen Nagua,Earthbound tecpatl,1/400,1/400,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Earthen_Nagua
-greater,Elder custodian stalker,Antler guard,1/650,1/650 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Elder_custodian_stalker
-greater,Gargoyle,Granite maul,1/256,1/256,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Gargoyle
-greater,General Graardor,Bandos boots,1/381,1/381 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/General_Graardor
-greater,General Graardor,Bandos chestplate,1/381,1/381 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/General_Graardor
-greater,General Graardor,Bandos tassets,1/381,1/381 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/General_Graardor
-greater,Greater abyssal demon,Abyssal whip,1/512,3 × 1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Greater_abyssal_demon
-greater,Guardian Drake,Drake's claw,1/512,3 × 1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Guardian_Drake
-greater,Guardian Drake,Drake's tooth,1/512,3 × 1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Guardian_Drake
-greater,Icefiend,Frozen tear,1/150,1/150 [ d 7 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Icefiend
-greater,K'ril Tsutsaroth,Steam battlestaff,1/127,1/127 [ 6 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth
-greater,K'ril Tsutsaroth,Zamorakian spear,1/127,1/127 [ 7 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth
-greater,Kalphite Queen,Dragon 2h sword,1/256,1/256 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Kalphite_Queen
-greater,Kalphite Queen,Dragon chainbody,1/128,1/128 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Kalphite_Queen
-greater,Kalphite Queen,Dragon pickaxe,1/400,1/400,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Kalphite_Queen
-greater,King kurask,Leaf-bladed sword,1/384,3 × 1/384 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/King_kurask
-greater,Kraken,Kraken tentacle,1/400,1/400 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Kraken
-greater,Kraken,Trident of the Seas (full),1/512,1/512 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Kraken
-greater,Kree'arra,Armadyl chainskirt,1/381,1/381 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Kree%27arra
-greater,Kree'arra,Armadyl chestplate,1/381,1/381 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Kree%27arra
-greater,Kree'arra,Armadyl helmet,1/381,1/381 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Kree%27arra
-greater,Kurask,Leaf-bladed sword,1/384,1/384 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Kurask
-greater,Long-tailed Wyvern,Granite longsword,1/512,1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Long-tailed_Wyvern
-greater,Mad Angel,Hallowfell,1/127,1/127 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Mad_Angel
-greater,Maggot King,Crimson kisten,1/520,1/520 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Maggot_King
-greater,Maggot King,Elder venator fang,1/340,1/340 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Maggot_King
-greater,Marble gargoyle,Granite maul,1/256,3 × 1/256,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Marble_gargoyle
-greater,Mutated Terrorbird,Warped sceptre (uncharged),1/320,1/320 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Mutated_Terrorbird
-greater,Mutated Tortoise,Warped sceptre (uncharged),1/320,1/320 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Mutated_Tortoise
-greater,Nex,Ancient hilt,1/516,1/516,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Nex
-greater,Nex,Nihil horn,1/258,1/258,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Nex
-greater,Nex,Torva full helm (damaged),1/258,1/258,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Nex
-greater,Nex,Torva platebody (damaged),1/258,1/258,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Nex
-greater,Nex,Torva platelegs (damaged),1/258,1/258,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Nex
-greater,Nex,Zaryte vambraces,1/172,1/172,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Nex
-greater,Night beast,Dark bow,1/512,3 × 1/512,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Night_beast
-greater,Nuclear smoke devil,Occult necklace,1/512,3 × 1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Nuclear_smoke_devil
-greater,Sarachnis,Sarachnis cudgel,1/384,1/384 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Sarachnis
-greater,Scorpia,Dragon 2h sword,1/128,1/128,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Scorpia
-greater,Scorpia,Malediction shard 3,1/256,1/256 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Scorpia
-greater,Scorpia,Odium shard 3,1/256,1/256 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Scorpia
-greater,Smoke devil,Occult necklace,1/512,1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Smoke_devil
-greater,Spiked Turoth,Leaf-bladed sword,1/500,3 × 1/500,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Spiked_Turoth
-greater,Spiked Turoth,Necklace of Fangs,1/128,3 × 1/128,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Spiked_Turoth
-greater,Spindel,Dragon 2h sword,1/358,1/358 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Spindel
-greater,Spindel,Dragon pickaxe,1/358,1/358 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Spindel
-greater,Spiritual mage,Dragon boots,1/128,1/128,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Spiritual_mage
-greater,Taloned Wyvern,Granite longsword,1/512,1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Taloned_Wyvern
-greater,Terror dog,Granite helm,1/128,1/128,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Terror_dog
-greater,The Leviathan,Chromium ingot,1/256,3/768,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Leviathan
-greater,The Whisperer,Bellator vestige,1/512,1/512 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Whisperer
-greater,The Whisperer,Chromium ingot,3/512,3/512,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Whisperer
-greater,The Whisperer,Siren's staff,1/512,1/512,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Whisperer
-greater,Thermonuclear smoke devil,Occult necklace,1/350,1/350 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Thermonuclear_smoke_devil
-greater,Thermonuclear smoke devil,Smoke battlestaff,1/512,1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Thermonuclear_smoke_devil
-greater,Turoth,Necklace of Fangs,1/129,1/129,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Turoth
-greater,Vardorvis,Chromium ingot,3/1088,"3/1,088",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vardorvis
-greater,Venenatis,Dragon 2h sword,1/256,1/256 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Venenatis
-greater,Venenatis,Dragon pickaxe,1/256,1/256 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Venenatis
-greater,Venenatis,Fangs of Venenatis,1/196,1/196 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Venenatis
-greater,Venenatis,Treasonous ring,1/512,1/512 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Venenatis
-greater,Venenatis,Voidwaker gem,1/360,1/360 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Venenatis
-greater,Vet'ion,Dragon 2h sword,1/256,1/256 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vet%27ion
-greater,Vet'ion,Dragon pickaxe,1/256,1/256 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vet%27ion
-greater,Vet'ion,Ring of the gods,1/512,1/512 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vet%27ion
-greater,Vet'ion,Skull of Vet'ion,1/196,1/196 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vet%27ion
-greater,Vet'ion,Voidwaker blade,1/360,1/360 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vet%27ion
-greater,Warped Terrorbird,Warped sceptre (uncharged),1/320,1/320 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Warped_Terrorbird
-greater,Warped Tortoise,Warped sceptre (uncharged),1/320,1/320 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Warped_Tortoise
-greater,Yama,Oathplate chest,1/600,1/600 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Yama
-greater,Yama,Oathplate helm,1/600,1/600 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Yama
-greater,Yama,Oathplate legs,1/600,1/600 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Yama
-greater,Yama,Soulflame horn,1/300,2/600 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Yama
-greater,Zalcano,Crystal tool seed,39/8000,"39/8,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Zalcano
-superior,Adamant dragon,Dragon metal slice,1/5000,"1/5,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Adamant_dragon
-superior,Alchemical Hydra,Hydra's claw,1/1001,"1/1,001 [ 4 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Alchemical_Hydra
-superior,Armoured zombie (Zemouregal's Base),Broken zombie axe,1/800,1/800,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Armoured_zombie_(Zemouregal%27s_Base)
-superior,Basilisk Sentinel,Basilisk jaw,1/1000,"1/1,000 [ 2 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Basilisk_Sentinel
-superior,Black dragon,Draconic visage,1/1250,"1/1,250",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Black_dragon
-superior,Black dragon,Draconic visage,1/5000,"1/5,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Black_dragon
-superior,Bloodthirsty Basilisk Sentinel,Basilisk jaw,1/1000,"1/1,000 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_Basilisk_Sentinel
-superior,Bloodthirsty Hydra,Hydra tail,1/1001,"9 × 1/1,001 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_Hydra
-superior,Bloodthirsty kurask,Leaf-bladed battleaxe,1/1026,"9 × 1/1,026 [ 2 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_kurask
-superior,Bloodthirsty Shadow Wyrm,Dragon harpoon,1/2000,"1/2,000 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_Shadow_Wyrm
-superior,Bloodthirsty Shadow Wyrm,Dragon sword,1/2000,"1/2,000 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_Shadow_Wyrm
-superior,Cave kraken,Kraken tentacle,1/1200,"1/1,200",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Cave_kraken
-superior,Colossal Hydra,Hydra tail,1/1001,"1/1,001 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Colossal_Hydra
-superior,Corporeal Beast,Elysian sigil,1/4095,"1/4,095",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Corporeal_Beast
-superior,Dire gryphon,Horn of Plenty (empty),1/1000,"1/1,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dire_gryphon
-superior,Duke Sucellus,Virtus mask,1/2160,"1/2,160",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Duke_Sucellus
-superior,Duke Sucellus,Virtus robe bottom,1/2160,"1/2,160",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Duke_Sucellus
-superior,Duke Sucellus,Virtus robe top,1/2160,"1/2,160",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Duke_Sucellus
-superior,Elder Chaos druid,Elder chaos hood,1/1419,"1/1,419",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Elder_Chaos_druid
-superior,Elder Chaos druid,Elder chaos robe,1/1419,"1/1,419",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Elder_Chaos_druid
-superior,Elder Chaos druid,Elder chaos top,1/1419,"1/1,419",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Elder_Chaos_druid
-superior,King Black Dragon,Draconic visage,1/5000,"1/5,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/King_Black_Dragon
-superior,King Black Dragon,Dragon pickaxe,1/1000,"1/1,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/King_Black_Dragon
-superior,King kurask,Leaf-bladed battleaxe,1/1026,"3 × 1/1,026 [ 2 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/King_kurask
-superior,Lizardman shaman,Dragon warhammer,1/3000,"1/3,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Lizardman_shaman
-superior,Long-tailed Wyvern,Granite boots,1/2560,"1/2,560 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Long-tailed_Wyvern
-superior,Mature custodian stalker,Antler guard,1/800,1/800 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Mature_custodian_stalker
-superior,Phosani's Nightmare,Eldritch orb,1/1600,"1/1,600",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare
-superior,Phosani's Nightmare,Harmonised orb,1/1600,"1/1,600",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare
-superior,Phosani's Nightmare,Volatile orb,1/1600,"1/1,600",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare
-superior,Rune dragon,Dragon metal lump,1/5000,"1/5,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Rune_dragon
-superior,Shadow Wyrm,Dragon harpoon,1/2000,"1/2,000 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Shadow_Wyrm
-superior,Shadow Wyrm,Dragon sword,1/2000,"1/2,000 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Shadow_Wyrm
-superior,Spitting Wyvern,Granite boots,1/2560,"1/2,560 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Spitting_Wyvern
-superior,Taloned Wyvern,Granite boots,1/2560,"1/2,560 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Taloned_Wyvern
-superior,The Leviathan,Leviathan's lure,1/768,1/768,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Leviathan
-superior,The Leviathan,Venator vestige,1/768,1/768 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Leviathan
-superior,The Leviathan,Virtus mask,1/2304,"1/2,304",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Leviathan
-superior,The Leviathan,Virtus robe bottom,1/2304,"1/2,304",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Leviathan
-superior,The Leviathan,Virtus robe top,1/2304,"1/2,304",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Leviathan
-superior,The Whisperer,Virtus mask,1/1536,"1/1,536",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Whisperer
-superior,The Whisperer,Virtus robe bottom,1/1536,"1/1,536",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Whisperer
-superior,The Whisperer,Virtus robe top,1/1536,"1/1,536",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Whisperer
-superior,Thermonuclear smoke devil,Dragon chainbody,1/2000,"1/2,000 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Thermonuclear_smoke_devil
-superior,Tortured gorilla,Ballista limbs,1/5000,"1/5,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Tortured_gorilla
-superior,Tortured gorilla,Ballista spring,1/5000,"1/5,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Tortured_gorilla
-superior,Tortured gorilla,Zenyte shard,1/3000,"1/3,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Tortured_gorilla
-superior,Undead Druid,Mask of Ranul,1/1000,"1/1,000 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Undead_Druid
-superior,Vardorvis,Executioner's axe head,1/1088,"1/1,088",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vardorvis
-superior,Vardorvis,Ultor vestige,1/1088,"1/1,088 [ d 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vardorvis
-superior,Vardorvis,Virtus mask,1/3264,"1/3,264",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vardorvis
-superior,Vardorvis,Virtus robe bottom,1/3264,"1/3,264",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vardorvis
-superior,Vardorvis,Virtus robe top,1/3264,"1/3,264",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vardorvis
-superior,Venator,Blood shard,1/860,1/860,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Venator
-superior,Vorkath,Draconic visage,1/5000,"1/5,000 [ 3 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vorkath
-superior,Vorkath,Skeletal visage,1/5000,"1/5,000 [ 3 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vorkath
+source_kind,tier,creature,item,base_rate_for_tier,raw_rates,status,historical_v1_fp,v2_fp,source_url
+MONSTER,greater,Brine rat,Brine sabre,1/512,1/512 [ 1 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,450,TBD,https://oldschool.runescape.wiki/w/Brine_rat
+MONSTER,greater,Turoth,Leaf-bladed sword,1/500,1/500,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,400,TBD,https://oldschool.runescape.wiki/w/Turoth
+MONSTER,greater,Cave horror,Black mask (10),1/512,1/512,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,450,TBD,https://oldschool.runescape.wiki/w/Cave_horror
+MONSTER,greater,Sulphur Nagua,Sulphur blades,1/450,1/450,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,325,TBD,https://oldschool.runescape.wiki/w/Sulphur_Nagua
+MONSTER,superior,Kurask,Leaf-bladed battleaxe,1/1026,"1/1,026 [ 3 ]",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,975,TBD,https://oldschool.runescape.wiki/w/Kurask
+MONSTER,greater,Skeletal Wyvern,Granite legs,1/512,1/512 [ 6 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,850,TBD,https://oldschool.runescape.wiki/w/Skeletal_Wyvern
+MONSTER,greater,Abyssal demon,Abyssal whip,1/512,1/512 [ 3 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,400,TBD,https://oldschool.runescape.wiki/w/Abyssal_demon
+MONSTER,greater,Dark beast,Dark bow,1/512,1/512,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,850,TBD,https://oldschool.runescape.wiki/w/Dark_beast
+MONSTER,greater,Spitting Wyvern,Granite longsword,1/512,1/512 [ 1 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,975,TBD,https://oldschool.runescape.wiki/w/Spitting_Wyvern
+MONSTER,superior,Adamant dragon,Dragon limbs,1/1000,"1/1,000",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1775,TBD,https://oldschool.runescape.wiki/w/Adamant_dragon
+MONSTER,superior,Rune dragon,Dragon limbs,1/800,1/800,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1900,TBD,https://oldschool.runescape.wiki/w/Rune_dragon
+MONSTER,greater,Demonic gorilla,Ballista limbs,1/500,1/500,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1225,TBD,https://oldschool.runescape.wiki/w/Demonic_gorilla
+MONSTER,greater,Demonic gorilla,Ballista spring,1/500,1/500,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1225,TBD,https://oldschool.runescape.wiki/w/Demonic_gorilla
+MONSTER,greater,Demonic gorilla,Light frame,1/750,1/750,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1775,TBD,https://oldschool.runescape.wiki/w/Demonic_gorilla
+MONSTER,superior,Demonic gorilla,Heavy frame,1/1500,"1/1,500",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,3450,TBD,https://oldschool.runescape.wiki/w/Demonic_gorilla
+MONSTER,superior,Vyrewatch Sentinel,Blood shard,1/1500,"1/1,500 [ 1 ]",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1775,TBD,https://oldschool.runescape.wiki/w/Vyrewatch_Sentinel
+MONSTER,greater,Tormented Demon,Burning claw,499/250000,"499/250,000",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1775,TBD,https://oldschool.runescape.wiki/w/Tormented_Demon
+MONSTER,greater,Tormented Demon,Tormented synapse,1/500,1/500,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1775,TBD,https://oldschool.runescape.wiki/w/Tormented_Demon
+BOSS,greater,General Graardor,Bandos hilt,1/508,1/508,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2650,TBD,https://oldschool.runescape.wiki/w/General_Graardor
+BOSS,greater,Kree'arra,Armadyl hilt,1/508,1/508,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2925,TBD,https://oldschool.runescape.wiki/w/Kree%27arra
+BOSS,greater,Commander Zilyana,Armadyl crossbow,1/508,1/508 [ 3 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2650,TBD,https://oldschool.runescape.wiki/w/Commander_Zilyana
+BOSS,greater,Commander Zilyana,Saradomin hilt,1/508,1/508 [ 3 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2650,TBD,https://oldschool.runescape.wiki/w/Commander_Zilyana
+BOSS,greater,K'ril Tsutsaroth,Staff of the Dead,1/508,1/508 [ 8 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2650,TBD,https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth
+BOSS,greater,K'ril Tsutsaroth,Zamorak hilt,1/508,1/508 [ 8 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2650,TBD,https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth
+BOSS,superior,Zulrah,Tanzanite fang,1/1024,"2 × 1/1,024",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,4375,TBD,https://oldschool.runescape.wiki/w/Zulrah
+BOSS,superior,Zulrah,Magic fang,1/1024,"2 × 1/1,024",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,4375,TBD,https://oldschool.runescape.wiki/w/Zulrah
+BOSS,superior,Zulrah,Serpentine visage,1/1024,"2 × 1/1,024",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,4375,TBD,https://oldschool.runescape.wiki/w/Zulrah
+BOSS,superior,Vorkath,Dragonbone necklace,1/1000,"1/1,000 [ 3 ]",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,4275,TBD,https://oldschool.runescape.wiki/w/Vorkath
+BOSS,superior,Corporeal Beast,Spectral sigil,1/1365,"1/1,365",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,13750,TBD,https://oldschool.runescape.wiki/w/Corporeal_Beast
+BOSS,superior,Corporeal Beast,Arcane sigil,1/1365,"1/1,365",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,13750,TBD,https://oldschool.runescape.wiki/w/Corporeal_Beast
+BOSS,greater,Phosani's Nightmare,Nightmare staff,69/35000,"69/35,000",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,8575,TBD,https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare
+BOSS,greater,Phosani's Nightmare,Inquisitor's great helm,1/700,1/700,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,11775,TBD,https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare
+BOSS,greater,Phosani's Nightmare,Inquisitor's hauberk,1/700,1/700,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,11775,TBD,https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare
+BOSS,greater,Phosani's Nightmare,Inquisitor's plateskirt,1/700,1/700,V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,11775,TBD,https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare
+BOSS,superior,Phosani's Nightmare,Inquisitor's mace,31/35000,"31/35,000",V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,18925,TBD,https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare
+BOSS,greater,Artio,Claws of Callisto,1/618,1/618 [ 2 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2175,TBD,https://oldschool.runescape.wiki/w/Artio
+BOSS,greater,Artio,Tyrannical ring,1/716,1/716 [ 2 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2500,TBD,https://oldschool.runescape.wiki/w/Artio
+BOSS,superior,Artio,Voidwaker hilt,1/912,1/912 [ 2 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,3150,TBD,https://oldschool.runescape.wiki/w/Artio
+BOSS,greater,Spindel,Fangs of Venenatis,1/618,1/618 [ 1 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2175,TBD,https://oldschool.runescape.wiki/w/Spindel
+BOSS,greater,Spindel,Treasonous ring,1/716,1/716 [ 1 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2500,TBD,https://oldschool.runescape.wiki/w/Spindel
+BOSS,superior,Spindel,Voidwaker gem,1/912,1/912 [ 1 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,3150,TBD,https://oldschool.runescape.wiki/w/Spindel
+BOSS,greater,Calvar'ion,Skull of Vet'ion,1/618,1/618 [ 1 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1650,TBD,https://oldschool.runescape.wiki/w/Calvar%27ion
+BOSS,greater,Calvar'ion,Ring of the gods,1/716,1/716 [ 1 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,1900,TBD,https://oldschool.runescape.wiki/w/Calvar%27ion
+BOSS,superior,Calvar'ion,Voidwaker blade,1/912,1/912 [ 1 ],V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED,2400,TBD,https://oldschool.runescape.wiki/w/Calvar%27ion
+BOSS,lesser,Amoxliatl,Pendant of Ates (inert),1/25,1/25,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Amoxliatl
+BOSS,lesser,Hespori,Bottomless compost bucket,1/35,1/35 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Hespori
+MONSTER,lesser,Magma strykewyrm,Dragon metal sheet,1/45,3 × 1/45,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Magma_strykewyrm
+BOSS,lesser,Phantom Muspah,Ancient icon,1/50,2/100 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Phantom_Muspah
+BOSS,lesser,Scurrius,Scurrius' spine,1/33,1/33 [ d 3 ]; 1/33 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Scurrius
+BOSS,lesser,The Hueycoatl,Hueycoatl hide,11/315,11/315,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Hueycoatl
+BOSS,standard,Abyssal Sire,Unsired,1/100,1/100 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Abyssal_Sire
+BOSS,standard,Amoxliatl,Glacial temotli,1/100,1/100,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Amoxliatl
+BOSS,standard,Branda the Fire Queen,Fire element staff crown,1/75,1/75,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Branda_the_Fire_Queen
+BOSS,standard,Chaos Elemental,Dragon 2h sword,1/64,2/128,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Chaos_Elemental
+BOSS,standard,Corporeal Beast,Spirit shield,1/64,8/512 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Corporeal_Beast
+MONSTER,standard,Cyclops,Dragon defender,1/100,1/100,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Cyclops
+BOSS,standard,Eldric the Ice King,Ice element staff crown,1/75,1/75,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Eldric_the_Ice_King
+BOSS,standard,Maggot King,Venator fang,2/159,2/159,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Maggot_King
+BOSS,standard,Maggot King,Venator tooth,2/159,2/159,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Maggot_King
+BOSS,standard,Phantom Muspah,Venator shard,1/100,1/100 [ 1 ] [ d 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Phantom_Muspah
+BOSS,standard,The Hueycoatl,Dragon hunter wand,1/105,1/105,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Hueycoatl
+BOSS,standard,The Hueycoatl,Tome of Earth (empty),1/90,1/90,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Hueycoatl
+BOSS,greater,Alchemical Hydra,Hydra leather,1/514,1/514 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Alchemical_Hydra
+BOSS,greater,Alchemical Hydra,Hydra tail,1/513,1/513 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Alchemical_Hydra
+MONSTER,greater,Ancient Custodian,Antler guard,1/650,1/650,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Ancient_Custodian
+MONSTER,greater,Ancient Wyvern,Granite boots,1/600,1/600 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Ancient_Wyvern
+MONSTER,greater,Ancient Wyvern,Granite longsword,1/600,1/600 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Ancient_Wyvern
+BOSS,greater,Araxxor,Araxyte fang,1/600,1/600,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Araxxor
+BOSS,greater,Araxxor,Noxious blade,1/200,1/200 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Araxxor
+BOSS,greater,Araxxor,Noxious point,1/200,1/200 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Araxxor
+BOSS,greater,Araxxor,Noxious pommel,1/200,1/200 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Araxxor
+BOSS,greater,Artio,Dragon 2h sword,1/358,1/358 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Artio
+BOSS,greater,Artio,Dragon pickaxe,1/358,1/358 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Artio
+MONSTER,greater,Bloodthirsty abomination,Black mask (10),1/512,9 × 1/512,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_abomination
+MONSTER,greater,Bloodthirsty abyssal demon,Abyssal whip,1/512,9 × 1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_abyssal_demon
+MONSTER,greater,Bloodthirsty Drake,Drake's claw,1/512,1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_Drake
+MONSTER,greater,Bloodthirsty Drake,Drake's tooth,1/512,1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_Drake
+MONSTER,greater,Bloodthirsty gargoyle,Granite maul,1/256,9 × 1/256,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_gargoyle
+MONSTER,greater,Bloodthirsty kurask,Leaf-bladed sword,1/384,9 × 1/384 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_kurask
+MONSTER,greater,Bloodthirsty Night beast,Dark bow,1/512,9 × 1/512,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_Night_beast
+MONSTER,greater,Bloodthirsty smoke devil,Occult necklace,1/512,9 × 1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_smoke_devil
+MONSTER,greater,Bloodthirsty Turoth,Leaf-bladed sword,1/500,9 × 1/500,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_Turoth
+BOSS,greater,Callisto,Claws of Callisto,1/196,1/196 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Callisto
+BOSS,greater,Callisto,Dragon 2h sword,1/256,1/256 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Callisto
+BOSS,greater,Callisto,Dragon pickaxe,1/256,1/256 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Callisto
+BOSS,greater,Callisto,Tyrannical ring,1/512,1/512 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Callisto
+BOSS,greater,Callisto,Voidwaker hilt,1/360,1/360 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Callisto
+BOSS,greater,Calvar'ion,Dragon 2h sword,1/358,1/358 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Calvar%27ion
+BOSS,greater,Calvar'ion,Dragon pickaxe,1/358,1/358 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Calvar%27ion
+MONSTER,greater,Cave abomination,Black mask (10),1/512,3 × 1/512,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Cave_abomination
+MONSTER,greater,Cave kraken,Uncharged trident,1/200,1/200,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Cave_kraken
+BOSS,greater,Cerberus,Eternal crystal,1/520,1/520,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Cerberus
+BOSS,greater,Cerberus,Pegasian crystal,1/520,1/520,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Cerberus
+BOSS,greater,Cerberus,Primordial crystal,1/520,1/520,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Cerberus
+BOSS,greater,Cerberus,Smouldering stone,1/520,1/520,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Cerberus
+BOSS,greater,Chaos Elemental,Dragon pickaxe,1/256,1/256,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Chaos_Elemental
+BOSS,greater,Chaos Fanatic,Malediction shard 1,1/256,1/256 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Chaos_Fanatic
+BOSS,greater,Chaos Fanatic,Odium shard 1,1/256,1/256 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Chaos_Fanatic
+BOSS,greater,Commander Zilyana,Saradomin sword,1/127,1/127 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Commander_Zilyana
+BOSS,greater,Commander Zilyana,Saradomin's light,1/254,1/254 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Commander_Zilyana
+BOSS,greater,Corporeal Beast,Holy elixir,3/512,3/512 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Corporeal_Beast
+BOSS,greater,Crazy archaeologist,Malediction shard 2,1/256,1/256 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Crazy_archaeologist
+BOSS,greater,Crazy archaeologist,Odium shard 2,1/256,1/256 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Crazy_archaeologist
+BOSS,greater,Dagannoth Prime,Dragon axe,1/128,1/128 [ 1 ] [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dagannoth_Prime
+BOSS,greater,Dagannoth Prime,Mud battlestaff,1/128,1/128 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dagannoth_Prime
+BOSS,greater,Dagannoth Prime,Seers ring,1/128,1/128 [ 1 ] [ 2 ] [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dagannoth_Prime
+BOSS,greater,Dagannoth Rex,Berserker ring,1/128,1/128 [ 2 ] [ 3 ] [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dagannoth_Rex
+BOSS,greater,Dagannoth Rex,Dragon axe,1/128,1/128 [ 2 ] [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dagannoth_Rex
+BOSS,greater,Dagannoth Rex,Warrior ring,1/128,1/128 [ 2 ] [ 3 ] [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dagannoth_Rex
+BOSS,greater,Dagannoth Supreme,Archers ring,1/128,1/128 [ 1 ] [ 2 ] [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dagannoth_Supreme
+BOSS,greater,Dagannoth Supreme,Dragon axe,1/128,1/128 [ 1 ] [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dagannoth_Supreme
+BOSS,greater,Dagannoth Supreme,Seercull,1/128,1/128 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dagannoth_Supreme
+MONSTER,greater,Demonic gorilla,Zenyte shard,1/300,1/300,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Demonic_gorilla
+MONSTER,greater,Dreadborn Araxyte,Aranea boots,1/400,3 × 1/400,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dreadborn_Araxyte
+BOSS,greater,Duke Sucellus,Chromium ingot,1/240,3/720,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Duke_Sucellus
+BOSS,greater,Duke Sucellus,Eye of the Duke,1/720,1/720,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Duke_Sucellus
+MONSTER,greater,Earthen Nagua,Earthbound tecpatl,1/400,1/400,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Earthen_Nagua
+MONSTER,greater,Elder custodian stalker,Antler guard,1/650,1/650 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Elder_custodian_stalker
+MONSTER,greater,Gargoyle,Granite maul,1/256,1/256,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Gargoyle
+BOSS,greater,General Graardor,Bandos boots,1/381,1/381 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/General_Graardor
+BOSS,greater,General Graardor,Bandos chestplate,1/381,1/381 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/General_Graardor
+BOSS,greater,General Graardor,Bandos tassets,1/381,1/381 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/General_Graardor
+MONSTER,greater,Greater abyssal demon,Abyssal whip,1/512,3 × 1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Greater_abyssal_demon
+MONSTER,greater,Guardian Drake,Drake's claw,1/512,3 × 1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Guardian_Drake
+MONSTER,greater,Guardian Drake,Drake's tooth,1/512,3 × 1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Guardian_Drake
+MONSTER,greater,Icefiend,Frozen tear,1/150,1/150 [ d 7 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Icefiend
+BOSS,greater,K'ril Tsutsaroth,Steam battlestaff,1/127,1/127 [ 6 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth
+BOSS,greater,K'ril Tsutsaroth,Zamorakian spear,1/127,1/127 [ 7 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth
+BOSS,greater,Kalphite Queen,Dragon 2h sword,1/256,1/256 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Kalphite_Queen
+BOSS,greater,Kalphite Queen,Dragon chainbody,1/128,1/128 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Kalphite_Queen
+BOSS,greater,Kalphite Queen,Dragon pickaxe,1/400,1/400,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Kalphite_Queen
+MONSTER,greater,King kurask,Leaf-bladed sword,1/384,3 × 1/384 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/King_kurask
+BOSS,greater,Kraken,Kraken tentacle,1/400,1/400 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Kraken
+BOSS,greater,Kraken,Trident of the Seas (full),1/512,1/512 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Kraken
+BOSS,greater,Kree'arra,Armadyl chainskirt,1/381,1/381 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Kree%27arra
+BOSS,greater,Kree'arra,Armadyl chestplate,1/381,1/381 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Kree%27arra
+BOSS,greater,Kree'arra,Armadyl helmet,1/381,1/381 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Kree%27arra
+MONSTER,greater,Kurask,Leaf-bladed sword,1/384,1/384 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Kurask
+MONSTER,greater,Long-tailed Wyvern,Granite longsword,1/512,1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Long-tailed_Wyvern
+BOSS,greater,Mad Angel,Hallowfell,1/127,1/127 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Mad_Angel
+BOSS,greater,Maggot King,Crimson kisten,1/520,1/520 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Maggot_King
+BOSS,greater,Maggot King,Elder venator fang,1/340,1/340 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Maggot_King
+MONSTER,greater,Marble gargoyle,Granite maul,1/256,3 × 1/256,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Marble_gargoyle
+MONSTER,greater,Mutated Terrorbird,Warped sceptre (uncharged),1/320,1/320 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Mutated_Terrorbird
+MONSTER,greater,Mutated Tortoise,Warped sceptre (uncharged),1/320,1/320 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Mutated_Tortoise
+BOSS,greater,Nex,Ancient hilt,1/516,1/516,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Nex
+BOSS,greater,Nex,Nihil horn,1/258,1/258,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Nex
+BOSS,greater,Nex,Torva full helm (damaged),1/258,1/258,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Nex
+BOSS,greater,Nex,Torva platebody (damaged),1/258,1/258,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Nex
+BOSS,greater,Nex,Torva platelegs (damaged),1/258,1/258,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Nex
+BOSS,greater,Nex,Zaryte vambraces,1/172,1/172,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Nex
+MONSTER,greater,Night beast,Dark bow,1/512,3 × 1/512,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Night_beast
+MONSTER,greater,Nuclear smoke devil,Occult necklace,1/512,3 × 1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Nuclear_smoke_devil
+BOSS,greater,Sarachnis,Sarachnis cudgel,1/384,1/384 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Sarachnis
+BOSS,greater,Scorpia,Dragon 2h sword,1/128,1/128,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Scorpia
+BOSS,greater,Scorpia,Malediction shard 3,1/256,1/256 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Scorpia
+BOSS,greater,Scorpia,Odium shard 3,1/256,1/256 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Scorpia
+MONSTER,greater,Smoke devil,Occult necklace,1/512,1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Smoke_devil
+MONSTER,greater,Spiked Turoth,Leaf-bladed sword,1/500,3 × 1/500,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Spiked_Turoth
+MONSTER,greater,Spiked Turoth,Necklace of Fangs,1/128,3 × 1/128,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Spiked_Turoth
+BOSS,greater,Spindel,Dragon 2h sword,1/358,1/358 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Spindel
+BOSS,greater,Spindel,Dragon pickaxe,1/358,1/358 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Spindel
+MONSTER,greater,Spiritual mage,Dragon boots,1/128,1/128,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Spiritual_mage
+MONSTER,greater,Taloned Wyvern,Granite longsword,1/512,1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Taloned_Wyvern
+MONSTER,greater,Terror dog,Granite helm,1/128,1/128,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Terror_dog
+BOSS,greater,The Leviathan,Chromium ingot,1/256,3/768,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Leviathan
+BOSS,greater,The Whisperer,Bellator vestige,1/512,1/512 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Whisperer
+BOSS,greater,The Whisperer,Chromium ingot,3/512,3/512,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Whisperer
+BOSS,greater,The Whisperer,Siren's staff,1/512,1/512,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Whisperer
+BOSS,greater,Thermonuclear smoke devil,Occult necklace,1/350,1/350 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Thermonuclear_smoke_devil
+BOSS,greater,Thermonuclear smoke devil,Smoke battlestaff,1/512,1/512 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Thermonuclear_smoke_devil
+MONSTER,greater,Turoth,Necklace of Fangs,1/129,1/129,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Turoth
+BOSS,greater,Vardorvis,Chromium ingot,3/1088,"3/1,088",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vardorvis
+BOSS,greater,Venenatis,Dragon 2h sword,1/256,1/256 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Venenatis
+BOSS,greater,Venenatis,Dragon pickaxe,1/256,1/256 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Venenatis
+BOSS,greater,Venenatis,Fangs of Venenatis,1/196,1/196 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Venenatis
+BOSS,greater,Venenatis,Treasonous ring,1/512,1/512 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Venenatis
+BOSS,greater,Venenatis,Voidwaker gem,1/360,1/360 [ 2 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Venenatis
+BOSS,greater,Vet'ion,Dragon 2h sword,1/256,1/256 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vet%27ion
+BOSS,greater,Vet'ion,Dragon pickaxe,1/256,1/256 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vet%27ion
+BOSS,greater,Vet'ion,Ring of the gods,1/512,1/512 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vet%27ion
+BOSS,greater,Vet'ion,Skull of Vet'ion,1/196,1/196 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vet%27ion
+BOSS,greater,Vet'ion,Voidwaker blade,1/360,1/360 [ 4 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vet%27ion
+MONSTER,greater,Warped Terrorbird,Warped sceptre (uncharged),1/320,1/320 [ 3 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Warped_Terrorbird
+MONSTER,greater,Warped Tortoise,Warped sceptre (uncharged),1/320,1/320 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Warped_Tortoise
+BOSS,greater,Yama,Oathplate chest,1/600,1/600 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Yama
+BOSS,greater,Yama,Oathplate helm,1/600,1/600 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Yama
+BOSS,greater,Yama,Oathplate legs,1/600,1/600 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Yama
+BOSS,greater,Yama,Soulflame horn,1/300,2/600 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Yama
+BOSS,greater,Zalcano,Crystal tool seed,39/8000,"39/8,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Zalcano
+MONSTER,superior,Adamant dragon,Dragon metal slice,1/5000,"1/5,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Adamant_dragon
+BOSS,superior,Alchemical Hydra,Hydra's claw,1/1001,"1/1,001 [ 4 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Alchemical_Hydra
+MONSTER,superior,Armoured zombie (Zemouregal's Base),Broken zombie axe,1/800,1/800,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Armoured_zombie_(Zemouregal%27s_Base)
+MONSTER,superior,Basilisk Sentinel,Basilisk jaw,1/1000,"1/1,000 [ 2 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Basilisk_Sentinel
+MONSTER,superior,Black dragon,Draconic visage,1/1250,"1/1,250",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Black_dragon
+MONSTER,superior,Black dragon,Draconic visage,1/5000,"1/5,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Black_dragon
+MONSTER,superior,Bloodthirsty Basilisk Sentinel,Basilisk jaw,1/1000,"1/1,000 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_Basilisk_Sentinel
+MONSTER,superior,Bloodthirsty Hydra,Hydra tail,1/1001,"9 × 1/1,001 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_Hydra
+MONSTER,superior,Bloodthirsty kurask,Leaf-bladed battleaxe,1/1026,"9 × 1/1,026 [ 2 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_kurask
+MONSTER,superior,Bloodthirsty Shadow Wyrm,Dragon harpoon,1/2000,"1/2,000 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_Shadow_Wyrm
+MONSTER,superior,Bloodthirsty Shadow Wyrm,Dragon sword,1/2000,"1/2,000 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Bloodthirsty_Shadow_Wyrm
+MONSTER,superior,Cave kraken,Kraken tentacle,1/1200,"1/1,200",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Cave_kraken
+MONSTER,superior,Colossal Hydra,Hydra tail,1/1001,"1/1,001 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Colossal_Hydra
+BOSS,superior,Corporeal Beast,Elysian sigil,1/4095,"1/4,095",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Corporeal_Beast
+MONSTER,superior,Dire gryphon,Horn of Plenty (empty),1/1000,"1/1,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Dire_gryphon
+BOSS,superior,Duke Sucellus,Virtus mask,1/2160,"1/2,160",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Duke_Sucellus
+BOSS,superior,Duke Sucellus,Virtus robe bottom,1/2160,"1/2,160",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Duke_Sucellus
+BOSS,superior,Duke Sucellus,Virtus robe top,1/2160,"1/2,160",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Duke_Sucellus
+MONSTER,superior,Elder Chaos druid,Elder chaos hood,1/1419,"1/1,419",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Elder_Chaos_druid
+MONSTER,superior,Elder Chaos druid,Elder chaos robe,1/1419,"1/1,419",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Elder_Chaos_druid
+MONSTER,superior,Elder Chaos druid,Elder chaos top,1/1419,"1/1,419",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Elder_Chaos_druid
+BOSS,superior,King Black Dragon,Draconic visage,1/5000,"1/5,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/King_Black_Dragon
+BOSS,superior,King Black Dragon,Dragon pickaxe,1/1000,"1/1,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/King_Black_Dragon
+MONSTER,superior,King kurask,Leaf-bladed battleaxe,1/1026,"3 × 1/1,026 [ 2 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/King_kurask
+MONSTER,superior,Lizardman shaman,Dragon warhammer,1/3000,"1/3,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Lizardman_shaman
+MONSTER,superior,Long-tailed Wyvern,Granite boots,1/2560,"1/2,560 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Long-tailed_Wyvern
+MONSTER,superior,Mature custodian stalker,Antler guard,1/800,1/800 [ 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Mature_custodian_stalker
+BOSS,superior,Phosani's Nightmare,Eldritch orb,1/1600,"1/1,600",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare
+BOSS,superior,Phosani's Nightmare,Harmonised orb,1/1600,"1/1,600",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare
+BOSS,superior,Phosani's Nightmare,Volatile orb,1/1600,"1/1,600",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare
+MONSTER,superior,Rune dragon,Dragon metal lump,1/5000,"1/5,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Rune_dragon
+MONSTER,superior,Shadow Wyrm,Dragon harpoon,1/2000,"1/2,000 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Shadow_Wyrm
+MONSTER,superior,Shadow Wyrm,Dragon sword,1/2000,"1/2,000 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Shadow_Wyrm
+MONSTER,superior,Spitting Wyvern,Granite boots,1/2560,"1/2,560 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Spitting_Wyvern
+MONSTER,superior,Taloned Wyvern,Granite boots,1/2560,"1/2,560 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Taloned_Wyvern
+BOSS,superior,The Leviathan,Leviathan's lure,1/768,1/768,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Leviathan
+BOSS,superior,The Leviathan,Venator vestige,1/768,1/768 [ d 1 ],SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Leviathan
+BOSS,superior,The Leviathan,Virtus mask,1/2304,"1/2,304",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Leviathan
+BOSS,superior,The Leviathan,Virtus robe bottom,1/2304,"1/2,304",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Leviathan
+BOSS,superior,The Leviathan,Virtus robe top,1/2304,"1/2,304",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Leviathan
+BOSS,superior,The Whisperer,Virtus mask,1/1536,"1/1,536",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Whisperer
+BOSS,superior,The Whisperer,Virtus robe bottom,1/1536,"1/1,536",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Whisperer
+BOSS,superior,The Whisperer,Virtus robe top,1/1536,"1/1,536",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/The_Whisperer
+BOSS,superior,Thermonuclear smoke devil,Dragon chainbody,1/2000,"1/2,000 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Thermonuclear_smoke_devil
+MONSTER,superior,Tortured gorilla,Ballista limbs,1/5000,"1/5,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Tortured_gorilla
+MONSTER,superior,Tortured gorilla,Ballista spring,1/5000,"1/5,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Tortured_gorilla
+MONSTER,superior,Tortured gorilla,Zenyte shard,1/3000,"1/3,000",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Tortured_gorilla
+MONSTER,superior,Undead Druid,Mask of Ranul,1/1000,"1/1,000 [ 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Undead_Druid
+BOSS,superior,Vardorvis,Executioner's axe head,1/1088,"1/1,088",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vardorvis
+BOSS,superior,Vardorvis,Ultor vestige,1/1088,"1/1,088 [ d 1 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vardorvis
+BOSS,superior,Vardorvis,Virtus mask,1/3264,"1/3,264",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vardorvis
+BOSS,superior,Vardorvis,Virtus robe bottom,1/3264,"1/3,264",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vardorvis
+BOSS,superior,Vardorvis,Virtus robe top,1/3264,"1/3,264",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vardorvis
+MONSTER,superior,Venator,Blood shard,1/860,1/860,SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Venator
+BOSS,superior,Vorkath,Draconic visage,1/5000,"1/5,000 [ 3 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vorkath
+BOSS,superior,Vorkath,Skeletal visage,1/5000,"1/5,000 [ 3 ]",SOURCE_CANDIDATE_NOT_ADMITTED,,TBD,https://oldschool.runescape.wiki/w/Vorkath

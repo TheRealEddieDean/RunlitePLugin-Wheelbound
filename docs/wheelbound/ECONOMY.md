@@ -73,7 +73,7 @@ WB-D130/131: reward/time candidates use one specific target item with in-band re
 
 ## Challenge FP schedule v1 — WB-D143
 
-All44 [authored Challenge hunts](CHALLENGE_HUNT_TABLE.md) have numeric fixed quotes:25*ceil((100+100*reference_expected_hours)/25), expected hours using the lower supported probability and authored source throughput.325–18,925 FP across early and long late-game hunts. This is a concrete delegated schedule, not historical H1–H4 calibration or measured player earnings. No market-price floor, passive/partial FP, KC/time cap, refund or actual-duration repricing. Quotes freeze before selection/reveal under existing contract. Future balancing needs a new version; do not rewrite already frozen assignments. Ordinary rewards, independent bounty payouts, unlock prices and historical simulations unchanged.
+All44 [boss drop table](BOSS_CHALLENGE_HUNT_TABLE.md) and [monster drop table](MONSTER_CHALLENGE_HUNT_TABLE.md) have numeric fixed quotes:25*ceil((100+100*reference_expected_hours)/25), expected hours using the lower supported probability and authored source throughput.325–18,925 FP across early and long late-game hunts. This is a concrete delegated schedule, not historical H1–H4 calibration or measured player earnings. No market-price floor, passive/partial FP, KC/time cap, refund or actual-duration repricing. Quotes freeze before selection/reveal under existing contract. Future balancing needs a new version; do not rewrite already frozen assignments. Ordinary rewards, independent bounty payouts, unlock prices and historical simulations unchanged.
 
 ## Current Challenge rarity/card supersession — WB-D144/145
 

@@ -47,7 +47,7 @@ WB-D140/141: prioritize repeatable task-independent starter contexts; hold finit
 
 ## Completed finite Challenge design catalog v1 — WB-D142/143
 
-[Challenge hunt table](CHALLENGE_HUNT_TABLE.md) and catalogs/challenge_hunts_v1.json now author25 source/encounter keys,44 specific-item hunts, six starter creatures, source-reviewed in-band personal contexts, concrete access/receipt contracts and fixed FP quotes. This supersedes earlier **unfilled v1 membership/context/quote table** status, not historical simulation inputs or runtime enable gates. Finite roster source/model authoring is complete; no all-game completeness claim. Excluded task/group/stateful/unsupported contexts are not selectable. Future current-client adapter/ownership/timing tests remain activation gates. No catalog is enabled by documentation. Authority manifest now pins this ninth catalog independently of immutable H3 inputs.
+[boss drop table](BOSS_CHALLENGE_HUNT_TABLE.md) and [monster drop table](MONSTER_CHALLENGE_HUNT_TABLE.md) and catalogs/challenge_hunts_v1.json now author25 source/encounter keys,44 specific-item hunts, six starter creatures, source-reviewed in-band personal contexts, concrete access/receipt contracts and fixed FP quotes. This supersedes earlier **unfilled v1 membership/context/quote table** status, not historical simulation inputs or runtime enable gates. Finite roster source/model authoring is complete; no all-game completeness claim. Excluded task/group/stateful/unsupported contexts are not selectable. Future current-client adapter/ownership/timing tests remain activation gates. No catalog is enabled by documentation. Authority manifest now pins this ninth catalog independently of immutable H3 inputs.
 
 ## Current Challenge rarity/card supersession — WB-D144/145
 
@@ -56,3 +56,7 @@ WB-D140/141: prioritize repeatable task-independent starter contexts; hold finit
 ## Tier presentation index — A65
 
 catalogs/challenge_hunt_review_index_v2.json/.csv drives CHALLENGE_HUNT_TABLE's four-tier display. It preserves all44 historical reviewed entries plus explicit source candidate groups and unresolved rows. The authority manifest pins it as a **review index, not an admitted/runtime roster**. No new FP/unlock topology or source-access approval follows from display membership. Old44-hunt JSON/CSV remain unchanged; old human table is preserved in CHALLENGE_HUNT_TABLE_V1_ARCHIVE.
+
+## Monster/boss source partition — A66 / WB-D146
+
+Current user-facing tables are MONSTER_CHALLENGE_HUNT_TABLE.md (90 rows) and BOSS_CHALLENGE_HUNT_TABLE.md (156 rows). Corrected taxonomy determines source_kind in the shared review index/CSV;246 existing rows and45 held rate rows are conserved without cross-listing a source in both tables. New candidates/v2 FP/unlock integration remain unapproved/pending as before. Former single/archive filenames are historical references, not active tables.

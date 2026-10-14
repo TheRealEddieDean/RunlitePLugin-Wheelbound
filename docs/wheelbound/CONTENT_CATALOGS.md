@@ -191,7 +191,7 @@ WB-D140/141: prioritize repeatable task-independent starter contexts; hold finit
 
 ## Completed authored Challenge catalog v1
 
-The separate catalogs/challenge_hunts_v1.json and .csv contain25 encounter keys/44 exact-item hunts; [human table](CHALLENGE_HUNT_TABLE.md) lists access, personal probability and numeric FP. Source/identity packets and full-corpus screening dispositions accompany the finite whitelist. Authority WB-D142/143. This completes v1 content authoring; unlisted source contexts, task-dependent/group/stateful formulas and runtime enablement are outside this version. Original raw upload and historical catalogs remain unchanged.
+The separate catalogs/challenge_hunts_v1.json and .csv contain25 encounter keys/44 exact-item hunts; [boss drop table](BOSS_CHALLENGE_HUNT_TABLE.md) and [monster drop table](MONSTER_CHALLENGE_HUNT_TABLE.md) lists access, personal probability and numeric FP. Source/identity packets and full-corpus screening dispositions accompany the finite whitelist. Authority WB-D142/143. This completes v1 content authoring; unlisted source contexts, task-dependent/group/stateful formulas and runtime enablement are outside this version. Original raw upload and historical catalogs remain unchanged.
 
 ## Current Challenge rarity/card supersession — WB-D144/145
 

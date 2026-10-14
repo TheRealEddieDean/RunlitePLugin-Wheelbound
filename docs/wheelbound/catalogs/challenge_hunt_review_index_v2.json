@@ -184,7 +184,18 @@
         2
       ],
       "access_requirements": "Complete Olaf's Quest; enter Brine Rat Cavern with a usable spade route; no active task required.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -203,7 +214,21 @@
         1
       ],
       "access_requirements": "Fremennik Slayer Dungeon; owned usable leaf-bladed weapon, broad ammunition or Magic Dart and supplies; off-task route.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -222,7 +247,22 @@
         5
       ],
       "access_requirements": "Cabin Fever complete; Mos Le'Harmless Cave; functioning light or permanent light; usable witchwood icon or sustainable Protect from Melee; off-task route.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Allotment seed drop table monsters",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -241,7 +281,20 @@
         0
       ],
       "access_requirements": "Perilous Moons progressed far enough to enter Neypotzli Ancient Prison; repeatable off-task access.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "category_ancestry:boss"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -260,7 +313,21 @@
         7
       ],
       "access_requirements": "Fremennik Slayer Dungeon; usable leaf-bladed weapon, broad ammunition or Magic Dart; off-task route. Iorwerth/Wilderness/superior contexts not selected.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -279,7 +346,20 @@
         1
       ],
       "access_requirements": "Asgarnian Ice Dungeon end chamber; repeatable off-task route; owned usable icy-breath protection and sustainable combat supplies. No task-only upper-floor route.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -298,7 +378,22 @@
         7
       ],
       "access_requirements": "Ordinary Slayer Tower upper-floor or ordinary Catacombs route; no Wilderness Slayer Cave or task-only basement; no superior/Sire credit.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Wilderness slayer drop table monsters"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -317,7 +412,23 @@
         0
       ],
       "access_requirements": "Mourning's End Part II complete and accessible Mourner Tunnels route; off-task ordinary dark beasts only. No Night beast credit.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that do not become tolerant",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -336,7 +447,19 @@
         7
       ],
       "access_requirements": "Bone Voyage complete; Fossil Island Wyvern Cave off-task area; owned usable icy-breath protection and sustainable supplies. Other wyvern species remain distinct, unselected sources.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -355,7 +478,20 @@
         53
       ],
       "access_requirements": "Dragon Slayer II complete; repeatable western Lithkren Vault route; post-quest only, dragonfire/poison combat readiness.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Useful herb drop table monsters"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -374,7 +510,20 @@
         55
       ],
       "access_requirements": "Dragon Slayer II complete; repeatable eastern Lithkren Vault route; post-quest only, dragonfire/shock combat readiness.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Useful herb drop table monsters"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -393,7 +542,20 @@
         2
       ],
       "access_requirements": "Monkey Madness II complete; repeatable Crash Site Cavern route; post-quest ordinary gorillas, sustainable two-style combat; no tortured gorilla or quest fight credit.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters that drop clues",
+        "page_category:Quest monsters",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -412,7 +574,20 @@
         3
       ],
       "access_requirements": "Monkey Madness II complete; repeatable Crash Site Cavern route; post-quest ordinary gorillas, sustainable two-style combat; no tortured gorilla or quest fight credit.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters that drop clues",
+        "page_category:Quest monsters",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -431,7 +606,20 @@
         4
       ],
       "access_requirements": "Monkey Madness II complete; repeatable Crash Site Cavern route; post-quest ordinary gorillas, sustainable two-style combat; no tortured gorilla or quest fight credit.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters that drop clues",
+        "page_category:Quest monsters",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -450,7 +638,20 @@
         5
       ],
       "access_requirements": "Monkey Madness II complete; repeatable Crash Site Cavern route; post-quest ordinary gorillas, sustainable two-style combat; no tortured gorilla or quest fight credit.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters that drop clues",
+        "page_category:Quest monsters",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -469,7 +670,22 @@
         1
       ],
       "access_requirements": "Sins of the Father complete; Darkmeyer route and owned usable Blisterwood flail; combat only. Pickpocketed blood shards and venator drops never qualify.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that do not become tolerant",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Uncommon seed drop table monsters"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -488,7 +704,21 @@
         1
       ],
       "access_requirements": "While Guthix Sleeps complete; repeatable Ancient Guthixian Temple route; post-quest combat, sustainable style switching. No quest-instance credit.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Combat herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters",
+        "page_category:Useful herb drop table monsters"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -507,7 +737,21 @@
         2
       ],
       "access_requirements": "While Guthix Sleeps complete; repeatable Ancient Guthixian Temple route; post-quest combat, sustainable style switching. No quest-instance credit.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Combat herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters",
+        "page_category:Useful herb drop table monsters"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -526,7 +770,12 @@
         5
       ],
       "access_requirements": "Verified normal God Wars Dungeon entry route; hammer; Bandos Stronghold; earn ordinary 40 faction KC each entry. Solo boss kills, no team contribution or bodyguard-drop credit.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -545,7 +794,12 @@
         6
       ],
       "access_requirements": "Verified normal God Wars Dungeon entry route; usable crossbow and mithril grapple; Armadyl Eyrie; ordinary 40 faction KC each entry; solo boss kills only.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -564,7 +818,12 @@
         4
       ],
       "access_requirements": "Verified normal God Wars Dungeon entry; unboosted 70 Agility, ropes installed for route; Saradomin Encampment, ordinary 40 faction KC each entry; solo boss kills only.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -583,7 +842,12 @@
         5
       ],
       "access_requirements": "Verified normal God Wars Dungeon entry; unboosted 70 Agility, ropes installed for route; Saradomin Encampment, ordinary 40 faction KC each entry; solo boss kills only.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -602,7 +866,12 @@
         4
       ],
       "access_requirements": "Verified normal God Wars Dungeon entry; 70 Hitpoints river crossing; Zamorak Fortress; ordinary 40 faction KC each entry; solo boss kills only.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -621,7 +890,12 @@
         5
       ],
       "access_requirements": "Verified normal God Wars Dungeon entry; 70 Hitpoints river crossing; Zamorak Fortress; ordinary 40 faction KC each entry; solo boss kills only.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -640,7 +914,12 @@
         1
       ],
       "access_requirements": "Regicide complete as conservative authored access gate; sacrifice dialogue completed, repeatable boat access from Zul-Andra; solo normal encounter with sustainable combat supplies.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -659,7 +938,12 @@
         2
       ],
       "access_requirements": "Regicide complete as conservative authored access gate; sacrifice dialogue completed, repeatable boat access from Zul-Andra; solo normal encounter with sustainable combat supplies.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -678,7 +962,12 @@
         3
       ],
       "access_requirements": "Regicide complete as conservative authored access gate; sacrifice dialogue completed, repeatable boat access from Zul-Andra; solo normal encounter with sustainable combat supplies.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -697,7 +986,12 @@
         86
       ],
       "access_requirements": "Dragon Slayer II complete; Torfinn/Ungael repeatable route; post-quest solo instance only; no quest Vorkath. Dragonbone necklace is a one-roll tertiary, not a two-roll main-table item.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -716,7 +1010,12 @@
         0
       ],
       "access_requirements": "Repeatable lair access via permitted games-necklace route; sustainable solo strategy and supplies. No combat-level/quest access requirement invented; Wilderness walking alternative not selected. Entire kill solo, no group damage/loot allocation.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -735,7 +1034,12 @@
         1
       ],
       "access_requirements": "Repeatable lair access via permitted games-necklace route; sustainable solo strategy and supplies. No combat-level/quest access requirement invented; Wilderness walking alternative not selected. Entire kill solo, no group damage/loot allocation.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -754,7 +1058,12 @@
         1
       ],
       "access_requirements": "Sisterhood Sanctuary/Pool of Nightmares reachable through a permitted repeatable route; Drink-from solo encounter. A prior normal Nightmare kill is a warning recommendation, not a hard prerequisite. No ordinary Nightmare or historical competition-mode credit.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -773,7 +1082,12 @@
         2
       ],
       "access_requirements": "Sisterhood Sanctuary/Pool of Nightmares reachable through a permitted repeatable route; Drink-from solo encounter. A prior normal Nightmare kill is a warning recommendation, not a hard prerequisite. No ordinary Nightmare or historical competition-mode credit.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -792,7 +1106,12 @@
         3
       ],
       "access_requirements": "Sisterhood Sanctuary/Pool of Nightmares reachable through a permitted repeatable route; Drink-from solo encounter. A prior normal Nightmare kill is a warning recommendation, not a hard prerequisite. No ordinary Nightmare or historical competition-mode credit.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -811,7 +1130,12 @@
         4
       ],
       "access_requirements": "Sisterhood Sanctuary/Pool of Nightmares reachable through a permitted repeatable route; Drink-from solo encounter. A prior normal Nightmare kill is a warning recommendation, not a hard prerequisite. No ordinary Nightmare or historical competition-mode credit.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -830,7 +1154,12 @@
         5
       ],
       "access_requirements": "Sisterhood Sanctuary/Pool of Nightmares reachable through a permitted repeatable route; Drink-from solo encounter. A prior normal Nightmare kill is a warning recommendation, not a hard prerequisite. No ordinary Nightmare or historical competition-mode credit.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -849,7 +1178,12 @@
         3
       ],
       "access_requirements": "Wilderness access explicitly unlocked; hard Wilderness diary complete (no finite-task bypass); repeatable Hunter's End entry and fee funding; solo singles-plus encounter. Player-killer risk included in authored throughput, no death exemption.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:boss",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -868,7 +1202,12 @@
         4
       ],
       "access_requirements": "Wilderness access explicitly unlocked; hard Wilderness diary complete (no finite-task bypass); repeatable Hunter's End entry and fee funding; solo singles-plus encounter. Player-killer risk included in authored throughput, no death exemption.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:boss",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -887,7 +1226,12 @@
         5
       ],
       "access_requirements": "Wilderness access explicitly unlocked; hard Wilderness diary complete (no finite-task bypass); repeatable Hunter's End entry and fee funding; solo singles-plus encounter. Player-killer risk included in authored throughput, no death exemption.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:boss",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -906,7 +1250,12 @@
         3
       ],
       "access_requirements": "Wilderness access explicitly unlocked; hard Wilderness diary complete (no finite-task bypass); repeatable Web Chasm entry and fee funding; solo singles-plus encounter. Venenatis and its spiderlings do not count.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -925,7 +1274,12 @@
         4
       ],
       "access_requirements": "Wilderness access explicitly unlocked; hard Wilderness diary complete (no finite-task bypass); repeatable Web Chasm entry and fee funding; solo singles-plus encounter. Venenatis and its spiderlings do not count.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -944,7 +1298,12 @@
         5
       ],
       "access_requirements": "Wilderness access explicitly unlocked; hard Wilderness diary complete (no finite-task bypass); repeatable Web Chasm entry and fee funding; solo singles-plus encounter. Venenatis and its spiderlings do not count.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -963,7 +1322,12 @@
         3
       ],
       "access_requirements": "Wilderness access explicitly unlocked; hard Wilderness diary complete (no finite-task bypass); repeatable Skeletal Tomb entry and fee funding; solo full two-phase encounter. Vet'ion, hellhounds and interrupted first phases do not count.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -982,7 +1346,12 @@
         4
       ],
       "access_requirements": "Wilderness access explicitly unlocked; hard Wilderness diary complete (no finite-task bypass); repeatable Skeletal Tomb entry and fee funding; solo full two-phase encounter. Vet'ion, hellhounds and interrupted first phases do not count.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "status": "V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED",
@@ -1001,7 +1370,12 @@
         5
       ],
       "access_requirements": "Wilderness access explicitly unlocked; hard Wilderness diary complete (no finite-task bypass); repeatable Skeletal Tomb entry and fee funding; solo full two-phase encounter. Vet'ion, hellhounds and interrupted first phases do not count.",
-      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged"
+      "receipt_contract": "challenge-personal-drop-v1; current-client gate unchanged",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     }
   ],
   "source_candidates": [
@@ -1073,7 +1447,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:boss",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "lesser",
@@ -1145,7 +1524,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "lesser",
@@ -1217,7 +1601,22 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Monsters that take priority in combat",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "lesser",
@@ -1289,7 +1688,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "lesser",
@@ -1418,7 +1822,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "lesser",
@@ -1488,7 +1897,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "standard",
@@ -1560,7 +1974,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:boss",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "standard",
@@ -1630,7 +2049,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:boss",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "standard",
@@ -1700,7 +2124,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "standard",
@@ -1770,7 +2199,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "standard",
@@ -1842,7 +2276,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "standard",
@@ -1912,7 +2351,22 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Uncommon seed drop table monsters"
+      ]
     },
     {
       "tier": "standard",
@@ -1982,7 +2436,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "standard",
@@ -2052,7 +2511,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "standard",
@@ -2122,7 +2586,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "standard",
@@ -2195,7 +2664,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "standard",
@@ -2265,7 +2739,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "standard",
@@ -2335,7 +2814,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -2407,7 +2891,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:boss",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -2479,7 +2968,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:boss",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -2549,7 +3043,21 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -2621,7 +3129,20 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -2693,7 +3214,20 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -2763,7 +3297,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:boss",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -2835,7 +3374,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:boss",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -2907,7 +3451,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:boss",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -2979,7 +3528,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:boss",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -3051,7 +3605,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:boss",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -3123,7 +3682,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:boss",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -3195,7 +3759,23 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Allotment seed drop table monsters",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Needs Monster Examine",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -3269,7 +3849,22 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters",
+        "page_category:Wilderness slayer drop table monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -3341,7 +3936,21 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -3413,7 +4022,21 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -3485,7 +4108,20 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Needs Monster Examine",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -3559,7 +4195,21 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -3631,7 +4281,21 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Rare drop table monsters",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -3705,7 +4369,21 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -3777,7 +4455,21 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -3849,7 +4541,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -3921,7 +4618,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -3993,7 +4695,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -4065,7 +4772,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -4137,7 +4849,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -4209,7 +4926,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -4281,7 +5003,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -4353,7 +5080,25 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Allotment seed drop table monsters",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Monsters that take priority in combat",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -4423,7 +5168,22 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task"
+      ]
     },
     {
       "tier": "greater",
@@ -4493,7 +5253,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -4563,7 +5328,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -4633,7 +5403,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -4703,7 +5478,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -4773,7 +5553,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -4845,7 +5630,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -4917,7 +5707,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -4989,7 +5784,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -5061,7 +5861,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -5133,7 +5938,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -5205,7 +6015,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -5277,7 +6092,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -5350,7 +6170,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -5422,7 +6247,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -5496,7 +6326,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -5570,7 +6405,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -5643,7 +6483,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -5717,7 +6562,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -5791,7 +6641,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -5864,7 +6719,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -5936,7 +6796,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -6006,7 +6871,20 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters that drop clues",
+        "page_category:Quest monsters",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -6078,7 +6956,21 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters",
+        "page_category:Uncommon seed drop table monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -6148,7 +7040,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -6218,7 +7115,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -6288,7 +7190,19 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -6360,7 +7274,19 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -6430,7 +7356,21 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -6502,7 +7442,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -6574,7 +7519,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -6646,7 +7596,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -6720,7 +7675,25 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Monsters that take priority in combat",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters",
+        "page_category:Wilderness slayer drop table monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -6794,7 +7767,24 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Monsters that take priority in combat",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -6868,7 +7858,24 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Monsters that take priority in combat",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -6940,7 +7947,19 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -7012,7 +8031,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -7084,7 +8108,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -7156,7 +8185,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -7228,7 +8262,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -7298,7 +8337,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -7372,7 +8416,24 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Monsters that take priority in combat",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -7444,7 +8505,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -7516,7 +8582,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -7588,7 +8659,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -7660,7 +8736,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -7732,7 +8813,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -7804,7 +8890,21 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -7876,7 +8976,19 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -7948,7 +9060,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -8020,7 +9137,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -8092,7 +9214,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -8164,7 +9291,22 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Monsters that take priority in combat",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -8236,7 +9378,20 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -8308,7 +9463,20 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -8378,7 +9546,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -8448,7 +9621,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -8518,7 +9696,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -8588,7 +9771,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -8658,7 +9846,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -8728,7 +9921,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -8800,7 +9998,24 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Monsters that take priority in combat",
+        "page_category:Rare drop table monsters",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -8874,7 +10089,23 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -8946,7 +10177,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -9016,7 +10252,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -9088,7 +10329,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -9160,7 +10406,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -9232,7 +10483,22 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task"
+      ]
     },
     {
       "tier": "greater",
@@ -9304,7 +10570,24 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Monsters that take priority in combat",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -9376,7 +10659,24 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Monsters that take priority in combat",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -9448,7 +10748,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -9520,7 +10825,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -9644,7 +10954,20 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Wilderness slayer drop table monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -9716,7 +11039,19 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -9840,7 +11175,20 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -9910,7 +11258,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -9982,7 +11335,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -10052,7 +11410,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -10122,7 +11485,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -10194,7 +11562,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -10266,7 +11639,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -10336,7 +11714,21 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -10406,7 +11798,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -10478,7 +11875,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -10550,7 +11952,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -10622,7 +12029,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -10694,7 +12106,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -10766,7 +12183,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -10838,7 +12260,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -10910,7 +12337,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -10982,7 +12414,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -11054,7 +12491,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -11126,7 +12568,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -11198,7 +12645,20 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that do not become tolerant",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -11270,7 +12730,19 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "tier": "greater",
@@ -11342,7 +12814,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -11414,7 +12891,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -11486,7 +12968,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -11558,7 +13045,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "greater",
@@ -11628,7 +13120,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -11698,7 +13195,20 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Useful herb drop table monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -11770,7 +13280,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:boss",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -11840,7 +13355,20 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -11912,7 +13440,23 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Monsters that take priority in combat",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters",
+        "page_category:Useful herb drop table monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -11982,7 +13526,21 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Wilderness slayer drop table monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -12052,7 +13610,21 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Wilderness slayer drop table monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -12124,7 +13696,20 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters",
+        "page_category:Useful herb drop table monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -12198,7 +13783,21 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -12272,7 +13871,21 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -12344,7 +13957,21 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -12416,7 +14043,21 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -12486,7 +14127,22 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task"
+      ]
     },
     {
       "tier": "superior",
@@ -12558,7 +14214,24 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Monsters that take priority in combat",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -12628,7 +14301,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -12698,7 +14376,23 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Allotment seed drop table monsters",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -12768,7 +14462,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -12838,7 +14537,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -12908,7 +14612,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -12978,7 +14687,23 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that do not become tolerant",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Wilderness slayer drop table monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -13048,7 +14773,23 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that do not become tolerant",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Wilderness slayer drop table monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -13118,7 +14859,23 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that do not become tolerant",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Wilderness slayer drop table monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -13188,7 +14945,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -13258,7 +15020,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -13332,7 +15099,24 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Monsters that take priority in combat",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -13402,7 +15186,21 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that do not become tolerant",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -13474,7 +15272,19 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -13546,7 +15356,19 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -13616,7 +15438,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -13686,7 +15513,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -13756,7 +15588,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -13826,7 +15663,20 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Useful herb drop table monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -13898,7 +15748,24 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Monsters that take priority in combat",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -13970,7 +15837,24 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Monsters that take priority in combat",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -14042,7 +15926,19 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -14114,7 +16010,19 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -14184,7 +16092,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -14256,7 +16169,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -14326,7 +16244,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -14396,7 +16319,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -14466,7 +16394,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -14536,7 +16469,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -14606,7 +16544,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -14676,7 +16619,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -14748,7 +16696,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -14818,7 +16771,20 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -14888,7 +16854,20 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -14958,7 +16937,20 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -15030,7 +17022,22 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Uncommon seed drop table monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -15100,7 +17107,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -15172,7 +17184,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -15242,7 +17259,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -15312,7 +17334,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -15382,7 +17409,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -15452,7 +17484,19 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "tier": "superior",
@@ -15524,7 +17568,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "tier": "superior",
@@ -15596,7 +17645,12 @@
           "runtime_enabled": false
         }
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     }
   ],
   "unresolved_rate_context_rows": [
@@ -15658,7 +17712,12 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "creature": "Yama",
@@ -15718,7 +17777,12 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "creature": "Yama",
@@ -15778,7 +17842,12 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "creature": "Yama",
@@ -15832,7 +17901,12 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "creature": "Orca",
@@ -15910,7 +17984,18 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters that drop clues"
+      ]
     },
     {
       "creature": "Baby blue dragon",
@@ -15968,7 +18053,17 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "Great white shark",
@@ -16046,7 +18141,17 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters that drop clues"
+      ]
     },
     {
       "creature": "Blood-starved venator",
@@ -16097,7 +18202,20 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "creature": "Blood-starved venator",
@@ -16148,7 +18266,20 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "creature": "Basilisk Knight",
@@ -16226,7 +18357,20 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Useful herb drop table monsters"
+      ]
     },
     {
       "creature": "Gryphon",
@@ -16303,7 +18447,21 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Allotment seed drop table monsters",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "Araxyte",
@@ -16380,7 +18538,11 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:boss"
+      ]
     },
     {
       "creature": "Araxyte",
@@ -16457,7 +18619,11 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:boss"
+      ]
     },
     {
       "creature": "Drake",
@@ -16535,7 +18701,21 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "Drake",
@@ -16613,7 +18793,21 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "Armoured zombie (Zemouregal's Fort)",
@@ -16669,7 +18863,20 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "Vitreous Chilled Jelly",
@@ -16720,7 +18927,21 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Slayer monsters that can only be fought on task",
+        "page_category:Superior slayer monsters"
+      ]
     },
     {
       "creature": "Lava Strykewyrm",
@@ -16798,7 +19019,19 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "Veiled kraken",
@@ -16876,7 +19109,17 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters that drop clues"
+      ]
     },
     {
       "creature": "Vampyre kraken",
@@ -16954,7 +19197,20 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare seed drop table monsters"
+      ]
     },
     {
       "creature": "Frost Crab",
@@ -17010,7 +19266,19 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "Venator",
@@ -17066,7 +19334,19 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "Venator",
@@ -17122,7 +19402,19 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "Hydra",
@@ -17200,7 +19492,21 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "Wyrm",
@@ -17278,7 +19584,21 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "Wyrm",
@@ -17356,7 +19676,21 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "Armoured kraken",
@@ -17434,7 +19768,19 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters that drop clues"
+      ]
     },
     {
       "creature": "Cave crawler",
@@ -17487,7 +19833,20 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Allotment seed drop table monsters",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "The Nightmare",
@@ -17538,7 +19897,12 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "creature": "The Nightmare",
@@ -17589,7 +19953,12 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "creature": "The Nightmare",
@@ -17640,7 +20009,12 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "creature": "The Nightmare",
@@ -17691,7 +20065,12 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "creature": "The Nightmare",
@@ -17742,7 +20121,12 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "creature": "The Nightmare",
@@ -17793,7 +20177,12 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "creature": "The Nightmare",
@@ -17844,7 +20233,12 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "creature": "The Nightmare",
@@ -17895,7 +20289,12 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "BOSS",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ]
     },
     {
       "creature": "Frost dragon",
@@ -17973,7 +20372,20 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "Blue dragon",
@@ -18031,7 +20443,20 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "Frost Nagua",
@@ -18087,7 +20512,19 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "Frost Nagua",
@@ -18143,7 +20580,19 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "Frost Nagua",
@@ -18199,7 +20648,19 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "Ice spider",
@@ -18252,7 +20713,19 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Wilderness slayer drop table monsters"
+      ]
     },
     {
       "creature": "Ice warrior",
@@ -18305,7 +20778,23 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Free-to-play monsters",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Uncommon seed drop table monsters",
+        "page_category:Wilderness slayer drop table monsters"
+      ]
     },
     {
       "creature": "Brutal blue dragon",
@@ -18363,7 +20852,20 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters"
+      ]
     },
     {
       "creature": "Chilled jelly",
@@ -18416,7 +20918,19 @@
         "review_status": "UNREVIEWED"
       },
       "runtime_enabled": false,
-      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER"
+      "status": "UNRESOLVED_RATE_CONTEXT_NO_FIXED_TIER",
+      "source_kind": "MONSTER",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters"
+      ]
     }
   ],
   "outside_brackets_named_source_rows": 59,
@@ -18438,6 +20952,30 @@
       "standard": 12,
       "greater": 128,
       "superior": 56
+    },
+    "by_source_kind": {
+      "MONSTER": {
+        "reviewed": 18,
+        "candidate_groups": 72,
+        "unresolved_rows": 33,
+        "by_tier": {
+          "greater": 53,
+          "superior": 35,
+          "lesser": 1,
+          "standard": 1
+        }
+      },
+      "BOSS": {
+        "reviewed": 26,
+        "candidate_groups": 130,
+        "unresolved_rows": 12,
+        "by_tier": {
+          "greater": 104,
+          "superior": 36,
+          "lesser": 5,
+          "standard": 11
+        }
+      }
     }
   },
   "v1_catalog_sha256": "b1385d079df61f3a6dec0490c76e4e07cd011c7dba749aa198d76f026bc0b9f1"

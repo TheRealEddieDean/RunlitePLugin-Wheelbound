@@ -1,0 +1,43 @@
+{
+  "status": "PASS_SOURCE_DISPLAY_ONLY_NOT_RUNTIME",
+  "assertions": 2194,
+  "reviewed_v1_hunts": 44,
+  "additional_candidate_groups": 202,
+  "by_tier_total_display_rows": {
+    "greater": 157,
+    "superior": 71,
+    "lesser": 6,
+    "standard": 12
+  },
+  "unresolved_rows": 45,
+  "table_sha256_by_kind": {
+    "MONSTER": "cbbb7bea0d55c4a809920acead3cbe2bf69322aa073d989655a3ff4b947d3df8",
+    "BOSS": "1b34851c9e40467f9b05c6c0b68c6323456e8eba38b492919e5c8a0b96c8da47"
+  },
+  "by_source_kind": {
+    "MONSTER": {
+      "reviewed": 18,
+      "candidate_groups": 72,
+      "unresolved_rows": 33,
+      "by_tier": {
+        "greater": 53,
+        "superior": 35,
+        "lesser": 1,
+        "standard": 1
+      }
+    },
+    "BOSS": {
+      "reviewed": 26,
+      "candidate_groups": 130,
+      "unresolved_rows": 12,
+      "by_tier": {
+        "greater": 104,
+        "superior": 36,
+        "lesser": 5,
+        "standard": 11
+      }
+    }
+  },
+  "index_sha256": "0ce22aab9b7feb66d26f36b1432ee28c00bf895e2f17fd6255071feaaf0f5371",
+  "new_unlock_or_reward_approval": false
+}

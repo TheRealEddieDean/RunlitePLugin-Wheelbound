@@ -263,3 +263,7 @@ Startingc62d381e4392845bce76d0738fc176af13374661, claimbcaa9a874626d2b1ea85a03b2
 ## A65 requested all-tier file update —2026-10-14
 
 Starting05706461ff2c5dcb327a2d83d2d5c227b383d5fe; claim888b915ef744accf16a4adb6511927b098b5903e. CHALLENGE_HUNT_TABLE now lists44 prior reviewed hunts+202 named-source candidate groups across Lesser6/Standard12/Greater157/Superior71;45 unresolved rows held separately. These are246 display groups, not admitted targets/creature diversity. Historical human table archived unchanged; old JSON/CSV untouched. New source-preserving index/CSV, renderer and validator;1,319 offline checks/22 tests pass. Manifest11 records; no new decisions/FP/unlock topology/production/main changes. Owner released; verify owning commit remote/tree/main before saved claim. A64 unlock question remains pending.
+
+## A66 user-corrected monster/boss table split —2026-10-14
+
+Starting98ae9450bb51ed8ed9b8c8234b88210c06ce3cd4; claim37bf1aeaaebe5b053d43056debf0a18c60cfd622. Two current tiered documents: MONSTER_CHALLENGE_HUNT_TABLE90 rows and BOSS_CHALLENGE_HUNT_TABLE156 rows;44 prior reviewed+202 candidates conserved,45 held rows partition33/12. Source_kind follows corrected taxonomy; old active mixed/archive filenames removed and links/manifest/render pipeline updated. WB-D146 confirms doc split, not new mechanical card families.2,194 source/display checks and22 tests pass; actual old FP/access/raw data preserved. Owner released; owning commit requires guarded remote/tree/main verification. No unlock answer inferred or runtime/main change.

@@ -1,5 +1,5 @@
 {
-  "version": "authority-v6-2026-10-14",
+  "version": "authority-v7-2026-10-14",
   "scope": "Documentation metadata only; does not enable gameplay",
   "decision_register": "../DECISIONS.md",
   "catalogs": [
@@ -147,11 +147,14 @@
         "Authorized production adapters and atomic once-only settlement implementation"
       ],
       "h3_pinned_input": false,
-      "human_table": "CHALLENGE_HUNT_TABLE.md",
       "csv": "catalogs/challenge_hunts_v1.csv",
       "reward_schedule_version": "challenge-fp-v1",
       "future_selection_status": "SUPERSEDED_BRACKET_POLICY_WB_D144_145; preserve historical roster/quotes and frozen assignments",
-      "superseding_rules": "catalogs/challenge_tier_rules_v2.json"
+      "superseding_rules": "catalogs/challenge_tier_rules_v2.json",
+      "human_tables": [
+        "MONSTER_CHALLENGE_HUNT_TABLE.md",
+        "BOSS_CHALLENGE_HUNT_TABLE.md"
+      ]
     },
     {
       "path": "catalogs/challenge_tier_rules_v2.json",
@@ -172,7 +175,7 @@
     {
       "path": "catalogs/challenge_hunt_review_index_v2.json",
       "version": "challenge-hunt-review-index-v2-2026-10-14",
-      "sha256": "d6506901fae6352016b51317ec6f3789b54ebbaa18b5f805e20c1e47180759e0",
+      "sha256": "0ce22aab9b7feb66d26f36b1432ee28c00bf895e2f17fd6255071feaaf0f5371",
       "entry_count": 246,
       "authority": "SOURCE_BACKED_DISPLAY_REVIEW_INDEX_ONLY",
       "runtime_enabled": false,
@@ -184,8 +187,16 @@
         "Current-client/production authorization and validation"
       ],
       "h3_pinned_input": false,
-      "human_table": "CHALLENGE_HUNT_TABLE.md",
-      "csv": "catalogs/challenge_hunt_review_index_v2.csv"
+      "csv": "catalogs/challenge_hunt_review_index_v2.csv",
+      "human_tables": [
+        "MONSTER_CHALLENGE_HUNT_TABLE.md",
+        "BOSS_CHALLENGE_HUNT_TABLE.md"
+      ],
+      "source_kind_partition": {
+        "MONSTER": 90,
+        "BOSS": 156
+      },
+      "source_kind_required": true
     }
   ],
   "historical_experiments": {
@@ -193,5 +204,9 @@
     "H2": "Retained model/source and output hashes; synthetic inputs remain assumptions.",
     "H3": "Pinned item/punishment catalog hashes remain unchanged; new normative catalogs require new paths/versions and model outputs."
   },
-  "current_challenge_rules": "catalogs/challenge_tier_rules_v2.json"
+  "current_challenge_rules": "catalogs/challenge_tier_rules_v2.json",
+  "challenge_human_tables": [
+    "MONSTER_CHALLENGE_HUNT_TABLE.md",
+    "BOSS_CHALLENGE_HUNT_TABLE.md"
+  ]
 }
