@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-delegated-challenge-contract
-- State: IDLE — owner released; no active lease.
+- State: ACTIVE — wb-20261014-confirm-challenge owns WB-A49; acquired 2026-10-14T01:47:00.953748+00:00; expires 2026-10-14T02:02:00.953748+00:00.
 - Branch: wheelbound-mode
 - Starting remote head:2636e5de758b5d926d1c8492edfaafd2f446d994
 - Verified claim:d5ea018fe602bd3ee63bb024a538785708cb07d5
@@ -25,3 +25,5 @@
 6. Separate unresolved: concrete starter/target tiers/prices/rewards, broader Q6 pool/postcommit recovery, Q2 actual unsupported/full Coffer boundary, Q5 exact policy review and historical separate CA reward scope. Actual client traces/build exports and implementation authorization remain external gates. A33 PDF is stale/unfinished.
 
 Stop reason: two bounded recommendation deliverables complete; released ownership for next session. No full-project completion/background-execution claim.
+
+Current bounded task WB-A49: record explicit user approval of WB-D133–137 after in-game explanation; no gameplay changes or implementation.
