@@ -1388,7 +1388,8 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 
 ## WB-D133 - Challenge rarity uses the player's personal receiving probability
 
-- Status: DELEGATED adopted recommendation,2026-10-13; authority WB-D132.
+- Status: CONFIRMED explicit approval,2026-10-13; originally adopted under WB-D132 delegation.
+- Approval evidence: User replies “Yep this is all good” after the five recommendations were explained in game context. This confirms this policy, not hypothetical example rates, a real roster, prices/rewards, detector proof or coding authorization.
 - Decision: Apply WB-D131's inclusive probability band to the chance that the assigned player receives the selected specific item from one completed authored encounter/loot opportunity in its reviewed context. Whole-party any-recipient chance, any-unique chance and conditional unique-table chance cannot substitute. A teammate's loot or subsequent trade cannot settle the player's hunt.
 - Rationale: Personal acquisition is the existing completion goal; using party probability could conceal a much rarer personal hunt.
 - Affects: FATE_CARDS, CATALOG_ACCEPTANCE, CATALOG_AUTHORITY, STATE_CONTRACT, PERSISTENCE, ECONOMY, TESTING, questions/checkpoints.
@@ -1398,7 +1399,8 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 
 ## WB-D134 - Supported rate contexts must be explicit; unknown variable rates stay unavailable
 
-- Status: DELEGATED adopted recommendation,2026-10-13; authority WB-D132.
+- Status: CONFIRMED explicit approval,2026-10-13; originally adopted under WB-D132 delegation.
+- Approval evidence: User replies “Yep this is all good” after the five recommendations were explained in game context. This confirms this policy, not hypothetical example rates, a real roster, prices/rewards, detector proof or coding authorization.
 - Decision: Author supported source/method contexts with explicit encounter mode, loot opportunity, relevant group/boost/contribution assumptions, source revision and personal probability or reviewed range. A range qualifies only when its entire supported range is inside WB-D131's band. Unknown or straddling ranges do not enable that context. Missing context evidence never falls back to a convenient base/group rate.
 - Rationale: Make the approved rarity screen auditable without requiring fabricated live precision or locking every player to one arbitrary party size.
 - Affects: rate catalog acceptance, eligibility snapshots, assignment/persistence, UX and receipt evidence.
@@ -1409,7 +1411,8 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 
 ## WB-D135 - Challenge target reveal follows card selection with durable random commitment
 
-- Status: DELEGATED adopted recommendation,2026-10-13; authority WB-D132.
+- Status: CONFIRMED explicit approval,2026-10-13; originally adopted under WB-D132 delegation.
+- Approval evidence: User replies “Yep this is all good” after the five recommendations were explained in game context. This confirms this policy, not hypothetical example rates, a real roster, prices/rewards, detector proof or coding authorization.
 - Decision: Preserve Bossing card-before-target sequence. Before displaying offers, persist eligibility/catalog/context snapshot, the complete offer set, independently committed per-offer randomness and the reviewed reward schedule/version. Challenge offer states one random specific-item hunt and shows eligible creature odds plus its possible reward range; it does not reveal/select the final creature/item. Selecting that offer commits the selected card and deterministic creature/item draw, exact reward and context before animation/reveal. Final hunt replaces KC completion for Challenge only; the initial Standard KC reference still describes normal L/S/G, not a Challenge quota.
 - Rationale: Preserve unpredictability and existing sequence, while making restart/animation incapable of changing results or debiting twice. Do not imply a fixed preselection reward when targets have different authored rewards.
 - Dependencies: Every eligible item needs a reviewed frozen reward quote; without it exclude the item before offering. Missing catalog/source/reward support cannot be fixed by drawing again after selection. No new spin timing, refunds, free retries or discretionary rerolls. Implementation transaction format and durable filesystem proof remain future work.
@@ -1418,7 +1421,8 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 
 ## WB-D136 - Equal creature-first then equal eligible-item Challenge draws
 
-- Status: DELEGATED adopted design default,2026-10-13; authority WB-D132. Not a recovered historical weight approval or empirically validated balance claim.
+- Status: CONFIRMED explicit approval,2026-10-13; originally adopted under WB-D132 delegation. Not a recovered historical weight approval or empirically validated balance claim.
+- Approval evidence: User replies “Yep this is all good” after the five recommendations were explained in game context. This confirms this policy, not hypothetical example rates, a real roster, prices/rewards, detector proof or coding authorization.
 - Decision: From the frozen supported pool, draw uniformly among distinct eligible creature/encounter keys; then uniformly among that creature's distinct eligible logical specific items. For C creatures and K eligible items on selected creature, that item has assignment probability1/(C*K). These are assignment odds, not in-game drop probabilities. Grouped NPC forms, accepted same-item variants and supported rate contexts are metadata, not extra lottery entries. Multiple Challenge offers retain independently committed randomness; general card-type offer probabilities are not changed.
 - Rationale: Buying another creature expands the wheel predictably; sources with more unique items do not silently dominate creature odds. A simple transparent default precedes empirical weighting/reward review.
 - Affects: Challenge assignment contract, FATE_CARDS, catalog/state/persistence/UI/testing/traceability.
@@ -1428,7 +1432,8 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 
 ## WB-D137 - Challenge completion observes the drop without consuming the item
 
-- Status: DELEGATED adopted recommendation,2026-10-13; authority WB-D132.
+- Status: CONFIRMED explicit approval,2026-10-13; originally adopted under WB-D132 delegation.
+- Approval evidence: User replies “Yep this is all good” after the five recommendations were explained in game context. This confirms this policy, not hypothetical example rates, a real roster, prices/rewards, detector proof or coding authorization.
 - Decision: One supported fresh personal assigned-source acquisition of the selected logical item settles the hunt once; no plugin turn-in, consumption, equipping or further ownership requirement. Player keeps the drop and may use/sell it subject to existing account-access rules. Subsequent disposal does not revoke a legitimately earned completion. Source-correlated receipt remains necessary; merely possessing or buying the item never completes it.
 - Rationale: The approved task is obtain one drop, not sacrifice it; preserve the reward of the hunt without introducing a second interaction or economic sink.
 - Supersession: Closes unapproved turn-in/multi-copy/continued-possession possibilities noted under WB-D130, without weakening fresh-drop or paused-evidence rules.

@@ -45,3 +45,5 @@ WB-D133/134 resolve rate policy under current delegation: personal receiving pro
 Current workflow WB-D132 supersedes ask-before-adoption for context-supported delegated recommendations. Remaining questions require one-at-a-time discussion only where approved intent/evidence cannot resolve them. No implementation authorized.
 
 Challenge generation/reveal/weights RESOLVED under WB-D135/136 delegation. Exact starter set, concrete target/source/rate/reward/price/tier tables remain research/balance work; no arbitrary isolated approval question. Broader all-unavailable/postcommit recovery, evidence-dependent Coffer/policy and separate legacy CA reward scope remain independent unresolved boundaries.
+
+User explicitly confirmed all five WB-D133–137 policies2026-10-13 after in-game explanation (“Yep this is all good”). Hypothetical probabilities were illustrative, not source evidence. Next requested work: two context-supported remaining decisions under WB-D132 delegation; no implementation.

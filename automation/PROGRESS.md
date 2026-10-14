@@ -203,3 +203,7 @@ Starting remote2636e5de; verified claimd5ea018fe602bd3ee63bb024a538785708cb07d5.
 ## WB-A47 — delegated draw/reveal/completion contract,2026-10-13
 
 A46 remote c5baba520228ffa85b541e742459a27039bdbd9e and exact tree dceec7c754e6463eadef17136fb385c78f740a1c verified before work; main unchanged. WB-D135 fixes card-before-target durable reveal; WB-D136 adopts equal creature-first/item-second assignment odds; WB-D137 keeps acquired item without turn-in/consumption. New contract gives data requirements, sequence, hypothetical exact odds and planned NOT_RUN acceptance. Documentation/hash checks and exact-fraction arithmetic validated before owning-commit publication. No Java/live tests, source/rate roster research, prices/rewards/model rewrites or current PDF claimed. Local Git HTTPS push credentials unavailable; connected API guards publication.
+
+## WB-A49 — explicit Challenge confirmation,2026-10-13
+
+Starting583453975e351fcdf50c99e9423891ba49130c73; guarded claim916e8a52368f495aef16f3f1d8cb54c940b16692 remotely verified. User explicitly approves five explained policies; WB-D133–137 promoted to CONFIRMED without rule changes. Illustrative probabilities/roster/rewards/live evidence remain unapproved/unverified. Owning commit updates contract/provenance/checkpoints; validation and remote tree verification required before next requested decisions. Main/production/model inputs unchanged.

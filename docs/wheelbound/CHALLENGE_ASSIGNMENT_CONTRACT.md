@@ -1,6 +1,6 @@
 # Bossing Challenge assignment contract
 
-Authority: [DECISIONS](DECISIONS.md), WB-D123–126/128–137. WB-D132 delegates current recommendations; WB-D133–137 are adopted delegated rules, not historical confirmations. Documentation only: no enabled catalog, current-client detector, production implementation or newly executed gameplay test.
+Authority: [DECISIONS](DECISIONS.md), WB-D123–126/128–137. WB-D132 delegates current recommendations; WB-D133–137 were adopted under delegation and then explicitly approved2026-10-13 after the in-game explanation; they are not recovered historical approvals. Documentation only: no enabled catalog, current-client detector, production implementation or newly executed gameplay test.
 
 ## Eligibility and data
 

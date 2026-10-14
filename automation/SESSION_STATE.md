@@ -6,7 +6,7 @@
 - Starting remote head:2636e5de758b5d926d1c8492edfaafd2f446d994
 - Verified claim:d5ea018fe602bd3ee63bb024a538785708cb07d5
 - Verified A46:c5baba520228ffa85b541e742459a27039bdbd9e; tree dceec7c754e6463eadef17136fb385c78f740a1c matched local contents.
-- A47: owning commit containing this checkpoint; resolve its SHA from branch/file history. No circular self-hash.
+- Verified A47:583453975e351fcdf50c99e9423891ba49130c73; source tree4d6bf191af16cbb8b0a479ffcbfed509309a75bc.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
 - Completed: A46 WB-D132–134 current delegation/personal probability/supported in-band contexts; A47 WB-D135–137 post-card target reveal/uniform creature-item draws/player keeps drop;137 decision IDs.
 - Verification before publication: design_checks, exact rational assignment-odds arithmetic and diff/scope checks; historical inputs untouched. Owning commit still requires remote tree/head/main verification before reporting saved.
@@ -26,4 +26,4 @@
 
 Stop reason: two bounded recommendation deliverables complete; released ownership for next session. No full-project completion/background-execution claim.
 
-Current bounded task WB-A49: record explicit user approval of WB-D133–137 after in-game explanation; no gameplay changes or implementation.
+Current bounded task WB-A49 complete in owning checkpoint: explicit approval of WB-D133–137, no gameplay changes. Claim916e8a52368f495aef16f3f1d8cb54c940b16692. Verify publication before next task: user requested next couple decisions; inspect residual Q6 unavailable-activity/all-unavailable selection boundaries first. Owner remains ACTIVE for next bounded decision batch.
