@@ -1,0 +1,241 @@
+{
+  "task": "WB-A54",
+  "starting_head": "04709b3e043f8b1bd29dbe07a53e0cf33992dde4",
+  "verified_claim": "c69fd835532ac3f0ca6de5508293ea65b2f95316",
+  "status": "BOUNDED_LIVE_COLLECTION_COMPLETE_NOT_CATALOG_ADMISSION",
+  "runtime_enabled": false,
+  "coverage": {
+    "scope": "url_manifest",
+    "started_at": "2026-10-14T04:20:43.137598+00:00",
+    "status": "MANIFEST_EXHAUSTED_UNVERIFIED",
+    "all_monsters_verified": false,
+    "errors": [],
+    "pending": [],
+    "processed_pages": 3,
+    "discovered_pages": 3,
+    "finished_at": "2026-10-14T04:20:54.446510+00:00",
+    "unclassified_pages": 0,
+    "pages_without_supported_tables": 0,
+    "unsupported_row_count": 0
+  },
+  "robots": {
+    "url": "https://oldschool.runescape.wiki/robots.txt",
+    "fetched_at": "2026-10-14T04:20:46.303635+00:00",
+    "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+    "sha256": "799042fd47ea641a7322105b771bee67e22f0b037fb41ad247ed1a0565a3073f"
+  },
+  "robots_interpretation": "Collector matching rules allowed these three canonical page paths. Named AI/search bots have separate disallow rules; no permission for other clients/routes or unrestricted crawling inferred. No oldid/API/Special URLs requested.",
+  "input_url_sha256": "cf64b5e602870ecae825f4dd911169ca54eb37853f5bb7cef46f6bfb7df6395c",
+  "pages": [
+    {
+      "name": "Kurask",
+      "url": "https://oldschool.runescape.wiki/w/Kurask",
+      "revision_id_reported_in_html": 15338306,
+      "source_sha256": "a19978e073f5203196fbabaea91a6838fb2bced35fbc7b533be379d201c0a058",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Kurask",
+        "fetched_at": "2026-10-14T04:20:54.382783+00:00",
+        "sha256": "a19978e073f5203196fbabaea91a6838fb2bced35fbc7b533be379d201c0a058",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Kurask",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 04:07:37 GMT",
+        "fixture": false
+      },
+      "classification": "monster",
+      "classification_evidence": [
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare seed drop table monsters",
+        "page_category:Slayer monsters"
+      ],
+      "reported_npc_ids_not_complete_mapping": [
+        410
+      ],
+      "parsed_drop_row_count": 61,
+      "parser_warnings": [],
+      "selected_rows": [
+        {
+          "item_name": "Leaf-bladed battleaxe",
+          "section": "Drops / Weapons and armour",
+          "quantity_raw": "1",
+          "reported_rate": {
+            "raw": "1/1,026 [ 3 ]",
+            "expression": "1/1,026",
+            "kind": "fraction",
+            "exact_probability": {
+              "numerator": 1,
+              "denominator": 1026
+            },
+            "needs_context_review": true,
+            "approximate": false
+          },
+          "annotations": [
+            "[ 3 ]"
+          ],
+          "reported_fraction_in_band": true,
+          "canonical_item_ids": [],
+          "runtime_enabled": false,
+          "status": "SOURCE_ROW_VERIFIED_NOT_ADMITTED"
+        }
+      ],
+      "runtime_enabled": false
+    },
+    {
+      "name": "Vyrewatch Sentinel",
+      "url": "https://oldschool.runescape.wiki/w/Vyrewatch_Sentinel",
+      "revision_id_reported_in_html": 15367082,
+      "source_sha256": "2faa78fc5385ae564c86c19da164391fb42e2e2dd17c4bf834a5c24f95c76208",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Vyrewatch_Sentinel",
+        "fetched_at": "2026-10-14T04:20:51.860830+00:00",
+        "sha256": "2faa78fc5385ae564c86c19da164391fb42e2e2dd17c4bf834a5c24f95c76208",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Vyrewatch_Sentinel",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 04:12:19 GMT",
+        "fixture": false
+      },
+      "classification": "monster",
+      "classification_evidence": [
+        "monster_infobox_fields",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters immune to poison",
+        "page_category:Monsters immune to venom",
+        "page_category:Monsters that do not become tolerant",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Uncommon seed drop table monsters"
+      ],
+      "reported_npc_ids_not_complete_mapping": [
+        9756
+      ],
+      "parsed_drop_row_count": 93,
+      "parser_warnings": [],
+      "selected_rows": [
+        {
+          "item_name": "Blood shard",
+          "section": "Drops / Unique",
+          "quantity_raw": "1",
+          "reported_rate": {
+            "raw": "1/1,500 [ 1 ]",
+            "expression": "1/1,500",
+            "kind": "fraction",
+            "exact_probability": {
+              "numerator": 1,
+              "denominator": 1500
+            },
+            "needs_context_review": true,
+            "approximate": false
+          },
+          "annotations": [
+            "[ 1 ]"
+          ],
+          "reported_fraction_in_band": true,
+          "canonical_item_ids": [],
+          "runtime_enabled": false,
+          "status": "SOURCE_ROW_VERIFIED_NOT_ADMITTED"
+        }
+      ],
+      "runtime_enabled": false
+    },
+    {
+      "name": "Tormented Demon",
+      "url": "https://oldschool.runescape.wiki/w/Tormented_Demon",
+      "revision_id_reported_in_html": 15337983,
+      "source_sha256": "30c27fb03ed0c165c61a8289312b7655f73b640f0ca09b9c6eaf35b8c1a6c710",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Tormented_Demon",
+        "fetched_at": "2026-10-14T04:20:49.042013+00:00",
+        "sha256": "30c27fb03ed0c165c61a8289312b7655f73b640f0ca09b9c6eaf35b8c1a6c710",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Tormented_Demon",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 04:10:29 GMT",
+        "fixture": false
+      },
+      "classification": "monster",
+      "classification_evidence": [
+        "monster_infobox_fields",
+        "page_category:Combat herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Slayer monsters",
+        "page_category:Tree-herb seed drop table monsters",
+        "page_category:Useful herb drop table monsters"
+      ],
+      "reported_npc_ids_not_complete_mapping": [
+        13599
+      ],
+      "parsed_drop_row_count": 47,
+      "parser_warnings": [],
+      "selected_rows": [
+        {
+          "item_name": "Burning claw",
+          "section": "Drops / Unique",
+          "quantity_raw": "1",
+          "reported_rate": {
+            "raw": "499/250,000",
+            "expression": "499/250,000",
+            "kind": "fraction",
+            "exact_probability": {
+              "numerator": 499,
+              "denominator": 250000
+            },
+            "needs_context_review": false,
+            "approximate": false
+          },
+          "annotations": [],
+          "reported_fraction_in_band": true,
+          "canonical_item_ids": [],
+          "runtime_enabled": false,
+          "status": "SOURCE_ROW_VERIFIED_NOT_ADMITTED"
+        },
+        {
+          "item_name": "Tormented synapse",
+          "section": "Drops / Unique",
+          "quantity_raw": "1",
+          "reported_rate": {
+            "raw": "1/500",
+            "expression": "1/500",
+            "kind": "fraction",
+            "exact_probability": {
+              "numerator": 1,
+              "denominator": 500
+            },
+            "needs_context_review": false,
+            "approximate": false
+          },
+          "annotations": [],
+          "reported_fraction_in_band": true,
+          "canonical_item_ids": [],
+          "runtime_enabled": false,
+          "status": "SOURCE_ROW_VERIFIED_NOT_ADMITTED"
+        }
+      ],
+      "runtime_enabled": false
+    }
+  ],
+  "raw_capture_archived_in_git": false,
+  "limits": [
+    "Selected review extracts and capture hashes/revision identifiers are committed; full HTML/database are transient generated outputs, not archived in Git.",
+    "Parsed fraction is a source report, not proof of a complete personal probability context.",
+    "No boss page, category traversal, complex raid/reward-chest table, complete NPC/item mapping or live client receipt tested.",
+    "No enabled roster, final bundle, price, reward or plugin behavior change."
+  ]
+}
