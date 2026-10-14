@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-delegated-challenge-contract
-- State: IDLE — owner released; no active lease.
+- State: ACTIVE — wb-20261014-challenge-candidates owns A48 batch1; acquired 2026-10-14T01:55:00.352707+00:00; expires 2026-10-14T02:25:00.352707+00:00.
 - Branch: wheelbound-mode
 - Starting remote head:2636e5de758b5d926d1c8492edfaafd2f446d994
 - Verified claim:d5ea018fe602bd3ee63bb024a538785708cb07d5
@@ -28,3 +28,5 @@ Stop reason: explicit confirmation and next two delegated recommendations comple
 
 
 Verified A49 explicit confirmation:827c27f9c26339bbcb452a0ca32f480de3f52066. A50 owning checkpoint adopts WB-D138/139; resolve own SHA from branch history and verify remote tree/head/main before reporting saved. Next bounded independent task A48 remains real source-backed target catalog review. No automatic continuation or implementation authorized.
+
+Current bounded deliverable A48 batch1: review a small creature/item shortlist with current primary source rate/access evidence; record recommended bundle/expansion strategy, no implementation or enabled catalog.
