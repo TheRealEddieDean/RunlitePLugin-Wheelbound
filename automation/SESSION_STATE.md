@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-curated-catalog
-- State: IDLE — owner released in this A62 owning checkpoint after four-part catalog request.
+- State: ACTIVE — owner wb-20261014-challenge-tiers; A63 bracket/rate supersession and migration tables.
 - Branch: wheelbound-mode only.
 - Starting remote head:93536bc530fe83ff15d3ff664657ba4e11cf5367.
 - Guarded claim:00b7318f2dd83f33e9f4d3ef8939aec28f22bf18.
@@ -43,3 +43,5 @@ Preserve all locked decisions, normal L/S/G pool, card-before-target uniform cre
 Q6-PERMANENT-ORDINARY-INVALIDATION: if a reviewed external game update permanently removes every completion route for an assigned ordinary Fate, should it retire without reward/penalty and without consuming its actual reserved ordinary spin? Recommendation YES remains **PROPOSED, NOT_ADOPTED**, awaiting explicit answer. Existing Pause/Reject/no-reroll applies. Mandatory specials, temporary/unknown/self-caused changes excluded; no blanket+1 or automatic replacement. Committed-but-unselected offer reconciliation remains separate. Do not infer approval from the catalog request.
 
 Other preserved boundaries: actual full/unsupported Coffer forced donation (Q2), exact restrictive-control policy review (Q5), separate legacy CA reward scope, task-dependent expansion continuation. No new approvals inferred. Owner released; no active lease. Resume with remote/main/ownership verification and PROTOCOL; historical experiments/catalogs must not be overwritten.
+
+A63 acquisition 2026-10-14T18:45:31.086610+00:00 expires 2026-10-14T20:45:31.086610+00:00. Expected remote c62d381e4392845bce76d0738fc176af13374661; owner released previously. User asks four unlockable Challenge tiers and per-roll bracket classification ignoring displayed roll count. Final four explicit brackets supersede preliminary1/60/max1000 wording. Unlock/offer integration is material and will be presented as a proposal, not silently approved.
