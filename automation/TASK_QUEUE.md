@@ -88,3 +88,7 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 | WB-A49 | Record explicit approval of Challenge recommendations | P0 | User approval; guarded ownership | XS | DONE (owning checkpoint) | DECISIONS; contract; checkpoints | WB-D133–137 CONFIRMED with provenance; validation and remote verification before next work |
 
 | WB-A50 | Resolve ordinary-empty retries and all-unavailable readiness | P0 | A49 remote verified; WB-D132 same-rubric delegation | S | DONE (documentation only; owning checkpoint) | DECISIONS; UNAVAILABLE_SELECTION_CONTRACT; affected specs/checkpoints | WB-D138/139; exact conditional-odds/consistency/scope checks; guarded remote verification |
+
+| WB-A51 | Trace Loot Lookup drop-table retrieval and parser limits | P1 | User request; verified upstream/Hub pin; current owner | S | DONE (source analysis only; owning checkpoint) | research/LOOT_LOOKUP_SOURCE_TRACE | Ten source pins; request/parser/context/data flow; no live/Java run; guarded remote verification |
+
+| WB-A52 | Specify lossless candidate import/export review packet | P1 | A51 source trace; existing Challenge contexts | S | TODO | Separate documentation/format fixture plan | Preserve source text/conditions/IDs/errors and exact rate interpretations; no blocked scraping or runtime implementation |

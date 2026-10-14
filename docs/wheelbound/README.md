@@ -65,3 +65,5 @@ Current delegated Bossing Challenge details: [assignment contract](CHALLENGE_ASS
 Precommit empty-pool policy: [unavailable selection contract](UNAVAILABLE_SELECTION_CONTRACT.md), WB-D138/139. Committed-Fate invalidation recovery remains a separate gate.
 
 New source-limited catalog work: [Challenge candidate review batch1](research/CHALLENGE_CANDIDATE_REVIEW_B1.md). Every candidate remains disabled; exact starter roster is not yet locked.
+
+[Loot Lookup source investigation](research/LOOT_LOOKUP_SOURCE_TRACE.md), A51: verified Hub/upstream pin58812e18d0f955d597c4894ece0ae23aff1a3a74. Plugin fetches rendered Wiki tables using actual RuneLite identity; display parser is lossy for approximation, alternative rates and multi-roll notation. Use only as future candidate-collection reference, preserving raw source/context and exact reviewed personal probability. HTTP/parser failure is unknown, never a verified-empty pool. No live request/build/plugin code/dependency activated; current AI Wiki/source freshness blocker remains. A48 King-kurask multiplied probability is explicitly source-unverified, with corrected interpretation in the report.

@@ -1,0 +1,92 @@
+{
+  "review_date_utc": "2026-10-14",
+  "review_date_user_local": "2026-10-13",
+  "upstream_repository": "donth77/loot-lookup-plugin",
+  "upstream_head": "58812e18d0f955d597c4894ece0ae23aff1a3a74",
+  "hub_descriptor_url": "https://github.com/runelite/plugin-hub/blob/master/plugins/loot-lookup",
+  "hub_descriptor_blob_sha": "3a1c3a5b17da08cd5180b14aad68610697ee68b3",
+  "hub_declared_commit": "58812e18d0f955d597c4894ece0ae23aff1a3a74",
+  "local_declared_version": "1.2.3",
+  "production_runtime_executed": false,
+  "live_wiki_requests_executed": false,
+  "java_tests_executed": false,
+  "sources": [
+    {
+      "path": "src/main/java/com/lootlookup/LootLookupPlugin.java",
+      "git_blob_sha": "0b0c722931016a690d96e1b4c7bb3dc2ab501dec",
+      "sha256": "eb748de30eb70b8e81004ebb1fbfc6ec1de75abb1ef593b2e2bb5eb40bea7b9f",
+      "url": "https://github.com/donth77/loot-lookup-plugin/blob/58812e18d0f955d597c4894ece0ae23aff1a3a74/src/main/java/com/lootlookup/LootLookupPlugin.java"
+    },
+    {
+      "path": "src/main/java/com/lootlookup/views/LootLookupPanel.java",
+      "git_blob_sha": "0e57a08e97ebb4ba8c1d144ac43bf991e78e30ee",
+      "sha256": "99f55981a71e8366a44d25543b5a653cb883b8e45d8da909fc15d4ce7c2e7852",
+      "url": "https://github.com/donth77/loot-lookup-plugin/blob/58812e18d0f955d597c4894ece0ae23aff1a3a74/src/main/java/com/lootlookup/views/LootLookupPanel.java"
+    },
+    {
+      "path": "src/main/java/com/lootlookup/osrswiki/WikiScraper.java",
+      "git_blob_sha": "acb909db026bf910f1f6a6df62e837c8915500e8",
+      "sha256": "1016b1069b5ee6e4108b6813a4631d918db38602a06f187587754beebf07020d",
+      "url": "https://github.com/donth77/loot-lookup-plugin/blob/58812e18d0f955d597c4894ece0ae23aff1a3a74/src/main/java/com/lootlookup/osrswiki/WikiScraper.java"
+    },
+    {
+      "path": "src/main/java/com/lootlookup/osrswiki/WikiItem.java",
+      "git_blob_sha": "9289fd8f9f2ec13db3429f91c9261b9fda62503f",
+      "sha256": "b1a563fa4d6683c46e867c0ad59fbbd8da2c9afed965653f02e944ca2d4621bf",
+      "url": "https://github.com/donth77/loot-lookup-plugin/blob/58812e18d0f955d597c4894ece0ae23aff1a3a74/src/main/java/com/lootlookup/osrswiki/WikiItem.java"
+    },
+    {
+      "path": "src/main/java/com/lootlookup/utils/Constants.java",
+      "git_blob_sha": "5ad399d341852517ba2dd36f8e5f47da2bbc6fc5",
+      "sha256": "9cbf1afbed1d3ca756b0ddd460e1095633271c4849c90018c7db68179b30a02e",
+      "url": "https://github.com/donth77/loot-lookup-plugin/blob/58812e18d0f955d597c4894ece0ae23aff1a3a74/src/main/java/com/lootlookup/utils/Constants.java"
+    },
+    {
+      "path": "src/main/java/com/lootlookup/utils/Util.java",
+      "git_blob_sha": "0502360e90dc74214148cbd6df33a57acbc8966d",
+      "sha256": "24b75ad15a0f72772635025cc5a587dc31a89b55e9c30d24c465f6ffdd3851af",
+      "url": "https://github.com/donth77/loot-lookup-plugin/blob/58812e18d0f955d597c4894ece0ae23aff1a3a74/src/main/java/com/lootlookup/utils/Util.java"
+    },
+    {
+      "path": "src/test/java/com/lootlookup/osrswiki/WikiStructureLiveTest.java",
+      "git_blob_sha": "1b717ab19d1560220fc3f2817bc43004d27403ac",
+      "sha256": "44b389ed9e693831c8bd89a25b8ef355843559b4dba29a01bc294756b9d09c45",
+      "url": "https://github.com/donth77/loot-lookup-plugin/blob/58812e18d0f955d597c4894ece0ae23aff1a3a74/src/test/java/com/lootlookup/osrswiki/WikiStructureLiveTest.java"
+    },
+    {
+      "path": "src/test/java/com/lootlookup/WikiScraperTest.java",
+      "git_blob_sha": "e3952eb2eed922f5c7f746b90d7db16e4d8999fb",
+      "sha256": "999dac8ace85aa87c37f6cf13cb0e76697f639531987b7d8696c5e9de024c079",
+      "url": "https://github.com/donth77/loot-lookup-plugin/blob/58812e18d0f955d597c4894ece0ae23aff1a3a74/src/test/java/com/lootlookup/WikiScraperTest.java"
+    },
+    {
+      "path": "build.gradle",
+      "git_blob_sha": "6b69603cb4403901b6b7ce341cbe3ddbdbd31613",
+      "sha256": "444512c1b5a113147a1256d692fa4f102c96b27445d02a8fa2a0a72e086a95a5",
+      "url": "https://github.com/donth77/loot-lookup-plugin/blob/58812e18d0f955d597c4894ece0ae23aff1a3a74/build.gradle"
+    },
+    {
+      "path": "LICENSE",
+      "git_blob_sha": "b89a92d93e5a030c84d06cd6be9f190e06a723e3",
+      "sha256": "551b3a2e6e3ee2e0e27e317d434b0c2badf59d654e3ed03f80ec72238e253240",
+      "url": "https://github.com/donth77/loot-lookup-plugin/blob/58812e18d0f955d597c4894ece0ae23aff1a3a74/LICENSE"
+    }
+  ],
+  "findings": {
+    "origin": "OSRS Wiki rendered HTML on request",
+    "resolver": "Special:Lookup with type=npc, id, name; followed by injected HTTP client",
+    "parser": "Jsoup headings and item-drops tables",
+    "user_agent": "RuneLite.USER_AGENT plus (loot-lookup)",
+    "embedded_drop_database_found": false,
+    "private_jagex_drop_table_api_used": false,
+    "explicit_application_drop_cache_found": false,
+    "current_live_runtime_success_verified": false,
+    "lossy_rate_operations": [
+      "strip leading approximate marker",
+      "strip2x/3x prefix in supported spelling",
+      "use first semicolon-separated value",
+      "strip bracketed row annotations"
+    ],
+    "wheelbound_use": "candidate acquisition/reference only; preserve raw context, rational probabilities, evidence and freeze reviewed catalog; no automatic runtime eligibility"
+  }
+}

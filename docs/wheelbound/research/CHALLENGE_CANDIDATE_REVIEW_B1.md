@@ -35,3 +35,7 @@ Source reports: [Tormented Demon](https://oldschool.runescape.wiki/w/Tormented_D
 Check unique record IDs, seven records/six creature keys, exact rational band membership and excluded-context normalization, all runtime flags false and no reward/price values. Documentation/hash/link/scope checks preserve old catalogs/models. These are offline data checks, not runtime/client tests.
 
 Next: revalidate source revisions through accessible primary material; review another small task-independent creature batch, then propose concrete bundle breadth with route/readiness coverage. Do not declare this full roster, invent rates or spend effort redoing historical bounty research. Task-dependent expansion remains held until a separate continuation design is reviewed.
+
+## Later source-interpretation correction — A51
+
+The earlier King kurask3×1/1026→3/1026 normalization is not proof of per-encounter at-least-one probability. [Loot Lookup source investigation](LOOT_LOOKUP_SOURCE_TRACE.md) distinguishes independent multiple rolls from additive probability and records both hypothetical interpretations. Original B1 JSON stays preserved as a provisional source receipt; its multiplied fraction must not become a normative personal-rate fact. Context remains held/excluded pending exact source semantics; no runtime entry enabled.

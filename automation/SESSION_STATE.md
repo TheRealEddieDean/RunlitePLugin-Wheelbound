@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-delegated-challenge-contract
-- State: ACTIVE — wb-20261014-loot-lookup-source owns A51; acquired 2026-10-14T03:13:37.748198+00:00; expires 2026-10-14T03:33:37.748198+00:00.
+- State: IDLE — owner released; no active lease.
 - Branch: wheelbound-mode
 - Starting remote head:2636e5de758b5d926d1c8492edfaafd2f446d994
 - Verified claim:d5ea018fe602bd3ee63bb024a538785708cb07d5
@@ -20,12 +20,12 @@
 
 1. Verify latest remote head/main/owner and current protocol/decisions. Acquire guarded ownership before writing; preserve concurrent changes.
 2. Do not re-ask resolved item/fresh-drop/rarity/personal-rate/context/draw/reveal policies. WB-D133–137 now explicitly CONFIRMED; WB-D138/139 adopted DELEGATED. Current WB-D132 delegation allows further context-supported recommended details; preserves locked user decisions and no coding.
-3. A48 batch1 complete, source-limited: seven hunts/six creature keys in research/CHALLENGE_CANDIDATE_REVIEW_B1.md/json. WB-D140 task-independent starter authoring and WB-D141 no dynamic GP-price floor adopted; no final roster. Next bounded task: revalidate current primary sources/another small candidate batch. Direct current Wiki access blocked by robots.txt; indexed excerpts often1.3-year-old; Basilisk secondary lead only. Read existing source manifest/reviews first, then use primary sources for new specific gaps. Document exact personal probability/context/formula/source/access/receipt/reward unknowns in separate new review records. No approved/full enabled roster implied. Finish/validate/publish/verify this one batch before another.
+3. A51 Loot Lookup source investigation complete at Hub/upstream pin58812e18d0f955d597c4894ece0ae23aff1a3a74, ten source hashes. Next bounded task A52: lossless offline candidate import/export packet/format review; no actual scraper or Java coding. A48 batch1 remains source-limited: seven hunts/six creature keys in research/CHALLENGE_CANDIDATE_REVIEW_B1.md/json. WB-D140 task-independent starter authoring and WB-D141 no dynamic GP-price floor adopted; no final roster. Next bounded task: revalidate current primary sources/another small candidate batch. Direct current Wiki access blocked by robots.txt; indexed excerpts often1.3-year-old; Basilisk secondary lead only. Read existing source manifest/reviews first, then use primary sources for new specific gaps. Document exact personal probability/context/formula/source/access/receipt/reward unknowns in separate new review records. No approved/full enabled roster implied. Finish/validate/publish/verify this one batch before another.
 4. Existing Challenge: item-only, random dedicated pool, Lesser AND Greater gate, included starter bundle, individual expansion,≥3 distinct actual eligible creatures; personal specific-item probability entirely within inclusive[1/1500,1/400]; canonical variants/context do not add draw entries; card choice then equal creature/item draw; no picker/reroll/KC quota/consumption/pity cap; fresh active personal assigned-source receipt. Normal L/S/G unchanged.
 5. Preserve Questing storage/no destruction/free-empty-retry, lifetime duplicate baseline, no paused payout, independent automatic once-only bounty FP and hilt5 Grand without active-CA history audit. Committed invalid/unknown contexts do not reroll/erase; existing Pause/Reject only pending broader Q6 recovery work.
 6. Separate unresolved: concrete starter/target tiers/prices/rewards, Q6 postcommit invalidation/detailed changed-snapshot reconciliation, Q2 actual unsupported/full Coffer boundary, Q5 exact policy review and historical separate CA reward scope. Actual client traces/build exports and implementation authorization remain external gates. A33 PDF is stale/unfinished.
 
-Stop reason: one bounded source-limited candidate review complete, authoring recommendations saved; ownership released. No full-project completion/background-execution claim.
+Stop reason: user-requested bounded Loot Lookup source investigation saved; ownership released. No full-project completion/background-execution claim.
 
 
 Verified A49 explicit confirmation:827c27f9c26339bbcb452a0ca32f480de3f52066. A50 owning checkpoint adopts WB-D138/139; resolve own SHA from branch history and verify remote tree/head/main before reporting saved. Next bounded independent task A48 remains real source-backed target catalog review. No automatic continuation or implementation authorized.
@@ -33,4 +33,5 @@ Verified A49 explicit confirmation:827c27f9c26339bbcb452a0ca32f480de3f52066. A50
 
 A48 B1 owning commit contains this checkpoint and review; resolve own SHA from branch history. Starting e8d07f9ecc9de9a775f44e8287d1104159b3e9d1; verified claim2a12694f6f46e250bd26d3443d88c76e45ce0add. Runtime/IDs/rewards/prices remain disabled/unresolved; primary freshness source blocker WB-B09. Remote tree/head/main must verify before saved claim.
 
-Current bounded deliverable A51: user-requested Loot Lookup source trace at verified Plugin Hub pin; report retrieval/parser/context limits and Wheelbound recommendations, no implementation/live scrape.
+
+A51 starting remote3db51f6a97fadabf4a2d6389888c85880fc5771c; verified claim7160379b5b16b6b6b61a0af9e3163f8bfab2dbc7. Owning checkpoint contains report and ten-source hash receipt; own SHA resolved from remote branch/file history. Live Wiki/Java/runtime NOT_RUN. HTTP/parser empty is unknown; A48 King multi-roll fraction is not normative. Remote tree/head/main verification required before saved claim.
