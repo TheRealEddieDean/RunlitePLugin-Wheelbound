@@ -1,0 +1,824 @@
+{
+  "batch": "A59",
+  "status": "REVIEW_ONLY_DISABLED",
+  "intake_commit": "fc392840194c2895023727616056c6ebf7710049",
+  "archive_sha256": "e00babd58e09c047f68df94625cd5b4e77e119952d52c0d0c50b53a7d2b60309",
+  "source_pages": 3,
+  "reviewed_source_rows": 11,
+  "distinct_creature_item_pairs": 9,
+  "sources": [
+    {
+      "name": "Zulrah",
+      "source_url": "https://oldschool.runescape.wiki/w/Zulrah",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Zulrah",
+        "fetched_at": "2026-10-14T15:16:01.123548+00:00",
+        "sha256": "d8cd31104afb482ccd87560d520bca57f7c89d2fc1ef48f8431648bef4ca1762",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\280a9300f03c47ae972cd744aefb16f732da61334c86451cbc6f99ef6dd3cd4f.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Zulrah",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:19:24 GMT",
+        "fixture": false
+      },
+      "raw_html_sha256": "623effbad4ea71e9b867ad2852539d2d389da53ebb400c7d559ae75e3381559d",
+      "reported_revision_ids": [
+        "15366227"
+      ],
+      "reported_npc_ids": [
+        2042
+      ],
+      "classification": "boss",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ],
+      "source_prose_extracts": [
+        "Zulrah is a level 725 solo-only snake boss . Before the player can fight Zulrah, players must have completed Regicide to the point of reaching Port Tyras , as well as having spoken with High Priestess Zul-Harcinqa to offer themselves as the sacrifice in place of the gnome child , as Zul-Gwenwynig will prevent the player from boarding the boat until Zul-Harcinqa allows them to be the sacrifice.",
+        "When a player defeats Zulrah, the drops will be received under the player, much like cave krakens . A Zul-andra teleport scroll will also be dropped near the player, which cannot be picked up but can be used to return to Zul-Andra. To fight Zulrah again after, the player must return to the shrine via the boat.",
+        "In addition to the 100% drops, the player will also have two rolls on Zulrah's drop table, excluding tertiary items, which have only one roll. The displayed drop chances represent a single roll.",
+        "There is a 1/128 chance of hitting the unique drop table per kill. [ 4 ] Zulrah gives two rolls per kill, meaning there's approximately a 1/512 chance per kill to receive a specific item from this table (or ~1/128 for any item). Below lists the approximate drop rates per roll of any specific item, which takes into account the fact that there are 4 different items in this drop table. Although uncut onyx appears on the unique drop table and in the collection log, it is not exclusive to Zulrah.",
+        "There is a 10/249 chance to roll on the flax table, followed by a 10/2,632 chance to roll on the mutagen sub-table. [ 5 ] Each mutagen is equally likely, making the drop rate per kill approximately 1/6,554 for a specific mutagen or 1/3,277 for either mutagen."
+      ],
+      "row_note_links": [
+        {
+          "text": "[ d 2 ]",
+          "href": "#cite_note-muta-7"
+        },
+        {
+          "text": "[ d 2 ]",
+          "href": "#cite_note-muta-7"
+        }
+      ],
+      "referenced_notes": [
+        {
+          "id": "cite_note-muta-7",
+          "text": "^ 2.0 2.1 The exact rarity is 10/249 * 10/5264 per roll."
+        }
+      ],
+      "rows": [
+        {
+          "source_row_zero_based": 1,
+          "raw_record": {
+            "section": "Drops / Uniques",
+            "item_name": "Tanzanite fang",
+            "item_links": [
+              {
+                "text": "Tanzanite fang",
+                "href": "https://oldschool.runescape.wiki/w/Tanzanite_fang"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "2 × 1/1,024",
+              "expression": "2 × 1/1,024",
+              "kind": "multiple_rolls",
+              "exact_probability": null,
+              "needs_context_review": true,
+              "roll_count": 2,
+              "per_roll_probability": {
+                "numerator": 1,
+                "denominator": 1024
+              },
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Tanzanite fang",
+                "1",
+                "2 × 1/1,024",
+                "9,905,245",
+                "66,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "review_disposition": "HOLD_MULTIPLE_ROLLS",
+          "review_reason": "Two reported 1/1024 rolls; source says approximately 1/512 per kill. Do not set exact per-kill probability to 1/512 or assume independence. Solo/repeatable creature-specific upgrade lead; exact personal-context model pending.",
+          "runtime_enabled": false,
+          "canonical_logical_item_id": null,
+          "personal_probability": null,
+          "reward_quote": null
+        },
+        {
+          "source_row_zero_based": 2,
+          "raw_record": {
+            "section": "Drops / Uniques",
+            "item_name": "Magic fang",
+            "item_links": [
+              {
+                "text": "Magic fang",
+                "href": "https://oldschool.runescape.wiki/w/Magic_fang"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "2 × 1/1,024",
+              "expression": "2 × 1/1,024",
+              "kind": "multiple_rolls",
+              "exact_probability": null,
+              "needs_context_review": true,
+              "roll_count": 2,
+              "per_roll_probability": {
+                "numerator": 1,
+                "denominator": 1024
+              },
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Magic fang",
+                "1",
+                "2 × 1/1,024",
+                "3,049,387",
+                "61,200"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "review_disposition": "HOLD_MULTIPLE_ROLLS",
+          "review_reason": "Same multiple-roll and per-encounter probability review as tanzanite fang.",
+          "runtime_enabled": false,
+          "canonical_logical_item_id": null,
+          "personal_probability": null,
+          "reward_quote": null
+        },
+        {
+          "source_row_zero_based": 3,
+          "raw_record": {
+            "section": "Drops / Uniques",
+            "item_name": "Serpentine visage",
+            "item_links": [
+              {
+                "text": "Serpentine visage",
+                "href": "https://oldschool.runescape.wiki/w/Serpentine_visage"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "2 × 1/1,024",
+              "expression": "2 × 1/1,024",
+              "kind": "multiple_rolls",
+              "exact_probability": null,
+              "needs_context_review": true,
+              "roll_count": 2,
+              "per_roll_probability": {
+                "numerator": 1,
+                "denominator": 1024
+              },
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Serpentine visage",
+                "1",
+                "2 × 1/1,024",
+                "3,071,067",
+                "63,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "review_disposition": "HOLD_MULTIPLE_ROLLS",
+          "review_reason": "Same multiple-roll and per-encounter probability review as tanzanite fang.",
+          "runtime_enabled": false,
+          "canonical_logical_item_id": null,
+          "personal_probability": null,
+          "reward_quote": null
+        },
+        {
+          "source_row_zero_based": 6,
+          "raw_record": {
+            "section": "Drops / Mutagens",
+            "item_name": "Tanzanite mutagen",
+            "item_links": [
+              {
+                "text": "Tanzanite mutagen",
+                "href": "https://oldschool.runescape.wiki/w/Tanzanite_mutagen"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "2 × 1/13,107 [ d 2 ]",
+              "expression": "2 × 1/13,107",
+              "kind": "multiple_rolls",
+              "exact_probability": null,
+              "needs_context_review": true,
+              "roll_count": 2,
+              "per_roll_probability": {
+                "numerator": 1,
+                "denominator": 13107
+              },
+              "approximate": false
+            },
+            "annotations": [
+              "[ d 2 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Tanzanite mutagen",
+                "1",
+                "2 × 1/13,107 [ d 2 ]",
+                "Not sold",
+                "5,700"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "review_disposition": "EXCLUDE_REPORTED_RATE",
+          "review_reason": "Source reports specific mutagen approximately 1/6554 per kill, outside band. Keep two-roll expression and note; no additive exact normalization.",
+          "runtime_enabled": false,
+          "canonical_logical_item_id": null,
+          "personal_probability": null,
+          "reward_quote": null
+        },
+        {
+          "source_row_zero_based": 7,
+          "raw_record": {
+            "section": "Drops / Mutagens",
+            "item_name": "Magma mutagen",
+            "item_links": [
+              {
+                "text": "Magma mutagen",
+                "href": "https://oldschool.runescape.wiki/w/Magma_mutagen"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "2 × 1/13,107 [ d 2 ]",
+              "expression": "2 × 1/13,107",
+              "kind": "multiple_rolls",
+              "exact_probability": null,
+              "needs_context_review": true,
+              "roll_count": 2,
+              "per_roll_probability": {
+                "numerator": 1,
+                "denominator": 13107
+              },
+              "approximate": false
+            },
+            "annotations": [
+              "[ d 2 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Magma mutagen",
+                "1",
+                "2 × 1/13,107 [ d 2 ]",
+                "Not sold",
+                "5,700"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "review_disposition": "EXCLUDE_REPORTED_RATE",
+          "review_reason": "Same reported out-of-band specific-mutagen probability; preserve both alternatives as distinct items, not any-mutagen completion.",
+          "runtime_enabled": false,
+          "canonical_logical_item_id": null,
+          "personal_probability": null,
+          "reward_quote": null
+        }
+      ],
+      "cached_reparse_drop_array_equal": true,
+      "runtime_enabled": false
+    },
+    {
+      "name": "Kraken",
+      "source_url": "https://oldschool.runescape.wiki/w/Kraken",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Kraken",
+        "fetched_at": "2026-10-14T15:13:29.169335+00:00",
+        "sha256": "0fc2fac4b1670aaf529cb8469f4e1cd00b8c291203236da71a3b90ff078ce6e5",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\8a681808e16be008f15a6e443dc2a5bc09bd94224a9dc6f7cd4aa15632fd903a.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Kraken",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:18:26 GMT",
+        "fixture": false
+      },
+      "raw_html_sha256": "f5825b08112ea06167f914d698c1c8ef171baac30abb23df2f1711dc09a3ad72",
+      "reported_revision_ids": [
+        "15368743"
+      ],
+      "reported_npc_ids": [
+        496
+      ],
+      "classification": "boss",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "page_category:Bosses"
+      ],
+      "source_prose_extracts": [
+        "The Kraken is a stronger and larger version of the cave kraken . It requires level 87 Slayer to kill and cannot be boosted. Located at the Kraken Cove , it can only be attacked if the player has it, or cave krakens as a Slayer task , which also requires level 50 Magic . Alongside its non-boss variants , it is the only monster that drops the Kraken tentacle and charged Trident of the Seas .",
+        "Players can create a Kraken instance for 25,000 coins. This fee can be deducted directly from the bank; players do not need to carry coins on them to create the instance. The boss respawns more slowly in a private instance than the public arena."
+      ],
+      "row_note_links": [
+        {
+          "text": "[ 2 ]",
+          "href": "#cite_note-Drop_Rates_V2-2"
+        },
+        {
+          "text": "[ 2 ]",
+          "href": "#cite_note-Drop_Rates_V2-2"
+        }
+      ],
+      "referenced_notes": [
+        {
+          "id": "cite_note-Drop_Rates_V2-2",
+          "text": "^ 2.0 2.1 2.2 2.3 2.4 2.5 Envision. \"Drop Rates V2.\" Old School RuneScape Forums."
+        }
+      ],
+      "rows": [
+        {
+          "source_row_zero_based": 5,
+          "raw_record": {
+            "section": "Drops / Weapons and armour",
+            "item_name": "Trident of the Seas (full)",
+            "item_links": [
+              {
+                "text": "Trident of the Seas (full)",
+                "href": "https://oldschool.runescape.wiki/w/Trident_of_the_Seas_(full)"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/512 [ 2 ]",
+              "expression": "1/512",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 512
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 2 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Trident of the Seas (full)",
+                "1",
+                "1/512 [ 2 ]",
+                "859,452",
+                "41,400"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "review_disposition": "HOLD_TASK_DEPENDENT",
+          "review_reason": "Reported 1/512 within band, but Kraken can only be attacked on a qualifying Slayer task. WB-D140 continuation permission/evidence unresolved; hold expansion, not starter.",
+          "runtime_enabled": false,
+          "canonical_logical_item_id": null,
+          "personal_probability": null,
+          "reward_quote": null
+        },
+        {
+          "source_row_zero_based": 35,
+          "raw_record": {
+            "section": "Drops / Other",
+            "item_name": "Kraken tentacle",
+            "item_links": [
+              {
+                "text": "Kraken tentacle",
+                "href": "https://oldschool.runescape.wiki/w/Kraken_tentacle"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/400 [ 2 ]",
+              "expression": "1/400",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 400
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 2 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Kraken tentacle",
+                "1",
+                "1/400 [ 2 ]",
+                "207,560",
+                "50,004"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "review_disposition": "HOLD_TASK_DEPENDENT",
+          "review_reason": "Reported 1/400 inclusive endpoint. Same task-continuation hold; do not infer sustainable hunt from current task.",
+          "runtime_enabled": false,
+          "canonical_logical_item_id": null,
+          "personal_probability": null,
+          "reward_quote": null
+        }
+      ],
+      "cached_reparse_drop_array_equal": true,
+      "runtime_enabled": false
+    },
+    {
+      "name": "Abyssal demon",
+      "source_url": "https://oldschool.runescape.wiki/w/Abyssal_demon",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Abyssal_demon",
+        "fetched_at": "2026-10-14T15:03:00.461032+00:00",
+        "sha256": "87d9301da2d0658e84ba09c98a446cd63c099527bb3cb9f967e2c0d9f5ecd938",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\f40b18ac0fee0aebab3bddbe202d6ca12843a1664447508a4995cc39cb207758.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Abyssal_demon",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:16:54 GMT",
+        "fixture": false
+      },
+      "raw_html_sha256": "9fc4062ed46c1626acac14a1a023df2281bddabcb0ed2aab44f2ffa67eef9565",
+      "reported_revision_ids": [
+        "15357583"
+      ],
+      "reported_npc_ids": [
+        415,
+        416
+      ],
+      "classification": "monster",
+      "classification_evidence": [
+        "category_ancestry:monster",
+        "monster_infobox_fields",
+        "page_category:Gem drop table monsters",
+        "page_category:Herb drop table monsters",
+        "page_category:Members' monsters",
+        "page_category:Monsters",
+        "page_category:Monsters susceptible to poison",
+        "page_category:Monsters susceptible to venom",
+        "page_category:Monsters that drop clues",
+        "page_category:Rare drop table monsters",
+        "page_category:Slayer monsters",
+        "page_category:Wilderness slayer drop table monsters"
+      ],
+      "source_prose_extracts": [
+        "Abyssal demons are one of the strongest types of demons , requiring level 85 Slayer to be damaged. Alongside their boss variant , they are the only creatures in the game to drop the abyssal whip and abyssal dagger . They have relatively high accuracy but their max hit of 8 is low for their combat level.",
+        "The following drops are only accessible while killing the Catacombs of Kourend variants.",
+        "The following drops are only accessible while on a Slayer task given by Krystilia ."
+      ],
+      "row_note_links": [
+        {
+          "text": "[ 3 ]",
+          "href": "#cite_note-drop-3"
+        },
+        {
+          "text": "[ 4 ]",
+          "href": "#cite_note-dagger-4"
+        },
+        {
+          "text": "[ 3 ]",
+          "href": "#cite_note-drop-3"
+        },
+        {
+          "text": "[ 4 ]",
+          "href": "#cite_note-dagger-4"
+        }
+      ],
+      "referenced_notes": [
+        {
+          "id": "cite_note-drop-3",
+          "text": "^ 3.0 3.1 3.2 3.3 3.4 3.5 3.6 3.7 Envision. \"Drop Rates V2.\" 9 July 2014. Old School RuneScape Forums."
+        },
+        {
+          "id": "cite_note-dagger-4",
+          "text": "^ 4.0 4.1 \"Item Incinerator\" . Old School RuneScape News. Jagex. 30 June 2016. Archived from the original . \"Abyssal Demons have had the abyssal dagger added to their drop table with a drop rate of 1/32k.\""
+        }
+      ],
+      "rows": [
+        {
+          "source_row_zero_based": 7,
+          "raw_record": {
+            "section": "Drops / Standard and Catacombs of Kourend / Weapons and armour",
+            "item_name": "Abyssal whip",
+            "item_links": [
+              {
+                "text": "Abyssal whip",
+                "href": "https://oldschool.runescape.wiki/w/Abyssal_whip"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/512 [ 3 ]",
+              "expression": "1/512",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 512
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 3 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Abyssal whip",
+                "1",
+                "1/512 [ 3 ]",
+                "791,060",
+                "72,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "review_disposition": "RATE_SCREEN_PASS_CONTEXT_REVIEW",
+          "review_reason": "Reported 1/512 in two location sections; preserve contexts as one logical item/creature, not two draws. Off-task repeatable-route lead. Canonical IDs, supported access and personal receipt/reward remain unverified.",
+          "runtime_enabled": false,
+          "canonical_logical_item_id": null,
+          "personal_probability": null,
+          "reward_quote": null
+        },
+        {
+          "source_row_zero_based": 8,
+          "raw_record": {
+            "section": "Drops / Standard and Catacombs of Kourend / Weapons and armour",
+            "item_name": "Abyssal dagger",
+            "item_links": [
+              {
+                "text": "Abyssal dagger",
+                "href": "https://oldschool.runescape.wiki/w/Abyssal_dagger"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/32,000 [ 4 ]",
+              "expression": "1/32,000",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 32000
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 4 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Abyssal dagger",
+                "1",
+                "1/32,000 [ 4 ]",
+                "1,072,369",
+                "69,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "review_disposition": "EXCLUDE_REPORTED_RATE",
+          "review_reason": "Reported 1/32000 outside rarity band in both supplied sections; no admission.",
+          "runtime_enabled": false,
+          "canonical_logical_item_id": null,
+          "personal_probability": null,
+          "reward_quote": null
+        },
+        {
+          "source_row_zero_based": 78,
+          "raw_record": {
+            "section": "Drops / Wilderness Slayer Cave / Weapons and armour",
+            "item_name": "Abyssal whip",
+            "item_links": [
+              {
+                "text": "Abyssal whip",
+                "href": "https://oldschool.runescape.wiki/w/Abyssal_whip"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/512 [ 3 ]",
+              "expression": "1/512",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 512
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 3 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Abyssal whip",
+                "1",
+                "1/512 [ 3 ]",
+                "791,060",
+                "72,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "review_disposition": "RATE_SCREEN_PASS_CONTEXT_REVIEW",
+          "review_reason": "Reported 1/512 in two location sections; preserve contexts as one logical item/creature, not two draws. Off-task repeatable-route lead. Canonical IDs, supported access and personal receipt/reward remain unverified.",
+          "runtime_enabled": false,
+          "canonical_logical_item_id": null,
+          "personal_probability": null,
+          "reward_quote": null
+        },
+        {
+          "source_row_zero_based": 79,
+          "raw_record": {
+            "section": "Drops / Wilderness Slayer Cave / Weapons and armour",
+            "item_name": "Abyssal dagger",
+            "item_links": [
+              {
+                "text": "Abyssal dagger",
+                "href": "https://oldschool.runescape.wiki/w/Abyssal_dagger"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/32,000 [ 4 ]",
+              "expression": "1/32,000",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 32000
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 4 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Abyssal dagger",
+                "1",
+                "1/32,000 [ 4 ]",
+                "1,072,369",
+                "69,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "review_disposition": "EXCLUDE_REPORTED_RATE",
+          "review_reason": "Reported 1/32000 outside rarity band in both supplied sections; no admission.",
+          "runtime_enabled": false,
+          "canonical_logical_item_id": null,
+          "personal_probability": null,
+          "reward_quote": null
+        }
+      ],
+      "cached_reparse_drop_array_equal": true,
+      "runtime_enabled": false
+    }
+  ],
+  "gates": [
+    "Canonical creature/item identities and accepted variants",
+    "Observable actual access and continuing qualifying route",
+    "Reviewed personal probability per encounter/context",
+    "Fresh active personal assigned-source receipt proof",
+    "Frozen reviewed reward quote/version",
+    "Final reviewed roster; none enabled"
+  ],
+  "approved_decisions_unchanged": true,
+  "unanswered_A56_proposal": "NOT_ADOPTED"
+}

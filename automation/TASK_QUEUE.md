@@ -104,4 +104,6 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A58 | Inspect uploaded collector output and save quality/intake report | P1 | User upload; A57 handoff; guarded ownership | S per bounded intake | DONE (intake only; owning checkpoint) | Separate data intake report/reference | Original hashes/provenance, scope/counts/classification/parser/source gaps; no full roster/fixture/live evidence claims; verify remote before next batch |
 
-| WB-A59 | Review uploaded Abyssal demon/Kraken/Zulrah unique-drop contexts | P1 | A58 remote verification; supplied cache | S | NEXT | research/CHALLENGE_UPLOAD_BATCH_A59 | Source-pinned lossless context review; no runtime admission |
+| WB-A59 | Review uploaded Abyssal demon/Kraken/Zulrah unique-drop contexts | P1 | A58 remote verification; supplied cache | S | DONE (review only; owning checkpoint) | research/CHALLENGE_UPLOAD_BATCH_A59 | Source-pinned lossless context review; no runtime admission |
+
+| WB-A60 | Quarantine weak monster labels and ancestry-only boss classifications in review index | P1 | A59 verified; supplied cache | S per batch | NEXT | Separate taxonomy review packet | Preserve raw records; explicit evidence/disposition, no enabled encounter keys |

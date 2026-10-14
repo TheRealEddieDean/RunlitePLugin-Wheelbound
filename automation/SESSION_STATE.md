@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-real-batch-readiness
-- State: ACTIVE — owner wb-20261014-upload-intake; task A58 only.
+- State: IDLE — owner wb-20261014-upload-intake released after A58/A59.
 - Acquired: 2026-10-14T17:40:58.961509+00:00; expires: 2026-10-14T19:40:58.961509+00:00
 - Expected acquisition head: 85c4c7f51b8a04e61f3ba30d98308cbedba76da5
 - Branch: wheelbound-mode
@@ -24,13 +24,15 @@
 
 The two real manifests cover six explicit pages/411 parsed rows, not all-monster/category discovery. Full HTML/databases are transient generated outputs, not archived in Git; selected review extracts/hashes/revision identifiers are committed. The unchanged declared collector matched allowing robots rules for these canonical paths. Earlier named-client/browser/search blocks remain historical route-specific facts, not universal collection failure or blanket access permission. No oldid/API/Special bypass or identity change. B1 source receipts stay intact; A51 King-kurask multi-roll caution remains.
 
-## Exact next action — uploaded data reviewed
+## Exact next action — A58 intake and A59 first curated review saved
 
 A58 intake complete in owning checkpoint: docs/wheelbound/research/WIKI_UPLOAD_INTAKE_A58.md/json; reproducible tools/wiki_drops/audit_intake.py. Original output.zip retained as user attachment libfile_12514dfedef0819184279d6d84d380ff, SHA256 e00babd58e09c047f68df94625cd5b4e77e119952d52c0d0c50b53a7d2b60309. No bulk caches committed.
 
 2,929 source pages: 1,957 labeled (203 boss/1,754 monster), 972 unknown; 40,534 labeled drops plus 3,913 unknown-page drops. PARTIAL despite empty queue. JSON/per-page/SQLite/CSV and normalized cached HTML agree; Windows newline byte hashes distinguished. Seventeen offline tests and eight cached reparses passed. Broad monster category regex mislabels items/chests; ancestry boss labels include adds; taxonomy is provisional. No final roster or new gameplay decisions.
 
-Publish/verify A58 head/tree/main before A59. Then bounded three-source review: Abyssal demon, Kraken, Zulrah unique-drop contexts using supplied cache; keep raw rates/conditions/revisions, candidates disabled. No rescrape or repeat A54/A55. Ownership retained for immediate follow-on A59, renew/release guarded. Acquisition 8a122352004f7ee20895719bd439f85c83e99e64 from verified 85c4c7f51b8a04e61f3ba30d98308cbedba76da5. Owning commit must be remotely verified before saved claim. A56 question remains unapproved.
+A58 verified remote fc392840194c2895023727616056c6ebf7710049, exact tree09c9c068ac56ee0d9535085555666ef6b131e097, main unchanged. A59 owning checkpoint adds CHALLENGE_UPLOAD_BATCH_A59.md/json: three supplied sources, eleven rows/nine logical pairs. One whip rate-screen/context lead; two Kraken task-dependent holds; three Zulrah multiple-roll holds; dagger/two mutagens excluded by reported rates. Selected SQLite payloads and cached reparses agree; reported revisions/HTML note links/conditions preserved. No personal probability/reward/canonical ID invented; no runtime admission.
+
+Next A60: bounded disabled taxonomy review index for weak monster classifications and forty ancestry-only boss labels; use supplied cached evidence, preserve originals. Then source-specific probability/identity/access/receipt/reward review toward a curated catalog. Do not recrawl, repeat A54/A55 or count research creatures toward ≥3 runtime eligibility. User attachment remains durable raw source; prepare it locally again if scratch expired. Acquire expected-head guarded ownership before writing. A56 question remains unapproved. Owner released; no background work. Acquisition8a122352004f7ee20895719bd439f85c83e99e64 from85c4c7f51b8a04e61f3ba30d98308cbedba76da5. Verify owning A59 head/tree/main before reporting saved; commit cannot embed itself.
 
 ## Preserved A56 design question — unanswered
 

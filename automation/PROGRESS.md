@@ -243,3 +243,7 @@ Latest remote a68f025cc50ae47a3dc7d4a6ac620d2d6779486a verified; IDLE owner, mai
 ## A58 uploaded collector intake — 2026-10-14
 
 Starting remote85c4c7f51b8a04e61f3ba30d98308cbedba76da5; guarded claim8a122352004f7ee20895719bd439f85c83e99e64. WIKI_UPLOAD_INTAKE_A58.md/json and read-only audit tool: 2,929 page records/44,447 retained rows; 40,534 labeled rows agree across exports. Partial coverage, broad-category classification bug, ancestry minions, unsupported and variable-rate hazards recorded. All normalized HTML hashes/receipts agree; eight reparses and17 existing offline tests pass. Owning commit publication/remote tree/head/main verification required; no roster or gameplay change. Next A59 three-source uploaded-context review.
+
+## A59 first uploaded Challenge review — 2026-10-14
+
+A58 remotely verified fc392840194c2895023727616056c6ebf7710049/tree09c9c068ac56ee0d9535085555666ef6b131e097; main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa unchanged. CHALLENGE_UPLOAD_BATCH_A59.md/json: three cached pages,11 raw rows/nine logical creature-item pairs, one rate-screen/context lead/two task-dependent holds/three multiple-roll holds/three reported-rate exclusions. Source revisions/hashes/row note targets and raw expressions retained. SQLite selected payloads/cached parse arrays/exact hypothetical arithmetic validated. No enabled roster, new design decision or production code. Owning A59 commit requires guarded publication and remote verification. Ownership released; next A60 disabled taxonomy index, A56 still NOT_ADOPTED.
