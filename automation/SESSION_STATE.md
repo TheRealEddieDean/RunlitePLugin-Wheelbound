@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-delegated-challenge-contract
-- State: IDLE — owner released; no active lease.
+- State: ACTIVE — wb-20261014-loot-lookup-source owns A51; acquired 2026-10-14T03:13:37.748198+00:00; expires 2026-10-14T03:33:37.748198+00:00.
 - Branch: wheelbound-mode
 - Starting remote head:2636e5de758b5d926d1c8492edfaafd2f446d994
 - Verified claim:d5ea018fe602bd3ee63bb024a538785708cb07d5
@@ -32,3 +32,5 @@ Verified A49 explicit confirmation:827c27f9c26339bbcb452a0ca32f480de3f52066. A50
 
 
 A48 B1 owning commit contains this checkpoint and review; resolve own SHA from branch history. Starting e8d07f9ecc9de9a775f44e8287d1104159b3e9d1; verified claim2a12694f6f46e250bd26d3443d88c76e45ce0add. Runtime/IDs/rewards/prices remain disabled/unresolved; primary freshness source blocker WB-B09. Remote tree/head/main must verify before saved claim.
+
+Current bounded deliverable A51: user-requested Loot Lookup source trace at verified Plugin Hub pin; report retrieval/parser/context limits and Wheelbound recommendations, no implementation/live scrape.
