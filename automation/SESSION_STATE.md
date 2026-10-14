@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: IDLE — A65 all-tier file update complete; owner released. Unlock topology remains unanswered.
+- State: ACTIVE — owner wb-20261014-monster-boss-split; A66 user-directed rename/split.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -53,3 +53,5 @@ Full raw-row/URL/hash/timestamp preserving index and CSV in catalogs/challenge_h
 Validation:1,319 offline source/bounds/count/display/JSON-SQLite assertions pass,22 existing tests pass, all11 manifest hashes/145 unique decisions valid. Render reproducibility and whitespace/scope checks required before guarded owning publication. A65 owning commit requires exact remote head/tree/main verification before saved claim. Owner released; no background work.
 
 Current next material question remains A64 progressive-versus-independent card unlock topology; the file update is not its answer. Expanded v2 candidate admission/rewards/offer integration still pending. Do not call candidate display membership a ready catalog.
+
+A66 acquisition 2026-10-14T19:07:20.956355+00:00 expires 2026-10-14T21:07:20.956355+00:00; expected remote98ae9450bb51ed8ed9b8c8234b88210c06ce3cd4. Explicit user clarification: two current monster/boss drop tables, both new tiers; rename old current/archive files and fix content/source classification/links. No new unlock topology, roster, reward or production approval.
