@@ -1,0 +1,639 @@
+{
+  "archive": {
+    "name": "output.zip",
+    "sha256": "e00babd58e09c047f68df94625cd5b4e77e119952d52c0d0c50b53a7d2b60309",
+    "bytes": 91341367,
+    "library_id": "libfile_12514dfedef0819184279d6d84d380ff"
+  },
+  "collector_source_sha256": "e2fae8707e192ebacae8e1669e17e9dae0660dc8c3793233afca99734db0f56f",
+  "collector_version_proof": "No script/commit pin in upload; schema and user agent compatible with committed 0.1, exact executed source unproven.",
+  "coverage": {
+    "scope": "category_discovery",
+    "started_at": "2026-10-14T15:02:40.209505+00:00",
+    "status": "PARTIAL",
+    "all_monsters_verified": false,
+    "errors": [
+      {
+        "url": "https://oldschool.runescape.wiki/w/Category:Unknown_talisman",
+        "role": "category",
+        "kind": "monster",
+        "error": "Unsupported/missing category layout",
+        "at": "2026-10-14T15:10:44.544424+00:00"
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Frog",
+        "role": "page",
+        "kind": "monster",
+        "error": "<urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>",
+        "at": "2026-10-14T15:20:31.594785+00:00"
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Category:Safespot_images",
+        "role": "category",
+        "kind": "monster",
+        "error": "Unsupported/missing category layout",
+        "at": "2026-10-14T15:32:32.224966+00:00"
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Category:Slayer_monster_images",
+        "role": "category",
+        "kind": "monster",
+        "error": "Unsupported/missing category layout",
+        "at": "2026-10-14T15:32:34.156130+00:00"
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Ennius_Tullus",
+        "role": "page",
+        "kind": "monster",
+        "error": "<urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>",
+        "at": "2026-10-14T15:34:31.502044+00:00"
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Big_rat_(brown)",
+        "role": "page",
+        "kind": "boss",
+        "error": "HTTP Error 404: Not Found",
+        "at": "2026-10-14T16:05:28.117119+00:00"
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Big_rat_(brown)",
+        "role": "page",
+        "kind": "monster",
+        "error": "HTTP Error 404: Not Found",
+        "at": "2026-10-14T16:17:29.887441+00:00"
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Araxyte_Betrayal",
+        "role": "page",
+        "kind": "boss",
+        "error": "<urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>",
+        "at": "2026-10-14T16:30:12.622649+00:00"
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Let_it_seep_in",
+        "role": "page",
+        "kind": "boss",
+        "error": "<urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>",
+        "at": "2026-10-14T16:30:14.999348+00:00"
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Perfect_Araxxor",
+        "role": "page",
+        "kind": "boss",
+        "error": "<urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>",
+        "at": "2026-10-14T16:30:18.796304+00:00"
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Perfect_Araxxor_2",
+        "role": "page",
+        "kind": "boss",
+        "error": "<urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>",
+        "at": "2026-10-14T16:30:20.134225+00:00"
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Green_Guard",
+        "role": "page",
+        "kind": "monster",
+        "error": "<urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>",
+        "at": "2026-10-14T16:37:06.660184+00:00"
+      }
+    ],
+    "pending": [],
+    "processed_pages": 3929,
+    "discovered_pages": 3938,
+    "finished_at": "2026-10-14T16:47:51.858686+00:00",
+    "unclassified_pages": 972,
+    "pages_without_supported_tables": 1152,
+    "unsupported_row_count": 742
+  },
+  "counts": {
+    "included_pages": 1957,
+    "unknown_pages": 972,
+    "all_page_records": 2929,
+    "unique_source_urls": 2929,
+    "classifications": {
+      "monster": 1754,
+      "boss": 203,
+      "unknown": 972
+    },
+    "included_drop_rows": 40534,
+    "unknown_page_drop_rows": 3913,
+    "all_drop_rows": 44447,
+    "rate_kinds": {
+      "always": 1724,
+      "fraction": 17774,
+      "unknown": 10933,
+      "alternatives": 6406,
+      "multiple_rolls": 2002,
+      "approximate": 1695
+    },
+    "unsupported_included_rows": 599,
+    "unsupported_all_rows": 742,
+    "included_no_tables": 500,
+    "all_no_tables": 1152,
+    "missing_npc_ids_included": 373,
+    "cache_receipts": 3063,
+    "db_creatures": 1957,
+    "db_drops": 40534,
+    "csv_rows": 40534,
+    "csv_expected_rows": 40534,
+    "page_json_files": 2929,
+    "syntactic_band_fraction_rows": 1521
+  },
+  "provenance": {
+    "origins": {
+      "network_html": 2929
+    },
+    "fixture_flags": {
+      "False": 2929
+    },
+    "fetched_at_min": "2026-10-14T15:02:46.545609+00:00",
+    "fetched_at_max": "2026-10-14T16:47:51.811345+00:00",
+    "generated_at": "2026-10-14T16:48:14.528111+00:00",
+    "capture_last_modified_missing": 0,
+    "runtime_enabled_pages": 0,
+    "runtime_enabled_drops": 0
+  },
+  "cross_checks": {
+    "csv_differences": []
+  },
+  "raw_html_byte_hash_differs_from_text_hash": 2929,
+  "sqlite_integrity": "ok",
+  "coverage_matches_catalog": true,
+  "db_coverage_matches": true,
+  "duplicates": {
+    "source_urls": {},
+    "names": {},
+    "html_hashes": {},
+    "shared_npc_ids": {
+      "9434": [
+        "https://oldschool.runescape.wiki/w/Totem_(The_Nightmare)",
+        "https://oldschool.runescape.wiki/w/Totem_(Phosani%27s_Nightmare)"
+      ],
+      "9435": [
+        "https://oldschool.runescape.wiki/w/Totem_(The_Nightmare)",
+        "https://oldschool.runescape.wiki/w/Totem_(Phosani%27s_Nightmare)"
+      ],
+      "9436": [
+        "https://oldschool.runescape.wiki/w/Totem_(The_Nightmare)",
+        "https://oldschool.runescape.wiki/w/Totem_(Phosani%27s_Nightmare)"
+      ],
+      "9437": [
+        "https://oldschool.runescape.wiki/w/Totem_(The_Nightmare)",
+        "https://oldschool.runescape.wiki/w/Totem_(Phosani%27s_Nightmare)"
+      ],
+      "9438": [
+        "https://oldschool.runescape.wiki/w/Totem_(The_Nightmare)",
+        "https://oldschool.runescape.wiki/w/Totem_(Phosani%27s_Nightmare)"
+      ],
+      "9439": [
+        "https://oldschool.runescape.wiki/w/Totem_(The_Nightmare)",
+        "https://oldschool.runescape.wiki/w/Totem_(Phosani%27s_Nightmare)"
+      ],
+      "9440": [
+        "https://oldschool.runescape.wiki/w/Totem_(The_Nightmare)",
+        "https://oldschool.runescape.wiki/w/Totem_(Phosani%27s_Nightmare)"
+      ],
+      "9441": [
+        "https://oldschool.runescape.wiki/w/Totem_(The_Nightmare)",
+        "https://oldschool.runescape.wiki/w/Totem_(Phosani%27s_Nightmare)"
+      ],
+      "9442": [
+        "https://oldschool.runescape.wiki/w/Totem_(The_Nightmare)",
+        "https://oldschool.runescape.wiki/w/Totem_(Phosani%27s_Nightmare)"
+      ],
+      "9443": [
+        "https://oldschool.runescape.wiki/w/Totem_(The_Nightmare)",
+        "https://oldschool.runescape.wiki/w/Totem_(Phosani%27s_Nightmare)"
+      ],
+      "9444": [
+        "https://oldschool.runescape.wiki/w/Totem_(The_Nightmare)",
+        "https://oldschool.runescape.wiki/w/Totem_(Phosani%27s_Nightmare)"
+      ],
+      "9445": [
+        "https://oldschool.runescape.wiki/w/Totem_(The_Nightmare)",
+        "https://oldschool.runescape.wiki/w/Totem_(Phosani%27s_Nightmare)"
+      ],
+      "9248": [
+        "https://oldschool.runescape.wiki/w/Arianwyn",
+        "https://oldschool.runescape.wiki/w/Arianwyn_(Nightmare_Zone)"
+      ]
+    },
+    "identical_row_groups": [
+      {
+        "url": "https://oldschool.runescape.wiki/w/Steel_Chest_(crimson)",
+        "copies": 2,
+        "item": "Black spear",
+        "section": "Possible rewards / Weapons"
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Steel_Chest_(red)",
+        "copies": 2,
+        "item": "Black spear",
+        "section": "Possible rewards / Weapons"
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Steel_Chest_(brown)",
+        "copies": 2,
+        "item": "Black spear",
+        "section": "Possible rewards / Weapons"
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Steel_Chest_(black)",
+        "copies": 2,
+        "item": "Black spear",
+        "section": "Possible rewards / Weapons"
+      },
+      {
+        "url": "https://oldschool.runescape.wiki/w/Steel_Chest_(purple)",
+        "copies": 2,
+        "item": "Black spear",
+        "section": "Possible rewards / Weapons"
+      }
+    ]
+  },
+  "boss_without_direct_boss_category": [
+    "Summoned Soul",
+    "Parasite (Phosani's Nightmare)",
+    "Scion",
+    "Totem (The Nightmare)",
+    "Totem (Phosani's Nightmare)",
+    "Snakeling",
+    "Giant crypt rat",
+    "Spawn",
+    "Dark energy core",
+    "Grimy Lizard",
+    "Husk",
+    "Husk (Phosani's Nightmare)",
+    "Moonlight Cockatrice",
+    "Fire elemental (Royal Titans)",
+    "Judge of Yama",
+    "Crypt spider",
+    "Skeleton (Barrows)",
+    "Araxyte",
+    "Bloodworm",
+    "Mirrorback Araxyte",
+    "Imp (Yama)",
+    "Jim",
+    "Respiratory system",
+    "Void Flare",
+    "Giant crypt spider",
+    "Crypt rat",
+    "Blood jaguar",
+    "Ur-maggot larvae",
+    "Giant rat (Scurrius)",
+    "Ice elemental (Royal Titans)",
+    "Golem (Zalcano)",
+    "Ruptura Araxyte",
+    "Parasite",
+    "Zombified Spawn",
+    "Sleepwalker (monster)",
+    "Sulphur Nagua",
+    "Wyrmling",
+    "Tentacle (Abyssal Sire)",
+    "Acidic Araxyte",
+    "Sleepwalker (Phosani's Nightmare)"
+  ],
+  "syntactic_band_leads_sample_NOT_ELIGIBLE": [
+    {
+      "url": "https://oldschool.runescape.wiki/w/Donny_the_lad",
+      "row": 44,
+      "item": "Larran's key (m)",
+      "raw": "1/734"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Hoop_Snake",
+      "row": 6,
+      "item": "Unidentified rare fossil",
+      "raw": "3/3,500"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Yama",
+      "row": 1,
+      "item": "Oathplate helm",
+      "raw": "1/600 [ d 1 ]"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Yama",
+      "row": 2,
+      "item": "Oathplate chest",
+      "raw": "1/600 [ d 1 ]"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Yama",
+      "row": 3,
+      "item": "Oathplate legs",
+      "raw": "1/600 [ d 1 ]"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Spindel",
+      "row": 3,
+      "item": "Fangs of Venenatis",
+      "raw": "1/618 [ 1 ]"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Spindel",
+      "row": 4,
+      "item": "Treasonous ring",
+      "raw": "1/716 [ 1 ]"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Spindel",
+      "row": 5,
+      "item": "Voidwaker gem",
+      "raw": "1/912 [ 1 ]"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Fishy_salvage",
+      "row": 1,
+      "item": "Boat bottle (empty)",
+      "raw": "1/750 [ 1 ]"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Fishy_salvage",
+      "row": 12,
+      "item": "Steel bar",
+      "raw": "1/467"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Screaming_banshee",
+      "row": 45,
+      "item": "Eternal gem",
+      "raw": "1/1,288"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Screaming_banshee",
+      "row": 46,
+      "item": "Imbued heart",
+      "raw": "1/1,288"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Tortoise",
+      "row": 20,
+      "item": "Sweetcorn seed",
+      "raw": "1/456"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Tortoise",
+      "row": 21,
+      "item": "Strawberry seed",
+      "raw": "1/913"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Tortoise",
+      "row": 29,
+      "item": "Krandorian seed",
+      "raw": "1/730"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Tortoise",
+      "row": 30,
+      "item": "Wildblood seed",
+      "raw": "1/1,434"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Tortoise",
+      "row": 31,
+      "item": "Marigold seed",
+      "raw": "1/433"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Tortoise",
+      "row": 32,
+      "item": "Nasturtium seed",
+      "raw": "1/655"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Tortoise",
+      "row": 33,
+      "item": "Rosemary seed",
+      "raw": "1/1,013"
+    },
+    {
+      "url": "https://oldschool.runescape.wiki/w/Tortoise",
+      "row": 34,
+      "item": "Woad seed",
+      "raw": "1/1,370"
+    }
+  ],
+  "files": [
+    {
+      "path": "catalog.json",
+      "bytes": 76224151,
+      "sha256": "aea6c2d92f396353d6c515db4fbe762c7405997c6983eebbb481c17c738db1f2"
+    },
+    {
+      "path": "coverage.json",
+      "bytes": 3635,
+      "sha256": "f466bb9602a34a13731b67b29efe4a262739f7e530cc360b2f4c06180a69cc15"
+    },
+    {
+      "path": "crawl_state.json",
+      "bytes": 453034,
+      "sha256": "92408416c7935e223092e70eb8a435b02dbb88bdd67989b55dfa7bd56006760c"
+    },
+    {
+      "path": "drops.csv",
+      "bytes": 6162713,
+      "sha256": "aa3f770c298e95beda4ebea9fa49f85c368ab4ec29006515e8efc0e967f144b5"
+    },
+    {
+      "path": "drops.sqlite",
+      "bytes": 79663104,
+      "sha256": "145d710b3ac1e4948b4c08f7b706d1be5fe197a6002d5e6f242beeea14ebcf18"
+    },
+    {
+      "path": "robots_receipt.json",
+      "bytes": 4323,
+      "sha256": "5f9a2a628c2f944359f65858678af1c96a427801c8991dece3f15b1ab53efeb8"
+    },
+    {
+      "path": "scope.json",
+      "bytes": 100,
+      "sha256": "575477ad7c5d77036ba7ca9a2aa8f9b58e83d74284ade0fbfce5e6b6477a70bd"
+    }
+  ],
+  "full_file_inventory": {
+    "count": 9062,
+    "total_bytes": 613150582,
+    "sha256_of_sorted_compact_json": "f4f974e6204bcbe7e23bfe3c5348dcf9618870b484d83ea717ad79bd13ecf0e7"
+  },
+  "cached_html_reparse_sample": [
+    {
+      "name": "Summoned Soul",
+      "url": "https://oldschool.runescape.wiki/w/Summoned_Soul",
+      "drop_rows": 0,
+      "normalized_text_sha256": "6bf502aba56f13ff81168a1a1bfdf02cd1dcaea8c4fe10b4e9cac37a1e30937e",
+      "raw_file_sha256": "703e6469c1f23cc70768c0097a2ba2be09335eead73d714081981bd3d68d7563",
+      "reported_revision_ids": [
+        "15168197"
+      ],
+      "field_equal_without_ancestry_hint": {
+        "name": true,
+        "drops": true,
+        "footnotes": true,
+        "categories": true,
+        "infobox_fields": true,
+        "reported_npc_ids": true,
+        "page_context": true,
+        "source_sha256": true
+      },
+      "classification_without_hint": "monster",
+      "stored_classification": "boss"
+    },
+    {
+      "name": "Kurask",
+      "url": "https://oldschool.runescape.wiki/w/Kurask",
+      "drop_rows": 61,
+      "normalized_text_sha256": "4c8d12fefd8f879659dbcc9ec483ad82c6b3e808a1692721e0867d6a53032c89",
+      "raw_file_sha256": "dd63b97102799bbfefd5c7075d218f1c319b548c1276f4b177c19893a9454ee5",
+      "reported_revision_ids": [
+        "15338306"
+      ],
+      "field_equal_without_ancestry_hint": {
+        "name": true,
+        "drops": true,
+        "footnotes": true,
+        "categories": true,
+        "infobox_fields": true,
+        "reported_npc_ids": true,
+        "page_context": true,
+        "source_sha256": true
+      },
+      "classification_without_hint": "monster",
+      "stored_classification": "monster"
+    },
+    {
+      "name": "Zulrah",
+      "url": "https://oldschool.runescape.wiki/w/Zulrah",
+      "drop_rows": 76,
+      "normalized_text_sha256": "d8cd31104afb482ccd87560d520bca57f7c89d2fc1ef48f8431648bef4ca1762",
+      "raw_file_sha256": "623effbad4ea71e9b867ad2852539d2d389da53ebb400c7d559ae75e3381559d",
+      "reported_revision_ids": [
+        "15366227"
+      ],
+      "field_equal_without_ancestry_hint": {
+        "name": true,
+        "drops": true,
+        "footnotes": true,
+        "categories": true,
+        "infobox_fields": true,
+        "reported_npc_ids": true,
+        "page_context": true,
+        "source_sha256": true
+      },
+      "classification_without_hint": "boss",
+      "stored_classification": "boss"
+    },
+    {
+      "name": "Basilisk Knight",
+      "url": "https://oldschool.runescape.wiki/w/Basilisk_Knight",
+      "drop_rows": 42,
+      "normalized_text_sha256": "d09b4607dcf3ce5ddd7faa18234836ce1b29f9745d83baa0079ae1296e97a9c3",
+      "raw_file_sha256": "bf23b58154a4dc036ebd23f628a4713d152e534e11fb2c674acf9f079342f400",
+      "reported_revision_ids": [
+        "15340714"
+      ],
+      "field_equal_without_ancestry_hint": {
+        "name": true,
+        "drops": true,
+        "footnotes": true,
+        "categories": true,
+        "infobox_fields": true,
+        "reported_npc_ids": true,
+        "page_context": true,
+        "source_sha256": true
+      },
+      "classification_without_hint": "monster",
+      "stored_classification": "monster"
+    },
+    {
+      "name": "Vorkath",
+      "url": "https://oldschool.runescape.wiki/w/Vorkath",
+      "drop_rows": 91,
+      "normalized_text_sha256": "3e99a46c02c6adaf3549c20e39a6de58efdab1a47cf22faba9a81e5c3f25265d",
+      "raw_file_sha256": "b49af7d1e1031c6c97f401ec2964a2d6a5d89a479953525d9d9d833346c795ad",
+      "reported_revision_ids": [
+        "15364808"
+      ],
+      "field_equal_without_ancestry_hint": {
+        "name": true,
+        "drops": true,
+        "footnotes": true,
+        "categories": true,
+        "infobox_fields": true,
+        "reported_npc_ids": true,
+        "page_context": true,
+        "source_sha256": true
+      },
+      "classification_without_hint": "boss",
+      "stored_classification": "boss"
+    },
+    {
+      "name": "King kurask",
+      "url": "https://oldschool.runescape.wiki/w/King_kurask",
+      "drop_rows": 65,
+      "normalized_text_sha256": "0475990bde351a4ef4257ccfa3ec4a50e06d86aa15594524497d944af32ec209",
+      "raw_file_sha256": "6f1517d7e9823a2a36d87e0b64aa769fcff3ca168b29acd03c555470694183a3",
+      "reported_revision_ids": [
+        "15357564"
+      ],
+      "field_equal_without_ancestry_hint": {
+        "name": true,
+        "drops": true,
+        "footnotes": true,
+        "categories": true,
+        "infobox_fields": true,
+        "reported_npc_ids": true,
+        "page_context": true,
+        "source_sha256": true
+      },
+      "classification_without_hint": "monster",
+      "stored_classification": "monster"
+    },
+    {
+      "name": "Abyssal demon",
+      "url": "https://oldschool.runescape.wiki/w/Abyssal_demon",
+      "drop_rows": 157,
+      "normalized_text_sha256": "87d9301da2d0658e84ba09c98a446cd63c099527bb3cb9f967e2c0d9f5ecd938",
+      "raw_file_sha256": "9fc4062ed46c1626acac14a1a023df2281bddabcb0ed2aab44f2ffa67eef9565",
+      "reported_revision_ids": [
+        "15357583"
+      ],
+      "field_equal_without_ancestry_hint": {
+        "name": true,
+        "drops": true,
+        "footnotes": true,
+        "categories": true,
+        "infobox_fields": true,
+        "reported_npc_ids": true,
+        "page_context": true,
+        "source_sha256": true
+      },
+      "classification_without_hint": "monster",
+      "stored_classification": "monster"
+    },
+    {
+      "name": "Barrows",
+      "url": "https://oldschool.runescape.wiki/w/Barrows",
+      "drop_rows": 0,
+      "normalized_text_sha256": "1bc05853a5f297de33d806a6d589511f18b6037f17c95312b4860f498435ed4d",
+      "raw_file_sha256": "c1fc6223a8dde561aeb63fb62add5d82853c95140d82be6fd6309cd54aa6be16",
+      "reported_revision_ids": [
+        "15368463"
+      ],
+      "field_equal_without_ancestry_hint": {
+        "name": true,
+        "drops": true,
+        "footnotes": true,
+        "categories": true,
+        "infobox_fields": true,
+        "reported_npc_ids": true,
+        "page_context": true,
+        "source_sha256": true
+      },
+      "classification_without_hint": "unknown",
+      "stored_classification": "unknown"
+    }
+  ]
+}

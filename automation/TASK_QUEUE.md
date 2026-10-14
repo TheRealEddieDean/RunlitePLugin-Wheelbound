@@ -102,4 +102,6 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A57 | Prepare user-collected data new-chat handoff and starter prompt | P0 | User request; verified A56 remote/owner | XS | DONE (handoff only; owning checkpoint) | DATA_PARSING_HANDOFF; START_DATA_PARSING; SESSION_STATE | Preserve A54–56/current decisions; attachment guidance; exact intake-first steps; remote verification |
 
-| WB-A58 | Inspect uploaded collector output and save quality/intake report | P1 | User upload; A57 handoff; guarded ownership | S per bounded intake | WAITING_INPUT | Separate data intake report/reference | Original hashes/provenance, scope/counts/classification/parser/source gaps; no full roster/fixture/live evidence claims; verify remote before next batch |
+| WB-A58 | Inspect uploaded collector output and save quality/intake report | P1 | User upload; A57 handoff; guarded ownership | S per bounded intake | DONE (intake only; owning checkpoint) | Separate data intake report/reference | Original hashes/provenance, scope/counts/classification/parser/source gaps; no full roster/fixture/live evidence claims; verify remote before next batch |
+
+| WB-A59 | Review uploaded Abyssal demon/Kraken/Zulrah unique-drop contexts | P1 | A58 remote verification; supplied cache | S | NEXT | research/CHALLENGE_UPLOAD_BATCH_A59 | Source-pinned lossless context review; no runtime admission |

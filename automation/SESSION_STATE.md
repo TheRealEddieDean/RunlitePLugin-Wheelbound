@@ -24,13 +24,13 @@
 
 The two real manifests cover six explicit pages/411 parsed rows, not all-monster/category discovery. Full HTML/databases are transient generated outputs, not archived in Git; selected review extracts/hashes/revision identifiers are committed. The unchanged declared collector matched allowing robots rules for these canonical paths. Earlier named-client/browser/search blocks remain historical route-specific facts, not universal collection failure or blanket access permission. No oldid/API/Special bypass or identity change. B1 source receipts stay intact; A51 King-kurask multi-roll caution remains.
 
-## Exact next action — user-collected data intake
+## Exact next action — uploaded data reviewed
 
-User2026-10-14 requests a fresh chat to parse collector outputs. Read automation/DATA_PARSING_HANDOFF.md and use automation/START_DATA_PARSING.md as the starter prompt. Prefer full output ZIP; catalog.json and coverage.json suffice for initial review. No upload received in this checkpoint session. A58 WAITING_INPUT; do not claim user data has been parsed.
+A58 intake complete in owning checkpoint: docs/wheelbound/research/WIKI_UPLOAD_INTAKE_A58.md/json; reproducible tools/wiki_drops/audit_intake.py. Original output.zip retained as user attachment libfile_12514dfedef0819184279d6d84d380ff, SHA256 e00babd58e09c047f68df94625cd5b4e77e119952d52c0d0c50b53a7d2b60309. No bulk caches committed.
 
-First produce one bounded intake/quality report: preserve original hashes/provenance, inspect real-versus-fixture/source timestamps, scope/errors/pending/unknown/unsupported coverage, creature/drop counts, duplicates and classification evidence. Cross-check HTML/per-page/SQLite/CSV when available. Save/validate/guardedly publish and verify remote before a new candidate-normalization batch. Do not re-scrape supplied pages or restart A54/A55 research without a named gap. Main/production implementation remain unauthorized.
+2,929 source pages: 1,957 labeled (203 boss/1,754 monster), 972 unknown; 40,534 labeled drops plus 3,913 unknown-page drops. PARTIAL despite empty queue. JSON/per-page/SQLite/CSV and normalized cached HTML agree; Windows newline byte hashes distinguished. Seventeen offline tests and eight cached reparses passed. Broad monster category regex mislabels items/chests; ancestry boss labels include adds; taxonomy is provisional. No final roster or new gameplay decisions.
 
-The separate A56 material question below is preserved and unapproved. It need not interrupt independent data intake.
+Publish/verify A58 head/tree/main before A59. Then bounded three-source review: Abyssal demon, Kraken, Zulrah unique-drop contexts using supplied cache; keep raw rates/conditions/revisions, candidates disabled. No rescrape or repeat A54/A55. Ownership retained for immediate follow-on A59, renew/release guarded. Acquisition 8a122352004f7ee20895719bd439f85c83e99e64 from verified 85c4c7f51b8a04e61f3ba30d98308cbedba76da5. Owning commit must be remotely verified before saved claim. A56 question remains unapproved.
 
 ## Preserved A56 design question — unanswered
 

@@ -239,3 +239,7 @@ A55 checkpointd2cb5db13b95254f4444f5e8789972fc9376c3b7/tree7e9f0a3a6ba5665fcb525
 ## WB-A57 — data-intake new-chat checkpoint,2026-10-14
 
 Latest remote a68f025cc50ae47a3dc7d4a6ac620d2d6779486a verified; IDLE owner, main unchanged. Guarded claimea81829bee4b00107d4358dbad2aabbaa37fa2e6 remotely verified before writing. User requests output attachment guidance/checkpoint/new-chat prompt. Added DATA_PARSING_HANDOFF and START_DATA_PARSING: prefer full output ZIP, minimal catalog/coverage JSON acceptable, intake/quality first with source/fixture/provenance/coverage checks. Preserved A54/A55 real batches,141 decisions and A56 PROPOSED/NOT_ADOPTED choice. Upload not received; no data parsed. A58 WAITING_INPUT. Validation/guarded publication/remote tree/main verification required before saved claim.
+
+## A58 uploaded collector intake — 2026-10-14
+
+Starting remote85c4c7f51b8a04e61f3ba30d98308cbedba76da5; guarded claim8a122352004f7ee20895719bd439f85c83e99e64. WIKI_UPLOAD_INTAKE_A58.md/json and read-only audit tool: 2,929 page records/44,447 retained rows; 40,534 labeled rows agree across exports. Partial coverage, broad-category classification bug, ancestry minions, unsupported and variable-rate hazards recorded. All normalized HTML hashes/receipts agree; eight reparses and17 existing offline tests pass. Owning commit publication/remote tree/head/main verification required; no roster or gameplay change. Next A59 three-source uploaded-context review.
