@@ -77,3 +77,7 @@ Alternative to ask about: independent rank purchases after a common entry gate. 
 ## Validation and status
 
 The classifier runs offline on the supplied cache. Exact endpoints, out-of-band cases, non-unit fractions, ignored multipliers and all44 historical mappings are checked. Source lead row payloads match original JSON/SQLite. No source recrawl, production code or runtime activation. Current-client validation remains future work. The tier rules/migration tables are complete; the expanded v2 catalog and final unlock/offer/FP integration are explicitly unfinished, not falsely marked ready.
+
+## All-tier hunt/candidate presentation — A65
+
+[CHALLENGE_HUNT_TABLE](CHALLENGE_HUNT_TABLE.md) now displays all44 prior reviewed hunts and the complete qualifying scalar-rate groups from the explicit named unique-item review scope, split into four tiers. New candidates and unresolved expressions are visibly held, not admitted; historical FP is separate from TBD v2 quotes. The source-preserving review index/CSV defines the exact scan scope and counts. This file update does not answer unlock topology or complete a production-ready v2 catalog.

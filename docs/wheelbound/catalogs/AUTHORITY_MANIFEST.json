@@ -1,5 +1,5 @@
 {
-  "version": "authority-v5-2026-10-14",
+  "version": "authority-v6-2026-10-14",
   "scope": "Documentation metadata only; does not enable gameplay",
   "decision_register": "../DECISIONS.md",
   "catalogs": [
@@ -168,6 +168,24 @@
       "h3_pinned_input": false,
       "historical_hunt_mappings": 44,
       "not_a_full_v2_roster": true
+    },
+    {
+      "path": "catalogs/challenge_hunt_review_index_v2.json",
+      "version": "challenge-hunt-review-index-v2-2026-10-14",
+      "sha256": "d6506901fae6352016b51317ec6f3789b54ebbaa18b5f805e20c1e47180759e0",
+      "entry_count": 246,
+      "authority": "SOURCE_BACKED_DISPLAY_REVIEW_INDEX_ONLY",
+      "runtime_enabled": false,
+      "not_an_admitted_roster": true,
+      "unresolved_source_rows": 45,
+      "enable_gates": [
+        "Finish candidate source/access/receipt/reward review",
+        "Settle unanswered unlock/offer/per-rank eligibility contracts",
+        "Current-client/production authorization and validation"
+      ],
+      "h3_pinned_input": false,
+      "human_table": "CHALLENGE_HUNT_TABLE.md",
+      "csv": "catalogs/challenge_hunt_review_index_v2.csv"
     }
   ],
   "historical_experiments": {

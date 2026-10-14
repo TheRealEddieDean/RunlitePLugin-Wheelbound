@@ -1,0 +1,16 @@
+{
+  "status": "PASS_SOURCE_DISPLAY_ONLY_NOT_RUNTIME",
+  "assertions": 1319,
+  "reviewed_v1_hunts": 44,
+  "additional_candidate_groups": 202,
+  "by_tier_total_display_rows": {
+    "greater": 157,
+    "superior": 71,
+    "lesser": 6,
+    "standard": 12
+  },
+  "unresolved_rows": 45,
+  "table_sha256": "c899a612de0486e6837b507a2a5a9ea60c31bb737c57e4f0dda24821f9727bdd",
+  "index_sha256": "d6506901fae6352016b51317ec6f3789b54ebbaa18b5f805e20c1e47180759e0",
+  "new_unlock_or_reward_approval": false
+}

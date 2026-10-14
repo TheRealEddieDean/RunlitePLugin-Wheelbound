@@ -118,3 +118,5 @@ A62 completion note: all four requested finite catalog tasks complete;25 creatur
 | WB-A64 | Settle rank unlock topology then expand four-tier source/access/receipt/FP/offer catalog | P0 | A63 verified; one unlock answer; existing source data | M per bounded source packet | NEXT_DESIGN_ANSWER | Future challenge catalogv2 | Coherent separate rank ownership/offer/actual-diversity gates and reviewed lower-tier hunts; no use of raw lead counts as eligibility |
 
 A63 supersedes old A62 single-range future selection. Old v1 completion remains historical; the expanded four-tier catalog is not complete. Ask one material topology question recorded in SESSION_STATE; no automatic chain or opt-in control adopted.
+
+| WB-A65 | Update CHALLENGE_HUNT_TABLE with all-tier reviewed and source-candidate entries | P0 | Explicit file request; A63 rules; supplied output; guarded ownership | S | DONE (display/index; owning checkpoint) | CHALLENGE_HUNT_TABLE; review indexv2/CSV; archive; validation | All44 reviewed+202 candidate groups in four tiers,45 unresolved rows held, exact source evidence/status; no roster/FP/unlock adoption |

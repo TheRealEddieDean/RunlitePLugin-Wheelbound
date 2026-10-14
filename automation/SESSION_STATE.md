@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — owner wb-20261014-table-by-tier; A65 comprehensive display table, unlock topology still unanswered.
+- State: IDLE — A65 all-tier file update complete; owner released. Unlock topology remains unanswered.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -43,3 +43,13 @@ A62 historical checkpointc62d381e4392845bce76d0738fc176af13374661/treeb119090f39
 A56 Q6 permanent ordinary invalidation stays PROPOSED/NOT_ADOPTED; no answer inferred from tiers. Existing Pause/Reject/no-reroll applies. Committed-but-unselected reconciliation, task-continuation, Coffer Q2, policy Q5 and separate legacy CA rewards remain independent. Current-client identity/composition/ownership/timing traces and engineering remain future activation gates. No background execution/quota/production completion claim. Owner released.
 
 A65 claim 2026-10-14T18:55:13.612274+00:00 expires 2026-10-14T20:55:13.612274+00:00; expected head05706461ff2c5dcb327a2d83d2d5c227b383d5fe. User requests CHALLENGE_HUNT_TABLE include entries under each tier. Display existing reviewed hunts plus explicit source candidates without admitting unresolved contexts or changing unlock topology/rewards.
+
+## Latest A65 — requested CHALLENGE_HUNT_TABLE update complete
+
+Starting remote05706461ff2c5dcb327a2d83d2d5c227b383d5fe; guarded claim888b915ef744accf16a4adb6511927b098b5903e. User explicitly selected GitHub and asked to update that file to include entries in every tier. CHALLENGE_HUNT_TABLE.md now has all four tier sections, every44 prior reviewed hunt reclassified, and202 new candidate source/item/rate groups from a named-signature item scan. Display totals: Lesser6, Standard12, Greater157 (29 prior+128 candidates), Superior71 (15 prior+56 candidates);45 unresolved source rows held separately. These are display groups, NOT eligible creature/roster counts.
+
+Full raw-row/URL/hash/timestamp preserving index and CSV in catalogs/challenge_hunt_review_index_v2; candidate name scope explicit, not all-game/every-item completeness. Wrong source types/encounter adds/alternate modes filtered with A60 overlay; no generic raw-drop auto-admission. V2 FP stays TBD; old v1 quotes labeled historical. Old human table preserved byte-for-byte at CHALLENGE_HUNT_TABLE_V1_ARCHIVE.md; old v1 JSON/CSV unchanged. No new membership/access/receipt/reward/unlock topology approval and no production/main changes.
+
+Validation:1,319 offline source/bounds/count/display/JSON-SQLite assertions pass,22 existing tests pass, all11 manifest hashes/145 unique decisions valid. Render reproducibility and whitespace/scope checks required before guarded owning publication. A65 owning commit requires exact remote head/tree/main verification before saved claim. Owner released; no background work.
+
+Current next material question remains A64 progressive-versus-independent card unlock topology; the file update is not its answer. Expanded v2 candidate admission/rewards/offer integration still pending. Do not call candidate display membership a ready catalog.

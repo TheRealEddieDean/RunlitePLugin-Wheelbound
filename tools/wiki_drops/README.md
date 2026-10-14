@@ -114,3 +114,7 @@ Tests use synthetic local HTML/mocked fetching. They cover rate semantics, colsp
 ## Current four-rank Challenge classification (A63)
 
 `challenge_tier_rules_v2.py INPUT_OUTPUT_DIRECTORY` builds source-preserving tier rules/migration tables; `tests/test_challenge_tiers.py` validates edges and ignored roll counts. See docs/wheelbound/CHALLENGE_CARD_TIERS.md. The old `curated_hunts_v1.py`, `finalize_challenge_catalog.py` and `validate_challenge_catalog.py` reproduce the historical old-band v1 packet; they are not current four-tier eligibility code and must not overwrite the current supersession banner as a routine update. V2 is rule/migration documentation, not an expanded ready roster or gameplay adapter. No generic raw data admission.
+
+## All-tier review table (A65)
+
+`python tools/wiki_drops/build_hunt_table_by_tier.py PATH_TO_EXTRACTED_OUTPUT` renders CHALLENGE_HUNT_TABLE and a JSON/CSV review index from the unchanged44-hunt v1 evidence, current tier rules and an explicit named-signature item candidate scope. `python tools/wiki_drops/validate_hunt_review_index.py PATH_TO_EXTRACTED_OUTPUT` validates source/SQLite payloads, counts, bracket placement and status preservation. Renderer never approves new candidates/rewards/unlock topology; v2 quotes remain TBD. Historical human table is CHALLENGE_HUNT_TABLE_V1_ARCHIVE.md. Do not use this review index as an enabled roster.

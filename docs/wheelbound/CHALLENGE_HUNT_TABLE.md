@@ -1,118 +1,376 @@
-# Challenge hunt table — authored catalog v1
+# Challenge hunt table — all four tiers
 
-> **Superseded for future tier selection by WB-D144/145:** see [four Challenge card tiers](CHALLENGE_CARD_TIERS.md). This44-hunt v1 table/quotes is historical; the four-tier v2 expanded roster and unlock/offer/reward integration are not yet complete. Use the new per-roll brackets, not the old single personal-rate band. Existing committed assignments keep their frozen versions.
+Current bracket rules: [Challenge card tiers](CHALLENGE_CARD_TIERS.md), WB-D144/145. **Tier placement uses the unmultiplied per-roll rate:** `2 × 1/75` is Standard at `1/75`. Original rolls, alternatives and conditions remain in the evidence. This is not an exact per-kill probability claim.
 
-**44 specific-item hunts, 25 distinct creature/encounter keys, six starter creatures.** This is the completed design selection table with source-reviewed rates, fixed FP quotes, access predicates and completion evidence. Runtime implementation and current-client validation remain separate; no gameplay code was authorized or enabled.
+This page contains every previously reviewed hunt, plus the complete in-range scalar-rate results of the explicit named signature-item candidate scan across the supplied corpus. It is **not every drop in OSRS**: generic loot, unknown entities, encounter adds and alternate modes are not promoted to hunts. Conditional/approximate/unparsed rates are listed separately rather than guessed into a tier. The input crawl remains partial.
 
-Machine-readable [JSON](catalogs/challenge_hunts_v1.json), flat [CSV](catalogs/challenge_hunts_v1.csv), [source context packet](research/CHALLENGE_CONTEXT_EVIDENCE_A61.json), [taxonomy overlay](research/CHALLENGE_TAXONOMY_A60.md). Use the explicit roster, not raw collector labels. Unlisted sources/items/contexts are not selectable. Source corpus is the user-supplied 2026-10-14 snapshot; no all-game completeness or independent live verification claim.
+**Status legend:** **Reviewed v1** means its prior context/access/evidence was authored, now reclassified; it is not automatically admitted to a new four-tier pool. **Candidate** means captured source evidence exists but full source/access/receipt/reward review remains. **V2 FP is TBD for every row**; historical v1 FP is shown only for continuity, not silently reused as a tier reward. All entries remain runtime-disabled. Unlock topology/offer controls/prices and per-rank eligibility remain unanswered proposals.
 
-## Selection table
+[Full source-preserving JSON index](catalogs/challenge_hunt_review_index_v2.json) · [Flat CSV](catalogs/challenge_hunt_review_index_v2.csv) · [Historical v1 table/access/FP archive](CHALLENGE_HUNT_TABLE_V1_ARCHIVE.md)
 
-One line means **obtain that exact item from that assigned creature**, not any unique. Starter means the target unlock is included with the gated Challenge card; skills/quests/actual access are still required. Expansion members use existing individual target unlocks; this table does not set purchase prices. Grouped ordinary forms count once. At least three actually eligible creature keys are required before offering Challenge; then uniform creature-first and item-second draw. Previously owned items remain eligible.
+## Brackets and totals
 
-| Creature | Specific fresh drop | Personal rate / full kill | Fixed FP | Unlock |
-| --- | --- | --- | ---: | --- |
-| Brine rat | Brine sabre | 1/512 | 450 | starter |
-| Turoth | Leaf-bladed sword | 1/500 | 400 | starter |
-| Cave horror | Black mask (10) | 1/512 | 450 | starter |
-| Sulphur Nagua | Sulphur blades | 1/450 | 325 | starter |
-| Kurask | Leaf-bladed battleaxe | 1/1026 | 975 | starter |
-| Skeletal Wyvern | Granite legs | 1/512 | 850 | starter |
-| Abyssal demon | Abyssal whip | 1/512 | 400 | expansion |
-| Dark beast | Dark bow | 1/512 | 850 | expansion |
-| Spitting Wyvern | Granite longsword | 1/512 | 975 | expansion |
-| Adamant dragon | Dragon limbs | 1/1000 | 1,775 | expansion |
-| Rune dragon | Dragon limbs | 1/800 | 1,900 | expansion |
-| Demonic gorilla | Ballista limbs | 1/500 | 1,225 | expansion |
-| Demonic gorilla | Ballista spring | 1/500 | 1,225 | expansion |
-| Demonic gorilla | Light frame | 1/750 | 1,775 | expansion |
-| Demonic gorilla | Heavy frame | 1/1500 | 3,450 | expansion |
-| Vyrewatch Sentinel | Blood shard | 1/1500 | 1,775 | expansion |
-| Tormented Demon | Burning claw | 499/250000 | 1,775 | expansion |
-| Tormented Demon | Tormented synapse | 1/500 | 1,775 | expansion |
-| General Graardor | Bandos hilt | 1/508 | 2,650 | expansion |
-| Kree'arra | Armadyl hilt | 1/508 | 2,925 | expansion |
-| Commander Zilyana | Armadyl crossbow | 1/508 | 2,650 | expansion |
-| Commander Zilyana | Saradomin hilt | 1/508 | 2,650 | expansion |
-| K'ril Tsutsaroth | Staff of the Dead | 1/508 | 2,650 | expansion |
-| K'ril Tsutsaroth | Zamorak hilt | 1/508 | 2,650 | expansion |
-| Zulrah | Tanzanite fang | 1/1024 to 1/512 | 4,375 | expansion |
-| Zulrah | Magic fang | 1/1024 to 1/512 | 4,375 | expansion |
-| Zulrah | Serpentine visage | 1/1024 to 1/512 | 4,375 | expansion |
-| Vorkath | Dragonbone necklace | 1/1000 | 4,275 | expansion |
-| Corporeal Beast | Spectral sigil | 1/1365 | 13,750 | expansion |
-| Corporeal Beast | Arcane sigil | 1/1365 | 13,750 | expansion |
-| Phosani's Nightmare | Nightmare staff | 69/35000 | 8,575 | expansion |
-| Phosani's Nightmare | Inquisitor's great helm | 1/700 | 11,775 | expansion |
-| Phosani's Nightmare | Inquisitor's hauberk | 1/700 | 11,775 | expansion |
-| Phosani's Nightmare | Inquisitor's plateskirt | 1/700 | 11,775 | expansion |
-| Phosani's Nightmare | Inquisitor's mace | 31/35000 | 18,925 | expansion |
-| Artio | Claws of Callisto | 1/618 | 2,175 | expansion |
-| Artio | Tyrannical ring | 1/716 | 2,500 | expansion |
-| Artio | Voidwaker hilt | 1/912 | 3,150 | expansion |
-| Spindel | Fangs of Venenatis | 1/618 | 2,175 | expansion |
-| Spindel | Treasonous ring | 1/716 | 2,500 | expansion |
-| Spindel | Voidwaker gem | 1/912 | 3,150 | expansion |
-| Calvar'ion | Skull of Vet'ion | 1/618 | 1,650 | expansion |
-| Calvar'ion | Ring of the gods | 1/716 | 1,900 | expansion |
-| Calvar'ion | Voidwaker blade | 1/912 | 2,400 | expansion |
+Shared endpoints belong to the easier tier. For non-unit fractions use exact reciprocal D=1/p; do not round into a different bracket.
 
-## Access requirements by creature
+| Tier | Base rate bracket | Previously reviewed hunts | Additional candidate source/item/rate groups |
+| --- | --- | ---: | ---: |
+| [Lesser Challenge](#lesser-challenge) | 1/25 through 1/50 | 0 | 6 |
+| [Standard Challenge](#standard-challenge) | Rarer than 1/50, through 1/125 | 0 | 12 |
+| [Greater Challenge](#greater-challenge) | Rarer than 1/125, through 1/750 | 29 | 128 |
+| [Superior Challenge](#superior-challenge) | Rarer than 1/750, through 1/5000 | 15 | 56 |
 
-All entries require membership, initialized correct account/run/normal-world state, existing lawful region/shop/travel/combat permissions, sustainable combat supplies and verified personal solo loot. Unknown access excludes before offers; selection grants no unlocks or tolerance exceptions. Every stat minimum below is an authored conservative **unboosted** gate; recommended gear/skills do not become unstated mandatory requirements. GWD common dungeon-entry route must be verified in addition to each listed faction room; necessary faction KC must already be permitted. Consumable entry fees/supplies need legal replenishment, not an infinite inventory or a finite task/key as the sole route.
+**Total: 44 previously reviewed hunts + 202 candidate groups; 45 unresolved source rows held separately.** Groups/rows are not counts of distinct eligible creatures; repeated source methods/forms do not increase selection odds.
 
-| Creature | Minimum authored skills | Supported route and conditions |
-| --- | --- | --- |
-| Brine rat | 47 Slayer | Complete Olaf's Quest; enter Brine Rat Cavern with a usable spade route; no active task required. |
-| Turoth | 55 Slayer | Fremennik Slayer Dungeon; owned usable leaf-bladed weapon, broad ammunition or Magic Dart and supplies; off-task route. |
-| Cave horror | 58 Slayer | Cabin Fever complete; Mos Le'Harmless Cave; functioning light or permanent light; usable witchwood icon or sustainable Protect from Melee; off-task route. |
-| Sulphur Nagua | 48 Slayer | Perilous Moons progressed far enough to enter Neypotzli Ancient Prison; repeatable off-task access. |
-| Kurask | 70 Slayer | Fremennik Slayer Dungeon; usable leaf-bladed weapon, broad ammunition or Magic Dart; off-task route. Iorwerth/Wilderness/superior contexts not selected. |
-| Skeletal Wyvern | 72 Slayer | Asgarnian Ice Dungeon end chamber; repeatable off-task route; owned usable icy-breath protection and sustainable combat supplies. No task-only upper-floor route. |
-| Abyssal demon | 85 Slayer | Ordinary Slayer Tower upper-floor or ordinary Catacombs route; no Wilderness Slayer Cave or task-only basement; no superior/Sire credit. |
-| Dark beast | 90 Slayer | Mourning's End Part II complete and accessible Mourner Tunnels route; off-task ordinary dark beasts only. No Night beast credit. |
-| Spitting Wyvern | 66 Slayer | Bone Voyage complete; Fossil Island Wyvern Cave off-task area; owned usable icy-breath protection and sustainable supplies. Other wyvern species remain distinct, unselected sources. |
-| Adamant dragon | No additional numeric gate; actual combat readiness | Dragon Slayer II complete; repeatable western Lithkren Vault route; post-quest only, dragonfire/poison combat readiness. |
-| Rune dragon | No additional numeric gate; actual combat readiness | Dragon Slayer II complete; repeatable eastern Lithkren Vault route; post-quest only, dragonfire/shock combat readiness. |
-| Demonic gorilla | No additional numeric gate; actual combat readiness | Monkey Madness II complete; repeatable Crash Site Cavern route; post-quest ordinary gorillas, sustainable two-style combat; no tortured gorilla or quest fight credit. |
-| Vyrewatch Sentinel | 38 Slayer | Sins of the Father complete; Darkmeyer route and owned usable Blisterwood flail; combat only. Pickpocketed blood shards and venator drops never qualify. |
-| Tormented Demon | No additional numeric gate; actual combat readiness | While Guthix Sleeps complete; repeatable Ancient Guthixian Temple route; post-quest combat, sustainable style switching. No quest-instance credit. |
-| General Graardor | 70 Strength | Verified normal God Wars Dungeon entry route; hammer; Bandos Stronghold; earn ordinary 40 faction KC each entry. Solo boss kills, no team contribution or bodyguard-drop credit. |
-| Kree'arra | 70 Ranged | Verified normal God Wars Dungeon entry route; usable crossbow and mithril grapple; Armadyl Eyrie; ordinary 40 faction KC each entry; solo boss kills only. |
-| Commander Zilyana | 70 Agility | Verified normal God Wars Dungeon entry; unboosted 70 Agility, ropes installed for route; Saradomin Encampment, ordinary 40 faction KC each entry; solo boss kills only. |
-| K'ril Tsutsaroth | 70 Hitpoints | Verified normal God Wars Dungeon entry; 70 Hitpoints river crossing; Zamorak Fortress; ordinary 40 faction KC each entry; solo boss kills only. |
-| Zulrah | No additional numeric gate; actual combat readiness | Regicide complete as conservative authored access gate; sacrifice dialogue completed, repeatable boat access from Zul-Andra; solo normal encounter with sustainable combat supplies. |
-| Vorkath | No additional numeric gate; actual combat readiness | Dragon Slayer II complete; Torfinn/Ungael repeatable route; post-quest solo instance only; no quest Vorkath. Dragonbone necklace is a one-roll tertiary, not a two-roll main-table item. |
-| Corporeal Beast | No additional numeric gate; actual combat readiness | Repeatable lair access via permitted games-necklace route; sustainable solo strategy and supplies. No combat-level/quest access requirement invented; Wilderness walking alternative not selected. Entire kill solo, no group damage/loot allocation. |
-| Phosani's Nightmare | No additional numeric gate; actual combat readiness | Sisterhood Sanctuary/Pool of Nightmares reachable through a permitted repeatable route; Drink-from solo encounter. A prior normal Nightmare kill is a warning recommendation, not a hard prerequisite. No ordinary Nightmare or historical competition-mode credit. |
-| Artio | No additional numeric gate; actual combat readiness | Wilderness access explicitly unlocked; hard Wilderness diary complete (no finite-task bypass); repeatable Hunter's End entry and fee funding; solo singles-plus encounter. Player-killer risk included in authored throughput, no death exemption. |
-| Spindel | No additional numeric gate; actual combat readiness | Wilderness access explicitly unlocked; hard Wilderness diary complete (no finite-task bypass); repeatable Web Chasm entry and fee funding; solo singles-plus encounter. Venenatis and its spiderlings do not count. |
-| Calvar'ion | No additional numeric gate; actual combat readiness | Wilderness access explicitly unlocked; hard Wilderness diary complete (no finite-task bypass); repeatable Skeletal Tomb entry and fee funding; solo full two-phase encounter. Vet'ion, hellhounds and interrupted first phases do not count. |
+## Lesser Challenge
 
-## Completion evidence for every row
+### Previously reviewed hunts
 
-Use the `challenge-personal-drop-v1` contract embedded in JSON. Record account/run, assignment, catalog/context/quote version, completed encounter/instance, active earning interval, local recipient proof and exact source/item IDs. A new supported personal loot receipt from the assigned source settles the hunt once and pays the frozen FP. It does not require handing in or consuming the drop. A second unique of a different type does not complete the hunt. An old owned item never completes it.
+No previously reviewed v1 hunts in this tier. Candidate rows below still need review.
 
-ServerNpcLoot exposes source composition and item stacks; NpcLootReceived exposes an NPC and item stacks. These APIs are candidate evidence inputs, not by themselves proof of every context or ownership edge case. Correlate the local awarded loot with the observed supported encounter and active earning interval. Never infer ownership from proximity/inventory alone. Deduplicate both event streams and reconnect/replay against one durable completion journal. Item identity, region, phase and solo context must match; known same-name pets, quest actors and other modes are excluded. Source-reported composition aliases are scoped to the observed encounter and require current-client trace validation before activation.
+### Additional source candidates — not admitted
 
-Negative evidence cases: GE/shop/trade/bank/old possession, teammate drop, another creature/minion, pickpocketed shard, wrong mode or post-pause earning cannot settle. Ambiguous delayed loot is held as evidence without invented payout; existing paused/delivery rules remain. Player keeps the item and may dispose of it after legitimate completion. An independently qualifying permanent bounty remains separate and once-only.
+| Creature / encounter | Specific item candidate | Rate used for tier | Original notation | Status / V2 FP |
+| --- | --- | --- | --- | --- |
+| Amoxliatl | Pendant of Ates (inert) | 1/25 | 1/25 | Candidate; FP TBD |
+| Hespori | Bottomless compost bucket | 1/35 | 1/35 [ 4 ] | Candidate; FP TBD |
+| Magma strykewyrm | Dragon metal sheet | 1/45 | 3 × 1/45 | Candidate; FP TBD |
+| Phantom Muspah | Ancient icon | 1/50 | 2/100 [ 1 ] | Candidate; FP TBD |
+| Scurrius | Scurrius' spine | 1/33 | 1/33 [ d 3 ]; 1/33 [ d 1 ] | Candidate; FP TBD |
+| The Hueycoatl | Hueycoatl hide | 11/315 | 11/315 | Candidate; FP TBD |
 
-## FP schedule and effort limits
+## Standard Challenge
 
-Version `challenge-fp-v1`: **25 × ceil((100 + 100 × reference expected hours) / 25)**. Reference expected hours = 1 / (conservative lower supported source-model probability × authored kills/hour). The fixed 100 FP base and 100 FP/reference-hour are new delegated v1 balance choices, not recovered historical approvals or measured income. Kills/hour includes an authored allowance for travel, repeat entry, resupply and risk; each value and exact rational computation are in JSON/CSV. It is not live telemetry or a player speed requirement.
+### Previously reviewed hunts
 
-Zulrah's dependency-free range is 1/1024–1/512; the quote conservatively uses 1/1024. Single-roll tertiary Vorkath necklace stays 1/1000 despite two ordinary loot rolls. Exact non-unit fractions remain intact. The entire supported personal range must fit 1/1500–1/400, with no independence assumption, team-rate division or choice of a convenient task alternative.
+No previously reviewed v1 hunts in this tier. Candidate rows below still need review.
 
-Long late-game hunts deliberately pay more because rate rarity alone does not capture kill duration. These authored quotes need future playtest calibration against the wider provisional economy; there is no claim of measured balance. Quote freezes with the offer/catalog and final assignment. Actual fast or dry luck never changes it; there is no KC/time cap, pity completion, passive/partial FP or market-price floor. Table membership is not altered by price or ownership. Negative FP and separate bounty rewards follow existing rules.
+### Additional source candidates — not admitted
 
-## Explicit v1 exclusions
+| Creature / encounter | Specific item candidate | Rate used for tier | Original notation | Status / V2 FP |
+| --- | --- | --- | --- | --- |
+| Abyssal Sire | Unsired | 1/100 | 1/100 [ 2 ] | Candidate; FP TBD |
+| Amoxliatl | Glacial temotli | 1/100 | 1/100 | Candidate; FP TBD |
+| Branda the Fire Queen | Fire element staff crown | 1/75 | 1/75 | Candidate; FP TBD |
+| Chaos Elemental | Dragon 2h sword | 1/64 | 2/128 | Candidate; FP TBD |
+| Corporeal Beast | Spirit shield | 1/64 | 8/512 [ 2 ] | Candidate; FP TBD |
+| Cyclops | Dragon defender | 1/100 | 1/100 | Candidate; FP TBD |
+| Eldric the Ice King | Ice element staff crown | 1/75 | 1/75 | Candidate; FP TBD |
+| Maggot King | Venator fang | 2/159 | 2/159 | Candidate; FP TBD |
+| Maggot King | Venator tooth | 2/159 | 2/159 | Candidate; FP TBD |
+| Phantom Muspah | Venator shard | 1/100 | 1/100 [ 1 ] [ d 3 ] | Candidate; FP TBD |
+| The Hueycoatl | Dragon hunter wand | 1/105 | 1/105 | Candidate; FP TBD |
+| The Hueycoatl | Tome of Earth (empty) | 1/90 | 1/90 | Candidate; FP TBD |
 
-Task-only/finite-task routes (including Kraken, Cerberus, Smoke devil and Alchemical Hydra), superior shared-table hunts, task-only boosted Basilisk/Drake/Hydra contexts, finite-key-only encounters, raids/Nex/unknown group allocation, DT2 hidden vestige progress, ordinary Nightmare and larger multi-recipient Wilderness boss contexts are not in v1. They are not silently fixed by free tasks, unrelated training, dividing party chance, or rerolling on task exhaustion. Jars/heads/pets/generic and shared RDT outcomes are not selected. Items outside the band are excluded in that reported context. Further distinct Fossil Island wyvern species are unselected, not extra variants silently merged into Spitting Wyvern.
+## Greater Challenge
 
-This completes the finite authored catalog, not every possible future hunt. Future additions use a new reviewed version. The outstanding permanent-invalidation and task-continuation proposals remain unadopted; on later context loss preserve assignment and existing Pause/Reject behavior.
+### Previously reviewed hunts
 
-## Evidence and validation boundary
+| Creature / encounter | Specific fresh item | Rate used for tier | Original rate notation | Historical v1 FP | V2 FP |
+| --- | --- | --- | --- | ---: | --- |
+| Abyssal demon | Abyssal whip | 1/512 | 1/512 [ 3 ] | 400 | TBD |
+| Artio | Claws of Callisto | 1/618 | 1/618 [ 2 ] | 2,175 | TBD |
+| Artio | Tyrannical ring | 1/716 | 1/716 [ 2 ] | 2,500 | TBD |
+| Brine rat | Brine sabre | 1/512 | 1/512 [ 1 ] | 450 | TBD |
+| Calvar'ion | Ring of the gods | 1/716 | 1/716 [ 1 ] | 1,900 | TBD |
+| Calvar'ion | Skull of Vet'ion | 1/618 | 1/618 [ 1 ] | 1,650 | TBD |
+| Cave horror | Black mask (10) | 1/512 | 1/512 | 450 | TBD |
+| Commander Zilyana | Armadyl crossbow | 1/508 | 1/508 [ 3 ] | 2,650 | TBD |
+| Commander Zilyana | Saradomin hilt | 1/508 | 1/508 [ 3 ] | 2,650 | TBD |
+| Dark beast | Dark bow | 1/512 | 1/512 | 850 | TBD |
+| Demonic gorilla | Ballista limbs | 1/500 | 1/500 | 1,225 | TBD |
+| Demonic gorilla | Ballista spring | 1/500 | 1/500 | 1,225 | TBD |
+| Demonic gorilla | Light frame | 1/750 | 1/750 | 1,775 | TBD |
+| General Graardor | Bandos hilt | 1/508 | 1/508 | 2,650 | TBD |
+| K'ril Tsutsaroth | Staff of the Dead | 1/508 | 1/508 [ 8 ] | 2,650 | TBD |
+| K'ril Tsutsaroth | Zamorak hilt | 1/508 | 1/508 [ 8 ] | 2,650 | TBD |
+| Kree'arra | Armadyl hilt | 1/508 | 1/508 | 2,925 | TBD |
+| Phosani's Nightmare | Inquisitor's great helm | 1/700 | 1/700 | 11,775 | TBD |
+| Phosani's Nightmare | Inquisitor's hauberk | 1/700 | 1/700 | 11,775 | TBD |
+| Phosani's Nightmare | Inquisitor's plateskirt | 1/700 | 1/700 | 11,775 | TBD |
+| Phosani's Nightmare | Nightmare staff | 69/35000 | 69/35,000 | 8,575 | TBD |
+| Skeletal Wyvern | Granite legs | 1/512 | 1/512 [ 6 ] | 850 | TBD |
+| Spindel | Fangs of Venenatis | 1/618 | 1/618 [ 1 ] | 2,175 | TBD |
+| Spindel | Treasonous ring | 1/716 | 1/716 [ 1 ] | 2,500 | TBD |
+| Spitting Wyvern | Granite longsword | 1/512 | 1/512 [ 1 ] | 975 | TBD |
+| Sulphur Nagua | Sulphur blades | 1/450 | 1/450 | 325 | TBD |
+| Tormented Demon | Burning claw | 499/250000 | 499/250,000 | 1,775 | TBD |
+| Tormented Demon | Tormented synapse | 1/500 | 1/500 | 1,775 | TBD |
+| Turoth | Leaf-bladed sword | 1/500 | 1/500 | 400 | TBD |
 
-Primary API references: [ServerNpcLoot](https://static.runelite.net/runelite-client/apidocs/net/runelite/client/events/ServerNpcLoot.html), [NpcLootReceived](https://static.runelite.net/runelite-client/apidocs/net/runelite/client/events/NpcLootReceived.html). Identity constants pinned to RuneLite commit `42a6f17a6a2e8e478aa763890ecd0181a59dad38` in the evidence packet. API signatures and identity constants do not establish current-client timing/ownership/phase behavior. Original cached source fractions/footnotes and revision receipts are retained separately from authored access/reward judgment.
+### Additional source candidates — not admitted
 
-Offline validation checks all 44 hunt IDs/quotes/bounds/source rows, source identities, six starter keys/25 diversity keys, exact specific drop IDs, grouping invariance, source-hash/SQLite matches, dependency-free multi-roll arithmetic, selection odds and negative receipt-contract requirements. Current-client traces, Java adapters and gameplay settlement tests are **NOT_RUN and remain activation gates**. No production gameplay or main changes.
+| Creature / encounter | Specific item candidate | Rate used for tier | Original notation | Status / V2 FP |
+| --- | --- | --- | --- | --- |
+| Alchemical Hydra | Hydra leather | 1/514 | 1/514 [ 4 ] | Candidate; FP TBD |
+| Alchemical Hydra | Hydra tail | 1/513 | 1/513 [ 4 ] | Candidate; FP TBD |
+| Ancient Custodian | Antler guard | 1/650 | 1/650 | Candidate; FP TBD |
+| Ancient Wyvern | Granite boots | 1/600 | 1/600 [ 1 ] | Candidate; FP TBD |
+| Ancient Wyvern | Granite longsword | 1/600 | 1/600 [ 1 ] | Candidate; FP TBD |
+| Araxxor | Araxyte fang | 1/600 | 1/600 | Candidate; FP TBD |
+| Araxxor | Noxious blade | 1/200 | 1/200 [ d 1 ] | Candidate; FP TBD |
+| Araxxor | Noxious point | 1/200 | 1/200 [ d 1 ] | Candidate; FP TBD |
+| Araxxor | Noxious pommel | 1/200 | 1/200 [ d 1 ] | Candidate; FP TBD |
+| Artio | Dragon 2h sword | 1/358 | 1/358 [ 2 ] | Candidate; FP TBD |
+| Artio | Dragon pickaxe | 1/358 | 1/358 [ 2 ] | Candidate; FP TBD |
+| Bloodthirsty abomination | Black mask (10) | 1/512 | 9 × 1/512 | Candidate; FP TBD |
+| Bloodthirsty abyssal demon | Abyssal whip | 1/512 | 9 × 1/512 [ 1 ] | Candidate; FP TBD |
+| Bloodthirsty Drake | Drake's claw | 1/512 | 1/512 [ 1 ] | Candidate; FP TBD |
+| Bloodthirsty Drake | Drake's tooth | 1/512 | 1/512 [ 1 ] | Candidate; FP TBD |
+| Bloodthirsty gargoyle | Granite maul | 1/256 | 9 × 1/256 | Candidate; FP TBD |
+| Bloodthirsty kurask | Leaf-bladed sword | 1/384 | 9 × 1/384 [ 1 ] | Candidate; FP TBD |
+| Bloodthirsty Night beast | Dark bow | 1/512 | 9 × 1/512 | Candidate; FP TBD |
+| Bloodthirsty smoke devil | Occult necklace | 1/512 | 9 × 1/512 [ 1 ] | Candidate; FP TBD |
+| Bloodthirsty Turoth | Leaf-bladed sword | 1/500 | 9 × 1/500 | Candidate; FP TBD |
+| Callisto | Claws of Callisto | 1/196 | 1/196 [ 3 ] | Candidate; FP TBD |
+| Callisto | Dragon 2h sword | 1/256 | 1/256 [ 3 ] | Candidate; FP TBD |
+| Callisto | Dragon pickaxe | 1/256 | 1/256 [ 3 ] | Candidate; FP TBD |
+| Callisto | Tyrannical ring | 1/512 | 1/512 [ 3 ] | Candidate; FP TBD |
+| Callisto | Voidwaker hilt | 1/360 | 1/360 [ 3 ] | Candidate; FP TBD |
+| Calvar'ion | Dragon 2h sword | 1/358 | 1/358 [ 1 ] | Candidate; FP TBD |
+| Calvar'ion | Dragon pickaxe | 1/358 | 1/358 [ 1 ] | Candidate; FP TBD |
+| Cave abomination | Black mask (10) | 1/512 | 3 × 1/512 | Candidate; FP TBD |
+| Cave kraken | Uncharged trident | 1/200 | 1/200 | Candidate; FP TBD |
+| Cerberus | Eternal crystal | 1/520 | 1/520 | Candidate; FP TBD |
+| Cerberus | Pegasian crystal | 1/520 | 1/520 | Candidate; FP TBD |
+| Cerberus | Primordial crystal | 1/520 | 1/520 | Candidate; FP TBD |
+| Cerberus | Smouldering stone | 1/520 | 1/520 | Candidate; FP TBD |
+| Chaos Elemental | Dragon pickaxe | 1/256 | 1/256 | Candidate; FP TBD |
+| Chaos Fanatic | Malediction shard 1 | 1/256 | 1/256 [ d 1 ] | Candidate; FP TBD |
+| Chaos Fanatic | Odium shard 1 | 1/256 | 1/256 [ d 1 ] | Candidate; FP TBD |
+| Commander Zilyana | Saradomin sword | 1/127 | 1/127 [ 3 ] | Candidate; FP TBD |
+| Commander Zilyana | Saradomin's light | 1/254 | 1/254 [ 3 ] | Candidate; FP TBD |
+| Corporeal Beast | Holy elixir | 3/512 | 3/512 [ 2 ] | Candidate; FP TBD |
+| Crazy archaeologist | Malediction shard 2 | 1/256 | 1/256 [ d 1 ] | Candidate; FP TBD |
+| Crazy archaeologist | Odium shard 2 | 1/256 | 1/256 [ d 1 ] | Candidate; FP TBD |
+| Dagannoth Prime | Dragon axe | 1/128 | 1/128 [ 1 ] [ 2 ] | Candidate; FP TBD |
+| Dagannoth Prime | Mud battlestaff | 1/128 | 1/128 [ 1 ] | Candidate; FP TBD |
+| Dagannoth Prime | Seers ring | 1/128 | 1/128 [ 1 ] [ 2 ] [ 3 ] | Candidate; FP TBD |
+| Dagannoth Rex | Berserker ring | 1/128 | 1/128 [ 2 ] [ 3 ] [ 4 ] | Candidate; FP TBD |
+| Dagannoth Rex | Dragon axe | 1/128 | 1/128 [ 2 ] [ 3 ] | Candidate; FP TBD |
+| Dagannoth Rex | Warrior ring | 1/128 | 1/128 [ 2 ] [ 3 ] [ 4 ] | Candidate; FP TBD |
+| Dagannoth Supreme | Archers ring | 1/128 | 1/128 [ 1 ] [ 2 ] [ 3 ] | Candidate; FP TBD |
+| Dagannoth Supreme | Dragon axe | 1/128 | 1/128 [ 1 ] [ 2 ] | Candidate; FP TBD |
+| Dagannoth Supreme | Seercull | 1/128 | 1/128 [ 1 ] | Candidate; FP TBD |
+| Demonic gorilla | Zenyte shard | 1/300 | 1/300 | Candidate; FP TBD |
+| Dreadborn Araxyte | Aranea boots | 1/400 | 3 × 1/400 | Candidate; FP TBD |
+| Duke Sucellus | Chromium ingot | 1/240 | 3/720 | Candidate; FP TBD |
+| Duke Sucellus | Eye of the Duke | 1/720 | 1/720 | Candidate; FP TBD |
+| Earthen Nagua | Earthbound tecpatl | 1/400 | 1/400 | Candidate; FP TBD |
+| Elder custodian stalker | Antler guard | 1/650 | 1/650 [ 1 ] | Candidate; FP TBD |
+| Gargoyle | Granite maul | 1/256 | 1/256 | Candidate; FP TBD |
+| General Graardor | Bandos boots | 1/381 | 1/381 [ d 1 ] | Candidate; FP TBD |
+| General Graardor | Bandos chestplate | 1/381 | 1/381 [ d 1 ] | Candidate; FP TBD |
+| General Graardor | Bandos tassets | 1/381 | 1/381 [ d 1 ] | Candidate; FP TBD |
+| Greater abyssal demon | Abyssal whip | 1/512 | 3 × 1/512 [ 1 ] | Candidate; FP TBD |
+| Guardian Drake | Drake's claw | 1/512 | 3 × 1/512 [ 1 ] | Candidate; FP TBD |
+| Guardian Drake | Drake's tooth | 1/512 | 3 × 1/512 [ 1 ] | Candidate; FP TBD |
+| Icefiend | Frozen tear | 1/150 | 1/150 [ d 7 ] | Candidate; FP TBD |
+| K'ril Tsutsaroth | Steam battlestaff | 1/127 | 1/127 [ 6 ] | Candidate; FP TBD |
+| K'ril Tsutsaroth | Zamorakian spear | 1/127 | 1/127 [ 7 ] | Candidate; FP TBD |
+| Kalphite Queen | Dragon 2h sword | 1/256 | 1/256 [ 4 ] | Candidate; FP TBD |
+| Kalphite Queen | Dragon chainbody | 1/128 | 1/128 [ 4 ] | Candidate; FP TBD |
+| Kalphite Queen | Dragon pickaxe | 1/400 | 1/400 | Candidate; FP TBD |
+| King kurask | Leaf-bladed sword | 1/384 | 3 × 1/384 [ 1 ] | Candidate; FP TBD |
+| Kraken | Kraken tentacle | 1/400 | 1/400 [ 2 ] | Candidate; FP TBD |
+| Kraken | Trident of the Seas (full) | 1/512 | 1/512 [ 2 ] | Candidate; FP TBD |
+| Kree'arra | Armadyl chainskirt | 1/381 | 1/381 [ d 1 ] | Candidate; FP TBD |
+| Kree'arra | Armadyl chestplate | 1/381 | 1/381 [ d 1 ] | Candidate; FP TBD |
+| Kree'arra | Armadyl helmet | 1/381 | 1/381 [ d 1 ] | Candidate; FP TBD |
+| Kurask | Leaf-bladed sword | 1/384 | 1/384 [ 2 ] | Candidate; FP TBD |
+| Long-tailed Wyvern | Granite longsword | 1/512 | 1/512 [ 1 ] | Candidate; FP TBD |
+| Mad Angel | Hallowfell | 1/127 | 1/127 [ 3 ] | Candidate; FP TBD |
+| Maggot King | Crimson kisten | 1/520 | 1/520 [ 3 ] | Candidate; FP TBD |
+| Maggot King | Elder venator fang | 1/340 | 1/340 [ 3 ] | Candidate; FP TBD |
+| Marble gargoyle | Granite maul | 1/256 | 3 × 1/256 | Candidate; FP TBD |
+| Mutated Terrorbird | Warped sceptre (uncharged) | 1/320 | 1/320 [ 1 ] | Candidate; FP TBD |
+| Mutated Tortoise | Warped sceptre (uncharged) | 1/320 | 1/320 [ 1 ] | Candidate; FP TBD |
+| Nex | Ancient hilt | 1/516 | 1/516 | Candidate; FP TBD |
+| Nex | Nihil horn | 1/258 | 1/258 | Candidate; FP TBD |
+| Nex | Torva full helm (damaged) | 1/258 | 1/258 | Candidate; FP TBD |
+| Nex | Torva platebody (damaged) | 1/258 | 1/258 | Candidate; FP TBD |
+| Nex | Torva platelegs (damaged) | 1/258 | 1/258 | Candidate; FP TBD |
+| Nex | Zaryte vambraces | 1/172 | 1/172 | Candidate; FP TBD |
+| Night beast | Dark bow | 1/512 | 3 × 1/512 | Candidate; FP TBD |
+| Nuclear smoke devil | Occult necklace | 1/512 | 3 × 1/512 [ 1 ] | Candidate; FP TBD |
+| Sarachnis | Sarachnis cudgel | 1/384 | 1/384 [ 2 ] | Candidate; FP TBD |
+| Scorpia | Dragon 2h sword | 1/128 | 1/128 | Candidate; FP TBD |
+| Scorpia | Malediction shard 3 | 1/256 | 1/256 [ d 1 ] | Candidate; FP TBD |
+| Scorpia | Odium shard 3 | 1/256 | 1/256 [ d 1 ] | Candidate; FP TBD |
+| Smoke devil | Occult necklace | 1/512 | 1/512 [ 1 ] | Candidate; FP TBD |
+| Spiked Turoth | Leaf-bladed sword | 1/500 | 3 × 1/500 | Candidate; FP TBD |
+| Spiked Turoth | Necklace of Fangs | 1/128 | 3 × 1/128 | Candidate; FP TBD |
+| Spindel | Dragon 2h sword | 1/358 | 1/358 [ 1 ] | Candidate; FP TBD |
+| Spindel | Dragon pickaxe | 1/358 | 1/358 [ 1 ] | Candidate; FP TBD |
+| Spiritual mage | Dragon boots | 1/128 | 1/128 | Candidate; FP TBD |
+| Taloned Wyvern | Granite longsword | 1/512 | 1/512 [ 1 ] | Candidate; FP TBD |
+| Terror dog | Granite helm | 1/128 | 1/128 | Candidate; FP TBD |
+| The Leviathan | Chromium ingot | 1/256 | 3/768 | Candidate; FP TBD |
+| The Whisperer | Bellator vestige | 1/512 | 1/512 [ d 1 ] | Candidate; FP TBD |
+| The Whisperer | Chromium ingot | 3/512 | 3/512 | Candidate; FP TBD |
+| The Whisperer | Siren's staff | 1/512 | 1/512 | Candidate; FP TBD |
+| Thermonuclear smoke devil | Occult necklace | 1/350 | 1/350 [ 1 ] | Candidate; FP TBD |
+| Thermonuclear smoke devil | Smoke battlestaff | 1/512 | 1/512 [ 1 ] | Candidate; FP TBD |
+| Turoth | Necklace of Fangs | 1/129 | 1/129 | Candidate; FP TBD |
+| Vardorvis | Chromium ingot | 3/1088 | 3/1,088 | Candidate; FP TBD |
+| Venenatis | Dragon 2h sword | 1/256 | 1/256 [ 2 ] | Candidate; FP TBD |
+| Venenatis | Dragon pickaxe | 1/256 | 1/256 [ 2 ] | Candidate; FP TBD |
+| Venenatis | Fangs of Venenatis | 1/196 | 1/196 [ 2 ] | Candidate; FP TBD |
+| Venenatis | Treasonous ring | 1/512 | 1/512 [ 2 ] | Candidate; FP TBD |
+| Venenatis | Voidwaker gem | 1/360 | 1/360 [ 2 ] | Candidate; FP TBD |
+| Vet'ion | Dragon 2h sword | 1/256 | 1/256 [ 4 ] | Candidate; FP TBD |
+| Vet'ion | Dragon pickaxe | 1/256 | 1/256 [ 4 ] | Candidate; FP TBD |
+| Vet'ion | Ring of the gods | 1/512 | 1/512 [ 4 ] | Candidate; FP TBD |
+| Vet'ion | Skull of Vet'ion | 1/196 | 1/196 [ 4 ] | Candidate; FP TBD |
+| Vet'ion | Voidwaker blade | 1/360 | 1/360 [ 4 ] | Candidate; FP TBD |
+| Warped Terrorbird | Warped sceptre (uncharged) | 1/320 | 1/320 [ 3 ] | Candidate; FP TBD |
+| Warped Tortoise | Warped sceptre (uncharged) | 1/320 | 1/320 [ 1 ] | Candidate; FP TBD |
+| Yama | Oathplate chest | 1/600 | 1/600 [ d 1 ] | Candidate; FP TBD |
+| Yama | Oathplate helm | 1/600 | 1/600 [ d 1 ] | Candidate; FP TBD |
+| Yama | Oathplate legs | 1/600 | 1/600 [ d 1 ] | Candidate; FP TBD |
+| Yama | Soulflame horn | 1/300 | 2/600 [ d 1 ] | Candidate; FP TBD |
+| Zalcano | Crystal tool seed | 39/8000 | 39/8,000 | Candidate; FP TBD |
+
+## Superior Challenge
+
+### Previously reviewed hunts
+
+| Creature / encounter | Specific fresh item | Rate used for tier | Original rate notation | Historical v1 FP | V2 FP |
+| --- | --- | --- | --- | ---: | --- |
+| Adamant dragon | Dragon limbs | 1/1000 | 1/1,000 | 1,775 | TBD |
+| Artio | Voidwaker hilt | 1/912 | 1/912 [ 2 ] | 3,150 | TBD |
+| Calvar'ion | Voidwaker blade | 1/912 | 1/912 [ 1 ] | 2,400 | TBD |
+| Corporeal Beast | Arcane sigil | 1/1365 | 1/1,365 | 13,750 | TBD |
+| Corporeal Beast | Spectral sigil | 1/1365 | 1/1,365 | 13,750 | TBD |
+| Demonic gorilla | Heavy frame | 1/1500 | 1/1,500 | 3,450 | TBD |
+| Kurask | Leaf-bladed battleaxe | 1/1026 | 1/1,026 [ 3 ] | 975 | TBD |
+| Phosani's Nightmare | Inquisitor's mace | 31/35000 | 31/35,000 | 18,925 | TBD |
+| Rune dragon | Dragon limbs | 1/800 | 1/800 | 1,900 | TBD |
+| Spindel | Voidwaker gem | 1/912 | 1/912 [ 1 ] | 3,150 | TBD |
+| Vorkath | Dragonbone necklace | 1/1000 | 1/1,000 [ 3 ] | 4,275 | TBD |
+| Vyrewatch Sentinel | Blood shard | 1/1500 | 1/1,500 [ 1 ] | 1,775 | TBD |
+| Zulrah | Magic fang | 1/1024 | 2 × 1/1,024 | 4,375 | TBD |
+| Zulrah | Serpentine visage | 1/1024 | 2 × 1/1,024 | 4,375 | TBD |
+| Zulrah | Tanzanite fang | 1/1024 | 2 × 1/1,024 | 4,375 | TBD |
+
+### Additional source candidates — not admitted
+
+| Creature / encounter | Specific item candidate | Rate used for tier | Original notation | Status / V2 FP |
+| --- | --- | --- | --- | --- |
+| Adamant dragon | Dragon metal slice | 1/5000 | 1/5,000 | Candidate; FP TBD |
+| Alchemical Hydra | Hydra's claw | 1/1001 | 1/1,001 [ 4 ] | Candidate; FP TBD |
+| Armoured zombie (Zemouregal's Base) | Broken zombie axe | 1/800 | 1/800 | Candidate; FP TBD |
+| Basilisk Sentinel | Basilisk jaw | 1/1000 | 1/1,000 [ 2 ] | Candidate; FP TBD |
+| Black dragon | Draconic visage | 1/1250 | 1/1,250 | Candidate; FP TBD |
+| Black dragon | Draconic visage | 1/5000 | 1/5,000 | Candidate; FP TBD |
+| Bloodthirsty Basilisk Sentinel | Basilisk jaw | 1/1000 | 1/1,000 [ 1 ] | Candidate; FP TBD |
+| Bloodthirsty Hydra | Hydra tail | 1/1001 | 9 × 1/1,001 [ 1 ] | Candidate; FP TBD |
+| Bloodthirsty kurask | Leaf-bladed battleaxe | 1/1026 | 9 × 1/1,026 [ 2 ] | Candidate; FP TBD |
+| Bloodthirsty Shadow Wyrm | Dragon harpoon | 1/2000 | 1/2,000 [ 1 ] | Candidate; FP TBD |
+| Bloodthirsty Shadow Wyrm | Dragon sword | 1/2000 | 1/2,000 [ 1 ] | Candidate; FP TBD |
+| Cave kraken | Kraken tentacle | 1/1200 | 1/1,200 | Candidate; FP TBD |
+| Colossal Hydra | Hydra tail | 1/1001 | 1/1,001 [ 1 ] | Candidate; FP TBD |
+| Corporeal Beast | Elysian sigil | 1/4095 | 1/4,095 | Candidate; FP TBD |
+| Dire gryphon | Horn of Plenty (empty) | 1/1000 | 1/1,000 | Candidate; FP TBD |
+| Duke Sucellus | Virtus mask | 1/2160 | 1/2,160 | Candidate; FP TBD |
+| Duke Sucellus | Virtus robe bottom | 1/2160 | 1/2,160 | Candidate; FP TBD |
+| Duke Sucellus | Virtus robe top | 1/2160 | 1/2,160 | Candidate; FP TBD |
+| Elder Chaos druid | Elder chaos hood | 1/1419 | 1/1,419 | Candidate; FP TBD |
+| Elder Chaos druid | Elder chaos robe | 1/1419 | 1/1,419 | Candidate; FP TBD |
+| Elder Chaos druid | Elder chaos top | 1/1419 | 1/1,419 | Candidate; FP TBD |
+| King Black Dragon | Draconic visage | 1/5000 | 1/5,000 | Candidate; FP TBD |
+| King Black Dragon | Dragon pickaxe | 1/1000 | 1/1,000 | Candidate; FP TBD |
+| King kurask | Leaf-bladed battleaxe | 1/1026 | 3 × 1/1,026 [ 2 ] | Candidate; FP TBD |
+| Lizardman shaman | Dragon warhammer | 1/3000 | 1/3,000 | Candidate; FP TBD |
+| Long-tailed Wyvern | Granite boots | 1/2560 | 1/2,560 [ 1 ] | Candidate; FP TBD |
+| Mature custodian stalker | Antler guard | 1/800 | 1/800 [ 1 ] | Candidate; FP TBD |
+| Phosani's Nightmare | Eldritch orb | 1/1600 | 1/1,600 | Candidate; FP TBD |
+| Phosani's Nightmare | Harmonised orb | 1/1600 | 1/1,600 | Candidate; FP TBD |
+| Phosani's Nightmare | Volatile orb | 1/1600 | 1/1,600 | Candidate; FP TBD |
+| Rune dragon | Dragon metal lump | 1/5000 | 1/5,000 | Candidate; FP TBD |
+| Shadow Wyrm | Dragon harpoon | 1/2000 | 1/2,000 [ 1 ] | Candidate; FP TBD |
+| Shadow Wyrm | Dragon sword | 1/2000 | 1/2,000 [ 1 ] | Candidate; FP TBD |
+| Spitting Wyvern | Granite boots | 1/2560 | 1/2,560 [ 1 ] | Candidate; FP TBD |
+| Taloned Wyvern | Granite boots | 1/2560 | 1/2,560 [ 1 ] | Candidate; FP TBD |
+| The Leviathan | Leviathan's lure | 1/768 | 1/768 | Candidate; FP TBD |
+| The Leviathan | Venator vestige | 1/768 | 1/768 [ d 1 ] | Candidate; FP TBD |
+| The Leviathan | Virtus mask | 1/2304 | 1/2,304 | Candidate; FP TBD |
+| The Leviathan | Virtus robe bottom | 1/2304 | 1/2,304 | Candidate; FP TBD |
+| The Leviathan | Virtus robe top | 1/2304 | 1/2,304 | Candidate; FP TBD |
+| The Whisperer | Virtus mask | 1/1536 | 1/1,536 | Candidate; FP TBD |
+| The Whisperer | Virtus robe bottom | 1/1536 | 1/1,536 | Candidate; FP TBD |
+| The Whisperer | Virtus robe top | 1/1536 | 1/1,536 | Candidate; FP TBD |
+| Thermonuclear smoke devil | Dragon chainbody | 1/2000 | 1/2,000 [ 1 ] | Candidate; FP TBD |
+| Tortured gorilla | Ballista limbs | 1/5000 | 1/5,000 | Candidate; FP TBD |
+| Tortured gorilla | Ballista spring | 1/5000 | 1/5,000 | Candidate; FP TBD |
+| Tortured gorilla | Zenyte shard | 1/3000 | 1/3,000 | Candidate; FP TBD |
+| Undead Druid | Mask of Ranul | 1/1000 | 1/1,000 [ 1 ] | Candidate; FP TBD |
+| Vardorvis | Executioner's axe head | 1/1088 | 1/1,088 | Candidate; FP TBD |
+| Vardorvis | Ultor vestige | 1/1088 | 1/1,088 [ d 1 ] | Candidate; FP TBD |
+| Vardorvis | Virtus mask | 1/3264 | 1/3,264 | Candidate; FP TBD |
+| Vardorvis | Virtus robe bottom | 1/3264 | 1/3,264 | Candidate; FP TBD |
+| Vardorvis | Virtus robe top | 1/3264 | 1/3,264 | Candidate; FP TBD |
+| Venator | Blood shard | 1/860 | 1/860 | Candidate; FP TBD |
+| Vorkath | Draconic visage | 1/5000 | 1/5,000 [ 3 ] | Candidate; FP TBD |
+| Vorkath | Skeletal visage | 1/5000 | 1/5,000 [ 3 ] | Candidate; FP TBD |
+
+## Conditional, approximate or unsupported rate expressions — held
+
+No convenient alternative is selected below. These rows have no fixed tier until source/method/task/allocation or approximation is reviewed. A candidate may already have a different supported context elsewhere; rows do not create extra lottery entries.
+
+| Source | Item | Captured raw expression | Section | Status |
+| --- | --- | --- | --- | --- |
+| Araxyte | Aranea boots | 1/4,000 ; 1/1,600 [ d 3 ] | Level 96 drops / Tertiary | Context/rate review; FP TBD |
+| Araxyte | Aranea boots | 1/2,000 ; 1/800 [ d 3 ] | Level 146 drops / Tertiary | Context/rate review; FP TBD |
+| Armoured kraken | Dragon metal sheet | 4/540 ; 4/270 [ d 1 ] [ 1 ] | Drops / Pre-roll | Context/rate review; FP TBD |
+| Armoured zombie (Zemouregal's Fort) | Broken zombie axe | ~1/600 | Drops / Tertiary | Context/rate review; FP TBD |
+| Baby blue dragon | Frozen tear | ~1/100 [ d 2 ] | Drops / Tertiary | Context/rate review; FP TBD |
+| Basilisk Knight | Basilisk jaw | 1/5,000 ; 1/1,000 [ d 6 ] [ 1 ] | Drops / Tertiary | Context/rate review; FP TBD |
+| Blood-starved venator | Venator fang | 3 × ~7/131 | Drops / Main drops | Context/rate review; FP TBD |
+| Blood-starved venator | Venator tooth | 3 × ~7/131 | Drops / Main drops | Context/rate review; FP TBD |
+| Blue dragon | Frozen tear | ~1/100 [ d 2 ] | Drops / Tertiary | Context/rate review; FP TBD |
+| Brutal blue dragon | Frozen tear | ~1/32 [ e 1 ] | Drops / Tertiary | Context/rate review; FP TBD |
+| Cave crawler | Frozen tear | Unknown [ d 1 ] | Drops / Tertiary | Context/rate review; FP TBD |
+| Chilled jelly | Frozen tear | Rare [ d 4 ] | Drops / Tertiary | Context/rate review; FP TBD |
+| Drake | Drake's claw | 1/2,560 ; 1/512 [ d 1 ] [ 1 ] | Drops / Pre-roll | Context/rate review; FP TBD |
+| Drake | Drake's tooth | 1/2,560 ; 1/512 [ d 1 ] [ 1 ] | Drops / Pre-roll | Context/rate review; FP TBD |
+| Frost Crab | Frozen tear | ~1/90 | Drops / Tertiary | Context/rate review; FP TBD |
+| Frost dragon | Dragon metal sheet | 1/100 ; 1/40 [ d 1 ] [ 1 ] | Drops / Pre-roll | Context/rate review; FP TBD |
+| Frost Nagua | Frozen tear | ~1/10 | Drops / Tertiary | Context/rate review; FP TBD |
+| Frost Nagua | Glacial temotli | ~1/500 | Drops / Tertiary | Context/rate review; FP TBD |
+| Frost Nagua | Pendant of Ates (inert) | ~1/100 | Drops / Tertiary | Context/rate review; FP TBD |
+| Great white shark | Dragon metal sheet | 4/720 ; 4/360 [ d 1 ] [ 1 ] | Drops / Pre-roll | Context/rate review; FP TBD |
+| Gryphon | Horn of Plenty (empty) | 1/2,500 ; 1/1,000 [ 1 ] | Drops / Tertiary | Context/rate review; FP TBD |
+| Hydra | Hydra tail | 1/5,001 ; 1/1,001 [ d 1 ] [ 1 ] | Drops / Pre-roll | Context/rate review; FP TBD |
+| Ice spider | Frozen tear | Unknown [ d 3 ] | Drops / Tertiary | Context/rate review; FP TBD |
+| Ice warrior | Frozen tear | Unknown [ d 5 ] | Drops / Tertiary | Context/rate review; FP TBD |
+| Lava Strykewyrm | Dragon metal sheet | 1/115 ; 1/45 [ d 1 ] [ 1 ] | Drops / Pre-roll | Context/rate review; FP TBD |
+| Orca | Dragon metal sheet | 2/400 ; 2/200 [ d 1 ] [ 1 ] | Drops / Pre-roll | Context/rate review; FP TBD |
+| The Nightmare | Eldritch orb | 1/960 – 1/548.7 | Drops / Uniques / Orb table | Context/rate review; FP TBD |
+| The Nightmare | Harmonised orb | 1/960 – 1/548.7 | Drops / Uniques / Orb table | Context/rate review; FP TBD |
+| The Nightmare | Inquisitor's great helm | 1/420 – 1/240.1 | Drops / Uniques / Inquisitor's and Nightmare staff table | Context/rate review; FP TBD |
+| The Nightmare | Inquisitor's hauberk | 1/420 – 1/240.1 | Drops / Uniques / Inquisitor's and Nightmare staff table | Context/rate review; FP TBD |
+| The Nightmare | Inquisitor's mace | 1/750 – 1/428.7 | Drops / Uniques / Inquisitor's and Nightmare staff table | Context/rate review; FP TBD |
+| The Nightmare | Inquisitor's plateskirt | 1/420 – 1/240.1 | Drops / Uniques / Inquisitor's and Nightmare staff table | Context/rate review; FP TBD |
+| The Nightmare | Nightmare staff | 1/300 – 1/171.5 | Drops / Uniques / Inquisitor's and Nightmare staff table | Context/rate review; FP TBD |
+| The Nightmare | Volatile orb | 1/960 – 1/548.7 | Drops / Uniques / Orb table | Context/rate review; FP TBD |
+| Vampyre kraken | Dragon metal sheet | 2/320 ; 2/160 [ d 1 ] [ 1 ] | Drops / Pre-roll | Context/rate review; FP TBD |
+| Veiled kraken | Dragon metal sheet | 2/360 ; 2/180 [ d 1 ] [ 1 ] | Drops / Pre-roll | Context/rate review; FP TBD |
+| Venator | Venator fang | ~7/131 | Drops / Main drops | Context/rate review; FP TBD |
+| Venator | Venator tooth | ~7/131 | Drops / Main drops | Context/rate review; FP TBD |
+| Vitreous Chilled Jelly | Frozen tear | Rare | Drops / Tertiary | Context/rate review; FP TBD |
+| Wyrm | Dragon harpoon | 1/10,000 ; 1/2,000 [ a 1 ] [ 1 ] | Drops / Pre-roll | Context/rate review; FP TBD |
+| Wyrm | Dragon sword | 1/10,000 ; 1/2,000 [ a 1 ] [ 1 ] | Drops / Pre-roll | Context/rate review; FP TBD |
+| Yama | Oathplate chest | Always | Drops / Contract | Context/rate review; FP TBD |
+| Yama | Oathplate helm | Always | Drops / Contract | Context/rate review; FP TBD |
+| Yama | Oathplate legs | Always | Drops / Contract | Context/rate review; FP TBD |
+| Yama | Soulflame horn | Always | Drops / Contract | Context/rate review; FP TBD |
+
+## Access, completion and selection safeguards
+
+For the44 reviewed hunts, the [historical access table](CHALLENGE_HUNT_TABLE_V1_ARCHIVE.md#access-requirements-by-creature) and [source/context packet](research/CHALLENGE_CONTEXT_EVIDENCE_A61.json) preserve specific levels, quests, routes, equipment, solo allocation and source IDs. They do not grant newly listed candidates those same permissions. Every additional candidate needs its own route, exact item/source mapping, supported personal receipt and reward review. Task-only hunts, finite keys/seeds, group allocation and stateful drops remain held where existing policies require it. Candidate inclusion is a review lead, never a task/region/shop/access waiver.
+
+Completion remains one fresh active personal exact-item drop from the assigned source, with matched run/account/assignment/context, supported recipient proof and once-only journal settlement. Old ownership/trade/bank movement/paused earning/another creature cannot complete. Keep the item; no hand-in or consumption. Existing qualifying permanent bounty remains independent and once-only. Tier labels do not multiply FP or guarantee duration. No roster/offer/control/unlock-topology approval is inferred from this table update.
+
+Source scan uses the explicit item-name list in the JSON index, not an assertion that all named items or every source is suitable. Names only identify research leads; final selection uses reviewed canonical IDs. Source rows, raw rolls/rates/notes, timestamps and hashes are retained in the index/original upload. Duplicate identical source/item/rate rows are grouped, while different rates/contexts remain distinct review groups. The old v1 raw catalog/CSV/FP and frozen assignments are unchanged.
+
+This page replaces the old mixed44-row presentation. It does not claim the expanded four-tier catalog is ready for runtime. Current-client adapter tests and the unanswered rank-unlock/offer/FP integration remain separate. No production gameplay/main changes or source recrawl.

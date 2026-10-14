@@ -52,3 +52,7 @@ WB-D140/141: prioritize repeatable task-independent starter contexts; hold finit
 ## Current Challenge rarity/card supersession — WB-D144/145
 
 [CHALLENGE_CARD_TIERS](CHALLENGE_CARD_TIERS.md) controls future Challenge rank placement: Lesser reciprocal25–50, Standard>50–125, Greater>125–750, Superior>750–5000. Ignore displayed roll-count multiplier for tier classification; preserve raw rolls/personal encounter probability separately. This supersedes old single1/400–1/1500/aggregate-rate bracket statements in this chapter for future selection only. Fresh personal exact assigned-source completion, source/context review and existing settled assignments remain protected. Four rank identities are confirmed; sequential/independent unlock topology, enabled-rank control/offer integration and expanded v2 roster/rewards are not yet adopted/completed. Do not treat the preserved v1 roster/FP or lower-tier source leads as a ready four-tier pool. No runtime implementation/main change.
+
+## Tier presentation index — A65
+
+catalogs/challenge_hunt_review_index_v2.json/.csv drives CHALLENGE_HUNT_TABLE's four-tier display. It preserves all44 historical reviewed entries plus explicit source candidate groups and unresolved rows. The authority manifest pins it as a **review index, not an admitted/runtime roster**. No new FP/unlock topology or source-access approval follows from display membership. Old44-hunt JSON/CSV remain unchanged; old human table is preserved in CHALLENGE_HUNT_TABLE_V1_ARCHIVE.
