@@ -1,0 +1,88 @@
+"""Explicit source-reviewed Challenge catalog authoring, NOT a gameplay adapter.
+Reproduce: python tools/wiki_drops/curated_hunts_v1.py OUTPUT_DIRECTORY
+Uses the supplied extracted output; preserves original payloads and source receipts.
+"""
+import collections,hashlib,json,math,pathlib,re,sys
+from fractions import Fraction
+ROOT=pathlib.Path(__file__).resolve().parents[2]
+OUT=ROOT/'docs/wheelbound/catalogs'
+# kph values are authored, not measured; freeze one quote per hunt at assignment.
+# A source family can have other encounters; only the named source and explicit context count.
+SPECS=[
+('Brine rat','brine-rat','starter',150,{'Slayer':47},"Complete Olaf's Quest; enter Brine Rat Cavern with a usable spade route; no active task required.", [('Brine sabre','BRINE_SABRE')]),
+('Turoth','turoth','starter',180,{'Slayer':55},'Fremennik Slayer Dungeon; owned usable leaf-bladed weapon, broad ammunition or Magic Dart and supplies; off-task route.', [('Leaf-bladed sword','LEAFBLADED_SWORD')]),
+('Cave horror','cave-horror','starter',150,{'Slayer':58},'Cabin Fever complete; Mos Le\'Harmless Cave; functioning light or permanent light; usable witchwood icon or sustainable Protect from Melee; off-task route.', [('Black mask (10)','BLACK_MASK_10')]),
+('Sulphur Nagua','sulphur-nagua','starter',200,{'Slayer':48},'Perilous Moons progressed far enough to enter Neypotzli Ancient Prison; repeatable off-task access.', [('Sulphur blades','SULPHUR_BLADES')]),
+('Kurask','kurask','starter',120,{'Slayer':70},'Fremennik Slayer Dungeon; usable leaf-bladed weapon, broad ammunition or Magic Dart; off-task route. Iorwerth/Wilderness/superior contexts not selected.', [('Leaf-bladed battleaxe','LEAFBLADED_BATTLEAXE')]),
+('Skeletal Wyvern','skeletal-wyvern','starter',70,{'Slayer':72},'Asgarnian Ice Dungeon end chamber; repeatable off-task route; owned usable icy-breath protection and sustainable combat supplies. No task-only upper-floor route.', [('Granite legs','GRANITE_LEGS')]),
+('Abyssal demon','abyssal-demon','expansion',180,{'Slayer':85},'Ordinary Slayer Tower upper-floor or ordinary Catacombs route; no Wilderness Slayer Cave or task-only basement; no superior/Sire credit.', [('Abyssal whip','ABYSSAL_WHIP')]),
+('Dark beast','dark-beast','expansion',70,{'Slayer':90},"Mourning's End Part II complete and accessible Mourner Tunnels route; off-task ordinary dark beasts only. No Night beast credit.", [('Dark bow','DARK_BOW')]),
+('Spitting Wyvern','spitting-wyvern','expansion',60,{'Slayer':66},'Bone Voyage complete; Fossil Island Wyvern Cave off-task area; owned usable icy-breath protection and sustainable supplies. Other wyvern species remain distinct, unselected sources.', [('Granite longsword','GRANITE_LONGSWORD')]),
+('Adamant dragon','adamant-dragon','expansion',60,{},'Dragon Slayer II complete; repeatable western Lithkren Vault route; post-quest only, dragonfire/poison combat readiness.', [('Dragon limbs','DRAGON_LIMBS')]),
+('Rune dragon','rune-dragon','expansion',45,{},'Dragon Slayer II complete; repeatable eastern Lithkren Vault route; post-quest only, dragonfire/shock combat readiness.', [('Dragon limbs','DRAGON_LIMBS')]),
+('Demonic gorilla','demonic-gorilla','expansion',45,{},'Monkey Madness II complete; repeatable Crash Site Cavern route; post-quest ordinary gorillas, sustainable two-style combat; no tortured gorilla or quest fight credit.', [('Ballista limbs','BALLISTA_LIMBS'),('Ballista spring','BALLISTA_SPRING'),('Light frame','LIGHT_FRAME'),('Heavy frame','HEAVY_FRAME')]),
+('Vyrewatch Sentinel','vyrewatch-sentinel','expansion',90,{'Slayer':38},'Sins of the Father complete; Darkmeyer route and owned usable Blisterwood flail; combat only. Pickpocketed blood shards and venator drops never qualify.', [('Blood shard','BLOOD_SHARD')]),
+('Tormented Demon','tormented-demon','expansion',30,{},'While Guthix Sleeps complete; repeatable Ancient Guthixian Temple route; post-quest combat, sustainable style switching. No quest-instance credit.', [('Burning claw','BURNING_CLAW'),('Tormented synapse','TORMENTED_SYNAPSE')]),
+('General Graardor','general-graardor','expansion',20,{'Strength':70},'Verified normal God Wars Dungeon entry route; hammer; Bandos Stronghold; earn ordinary 40 faction KC each entry. Solo boss kills, no team contribution or bodyguard-drop credit.', [('Bandos hilt','BANDOS_HILT')]),
+("Kree'arra",'kree-arra','expansion',18,{'Ranged':70},'Verified normal God Wars Dungeon entry route; usable crossbow and mithril grapple; Armadyl Eyrie; ordinary 40 faction KC each entry; solo boss kills only.', [('Armadyl hilt','ARMADYL_HILT')]),
+('Commander Zilyana','commander-zilyana','expansion',20,{'Agility':70},'Verified normal God Wars Dungeon entry; unboosted 70 Agility, ropes installed for route; Saradomin Encampment, ordinary 40 faction KC each entry; solo boss kills only.', [('Armadyl crossbow','ARMADYL_CROSSBOW'),('Saradomin hilt','SARADOMIN_HILT')]),
+("K'ril Tsutsaroth",'kril-tsutsaroth','expansion',20,{'Hitpoints':70},'Verified normal God Wars Dungeon entry; 70 Hitpoints river crossing; Zamorak Fortress; ordinary 40 faction KC each entry; solo boss kills only.', [('Staff of the Dead','STAFF_OF_THE_DEAD'),('Zamorak hilt','ZAMORAK_HILT')]),
+('Zulrah','zulrah','expansion',24,{},'Regicide complete as conservative authored access gate; sacrifice dialogue completed, repeatable boat access from Zul-Andra; solo normal encounter with sustainable combat supplies.', [('Tanzanite fang','TANZANITE_FANG'),('Magic fang','MAGIC_FANG'),('Serpentine visage','SERPENTINE_VISAGE')]),
+('Vorkath','vorkath','expansion',24,{},'Dragon Slayer II complete; Torfinn/Ungael repeatable route; post-quest solo instance only; no quest Vorkath. Dragonbone necklace is a one-roll tertiary, not a two-roll main-table item.', [('Dragonbone necklace','DRAGONBONE_NECKLACE')]),
+('Corporeal Beast','corporeal-beast','expansion',10,{},'Repeatable lair access via permitted games-necklace route; sustainable solo strategy and supplies. No combat-level/quest access requirement invented; Wilderness walking alternative not selected. Entire kill solo, no group damage/loot allocation.', [('Spectral sigil','SPECTRAL_SIGIL'),('Arcane sigil','ARCANE_SIGIL')]),
+("Phosani's Nightmare",'phosanis-nightmare','expansion',6,{},'Sisterhood Sanctuary/Pool of Nightmares reachable through a permitted repeatable route; Drink-from solo encounter. A prior normal Nightmare kill is a warning recommendation, not a hard prerequisite. No ordinary Nightmare or historical competition-mode credit.', [('Nightmare staff','NIGHTMARE_STAFF'),("Inquisitor's great helm",'INQUISITORS_GREAT_HELM'),("Inquisitor's hauberk",'INQUISITORS_HAUBERK'),("Inquisitor's plateskirt",'INQUISITORS_PLATESKIRT'),("Inquisitor's mace",'INQUISITORS_MACE')]),
+('Artio','artio','expansion',30,{},'Wilderness access explicitly unlocked; hard Wilderness diary complete (no finite-task bypass); repeatable Hunter\'s End entry and fee funding; solo singles-plus encounter. Player-killer risk included in authored throughput, no death exemption.', [('Claws of Callisto','CLAWS_OF_CALLISTO'),('Tyrannical ring','TYRANNICAL_RING'),('Voidwaker hilt','VOIDWAKER_HILT')]),
+('Spindel','spindel','expansion',30,{},'Wilderness access explicitly unlocked; hard Wilderness diary complete (no finite-task bypass); repeatable Web Chasm entry and fee funding; solo singles-plus encounter. Venenatis and its spiderlings do not count.', [('Fangs of Venenatis','FANGS_OF_VENENATIS'),('Treasonous ring','TREASONOUS_RING'),('Voidwaker gem','VOIDWAKER_GEM')]),
+("Calvar'ion",'calvar-ion','expansion',40,{},"Wilderness access explicitly unlocked; hard Wilderness diary complete (no finite-task bypass); repeatable Skeletal Tomb entry and fee funding; solo full two-phase encounter. Vet'ion, hellhounds and interrupted first phases do not count.", [("Skull of Vet'ion",'SKULL_OF_VETION'),('Ring of the gods','RING_OF_THE_GODS'),('Voidwaker blade','VOIDWAKER_BLADE')]),
+]
+# Conservative normal-world form allowlists: symbols alone are NOT mode/phase proof.
+NPCS={'brine-rat':[4501],'turoth':list(range(426,433)),'cave-horror':list(range(1047,1052)),'sulphur-nagua':[13033],'kurask':[410,411],'skeletal-wyvern':[465,466,467,468],'abyssal-demon':[415,416],'dark-beast':[4005,7250],'spitting-wyvern':[7794],'adamant-dragon':[8030,8090],'rune-dragon':[8031,8091],'demonic-gorilla':list(range(7144,7150)),'vyrewatch-sentinel':list(range(9756,9764)),'tormented-demon':list(range(13599,13607)),'general-graardor':[2215],'kree-arra':[3162],'commander-zilyana':[2205],'kril-tsutsaroth':[3129],'zulrah':[2042,2043,2044],'vorkath':[8059,8061],'corporeal-beast':[319],'phosanis-nightmare':list(range(9416,9425))+[11153,11154,11155],'artio':[11992],'spindel':[11998],'calvar-ion':[11993,11994]}
+
+def frac(f):return {'numerator':f.numerator,'denominator':f.denominator}
+def fval(d):return Fraction(d['numerator'],d['denominator'])
+def build(input_dir):
+    catalog=json.load(open(input_dir/'catalog.json'));pages=catalog['creatures']+catalog['unclassified_pages'];byname={p['name']:p for p in pages};pins=json.load(open(ROOT/'docs/wheelbound/research/CHALLENGE_IDENTITY_PINS_A61.json'));ids={x['symbol']:x['id'] for x in pins['items']};npc_ids={x['id'] for x in pins['npcs']};entries=[];creatures=[];evidence=[]
+    for name,key,bundle,kph,skills,route,items in SPECS:
+        p=byname[name];hf=input_dir/'html'/(hashlib.sha256(p['source_url'].encode()).hexdigest()+'.html');html=hf.read_text(encoding='utf-8');assert hashlib.sha256(html.encode()).hexdigest()==p['source_sha256']
+        assert set(NPCS[key])<=npc_ids,(key,set(NPCS[key])-npc_ids)
+        selected=[]
+        for item,symbol in items:
+            found=[(i,d) for i,d in enumerate(p['drops']) if d['item_name']==item];assert found,(name,item)
+            # Select ordinary source section; preserve other rows as variants, not extra draws.
+            i,d=found[0];r=d['rarity'];kind=r['kind']
+            if kind=='fraction':lo=hi=fval(r['exact_probability']);method='REPORTED_SINGLE_OPPORTUNITY_FRACTION'
+            elif kind=='multiple_rolls' and key=='zulrah':
+                q=fval(r['per_roll_probability']);n=r['roll_count'];lo=q;hi=min(Fraction(1),n*q);method='FRECHET_UNION_BOUNDS_NO_INDEPENDENCE_ASSUMED'
+            else:raise ValueError((name,item,r))
+            assert Fraction(1,1500)<=lo<=hi<=Fraction(1,400),(name,item,lo,hi)
+            assert symbol in ids and ids[symbol] is not None,symbol
+            hunt='WB-CH-'+key+'-'+re.sub('[^a-z0-9]+','-',symbol.lower()).strip('-');selected.append(hunt)
+            entries.append({'id':hunt,'creature_key':key,'item_name':item,'item_symbol':symbol,'canonical_item_id':ids[symbol],'accepted_drop_item_ids':[ids[symbol]],'accepted_variants':'Only the explicit newly dropped ID; no note/charged/ornament conversion or transformed old item credit.','quantity':1,'significance':'Signature source-family equipment, weapon component or upgrade material; not generic/RDT.','context_id':key+'-normal-repeatable-v1','personal_probability':{'lower':frac(lo),'upper':frac(hi),'method':method,'encounter_unit':'One complete supported solo kill with personal loot; specific item at least once.','source_model':'Published source fractions, not an empirical confidence interval or measured runtime probability.','independent_roll_formula_applied':False},'source_url':p['source_url'],'source_rows':[{'row_zero_based':ii,'raw_record':dd} for ii,dd in found],'reviewed_row_zero_based':i,'completion_contract':'challenge-personal-drop-v1','reference_kills_per_hour':kph,'reference_effort_status':'AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED','runtime_enabled':False,'design_status':'SOURCE_REVIEWED_CONTEXT_AUTHORED','reward_status':'NEXT_A62'})
+        creatures.append({'key':key,'name':name,'bundle':bundle,'npc_form_ids':NPCS[key],'npc_identity_pin':pins['source_commit'],'form_policy':'Group listed ordinary forms/phases as one encounter; full context/region/quest/normal-world predicates required. No prefix-name auto-inclusion.','membership_required':True,'minimum_skills':skills,'route_requirements':route,'task_requirement':'NONE; v1 route sustainable without a finite Slayer assignment.','allocation':'SOLO_PERSONAL_ONLY','entry_resources':'Own renewable supplies/entry resources through existing permitted Wheelbound routes; no free region/shop/quest/task unlock. No finite key as the sole continuing route.','common_access_contract':'challenge-access-v1','context_id':key+'-normal-repeatable-v1','hunts':selected,'runtime_enabled':False})
+        # Note targets retained by actual HTML fragment link, not only displayed note numbers.
+        import scrape
+        root=scrape.parse_tree(html);links=[]
+        selected_names={x[0] for x in items}
+        for n in root.walk():
+            if n.tag=='tr' and any(t in scrape.clean(n.text()) for t in selected_names):
+                links.extend({'text':scrape.clean(a.text()),'href':a.attrs['href']} for a in n.walk() if a.tag=='a' and '#cite_note' in a.attrs.get('href',''))
+        refs={x['href'].split('#')[-1] for x in links}
+        evidence.append({'creature_key':key,'name':name,'source_url':p['source_url'],'capture':p['capture'],'source_sha256_normalized':p['source_sha256'],'raw_html_sha256':hashlib.sha256(hf.read_bytes()).hexdigest(),'reported_revision_ids':sorted(set(re.findall(r'"wgRevisionId"\s*:\s*(\d+)',html))),'row_note_links':links,'referenced_notes':[x for x in p['footnotes'] if x['id'] in refs],'access_and_rate_source_passages':[t for t in p['page_context'][:4]]+[t for t in p['page_context'][4:] if any(w in t.lower() for w in ['two rolls','specific item','chance to roll two unique','drop rates are estimated','drop table has a','only accessible while','only be attacked'])],'reported_npc_ids':p['reported_npc_ids']})
+    selected_pairs={(e['source_url'],e['item_name']) for e in entries};screen=collections.Counter();leads=[]
+    for p in pages:
+        strong=any(re.search(r'combat level|hitpoints|slayer level',m['field'],re.I) for m in p['infobox_fields'])
+        for i,d in enumerate(p['drops']):
+            if (p['source_url'],d['item_name']) in selected_pairs:disposition='SELECTED_V1_SOURCE_CONTEXT_REVIEW_REQUIRED_FOR_ADDITIONAL_ROWS'
+            elif 'Items' in p['categories'] or 'Scenery' in p['categories'] or 'Pets' in p['categories'] or not strong:disposition='NON_CREATURE_OR_UNRESOLVED_SOURCE'
+            elif not d['layout_supported']:disposition='UNSUPPORTED_LAYOUT_NOT_SELECTABLE'
+            elif any(w in (d['item_name'] or '').lower() for w in ['clue','long bone','curved bone','imbued heart','eternal gem','godsword shard','uncut','seed','mystic','champion','jar of','pet','head','fossil']):disposition='NOT_V1_MEANINGFUL_SPECIFIC_UNIQUE'
+            elif 'rare drop table' in d['section'].lower() or 'gem drop table' in d['section'].lower():disposition='SHARED_GENERIC_TABLE_EXCLUDED'
+            elif d['rarity']['kind']=='fraction':
+                q=fval(d['rarity']['exact_probability']);disposition='OUTSIDE_BAND' if not Fraction(1,1500)<=q<=Fraction(1,400) else 'IN_BAND_NOT_AUTHORED_V1'
+            else:disposition='ALTERNATIVE_APPROXIMATE_MULTIROLL_OR_UNKNOWN_NOT_AUTHORED_V1'
+            screen[disposition]+=1
+            if disposition=='IN_BAND_NOT_AUTHORED_V1':leads.append([p['name'],i,d['item_name'],d['rarity']['raw']])
+    result={'version':'challenge-hunts-v1-2026-10-14','authority':'DELEGATED_CONTENT_UNDER_WB_D132; explicit 2026-10-14 completion request','archive_sha256':'e00babd58e09c047f68df94625cd5b4e77e119952d52c0d0c50b53a7d2b60309','scope':'Finite authored v1 roster, not all-monster coverage; source-model reviewed, client validation remains separate.','runtime_enabled':False,'minimum_actual_eligible_creatures':3,'selection':'Uniform among distinct accessible unlocked creature keys, then uniform among their qualifying distinct specific items.','starter_bundle':[c['key'] for c in creatures if c['bundle']=='starter'],'creatures':creatures,'hunts':entries,'exclusion_policy':{'task_only':'Kraken/Cerberus/Smoke devil/Alchemical Hydra and other task-only or superior contexts excluded v1; no finite remaining task can guarantee an uncapped rare hunt.','task_boosted':'Basilisk jaw/Drake uniques/ordinary Hydra tail task alternatives not selected; off-task reported rates outside band.','multiroll':'Use dependency-free lower=max(marginal p_i), upper=min(1,sum p_i); entire range must fit band. Zulrah qualifies; King kurask same-item total needs separate review and is excluded.','group_allocation':'No raids/Nex/group-personal division; solo-only authored contexts where feasible.','stateful_drops':'DT2 vestiges with hidden progress/guarantees and party/contribution formulas excluded v1, not treated as geometric table fractions.','finite_keys':'Bryophyta/Obor and chest/minigame/keyed reward contexts not selected.','cosmetics_and_generic':'Jars, heads, pets, shared superior rare table, generic rare-table loot and repeatable shop-equipment families not selected.','additional_sources':'Unlisted source/item/context is not selectable even if its numeric fraction fits. Expansion requires a new reviewed catalog version.'},'full_corpus_row_screen_counts':dict(screen),'unselected_in_band_leads_NOT_SELECTABLE':leads}
+    return result,evidence
+if __name__=='__main__':
+    r,e=build(pathlib.Path(sys.argv[1]));OUT.mkdir(parents=True,exist_ok=True);(OUT/'challenge_hunts_v1.json').write_text(json.dumps(r,indent=2,ensure_ascii=False)+'\n');(ROOT/'docs/wheelbound/research/CHALLENGE_CONTEXT_EVIDENCE_A61.json').write_text(json.dumps(e,indent=2,ensure_ascii=False)+'\n');print(len(r['creatures']),len(r['hunts']),len(r['starter_bundle']),r['full_corpus_row_screen_counts'])

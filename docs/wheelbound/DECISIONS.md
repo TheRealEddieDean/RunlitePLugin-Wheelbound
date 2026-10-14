@@ -1483,3 +1483,11 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 ### A48 source-limited candidate note
 
 WB-D140/141 are adopted authoring recommendations, not confirmations of reported real rates. The separate batch1 packet preserves indexed-source versus secondary-lead provenance and marks every candidate runtime-disabled. Actual canonical/source/live/reward gates remain; no final starter membership adopted.
+
+## WB-D142 - Finite Challenge catalog v1 and conservative authored contexts
+
+- Status: DELEGATED content authoring,2026-10-14, under WB-D132 and explicit request to finish the four catalog tasks. Not historical approval or production activation.
+- Decision: Author challenge_hunts_v1 with25 creature keys/44 item hunts and six starter creatures: Brine rat, Turoth, Cave horror, Sulphur Nagua, Kurask, Skeletal Wyvern. Other members are individual expansions; existing ≥3 actual eligible keys/unlock/card draw rules unchanged. No expansion/card price adopted here.
+- Contexts: repeatable task-independent routes, explicit normal/source/mode/form IDs and conservative solo personal allocation. Task-only, finite-key-only, unknown group allocation and stateful progress models excluded v1; exclusions do not resolve broader task-continuation or Q6 policy. Items shared narrowly within a signature source family qualify only from the exact assigned source; generic/RDT remains excluded.
+- Rates: WB-D134 permits fully in-band conservative ranges. For Zulrah two reported1/1024 marginals, dependency-free union bounds[1/1024,1/512] qualify without independent/additive exact-rate assumptions. This is derivation of existing policy using published-source fractions, not measured live probabilities.
+- Evidence: research/CHALLENGE_CATALOG_A61 and source/identity packets; original archive preserved; no bulk raw-cache rewrite. A62 owns numeric reward/completion/access packet. Source-reviewed authored content stays runtime-disabled until future current-client/implementation acceptance. All unanswered proposals remain unapproved.

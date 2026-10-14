@@ -64,3 +64,7 @@ Current explicit user request2026-10-14: finish incorrect labels/grouped variant
 ## Current A60 completed overlay
 
 CHALLENGE_TAXONOMY_A60.md/json covers all2,929 pages with corrected identity/grouping and alternate-mode exclusions. Validation passes. No raw data changed. Publish/verify owning A60 checkpoint before A61; owner remains active. Current request continues until concrete catalog/access/receipt/FP table finished; do not stop at the overlay.
+
+## A61 source catalog completed
+
+A60 verified778683bb11316e21d7357b017eec94925589f847/tree893d6c47cdfc277e019404a8ae5bd6905b85178e; main unchanged. A61 adds challenge_hunts_v1 (25 keys/44 hunts), six starter members, explicit rate/source/context exclusions, source/identity packets and WB-D142. Publish/verify before A62 FP/evidence/access packet; owner retained, user request still in progress.

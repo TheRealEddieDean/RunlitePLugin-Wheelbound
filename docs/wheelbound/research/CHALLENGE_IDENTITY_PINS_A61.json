@@ -1,0 +1,674 @@
+{
+  "source_commit": "42a6f17a6a2e8e478aa763890ecd0181a59dad38",
+  "item_source_path": "runelite-api/src/main/java/net/runelite/api/ItemID.java",
+  "npc_source_path": "runelite-api/src/main/java/net/runelite/api/NpcID.java",
+  "provenance": "Fetched pinned primary RuneLite sources; constants verify identities, not current-client receipt behavior.",
+  "items": [
+    {
+      "symbol": "ABYSSAL_WHIP",
+      "id": 4151
+    },
+    {
+      "symbol": "BLACK_MASK_10",
+      "id": 8901
+    },
+    {
+      "symbol": "BRINE_SABRE",
+      "id": 11037
+    },
+    {
+      "symbol": "LEAFBLADED_SWORD",
+      "id": 11902
+    },
+    {
+      "symbol": "LEAFBLADED_BATTLEAXE",
+      "id": 20727
+    },
+    {
+      "symbol": "GRANITE_LEGS",
+      "id": 6809
+    },
+    {
+      "symbol": "GRANITE_LONGSWORD",
+      "id": 21646
+    },
+    {
+      "symbol": "DARK_BOW",
+      "id": 11235
+    },
+    {
+      "symbol": "DRAGON_LIMBS",
+      "id": 21918
+    },
+    {
+      "symbol": "BALLISTA_LIMBS",
+      "id": 19592
+    },
+    {
+      "symbol": "BALLISTA_SPRING",
+      "id": 19601
+    },
+    {
+      "symbol": "LIGHT_FRAME",
+      "id": 19586
+    },
+    {
+      "symbol": "HEAVY_FRAME",
+      "id": 19589
+    },
+    {
+      "symbol": "BLOOD_SHARD",
+      "id": 24777
+    },
+    {
+      "symbol": "TORMENTED_SYNAPSE",
+      "id": 29580
+    },
+    {
+      "symbol": "BURNING_CLAW",
+      "id": 29574
+    },
+    {
+      "symbol": "BANDOS_HILT",
+      "id": 11812
+    },
+    {
+      "symbol": "ARMADYL_HILT",
+      "id": 11810
+    },
+    {
+      "symbol": "SARADOMIN_HILT",
+      "id": 11814
+    },
+    {
+      "symbol": "ZAMORAK_HILT",
+      "id": 11816
+    },
+    {
+      "symbol": "STAFF_OF_THE_DEAD",
+      "id": 11791
+    },
+    {
+      "symbol": "ARMADYL_CROSSBOW",
+      "id": 11785
+    },
+    {
+      "symbol": "DRAGONBONE_NECKLACE",
+      "id": 22111
+    },
+    {
+      "symbol": "SPECTRAL_SIGIL",
+      "id": 12823
+    },
+    {
+      "symbol": "ARCANE_SIGIL",
+      "id": 12827
+    },
+    {
+      "symbol": "NIGHTMARE_STAFF",
+      "id": 24422
+    },
+    {
+      "symbol": "INQUISITORS_GREAT_HELM",
+      "id": 24419
+    },
+    {
+      "symbol": "INQUISITORS_HAUBERK",
+      "id": 24420
+    },
+    {
+      "symbol": "INQUISITORS_PLATESKIRT",
+      "id": 24421
+    },
+    {
+      "symbol": "INQUISITORS_MACE",
+      "id": 24417
+    },
+    {
+      "symbol": "SULPHUR_BLADES",
+      "id": 29084
+    },
+    {
+      "symbol": "MASK_OF_RANUL",
+      "id": 23522
+    },
+    {
+      "symbol": "TANZANITE_FANG",
+      "id": 12922
+    },
+    {
+      "symbol": "MAGIC_FANG",
+      "id": 12932
+    },
+    {
+      "symbol": "SERPENTINE_VISAGE",
+      "id": 12927
+    },
+    {
+      "symbol": "CLAWS_OF_CALLISTO",
+      "id": 27667
+    },
+    {
+      "symbol": "FANGS_OF_VENENATIS",
+      "id": 27670
+    },
+    {
+      "symbol": "VOIDWAKER_HILT",
+      "id": 27681
+    },
+    {
+      "symbol": "VOIDWAKER_BLADE",
+      "id": 27684
+    },
+    {
+      "symbol": "VOIDWAKER_GEM",
+      "id": 27687
+    },
+    {
+      "symbol": "RING_OF_THE_GODS",
+      "id": 12601
+    },
+    {
+      "symbol": "TYRANNICAL_RING",
+      "id": 12603
+    },
+    {
+      "symbol": "TREASONOUS_RING",
+      "id": 12605
+    },
+    {
+      "symbol": "SKULL_OF_VETION",
+      "id": 27673
+    }
+  ],
+  "npcs": [
+    {
+      "symbol": "CORPOREAL_BEAST",
+      "id": 319
+    },
+    {
+      "symbol": "PHOSANIS_NIGHTMARE",
+      "id": 377
+    },
+    {
+      "symbol": "KURASK",
+      "id": 410
+    },
+    {
+      "symbol": "KURASK_411",
+      "id": 411
+    },
+    {
+      "symbol": "ABYSSAL_DEMON",
+      "id": 415
+    },
+    {
+      "symbol": "ABYSSAL_DEMON_416",
+      "id": 416
+    },
+    {
+      "symbol": "TUROTH",
+      "id": 426
+    },
+    {
+      "symbol": "TUROTH_427",
+      "id": 427
+    },
+    {
+      "symbol": "TUROTH_428",
+      "id": 428
+    },
+    {
+      "symbol": "TUROTH_429",
+      "id": 429
+    },
+    {
+      "symbol": "TUROTH_430",
+      "id": 430
+    },
+    {
+      "symbol": "TUROTH_431",
+      "id": 431
+    },
+    {
+      "symbol": "TUROTH_432",
+      "id": 432
+    },
+    {
+      "symbol": "SKELETAL_WYVERN",
+      "id": 465
+    },
+    {
+      "symbol": "SKELETAL_WYVERN_466",
+      "id": 466
+    },
+    {
+      "symbol": "SKELETAL_WYVERN_467",
+      "id": 467
+    },
+    {
+      "symbol": "SKELETAL_WYVERN_468",
+      "id": 468
+    },
+    {
+      "symbol": "CAVE_HORROR",
+      "id": 1047
+    },
+    {
+      "symbol": "CAVE_HORROR_1048",
+      "id": 1048
+    },
+    {
+      "symbol": "CAVE_HORROR_1049",
+      "id": 1049
+    },
+    {
+      "symbol": "CAVE_HORROR_1050",
+      "id": 1050
+    },
+    {
+      "symbol": "CAVE_HORROR_1051",
+      "id": 1051
+    },
+    {
+      "symbol": "ZULRAH",
+      "id": 2042
+    },
+    {
+      "symbol": "ZULRAH_2043",
+      "id": 2043
+    },
+    {
+      "symbol": "ZULRAH_2044",
+      "id": 2044
+    },
+    {
+      "symbol": "UNDEAD_DRUID",
+      "id": 2145
+    },
+    {
+      "symbol": "COMMANDER_ZILYANA",
+      "id": 2205
+    },
+    {
+      "symbol": "GENERAL_GRAARDOR",
+      "id": 2215
+    },
+    {
+      "symbol": "KRIL_TSUTSAROTH",
+      "id": 3129
+    },
+    {
+      "symbol": "KREEARRA",
+      "id": 3162
+    },
+    {
+      "symbol": "DARK_BEAST",
+      "id": 4005
+    },
+    {
+      "symbol": "BRINE_RAT",
+      "id": 4501
+    },
+    {
+      "symbol": "KREEARRA_6492",
+      "id": 6492
+    },
+    {
+      "symbol": "COMMANDER_ZILYANA_6493",
+      "id": 6493
+    },
+    {
+      "symbol": "GENERAL_GRAARDOR_6494",
+      "id": 6494
+    },
+    {
+      "symbol": "KRIL_TSUTSAROTH_6495",
+      "id": 6495
+    },
+    {
+      "symbol": "KREEARRA_JR",
+      "id": 6631
+    },
+    {
+      "symbol": "GENERAL_GRAARDOR_JR",
+      "id": 6632
+    },
+    {
+      "symbol": "KRIL_TSUTSAROTH_JR",
+      "id": 6634
+    },
+    {
+      "symbol": "KREEARRA_JR_6643",
+      "id": 6643
+    },
+    {
+      "symbol": "GENERAL_GRAARDOR_JR_6644",
+      "id": 6644
+    },
+    {
+      "symbol": "KRIL_TSUTSAROTH_JR_6647",
+      "id": 6647
+    },
+    {
+      "symbol": "DEMONIC_GORILLA",
+      "id": 7144
+    },
+    {
+      "symbol": "DEMONIC_GORILLA_7145",
+      "id": 7145
+    },
+    {
+      "symbol": "DEMONIC_GORILLA_7146",
+      "id": 7146
+    },
+    {
+      "symbol": "DEMONIC_GORILLA_7147",
+      "id": 7147
+    },
+    {
+      "symbol": "DEMONIC_GORILLA_7148",
+      "id": 7148
+    },
+    {
+      "symbol": "DEMONIC_GORILLA_7149",
+      "id": 7149
+    },
+    {
+      "symbol": "DEMONIC_GORILLA_7152",
+      "id": 7152
+    },
+    {
+      "symbol": "ABYSSAL_DEMON_7241",
+      "id": 7241
+    },
+    {
+      "symbol": "DARK_BEAST_7250",
+      "id": 7250
+    },
+    {
+      "symbol": "SPITTING_WYVERN",
+      "id": 7794
+    },
+    {
+      "symbol": "VORKATH",
+      "id": 8026
+    },
+    {
+      "symbol": "RUNE_DRAGON",
+      "id": 8027
+    },
+    {
+      "symbol": "ADAMANT_DRAGON",
+      "id": 8030
+    },
+    {
+      "symbol": "RUNE_DRAGON_8031",
+      "id": 8031
+    },
+    {
+      "symbol": "VORKATH_8058",
+      "id": 8058
+    },
+    {
+      "symbol": "VORKATH_8059",
+      "id": 8059
+    },
+    {
+      "symbol": "VORKATH_8060",
+      "id": 8060
+    },
+    {
+      "symbol": "VORKATH_8061",
+      "id": 8061
+    },
+    {
+      "symbol": "ADAMANT_DRAGON_8090",
+      "id": 8090
+    },
+    {
+      "symbol": "RUNE_DRAGON_8091",
+      "id": 8091
+    },
+    {
+      "symbol": "PHOSANIS_NIGHTMARE_9416",
+      "id": 9416
+    },
+    {
+      "symbol": "PHOSANIS_NIGHTMARE_9417",
+      "id": 9417
+    },
+    {
+      "symbol": "PHOSANIS_NIGHTMARE_9418",
+      "id": 9418
+    },
+    {
+      "symbol": "PHOSANIS_NIGHTMARE_9419",
+      "id": 9419
+    },
+    {
+      "symbol": "PHOSANIS_NIGHTMARE_9420",
+      "id": 9420
+    },
+    {
+      "symbol": "PHOSANIS_NIGHTMARE_9421",
+      "id": 9421
+    },
+    {
+      "symbol": "PHOSANIS_NIGHTMARE_9422",
+      "id": 9422
+    },
+    {
+      "symbol": "PHOSANIS_NIGHTMARE_9423",
+      "id": 9423
+    },
+    {
+      "symbol": "PHOSANIS_NIGHTMARE_9424",
+      "id": 9424
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL",
+      "id": 9599
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_9600",
+      "id": 9600
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_9601",
+      "id": 9601
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_9602",
+      "id": 9602
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_9603",
+      "id": 9603
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_9604",
+      "id": 9604
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_9756",
+      "id": 9756
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_9757",
+      "id": 9757
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_9758",
+      "id": 9758
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_9759",
+      "id": 9759
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_9760",
+      "id": 9760
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_9761",
+      "id": 9761
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_9762",
+      "id": 9762
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_9763",
+      "id": 9763
+    },
+    {
+      "symbol": "PHOSANIS_NIGHTMARE_11153",
+      "id": 11153
+    },
+    {
+      "symbol": "PHOSANIS_NIGHTMARE_11154",
+      "id": 11154
+    },
+    {
+      "symbol": "PHOSANIS_NIGHTMARE_11155",
+      "id": 11155
+    },
+    {
+      "symbol": "ABYSSAL_DEMON_11239",
+      "id": 11239
+    },
+    {
+      "symbol": "VORKATH_11959",
+      "id": 11959
+    },
+    {
+      "symbol": "ARTIO",
+      "id": 11992
+    },
+    {
+      "symbol": "CALVARION",
+      "id": 11993
+    },
+    {
+      "symbol": "CALVARION_11994",
+      "id": 11994
+    },
+    {
+      "symbol": "CALVARION_11995",
+      "id": 11995
+    },
+    {
+      "symbol": "SPINDEL",
+      "id": 11998
+    },
+    {
+      "symbol": "KREEARRA_12443",
+      "id": 12443
+    },
+    {
+      "symbol": "GENERAL_GRAARDOR_12444",
+      "id": 12444
+    },
+    {
+      "symbol": "COMMANDER_ZILYANA_12445",
+      "id": 12445
+    },
+    {
+      "symbol": "KRIL_TSUTSAROTH_12446",
+      "id": 12446
+    },
+    {
+      "symbol": "SULPHUR_NAGUA",
+      "id": 12879
+    },
+    {
+      "symbol": "SULPHUR_NAGUA_13033",
+      "id": 13033
+    },
+    {
+      "symbol": "TORMENTED_DEMON",
+      "id": 13599
+    },
+    {
+      "symbol": "TORMENTED_DEMON_13600",
+      "id": 13600
+    },
+    {
+      "symbol": "TORMENTED_DEMON_13601",
+      "id": 13601
+    },
+    {
+      "symbol": "TORMENTED_DEMON_13602",
+      "id": 13602
+    },
+    {
+      "symbol": "TORMENTED_DEMON_13603",
+      "id": 13603
+    },
+    {
+      "symbol": "TORMENTED_DEMON_13604",
+      "id": 13604
+    },
+    {
+      "symbol": "TORMENTED_DEMON_13605",
+      "id": 13605
+    },
+    {
+      "symbol": "TORMENTED_DEMON_13606",
+      "id": 13606
+    },
+    {
+      "symbol": "KURASK_14172",
+      "id": 14172
+    },
+    {
+      "symbol": "KURASK_14173",
+      "id": 14173
+    },
+    {
+      "symbol": "ABYSSAL_DEMON_14174",
+      "id": 14174
+    },
+    {
+      "symbol": "ABYSSAL_DEMON_14175",
+      "id": 14175
+    },
+    {
+      "symbol": "KREEARRA_15697",
+      "id": 15697
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_15724",
+      "id": 15724
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_15726",
+      "id": 15726
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_16136",
+      "id": 16136
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_16137",
+      "id": 16137
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_16144",
+      "id": 16144
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_16145",
+      "id": 16145
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_16146",
+      "id": 16146
+    },
+    {
+      "symbol": "VYREWATCH_SENTINEL_16147",
+      "id": 16147
+    }
+  ]
+}

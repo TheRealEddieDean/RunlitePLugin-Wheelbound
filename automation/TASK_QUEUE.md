@@ -108,4 +108,6 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A60 | Quarantine weak monster labels and ancestry-only boss classifications in review index | P1 | A59 verified; supplied cache | S per batch | DONE (overlay; owning checkpoint) | research/CHALLENGE_TAXONOMY_A60 | Preserve raw records; explicit evidence/disposition, no enabled encounter keys |
 
-| WB-A61 | Author finite personal-rate Challenge contexts from corrected upload | P0 | A60 verified | M bounded catalog | IN_PROGRESS | catalogs/challenge_hunts_v1 | Specific meaningful items, normalized contexts and exclusion coverage; no production enablement |
+| WB-A61 | Author finite personal-rate Challenge contexts from corrected upload | P0 | A60 verified | M bounded catalog | DONE (source-reviewed design; owning checkpoint) | catalogs/challenge_hunts_v1 | Specific meaningful items, normalized contexts and exclusion coverage; no production enablement |
+
+| WB-A62 | Complete Challenge access/receipt/FP schedule and catalog delivery | P0 | A61 verified | M bounded packet | IN_PROGRESS | CHALLENGE_HUNT_TABLE; contracts/catalog | Every supported hunt has concrete access, completion evidence and frozen FP; validation, manifest, remote verification |

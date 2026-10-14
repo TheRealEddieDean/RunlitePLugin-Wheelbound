@@ -1,0 +1,1034 @@
+[
+  {
+    "creature_key": "brine-rat",
+    "name": "Brine rat",
+    "source_url": "https://oldschool.runescape.wiki/w/Brine_rat",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Brine_rat",
+      "fetched_at": "2026-10-14T15:35:43.849322+00:00",
+      "sha256": "8a0c36b5b837d52e387e6a2b89dfe0ed16fefe58cea187f3a4910aa8d6a6de56",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\b28abe9c0837d0657498eac3da8e0ef0da894adbdcd7793ae3a813549e4756d1.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Brine_rat",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 15:26:20 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "8a0c36b5b837d52e387e6a2b89dfe0ed16fefe58cea187f3a4910aa8d6a6de56",
+    "raw_html_sha256": "2bbbfe9943549fae7a64215ba068746f1b9a994a186ff1180d7dc295ba50ef66",
+    "reported_revision_ids": [
+      "15365755"
+    ],
+    "row_note_links": [
+      {
+        "text": "[ 1 ]",
+        "href": "#cite_note-Drop_Rates_V2-1"
+      }
+    ],
+    "referenced_notes": [
+      {
+        "id": "cite_note-Drop_Rates_V2-1",
+        "text": "^ Envision. \"Drop Rates V2.\" 14 July 2014. Old School RuneScape Forums."
+      }
+    ],
+    "access_and_rate_source_passages": [
+      "Brine rats are Slayer monsters that can be found in the Brine Rat Cavern near Rellekka . They are notable for being the only monsters to drop the brine sabre . A Slayer level of 47 is required to fight them.",
+      "They are only assigned to players who have completed Olaf's Quest . Additionally, they can be killed as an alternative for a rat Slayer task provided the player has the appropriate Slayer level to do so.",
+      "Killing a brine rat is a requirement for completing the medium task set in the Fremennik Diary .",
+      "Note: A spade is required to enter Brine Rat Cavern .",
+      "Drop rates are estimated based on 128,958 samples from the Drop Rate Project , unless otherwise cited."
+    ],
+    "reported_npc_ids": [
+      4501
+    ]
+  },
+  {
+    "creature_key": "turoth",
+    "name": "Turoth",
+    "source_url": "https://oldschool.runescape.wiki/w/Turoth",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Turoth",
+      "fetched_at": "2026-10-14T15:52:24.005692+00:00",
+      "sha256": "911dcf45436015c321ab7e8c48da1929cd5411dfab183973d4c1e26ac6b11e7b",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\a75613358c5f9075496129a885a11dafbaa56c4f66ed007f1068fafbf653cfc0.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Turoth",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 15:26:30 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "911dcf45436015c321ab7e8c48da1929cd5411dfab183973d4c1e26ac6b11e7b",
+    "raw_html_sha256": "544c76589ad24a7fe476e0c3a06da676eb712067cf3f5585b241881fc3ae3e3b",
+    "reported_revision_ids": [
+      "15352117"
+    ],
+    "row_note_links": [],
+    "referenced_notes": [],
+    "access_and_rate_source_passages": [
+      "Turoth are Slayer monsters that require a Slayer level of 55 to kill. They are melee based, and as such Protect from Melee will negate all of their damage. They drop herbs and seeds commonly, though not as frequently as aberrant spectres , as well as frequent nature runes . In addition, they also drop the leaf-bladed sword and necklace of fangs .",
+      "Turoth, like kurask , can only be damaged with leaf-bladed weapons , broad arrows and bolts , or the Magic dart spell due to their thick hides. [ 1 ] Turoth are immune to other types of attacks, thereby establishing hidden skill requirements to kill them (particularly for ironmen ). Though most of the means available for attacking them cannot inflict poison, it is still possible to inflict venom by using either a serpentine helm or a toxic staff of the dead with Magic Dart . This also means the dwarf multicannon is ineffective, and cannot be placed in this area.",
+      "Although turoth are invulnerable to any damage from the eldritch Nightmare staff , Saradomin godsword , and toxic blowpipe special attacks, they will still heal the player as if it would have dealt damage, making them useful as special attack weapons during extended trips. The ancient mace special attack also restores Prayer points equal to the damage that would have been dealt. Guthan's equipment's set effect does not work.",
+      "The majority of the Turoth in the Fremennik Slayer Dungeon are level 83 and 85, along with three level 87s, and one level 89.",
+      "Drop rates are estimated based on 1,788,457 samples from the Drop Rate Project , unless otherwise cited."
+    ],
+    "reported_npc_ids": [
+      430
+    ]
+  },
+  {
+    "creature_key": "cave-horror",
+    "name": "Cave horror",
+    "source_url": "https://oldschool.runescape.wiki/w/Cave_horror",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Cave_horror",
+      "fetched_at": "2026-10-14T15:16:57.162017+00:00",
+      "sha256": "d7a35e2ac79cffa853b44526c2211ed5724116e6ea28e395366de559d9981759",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\e2cb26da610d3e156e7a6f1a7b9584665595d7540fae949f9338a28462d6ff68.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Cave_horror",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 13:17:09 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "d7a35e2ac79cffa853b44526c2211ed5724116e6ea28e395366de559d9981759",
+    "raw_html_sha256": "bed813ef8b7146594898ded5f31ad5b1e20e0c8f584f6cb68321d687720e2a4e",
+    "reported_revision_ids": [
+      "15372165"
+    ],
+    "row_note_links": [],
+    "referenced_notes": [],
+    "access_and_rate_source_passages": [
+      "Cave horrors are Slayer monsters and a type of horror found in the Mos Le'Harmless Cave . Killing them requires the completion of Cabin Fever , level 58 Slayer , a witchwood icon or protect from melee, and a light source (unless a fire of eternal light is lit). They are most often killed for their black mask drops along with a decent rate of hard clue scrolls .",
+      "The cave horrors have a special attack which always deals damage equal to 10% of the player's base Hitpoints level, rounded down (for example 9 damage at 96 Hitpoints). This attack can be partially avoided by wearing a witchwood icon, OR completely nullified by having Protect from Melee activated. This special attack also has a strange effect of being an Area-of-Effect (AoE) attack in a single-way combat area, hitting any players standing next to the cave horror not already in combat with it.",
+      "Using protection prayers allows players to use more powerful necklaces instead of the witchwood icon, as it only provides minor bonuses. Another strategy is to use safespots , but players should take caution leaving their safespot to loot, as the aggressive cave horrors may attack you. For this reason, if you do not have access to Protect from Melee, it is still recommended to bring the witchwood icon, or grab the loot using Telekinetic Grab .",
+      "Cave horrors have a max wander range of 10 tiles and an attack range of 13 tiles.",
+      "Drop rates are estimated based on 332,479 samples from the Drop Rate Project , unless otherwise cited."
+    ],
+    "reported_npc_ids": [
+      1047
+    ]
+  },
+  {
+    "creature_key": "sulphur-nagua",
+    "name": "Sulphur Nagua",
+    "source_url": "https://oldschool.runescape.wiki/w/Sulphur_Nagua",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Sulphur_Nagua",
+      "fetched_at": "2026-10-14T16:04:20.065603+00:00",
+      "sha256": "038f68d6854c1eb9aff7d664600aebbbccb4baf0300e953f29cefc01323729b9",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\c8648c48e89c2bcef8d622c8d9795ab1adf82868c2c8c61161ad76f955d45f38.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Sulphur_Nagua",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 15:30:05 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "038f68d6854c1eb9aff7d664600aebbbccb4baf0300e953f29cefc01323729b9",
+    "raw_html_sha256": "36b3ece14f9cf9316a3e992d14df0d4f4e146c06d8c9214c740361c53152d8ec",
+    "reported_revision_ids": [
+      "15352431"
+    ],
+    "row_note_links": [],
+    "referenced_notes": [],
+    "access_and_rate_source_passages": [
+      "Sulphur nagua are slayer monsters that require level 48 Slayer to kill. They are found in the Ancient Prison within Neypotzli , accessed from the south-west entrance of the antechamber. Partial completion of Perilous Moons is required for access.",
+      "Their attacks are unique in that they hit twice per attack, rolling damage normally and splitting it in two hitsplats . After five attacks they will use a special attack in which they raise their weapon, and if the player remains within their melee range (including diagonal spaces) after three ticks, they will have 5 prayer points drained.",
+      "They are spectral creatures but not undead , meaning the Ectoplasmator will provide prayer experience for defeating them, but the Salve amulet and its variants will not affect them.",
+      "Sulphur nagua have -4 flat armour , so all successful hits will do an extra 4 damage to them. This incentivises using faster weapons or multi-hit weapons .",
+      "Drop rates are estimated based on 1,455,248 samples from the Drop Rate Project , unless otherwise cited."
+    ],
+    "reported_npc_ids": [
+      13033
+    ]
+  },
+  {
+    "creature_key": "kurask",
+    "name": "Kurask",
+    "source_url": "https://oldschool.runescape.wiki/w/Kurask",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Kurask",
+      "fetched_at": "2026-10-14T15:29:16.040868+00:00",
+      "sha256": "4c8d12fefd8f879659dbcc9ec483ad82c6b3e808a1692721e0867d6a53032c89",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\12879aaaf4c2fe8bae629f5b6bd01fa3e1ba91595d7cc2a8b7984c97362ff895.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Kurask",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 15:26:30 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "4c8d12fefd8f879659dbcc9ec483ad82c6b3e808a1692721e0867d6a53032c89",
+    "raw_html_sha256": "dd63b97102799bbfefd5c7075d218f1c319b548c1276f4b177c19893a9454ee5",
+    "reported_revision_ids": [
+      "15338306"
+    ],
+    "row_note_links": [
+      {
+        "text": "[ 3 ]",
+        "href": "#cite_note-3"
+      }
+    ],
+    "referenced_notes": [
+      {
+        "id": "cite_note-3",
+        "text": "^ Jagex. Mod Ash's Twitter account . 24 October 2016. Archived from the original on 15 May 2019. Mod Ash: \"1/1026.\""
+      }
+    ],
+    "access_and_rate_source_passages": [
+      "Kurask are Slayer monsters that require a Slayer level of 70 to kill. Like turoth , they can only be damaged with leaf-bladed weapons , broad ammunition , or the Magic Dart spell due to their tough hides; [ 1 ] they are immune to any other types of attacks. They are, however, susceptible to burn damage from weapons such as burning claws .",
+      "Kurask are relatively inaccurate, but they can hit somewhat high if their attacks manage to land. Additionally, they have fast health regeneration, healing one hitpoint every five game ticks . Due to their relative inaccuracy, they can be fought without protection prayers by using Bones to Peaches for healing, though players may wish to activate Protect from Melee if the superior version , the king kurask , spawns.",
+      "Although kurask are invulnerable to any damage from the special attacks of Saradomin godsword , ancient godsword , and toxic blowpipe , their healing effects will still activate as if damage had been dealt, making them useful as special attack weapons during extended trips. Likewise, the special attacks of ancient mace and eldritch Nightmare staff will restore prayer points based on what damage would have been dealt. The set effect of Guthan's equipment will not activate against kurask, however.",
+      "Kurask have a relatively small aggressive range of 2, with the centre at their south-west tile. As they are 3x3 monsters, they will only attack you from their north-east side if they walk under your true tile.",
+      "Drop rates are estimated based on 480,493 samples from the Drop Rate Project , unless otherwise cited."
+    ],
+    "reported_npc_ids": [
+      410
+    ]
+  },
+  {
+    "creature_key": "skeletal-wyvern",
+    "name": "Skeletal Wyvern",
+    "source_url": "https://oldschool.runescape.wiki/w/Skeletal_Wyvern",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Skeletal_Wyvern",
+      "fetched_at": "2026-10-14T15:52:08.072360+00:00",
+      "sha256": "215275d8f9e4228f6d5413b51fcd987f5346323d3b921d622e3b06537a0bf479",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\34ca8f10b15ec3118e541df71dbe8dd0e6f4cc4792ea357550b59f27379b6e34.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Skeletal_Wyvern",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 15:26:31 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "215275d8f9e4228f6d5413b51fcd987f5346323d3b921d622e3b06537a0bf479",
+    "raw_html_sha256": "f67e6a55f266e2902cdb737b2a932d702fce99006afd29219a7b0401433d61a9",
+    "reported_revision_ids": [
+      "15359558"
+    ],
+    "row_note_links": [
+      {
+        "text": "[ 6 ]",
+        "href": "#cite_note-Drop_Rates_V2-6"
+      }
+    ],
+    "referenced_notes": [
+      {
+        "id": "cite_note-Drop_Rates_V2-6",
+        "text": "^ 6.0 6.1 6.2 Envision. \"Drop Rates V2.\" Old School RuneScape Forums."
+      }
+    ],
+    "access_and_rate_source_passages": [
+      "Skeletal wyverns are Slayer monsters that require a Slayer level of 72 in order to be harmed. They are found at the end of the Asgarnian Ice Dungeon . There is a shortcut at the ladder to the Ice Dungeon leading to the skeletal wyverns requiring level 82 Agility (or level 77 Agility with a Summer pie ). Like other wyverns , they require an elemental shield , mind shield , dragonfire shield , dragonfire ward , or ancient wyvern shield to reduce damage from their icy breath ; however, it is not required to be slain. They are also the only monster that drop granite legs .",
+      "Although Tarn in his diary writes that he believes skeletal wyverns are undead , they are actually magically animated remains, [ 1 ] different from actual undead creatures. This means that the Salve amulet and its enchanted versions do not work against them. They originate from Fossil Island , having escaped the island via magic. [ 2 ] Additionally, their bones radiate a very weak magical aura, and stay colder than room temperature. [ 3 ]",
+      "Skeletal wyverns are assigned by the Slayer masters Chaeldar , Konar , Nieve , and Duradel/Kuradal . Because an elemental shield or better is required to defend against their icy breath, they will only assign them if the player has completed the Elemental Workshop I quest . [ 4 ]",
+      "Unlike the wyverns that reside within Fossil Island , skeletal wyverns do not drop the wyvern visage ; rather, they drop the draconic visage . Killing a wyvern is also a requirement for the Hard Falador Diary .",
+      "Drop rates are estimated based on 228,591 samples from the Drop Rate Project , unless otherwise cited."
+    ],
+    "reported_npc_ids": [
+      468
+    ]
+  },
+  {
+    "creature_key": "abyssal-demon",
+    "name": "Abyssal demon",
+    "source_url": "https://oldschool.runescape.wiki/w/Abyssal_demon",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Abyssal_demon",
+      "fetched_at": "2026-10-14T15:03:00.461032+00:00",
+      "sha256": "87d9301da2d0658e84ba09c98a446cd63c099527bb3cb9f967e2c0d9f5ecd938",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\f40b18ac0fee0aebab3bddbe202d6ca12843a1664447508a4995cc39cb207758.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Abyssal_demon",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 13:16:54 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "87d9301da2d0658e84ba09c98a446cd63c099527bb3cb9f967e2c0d9f5ecd938",
+    "raw_html_sha256": "9fc4062ed46c1626acac14a1a023df2281bddabcb0ed2aab44f2ffa67eef9565",
+    "reported_revision_ids": [
+      "15357583"
+    ],
+    "row_note_links": [
+      {
+        "text": "[ 3 ]",
+        "href": "#cite_note-drop-3"
+      },
+      {
+        "text": "[ 3 ]",
+        "href": "#cite_note-drop-3"
+      }
+    ],
+    "referenced_notes": [
+      {
+        "id": "cite_note-drop-3",
+        "text": "^ 3.0 3.1 3.2 3.3 3.4 3.5 3.6 3.7 Envision. \"Drop Rates V2.\" 9 July 2014. Old School RuneScape Forums."
+      }
+    ],
+    "access_and_rate_source_passages": [
+      "Abyssal demons are one of the strongest types of demons , requiring level 85 Slayer to be damaged. Alongside their boss variant , they are the only creatures in the game to drop the abyssal whip and abyssal dagger . They have relatively high accuracy but their max hit of 8 is low for their combat level.",
+      "In combat, abyssal demons are capable of teleporting either themselves or the player around, meaning that safespotting is not viable. When landing a successful hit on an abyssal demon, it has a 1/6 chance to teleport away, followed by a 1/3 chance to teleport the player away in case the first roll fails. [ 1 ] Abyssal demons can teleport players up to 20 tiles away. [ 2 ] When teleported, you will stop attacking the demon. Having Auto Retaliate turned on can help make sure you fight back. The forced teleport on the player can be avoided by reading a Teleport anchoring scroll .",
+      "Killing an abyssal demon in the Slayer Tower is a requirement for the Morytania elite diary .",
+      "Being a demon , this creature is affected by demonbane weapons .",
+      "Drop rates are estimated based on 1,142,066 samples from the Drop Rate Project , unless otherwise cited.",
+      "The following drops are only accessible while killing the Catacombs of Kourend variants.",
+      "Drop rates are estimated based on 1,180,000 samples from the Drop Rate Project , unless otherwise cited.",
+      "The following drops are only accessible while on a Slayer task given by Krystilia ."
+    ],
+    "reported_npc_ids": [
+      415,
+      416
+    ]
+  },
+  {
+    "creature_key": "dark-beast",
+    "name": "Dark beast",
+    "source_url": "https://oldschool.runescape.wiki/w/Dark_beast",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Dark_beast",
+      "fetched_at": "2026-10-14T15:25:09.973664+00:00",
+      "sha256": "0f7ce63e4c71632b4226609b6612bc1b5f3d077dcbea79d39ba18df0bfbc032f",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\2157b6080b669e84ed5ba42fa7418d1c688de92392b5e82e0855dcff8d464689.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Dark_beast",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 13:17:04 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "0f7ce63e4c71632b4226609b6612bc1b5f3d077dcbea79d39ba18df0bfbc032f",
+    "raw_html_sha256": "a48f87ecc842bdb11e3148ecc8cfa65a1d22b62fd28fb6860e887d3b82b160d6",
+    "reported_revision_ids": [
+      "15350345"
+    ],
+    "row_note_links": [],
+    "referenced_notes": [],
+    "access_and_rate_source_passages": [
+      "Dark beasts are monsters that require level 90 Slayer to kill. They are found in the Mourner Tunnels under West Ardougne and in Iorwerth Dungeon in Prifddinas . Along with their superior variant , they are the only monster in the game to drop the dark bow and the death talisman .",
+      "Dark beasts attack with both Melee and Magic . However, they will only use Magic as their first attack if they are attacked by the player first, or if they cannot attack the player with Melee. Dark beasts do not follow tolerance rules and are always aggressive to the player regardless of how long they have stayed in their presence. Given their highly accurate melee attacks, Protect from Melee is recommended while killing dark beasts.",
+      "In addition to level 90 Slayer, a combat level of 90 is required to have them assigned to the player as a Slayer task , unless the player has spoken to a Slayer Master about the difficulty of assignments. The player also needs to have started Mourning's End Part II , however no progression is required; players who do not wish to be assigned them should not continue the dialogue after completing Mourning's End Part I .",
+      "By default, Slayer Masters aside from Mortimer will only assign 10-20 dark beasts for a Slayer task. However, the player can spend 100 Slayer reward points on Need more darkness to extend the amount assigned to 110-135.",
+      "Drop rates are estimated based on 9,871,861 samples from the Drop Rate Project , unless otherwise cited."
+    ],
+    "reported_npc_ids": [
+      4005,
+      7250
+    ]
+  },
+  {
+    "creature_key": "spitting-wyvern",
+    "name": "Spitting Wyvern",
+    "source_url": "https://oldschool.runescape.wiki/w/Spitting_Wyvern",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Spitting_Wyvern",
+      "fetched_at": "2026-10-14T15:53:40.109289+00:00",
+      "sha256": "1a47b558fe9a2536fb1033ecda79fa07e8379572136721a3275749302d263457",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\195741a6a01e635ac72f3dfec812bc522179b44e046dd84c3013caaf015fde7e.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Spitting_Wyvern",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 15:28:24 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "1a47b558fe9a2536fb1033ecda79fa07e8379572136721a3275749302d263457",
+    "raw_html_sha256": "9a6c6ffc7f5e5c0d9681e4f3d71e9e83464a8870231e565e9fd4272b6da4b033",
+    "reported_revision_ids": [
+      "15366068"
+    ],
+    "row_note_links": [
+      {
+        "text": "[ 1 ]",
+        "href": "#cite_note-wyvern_uniques2-1"
+      }
+    ],
+    "referenced_notes": [
+      {
+        "id": "cite_note-wyvern_uniques2-1",
+        "text": "^ 1.0 1.1 Jagex. Mod Maz's Twitter account . 24 October 2017. Archived from the original on 25 March 2019. Mod Maz: \"Fossil Island info! Granite LS/boots drop rates. From ancient: 1/600 each From normal: LS 1/512 Boots 1/2560\""
+      }
+    ],
+    "access_and_rate_source_passages": [
+      "Spitting wyverns are Slayer monsters that require a Slayer level of 66 in order to be harmed. They reside in the Wyvern Cave on Fossil Island and are the weakest of the Fossil Island wyverns . Like with other Wyverns , an elemental , mind , dragonfire ward , dragonfire , or ancient wyvern shield (not including Anti-dragon Shield ) provides significant protection against their icy breath . These monsters require completion of the Bone Voyage quest to be assigned as a Slayer task. Additionally, players can benefit from using dragonbane weapons to deal additional damage per second.",
+      "Unlike their skeletal variant, spitting wyverns can use their icy breath from any distance. They will use Ranged when attacking from a distance, and will not try to use melee unless the target is in melee range. Their Ranged attack is weak; however, it may hit the player multiple times if it is a successful hit .",
+      "The task-only cave entrance is a trapdoor in the Mushroom Forest and the regular cave entrance is south of the Museum Camp . When a player attempts to attack wyverns in the Slayer task area without a Fossil Island wyvern Slayer task , Weve ( Steve 's son) will stop them from doing so.",
+      "Drop rates are estimated based on 95,043 samples from the Drop Rate Project , unless otherwise cited."
+    ],
+    "reported_npc_ids": [
+      7794
+    ]
+  },
+  {
+    "creature_key": "adamant-dragon",
+    "name": "Adamant dragon",
+    "source_url": "https://oldschool.runescape.wiki/w/Adamant_dragon",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Adamant_dragon",
+      "fetched_at": "2026-10-14T15:03:20.450602+00:00",
+      "sha256": "72005fe709a7da92b5ff36f80b5f082f0a3af8cad0458cebc090c59a407c817e",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\38148b32839ef6ef9ca92b5cab5efc41838e9aed3cd67ffaa78762551e70ce7f.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Adamant_dragon",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 13:20:19 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "72005fe709a7da92b5ff36f80b5f082f0a3af8cad0458cebc090c59a407c817e",
+    "raw_html_sha256": "b826e45afb5ead859bfc1167a0ec326403565a3f5ef52131a49a0a889e01d5b2",
+    "reported_revision_ids": [
+      "15339940"
+    ],
+    "row_note_links": [],
+    "referenced_notes": [],
+    "access_and_rate_source_passages": [
+      "Adamant dragons are metal dragons first encountered during Dragon Slayer II , in which the player must fight against one during Zorgoth 's assault. After completion of the quest, they can be found in the western chamber of the Lithkren Vault .",
+      "To get back to the laboratory underneath Lithkren , players can travel using the rowboat from the quest or, after completion, taking a digsite pendant and using it on the strange machine north of the rune dragon room, adding a teleport straight to Lithkren on it.",
+      "Adamant dragons are the result of a side project of Zorgoth 's after being inspired by another dragonkin , Forcae , which involves infusing dragon eggs with various metals. While Forcae's metal dragons were created to find a solution to the dragonkin's infertility, Zorgoth had bred his metal dragons for his war against humanity .",
+      "Adamant dragons have multiple attacks, similar to mithril and rune dragons . Along with long-range dragonfire attacks, they have a standard melee , ranged and magic attack (which resembles Earth Wave ), as well as two unique attacks of their own."
+    ],
+    "reported_npc_ids": [
+      8030,
+      8090
+    ]
+  },
+  {
+    "creature_key": "rune-dragon",
+    "name": "Rune dragon",
+    "source_url": "https://oldschool.runescape.wiki/w/Rune_dragon",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Rune_dragon",
+      "fetched_at": "2026-10-14T15:52:03.994972+00:00",
+      "sha256": "2824a2d795621dd271ebcbe4c07bc9a9b0edfac258ef2074e8b3012902f73d51",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\570e6b9e62e70bf02e1828b49ffa469de922a9f3cb5e745e1e5e3c5b1bca9ff7.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Rune_dragon",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 15:28:14 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "2824a2d795621dd271ebcbe4c07bc9a9b0edfac258ef2074e8b3012902f73d51",
+    "raw_html_sha256": "529b5ac75d5a680a74cd78e75433bb7f8578293d7d53a57b1235d47409f369be",
+    "reported_revision_ids": [
+      "15364710"
+    ],
+    "row_note_links": [],
+    "referenced_notes": [],
+    "access_and_rate_source_passages": [
+      "Rune dragons are metal dragons first encountered during Dragon Slayer II , in which the player must fight one during Zorgoth 's assault. After completion of the quest , they can be found in the eastern chamber of the Lithkren Vault .",
+      "To get back to the laboratory underneath Lithkren , players can travel using the rowboat from the quest on the west side of Fossil Island or, after completion, taking a digsite pendant and using it on the strange machine north of the rune dragon room, adding a teleport straight to Lithkren on it.",
+      "Rune dragons are the result of a side project of Zorgoth's after being inspired by another dragonkin , Forcae , which involves infusing dragon eggs with various metals. While Forcae's metal dragons were created to find a solution to the dragonkin's infertility, Zorgoth had bred his metal dragons for his war against humanity .",
+      "At 99 Construction , players can add them to their player-owned house treasure rooms for 25,000,000 coins."
+    ],
+    "reported_npc_ids": [
+      8031,
+      8091
+    ]
+  },
+  {
+    "creature_key": "demonic-gorilla",
+    "name": "Demonic gorilla",
+    "source_url": "https://oldschool.runescape.wiki/w/Demonic_gorilla",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Demonic_gorilla",
+      "fetched_at": "2026-10-14T15:28:26.159807+00:00",
+      "sha256": "68ea258e438fb1b1df1c0ed67abdfde4caa4f650e68598c4a0bee0ca0cc8c546",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\a7997d6e79e247bcf86c4ec952406c1507bf28b0f8755febc0f0d753a8492d47.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Demonic_gorilla",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 15:28:10 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "68ea258e438fb1b1df1c0ed67abdfde4caa4f650e68598c4a0bee0ca0cc8c546",
+    "raw_html_sha256": "3030b1c5ec0eff06c13a6fca2f06aa423730026e7398eee66230f1add7832997",
+    "reported_revision_ids": [
+      "15362958"
+    ],
+    "row_note_links": [],
+    "referenced_notes": [],
+    "access_and_rate_source_passages": [
+      "Demonic gorillas are powerful creatures found in the Crash Site Cavern . Two of them are fought during Monkey Madness II , in the penultimate stage of the fight. After the quest is completed, more demonic gorillas can be found in the caverns alongside their tortured brethren. They are primarily killed for their zenyte shard and ballista component drops.",
+      "Demonic gorillas count as monkeys and black demons for the progression of Slayer tasks . As they are demons, they are susceptible to the effects of demonbane weapons , excluding holy water . Demonic gorillas cannot be damaged with a Dwarf multicannon .",
+      "Players can check their kill count by reading Nieve's gravestone next to Lumo at the opening in the fence.",
+      "Demonic gorillas use all three combat styles to attack, and will change combat styles after missing three hits in that attack style. They are also capable of using protection prayers , and will switch to the player's last used combat style against them when they have been dealt damage at least four times, and been dealt 70 or more damage. Therefore, players must bring at least two different combat styles to kill them. Though they have a 35% elemental weakness to water spells , they are most often killed with melee and ranged.",
+      "Drop rates are estimated based on 14,768,867 samples from the Drop Rate Project , unless otherwise cited."
+    ],
+    "reported_npc_ids": [
+      7144,
+      7145,
+      7146
+    ]
+  },
+  {
+    "creature_key": "vyrewatch-sentinel",
+    "name": "Vyrewatch Sentinel",
+    "source_url": "https://oldschool.runescape.wiki/w/Vyrewatch_Sentinel",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Vyrewatch_Sentinel",
+      "fetched_at": "2026-10-14T15:37:15.814990+00:00",
+      "sha256": "e8ce22bb223ad47390f432189ea25e0acb6fc097ca14fef7db8dfddb0ec9f568",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\4d34299be0b386a4b7694f5d0a55b41ff3d5b686db25db0e5d20b33ffcf2e7b4.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Vyrewatch_Sentinel",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 15:28:57 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "e8ce22bb223ad47390f432189ea25e0acb6fc097ca14fef7db8dfddb0ec9f568",
+    "raw_html_sha256": "e944ea1c00ce0517235f03227078b4f443b782841054c33e3aad55e5900a0ca6",
+    "reported_revision_ids": [
+      "15367082"
+    ],
+    "row_note_links": [
+      {
+        "text": "[ 1 ]",
+        "href": "#cite_note-1"
+      }
+    ],
+    "referenced_notes": [
+      {
+        "id": "cite_note-1",
+        "text": "^ Jagex. Mod Husky's Twitter account . 26 February 2021. Archived from the original on 26 February 2021. Mod Husky: \"The rates for the blood shard are 1/5k from pickpocketing and 1/1.5k from killing Vyres which I believe is what the wiki already have, seems the crowd sourcing for droprates got it spot on!\""
+      }
+    ],
+    "access_and_rate_source_passages": [
+      "Vyrewatch Sentinels are stronger variants of the Vyrewatch , and can be fought after completing the Sins of the Father quest. They can be found prowling the streets of the upper class areas of Darkmeyer , in search of unruly humans to snack on. The Vyrewatch Sentinels are one of the only monsters that drop the blood shard (the other being venators ), although they can also be obtained via pickpocketing the various Vyre citizens throughout the city.",
+      "As with all members of the Vyrewatch, they can only be harmed with the Sunspear, Hallowed flail , Blisterwood sickle , Ivandis flail , Blisterwood flail , or Blisterwood stakes . Despite being invulnerable to any damage from weapons like the Saradomin godsword and ancient mace , special attacks will still heal & restore prayer points as if they had dealt damage. The burning claws and Arkan blade special attacks can also apply burn in a similar fashion.",
+      "The ability to be assigned vampyres can be purchased for 80 Slayer reward points . Once unlocked, they can be disabled, but players must spend another 80 points to unlock them again.",
+      "They can also be killed off task as a low-effort money maker because they can be killed next to an altar and bank.",
+      "Drop rates are estimated based on 270,428 samples from the Drop Rate Project , unless otherwise cited."
+    ],
+    "reported_npc_ids": [
+      9756
+    ]
+  },
+  {
+    "creature_key": "tormented-demon",
+    "name": "Tormented Demon",
+    "source_url": "https://oldschool.runescape.wiki/w/Tormented_Demon",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Tormented_Demon",
+      "fetched_at": "2026-10-14T15:19:10.199481+00:00",
+      "sha256": "0a560972f29329247dd47b83569c7032d5b618e688e8ac58eac3ad3e7338e4aa",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\7eff84c3874de88fcd0702c35c343d73b0fd74be8fb86b94dfb50d19877921c1.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Tormented_Demon",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 13:19:17 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "0a560972f29329247dd47b83569c7032d5b618e688e8ac58eac3ad3e7338e4aa",
+    "raw_html_sha256": "0b467b4a2b17e614466054ec08a6664d2d29a65a52eff2b8c5d19f25557661f5",
+    "reported_revision_ids": [
+      "15337983"
+    ],
+    "row_note_links": [],
+    "referenced_notes": [],
+    "access_and_rate_source_passages": [
+      "Tormented Demons are extremely powerful demons bound into a state of perpetual agony, healing their bodies as they burn, summoned by the Mahjarrat Lucien after he teleports away the Stone of Jas during While Guthix Sleeps . They can be found throughout the Ancient Guthixian Temple after completion of the quest.",
+      "Tormented demons count as greater demons for the progression of Slayer tasks . As demons, they are susceptible to the effects of demonbane weapons .",
+      "They are primarily killed for their tormented synapses , which are used to create high-tier demonbane weapons, as well as their burning claw drop, two of which are combined into the burning claws , a special attack weapon that sits in between the dragon dagger and dragon claws in terms of power, but are more effective against demons (such as tormented demons).",
+      "Although the entire Ancient Guthixian Temple is considered a single-way combat zone by the game, the temple is a unique outlier in the fact that some areas are pseudo- multicombat areas . While in the temple, an icon that depicts a tormented demon's head (shown below) can be seen in the user interface, indicating the number of demons the player can engage at one time. Other players will be unable to attack a demon that is engaged in combat with another player until that player leaves by any means.",
+      "Drop rates are estimated based on 110,286 samples from the Drop Rate Project , unless otherwise cited."
+    ],
+    "reported_npc_ids": [
+      13599
+    ]
+  },
+  {
+    "creature_key": "general-graardor",
+    "name": "General Graardor",
+    "source_url": "https://oldschool.runescape.wiki/w/General_Graardor",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/General_Graardor",
+      "fetched_at": "2026-10-14T15:12:39.088304+00:00",
+      "sha256": "15f1736acb3b50f0e38abe6914cce7cdfff30276d8e2a6f6cdb97ab72a1df245",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\17f748ce4933538e3c92aedf31477e0ac5451d6f4619931ccffc2664fe3136f8.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/General_Graardor",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 13:18:14 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "15f1736acb3b50f0e38abe6914cce7cdfff30276d8e2a6f6cdb97ab72a1df245",
+    "raw_html_sha256": "b32495f59f51693755735c49487d86a4da1103c65e178344fb28ed87c35d45b6",
+    "reported_revision_ids": [
+      "15337045"
+    ],
+    "row_note_links": [],
+    "referenced_notes": [],
+    "access_and_rate_source_passages": [
+      "General Graardor is the leader of Bandos ' forces within the God Wars Dungeon . He is the only known living member of the Ourg race.",
+      "He is found in Bandos' Stronghold , which requires a Strength level of 70 and a hammer to access. To enter his quarters, players must have an ecumenical key in their inventory or have killed 40 [ 1 ] of Bandos' followers throughout the dungeon, with goblins being the easiest of the followers to kill.",
+      "Like other God Wars Dungeon bosses, Graardor roams around a rectangular room with his bodyguards until a player enters, attacking them on sight. He attacks primarily with melee (2/3 chance [ 2 ] ), and his bodyguards use a different combat style each. Graardor may also use a ranged attack (1/3 chance [ 2 ] ) where he slams the ground, hitting all players in the room which has an equal chance to hit between 15-35 upon successfully hitting the player. [ 3 ] Despite it being a Ranged attack, Graardor can only use it if he is within melee range of his current target. If there are no players in his chamber, his health and stats will be reset.",
+      "The following money making guide is available for General Graardor:",
+      "Drop rates are estimated based on 57,107 samples from the Drop Rate Project , unless otherwise cited."
+    ],
+    "reported_npc_ids": [
+      2215
+    ]
+  },
+  {
+    "creature_key": "kree-arra",
+    "name": "Kree'arra",
+    "source_url": "https://oldschool.runescape.wiki/w/Kree%27arra",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Kree%27arra",
+      "fetched_at": "2026-10-14T15:13:31.148810+00:00",
+      "sha256": "a97e2f63d6a6bca2359d1f563371cf6c0eb7411da385cecc0a36b070659fa3ee",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\bf79b2b998d00410625087cec66b5d542a7ba2b833c2f736321f878ad7b84e4d.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Kree%27arra",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 13:18:14 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "a97e2f63d6a6bca2359d1f563371cf6c0eb7411da385cecc0a36b070659fa3ee",
+    "raw_html_sha256": "aa469c850d48bfd23f6e9f1284ddaf8674ba62cba094bc37b513b3e78030b87b",
+    "reported_revision_ids": [
+      "15337073"
+    ],
+    "row_note_links": [],
+    "referenced_notes": [],
+    "access_and_rate_source_passages": [
+      "Kree'arra is one of Armadyl 's most trusted generals. He is the most powerful of the surviving aviansie , and leader to the forces of Armadyl's Eyrie in the God Wars Dungeon .",
+      "In order to reach the encampment, players must first wield any crossbow along with a mithril grapple . A Ranged level of at least 70 is then required to navigate the chasm. To enter the boss room, players must use an ecumenical key , or have slain 40 [ 1 ] followers of Armadyl, with aviansie and their spiritual variants being his only followers within the dungeon.",
+      "Kree'arra can be seen yelling several battle cries in his chamber. However, unlike the other generals, his taunts are non-verbal.",
+      "Like other God Wars Dungeon bosses , Kree'arra roams around a rectangular room with his bodyguards until a player enters, attacking them on sight. He attacks primarily with Ranged , and his bodyguards use a different combat style each. However, if no one is targeting Kree'arra, he will fly up to players to use Melee attacks as well. If all players leave, his health and stats will be reset.",
+      "Drop rates are estimated based on 29,637 samples from the Drop Rate Project , unless otherwise cited."
+    ],
+    "reported_npc_ids": [
+      3162
+    ]
+  },
+  {
+    "creature_key": "commander-zilyana",
+    "name": "Commander Zilyana",
+    "source_url": "https://oldschool.runescape.wiki/w/Commander_Zilyana",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Commander_Zilyana",
+      "fetched_at": "2026-10-14T15:11:29.101049+00:00",
+      "sha256": "81035d9a1cf73f7afa71ba5928ee738174045d162bb1cfb2848622cc56e9c0a9",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\39d5827338e927efcceca31a9efc2005e6f4a1b5284d54d5fec130121349e769.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Commander_Zilyana",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 13:18:14 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "81035d9a1cf73f7afa71ba5928ee738174045d162bb1cfb2848622cc56e9c0a9",
+    "raw_html_sha256": "a389e52f443fa608dad248403110288ada578a25877ec6b3ed544f09b0dffa0e",
+    "reported_revision_ids": [
+      "15337016"
+    ],
+    "row_note_links": [
+      {
+        "text": "[ 3 ]",
+        "href": "#cite_note-sara-4"
+      },
+      {
+        "text": "[ 3 ]",
+        "href": "#cite_note-sara-4"
+      }
+    ],
+    "referenced_notes": [
+      {
+        "id": "cite_note-sara-4",
+        "text": "^ 3.0 3.1 3.2 3.3 Jagex. Mod Kieren's Twitter account . 23 August 2017. Archived from the original on 26 March 2019. Mod Kieren: \"Here are some numbers! Hilt=1/508, Light=1/254, Sword=1/127, ACB=1/508\""
+      }
+    ],
+    "access_and_rate_source_passages": [
+      "Commander Zilyana is the appointed leader of Saradomin 's forces in the God Wars Dungeon and one of only three known still living representatives of the Icyene race, one being the half-human half-Icyene Safalaan and the other being a full-blooded Icyene encountered during the quest The Blood Moon Rises .",
+      "To gain access to her chamber within the Saradomin Encampment , players must use an ecumenical key or have killed 40 [ 1 ] of Saradomin's followers throughout the dungeon. Furthermore, in addition to an Agility level of 70 (cannot be boosted) , players must bring two ropes on their first visit in order to navigate obstacles in the encampment. Note, if this is your first time entering the God Wars Dungeon, you will need a total of three ropes.",
+      "Like other God Wars Dungeon bosses, Zilyana roams around a rectangular room with her bodyguards until a player enters, attacking them on sight. While she has a significantly lower max hit than the other generals, she makes up for it with extremely fast and accurate attacks, and her bodyguards use a different combat style each. She will only use her magic attacks at melee distance, which has a minimum hit of 10 should it successfully hit the player [ 2 ] . If all players leave, her health and stats will be reset.",
+      "The following money making guide is available for Commander Zilyana:",
+      "Drop rates are estimated based on 23,068 samples from the Drop Rate Project , unless otherwise cited."
+    ],
+    "reported_npc_ids": [
+      2205
+    ]
+  },
+  {
+    "creature_key": "kril-tsutsaroth",
+    "name": "K'ril Tsutsaroth",
+    "source_url": "https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth",
+      "fetched_at": "2026-10-14T15:13:13.131334+00:00",
+      "sha256": "a4a7383d81bbf1ac3483c91beead83995958c9cae283c4bc46e8f58ad0996dec",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\befe6c5159efe24b605b4d923b3b7625ef6d74e6473f136af8b4549bb980dc70.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 13:18:12 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "a4a7383d81bbf1ac3483c91beead83995958c9cae283c4bc46e8f58ad0996dec",
+    "raw_html_sha256": "592cc42f87bdcc7fba4e822ba7544cf9d0bda25205b243ac79da84f61b677d21",
+    "reported_revision_ids": [
+      "15357597"
+    ],
+    "row_note_links": [
+      {
+        "text": "[ 8 ]",
+        "href": "#cite_note-sotd-9"
+      },
+      {
+        "text": "[ 8 ]",
+        "href": "#cite_note-sotd-9"
+      }
+    ],
+    "referenced_notes": [
+      {
+        "id": "cite_note-sotd-9",
+        "text": "^ 8.0 8.1 Jagex. Mod Ash's Twitter account . 17 March 2016. Archived from the original on 29 March 2019. Mod Ash: \"[does that mean SOTD/all other hilts are also 1/508?] Yeah, we kept them consistent.\""
+      }
+    ],
+    "access_and_rate_source_passages": [
+      "K'ril Tsutsaroth (pronounced / ˌ k r ɪ l ˈ t ʌ d z iː r ɒ θ / KRILL TUTT -zee-roth [ 1 ] ) is the leader of Zamorak 's forces in the God Wars Dungeon .",
+      "He is located in Zamorak's Fortress , which requires 70 Hitpoints to cross the river to access. To gain access to his chamber, players must use an ecumenical key or have slain 40 [ 2 ] Zamorakians throughout the dungeon.",
+      "He is typically killed on a Slayer task - K'ril Tsutsaroth is classified as a greater demon , and thus killing him counts towards any greater demon Slayer task and allows a player to take advantage of the damage boosting effects of a Black mask or Slayer helmet . As a demon, he is also susceptible to demonbane weapons and spells .",
+      "Like other God Wars Dungeon bosses, K'ril roams around a rectangular room with his bodyguards until a player enters, attacking them on sight. He attacks with melee and magic, and if his target is praying Protect from Melee , he can use a devastating melee special attack that hits through prayer. The melee attack has a maximum hit of 46, the magic attack hits from 10-30 [ 3 ] and the special attack hits from 35-49 [ 4 ] , as well as draining half of the player's current prayer points, rounded down. The relative occurrences of the attacks are 2/3 for melee and 1/3 for magic. Barring a complex mechanic, K'ril will use his special on 1 in every 9 hits instead of a melee attack, which gives it an incidence of 2/27 in total. [ 5 ] If all players leave, his health and stats will be reset.",
+      "Drop rates are estimated based on 15,111 samples from the Drop Rate Project , unless otherwise cited."
+    ],
+    "reported_npc_ids": [
+      3129
+    ]
+  },
+  {
+    "creature_key": "zulrah",
+    "name": "Zulrah",
+    "source_url": "https://oldschool.runescape.wiki/w/Zulrah",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Zulrah",
+      "fetched_at": "2026-10-14T15:16:01.123548+00:00",
+      "sha256": "d8cd31104afb482ccd87560d520bca57f7c89d2fc1ef48f8431648bef4ca1762",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\280a9300f03c47ae972cd744aefb16f732da61334c86451cbc6f99ef6dd3cd4f.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Zulrah",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 13:19:24 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "d8cd31104afb482ccd87560d520bca57f7c89d2fc1ef48f8431648bef4ca1762",
+    "raw_html_sha256": "623effbad4ea71e9b867ad2852539d2d389da53ebb400c7d559ae75e3381559d",
+    "reported_revision_ids": [
+      "15366227"
+    ],
+    "row_note_links": [],
+    "referenced_notes": [],
+    "access_and_rate_source_passages": [
+      "Zulrah is a level 725 solo-only snake boss . Before the player can fight Zulrah, players must have completed Regicide to the point of reaching Port Tyras , as well as having spoken with High Priestess Zul-Harcinqa to offer themselves as the sacrifice in place of the gnome child , as Zul-Gwenwynig will prevent the player from boarding the boat until Zul-Harcinqa allows them to be the sacrifice.",
+      "Killing Zulrah is a required task for the hard Western Provinces Achievement Diary , which in turn is a requirement for upgrading to the Elite Void set.",
+      "Zulrah was created as an experiment by an unnamed dragonkin living in the Poison Waste . Originally seen as one of many failures, Zulrah was discarded into the swamp, where it grew into an unexpectedly powerful and intelligent serpent. It was found once again by its dragonkin creator, who named it \"Zulrah\" before eventually being eaten by their own creation. [ 1 ]",
+      "Sometime during the Fifth Age , Harcinqa , her mother, and her brother Rentos visited the Poison Waste. On 5th Bennath, a group of men, Ohn , Mortarium , Onan , and several others, attempted to escape the elven clans by running south to the Poison Waste. With no food to eat, they attempted to fish for eels in the swamp, to no avail. With no luck on catching food, they decide to camp out with the gnomes.",
+      "In addition to the 100% drops, the player will also have two rolls on Zulrah's drop table, excluding tertiary items, which have only one roll. The displayed drop chances represent a single roll.",
+      "Drop rates are estimated based on 223,726 samples from the Drop Rate Project , unless otherwise cited.",
+      "There is a 1/128 chance of hitting the unique drop table per kill. [ 4 ] Zulrah gives two rolls per kill, meaning there's approximately a 1/512 chance per kill to receive a specific item from this table (or ~1/128 for any item). Below lists the approximate drop rates per roll of any specific item, which takes into account the fact that there are 4 different items in this drop table. Although uncut onyx appears on the unique drop table and in the collection log, it is not exclusive to Zulrah."
+    ],
+    "reported_npc_ids": [
+      2042
+    ]
+  },
+  {
+    "creature_key": "vorkath",
+    "name": "Vorkath",
+    "source_url": "https://oldschool.runescape.wiki/w/Vorkath",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Vorkath",
+      "fetched_at": "2026-10-14T15:15:43.149229+00:00",
+      "sha256": "3e99a46c02c6adaf3549c20e39a6de58efdab1a47cf22faba9a81e5c3f25265d",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\8be1740c6bd8f03185fdbedd8d752c7a1e87960292001321bf5f05a10355ca8a.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Vorkath",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 13:20:25 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "3e99a46c02c6adaf3549c20e39a6de58efdab1a47cf22faba9a81e5c3f25265d",
+    "raw_html_sha256": "b49af7d1e1031c6c97f401ec2964a2d6a5d89a479953525d9d9d833346c795ad",
+    "reported_revision_ids": [
+      "15364808"
+    ],
+    "row_note_links": [
+      {
+        "text": "[ 3 ]",
+        "href": "#cite_note-droprates-10"
+      }
+    ],
+    "referenced_notes": [
+      {
+        "id": "cite_note-droprates-10",
+        "text": "^ 3.0 3.1 3.2 3.3 3.4 3.5 3.6 Old School RuneScape. \"Vorki/Rune/Addy Dragon Drop Rates Revealed! - OSRS Q&A\" (in 57:42). YouTube video. 10 January 2018."
+      }
+    ],
+    "access_and_rate_source_passages": [
+      "Vorkath (roughly translated as pathetic failure/weakling/runt in the dragonkin's language ) is a draconic boss-monster first encountered during the Dragon Slayer II quest as the penultimate boss. Created by Zorgoth during the Fourth Age 's Dragonkin Conflicts , the blue dragon is one of his subjects that has survived his experiments in the laboratory beneath the dragonkin fortress on Ungael . Despite its phenomenal strength, Zorgoth abandoned Vorkath due to its lack of aggression, leaving it as a 'distraction' for any humans that would stumble onto the island.",
+      "Vorkath is considered a blue dragon and zombie for the purpose of a Slayer task . As Vorkath is also undead , the Salve amulet and its variants will work on him. However, it does not stack with the Slayer helmet . Vorkath is also immune to recoil damage.",
+      "After completing Dragon Slayer II , players may fight Vorkath again, with increased stats and rewards.",
+      "Vorkath can be found on the island of Ungael , in the centre of its crater. The island is accessible by talking to Torfinn the sailor on the third dock from west in Rellekka . It can also be accessed via the \"Ungael\" option on Torfinn or the \"Travel\" option on his Fremennik boat after travelling to Ungael for the first time.",
+      "Drop rates are estimated based on 15,512,839 samples from the Drop Rate Project , unless otherwise cited.",
+      "In addition to the 100% drops, the player will also have two rolls on Vorkath's drop table, excluding tertiary items, which have only one roll. The displayed drop chances represent a single roll. Drops will remain on the ground for 3 hours or until the player leaves the instanced area. [ 1 ]"
+    ],
+    "reported_npc_ids": [
+      8059,
+      8061
+    ]
+  },
+  {
+    "creature_key": "corporeal-beast",
+    "name": "Corporeal Beast",
+    "source_url": "https://oldschool.runescape.wiki/w/Corporeal_Beast",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Corporeal_Beast",
+      "fetched_at": "2026-10-14T15:11:31.069066+00:00",
+      "sha256": "092e5cbfa77200475f28248a0e54ca34402d8ceede08298d9fe6a8aac1d1d02c",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\c246c65ff2868472c47cda1023ae0b140b1a49fea0ed6fcfdd5088703da7f556.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Corporeal_Beast",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 13:19:20 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "092e5cbfa77200475f28248a0e54ca34402d8ceede08298d9fe6a8aac1d1d02c",
+    "raw_html_sha256": "722e020f6ce3ecb0f106f2682e26f1a8a3bc9ec855714002c7db12c48a4915f3",
+    "reported_revision_ids": [
+      "15364759"
+    ],
+    "row_note_links": [],
+    "referenced_notes": [],
+    "access_and_rate_source_passages": [
+      "The Corporeal Beast , often referred to simply as Corp , is a large monster residing in its lair , accessed via the games necklace or an entrance in level 21 Wilderness . Due to its very high combat stats, it is often fought by groups of players. Unlike its RuneScape 3 counterpart, it has no quest requirements to access.",
+      "The Corporeal Beast is the only monster to drop the spirit shield , as well as the holy elixir and arcane , elysian , and spectral sigils, used to enhance the shield. In addition to its sigil drops, the Corporeal Beast has many other valuable drops. Unlike some other group bosses, only the player who dealt the most damage will receive kill credit and loot.",
+      "Players can pay 200,000 coins to open a group instance for their chat-channel via the private portal , excluding ironmen .",
+      "The Corporeal Beast's Lair is located in level 21 Wilderness , although players can teleport directly there using a games necklace . This will take the player to a small safe room with a large doorway to Corporeal Beast.",
+      "Drop rates are estimated based on 434,422 samples from the Drop Rate Project , unless otherwise cited."
+    ],
+    "reported_npc_ids": [
+      319
+    ]
+  },
+  {
+    "creature_key": "phosanis-nightmare",
+    "name": "Phosani's Nightmare",
+    "source_url": "https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare",
+      "fetched_at": "2026-10-14T15:14:03.115995+00:00",
+      "sha256": "ba7a0ce0a49bd48aa9df1129a7bf504b2f0a1c292f14f89d4a11afbdefd06a1f",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\fe9c2a3000d534374205b3c1ebc16ad4df67db5ff322dc84567f48f4f98dd9a1.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 13:21:26 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "ba7a0ce0a49bd48aa9df1129a7bf504b2f0a1c292f14f89d4a11afbdefd06a1f",
+    "raw_html_sha256": "829aa5746bb5cb4e6f73a085e75970abb5c87e6ab882ecdb7987de8f75fb6faf",
+    "reported_revision_ids": [
+      "15358773"
+    ],
+    "row_note_links": [],
+    "referenced_notes": [],
+    "access_and_rate_source_passages": [
+      "Phosani's Nightmare is a more difficult version of The Nightmare , encountered by selecting Drink-from on the Pool of Nightmares in the Sisterhood Sanctuary .",
+      "Phosani's Nightmare can only be fought alone, and the game encourages the player to have at least one normal Nightmare kill before attempting Phosani's Nightmare; trying to attempt the boss without any Nightmare kill count will result in an initial warning advising the player to do so, though they may ignore it and proceed to the boss fight.",
+      "Compared to fighting the Nightmare solo, Phosani's Nightmare is significantly faster, with little damage being taken if players master the fight's mechanics, though far more punishing when mistakes are made. Although the boss itself has a lower drop rate for uniques compared to the original, it makes up for it with its faster kill times and increased quantities of normal drops. [ 1 ] It also possesses two unique drops the original lacks; the Slepey tablet , which allows players to access the Nightmare even quicker, and the parasitic egg , an item that unlocks a cosmetic skin for the Little Nightmare .",
+      "There are notable differences in mechanics compared to the regular Nightmare encounter:",
+      "Drop rates are estimated based on 651,229 samples from the Drop Rate Project , unless otherwise cited.",
+      "With each kill, Phosani's Nightmare has a chance to roll two unique drop tables, one containing the armour, mace, and staff, and one containing the orbs; both table rolls can be successful with each kill. The armour, mace, and staff drop table has a 1/140 [ 2 ] chance to roll. The orb drop table has a ~1/533 chance to roll. There is an effective chance of ~1/111 to receive any item. On the armour, mace, and staff drop table, there's a 1/10 chance to roll the mace, a 2/10 chance to roll an individual armour piece, and a 3/10 chance to roll the staff. If the staff was rolled, there is a 8/100 chance of switching to the mace. [ 3 ] The effective droprates are listed in the table below."
+    ],
+    "reported_npc_ids": [
+      377,
+      9416,
+      9417,
+      9418,
+      9419,
+      9420,
+      9421,
+      9422,
+      9423,
+      9424,
+      11153,
+      11154,
+      11155
+    ]
+  },
+  {
+    "creature_key": "artio",
+    "name": "Artio",
+    "source_url": "https://oldschool.runescape.wiki/w/Artio",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Artio",
+      "fetched_at": "2026-10-14T15:05:32.421214+00:00",
+      "sha256": "dd7e1a8cd8d32294a7f504fc98814177f9b8db314ce7969b97b5d6ed7eb3255f",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\a1f8ba1f5ccaaf2a8f8bebe5c1a9fa44656aa470661342acd1bc4d562d423e41.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Artio",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 13:23:14 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "dd7e1a8cd8d32294a7f504fc98814177f9b8db314ce7969b97b5d6ed7eb3255f",
+    "raw_html_sha256": "356f18d9a4475a73e1215a8d5b85da931188efe00b575b6e1037b037d30521b8",
+    "reported_revision_ids": [
+      "15358758"
+    ],
+    "row_note_links": [
+      {
+        "text": "[ 2 ]",
+        "href": "#cite_note-news-2"
+      },
+      {
+        "text": "[ 2 ]",
+        "href": "#cite_note-news-2"
+      },
+      {
+        "text": "[ 2 ]",
+        "href": "#cite_note-news-2"
+      }
+    ],
+    "referenced_notes": [
+      {
+        "id": "cite_note-news-2",
+        "text": "^ 2.0 2.1 2.2 2.3 2.4 2.5 \"Poll 78 Updates & More\" . Old School RuneScape News. Jagex. 8 February 2023. Archived from the original ."
+      }
+    ],
+    "access_and_rate_source_passages": [
+      "Artio is a weaker variant of Callisto who is fought in the Hunter's End , a singles-plus combat area in level 21 Wilderness . To enter Artio's lair, players must have completed the hard Wilderness diary , OR they must have a Callisto boss Slayer task (a bear Slayer task does not bypass the diary requirement).",
+      "Compared to Callisto, the fight is safer and easier in return for lower drop quantities and rates. Artio's melee attack has a minimum hit of 15, [ 1 ] which can only be partially blocked with Protect from Melee .",
+      "Killing Artio counts as a Callisto alternative for a slayer Boss task, the elite Wilderness diary task, and the combat achievements.",
+      "Upon any player entering the den, all players inside will be unable to teleport for 3 ticks . This delay no longer occurs after completion of the hard Wilderness diary .",
+      "Drop rates are estimated based on 787,872 samples from the Drop Rate Project , unless otherwise cited.",
+      "The following drops are only accessible while on a Slayer task given by Krystilia ."
+    ],
+    "reported_npc_ids": [
+      11992
+    ]
+  },
+  {
+    "creature_key": "spindel",
+    "name": "Spindel",
+    "source_url": "https://oldschool.runescape.wiki/w/Spindel",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Spindel",
+      "fetched_at": "2026-10-14T15:14:39.253078+00:00",
+      "sha256": "b2c8decd762aeb55906b4dfe3bb83b7e2ff3e3f20935f34f7e82d300e7eec69a",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\0164efea099b606e333456b08fcc9462af35e6dd374b1b78d2df3c58f4e5925d.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Spindel",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 13:23:15 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "b2c8decd762aeb55906b4dfe3bb83b7e2ff3e3f20935f34f7e82d300e7eec69a",
+    "raw_html_sha256": "dfb116caed5eb8c7b1d803eae2421dd951617a238ce80294bbdf71c0bf7ea2d7",
+    "reported_revision_ids": [
+      "15358779"
+    ],
+    "row_note_links": [
+      {
+        "text": "[ 1 ]",
+        "href": "#cite_note-news-1"
+      },
+      {
+        "text": "[ 1 ]",
+        "href": "#cite_note-news-1"
+      },
+      {
+        "text": "[ 1 ]",
+        "href": "#cite_note-news-1"
+      }
+    ],
+    "referenced_notes": [
+      {
+        "id": "cite_note-news-1",
+        "text": "^ 1.0 1.1 1.2 1.3 1.4 1.5 \"Poll 78 Updates & More\" . Old School RuneScape News. Jagex. 8 February 2023. Archived from the original ."
+      }
+    ],
+    "access_and_rate_source_passages": [
+      "Spindel is a weaker variant of Venenatis who is fought in the Web Chasm , a singles-plus combat area in level 29 Wilderness . To enter Spindel's lair, players must have completed the hard Wilderness diary , OR they must have a Venenatis boss Slayer task (a spider Slayer task does not bypass the diary requirement).",
+      "Compared to Venenatis, the fight is easier and safer in return for lower drop quantities and rates. Killing Spindel counts as a Venenatis alternative for a slayer Boss task, the elite Wilderness diary task, and the combat achievements.",
+      "Spindel appears to be immune to Vengeance , so bringing runes or Vengeance sacks has no effect.",
+      "Upon any player entering the chasm, all players inside will be unable to teleport for 3 ticks (1.8s). This delay no longer occurs after completion of the hard Wilderness diary .",
+      "Drop rates are estimated based on 670,954 samples from the Drop Rate Project , unless otherwise cited.",
+      "The following drops are only accessible while on a Slayer task given by Krystilia ."
+    ],
+    "reported_npc_ids": [
+      11998
+    ]
+  },
+  {
+    "creature_key": "calvar-ion",
+    "name": "Calvar'ion",
+    "source_url": "https://oldschool.runescape.wiki/w/Calvar%27ion",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Calvar%27ion",
+      "fetched_at": "2026-10-14T15:11:19.138922+00:00",
+      "sha256": "0fc14891ab7d2038e9da5ddad558d8611ab2646aeb87bacabcb8acf316559a64",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\cd202ceda37dc7c8d3c2633904d536d9c926a4c36048387c8f9b65f91d583f5c.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Calvar%27ion",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 13:23:14 GMT",
+      "fixture": false
+    },
+    "source_sha256_normalized": "0fc14891ab7d2038e9da5ddad558d8611ab2646aeb87bacabcb8acf316559a64",
+    "raw_html_sha256": "7f8e5a26454d271fdb8376d234b53b19da043d5975025d440266750d73f2db56",
+    "reported_revision_ids": [
+      "15370224"
+    ],
+    "row_note_links": [
+      {
+        "text": "[ 1 ]",
+        "href": "#cite_note-news-1"
+      },
+      {
+        "text": "[ 1 ]",
+        "href": "#cite_note-news-1"
+      },
+      {
+        "text": "[ 1 ]",
+        "href": "#cite_note-news-1"
+      }
+    ],
+    "referenced_notes": [
+      {
+        "id": "cite_note-news-1",
+        "text": "^ 1.0 1.1 1.2 1.3 1.4 1.5 \"Poll 78 Updates & More\" . Old School RuneScape News. Jagex. 8 February 2023. Archived from the original ."
+      }
+    ],
+    "access_and_rate_source_passages": [
+      "Calvar'ion is a weaker variant of Vet'ion who is fought in the Skeletal Tomb , a singles-plus combat area in level 21 Wilderness . To enter Calvar'ion's lair, players must have completed the hard Wilderness diary , OR they must have a Vet'ion boss Slayer task (a skeleton Slayer task does not bypass the diary requirement).",
+      "Compared to Vet'ion, the fight is quicker and safer at the cost of an overall lower loot value.",
+      "Killing Calvar'ion counts as a Vet'ion alternative for a slayer Boss task, the elite Wilderness diary task, and the combat achievements.",
+      "Upon any player entering the tomb, all players inside will be unable to teleport for 3 ticks . This delay no longer occurs after completion of the hard Wilderness diary .",
+      "Drop rates are estimated based on 883,084 samples from the Drop Rate Project , unless otherwise cited.",
+      "The following drops are only accessible while on a Slayer task given by Krystilia ."
+    ],
+    "reported_npc_ids": [
+      11993
+    ]
+  }
+]
