@@ -1,5 +1,5 @@
 {
-  "version": "authority-v7-2026-10-14",
+  "version": "authority-v8-2026-10-14",
   "scope": "Documentation metadata only; does not enable gameplay",
   "decision_register": "../DECISIONS.md",
   "catalogs": [
@@ -175,12 +175,12 @@
     {
       "path": "catalogs/challenge_hunt_review_index_v2.json",
       "version": "challenge-hunt-review-index-v2-2026-10-14",
-      "sha256": "0ce22aab9b7feb66d26f36b1432ee28c00bf895e2f17fd6255071feaaf0f5371",
-      "entry_count": 246,
+      "sha256": "ebb9de6def768f379d26b1bc73da40e836f113cb5492a1d969a9fbd80fef12a1",
+      "entry_count": 483,
       "authority": "SOURCE_BACKED_DISPLAY_REVIEW_INDEX_ONLY",
       "runtime_enabled": false,
       "not_an_admitted_roster": true,
-      "unresolved_source_rows": 45,
+      "unresolved_source_rows": 183,
       "enable_gates": [
         "Finish candidate source/access/receipt/reward review",
         "Settle unanswered unlock/offer/per-rank eligibility contracts",
@@ -193,10 +193,25 @@
         "BOSS_CHALLENGE_HUNT_TABLE.md"
       ],
       "source_kind_partition": {
-        "MONSTER": 90,
+        "MONSTER": 327,
         "BOSS": 156
       },
-      "source_kind_required": true
+      "source_kind_required": true,
+      "monster_scope_audit": "research/MONSTER_DROP_AUDIT_A67.json"
+    },
+    {
+      "path": "research/MONSTER_DROP_AUDIT_A67.json",
+      "version": "monster-drop-audit-a67",
+      "sha256": "9af39686e7978a833fa469ee3d28d504175549fdb732d718da027ae48ea322ed",
+      "entry_count": 1437,
+      "captured_drop_rows": 31757,
+      "authority": "COMPLETE_SUPPLIED_MONSTER_ROW_REVIEW_NOT_ROSTER_ADMISSION",
+      "runtime_enabled": false,
+      "h3_pinned_input": false,
+      "enable_gates": [
+        "Context/access/identity/personal-receipt/FP review still required",
+        "399 unsupported monster captures are missing-data gaps; not no-drop proof"
+      ]
     }
   ],
   "historical_experiments": {

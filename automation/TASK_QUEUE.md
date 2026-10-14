@@ -122,3 +122,7 @@ A63 supersedes old A62 single-range future selection. Old v1 completion remains 
 | WB-A65 | Update CHALLENGE_HUNT_TABLE with all-tier reviewed and source-candidate entries | P0 | Explicit file request; A63 rules; supplied output; guarded ownership | S | DONE (display/index; owning checkpoint) | CHALLENGE_HUNT_TABLE; review indexv2/CSV; archive; validation | All44 reviewed+202 candidate groups in four tiers,45 unresolved rows held, exact source evidence/status; no roster/FP/unlock adoption |
 
 | WB-A66 | Rename/fix current monster and boss Challenge tier drop tables | P0 | Explicit user clarification; A65 source index; guarded ownership | S | DONE (two current tables; owning checkpoint) | MONSTER_CHALLENGE_HUNT_TABLE; BOSS_CHALLENGE_HUNT_TABLE |90/156 rows exactly partitioned, source_kind evidence/links/generator/validation, no obsolete active filenames or new mechanics |
+
+## A67 — DONE: complete supplied-monster drop review
+
+Priority user-directed; effort M; dependency A66 + supplied archive. Deliverables: full1,437-source/31,757-row/1,803-item audit and report, expanded327-row monster table with four tiers and explicit holds;309 candidates (252 new/15 removed/57 retained),18 previous contexts. Boss156 membership unchanged. Validated source/cache/SQLite, complete row conservation, reproducibility,12 manifest pins and22 tests; guarded publication and exact remote verification required. No production activation. Next safe batch: contextual access/receipt/FP admission; unsupported399 and unresolved444 entity gaps stay visible, no broad recrawl.

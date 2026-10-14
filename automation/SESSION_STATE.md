@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — A67 full supplied-monster drop review; owner wb-a67.
+- State: IDLE — A67 complete supplied-monster row review saved; owner released.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -56,7 +56,7 @@ Current next material question remains A64 progressive-versus-independent card u
 
 A66 acquisition 2026-10-14T19:07:20.956355+00:00 expires 2026-10-14T21:07:20.956355+00:00; expected remote98ae9450bb51ed8ed9b8c8234b88210c06ce3cd4. Explicit user clarification: two current monster/boss drop tables, both new tiers; rename old current/archive files and fix content/source classification/links. No new unlock topology, roster, reward or production approval.
 
-## Current A66 — monster and boss documents separated
+## Historical A66 — monster and boss documents separated
 
 Starting98ae9450bb51ed8ed9b8c8234b88210c06ce3cd4; guarded claim37bf1aeaaebe5b053d43056debf0a18c60cfd622. User clarified the two intended current files: ordinary monster drop rates expanded to new tiers, and boss-only drop rates. MONSTER_CHALLENGE_HUNT_TABLE.md now has90 entries (18 prior reviewed/72 candidates); BOSS_CHALLENGE_HUNT_TABLE.md has156 (26 prior/130 candidates). Both are current four-tier drop-rate tables, NOT an archived monster list. Old CHALLENGE_HUNT_TABLE.md and CHALLENGE_HUNT_TABLE_V1_ARCHIVE.md removed/renamed from active tree; historical originals remain accessible in Git history.
 
@@ -69,3 +69,15 @@ A66 source/display validator2,194 assertions and22 offline tests pass. Regenerat
 ## A67 ownership claim
 
 Owner wb-a67; acquired 2026-10-14T19:20:30.706356+00:00; expires 2026-10-14T21:20:30.706372+00:00. Expected head bf213a6bc4f2c34a6693fc42bbaebcae3ffdc12a. Review every supplied corrected monster and every drop; replace monster name whitelist with explicit complete row dispositions, expand meaningful candidates, preserve held conditions. No boss expansion or gameplay policy adoption.
+
+## Current A67 — every supplied corrected monster and drop audited
+
+Starting bf213a6bc4f2c34a6693fc42bbaebcae3ffdc12a; guarded claim3f849d6d458afff67e2d3f12734cdf69bc320bc0. Explicit request after missing Killerwatt/Air diamond: review all supplied monsters and their drops. Completed1,437 corrected MONSTER captures/31,757 rows/1,803 distinct names, with explicit per-item judgements and per-page exhaustive row-index dispositions. No silent monster retrieval whitelist; pinned input change requires new inventory review. Corrected taxonomy unchanged;161 bosses/855 non-creatures/32 components/444 unresolved not silently relabeled.
+
+MONSTER_CHALLENGE_HUNT_TABLE.md now327 tiered rows:18 prior contexts+309 candidates; tiers22/34/164/107. Compared with prior72 candidates:252 added,15 removed,57 retained. Includes Killerwatt Air diamond1/64 Standard and other elemental gems.171 unresolved rate rows and401 significance/activity leads remain visible, not admitted. Source-specific sections, raw quantities/rolls/alternatives/annotations and captured context retained; no favorable conditional probabilities or aggregated tier rates. Shared Superior Slayer tertiary staff outcomes excluded; League/Deadman/discontinued/event sources and non-kill methods audited separately. Boss membership stays156.
+
+research/MONSTER_DROP_REVIEW_A67.md + MONSTER_DROP_AUDIT_A67.json contain report/full ledger. All1,437 network/nonfixture HTML normalized hashes checked; all31,757 SQLite payloads equal captured records (36,068 source assertions).1,038 captures have parsed rows;399 NO_SUPPORTED_TABLES are missing data, not no-drop proof. Existing partial-crawl errors/source scope unchanged; no rescrape. Captured first3 introductions/access infobox facts/all footnotes/NPC IDs and receipts for displayed monster sources preserved in review index.
+
+Validation:6,487 index/display/coverage assertions and22 existing offline tests pass; exact regeneration and all12 manifest hashes/146 decision IDs checked before guarded publication. Historical v1 JSON/CSV/FP unchanged; all runtime flags false. Owning checkpoint releases owner; final remote head/tree/main verification required before saved claim. No production/main changes.
+
+Next: contextual admission/access/identity/receipt/FP review for visible candidates; prioritize normal task-independent sources. Do not present327 display groups as eligible creature count or ready v2 catalog.399 empty captures/444 unresolved classifications remain explicit gaps. Rank unlock topology and A56 permanent-invalidation proposals remain UNANSWERED/NOT_ADOPTED. This completed review supersedes A65/A66 monster-scan/count descriptions, not their historical evidence. No active owner or background task.

@@ -1,0 +1,45 @@
+{
+  "monster_audit_row_conservation": "PASS",
+  "monster_audit_source_cross_checks": 36068,
+  "status": "PASS_SOURCE_DISPLAY_ONLY_NOT_RUNTIME",
+  "assertions": 6487,
+  "reviewed_v1_hunts": 44,
+  "additional_candidate_groups": 439,
+  "by_tier_total_display_rows": {
+    "greater": 268,
+    "superior": 143,
+    "lesser": 27,
+    "standard": 45
+  },
+  "unresolved_rows": 183,
+  "table_sha256_by_kind": {
+    "MONSTER": "f2cbce4c5c7c794f3d5a410eb5c81a8481e048991252b2c7b33ee69db7037be3",
+    "BOSS": "2a463dd824b1d62f5d3c6b294ec079968c5cb35ad5050c8a87df389b5038e05d"
+  },
+  "by_source_kind": {
+    "MONSTER": {
+      "reviewed": 18,
+      "candidate_groups": 309,
+      "unresolved_rows": 171,
+      "by_tier": {
+        "greater": 164,
+        "superior": 107,
+        "lesser": 22,
+        "standard": 34
+      }
+    },
+    "BOSS": {
+      "reviewed": 26,
+      "candidate_groups": 130,
+      "unresolved_rows": 12,
+      "by_tier": {
+        "greater": 104,
+        "superior": 36,
+        "lesser": 5,
+        "standard": 11
+      }
+    }
+  },
+  "index_sha256": "ebb9de6def768f379d26b1bc73da40e836f113cb5492a1d969a9fbd80fef12a1",
+  "new_unlock_or_reward_approval": false
+}

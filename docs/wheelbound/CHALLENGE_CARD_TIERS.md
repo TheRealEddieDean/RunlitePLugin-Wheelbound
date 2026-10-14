@@ -85,3 +85,7 @@ The classifier runs offline on the supplied cache. Exact endpoints, out-of-band 
 ## Current two-table presentation — WB-D146 / A66
 
 Use [monster drops](MONSTER_CHALLENGE_HUNT_TABLE.md) for non-boss sources and [boss drops](BOSS_CHALLENGE_HUNT_TABLE.md) for boss-only sources. Both include all four new tiers and keep drop rates/conditions/status. The former mixed file and historical-archive filename have been renamed/replaced; historical original content remains in Git commits. The shared index/CSV now has source_kind. This display split does not decide card-family unlock topology or admit candidates.
+
+## Full supplied-monster inventory review — A67
+
+The [monster table](MONSTER_CHALLENGE_HUNT_TABLE.md) now contains327 tiered source/item/rate rows (22 Lesser,34 Standard,164 Greater,107 Superior):18 prior contexts and309 candidates. The full1,437-monster/31,757-row source inventory was reviewed, replacing the monster retrieval whitelist.171 unresolved signature-rate rows and401 significance/activity leads are held visibly;399 captures have no supported drop rows. See the [coverage report](research/MONSTER_DROP_REVIEW_A67.md) and [complete row audit](research/MONSTER_DROP_AUDIT_A67.json). Boss table membership stays156. These supersede A66 display counts only, not approved tier/unlock/completion policies. V2 admission/rewards remain unfinished.

@@ -14,13 +14,18 @@ def render(input_dir):
  raw=json.load(open(input_dir/'catalog.json'));pages=raw['creatures']+raw['unclassified_pages'];byurl={p['source_url']:p for p in pages};old=json.load(open(D/'catalogs/challenge_hunts_v1.json'));rules=json.load(open(D/'catalogs/challenge_tier_rules_v2.json'));oldhunt={h['id']:h for h in old['hunts']};creatures={c['key']:c for c in old['creatures']};taxonomy=json.load(open(D/'research/CHALLENGE_TAXONOMY_A60.json'));correction={x[1]:x[3] for x in taxonomy['corrections']};reviewed=[];oldpairs=set()
  for m in rules['existing_hunt_mapping']:
   h=oldhunt[m['hunt_id_v1']];oldpairs.add((h['source_url'],h['item_name']));reviewed.append({'status':'V1_REVIEWED_CONTEXT_RECLASSIFIED_V2_NOT_ADMITTED','tier':m['challenge_tier'],'creature':creatures[h['creature_key']]['name'],'item':h['item_name'],'source_url':h['source_url'],'base_rate':str(Fraction(**m['bracket_probability'])),'raw_rates':[m['raw_rate']],'historical_v1_fp':h['fp_reward'],'v2_fp':None,'hunt_id_v1':h['id'],'source_rows':[h['reviewed_row_zero_based']],'access_requirements':creatures[h['creature_key']]['route_requirements'],'receipt_contract':'challenge-personal-drop-v1; current-client gate unchanged'})
+ from review_all_monster_drops import review
+ old_rows={(h['source_url'],h['reviewed_row_zero_based']) for h in old['hunts']}
+ monster_selected,monster_audit=review(input_dir,pages,correction,CANDIDATE_NAMES,old_rows)
  groups={};unresolved=[];outside=0;selected_raw=0
  for p in pages:
   path=p['source_url'].split('/w/',1)[-1];kind=correction.get(path,p['classification'].upper())
   if kind not in ['MONSTER','BOSS']:continue
   if re.search(r'Nightmare Zone|Deadman|\(Echo\)|Realm of Memories|Sailing alpha|Leagues',p['name'],re.I):continue
   for i,row in enumerate(p['drops']):
-   if row['item_name'] not in CANDIDATE_NAMES or (p['source_url'],row['item_name']) in oldpairs:continue
+   if kind=='MONSTER':
+    if (p['source_url'],i) not in monster_selected:continue
+   elif row['item_name'] not in CANDIDATE_NAMES or (p['source_url'],row['item_name']) in oldpairs:continue
    selected_raw+=1;pval=scalar_rate(row['rarity']);tier=tier_for_probability(pval)
    base={'creature':p['name'],'item':row['item_name'],'source_url':p['source_url'],'source_sha256':p['source_sha256'],'fetched_at':p['capture']['fetched_at'],'source_row_zero_based':i,'raw_record':row,'runtime_enabled':False}
    if pval is None:
@@ -31,8 +36,9 @@ def render(input_dir):
    g=groups[key];g['source_rows'].append(base)
    if row['rarity']['raw'] not in g['raw_rates']:g['raw_rates'].append(row['rarity']['raw'])
  candidates=sorted(groups.values(),key=lambda x:([t[0] for t in TIERS].index(x['tier']),x['creature'].casefold(),x['item'].casefold(),x['base_rate']))
- result={'version':'challenge-hunt-review-index-v2-2026-10-14','purpose':'Comprehensive tier display for all44 prior reviewed hunts and all qualifying scalar source/item/rate groups in the explicit named-signature candidate scan. Not an admitted v2 roster.','raw_archive_sha256':rules['v1_catalog_sha256'],'raw_archive_sha256_note':'This field pins the historical v1 catalog; original upload hash separately below.','upload_sha256':'e00babd58e09c047f68df94625cd5b4e77e119952d52c0d0c50b53a7d2b60309','candidate_name_scope':CANDIDATE_NAMES,'reviewed_hunts':reviewed,'source_candidates':candidates,'unresolved_rate_context_rows':unresolved,'outside_brackets_named_source_rows':outside,'named_unreviewed_source_rows_screened':selected_raw,'excluded_sources':'Corrected non-creature/unresolved/component pages and alternate-mode pages; no generic-RDT promotion.','runtime_enabled':False,'unlock_topology':'UNANSWERED_PROPOSAL_NOT_ADOPTED','v2_rewards':'NOT_AUTHORED; historical v1 quotes labeled separately','counts':{'reviewed':len(reviewed),'candidate_groups':len(candidates),'unresolved_rows':len(unresolved),'reviewed_by_tier':dict(collections.Counter(x['tier'] for x in reviewed)),'candidate_by_tier':dict(collections.Counter(x['tier'] for x in candidates))}}
+ result={'version':'challenge-hunt-review-index-v2-2026-10-14','purpose':'Tier display of44 prior hunts, full captured monster inventory review, and legacy named boss candidates. Not an admitted v2 roster.','raw_archive_sha256':rules['v1_catalog_sha256'],'raw_archive_sha256_note':'This field pins the historical v1 catalog; original upload hash separately below.','upload_sha256':'e00babd58e09c047f68df94625cd5b4e77e119952d52c0d0c50b53a7d2b60309','candidate_name_scope':CANDIDATE_NAMES,'monster_scope':'Full captured monster inventory with explicit row dispositions in research/MONSTER_DROP_AUDIT_A67.json; candidate_name_scope now applies only to legacy boss scan','monster_audit':'research/MONSTER_DROP_AUDIT_A67.json','reviewed_hunts':reviewed,'source_candidates':candidates,'unresolved_rate_context_rows':unresolved,'outside_brackets_named_source_rows':outside,'named_unreviewed_source_rows_screened':selected_raw,'excluded_sources':'Corrected non-creature/unresolved/component pages and alternate-mode pages; no generic-RDT promotion.','runtime_enabled':False,'unlock_topology':'UNANSWERED_PROPOSAL_NOT_ADOPTED','v2_rewards':'NOT_AUTHORED; historical v1 quotes labeled separately','counts':{'reviewed':len(reviewed),'candidate_groups':len(candidates),'unresolved_rows':len(unresolved),'reviewed_by_tier':dict(collections.Counter(x['tier'] for x in reviewed)),'candidate_by_tier':dict(collections.Counter(x['tier'] for x in candidates))}}
  # Correct pin naming: historical catalog and original uploaded archive are different artifacts.
+ result['monster_coverage']={k:monster_audit[k] for k in ['monster_pages','drop_rows','distinct_item_names','disposition_counts','source_cross_checks']}
  result['v1_catalog_sha256']=result.pop('raw_archive_sha256');result.pop('raw_archive_sha256_note')
  # Source-kind partition is explicit and conserved; never infer boss from combat level.
  for entry in result['reviewed_hunts']+result['source_candidates']+result['unresolved_rate_context_rows']:
@@ -41,6 +47,8 @@ def render(input_dir):
   entry['source_kind']=kind
   entry['classification_evidence']=source['classification_evidence']
  result['counts']['by_source_kind']={kind:{'reviewed':sum(x['source_kind']==kind for x in result['reviewed_hunts']),'candidate_groups':sum(x['source_kind']==kind for x in result['source_candidates']),'unresolved_rows':sum(x['source_kind']==kind for x in result['unresolved_rate_context_rows']),'by_tier':dict(collections.Counter(x['tier'] for x in result['reviewed_hunts']+result['source_candidates'] if x['source_kind']==kind))} for kind in ['MONSTER','BOSS']}
+ monster_urls={x['source_url'] for x in reviewed+candidates+unresolved if x['source_kind']=='MONSTER'}
+ result['monster_source_contexts']={url:{'reported_npc_ids':byurl[url]['reported_npc_ids'],'capture':byurl[url]['capture'],'page_context_first_three_paragraphs':byurl[url]['page_context'][:3],'footnotes':byurl[url]['footnotes'],'access_infobox_fields':[f for f in byurl[url]['infobox_fields'] if f['field'] in ['Slayer level','Members','Released','Monster ID']],'warnings':byurl[url]['warnings']} for url in sorted(monster_urls)}
  index=D/'catalogs/challenge_hunt_review_index_v2.json';index.write_text(json.dumps(result,indent=2,ensure_ascii=False)+'\n')
  with (D/'catalogs/challenge_hunt_review_index_v2.csv').open('w',newline='',encoding='utf-8') as f:
   w=csv.writer(f,lineterminator="\n");w.writerow(['source_kind','tier','creature','item','base_rate_for_tier','raw_rates','status','historical_v1_fp','v2_fp','source_url']);w.writerows([x['source_kind'],x['tier'],x['creature'],x['item'],x['base_rate'],'; '.join(x['raw_rates']),x['status'],x.get('historical_v1_fp',''),'TBD',x['source_url']] for x in reviewed+candidates)

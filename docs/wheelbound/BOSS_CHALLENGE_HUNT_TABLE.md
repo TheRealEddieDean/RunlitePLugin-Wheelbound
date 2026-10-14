@@ -8,7 +8,7 @@ This is a current creature/drop table expanded to the four tiers, not an archive
 
 **Tier rule:** use the unmultiplied per-roll probability: `2 × 1/75` is Standard at `1/75`. The full original notation remains visible. Shared endpoints belong to the easier tier:1/50 Lesser,1/125 Standard,1/750 Greater,1/5000 Superior. Keep supported personal per-kill probability separate; per-roll labels are not exact per-kill claims.
 
-**Review status:** “Reviewed v1 context” preserves prior source/access/receipt work, but is not automatic v2 admission. “Candidate” still needs full source/mode/access/personal-receipt/reward review. V2 FP is TBD; any prior FP shown is historical only. All entries remain runtime-disabled. These are source/item/rate review rows, not counts of distinct eligible creatures. The supplied crawl is partial and the named-item scan is explicit, not every drop in OSRS.
+**Review status:** “Reviewed v1 context” preserves prior source/access/receipt work, but is not automatic v2 admission. “Candidate” still needs full source/mode/access/personal-receipt/reward review. V2 FP is TBD; any prior FP shown is historical only. All entries remain runtime-disabled. These are source/item/rate review rows, not counts of distinct eligible creatures. The supplied crawl is partial. Monster coverage now audits every captured corrected-monster row; boss coverage remains the explicit named-item scan. This is not every drop in OSRS.
 
 ## Tier overview
 

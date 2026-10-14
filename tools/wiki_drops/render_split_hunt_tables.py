@@ -19,7 +19,7 @@ This is a current creature/drop table expanded to the four tiers, not an archive
 
 **Tier rule:** use the unmultiplied per-roll probability: `2 × 1/75` is Standard at `1/75`. The full original notation remains visible. Shared endpoints belong to the easier tier:1/50 Lesser,1/125 Standard,1/750 Greater,1/5000 Superior. Keep supported personal per-kill probability separate; per-roll labels are not exact per-kill claims.
 
-**Review status:** “Reviewed v1 context” preserves prior source/access/receipt work, but is not automatic v2 admission. “Candidate” still needs full source/mode/access/personal-receipt/reward review. V2 FP is TBD; any prior FP shown is historical only. All entries remain runtime-disabled. These are source/item/rate review rows, not counts of distinct eligible creatures. The supplied crawl is partial and the named-item scan is explicit, not every drop in OSRS.
+**Review status:** “Reviewed v1 context” preserves prior source/access/receipt work, but is not automatic v2 admission. “Candidate” still needs full source/mode/access/personal-receipt/reward review. V2 FP is TBD; any prior FP shown is historical only. All entries remain runtime-disabled. These are source/item/rate review rows, not counts of distinct eligible creatures. The supplied crawl is partial. Monster coverage now audits every captured corrected-monster row; boss coverage remains the explicit named-item scan. This is not every drop in OSRS.
 
 ## Tier overview
 
@@ -39,10 +39,13 @@ This is a current creature/drop table expanded to the four tiers, not an archive
                 text+='| Creature / encounter | Specific fresh drop | Rate used for tier | Original source notation | Historical v1 FP | V2 FP |\n| --- | --- | --- | --- | ---: | --- |\n'
                 for x in rr:text+='| '+' | '.join(esc(v) for v in [x['creature'],x['item'],x['base_rate'],'; '.join(x['raw_rates']),f"{x['historical_v1_fp']:,}",'TBD'])+' |\n'
             text+='\n### Additional candidates — not admitted\n\n'
-            if not cc:text+='No additional in-range scalar-rate candidates in the current named-item source scan.\n'
+            if not cc:text+='No additional in-range scalar-rate candidates in the current source review.\n'
             else:
                 text+='| Creature / encounter | Item candidate | Rate used for tier | Original source notation | Review / V2 FP |\n| --- | --- | --- | --- | --- |\n'
-                for x in cc:text+='| '+' | '.join(esc(v) for v in [x['creature'],x['item'],x['base_rate'],'; '.join(x['raw_rates']),'Candidate; FP TBD'])+' |\n'
+                for x in cc:
+                    sections='; '.join(dict.fromkeys(z['raw_record']['section'] for z in x['source_rows']))
+                    note='Candidate; FP TBD'+(' — '+sections if kind=='MONSTER' else '')
+                    text+='| '+' | '.join(esc(v) for v in [x['creature'],x['item'],x['base_rate'],'; '.join(x['raw_rates']),note])+' |\n'
         text+='''
 ## Conditional, approximate or unparsed rates — held
 
@@ -52,6 +55,12 @@ These rows have no fixed tier yet. Do not choose a favorable task/party/variant 
 | --- | --- | --- | --- | --- |
 '''
         for x in sorted(held,key=lambda x:(x['creature'].casefold(),x['item'].casefold(),x['source_row_zero_based'])):text+='| '+' | '.join(esc(v) for v in [x['creature'],x['item'],x['raw_record']['rarity']['raw'] or '(unparsed)',x['raw_record']['section'],'Context/rate review; FP TBD'])+' |\n'
+        if kind=='MONSTER':
+            audit=__import__('json').load(open(D/'research/MONSTER_DROP_AUDIT_A67.json'))
+            text+='\n## Additional item leads — significance or activity review held\n\nThese are visible review leads, not approved meaningful uniques. Some are cosmetics, keys, supplies, or special activities; ordinary loot is not automatically a hunt. Rates and methods stay unaltered.\n\n| Creature | Item | Raw rate | Source section | Hold reason |\n| --- | --- | --- | --- | --- |\n'
+            for x in audit['held_significance_or_activity_rows']:
+                text+='| '+' | '.join(esc(x[k]) for k in ['creature','item','raw_rate','section','reason'])+' |\n'
+            text+='\n## Full supplied-monster coverage\n\n[Review report](research/MONSTER_DROP_REVIEW_A67.md) · [Every monster and row disposition](research/MONSTER_DROP_AUDIT_A67.json). All '+str(audit['monster_pages'])+' corrected monster captures / '+str(audit['drop_rows'])+' rows were checked against SQLite and cached HTML hashes. No re-scrape. Captured source introductions, infobox facts and footnotes for displayed candidates are in `monster_source_contexts` in the review index. They are source evidence, not completed access/FP approval.\n'
         text+='''
 ## Preserved access and receipt details for previously reviewed creatures
 
