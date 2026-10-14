@@ -48,3 +48,7 @@ All cases below are planned NOT_RUN gameplay/implementation acceptance, not new 
 | Repeated hunt after paid permanent item bounty | Separate Challenge receipt, no repeated permanent bounty |
 
 Before engineering: reviewed real target catalog/rewards, actual access/rate predicates, durable Java transaction implementation and current-client personal-source trace packet are still required. Existing synthetic experiments remain historical evidence.
+
+## Concrete authored v1 pool and quotes
+
+WB-D142/143 supplies [CHALLENGE_HUNT_TABLE](CHALLENGE_HUNT_TABLE.md) / catalogs/challenge_hunts_v1.json:25 keys/44 exact-item hunts; six starter members. For design selection use only these explicit keys, supported source contexts, canonical dropped IDs and fixed fp_reward/reward_quote_version, filtered by actual owned/access/validated-adapter predicates. Extra variants and additional raw collector rows are not entries. Earlier missing concrete table/quote statements are superseded for v1 only; current-client proof/implementation gates remain. All new quantities are one fresh specific drop; inventory ownership is not an eligibility filter. No gameplay implementation or Q6 retirement approval.

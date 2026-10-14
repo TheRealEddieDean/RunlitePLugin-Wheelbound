@@ -37,7 +37,11 @@
       "hunts": [
         "WB-CH-brine-rat-brine-sabre"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        4501
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "turoth",
@@ -67,7 +71,11 @@
       "hunts": [
         "WB-CH-turoth-leafbladed-sword"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        430
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "cave-horror",
@@ -95,7 +103,11 @@
       "hunts": [
         "WB-CH-cave-horror-black-mask-10"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        1047
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "sulphur-nagua",
@@ -119,7 +131,11 @@
       "hunts": [
         "WB-CH-sulphur-nagua-sulphur-blades"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        13033
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "kurask",
@@ -144,7 +160,11 @@
       "hunts": [
         "WB-CH-kurask-leafbladed-battleaxe"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        410
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "skeletal-wyvern",
@@ -171,7 +191,11 @@
       "hunts": [
         "WB-CH-skeletal-wyvern-granite-legs"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        468
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "abyssal-demon",
@@ -196,7 +220,12 @@
       "hunts": [
         "WB-CH-abyssal-demon-abyssal-whip"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        415,
+        416
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "dark-beast",
@@ -221,7 +250,12 @@
       "hunts": [
         "WB-CH-dark-beast-dark-bow"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        4005,
+        7250
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "spitting-wyvern",
@@ -245,7 +279,11 @@
       "hunts": [
         "WB-CH-spitting-wyvern-granite-longsword"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        7794
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "adamant-dragon",
@@ -268,7 +306,12 @@
       "hunts": [
         "WB-CH-adamant-dragon-dragon-limbs"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        8030,
+        8090
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "rune-dragon",
@@ -291,7 +334,12 @@
       "hunts": [
         "WB-CH-rune-dragon-dragon-limbs"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        8031,
+        8091
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "demonic-gorilla",
@@ -321,7 +369,13 @@
         "WB-CH-demonic-gorilla-light-frame",
         "WB-CH-demonic-gorilla-heavy-frame"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        7144,
+        7145,
+        7146
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "vyrewatch-sentinel",
@@ -352,7 +406,11 @@
       "hunts": [
         "WB-CH-vyrewatch-sentinel-blood-shard"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        9756
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "tormented-demon",
@@ -382,7 +440,11 @@
         "WB-CH-tormented-demon-burning-claw",
         "WB-CH-tormented-demon-tormented-synapse"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        13599
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "general-graardor",
@@ -406,7 +468,11 @@
       "hunts": [
         "WB-CH-general-graardor-bandos-hilt"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        2215
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "kree-arra",
@@ -430,7 +496,11 @@
       "hunts": [
         "WB-CH-kree-arra-armadyl-hilt"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        3162
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "commander-zilyana",
@@ -455,7 +525,11 @@
         "WB-CH-commander-zilyana-armadyl-crossbow",
         "WB-CH-commander-zilyana-saradomin-hilt"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        2205
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "kril-tsutsaroth",
@@ -480,7 +554,11 @@
         "WB-CH-kril-tsutsaroth-staff-of-the-dead",
         "WB-CH-kril-tsutsaroth-zamorak-hilt"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        3129
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "zulrah",
@@ -506,7 +584,11 @@
         "WB-CH-zulrah-magic-fang",
         "WB-CH-zulrah-serpentine-visage"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        2042
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "vorkath",
@@ -529,7 +611,12 @@
       "hunts": [
         "WB-CH-vorkath-dragonbone-necklace"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        8059,
+        8061
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "corporeal-beast",
@@ -552,7 +639,11 @@
         "WB-CH-corporeal-beast-spectral-sigil",
         "WB-CH-corporeal-beast-arcane-sigil"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        319
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "phosanis-nightmare",
@@ -589,7 +680,23 @@
         "WB-CH-phosanis-nightmare-inquisitors-plateskirt",
         "WB-CH-phosanis-nightmare-inquisitors-mace"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        377,
+        9416,
+        9417,
+        9418,
+        9419,
+        9420,
+        9421,
+        9422,
+        9423,
+        9424,
+        11153,
+        11154,
+        11155
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "artio",
@@ -613,7 +720,11 @@
         "WB-CH-artio-tyrannical-ring",
         "WB-CH-artio-voidwaker-hilt"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        11992
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "spindel",
@@ -637,7 +748,11 @@
         "WB-CH-spindel-treasonous-ring",
         "WB-CH-spindel-voidwaker-gem"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        11998
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     },
     {
       "key": "calvar-ion",
@@ -662,7 +777,11 @@
         "WB-CH-calvar-ion-ring-of-the-gods",
         "WB-CH-calvar-ion-voidwaker-blade"
       ],
-      "runtime_enabled": false
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        11993
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation."
     }
   ],
   "hunts": [
@@ -752,7 +871,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 450,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "512/1",
+        "reference_expected_hours": "256/75",
+        "reference_expected_hours_decimal": 3.413,
+        "supported_effort_hours_range": [
+          3.413,
+          3.413
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-turoth-leafbladed-sword",
@@ -838,7 +977,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 400,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "500/1",
+        "reference_expected_hours": "25/9",
+        "reference_expected_hours_decimal": 2.778,
+        "supported_effort_hours_range": [
+          2.778,
+          2.778
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-cave-horror-black-mask-10",
@@ -924,7 +1083,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 450,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "512/1",
+        "reference_expected_hours": "256/75",
+        "reference_expected_hours_decimal": 3.413,
+        "supported_effort_hours_range": [
+          3.413,
+          3.413
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-sulphur-nagua-sulphur-blades",
@@ -1010,7 +1189,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 325,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "450/1",
+        "reference_expected_hours": "9/4",
+        "reference_expected_hours_decimal": 2.25,
+        "supported_effort_hours_range": [
+          2.25,
+          2.25
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-kurask-leafbladed-battleaxe",
@@ -1098,7 +1297,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 975,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "1026/1",
+        "reference_expected_hours": "171/20",
+        "reference_expected_hours_decimal": 8.55,
+        "supported_effort_hours_range": [
+          8.55,
+          8.55
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-skeletal-wyvern-granite-legs",
@@ -1186,7 +1405,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 850,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "512/1",
+        "reference_expected_hours": "256/35",
+        "reference_expected_hours_decimal": 7.314,
+        "supported_effort_hours_range": [
+          7.314,
+          7.314
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-abyssal-demon-abyssal-whip",
@@ -1324,7 +1563,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 400,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "512/1",
+        "reference_expected_hours": "128/45",
+        "reference_expected_hours_decimal": 2.844,
+        "supported_effort_hours_range": [
+          2.844,
+          2.844
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-dark-beast-dark-bow",
@@ -1410,7 +1669,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 850,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "512/1",
+        "reference_expected_hours": "256/35",
+        "reference_expected_hours_decimal": 7.314,
+        "supported_effort_hours_range": [
+          7.314,
+          7.314
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-spitting-wyvern-granite-longsword",
@@ -1498,7 +1777,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 975,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "512/1",
+        "reference_expected_hours": "128/15",
+        "reference_expected_hours_decimal": 8.533,
+        "supported_effort_hours_range": [
+          8.533,
+          8.533
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-adamant-dragon-dragon-limbs",
@@ -1584,7 +1883,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 1775,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "1000/1",
+        "reference_expected_hours": "50/3",
+        "reference_expected_hours_decimal": 16.667,
+        "supported_effort_hours_range": [
+          16.667,
+          16.667
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-rune-dragon-dragon-limbs",
@@ -1670,7 +1989,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 1900,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "800/1",
+        "reference_expected_hours": "160/9",
+        "reference_expected_hours_decimal": 17.778,
+        "supported_effort_hours_range": [
+          17.778,
+          17.778
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-demonic-gorilla-ballista-limbs",
@@ -1756,7 +2095,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 1225,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "500/1",
+        "reference_expected_hours": "100/9",
+        "reference_expected_hours_decimal": 11.111,
+        "supported_effort_hours_range": [
+          11.111,
+          11.111
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-demonic-gorilla-ballista-spring",
@@ -1842,7 +2201,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 1225,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "500/1",
+        "reference_expected_hours": "100/9",
+        "reference_expected_hours_decimal": 11.111,
+        "supported_effort_hours_range": [
+          11.111,
+          11.111
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-demonic-gorilla-light-frame",
@@ -1928,7 +2307,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 1775,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "750/1",
+        "reference_expected_hours": "50/3",
+        "reference_expected_hours_decimal": 16.667,
+        "supported_effort_hours_range": [
+          16.667,
+          16.667
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-demonic-gorilla-heavy-frame",
@@ -2014,7 +2413,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 3450,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "1500/1",
+        "reference_expected_hours": "100/3",
+        "reference_expected_hours_decimal": 33.333,
+        "supported_effort_hours_range": [
+          33.333,
+          33.333
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-vyrewatch-sentinel-blood-shard",
@@ -2102,7 +2521,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 1775,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "1500/1",
+        "reference_expected_hours": "50/3",
+        "reference_expected_hours_decimal": 16.667,
+        "supported_effort_hours_range": [
+          16.667,
+          16.667
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-tormented-demon-burning-claw",
@@ -2188,7 +2627,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 1775,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "250000/499",
+        "reference_expected_hours": "25000/1497",
+        "reference_expected_hours_decimal": 16.7,
+        "supported_effort_hours_range": [
+          16.7,
+          16.7
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-tormented-demon-tormented-synapse",
@@ -2274,7 +2733,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 1775,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "500/1",
+        "reference_expected_hours": "50/3",
+        "reference_expected_hours_decimal": 16.667,
+        "supported_effort_hours_range": [
+          16.667,
+          16.667
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-general-graardor-bandos-hilt",
@@ -2360,7 +2839,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 2650,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "508/1",
+        "reference_expected_hours": "127/5",
+        "reference_expected_hours_decimal": 25.4,
+        "supported_effort_hours_range": [
+          25.4,
+          25.4
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-kree-arra-armadyl-hilt",
@@ -2446,7 +2945,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 2925,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "508/1",
+        "reference_expected_hours": "254/9",
+        "reference_expected_hours_decimal": 28.222,
+        "supported_effort_hours_range": [
+          28.222,
+          28.222
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-commander-zilyana-armadyl-crossbow",
@@ -2534,7 +3053,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 2650,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "508/1",
+        "reference_expected_hours": "127/5",
+        "reference_expected_hours_decimal": 25.4,
+        "supported_effort_hours_range": [
+          25.4,
+          25.4
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-commander-zilyana-saradomin-hilt",
@@ -2622,7 +3161,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 2650,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "508/1",
+        "reference_expected_hours": "127/5",
+        "reference_expected_hours_decimal": 25.4,
+        "supported_effort_hours_range": [
+          25.4,
+          25.4
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-kril-tsutsaroth-staff-of-the-dead",
@@ -2710,7 +3269,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 2650,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "508/1",
+        "reference_expected_hours": "127/5",
+        "reference_expected_hours_decimal": 25.4,
+        "supported_effort_hours_range": [
+          25.4,
+          25.4
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-kril-tsutsaroth-zamorak-hilt",
@@ -2798,7 +3377,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 2650,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "508/1",
+        "reference_expected_hours": "127/5",
+        "reference_expected_hours_decimal": 25.4,
+        "supported_effort_hours_range": [
+          25.4,
+          25.4
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-zulrah-tanzanite-fang",
@@ -2886,7 +3485,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 4375,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "1024/1",
+        "reference_expected_hours": "128/3",
+        "reference_expected_hours_decimal": 42.667,
+        "supported_effort_hours_range": [
+          21.333,
+          42.667
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-zulrah-magic-fang",
@@ -2974,7 +3593,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 4375,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "1024/1",
+        "reference_expected_hours": "128/3",
+        "reference_expected_hours_decimal": 42.667,
+        "supported_effort_hours_range": [
+          21.333,
+          42.667
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-zulrah-serpentine-visage",
@@ -3062,7 +3701,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 4375,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "1024/1",
+        "reference_expected_hours": "128/3",
+        "reference_expected_hours_decimal": 42.667,
+        "supported_effort_hours_range": [
+          21.333,
+          42.667
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-vorkath-dragonbone-necklace",
@@ -3150,7 +3809,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 4275,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "1000/1",
+        "reference_expected_hours": "125/3",
+        "reference_expected_hours_decimal": 41.667,
+        "supported_effort_hours_range": [
+          41.667,
+          41.667
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-corporeal-beast-spectral-sigil",
@@ -3236,7 +3915,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 13750,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "1365/1",
+        "reference_expected_hours": "273/2",
+        "reference_expected_hours_decimal": 136.5,
+        "supported_effort_hours_range": [
+          136.5,
+          136.5
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-corporeal-beast-arcane-sigil",
@@ -3322,7 +4021,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 13750,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "1365/1",
+        "reference_expected_hours": "273/2",
+        "reference_expected_hours_decimal": 136.5,
+        "supported_effort_hours_range": [
+          136.5,
+          136.5
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-phosanis-nightmare-nightmare-staff",
@@ -3408,7 +4127,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 8575,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "35000/69",
+        "reference_expected_hours": "17500/207",
+        "reference_expected_hours_decimal": 84.541,
+        "supported_effort_hours_range": [
+          84.541,
+          84.541
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-phosanis-nightmare-inquisitors-great-helm",
@@ -3494,7 +4233,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 11775,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "700/1",
+        "reference_expected_hours": "350/3",
+        "reference_expected_hours_decimal": 116.667,
+        "supported_effort_hours_range": [
+          116.667,
+          116.667
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-phosanis-nightmare-inquisitors-hauberk",
@@ -3580,7 +4339,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 11775,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "700/1",
+        "reference_expected_hours": "350/3",
+        "reference_expected_hours_decimal": 116.667,
+        "supported_effort_hours_range": [
+          116.667,
+          116.667
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-phosanis-nightmare-inquisitors-plateskirt",
@@ -3666,7 +4445,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 11775,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "700/1",
+        "reference_expected_hours": "350/3",
+        "reference_expected_hours_decimal": 116.667,
+        "supported_effort_hours_range": [
+          116.667,
+          116.667
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-phosanis-nightmare-inquisitors-mace",
@@ -3752,7 +4551,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 18925,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "35000/31",
+        "reference_expected_hours": "17500/93",
+        "reference_expected_hours_decimal": 188.172,
+        "supported_effort_hours_range": [
+          188.172,
+          188.172
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-artio-claws-of-callisto",
@@ -3840,7 +4659,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 2175,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "618/1",
+        "reference_expected_hours": "103/5",
+        "reference_expected_hours_decimal": 20.6,
+        "supported_effort_hours_range": [
+          20.6,
+          20.6
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-artio-tyrannical-ring",
@@ -3928,7 +4767,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 2500,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "716/1",
+        "reference_expected_hours": "358/15",
+        "reference_expected_hours_decimal": 23.867,
+        "supported_effort_hours_range": [
+          23.867,
+          23.867
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-artio-voidwaker-hilt",
@@ -4016,7 +4875,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 3150,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "912/1",
+        "reference_expected_hours": "152/5",
+        "reference_expected_hours_decimal": 30.4,
+        "supported_effort_hours_range": [
+          30.4,
+          30.4
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-spindel-fangs-of-venenatis",
@@ -4104,7 +4983,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 2175,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "618/1",
+        "reference_expected_hours": "103/5",
+        "reference_expected_hours_decimal": 20.6,
+        "supported_effort_hours_range": [
+          20.6,
+          20.6
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-spindel-treasonous-ring",
@@ -4192,7 +5091,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 2500,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "716/1",
+        "reference_expected_hours": "358/15",
+        "reference_expected_hours_decimal": 23.867,
+        "supported_effort_hours_range": [
+          23.867,
+          23.867
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-spindel-voidwaker-gem",
@@ -4280,7 +5199,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 3150,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "912/1",
+        "reference_expected_hours": "152/5",
+        "reference_expected_hours_decimal": 30.4,
+        "supported_effort_hours_range": [
+          30.4,
+          30.4
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-calvar-ion-skull-of-vetion",
@@ -4368,7 +5307,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 1650,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "618/1",
+        "reference_expected_hours": "309/20",
+        "reference_expected_hours_decimal": 15.45,
+        "supported_effort_hours_range": [
+          15.45,
+          15.45
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-calvar-ion-ring-of-the-gods",
@@ -4456,7 +5415,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 1900,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "716/1",
+        "reference_expected_hours": "179/10",
+        "reference_expected_hours_decimal": 17.9,
+        "supported_effort_hours_range": [
+          17.9,
+          17.9
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     },
     {
       "id": "WB-CH-calvar-ion-voidwaker-blade",
@@ -4544,7 +5523,27 @@
       "reference_effort_status": "AUTHORED_BALANCE_ESTIMATE_NOT_MEASURED",
       "runtime_enabled": false,
       "design_status": "SOURCE_REVIEWED_CONTEXT_AUTHORED",
-      "reward_status": "NEXT_A62"
+      "reward_status": "AUTHORED_V1_FIXED_QUOTE",
+      "fp_reward": 2400,
+      "reward_quote_version": "challenge-fp-v1",
+      "reward_reference": {
+        "formula": "25 * ceil((100 + 100 * reference_expected_hours) / 25)",
+        "base_fp": 100,
+        "fp_per_reference_hour": 100,
+        "round_up_to_fp": 25,
+        "probability_anchor": "lower supported source-model bound; conservative expected effort",
+        "reference_expected_kills": "912/1",
+        "reference_expected_hours": "114/5",
+        "reference_expected_hours_decimal": 22.8,
+        "supported_effort_hours_range": [
+          22.8,
+          22.8
+        ],
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes repeat entry/travel/supply downtime in one reference estimate",
+        "payment": "Once on supported fresh active personal drop; no KC cap, partial/time-based payout or guaranteed completion.",
+        "not_market_price_based": true,
+        "actual_duration_reprices_quote": false
+      }
     }
   ],
   "exclusion_policy": {
@@ -7015,5 +8014,61 @@
       "Little Nightmare",
       "1/1,400 [ 4 ]"
     ]
-  ]
+  ],
+  "design_status": "COMPLETE_AUTHORED_V1_CATALOG",
+  "reward_schedule_version": "challenge-fp-v1",
+  "runtime_status": "NOT_IMPLEMENTED_OR_CLIENT_VALIDATED",
+  "access_contract": {
+    "id": "challenge-access-v1",
+    "all_required": [
+      "Correct initialized account/run identity and normal persistent game world; exclude Leagues/Deadman/beta/quest reenactments.",
+      "Own Challenge through Lesser AND Greater; own starter grant or individual target unlock.",
+      "At least three distinct unlocked accessible supported creature keys after all filtering.",
+      "Membership, authored unboosted minimum skills and completed quest/diary/stage predicates; actual required regions and entry routes legally available.",
+      "Required usable equipment and supplies are owned or legally renewable under existing access. Do not demand infinite stock, but a finite task/key-only route is not sustainable.",
+      "Source-specific repeatable route and personal solo allocation are feasible; instance fees and legal replenishment route supported.",
+      "Necessary travel/vendor/faction-KC actions are already permitted; hunt selection grants no new access or tolerance exemption.",
+      "Current validated source/loot/composition/context adapter for the live client. Unknown predicates exclude before offers."
+    ],
+    "on_later_failure": "Preserve frozen assignment/evidence/quote; show context unavailable; existing Pause/Reject only. No automatic reroll or adoption of pending retirement proposal."
+  },
+  "completion_contract": {
+    "id": "challenge-personal-drop-v1",
+    "event_sources": [
+      "RuneLite ServerNpcLoot composition + items (candidate authoritative local loot source)",
+      "NpcLootReceived NPC + items only when ownership/source correlation is separately validated; never double-award both streams"
+    ],
+    "required_receipt_fields": [
+      "run_id",
+      "account_profile_key",
+      "assignment_id",
+      "encounter_key",
+      "context_id",
+      "context_version",
+      "catalog_hash",
+      "quote_version",
+      "world_type",
+      "encounter_instance_id",
+      "server_or_validated_session_receipt_key",
+      "encounter_completed_at_active_interval",
+      "local_recipient_proof",
+      "source_composition_or_npc_id",
+      "fresh_item_id",
+      "quantity"
+    ],
+    "positive_rules": [
+      "Assignment was durably selected before earning encounter and loot; run/account matches.",
+      "One completed source encounter within supported location/mode/phase and solo context; frozen item/context match.",
+      "Fresh local personal assigned-source loot receipt lists exact accepted dropped item ID and quantity >=1. No pickup/turn-in/consumption prerequisite added; owning an old item is irrelevant.",
+      "Earning occurs while active; no paused-drop backfill or payout processing while paused. Ambiguous delayed earning/delivery retains evidence without automatic credit until existing timing policy can prove qualification.",
+      "Atomic once-only assignment completion/FP journal transaction; duplicate adapter streams, reconnect/replay/repeated pickup cannot pay twice.",
+      "Player keeps the drop; disposal afterward does not revoke legitimate completion. Independent first-time permanent item bounty is separately keyed and can pay once."
+    ],
+    "negative_rules": [
+      "Inventory/bank increase alone, collection-log history, GE/shop/trade, teammate item, floor pickup without personal-source receipt, transformed old item, minion/other creature, quest/alternate mode or paused earning never qualify.",
+      "Unknown source/ownership/context/earning time holds evidence without inventing credit.",
+      "No proximity-only ownership; no exact string-name-only source or item mapping."
+    ],
+    "client_validation_status": "REQUIRED_BEFORE_RUNTIME; specification complete, positive/negative current-client traces NOT_RUN."
+  }
 }

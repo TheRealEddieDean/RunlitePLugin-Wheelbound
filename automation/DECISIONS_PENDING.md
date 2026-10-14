@@ -55,3 +55,7 @@ A48 batch1 complete (bounded/source-limited): WB-D140 task-independent starter a
 ## Next single question — Q6 permanent ordinary invalidation (A56)
 
 [Recovery boundary/matrix](decision_analysis/POSTCOMMIT_RECOVERY_A56.md) is planning only. Recommend no-fault retirement of an unresolved selected ordinary Fate only when a reviewed external game change eliminates every qualifying completion route: no completion reward, FP penalty, Punishment or consumed ordinary spin; release actual reservation idempotently, never blanket +1. Temporary/unknown/self-caused changes and mandatory specials excluded. **PROPOSED, NOT ADOPTED; await user answer.** Existing Pause/Reject/no-reroll applies until answered. Committed-but-unselected offer reconciliation remains separately open.
+
+## Catalog v1 authoring complete — WB-D142/143,2026-10-14
+
+Supersedes earlier pending **concrete v1 members/rates/access/receipt definitions/reward table** status: CHALLENGE_HUNT_TABLE and catalogs/challenge_hunts_v1 now hold25 creature keys/44 specific-item hunts/six starter members and numeric FP. Taxonomy/full-corpus screen/source/identity/conditions reviewed. No broader task/group/stateful contexts silently adopted: excluded from v1. Task-dependent expansion policy, purchase prices, wider empirical balance and actual runtime/current-client validation remain separate. Do not repeat completed intake or ask for approval of routine delegated table authoring. A56 retirement proposal remains PROPOSED/NOT_ADOPTED; no answer inferred.

@@ -28,3 +28,7 @@ Do not restart completed research, reread the full transcript/PDF or re-scrape a
 ## Starter prompt
 
 Use [START_DATA_PARSING.md](START_DATA_PARSING.md), attach the archive/JSON to the new chat, and follow the committed checkpoint rather than an introductory summary.
+
+## Completed follow-through2026-10-14 — A58–A62
+
+User output was received and reviewed; do not restart the above initial-intake instructions. CHALLENGE_HUNT_TABLE and catalogs/challenge_hunts_v1.json/.csv complete the finite25-key/44-hunt design table with source-reviewed conditions, access/receipt definitions and fixed FP. SESSION_STATE gives exact evidence/validation/current continuation. All raw references retained; source-label corrections are overlays. Future additional content/engineering is separate; v1 runtime remains disabled pending current-client adapter validation.

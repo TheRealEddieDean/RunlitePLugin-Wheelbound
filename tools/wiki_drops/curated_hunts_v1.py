@@ -1,5 +1,5 @@
 """Explicit source-reviewed Challenge catalog authoring, NOT a gameplay adapter.
-Reproduce: python tools/wiki_drops/curated_hunts_v1.py OUTPUT_DIRECTORY
+Reproduce: python tools/wiki_drops/curated_hunts_v1.py INPUT_OUTPUT_DIRECTORY
 Uses the supplied extracted output; preserves original payloads and source receipts.
 """
 import collections,hashlib,json,math,pathlib,re,sys

@@ -110,4 +110,6 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A61 | Author finite personal-rate Challenge contexts from corrected upload | P0 | A60 verified | M bounded catalog | DONE (source-reviewed design; owning checkpoint) | catalogs/challenge_hunts_v1 | Specific meaningful items, normalized contexts and exclusion coverage; no production enablement |
 
-| WB-A62 | Complete Challenge access/receipt/FP schedule and catalog delivery | P0 | A61 verified | M bounded packet | IN_PROGRESS | CHALLENGE_HUNT_TABLE; contracts/catalog | Every supported hunt has concrete access, completion evidence and frozen FP; validation, manifest, remote verification |
+| WB-A62 | Complete Challenge access/receipt/FP schedule and catalog delivery | P0 | A61 verified | M bounded packet | DONE (complete authored v1; owning checkpoint) | CHALLENGE_HUNT_TABLE; contracts/catalog | Every supported hunt has concrete access, completion evidence and frozen FP; validation, manifest, remote verification |
+
+A62 completion note: all four requested finite catalog tasks complete;25 creature keys/44 hunts/six starter keys with access/personal rates/receipt definitions/numeric FP. A60 corrected overlay32 components/1,437 monsters after source-introduction cross-check; historical A60 commit retained. Runtime engineering/client traces remain separate authorization gate, not an unfilled design table.
