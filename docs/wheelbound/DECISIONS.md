@@ -1406,3 +1406,30 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Recovery: A later unknown/unsupported/out-of-range context cannot reroll, erase or auto-complete the committed hunt. Preserve assignment/evidence and explain that qualifying context is unavailable; existing free Pause/Reject remain. Postcommit recovery beyond those existing actions stays separate Q6 work. A known supported matching context may continue after revalidation; do not backfill paused earning.
 - Supersession: Pending rate/variant policy definition; concrete source formulas and actual catalog review remain pending.
 - Acceptance (planned, NOT_RUN): range[1/1000,1/500] passes; range[1/2000,1/500] fails; unknown rate fails; changing context cannot replace selected item/reward; context variants count as one creature.
+
+## WB-D135 - Challenge target reveal follows card selection with durable random commitment
+
+- Status: DELEGATED adopted recommendation,2026-10-13; authority WB-D132.
+- Decision: Preserve Bossing card-before-target sequence. Before displaying offers, persist eligibility/catalog/context snapshot, the complete offer set, independently committed per-offer randomness and the reviewed reward schedule/version. Challenge offer states one random specific-item hunt and shows eligible creature odds plus its possible reward range; it does not reveal/select the final creature/item. Selecting that offer commits the selected card and deterministic creature/item draw, exact reward and context before animation/reveal. Final hunt replaces KC completion for Challenge only; the initial Standard KC reference still describes normal L/S/G, not a Challenge quota.
+- Rationale: Preserve unpredictability and existing sequence, while making restart/animation incapable of changing results or debiting twice. Do not imply a fixed preselection reward when targets have different authored rewards.
+- Dependencies: Every eligible item needs a reviewed frozen reward quote; without it exclude the item before offering. Missing catalog/source/reward support cannot be fixed by drawing again after selection. No new spin timing, refunds, free retries or discretionary rerolls. Implementation transaction format and durable filesystem proof remain future work.
+- Supersession: Challenge-only generation/reveal ambiguity in WB-D122/123/128/130; normal L/S/G sequence and Standard target uniqueness remain unchanged.
+- Acceptance (planned, NOT_RUN): reload before selection restores offers/pool/randomness; reload after selection restores same creature/item/reward; skipped animation and repeated clicks never redraw/pay twice; Challenge UI never treats reference KC as completion.
+
+## WB-D136 - Equal creature-first then equal eligible-item Challenge draws
+
+- Status: DELEGATED adopted design default,2026-10-13; authority WB-D132. Not a recovered historical weight approval or empirically validated balance claim.
+- Decision: From the frozen supported pool, draw uniformly among distinct eligible creature/encounter keys; then uniformly among that creature's distinct eligible logical specific items. For C creatures and K eligible items on selected creature, that item has assignment probability1/(C*K). These are assignment odds, not in-game drop probabilities. Grouped NPC forms, accepted same-item variants and supported rate contexts are metadata, not extra lottery entries. Multiple Challenge offers retain independently committed randomness; general card-type offer probabilities are not changed.
+- Rationale: Buying another creature expands the wheel predictably; sources with more unique items do not silently dominate creature odds. A simple transparent default precedes empirical weighting/reward review.
+- Affects: Challenge assignment contract, FATE_CARDS, catalog/state/persistence/UI/testing/traceability.
+- Dependencies: Build deduplicated canonical keys before sampling; unknown/inaccessible/unsupported/out-of-band/unquoted items are absent. Preserve≥3 distinct actually eligible creatures; normal boss wheel and Master slice enhancements do not alter Challenge odds. No difficulty/rate weighting, unlock-tier weighting or hidden pity adjustments; changes require a new documented decision and pool version.
+- Supersession: Challenge target/item weighting ambiguity; card-type offering frequency and concrete reward/price balance remain separate.
+- Acceptance (planned, NOT_RUN): three creatures with1/2/3 valid items each receive1/3 creature odds; their item odds are1/3,1/6,1/9 respectively and sum to1. Duplicated variants/contexts do not change odds or the diversity floor. Restart reuses the committed pool/draw.
+
+## WB-D137 - Challenge completion observes the drop without consuming the item
+
+- Status: DELEGATED adopted recommendation,2026-10-13; authority WB-D132.
+- Decision: One supported fresh personal assigned-source acquisition of the selected logical item settles the hunt once; no plugin turn-in, consumption, equipping or further ownership requirement. Player keeps the drop and may use/sell it subject to existing account-access rules. Subsequent disposal does not revoke a legitimately earned completion. Source-correlated receipt remains necessary; merely possessing or buying the item never completes it.
+- Rationale: The approved task is obtain one drop, not sacrifice it; preserve the reward of the hunt without introducing a second interaction or economic sink.
+- Supersession: Closes unapproved turn-in/multi-copy/continued-possession possibilities noted under WB-D130, without weakening fresh-drop or paused-evidence rules.
+- Acceptance (planned, NOT_RUN): qualifying receipt settles once with item unchanged; later disposal does not undo payout; old item/trade/bank movement cannot settle; permanent Bounties Shop key stays once-only and separate.

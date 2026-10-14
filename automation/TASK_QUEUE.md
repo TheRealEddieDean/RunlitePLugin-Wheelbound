@@ -80,3 +80,7 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 | WB-A45 | Confirm one specific Challenge item and bounded1/400–1/1500 rarity | P0 | Explicit user design2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; card/catalog/economy/state/UI/tests/handoff | 38678af1: WB-D130/131;13 specs; one exact logical item, inclusive[1/1500,1/400];131 IDs checked; no guaranteed kill cap |
 
 | WB-A46 | Resolve Challenge personal probability and supported-context policy | P0 | WB-D132 current delegation; verified owner | S | DONE (documentation only; owning commit) | DECISIONS; affected specs/checkpoints | WB-D132–134; consistency checks; guarded publication must verify remote before starting A47 |
+
+| WB-A47 | Specify Challenge draw/reveal and non-consuming completion | P0 | A46 remotely verified; current owner | S | DONE (documentation only; owning commit) | CHALLENGE_ASSIGNMENT_CONTRACT; DECISIONS; affected specs | WB-D135–137; odds arithmetic/consistency/scope checks, guarded remote publication |
+
+| WB-A48 | Review bounded Challenge starter/expansion target candidates | P1 | A46/A47; current primary source access | S per candidate batch | TODO | Separate new Challenge candidate review | Trace exact personal rate/context/access/item/source/reward gaps; preserve old catalogs; no enabled roster or invented facts |

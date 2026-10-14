@@ -1,26 +1,27 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-delegated-challenge-contract
-- State: ACTIVE — owner Codex wb-20261014-delegated-challenge-contract; acquired 2026-10-14T01:23:25.665135+00:00; expires 2026-10-14T01:58:25.665135+00:00.
+- State: IDLE — owner released; no active lease.
 - Branch: wheelbound-mode
-- Starting head:2636e5de758b5d926d1c8492edfaafd2f446d994
-- Claim:d5ea018fe602bd3ee63bb024a538785708cb07d5
-- Latest rule commit:38678af174e129d7e00e6d6e1973e1fb8b70e66f; final owning checkpoint also cleans catalogue wording, resolve from branch/file history.
+- Starting remote head:2636e5de758b5d926d1c8492edfaafd2f446d994
+- Verified claim:d5ea018fe602bd3ee63bb024a538785708cb07d5
+- Verified A46:c5baba520228ffa85b541e742459a27039bdbd9e; tree dceec7c754e6463eadef17136fb385c78f740a1c matched local contents.
+- A47: owning commit containing this checkpoint; resolve its SHA from branch/file history. No circular self-hash.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
-- Completed A45: WB-D130 one specific logical unique item; WB-D131 inclusive1/400–1/1500 target-item rarity band;13 specs,131 IDs.
-- More-common-than1/400/rarer-than1/1500/shared-table/unknown-rate items excluded. Specific-item chance, not aggregate any-unique or conditioned subtable probability. No hard kill/time/pity cap, guarantee or alternate completion. WB-D133/134 resolve personal probability and supported context policy under WB-D132 delegation; actual source formulas remain gated.
-- Verification: design_checks passed; source/catalog/model/oracle history unchanged. Final guarded publication needs remote byte/main/scope verification.
-- No production code/workflow activation, actual new Java build/tests/live traces/login/policy contact, concrete rates/prices/rewards/weights or fixture/model rewrite.
-- Uncommitted completed canonical deliverables: NONE after final successful publication/byte verification; failed publication invalidates claim.
-- Preserved: older repo/ dirty docs, legacy local simulation/smoke.json absent from remote, connection-test file; no reset/clean.
-- PDF version9/source284799b1 STALE; A33 TODO. Generate latest committed gameplay tree, render/inspect/save guarded version before claiming current.
+- Completed: A46 WB-D132–134 current delegation/personal probability/supported in-band contexts; A47 WB-D135–137 post-card target reveal/uniform creature-item draws/player keeps drop;137 decision IDs.
+- Verification before publication: design_checks, exact rational assignment-odds arithmetic and diff/scope checks; historical inputs untouched. Owning commit still requires remote tree/head/main verification before reporting saved.
+- No production code/workflows, Java/live tests, concrete target-rate/price/reward tables, model/oracle/catalog rewrites or policy contact.
+- Git reading works; local HTTPS push has no credentials. Connected GitHub Git-object API supports guarded commit/ref publication; never silently fall back to force.
+- Uncommitted completed canonical deliverables: NONE after successful owning-commit publication/remote byte verification; failed publication invalidates saved claim.
+- PDF version9/source284799b1 STALE; A33 TODO. Historical130,080 synthetic trajectories unchanged.
 
 ## Exact continuation
 
-1. Verify latest remote/main/owner and read current protocol/decisions. Preserve approved rules and historical experiments.
-2. WB-A46 adopts WB-D132–134: delegated recommended decisions; personal receiving probability; supported fully in-band contexts, no unknown fallback. Do not re-ask these policies. Owning commit must be remotely verified before any A47 work.
-3. Next bounded deliverable A47: define Challenge post-card-selection target/item draw, reveal/persistence and weighting recommendation. Do not change normal L/S/G or expose player target choice.
-4. Remaining separate work: actual target source/rate/access review and starter bundle, prices/rewards, residual Q6 recovery, Q2 live Coffer boundary, Q5 exact policy review, separate legacy CA reward scope. No implementation authorized.
-5. PDF A33 stale; historical130,080 synthetic trajectories unchanged. No uncommitted completed deliverables after successful owning-commit publication; failed publication invalidates saved claim.
+1. Verify latest remote head/main/owner and current protocol/decisions. Acquire guarded ownership before writing; preserve concurrent changes.
+2. Do not re-ask resolved item/fresh-drop/rarity/personal-rate/context/draw/reveal policies. Current WB-D132 delegation allows context-supported recommended details recorded DELEGATED; preserves locked user decisions and no coding.
+3. Next bounded design research task A48: review a small batch of actual starter/expansion creature-item candidates. Read existing source manifest/reviews first, then use primary sources for new specific gaps. Document exact personal probability/context/formula/source/access/receipt/reward unknowns in separate new review records. No approved/full enabled roster implied. Finish/validate/publish/verify this one batch before another.
+4. Existing Challenge: item-only, random dedicated pool, Lesser AND Greater gate, included starter bundle, individual expansion,≥3 distinct actual eligible creatures; personal specific-item probability entirely within inclusive[1/1500,1/400]; canonical variants/context do not add draw entries; card choice then equal creature/item draw; no picker/reroll/KC quota/consumption/pity cap; fresh active personal assigned-source receipt. Normal L/S/G unchanged.
+5. Preserve Questing storage/no destruction/free-empty-retry, lifetime duplicate baseline, no paused payout, independent automatic once-only bounty FP and hilt5 Grand without active-CA history audit. Committed invalid/unknown contexts do not reroll/erase; existing Pause/Reject only pending broader Q6 recovery work.
+6. Separate unresolved: concrete starter/target tiers/prices/rewards, broader Q6 pool/postcommit recovery, Q2 actual unsupported/full Coffer boundary, Q5 exact policy review and historical separate CA reward scope. Actual client traces/build exports and implementation authorization remain external gates. A33 PDF is stale/unfinished.
 
-State remains ACTIVE for this owner until verified next bounded task/release. No background-execution promise.
+Stop reason: two bounded recommendation deliverables complete; released ownership for next session. No full-project completion/background-execution claim.

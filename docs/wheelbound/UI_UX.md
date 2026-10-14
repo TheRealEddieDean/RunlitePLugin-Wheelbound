@@ -45,18 +45,20 @@ WB-D116/117: label Bounties Shop as item goal→FP. Master CA Grand checklist re
 
 WB-D121: Questing offers Store/Reactivate, not Destroy. Explain storage cost/room and final active minimum. During full-wheel special displacement, Questing is selectable only for legal storage; never suggest destroying it or grant extra capacity. Other legal ordinary choices remain player-selected.
 
-WB-D122: Bossing Challenge card indicates an item-drop-only unique hunt (WB-D128), with exact source/item and authored reward when determined. Do not label it merely Greater KC or permit target choice/rerolls. Objective-generation order is pending; no misleading fully specified offer before target data exists.
+WB-D122: Bossing Challenge card indicates an item-drop-only unique hunt (WB-D128), with exact source/item and authored reward when determined. Do not label it merely Greater KC or permit target choice/rerolls. WB-D135 fixes post-selection reveal; preselection offer shows rules/pool odds/reviewed reward range, not an invented final target.
 
-WB-D123: show Challenge draw as its eligible boss/creature target pool, separate from normal Bossing outcomes. Display actual committed eligible odds when specified; never offer player target selection/rerolls or suggest card purchase silently unlocked every creature. Exact offer/objective reveal timing awaits specification.
+WB-D123: show Challenge draw as its eligible boss/creature target pool, separate from normal Bossing outcomes. Display actual committed eligible odds when specified; never offer player target selection/rerolls or suggest card purchase silently unlocked every creature. WB-D135/136 now specify timing and true creature/item assignment odds.
 
 WB-D124: render explicit Bossing Lesser AND Greater prerequisite connections to Challenge; show included starter target set, then downstream creature unlock branch. Owned versus currently eligible targets must be distinguishable. WB-D125 rare-drop targets describe the actual unique/source, not a generic rare-table goal. No undisclosed minimum-target gate or new target prices.
 
 WB-D126: owned Challenge remains visible as unlocked; when below3 eligible distinct bosses/creatures, explain it is unavailable in new card offerings and show current eligible target count. No punishment, ownership loss/refund or forced paused status. Three targets is not a third-card upgrade. Included starter bundle remains displayed as part of purchase.
 
-WB-D128: no CA family or family selector/draw; explain random target/item hunt and reveal committed objective without reroll. Exact reveal sequencing/weights remain technical specification.
+WB-D128: no CA family or family selector/draw; explain random target/item hunt and reveal committed objective without reroll. WB-D135/136 resolve reveal sequencing and uniform creature/item assignment odds; implementation remains unauthorized.
 
 WB-D129: tell player Already-owned items do not count - obtain a fresh drop during this assignment. Do not offer turn-in/withdrawal or instant completion from inventory/collection log. Keep eligible target display even if item is owned. Show supported fresh acquisition/completion once; no duplicated FP feedback on replay.
 
 WB-D130/131: show the exact target item/icon/name, assigned source and authored reward; other uniques do not count. Catalog rarity eligibility1/400–1/1500 is not a guarantee of a drop within1500 kills. Do not show pity completion/alternate-item claim; retain Pause/Reject under existing rules. Display rates only when reviewed with actual context.
 
 WB-D133/134: use reviewed personal receiving probability for one specific item per authored encounter/loot opportunity. Freeze source/mode/context IDs, assumptions, formula/source revision and exact probability or fully in-band range. Unknown allocation/context/range is unavailable for new offers. Do not assume group chance/team size. Preserve committed hunt/item/reward on later context failure; explain unavailable qualification and retain existing Pause/Reject. Only supported fresh active personal assigned-source receipts qualify; variants do not multiply target diversity. Concrete source formulas/live proof remain gated.
+
+WB-D135–137: follow [Challenge assignment contract](CHALLENGE_ASSIGNMENT_CONTRACT.md). Freeze eligible canonical pool/context/reward schedule and offer randomness before display; card selection precedes durable uniform creature-then-item result and exact reward reveal. Variants/contexts are not extra lottery entries. Challenge uses fresh-drop completion, no KC quota or item consumption. Receipt/restart/odds cases are planned NOT_RUN; actual catalog/quotes/source adapters remain gated.

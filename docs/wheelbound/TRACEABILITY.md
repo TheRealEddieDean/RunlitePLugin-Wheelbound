@@ -63,7 +63,7 @@ WB-D122→I03/I05/I09: fourth Bossing Challenge, now significant unique-drop hun
 
 WB-D123→I03/I05/I09: dedicated eligible random Challenge boss/creature target pool distinct from ordinary Bossing and card types; unlock mapping/order still pending. No normal-roster expansion or player reroll.
 
-WB-D124→I03/I04/I09 prerequisite AND tree, atomic included starter bundle and paid expansion; WB-D125→I03/I05 catalog unique/shared-table classification and reviewed rate/source. Exact bundle/gates/prices/time balance pending; eligibility-diversity minimum not approved.
+WB-D124→I03/I04/I09 prerequisite AND tree, atomic included starter bundle and paid expansion; WB-D125→I03/I05 catalog unique/shared-table classification and reviewed rate/source. Exact bundle/gates/prices/time balance pending; WB-D126 subsequently approves three distinct actually eligible targets.
 
 WB-D126→I03/I05/I09: minimum3 distinct actually eligible Challenge boss/creature targets for new offerings; permanent card/bundle retained belowfloor; knownness/grouping/current evidence count; committed selections not rerolled.
 
@@ -74,3 +74,5 @@ WB-D129→I03/I05/I09: old ownership no exclusion/no completion; fresh active as
 WB-D130→I03/I05/I09 one specific frozen logical item, other uniques not substitutes. WB-D131→catalog/I03/I05 inclusive specific-item probability band[1/1500,1/400], reviewed source/context and normalization; no hard kill/time/pity outcome.
 
 WB-D132→workflow delegation provenance. WB-D133/134→I03/I05/I09 personal-rate catalog/context gate, frozen versioned assumptions, personal receipts and no unknown-rate fallback; planned cases in TESTING, no live execution.
+
+WB-D135/136→I03/I09 frozen per-offer randomness, selected result before reveal, uniform canonical creature/item draws and exact displayed odds; WB-D137→I05 non-consuming fresh receipt settlement. Future acceptance packet in CHALLENGE_ASSIGNMENT_CONTRACT; no runtime tests executed.

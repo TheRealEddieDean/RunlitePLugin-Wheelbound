@@ -1,6 +1,6 @@
 # Consequential questions for return
 
-Routine technical selections are delegated, not historical approvals. Implementation may begin with the local state engine while these content decisions remain isolated.
+Routine technical selections are delegated, not historical approvals. Implementation is not authorized in the current session; future local state-engine work requires explicit authorization.
 
 | ID | Question and recommendation | Alternatives and impact | Independent work |
 | --- | --- | --- | --- |
@@ -18,7 +18,7 @@ Q7 — RESOLVED: S8-M0296–0297 explicitly confirms random forced Death’s Whe
 
 Q8 — RESOLVED precondition: S8-M0321 requires no active Fate. Pending mandatory Punishment/Sacrifice must finish before Grand activation (WB-D089). This adds no minimum level/playtime gate.
 
-Q9 — EXISTENCE RESOLVED by WB-D122: Bossing Challenge is a fourth card with significant unique item-drop hunt only (WB-D128). Remaining: WB-D123 dedicated pool and WB-D124 AND prerequisite/starter-bundle/individual expansion confirmed; exact starter set/tiers/prices, target-generation sequence and validated catalog/detectors pending. Random target/no reroll remains. WB-D131 now confirms inclusive1/400–1/1500 band; actual source rates/reward tables still unverified.
+Q9 — EXISTENCE RESOLVED by WB-D122: Bossing Challenge is a fourth card with significant unique item-drop hunt only (WB-D128). Remaining: WB-D123 dedicated pool and WB-D124 AND prerequisite/starter-bundle/individual expansion confirmed; exact starter set/tiers/prices, validated catalog/detectors pending; WB-D135/136 resolve target-generation sequence and weighting. Random target/no reroll remains. WB-D131 now confirms inclusive1/400–1/1500 band; actual source rates/reward tables still unverified.
 
 Q10 — RESOLVED by WB-D112,2026-10-12: supported qualifying active bounties automatically credit FP once, independent of assignment success/failure/Reject. No manual claim, escrow or clawback. Prior forfeiture/manual-claim sources remain superseded history. Qualification of mixed CA aggregate remains its own open choice.
 
@@ -45,6 +45,8 @@ WB-D128: Bossing Challenge is item-drop-only; CA family and random-family decisi
 
 WB-D129 fresh-drop rule confirmed. WB-D130 resolves one specific item. WB-D131 fixes inclusive1/400–1/1500 specific-item band; no any-unique substitute or guaranteed kill cap.
 
-WB-D133/134 resolve rate policy under current delegation: personal receiving probability in explicit supported contexts; entire reviewed probability range must lie inside the band. Whole-party chance and unknown allocation cannot qualify. Actual formulas/source/current-client proof remain gated; do not re-ask the policy. Next bounded work: target generation/reveal and weighting specification.
+WB-D133/134 resolve rate policy under current delegation: personal receiving probability in explicit supported contexts; entire reviewed probability range must lie inside the band. Whole-party chance and unknown allocation cannot qualify. Actual formulas/source/current-client proof remain gated; do not re-ask the policy. WB-D135/136 now resolve generation/reveal and creature/item weighting; WB-D137 confirms player keeps the drop. Next bounded work: separate reviewed starter/expansion catalog candidate research, with real primary source data and no runtime enablement.
 
 Current workflow WB-D132 supersedes ask-before-adoption for context-supported delegated recommendations. Remaining questions require one-at-a-time discussion only where approved intent/evidence cannot resolve them. No implementation authorized.
+
+Challenge generation/reveal/weights RESOLVED under WB-D135/136 delegation. Exact starter set, concrete target/source/rate/reward/price/tier tables remain research/balance work; no arbitrary isolated approval question. Broader all-unavailable/postcommit recovery, evidence-dependent Coffer/policy and separate legacy CA reward scope remain independent unresolved boundaries.

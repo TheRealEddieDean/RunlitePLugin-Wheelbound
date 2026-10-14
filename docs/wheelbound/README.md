@@ -59,3 +59,5 @@ Catalog authority: [manifest and promotion gates](CATALOG_AUTHORITY.md). Exact c
 [Build baseline](research/BUILD_BASELINE.md) records successful remote compilation/test task on JDK11/Gradle8.10; local wrapper failure remains distinct. [Capture packet](research/TRACE_CAPTURE_PROTOCOL.md) defines46 NOT_RUN cases and a schema/offline validator, not actual live evidence. No production code or workflow changed.
 
 [Restrictive-control review brief](research/POLICY_REVIEW_PACKET.md) records exact behavior/routes for later authorized review. It was not sent and grants no policy approval.
+
+Current delegated Bossing Challenge details: [assignment contract](CHALLENGE_ASSIGNMENT_CONTRACT.md), WB-D132–137. Concrete catalog/reward/source review remains gated; no implementation authorized.

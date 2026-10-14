@@ -1,12 +1,12 @@
 # Major decisions pending
 
-Authority: docs/wheelbound/DECISIONS.md. Latest explicit replies2026-10-12 are WB-D111–115. Ask one choice at a time, discuss its answer, and automatically present the next single choice until the user says stop. Do not repeat approved rules.
+Authority: docs/wheelbound/DECISIONS.md. Latest gameplay approvals2026-10-12 extend through WB-D131; current2026-10-13 delegation is WB-D132 and adopted recommendations WB-D133–137. Ask one choice at a time, discuss its answer, and automatically present the next single choice until the user says stop. Do not repeat approved rules.
 
 ## Resolved current answers
 
 - Q6 Questing: retain slice and spin normally; known-empty Questing landing gives brief notice and automatically respins (WB-D111). Suspension proposal rejected for this behavior. Broader activity recovery, unknown evidence, WB-D121 resolves Questing as removable to normal storage but indestructible. WB-D120 confirms no extra empty-retry cost; eventual valid Fate one spin.
 - Q10: automatic independent qualifying bounty FP survives Fate failure/Reject; no manual claim, escrow or clawback (WB-D112 supersedes WB-D094 manual flow and historical forfeiture).
-- Bossing: L/S/G requirements reaffirmed (WB-D113). Separate fourth named Challenge still not clearly answered.
+- Bossing: L/S/G requirements reaffirmed (WB-D113). WB-D122 confirms fourth Challenge; WB-D128 narrows it to item hunts only.
 - PAUSE-CLAIM: no reward/claim processing while paused; preserve prior paid FP/active evidence; no paused earning backfill (WB-D114).
 - Workflow: one design choice at a time (WB-D115).
 
@@ -40,6 +40,8 @@ WB-D128: Bossing Challenge is item-drop-only; CA family and random-family decisi
 
 WB-D129 fresh-drop rule confirmed. WB-D130 resolves one specific item. WB-D131 fixes inclusive1/400–1/1500 specific-item band; no any-unique substitute or guaranteed kill cap.
 
-WB-D133/134 resolve rate policy under current delegation: personal receiving probability in explicit supported contexts; entire reviewed probability range must lie inside the band. Whole-party chance and unknown allocation cannot qualify. Actual formulas/source/current-client proof remain gated; do not re-ask the policy. Next bounded work: target generation/reveal and weighting specification.
+WB-D133/134 resolve rate policy under current delegation: personal receiving probability in explicit supported contexts; entire reviewed probability range must lie inside the band. Whole-party chance and unknown allocation cannot qualify. Actual formulas/source/current-client proof remain gated; do not re-ask the policy. WB-D135/136 now resolve generation/reveal and creature/item weighting; WB-D137 confirms player keeps the drop. Next bounded work: separate reviewed starter/expansion catalog candidate research, with real primary source data and no runtime enablement.
 
 Current workflow WB-D132 supersedes ask-before-adoption for context-supported delegated recommendations. Remaining questions require one-at-a-time discussion only where approved intent/evidence cannot resolve them. No implementation authorized.
+
+Challenge generation/reveal/weights RESOLVED under WB-D135/136 delegation. Exact starter set, concrete target/source/rate/reward/price/tier tables remain research/balance work; no arbitrary isolated approval question. Broader all-unavailable/postcommit recovery, evidence-dependent Coffer/policy and separate legacy CA reward scope remain independent unresolved boundaries.

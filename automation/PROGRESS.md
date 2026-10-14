@@ -199,3 +199,7 @@ Claim2ab81e193d87e1f35620e7354d097cd7d2fab4d0; rules38678af174e129d7e00e6d6e1973
 ## WB-A46 — delegated rate/context contract,2026-10-13
 
 Starting remote2636e5de; verified claimd5ea018fe602bd3ee63bb024a538785708cb07d5. WB-D132 records current explicit delegation; WB-D133 adopts personal receiving chance; WB-D134 specifies supported fully in-band contexts and no unknown/base/group fallback. Specifications/question records reconciled; design_checks and diff checks required before guarded publication. Owning commit carries this deliverable; observe its SHA from branch history. No actual rates, roster, prices/rewards, runtime/live tests or model inputs changed; PDF remains stale. Local HTTPS push lacked credentials; connected GitHub Git-object API used with expected-head guard.
+
+## WB-A47 — delegated draw/reveal/completion contract,2026-10-13
+
+A46 remote c5baba520228ffa85b541e742459a27039bdbd9e and exact tree dceec7c754e6463eadef17136fb385c78f740a1c verified before work; main unchanged. WB-D135 fixes card-before-target durable reveal; WB-D136 adopts equal creature-first/item-second assignment odds; WB-D137 keeps acquired item without turn-in/consumption. New contract gives data requirements, sequence, hypothetical exact odds and planned NOT_RUN acceptance. Documentation/hash checks and exact-fraction arithmetic validated before owning-commit publication. No Java/live tests, source/rate roster research, prices/rewards/model rewrites or current PDF claimed. Local Git HTTPS push credentials unavailable; connected API guards publication.
