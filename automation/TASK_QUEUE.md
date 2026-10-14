@@ -99,3 +99,7 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 | WB-A55 | Review bounded real boss classification/candidate batch | P1 | A54 remotely verified | S | DONE (three real bosses; no admission) | research/CHALLENGE_CANDIDATE_REVIEW_B2 | Three bosses/210 rows/nine reviewed extracts; category labels, source hashes/revisions and hold/exclusions; remote verification required |
 
 | WB-A56 | Prepare Q6 postcommit recovery boundary matrix and one material choice | P1 | A55 verified; existing no-reroll/Pause/Reject contracts | S | DONE (planning; awaiting one answer) | automation/decision_analysis/POSTCOMMIT_RECOVERY_A56 |16 cases:13 existing-rule derivations/one open/two proposed; no new adopted rule; remote verification required |
+
+| WB-A57 | Prepare user-collected data new-chat handoff and starter prompt | P0 | User request; verified A56 remote/owner | XS | DONE (handoff only; owning checkpoint) | DATA_PARSING_HANDOFF; START_DATA_PARSING; SESSION_STATE | Preserve A54–56/current decisions; attachment guidance; exact intake-first steps; remote verification |
+
+| WB-A58 | Inspect uploaded collector output and save quality/intake report | P1 | User upload; A57 handoff; guarded ownership | S per bounded intake | WAITING_INPUT | Separate data intake report/reference | Original hashes/provenance, scope/counts/classification/parser/source gaps; no full roster/fixture/live evidence claims; verify remote before next batch |

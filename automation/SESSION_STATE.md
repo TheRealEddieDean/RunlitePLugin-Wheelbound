@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-real-batch-readiness
-- State: ACTIVE — wb-20261014-data-parsing-handoff owns A57; acquired 2026-10-14T17:36:04.371011+00:00; expires 2026-10-14T17:51:04.371011+00:00.
+- State: IDLE — owner released; no active lease.
 - Branch: wheelbound-mode
 - Starting remote head:04709b3e043f8b1bd29dbe07a53e0cf33992dde4
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
@@ -22,7 +22,15 @@
 
 The two real manifests cover six explicit pages/411 parsed rows, not all-monster/category discovery. Full HTML/databases are transient generated outputs, not archived in Git; selected review extracts/hashes/revision identifiers are committed. The unchanged declared collector matched allowing robots rules for these canonical paths. Earlier named-client/browser/search blocks remain historical route-specific facts, not universal collection failure or blanket access permission. No oldid/API/Special bypass or identity change. B1 source receipts stay intact; A51 King-kurask multi-roll caution remains.
 
-## Exact next action — one user answer pending
+## Exact next action — user-collected data intake
+
+User2026-10-14 requests a fresh chat to parse collector outputs. Read automation/DATA_PARSING_HANDOFF.md and use automation/START_DATA_PARSING.md as the starter prompt. Prefer full output ZIP; catalog.json and coverage.json suffice for initial review. No upload received in this checkpoint session. A58 WAITING_INPUT; do not claim user data has been parsed.
+
+First produce one bounded intake/quality report: preserve original hashes/provenance, inspect real-versus-fixture/source timestamps, scope/errors/pending/unknown/unsupported coverage, creature/drop counts, duplicates and classification evidence. Cross-check HTML/per-page/SQLite/CSV when available. Save/validate/guardedly publish and verify remote before a new candidate-normalization batch. Do not re-scrape supplied pages or restart A54/A55 research without a named gap. Main/production implementation remain unauthorized.
+
+The separate A56 material question below is preserved and unapproved. It need not interrupt independent data intake.
+
+## Preserved A56 design question — unanswered
 
 Present Q6-PERMANENT-ORDINARY-INVALIDATION from A56:
 
@@ -42,6 +50,7 @@ Committed-but-unselected offer reconciliation remains separately unresolved. Do 
 - Further candidate admission: concrete starter membership/count, source significance/contexts, canonical identities, actual access/personal receipts, reviewed reward quotes, tiers/prices remain unfinished. Task-dependent expansion held; live all-monster crawl NOT_RUN. Do not silently enable disabled research catalogs.
 - Q2 actual full/unsupported Coffer boundary and Q5 exact restrictive-control policy review need evidence. Separate legacy CA reward scope remains open. Current-client traces/build report exports and engineering authorization remain external gates. No policy contact or production work performed.
 
-Stop reason: three bounded deliverables completed; next material design answer pending. Ownership released. No full-project completion, background execution, measured allowance or exact30-minute claim.
+Stop reason: A57 new-chat data-parsing handoff complete; user upload awaited, A56 design answer still pending. Ownership released. No full-project completion, background execution, measured allowance or exact30-minute claim.
 
-Current bounded request A57: checkpoint for new chat to parse user-collected output archive. Upload not yet received; preserve A54–56 and unanswered Q6 choice. Documentation only.
+
+A57 starts from verified remotea68f025cc50ae47a3dc7d4a6ac620d2d6779486a. Claimea81829bee4b00107d4358dbad2aabbaa37fa2e6 verified. This owning checkpoint adds DATA_PARSING_HANDOFF/START_DATA_PARSING and releases ownership; resolve own SHA from branch/file history. No user output received/parsed, no new gameplay approvals. Remote tree/head/main verification required before saved claim.

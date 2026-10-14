@@ -235,3 +235,7 @@ A54 checkpoint1118993f4345c6a8c1ce0abcc247280f3d45979b/tree9fa6978873582821d23e8
 ## WB-A56 — Q6 recovery planning,2026-10-13 America/Chicago
 
 A55 checkpointd2cb5db13b95254f4444f5e8789972fc9376c3b7/tree7e9f0a3a6ba5665fcb52547443d28bb0648bf7d1 verified. Claimbb940943496720f718d0433346376380d403e1be remotely verified. Saved16-case matrix:13 existing-rule derivations, one unselected-offer reconciliation OPEN, two no-fault-retirement cases PROPOSED/NOT_ADOPTED. No-fault ordinary retirement recommendation awaits explicit user answer; actual reservation accounting distinguished from blanket spin grant.141 adopted IDs unchanged; all cases NOT_RUN. No production/model/catalog changes. Checkpoints point to this one next question; ownership released in owning commit, remote tree/head/main must verify.
+
+## WB-A57 — data-intake new-chat checkpoint,2026-10-14
+
+Latest remote a68f025cc50ae47a3dc7d4a6ac620d2d6779486a verified; IDLE owner, main unchanged. Guarded claimea81829bee4b00107d4358dbad2aabbaa37fa2e6 remotely verified before writing. User requests output attachment guidance/checkpoint/new-chat prompt. Added DATA_PARSING_HANDOFF and START_DATA_PARSING: prefer full output ZIP, minimal catalog/coverage JSON acceptable, intake/quality first with source/fixture/provenance/coverage checks. Preserved A54/A55 real batches,141 decisions and A56 PROPOSED/NOT_ADOPTED choice. Upload not received; no data parsed. A58 WAITING_INPUT. Validation/guarded publication/remote tree/main verification required before saved claim.
