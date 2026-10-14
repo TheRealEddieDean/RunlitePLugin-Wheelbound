@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: IDLE — A63 bounded rule/table deliverable completed; owner released, awaiting one material unlock-topology answer.
+- State: ACTIVE — owner wb-20261014-table-by-tier; A65 comprehensive display table, unlock topology still unanswered.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -41,3 +41,5 @@ Original output.zip user attachment libfile_12514dfedef0819184279d6d84d380ff, SH
 A62 historical checkpointc62d381e4392845bce76d0738fc176af13374661/treeb119090f3919616ad482e5fe613075bc3a67efee completed old finite25-key/44-hunt v1 with six starter unlocks/325–18,925 FP under old rate policy. A54/A55/A58/A59/A60/A61 evidence and143 prior decisions remain preserved except explicit WB-D144/145 supersessions. PDF stale.
 
 A56 Q6 permanent ordinary invalidation stays PROPOSED/NOT_ADOPTED; no answer inferred from tiers. Existing Pause/Reject/no-reroll applies. Committed-but-unselected reconciliation, task-continuation, Coffer Q2, policy Q5 and separate legacy CA rewards remain independent. Current-client identity/composition/ownership/timing traces and engineering remain future activation gates. No background execution/quota/production completion claim. Owner released.
+
+A65 claim 2026-10-14T18:55:13.612274+00:00 expires 2026-10-14T20:55:13.612274+00:00; expected head05706461ff2c5dcb327a2d83d2d5c227b383d5fe. User requests CHALLENGE_HUNT_TABLE include entries under each tier. Display existing reviewed hunts plus explicit source candidates without admitting unresolved contexts or changing unlock topology/rewards.
