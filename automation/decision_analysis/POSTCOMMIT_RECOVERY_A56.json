@@ -1,0 +1,177 @@
+{
+  "task": "WB-A56",
+  "starting_head": "d2cb5db13b95254f4444f5e8789972fc9376c3b7",
+  "verified_claim": "bb940943496720f718d0433346376380d403e1be",
+  "status": "PLANNING_COMPLETE_USER_DECISION_PENDING",
+  "authority": [
+    "WB-D105",
+    "WB-D112",
+    "WB-D114",
+    "WB-D126",
+    "WB-D129",
+    "WB-D133",
+    "WB-D134",
+    "WB-D135",
+    "WB-D137",
+    "WB-D138",
+    "WB-D139",
+    "WB-D140"
+  ],
+  "new_adopted_decisions": [],
+  "runtime_enabled": false,
+  "cases": [
+    {
+      "id": "R01",
+      "trigger": "Detector initialization/network/source unavailable",
+      "classification": "PRESERVE_WAIT",
+      "required_or_proposed_behavior": "Unknown is not empty or permanently impossible; retain offers/assignment/randomness/quote; no new credit based on missing evidence.",
+      "status": "EXISTING_RULE_DERIVATION",
+      "execution": "NOT_RUN",
+      "runtime_enabled": false
+    },
+    {
+      "id": "R02",
+      "trigger": "Required equipment temporarily banked, sold or missing",
+      "classification": "PRESERVE_WAIT",
+      "required_or_proposed_behavior": "Preserve assignment; existing legal access/reacquisition/Pause/Reject only. No new off-task permission.",
+      "status": "EXISTING_RULE_DERIVATION",
+      "execution": "NOT_RUN",
+      "runtime_enabled": false
+    },
+    {
+      "id": "R03",
+      "trigger": "Finite Slayer task ends or player changes unsupported method",
+      "classification": "PRESERVE_WAIT",
+      "required_or_proposed_behavior": "No off-task credit or automatic replacement. Task-dependent catalog remains held under WB-D140; no reacquisition waiver.",
+      "status": "EXISTING_RULE_DERIVATION",
+      "execution": "NOT_RUN",
+      "runtime_enabled": false
+    },
+    {
+      "id": "R04",
+      "trigger": "Challenge pool falls from three eligible creatures to two after target commitment",
+      "classification": "PRESERVE_SELECTED",
+      "required_or_proposed_behavior": "New Challenge offers unavailable; already committed creature/item remains. Diversity count is not a cancellation condition.",
+      "status": "EXISTING_RULE_DERIVATION",
+      "execution": "NOT_RUN",
+      "runtime_enabled": false
+    },
+    {
+      "id": "R05",
+      "trigger": "Current rate or allocation becomes unknown/out of band",
+      "classification": "PRESERVE_WAIT",
+      "required_or_proposed_behavior": "Preserve hunt/item/reward and evidence; do not accept a newly unsupported context or choose another target. Reviewed permanent invalidation remains open.",
+      "status": "EXISTING_RULE_DERIVATION",
+      "execution": "NOT_RUN",
+      "runtime_enabled": false
+    },
+    {
+      "id": "R06",
+      "trigger": "Fresh current evidence again supports the same frozen source/context",
+      "classification": "RESUME_SAME",
+      "required_or_proposed_behavior": "Revalidate identity/context and active evidence boundary; continue same target/reward. No paused-progress backfill.",
+      "status": "EXISTING_RULE_DERIVATION",
+      "execution": "NOT_RUN",
+      "runtime_enabled": false
+    },
+    {
+      "id": "R07",
+      "trigger": "Price or reward schedule changes after offer commitment",
+      "classification": "PRESERVE_QUOTE",
+      "required_or_proposed_behavior": "Keep existing frozen quote/version; new schedules govern future offers only.",
+      "status": "EXISTING_RULE_DERIVATION",
+      "execution": "NOT_RUN",
+      "runtime_enabled": false
+    },
+    {
+      "id": "R08",
+      "trigger": "Catalog omits target but source disappearance is not proven",
+      "classification": "PRESERVE_WAIT",
+      "required_or_proposed_behavior": "Missing catalog row is not external impossibility. Preserve original payload; no silent substitution or reseed.",
+      "status": "EXISTING_RULE_DERIVATION",
+      "execution": "NOT_RUN",
+      "runtime_enabled": false
+    },
+    {
+      "id": "R09",
+      "trigger": "Old account/session callback or repeated callback arrives",
+      "classification": "IDENTITY_AND_IDEMPOTENCY",
+      "required_or_proposed_behavior": "Reject stale identity; recognized duplicate uses existing receipt, no second debit/payment.",
+      "status": "EXISTING_RULE_DERIVATION",
+      "execution": "NOT_RUN",
+      "runtime_enabled": false
+    },
+    {
+      "id": "R10",
+      "trigger": "Completion already settled before later source change",
+      "classification": "PRESERVE_SETTLEMENT",
+      "required_or_proposed_behavior": "Keep legitimate once-only settlement and player item; no new reward replay or invalidation-based clawback.",
+      "status": "EXISTING_RULE_DERIVATION",
+      "execution": "NOT_RUN",
+      "runtime_enabled": false
+    },
+    {
+      "id": "R11",
+      "trigger": "Prechange active receipt still unsettled when player pauses",
+      "classification": "PRESERVE_RECEIPT",
+      "required_or_proposed_behavior": "Preserve earning-time evidence; no payment while paused. Existing reviewed reconciliation required, not automatic backfill or denial.",
+      "status": "EXISTING_RULE_DERIVATION",
+      "execution": "NOT_RUN",
+      "runtime_enabled": false
+    },
+    {
+      "id": "R12",
+      "trigger": "Unknown future save schema or migration failure",
+      "classification": "PRESERVE_READ_ONLY",
+      "required_or_proposed_behavior": "Retain original state and last-good payload; no destructive reset, merge, fabricated retirement or reward.",
+      "status": "EXISTING_RULE_DERIVATION",
+      "execution": "NOT_RUN",
+      "runtime_enabled": false
+    },
+    {
+      "id": "R13",
+      "trigger": "Selected ordinary target permanently impossible in every supported context after verified game change",
+      "classification": "USER_DECISION_REQUIRED",
+      "required_or_proposed_behavior": "Recommended narrowly reviewed no-fault retirement is PROPOSED only. Existing Pause/Reject remain current until answered.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "execution": "NOT_RUN",
+      "runtime_enabled": false
+    },
+    {
+      "id": "R14",
+      "trigger": "Offer set committed but not selected when eligibility changes",
+      "classification": "RECONCILIATION_OPEN",
+      "required_or_proposed_behavior": "Preserve full set and seeds; hold unresolved selection. Detailed invalid-offer reconciliation is not settled by selected-assignment retirement.",
+      "status": "OPEN",
+      "execution": "NOT_RUN",
+      "runtime_enabled": false
+    },
+    {
+      "id": "R15",
+      "trigger": "Taint/Punishment/Sacrifice mandatory obligation becomes unavailable",
+      "classification": "SPECIAL_RECOVERY_SEPARATE",
+      "required_or_proposed_behavior": "Do not apply proposed ordinary retirement, skip specials or erase mandatory obligations. Coffer Q2 remains evidence-gated.",
+      "status": "EXISTING_RULE_DERIVATION",
+      "execution": "NOT_RUN",
+      "runtime_enabled": false
+    },
+    {
+      "id": "R16",
+      "trigger": "Crash/restart during a future approved no-fault retirement",
+      "classification": "PROPOSED_NOT_ADOPTED",
+      "required_or_proposed_behavior": "If approved, atomic idempotent assignment-scoped retirement receipt releases only its actual outstanding ordinary reservation; no duplicate spin grant or penalty bypass.",
+      "status": "PROPOSED_NOT_ADOPTED",
+      "execution": "NOT_RUN",
+      "runtime_enabled": false
+    }
+  ],
+  "question_id": "Q6-PERMANENT-ORDINARY-INVALIDATION",
+  "proposal_status": "PROPOSED_NOT_ADOPTED",
+  "recommendation": "For a selected ordinary assignment made impossible in every qualifying context by an evidenced external game change, reviewed no-fault retirement: no completion reward, FP penalty, Punishment or consumed allotted spin; preserve receipts and independent settled bounties. Never a player-selected reroll or mandatory-special waiver. Exact debit correction must use actual ledger/reservation, not a blanket +1 grant.",
+  "residual_open": [
+    "Changed committed-but-unselected offer reconciliation",
+    "Exact durable schema/client proof and reviewed invalidation evidence format",
+    "Task-dependent continuation permissions",
+    "Mandatory special recovery/Q2 boundary"
+  ]
+}
