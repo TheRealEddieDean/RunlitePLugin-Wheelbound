@@ -113,3 +113,8 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 | WB-A62 | Complete Challenge access/receipt/FP schedule and catalog delivery | P0 | A61 verified | M bounded packet | DONE (complete authored v1; owning checkpoint) | CHALLENGE_HUNT_TABLE; contracts/catalog | Every supported hunt has concrete access, completion evidence and frozen FP; validation, manifest, remote verification |
 
 A62 completion note: all four requested finite catalog tasks complete;25 creature keys/44 hunts/six starter keys with access/personal rates/receipt definitions/numeric FP. A60 corrected overlay32 components/1,437 monsters after source-introduction cross-check; historical A60 commit retained. Runtime engineering/client traces remain separate authorization gate, not an unfilled design table.
+
+| WB-A63 | Four Challenge rarity cards/per-roll brackets and migration tables | P0 | Explicit2026-10-14 rule change; guarded ownership | S | DONE (rules/tables; owning checkpoint) | CHALLENGE_CARD_TIERS; challenge_tier_rules_v2 | WB-D144/145, exact no-overlap edges,44 retier mappings,22 offline tests; proposals not adopted |
+| WB-A64 | Settle rank unlock topology then expand four-tier source/access/receipt/FP/offer catalog | P0 | A63 verified; one unlock answer; existing source data | M per bounded source packet | NEXT_DESIGN_ANSWER | Future challenge catalogv2 | Coherent separate rank ownership/offer/actual-diversity gates and reviewed lower-tier hunts; no use of raw lead counts as eligibility |
+
+A63 supersedes old A62 single-range future selection. Old v1 completion remains historical; the expanded four-tier catalog is not complete. Ask one material topology question recorded in SESSION_STATE; no automatic chain or opt-in control adopted.

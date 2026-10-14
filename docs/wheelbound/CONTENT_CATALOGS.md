@@ -192,3 +192,7 @@ WB-D140/141: prioritize repeatable task-independent starter contexts; hold finit
 ## Completed authored Challenge catalog v1
 
 The separate catalogs/challenge_hunts_v1.json and .csv contain25 encounter keys/44 exact-item hunts; [human table](CHALLENGE_HUNT_TABLE.md) lists access, personal probability and numeric FP. Source/identity packets and full-corpus screening dispositions accompany the finite whitelist. Authority WB-D142/143. This completes v1 content authoring; unlisted source contexts, task-dependent/group/stateful formulas and runtime enablement are outside this version. Original raw upload and historical catalogs remain unchanged.
+
+## Current Challenge rarity/card supersession — WB-D144/145
+
+[CHALLENGE_CARD_TIERS](CHALLENGE_CARD_TIERS.md) controls future Challenge rank placement: Lesser reciprocal25–50, Standard>50–125, Greater>125–750, Superior>750–5000. Ignore displayed roll-count multiplier for tier classification; preserve raw rolls/personal encounter probability separately. This supersedes old single1/400–1/1500/aggregate-rate bracket statements in this chapter for future selection only. Fresh personal exact assigned-source completion, source/context review and existing settled assignments remain protected. Four rank identities are confirmed; sequential/independent unlock topology, enabled-rank control/offer integration and expanded v2 roster/rewards are not yet adopted/completed. Do not treat the preserved v1 roster/FP or lower-tier source leads as a ready four-tier pool. No runtime implementation/main change.

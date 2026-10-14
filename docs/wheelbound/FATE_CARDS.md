@@ -74,3 +74,7 @@ WB-D140/141: prioritize repeatable task-independent starter contexts; hold finit
 ## Concrete Bossing Challenge table v1
 
 WB-D142/143 completes [44 specific-item hunts across25 keys](CHALLENGE_HUNT_TABLE.md), with six included starter creatures and source-specific access/rates/fixed FP/receipt contracts. Use the finite versioned table for future pool construction; never raw Wiki labels. Actual accessibility/ownership/validated adapters and≥3-key floor still apply. All entries stay runtime-disabled pending engineering; no normal L/S/G change or broadened Challenge objectives.
+
+## Current Challenge rarity/card supersession — WB-D144/145
+
+[CHALLENGE_CARD_TIERS](CHALLENGE_CARD_TIERS.md) controls future Challenge rank placement: Lesser reciprocal25–50, Standard>50–125, Greater>125–750, Superior>750–5000. Ignore displayed roll-count multiplier for tier classification; preserve raw rolls/personal encounter probability separately. This supersedes old single1/400–1/1500/aggregate-rate bracket statements in this chapter for future selection only. Fresh personal exact assigned-source completion, source/context review and existing settled assignments remain protected. Four rank identities are confirmed; sequential/independent unlock topology, enabled-rank control/offer integration and expanded v2 roster/rewards are not yet adopted/completed. Do not treat the preserved v1 roster/FP or lower-tier source leads as a ready four-tier pool. No runtime implementation/main change.

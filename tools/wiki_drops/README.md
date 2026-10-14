@@ -110,3 +110,7 @@ python -m unittest discover -s tools/wiki_drops/tests -v
 ```
 
 Tests use synthetic local HTML/mocked fetching. They cover rate semantics, colspan layouts, boss/monster distinction, footnotes/methods, unknown data, robots denial, redirect host restrictions, resume, access-stop behavior, scope isolation and SQLite/JSON exports. No real source freshness, live coverage, client behavior or production build is established by these tests.
+
+## Current four-rank Challenge classification (A63)
+
+`challenge_tier_rules_v2.py INPUT_OUTPUT_DIRECTORY` builds source-preserving tier rules/migration tables; `tests/test_challenge_tiers.py` validates edges and ignored roll counts. See docs/wheelbound/CHALLENGE_CARD_TIERS.md. The old `curated_hunts_v1.py`, `finalize_challenge_catalog.py` and `validate_challenge_catalog.py` reproduce the historical old-band v1 packet; they are not current four-tier eligibility code and must not overwrite the current supersession banner as a routine update. V2 is rule/migration documentation, not an expanded ready roster or gameplay adapter. No generic raw data admission.

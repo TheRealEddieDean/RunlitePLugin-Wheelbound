@@ -1,5 +1,5 @@
 {
-  "version": "authority-v4-2026-10-14",
+  "version": "authority-v5-2026-10-14",
   "scope": "Documentation metadata only; does not enable gameplay",
   "decision_register": "../DECISIONS.md",
   "catalogs": [
@@ -149,12 +149,31 @@
       "h3_pinned_input": false,
       "human_table": "CHALLENGE_HUNT_TABLE.md",
       "csv": "catalogs/challenge_hunts_v1.csv",
-      "reward_schedule_version": "challenge-fp-v1"
+      "reward_schedule_version": "challenge-fp-v1",
+      "future_selection_status": "SUPERSEDED_BRACKET_POLICY_WB_D144_145; preserve historical roster/quotes and frozen assignments",
+      "superseding_rules": "catalogs/challenge_tier_rules_v2.json"
+    },
+    {
+      "path": "catalogs/challenge_tier_rules_v2.json",
+      "version": "challenge-tier-rules-v2-2026-10-14",
+      "sha256": "405daaaf33c8aaa6f4d52b23f50ecdd0414ef2c203c20fdaecf7b37504ea72c5",
+      "entry_count": 4,
+      "authority": "WB-D144_CONFIRMED_RULES_WB-D145_DELEGATED_EDGES",
+      "runtime_enabled": false,
+      "enable_gates": [
+        "Settle rank unlock/offer integration",
+        "Author expanded four-tier item/access/receipt/reward catalog",
+        "Current-client adapters and once-only settlement validation"
+      ],
+      "h3_pinned_input": false,
+      "historical_hunt_mappings": 44,
+      "not_a_full_v2_roster": true
     }
   ],
   "historical_experiments": {
     "H1": "Outputs preserve original model hash; recover original source revision before claiming full reproducibility from the current tree.",
     "H2": "Retained model/source and output hashes; synthetic inputs remain assumptions.",
     "H3": "Pinned item/punishment catalog hashes remain unchanged; new normative catalogs require new paths/versions and model outputs."
-  }
+  },
+  "current_challenge_rules": "catalogs/challenge_tier_rules_v2.json"
 }

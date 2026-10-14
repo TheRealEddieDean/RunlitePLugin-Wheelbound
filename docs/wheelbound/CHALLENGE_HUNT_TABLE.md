@@ -1,5 +1,7 @@
 # Challenge hunt table — authored catalog v1
 
+> **Superseded for future tier selection by WB-D144/145:** see [four Challenge card tiers](CHALLENGE_CARD_TIERS.md). This44-hunt v1 table/quotes is historical; the four-tier v2 expanded roster and unlock/offer/reward integration are not yet complete. Use the new per-roll brackets, not the old single personal-rate band. Existing committed assignments keep their frozen versions.
+
 **44 specific-item hunts, 25 distinct creature/encounter keys, six starter creatures.** This is the completed design selection table with source-reviewed rates, fixed FP quotes, access predicates and completion evidence. Runtime implementation and current-client validation remain separate; no gameplay code was authorized or enabled.
 
 Machine-readable [JSON](catalogs/challenge_hunts_v1.json), flat [CSV](catalogs/challenge_hunts_v1.csv), [source context packet](research/CHALLENGE_CONTEXT_EVIDENCE_A61.json), [taxonomy overlay](research/CHALLENGE_TAXONOMY_A60.md). Use the explicit roster, not raw collector labels. Unlisted sources/items/contexts are not selectable. Source corpus is the user-supplied 2026-10-14 snapshot; no all-game completeness or independent live verification claim.

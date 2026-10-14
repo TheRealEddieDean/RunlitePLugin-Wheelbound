@@ -1,47 +1,43 @@
 # Wheelbound session checkpoint and ownership
 
-- Session ID: wb-20261014-curated-catalog
-- State: ACTIVE — owner wb-20261014-challenge-tiers; A63 bracket/rate supersession and migration tables.
+- Session ID: wb-20261014-challenge-tiers
+- State: IDLE — A63 bounded rule/table deliverable completed; owner released, awaiting one material unlock-topology answer.
 - Branch: wheelbound-mode only.
-- Starting remote head:93536bc530fe83ff15d3ff664657ba4e11cf5367.
-- Guarded claim:00b7318f2dd83f33e9f4d3ef8939aec28f22bf18.
-- Verified A60:778683bb11316e21d7357b017eec94925589f847; exact tree893d6c47cdfc277e019404a8ae5bd6905b85178e.
-- Verified A61:3f2443cc66fd52cf7c1b647a00fd35490103f31f; exact treed7789dad0e843b2185f86ff767de3b63716771ff.
+- Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
-- Owning A62 commit contains final table/FP/access/receipt/manifest and this release. Resolve its own SHA from branch history; a commit cannot embed itself. Verify exact remote head/tree/main before reporting saved.
-- Scope: design/documentation/research and standalone tools/wiki_drops only. No production gameplay implementation, main changes or workflow activation authorized.
+- Owning A63 checkpoint contains current rules/tables/release; resolve own SHA from branch history and verify head/tree/main before saved claim. Commit cannot embed itself.
+- Scope: design/docs/research/standalone tools/wiki_drops only; no production gameplay/main/workflow activation authorized.
 
-## Completed current user request — four-part finite catalog v1
+## Latest explicit user change — WB-D144/145
 
-User2026-10-14 explicitly requested: remove bad labels/group variants; meaningful personal1/400–1/1500 items; resolve task/multi-roll conditions; access/completion/FP for each supported hunt. **All four completed for the finite authored v1 design catalog.** Do not return to intake or call the concrete table unfinished merely because future implementation is unvalidated.
+User2026-10-14 specifies four separately unlockable item-hunt Challenge ranks: Lesser1/25–1/50; Standard1/50–1/125; Greater1/125–1/750; Superior1/750–1/5000. These final structured ranges supersede the same message's preliminary1/60/max1000 and the prior single1/400–1/1500 band. Ignore the displayed2× in2×1/75 **for bracket placement**; classify as1/75. Preserve raw counts/conditions/personal encounter probability separately; never call per-roll rate exact per-kill rate.
 
-- CHALLENGE_HUNT_TABLE.md: human selection/access/evidence/reward table.
-- catalogs/challenge_hunts_v1.json and .csv:25 canonical creature keys,44 exact-item hunts, six starter targets, explicit skill/quest/diary/route/mode/source/form/solo predicates, personal source-model bounds and numeric frozen FP quotes.
-- Starter: Brine rat, Turoth, Cave horror, Sulphur Nagua, Kurask, Skeletal Wyvern. Grants unlocks, not access. Existing Lesser AND Greater gate and≥3 actual eligible creature rule unchanged.
-- research/CHALLENGE_TAXONOMY_A60.md/json plus builder: all2,929 source pages screened, explicit item/scenery/pet removals; corrected overlay1,437 monsters/161 bosses/855 non-creatures/32 components/444 unresolved. Source introduction checks corrected five initial parent inferences; ordinary Araxyte is not a boss component. Raw data unchanged.
-- research/CHALLENGE_CONTEXT_EVIDENCE_A61.json and CHALLENGE_IDENTITY_PINS_A61.json:25 cached pages, reported revision/hash/receipts/notes; exact selected raw rows and pinned primary RuneLite item/NPC identity constants. Prefix matching forbidden; composition aliases need context/current-client verification.
-- Whole uploaded corpus44,447 rows receives a screening disposition;408 unselected numeric leads are NOT selectable, not falsely declared invalid/fully reviewed. Finite v1 does not claim exhaustive all-game coverage.
-- Task-only/finite-key-only, unmodeled group allocation, stateful vestiges, superiors/shared tables and unsupported sources excluded v1. No free task, forced unrelated training or off-task waiver invented. Task-continuation remains separately pending for future content.
-- Zulrah two reported1/1024 marginals yield dependence-free[1/1024,1/512]; full range in-band. No independent/additive exact-rate assumption. Vorkath necklace is a single-roll tertiary. Burning claw499/250000 and Phosani fractions preserved.
-- WB-D142/143: delegated content and FP adoption under WB-D132/current explicit request. FP versionchallenge-fp-v1:25*ceil((100+100*reference_expected_hours)/25); authored throughput/lower-bound effort anchor,325–18,925 FP. Authored balance, not measured playtime/calibrated economy. Quotes freeze; ordinary/bounty/unlock prices and historical simulations unchanged.
-- Common access/receipt contracts in JSON: correct account/run/active interval, source/phase/mode/solo personal exact dropped item, once-only transaction, no old/traded/paused/other-source credit; player keeps item. No new pickup/turn-in requirement. Current-client behavior is not claimed tested.
+WB-D145 delegated shared-edge convention: reciprocal denominator D=1/p; Lesser25≤D≤50, Standard50<D≤125, Greater125<D≤750, Superior750<D≤5000. Shared boundaries go to easier rank, no duplicate same-context entries. Non-unit fractions compared exactly. Alternatives/task/party/approximation need explicit context review; no convenient-rate fallback.
 
-## Validation and publication
+Personal fresh active exact assigned-source drop, meaningful unique/source filtering, previous ownership allowed, non-consuming/once-only completion, no reroll/pity and normal Bossing L/S/G mechanics remain. New Challenge ranks are distinct from ordinary KC-card names.
 
-432 offline assertions pass: roster/source/ID/hash/SQLite row/rational bound/union bound/fixed quote/odds/diversity/contract checks. Existing17 offline/synthetic collector tests pass. Source builder + finalizer reproduce JSON/CSV/human table/source evidence byte-for-byte. All nine authority manifest hashes match;143 unique decision IDs. No production build, runtime adapter or current-client positive/negative trace was executed. Git whitespace/scope checks required before guarded A62 publication. Failed publication invalidates saved claim; no force fallback.
+## A63 completed artifacts and validation
 
-Original input remains user attachment output.zip, Library IDlibfile_12514dfedef0819184279d6d84d380ff, SHA256e00babd58e09c047f68df94625cd5b4e77e119952d52c0d0c50b53a7d2b60309. Full cache/SQLite not bulk-committed. Reprepare original if scratch expires; don't reread/re-scrape all supplied pages. A58fc392840194c2895023727616056c6ebf7710049 intake and A5993536bc530fe83ff15d3ff664657ba4e11cf5367 source reviews remain historical. A54/A55 prior six-page receipts unchanged.
+- docs/wheelbound/CHALLENGE_CARD_TIERS.md: adopted brackets, roll-count examples, migration counts, lower-tier source leads and explicitly unadopted unlock/control recommendation.
+- catalogs/challenge_tier_rules_v2.json: four rules,44 historical hunt mappings, original raw rates, unchanged v1 personal/FP receipts marked historical, full44,447-row classification statistics NOT roster counts, lower-tier cached leads NOT admitted.
+- tools/wiki_drops/challenge_tier_rules_v2.py and five new tests: exact classifier/derivation; existing17 collector tests plus5 new =22 offline tests pass.
+-44 old hunts map29 Greater/15 Superior; zero Lesser/Standard. New lower-tier source leads: Scurrius spine1/33 (two contexts, not two creatures), Hespori bucket1/35, Corp spirit shield8/512=1/64. Access/receipt/FP reviews still required; no promotion from raw data.
+- Endpoint/outside/nonunit/ignored-multiplier/unknown-alternative checks,44 mapping and44,447-row conservation, lead JSON/SQLite equality and unchanged v1 hash pass. Authority manifestv5 has10 hash-pinned records; current Challenge rules point to v2.
+- Prior44-hunt v1 JSON/CSV unchanged as historical/source receipts; old human table carries a supersession banner. Old builders/validator reproduce historical policy, not new future pool construction. V1 FP is not automatically a new tier reward.
+- Expanded v2 four-tier roster/rewards/offer integration are explicitly **not complete**. Do not repeat the old v1-complete status as current four-tier readiness. No live/client/gameplay tests performed.
 
-## Exact continuation and remaining boundaries
+## Exact next single question — unlock topology
 
-No unfinished work in the requested finite four-part catalog packet. Next engineering milestone, **only after separate implementation authorization**, is implement validated access and personal-source adapters, source/form/composition mapping, active earning/delivery timing, durable once-only settlement and positive/negative/paused/reconnect/account traces on current RuneLite. Catalog stays runtime-disabled until then. Entry/card/expansion purchase prices and wider empirical economy calibration are separate from this requested reward table. Additional unlisted hunts require a new source-reviewed catalog version; do not silently broaden v1.
+Ask: should the four Challenge ranks unlock progressively **Lesser → Standard → Greater → Superior**, or be independently purchasable after a common entry gate?
 
-Preserve all locked decisions, normal L/S/G pool, card-before-target uniform creature/item draw, fresh specific personal drop, ownership-permitted/non-consuming completion, independent automatic once-only bounties and Pause rules. PDF remains stale. No background work/allowance/runtime completion claim.
+Recommendation: progressive separate permanent unlocks while retaining lower ranks, so unlocking Superior never forces its hunts. User's desire for four unlockable rank identities is confirmed; exact dependency topology is still PROPOSED/NOT_ADOPTED. The between-assignment owned-rank enable/disable selector, offer slots/frequencies/tier chooser, old Bossing Lesser AND Greater entry gate, first starter grants, per-rank≥3 actual creature readiness and prices need coherent integration; do not silently grant free Lesser or four extra offer slots. No reselecting/reseeding committed offers.
 
-## Preserved unanswered design proposal — A56
+After answer: verify remote/main/owner, guarded claim, record only precise approved topology/supersession, update specs/checkpoint, validate/publish/verify before next one-at-a-time material design question. Independent safe source review can continue but no final v2 admission until relevant pool/access/receipt/reward/offer contracts are settled.
 
-Q6-PERMANENT-ORDINARY-INVALIDATION: if a reviewed external game update permanently removes every completion route for an assigned ordinary Fate, should it retire without reward/penalty and without consuming its actual reserved ordinary spin? Recommendation YES remains **PROPOSED, NOT_ADOPTED**, awaiting explicit answer. Existing Pause/Reject/no-reroll applies. Mandatory specials, temporary/unknown/self-caused changes excluded; no blanket+1 or automatic replacement. Committed-but-unselected offer reconciliation remains separate. Do not infer approval from the catalog request.
+## Historical evidence and preserved unrelated proposals
 
-Other preserved boundaries: actual full/unsupported Coffer forced donation (Q2), exact restrictive-control policy review (Q5), separate legacy CA reward scope, task-dependent expansion continuation. No new approvals inferred. Owner released; no active lease. Resume with remote/main/ownership verification and PROTOCOL; historical experiments/catalogs must not be overwritten.
+Original output.zip user attachment libfile_12514dfedef0819184279d6d84d380ff, SHA256e00babd58e09c047f68df94625cd5b4e77e119952d52c0d0c50b53a7d2b60309.2,929 parsed pages/44,447 raw rows; partial discovery, no all-game completeness claim. Corrected taxonomy1,437 monsters/161 bosses/855 non-creatures/32 components/444 unresolved. No raw edits/bulk cache commit or source recrawl; prepare attachment again if scratch expires.
 
-A63 acquisition 2026-10-14T18:45:31.086610+00:00 expires 2026-10-14T20:45:31.086610+00:00. Expected remote c62d381e4392845bce76d0738fc176af13374661; owner released previously. User asks four unlockable Challenge tiers and per-roll bracket classification ignoring displayed roll count. Final four explicit brackets supersede preliminary1/60/max1000 wording. Unlock/offer integration is material and will be presented as a proposal, not silently approved.
+A62 historical checkpointc62d381e4392845bce76d0738fc176af13374661/treeb119090f3919616ad482e5fe613075bc3a67efee completed old finite25-key/44-hunt v1 with six starter unlocks/325–18,925 FP under old rate policy. A54/A55/A58/A59/A60/A61 evidence and143 prior decisions remain preserved except explicit WB-D144/145 supersessions. PDF stale.
+
+A56 Q6 permanent ordinary invalidation stays PROPOSED/NOT_ADOPTED; no answer inferred from tiers. Existing Pause/Reject/no-reroll applies. Committed-but-unselected reconciliation, task-continuation, Coffer Q2, policy Q5 and separate legacy CA rewards remain independent. Current-client identity/composition/ownership/timing traces and engineering remain future activation gates. No background execution/quota/production completion claim. Owner released.
