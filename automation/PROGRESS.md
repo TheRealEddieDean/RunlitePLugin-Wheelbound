@@ -247,3 +247,5 @@ Starting remote85c4c7f51b8a04e61f3ba30d98308cbedba76da5; guarded claim8a12235200
 ## A59 first uploaded Challenge review — 2026-10-14
 
 A58 remotely verified fc392840194c2895023727616056c6ebf7710049/tree09c9c068ac56ee0d9535085555666ef6b131e097; main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa unchanged. CHALLENGE_UPLOAD_BATCH_A59.md/json: three cached pages,11 raw rows/nine logical creature-item pairs, one rate-screen/context lead/two task-dependent holds/three multiple-roll holds/three reported-rate exclusions. Source revisions/hashes/row note targets and raw expressions retained. SQLite selected payloads/cached parse arrays/exact hypothetical arithmetic validated. No enabled roster, new design decision or production code. Owning A59 commit requires guarded publication and remote verification. Ownership released; next A60 disabled taxonomy index, A56 still NOT_ADOPTED.
+
+A60 taxonomy overlay: all2,929 pages dispositioned;1,436 monsters/161 bosses/855 non-creatures/33 grouped components/444 unresolved. Original archive unchanged. Counts/identity/grouping validations pass; next A61 finite hunt catalog. Owning checkpoint must be remotely verified.

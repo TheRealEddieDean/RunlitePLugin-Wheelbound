@@ -60,3 +60,7 @@ Stop reason: A57 new-chat data-parsing handoff complete; user upload awaited, A5
 A57 starts from verified remotea68f025cc50ae47a3dc7d4a6ac620d2d6779486a. Claimea81829bee4b00107d4358dbad2aabbaa37fa2e6 verified. This owning checkpoint adds DATA_PARSING_HANDOFF/START_DATA_PARSING and releases ownership; resolve own SHA from branch/file history. No user output received/parsed, no new gameplay approvals. Remote tree/head/main verification required before saved claim.
 
 Current explicit user request2026-10-14: finish incorrect labels/grouped variants, meaningful personal in-band unique hunts, task/multi-roll conditions, access/completion/FP table. Research/design catalog authoring authorized; no production implementation/main change or live trace claim. Publish each bounded stage before continuing; do not stop at intake.
+
+## Current A60 completed overlay
+
+CHALLENGE_TAXONOMY_A60.md/json covers all2,929 pages with corrected identity/grouping and alternate-mode exclusions. Validation passes. No raw data changed. Publish/verify owning A60 checkpoint before A61; owner remains active. Current request continues until concrete catalog/access/receipt/FP table finished; do not stop at the overlay.
