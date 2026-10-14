@@ -91,4 +91,6 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A51 | Trace Loot Lookup drop-table retrieval and parser limits | P1 | User request; verified upstream/Hub pin; current owner | S | DONE (source analysis only; owning checkpoint) | research/LOOT_LOOKUP_SOURCE_TRACE | Ten source pins; request/parser/context/data flow; no live/Java run; guarded remote verification |
 
-| WB-A52 | Specify lossless candidate import/export review packet | P1 | A51 source trace; existing Challenge contexts | S | TODO | Separate documentation/format fixture plan | Preserve source text/conditions/IDs/errors and exact rate interpretations; no blocked scraping or runtime implementation |
+| WB-A52 | Specify lossless candidate import/export review packet | P1 | A51 source trace; existing Challenge contexts | S | DONE (format/fixtures via A53) | tools/wiki_drops/README.md; fixtures | Raw HTML/context/rate alternatives and disabled review records; no approved runtime catalog |
+
+| WB-A53 | Build user-requested Python Wiki drop research collector | P0 | Explicit tools authorization; verified owner; A51 source study | M (bounded tool) | DONE (tool/offline validation; owning checkpoint) | tools/wiki_drops; checkpoints | Standard-library category/URL/offline modes; boss/monster evidence; raw rates/contexts; SQLite/JSON/CSV;17 offline tests and CLI sample; guarded remote verification; live all-monster coverage NOT_RUN |
