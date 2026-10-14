@@ -1373,6 +1373,36 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Decision: Eligible specific Challenge item probability p lies in inclusive[1/1500,1/400]. In normalized1-in-N notation,400≤N≤1500. Exclude more-common-than1/400 and rarer-than1/1500 targets. Apply to the selected specific item, not aggregate chance of any unique or a conditional subtable roll. Shared rare-drop-table/generic loot remains excluded even if its probability falls in-band.
 - Rationale: Bound catalog rarity while retaining significant item hunts.
 - Affects: FATE_CARDS, rate/source catalog validation, economy/time review, target pool/eligibility and I03/I05 tests.
-- Exceptions/dependencies: Published/base versus player-specific/group probability definition, method variants/boosts and variable encounters need reviewed policy/source data; do not invent live rates. Unknown/unverified rate cannot be advertised eligible. Interval uses rational probability, not a raw textual denominator when numerator differs from1. This is not a1500-kill/time cap, guaranteed drop, consolation completion or pity reward. Keep fresh-drop-only completion, free Pause and existing Reject rules. Kill speed/access/supply cost still need curated expected-time/reward review, without a new universal time cap. No concrete target rates, roster membership, FP prices/rewards or party rule approved here.
+- Later policy resolution: WB-D133/134 adopt personal probability in reviewed supported contexts under WB-D132 delegation; no real-rate proof inferred.
+- Exceptions/dependencies: Historically unresolved published/base versus player-specific/group probability definition, method variants/boosts and variable encounters need reviewed policy/source data; do not invent live rates. Unknown/unverified rate cannot be advertised eligible. Interval uses rational probability, not a raw textual denominator when numerator differs from1. This is not a1500-kill/time cap, guaranteed drop, consolation completion or pity reward. Keep fresh-drop-only completion, free Pause and existing Reject rules. Kill speed/access/supply cost still need curated expected-time/reward review, without a new universal time cap. No concrete target rates, roster membership, FP prices/rewards or party rule approved here.
 - Supersession: WB-D125 exploratory1/400-only cutoff and all related unbounded-rarity wording; exact item/rate research remains gated.
 - Acceptance:1/400 and1/1500 pass;1/399 and1/1501 fail. Equivalent fractions normalized correctly; selected-item rate tested separately from any-unique/subtable chance. Unknown/shared-table items fail catalog enablement; no completion without the selected fresh drop.
+
+## WB-D132 - Context-supported recommendations are delegated for this continuation
+
+- Status: CONFIRMED explicit workflow delegation,2026-10-13 (America/Chicago); no gameplay approval implied by this entry alone.
+- Authority: Current user instruction: make as many decisions as possible using recommended takes based on contextual decisions already made.
+- Decision: Resolve context-supported design details autonomously, recording each as DELEGATED with rationale and acceptance. Ask one question at a time only when material ambiguity cannot be resolved without overriding approved intent or inventing evidence; wait before adopting that answer.
+- Supersession: WB-D115/119 and protocol answer-before-adoption requirements are narrowed for the delegated choices in this continuation. No reopening completed research or reinterpretation of locked decisions; design/documentation/research/planning only.
+- Acceptance: Each bounded deliverable is validated, committed, remotely verified before another begins. Ownership/head guards remain. No implementation authorization, invented user quotation, source fact or numerical balance approval.
+
+## WB-D133 - Challenge rarity uses the player's personal receiving probability
+
+- Status: DELEGATED adopted recommendation,2026-10-13; authority WB-D132.
+- Decision: Apply WB-D131's inclusive probability band to the chance that the assigned player receives the selected specific item from one completed authored encounter/loot opportunity in its reviewed context. Whole-party any-recipient chance, any-unique chance and conditional unique-table chance cannot substitute. A teammate's loot or subsequent trade cannot settle the player's hunt.
+- Rationale: Personal acquisition is the existing completion goal; using party probability could conceal a much rarer personal hunt.
+- Affects: FATE_CARDS, CATALOG_ACCEPTANCE, CATALOG_AUTHORITY, STATE_CONTRACT, PERSISTENCE, ECONOMY, TESTING, questions/checkpoints.
+- Dependencies: Real source/method/allocation/contribution data and supported personal receipts remain unverified. Do not divide group chance by team size unless reviewed allocation mathematics actually justify it. No live player-rate calculation, roster membership, fixed party size or solo-only restriction is approved.
+- Supersession: WB-D131 personal-versus-group policy gap only. No change to rarity endpoints, fresh-drop requirement, Pause/Reject, rewards or no guaranteed kill cap.
+- Acceptance (planned, NOT_RUN): synthetic party probability1/500 but personal1/2000 excludes that context; personal1/500 includes it subject to other gates; teammates' drops do not complete; unknown allocation is not eligible.
+
+## WB-D134 - Supported rate contexts must be explicit; unknown variable rates stay unavailable
+
+- Status: DELEGATED adopted recommendation,2026-10-13; authority WB-D132.
+- Decision: Author supported source/method contexts with explicit encounter mode, loot opportunity, relevant group/boost/contribution assumptions, source revision and personal probability or reviewed range. A range qualifies only when its entire supported range is inside WB-D131's band. Unknown or straddling ranges do not enable that context. Missing context evidence never falls back to a convenient base/group rate.
+- Rationale: Make the approved rarity screen auditable without requiring fabricated live precision or locking every player to one arbitrary party size.
+- Affects: rate catalog acceptance, eligibility snapshots, assignment/persistence, UX and receipt evidence.
+- Dependencies: Context predicates must be observable and reviewed; otherwise withhold the context before new offers. Freeze supported context IDs/versions with the pool and selected result. Multiple qualifying contexts may be authored for one item/source, but must not multiply creature diversity or imply different items. No new game inputs, compulsory party settings, arbitrary stat gates or live adapters.
+- Recovery: A later unknown/unsupported/out-of-range context cannot reroll, erase or auto-complete the committed hunt. Preserve assignment/evidence and explain that qualifying context is unavailable; existing free Pause/Reject remain. Postcommit recovery beyond those existing actions stays separate Q6 work. A known supported matching context may continue after revalidation; do not backfill paused earning.
+- Supersession: Pending rate/variant policy definition; concrete source formulas and actual catalog review remain pending.
+- Acceptance (planned, NOT_RUN): range[1/1000,1/500] passes; range[1/2000,1/500] fails; unknown rate fails; changing context cannot replace selected item/reward; context variants count as one creature.

@@ -26,3 +26,5 @@
 | Pardon then Tempt loses again | Vendor Banned again; another same-price Pardon permitted |
 
 WB-D085: paused-acquired items remain available in the approved empty-candidate Sacrifice recovery exception, with no retroactive acquisition credit. An active verified donation may settle it; never replace a nonempty frozen list arbitrarily.
+
+WB-D133/134: use reviewed personal receiving probability for one specific item per authored encounter/loot opportunity. Freeze source/mode/context IDs, assumptions, formula/source revision and exact probability or fully in-band range. Unknown allocation/context/range is unavailable for new offers. Do not assume group chance/team size. Preserve committed hunt/item/reward on later context failure; explain unavailable qualification and retain existing Pause/Reject. Only supported fresh active personal assigned-source receipts qualify; variants do not multiply target diversity. Concrete source formulas/live proof remain gated.

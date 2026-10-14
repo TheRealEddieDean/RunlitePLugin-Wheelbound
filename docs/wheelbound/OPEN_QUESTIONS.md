@@ -45,4 +45,6 @@ WB-D128: Bossing Challenge is item-drop-only; CA family and random-family decisi
 
 WB-D129 fresh-drop rule confirmed. WB-D130 resolves one specific item. WB-D131 fixes inclusive1/400–1/1500 specific-item band; no any-unique substitute or guaranteed kill cap.
 
-WB-D130/131 goal and rarity resolved. Next narrow rate-basis choice: for group encounters, use player's personal chance of receiving the selected item versus whole group's drop chance. Recommend personal probability to honor grind ceiling; actual source/method/contribution data still requires review. No party rule adopted yet.
+WB-D133/134 resolve rate policy under current delegation: personal receiving probability in explicit supported contexts; entire reviewed probability range must lie inside the band. Whole-party chance and unknown allocation cannot qualify. Actual formulas/source/current-client proof remain gated; do not re-ask the policy. Next bounded work: target generation/reveal and weighting specification.
+
+Current workflow WB-D132 supersedes ask-before-adoption for context-supported delegated recommendations. Remaining questions require one-at-a-time discussion only where approved intent/evidence cannot resolve them. No implementation authorized.
