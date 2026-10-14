@@ -1,8 +1,8 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-real-batch-readiness
-- State: IDLE — A54 complete; ownership released.
-- Ownership acquired: 2026-10-14T04:20:08.571179+00:00; expires: 2026-10-14T05:05:08.571179+00:00.
+- State: ACTIVE — owner wb-20261014-real-batch-readiness; task A55 bounded real boss-page classification/candidate review.
+- Ownership acquired: 2026-10-14T04:24:47.773788+00:00; expires: 2026-10-14T04:54:47.773788+00:00.
 - Branch: wheelbound-mode
 - Starting remote head:04709b3e043f8b1bd29dbe07a53e0cf33992dde4
 - Verified claim:c69fd835532ac3f0ca6de5508293ea65b2f95316
@@ -41,3 +41,5 @@ A51 starting remote3db51f6a97fadabf4a2d6389888c85880fc5771c; verified claim71603
 A53 explicit tools authorization2026-10-13. Starting remote5bd2beb31b4b03936c88890391abe024d35bad05; verified claimc07c7f05a81e1fe0c56952b10d9cb11e796aa9a4. Owning checkpoint contains script/readme/example URLs/fixtures/tests. No live Wiki/production/client activity;17 offline tests and synthetic exports passed. Own SHA resolve from branch history; remote tree/head/main verification required before saved claim. Next real source collection stays subject to access policy and accurate partial coverage.
 
 A54 owning checkpoint includes first bounded live collector review. Source captures are transient generated files; selected review packet/hashes/revision IDs are committed. Actual candidate admission and client evidence remain gated. Resolve owning SHA from remote branch history; verify exact tree/head/main before reporting saved.
+
+A54 verified owning checkpoint1118993f4345c6a8c1ce0abcc247280f3d45979b; exact tree9fa6978873582821d23e8a9faa9e869a82da1dea; main unchanged. A55 starts from this remote head.
