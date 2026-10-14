@@ -1,0 +1,296 @@
+{
+  "task": "WB-A55",
+  "starting_head": "1118993f4345c6a8c1ce0abcc247280f3d45979b",
+  "verified_claim": "fbfc38f5b1c7a1a1f32f3cb8c1dfbee76a7a729c",
+  "status": "BOUNDED_BOSS_SOURCE_REVIEW_NOT_CATALOG_ADMISSION",
+  "runtime_enabled": false,
+  "coverage": {
+    "scope": "url_manifest",
+    "started_at": "2026-10-14T04:25:12.483049+00:00",
+    "status": "MANIFEST_EXHAUSTED_UNVERIFIED",
+    "all_monsters_verified": false,
+    "errors": [],
+    "pending": [],
+    "processed_pages": 3,
+    "discovered_pages": 3,
+    "finished_at": "2026-10-14T04:25:28.797279+00:00",
+    "unclassified_pages": 0,
+    "pages_without_supported_tables": 0,
+    "unsupported_row_count": 0
+  },
+  "robots": {
+    "url": "https://oldschool.runescape.wiki/robots.txt",
+    "fetched_at": "2026-10-14T04:25:16.852093+00:00",
+    "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+    "sha256": "799042fd47ea641a7322105b771bee67e22f0b037fb41ad247ed1a0565a3073f"
+  },
+  "pages": [
+    {
+      "name": "Kalphite Queen",
+      "url": "https://oldschool.runescape.wiki/w/Kalphite_Queen",
+      "revision_id_reported_in_html": 15372004,
+      "source_sha256": "6de2134f59eceb370484eca17b0bfb1b5d17d4e683a6af0df2a2bc55494f5fe3",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Kalphite_Queen",
+        "fetched_at": "2026-10-14T04:25:25.506812+00:00",
+        "sha256": "6de2134f59eceb370484eca17b0bfb1b5d17d4e683a6af0df2a2bc55494f5fe3",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Kalphite_Queen",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 04:07:29 GMT",
+        "fixture": false
+      },
+      "classification": "boss",
+      "classification_evidence": [
+        "page_category:Bosses"
+      ],
+      "reported_npc_ids_not_complete_mapping": [
+        963,
+        4303
+      ],
+      "parsed_drop_row_count": 78,
+      "parser_warnings": [],
+      "selected_rows": [
+        {
+          "item_name": "Coins",
+          "section": "Drops / Rare drop table",
+          "quantity_raw": "3,000",
+          "reported_rate": {
+            "raw": "1/768",
+            "expression": "1/768",
+            "kind": "fraction",
+            "exact_probability": {
+              "numerator": 1,
+              "denominator": 768
+            },
+            "needs_context_review": false,
+            "approximate": false
+          },
+          "reported_fraction_in_band": true,
+          "disposition": "EXCLUDE_GENERIC_SHARED_TABLE",
+          "runtime_enabled": false
+        },
+        {
+          "item_name": "Dragon chainbody",
+          "section": "Drops / Tertiary",
+          "quantity_raw": "1",
+          "reported_rate": {
+            "raw": "1/128 [ 4 ]",
+            "expression": "1/128",
+            "kind": "fraction",
+            "exact_probability": {
+              "numerator": 1,
+              "denominator": 128
+            },
+            "needs_context_review": true,
+            "approximate": false
+          },
+          "reported_fraction_in_band": false,
+          "disposition": "EXCLUDE_REPORTED_RATE_TOO_COMMON",
+          "runtime_enabled": false
+        },
+        {
+          "item_name": "Dragon pickaxe",
+          "section": "Drops / Tertiary",
+          "quantity_raw": "1",
+          "reported_rate": {
+            "raw": "1/400",
+            "expression": "1/400",
+            "kind": "fraction",
+            "exact_probability": {
+              "numerator": 1,
+              "denominator": 400
+            },
+            "needs_context_review": false,
+            "approximate": false
+          },
+          "reported_fraction_in_band": true,
+          "disposition": "HOLD_PERSONAL_CONTEXT_AND_UNIQUENESS_REVIEW",
+          "runtime_enabled": false
+        },
+        {
+          "item_name": "Jar of Sand",
+          "section": "Drops / Tertiary",
+          "quantity_raw": "1",
+          "reported_rate": {
+            "raw": "1/2,000",
+            "expression": "1/2,000",
+            "kind": "fraction",
+            "exact_probability": {
+              "numerator": 1,
+              "denominator": 2000
+            },
+            "needs_context_review": false,
+            "approximate": false
+          },
+          "reported_fraction_in_band": false,
+          "disposition": "EXCLUDE_REPORTED_RATE_TOO_RARE",
+          "runtime_enabled": false
+        }
+      ],
+      "runtime_enabled": false
+    },
+    {
+      "name": "King Black Dragon",
+      "url": "https://oldschool.runescape.wiki/w/King_Black_Dragon",
+      "revision_id_reported_in_html": 15361304,
+      "source_sha256": "9de2aac3ba32f3348ed78aecf49206dd7ad9ea3ae4cccd3489c164e879e48aa5",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/King_Black_Dragon",
+        "fetched_at": "2026-10-14T04:25:21.408349+00:00",
+        "sha256": "9de2aac3ba32f3348ed78aecf49206dd7ad9ea3ae4cccd3489c164e879e48aa5",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "resolved_url": "https://oldschool.runescape.wiki/w/King_Black_Dragon",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 04:07:22 GMT",
+        "fixture": false
+      },
+      "classification": "boss",
+      "classification_evidence": [
+        "page_category:Bosses"
+      ],
+      "reported_npc_ids_not_complete_mapping": [
+        239,
+        2642
+      ],
+      "parsed_drop_row_count": 56,
+      "parser_warnings": [],
+      "selected_rows": [
+        {
+          "item_name": "Dragon pickaxe",
+          "section": "Drops / Pre-roll",
+          "quantity_raw": "1",
+          "reported_rate": {
+            "raw": "1/1,000",
+            "expression": "1/1,000",
+            "kind": "fraction",
+            "exact_probability": {
+              "numerator": 1,
+              "denominator": 1000
+            },
+            "needs_context_review": false,
+            "approximate": false
+          },
+          "reported_fraction_in_band": true,
+          "disposition": "HOLD_PERSONAL_CONTEXT_AND_UNIQUENESS_REVIEW",
+          "runtime_enabled": false
+        },
+        {
+          "item_name": "Draconic visage",
+          "section": "Drops / Tertiary",
+          "quantity_raw": "1",
+          "reported_rate": {
+            "raw": "1/5,000",
+            "expression": "1/5,000",
+            "kind": "fraction",
+            "exact_probability": {
+              "numerator": 1,
+              "denominator": 5000
+            },
+            "needs_context_review": false,
+            "approximate": false
+          },
+          "reported_fraction_in_band": false,
+          "disposition": "EXCLUDE_REPORTED_RATE_TOO_RARE",
+          "runtime_enabled": false
+        }
+      ],
+      "runtime_enabled": false
+    },
+    {
+      "name": "Sarachnis",
+      "url": "https://oldschool.runescape.wiki/w/Sarachnis",
+      "revision_id_reported_in_html": 15366275,
+      "source_sha256": "57ba3c62313efc75175b000cbf4364078867fa104807eea6dc0b4b8bee554c48",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Sarachnis",
+        "fetched_at": "2026-10-14T04:25:28.726478+00:00",
+        "sha256": "57ba3c62313efc75175b000cbf4364078867fa104807eea6dc0b4b8bee554c48",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Sarachnis",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 04:12:04 GMT",
+        "fixture": false
+      },
+      "classification": "boss",
+      "classification_evidence": [
+        "page_category:Bosses"
+      ],
+      "reported_npc_ids_not_complete_mapping": [
+        8713
+      ],
+      "parsed_drop_row_count": 76,
+      "parser_warnings": [],
+      "selected_rows": [
+        {
+          "item_name": "Sarachnis cudgel",
+          "section": "Drops / Pre-roll",
+          "quantity_raw": "1",
+          "reported_rate": {
+            "raw": "1/384 [ 2 ]",
+            "expression": "1/384",
+            "kind": "fraction",
+            "exact_probability": {
+              "numerator": 1,
+              "denominator": 384
+            },
+            "needs_context_review": true,
+            "approximate": false
+          },
+          "reported_fraction_in_band": false,
+          "disposition": "EXCLUDE_REPORTED_RATE_TOO_COMMON",
+          "runtime_enabled": false
+        },
+        {
+          "item_name": "Pristine spider silk",
+          "section": "Drops / Tertiary",
+          "quantity_raw": "1",
+          "reported_rate": {
+            "raw": "1/50",
+            "expression": "1/50",
+            "kind": "fraction",
+            "exact_probability": {
+              "numerator": 1,
+              "denominator": 50
+            },
+            "needs_context_review": false,
+            "approximate": false
+          },
+          "reported_fraction_in_band": false,
+          "disposition": "EXCLUDE_REPORTED_RATE_TOO_COMMON",
+          "runtime_enabled": false
+        },
+        {
+          "item_name": "Jar of Eyes",
+          "section": "Drops / Tertiary",
+          "quantity_raw": "1",
+          "reported_rate": {
+            "raw": "1/2,000 [ 2 ]",
+            "expression": "1/2,000",
+            "kind": "fraction",
+            "exact_probability": {
+              "numerator": 1,
+              "denominator": 2000
+            },
+            "needs_context_review": true,
+            "approximate": false
+          },
+          "reported_fraction_in_band": false,
+          "disposition": "EXCLUDE_REPORTED_RATE_TOO_RARE",
+          "runtime_enabled": false
+        }
+      ],
+      "runtime_enabled": false
+    }
+  ],
+  "raw_capture_archived_in_git": false,
+  "limits": [
+    "Source reports do not prove per-player receiving probability, group allocation, receipt attribution or complete item/NPC mapping.",
+    "Two dragon-pickaxe sources remain held pending significance/exclusive-versus-curated-source interpretation and personal context; no exclusive creature-identity rule invented.",
+    "Sarachnis Pristine spider silk row reports1/50, outside the band; do not infer any unreviewed source qualifies.",
+    "No full HTML/database archive, category crawl, current-client validation, final roster, reward or price."
+  ]
+}

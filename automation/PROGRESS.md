@@ -227,3 +227,7 @@ User explicitly authorizes tools folder/Python collector for all-monster discove
 ## WB-A54 — first real collector batch,2026-10-13 America/Chicago
 
 Starting04709b3e; guarded claimc69fd835532ac3f0ca6de5508293ea65b2f95316 verified. Three canonical creature pages fetched under collector rules; three monster classifications,201 rows in JSON/CSV/SQLite, four target extracts in band. Capture hashes/revision identifiers/coverage and admission gaps committed in WIKI_REAL_BATCH_A54. No full HTML archive or complete variant/item mappings; boss classification not yet exercised. Earlier browser/search blocks remain route-specific; no enabled roster, production change or all-monster claim. Owning commit SHA must be observed/verified remotely before next bounded A55.
+
+## WB-A55 — real boss candidate batch,2026-10-13 America/Chicago
+
+A54 checkpoint1118993f4345c6a8c1ce0abcc247280f3d45979b/tree9fa6978873582821d23e8a9faa9e869a82da1dea verified. Guarded claimfbfc38f5b1c7a1a1f32f3cb8c1dfbee76a7a729c verified before three boss-page captures. B2 saves three explicit Bosses-category classifications/210 exported rows/nine review extracts: two pickaxe hunts held, seven exclusions. Source hashes/revisions/fraction/export/scope checks pass. Combined finite manifests six pages/411 rows; no all-monster claim, final roster or live receipt. No production/model/catalog changes. Owning commit requires remote tree/head/main verification before A56.
