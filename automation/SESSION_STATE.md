@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-delegated-challenge-contract
-- State: IDLE — owner released; no active lease.
+- State: ACTIVE — wb-20261014-wiki-tool owns A53; acquired 2026-10-14T03:32:47.817219+00:00; expires 2026-10-14T04:17:47.817219+00:00.
 - Branch: wheelbound-mode
 - Starting remote head:2636e5de758b5d926d1c8492edfaafd2f446d994
 - Verified claim:d5ea018fe602bd3ee63bb024a538785708cb07d5
@@ -35,3 +35,5 @@ A48 B1 owning commit contains this checkpoint and review; resolve own SHA from b
 
 
 A51 starting remote3db51f6a97fadabf4a2d6389888c85880fc5771c; verified claim7160379b5b16b6b6b61a0af9e3163f8bfab2dbc7. Owning checkpoint contains report and ten-source hash receipt; own SHA resolved from remote branch/file history. Live Wiki/Java/runtime NOT_RUN. HTTP/parser empty is unknown; A48 King multi-roll fraction is not normative. Remote tree/head/main verification required before saved claim.
+
+Current explicit authorization: user requests tools folder/Python Wiki drop collector with boss-versus-monster classification. Research tooling only, not production plugin implementation. A53 bounded deliverable: respectful discovery/fetch, lossless parsing, local SQLite/JSON/CSV, offline tests/readme. No live all-monster scrape claim.
