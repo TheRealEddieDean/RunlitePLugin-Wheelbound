@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: IDLE — A66 two-table rename/split complete; owner released.
+- State: ACTIVE — A67 full supplied-monster drop review; owner wb-a67.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -65,3 +65,7 @@ Partition by corrected A60 taxonomy/source evidence, not combat level/name guess
 Active relative links/manifest pointers and generator/validator now target both new names. WB-D146 confirms documentation split ONLY, not separate paid monster/boss card unlock families. Rank unlock topology and v2 admission/reward/offer integration remain unanswered/pending; do not infer answer from file organization.
 
 A66 source/display validator2,194 assertions and22 offline tests pass. Regeneration,11 manifest hashes/146 decisions, no active old relative links, whitespace/scope and exact remote tree/head/main verification required before final saved claim. Owning commit records release; resolve SHA from history. No production/main/raw source changes or rescrape; owner released. Latest source/docs paths above supersede earlier A65 single/archive descriptions.
+
+## A67 ownership claim
+
+Owner wb-a67; acquired 2026-10-14T19:20:30.706356+00:00; expires 2026-10-14T21:20:30.706372+00:00. Expected head bf213a6bc4f2c34a6693fc42bbaebcae3ffdc12a. Review every supplied corrected monster and every drop; replace monster name whitelist with explicit complete row dispositions, expand meaningful candidates, preserve held conditions. No boss expansion or gameplay policy adoption.
