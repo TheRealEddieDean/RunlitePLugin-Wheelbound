@@ -1,8 +1,8 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-real-batch-readiness
-- State: IDLE — A55 complete; ownership released.
-- Ownership acquired: 2026-10-14T04:24:47.773788+00:00; expires: 2026-10-14T04:54:47.773788+00:00.
+- State: ACTIVE — owner wb-20261014-real-batch-readiness; task A56 Q6 postcommit recovery planning.
+- Ownership acquired: 2026-10-14T04:28:35.019150+00:00; expires: 2026-10-14T04:58:35.019150+00:00.
 - Branch: wheelbound-mode
 - Starting remote head:04709b3e043f8b1bd29dbe07a53e0cf33992dde4
 - Verified claim:c69fd835532ac3f0ca6de5508293ea65b2f95316
@@ -45,3 +45,5 @@ A54 owning checkpoint includes first bounded live collector review. Source captu
 A54 verified owning checkpoint1118993f4345c6a8c1ce0abcc247280f3d45979b; exact tree9fa6978873582821d23e8a9faa9e869a82da1dea; main unchanged. A55 starts from this remote head.
 
 A55 owning checkpoint: three boss captures/210 rows; nine selected source reviews remain held/excluded/runtime-disabled. No new decision IDs. Next A56 Q6 postcommit matrix; current committed assignments still preserve existing Pause/Reject/no-reroll. Resolve own SHA from remote history and verify exact tree/head/main.
+
+A55 verified owning checkpointd2cb5db13b95254f4444f5e8789972fc9376c3b7; exact tree7e9f0a3a6ba5665fcb52547443d28bb0648bf7d1; main unchanged. A56 starts here.
