@@ -1,7 +1,9 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-real-batch-readiness
-- State: IDLE — owner released; no active lease.
+- State: ACTIVE — owner wb-20261014-upload-intake; task A58 only.
+- Acquired: 2026-10-14T17:40:58.961509+00:00; expires: 2026-10-14T19:40:58.961509+00:00
+- Expected acquisition head: 85c4c7f51b8a04e61f3ba30d98308cbedba76da5
 - Branch: wheelbound-mode
 - Starting remote head:04709b3e043f8b1bd29dbe07a53e0cf33992dde4
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
