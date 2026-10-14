@@ -1,9 +1,10 @@
 # Wheelbound session checkpoint and ownership
 
-- Session ID: wb-20261014-delegated-challenge-contract
-- State: IDLE — owner released; no active lease.
+- Session ID: wb-20261014-real-batch-readiness
+- State: ACTIVE — owner wb-20261014-real-batch-readiness; task A54 bounded real-source collection/readiness review.
+- Ownership acquired: 2026-10-14T04:20:08.571179+00:00; expires: 2026-10-14T05:05:08.571179+00:00.
 - Branch: wheelbound-mode
-- Starting remote head:2636e5de758b5d926d1c8492edfaafd2f446d994
+- Starting remote head:04709b3e043f8b1bd29dbe07a53e0cf33992dde4
 - Verified claim:d5ea018fe602bd3ee63bb024a538785708cb07d5
 - Verified A46:c5baba520228ffa85b541e742459a27039bdbd9e; tree dceec7c754e6463eadef17136fb385c78f740a1c matched local contents.
 - Verified A47:583453975e351fcdf50c99e9423891ba49130c73; source tree4d6bf191af16cbb8b0a479ffcbfed509309a75bc.
