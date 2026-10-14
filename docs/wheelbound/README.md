@@ -63,3 +63,5 @@ Catalog authority: [manifest and promotion gates](CATALOG_AUTHORITY.md). Exact c
 Current delegated Bossing Challenge details: [assignment contract](CHALLENGE_ASSIGNMENT_CONTRACT.md), WB-D132–137. Concrete catalog/reward/source review remains gated; no implementation authorized.
 
 Precommit empty-pool policy: [unavailable selection contract](UNAVAILABLE_SELECTION_CONTRACT.md), WB-D138/139. Committed-Fate invalidation recovery remains a separate gate.
+
+New source-limited catalog work: [Challenge candidate review batch1](research/CHALLENGE_CANDIDATE_REVIEW_B1.md). Every candidate remains disabled; exact starter roster is not yet locked.

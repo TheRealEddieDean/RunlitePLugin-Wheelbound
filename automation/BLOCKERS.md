@@ -13,3 +13,5 @@
 These are limitations, not permission requests. Continue authorized independent documentation tasks. Do not invent live proof, account credentials, maintainer responses or production implementation.
 
 WB-B08: the older isolated repo/ checkout contains preexisting modified/untracked documentation from earlier work. It is not the canonical latest source. Those unreviewed files were preserved; no reset/clean or production edits were made. Current canonical docs are the verified GitHub wheelbound-mode tree and root docs/wheelbound working copy. Do not claim the older checkout currently clean or use it to publish stale documentation.
+
+WB-B09 (A48 B1,2026-10-13): Direct current OSRS Wiki page access blocked by robots.txt; stronger search also blocked. Available indexed wiki excerpts often show1.3-year-old crawl; no fresh page/revision pin obtained. Specific-rate candidate research may proceed provisionally with exact provenance, but runtime/final roster admission needs accessible current primary verification. Basilisk rate is secondary discovery only. This is a research-source limitation, not GitHub read/write failure.

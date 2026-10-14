@@ -1459,3 +1459,27 @@ S4 earlier CP terminology, difficulty-based spin caps, +2/+5/+10 curses and 50% 
 - Presentation: Automatic redraws may yield between animation batches so UI/Pause remain responsive; no arbitrary retry-count becomes a loss, pity guarantee or forced different result. A valid special obligation still has its own supported path even with no currently held donation candidate. An unsupported special is a readiness blocker, not an empty removable slice.
 - Supersession: Residual Q6 all-unavailable/precommit readiness question; no changes to approved mandatory obligations or committed-assignment no-reroll policy.
 - Acceptance (planned, NOT_RUN): all known-empty ordinary outcomes→zero draws/debits/rewards; unknown positive-weight outcome→wait, not conditional exclusion; empty ordinary plus valid special→normal special chance and obligation; restore retries→same stream/history; legal recovery preserves5/3/24 and all normal prices; zero spins still follows existing gate.
+
+## WB-D140 - Prioritize repeatable task-independent starter hunts
+
+- Status: DELEGATED adopted catalog-authoring recommendation,2026-10-13; authority WB-D132 and current next-task request.
+- Decision: Author the included Challenge starter bundle around meaningful sources with repeatable qualifying contexts that do not depend on keeping/reacquiring a finite Slayer task. Actual quests/Slayer levels/equipment/access still apply; no free normal boss unlock or arbitrary recommended-stat gate. Exact bundle membership/size remains candidate review, not enabled roster. Card ownership can precede actual three-target readiness under WB-D126.
+- Rationale: A long rare-drop hunt can outlast a finite task. A rate qualifying only while on-task risks stranding the assignment or requiring unrelated task hunting, before those permission/recovery details are resolved.
+- Expansion: Hold task-dependent qualifying contexts out of the initial supported catalog until task exhaustion/reacquisition, off-task rarity and supported evidence/permissions are reviewed. A current task alone is not sufficient proof of a sustainable full hunt. Do not forbid such targets forever, waive the rarity band, grant off-task credit or force other training.
+- Evidence: A48 batch1 candidate review records limited retrieved source excerpts and freshness gaps; Basilisk jaw is the illustrative task-dependent candidate, not an approved source formula or current-client test.
+- Supersession: Narrows delegated starter/expansion authoring strategy; WB-D124 included bundle and individual expansion plus WB-D126 actual eligibility floor remain unchanged. No final roster/count/prices/rewards approved.
+- Acceptance (planned, NOT_RUN): candidate needs a documented repeatable legal qualifying route; finite task without reviewed continuation stays held; unlock remains distinct from actual access; starter grants do not remove quest/level/equipment checks.
+
+## WB-D141 - Meaningful unique items do not require a fluctuating GP floor
+
+- Status: DELEGATED adopted catalog-authoring recommendation,2026-10-13; authority WB-D132 and current next-task request.
+- Decision: Judge significant creature-specific unique candidates by distinct equipment/upgrade/component function and a genuine reviewed item hunt, not a new minimum GE price or whether the player already owns the item. Low market value alone is not exclusion. Authored context must still pass specific personal rarity/source/access/receipt/reward review. Generic seeds/alchables/shared rare table do not become Challenge uniques simply because rare or expensive.
+- Rationale: Avoid a changing market price silently adding/removing targets; preserve useful earlier progression hunts without making every eligible target a premium-money grind. WB-D129 already permits owned-item hunts.
+- Dependencies: Item significance is an explicit catalog review judgement, not automatic inclusion of every weapon/cosmetic/head. No economic FP reward formula approved; candidate effort/access/supply/time review still required. Source failures or lack of reliable acquisition proof cannot be cured by value or usefulness.
+- Evidence: Leaf-bladed battleaxe/Abyssal whip are provisional research examples; no current GE values asserted and no enabled membership inferred. Concrete candidates remain separately versioned from historical Bounties/simulation inputs.
+- Supersession: Resolves whether catalog authors should invent a dynamic price floor; no change to rarity band or creature-specific unique requirement.
+- Acceptance (planned, NOT_RUN): changing price alone does not reroll a hunt/change membership; reviewed useful unique can remain a candidate at lower value; generic high-value drop still fails uniqueness gate; independent Bounties Shop keys unchanged.
+
+### A48 source-limited candidate note
+
+WB-D140/141 are adopted authoring recommendations, not confirmations of reported real rates. The separate batch1 packet preserves indexed-source versus secondary-lead provenance and marks every candidate runtime-disabled. Actual canonical/source/live/reward gates remain; no final starter membership adopted.

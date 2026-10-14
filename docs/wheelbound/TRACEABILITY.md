@@ -78,3 +78,5 @@ WB-D132→workflow delegation provenance. WB-D133/134→I03/I05/I09 personal-rat
 WB-D135/136→I03/I09 frozen per-offer randomness, selected result before reveal, uniform canonical creature/item draws and exact displayed odds; WB-D137→I05 non-consuming fresh receipt settlement. Future acceptance packet in CHALLENGE_ASSIGNMENT_CONTRACT; no runtime tests executed.
 
 WB-D138/139→I03/I09 complete-pool readiness classification, full-weight ordinary-empty retries, no unknown/special exclusion, all-empty readiness stop, preserved transaction/random stream and planned recovery acceptance in UNAVAILABLE_SELECTION_CONTRACT.
+
+WB-D140/141→I03/I04/I05/I09 starter sustainability/significance review, no finite-task continuation assumption or dynamic GP inclusion gate. A48 B1 data validates reported fractions/source distinctions only; canonical/context/live/reward support still gates admission.

@@ -1,0 +1,294 @@
+{
+  "version": 1,
+  "batch": "A48-B1",
+  "review_date_user_local": "2026-10-13",
+  "retrieval_date_utc": "2026-10-14",
+  "source_commit": "e8d07f9ecc9de9a775f44e8287d1104159b3e9d1",
+  "status": "BOUNDED_CANDIDATE_REVIEW_SOURCE_LIMITED",
+  "runtime_enabled": false,
+  "limitations": [
+    "Direct current OSRS Wiki pages blocked by robots.txt. Stronger search returned block; available indexed wiki excerpts often report1.3-year-old crawl.",
+    "Canonical URLs identify intended pages, not successful fresh reads/revision pins. Retrieved aliases retained for provenance.",
+    "Basilisk rate is secondary lead only. Current primary/game/client verification required before admission.",
+    "No actual full approved starter set, minimum GE value, reward/price/tier numbers or runtime adapters."
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "canonical_url": "https://oldschool.runescape.wiki/w/Tormented_Demon",
+      "retrieved_url": "https://oldschool.runescape.wiki/w/Torrmented_demon",
+      "ref": "turn0search0",
+      "kind": "first-party wiki indexed excerpt",
+      "crawl_age_reported": "1.3 years",
+      "facts": "Synapse1/500; burning claw499/250000; sequential specific-item outcomes."
+    },
+    {
+      "id": "S2",
+      "canonical_url": "https://oldschool.runescape.wiki/w/Blood_shard",
+      "retrieved_url": "https://oldschool.runescape.wiki/w/Blood%20shard",
+      "ref": "turn0search2",
+      "kind": "first-party wiki indexed excerpt",
+      "crawl_age_reported": "1.3 years",
+      "facts": "Sentinel combat1/1500; vyre pickpocket1/5000; item24777."
+    },
+    {
+      "id": "S3",
+      "canonical_url": "https://oldschool.runescape.wiki/w/Leaf-bladed_battleaxe",
+      "retrieved_url": "https://oldschool.runescape.wiki/w/Leaf_battle_axe",
+      "ref": "turn3search0",
+      "kind": "first-party wiki indexed excerpt",
+      "crawl_age_reported": "1.3 years",
+      "facts": "Regular Kurask1/1026; King kurask3/1026."
+    },
+    {
+      "id": "S4",
+      "canonical_url": "https://oldschool.runescape.wiki/w/Abyssal_whip",
+      "retrieved_url": "https://oldschool.runescape.wiki/w/Abyssel_whip",
+      "ref": "turn2search0",
+      "kind": "first-party wiki indexed excerpt",
+      "crawl_age_reported": "1.3 years",
+      "facts": "Standard Abyssal demon1/512; Unsired12/128 is another opportunity/source."
+    },
+    {
+      "id": "S5",
+      "canonical_url": "https://oldschool.runescape.wiki/w/Basilisk_jaw",
+      "retrieved_url": "https://osrsindex.com/wiki/basilisk-jaw?site=osrs_wiki",
+      "ref": "turn2search12",
+      "kind": "secondary mirror lead only",
+      "crawl_age_reported": "2 weeks",
+      "facts": "Reported1/1000 on-task and1/5000 off-task; direct current primary page inaccessible. Do not treat as source validation."
+    },
+    {
+      "id": "S6",
+      "canonical_url": "https://oldschool.runescape.wiki/w/Demonic_gorilla",
+      "retrieved_url": "https://oldschool.runescape.wiki/w/Demonic%20Gorilla",
+      "ref": "turn2search8",
+      "kind": "first-party wiki indexed excerpt",
+      "crawl_age_reported": "1.3 years",
+      "facts": "Zenyte shard1/300; does not establish eligibility of other gorilla uniques."
+    },
+    {
+      "id": "S7",
+      "canonical_url": "https://oldschool.runescape.wiki/w/Fremennik_Slayer_Dungeon",
+      "retrieved_url": "https://oldschool.runescape.wiki/w/Freminick_slayer_dungeon",
+      "ref": "turn4search4",
+      "kind": "first-party wiki indexed excerpt",
+      "crawl_age_reported": "1.3 years",
+      "facts": "Regular Kurask70 Slayer and specialized damage equipment; upstairs task-only area separate."
+    },
+    {
+      "id": "S8",
+      "canonical_url": "https://oldschool.runescape.wiki/w/Slayer_task",
+      "retrieved_url": "https://oldschool.runescape.wiki/w/Task_weight",
+      "ref": "turn3search10",
+      "kind": "first-party wiki indexed excerpt",
+      "crawl_age_reported": "1.3 years",
+      "facts": "Abyssal demon85 Slayer; locations/variants need exact route review."
+    },
+    {
+      "id": "S9",
+      "canonical_url": "https://oldschool.runescape.wiki/w/Money_making_guide/Killing_Vyrewatch_Sentinels",
+      "retrieved_url": "https://oldschool.runescape.wiki/w/Killing_vyres",
+      "ref": "turn3search1",
+      "kind": "first-party wiki indexed excerpt",
+      "crawl_age_reported": "1.3 years",
+      "facts": "Guide lists Sins of the Father and Blisterwood equipment; recommended stats are not automatic hard gates."
+    },
+    {
+      "id": "S10",
+      "canonical_url": "https://oldschool.runescape.wiki/w/Tormented_Demon",
+      "retrieved_url": "https://oldschool.runescape.wiki/w/Tormened_demons",
+      "ref": "turn4search0",
+      "kind": "first-party wiki indexed excerpt",
+      "crawl_age_reported": "1.3 years",
+      "facts": "Post-While Guthix Sleeps encounter; one burning claw is distinct from crafted pair."
+    }
+  ],
+  "entries": [
+    {
+      "id": "CC-B1-01",
+      "creature_key": "tormented_demon",
+      "item": "Tormented synapse",
+      "reported_specific_probability": {
+        "numerator": 1,
+        "denominator": 500
+      },
+      "source_status": "PROVISIONAL_SOURCE_EXCERPT",
+      "recommendation": "PRIORITIZE_STARTER_REVIEW",
+      "source_ids": [
+        "S1",
+        "S10"
+      ],
+      "access_review": "Quest completion/access and personal loot attribution require current verification.",
+      "notes": "Preserves user example; quest gating not waived.",
+      "runtime_enabled": false,
+      "canonical_item_ids": null,
+      "canonical_source_ids": null,
+      "reward_fp": null,
+      "price_fp": null,
+      "current_client_trace_status": "NOT_RUN"
+    },
+    {
+      "id": "CC-B1-02",
+      "creature_key": "tormented_demon",
+      "item": "Burning claw",
+      "reported_specific_probability": {
+        "numerator": 499,
+        "denominator": 250000
+      },
+      "source_status": "PROVISIONAL_SOURCE_EXCERPT",
+      "recommendation": "ADDITIONAL_ITEM_CANDIDATE",
+      "source_ids": [
+        "S1",
+        "S10"
+      ],
+      "access_review": "Same creature/source review as synapse.",
+      "notes": "One claw hunt, not two-claw assembly. Exact unconditional fraction; same creature diversity key.",
+      "runtime_enabled": false,
+      "canonical_item_ids": null,
+      "canonical_source_ids": null,
+      "reward_fp": null,
+      "price_fp": null,
+      "current_client_trace_status": "NOT_RUN"
+    },
+    {
+      "id": "CC-B1-03",
+      "creature_key": "vyrewatch_sentinel",
+      "item": "Blood shard",
+      "reported_specific_probability": {
+        "numerator": 1,
+        "denominator": 1500
+      },
+      "source_status": "PROVISIONAL_SOURCE_EXCERPT",
+      "recommendation": "PRIORITIZE_STARTER_REVIEW",
+      "source_ids": [
+        "S2",
+        "S9"
+      ],
+      "access_review": "Quest, equipment and combat-source attribution require current verification.",
+      "notes": "Combat method only; pickpocket1/5000 excluded by band and assigned-source rule.",
+      "runtime_enabled": false,
+      "canonical_item_ids": null,
+      "canonical_source_ids": null,
+      "reward_fp": null,
+      "price_fp": null,
+      "current_client_trace_status": "NOT_RUN"
+    },
+    {
+      "id": "CC-B1-04",
+      "creature_key": "kurask",
+      "item": "Leaf-bladed battleaxe",
+      "reported_specific_probability": {
+        "numerator": 1,
+        "denominator": 1026
+      },
+      "source_status": "PROVISIONAL_SOURCE_EXCERPT",
+      "recommendation": "PRIORITIZE_STARTER_REVIEW",
+      "source_ids": [
+        "S3",
+        "S7"
+      ],
+      "access_review": "Reported70 Slayer/specialized damage equipment; standard non-task-only route needs current verification.",
+      "notes": "Meaningful functional weapon candidate without GE-price floor; King kurask3/1026 excluded, not accepted variant.",
+      "runtime_enabled": false,
+      "canonical_item_ids": null,
+      "canonical_source_ids": null,
+      "reward_fp": null,
+      "price_fp": null,
+      "current_client_trace_status": "NOT_RUN"
+    },
+    {
+      "id": "CC-B1-05",
+      "creature_key": "abyssal_demon",
+      "item": "Abyssal whip",
+      "reported_specific_probability": {
+        "numerator": 1,
+        "denominator": 512
+      },
+      "source_status": "PROVISIONAL_SOURCE_EXCERPT",
+      "recommendation": "LATER_EXPANSION_REVIEW",
+      "source_ids": [
+        "S4",
+        "S8"
+      ],
+      "access_review": "Reported85 Slayer; task-independent non-Wilderness route requires verification.",
+      "notes": "Do not implicitly accept Unsired exchange or superior/Wilderness contexts. No tier number/FP adopted.",
+      "runtime_enabled": false,
+      "canonical_item_ids": null,
+      "canonical_source_ids": null,
+      "reward_fp": null,
+      "price_fp": null,
+      "current_client_trace_status": "NOT_RUN"
+    },
+    {
+      "id": "CC-B1-06",
+      "creature_key": "basilisk_knight",
+      "item": "Basilisk jaw",
+      "reported_specific_probability": {
+        "numerator": 1,
+        "denominator": 1000
+      },
+      "source_status": "SECONDARY_LEAD_ONLY",
+      "recommendation": "HOLD_TASK_DEPENDENCY",
+      "source_ids": [
+        "S5"
+      ],
+      "access_review": "Quest/access/task continuation and direct primary rate review missing.",
+      "notes": "Only reported on-task rate in-band; reported off-task1/5000 excluded. Do not auto-assign while assuming future matching tasks.",
+      "runtime_enabled": false,
+      "canonical_item_ids": null,
+      "canonical_source_ids": null,
+      "reward_fp": null,
+      "price_fp": null,
+      "current_client_trace_status": "NOT_RUN"
+    },
+    {
+      "id": "CC-B1-07",
+      "creature_key": "demonic_gorilla",
+      "item": "Zenyte shard",
+      "reported_specific_probability": {
+        "numerator": 1,
+        "denominator": 300
+      },
+      "source_status": "PROVISIONAL_SOURCE_EXCERPT",
+      "recommendation": "EXCLUDE_REPORTED_RATE",
+      "source_ids": [
+        "S6"
+      ],
+      "access_review": "No enabling access review attempted for excluded item.",
+      "notes": "Reported too common for band. Excludes this hunt only; ballista-component hunts remain separate unreviewed candidates.",
+      "runtime_enabled": false,
+      "canonical_item_ids": null,
+      "canonical_source_ids": null,
+      "reward_fp": null,
+      "price_fp": null,
+      "current_client_trace_status": "NOT_RUN"
+    }
+  ],
+  "excluded_contexts": [
+    {
+      "name": "Vyre pickpocket blood shard",
+      "p": [
+        1,
+        5000
+      ],
+      "source": "S2"
+    },
+    {
+      "name": "King kurask battleaxe",
+      "p": [
+        3,
+        1026
+      ],
+      "source": "S3"
+    },
+    {
+      "name": "Basilisk jaw off-task",
+      "p": [
+        1,
+        5000
+      ],
+      "source": "S5"
+    }
+  ]
+}
