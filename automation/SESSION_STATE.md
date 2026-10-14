@@ -1,9 +1,9 @@
 # Wheelbound session checkpoint and ownership
 
-- Session ID: wb-20261012-challenge-item-band
-- State: IDLE — owner released; no active lease.
+- Session ID: wb-20261014-delegated-challenge-contract
+- State: ACTIVE — owner Codex wb-20261014-delegated-challenge-contract; acquired 2026-10-14T01:23:25.665135+00:00; expires 2026-10-14T01:58:25.665135+00:00.
 - Branch: wheelbound-mode
-- Starting head:8ee997d377f57fd85d4217e4c5d049b8ee7212ca
+- Starting head:2636e5de758b5d926d1c8492edfaafd2f446d994
 - Claim:2ab81e193d87e1f35620e7354d097cd7d2fab4d0
 - Latest rule commit:38678af174e129d7e00e6d6e1973e1fb8b70e66f; final owning checkpoint also cleans catalogue wording, resolve from branch/file history.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
@@ -25,3 +25,6 @@
 6. Other earlier approvals preserved: Questing storage/no-destroy/free-empty-retry, lifetime duplicate baseline/history, no paused payout, Master Grand hilt5/no prerequisite active-CA audit. A33 PDF concrete unfinished/stale task; coding unauthorized; real artifact/dependency/test exports/live/policy gates remain.130,080 historical synthetic trajectories unchanged.
 
 Stop reason: explicit goal/range checkpoint complete; next single rate-basis question pending. No full completion/background-execution claim.
+
+## Current bounded task
+WB-A46: adopt delegated personal-rate and supported-context policy, reconcile affected specifications and checkpoint. User 2026-10-13 explicitly delegates recommended context-consistent decisions; preserve locked gameplay. Further bounded work only after verified publication. No implementation.
