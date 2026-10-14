@@ -86,3 +86,5 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 | WB-A48 | Review bounded Challenge starter/expansion target candidates | P1 | A46/A47; current primary source access | S per candidate batch | TODO | Separate new Challenge candidate review | Trace exact personal rate/context/access/item/source/reward gaps; preserve old catalogs; no enabled roster or invented facts |
 
 | WB-A49 | Record explicit approval of Challenge recommendations | P0 | User approval; guarded ownership | XS | DONE (owning checkpoint) | DECISIONS; contract; checkpoints | WB-D133–137 CONFIRMED with provenance; validation and remote verification before next work |
+
+| WB-A50 | Resolve ordinary-empty retries and all-unavailable readiness | P0 | A49 remote verified; WB-D132 same-rubric delegation | S | DONE (documentation only; owning checkpoint) | DECISIONS; UNAVAILABLE_SELECTION_CONTRACT; affected specs/checkpoints | WB-D138/139; exact conditional-odds/consistency/scope checks; guarded remote verification |

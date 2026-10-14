@@ -76,3 +76,5 @@ WB-D130→I03/I05/I09 one specific frozen logical item, other uniques not substi
 WB-D132→workflow delegation provenance. WB-D133/134→I03/I05/I09 personal-rate catalog/context gate, frozen versioned assumptions, personal receipts and no unknown-rate fallback; planned cases in TESTING, no live execution.
 
 WB-D135/136→I03/I09 frozen per-offer randomness, selected result before reveal, uniform canonical creature/item draws and exact displayed odds; WB-D137→I05 non-consuming fresh receipt settlement. Future acceptance packet in CHALLENGE_ASSIGNMENT_CONTRACT; no runtime tests executed.
+
+WB-D138/139→I03/I09 complete-pool readiness classification, full-weight ordinary-empty retries, no unknown/special exclusion, all-empty readiness stop, preserved transaction/random stream and planned recovery acceptance in UNAVAILABLE_SELECTION_CONTRACT.

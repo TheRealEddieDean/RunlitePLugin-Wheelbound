@@ -207,3 +207,7 @@ A46 remote c5baba520228ffa85b541e742459a27039bdbd9e and exact tree dceec7c754e64
 ## WB-A49 — explicit Challenge confirmation,2026-10-13
 
 Starting583453975e351fcdf50c99e9423891ba49130c73; guarded claim916e8a52368f495aef16f3f1d8cb54c940b16692 remotely verified. User explicitly approves five explained policies; WB-D133–137 promoted to CONFIRMED without rule changes. Illustrative probabilities/roster/rewards/live evidence remain unapproved/unverified. Owning commit updates contract/provenance/checkpoints; validation and remote tree verification required before next requested decisions. Main/production/model inputs unchanged.
+
+## WB-A50 — next two delegated empty-pool decisions,2026-10-13
+
+Explicit approval827c27f9c26339bbcb452a0ca32f480de3f52066 remotely verified before work; active claim916e8a5 remains current session owner. WB-D138 extends known-empty Questing precedent to ordinary precommit pools; WB-D139 defines readiness stop for all-empty/unknown pools without skipping specials, losing spins or auto-failing. New contract distinguishes complete-pool evidence, full/raw versus accepted odds and preserved in-flight stream. Exact hypothetical conditional-odds arithmetic and documentation/hash/scope checks passed before owning-commit publication. Planned runtime cases remain NOT_RUN. No production/live/source/catalog/model changes; postcommit invalidation and concrete catalog/rate/reward/source work remain separate.

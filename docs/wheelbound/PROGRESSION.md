@@ -23,7 +23,7 @@ Proposed quest mapping: Low=Novice, Medium=Intermediate, Hard=Experienced, Maste
 
 Boss pools require a reviewed versioned catalog. Do not manufacture encounters to reach historical counts. H1's six synthetic tiers are not the historical 64-entry catalog. Task-only bosses require enough remaining assignment kills for the selected target.
 
-Completed quests/inaccessible bosses cannot become valid merely to keep a slice usable. Eligibility conditioning changes wheel odds and must be explicit. Whether an exhausted activity slice can suspend without paid storage is OPEN; do not grant an undocumented free wheel edit.
+Completed quests/inaccessible bosses cannot become valid merely to keep a slice usable. Eligibility conditioning changes wheel odds and must be explicit. WB-D138/139 retain exhausted ordinary slices and weights with verified-empty landing retries/readiness stop; no free suspension/storage/edit.
 
 ## Catalog drafting checkpoint
 
@@ -43,7 +43,7 @@ WB-D099 confirms bosses are peer unlocks within each tier, with any-X purchase g
 
 WB-D100 makes boss purchases a permanent pool commitment: do not let ordinary Master-slice storage/destruction remove an individual boss from the Bossing pool. An expensive boss-erasure idea was not finalized. FP/tier prerequisites determine purchase permission; the player judges readiness, with actual game access still necessary for assignment. No extra plugin combat-level gate. The pinned normal 67-category roster is preserved alongside the separately recovered 64-node mode roster.
 
-WB-D111: if no eligible quests remain, a Questing Master landing retains its slice, shows a brief notice and automatically respins; tier/access rules do not become free unlocks. Unknown data is not empty. WB-D120 confirms no extra spin cost for empty retry; eventual valid Fate one spin. Wider unavailable-pool policy remains unverified.
+WB-D111: if no eligible quests remain, a Questing Master landing retains its slice, shows a brief notice and automatically respins; tier/access rules do not become free unlocks. Unknown data is not empty. WB-D120 confirms no extra spin cost for empty retry; eventual valid Fate one spin. WB-D138/139 resolve wider precommit ordinary-pool/readiness policy; postcommit invalidation remains separate.
 
 WB-D122 adds Bossing Challenge to the separate permanent Bossing card unlock pool, alongside L/S/G. Its price/prerequisite and boss/creature eligible pool mapping remain specification/balance work; do not automatically add all rare-drop creatures as normal purchased boss nodes. Existing permanent boss membership/no artificial stat gates remains.
 
@@ -56,3 +56,5 @@ Bossing Lesser AND Bossing Greater → purchase Bossing Challenge + automatic au
 Starter targets enter only the Challenge pool; normal L/S/G boss unlocks/64-node grouping are unchanged. Non-starter boss targets reuse existing boss unlocks where applicable; non-boss expansion targets have individual FP unlocks. Exact starter members/count, tiers and prices remain delegated catalog/balance work. Actual access/support gates remain. Ownership variety can differ from eligible variety; WB-D126 requires at least three distinct actually eligible bosses/creatures before new Challenge offers, without revoking card/bundle ownership.
 
 WB-D128: Bossing Challenge subtree targets support unique item-drop hunts only. Preserve Lesser AND Greater gate, included starter grants and expansion nodes; do not add CA-only target nodes to satisfy actual3-target floor. Existing normal boss/CA filters and other historical CA features are separate, not deleted by this card change.
+
+WB-D138/139: [unavailable selection contract](UNAVAILABLE_SELECTION_CONTRACT.md) extends free automatic Master retry only to verified-empty ordinary activity pools before valid offer/result commitment. Keep full wheel weights; unknown/unsupported positive-weight outcomes block readiness, not normalize out. All verified-empty ordinary outcomes stop before drawing/debit without failure/reward; use existing legal recovery/Pause/eligible Grand. Supported special paths retain mandatory obligations and cannot be skipped. Persist unresolved selection stream/history; no valid target reroll. Postcommit invalidation recovery remains separate; all cases planned NOT_RUN.
