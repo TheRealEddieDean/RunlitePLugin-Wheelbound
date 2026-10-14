@@ -1,9 +1,9 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-real-batch-readiness
-- State: IDLE — owner wb-20261014-upload-intake released after A58/A59.
-- Acquired: 2026-10-14T17:40:58.961509+00:00; expires: 2026-10-14T19:40:58.961509+00:00
-- Expected acquisition head: 85c4c7f51b8a04e61f3ba30d98308cbedba76da5
+- State: ACTIVE — owner wb-20261014-curated-catalog; A60 taxonomy then A61 rate/context catalog then A62 rewards/completion.
+- Acquired: 2026-10-14T17:59:54.014084+00:00; expires: 2026-10-14T20:59:54.014084+00:00
+- Expected acquisition head: 93536bc530fe83ff15d3ff664657ba4e11cf5367
 - Branch: wheelbound-mode
 - Starting remote head:04709b3e043f8b1bd29dbe07a53e0cf33992dde4
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa
@@ -58,3 +58,5 @@ Stop reason: A57 new-chat data-parsing handoff complete; user upload awaited, A5
 
 
 A57 starts from verified remotea68f025cc50ae47a3dc7d4a6ac620d2d6779486a. Claimea81829bee4b00107d4358dbad2aabbaa37fa2e6 verified. This owning checkpoint adds DATA_PARSING_HANDOFF/START_DATA_PARSING and releases ownership; resolve own SHA from branch/file history. No user output received/parsed, no new gameplay approvals. Remote tree/head/main verification required before saved claim.
+
+Current explicit user request2026-10-14: finish incorrect labels/grouped variants, meaningful personal in-band unique hunts, task/multi-roll conditions, access/completion/FP table. Research/design catalog authoring authorized; no production implementation/main change or live trace claim. Publish each bounded stage before continuing; do not stop at intake.
