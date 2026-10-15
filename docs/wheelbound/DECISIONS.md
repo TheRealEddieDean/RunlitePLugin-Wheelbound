@@ -1578,3 +1578,11 @@ WB-D140/141 are adopted authoring recommendations, not confirmations of reported
 - Supersession: replaces WB-D142 six-member starter list for future ranked v2 initial-bundle authoring only. Historical v1 JSON/quotes/grants and already committed assignments remain preserved; no migration deletes/charges/regrants them.
 - Evidence/limits: A77 pinned constants and captured item-scoped dated citations, with source-model caveats. Partial authored design catalog is runtime-disabled; prices/FP/client support not automatically supplied. No all-four-rank catalog readiness, free ordinary boss unlock, access waiver or paid product activation.
 - Planned acceptance: exactly four canonical grants once; minimum three actually eligible canonical keys per rank; repeated forms/loot callbacks cannot create extra grants or rewards; purchase price/content/client gates still apply.
+
+## WB-D152 - Source-specific FP quotes for the partial v2 Lesser bundle
+
+- Status: DELEGATED numeric draft content,2026-10-15 under WB-D132/current ten-checkpoint request; not empirically validated or recovered historical balance.
+- Decision: author four draft fixed quotes using WB-D143 base100+100 per source-model reference hour, round up25. Authored sustainable reference rates: Minotaur180 kills/hour, Flesh Crawler150, Catablepon120, Ankou90. These include route/supply allowance as assumptions, not live benchmarks. Result125/125/150/150 FP respectively.
+- Evidence: exact probability/source context from A77; arithmetic/quantiles and half/double throughput sensitivity in STARTER_EFFORT_QUOTES_A80. No tier-name multiplier or market floor. Conservative authored source-model quotes do not assert empirical personal probability or a guaranteed finish.
+- Payment: freeze selected quote/version with existing offer/assignment; pay once for a supported fresh active personal exact-source drop. No KC/time cap, actual-duration repricing, partial reward, consumption or paused earning.
+- Scope: only partial v2 four-source draft; all runtime flags false. Rank/product prices, full other-rank roster, access/composition/recipient/client proof remain separate. Historical v1 grants/FP unchanged.

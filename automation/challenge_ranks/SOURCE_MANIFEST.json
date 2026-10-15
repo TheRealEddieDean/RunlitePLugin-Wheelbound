@@ -1,5 +1,5 @@
 {
-  "version": "rank-contract-a79-source-v2",
+  "version": "rank-contract-a80-source-v3",
   "scope": "Synthetic design contract inputs only; no runtime source/client proof",
   "sources": [
     {
@@ -8,11 +8,11 @@
     },
     {
       "path": "docs/wheelbound/DECISIONS.md",
-      "sha256": "8f7b3eef2f8480b55b5e830dc4de842d15802ad9d9d91fd192dd127994a9a864"
+      "sha256": "9a8a774c8ff4ab3d281db08a6bf315982ba539f3420ba0011390c9338d6fe1fe"
     },
     {
       "path": "docs/wheelbound/catalogs/challenge_rank_contract_v1.json",
-      "sha256": "5c846b152a8bc5fb02a04edab26325e5bf6faf5971f8d8a83db769083ac0e2c6"
+      "sha256": "cbd28fb60d5abb8d8a57c9c26ecdacfb50f4aecd99b20ed4533e9ab211ad32b5"
     },
     {
       "path": "docs/wheelbound/CHALLENGE_RANK_CONTROL_CONTRACT.md",
@@ -31,5 +31,5 @@
       "sha256": "1f297587efaccc0fac7c57fe9cc6d4eed7c2d90ded12c0a2a071dcba30db47a5"
     }
   ],
-  "update_reason": "WB-D151 partial bundle content; WB-D147-150 rank/control oracle policy unchanged"
+  "update_reason": "WB-D152 partial draft quote content; WB-D147-150 rank/control policy unchanged"
 }

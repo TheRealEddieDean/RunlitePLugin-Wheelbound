@@ -45,7 +45,7 @@
   ],
   "rank_prices": null,
   "numeric_family_frequency_schedule": null,
-  "v2_fp_quotes": null,
+  "v2_fp_quotes": "Partial four-source Lesser draft: catalogs/challenge_hunts_v2_draft.json; not full rank roster",
   "ready_v2_roster": false,
   "legacy_single_card_mapping": "review required; no blanket four-rank grant or silent assignment rewrite",
   "supersedes_metadata_only": [

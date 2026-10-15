@@ -1,0 +1,187 @@
+{
+  "version": "starter-effort-a80-v1",
+  "basis": "WB-D143 formula reused for authored draft; new throughput judgments not observed OSRS facts",
+  "quotes": [
+    {
+      "hunt_id": "WB-CH2-stronghold-minotaur-9007",
+      "creature_key": "stronghold-minotaur",
+      "rate": "3/101",
+      "reference_kills_per_hour": 180,
+      "throughput_status": "AUTHORED_NOT_MEASURED; includes route/supply downtime, no live training benchmark",
+      "mean_kills": "101/3",
+      "reference_mean_hours": "101/540",
+      "fp_reward": 125,
+      "formula": "25 * ceil((100 + 100 * reference_mean_hours) / 25)",
+      "quote_version": "challenge-fp-v2-draft-a80",
+      "reference_quantiles": {
+        "median": {
+          "kills_under_source_model": 23,
+          "reference_hours": "23/180"
+        },
+        "p90": {
+          "kills_under_source_model": 77,
+          "reference_hours": "77/180"
+        },
+        "p95": {
+          "kills_under_source_model": 100,
+          "reference_hours": "5/9"
+        }
+      },
+      "throughput_sensitivity": [
+        {
+          "speed_multiplier": "1/2",
+          "mean_hours": "101/270",
+          "recomputed_quote_for_comparison_only": 150
+        },
+        {
+          "speed_multiplier": "1",
+          "mean_hours": "101/540",
+          "recomputed_quote_for_comparison_only": 125
+        },
+        {
+          "speed_multiplier": "2",
+          "mean_hours": "101/1080",
+          "recomputed_quote_for_comparison_only": 125
+        }
+      ],
+      "payment": "Frozen once per assignment on fresh personal supported active source receipt only; never reprice actual lucky/dry outcomes.",
+      "runtime_enabled": false
+    },
+    {
+      "hunt_id": "WB-CH2-stronghold-flesh-crawler-9011",
+      "creature_key": "stronghold-flesh-crawler",
+      "rate": "3/100",
+      "reference_kills_per_hour": 150,
+      "throughput_status": "AUTHORED_NOT_MEASURED; includes route/supply downtime, no live training benchmark",
+      "mean_kills": "100/3",
+      "reference_mean_hours": "2/9",
+      "fp_reward": 125,
+      "formula": "25 * ceil((100 + 100 * reference_mean_hours) / 25)",
+      "quote_version": "challenge-fp-v2-draft-a80",
+      "reference_quantiles": {
+        "median": {
+          "kills_under_source_model": 23,
+          "reference_hours": "23/150"
+        },
+        "p90": {
+          "kills_under_source_model": 76,
+          "reference_hours": "38/75"
+        },
+        "p95": {
+          "kills_under_source_model": 99,
+          "reference_hours": "33/50"
+        }
+      },
+      "throughput_sensitivity": [
+        {
+          "speed_multiplier": "1/2",
+          "mean_hours": "4/9",
+          "recomputed_quote_for_comparison_only": 150
+        },
+        {
+          "speed_multiplier": "1",
+          "mean_hours": "2/9",
+          "recomputed_quote_for_comparison_only": 125
+        },
+        {
+          "speed_multiplier": "2",
+          "mean_hours": "1/9",
+          "recomputed_quote_for_comparison_only": 125
+        }
+      ],
+      "payment": "Frozen once per assignment on fresh personal supported active source receipt only; never reprice actual lucky/dry outcomes.",
+      "runtime_enabled": false
+    },
+    {
+      "hunt_id": "WB-CH2-stronghold-catablepon-9010",
+      "creature_key": "stronghold-catablepon",
+      "rate": "3/101",
+      "reference_kills_per_hour": 120,
+      "throughput_status": "AUTHORED_NOT_MEASURED; includes route/supply downtime, no live training benchmark",
+      "mean_kills": "101/3",
+      "reference_mean_hours": "101/360",
+      "fp_reward": 150,
+      "formula": "25 * ceil((100 + 100 * reference_mean_hours) / 25)",
+      "quote_version": "challenge-fp-v2-draft-a80",
+      "reference_quantiles": {
+        "median": {
+          "kills_under_source_model": 23,
+          "reference_hours": "23/120"
+        },
+        "p90": {
+          "kills_under_source_model": 77,
+          "reference_hours": "77/120"
+        },
+        "p95": {
+          "kills_under_source_model": 100,
+          "reference_hours": "5/6"
+        }
+      },
+      "throughput_sensitivity": [
+        {
+          "speed_multiplier": "1/2",
+          "mean_hours": "101/180",
+          "recomputed_quote_for_comparison_only": 175
+        },
+        {
+          "speed_multiplier": "1",
+          "mean_hours": "101/360",
+          "recomputed_quote_for_comparison_only": 150
+        },
+        {
+          "speed_multiplier": "2",
+          "mean_hours": "101/720",
+          "recomputed_quote_for_comparison_only": 125
+        }
+      ],
+      "payment": "Frozen once per assignment on fresh personal supported active source receipt only; never reprice actual lucky/dry outcomes.",
+      "runtime_enabled": false
+    },
+    {
+      "hunt_id": "WB-CH2-stronghold-ankou-9008",
+      "creature_key": "stronghold-ankou",
+      "rate": "3/100",
+      "reference_kills_per_hour": 90,
+      "throughput_status": "AUTHORED_NOT_MEASURED; includes route/supply downtime, no live training benchmark",
+      "mean_kills": "100/3",
+      "reference_mean_hours": "10/27",
+      "fp_reward": 150,
+      "formula": "25 * ceil((100 + 100 * reference_mean_hours) / 25)",
+      "quote_version": "challenge-fp-v2-draft-a80",
+      "reference_quantiles": {
+        "median": {
+          "kills_under_source_model": 23,
+          "reference_hours": "23/90"
+        },
+        "p90": {
+          "kills_under_source_model": 76,
+          "reference_hours": "38/45"
+        },
+        "p95": {
+          "kills_under_source_model": 99,
+          "reference_hours": "11/10"
+        }
+      },
+      "throughput_sensitivity": [
+        {
+          "speed_multiplier": "1/2",
+          "mean_hours": "20/27",
+          "recomputed_quote_for_comparison_only": 175
+        },
+        {
+          "speed_multiplier": "1",
+          "mean_hours": "10/27",
+          "recomputed_quote_for_comparison_only": 150
+        },
+        {
+          "speed_multiplier": "2",
+          "mean_hours": "5/27",
+          "recomputed_quote_for_comparison_only": 125
+        }
+      ],
+      "payment": "Frozen once per assignment on fresh personal supported active source receipt only; never reprice actual lucky/dry outcomes.",
+      "runtime_enabled": false
+    }
+  ],
+  "runtime_enabled": false
+}

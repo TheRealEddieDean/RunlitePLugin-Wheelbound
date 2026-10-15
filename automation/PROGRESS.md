@@ -329,3 +329,7 @@ Predecessor verified `7ce36db152b9a0453776a008ac86abf708f9f0b6`. Five pages/four
 ## A79 — four-source initial Lesser bundle draft
 
 Predecessor verified `c85efa63e6e1c58cb6b08d79d314d9f12e5a2ab9`. WB-D151 DELEGATED future v2 bundle authoring: four Stronghold keys/four exact components; pinned partial catalog, normal boss separation, historical grants preserved.16 hypothetical access masks/five≥3 cases verified; no actual readiness or prices claimed. Size S/M bounded source/research deliverable; no production/main changes. Exact remote publication verification required. Next: A80 source-specific authored effort/FP quotes for the four draft hunts; preserve probability/source caveats.
+
+## A80 — four source-specific draft effort/FP quotes
+
+Predecessor verified `e9a8408b1418040775990f4b58a4a08aa2820707`. WB-D152 DELEGATED: quoted four partial Lesser hunts125/125/150/150 FP using exact source-model fractions and explicitly authored180/150/120/90 kph. Median/p90/p95 and half/double throughput sensitivity checked; no measurements, runtime payouts or historical repricing claimed. Size S/M bounded source/research deliverable; no production/main changes. Exact remote publication verification required. Next: A81 bounded rank-price/family-frequency sensitivity study; no automatic adoption of candidate product prices.

@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — A79 complete in owning checkpoint; owner wb-a74-a83 continuing authorized sequence.
+- State: ACTIVE — A80 complete in owning checkpoint; owner wb-a74-a83 continuing authorized sequence.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -10,9 +10,9 @@
 
 ## Current continuation — A74–A83
 
-Latest completed A79: four-source initial Lesser bundle draft. Verified predecessor `c85efa63e6e1c58cb6b08d79d314d9f12e5a2ab9`. WB-D151 DELEGATED future v2 bundle authoring: four Stronghold keys/four exact components; pinned partial catalog, normal boss separation, historical grants preserved.16 hypothetical access masks/five≥3 cases verified; no actual readiness or prices claimed.
+Latest completed A80: four source-specific draft effort/FP quotes. Verified predecessor `e9a8408b1418040775990f4b58a4a08aa2820707`. WB-D152 DELEGATED: quoted four partial Lesser hunts125/125/150/150 FP using exact source-model fractions and explicitly authored180/150/120/90 kph. Median/p90/p95 and half/double throughput sensitivity checked; no measurements, runtime payouts or historical repricing claimed.
 
-Exact next action: A80 source-specific authored effort/FP quotes for the four draft hunts; preserve probability/source caveats.
+Exact next action: A81 bounded rank-price/family-frequency sensitivity study; no automatic adoption of candidate product prices.
 
 Current source/rank rules remain WB-D144–150. No retired-Fate, task continuation or production approval inferred. Active owner wb-a74-a83 under recorded lease; publish/verify before next deliverable. All earlier next-question/next-task descriptions below are historical where superseded by this section. Owning commit must be remotely verified before saved claim.
 

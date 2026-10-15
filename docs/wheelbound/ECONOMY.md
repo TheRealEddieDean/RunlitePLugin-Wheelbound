@@ -82,3 +82,7 @@ All44 [boss drop table](BOSS_CHALLENGE_HUNT_TABLE.md) and [monster drop table](M
 ## Current shared Challenge targets and purchase contract — WB-D150
 
 [Rank purchases](CHALLENGE_RANK_PURCHASE_CONTRACT.md) grant one shared canonical Challenge target entitlement across reviewed rank contexts; no target repurchase per rank. The first paid Lesser entry includes one reviewed versioned bundle and explicit Lesser enable, atomically; later ranks grant ownership only unless separately opted in at a legal boundary. Target/access/rank ownership remain distinct. Historical v1 six starters/quotes are preserved and not a Lesser-ready bundle. V2 exact bundle/prices/quotes are unfinished; missing payload cannot be sold or labeled free. No normal roster change or blanket legacy four-rank grant.
+
+## A80 partial v2 starter quote supersession — WB-D152
+
+[Starter effort/quotes](research/STARTER_EFFORT_QUOTES_A80.md) now supplies authored fixed draft rewards125/125/150/150 FP for Minotaur/Flesh Crawler/Catablepon/Ankou. Earlier missing-A80-quotes wording is superseded for those four only. Throughput is authored, not measured; prices/client gates and full four-rank content remain unfinished. No historical repricing or runtime enablement.

@@ -14,3 +14,7 @@ One exact personal fresh drop settles one assignment once; keep item. Old copies
 The four species share a location but not a canonical source key; variants of each count once. At most four keys are granted, and actual rank offering still needs three currently accessible, supported, quoted keys. Hypothetically,16 access masks include five with at least three keys; this combinatoric fact is not proof of any account's readiness. Missing region/source/receipt/quote evidence counts as unsupported, not access granted by purchase.
 
 Initial bundle is granted once with the first paid Lesser purchase. Higher purchases retain it without another copy or normal boss unlock. Price/product payload and current-client proof remain missing; no0 FP placeholder or paid product is activated. The historical six-member v1 bundle stays intact in its old catalog/grant receipts; this future draft never migrates it silently. A80 will author transparent source-specific effort/FP quotes separately.
+
+## A80 partial v2 starter quote supersession — WB-D152
+
+[Starter effort/quotes](research/STARTER_EFFORT_QUOTES_A80.md) now supplies authored fixed draft rewards125/125/150/150 FP for Minotaur/Flesh Crawler/Catablepon/Ankou. Earlier missing-A80-quotes wording is superseded for those four only. Throughput is authored, not measured; prices/client gates and full four-rank content remain unfinished. No historical repricing or runtime enablement.
