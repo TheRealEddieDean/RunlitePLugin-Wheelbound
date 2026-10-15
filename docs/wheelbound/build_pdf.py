@@ -2,6 +2,8 @@
 import argparse
 import hashlib
 import re
+import json
+import subprocess
 from pathlib import Path
 from xml.sax.saxutils import escape
 from reportlab.lib import colors
@@ -14,7 +16,12 @@ from reportlab.platypus import BaseDocTemplate, PageTemplate, Frame, Paragraph, 
 from reportlab.platypus.tableofcontents import TableOfContents
 
 ROOT=Path(__file__).resolve().parent
-ORDER=["README","BLUEPRINT","GAME_RULES","DECISIONS","PROGRESSION","WHEELS",
+ORDER=["PUBLICATION_GUIDE","../../automation/WORKSTREAM_STATUS","CHALLENGE_CORE_V2",
+       "CHALLENGE_CARD_TIERS","CHALLENGE_RANK_CONTROL_CONTRACT","CHALLENGE_RANK_OFFER_CONTRACT",
+       "CHALLENGE_RANK_PURCHASE_CONTRACT","research/RANK_ECONOMY_A87",
+       "research/OFFICIAL_ELEMENTAL_RATES_A84","research/STANDARD_EXPANSION_A85",
+       "research/GREATER_SUPERIOR_CONTEXTS_A86","research/TUROTH_RATE_CONFLICT_A90",
+       "README","BLUEPRINT","GAME_RULES","DECISIONS","PROGRESSION","WHEELS",
        "FATE_CARDS","FATE_SHOP","ECONOMY","BALANCE_CANDIDATE","GRAND_FATES","DEFY_FATE","PUNISHMENTS",
        "BOUNTIES","ACCOUNT_ACCESS","UI_UX","UX_RECOVERY_FLOWS","PERSISTENCE","ARCHITECTURE",
        "RUNELITE_INTEGRATION","POLICY_AND_FEASIBILITY","research/POLICY_REVIEW_PACKET","TECHNICAL_SPECIFICATIONS","CONTENT_CATALOGS","CATALOG_AUTHORITY","BOUNTY_CATALOG_REVIEW","PUNISHMENT_CATALOG_REVIEW","CATALOG_ACCEPTANCE","ACQUISITION_EVIDENCE","DIARY_CA_RECEIPT_REVIEW","STATE_CONTRACT","EDGE_CASES","TESTING","SIMULATION_RESULTS","H4_RESULTS","simulation/h4/CONTRACT",
@@ -22,7 +29,20 @@ ORDER=["README","BLUEPRINT","GAME_RULES","DECISIONS","PROGRESSION","WHEELS",
 parser=argparse.ArgumentParser()
 parser.add_argument("--commit",required=True)
 parser.add_argument("--output",required=True)
+parser.add_argument("--manifest",help="Optional JSON receipt of exact committed Markdown inputs")
 args=parser.parse_args()
+REPO=ROOT.parent.parent
+commit=subprocess.check_output(["git","rev-parse",args.commit+"^{commit}"],cwd=REPO,text=True).strip()
+if args.commit!=commit:
+    parser.error("--commit must identify the full exact commit SHA")
+as_of=subprocess.check_output(["git","show","-s","--format=%cs",commit],cwd=REPO,text=True).strip()
+inputs={}
+for path in [Path(__file__).resolve()]+[(ROOT/(name+".md")).resolve() for name in ORDER]:
+    relative=path.relative_to(REPO).as_posix()
+    committed=subprocess.check_output(["git","show",commit+":"+relative],cwd=REPO)
+    if path.read_bytes()!=committed:
+        parser.error("Uncommitted or mismatched publication input: "+relative)
+    inputs[relative]=hashlib.sha256(committed).hexdigest()
 out=Path(args.output)
 out.parent.mkdir(parents=True,exist_ok=True)
 pdfmetrics.registerFont(TTFont("DejaVu","/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"))
@@ -66,16 +86,16 @@ def footer(canvas,doc):
     canvas.restoreState()
 
 doc=Doc(str(out),pagesize=A4,leftMargin=48,rightMargin=48,topMargin=48,bottomMargin=54,
-        title="Wheelbound - Recovered Design, Research and Balance Checkpoint",
+        title="Wheelbound - Design, Research and Remaining Work Checkpoint",
         author="Wheelbound design documentation")
 doc.addPageTemplates(PageTemplate(id="main",frames=Frame(48,54,A4[0]-96,A4[1]-102,id="body",leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0),onPage=footer))
 story=[Spacer(1,94),Paragraph("WHEELBOUND",styles["WBCover"]),Spacer(1,18),
-       Paragraph("Recovered design, technical research<br/>and economy simulation checkpoint",styles["WBH1"]),Spacer(1,24),
-       Paragraph("10 October 2026 | wheelbound-mode | Documentation only",styles["WBBody"]),
-       Paragraph("Confirmed user rules, unverified historical details, new proposals and open decisions are explicitly distinguished. This is a checkpoint, not a final implementation-ready specification.",styles["WBBody"]),
-       Paragraph("Executed models: 130,080 synthetic account trajectories across historical, corrected and sensitivity runs. Live RuneLite enforcement and Death's Coffer verification remain untested.",styles["WBBody"]),
+       Paragraph("Design, research<br/>and remaining work checkpoint",styles["WBH1"]),Spacer(1,24),
+       Paragraph(as_of+" | wheelbound-mode | Design and documentation only",styles["WBBody"]),
+       Paragraph("Current four-rank Challenge core: 14 canonical keys / 16 hunts. Authored content and synthetic checks do not establish current-account eligibility or a playable plugin. Production implementation is not authorized.",styles["WBBody"]),
+       Paragraph("Read the current guide and workstream register first. Historical chapter statements remain subject to explicit supersession. Markdown controls; prices, client traces, policy and release gates remain open.",styles["WBBody"]),
        Spacer(1,22),Paragraph("Markdown source commit: "+args.commit,styles["WBBody"]),
-       Paragraph("Repository: TheRealEddieDean/RunlitePLugin-Wheelbound<br/>Source: docs/wheelbound/",styles["WBBody"]),PageBreak()]
+       Paragraph("Repository: TheRealEddieDean/RunlitePLugin-Wheelbound<br/>Sources: committed docs/wheelbound/ and automation/WORKSTREAM_STATUS.md",styles["WBBody"]),PageBreak()]
 story.append(Paragraph("Contents",styles["WBH1"]))
 toc=TableOfContents();toc.levelStyles=[styles["WBTOC"]]
 story.extend([toc,PageBreak()])
@@ -137,4 +157,6 @@ for name in ORDER:
         i+=1
     if name!=ORDER[-1]: story.append(PageBreak())
 doc.multiBuild(story)
+if args.manifest:
+    Path(args.manifest).write_text(json.dumps({"source_commit":commit,"source_date":as_of,"inputs_sha256":inputs,"pdf_sha256":hashlib.sha256(out.read_bytes()).hexdigest(),"derived_only":True},indent=2)+"\n")
 print(str(out.resolve()))

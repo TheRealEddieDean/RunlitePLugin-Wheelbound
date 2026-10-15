@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — hour work block A90 completed in owning commit; owner wb-hour-a84.
+- State: ACTIVE — hour work block A91 completed in owning commit; owner wb-hour-a84.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -10,9 +10,9 @@
 
 ## Current continuation — hour work block
 
-Latest completed A90: Turoth conflict isolated with explicit held disposition. Verified predecessor `a9e82a196bf9b273c9d678abe6c8a6a6320b4b36`. Official/captured1/128 versus1/129 mismatch traced to exact item/main-table and separate pre-roll records; both Greater but no source formula reconciliation proved. Diagnostic129 table context preserved without asserting causality, inventing bounds or admitting new hunt.
+Latest completed A91: Current publication guide and exact-source PDF pipeline. Verified predecessor `409698c714f2deca01a0c756db773018bad3f33b`. Current reader guide fronts the14-key/16-hunt core, explicit rank supersessions and15 workstreams; dated historical chapter statements remain historical. PDF builder now verifies every included Markdown/builder byte against its full source commit, derives cover date from it and can emit a hash receipt. No PDF refresh claimed before generation/render/storage.
 
-Exact next action: Refresh the queued derived PDF(A33) from an exact committed source, visually verify/save it; retain source conflict in current status.
+Exact next action: Generate PDF from this committed revision; visually inspect every page and save a guarded replacement of the existing publication before closing A33.
 
 Existing approved rules and explicit supersessions remain controlling. No source estimate silently certified, no unrelated retirement/task/Coffer/policy approval inferred. Active owner wb-hour-a84 under recorded lease; publish and verify before starting next bounded deliverable. Previous “next” paragraphs are historical where superseded. Owning commit requires final remote head/tree/main verification.
 
