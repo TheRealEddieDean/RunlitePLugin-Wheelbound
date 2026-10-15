@@ -75,3 +75,7 @@ WB-D147 CONFIRMED2026-10-15: progressive paid Lesser→Standard→Greater→Supe
 ## A70 — owned-rank control resolved under delegation
 
 WB-D148 adopts the future-offer owned-rank selector and safe edit boundary, including explicit first Lesser enable and higher-rank opt-in defaults. No more approval question for these controls. Next integration: family offering/rank choice and per-rank readiness; content/quotes and current-client proof remain unfinished.
+
+## A71 — offer/rank readiness integration resolved
+
+WB-D149 DELEGATED: one Challenge family, same two/three slots, uniform ready enabled rank committed before display, per-rank≥3 canonical eligible keys and unchanged creature-first/item-second draw. Numeric family schedule, actual v2 members/quotes and client proof remain unfinished; no isolated price/frequency invented. Next shared target/starter purchase integration is A72.

@@ -283,3 +283,7 @@ Verified predecessor `e232e5de920e23cfcc236b26e3e37a00f51dd962`; owning commit c
 ## A70 — owned-rank opt-in and immutable-offer controls
 
 Verified predecessor `e3c8d9848a5b597892b1dc761fc4fe9089918854`; owning commit contains this deliverable. WB-D148 DELEGATED; concrete control/persistence contract and five affected specs. Validation:148 unique decisions,13 manifest pins and whitespace. No normal-card toggle or new FP/target grant. Publication requires exact expected-head update and remote head/tree/main verification; no saved claim until verified.
+
+## A71 — ranked offering and per-rank diversity contract
+
+Verified predecessor `bfe00980939a36331197a1264e8ad385e79a1bad`; owning commit contains this deliverable. WB-D149 DELEGATED; concrete family/rank/source sequencing, conditional q/R odds, per-rank≥3 floor and immutable snapshot requirements. Validation:149 unique IDs,13 manifest hashes, whitespace. No new numeric card weight or real catalog admission. Publication requires exact expected-head update and remote head/tree/main verification; no saved claim until verified.

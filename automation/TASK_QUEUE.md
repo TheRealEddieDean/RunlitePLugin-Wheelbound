@@ -138,3 +138,7 @@ Priority P0/P1; size S (A73 M); preceding checkpoint remotely verified. WB-D147 
 ## A70 — DONE in owning checkpoint: owned-rank opt-in and immutable-offer controls
 
 Priority P0/P1; size S (A73 M); preceding checkpoint remotely verified. WB-D148 DELEGATED; concrete control/persistence contract and five affected specs. Validation:148 unique decisions,13 manifest pins and whitespace. No normal-card toggle or new FP/target grant. Next: A71 preserve offer count and Challenge family exposure while integrating per-rank readiness.
+
+## A71 — DONE in owning checkpoint: ranked offering and per-rank diversity contract
+
+Priority P0/P1; size S (A73 M); preceding checkpoint remotely verified. WB-D149 DELEGATED; concrete family/rank/source sequencing, conditional q/R odds, per-rank≥3 floor and immutable snapshot requirements. Validation:149 unique IDs,13 manifest hashes, whitespace. No new numeric card weight or real catalog admission. Next: A72 shared target ownership, first starter bundle and clear purchase/readiness previews.
