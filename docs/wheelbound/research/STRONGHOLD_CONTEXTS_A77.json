@@ -1,0 +1,858 @@
+{
+  "version": "stronghold-contexts-a77-v1",
+  "primary_commit": "42a6f17a6a2e8e478aa763890ecd0181a59dad38",
+  "entries": [
+    {
+      "source_url": "https://oldschool.runescape.wiki/w/Minotaur",
+      "item": "Right skull half",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Minotaur",
+        "fetched_at": "2026-10-14T15:22:01.844745+00:00",
+        "sha256": "010266de43e1c5f087b5d9ef8c808a374bb83b945fdb067a8ba2f435995a451b",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\f5da676231cd4d8cefde37e2c70a21c8ba827f74a6678f5489a9fa6661925e89.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Minotaur",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:16:48 GMT",
+        "fixture": false
+      },
+      "normalized_source_sha256": "010266de43e1c5f087b5d9ef8c808a374bb83b945fdb067a8ba2f435995a451b",
+      "raw_file_sha256": "e3a88b2aa0c98f7d9fca08d75e3070e761f1f63da52af7dd87786988350016c9",
+      "reported_npc_ids": [
+        2481
+      ],
+      "source_context": [
+        "Minotaur are found on level one of the Stronghold of Security . They drop the right skull half , one of four parts of the skull sceptre . These monsters are great for training due to their low Defence , but have high attack damage making them dangerous for un-equipped players.",
+        "Minotaurs are a common method of Ranged training as they can be safespotted and commonly drop iron arrows.",
+        "There are various safespots located in the Stronghold of Security : Vault of War floor. These spots can be found in the following places: In the small centre room south of the room with the spikey chain, by standing on the east side of the north-westernmost skeleton. In the room immediately east to the start of the floor, behind the spiked fences. and in the large south-easternmost room behind the spiked fence.",
+        "Drop rates are estimated based on 1,265,519 samples from the Drop Rate Project , unless otherwise cited.",
+        "The average Minotaur kill is worth 124.35 .",
+        "Right skull halves can be chiseled into 3 to 7 bone fragments depending on which tier of the Varrock Diary has been completed, adding between 57.92 and 135.15 to the value of each kill.",
+        "There is a 1/101 chance of rolling the gem drop table . [ 2 ]",
+        "2m ago - Wroometh",
+        "5m ago - Wroometh",
+        "9m ago - AfterDarq",
+        "17m ago - Crabby"
+      ],
+      "access_infobox": [
+        {
+          "field": "Members",
+          "value": "No"
+        },
+        {
+          "field": "Slayer level",
+          "value": "None"
+        },
+        {
+          "field": "Slayer XP",
+          "value": "10 xp"
+        },
+        {
+          "field": "Monster ID",
+          "value": "2481"
+        }
+      ],
+      "raw_drop_rows": [
+        {
+          "row_zero_based": 15,
+          "record": {
+            "section": "Drops / Other",
+            "item_name": "Right skull half",
+            "item_links": [
+              {
+                "text": "Right skull half",
+                "href": "https://oldschool.runescape.wiki/w/Right_skull_half"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3/101 [ 1 ]",
+              "expression": "3/101",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 3,
+                "denominator": 101
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 1 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Right skull half",
+                "1",
+                "3/101 [ 1 ]",
+                "Not sold",
+                "0"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "html_drop_rows": [
+        {
+          "row_text": "Right skull half 1 3/101 [ 1 ] Not sold 0",
+          "reported_item_id": null,
+          "note_fragment_ids": [
+            "cite_note-Skull_sceptre_piece_rates_tweet-5"
+          ],
+          "referenced_notes": [
+            {
+              "id": "cite_note-Skull_sceptre_piece_rates_tweet-5",
+              "text": "^ Jagex. Mod Ash's Twitter account . 21 August 2019. Archived from the original on 9 September 2019. Mod Ash: \"3% from ankou, 3% from fleshcrawlers 3/101 for catablepon, 3/101 for minotaurs.\""
+            }
+          ]
+        }
+      ],
+      "html_identity_rows": [],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 1,265,519 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "runtime_enabled": false,
+      "canonical_key": "stronghold-minotaur",
+      "canonical_item": {
+        "symbol": "SOS_HALF_SKULL1",
+        "id": 9007,
+        "line": 29945,
+        "declaration": "public static final int SOS_HALF_SKULL1 = 9007;"
+      },
+      "authored_form_allowlist": [
+        {
+          "symbol": "SOS_WAR_MINOTAUR",
+          "id": 2481,
+          "line": 11660,
+          "declaration": "public static final int SOS_WAR_MINOTAUR = 2481;"
+        },
+        {
+          "symbol": "SOS_WAR_MINOTAUR2",
+          "id": 2482,
+          "line": 11665,
+          "declaration": "public static final int SOS_WAR_MINOTAUR2 = 2482;"
+        },
+        {
+          "symbol": "SOS_WAR_MINOTAUR3",
+          "id": 2483,
+          "line": 11670,
+          "declaration": "public static final int SOS_WAR_MINOTAUR3 = 2483;"
+        }
+      ],
+      "authored_context": {
+        "rank": "lesser",
+        "world": "normal members world only in initial authored context",
+        "location": "Stronghold of Security floor1",
+        "task_required": false,
+        "quantity": 1,
+        "item_owned_before_assignment_allowed": true,
+        "completion": "fresh active personal exact item from assigned Stronghold source; keep item; once-only",
+        "rate_as_authored_source_model": "3/101",
+        "route_permissions": "Already legal region/floor access, combat equipment and renewable supplies; no assignment-granted access",
+        "status": "AUTHORED_SOURCE_CONTEXT_NOT_RUNTIME_READY"
+      },
+      "identity_scope": "Allowlist plus actual region/method/source correlation; numeric constants alone insufficient",
+      "client_trace_status": "NOT_RUN"
+    },
+    {
+      "source_url": "https://oldschool.runescape.wiki/w/Flesh_Crawler",
+      "item": "Bottom of sceptre",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Flesh_Crawler",
+        "fetched_at": "2026-10-14T15:20:06.149960+00:00",
+        "sha256": "b48b500ba1afec4c870e72afeda378f0ac5fa9ff78c434bcb1dbe08292a36671",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\15ce6b7934f2b4f22ab094b860e026c59d24824b33327e6cc117063428b1b77a.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Flesh_Crawler",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:17:12 GMT",
+        "fixture": false
+      },
+      "normalized_source_sha256": "b48b500ba1afec4c870e72afeda378f0ac5fa9ff78c434bcb1dbe08292a36671",
+      "raw_file_sha256": "7d3e9cb7afab5ca3404ce9013586b52b0c1342a83d4e91812b1c05c604358834",
+      "reported_npc_ids": [
+        2498
+      ],
+      "source_context": [
+        "Flesh Crawlers are medium level monsters found in the second level of the Stronghold of Security . They drop the bottom of sceptre , one of four parts of the skull sceptre . Flesh crawlers drop herbs often, and are frequently killed for their uncommon grimy ranarr drops.",
+        "They are scavengers, and will eat anything if given the chance. [ 1 ]",
+        "Flesh crawlers are aggressive to any level players. Ranged is a good style to use as there are safespots in the rooms, such as in the south-west corner of the south-east room. It is possible to hide behind non-aggressive giant rats in one room and range the flesh crawlers, protected from their rapid, albeit weak, attacks. Their attack speed is three ticks, or equivalent to the goblin paint cannon . Because these attacks max at 1 damage, using a regen bracelet can help to offset much of the damage taken, especially if the player has a strong defence.",
+        "For minimal user-input (also known as afk or semi-afk training), turn on auto retaliate and let the crawlers come to you. When they lose their aggressiveness , simply move to another room, then come back. Since flesh crawlers are 2x2 in size, when multiple players are afk training at once the flesh crawlers can get stuck on one another and stop attacking the player; this can be mitigated by standing on the same tile as other players who are already afk training on the same world, greatly increasing xp rates.",
+        "To reduce banking trips needed, deposit all non-stackable drops when you are teleported to random events , and drop all herbs aside from ranarr, as those are often more valuable than even the highest levelled herbs such as dwarf weed .",
+        "Drop rates are estimated based on 1,215,464 samples from the Drop Rate Project , unless otherwise cited.",
+        "The average flesh crawler kill on members' worlds is worth 468.35 .",
+        "There is a 35/100 chance of rolling the herb drop table .",
+        "There is a 2/100 chance of rolling the gem drop table .",
+        "Drop rates are estimated based on 1,464,915 samples from the Drop Rate Project , unless otherwise cited.",
+        "The average flesh crawler kill on free-to-play worlds is worth 19.73 .",
+        "There is a 2/100 chance of rolling the gem drop table .",
+        "Flesh Crawlers now have a 20% elemental weakness to fire spells .",
+        "3m ago - Wroometh",
+        "7m ago - AfterDarq",
+        "15m ago - Crabby",
+        "15m ago - Crabby"
+      ],
+      "access_infobox": [
+        {
+          "field": "Members",
+          "value": "No"
+        },
+        {
+          "field": "Slayer level",
+          "value": "None"
+        },
+        {
+          "field": "Slayer XP",
+          "value": "25 xp"
+        },
+        {
+          "field": "Monster ID",
+          "value": "2498"
+        }
+      ],
+      "raw_drop_rows": [
+        {
+          "row_zero_based": 9,
+          "record": {
+            "section": "Members' worlds drops / Other",
+            "item_name": "Bottom of sceptre",
+            "item_links": [
+              {
+                "text": "Bottom of sceptre",
+                "href": "https://oldschool.runescape.wiki/w/Bottom_of_sceptre"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3/100 [ 2 ]",
+              "expression": "3/100",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 3,
+                "denominator": 100
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 2 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Bottom of sceptre",
+                "1",
+                "3/100 [ 2 ]",
+                "Not sold",
+                "0"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        },
+        {
+          "row_zero_based": 39,
+          "record": {
+            "section": "Free-to-play worlds drops",
+            "item_name": "Bottom of sceptre",
+            "item_links": [
+              {
+                "text": "Bottom of sceptre",
+                "href": "https://oldschool.runescape.wiki/w/Bottom_of_sceptre"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3/100 [ 2 ]",
+              "expression": "3/100",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 3,
+                "denominator": 100
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 2 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Bottom of sceptre",
+                "1",
+                "3/100 [ 2 ]",
+                "Not sold",
+                "0"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "html_drop_rows": [
+        {
+          "row_text": "Bottom of sceptre 1 3/100 [ 2 ] Not sold 0",
+          "reported_item_id": null,
+          "note_fragment_ids": [
+            "cite_note-Skull_sceptre_piece_rates_tweet-2"
+          ],
+          "referenced_notes": [
+            {
+              "id": "cite_note-Skull_sceptre_piece_rates_tweet-2",
+              "text": "^ 2.0 2.1 Jagex. Mod Ash's Twitter account . 21 August 2019. Archived from the original on 9 September 2019. Mod Ash: \"3% from ankou, 3% from fleshcrawlers 3/101 for catablepon, 3/101 for minotaurs.\""
+            }
+          ]
+        },
+        {
+          "row_text": "Bottom of sceptre 1 3/100 [ 2 ] Not sold 0",
+          "reported_item_id": null,
+          "note_fragment_ids": [
+            "cite_note-Skull_sceptre_piece_rates_tweet-2"
+          ],
+          "referenced_notes": [
+            {
+              "id": "cite_note-Skull_sceptre_piece_rates_tweet-2",
+              "text": "^ 2.0 2.1 Jagex. Mod Ash's Twitter account . 21 August 2019. Archived from the original on 9 September 2019. Mod Ash: \"3% from ankou, 3% from fleshcrawlers 3/101 for catablepon, 3/101 for minotaurs.\""
+            }
+          ]
+        }
+      ],
+      "html_identity_rows": [],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 1,215,464 samples from the Drop Rate Project , unless otherwise cited.",
+        "Drop rates are estimated based on 1,464,915 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "runtime_enabled": false,
+      "canonical_key": "stronghold-flesh-crawler",
+      "canonical_item": {
+        "symbol": "SOS_HALF_SCEPTRE2",
+        "id": 9011,
+        "line": 29965,
+        "declaration": "public static final int SOS_HALF_SCEPTRE2 = 9011;"
+      },
+      "authored_form_allowlist": [
+        {
+          "symbol": "SOS_FAM_FLESHCRAWLER",
+          "id": 2498,
+          "line": 11741,
+          "declaration": "public static final int SOS_FAM_FLESHCRAWLER = 2498;"
+        },
+        {
+          "symbol": "SOS_FAM_FLESHCRAWLER2",
+          "id": 2499,
+          "line": 11746,
+          "declaration": "public static final int SOS_FAM_FLESHCRAWLER2 = 2499;"
+        },
+        {
+          "symbol": "SOS_FAM_FLESHCRAWLER3",
+          "id": 2500,
+          "line": 11751,
+          "declaration": "public static final int SOS_FAM_FLESHCRAWLER3 = 2500;"
+        }
+      ],
+      "authored_context": {
+        "rank": "lesser",
+        "world": "normal members world only in initial authored context",
+        "location": "Stronghold of Security floor2",
+        "task_required": false,
+        "quantity": 1,
+        "item_owned_before_assignment_allowed": true,
+        "completion": "fresh active personal exact item from assigned Stronghold source; keep item; once-only",
+        "rate_as_authored_source_model": "3/100",
+        "route_permissions": "Already legal region/floor access, combat equipment and renewable supplies; no assignment-granted access",
+        "status": "AUTHORED_SOURCE_CONTEXT_NOT_RUNTIME_READY"
+      },
+      "identity_scope": "Allowlist plus actual region/method/source correlation; numeric constants alone insufficient",
+      "client_trace_status": "NOT_RUN"
+    },
+    {
+      "source_url": "https://oldschool.runescape.wiki/w/Catablepon",
+      "item": "Top of sceptre",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Catablepon",
+        "fetched_at": "2026-10-14T15:16:51.124178+00:00",
+        "sha256": "557f19cc702f53988e411b92c23e9f003702705876af835f94288902ce565a4b",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\d960f300af1a8f962b5be3552b37296cdac6378eda569cf4aed6d9e8d4c8bb5a.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Catablepon",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:16:43 GMT",
+        "fixture": false
+      },
+      "normalized_source_sha256": "557f19cc702f53988e411b92c23e9f003702705876af835f94288902ce565a4b",
+      "raw_file_sha256": "68a3e0cbc670837b249d2e6929e0a74694c295684b2f9759b82a1e492579731d",
+      "reported_npc_ids": [
+        2474
+      ],
+      "source_context": [
+        "Catablepon are magical creatures that appear to be green bulls with reptilian tails. They are found on the third level of the Stronghold of Security . They drop the top of sceptre , one of four parts of the Skull sceptre .",
+        "They have a weakening glare [ 1 ] which drains your Strength , but will stop casting once 8% + 3 of your total strength level has been drained.",
+        "Players are not advised to train on these with Melee , as Weaken can drain Strength quite significantly, which will affect the player's experience rates in turn, unless Strength potions or Restore potions are used (you can also use the Protect from Magic prayer). They can use melee and magic attacks often and cast Weaken at the same time. After the spell has decreased 8% +3 of your Strength levels, catablepon will stop casting Weaken, but casts before this threshold can still bring you lower than the threshold. Ranged or Magic attacks are recommended instead of melee.",
+        "On the west side of north-western room, there is a ranged and mage safespot behind the \" Stinking/Dripping tendrils \" available. Walk into the western door and the westernmost tile behind the tendrils. Another safespot is in the same room. Enter from the western door and stand against the wall beside the door. Finally, another safespot is available in the room right before the central room. Standing in the north-westernmost corner of the room, it is possible to attack the catablepon from a distance. Level 64 catablepon give 70 Slayer experience per kill, while levels 68 and 49 give only 50 and 40 respectively, so to maximize for Slayer experience, only kill level 64 catablepon on task.",
+        "Drop rates are estimated based on 224,252 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 3/101 chance of rolling the herb drop table .",
+        "There is a 1/101 chance of rolling the allotment seed drop table .",
+        "There is a 2/101 chance of rolling the gem drop table .",
+        "4m ago - AfterDarq",
+        "12m ago - Crabby",
+        "12m ago - Crabby",
+        "12m ago - Crabby"
+      ],
+      "access_infobox": [
+        {
+          "field": "Members",
+          "value": "No"
+        },
+        {
+          "field": "Slayer level",
+          "value": "None"
+        },
+        {
+          "field": "Slayer XP",
+          "value": "40 xp"
+        },
+        {
+          "field": "Monster ID",
+          "value": "2474"
+        }
+      ],
+      "raw_drop_rows": [
+        {
+          "row_zero_based": 37,
+          "record": {
+            "section": "Drops / Other",
+            "item_name": "Top of sceptre",
+            "item_links": [
+              {
+                "text": "Top of sceptre",
+                "href": "https://oldschool.runescape.wiki/w/Top_of_sceptre"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3/101 [ 3 ]",
+              "expression": "3/101",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 3,
+                "denominator": 101
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 3 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Top of sceptre",
+                "1",
+                "3/101 [ 3 ]",
+                "Not sold",
+                "N/A"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "html_drop_rows": [
+        {
+          "row_text": "Top of sceptre 1 3/101 [ 3 ] Not sold N/A",
+          "reported_item_id": null,
+          "note_fragment_ids": [
+            "cite_note-Skull_sceptre_piece_rates_tweet-4"
+          ],
+          "referenced_notes": [
+            {
+              "id": "cite_note-Skull_sceptre_piece_rates_tweet-4",
+              "text": "^ Jagex. Mod Ash's Twitter account . 21 August 2019. Archived from the original on 9 September 2019. Mod Ash: \"3% from ankou, 3% from fleshcrawlers 3/101 for catablepon, 3/101 for minotaurs.\""
+            }
+          ]
+        }
+      ],
+      "html_identity_rows": [],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 224,252 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "runtime_enabled": false,
+      "canonical_key": "stronghold-catablepon",
+      "canonical_item": {
+        "symbol": "SOS_HALF_SCEPTRE1",
+        "id": 9010,
+        "line": 29960,
+        "declaration": "public static final int SOS_HALF_SCEPTRE1 = 9010;"
+      },
+      "authored_form_allowlist": [
+        {
+          "symbol": "SOS_PEST_CATABLEPON",
+          "id": 2474,
+          "line": 11625,
+          "declaration": "public static final int SOS_PEST_CATABLEPON = 2474;"
+        },
+        {
+          "symbol": "SOS_PEST_CATABLEPON2",
+          "id": 2475,
+          "line": 11630,
+          "declaration": "public static final int SOS_PEST_CATABLEPON2 = 2475;"
+        },
+        {
+          "symbol": "SOS_PEST_CATABLEPON3",
+          "id": 2476,
+          "line": 11635,
+          "declaration": "public static final int SOS_PEST_CATABLEPON3 = 2476;"
+        }
+      ],
+      "authored_context": {
+        "rank": "lesser",
+        "world": "normal members world only in initial authored context",
+        "location": "Stronghold of Security floor3",
+        "task_required": false,
+        "quantity": 1,
+        "item_owned_before_assignment_allowed": true,
+        "completion": "fresh active personal exact item from assigned Stronghold source; keep item; once-only",
+        "rate_as_authored_source_model": "3/101",
+        "route_permissions": "Already legal region/floor access, combat equipment and renewable supplies; no assignment-granted access",
+        "status": "AUTHORED_SOURCE_CONTEXT_NOT_RUNTIME_READY"
+      },
+      "identity_scope": "Allowlist plus actual region/method/source correlation; numeric constants alone insufficient",
+      "client_trace_status": "NOT_RUN"
+    },
+    {
+      "source_url": "https://oldschool.runescape.wiki/w/Ankou",
+      "item": "Left skull half",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Ankou",
+        "fetched_at": "2026-10-14T15:04:52.468837+00:00",
+        "sha256": "b06773857448d2325d96ac422518538340e9c53039c39932eece0532d7e27315",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\333c14659c65f707f4b12ccb20566a7f26bae40ea2c8d10858a7a66747e4949a.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Ankou",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:16:59 GMT",
+        "fixture": false
+      },
+      "normalized_source_sha256": "b06773857448d2325d96ac422518538340e9c53039c39932eece0532d7e27315",
+      "raw_file_sha256": "3920200c6b963881b5c43b46b71e73102827a66ef52b1637efc3a4eb16e542d6",
+      "reported_npc_ids": [
+        2514,
+        2517
+      ],
+      "source_context": [
+        "Ankou are skeletal, ghostly monsters. Ankou in the fourth level of the Stronghold of Security can drop the left skull half , one of four parts of the skull sceptre .",
+        "Ankou are popular monsters for their common death and blood rune drops, and in the Wilderness they are an excellent source of dark fishing bait . They can be assigned as Slayer tasks by Vannaka , Nieve / Steve , Krystilia , Duradel / Kuradal , and Konar quo Maten .",
+        "The salve amulet works on this monster as it is an undead creature. However, if ankou are your Slayer task, the salve amulet does not stack with the bonus received by the Slayer Helmet , and the former's bonus will take priority. It also does not work on secondary targets when using chinchompas or Ancient Magicks .",
+        "The north east corner of the Stronghold of Security has a room with only ankou for easy afking with melee (no safespots for ranged).",
+        "There is a safespot at The Forgotten Cemetery , located behind the south-west coffin, on the square between the bone spawns. Beware of player killers as this is around level 30 Wilderness .",
+        "In the Stronghold Slayer Cave , it is possible to get ankou stuck around the corners of the rockslide. However, they do not get stuck on their own; the player has to get an ankou to stand on the northern corner tile, stand one tile north or south of them and move onto the southern corner tile. It's also possible to attack them over the rockslide itself. Be aware that the surrounding ankou can still attack you.",
+        "Furthermore there is a safespot located in the Stronghold of Security : Sepulchre of Death floor. This spot can be found in the large south-west room, by standing on the south side of the south-easternmost skeleton.",
+        "To speed up an ankou Slayer task, a dwarf multicannon can be used in the Wilderness Slayer Cave , as well as in the Stronghold Slayer Cave . It is also possible to burst or barrage ankou in the Catacombs of Kourend ; however, they need to be danced in order to stack them effectively.",
+        "Drop rates are estimated based on 400,459 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 3/100 chance of rolling the herb drop table .",
+        "There is a 1/100 chance of rolling the uncommon seed drop table .",
+        "There is a 2/100 chance of rolling the gem drop table .",
+        "The following drops are only accessible while killing the Catacombs of Kourend variants.",
+        "The following drops are only accessible while on a Slayer task given by Krystilia .",
+        "There is a 2/100 chance of rolling the gem drop table .",
+        "Drop rates are estimated based on 477,184 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 3/92 chance of rolling the herb drop table .",
+        "There is a 1/92 chance of rolling the uncommon seed drop table .",
+        "There is a 2/95 chance of rolling the gem drop table .",
+        "The following drops are only accessible while on a Slayer task given by Krystilia .",
+        "There is approximately a 66/100 chance of rolling the Wilderness Slayer Cave drop table, which includes various items available from Justine's stuff for the Last Shopper Standing .",
+        "Ankou now have a 40% elemental weakness to wind spells .",
+        "Ankou were made into spectral creatures.",
+        "Killing ankous located in the Wilderness will now work for clue scroll tasks.",
+        "Ankou within the Wilderness now drop large quantities of dark fishing bait .",
+        "4m ago - Crabby",
+        "4m ago - Crabby",
+        "4m ago - Crabby",
+        "9m ago - Kiv"
+      ],
+      "access_infobox": [
+        {
+          "field": "Members",
+          "value": "No"
+        },
+        {
+          "field": "Slayer level",
+          "value": "None"
+        },
+        {
+          "field": "Slayer XP",
+          "value": "60 xp"
+        },
+        {
+          "field": "Monster ID",
+          "value": "2514,2517"
+        }
+      ],
+      "raw_drop_rows": [
+        {
+          "row_zero_based": 50,
+          "record": {
+            "section": "Members' worlds drops / Other",
+            "item_name": "Left skull half",
+            "item_links": [
+              {
+                "text": "Left skull half",
+                "href": "https://oldschool.runescape.wiki/w/Left_skull_half"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3/100 ; Never [ d 2 ]",
+              "expression": "3/100 ; Never",
+              "kind": "alternatives",
+              "exact_probability": null,
+              "needs_context_review": true,
+              "alternatives": [
+                {
+                  "raw": "3/100",
+                  "expression": "3/100",
+                  "kind": "fraction",
+                  "exact_probability": {
+                    "numerator": 3,
+                    "denominator": 100
+                  },
+                  "needs_context_review": false,
+                  "approximate": false
+                },
+                {
+                  "raw": "Never",
+                  "expression": "Never",
+                  "kind": "unknown",
+                  "exact_probability": null,
+                  "needs_context_review": false
+                }
+              ]
+            },
+            "annotations": [
+              "[ d 2 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Left skull half",
+                "1",
+                "3/100 ; Never [ d 2 ]",
+                "Not sold",
+                "0"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        },
+        {
+          "row_zero_based": 89,
+          "record": {
+            "section": "Free-to-play worlds drops / Other",
+            "item_name": "Left skull half",
+            "item_links": [
+              {
+                "text": "Left skull half",
+                "href": "https://oldschool.runescape.wiki/w/Left_skull_half"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3/100 [ d 2 ]",
+              "expression": "3/100",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 3,
+                "denominator": 100
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ d 2 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Left skull half",
+                "1",
+                "3/100 [ d 2 ]",
+                "Not sold",
+                "0"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "html_drop_rows": [
+        {
+          "row_text": "Left skull half 1 3/100 ; Never [ d 2 ] Not sold 0",
+          "reported_item_id": null,
+          "note_fragment_ids": [
+            "cite_note-stronghold-5"
+          ],
+          "referenced_notes": [
+            {
+              "id": "cite_note-stronghold-5",
+              "text": "^ Left skull halves are only dropped in the Stronghold of Security ."
+            }
+          ]
+        },
+        {
+          "row_text": "Left skull half 1 3/100 [ d 2 ] Not sold 0",
+          "reported_item_id": null,
+          "note_fragment_ids": [
+            "cite_note-stronghold-19"
+          ],
+          "referenced_notes": [
+            {
+              "id": "cite_note-stronghold-19",
+              "text": "^ Left skull halves are only dropped by those found in the Stronghold of Security ."
+            }
+          ]
+        }
+      ],
+      "html_identity_rows": [],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 400,459 samples from the Drop Rate Project , unless otherwise cited.",
+        "Drop rates are estimated based on 477,184 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "runtime_enabled": false,
+      "canonical_key": "stronghold-ankou",
+      "canonical_item": {
+        "symbol": "SOS_HALF_SKULL2",
+        "id": 9008,
+        "line": 29950,
+        "declaration": "public static final int SOS_HALF_SKULL2 = 9008;"
+      },
+      "authored_form_allowlist": [
+        {
+          "symbol": "SOS_DEATH_ANKOU",
+          "id": 2514,
+          "line": 11821,
+          "declaration": "public static final int SOS_DEATH_ANKOU = 2514;"
+        },
+        {
+          "symbol": "SOS_DEATH_ANKOU2",
+          "id": 2515,
+          "line": 11826,
+          "declaration": "public static final int SOS_DEATH_ANKOU2 = 2515;"
+        },
+        {
+          "symbol": "SOS_DEATH_ANKOU3",
+          "id": 2516,
+          "line": 11831,
+          "declaration": "public static final int SOS_DEATH_ANKOU3 = 2516;"
+        }
+      ],
+      "authored_context": {
+        "rank": "lesser",
+        "world": "normal members world only in initial authored context",
+        "location": "Stronghold of Security floor4",
+        "task_required": false,
+        "quantity": 1,
+        "item_owned_before_assignment_allowed": true,
+        "completion": "fresh active personal exact item from assigned Stronghold source; keep item; once-only",
+        "rate_as_authored_source_model": "3/100",
+        "route_permissions": "Already legal region/floor access, combat equipment and renewable supplies; no assignment-granted access",
+        "status": "AUTHORED_SOURCE_CONTEXT_NOT_RUNTIME_READY"
+      },
+      "identity_scope": "Allowlist plus actual region/method/source correlation; numeric constants alone insufficient",
+      "client_trace_status": "NOT_RUN"
+    }
+  ],
+  "cross_source_cited_rate_receipts": [
+    {
+      "source_url": "https://oldschool.runescape.wiki/w/Minotaur",
+      "id": "cite_note-Skull_sceptre_piece_rates_tweet-5",
+      "text": "^ Jagex. Mod Ash's Twitter account . 21 August 2019. Archived from the original on 9 September 2019. Mod Ash: \"3% from ankou, 3% from fleshcrawlers 3/101 for catablepon, 3/101 for minotaurs.\""
+    },
+    {
+      "source_url": "https://oldschool.runescape.wiki/w/Flesh_Crawler",
+      "id": "cite_note-Skull_sceptre_piece_rates_tweet-2",
+      "text": "^ 2.0 2.1 Jagex. Mod Ash's Twitter account . 21 August 2019. Archived from the original on 9 September 2019. Mod Ash: \"3% from ankou, 3% from fleshcrawlers 3/101 for catablepon, 3/101 for minotaurs.\""
+    },
+    {
+      "source_url": "https://oldschool.runescape.wiki/w/Catablepon",
+      "id": "cite_note-Skull_sceptre_piece_rates_tweet-4",
+      "text": "^ Jagex. Mod Ash's Twitter account . 21 August 2019. Archived from the original on 9 September 2019. Mod Ash: \"3% from ankou, 3% from fleshcrawlers 3/101 for catablepon, 3/101 for minotaurs.\""
+    }
+  ],
+  "rate_evidence": "Captured Wiki citations quote a dated Jagex statement naming all four rates; original tweet not independently refetched. Source-model authorship, not an empirical confidence interval.",
+  "historical_2015_catablepon_1_101": "Preserved in original footnotes, superseded for this draft by later2019 specifically item-scoped3/101 citation; do not conflate gem-table1/101.",
+  "runtime_enabled": false,
+  "personal_receipt_client_tests": "NOT_RUN",
+  "catalog_admission": "NEW_SOURCE_REVIEWED_DESIGN_CONTEXTS_ONLY_NO_RUNTIME_OFFER"
+}

@@ -317,3 +317,7 @@ Predecessor verified `4fb2de89fad2168f74f5881aac7a3a03342d1131`. All27 Lesser gr
 ## A76 — all displayed contexts rate/citation triage
 
 Predecessor verified `92df7c8475c4c90c34f94cb23a53da60b0a4c939`. 483 display groups across209 source pages checked for full-page estimate statements and actual HTML note references; counts saved. No note automatically certifies rate; scalar precision is not personal-rate proof. Original tables/v1 unchanged. Size S/M bounded source/research deliverable; no production/main changes. Exact remote publication verification required. Next: A77 resolve four Stronghold component identities and exact item-specific cited context exceptions.
+
+## A77 — four Stronghold source contexts authored
+
+Predecessor verified `92ff827689376f8c4e77da9aa62f8303898703d1`. Four specific component contexts defined with pinned item/form constants, exact captured HTML note mapping and semantically cited2019 cross-source rates. Ankou Stronghold-only alternative scoped; unrelated footnote/free-world/gem-rate confusion avoided. No live receipt proof. Size S/M bounded source/research deliverable; no production/main changes. Exact remote publication verification required. Next: A78 finish elemental item/form evidence and conservative sea-snake grouping without inventing gem rate certainty.

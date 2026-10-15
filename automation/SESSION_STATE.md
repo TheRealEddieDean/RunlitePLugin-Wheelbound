@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — A76 complete in owning checkpoint; owner wb-a74-a83 continuing authorized sequence.
+- State: ACTIVE — A77 complete in owning checkpoint; owner wb-a74-a83 continuing authorized sequence.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -10,9 +10,9 @@
 
 ## Current continuation — A74–A83
 
-Latest completed A76: all displayed contexts rate/citation triage. Verified predecessor `92df7c8475c4c90c34f94cb23a53da60b0a4c939`. 483 display groups across209 source pages checked for full-page estimate statements and actual HTML note references; counts saved. No note automatically certifies rate; scalar precision is not personal-rate proof. Original tables/v1 unchanged.
+Latest completed A77: four Stronghold source contexts authored. Verified predecessor `92ff827689376f8c4e77da9aa62f8303898703d1`. Four specific component contexts defined with pinned item/form constants, exact captured HTML note mapping and semantically cited2019 cross-source rates. Ankou Stronghold-only alternative scoped; unrelated footnote/free-world/gem-rate confusion avoided. No live receipt proof.
 
-Exact next action: A77 resolve four Stronghold component identities and exact item-specific cited context exceptions.
+Exact next action: A78 finish elemental item/form evidence and conservative sea-snake grouping without inventing gem rate certainty.
 
 Current source/rank rules remain WB-D144–150. No retired-Fate, task continuation or production approval inferred. Active owner wb-a74-a83 under recorded lease; publish/verify before next deliverable. All earlier next-question/next-task descriptions below are historical where superseded by this section. Owning commit must be remotely verified before saved claim.
 
