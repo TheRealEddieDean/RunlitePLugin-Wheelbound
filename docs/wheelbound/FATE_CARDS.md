@@ -82,3 +82,7 @@ WB-D142/143 completes [boss drop table](BOSS_CHALLENGE_HUNT_TABLE.md) and [monst
 ## Current Challenge unlock topology — WB-D147
 
 [CHALLENGE_CARD_TIERS](CHALLENGE_CARD_TIERS.md) now confirms paid permanent Lesser→Standard→Greater→Superior Challenge rank unlocks, retaining lower ranks. Ordinary Bossing Lesser AND Greater is the first Lesser Challenge entry gate; no additional generic entry charge/free Lesser. This supersedes earlier monolithic-card/prerequisite ambiguity only. Preserve starter grant/target expansion, normal L/S/G and Skilling separation. Exact v2 content/prices, controls and offer integration remain follow-on; no implementation authorized.
+
+## Current Challenge rank control — WB-D148
+
+[Rank controls](CHALLENGE_RANK_CONTROL_CONTRACT.md) separate owned/enabled/ready. First Lesser confirmation enables Lesser; later purchases preserve settings and start disabled unless explicitly opted in. Owned-rank settings may change only with no assignment/obligation/pending offers/unresolved selection. All off is allowed and suppresses only new Challenge offerings. Pending/paused/restored work stays immutable; no target toggles or reroll. This supersedes older selector-proposed and automatic-pool-entry wording for Challenge ranks only.

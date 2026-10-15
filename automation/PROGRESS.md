@@ -279,3 +279,7 @@ Remote predecessor173092c2c742c059481c8e69b5bb7e960f1fde39 verified; guarded cla
 ## A69 — confirmed progressive rank topology
 
 Verified predecessor `e232e5de920e23cfcc236b26e3e37a00f51dd962`; owning commit contains this deliverable. WB-D147 recorded with precise WB-D124/144 supersession; current tier/spec/UI/persistence references aligned. No prices, roster admissions or new runtime behavior. Validation:147 decision IDs,13 unchanged manifest pins and whitespace. Publication requires exact expected-head update and remote head/tree/main verification; no saved claim until verified.
+
+## A70 — owned-rank opt-in and immutable-offer controls
+
+Verified predecessor `e3c8d9848a5b597892b1dc761fc4fe9089918854`; owning commit contains this deliverable. WB-D148 DELEGATED; concrete control/persistence contract and five affected specs. Validation:148 unique decisions,13 manifest pins and whitespace. No normal-card toggle or new FP/target grant. Publication requires exact expected-head update and remote head/tree/main verification; no saved claim until verified.

@@ -134,3 +134,7 @@ Priority P1; size M bounded packet; dependencies A67 committed evidence and guar
 ## A69 — DONE in owning checkpoint: confirmed progressive rank topology
 
 Priority P0/P1; size S (A73 M); preceding checkpoint remotely verified. WB-D147 recorded with precise WB-D124/144 supersession; current tier/spec/UI/persistence references aligned. No prices, roster admissions or new runtime behavior. Validation:147 decision IDs,13 unchanged manifest pins and whitespace. Next: A70 owned-rank control/persistence contract under current recommendation delegation.
+
+## A70 — DONE in owning checkpoint: owned-rank opt-in and immutable-offer controls
+
+Priority P0/P1; size S (A73 M); preceding checkpoint remotely verified. WB-D148 DELEGATED; concrete control/persistence contract and five affected specs. Validation:148 unique decisions,13 manifest pins and whitespace. No normal-card toggle or new FP/target grant. Next: A71 preserve offer count and Challenge family exposure while integrating per-rank readiness.

@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — A69 complete in owning checkpoint; owner wb-a69-a73 continuing sequential plan.
+- State: ACTIVE — A70 complete in owning checkpoint; owner wb-a69-a73 continuing sequential plan.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -10,9 +10,9 @@
 
 ## Current continuation — A69–A73
 
-Latest completed: A69, confirmed progressive rank topology. Verified predecessor `e232e5de920e23cfcc236b26e3e37a00f51dd962`. WB-D147 recorded with precise WB-D124/144 supersession; current tier/spec/UI/persistence references aligned. No prices, roster admissions or new runtime behavior. Validation:147 decision IDs,13 unchanged manifest pins and whitespace.
+Latest completed: A70, owned-rank opt-in and immutable-offer controls. Verified predecessor `e3c8d9848a5b597892b1dc761fc4fe9089918854`. WB-D148 DELEGATED; concrete control/persistence contract and five affected specs. Validation:148 unique decisions,13 manifest pins and whitespace. No normal-card toggle or new FP/target grant.
 
-Exact next action: A70 owned-rank control/persistence contract under current recommendation delegation.
+Exact next action: A71 preserve offer count and Challenge family exposure while integrating per-rank readiness.
 
 Confirmed topology WB-D147: Lesser→Standard→Greater→Superior, lower ranks retained. Latest current contracts supersede older pending topology paragraphs below. Production/main changes remain unauthorized; A56 retirement and source/client evidence holds are independent. Owning publication must verify remote head/tree/main. Owner wb-a69-a73 remains active under recorded lease.
 

@@ -71,3 +71,7 @@ Current one-at-a-time topology question is preserved pending an answer; the2026-
 ## A69 current supersession — topology resolved
 
 WB-D147 CONFIRMED2026-10-15: progressive paid Lesser→Standard→Greater→Superior, lower ranks retained. Earlier “current next choice” and A68 topology-pending paragraphs are historical and no longer a question. First Lesser preserves WB-D124 ordinary Bossing Lesser AND Greater entry, without a second generic charge. Next delegated integration is owned-rank controls and immutable offers; catalog/FP/source holds remain.
+
+## A70 — owned-rank control resolved under delegation
+
+WB-D148 adopts the future-offer owned-rank selector and safe edit boundary, including explicit first Lesser enable and higher-rank opt-in defaults. No more approval question for these controls. Next integration: family offering/rank choice and per-rank readiness; content/quotes and current-client proof remain unfinished.

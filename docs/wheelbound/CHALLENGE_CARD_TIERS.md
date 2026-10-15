@@ -87,3 +87,7 @@ The [monster table](MONSTER_CHALLENGE_HUNT_TABLE.md) now contains327 tiered sour
 ## Lower-tier context review — A68
 
 The [seven-context review](research/LOWER_TIER_CONTEXT_REVIEW_A68.md) advances access/identity/receipt preparation for elemental gems and two Lesser contexts without admitting candidates. Jelly Lesser is task-dependent; Infernal Mage has page-level estimated-rate evidence; sea-snake source grouping and Mogre shore access need precise review. No table membership, FP quote, rank topology or runtime enablement changes.
+
+## Current Challenge rank control — WB-D148
+
+[Rank controls](CHALLENGE_RANK_CONTROL_CONTRACT.md) separate owned/enabled/ready. First Lesser confirmation enables Lesser; later purchases preserve settings and start disabled unless explicitly opted in. Owned-rank settings may change only with no assignment/obligation/pending offers/unresolved selection. All off is allowed and suppresses only new Challenge offerings. Pending/paused/restored work stays immutable; no target toggles or reroll. This supersedes older selector-proposed and automatic-pool-entry wording for Challenge ranks only.
