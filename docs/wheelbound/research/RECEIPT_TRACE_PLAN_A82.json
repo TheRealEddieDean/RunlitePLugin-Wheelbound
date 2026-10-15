@@ -1,0 +1,477 @@
+{
+  "version": "receipt-trace-plan-a82-v1",
+  "authority": "WB-D129/135/137/148-152 existing rule derivation; future acceptance only",
+  "catalog_sha256": "8e5c86a91169ac9613ec93518ff346888fec14581a8a3a8f5b9d77197235092b",
+  "runtime_enabled": false,
+  "client_tests_executed": 0,
+  "case_count": 32,
+  "receipt_required_fields": [
+    "account_key",
+    "run_id",
+    "assignment_id",
+    "canonical_source_key",
+    "context_id",
+    "source_composition_id",
+    "actual_region_method_world",
+    "logical_item_id",
+    "quantity",
+    "local_recipient_evidence",
+    "encounter_or_drop_occurrence_id",
+    "earning_time_evidence",
+    "earning_active_state",
+    "delivery_processing_active_state",
+    "frozen_catalog_and_quote_versions",
+    "evidence_journal_key",
+    "settlement_operation_id"
+  ],
+  "cases": [
+    {
+      "id": "WB-RC-positive-stronghold-minotaur",
+      "scenario": "One fresh active personally received item9007 from exact authored source/context/form after commitment.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "boundary": "Positive source identity plus region/context; absence of possession restriction does not prove receipt.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-positive-stronghold-flesh-crawler",
+      "scenario": "One fresh active personally received item9011 from exact authored source/context/form after commitment.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "boundary": "Positive source identity plus region/context; absence of possession restriction does not prove receipt.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-positive-stronghold-catablepon",
+      "scenario": "One fresh active personally received item9010 from exact authored source/context/form after commitment.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "boundary": "Positive source identity plus region/context; absence of possession restriction does not prove receipt.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-positive-stronghold-ankou",
+      "scenario": "One fresh active personally received item9008 from exact authored source/context/form after commitment.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "boundary": "Positive source identity plus region/context; absence of possession restriction does not prove receipt.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-duplicate-callbacks",
+      "scenario": "Server/client adapter callbacks refer to one same loot occurrence.",
+      "expected": "ONE_SETTLEMENT",
+      "boundary": "Canonical event/encounter journal prevents duplicate quote payment.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-prior-assignment",
+      "scenario": "Matching drop was earned before current assignment commitment.",
+      "expected": "NO_CURRENT_ASSIGNMENT_CREDIT",
+      "boundary": "Do not backdate a fresh assignment start.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-paused-earning",
+      "scenario": "Matching source drop earned while paused.",
+      "expected": "NO_CREDIT_NO_BACKFILL",
+      "boundary": "Later resume/delivery never converts paused earning to active.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-paused-delivery",
+      "scenario": "Proved active earning but delivery/processing occurs while paused.",
+      "expected": "PRESERVE_SUPPORTED_EVIDENCE_NO_PAUSED_PAYOUT",
+      "boundary": "No reward processing while paused; resume may process proved eligible prior active evidence, not paused earning.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-unknown-earning-time",
+      "scenario": "Event arrives after resume with no supported earning-time link.",
+      "expected": "PENDING_NO_CREDIT",
+      "boundary": "Unknown is neither active credit nor verified empty.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-wrong-account",
+      "scenario": "Receipt account differs from committed account.",
+      "expected": "NO_CREDIT",
+      "boundary": "No cross-profile mutation.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-wrong-run",
+      "scenario": "Receipt belongs to another run ID.",
+      "expected": "NO_CREDIT",
+      "boundary": "No grant/reward reuse across runs.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-wrong-assignment",
+      "scenario": "Exact item/source receipt was already attached to a different assignment.",
+      "expected": "NO_DUPLICATE_CREDIT",
+      "boundary": "Unique assignment and occurrence bindings.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-combined-item",
+      "scenario": "Old components combined into Skull sceptre9013.",
+      "expected": "NO_SOURCE_HUNT_COMPLETION",
+      "boundary": "Inventory transformation is not a new9007/9008/9010/9011 drop.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-wrong-minotaur",
+      "scenario": "Same display-name Colosseum Minotaur12812 produces an event.",
+      "expected": "NO_STRONGHOLD_CREDIT",
+      "boundary": "No name-prefix identity.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-wrong-location",
+      "scenario": "Ankou from another dungeon with matching name/component allegation.",
+      "expected": "NO_STRONGHOLD_CREDIT",
+      "boundary": "Actual Stronghold floor/source context is mandatory.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-wrong-world",
+      "scenario": "Correct source/item observed in a free world for this members-only draft.",
+      "expected": "NO_AUTHORED_CONTEXT_CREDIT",
+      "boundary": "Preserve unselected world contexts without auto-enabling them.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-trade",
+      "scenario": "Trade supplies a matching component.",
+      "expected": "NO_CREDIT",
+      "boundary": "Possession change is insufficient.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-bank",
+      "scenario": "Withdrawal of a previously held component.",
+      "expected": "NO_CREDIT",
+      "boundary": "Bank/old-item movement is not fresh source earning.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-inventory-only",
+      "scenario": "Inventory delta matches item with no source-correlated receipt.",
+      "expected": "PENDING_NO_SOURCE_PROOF",
+      "boundary": "Do not infer personal loot from a delta alone.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-teammate",
+      "scenario": "Another player receives the matching item.",
+      "expected": "NO_PERSONAL_CREDIT",
+      "boundary": "Source kill count alone does not establish local recipient.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-recipient-unknown",
+      "scenario": "Exact source drop event lacks local ownership proof.",
+      "expected": "PENDING_NO_CREDIT",
+      "boundary": "Missing payload evidence cannot be guessed.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-adapter-unsupported",
+      "scenario": "Live client composition/event adapter unvalidated.",
+      "expected": "NO_NEW_OFFER_FROM_UNSUPPORTED_CONTEXT",
+      "boundary": "Authored constants/content are not an adapter activation receipt.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-quote-missing",
+      "scenario": "Otherwise accessible target lacks frozen reviewed quote.",
+      "expected": "NO_NEW_OFFER",
+      "boundary": "No zero-FP fallback or postselection quote fabrication.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-settlement-write-failure",
+      "scenario": "Evidence qualifies but durable mutation acknowledgement is lost.",
+      "expected": "RECOVER_SAME_RECEIPT_NO_DOUBLE_PAYMENT",
+      "boundary": "Actual crash/save proof remains future engineering.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-catalog-update",
+      "scenario": "A rate/catalog changes after offers/assignment committed.",
+      "expected": "PRESERVE_COMMITTED_RANK_ITEM_QUOTE",
+      "boundary": "No silent reseed/reprice; detailed invalidation/reconciliation remains separate.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-settings-update",
+      "scenario": "Attempt to disable rank while an offer or assignment is pending.",
+      "expected": "REJECT_SETTINGS_MUTATION",
+      "boundary": "No replacement card or new random seed.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-killerwatt-orb",
+      "scenario": "Only passive orb470 interaction observed, no supported combat469 loot trace.",
+      "expected": "NO_GEM_RECEIPT_INFERRED",
+      "boundary": "Transform/kill/source evidence must connect, and estimated-rate context remains held.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-molanisk-bell",
+      "scenario": "Bell interaction near wall observed, no personal fresh34416 receipt.",
+      "expected": "NO_HUNT_COMPLETION",
+      "boundary": "MOLANISK1 constant is identity evidence, not proof an item dropped.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-sea-snake-mother",
+      "scenario": "Water sapphire claim from mother/quest boss1101.",
+      "expected": "NO_DRAFT_FAMILY_CREDIT",
+      "boundary": "Draft family accepts only1097/1098 in exact legal dungeon context.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-dispose-after-drop",
+      "scenario": "Qualifying component already settled then combined/chiseled/disposed.",
+      "expected": "NO_CLAWBACK_NO_SECOND_PAYMENT",
+      "boundary": "Player keeps earned reward; no ongoing possession requirement.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-independent-bounty",
+      "scenario": "Valid hunt drop also qualifies for separately once-only permanent item bounty.",
+      "expected": "SEPARATE_KEYS_NO_BOUNTY_RESET",
+      "boundary": "Reject/failure never revokes independently settled qualifying bounty.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-callback-order",
+      "scenario": "Equivalent source/client events arrive in either order or after reload.",
+      "expected": "SAME_SINGLE_SETTLEMENT_OR_PRESERVED_AMBIGUOUS_EVIDENCE",
+      "boundary": "Do not assume event ordering from API existence.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    }
+  ]
+}

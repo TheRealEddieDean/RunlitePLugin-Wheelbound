@@ -96,3 +96,7 @@ Run `python tools/wiki_drops/validate_challenge_catalog.py PATH_TO_EXTRACTED_OUT
 ## Ranked Challenge integration — A69–A73
 
 [Current readiness and continuation](CHALLENGE_RANK_READINESS.md) maps WB-D147 confirmed topology and WB-D148–150 delegated controls/offers/shared-target purchases to contracts, synthetic checks and remaining content/client gates. Run automation/challenge_ranks/check_contract.py for exact mathematical/transaction-model invariants; this is not client/durable-IO proof. V2 bundle/quotes/prices and source admission remain unfinished; production implementation is not authorized.
+
+## Current partial-v2 receipt acceptance — A82
+
+[Receipt trace packet](research/RECEIPT_TRACE_PLAN_A82.md) provides source-specific positive and negative/ambiguous cases bound to the exact draft catalog. All are client NOT_RUN, with no observed trace data. Required derived receipt fields are not claimed API payload fields. A83 integrates source/quote/schema verification, distinct from future actual-client acceptance.

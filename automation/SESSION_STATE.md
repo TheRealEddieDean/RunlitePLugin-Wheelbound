@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — A81 complete in owning checkpoint; owner wb-a74-a83 continuing authorized sequence.
+- State: ACTIVE — A82 complete in owning checkpoint; owner wb-a74-a83 continuing authorized sequence.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -10,9 +10,9 @@
 
 ## Current continuation — A74–A83
 
-Latest completed A81: candidate price and family-frequency sensitivity. Verified predecessor `952cb58e75dff75105561b67c08e21c8c7374a48`. Three progressive candidate price schedules and32 exact q/rank/slot exposure scenarios compared;64 assertions pass. Middle is trial baseline only. Reward-equivalent costs explicitly not preentry financing/playtime; prices/frequency remain unadopted, paid products unavailable without reviewed payload.
+Latest completed A82: concrete future personal-receipt trace matrix. Verified predecessor `f727a6ccf8094acefe78b42cba4822c55b7396b3`. 32 source-specific positive/negative/ambiguous future client cases and required derived receipt fields saved against exact draft catalog hash. All NOT_RUN/null traces; paused earning versus processing, duplicates, transformations, wrong sources and independent bounty rules preserved.
 
-Exact next action: A82 concrete future personal source/receipt trace matrix for authored bundle and elemental identity boundaries.
+Exact next action: A83 integrated offline source/quote/schema/hash validation, current continuation rewrite and final release.
 
 Current source/rank rules remain WB-D144–150. No retired-Fate, task continuation or production approval inferred. Active owner wb-a74-a83 under recorded lease; publish/verify before next deliverable. All earlier next-question/next-task descriptions below are historical where superseded by this section. Owning commit must be remotely verified before saved claim.
 
