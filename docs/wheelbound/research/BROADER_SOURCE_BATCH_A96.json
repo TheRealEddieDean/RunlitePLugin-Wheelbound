@@ -1,0 +1,612 @@
+{
+  "version": "broader-source-batch-a96-v1",
+  "scope": "Three bounded candidate contexts; no roster admission or current-client validation",
+  "archive_sha256": "e00babd58e09c047f68df94625cd5b4e77e119952d52c0d0c50b53a7d2b60309",
+  "constants_pin": "42a6f17a6a2e8e478aa763890ecd0181a59dad38",
+  "constant_file_hashes": {
+    "ItemID.java": "6f00480cae7939de1f5187dda406e7a2029f4280bf2b395b789619847587221d",
+    "NpcID.java": "6afa1a51c4f03ba60159544e90ec3c8d002337165ea90a9cfcf8510798caf47a"
+  },
+  "runtime_enabled": false,
+  "core_changed": false,
+  "source_candidates": [
+    {
+      "source": "Turoth",
+      "specific_item": "Leaf-bladed sword",
+      "canonical_item_id": 11902,
+      "nominal_rank": "greater",
+      "captured_raw_rate": "1/500",
+      "evidence": {
+        "source_url": "https://oldschool.runescape.wiki/w/Turoth",
+        "item": "Leaf-bladed sword",
+        "capture": {
+          "origin": "network_html",
+          "requested_url": "https://oldschool.runescape.wiki/w/Turoth",
+          "fetched_at": "2026-10-14T15:52:24.005692+00:00",
+          "sha256": "911dcf45436015c321ab7e8c48da1929cd5411dfab183973d4c1e26ac6b11e7b",
+          "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+          "cache_file": "tools\\wiki_drops\\output\\html\\a75613358c5f9075496129a885a11dafbaa56c4f66ed007f1068fafbf653cfc0.html",
+          "resolved_url": "https://oldschool.runescape.wiki/w/Turoth",
+          "etag": null,
+          "last_modified": "Wed, 14 Oct 2026 15:26:30 GMT",
+          "fixture": false
+        },
+        "normalized_source_sha256": "911dcf45436015c321ab7e8c48da1929cd5411dfab183973d4c1e26ac6b11e7b",
+        "raw_file_sha256": "544c76589ad24a7fe476e0c3a06da676eb712067cf3f5585b241881fc3ae3e3b",
+        "reported_npc_ids": [
+          430
+        ],
+        "source_context": [
+          "Turoth are Slayer monsters that require a Slayer level of 55 to kill. They are melee based, and as such Protect from Melee will negate all of their damage. They drop herbs and seeds commonly, though not as frequently as aberrant spectres , as well as frequent nature runes . In addition, they also drop the leaf-bladed sword and necklace of fangs .",
+          "Turoth, like kurask , can only be damaged with leaf-bladed weapons , broad arrows and bolts , or the Magic dart spell due to their thick hides. [ 1 ] Turoth are immune to other types of attacks, thereby establishing hidden skill requirements to kill them (particularly for ironmen ). Though most of the means available for attacking them cannot inflict poison, it is still possible to inflict venom by using either a serpentine helm or a toxic staff of the dead with Magic Dart . This also means the dwarf multicannon is ineffective, and cannot be placed in this area.",
+          "Although turoth are invulnerable to any damage from the eldritch Nightmare staff , Saradomin godsword , and toxic blowpipe special attacks, they will still heal the player as if it would have dealt damage, making them useful as special attack weapons during extended trips. The ancient mace special attack also restores Prayer points equal to the damage that would have been dealt. Guthan's equipment's set effect does not work.",
+          "The majority of the Turoth in the Fremennik Slayer Dungeon are level 83 and 85, along with three level 87s, and one level 89.",
+          "Slayer rings offer immediate access to Fremennik Slayer Dungeon . For those without access to Slayer rings, a fairy ring (code: A J R ) is conveniently located outside the dungeon. Other alternatives include the lyre , Fremennik sea boots and Teleport to House if the player's house is located in Rellekka . Players who are unable to use any of these options can use a Camelot teleport and make a long run north/north-west towards Rellekka and then east after passing the second bridge. Alternatively, players may teleport to Lunar Isle without a Seal of Passage and talk to an NPC to be kicked off the island to Rellekka; they may also teleport to Waterbirth Island and take the boat to Rellekka.",
+          "Drop rates are estimated based on 1,788,457 samples from the Drop Rate Project , unless otherwise cited.",
+          "There is a 31/129 chance to access the herb drop table . If accessed, it is rolled an average of 1.7 times \u2013 15/31 chance to roll once, 10/31 to roll twice, and 6/31 to roll three times. Each kill gives an average of 0.411 herbs.",
+          "There is a 18/129 chance of rolling the rare seed drop table .",
+          "There is a 5/129 chance of rolling the gem drop table .",
+          "Turoths have 3 collection log items.",
+          "Turoths now drop the necklace of fangs .",
+          "Thralls will no longer deal damage to turoths.",
+          "Kurasks and turoths now drop the leaf-bladed sword .",
+          "Duradel no longer assigns players Turoth tasks.",
+          "7m ago - Microbrews",
+          "14m ago - Kelsey",
+          "15m ago - Kelsey",
+          "15m ago - Kelsey"
+        ],
+        "access_infobox": [
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "55"
+          },
+          {
+            "field": "Slayer XP",
+            "value": "76 xp"
+          },
+          {
+            "field": "Monster ID",
+            "value": "430"
+          }
+        ],
+        "raw_drop_rows": [
+          {
+            "row_zero_based": 1,
+            "record": {
+              "section": "Drops / Pre-roll",
+              "item_name": "Leaf-bladed sword",
+              "item_links": [
+                {
+                  "text": "Leaf-bladed sword",
+                  "href": "https://oldschool.runescape.wiki/w/Leaf-bladed_sword"
+                }
+              ],
+              "quantity_raw": "1",
+              "rarity": {
+                "raw": "1/500",
+                "expression": "1/500",
+                "kind": "fraction",
+                "exact_probability": {
+                  "numerator": 1,
+                  "denominator": 500
+                },
+                "needs_context_review": false,
+                "approximate": false
+              },
+              "annotations": [],
+              "raw_row": {
+                "cells": [
+                  "",
+                  "Leaf-bladed sword",
+                  "1",
+                  "1/500",
+                  "40,065",
+                  "40,800"
+                ],
+                "table_headers": [
+                  "",
+                  "item",
+                  "quantity",
+                  "rarity",
+                  "price",
+                  "high alch"
+                ]
+              },
+              "layout_supported": true,
+              "canonical_item_ids": [],
+              "runtime_enabled": false,
+              "review_status": "UNREVIEWED"
+            }
+          }
+        ],
+        "html_drop_rows": [
+          {
+            "row_text": "Leaf-bladed sword 1 1/500 40,065 40,800",
+            "reported_item_id": null,
+            "note_fragment_ids": [],
+            "referenced_notes": []
+          }
+        ],
+        "html_identity_rows": [
+          {
+            "item_id": 11902,
+            "row_text": "Leaf-bladed sword Slayer 42.1%"
+          }
+        ],
+        "page_estimate_statements": [
+          "Drop rates are estimated based on 1,788,457 samples from the Drop Rate Project , unless otherwise cited."
+        ],
+        "runtime_enabled": false
+      },
+      "item_constant": {
+        "symbol": "LEAFBLADED_SWORD",
+        "id": 11902,
+        "line": 39758,
+        "declaration": "public static final int LEAFBLADED_SWORD = 11902;"
+      },
+      "npc_constant_leads": [
+        {
+          "symbol": "SLAYER_TUROTH",
+          "id": 426,
+          "line": 2069,
+          "declaration": "public static final int SLAYER_TUROTH = 426;"
+        },
+        {
+          "symbol": "SLAYER_TUROTH_DAD",
+          "id": 427,
+          "line": 2074,
+          "declaration": "public static final int SLAYER_TUROTH_DAD = 427;"
+        },
+        {
+          "symbol": "SLAYER_TUROTH_MUM",
+          "id": 428,
+          "line": 2079,
+          "declaration": "public static final int SLAYER_TUROTH_MUM = 428;"
+        },
+        {
+          "symbol": "SLAYER_TUROTH_CHILD",
+          "id": 429,
+          "line": 2084,
+          "declaration": "public static final int SLAYER_TUROTH_CHILD = 429;"
+        },
+        {
+          "symbol": "SLAYER_TUROTH_BABY",
+          "id": 430,
+          "line": 2089,
+          "declaration": "public static final int SLAYER_TUROTH_BABY = 430;"
+        },
+        {
+          "symbol": "SLAYER_TUROTH_DAD2",
+          "id": 431,
+          "line": 2094,
+          "declaration": "public static final int SLAYER_TUROTH_DAD2 = 431;"
+        },
+        {
+          "symbol": "SLAYER_TUROTH_DAD3",
+          "id": 432,
+          "line": 2099,
+          "declaration": "public static final int SLAYER_TUROTH_DAD3 = 432;"
+        }
+      ],
+      "review_status": "HELD_UNCITED_ESTIMATE",
+      "candidate_route_only": "Fremennik off-task source;55 Slayer and owned usable leaf/broad/Magic Dart route; no task/free equipment granted. Canonical forms group once;430 is a reported loot alias, not all forms independently proved.",
+      "unresolved_gates": [
+        "Exact personal probability/source proof or defensible reviewed bounds; scalar1/500 is still an uncited captured estimate",
+        "Actual region/form/430 alias/recipient/active earning correlation",
+        "Fresh source-specific effort/FP quote and reviewed product cost"
+      ],
+      "semantic_note": "Separate from the necklace1/128 versus1/129 conflict: sword is captured as its own pre-roll, not a129-table formula. Neither issue resolves the other.",
+      "runtime_enabled": false,
+      "authored_into_core": false,
+      "fp_quote": null,
+      "product_price": null,
+      "client_traces": "NOT_RUN"
+    },
+    {
+      "source": "Gargoyle",
+      "specific_item": "Granite maul",
+      "canonical_item_id": 4153,
+      "nominal_rank": "greater",
+      "captured_raw_rate": "1/256",
+      "evidence": {
+        "source_url": "https://oldschool.runescape.wiki/w/Gargoyle",
+        "item": "Granite maul",
+        "capture": {
+          "origin": "network_html",
+          "requested_url": "https://oldschool.runescape.wiki/w/Gargoyle",
+          "fetched_at": "2026-10-14T15:26:17.953466+00:00",
+          "sha256": "468d3ca227eb419b0040d24253a21a301bd438d34fb448f897e644b33ac4963d",
+          "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+          "cache_file": "tools\\wiki_drops\\output\\html\\45e1ebd94c71d3ff564d5b87bba61d133812fa2c5020c35af89a5f756908666b.html",
+          "resolved_url": "https://oldschool.runescape.wiki/w/Gargoyle",
+          "etag": null,
+          "last_modified": "Wed, 14 Oct 2026 13:17:06 GMT",
+          "fixture": false
+        },
+        "normalized_source_sha256": "468d3ca227eb419b0040d24253a21a301bd438d34fb448f897e644b33ac4963d",
+        "raw_file_sha256": "410bf0b02deb8cbcc401f76f28217786ec843381d641272fcf030363371652e0",
+        "reported_npc_ids": [
+          412,
+          413
+        ],
+        "source_context": [
+          "Gargoyles are Slayer monsters located in the Slayer Tower 's top floor and basement, requiring 75 Slayer in order to be harmed. Those found in the basement are only available to players who are assigned gargoyles as their Slayer task . If they attempt to kill them off-task, Raulyn will prevent them from attacking.",
+          "Gargoyles, like rockslugs , cannot be killed normally. In order to kill a gargoyle, a rock hammer , a rock thrownhammer , or a granite hammer must be used when they reach 8 or lower Hitpoints . Normally, the item must be used on the gargoyle, but players can buy the \" Gargoyle Smasher \" perk from Slayer Masters for 120 Slayer points , which will automatically smash the gargoyle when it falls to 9 or lower Hitpoints, provided that the player has a rock hammer (or equivalent) in their inventory. The granite hammer will automatically smash gargoyles even without the perk if it is equipped.",
+          "Because of the number of rune item drops, it is recommended to bring High Level Alchemy runes to reduce the frequency of banking and save inventory space.",
+          "Gargoyles can be safespotted near the doorway in the south-west area at the top floor in Slayer Tower or in the north-east corner of the basement behind an immovable bucket on the floor.",
+          "It should be noted that the gargoyles on the top floor of the tower are located after aberrant spectres , who drain players' stats if they are not wearing a Slayer helmet or nose peg . They may be avoided by using the Agility shortcut in the north-east from 1 st floor [ UK ] 2 nd floor [ US ] to 2 nd floor [ UK ] 3 rd floor [ US ] , although this route takes longer. There's also a shortcut requiring 81 Agility outside the southern wall of the tower that will take you from the ground floor [ UK ] 1 st floor [ US ] to the 2 nd floor [ UK ] 3 rd floor [ US ] . These gargoyles are susceptible to poison and venom ; the basement ones are immune to both.",
+          "In the book The Living Statues , it is revealed that the gargoyles were animated by the Bandosian general Snaarldor with the black tourmaline core , but turned against them after they ordered the gargoyles to fight against the forces of Zamorak , due to the Slayer Tower being filled with Zamorakian magic.",
+          "Being a golem , this creature is affected by golembane weapons .",
+          "The following money making guide is available for Gargoyle:",
+          "The following drop rates are provided by Jagex, unless otherwise specified. [ 1 ]",
+          "There is a 5/128 chance of rolling the gem drop table .",
+          "Gargoyles have 3 collection log items.",
+          "There is 1 Combat Achievement task (totalling 2 points) available for Gargoyle.",
+          "Gargoyles are now vulnerable to golembane weapons .",
+          "Gargoyles now have a 40% elemental weakness to earth spells as well as a -2 flat armour.",
+          "The range of aggressiveness of gargoyles has been slightly increased.",
+          "The drop table was improved to include more valuable drops.",
+          "More Gargoyle spawns have been added to the Slayer Tower.",
+          "6m ago - Wroometh",
+          "9m ago - Wroometh",
+          "14m ago - AfterDarq",
+          "21m ago - Crabby"
+        ],
+        "access_infobox": [
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "75"
+          },
+          {
+            "field": "Slayer XP",
+            "value": "105 xp"
+          },
+          {
+            "field": "Monster ID",
+            "value": "412,413"
+          }
+        ],
+        "raw_drop_rows": [
+          {
+            "row_zero_based": 0,
+            "record": {
+              "section": "Drops / Pre-roll",
+              "item_name": "Granite maul",
+              "item_links": [
+                {
+                  "text": "Granite maul",
+                  "href": "https://oldschool.runescape.wiki/w/Granite_maul"
+                }
+              ],
+              "quantity_raw": "1",
+              "rarity": {
+                "raw": "1/256",
+                "expression": "1/256",
+                "kind": "fraction",
+                "exact_probability": {
+                  "numerator": 1,
+                  "denominator": 256
+                },
+                "needs_context_review": false,
+                "approximate": false
+              },
+              "annotations": [],
+              "raw_row": {
+                "cells": [
+                  "",
+                  "Granite maul",
+                  "1",
+                  "1/256",
+                  "91,238",
+                  "30,000"
+                ],
+                "table_headers": [
+                  "",
+                  "item",
+                  "quantity",
+                  "rarity",
+                  "price",
+                  "high alch"
+                ]
+              },
+              "layout_supported": true,
+              "canonical_item_ids": [],
+              "runtime_enabled": false,
+              "review_status": "UNREVIEWED"
+            }
+          }
+        ],
+        "html_drop_rows": [
+          {
+            "row_text": "Granite maul 1 1/256 91,238 30,000",
+            "reported_item_id": null,
+            "note_fragment_ids": [],
+            "referenced_notes": []
+          }
+        ],
+        "html_identity_rows": [
+          {
+            "item_id": 4153,
+            "row_text": "Granite maul Slayer 47.8%"
+          }
+        ],
+        "page_estimate_statements": [],
+        "runtime_enabled": false
+      },
+      "item_constant": {
+        "symbol": "GRANITE_MAUL",
+        "id": 4153,
+        "line": 13342,
+        "declaration": "public static final int GRANITE_MAUL = 4153;"
+      },
+      "npc_constant_leads": [
+        {
+          "symbol": "SLAYER_GARGOYLE_1",
+          "id": 412,
+          "line": 2003,
+          "declaration": "public static final int SLAYER_GARGOYLE_1 = 412;"
+        },
+        {
+          "symbol": "SLAYER_GARGOYLE_DEAD",
+          "id": 413,
+          "line": 2008,
+          "declaration": "public static final int SLAYER_GARGOYLE_DEAD = 413;"
+        }
+      ],
+      "review_status": "REVIEWED_MEDIATED_RATE_WITH_UNREAD_PRIMARY_IMAGE",
+      "candidate_route_only": "Slayer Tower top-floor off-task route with75 Slayer, renewable finishing tool and legal travel/supplies. Basement requires a task and stays outside this route. Manual finishing and optional perk are alternatives; do not require perk or universal81 Agility.",
+      "unresolved_gates": [
+        "Read/transcribe linked original rate-table image or equivalent primary evidence; page says Jagex-provided but image contents were not newly retrieved",
+        "Map living412/dead413 transition and emitted loot alias in actual top-floor context; dead form not a second creature",
+        "Actual finishing/source/recipient/earning traces; source effort/FP quote and product cost"
+      ],
+      "semantic_note": "Captured source says manual hammer finishing at8 or lower HP; optional automatic perk threshold9 or lower. Preserve distinction and do not count a smash interaction as a proven item receipt.",
+      "runtime_enabled": false,
+      "authored_into_core": false,
+      "fp_quote": null,
+      "product_price": null,
+      "client_traces": "NOT_RUN",
+      "page_level_rate_reference": {
+        "page_claim": "The following drop rates are provided by Jagex, unless otherwise specified.",
+        "captured_note": {
+          "id": "cite_note-twitter-1",
+          "text": "^ Jagex. Mod Ash's Twitter account . 13 June 2018. Archived from the original on 26 May 2020. Mod Ash: \" [1] \""
+        },
+        "links": [
+          {
+            "text": "Mod Ash's Twitter account",
+            "href": "https://reldo.runescape.wiki/i/101420"
+          },
+          {
+            "text": "the original",
+            "href": "https://twitter.com/JagexAsh/status/1006920421080518657"
+          },
+          {
+            "text": "[1]",
+            "href": "https://pbs.twimg.com/media/DflMyA6X4AEtgvu.jpg:large"
+          }
+        ],
+        "primary_image_read": false
+      }
+    },
+    {
+      "source": "Lizardman shaman",
+      "specific_item": "Dragon warhammer",
+      "canonical_item_id": 13576,
+      "nominal_rank": "superior",
+      "captured_raw_rate": "1/3,000",
+      "evidence": {
+        "source_url": "https://oldschool.runescape.wiki/w/Lizardman_shaman",
+        "item": "Dragon warhammer",
+        "capture": {
+          "origin": "network_html",
+          "requested_url": "https://oldschool.runescape.wiki/w/Lizardman_shaman",
+          "fetched_at": "2026-10-14T15:37:03.829368+00:00",
+          "sha256": "d33dbf6ce6fab2ff82345f931b53c40fcf0db5e38c9c2f90f777c02357a1bd47",
+          "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+          "cache_file": "tools\\wiki_drops\\output\\html\\4c1d9cd5a6a0c81335d212f1ea209321ce35490a7d11d3ccf402f7ca205596cc.html",
+          "resolved_url": "https://oldschool.runescape.wiki/w/Lizardman_shaman",
+          "etag": null,
+          "last_modified": "Wed, 14 Oct 2026 15:28:09 GMT",
+          "fixture": false
+        },
+        "normalized_source_sha256": "d33dbf6ce6fab2ff82345f931b53c40fcf0db5e38c9c2f90f777c02357a1bd47",
+        "raw_file_sha256": "2bc1bbe15bd15647eb3dd9baad04b170c143ee0817a59a5e583e8bec4ccd2303",
+        "reported_npc_ids": [
+          6766,
+          6767,
+          7744,
+          7745
+        ],
+        "source_context": [
+          "Lizardman shamans are giant reptilian humanoids that are stronger than their normal lizardmen and lizardmen brute counterparts. They are often sought after for their dragon warhammer drops. They never become tolerant to the player.",
+          "Three shamans reside in the western area of Lizardman Canyon via the handholds . These three shamans are present in a multi-combat area . Shayzien soldiers will not attack the shamans (nor will the shamans attack them), since they are busy dealing with a small group of normal lizardmen . Below are a couple ways to get there.",
+          "Players can check how many players are currently in the western area of the canyon by speaking to the wounded soldier outside the canyon, just south of the broken crossbow.",
+          "Warning : Be wary of more than one shaman attacking at a time as they can quickly stack up damage from their abilities and attacks, which can quickly end a trip. To avoid being attacked constantly by the nearby lizardmen and their brute forms, killing the ones in the north and south-west corners is recommended.",
+          "Partial completion of Fairytale II - Cure a Queen is required to use the fairy rings . A fairy ring (code D J R ) is nearby, just south of Lizardman Canyon .",
+          "Eight shamans reside inside a cave at the northern end of the Lizardman Settlement before Xeric's Shrine . This is a single-way combat area. This location requires players to be on a lizardman Slayer task. A dwarf multicannon cannot be used here.",
+          "Fairy rings Lizardman Settlement - (Slayer Only Cave)",
+          "Lizardman shamans have standard ranged and melee attacks, so one should use Protect from Missiles and stand at a distance. Unlike most monsters, lizardman shamans are able to attack with melee diagonally if the player is in range.",
+          "Lizardman shamans have several special attacks that they can utilise during the fight. Excluding the spawns, these attacks do not have a cooldown so it is possible for a lizardman shaman to repeatedly use the same ability over and over again.",
+          "The following money making guides are available for Lizardman shaman:",
+          "Drop rates are estimated based on 292,640 samples from the Drop Rate Project , unless otherwise cited.",
+          "The average Lizardman shaman kill is worth 12,160 . Excluding the dragon warhammer , the average kill is worth 6,629.00 .",
+          "The average high alch value of a Lizardman shaman kill is 4,268 . Excluding the dragon warhammer , the average kill has a high alchemy value of 4,245.00 .",
+          "There is a 45/500 chance to hit the herb drop table.",
+          "There is a 10/500 chance of rolling the tree-herb seed drop table . [ 1 ]",
+          "There is a 20/500 chance of rolling the rare drop table .",
+          "Lizardman shamans have 2 collection log items.",
+          "There are 2 Combat Achievement tasks (totalling 2 points) available for Lizardman Shaman.",
+          "Lizardman shamans now drop herbs unnoted instead of noted.",
+          "The drop rate of the dragon warhammer has been increased from 1/5,000 to 1/3,000.",
+          "As Kourend Favour has been removed, fighting lizardman shamans no longer requires it.",
+          "Lizardman Shaman spawns in the Lizardmen Temple now have a 3x3 explosion radius down from 5x5. [ 2 ]",
+          "The Lizardman shaman's special attack Spawns will no longer occur in quick succession.",
+          "The two lizardman shaman spawns in the Lizardman Settlement were removed and replaced with the Lizardman Caves , which contains eight shamans. These shamans require a lizardman Slayer task and 100% Shayzien favour to kill.",
+          "Two lizardman shaman spawns were added in the Lizardman Settlement . Notably, these shamans did not require 100% Shayzien favour to kill.",
+          "0m ago - Kelsey",
+          "0m ago - Kelsey",
+          "1m ago - Kelsey",
+          "2m ago - Kelsey"
+        ],
+        "access_infobox": [
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "None"
+          },
+          {
+            "field": "Slayer XP",
+            "value": "157.5 xp"
+          },
+          {
+            "field": "Monster ID",
+            "value": "6766,6767,7744,7745"
+          }
+        ],
+        "raw_drop_rows": [
+          {
+            "row_zero_based": 1,
+            "record": {
+              "section": "Drops / Pre-roll",
+              "item_name": "Dragon warhammer",
+              "item_links": [
+                {
+                  "text": "Dragon warhammer",
+                  "href": "https://oldschool.runescape.wiki/w/Dragon_warhammer"
+                }
+              ],
+              "quantity_raw": "1",
+              "rarity": {
+                "raw": "1/3,000",
+                "expression": "1/3,000",
+                "kind": "fraction",
+                "exact_probability": {
+                  "numerator": 1,
+                  "denominator": 3000
+                },
+                "needs_context_review": false,
+                "approximate": false
+              },
+              "annotations": [],
+              "raw_row": {
+                "cells": [
+                  "",
+                  "Dragon warhammer",
+                  "1",
+                  "1/3,000",
+                  "16,593,734",
+                  "72,000"
+                ],
+                "table_headers": [
+                  "",
+                  "item",
+                  "quantity",
+                  "rarity",
+                  "price",
+                  "high alch"
+                ]
+              },
+              "layout_supported": true,
+              "canonical_item_ids": [],
+              "runtime_enabled": false,
+              "review_status": "UNREVIEWED"
+            }
+          }
+        ],
+        "html_drop_rows": [
+          {
+            "row_text": "Dragon warhammer 1 1/3,000 16,593,734 72,000",
+            "reported_item_id": null,
+            "note_fragment_ids": [],
+            "referenced_notes": []
+          }
+        ],
+        "html_identity_rows": [
+          {
+            "item_id": 13576,
+            "row_text": "Dragon warhammer Miscellaneous 11.5%"
+          }
+        ],
+        "page_estimate_statements": [
+          "Drop rates are estimated based on 292,640 samples from the Drop Rate Project , unless otherwise cited."
+        ],
+        "runtime_enabled": false
+      },
+      "item_constant": {
+        "symbol": "DRAGON_WARHAMMER",
+        "id": 13576,
+        "line": 45938,
+        "declaration": "public static final int DRAGON_WARHAMMER = 13576;"
+      },
+      "npc_constant_leads": [
+        {
+          "symbol": "ZEAH_LIZARDSHAMAN_1",
+          "id": 6766,
+          "line": 30921,
+          "declaration": "public static final int ZEAH_LIZARDSHAMAN_1 = 6766;"
+        },
+        {
+          "symbol": "ZEAH_LIZARDSHAMAN_2",
+          "id": 6767,
+          "line": 30926,
+          "declaration": "public static final int ZEAH_LIZARDSHAMAN_2 = 6767;"
+        },
+        {
+          "symbol": "LIZARDMAN_CAVE_SHAMAN_1",
+          "id": 7744,
+          "line": 35331,
+          "declaration": "public static final int LIZARDMAN_CAVE_SHAMAN_1 = 7744;"
+        },
+        {
+          "symbol": "LIZARDMAN_CAVE_SHAMAN_2",
+          "id": 7745,
+          "line": 35336,
+          "declaration": "public static final int LIZARDMAN_CAVE_SHAMAN_2 = 7745;"
+        }
+      ],
+      "review_status": "DIRECT_IMPLEMENTATION_RATE_SOURCE_RESOLVED_ACCESS_AND_RECEIPT_HELD",
+      "candidate_route_only": "Candidate normal canyon off-task solo kill route only; multi-combat requires exact personal source/allocation observations. Task-only Settlement caves not admitted. No invented Slayer requirement or old100% favour prerequisite; legal travel/renewable protection/supplies still required.",
+      "unresolved_gates": [
+        "Source-specific canyon versus task-cave form/region mapping and legal repeatable solo route",
+        "Current personal loot allocation and exact local recipient/earning-time evidence in a multi-combat area",
+        "Authored opportunity/throughput/FP quote and reviewed product cost"
+      ],
+      "semantic_note": "Official implementation reports1/3000; old1/5000 history is not a live alternate rate choice. Captured cave forms cannot all be assumed normal canyon aliases.",
+      "runtime_enabled": false,
+      "authored_into_core": false,
+      "fp_quote": null,
+      "product_price": null,
+      "client_traces": "NOT_RUN",
+      "direct_primary_evidence": {
+        "url": "https://secure.runescape.com/m=news/project-rebalance-combat-changes?oldschool=1",
+        "title": "Project Rebalance: Combat Changes",
+        "published": "2024-05-29",
+        "section": "Miscellaneous Combat-Adjacent Changes",
+        "short_quote": "now drops at a rate of 1/3,000",
+        "read_directly": true,
+        "source_type": "IMPLEMENTATION_NEWS_NOT_PROPOSAL",
+        "source_scope": "Exact item rate announcement; does not prove every method/form, current-client recipient or route access"
+      }
+    }
+  ],
+  "not_researched_here": [
+    "All remaining historical36 contexts as a whole",
+    "Entire483 display candidate catalog",
+    "Original Gargoyle tweet image",
+    "A new uncited Turoth probability interval",
+    "Actual client traces or production adapters"
+  ]
+}

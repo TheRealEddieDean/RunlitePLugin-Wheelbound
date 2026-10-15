@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — hour work block A95 completed in owning commit; owner wb-hour-a84.
+- State: ACTIVE — hour work block A96 completed in owning commit; owner wb-hour-a84.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -10,9 +10,9 @@
 
 ## Current continuation — hour work block
 
-Latest completed A95: Fresh existing-plugin remote build and exact local blocker. Verified predecessor `492be499960f3732bd6a08033ef6d521eb2b9e79`. GitHub run38774803140/job116559560554 at492be499: actual logs show Temurin11.0.32+1/Gradle8.10 clean build and successful test task in58s; zero exported artifacts, unknown executed counts/dependency pins/JAR inventory. Local wrapper fails before Gradle with Network is unreachable fetching distribution; no local Java tests. Existing production/build/workflow bytes unchanged from hour start. Rank oracle refreshed to43,336 assertions after additional disabled authority pins; no gameplay implementation.
+Latest completed A96: Three-context broader-source evidence packet. Verified predecessor `6c868cc768c6473f3bcd14df89066caa8f36ac32`. Turoth sword11902 uncited estimate held; Gargoyle maul4153 page-level developer-table/image provenance isolated but image not newly read; Shaman warhammer13576 exact1/3000 confirmed from directly read May29,2024 implementation news. Canonical IDs/forms, task-independent candidate routes, finishing/live-dead/canyon-versus-cave controls and remaining receipt/quote holds preserved. Three-context capture/row/constant/rank validator passes; no core admission or FP invented.
 
-Exact next action: Use remaining block for one bounded broader-source candidate packet, preserving exact evidence holds, then final validation/release.
+Exact next action: Final validation and end-of-hour release; next bounded source work Gargoyle primary image/top-floor receipt or Shaman canyon allocation/access, with all unresolved material questions preserved.
 
 Existing approved rules and explicit supersessions remain controlling. No source estimate silently certified, no unrelated retirement/task/Coffer/policy approval inferred. Active owner wb-hour-a84 under recorded lease; publish and verify before starting next bounded deliverable. Previous “next” paragraphs are historical where superseded. Owning commit requires final remote head/tree/main verification.
 
