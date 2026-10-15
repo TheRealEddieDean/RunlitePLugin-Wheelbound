@@ -154,3 +154,7 @@ Priority P0/P1; size S (A73 M); preceding checkpoint remotely verified. Complete
 ## A74 — DONE in owning checkpoint: full-source gem/NPC identity packet complete
 
 Predecessor verified `b3b1a441cdbe0fad79a6eeee8aaa9f016dd47e19`. Two normalized page hashes and HTML item identities checked against pinned primary constants; Killerwatt combat/orb469/470 distinguished; MOLANISK1 corroborated. Full-page estimate holds retained; prior b3b1a44 was tooling precursor only. No exact-rate/roster/client readiness claim. Size S/M bounded source/research deliverable; no production/main changes. Exact remote publication verification required. Next: A75 screen all27 Lesser display groups with full source context.
+
+## A75 — DONE in owning checkpoint: all Lesser source contexts screened
+
+Predecessor verified `4fb2de89fad2168f74f5881aac7a3a03342d1131`. All27 Lesser groups across18 pages reviewed using captured raw rows/context and real note links. Seven Cyclops defender rows remain one stateful source; Wilderness Jelly/task, Huey group, sea/shore and estimated-rate holds preserved. Four Stronghold component sources prioritized, not admitted. Size S/M bounded source/research deliverable; no production/main changes. Exact remote publication verification required. Next: A76 full-page rate/citation evidence audit of483 current display groups.

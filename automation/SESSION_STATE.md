@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — A74 complete in owning checkpoint; owner wb-a74-a83 continuing authorized sequence.
+- State: ACTIVE — A75 complete in owning checkpoint; owner wb-a74-a83 continuing authorized sequence.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -10,9 +10,9 @@
 
 ## Current continuation — A74–A83
 
-Latest completed A74: full-source gem/NPC identity packet complete. Verified predecessor `b3b1a441cdbe0fad79a6eeee8aaa9f016dd47e19`. Two normalized page hashes and HTML item identities checked against pinned primary constants; Killerwatt combat/orb469/470 distinguished; MOLANISK1 corroborated. Full-page estimate holds retained; prior b3b1a44 was tooling precursor only. No exact-rate/roster/client readiness claim.
+Latest completed A75: all Lesser source contexts screened. Verified predecessor `4fb2de89fad2168f74f5881aac7a3a03342d1131`. All27 Lesser groups across18 pages reviewed using captured raw rows/context and real note links. Seven Cyclops defender rows remain one stateful source; Wilderness Jelly/task, Huey group, sea/shore and estimated-rate holds preserved. Four Stronghold component sources prioritized, not admitted.
 
-Exact next action: A75 screen all27 Lesser display groups with full source context.
+Exact next action: A76 full-page rate/citation evidence audit of483 current display groups.
 
 Current source/rank rules remain WB-D144–150. No retired-Fate, task continuation or production approval inferred. Active owner wb-a74-a83 under recorded lease; publish/verify before next deliverable. All earlier next-question/next-task descriptions below are historical where superseded by this section. Owning commit must be remotely verified before saved claim.
 

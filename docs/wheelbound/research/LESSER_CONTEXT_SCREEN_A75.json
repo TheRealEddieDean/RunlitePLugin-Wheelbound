@@ -1,0 +1,2980 @@
+{
+  "version": "lesser-context-screen-a75-v1",
+  "review_groups": 27,
+  "distinct_source_pages": 18,
+  "source_kind_counts": {
+    "MONSTER": 22,
+    "BOSS": 5
+  },
+  "sources": {
+    "https://oldschool.runescape.wiki/w/Albatross": {
+      "name": "Albatross",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Albatross",
+        "fetched_at": "2026-10-14T15:03:48.386331+00:00",
+        "sha256": "bb770a166c2dca8f845670bb9ba42510fc41104787435fa8b6dd48653e464e72",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\fb1cc1f8ffc5083879601fa05f178267f1adbfd7ff883d6b4ccee1369cf52dcd.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Albatross",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:22:08 GMT",
+        "fixture": false
+      },
+      "source_sha256": "bb770a166c2dca8f845670bb9ba42510fc41104787435fa8b6dd48653e464e72",
+      "reported_npc_ids": [
+        15224,
+        15225
+      ],
+      "context_passages": [
+        "Albatrosses are monsters that can be found in the Sunset Ocean , Shrouded Ocean , Northern Ocean , and Unquiet Ocean . They may be assigned as a bounty task starting at 50 Sailing . A guaranteed bounty task can be received from The Summer Shore .",
+        "They are killed for their swift albatross feather drops, which is needed to build the gale catcher facility .",
+        "Boats require a dragon keel to not take any damage from them.",
+        "Drop rates are estimated based on 16,238 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 16,238 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "review": "Activity/Hunter-style sea source and feather significance/repeatability need explicit method/access review; no ordinary combat adapter inferred."
+    },
+    "https://oldschool.runescape.wiki/w/Amoxliatl": {
+      "name": "Amoxliatl",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Amoxliatl",
+        "fetched_at": "2026-10-14T15:04:02.451085+00:00",
+        "sha256": "c3aa78a68237cc3ffd9eec688600a9d4a7d5843cf795c3986b92a8c9563fab7e",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\594038dbe088034b2794cf5467b0d8e67118f285ce4bbfda70d1f71d90188aa0.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Amoxliatl",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:24:20 GMT",
+        "fixture": false
+      },
+      "source_sha256": "c3aa78a68237cc3ffd9eec688600a9d4a7d5843cf795c3986b92a8c9563fab7e",
+      "reported_npc_ids": [
+        13685
+      ],
+      "context_passages": [
+        "Amoxliatl is a powerful Frost Nagua found within the Ruins of Tapoyauik , who serves as its guardian and is fought during The Heart of Darkness as the final fight of the quest.",
+        "After the quest, Amoxliatl can be fought again as a regular boss . Like Scurrius , she is considered an entry-level boss with attacks meant to introduce various mechanics that are present in higher-level bosses, such as quickly reacting to prayers being deactivated and controlling where persistent ground hazards appear, which are comparable to Vorkath 's corrupting dragonfire and the Phantom Muspah 's ground spikes.",
+        "Amoxliatl is beyond a large door found to the west within the Ruins of Tapoyauik in Varlamore . By returning to the chamber with the Frost Nagua within Tapoyauik, players can use the lift platform in the centre (which appears after completion of the quest) to ascend to the Tower of Ascension . This unlocks a permanent shortcut which allows quick access to Amoxliatl.",
+        "Amoxliatl uses three different attacks throughout the fight. Her standard attack summons ice spikes around the arena. Their initial damage can be mitigated with Protect from Magic but spikes formed afterwards deal typeless damage. An icy pool will form in the tile the player was on before the attack; standing on one will deal moderate damage every tick. Her two special attacks include disabling prayers before launching an icicle that can be negated with Protect from Magic, and launching several unstable ice blocks near the player that create 3x3 icy pools if not destroyed. These ice blocks if left to explode will heal Amoxliatl.",
+        "Killing Amoxliatl gives two rolls on her drop table and one roll for frozen tears. The displayed drop rates represent one kill.",
+        "Drop rates are estimated based on 55,681 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 2/58 chance of rolling the gem drop table .",
+        "The drop rate of Tooth half of key (moon key) has been increased from 1/500 to 1/125."
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 55,681 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "review": "Post-Heart of Darkness repeatable boss lead; page-level estimate/citation and two-roll wording must be resolved for tertiary pendant before personal FP."
+    },
+    "https://oldschool.runescape.wiki/w/Ankou": {
+      "name": "Ankou",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Ankou",
+        "fetched_at": "2026-10-14T15:04:52.468837+00:00",
+        "sha256": "b06773857448d2325d96ac422518538340e9c53039c39932eece0532d7e27315",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\333c14659c65f707f4b12ccb20566a7f26bae40ea2c8d10858a7a66747e4949a.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Ankou",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:16:59 GMT",
+        "fixture": false
+      },
+      "source_sha256": "b06773857448d2325d96ac422518538340e9c53039c39932eece0532d7e27315",
+      "reported_npc_ids": [
+        2514,
+        2517
+      ],
+      "context_passages": [
+        "Ankou are skeletal, ghostly monsters. Ankou in the fourth level of the Stronghold of Security can drop the left skull half , one of four parts of the skull sceptre .",
+        "Ankou are popular monsters for their common death and blood rune drops, and in the Wilderness they are an excellent source of dark fishing bait . They can be assigned as Slayer tasks by Vannaka , Nieve / Steve , Krystilia , Duradel / Kuradal , and Konar quo Maten .",
+        "The salve amulet works on this monster as it is an undead creature. However, if ankou are your Slayer task, the salve amulet does not stack with the bonus received by the Slayer Helmet , and the former's bonus will take priority. It also does not work on secondary targets when using chinchompas or Ancient Magicks .",
+        "The north east corner of the Stronghold of Security has a room with only ankou for easy afking with melee (no safespots for ranged).",
+        "Drop rates are estimated based on 400,459 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 3/100 chance of rolling the herb drop table .",
+        "There is a 1/100 chance of rolling the uncommon seed drop table .",
+        "There is a 2/100 chance of rolling the gem drop table .",
+        "The following drops are only accessible while killing the Catacombs of Kourend variants.",
+        "The following drops are only accessible while on a Slayer task given by Krystilia .",
+        "There is a 2/100 chance of rolling the gem drop table .",
+        "Drop rates are estimated based on 477,184 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 3/92 chance of rolling the herb drop table .",
+        "There is a 1/92 chance of rolling the uncommon seed drop table .",
+        "There is a 2/95 chance of rolling the gem drop table .",
+        "The following drops are only accessible while on a Slayer task given by Krystilia .",
+        "There is approximately a 66/100 chance of rolling the Wilderness Slayer Cave drop table, which includes various items available from Justine's stuff for the Last Shopper Standing .",
+        "Killing ankous located in the Wilderness will now work for clue scroll tasks."
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 400,459 samples from the Drop Rate Project , unless otherwise cited.",
+        "Drop rates are estimated based on 477,184 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "review": "Stronghold-only skull component; free-world scalar row and members alternative must remain separate; exact source footnote/location review next."
+    },
+    "https://oldschool.runescape.wiki/w/Catablepon": {
+      "name": "Catablepon",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Catablepon",
+        "fetched_at": "2026-10-14T15:16:51.124178+00:00",
+        "sha256": "557f19cc702f53988e411b92c23e9f003702705876af835f94288902ce565a4b",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\d960f300af1a8f962b5be3552b37296cdac6378eda569cf4aed6d9e8d4c8bb5a.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Catablepon",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:16:43 GMT",
+        "fixture": false
+      },
+      "source_sha256": "557f19cc702f53988e411b92c23e9f003702705876af835f94288902ce565a4b",
+      "reported_npc_ids": [
+        2474
+      ],
+      "context_passages": [
+        "Catablepon are magical creatures that appear to be green bulls with reptilian tails. They are found on the third level of the Stronghold of Security . They drop the top of sceptre , one of four parts of the Skull sceptre .",
+        "They have a weakening glare [ 1 ] which drains your Strength , but will stop casting once 8% + 3 of your total strength level has been drained.",
+        "Players are not advised to train on these with Melee , as Weaken can drain Strength quite significantly, which will affect the player's experience rates in turn, unless Strength potions or Restore potions are used (you can also use the Protect from Magic prayer). They can use melee and magic attacks often and cast Weaken at the same time. After the spell has decreased 8% +3 of your Strength levels, catablepon will stop casting Weaken, but casts before this threshold can still bring you lower than the threshold. Ranged or Magic attacks are recommended instead of melee.",
+        "On the west side of north-western room, there is a ranged and mage safespot behind the \" Stinking/Dripping tendrils \" available. Walk into the western door and the westernmost tile behind the tendrils. Another safespot is in the same room. Enter from the western door and stand against the wall beside the door. Finally, another safespot is available in the room right before the central room. Standing in the north-westernmost corner of the room, it is possible to attack the catablepon from a distance. Level 64 catablepon give 70 Slayer experience per kill, while levels 68 and 49 give only 50 and 40 respectively, so to maximize for Slayer experience, only kill level 64 catablepon on task.",
+        "Drop rates are estimated based on 224,252 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 3/101 chance of rolling the herb drop table .",
+        "There is a 1/101 chance of rolling the allotment seed drop table .",
+        "There is a 2/101 chance of rolling the gem drop table ."
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 224,252 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "review": "Functional Skull sceptre component with specific cited rate; Stronghold route and canonical forms/IDs need packet."
+    },
+    "https://oldschool.runescape.wiki/w/Cyclops": {
+      "name": "Cyclops",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Cyclops",
+        "fetched_at": "2026-10-14T15:24:56.108986+00:00",
+        "sha256": "88a72b6ef33c5512e4856822a7adbec8e0511f124b3cbf3e99483669ad1ef9c2",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\a8255f76d44fd9c35285aac57df12659c7a05c13f1da3e4433471dba86cba58a.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Cyclops",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:16:52 GMT",
+        "fixture": false
+      },
+      "source_sha256": "88a72b6ef33c5512e4856822a7adbec8e0511f124b3cbf3e99483669ad1ef9c2",
+      "reported_npc_ids": [
+        2463,
+        2465,
+        2467
+      ],
+      "context_passages": [
+        "A cyclops (plural cyclopes ) is a large one-eyed giant . They are known for dropping many alchable drops, so bringing nature and fire runes is helpful as it allows players to make longer trips and more money without banking or taking up inventory space. The cyclopes found in the Warriors' Guild were brought over by Harrallak Menarous from the Wushanko Isles when he went on an expedition there.",
+        "Cyclopes in the Warriors' Guild have a rare chance of dropping a defender . These defensive weapons range from bronze to dragon and must be obtained in order, starting with bronze, by killing cyclopes on the top floor of the Warriors' Guild and then either re-entering the cyclops room with the defender in their inventory or by showing the defender to Kamfreena outside the chamber. Once a player earns the rune defender, they can enter the basement of the Warriors' Guild and kill the stronger cyclopes found there for a chance at the dragon defender. As this is located in the Warriors' Guild, cyclopes found in these areas are immune to Ranged and Magic attacks and must be fought with melee combat. As a result of being immune to Ranged damage, cyclopes are effectively immune to burn , which will be inflicted but reduced to 0 damage.",
+        "Cyclopes may be killed as a substitute for hill giants on a Slayer task .",
+        "Drop rates are estimated based on 219,150 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 3/100 chance of rolling the herb drop table .",
+        "There is a 1/100 chance of rolling the uncommon seed drop table .",
+        "There is a 2/100 chance of rolling the gem drop table .",
+        "Drop rates are estimated based on 94,000 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 4/100 chance of rolling the herb drop table .",
+        "There is a 3/100 chance of rolling the uncommon seed drop table .",
+        "There is a 2/100 chance of rolling the rare drop table .",
+        "Level 106 Cyclopes have been added to the Warriors' Guild basement; they have a chance of dropping dragon defenders ."
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 219,150 samples from the Drop Rate Project , unless otherwise cited.",
+        "Drop rates are estimated based on 94,000 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "review": "Sequential defender state and Warriors Guild tokens/access; do not count seven item rows as seven creatures or assume every previously passed defender is independently droppable."
+    },
+    "https://oldschool.runescape.wiki/w/Dagannoth_(Waterbirth_Island)": {
+      "name": "Dagannoth (Waterbirth Island)",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Dagannoth_(Waterbirth_Island)",
+        "fetched_at": "2026-10-14T15:25:05.969014+00:00",
+        "sha256": "11086650dad4f8237155620e498744bc2c35143672cec6dd554cc6d48526f72a",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\3fe59ee78064ee49cbad123e0b7a0ba60bb18021a7f8f513efe0f91f6545467b.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Dagannoth_(Waterbirth_Island)",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:18:28 GMT",
+        "fixture": false
+      },
+      "source_sha256": "11086650dad4f8237155620e498744bc2c35143672cec6dd554cc6d48526f72a",
+      "reported_npc_ids": [
+        2259,
+        5942
+      ],
+      "context_passages": [
+        "Dagannoth are monsters that live in Waterbirth Island Dungeon .",
+        "The level 90 Dagannoth use an accurate melee attack, which hits often and hard against players. Protect from Melee, or Barrows armour or better, and food is recommended.",
+        "The level 88 Dagannoth use a fast and very accurate ranged attack which hits higher than their melee variants. They will stand still when aggressive and lose interest if the player leaves their attack range of 4, making them difficult to safespot. They are also known for dropping components to create spined armour , along with the spined gloves and spined boots .",
+        "Drop rates are estimated based on 85,248 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 8/128 chance of rolling the herb drop table .",
+        "There is a 1/128 chance of rolling the rare seed drop table .",
+        "There is a 5/128 chance of rolling the talisman drop table .",
+        "There is a 1/128 chance of rolling the gem drop table .",
+        "Drop rates are estimated based on 48,769 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 4/128 chance of rolling the herb drop table .",
+        "There is a 1/128 chance of rolling the rare seed drop table .",
+        "There is a 4/128 chance of rolling the talisman drop table .",
+        "There is a 1/128 chance of rolling the gem drop table ."
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 85,248 samples from the Drop Rate Project , unless otherwise cited.",
+        "Drop rates are estimated based on 48,769 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "review": "Keep level88/90 rows distinct from level74 rate; reviewed exact forms/route/meaningful narrow equipment family and page estimates still required."
+    },
+    "https://oldschool.runescape.wiki/w/Flesh_Crawler": {
+      "name": "Flesh Crawler",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Flesh_Crawler",
+        "fetched_at": "2026-10-14T15:20:06.149960+00:00",
+        "sha256": "b48b500ba1afec4c870e72afeda378f0ac5fa9ff78c434bcb1dbe08292a36671",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\15ce6b7934f2b4f22ab094b860e026c59d24824b33327e6cc117063428b1b77a.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Flesh_Crawler",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:17:12 GMT",
+        "fixture": false
+      },
+      "source_sha256": "b48b500ba1afec4c870e72afeda378f0ac5fa9ff78c434bcb1dbe08292a36671",
+      "reported_npc_ids": [
+        2498
+      ],
+      "context_passages": [
+        "Flesh Crawlers are medium level monsters found in the second level of the Stronghold of Security . They drop the bottom of sceptre , one of four parts of the skull sceptre . Flesh crawlers drop herbs often, and are frequently killed for their uncommon grimy ranarr drops.",
+        "They are scavengers, and will eat anything if given the chance. [ 1 ]",
+        "Flesh crawlers are aggressive to any level players. Ranged is a good style to use as there are safespots in the rooms, such as in the south-west corner of the south-east room. It is possible to hide behind non-aggressive giant rats in one room and range the flesh crawlers, protected from their rapid, albeit weak, attacks. Their attack speed is three ticks, or equivalent to the goblin paint cannon . Because these attacks max at 1 damage, using a regen bracelet can help to offset much of the damage taken, especially if the player has a strong defence.",
+        "For minimal user-input (also known as afk or semi-afk training), turn on auto retaliate and let the crawlers come to you. When they lose their aggressiveness , simply move to another room, then come back. Since flesh crawlers are 2x2 in size, when multiple players are afk training at once the flesh crawlers can get stuck on one another and stop attacking the player; this can be mitigated by standing on the same tile as other players who are already afk training on the same world, greatly increasing xp rates.",
+        "Drop rates are estimated based on 1,215,464 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 35/100 chance of rolling the herb drop table .",
+        "There is a 2/100 chance of rolling the gem drop table .",
+        "Drop rates are estimated based on 1,464,915 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 2/100 chance of rolling the gem drop table ."
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 1,215,464 samples from the Drop Rate Project , unless otherwise cited.",
+        "Drop rates are estimated based on 1,464,915 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "review": "Functional Skull sceptre component; same logical item/member and free rows are contexts, not two creatures."
+    },
+    "https://oldschool.runescape.wiki/w/Hespori": {
+      "name": "Hespori",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Hespori",
+        "fetched_at": "2026-10-14T15:13:03.229215+00:00",
+        "sha256": "4e6a634571914cc8623437492ee09cbd42a755a909c60d8143d36ac8107eaee4",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\343ee1682d32211a4e629955032460ad6a116cc5933ff2b0b7936c69fbb84e30.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Hespori",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:21:06 GMT",
+        "fixture": false
+      },
+      "source_sha256": "4e6a634571914cc8623437492ee09cbd42a755a909c60d8143d36ac8107eaee4",
+      "reported_npc_ids": [
+        8583
+      ],
+      "context_passages": [
+        "The Hespori is a sporadic Farming boss fought in the cave within the west wing of the Farming Guild which requires 65 Farming [ boostable ] to access. To fight the Hespori, you must first plant a hespori seed in the hespori patch within the cave, and then wait 22-32 hours for it to grow (depending on planting time). You will need a rake to clear the patch of any weeds , and a seed dibber to plant the seed unless the Farming portion of Barbarian Training has been completed. The flower behind the cave entrance will bloom when the Hespori is ready to be fought.",
+        "Attempting to harvest the seed with a spade will awaken the Hespori. After killing it, the seed may be harvested granting 12,600 Farming experience (12,915 with full farmer's outfit ) and a range of seeds , including the rare white lily and anima seeds . There is also a 1/35 chance to drop the bottomless compost bucket .",
+        "The Hespori is surrounded by four flower buds that keep it invulnerable while it attacks the player. These buds open three times during the fight: on initiation of the fight, when the Hespori has 66%, and when the Hespori has 33% health remaining. Each bud has 10 hitpoints but will die in one hit from any weapon.",
+        "A hespori seed , spade , and seed dibber (if the Farming portion of Barbarian Training has not been completed) are required to plant a new Hespori after the previous Hespori has been defeated and dug up.",
+        "Drop rates are estimated based on 60,326 samples from the Drop Rate Project , unless otherwise cited.",
+        "The average Hespori kill is worth 30,699.57 . The player will have one roll on each of the two drop tables: anima seeds and normal seeds. The normal seed table also contains the bottomless compost bucket , which can hold up to 10,000 compost of any kind. In addition, Hespori has a chance to give the Tangleroot pet as a tertiary drop.",
+        "The Hespori has 4 collection log items. While the Hespori seed also appears in the collection log, it cannot be obtained from the Hespori itself."
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 60,326 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "review": "Farming seed, growth/re-entry/replenishment and source proof are separate from displayed1/35; slow recurring route cannot be treated as ordinary boss throughput."
+    },
+    "https://oldschool.runescape.wiki/w/Jelly": {
+      "name": "Jelly",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Jelly",
+        "fetched_at": "2026-10-14T15:27:24.529027+00:00",
+        "sha256": "be12379eb9b8166669ae2699ac37def4444452351a2b70d19d8d66162dd8baf4",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\a0aa8f2e962b479f008baa613fab8257fce2d7a368cf04d712c68727917bef34.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Jelly",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 15:26:21 GMT",
+        "fixture": false
+      },
+      "source_sha256": "be12379eb9b8166669ae2699ac37def4444452351a2b70d19d8d66162dd8baf4",
+      "reported_npc_ids": [
+        437,
+        11241
+      ],
+      "context_passages": [
+        "Jellies are Slayer monsters found in the Fremennik Slayer Dungeon and Wilderness Slayer Cave that require a Slayer level of 52 to kill. They give 75 Slayer experience per kill and drop hard clue scrolls and steel weaponry . Jellies and their variants are the only creatures to drop mithril boots .",
+        "They attack with magical acids that bypass physical defences [ 1 ] (a magic-based melee attack); therefore high magic defence armour, such as dragonhide is effective against their attacks. However, Protect from Melee will prevent all damage from them.",
+        "In the Wilderness cave jellies may only be attacked while on a Slayer task . Here they can be safespotted by using either side of the rockfall in the southern part of the cave, which the Jellies will not wander away from. It is also possible to safespot them by standing on the corner of the rocks in the western section of the chamber or from behind the stones in the hallway south of the jelly chamber.",
+        "Drop rates are estimated based on 237,836 samples from the Drop Rate Project , unless otherwise cited.",
+        "The overall chance of rolling a coin drop is 88/128 with an average value of 96 .",
+        "There is a 4/128 chance of rolling the gem drop table .",
+        "There is a 5/64 chance of rolling the gem drop table .",
+        "The following drops are only accessible while on a Slayer task given by Krystilia .",
+        "There is approximately a 76/100 chance of rolling the Wilderness Slayer Cave drop table, which includes various items available from Justine's stuff for the Last Shopper Standing ."
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 237,836 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "review": "Wilderness Slayer Cave1/32 is task-only; existing WB-D140 continuation hold remains. Normal1/128 is Greater."
+    },
+    "https://oldschool.runescape.wiki/w/Lava_dragon": {
+      "name": "Lava dragon",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Lava_dragon",
+        "fetched_at": "2026-10-14T15:29:22.163823+00:00",
+        "sha256": "9ae88ca4a5b011ec6eb4bd812954a653caadab2226c0b1de6f7bf3e6659838e7",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\9a85c184076fd7e2fe134fe44930b5a40df28bca28a4361881dc8f3e0518637a.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Lava_dragon",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 15:27:16 GMT",
+        "fixture": false
+      },
+      "source_sha256": "9ae88ca4a5b011ec6eb4bd812954a653caadab2226c0b1de6f7bf3e6659838e7",
+      "reported_npc_ids": [
+        6593
+      ],
+      "context_passages": [
+        "Lava dragons are former red dragons that have been transformed after being surrounded by lava for too long. [ 1 ] They reside in the Lava Dragon Isle in the Wilderness (between level 36 and 42 Wilderness), and attack with melee as well as with dragonfire . Due to their low Magic level they are particularly weak to Magic, which combined with their weakness to water spells makes water bolt a slow but profitable method of killing them.",
+        "Lava dragons can be safespotted both inside and outside their isle. The many piles of skeletons and edges at the isle allow for players to safespot them inside. Alternatively, players can camp some of the southern spawns outside the isle. Having 74 Agility is recommended when killing them to use the stepping stones to escape the isle, as the area is frequented by player killers .",
+        "Bringing a pestle and mortar is optional to grind the scales into shards, in addition to High Level Alchemy runes to alch their common adamant and rune equipment drops. If killing them from outside the isle, Telekinetic Grab will be needed to grab their drops. Although it is possible to stay at the isle indefinitely using this method, it is advisable to bank every 10\u201320 minutes as the isle is commonly targeted by player killers.",
+        "Lava dragons are the only monsters to drop the lava dragon bones , which give 85 Prayer experience when buried. However, burying them on Lava Dragon Isle grants 340 Prayer experience (400%) instead.",
+        "The following drop rates are provided by Jagex, unless otherwise specified.",
+        "There is a 5/128 chance of rolling twice on the herb drop table .",
+        "There is a 3/128 chance of rolling the rare drop table . There is also a 5/128 chance of rolling the gem drop table .",
+        "The following drops are only accessible while on a Slayer task given by Krystilia ."
+      ],
+      "page_estimate_statements": [],
+      "review": "Wilderness access and specific item/source-family significance need review; price alone neither includes nor excludes."
+    },
+    "https://oldschool.runescape.wiki/w/Lava_Strykewyrm": {
+      "name": "Lava Strykewyrm",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Lava_Strykewyrm",
+        "fetched_at": "2026-10-14T15:29:20.024797+00:00",
+        "sha256": "912ad6c904b7521d9b1c4d8663d802b4fbe7a39304f00502381ca3fd214181e5",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\7fb35a9dd8d3b12dacd9f70fd3f3b19c8fc9db87e739a411048b47531d1e6e28.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Lava_Strykewyrm",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:24:54 GMT",
+        "fixture": false
+      },
+      "source_sha256": "912ad6c904b7521d9b1c4d8663d802b4fbe7a39304f00502381ca3fd214181e5",
+      "reported_npc_ids": [
+        15500
+      ],
+      "context_passages": [
+        "Lava Strykewyrms are Slayer monsters requiring 62 Slayer to kill, located in the Charred Dungeon beneath Charred Island , requiring 60 Sailing to reach, as well as in the Wyrmscraig Cavern after partial completion of Fallen From Grace . They can be killed as part of a wyrm task, and are known for their dragon metal sheet drop, which is significantly more common when on a wyrm task.",
+        "Lava Strykewyrms attack with both melee and ranged . However, they use only melee when attacked from within one tile range of them, and only ranged when attacked from a distance. This means that all damage can be avoided with protection prayers . Fire spells will heal them equal to the amount hit. They are located in a single-way combat area and cannons cannot be used against them. Like wyrms, they are vulnerable to dragonbane weapons such as the dragon hunter lance .",
+        "With the Slayer reward Bigger and Badder unlocked for 50 Slayer reward points , there is a chance for their superior version, the magma strykewyrm , to spawn. The Slayer reward Can of Wyrms increases the number of wyrms assigned to 200-250 for the price of 100 Slayer reward points.",
+        "Drop rates are estimated based on 1,958,913 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 2/128 chance of rolling the herb drop table .",
+        "Dragon metal sheets drop rates have increased from 1/400 to 1/115 (1/100 to 1/45 on task).",
+        "The increased drop rate of dragon metal sheets is now applied when on a slayer task."
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 1,958,913 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "review": "Source method/access/ordinary world and identity must be reviewed from capture; no automatic ordinary Slayer route inferred."
+    },
+    "https://oldschool.runescape.wiki/w/Magma_strykewyrm": {
+      "name": "Magma strykewyrm",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Magma_strykewyrm",
+        "fetched_at": "2026-10-14T15:29:34.036615+00:00",
+        "sha256": "66b0d48c3ba5a9d9be91e9d6aca7e075d4b426f235650a4e9f2cf71825f02cc5",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\db7e79398e8983aa1f1d342996e8e98531d55a6e20485e035611d22343e173ff.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Magma_strykewyrm",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:24:54 GMT",
+        "fixture": false
+      },
+      "source_sha256": "66b0d48c3ba5a9d9be91e9d6aca7e075d4b426f235650a4e9f2cf71825f02cc5",
+      "reported_npc_ids": [
+        15504
+      ],
+      "context_passages": [
+        "The magma strykewyrm is the superior variant of the lava strykewyrm . It has a chance of spawning while on a wyrm slayer task, after purchasing the unlock Bigger and Badder for 50 Slayer reward points from any Slayer master .",
+        "Like lava strykewyrms, magma strykewyrms attack with both ranged and melee . Magma strykewyrms also have a special attack, where it burrows to player's location and deals 20+ damage if the player doesn't move away from that location within a few seconds. Note that this special attack can happen even if the player is standing next to a wall, so it cannot be avoided like the lizardman shamans ' similar special attack.",
+        "Just like the regular lava strykewyrms, magma strykewyrms can be safespotted by outranging their attacks and will not use its special attack.",
+        "In addition to 100% drops and tertiary drops, superior slayer monsters will always roll 3 additional items, of which only 1 roll may be from the superior unique table. The other rolls are performed on the regular counterpart's table; their displayed drop chances represent a single roll.",
+        "Drop rates are estimated based on 5,388 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 2/128 chance of rolling the herb drop table .",
+        "The chance to spawn a superior creature is 1/200 per kill while on a slayer task. [ d 1 ] The chance of receiving an item on the superior unique table is 1/80.9. More information on superior drops can be found on the superior drop rate page.",
+        "The drop rate of dragon metal sheets has been increased from 1/100 to 3 \u00d7 1/100"
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 5,388 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "review": "Keep displayed3x rolls separately from base rank; sea/activity/source identity and personal effort model need review."
+    },
+    "https://oldschool.runescape.wiki/w/Minotaur": {
+      "name": "Minotaur",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Minotaur",
+        "fetched_at": "2026-10-14T15:22:01.844745+00:00",
+        "sha256": "010266de43e1c5f087b5d9ef8c808a374bb83b945fdb067a8ba2f435995a451b",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\f5da676231cd4d8cefde37e2c70a21c8ba827f74a6678f5489a9fa6661925e89.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Minotaur",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:16:48 GMT",
+        "fixture": false
+      },
+      "source_sha256": "010266de43e1c5f087b5d9ef8c808a374bb83b945fdb067a8ba2f435995a451b",
+      "reported_npc_ids": [
+        2481
+      ],
+      "context_passages": [
+        "Minotaur are found on level one of the Stronghold of Security . They drop the right skull half , one of four parts of the skull sceptre . These monsters are great for training due to their low Defence , but have high attack damage making them dangerous for un-equipped players.",
+        "Minotaurs are a common method of Ranged training as they can be safespotted and commonly drop iron arrows.",
+        "There are various safespots located in the Stronghold of Security : Vault of War floor. These spots can be found in the following places: In the small centre room south of the room with the spikey chain, by standing on the east side of the north-westernmost skeleton. In the room immediately east to the start of the floor, behind the spiked fences. and in the large south-easternmost room behind the spiked fence.",
+        "Drop rates are estimated based on 1,265,519 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 1/101 chance of rolling the gem drop table . [ 2 ]"
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 1,265,519 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "review": "Functional Skull sceptre component; actual HTML citation link overrides misleading numeric-footnote guess. Stronghold forms only."
+    },
+    "https://oldschool.runescape.wiki/w/Mogre": {
+      "name": "Mogre",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Mogre",
+        "fetched_at": "2026-10-14T15:53:54.095445+00:00",
+        "sha256": "163d382fc8403a6459d23f53ca89a6bc38bd0d512cffea96e206be77e628b6ab",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\aee391f9ee9a0d642864bc1ff8521db1fe0b7839903a6e92472774240eda96a6.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Mogre",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 15:26:36 GMT",
+        "fixture": false
+      },
+      "source_sha256": "163d382fc8403a6459d23f53ca89a6bc38bd0d512cffea96e206be77e628b6ab",
+      "reported_npc_ids": [
+        2592
+      ],
+      "context_passages": [
+        "Mogres are Slayer monsters and a type of ogre that are found in Mudskipper Point , requiring level 32 Slayer to kill. Mogres appear when disturbed by the player, who must lure them using Fishing explosives on an Ominous Fishing Spot . Previously, they could only be killed by players who had completed the Skippy and the Mogres miniquest . Since the release of Sailing , Mogres swimming in the ocean can now be killed with cannons from the player's boat. Doing so does not require completion of Skippy and the Mogres and does not demand the use of Fishing explosives, but still requires having level 32 Slayer.",
+        "Mogres can only be \"lured\" by clicking Use on the fishing explosives in your inventory, then clicking on the ominous fishing spots while also standing a few tiles away. Although the ominous fishing spots do have an options to \"Lure\" or \"Bait\", both these options do nothing (even with fishing explosives) and instead merely say in chat \"Something seems to have scared all the fishes away...\"",
+        "Mogres are usually killed by players searching for their unique drops of flippers or Mudskipper hats .",
+        "Drop rates are estimated based on 900,109 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 13/128 chance of rolling the uncommon seed drop table .",
+        "The drop rate of flippers has been increased from 1/128 to 2/128"
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 900,109 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "review": "Shore fishing-explosive source/access ambiguity; do not apply sea source exemptions or rates."
+    },
+    "https://oldschool.runescape.wiki/w/Mogre_(sea)": {
+      "name": "Mogre (sea)",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Mogre_(sea)",
+        "fetched_at": "2026-10-14T15:53:56.032878+00:00",
+        "sha256": "33170060aa0c92912656328393b951d38f22ec32349b8e0be0fba9c835f0faf1",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\7364655e2f389053d93a8148d8d4335156e8950c105113e166295a43e87f1d3b.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Mogre_(sea)",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 15:30:21 GMT",
+        "fixture": false
+      },
+      "source_sha256": "33170060aa0c92912656328393b951d38f22ec32349b8e0be0fba9c835f0faf1",
+      "reported_npc_ids": [
+        15230,
+        15231,
+        15232,
+        15233
+      ],
+      "context_passages": [
+        "Mogres are monsters that can be found in the Ardent Ocean . Like the ones found on land , they require level 32 Slayer to fight. This requirement cannot be bypassed by having a crewmate man a cannon .",
+        "Any boat with an adamant keel or better will not take any damage from mogres.",
+        "The player may be assigned to kill them as a bounty task starting at 30 Sailing . A guaranteed bounty task can be received from Ardougne .",
+        "Drop rates are estimated based on 978,596 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 20/128 chance of rolling the uncommon seed drop table ."
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 978,596 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "review": "Boat/cannon method distinct from shore; source identity/supply/access and cosmetic significance remain held."
+    },
+    "https://oldschool.runescape.wiki/w/Phantom_Muspah": {
+      "name": "Phantom Muspah",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Phantom_Muspah",
+        "fetched_at": "2026-10-14T15:14:01.173434+00:00",
+        "sha256": "a4611b48039184f67297d4e01ba67fb574e4155a1b2c9229b1441df0eba3298b",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\a74f79a45767fe31e4a1b0b5d6140d214fd6862095fe6500bc5d658945fb7a8d.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Phantom_Muspah",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:23:14 GMT",
+        "fixture": false
+      },
+      "source_sha256": "a4611b48039184f67297d4e01ba67fb574e4155a1b2c9229b1441df0eba3298b",
+      "reported_npc_ids": [
+        12077
+      ],
+      "context_passages": [
+        "The Phantom Muspah is a solo boss that can be fought after completion of the quest Secrets of the North . It is the leftover energy of the Strange Creature that manifested after the events of the quest.",
+        "The Phantom Muspah is stronger than its quest variant, but otherwise shares the same attacks and mechanics. All forms of the Phantom Muspah have 33% freeze resistance, meaning it will only stay frozen for 66% of the base freeze duration.",
+        "Unique drops from the boss include ancient essence , used in the creation of forgotten brews or upgrading the imbued heart into a saturated heart ; the ancient icon , used to upgrade the ancient staff into an ancient sceptre ; and the venator shard , of which five can be combined to create the venator bow , a unique bow that shines in multicombat situations.",
+        "After the shield is depleted it will return to its ranged form. Every four attacks, it will generate spikes onto the arena, and players must defeat it as quickly as possible or the entire arena will be covered in spikes.",
+        "Drop rates are estimated based on 1,129,584 samples from the Drop Rate Project , unless otherwise cited.",
+        "In addition to the unique drops, the player will also have two rolls on the Phantom Muspah's secondary drop table. If the player gets a Venator shard , they will not get any other drop.",
+        "The expected amount of ancient essence received per kill is 759.4. This does not include the expected 6.1 essence per kill from frozen caches , the average 100 essence per kill from broken-down ancient icons , or the average of 500 essence per kill from broken-down Venator shards . If you include all sources of ancient essence the expected essence per kill is 1365.5.",
+        "There is a 2/9 chance to roll the supplies table. When rolled, the player will receive 3 drops from it: either sharks or summer pies, either ancient brew or ranging potion, and either super restore or prayer potion. It replaces one of the normal loot rolls.",
+        "There is a 3/235 chance to receive grimy toadflax and a 5/235 chance to roll the combat herb drop table .",
+        "There is a 5/235 chance of rolling the tree-herb seed drop table .",
+        "There is a 10/235 chance of rolling the shark drop table . [ 2 ]",
+        "There is a 5/235 chance of rolling the rare drop table ."
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 1,129,584 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "review": "Ancient icon ownership/maximum-drop conditions and quest/source model need review before claiming repeatable previously-owned hunt."
+    },
+    "https://oldschool.runescape.wiki/w/Scurrius": {
+      "name": "Scurrius",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Scurrius",
+        "fetched_at": "2026-10-14T15:14:15.145654+00:00",
+        "sha256": "938b58eb014764b5fcedcedeb86efbf71fae6e89eb0f8ecb8b68e98747aabc74",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\09c4ca5c091d1ecddc83465a71f0b064927eac33570b11ce0ee80bcfa0cdf139.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Scurrius",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:24:08 GMT",
+        "fixture": false
+      },
+      "source_sha256": "938b58eb014764b5fcedcedeb86efbf71fae6e89eb0f8ecb8b68e98747aabc74",
+      "reported_npc_ids": [
+        7222
+      ],
+      "context_passages": [
+        "Scurrius, the Rat King is a boss residing in the Varrock Sewers . As a mid-level boss meant for players with a combat level of 60-90, Scurrius is meant to introduce various mechanics that are present in higher-level play, such as switching protection prayers quickly during combat as well as dodging attacks and managing multiple monsters mid-fight.",
+        "Scurrius can be fought in either the public room or in an instance . It has two distinct stats if the player is fighting it in the public or an instanced room; the public variant of Scurrius is stronger than the instanced version, and has many more Hitpoints . Ironmen can participate with other accounts and will receive killcount, although they will not receive any drops except medium clues if they can manage to attain MVP. Group Ironmen have access to a shared instance allowing them to fight Scurrius together.",
+        "Scurrius rewards a substantially greater amount of combat experience than normal, especially with rat bone weapons , giving competitive amounts of experience compared to Nightmare Zone and sand crabs , though high-levelled players will still be better off training combat through existing methods.",
+        "Players will only roll this table if they dealt the most damage to Scurrius. (E.g., if they are in a private instance.)",
+        "Drop rates are estimated based on 896,502 samples from the Drop Rate Project , unless otherwise cited.",
+        "Players will only roll this table if they are participating in a group kill and did not deal the most damage to Scurrius."
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 896,502 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "review": "Solo private encounter is conservative lead; only one spine may drop per kill, so group rows are not independent personal1/33 proof."
+    },
+    "https://oldschool.runescape.wiki/w/The_Hueycoatl": {
+      "name": "The Hueycoatl",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/The_Hueycoatl",
+        "fetched_at": "2026-10-14T15:14:51.133616+00:00",
+        "sha256": "f5bdadee2355e15b0f9c03423eaf7b9b306266263c5a192e205cc527fa26eb4e",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\e2c51ffe6b597dba4182c3c69a756f9f35790f05315cc94fe0119d71fdda6673.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/The_Hueycoatl",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 13:24:15 GMT",
+        "fixture": false
+      },
+      "source_sha256": "f5bdadee2355e15b0f9c03423eaf7b9b306266263c5a192e205cc527fa26eb4e",
+      "reported_npc_ids": [
+        14009,
+        14010,
+        14013,
+        14014,
+        14017
+      ],
+      "context_passages": [
+        "The Hueycoatl ( / \u02c8 hw e\u026a k o\u028a \u02c8 \u00e6 t \u0259 l / HWAY -koh-at-el [ 1 ] ) is a draconic boss whose large body is coiled around the Darkfrost . Said to have scales as strong as rock and sleep atop a pile of gold, the Hueycoatl has awakened and wreaked havoc around the mountain and the dwarves of Cam Torum require assistance in subduing her. [ 2 ]",
+        "She can be fought in a group of up to 20 players, or via a private instance by the meeting flag next to the bank buffalo for a fee of 50,000 coins (25,000 with completion of the hard combat achievements ). Ironmen are eligible for drops when fought in a group. Though players can solo her, there are parts of the fight that are preferably dealt with in a group.",
+        "Uniques from the boss include the tome of earth , the dragon hunter wand , Hueycoatl hide , and huasca seeds .",
+        "The Hueycoatl drops a large lump of items upon death, and the share players receive from it is based on the player's total damage to the Hueycoatl. The maximum quantity of a drop assumes that the player is soloing. Multiple players can independently roll uniques from a single kill.",
+        "Drop rates are estimated based on 88,030 samples from the Drop Rate Project , unless otherwise cited.",
+        "There is a 1/18 chance of rolling the unique drop table, from which an item is then rolled for. This chance is individual per player and is scaled by contribution. [ 5 ] [ 6 ] Uniques are dropped in addition to the main loot table.",
+        "The Hueycoatl has 7 collection log items. Although huasca seeds are only part of this collection, there are various other ways to obtain them."
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 88,030 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "review": "Team contribution/loot allocation and hide quantity/opportunity semantics held; raw displayed fraction is not established personal probability."
+    }
+  },
+  "groups": [
+    {
+      "creature": "Albatross",
+      "item": "Swift albatross feather",
+      "base_rate": "1/35",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Albatross",
+      "indexed_source_rows": [
+        {
+          "creature": "Albatross",
+          "item": "Swift albatross feather",
+          "source_url": "https://oldschool.runescape.wiki/w/Albatross",
+          "source_sha256": "bb770a166c2dca8f845670bb9ba42510fc41104787435fa8b6dd48653e464e72",
+          "fetched_at": "2026-10-14T15:03:48.386331+00:00",
+          "source_row_zero_based": 0,
+          "raw_record": {
+            "section": "Drops / Pre-roll",
+            "item_name": "Swift albatross feather",
+            "item_links": [
+              {
+                "text": "Swift albatross feather",
+                "href": "https://oldschool.runescape.wiki/w/Swift_albatross_feather"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/35",
+              "expression": "1/35",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 35
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Swift albatross feather",
+                "1",
+                "1/35",
+                "385,947",
+                "4,800"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Swift albatross feather 1 1/35 385,947 4,800",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Activity/Hunter-style sea source and feather significance/repeatability need explicit method/access review; no ordinary combat adapter inferred.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Amoxliatl",
+      "item": "Pendant of Ates (inert)",
+      "base_rate": "1/25",
+      "source_kind": "BOSS",
+      "source_url": "https://oldschool.runescape.wiki/w/Amoxliatl",
+      "indexed_source_rows": [
+        {
+          "creature": "Amoxliatl",
+          "item": "Pendant of Ates (inert)",
+          "source_url": "https://oldschool.runescape.wiki/w/Amoxliatl",
+          "source_sha256": "c3aa78a68237cc3ffd9eec688600a9d4a7d5843cf795c3986b92a8c9563fab7e",
+          "fetched_at": "2026-10-14T15:04:02.451085+00:00",
+          "source_row_zero_based": 36,
+          "raw_record": {
+            "section": "Drops / Tertiary",
+            "item_name": "Pendant of Ates (inert)",
+            "item_links": [
+              {
+                "text": "Pendant of Ates (inert)",
+                "href": "https://oldschool.runescape.wiki/w/Pendant_of_Ates_(inert)"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/25",
+              "expression": "1/25",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 25
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Pendant of Ates (inert)",
+                "1",
+                "1/25",
+                "Not sold",
+                "210"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Pendant of Ates (inert) 1 1/25 Not sold 210",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Post-Heart of Darkness repeatable boss lead; page-level estimate/citation and two-roll wording must be resolved for tertiary pendant before personal FP.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Ankou",
+      "item": "Left skull half",
+      "base_rate": "3/100",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Ankou",
+      "indexed_source_rows": [
+        {
+          "creature": "Ankou",
+          "item": "Left skull half",
+          "source_url": "https://oldschool.runescape.wiki/w/Ankou",
+          "source_sha256": "b06773857448d2325d96ac422518538340e9c53039c39932eece0532d7e27315",
+          "fetched_at": "2026-10-14T15:04:52.468837+00:00",
+          "source_row_zero_based": 89,
+          "raw_record": {
+            "section": "Free-to-play worlds drops / Other",
+            "item_name": "Left skull half",
+            "item_links": [
+              {
+                "text": "Left skull half",
+                "href": "https://oldschool.runescape.wiki/w/Left_skull_half"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3/100 [ d 2 ]",
+              "expression": "3/100",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 3,
+                "denominator": 100
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ d 2 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Left skull half",
+                "1",
+                "3/100 [ d 2 ]",
+                "Not sold",
+                "0"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Left skull half 1 3/100 ; Never [ d 2 ] Not sold 0",
+          "reported_item_id": null,
+          "note_fragment_ids": [
+            "cite_note-stronghold-5"
+          ],
+          "referenced_notes": [
+            {
+              "id": "cite_note-stronghold-5",
+              "text": "^ Left skull halves are only dropped in the Stronghold of Security ."
+            }
+          ]
+        },
+        {
+          "row_text": "Left skull half 1 3/100 [ d 2 ] Not sold 0",
+          "reported_item_id": null,
+          "note_fragment_ids": [
+            "cite_note-stronghold-19"
+          ],
+          "referenced_notes": [
+            {
+              "id": "cite_note-stronghold-19",
+              "text": "^ Left skull halves are only dropped by those found in the Stronghold of Security ."
+            }
+          ]
+        }
+      ],
+      "review": "Stronghold-only skull component; free-world scalar row and members alternative must remain separate; exact source footnote/location review next.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Catablepon",
+      "item": "Top of sceptre",
+      "base_rate": "3/101",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Catablepon",
+      "indexed_source_rows": [
+        {
+          "creature": "Catablepon",
+          "item": "Top of sceptre",
+          "source_url": "https://oldschool.runescape.wiki/w/Catablepon",
+          "source_sha256": "557f19cc702f53988e411b92c23e9f003702705876af835f94288902ce565a4b",
+          "fetched_at": "2026-10-14T15:16:51.124178+00:00",
+          "source_row_zero_based": 37,
+          "raw_record": {
+            "section": "Drops / Other",
+            "item_name": "Top of sceptre",
+            "item_links": [
+              {
+                "text": "Top of sceptre",
+                "href": "https://oldschool.runescape.wiki/w/Top_of_sceptre"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3/101 [ 3 ]",
+              "expression": "3/101",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 3,
+                "denominator": 101
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 3 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Top of sceptre",
+                "1",
+                "3/101 [ 3 ]",
+                "Not sold",
+                "N/A"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Top of sceptre 1 3/101 [ 3 ] Not sold N/A",
+          "reported_item_id": null,
+          "note_fragment_ids": [
+            "cite_note-Skull_sceptre_piece_rates_tweet-4"
+          ],
+          "referenced_notes": [
+            {
+              "id": "cite_note-Skull_sceptre_piece_rates_tweet-4",
+              "text": "^ Jagex. Mod Ash's Twitter account . 21 August 2019. Archived from the original on 9 September 2019. Mod Ash: \"3% from ankou, 3% from fleshcrawlers 3/101 for catablepon, 3/101 for minotaurs.\""
+            }
+          ]
+        }
+      ],
+      "review": "Functional Skull sceptre component with specific cited rate; Stronghold route and canonical forms/IDs need packet.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Cyclops",
+      "item": "Adamant defender",
+      "base_rate": "1/50",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Cyclops",
+      "indexed_source_rows": [
+        {
+          "creature": "Cyclops",
+          "item": "Adamant defender",
+          "source_url": "https://oldschool.runescape.wiki/w/Cyclops",
+          "source_sha256": "88a72b6ef33c5512e4856822a7adbec8e0511f124b3cbf3e99483669ad1ef9c2",
+          "fetched_at": "2026-10-14T15:24:56.108986+00:00",
+          "source_row_zero_based": 25,
+          "raw_record": {
+            "section": "Drops / Warriors' Guild Top Floor / Defenders",
+            "item_name": "Adamant defender",
+            "item_links": [
+              {
+                "text": "Adamant defender",
+                "href": "https://oldschool.runescape.wiki/w/Adamant_defender"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "2/100",
+              "expression": "2/100",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 50
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Adamant defender",
+                "1",
+                "2/100",
+                "Not sold",
+                "0"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Adamant defender 1 2/100 Not sold 0",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Sequential defender state and Warriors Guild tokens/access; do not count seven item rows as seven creatures or assume every previously passed defender is independently droppable.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Cyclops",
+      "item": "Black defender",
+      "base_rate": "1/50",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Cyclops",
+      "indexed_source_rows": [
+        {
+          "creature": "Cyclops",
+          "item": "Black defender",
+          "source_url": "https://oldschool.runescape.wiki/w/Cyclops",
+          "source_sha256": "88a72b6ef33c5512e4856822a7adbec8e0511f124b3cbf3e99483669ad1ef9c2",
+          "fetched_at": "2026-10-14T15:24:56.108986+00:00",
+          "source_row_zero_based": 23,
+          "raw_record": {
+            "section": "Drops / Warriors' Guild Top Floor / Defenders",
+            "item_name": "Black defender",
+            "item_links": [
+              {
+                "text": "Black defender",
+                "href": "https://oldschool.runescape.wiki/w/Black_defender"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "2/100",
+              "expression": "2/100",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 50
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Black defender",
+                "1",
+                "2/100",
+                "Not sold",
+                "0"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Black defender 1 2/100 Not sold 0",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Sequential defender state and Warriors Guild tokens/access; do not count seven item rows as seven creatures or assume every previously passed defender is independently droppable.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Cyclops",
+      "item": "Bronze defender",
+      "base_rate": "1/50",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Cyclops",
+      "indexed_source_rows": [
+        {
+          "creature": "Cyclops",
+          "item": "Bronze defender",
+          "source_url": "https://oldschool.runescape.wiki/w/Cyclops",
+          "source_sha256": "88a72b6ef33c5512e4856822a7adbec8e0511f124b3cbf3e99483669ad1ef9c2",
+          "fetched_at": "2026-10-14T15:24:56.108986+00:00",
+          "source_row_zero_based": 20,
+          "raw_record": {
+            "section": "Drops / Warriors' Guild Top Floor / Defenders",
+            "item_name": "Bronze defender",
+            "item_links": [
+              {
+                "text": "Bronze defender",
+                "href": "https://oldschool.runescape.wiki/w/Bronze_defender"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "2/100",
+              "expression": "2/100",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 50
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Bronze defender",
+                "1",
+                "2/100",
+                "Not sold",
+                "0"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Bronze defender 1 2/100 Not sold 0",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Sequential defender state and Warriors Guild tokens/access; do not count seven item rows as seven creatures or assume every previously passed defender is independently droppable.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Cyclops",
+      "item": "Iron defender",
+      "base_rate": "1/50",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Cyclops",
+      "indexed_source_rows": [
+        {
+          "creature": "Cyclops",
+          "item": "Iron defender",
+          "source_url": "https://oldschool.runescape.wiki/w/Cyclops",
+          "source_sha256": "88a72b6ef33c5512e4856822a7adbec8e0511f124b3cbf3e99483669ad1ef9c2",
+          "fetched_at": "2026-10-14T15:24:56.108986+00:00",
+          "source_row_zero_based": 21,
+          "raw_record": {
+            "section": "Drops / Warriors' Guild Top Floor / Defenders",
+            "item_name": "Iron defender",
+            "item_links": [
+              {
+                "text": "Iron defender",
+                "href": "https://oldschool.runescape.wiki/w/Iron_defender"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "2/100",
+              "expression": "2/100",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 50
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Iron defender",
+                "1",
+                "2/100",
+                "Not sold",
+                "0"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Iron defender 1 2/100 Not sold 0",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Sequential defender state and Warriors Guild tokens/access; do not count seven item rows as seven creatures or assume every previously passed defender is independently droppable.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Cyclops",
+      "item": "Mithril defender",
+      "base_rate": "1/50",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Cyclops",
+      "indexed_source_rows": [
+        {
+          "creature": "Cyclops",
+          "item": "Mithril defender",
+          "source_url": "https://oldschool.runescape.wiki/w/Cyclops",
+          "source_sha256": "88a72b6ef33c5512e4856822a7adbec8e0511f124b3cbf3e99483669ad1ef9c2",
+          "fetched_at": "2026-10-14T15:24:56.108986+00:00",
+          "source_row_zero_based": 24,
+          "raw_record": {
+            "section": "Drops / Warriors' Guild Top Floor / Defenders",
+            "item_name": "Mithril defender",
+            "item_links": [
+              {
+                "text": "Mithril defender",
+                "href": "https://oldschool.runescape.wiki/w/Mithril_defender"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "2/100",
+              "expression": "2/100",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 50
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Mithril defender",
+                "1",
+                "2/100",
+                "Not sold",
+                "0"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Mithril defender 1 2/100 Not sold 0",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Sequential defender state and Warriors Guild tokens/access; do not count seven item rows as seven creatures or assume every previously passed defender is independently droppable.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Cyclops",
+      "item": "Rune defender",
+      "base_rate": "1/50",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Cyclops",
+      "indexed_source_rows": [
+        {
+          "creature": "Cyclops",
+          "item": "Rune defender",
+          "source_url": "https://oldschool.runescape.wiki/w/Cyclops",
+          "source_sha256": "88a72b6ef33c5512e4856822a7adbec8e0511f124b3cbf3e99483669ad1ef9c2",
+          "fetched_at": "2026-10-14T15:24:56.108986+00:00",
+          "source_row_zero_based": 26,
+          "raw_record": {
+            "section": "Drops / Warriors' Guild Top Floor / Defenders",
+            "item_name": "Rune defender",
+            "item_links": [
+              {
+                "text": "Rune defender",
+                "href": "https://oldschool.runescape.wiki/w/Rune_defender"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "2/100",
+              "expression": "2/100",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 50
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Rune defender",
+                "1",
+                "2/100",
+                "Not sold",
+                "N/A"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Rune defender 1 2/100 Not sold N/A",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Sequential defender state and Warriors Guild tokens/access; do not count seven item rows as seven creatures or assume every previously passed defender is independently droppable.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Cyclops",
+      "item": "Steel defender",
+      "base_rate": "1/50",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Cyclops",
+      "indexed_source_rows": [
+        {
+          "creature": "Cyclops",
+          "item": "Steel defender",
+          "source_url": "https://oldschool.runescape.wiki/w/Cyclops",
+          "source_sha256": "88a72b6ef33c5512e4856822a7adbec8e0511f124b3cbf3e99483669ad1ef9c2",
+          "fetched_at": "2026-10-14T15:24:56.108986+00:00",
+          "source_row_zero_based": 22,
+          "raw_record": {
+            "section": "Drops / Warriors' Guild Top Floor / Defenders",
+            "item_name": "Steel defender",
+            "item_links": [
+              {
+                "text": "Steel defender",
+                "href": "https://oldschool.runescape.wiki/w/Steel_defender"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "2/100",
+              "expression": "2/100",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 50
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Steel defender",
+                "1",
+                "2/100",
+                "Not sold",
+                "0"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Steel defender 1 2/100 Not sold 0",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Sequential defender state and Warriors Guild tokens/access; do not count seven item rows as seven creatures or assume every previously passed defender is independently droppable.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Dagannoth (Waterbirth Island)",
+      "item": "Fremennik blade",
+      "base_rate": "3/128",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Dagannoth_(Waterbirth_Island)",
+      "indexed_source_rows": [
+        {
+          "creature": "Dagannoth (Waterbirth Island)",
+          "item": "Fremennik blade",
+          "source_url": "https://oldschool.runescape.wiki/w/Dagannoth_(Waterbirth_Island)",
+          "source_sha256": "11086650dad4f8237155620e498744bc2c35143672cec6dd554cc6d48526f72a",
+          "fetched_at": "2026-10-14T15:25:05.969014+00:00",
+          "source_row_zero_based": 10,
+          "raw_record": {
+            "section": "Drops (Level 88) / Weapons and armour",
+            "item_name": "Fremennik blade",
+            "item_links": [
+              {
+                "text": "Fremennik blade",
+                "href": "https://oldschool.runescape.wiki/w/Fremennik_blade"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3/128",
+              "expression": "3/128",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 3,
+                "denominator": 128
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Fremennik blade",
+                "1",
+                "3/128",
+                "Not sold",
+                "3,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Fremennik blade 1 3/128 Not sold 3,000",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        },
+        {
+          "row_text": "Fremennik blade 1 2/128 Not sold 3,000",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Keep level88/90 rows distinct from level74 rate; reviewed exact forms/route/meaningful narrow equipment family and page estimates still required.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Dagannoth (Waterbirth Island)",
+      "item": "Fremennik helm",
+      "base_rate": "3/128",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Dagannoth_(Waterbirth_Island)",
+      "indexed_source_rows": [
+        {
+          "creature": "Dagannoth (Waterbirth Island)",
+          "item": "Fremennik helm",
+          "source_url": "https://oldschool.runescape.wiki/w/Dagannoth_(Waterbirth_Island)",
+          "source_sha256": "11086650dad4f8237155620e498744bc2c35143672cec6dd554cc6d48526f72a",
+          "fetched_at": "2026-10-14T15:25:05.969014+00:00",
+          "source_row_zero_based": 9,
+          "raw_record": {
+            "section": "Drops (Level 88) / Weapons and armour",
+            "item_name": "Fremennik helm",
+            "item_links": [
+              {
+                "text": "Fremennik helm",
+                "href": "https://oldschool.runescape.wiki/w/Fremennik_helm"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3/128",
+              "expression": "3/128",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 3,
+                "denominator": 128
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Fremennik helm",
+                "1",
+                "3/128",
+                "Not sold",
+                "3,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        },
+        {
+          "creature": "Dagannoth (Waterbirth Island)",
+          "item": "Fremennik helm",
+          "source_url": "https://oldschool.runescape.wiki/w/Dagannoth_(Waterbirth_Island)",
+          "source_sha256": "11086650dad4f8237155620e498744bc2c35143672cec6dd554cc6d48526f72a",
+          "fetched_at": "2026-10-14T15:25:05.969014+00:00",
+          "source_row_zero_based": 84,
+          "raw_record": {
+            "section": "Drops (Level 90) / Weapons and armour",
+            "item_name": "Fremennik helm",
+            "item_links": [
+              {
+                "text": "Fremennik helm",
+                "href": "https://oldschool.runescape.wiki/w/Fremennik_helm"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3/128",
+              "expression": "3/128",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 3,
+                "denominator": 128
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Fremennik helm",
+                "1",
+                "3/128",
+                "Not sold",
+                "3,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Fremennik helm 1 3/128 Not sold 3,000",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        },
+        {
+          "row_text": "Fremennik helm 1 3/128 Not sold 3,000",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Keep level88/90 rows distinct from level74 rate; reviewed exact forms/route/meaningful narrow equipment family and page estimates still required.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Dagannoth (Waterbirth Island)",
+      "item": "Fremennik shield",
+      "base_rate": "3/128",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Dagannoth_(Waterbirth_Island)",
+      "indexed_source_rows": [
+        {
+          "creature": "Dagannoth (Waterbirth Island)",
+          "item": "Fremennik shield",
+          "source_url": "https://oldschool.runescape.wiki/w/Dagannoth_(Waterbirth_Island)",
+          "source_sha256": "11086650dad4f8237155620e498744bc2c35143672cec6dd554cc6d48526f72a",
+          "fetched_at": "2026-10-14T15:25:05.969014+00:00",
+          "source_row_zero_based": 8,
+          "raw_record": {
+            "section": "Drops (Level 88) / Weapons and armour",
+            "item_name": "Fremennik shield",
+            "item_links": [
+              {
+                "text": "Fremennik shield",
+                "href": "https://oldschool.runescape.wiki/w/Fremennik_shield"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3/128",
+              "expression": "3/128",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 3,
+                "denominator": 128
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Fremennik shield",
+                "1",
+                "3/128",
+                "Not sold",
+                "3,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        },
+        {
+          "creature": "Dagannoth (Waterbirth Island)",
+          "item": "Fremennik shield",
+          "source_url": "https://oldschool.runescape.wiki/w/Dagannoth_(Waterbirth_Island)",
+          "source_sha256": "11086650dad4f8237155620e498744bc2c35143672cec6dd554cc6d48526f72a",
+          "fetched_at": "2026-10-14T15:25:05.969014+00:00",
+          "source_row_zero_based": 83,
+          "raw_record": {
+            "section": "Drops (Level 90) / Weapons and armour",
+            "item_name": "Fremennik shield",
+            "item_links": [
+              {
+                "text": "Fremennik shield",
+                "href": "https://oldschool.runescape.wiki/w/Fremennik_shield"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3/128",
+              "expression": "3/128",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 3,
+                "denominator": 128
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Fremennik shield",
+                "1",
+                "3/128",
+                "Not sold",
+                "3,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Fremennik shield 1 3/128 Not sold 3,000",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        },
+        {
+          "row_text": "Fremennik shield 1 3/128 Not sold 3,000",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Keep level88/90 rows distinct from level74 rate; reviewed exact forms/route/meaningful narrow equipment family and page estimates still required.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Flesh Crawler",
+      "item": "Bottom of sceptre",
+      "base_rate": "3/100",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Flesh_Crawler",
+      "indexed_source_rows": [
+        {
+          "creature": "Flesh Crawler",
+          "item": "Bottom of sceptre",
+          "source_url": "https://oldschool.runescape.wiki/w/Flesh_Crawler",
+          "source_sha256": "b48b500ba1afec4c870e72afeda378f0ac5fa9ff78c434bcb1dbe08292a36671",
+          "fetched_at": "2026-10-14T15:20:06.149960+00:00",
+          "source_row_zero_based": 9,
+          "raw_record": {
+            "section": "Members' worlds drops / Other",
+            "item_name": "Bottom of sceptre",
+            "item_links": [
+              {
+                "text": "Bottom of sceptre",
+                "href": "https://oldschool.runescape.wiki/w/Bottom_of_sceptre"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3/100 [ 2 ]",
+              "expression": "3/100",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 3,
+                "denominator": 100
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 2 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Bottom of sceptre",
+                "1",
+                "3/100 [ 2 ]",
+                "Not sold",
+                "0"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        },
+        {
+          "creature": "Flesh Crawler",
+          "item": "Bottom of sceptre",
+          "source_url": "https://oldschool.runescape.wiki/w/Flesh_Crawler",
+          "source_sha256": "b48b500ba1afec4c870e72afeda378f0ac5fa9ff78c434bcb1dbe08292a36671",
+          "fetched_at": "2026-10-14T15:20:06.149960+00:00",
+          "source_row_zero_based": 39,
+          "raw_record": {
+            "section": "Free-to-play worlds drops",
+            "item_name": "Bottom of sceptre",
+            "item_links": [
+              {
+                "text": "Bottom of sceptre",
+                "href": "https://oldschool.runescape.wiki/w/Bottom_of_sceptre"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3/100 [ 2 ]",
+              "expression": "3/100",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 3,
+                "denominator": 100
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 2 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Bottom of sceptre",
+                "1",
+                "3/100 [ 2 ]",
+                "Not sold",
+                "0"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Bottom of sceptre 1 3/100 [ 2 ] Not sold 0",
+          "reported_item_id": null,
+          "note_fragment_ids": [
+            "cite_note-Skull_sceptre_piece_rates_tweet-2"
+          ],
+          "referenced_notes": [
+            {
+              "id": "cite_note-Skull_sceptre_piece_rates_tweet-2",
+              "text": "^ 2.0 2.1 Jagex. Mod Ash's Twitter account . 21 August 2019. Archived from the original on 9 September 2019. Mod Ash: \"3% from ankou, 3% from fleshcrawlers 3/101 for catablepon, 3/101 for minotaurs.\""
+            }
+          ]
+        },
+        {
+          "row_text": "Bottom of sceptre 1 3/100 [ 2 ] Not sold 0",
+          "reported_item_id": null,
+          "note_fragment_ids": [
+            "cite_note-Skull_sceptre_piece_rates_tweet-2"
+          ],
+          "referenced_notes": [
+            {
+              "id": "cite_note-Skull_sceptre_piece_rates_tweet-2",
+              "text": "^ 2.0 2.1 Jagex. Mod Ash's Twitter account . 21 August 2019. Archived from the original on 9 September 2019. Mod Ash: \"3% from ankou, 3% from fleshcrawlers 3/101 for catablepon, 3/101 for minotaurs.\""
+            }
+          ]
+        }
+      ],
+      "review": "Functional Skull sceptre component; same logical item/member and free rows are contexts, not two creatures.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Hespori",
+      "item": "Bottomless compost bucket",
+      "base_rate": "1/35",
+      "source_kind": "BOSS",
+      "source_url": "https://oldschool.runescape.wiki/w/Hespori",
+      "indexed_source_rows": [
+        {
+          "creature": "Hespori",
+          "item": "Bottomless compost bucket",
+          "source_url": "https://oldschool.runescape.wiki/w/Hespori",
+          "source_sha256": "4e6a634571914cc8623437492ee09cbd42a755a909c60d8143d36ac8107eaee4",
+          "fetched_at": "2026-10-14T15:13:03.229215+00:00",
+          "source_row_zero_based": 3,
+          "raw_record": {
+            "section": "Drops / Main table / Pre-roll",
+            "item_name": "Bottomless compost bucket",
+            "item_links": [
+              {
+                "text": "Bottomless compost bucket",
+                "href": "https://oldschool.runescape.wiki/w/Bottomless_compost_bucket"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/35 [ 4 ]",
+              "expression": "1/35",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 35
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 4 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Bottomless compost bucket",
+                "1",
+                "1/35 [ 4 ]",
+                "488,748",
+                "27,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Bottomless compost bucket 1 1/35 [ 4 ] 488,748 27,000",
+          "reported_item_id": null,
+          "note_fragment_ids": [
+            "cite_note-Alchemical_Hydra-4"
+          ],
+          "referenced_notes": [
+            {
+              "id": "cite_note-Alchemical_Hydra-4",
+              "text": "^ 4.0 4.1 Jagex. Mod Munro's Twitter account . 13 February 2019. Archived from the original on 25 March 2019. Mod Munro: \"As I mentioned on the Q & A, here are the pictures of the drop rates for various parts of Kebos. This time with the correct drop rate for the pieces of the Brimstone Ring.\""
+            }
+          ]
+        }
+      ],
+      "review": "Farming seed, growth/re-entry/replenishment and source proof are separate from displayed1/35; slow recurring route cannot be treated as ordinary boss throughput.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Jelly",
+      "item": "Mithril boots",
+      "base_rate": "1/32",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Jelly",
+      "indexed_source_rows": [
+        {
+          "creature": "Jelly",
+          "item": "Mithril boots",
+          "source_url": "https://oldschool.runescape.wiki/w/Jelly",
+          "source_sha256": "be12379eb9b8166669ae2699ac37def4444452351a2b70d19d8d66162dd8baf4",
+          "fetched_at": "2026-10-14T15:27:24.529027+00:00",
+          "source_row_zero_based": 33,
+          "raw_record": {
+            "section": "Drops / Wilderness Slayer Cave drops / Weapons and armour",
+            "item_name": "Mithril boots",
+            "item_links": [
+              {
+                "text": "Mithril boots",
+                "href": "https://oldschool.runescape.wiki/w/Mithril_boots"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "2/64",
+              "expression": "2/64",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 32
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Mithril boots",
+                "1",
+                "2/64",
+                "533",
+                "468"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Mithril boots 1 1/128 533 468",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        },
+        {
+          "row_text": "Mithril boots 1 2/64 533 468",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Wilderness Slayer Cave1/32 is task-only; existing WB-D140 continuation hold remains. Normal1/128 is Greater.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Lava dragon",
+      "item": "Lava battlestaff",
+      "base_rate": "3/128",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Lava_dragon",
+      "indexed_source_rows": [
+        {
+          "creature": "Lava dragon",
+          "item": "Lava battlestaff",
+          "source_url": "https://oldschool.runescape.wiki/w/Lava_dragon",
+          "source_sha256": "9ae88ca4a5b011ec6eb4bd812954a653caadab2226c0b1de6f7bf3e6659838e7",
+          "fetched_at": "2026-10-14T15:29:22.163823+00:00",
+          "source_row_zero_based": 5,
+          "raw_record": {
+            "section": "Drops / Weapons and armour",
+            "item_name": "Lava battlestaff",
+            "item_links": [
+              {
+                "text": "Lava battlestaff",
+                "href": "https://oldschool.runescape.wiki/w/Lava_battlestaff"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3/128",
+              "expression": "3/128",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 3,
+                "denominator": 128
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Lava battlestaff",
+                "1",
+                "3/128",
+                "9,386",
+                "10,200"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Lava battlestaff 1 3/128 9,386 10,200",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Wilderness access and specific item/source-family significance need review; price alone neither includes nor excludes.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Lava Strykewyrm",
+      "item": "Lava battlestaff",
+      "base_rate": "5/128",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Lava_Strykewyrm",
+      "indexed_source_rows": [
+        {
+          "creature": "Lava Strykewyrm",
+          "item": "Lava battlestaff",
+          "source_url": "https://oldschool.runescape.wiki/w/Lava_Strykewyrm",
+          "source_sha256": "912ad6c904b7521d9b1c4d8663d802b4fbe7a39304f00502381ca3fd214181e5",
+          "fetched_at": "2026-10-14T15:29:20.024797+00:00",
+          "source_row_zero_based": 2,
+          "raw_record": {
+            "section": "Drops / Weapons and armour",
+            "item_name": "Lava battlestaff",
+            "item_links": [
+              {
+                "text": "Lava battlestaff",
+                "href": "https://oldschool.runescape.wiki/w/Lava_battlestaff"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "5/128",
+              "expression": "5/128",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 5,
+                "denominator": 128
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Lava battlestaff",
+                "1",
+                "5/128",
+                "9,386",
+                "10,200"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Lava battlestaff 1 5/128 9,386 10,200",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Source method/access/ordinary world and identity must be reviewed from capture; no automatic ordinary Slayer route inferred.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Magma strykewyrm",
+      "item": "Dragon metal sheet",
+      "base_rate": "1/45",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Magma_strykewyrm",
+      "indexed_source_rows": [
+        {
+          "creature": "Magma strykewyrm",
+          "item": "Dragon metal sheet",
+          "source_url": "https://oldschool.runescape.wiki/w/Magma_strykewyrm",
+          "source_sha256": "66b0d48c3ba5a9d9be91e9d6aca7e075d4b426f235650a4e9f2cf71825f02cc5",
+          "fetched_at": "2026-10-14T15:29:34.036615+00:00",
+          "source_row_zero_based": 2,
+          "raw_record": {
+            "section": "Drops / Unique",
+            "item_name": "Dragon metal sheet",
+            "item_links": [
+              {
+                "text": "Dragon metal sheet",
+                "href": "https://oldschool.runescape.wiki/w/Dragon_metal_sheet"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3 \u00d7 1/45",
+              "expression": "3 \u00d7 1/45",
+              "kind": "multiple_rolls",
+              "exact_probability": null,
+              "needs_context_review": true,
+              "roll_count": 3,
+              "per_roll_probability": {
+                "numerator": 1,
+                "denominator": 45
+              },
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Dragon metal sheet",
+                "1",
+                "3 \u00d7 1/45",
+                "141,967",
+                "30,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Dragon metal sheet 1 3 \u00d7 1/45 141,967 30,000",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Keep displayed3x rolls separately from base rank; sea/activity/source identity and personal effort model need review.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Magma strykewyrm",
+      "item": "Lava battlestaff",
+      "base_rate": "5/128",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Magma_strykewyrm",
+      "indexed_source_rows": [
+        {
+          "creature": "Magma strykewyrm",
+          "item": "Lava battlestaff",
+          "source_url": "https://oldschool.runescape.wiki/w/Magma_strykewyrm",
+          "source_sha256": "66b0d48c3ba5a9d9be91e9d6aca7e075d4b426f235650a4e9f2cf71825f02cc5",
+          "fetched_at": "2026-10-14T15:29:34.036615+00:00",
+          "source_row_zero_based": 3,
+          "raw_record": {
+            "section": "Drops / Weapons and armour",
+            "item_name": "Lava battlestaff",
+            "item_links": [
+              {
+                "text": "Lava battlestaff",
+                "href": "https://oldschool.runescape.wiki/w/Lava_battlestaff"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3 \u00d7 5/128",
+              "expression": "3 \u00d7 5/128",
+              "kind": "multiple_rolls",
+              "exact_probability": null,
+              "needs_context_review": true,
+              "roll_count": 3,
+              "per_roll_probability": {
+                "numerator": 5,
+                "denominator": 128
+              },
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Lava battlestaff",
+                "1",
+                "3 \u00d7 5/128",
+                "9,386",
+                "10,200"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Lava battlestaff 1 3 \u00d7 5/128 9,386 10,200",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Keep displayed3x rolls separately from base rank; sea/activity/source identity and personal effort model need review.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Minotaur",
+      "item": "Right skull half",
+      "base_rate": "3/101",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Minotaur",
+      "indexed_source_rows": [
+        {
+          "creature": "Minotaur",
+          "item": "Right skull half",
+          "source_url": "https://oldschool.runescape.wiki/w/Minotaur",
+          "source_sha256": "010266de43e1c5f087b5d9ef8c808a374bb83b945fdb067a8ba2f435995a451b",
+          "fetched_at": "2026-10-14T15:22:01.844745+00:00",
+          "source_row_zero_based": 15,
+          "raw_record": {
+            "section": "Drops / Other",
+            "item_name": "Right skull half",
+            "item_links": [
+              {
+                "text": "Right skull half",
+                "href": "https://oldschool.runescape.wiki/w/Right_skull_half"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "3/101 [ 1 ]",
+              "expression": "3/101",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 3,
+                "denominator": 101
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 1 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Right skull half",
+                "1",
+                "3/101 [ 1 ]",
+                "Not sold",
+                "0"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Right skull half 1 3/101 [ 1 ] Not sold 0",
+          "reported_item_id": null,
+          "note_fragment_ids": [
+            "cite_note-Skull_sceptre_piece_rates_tweet-5"
+          ],
+          "referenced_notes": [
+            {
+              "id": "cite_note-Skull_sceptre_piece_rates_tweet-5",
+              "text": "^ Jagex. Mod Ash's Twitter account . 21 August 2019. Archived from the original on 9 September 2019. Mod Ash: \"3% from ankou, 3% from fleshcrawlers 3/101 for catablepon, 3/101 for minotaurs.\""
+            }
+          ]
+        }
+      ],
+      "review": "Functional Skull sceptre component; actual HTML citation link overrides misleading numeric-footnote guess. Stronghold forms only.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Mogre",
+      "item": "Mudskipper hat",
+      "base_rate": "5/128",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Mogre",
+      "indexed_source_rows": [
+        {
+          "creature": "Mogre",
+          "item": "Mudskipper hat",
+          "source_url": "https://oldschool.runescape.wiki/w/Mogre",
+          "source_sha256": "163d382fc8403a6459d23f53ca89a6bc38bd0d512cffea96e206be77e628b6ab",
+          "fetched_at": "2026-10-14T15:53:54.095445+00:00",
+          "source_row_zero_based": 38,
+          "raw_record": {
+            "section": "Drops / Other",
+            "item_name": "Mudskipper hat",
+            "item_links": [
+              {
+                "text": "Mudskipper hat",
+                "href": "https://oldschool.runescape.wiki/w/Mudskipper_hat"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "5/128",
+              "expression": "5/128",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 5,
+                "denominator": 128
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Mudskipper hat",
+                "1",
+                "5/128",
+                "Not sold",
+                "0"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Mudskipper hat 1 5/128 Not sold 0",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Shore fishing-explosive source/access ambiguity; do not apply sea source exemptions or rates.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Mogre (sea)",
+      "item": "Mudskipper hat",
+      "base_rate": "1/30",
+      "source_kind": "MONSTER",
+      "source_url": "https://oldschool.runescape.wiki/w/Mogre_(sea)",
+      "indexed_source_rows": [
+        {
+          "creature": "Mogre (sea)",
+          "item": "Mudskipper hat",
+          "source_url": "https://oldschool.runescape.wiki/w/Mogre_(sea)",
+          "source_sha256": "33170060aa0c92912656328393b951d38f22ec32349b8e0be0fba9c835f0faf1",
+          "fetched_at": "2026-10-14T15:53:56.032878+00:00",
+          "source_row_zero_based": 0,
+          "raw_record": {
+            "section": "Drops / Pre-roll",
+            "item_name": "Mudskipper hat",
+            "item_links": [
+              {
+                "text": "Mudskipper hat",
+                "href": "https://oldschool.runescape.wiki/w/Mudskipper_hat"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "2/60",
+              "expression": "2/60",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 30
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Mudskipper hat",
+                "1",
+                "2/60",
+                "Not sold",
+                "0"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Mudskipper hat 1 2/60 Not sold 0",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Boat/cannon method distinct from shore; source identity/supply/access and cosmetic significance remain held.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Phantom Muspah",
+      "item": "Ancient icon",
+      "base_rate": "1/50",
+      "source_kind": "BOSS",
+      "source_url": "https://oldschool.runescape.wiki/w/Phantom_Muspah",
+      "indexed_source_rows": [
+        {
+          "creature": "Phantom Muspah",
+          "item": "Ancient icon",
+          "source_url": "https://oldschool.runescape.wiki/w/Phantom_Muspah",
+          "source_sha256": "a4611b48039184f67297d4e01ba67fb574e4155a1b2c9229b1441df0eba3298b",
+          "fetched_at": "2026-10-14T15:14:01.173434+00:00",
+          "source_row_zero_based": 4,
+          "raw_record": {
+            "section": "Drops / Unique",
+            "item_name": "Ancient icon",
+            "item_links": [
+              {
+                "text": "Ancient icon",
+                "href": "https://oldschool.runescape.wiki/w/Ancient_icon"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "2/100 [ 1 ]",
+              "expression": "2/100",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 50
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 1 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Ancient icon",
+                "1",
+                "2/100 [ 1 ]",
+                "Not sold",
+                "N/A"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Ancient icon 1 2/100 [ 1 ] Not sold N/A",
+          "reported_item_id": null,
+          "note_fragment_ids": [
+            "cite_note-uniques-3"
+          ],
+          "referenced_notes": [
+            {
+              "id": "cite_note-uniques-3",
+              "text": "^ 1.0 1.1 1.2 1.3 \"Secrets of the North Improvements\" . Old School RuneScape News. Jagex. 18 January 2023. Archived from the original ."
+            }
+          ]
+        }
+      ],
+      "review": "Ancient icon ownership/maximum-drop conditions and quest/source model need review before claiming repeatable previously-owned hunt.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "Scurrius",
+      "item": "Scurrius' spine",
+      "base_rate": "1/33",
+      "source_kind": "BOSS",
+      "source_url": "https://oldschool.runescape.wiki/w/Scurrius",
+      "indexed_source_rows": [
+        {
+          "creature": "Scurrius",
+          "item": "Scurrius' spine",
+          "source_url": "https://oldschool.runescape.wiki/w/Scurrius",
+          "source_sha256": "938b58eb014764b5fcedcedeb86efbf71fae6e89eb0f8ecb8b68e98747aabc74",
+          "fetched_at": "2026-10-14T15:14:15.145654+00:00",
+          "source_row_zero_based": 23,
+          "raw_record": {
+            "section": "Drops (MVP/Solo) / Tertiary",
+            "item_name": "Scurrius' spine",
+            "item_links": [
+              {
+                "text": "Scurrius' spine",
+                "href": "https://oldschool.runescape.wiki/w/Scurrius%27_spine"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/33 [ d 3 ]",
+              "expression": "1/33",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 33
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ d 3 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Scurrius' spine",
+                "1",
+                "1/33 [ d 3 ]",
+                "Not sold",
+                "N/A"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        },
+        {
+          "creature": "Scurrius",
+          "item": "Scurrius' spine",
+          "source_url": "https://oldschool.runescape.wiki/w/Scurrius",
+          "source_sha256": "938b58eb014764b5fcedcedeb86efbf71fae6e89eb0f8ecb8b68e98747aabc74",
+          "fetched_at": "2026-10-14T15:14:15.145654+00:00",
+          "source_row_zero_based": 40,
+          "raw_record": {
+            "section": "Drops (non-MVP) / Tertiary",
+            "item_name": "Scurrius' spine",
+            "item_links": [
+              {
+                "text": "Scurrius' spine",
+                "href": "https://oldschool.runescape.wiki/w/Scurrius%27_spine"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/33 [ d 1 ]",
+              "expression": "1/33",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 33
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ d 1 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Scurrius' spine",
+                "1",
+                "1/33 [ d 1 ]",
+                "Not sold",
+                "N/A"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Scurrius' spine 1 1/33 [ d 3 ] Not sold N/A",
+          "reported_item_id": null,
+          "note_fragment_ids": [
+            "cite_note-4"
+          ],
+          "referenced_notes": [
+            {
+              "id": "cite_note-4",
+              "text": "^ Only one player may receive a spine per kill."
+            }
+          ]
+        },
+        {
+          "row_text": "Scurrius' spine 1 1/33 [ d 1 ] Not sold N/A",
+          "reported_item_id": null,
+          "note_fragment_ids": [
+            "cite_note-7"
+          ],
+          "referenced_notes": [
+            {
+              "id": "cite_note-7",
+              "text": "^ Only one player may receive a spine per kill."
+            }
+          ]
+        }
+      ],
+      "review": "Solo private encounter is conservative lead; only one spine may drop per kill, so group rows are not independent personal1/33 proof.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    },
+    {
+      "creature": "The Hueycoatl",
+      "item": "Hueycoatl hide",
+      "base_rate": "11/315",
+      "source_kind": "BOSS",
+      "source_url": "https://oldschool.runescape.wiki/w/The_Hueycoatl",
+      "indexed_source_rows": [
+        {
+          "creature": "The Hueycoatl",
+          "item": "Hueycoatl hide",
+          "source_url": "https://oldschool.runescape.wiki/w/The_Hueycoatl",
+          "source_sha256": "f5bdadee2355e15b0f9c03423eaf7b9b306266263c5a192e205cc527fa26eb4e",
+          "fetched_at": "2026-10-14T15:14:51.133616+00:00",
+          "source_row_zero_based": 2,
+          "raw_record": {
+            "section": "Drops / Uniques",
+            "item_name": "Hueycoatl hide",
+            "item_links": [
+              {
+                "text": "Hueycoatl hide",
+                "href": "https://oldschool.runescape.wiki/w/Hueycoatl_hide"
+              }
+            ],
+            "quantity_raw": "3",
+            "rarity": {
+              "raw": "11/315",
+              "expression": "11/315",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 11,
+                "denominator": 315
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Hueycoatl hide",
+                "3",
+                "11/315",
+                "1,409,208",
+                "198"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "html_notes": [
+        {
+          "row_text": "Hueycoatl hide 3 11/315 1,409,208 198",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "review": "Team contribution/loot allocation and hide quantity/opportunity semantics held; raw displayed fraction is not established personal probability.",
+      "status": "LESSER_CONTEXT_SCREEN_NOT_ADMITTED",
+      "runtime_enabled": false
+    }
+  ],
+  "runtime_enabled": false,
+  "eligible_creature_count": null
+}
