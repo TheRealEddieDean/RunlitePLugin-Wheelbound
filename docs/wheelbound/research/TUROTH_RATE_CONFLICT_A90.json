@@ -1,0 +1,334 @@
+{
+  "version": "turoth-necklace-conflict-a90-v1",
+  "source_url": "https://oldschool.runescape.wiki/w/Turoth",
+  "capture": {
+    "origin": "network_html",
+    "requested_url": "https://oldschool.runescape.wiki/w/Turoth",
+    "fetched_at": "2026-10-14T15:52:24.005692+00:00",
+    "sha256": "911dcf45436015c321ab7e8c48da1929cd5411dfab183973d4c1e26ac6b11e7b",
+    "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+    "cache_file": "tools\\wiki_drops\\output\\html\\a75613358c5f9075496129a885a11dafbaa56c4f66ed007f1068fafbf653cfc0.html",
+    "resolved_url": "https://oldschool.runescape.wiki/w/Turoth",
+    "etag": null,
+    "last_modified": "Wed, 14 Oct 2026 15:26:30 GMT",
+    "fixture": false
+  },
+  "source_sha256": "911dcf45436015c321ab7e8c48da1929cd5411dfab183973d4c1e26ac6b11e7b",
+  "item_evidence": {
+    "source_url": "https://oldschool.runescape.wiki/w/Turoth",
+    "item": "Necklace of Fangs",
+    "capture": {
+      "origin": "network_html",
+      "requested_url": "https://oldschool.runescape.wiki/w/Turoth",
+      "fetched_at": "2026-10-14T15:52:24.005692+00:00",
+      "sha256": "911dcf45436015c321ab7e8c48da1929cd5411dfab183973d4c1e26ac6b11e7b",
+      "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+      "cache_file": "tools\\wiki_drops\\output\\html\\a75613358c5f9075496129a885a11dafbaa56c4f66ed007f1068fafbf653cfc0.html",
+      "resolved_url": "https://oldschool.runescape.wiki/w/Turoth",
+      "etag": null,
+      "last_modified": "Wed, 14 Oct 2026 15:26:30 GMT",
+      "fixture": false
+    },
+    "normalized_source_sha256": "911dcf45436015c321ab7e8c48da1929cd5411dfab183973d4c1e26ac6b11e7b",
+    "raw_file_sha256": "544c76589ad24a7fe476e0c3a06da676eb712067cf3f5585b241881fc3ae3e3b",
+    "reported_npc_ids": [
+      430
+    ],
+    "source_context": [
+      "Turoth are Slayer monsters that require a Slayer level of 55 to kill. They are melee based, and as such Protect from Melee will negate all of their damage. They drop herbs and seeds commonly, though not as frequently as aberrant spectres , as well as frequent nature runes . In addition, they also drop the leaf-bladed sword and necklace of fangs .",
+      "Turoth, like kurask , can only be damaged with leaf-bladed weapons , broad arrows and bolts , or the Magic dart spell due to their thick hides. [ 1 ] Turoth are immune to other types of attacks, thereby establishing hidden skill requirements to kill them (particularly for ironmen ). Though most of the means available for attacking them cannot inflict poison, it is still possible to inflict venom by using either a serpentine helm or a toxic staff of the dead with Magic Dart . This also means the dwarf multicannon is ineffective, and cannot be placed in this area.",
+      "Although turoth are invulnerable to any damage from the eldritch Nightmare staff , Saradomin godsword , and toxic blowpipe special attacks, they will still heal the player as if it would have dealt damage, making them useful as special attack weapons during extended trips. The ancient mace special attack also restores Prayer points equal to the damage that would have been dealt. Guthan's equipment's set effect does not work.",
+      "The majority of the Turoth in the Fremennik Slayer Dungeon are level 83 and 85, along with three level 87s, and one level 89.",
+      "Slayer rings offer immediate access to Fremennik Slayer Dungeon . For those without access to Slayer rings, a fairy ring (code: A J R ) is conveniently located outside the dungeon. Other alternatives include the lyre , Fremennik sea boots and Teleport to House if the player's house is located in Rellekka . Players who are unable to use any of these options can use a Camelot teleport and make a long run north/north-west towards Rellekka and then east after passing the second bridge. Alternatively, players may teleport to Lunar Isle without a Seal of Passage and talk to an NPC to be kicked off the island to Rellekka; they may also teleport to Waterbirth Island and take the boat to Rellekka.",
+      "Drop rates are estimated based on 1,788,457 samples from the Drop Rate Project , unless otherwise cited.",
+      "There is a 31/129 chance to access the herb drop table . If accessed, it is rolled an average of 1.7 times \u2013 15/31 chance to roll once, 10/31 to roll twice, and 6/31 to roll three times. Each kill gives an average of 0.411 herbs.",
+      "There is a 18/129 chance of rolling the rare seed drop table .",
+      "There is a 5/129 chance of rolling the gem drop table .",
+      "Turoths have 3 collection log items.",
+      "Turoths now drop the necklace of fangs .",
+      "Thralls will no longer deal damage to turoths.",
+      "Kurasks and turoths now drop the leaf-bladed sword .",
+      "Duradel no longer assigns players Turoth tasks.",
+      "7m ago - Microbrews",
+      "14m ago - Kelsey",
+      "15m ago - Kelsey",
+      "15m ago - Kelsey"
+    ],
+    "access_infobox": [
+      {
+        "field": "Members",
+        "value": "Yes"
+      },
+      {
+        "field": "Slayer level",
+        "value": "55"
+      },
+      {
+        "field": "Slayer XP",
+        "value": "76 xp"
+      },
+      {
+        "field": "Monster ID",
+        "value": "430"
+      }
+    ],
+    "raw_drop_rows": [
+      {
+        "row_zero_based": 8,
+        "record": {
+          "section": "Drops / Weapons and armour",
+          "item_name": "Necklace of Fangs",
+          "item_links": [
+            {
+              "text": "Necklace of Fangs",
+              "href": "https://oldschool.runescape.wiki/w/Necklace_of_Fangs"
+            }
+          ],
+          "quantity_raw": "1",
+          "rarity": {
+            "raw": "1/129",
+            "expression": "1/129",
+            "kind": "fraction",
+            "exact_probability": {
+              "numerator": 1,
+              "denominator": 129
+            },
+            "needs_context_review": false,
+            "approximate": false
+          },
+          "annotations": [],
+          "raw_row": {
+            "cells": [
+              "",
+              "Necklace of Fangs",
+              "1",
+              "1/129",
+              "45,629",
+              "30,000"
+            ],
+            "table_headers": [
+              "",
+              "item",
+              "quantity",
+              "rarity",
+              "price",
+              "high alch"
+            ]
+          },
+          "layout_supported": true,
+          "canonical_item_ids": [],
+          "runtime_enabled": false,
+          "review_status": "UNREVIEWED"
+        }
+      }
+    ],
+    "html_drop_rows": [
+      {
+        "row_text": "Necklace of Fangs 1 1/129 45,629 30,000",
+        "reported_item_id": null,
+        "note_fragment_ids": [],
+        "referenced_notes": []
+      }
+    ],
+    "html_identity_rows": [
+      {
+        "item_id": 34401,
+        "row_text": "Necklace of Fangs Slayer N/A"
+      }
+    ],
+    "page_estimate_statements": [
+      "Drop rates are estimated based on 1,788,457 samples from the Drop Rate Project , unless otherwise cited."
+    ],
+    "runtime_enabled": false
+  },
+  "primary_source": {
+    "url": "https://secure.runescape.com/m=news/summer-sweep-up-miscellaneous?oldschool=1",
+    "section": "Necklace of Fangs",
+    "published": "2026-09-02",
+    "rate_reported": "1/128",
+    "original_news_directly_read": true
+  },
+  "captured_rate": "1/129",
+  "canonical_item_constant_candidates": [
+    {
+      "symbol": "NECKLACE_OF_FANGS",
+      "id": 34401,
+      "line": 90088,
+      "declaration": "public static final int NECKLACE_OF_FANGS = 34401;"
+    }
+  ],
+  "common_main_table_129_rows": [
+    {
+      "row_zero_based": 3,
+      "section": "Drops / Weapons and armour",
+      "item": "Steel platelegs",
+      "raw_rate": "7/129"
+    },
+    {
+      "row_zero_based": 5,
+      "section": "Drops / Weapons and armour",
+      "item": "Mithril kiteshield",
+      "raw_rate": "1/129"
+    },
+    {
+      "row_zero_based": 6,
+      "section": "Drops / Weapons and armour",
+      "item": "Adamant full helm",
+      "raw_rate": "1/129"
+    },
+    {
+      "row_zero_based": 7,
+      "section": "Drops / Weapons and armour",
+      "item": "Rune dagger",
+      "raw_rate": "1/129"
+    },
+    {
+      "row_zero_based": 8,
+      "section": "Drops / Weapons and armour",
+      "item": "Necklace of Fangs",
+      "raw_rate": "1/129"
+    },
+    {
+      "row_zero_based": 10,
+      "section": "Drops / Runes",
+      "item": "Nature rune",
+      "raw_rate": "5/129"
+    },
+    {
+      "row_zero_based": 11,
+      "section": "Drops / Runes",
+      "item": "Nature rune",
+      "raw_rate": "1/129"
+    },
+    {
+      "row_zero_based": 37,
+      "section": "Drops / Materials",
+      "item": "Limpwurt root",
+      "raw_rate": "7/129"
+    },
+    {
+      "row_zero_based": 38,
+      "section": "Drops / Coins",
+      "item": "Coins",
+      "raw_rate": "29/129"
+    },
+    {
+      "row_zero_based": 40,
+      "section": "Drops / Coins",
+      "item": "Coins",
+      "raw_rate": "1/129"
+    }
+  ],
+  "page_table_probability_context": [
+    "There is a 31/129 chance to access the herb drop table . If accessed, it is rolled an average of 1.7 times \u2013 15/31 chance to roll once, 10/31 to roll twice, and 6/31 to roll three times. Each kill gives an average of 0.411 herbs.",
+    "There is a 18/129 chance of rolling the rare seed drop table .",
+    "There is a 5/129 chance of rolling the gem drop table ."
+  ],
+  "pre_roll_rows": [
+    {
+      "row_zero_based": 1,
+      "record": {
+        "section": "Drops / Pre-roll",
+        "item_name": "Leaf-bladed sword",
+        "item_links": [
+          {
+            "text": "Leaf-bladed sword",
+            "href": "https://oldschool.runescape.wiki/w/Leaf-bladed_sword"
+          }
+        ],
+        "quantity_raw": "1",
+        "rarity": {
+          "raw": "1/500",
+          "expression": "1/500",
+          "kind": "fraction",
+          "exact_probability": {
+            "numerator": 1,
+            "denominator": 500
+          },
+          "needs_context_review": false,
+          "approximate": false
+        },
+        "annotations": [],
+        "raw_row": {
+          "cells": [
+            "",
+            "Leaf-bladed sword",
+            "1",
+            "1/500",
+            "40,065",
+            "40,800"
+          ],
+          "table_headers": [
+            "",
+            "item",
+            "quantity",
+            "rarity",
+            "price",
+            "high alch"
+          ]
+        },
+        "layout_supported": true,
+        "canonical_item_ids": [],
+        "runtime_enabled": false,
+        "review_status": "UNREVIEWED"
+      }
+    },
+    {
+      "row_zero_based": 2,
+      "record": {
+        "section": "Drops / Pre-roll",
+        "item_name": "Mystic robe bottom (light)",
+        "item_links": [
+          {
+            "text": "Mystic robe bottom (light)",
+            "href": "https://oldschool.runescape.wiki/w/Mystic_robe_bottom_(light)"
+          }
+        ],
+        "quantity_raw": "1",
+        "rarity": {
+          "raw": "1/512",
+          "expression": "1/512",
+          "kind": "fraction",
+          "exact_probability": {
+            "numerator": 1,
+            "denominator": 512
+          },
+          "needs_context_review": false,
+          "approximate": false
+        },
+        "annotations": [],
+        "raw_row": {
+          "cells": [
+            "",
+            "Mystic robe bottom (light)",
+            "1",
+            "1/512",
+            "47,508",
+            "48,000"
+          ],
+          "table_headers": [
+            "",
+            "item",
+            "quantity",
+            "rarity",
+            "price",
+            "high alch"
+          ]
+        },
+        "layout_supported": true,
+        "canonical_item_ids": [],
+        "runtime_enabled": false,
+        "review_status": "UNREVIEWED"
+      }
+    }
+  ],
+  "tier_for_both": "greater",
+  "effort_model_status": "HELD_CONFLICT_NOT_RESOLVED",
+  "not_assumed": [
+    "Neither rate silently substituted",
+    "No confidence bounds inferred from two disagreeing point values",
+    "No proof that pre-rolls, ring of wealth or a129-slot table alone explain discrepancy",
+    "No superior-task rate or source used for an ordinary route"
+  ],
+  "runtime_enabled": false
+}

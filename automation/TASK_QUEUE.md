@@ -216,3 +216,7 @@ Verified predecessor `f98c096bfa9be76fcb1ba3b246ea34080c6e91b1`. 15 substantive 
 ## A89 — DONE within stated scope: finite four-rank core compiled and mutation-checked
 
 Verified predecessor `fe9a10fe13d8086b75091a5ba5c26f1ae07461aa`. 14 canonical keys/16 specific hunts compiled reproducibly from three pinned fragments; design key counts4/4/3/3.12 malformed activation/source/rank/quote/variant/dedup mutations rejected; original fragments/v1 remain preserved.18 authority hashes valid; no actual runtime eligibility inferred. Size S/M bounded work; no production/main change. Owning publication requires expected-head guard and exact remote/tree/main verification. Next: A90 targeted Turoth source-rate conflict and missing-gate evidence; then refresh derived publication and remaining-work status within the authorized hour.
+
+## A90 — DONE within stated scope: Turoth conflict isolated with explicit held disposition
+
+Verified predecessor `a9e82a196bf9b273c9d678abe6c8a6a6320b4b36`. Official/captured1/128 versus1/129 mismatch traced to exact item/main-table and separate pre-roll records; both Greater but no source formula reconciliation proved. Diagnostic129 table context preserved without asserting causality, inventing bounds or admitting new hunt. Size S/M bounded work; no production/main change. Owning publication requires expected-head guard and exact remote/tree/main verification. Next: Refresh the queued derived PDF(A33) from an exact committed source, visually verify/save it; retain source conflict in current status.

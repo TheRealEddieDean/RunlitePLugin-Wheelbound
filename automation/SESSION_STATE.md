@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — hour work block A89 completed in owning commit; owner wb-hour-a84.
+- State: ACTIVE — hour work block A90 completed in owning commit; owner wb-hour-a84.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -10,9 +10,9 @@
 
 ## Current continuation — hour work block
 
-Latest completed A89: finite four-rank core compiled and mutation-checked. Verified predecessor `fe9a10fe13d8086b75091a5ba5c26f1ae07461aa`. 14 canonical keys/16 specific hunts compiled reproducibly from three pinned fragments; design key counts4/4/3/3.12 malformed activation/source/rank/quote/variant/dedup mutations rejected; original fragments/v1 remain preserved.18 authority hashes valid; no actual runtime eligibility inferred.
+Latest completed A90: Turoth conflict isolated with explicit held disposition. Verified predecessor `a9e82a196bf9b273c9d678abe6c8a6a6320b4b36`. Official/captured1/128 versus1/129 mismatch traced to exact item/main-table and separate pre-roll records; both Greater but no source formula reconciliation proved. Diagnostic129 table context preserved without asserting causality, inventing bounds or admitting new hunt.
 
-Exact next action: A90 targeted Turoth source-rate conflict and missing-gate evidence; then refresh derived publication and remaining-work status within the authorized hour.
+Exact next action: Refresh the queued derived PDF(A33) from an exact committed source, visually verify/save it; retain source conflict in current status.
 
 Existing approved rules and explicit supersessions remain controlling. No source estimate silently certified, no unrelated retirement/task/Coffer/policy approval inferred. Active owner wb-hour-a84 under recorded lease; publish and verify before starting next bounded deliverable. Previous “next” paragraphs are historical where superseded. Owning commit requires final remote head/tree/main verification.
 
