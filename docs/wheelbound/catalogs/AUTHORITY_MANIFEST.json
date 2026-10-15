@@ -1,5 +1,5 @@
 {
-  "version": "authority-v13-a85-2026-10-15",
+  "version": "authority-v14-a86-2026-10-15",
   "scope": "Documentation metadata only; does not enable gameplay",
   "decision_register": "../DECISIONS.md",
   "catalogs": [
@@ -268,6 +268,21 @@
         "Other source composition/active personal recipient/current-client trace",
         "Reviewed rank/individual-expansion product prices",
         "No paid product or runtime adapter activated"
+      ]
+    },
+    {
+      "path": "catalogs/challenge_greater_superior_v2_draft.json",
+      "version": "greater-superior-expansion-v2-draft-a86",
+      "sha256": "d8e9c93669aa22c67d141d0afc70b0d31ca2f99ae527989c6274d1903a4172c1",
+      "entry_count": 8,
+      "authority": "WB-D154_BOUNDED_GREATER_SUPERIOR_DESIGN_CONTENT",
+      "runtime_enabled": false,
+      "h3_pinned_input": false,
+      "enable_gates": [
+        "Actual owned target/rank, legal game access and required supplies",
+        "Current-client source/composition/personal earning-time/recipient trace",
+        "Reviewed rank and expansion product prices",
+        "No general historic monolithic-card migration activated"
       ]
     }
   ],

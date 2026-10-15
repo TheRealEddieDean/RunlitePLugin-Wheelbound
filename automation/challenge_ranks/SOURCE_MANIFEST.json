@@ -8,7 +8,7 @@
     },
     {
       "path": "docs/wheelbound/DECISIONS.md",
-      "sha256": "67a956cda0ff77a7c58bd86e2d5b788c967884398a2d8667f794f64dec0c186b"
+      "sha256": "dbdbab6aa97a8ecf396ce1c2d4d02c99666f1d5d99fe167ad771afc30e5326df"
     },
     {
       "path": "docs/wheelbound/catalogs/challenge_rank_contract_v1.json",
@@ -31,5 +31,5 @@
       "sha256": "9aaa34ac90893cc2ec188f7f3de8157042277ebfbd7bcfde84595a33e4c28ca7"
     }
   ],
-  "update_reason": "A85 WB-D153 Standard draft content; core rank/control oracle unchanged"
+  "update_reason": "A86 WB-D154 bounded Greater/Superior content; rank/control rules unchanged"
 }

@@ -1,0 +1,1550 @@
+{
+  "version": "greater-superior-source-a86-v1",
+  "receipts": [
+    {
+      "hunt_id": "WB-CH2-commander-zilyana-11785",
+      "legacy_source_row_contexts": [
+        {
+          "row_zero_based": 4,
+          "raw_record": {
+            "section": "Drops / Uniques",
+            "item_name": "Armadyl crossbow",
+            "item_links": [
+              {
+                "text": "Armadyl crossbow",
+                "href": "https://oldschool.runescape.wiki/w/Armadyl_crossbow"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/508 [ 3 ]",
+              "expression": "1/508",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 508
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 3 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Armadyl crossbow",
+                "1",
+                "1/508 [ 3 ]",
+                "33,543,572",
+                "594,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "capture_evidence": {
+        "source_url": "https://oldschool.runescape.wiki/w/Commander_Zilyana",
+        "item": "Armadyl crossbow",
+        "capture": {
+          "origin": "network_html",
+          "requested_url": "https://oldschool.runescape.wiki/w/Commander_Zilyana",
+          "fetched_at": "2026-10-14T15:11:29.101049+00:00",
+          "sha256": "81035d9a1cf73f7afa71ba5928ee738174045d162bb1cfb2848622cc56e9c0a9",
+          "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+          "cache_file": "tools\\wiki_drops\\output\\html\\39d5827338e927efcceca31a9efc2005e6f4a1b5284d54d5fec130121349e769.html",
+          "resolved_url": "https://oldschool.runescape.wiki/w/Commander_Zilyana",
+          "etag": null,
+          "last_modified": "Wed, 14 Oct 2026 13:18:14 GMT",
+          "fixture": false
+        },
+        "normalized_source_sha256": "81035d9a1cf73f7afa71ba5928ee738174045d162bb1cfb2848622cc56e9c0a9",
+        "raw_file_sha256": "a389e52f443fa608dad248403110288ada578a25877ec6b3ed544f09b0dffa0e",
+        "reported_npc_ids": [
+          2205
+        ],
+        "source_context": [
+          "Commander Zilyana is the appointed leader of Saradomin 's forces in the God Wars Dungeon and one of only three known still living representatives of the Icyene race, one being the half-human half-Icyene Safalaan and the other being a full-blooded Icyene encountered during the quest The Blood Moon Rises .",
+          "To gain access to her chamber within the Saradomin Encampment , players must use an ecumenical key or have killed 40 [ 1 ] of Saradomin's followers throughout the dungeon. Furthermore, in addition to an Agility level of 70 (cannot be boosted) , players must bring two ropes on their first visit in order to navigate obstacles in the encampment. Note, if this is your first time entering the God Wars Dungeon, you will need a total of three ropes.",
+          "Like other God Wars Dungeon bosses, Zilyana roams around a rectangular room with her bodyguards until a player enters, attacking them on sight. While she has a significantly lower max hit than the other generals, she makes up for it with extremely fast and accurate attacks, and her bodyguards use a different combat style each. She will only use her magic attacks at melee distance, which has a minimum hit of 10 should it successfully hit the player [ 2 ] . If all players leave, her health and stats will be reset.",
+          "The following money making guide is available for Commander Zilyana:",
+          "Drop rates are estimated based on 23,068 samples from the Drop Rate Project , unless otherwise cited.",
+          "The chance to get any unique is 1/53. The chance to get any unique, excluding the Godsword shards, is 1/66.",
+          "There is an 8/127 chance of rolling the God Wars Dungeon-variant rare drop table and a 2/127 chance of rolling the God Wars Dungeon-variant gem drop table . [ 7 ] This table differs from the regular rare drop table and gem drop table in a few ways. This table is unaffected by the ring of wealth . [ 8 ] The runite bar drop is replaced by a rune sword . The quantity range of some items differs. All empty rolls (1/2.70) are replaced by a coin drop of 19,500-20,000; however the chance of rolling these coins is included in the monster's main drop table and is not displayed here for the sake of clarity.",
+          "Commander Zilyana has 8 collection log items.",
+          "There are 7 Combat Achievement tasks (totalling 31 points) available for Commander Zilyana.",
+          "Commander Zilyana's heavy Ranged defence has been lowered from 100 to 75.",
+          "Ironmen now have their own shared instance for each God Wars Dungeon general. The \"Peek\" option on doors will now tell players how many players are in the ironman instance. There is an ancient brazier that was added on the same wall as the final rope. If it is lit it shows there is someone in the Ironman instance.",
+          "Added a 'peek' option to the entrance of this boss, allowing players to see the number of other players currently in the boss room.",
+          "Players can now receive a pet version of this boss after defeating it.",
+          "Commander Zilyana is now more vulnerable to the freezing effects of ice spells and the Zamorak godsword.",
+          "6m ago - Crabby",
+          "6m ago - Crabby",
+          "7m ago - Crabby",
+          "10m ago - Crabby"
+        ],
+        "access_infobox": [
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "None"
+          },
+          {
+            "field": "Slayer XP",
+            "value": "350 xp"
+          },
+          {
+            "field": "Monster ID",
+            "value": "2205"
+          }
+        ],
+        "raw_drop_rows": [
+          {
+            "row_zero_based": 4,
+            "record": {
+              "section": "Drops / Uniques",
+              "item_name": "Armadyl crossbow",
+              "item_links": [
+                {
+                  "text": "Armadyl crossbow",
+                  "href": "https://oldschool.runescape.wiki/w/Armadyl_crossbow"
+                }
+              ],
+              "quantity_raw": "1",
+              "rarity": {
+                "raw": "1/508 [ 3 ]",
+                "expression": "1/508",
+                "kind": "fraction",
+                "exact_probability": {
+                  "numerator": 1,
+                  "denominator": 508
+                },
+                "needs_context_review": true,
+                "approximate": false
+              },
+              "annotations": [
+                "[ 3 ]"
+              ],
+              "raw_row": {
+                "cells": [
+                  "",
+                  "Armadyl crossbow",
+                  "1",
+                  "1/508 [ 3 ]",
+                  "33,543,572",
+                  "594,000"
+                ],
+                "table_headers": [
+                  "",
+                  "item",
+                  "quantity",
+                  "rarity",
+                  "price",
+                  "high alch"
+                ]
+              },
+              "layout_supported": true,
+              "canonical_item_ids": [],
+              "runtime_enabled": false,
+              "review_status": "UNREVIEWED"
+            }
+          }
+        ],
+        "html_drop_rows": [
+          {
+            "row_text": "Armadyl crossbow 1 1/508 [ 3 ] 33,543,572 594,000",
+            "reported_item_id": null,
+            "note_fragment_ids": [
+              "cite_note-sara-4"
+            ],
+            "referenced_notes": [
+              {
+                "id": "cite_note-sara-4",
+                "text": "^ 3.0 3.1 3.2 3.3 Jagex. Mod Kieren's Twitter account . 23 August 2017. Archived from the original on 26 March 2019. Mod Kieren: \"Here are some numbers! Hilt=1/508, Light=1/254, Sword=1/127, ACB=1/508\""
+              }
+            ]
+          }
+        ],
+        "html_identity_rows": [
+          {
+            "item_id": 11785,
+            "row_text": "Armadyl crossbow Commander Zilyana 6.8%"
+          }
+        ],
+        "page_estimate_statements": [
+          "Drop rates are estimated based on 23,068 samples from the Drop Rate Project , unless otherwise cited."
+        ],
+        "runtime_enabled": false
+      },
+      "semantic_review": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+      "source_conflicts_held": false
+    },
+    {
+      "hunt_id": "WB-CH2-commander-zilyana-11814",
+      "legacy_source_row_contexts": [
+        {
+          "row_zero_based": 5,
+          "raw_record": {
+            "section": "Drops / Uniques",
+            "item_name": "Saradomin hilt",
+            "item_links": [
+              {
+                "text": "Saradomin hilt",
+                "href": "https://oldschool.runescape.wiki/w/Saradomin_hilt"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/508 [ 3 ]",
+              "expression": "1/508",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 508
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 3 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Saradomin hilt",
+                "1",
+                "1/508 [ 3 ]",
+                "23,749,090",
+                "300,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "capture_evidence": {
+        "source_url": "https://oldschool.runescape.wiki/w/Commander_Zilyana",
+        "item": "Saradomin hilt",
+        "capture": {
+          "origin": "network_html",
+          "requested_url": "https://oldschool.runescape.wiki/w/Commander_Zilyana",
+          "fetched_at": "2026-10-14T15:11:29.101049+00:00",
+          "sha256": "81035d9a1cf73f7afa71ba5928ee738174045d162bb1cfb2848622cc56e9c0a9",
+          "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+          "cache_file": "tools\\wiki_drops\\output\\html\\39d5827338e927efcceca31a9efc2005e6f4a1b5284d54d5fec130121349e769.html",
+          "resolved_url": "https://oldschool.runescape.wiki/w/Commander_Zilyana",
+          "etag": null,
+          "last_modified": "Wed, 14 Oct 2026 13:18:14 GMT",
+          "fixture": false
+        },
+        "normalized_source_sha256": "81035d9a1cf73f7afa71ba5928ee738174045d162bb1cfb2848622cc56e9c0a9",
+        "raw_file_sha256": "a389e52f443fa608dad248403110288ada578a25877ec6b3ed544f09b0dffa0e",
+        "reported_npc_ids": [
+          2205
+        ],
+        "source_context": [
+          "Commander Zilyana is the appointed leader of Saradomin 's forces in the God Wars Dungeon and one of only three known still living representatives of the Icyene race, one being the half-human half-Icyene Safalaan and the other being a full-blooded Icyene encountered during the quest The Blood Moon Rises .",
+          "To gain access to her chamber within the Saradomin Encampment , players must use an ecumenical key or have killed 40 [ 1 ] of Saradomin's followers throughout the dungeon. Furthermore, in addition to an Agility level of 70 (cannot be boosted) , players must bring two ropes on their first visit in order to navigate obstacles in the encampment. Note, if this is your first time entering the God Wars Dungeon, you will need a total of three ropes.",
+          "Like other God Wars Dungeon bosses, Zilyana roams around a rectangular room with her bodyguards until a player enters, attacking them on sight. While she has a significantly lower max hit than the other generals, she makes up for it with extremely fast and accurate attacks, and her bodyguards use a different combat style each. She will only use her magic attacks at melee distance, which has a minimum hit of 10 should it successfully hit the player [ 2 ] . If all players leave, her health and stats will be reset.",
+          "The following money making guide is available for Commander Zilyana:",
+          "Drop rates are estimated based on 23,068 samples from the Drop Rate Project , unless otherwise cited.",
+          "The chance to get any unique is 1/53. The chance to get any unique, excluding the Godsword shards, is 1/66.",
+          "There is an 8/127 chance of rolling the God Wars Dungeon-variant rare drop table and a 2/127 chance of rolling the God Wars Dungeon-variant gem drop table . [ 7 ] This table differs from the regular rare drop table and gem drop table in a few ways. This table is unaffected by the ring of wealth . [ 8 ] The runite bar drop is replaced by a rune sword . The quantity range of some items differs. All empty rolls (1/2.70) are replaced by a coin drop of 19,500-20,000; however the chance of rolling these coins is included in the monster's main drop table and is not displayed here for the sake of clarity.",
+          "Commander Zilyana has 8 collection log items.",
+          "There are 7 Combat Achievement tasks (totalling 31 points) available for Commander Zilyana.",
+          "Commander Zilyana's heavy Ranged defence has been lowered from 100 to 75.",
+          "Ironmen now have their own shared instance for each God Wars Dungeon general. The \"Peek\" option on doors will now tell players how many players are in the ironman instance. There is an ancient brazier that was added on the same wall as the final rope. If it is lit it shows there is someone in the Ironman instance.",
+          "Added a 'peek' option to the entrance of this boss, allowing players to see the number of other players currently in the boss room.",
+          "Players can now receive a pet version of this boss after defeating it.",
+          "Commander Zilyana is now more vulnerable to the freezing effects of ice spells and the Zamorak godsword.",
+          "6m ago - Crabby",
+          "6m ago - Crabby",
+          "7m ago - Crabby",
+          "10m ago - Crabby"
+        ],
+        "access_infobox": [
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "None"
+          },
+          {
+            "field": "Slayer XP",
+            "value": "350 xp"
+          },
+          {
+            "field": "Monster ID",
+            "value": "2205"
+          }
+        ],
+        "raw_drop_rows": [
+          {
+            "row_zero_based": 5,
+            "record": {
+              "section": "Drops / Uniques",
+              "item_name": "Saradomin hilt",
+              "item_links": [
+                {
+                  "text": "Saradomin hilt",
+                  "href": "https://oldschool.runescape.wiki/w/Saradomin_hilt"
+                }
+              ],
+              "quantity_raw": "1",
+              "rarity": {
+                "raw": "1/508 [ 3 ]",
+                "expression": "1/508",
+                "kind": "fraction",
+                "exact_probability": {
+                  "numerator": 1,
+                  "denominator": 508
+                },
+                "needs_context_review": true,
+                "approximate": false
+              },
+              "annotations": [
+                "[ 3 ]"
+              ],
+              "raw_row": {
+                "cells": [
+                  "",
+                  "Saradomin hilt",
+                  "1",
+                  "1/508 [ 3 ]",
+                  "23,749,090",
+                  "300,000"
+                ],
+                "table_headers": [
+                  "",
+                  "item",
+                  "quantity",
+                  "rarity",
+                  "price",
+                  "high alch"
+                ]
+              },
+              "layout_supported": true,
+              "canonical_item_ids": [],
+              "runtime_enabled": false,
+              "review_status": "UNREVIEWED"
+            }
+          }
+        ],
+        "html_drop_rows": [
+          {
+            "row_text": "Saradomin hilt 1 1/508 [ 3 ] 23,749,090 300,000",
+            "reported_item_id": null,
+            "note_fragment_ids": [
+              "cite_note-sara-4"
+            ],
+            "referenced_notes": [
+              {
+                "id": "cite_note-sara-4",
+                "text": "^ 3.0 3.1 3.2 3.3 Jagex. Mod Kieren's Twitter account . 23 August 2017. Archived from the original on 26 March 2019. Mod Kieren: \"Here are some numbers! Hilt=1/508, Light=1/254, Sword=1/127, ACB=1/508\""
+              }
+            ]
+          }
+        ],
+        "html_identity_rows": [
+          {
+            "item_id": 11814,
+            "row_text": "Saradomin hilt Commander Zilyana 6.4%"
+          }
+        ],
+        "page_estimate_statements": [
+          "Drop rates are estimated based on 23,068 samples from the Drop Rate Project , unless otherwise cited."
+        ],
+        "runtime_enabled": false
+      },
+      "semantic_review": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+      "source_conflicts_held": false
+    },
+    {
+      "hunt_id": "WB-CH2-kril-tsutsaroth-11791",
+      "legacy_source_row_contexts": [
+        {
+          "row_zero_based": 4,
+          "raw_record": {
+            "section": "Drops / Uniques",
+            "item_name": "Staff of the Dead",
+            "item_links": [
+              {
+                "text": "Staff of the Dead",
+                "href": "https://oldschool.runescape.wiki/w/Staff_of_the_Dead"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/508 [ 8 ]",
+              "expression": "1/508",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 508
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 8 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Staff of the Dead",
+                "1",
+                "1/508 [ 8 ]",
+                "6,279,421",
+                "600,003"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "capture_evidence": {
+        "source_url": "https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth",
+        "item": "Staff of the Dead",
+        "capture": {
+          "origin": "network_html",
+          "requested_url": "https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth",
+          "fetched_at": "2026-10-14T15:13:13.131334+00:00",
+          "sha256": "a4a7383d81bbf1ac3483c91beead83995958c9cae283c4bc46e8f58ad0996dec",
+          "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+          "cache_file": "tools\\wiki_drops\\output\\html\\befe6c5159efe24b605b4d923b3b7625ef6d74e6473f136af8b4549bb980dc70.html",
+          "resolved_url": "https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth",
+          "etag": null,
+          "last_modified": "Wed, 14 Oct 2026 13:18:12 GMT",
+          "fixture": false
+        },
+        "normalized_source_sha256": "a4a7383d81bbf1ac3483c91beead83995958c9cae283c4bc46e8f58ad0996dec",
+        "raw_file_sha256": "592cc42f87bdcc7fba4e822ba7544cf9d0bda25205b243ac79da84f61b677d21",
+        "reported_npc_ids": [
+          3129
+        ],
+        "source_context": [
+          "K'ril Tsutsaroth (pronounced / \u02cc k r \u026a l \u02c8 t \u028c d z i\u02d0 r \u0252 \u03b8 / KRILL TUTT -zee-roth [ 1 ] ) is the leader of Zamorak 's forces in the God Wars Dungeon .",
+          "He is located in Zamorak's Fortress , which requires 70 Hitpoints to cross the river to access. To gain access to his chamber, players must use an ecumenical key or have slain 40 [ 2 ] Zamorakians throughout the dungeon.",
+          "He is typically killed on a Slayer task - K'ril Tsutsaroth is classified as a greater demon , and thus killing him counts towards any greater demon Slayer task and allows a player to take advantage of the damage boosting effects of a Black mask or Slayer helmet . As a demon, he is also susceptible to demonbane weapons and spells .",
+          "Like other God Wars Dungeon bosses, K'ril roams around a rectangular room with his bodyguards until a player enters, attacking them on sight. He attacks with melee and magic, and if his target is praying Protect from Melee , he can use a devastating melee special attack that hits through prayer. The melee attack has a maximum hit of 46, the magic attack hits from 10-30 [ 3 ] and the special attack hits from 35-49 [ 4 ] , as well as draining half of the player's current prayer points, rounded down. The relative occurrences of the attacks are 2/3 for melee and 1/3 for magic. Barring a complex mechanic, K'ril will use his special on 1 in every 9 hits instead of a melee attack, which gives it an incidence of 2/27 in total. [ 5 ] If all players leave, his health and stats will be reset.",
+          "The following money making guide is available for K'ril Tsutsaroth:",
+          "Drop rates are estimated based on 15,111 samples from the Drop Rate Project , unless otherwise cited.",
+          "The chance to get any unique is 3/127 (about 1/42). The chance to get any unique, excluding the Godsword shards, is 5/254 (about 1/51).",
+          "There is an 8/127 chance of rolling the God Wars Dungeon-variant rare drop table and a 2/127 chance of rolling the God Wars Dungeon-variant gem drop table . [ 10 ] This table differs from the regular rare drop table and gem drop table in a few ways. This table is unaffected by the ring of wealth . [ 11 ] The runite bar drop is replaced by a rune sword . The quantity range of some items differs. All empty rolls (1/2.70) are replaced by a coin drop of 19,500-20,000; however the chance of rolling these coins is included in the monster's main drop table and is not displayed here for the sake of clarity.",
+          "K'ril Tsutsaroth has 8 collection log items.",
+          "There are 9 Combat Achievement tasks (totalling 36 points) available for K'ril Tsutsaroth.",
+          "K'ril Tsutsaroth's stab defence has been decreased from 80 to 70.",
+          "K'ril Tsutsaroth's Magic defence has been reduced from +130 to +80.",
+          "K'ril Tsutsaroth now has a 30% weakness to water spells .",
+          "K'ril Tsutsaroth now drops infernal ashes in place of regular ashes.",
+          "Ironmen now have their own shared instance for each God Wars Dungeon general. The \"Peek\" option on doors will now tell players how many players are in the ironman instance. Ironmen can also observe the brazier outside the room to check if the shared ironman instance is empty. If the brazier is lit the instance is in use.",
+          "Added a 'peek' option to the entrance of this boss, allowing players to see the number of other players currently in the boss room.",
+          "Players can now receive a pet version of this boss after defeating it.",
+          "8m ago - Crabby",
+          "8m ago - Crabby",
+          "8m ago - Crabby",
+          "12m ago - Crabby"
+        ],
+        "access_infobox": [
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "None"
+          },
+          {
+            "field": "Slayer XP",
+            "value": "350.5 xp"
+          },
+          {
+            "field": "Monster ID",
+            "value": "3129"
+          }
+        ],
+        "raw_drop_rows": [
+          {
+            "row_zero_based": 4,
+            "record": {
+              "section": "Drops / Uniques",
+              "item_name": "Staff of the Dead",
+              "item_links": [
+                {
+                  "text": "Staff of the Dead",
+                  "href": "https://oldschool.runescape.wiki/w/Staff_of_the_Dead"
+                }
+              ],
+              "quantity_raw": "1",
+              "rarity": {
+                "raw": "1/508 [ 8 ]",
+                "expression": "1/508",
+                "kind": "fraction",
+                "exact_probability": {
+                  "numerator": 1,
+                  "denominator": 508
+                },
+                "needs_context_review": true,
+                "approximate": false
+              },
+              "annotations": [
+                "[ 8 ]"
+              ],
+              "raw_row": {
+                "cells": [
+                  "",
+                  "Staff of the Dead",
+                  "1",
+                  "1/508 [ 8 ]",
+                  "6,279,421",
+                  "600,003"
+                ],
+                "table_headers": [
+                  "",
+                  "item",
+                  "quantity",
+                  "rarity",
+                  "price",
+                  "high alch"
+                ]
+              },
+              "layout_supported": true,
+              "canonical_item_ids": [],
+              "runtime_enabled": false,
+              "review_status": "UNREVIEWED"
+            }
+          }
+        ],
+        "html_drop_rows": [
+          {
+            "row_text": "Staff of the Dead 1 1/508 [ 8 ] 6,279,421 600,003",
+            "reported_item_id": null,
+            "note_fragment_ids": [
+              "cite_note-sotd-9"
+            ],
+            "referenced_notes": [
+              {
+                "id": "cite_note-sotd-9",
+                "text": "^ 8.0 8.1 Jagex. Mod Ash's Twitter account . 17 March 2016. Archived from the original on 29 March 2019. Mod Ash: \"[does that mean SOTD/all other hilts are also 1/508?] Yeah, we kept them consistent.\""
+              }
+            ]
+          }
+        ],
+        "html_identity_rows": [
+          {
+            "item_id": 11791,
+            "row_text": "Staff of the Dead K'ril Tsutsaroth 5.7%"
+          }
+        ],
+        "page_estimate_statements": [
+          "Drop rates are estimated based on 15,111 samples from the Drop Rate Project , unless otherwise cited."
+        ],
+        "runtime_enabled": false
+      },
+      "semantic_review": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+      "source_conflicts_held": false
+    },
+    {
+      "hunt_id": "WB-CH2-kril-tsutsaroth-11816",
+      "legacy_source_row_contexts": [
+        {
+          "row_zero_based": 5,
+          "raw_record": {
+            "section": "Drops / Uniques",
+            "item_name": "Zamorak hilt",
+            "item_links": [
+              {
+                "text": "Zamorak hilt",
+                "href": "https://oldschool.runescape.wiki/w/Zamorak_hilt"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/508 [ 8 ]",
+              "expression": "1/508",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 508
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 8 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Zamorak hilt",
+                "1",
+                "1/508 [ 8 ]",
+                "18,394,876",
+                "300,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "capture_evidence": {
+        "source_url": "https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth",
+        "item": "Zamorak hilt",
+        "capture": {
+          "origin": "network_html",
+          "requested_url": "https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth",
+          "fetched_at": "2026-10-14T15:13:13.131334+00:00",
+          "sha256": "a4a7383d81bbf1ac3483c91beead83995958c9cae283c4bc46e8f58ad0996dec",
+          "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+          "cache_file": "tools\\wiki_drops\\output\\html\\befe6c5159efe24b605b4d923b3b7625ef6d74e6473f136af8b4549bb980dc70.html",
+          "resolved_url": "https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth",
+          "etag": null,
+          "last_modified": "Wed, 14 Oct 2026 13:18:12 GMT",
+          "fixture": false
+        },
+        "normalized_source_sha256": "a4a7383d81bbf1ac3483c91beead83995958c9cae283c4bc46e8f58ad0996dec",
+        "raw_file_sha256": "592cc42f87bdcc7fba4e822ba7544cf9d0bda25205b243ac79da84f61b677d21",
+        "reported_npc_ids": [
+          3129
+        ],
+        "source_context": [
+          "K'ril Tsutsaroth (pronounced / \u02cc k r \u026a l \u02c8 t \u028c d z i\u02d0 r \u0252 \u03b8 / KRILL TUTT -zee-roth [ 1 ] ) is the leader of Zamorak 's forces in the God Wars Dungeon .",
+          "He is located in Zamorak's Fortress , which requires 70 Hitpoints to cross the river to access. To gain access to his chamber, players must use an ecumenical key or have slain 40 [ 2 ] Zamorakians throughout the dungeon.",
+          "He is typically killed on a Slayer task - K'ril Tsutsaroth is classified as a greater demon , and thus killing him counts towards any greater demon Slayer task and allows a player to take advantage of the damage boosting effects of a Black mask or Slayer helmet . As a demon, he is also susceptible to demonbane weapons and spells .",
+          "Like other God Wars Dungeon bosses, K'ril roams around a rectangular room with his bodyguards until a player enters, attacking them on sight. He attacks with melee and magic, and if his target is praying Protect from Melee , he can use a devastating melee special attack that hits through prayer. The melee attack has a maximum hit of 46, the magic attack hits from 10-30 [ 3 ] and the special attack hits from 35-49 [ 4 ] , as well as draining half of the player's current prayer points, rounded down. The relative occurrences of the attacks are 2/3 for melee and 1/3 for magic. Barring a complex mechanic, K'ril will use his special on 1 in every 9 hits instead of a melee attack, which gives it an incidence of 2/27 in total. [ 5 ] If all players leave, his health and stats will be reset.",
+          "The following money making guide is available for K'ril Tsutsaroth:",
+          "Drop rates are estimated based on 15,111 samples from the Drop Rate Project , unless otherwise cited.",
+          "The chance to get any unique is 3/127 (about 1/42). The chance to get any unique, excluding the Godsword shards, is 5/254 (about 1/51).",
+          "There is an 8/127 chance of rolling the God Wars Dungeon-variant rare drop table and a 2/127 chance of rolling the God Wars Dungeon-variant gem drop table . [ 10 ] This table differs from the regular rare drop table and gem drop table in a few ways. This table is unaffected by the ring of wealth . [ 11 ] The runite bar drop is replaced by a rune sword . The quantity range of some items differs. All empty rolls (1/2.70) are replaced by a coin drop of 19,500-20,000; however the chance of rolling these coins is included in the monster's main drop table and is not displayed here for the sake of clarity.",
+          "K'ril Tsutsaroth has 8 collection log items.",
+          "There are 9 Combat Achievement tasks (totalling 36 points) available for K'ril Tsutsaroth.",
+          "K'ril Tsutsaroth's stab defence has been decreased from 80 to 70.",
+          "K'ril Tsutsaroth's Magic defence has been reduced from +130 to +80.",
+          "K'ril Tsutsaroth now has a 30% weakness to water spells .",
+          "K'ril Tsutsaroth now drops infernal ashes in place of regular ashes.",
+          "Ironmen now have their own shared instance for each God Wars Dungeon general. The \"Peek\" option on doors will now tell players how many players are in the ironman instance. Ironmen can also observe the brazier outside the room to check if the shared ironman instance is empty. If the brazier is lit the instance is in use.",
+          "Added a 'peek' option to the entrance of this boss, allowing players to see the number of other players currently in the boss room.",
+          "Players can now receive a pet version of this boss after defeating it.",
+          "8m ago - Crabby",
+          "8m ago - Crabby",
+          "8m ago - Crabby",
+          "12m ago - Crabby"
+        ],
+        "access_infobox": [
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "None"
+          },
+          {
+            "field": "Slayer XP",
+            "value": "350.5 xp"
+          },
+          {
+            "field": "Monster ID",
+            "value": "3129"
+          }
+        ],
+        "raw_drop_rows": [
+          {
+            "row_zero_based": 5,
+            "record": {
+              "section": "Drops / Uniques",
+              "item_name": "Zamorak hilt",
+              "item_links": [
+                {
+                  "text": "Zamorak hilt",
+                  "href": "https://oldschool.runescape.wiki/w/Zamorak_hilt"
+                }
+              ],
+              "quantity_raw": "1",
+              "rarity": {
+                "raw": "1/508 [ 8 ]",
+                "expression": "1/508",
+                "kind": "fraction",
+                "exact_probability": {
+                  "numerator": 1,
+                  "denominator": 508
+                },
+                "needs_context_review": true,
+                "approximate": false
+              },
+              "annotations": [
+                "[ 8 ]"
+              ],
+              "raw_row": {
+                "cells": [
+                  "",
+                  "Zamorak hilt",
+                  "1",
+                  "1/508 [ 8 ]",
+                  "18,394,876",
+                  "300,000"
+                ],
+                "table_headers": [
+                  "",
+                  "item",
+                  "quantity",
+                  "rarity",
+                  "price",
+                  "high alch"
+                ]
+              },
+              "layout_supported": true,
+              "canonical_item_ids": [],
+              "runtime_enabled": false,
+              "review_status": "UNREVIEWED"
+            }
+          }
+        ],
+        "html_drop_rows": [
+          {
+            "row_text": "Zamorak hilt 1 1/508 [ 8 ] 18,394,876 300,000",
+            "reported_item_id": null,
+            "note_fragment_ids": [
+              "cite_note-sotd-9"
+            ],
+            "referenced_notes": [
+              {
+                "id": "cite_note-sotd-9",
+                "text": "^ 8.0 8.1 Jagex. Mod Ash's Twitter account . 17 March 2016. Archived from the original on 29 March 2019. Mod Ash: \"[does that mean SOTD/all other hilts are also 1/508?] Yeah, we kept them consistent.\""
+              }
+            ]
+          }
+        ],
+        "html_identity_rows": [
+          {
+            "item_id": 11816,
+            "row_text": "Zamorak hilt K'ril Tsutsaroth 6.1%"
+          }
+        ],
+        "page_estimate_statements": [
+          "Drop rates are estimated based on 15,111 samples from the Drop Rate Project , unless otherwise cited."
+        ],
+        "runtime_enabled": false
+      },
+      "semantic_review": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+      "source_conflicts_held": false
+    },
+    {
+      "hunt_id": "WB-CH2-kurask-20727",
+      "legacy_source_row_contexts": [
+        {
+          "row_zero_based": 7,
+          "raw_record": {
+            "section": "Drops / Weapons and armour",
+            "item_name": "Leaf-bladed battleaxe",
+            "item_links": [
+              {
+                "text": "Leaf-bladed battleaxe",
+                "href": "https://oldschool.runescape.wiki/w/Leaf-bladed_battleaxe"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/1,026 [ 3 ]",
+              "expression": "1/1,026",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 1026
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 3 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Leaf-bladed battleaxe",
+                "1",
+                "1/1,026 [ 3 ]",
+                "61,025",
+                "57,600"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "capture_evidence": {
+        "source_url": "https://oldschool.runescape.wiki/w/Kurask",
+        "item": "Leaf-bladed battleaxe",
+        "capture": {
+          "origin": "network_html",
+          "requested_url": "https://oldschool.runescape.wiki/w/Kurask",
+          "fetched_at": "2026-10-14T15:29:16.040868+00:00",
+          "sha256": "4c8d12fefd8f879659dbcc9ec483ad82c6b3e808a1692721e0867d6a53032c89",
+          "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+          "cache_file": "tools\\wiki_drops\\output\\html\\12879aaaf4c2fe8bae629f5b6bd01fa3e1ba91595d7cc2a8b7984c97362ff895.html",
+          "resolved_url": "https://oldschool.runescape.wiki/w/Kurask",
+          "etag": null,
+          "last_modified": "Wed, 14 Oct 2026 15:26:30 GMT",
+          "fixture": false
+        },
+        "normalized_source_sha256": "4c8d12fefd8f879659dbcc9ec483ad82c6b3e808a1692721e0867d6a53032c89",
+        "raw_file_sha256": "dd63b97102799bbfefd5c7075d218f1c319b548c1276f4b177c19893a9454ee5",
+        "reported_npc_ids": [
+          410
+        ],
+        "source_context": [
+          "Kurask are Slayer monsters that require a Slayer level of 70 to kill. Like turoth , they can only be damaged with leaf-bladed weapons , broad ammunition , or the Magic Dart spell due to their tough hides; [ 1 ] they are immune to any other types of attacks. They are, however, susceptible to burn damage from weapons such as burning claws .",
+          "Kurask are relatively inaccurate, but they can hit somewhat high if their attacks manage to land. Additionally, they have fast health regeneration, healing one hitpoint every five game ticks . Due to their relative inaccuracy, they can be fought without protection prayers by using Bones to Peaches for healing, though players may wish to activate Protect from Melee if the superior version , the king kurask , spawns.",
+          "Although kurask are invulnerable to any damage from the special attacks of Saradomin godsword , ancient godsword , and toxic blowpipe , their healing effects will still activate as if damage had been dealt, making them useful as special attack weapons during extended trips. Likewise, the special attacks of ancient mace and eldritch Nightmare staff will restore prayer points based on what damage would have been dealt. The set effect of Guthan's equipment will not activate against kurask, however.",
+          "Kurask have a relatively small aggressive range of 2, with the centre at their south-west tile. As they are 3x3 monsters, they will only attack you from their north-east side if they walk under your true tile.",
+          "Kurask drop the leaf-bladed sword . They are also known for their light mystic robe top and kurask head drops, as well as being the only monster (including their superior version) to drop the leaf-bladed battleaxe .",
+          "The following money making guide is available for Kurask:",
+          "Drop rates are estimated based on 480,493 samples from the Drop Rate Project , unless otherwise cited.",
+          "The average Kurask kill in Iorwerth Dungeon is worth 7,626.00 due to the additional chance of receiving crystal shards as a tertiary drop. This value for crystal shards assumes that they are made into divine super combat potions . For a Konar task in the Iorwerth Dungeon, the average Kurask kill is worth 8,728.00",
+          "As they drop 3 herbs at a time, it may be worth considering bringing a herb sack to prolong slayer trips.",
+          "There is an 18/124 chance of rolling three times on the herb drop table .",
+          "There is a 15/124 chance of rolling the rare seed drop table , with the exception of limpwurt seeds.",
+          "There is a 6/124 chance of rolling the gem drop table .",
+          "Kurasks have 4 collection log items.",
+          "There is 1 Combat Achievement task (totalling 2 points) available for Kurask.",
+          "Thralls will no longer deal damage to kurasks.",
+          "The amount of crystal shards obtained from slayer monsters in the Iorwerth Dungeon has increased from 1 to 3-5.",
+          "The drop of 10\u201320 limpwurt roots (added in the previous drop table rebalance) was changed to a single limpwurt seed to balance the influx of limpwurt roots coming into the game.",
+          "The drop table was improved to include more valuable drops and increase quantity of existing drops as well as drop some as banknotes.",
+          "The leaf-bladed sword is now dropped by Kurask and Turoth .",
+          "9m ago - Wroometh",
+          "12m ago - Wroometh",
+          "16m ago - AfterDarq",
+          "24m ago - Crabby"
+        ],
+        "access_infobox": [
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "70"
+          },
+          {
+            "field": "Slayer XP",
+            "value": "97 xp"
+          },
+          {
+            "field": "Monster ID",
+            "value": "410"
+          }
+        ],
+        "raw_drop_rows": [
+          {
+            "row_zero_based": 7,
+            "record": {
+              "section": "Drops / Weapons and armour",
+              "item_name": "Leaf-bladed battleaxe",
+              "item_links": [
+                {
+                  "text": "Leaf-bladed battleaxe",
+                  "href": "https://oldschool.runescape.wiki/w/Leaf-bladed_battleaxe"
+                }
+              ],
+              "quantity_raw": "1",
+              "rarity": {
+                "raw": "1/1,026 [ 3 ]",
+                "expression": "1/1,026",
+                "kind": "fraction",
+                "exact_probability": {
+                  "numerator": 1,
+                  "denominator": 1026
+                },
+                "needs_context_review": true,
+                "approximate": false
+              },
+              "annotations": [
+                "[ 3 ]"
+              ],
+              "raw_row": {
+                "cells": [
+                  "",
+                  "Leaf-bladed battleaxe",
+                  "1",
+                  "1/1,026 [ 3 ]",
+                  "61,025",
+                  "57,600"
+                ],
+                "table_headers": [
+                  "",
+                  "item",
+                  "quantity",
+                  "rarity",
+                  "price",
+                  "high alch"
+                ]
+              },
+              "layout_supported": true,
+              "canonical_item_ids": [],
+              "runtime_enabled": false,
+              "review_status": "UNREVIEWED"
+            }
+          }
+        ],
+        "html_drop_rows": [
+          {
+            "row_text": "Leaf-bladed battleaxe 1 1/1,026 [ 3 ] 61,025 57,600",
+            "reported_item_id": null,
+            "note_fragment_ids": [
+              "cite_note-3"
+            ],
+            "referenced_notes": [
+              {
+                "id": "cite_note-3",
+                "text": "^ Jagex. Mod Ash's Twitter account . 24 October 2016. Archived from the original on 15 May 2019. Mod Ash: \"1/1026.\""
+              }
+            ]
+          }
+        ],
+        "html_identity_rows": [
+          {
+            "item_id": 20727,
+            "row_text": "Leaf-bladed battleaxe Slayer 22.9%"
+          }
+        ],
+        "page_estimate_statements": [
+          "Drop rates are estimated based on 480,493 samples from the Drop Rate Project , unless otherwise cited."
+        ],
+        "runtime_enabled": false
+      },
+      "semantic_review": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+      "source_conflicts_held": false
+    },
+    {
+      "hunt_id": "WB-CH2-rune-dragon-21918",
+      "legacy_source_row_contexts": [
+        {
+          "row_zero_based": 55,
+          "raw_record": {
+            "section": "Drops / Tertiary",
+            "item_name": "Dragon limbs",
+            "item_links": [
+              {
+                "text": "Dragon limbs",
+                "href": "https://oldschool.runescape.wiki/w/Dragon_limbs"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/800",
+              "expression": "1/800",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 800
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Dragon limbs",
+                "1",
+                "1/800",
+                "502,419",
+                "21,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "capture_evidence": {
+        "source_url": "https://oldschool.runescape.wiki/w/Rune_dragon",
+        "item": "Dragon limbs",
+        "capture": {
+          "origin": "network_html",
+          "requested_url": "https://oldschool.runescape.wiki/w/Rune_dragon",
+          "fetched_at": "2026-10-14T15:52:03.994972+00:00",
+          "sha256": "2824a2d795621dd271ebcbe4c07bc9a9b0edfac258ef2074e8b3012902f73d51",
+          "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+          "cache_file": "tools\\wiki_drops\\output\\html\\570e6b9e62e70bf02e1828b49ffa469de922a9f3cb5e745e1e5e3c5b1bca9ff7.html",
+          "resolved_url": "https://oldschool.runescape.wiki/w/Rune_dragon",
+          "etag": null,
+          "last_modified": "Wed, 14 Oct 2026 15:28:14 GMT",
+          "fixture": false
+        },
+        "normalized_source_sha256": "2824a2d795621dd271ebcbe4c07bc9a9b0edfac258ef2074e8b3012902f73d51",
+        "raw_file_sha256": "529b5ac75d5a680a74cd78e75433bb7f8578293d7d53a57b1235d47409f369be",
+        "reported_npc_ids": [
+          8031,
+          8091
+        ],
+        "source_context": [
+          "Rune dragons are metal dragons first encountered during Dragon Slayer II , in which the player must fight one during Zorgoth 's assault. After completion of the quest , they can be found in the eastern chamber of the Lithkren Vault .",
+          "To get back to the laboratory underneath Lithkren , players can travel using the rowboat from the quest on the west side of Fossil Island or, after completion, taking a digsite pendant and using it on the strange machine north of the rune dragon room, adding a teleport straight to Lithkren on it.",
+          "Rune dragons are the result of a side project of Zorgoth's after being inspired by another dragonkin , Forcae , which involves infusing dragon eggs with various metals. While Forcae's metal dragons were created to find a solution to the dragonkin's infertility, Zorgoth had bred his metal dragons for his war against humanity .",
+          "At 99 Construction , players can add them to their player-owned house treasure rooms for 25,000,000 coins.",
+          "Rune dragons have multiple attack styles. Like all metallic dragons, they have long-range dragonfire attacks; like mithril and adamant dragons , they have standard melee , ranged , and magic attacks; and they have an additional two special attacks of their own.",
+          "The first attack is two small electric bolts, which are launched around the player's position and hones in on them. This deals 4\u20137 damage per tick for a few seconds. If a player is wearing insulated boots , this damage is reduced to 1\u20132 per tick. Players can avoid the attack entirely by running four to five squares away from their original position when the attack was launched.",
+          "The second attack is a ranged attack that hits up to 40 through Protect from Missiles , and uses the Life Leech effect from enchanted onyx bolts , where the dragon will heal itself for 100% of the damage dealt to the player.",
+          "The following money making guide is available for Rune dragon:",
+          "The following drop rates are provided by Jagex, unless otherwise specified.",
+          "The average rune dragon kill, including its unique drops, is worth 36,407.00 . Without the unique drops, the average kill is worth 35,345.00 .",
+          "There is a 8/127 chance of rolling the useful herb drop table .",
+          "There is a 1/127 chance of rolling the rare drop table .",
+          "Rune dragons have 3 collection log items.",
+          "Rune dragon's heavy Ranged defence has been decreased from 65 to 50.",
+          "Rune dragons no longer have a 1/3 chance of their dragon bones being replaced by superior dragon bones .",
+          "It is now more difficult for aggro to be stolen by another player whilst dealing with the special attack.",
+          "The frequency of special attacks was reduced.",
+          "7m ago - Microbrews",
+          "13m ago - Kelsey",
+          "14m ago - Kelsey",
+          "14m ago - Kelsey"
+        ],
+        "access_infobox": [
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "None"
+          },
+          {
+            "field": "Slayer XP",
+            "value": "363 xp"
+          },
+          {
+            "field": "Monster ID",
+            "value": "8031,8091"
+          }
+        ],
+        "raw_drop_rows": [
+          {
+            "row_zero_based": 55,
+            "record": {
+              "section": "Drops / Tertiary",
+              "item_name": "Dragon limbs",
+              "item_links": [
+                {
+                  "text": "Dragon limbs",
+                  "href": "https://oldschool.runescape.wiki/w/Dragon_limbs"
+                }
+              ],
+              "quantity_raw": "1",
+              "rarity": {
+                "raw": "1/800",
+                "expression": "1/800",
+                "kind": "fraction",
+                "exact_probability": {
+                  "numerator": 1,
+                  "denominator": 800
+                },
+                "needs_context_review": false,
+                "approximate": false
+              },
+              "annotations": [],
+              "raw_row": {
+                "cells": [
+                  "",
+                  "Dragon limbs",
+                  "1",
+                  "1/800",
+                  "502,419",
+                  "21,000"
+                ],
+                "table_headers": [
+                  "",
+                  "item",
+                  "quantity",
+                  "rarity",
+                  "price",
+                  "high alch"
+                ]
+              },
+              "layout_supported": true,
+              "canonical_item_ids": [],
+              "runtime_enabled": false,
+              "review_status": "UNREVIEWED"
+            }
+          }
+        ],
+        "html_drop_rows": [
+          {
+            "row_text": "Dragon limbs 1 1/800 502,419 21,000",
+            "reported_item_id": null,
+            "note_fragment_ids": [],
+            "referenced_notes": []
+          }
+        ],
+        "html_identity_rows": [
+          {
+            "item_id": 21918,
+            "row_text": "Dragon limbs Miscellaneous 4.6%"
+          }
+        ],
+        "page_estimate_statements": [],
+        "runtime_enabled": false
+      },
+      "semantic_review": "CAPTURED_PAGE_JAGEX_PROVIDED_RATE_STATEMENT_NOT_DIRECT_PRIMARY_REFETCH",
+      "source_conflicts_held": false
+    },
+    {
+      "hunt_id": "WB-CH2-spitting-wyvern-21646",
+      "legacy_source_row_contexts": [
+        {
+          "row_zero_based": 7,
+          "raw_record": {
+            "section": "Drops / Weapons and armour",
+            "item_name": "Granite longsword",
+            "item_links": [
+              {
+                "text": "Granite longsword",
+                "href": "https://oldschool.runescape.wiki/w/Granite_longsword"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/512 [ 1 ]",
+              "expression": "1/512",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 512
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 1 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Granite longsword",
+                "1",
+                "1/512 [ 1 ]",
+                "22,391",
+                "19,200"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "capture_evidence": {
+        "source_url": "https://oldschool.runescape.wiki/w/Spitting_Wyvern",
+        "item": "Granite longsword",
+        "capture": {
+          "origin": "network_html",
+          "requested_url": "https://oldschool.runescape.wiki/w/Spitting_Wyvern",
+          "fetched_at": "2026-10-14T15:53:40.109289+00:00",
+          "sha256": "1a47b558fe9a2536fb1033ecda79fa07e8379572136721a3275749302d263457",
+          "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+          "cache_file": "tools\\wiki_drops\\output\\html\\195741a6a01e635ac72f3dfec812bc522179b44e046dd84c3013caaf015fde7e.html",
+          "resolved_url": "https://oldschool.runescape.wiki/w/Spitting_Wyvern",
+          "etag": null,
+          "last_modified": "Wed, 14 Oct 2026 15:28:24 GMT",
+          "fixture": false
+        },
+        "normalized_source_sha256": "1a47b558fe9a2536fb1033ecda79fa07e8379572136721a3275749302d263457",
+        "raw_file_sha256": "9a6c6ffc7f5e5c0d9681e4f3d71e9e83464a8870231e565e9fd4272b6da4b033",
+        "reported_npc_ids": [
+          7794
+        ],
+        "source_context": [
+          "Spitting wyverns are Slayer monsters that require a Slayer level of 66 in order to be harmed. They reside in the Wyvern Cave on Fossil Island and are the weakest of the Fossil Island wyverns . Like with other Wyverns , an elemental , mind , dragonfire ward , dragonfire , or ancient wyvern shield (not including Anti-dragon Shield ) provides significant protection against their icy breath . These monsters require completion of the Bone Voyage quest to be assigned as a Slayer task. Additionally, players can benefit from using dragonbane weapons to deal additional damage per second.",
+          "Unlike their skeletal variant, spitting wyverns can use their icy breath from any distance. They will use Ranged when attacking from a distance, and will not try to use melee unless the target is in melee range. Their Ranged attack is weak; however, it may hit the player multiple times if it is a successful hit .",
+          "The task-only cave entrance is a trapdoor in the Mushroom Forest and the regular cave entrance is south of the Museum Camp . When a player attempts to attack wyverns in the Slayer task area without a Fossil Island wyvern Slayer task , Weve ( Steve 's son) will stop them from doing so.",
+          "Drop rates are estimated based on 95,043 samples from the Drop Rate Project , unless otherwise cited.",
+          "There is a 1/123 chance of rolling the tree-herb seed drop table .",
+          "Spitting Wyverns have 3 collection log items.",
+          "Spitting wyverns now drop herbs unnoted instead of noted.",
+          "Fossil and Ancient Wyverns now drop Volcanic Ash.",
+          "Spitting wyverns now drop a maximum of 12 seaweed spores instead of 6.",
+          "The spitting wyvern's Defence level has been reduced from 120 to 90, changing its combat level from 146 to 139.",
+          "Increased the new wyvern drop tables significantly so they are much more profitable and have also increased the rate at which they drop fossils.",
+          "8m ago - Microbrews",
+          "15m ago - Kelsey",
+          "16m ago - Kelsey",
+          "16m ago - Kelsey"
+        ],
+        "access_infobox": [
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "66"
+          },
+          {
+            "field": "Slayer XP",
+            "value": "205 xp"
+          },
+          {
+            "field": "Monster ID",
+            "value": "7794"
+          }
+        ],
+        "raw_drop_rows": [
+          {
+            "row_zero_based": 7,
+            "record": {
+              "section": "Drops / Weapons and armour",
+              "item_name": "Granite longsword",
+              "item_links": [
+                {
+                  "text": "Granite longsword",
+                  "href": "https://oldschool.runescape.wiki/w/Granite_longsword"
+                }
+              ],
+              "quantity_raw": "1",
+              "rarity": {
+                "raw": "1/512 [ 1 ]",
+                "expression": "1/512",
+                "kind": "fraction",
+                "exact_probability": {
+                  "numerator": 1,
+                  "denominator": 512
+                },
+                "needs_context_review": true,
+                "approximate": false
+              },
+              "annotations": [
+                "[ 1 ]"
+              ],
+              "raw_row": {
+                "cells": [
+                  "",
+                  "Granite longsword",
+                  "1",
+                  "1/512 [ 1 ]",
+                  "22,391",
+                  "19,200"
+                ],
+                "table_headers": [
+                  "",
+                  "item",
+                  "quantity",
+                  "rarity",
+                  "price",
+                  "high alch"
+                ]
+              },
+              "layout_supported": true,
+              "canonical_item_ids": [],
+              "runtime_enabled": false,
+              "review_status": "UNREVIEWED"
+            }
+          }
+        ],
+        "html_drop_rows": [
+          {
+            "row_text": "Granite longsword 1 1/512 [ 1 ] 22,391 19,200",
+            "reported_item_id": null,
+            "note_fragment_ids": [
+              "cite_note-wyvern_uniques2-1"
+            ],
+            "referenced_notes": [
+              {
+                "id": "cite_note-wyvern_uniques2-1",
+                "text": "^ 1.0 1.1 Jagex. Mod Maz's Twitter account . 24 October 2017. Archived from the original on 25 March 2019. Mod Maz: \"Fossil Island info! Granite LS/boots drop rates. From ancient: 1/600 each From normal: LS 1/512 Boots 1/2560\""
+              }
+            ]
+          }
+        ],
+        "html_identity_rows": [
+          {
+            "item_id": 21646,
+            "row_text": "Granite longsword Slayer 11.2%"
+          }
+        ],
+        "page_estimate_statements": [
+          "Drop rates are estimated based on 95,043 samples from the Drop Rate Project , unless otherwise cited."
+        ],
+        "runtime_enabled": false
+      },
+      "semantic_review": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+      "source_conflicts_held": false
+    },
+    {
+      "hunt_id": "WB-CH2-vyrewatch-sentinel-24777",
+      "legacy_source_row_contexts": [
+        {
+          "row_zero_based": 1,
+          "raw_record": {
+            "section": "Drops / Unique",
+            "item_name": "Blood shard",
+            "item_links": [
+              {
+                "text": "Blood shard",
+                "href": "https://oldschool.runescape.wiki/w/Blood_shard"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/1,500 [ 1 ]",
+              "expression": "1/1,500",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 1500
+              },
+              "needs_context_review": true,
+              "approximate": false
+            },
+            "annotations": [
+              "[ 1 ]"
+            ],
+            "raw_row": {
+              "cells": [
+                "",
+                "Blood shard",
+                "1",
+                "1/1,500 [ 1 ]",
+                "9,080,886",
+                "120,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "capture_evidence": {
+        "source_url": "https://oldschool.runescape.wiki/w/Vyrewatch_Sentinel",
+        "item": "Blood shard",
+        "capture": {
+          "origin": "network_html",
+          "requested_url": "https://oldschool.runescape.wiki/w/Vyrewatch_Sentinel",
+          "fetched_at": "2026-10-14T15:37:15.814990+00:00",
+          "sha256": "e8ce22bb223ad47390f432189ea25e0acb6fc097ca14fef7db8dfddb0ec9f568",
+          "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+          "cache_file": "tools\\wiki_drops\\output\\html\\4d34299be0b386a4b7694f5d0a55b41ff3d5b686db25db0e5d20b33ffcf2e7b4.html",
+          "resolved_url": "https://oldschool.runescape.wiki/w/Vyrewatch_Sentinel",
+          "etag": null,
+          "last_modified": "Wed, 14 Oct 2026 15:28:57 GMT",
+          "fixture": false
+        },
+        "normalized_source_sha256": "e8ce22bb223ad47390f432189ea25e0acb6fc097ca14fef7db8dfddb0ec9f568",
+        "raw_file_sha256": "e944ea1c00ce0517235f03227078b4f443b782841054c33e3aad55e5900a0ca6",
+        "reported_npc_ids": [
+          9756
+        ],
+        "source_context": [
+          "Vyrewatch Sentinels are stronger variants of the Vyrewatch , and can be fought after completing the Sins of the Father quest. They can be found prowling the streets of the upper class areas of Darkmeyer , in search of unruly humans to snack on. The Vyrewatch Sentinels are one of the only monsters that drop the blood shard (the other being venators ), although they can also be obtained via pickpocketing the various Vyre citizens throughout the city.",
+          "As with all members of the Vyrewatch, they can only be harmed with the Sunspear, Hallowed flail , Blisterwood sickle , Ivandis flail , Blisterwood flail , or Blisterwood stakes . Despite being invulnerable to any damage from weapons like the Saradomin godsword and ancient mace , special attacks will still heal & restore prayer points as if they had dealt damage. The burning claws and Arkan blade special attacks can also apply burn in a similar fashion.",
+          "The ability to be assigned vampyres can be purchased for 80 Slayer reward points . Once unlocked, they can be disabled, but players must spend another 80 points to unlock them again.",
+          "They can also be killed off task as a low-effort money maker because they can be killed next to an altar and bank.",
+          "Before the completion of the quest The Blood Moon Rises , Vyrewatch Sentinels are not tolerant of the player unless the player is wearing vyre noble clothing . After completion of the quest, sentinels are no longer aggressive even without wearing vyre clothing. Their aggression can be re-enabled by carrying a garlic cocktail , purchasable from the werewolf just south of the Drakan's medallion Darkmeyer teleport.",
+          "The following money making guide is available for Vyrewatch Sentinel:",
+          "Drop rates are estimated based on 270,428 samples from the Drop Rate Project , unless otherwise cited.",
+          "There is a 1/93 chance of rolling the herb drop table .",
+          "There is a 1/93 chance of rolling the uncommon seed drop table .",
+          "There is a 1/93 chance of rolling the rare drop table .",
+          "Vyrewatch Sentinels have a single collection log item.",
+          "The Vyrewatch Sentinel's ranged defences increased from +0 to +100.",
+          "Vyrewatch Sentinels are once again only able to be harmed by the ivandis flail or blisterwood flail .",
+          "A bug allowing Vyrewatch Sentinels to be harmed by other weapons is introduced.",
+          "Vyrewatch Sentinels are no longer cannonable.",
+          "1m ago - Kelsey",
+          "1m ago - Kelsey",
+          "1m ago - Kelsey",
+          "2m ago - Kelsey"
+        ],
+        "access_infobox": [
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "38"
+          },
+          {
+            "field": "Slayer XP",
+            "value": "150 xp"
+          },
+          {
+            "field": "Monster ID",
+            "value": "9756"
+          }
+        ],
+        "raw_drop_rows": [
+          {
+            "row_zero_based": 1,
+            "record": {
+              "section": "Drops / Unique",
+              "item_name": "Blood shard",
+              "item_links": [
+                {
+                  "text": "Blood shard",
+                  "href": "https://oldschool.runescape.wiki/w/Blood_shard"
+                }
+              ],
+              "quantity_raw": "1",
+              "rarity": {
+                "raw": "1/1,500 [ 1 ]",
+                "expression": "1/1,500",
+                "kind": "fraction",
+                "exact_probability": {
+                  "numerator": 1,
+                  "denominator": 1500
+                },
+                "needs_context_review": true,
+                "approximate": false
+              },
+              "annotations": [
+                "[ 1 ]"
+              ],
+              "raw_row": {
+                "cells": [
+                  "",
+                  "Blood shard",
+                  "1",
+                  "1/1,500 [ 1 ]",
+                  "9,080,886",
+                  "120,000"
+                ],
+                "table_headers": [
+                  "",
+                  "item",
+                  "quantity",
+                  "rarity",
+                  "price",
+                  "high alch"
+                ]
+              },
+              "layout_supported": true,
+              "canonical_item_ids": [],
+              "runtime_enabled": false,
+              "review_status": "UNREVIEWED"
+            }
+          }
+        ],
+        "html_drop_rows": [
+          {
+            "row_text": "Blood shard 1 1/1,500 [ 1 ] 9,080,886 120,000",
+            "reported_item_id": null,
+            "note_fragment_ids": [
+              "cite_note-1"
+            ],
+            "referenced_notes": [
+              {
+                "id": "cite_note-1",
+                "text": "^ Jagex. Mod Husky's Twitter account . 26 February 2021. Archived from the original on 26 February 2021. Mod Husky: \"The rates for the blood shard are 1/5k from pickpocketing and 1/1.5k from killing Vyres which I believe is what the wiki already have, seems the crowd sourcing for droprates got it spot on!\""
+              }
+            ]
+          }
+        ],
+        "html_identity_rows": [
+          {
+            "item_id": 24777,
+            "row_text": "Blood shard Slayer 18.6%"
+          }
+        ],
+        "page_estimate_statements": [
+          "Drop rates are estimated based on 270,428 samples from the Drop Rate Project , unless otherwise cited."
+        ],
+        "runtime_enabled": false
+      },
+      "semantic_review": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+      "source_conflicts_held": false
+    }
+  ],
+  "runtime_enabled": false
+}

@@ -44,3 +44,7 @@ Original collector archive is the known output.zip attachment, SHA256e00babd58e0
 ## A85 Standard expansion content
 
 [Standard packet](research/STANDARD_EXPANSION_A85.md) supplies four authored source keys/hunts and175/175/150/175 draft FP. Water family keeps one entitlement/diversity key but initially qualifies Hatchling only; Young is a held variant. Exact quest-stage/current-client proof, actual source ownership/access and reviewed product prices remain gates. No runtime-ready Standard pool claimed.
+
+## A86 Greater/Superior core content
+
+[Bounded G/S packet](research/GREATER_SUPERIOR_CONTEXTS_A86.md) adds six authored source keys/eight specific hunts, with three canonical keys per rank before actual filtering. Together with Lesser and Standard drafts this gives all-four-rank core design coverage, not a full eligible/runtime catalog.36 old hunts and broader483 display evidence remain separate follow-up; a Turoth official/cached rate discrepancy is explicitly held.

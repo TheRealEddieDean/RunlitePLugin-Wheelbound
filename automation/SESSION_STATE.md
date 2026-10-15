@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — hour work block A85 completed in owning commit; owner wb-hour-a84.
+- State: ACTIVE — hour work block A86 completed in owning commit; owner wb-hour-a84.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -10,9 +10,9 @@
 
 ## Current continuation — hour work block
 
-Latest completed A85: four Standard expansions and water-access source map. Verified predecessor `662be2d96002bd0319233539ec79d26ca430b97f`. WB-D153 authors four Standard sources with primary-supported rate, exact item/form IDs, actual route/skill distinctions and175/175/150/175 authored FP. Water-stage variable namespaces/peer routing pinned; threshold remains unvalidated, not guessed from dungeon flag. Hatchling initially qualifies, Young held in one-count family.
+Latest completed A86: three-key-per-rank Greater/Superior core draft. Verified predecessor `065418461f4002f75d6b2a379e05303efcee2c19`. Six source keys/eight specific-item hunts semantically reviewed and reauthored with exact scoped source/rate/access/quote records; three keys per rank before filtering. Captured citations differentiated from original primary retrieval.36 historical hunts and conflicting Turoth rate held; all old artifacts unchanged.
 
-Exact next action: A86 bounded Greater/Superior source/context/quote review; prefer supported finite historical contexts and a primary-confirmed new Turoth item.
+Exact next action: A87 broader ordinary-income/spin/expense economy sensitivity using all-four-rank authored core, without turning assumptions into locked prices.
 
 Existing approved rules and explicit supersessions remain controlling. No source estimate silently certified, no unrelated retirement/task/Coffer/policy approval inferred. Active owner wb-hour-a84 under recorded lease; publish and verify before starting next bounded deliverable. Previous “next” paragraphs are historical where superseded. Owning commit requires final remote head/tree/main verification.
 

@@ -1,0 +1,495 @@
+{
+  "version": "greater-superior-expansion-v2-draft-a86",
+  "authority": "WB-D154_DELEGATED_REVIEWED_CONTENT",
+  "design_status": "BOUNDED_SOURCE_REVIEWED_DRAFT_NOT_ALL_HISTORICAL_CONTEXTS",
+  "runtime_enabled": false,
+  "ready_for_new_offers": false,
+  "historical_v1_catalog_sha256": "b1385d079df61f3a6dec0490c76e4e07cd011c7dba749aa198d76f026bc0b9f1",
+  "creatures": [
+    {
+      "key": "commander-zilyana",
+      "name": "Commander Zilyana",
+      "npc_form_ids": [
+        2205
+      ],
+      "npc_identity_pin": "42a6f17a6a2e8e478aa763890ecd0181a59dad38",
+      "form_policy": "Group listed ordinary forms/phases as one encounter; full context/region/quest/normal-world predicates required. No prefix-name auto-inclusion.",
+      "membership_required": true,
+      "minimum_skills": {
+        "Agility": 70
+      },
+      "route_requirements": "Verified normal God Wars Dungeon entry; unboosted 70 Agility, ropes installed for route; Saradomin Encampment, ordinary 40 faction KC each entry; solo boss kills only.",
+      "task_requirement": "NONE; v1 route sustainable without a finite Slayer assignment.",
+      "allocation": "SOLO_PERSONAL_ONLY",
+      "entry_resources": "Own renewable supplies/entry resources through existing permitted Wheelbound routes; no free region/shop/quest/task unlock. No finite key as the sole continuing route.",
+      "common_access_contract": "challenge-access-v1",
+      "context_id": "commander-zilyana-normal-repeatable-v2",
+      "hunts": [
+        "WB-CH2-commander-zilyana-11785",
+        "WB-CH2-commander-zilyana-11814"
+      ],
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        2205
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation.",
+      "legacy_bundle_label": "expansion",
+      "bundle": "individual-expansion-not-in-initial-bundle",
+      "grants_normal_boss_unlock": false
+    },
+    {
+      "key": "kril-tsutsaroth",
+      "name": "K'ril Tsutsaroth",
+      "npc_form_ids": [
+        3129
+      ],
+      "npc_identity_pin": "42a6f17a6a2e8e478aa763890ecd0181a59dad38",
+      "form_policy": "Group listed ordinary forms/phases as one encounter; full context/region/quest/normal-world predicates required. No prefix-name auto-inclusion.",
+      "membership_required": true,
+      "minimum_skills": {
+        "Hitpoints": 70
+      },
+      "route_requirements": "Verified normal God Wars Dungeon entry; 70 Hitpoints river crossing; Zamorak Fortress; ordinary 40 faction KC each entry; solo boss kills only.",
+      "task_requirement": "NONE; v1 route sustainable without a finite Slayer assignment.",
+      "allocation": "SOLO_PERSONAL_ONLY",
+      "entry_resources": "Own renewable supplies/entry resources through existing permitted Wheelbound routes; no free region/shop/quest/task unlock. No finite key as the sole continuing route.",
+      "common_access_contract": "challenge-access-v1",
+      "context_id": "kril-tsutsaroth-normal-repeatable-v2",
+      "hunts": [
+        "WB-CH2-kril-tsutsaroth-11791",
+        "WB-CH2-kril-tsutsaroth-11816"
+      ],
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        3129
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation.",
+      "legacy_bundle_label": "expansion",
+      "bundle": "individual-expansion-not-in-initial-bundle",
+      "grants_normal_boss_unlock": false
+    },
+    {
+      "key": "kurask",
+      "name": "Kurask",
+      "npc_form_ids": [
+        410,
+        411
+      ],
+      "npc_identity_pin": "42a6f17a6a2e8e478aa763890ecd0181a59dad38",
+      "form_policy": "Group listed ordinary forms/phases as one encounter; full context/region/quest/normal-world predicates required. No prefix-name auto-inclusion.",
+      "membership_required": true,
+      "minimum_skills": {
+        "Slayer": 70
+      },
+      "route_requirements": "Fremennik Slayer Dungeon; usable leaf-bladed weapon, broad ammunition or Magic Dart; off-task route. Iorwerth/Wilderness/superior contexts not selected.",
+      "task_requirement": "NONE; v1 route sustainable without a finite Slayer assignment.",
+      "allocation": "SOLO_PERSONAL_ONLY",
+      "entry_resources": "Own renewable supplies/entry resources through existing permitted Wheelbound routes; no free region/shop/quest/task unlock. No finite key as the sole continuing route.",
+      "common_access_contract": "challenge-access-v1",
+      "context_id": "kurask-normal-repeatable-v2",
+      "hunts": [
+        "WB-CH2-kurask-20727"
+      ],
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        410
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation.",
+      "legacy_bundle_label": "starter",
+      "bundle": "individual-expansion-not-in-initial-bundle",
+      "grants_normal_boss_unlock": false
+    },
+    {
+      "key": "rune-dragon",
+      "name": "Rune dragon",
+      "npc_form_ids": [
+        8031,
+        8091
+      ],
+      "npc_identity_pin": "42a6f17a6a2e8e478aa763890ecd0181a59dad38",
+      "form_policy": "Group listed ordinary forms/phases as one encounter; full context/region/quest/normal-world predicates required. No prefix-name auto-inclusion.",
+      "membership_required": true,
+      "minimum_skills": {},
+      "route_requirements": "Dragon Slayer II complete; repeatable eastern Lithkren Vault route; post-quest only, dragonfire/shock combat readiness.",
+      "task_requirement": "NONE; v1 route sustainable without a finite Slayer assignment.",
+      "allocation": "SOLO_PERSONAL_ONLY",
+      "entry_resources": "Own renewable supplies/entry resources through existing permitted Wheelbound routes; no free region/shop/quest/task unlock. No finite key as the sole continuing route.",
+      "common_access_contract": "challenge-access-v1",
+      "context_id": "rune-dragon-normal-repeatable-v2",
+      "hunts": [
+        "WB-CH2-rune-dragon-21918"
+      ],
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        8031,
+        8091
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation.",
+      "legacy_bundle_label": "expansion",
+      "bundle": "individual-expansion-not-in-initial-bundle",
+      "grants_normal_boss_unlock": false
+    },
+    {
+      "key": "spitting-wyvern",
+      "name": "Spitting Wyvern",
+      "npc_form_ids": [
+        7794
+      ],
+      "npc_identity_pin": "42a6f17a6a2e8e478aa763890ecd0181a59dad38",
+      "form_policy": "Group listed ordinary forms/phases as one encounter; full context/region/quest/normal-world predicates required. No prefix-name auto-inclusion.",
+      "membership_required": true,
+      "minimum_skills": {
+        "Slayer": 66
+      },
+      "route_requirements": "Bone Voyage complete; Fossil Island Wyvern Cave off-task area; owned usable icy-breath protection and sustainable supplies. Other wyvern species remain distinct, unselected sources.",
+      "task_requirement": "NONE; v1 route sustainable without a finite Slayer assignment.",
+      "allocation": "SOLO_PERSONAL_ONLY",
+      "entry_resources": "Own renewable supplies/entry resources through existing permitted Wheelbound routes; no free region/shop/quest/task unlock. No finite key as the sole continuing route.",
+      "common_access_contract": "challenge-access-v1",
+      "context_id": "spitting-wyvern-normal-repeatable-v2",
+      "hunts": [
+        "WB-CH2-spitting-wyvern-21646"
+      ],
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        7794
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation.",
+      "legacy_bundle_label": "expansion",
+      "bundle": "individual-expansion-not-in-initial-bundle",
+      "grants_normal_boss_unlock": false
+    },
+    {
+      "key": "vyrewatch-sentinel",
+      "name": "Vyrewatch Sentinel",
+      "npc_form_ids": [
+        9756,
+        9757,
+        9758,
+        9759,
+        9760,
+        9761,
+        9762,
+        9763
+      ],
+      "npc_identity_pin": "42a6f17a6a2e8e478aa763890ecd0181a59dad38",
+      "form_policy": "Group listed ordinary forms/phases as one encounter; full context/region/quest/normal-world predicates required. No prefix-name auto-inclusion.",
+      "membership_required": true,
+      "minimum_skills": {
+        "Slayer": 38
+      },
+      "route_requirements": "Sins of the Father complete; Darkmeyer route and owned usable Blisterwood flail; combat only. Pickpocketed blood shards and venator drops never qualify.",
+      "task_requirement": "NONE; v1 route sustainable without a finite Slayer assignment.",
+      "allocation": "SOLO_PERSONAL_ONLY",
+      "entry_resources": "Own renewable supplies/entry resources through existing permitted Wheelbound routes; no free region/shop/quest/task unlock. No finite key as the sole continuing route.",
+      "common_access_contract": "challenge-access-v1",
+      "context_id": "vyrewatch-sentinel-normal-repeatable-v2",
+      "hunts": [
+        "WB-CH2-vyrewatch-sentinel-24777"
+      ],
+      "runtime_enabled": false,
+      "loot_composition_alias_ids": [
+        9756
+      ],
+      "alias_policy": "Source-reported server composition aliases are scoped to this observed normal encounter, never global NPC-name matching; current-client mapping traces required before activation.",
+      "legacy_bundle_label": "expansion",
+      "bundle": "individual-expansion-not-in-initial-bundle",
+      "grants_normal_boss_unlock": false
+    }
+  ],
+  "hunts": [
+    {
+      "id": "WB-CH2-commander-zilyana-11785",
+      "historical_v1_hunt_id": "WB-CH-commander-zilyana-armadyl-crossbow",
+      "creature_key": "commander-zilyana",
+      "rank": "greater",
+      "specific_item": "Armadyl crossbow",
+      "canonical_item_id": 11785,
+      "accepted_drop_item_ids": [
+        11785
+      ],
+      "base_rate": "1/508",
+      "personal_probability_source_model": {
+        "lower": "1/508",
+        "upper": "1/508",
+        "method": "SCOPED_SINGLE_COMPLETE_SOLO_ENCOUNTER_PUBLISHED_SOURCE_MODEL",
+        "source_provenance": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+        "not_client_measurement": true
+      },
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "fp_reward": 2650,
+      "reward_quote": {
+        "version": "greater-superior-fp-draft-a86",
+        "reference_kills_per_hour": 20,
+        "reference_expected_hours": "127/5",
+        "fp_reward": 2650,
+        "formula": "25*ceil((100+100*reference_expected_hours)/25)",
+        "throughput_status": "AUTHORED_NOT_MEASURED; retained v1 source-specific planning estimate",
+        "frozen_quote_no_actual_duration_reprice": true
+      },
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-commander-zilyana-11814",
+      "historical_v1_hunt_id": "WB-CH-commander-zilyana-saradomin-hilt",
+      "creature_key": "commander-zilyana",
+      "rank": "greater",
+      "specific_item": "Saradomin hilt",
+      "canonical_item_id": 11814,
+      "accepted_drop_item_ids": [
+        11814
+      ],
+      "base_rate": "1/508",
+      "personal_probability_source_model": {
+        "lower": "1/508",
+        "upper": "1/508",
+        "method": "SCOPED_SINGLE_COMPLETE_SOLO_ENCOUNTER_PUBLISHED_SOURCE_MODEL",
+        "source_provenance": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+        "not_client_measurement": true
+      },
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "fp_reward": 2650,
+      "reward_quote": {
+        "version": "greater-superior-fp-draft-a86",
+        "reference_kills_per_hour": 20,
+        "reference_expected_hours": "127/5",
+        "fp_reward": 2650,
+        "formula": "25*ceil((100+100*reference_expected_hours)/25)",
+        "throughput_status": "AUTHORED_NOT_MEASURED; retained v1 source-specific planning estimate",
+        "frozen_quote_no_actual_duration_reprice": true
+      },
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-kril-tsutsaroth-11791",
+      "historical_v1_hunt_id": "WB-CH-kril-tsutsaroth-staff-of-the-dead",
+      "creature_key": "kril-tsutsaroth",
+      "rank": "greater",
+      "specific_item": "Staff of the Dead",
+      "canonical_item_id": 11791,
+      "accepted_drop_item_ids": [
+        11791
+      ],
+      "base_rate": "1/508",
+      "personal_probability_source_model": {
+        "lower": "1/508",
+        "upper": "1/508",
+        "method": "SCOPED_SINGLE_COMPLETE_SOLO_ENCOUNTER_PUBLISHED_SOURCE_MODEL",
+        "source_provenance": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+        "not_client_measurement": true
+      },
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "fp_reward": 2650,
+      "reward_quote": {
+        "version": "greater-superior-fp-draft-a86",
+        "reference_kills_per_hour": 20,
+        "reference_expected_hours": "127/5",
+        "fp_reward": 2650,
+        "formula": "25*ceil((100+100*reference_expected_hours)/25)",
+        "throughput_status": "AUTHORED_NOT_MEASURED; retained v1 source-specific planning estimate",
+        "frozen_quote_no_actual_duration_reprice": true
+      },
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-kril-tsutsaroth-11816",
+      "historical_v1_hunt_id": "WB-CH-kril-tsutsaroth-zamorak-hilt",
+      "creature_key": "kril-tsutsaroth",
+      "rank": "greater",
+      "specific_item": "Zamorak hilt",
+      "canonical_item_id": 11816,
+      "accepted_drop_item_ids": [
+        11816
+      ],
+      "base_rate": "1/508",
+      "personal_probability_source_model": {
+        "lower": "1/508",
+        "upper": "1/508",
+        "method": "SCOPED_SINGLE_COMPLETE_SOLO_ENCOUNTER_PUBLISHED_SOURCE_MODEL",
+        "source_provenance": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+        "not_client_measurement": true
+      },
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "fp_reward": 2650,
+      "reward_quote": {
+        "version": "greater-superior-fp-draft-a86",
+        "reference_kills_per_hour": 20,
+        "reference_expected_hours": "127/5",
+        "fp_reward": 2650,
+        "formula": "25*ceil((100+100*reference_expected_hours)/25)",
+        "throughput_status": "AUTHORED_NOT_MEASURED; retained v1 source-specific planning estimate",
+        "frozen_quote_no_actual_duration_reprice": true
+      },
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-kurask-20727",
+      "historical_v1_hunt_id": "WB-CH-kurask-leafbladed-battleaxe",
+      "creature_key": "kurask",
+      "rank": "superior",
+      "specific_item": "Leaf-bladed battleaxe",
+      "canonical_item_id": 20727,
+      "accepted_drop_item_ids": [
+        20727
+      ],
+      "base_rate": "1/1026",
+      "personal_probability_source_model": {
+        "lower": "1/1026",
+        "upper": "1/1026",
+        "method": "SCOPED_SINGLE_COMPLETE_SOLO_ENCOUNTER_PUBLISHED_SOURCE_MODEL",
+        "source_provenance": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+        "not_client_measurement": true
+      },
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "fp_reward": 975,
+      "reward_quote": {
+        "version": "greater-superior-fp-draft-a86",
+        "reference_kills_per_hour": 120,
+        "reference_expected_hours": "171/20",
+        "fp_reward": 975,
+        "formula": "25*ceil((100+100*reference_expected_hours)/25)",
+        "throughput_status": "AUTHORED_NOT_MEASURED; retained v1 source-specific planning estimate",
+        "frozen_quote_no_actual_duration_reprice": true
+      },
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-rune-dragon-21918",
+      "historical_v1_hunt_id": "WB-CH-rune-dragon-dragon-limbs",
+      "creature_key": "rune-dragon",
+      "rank": "superior",
+      "specific_item": "Dragon limbs",
+      "canonical_item_id": 21918,
+      "accepted_drop_item_ids": [
+        21918
+      ],
+      "base_rate": "1/800",
+      "personal_probability_source_model": {
+        "lower": "1/800",
+        "upper": "1/800",
+        "method": "SCOPED_SINGLE_COMPLETE_SOLO_ENCOUNTER_PUBLISHED_SOURCE_MODEL",
+        "source_provenance": "CAPTURED_PAGE_JAGEX_PROVIDED_RATE_STATEMENT_NOT_DIRECT_PRIMARY_REFETCH",
+        "not_client_measurement": true
+      },
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "fp_reward": 1900,
+      "reward_quote": {
+        "version": "greater-superior-fp-draft-a86",
+        "reference_kills_per_hour": 45,
+        "reference_expected_hours": "160/9",
+        "fp_reward": 1900,
+        "formula": "25*ceil((100+100*reference_expected_hours)/25)",
+        "throughput_status": "AUTHORED_NOT_MEASURED; retained v1 source-specific planning estimate",
+        "frozen_quote_no_actual_duration_reprice": true
+      },
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-spitting-wyvern-21646",
+      "historical_v1_hunt_id": "WB-CH-spitting-wyvern-granite-longsword",
+      "creature_key": "spitting-wyvern",
+      "rank": "greater",
+      "specific_item": "Granite longsword",
+      "canonical_item_id": 21646,
+      "accepted_drop_item_ids": [
+        21646
+      ],
+      "base_rate": "1/512",
+      "personal_probability_source_model": {
+        "lower": "1/512",
+        "upper": "1/512",
+        "method": "SCOPED_SINGLE_COMPLETE_SOLO_ENCOUNTER_PUBLISHED_SOURCE_MODEL",
+        "source_provenance": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+        "not_client_measurement": true
+      },
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "fp_reward": 975,
+      "reward_quote": {
+        "version": "greater-superior-fp-draft-a86",
+        "reference_kills_per_hour": 60,
+        "reference_expected_hours": "128/15",
+        "fp_reward": 975,
+        "formula": "25*ceil((100+100*reference_expected_hours)/25)",
+        "throughput_status": "AUTHORED_NOT_MEASURED; retained v1 source-specific planning estimate",
+        "frozen_quote_no_actual_duration_reprice": true
+      },
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-vyrewatch-sentinel-24777",
+      "historical_v1_hunt_id": "WB-CH-vyrewatch-sentinel-blood-shard",
+      "creature_key": "vyrewatch-sentinel",
+      "rank": "superior",
+      "specific_item": "Blood shard",
+      "canonical_item_id": 24777,
+      "accepted_drop_item_ids": [
+        24777
+      ],
+      "base_rate": "1/1500",
+      "personal_probability_source_model": {
+        "lower": "1/1500",
+        "upper": "1/1500",
+        "method": "SCOPED_SINGLE_COMPLETE_SOLO_ENCOUNTER_PUBLISHED_SOURCE_MODEL",
+        "source_provenance": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+        "not_client_measurement": true
+      },
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "fp_reward": 1775,
+      "reward_quote": {
+        "version": "greater-superior-fp-draft-a86",
+        "reference_kills_per_hour": 90,
+        "reference_expected_hours": "50/3",
+        "fp_reward": 1775,
+        "formula": "25*ceil((100+100*reference_expected_hours)/25)",
+        "throughput_status": "AUTHORED_NOT_MEASURED; retained v1 source-specific planning estimate",
+        "frozen_quote_no_actual_duration_reprice": true
+      },
+      "runtime_enabled": false
+    }
+  ],
+  "held_not_promoted_from_historical_v1": [
+    "WB-CH-brine-rat-brine-sabre",
+    "WB-CH-turoth-leafbladed-sword",
+    "WB-CH-cave-horror-black-mask-10",
+    "WB-CH-sulphur-nagua-sulphur-blades",
+    "WB-CH-skeletal-wyvern-granite-legs",
+    "WB-CH-abyssal-demon-abyssal-whip",
+    "WB-CH-dark-beast-dark-bow",
+    "WB-CH-adamant-dragon-dragon-limbs",
+    "WB-CH-demonic-gorilla-ballista-limbs",
+    "WB-CH-demonic-gorilla-ballista-spring",
+    "WB-CH-demonic-gorilla-light-frame",
+    "WB-CH-demonic-gorilla-heavy-frame",
+    "WB-CH-tormented-demon-burning-claw",
+    "WB-CH-tormented-demon-tormented-synapse",
+    "WB-CH-general-graardor-bandos-hilt",
+    "WB-CH-kree-arra-armadyl-hilt",
+    "WB-CH-zulrah-tanzanite-fang",
+    "WB-CH-zulrah-magic-fang",
+    "WB-CH-zulrah-serpentine-visage",
+    "WB-CH-vorkath-dragonbone-necklace",
+    "WB-CH-corporeal-beast-spectral-sigil",
+    "WB-CH-corporeal-beast-arcane-sigil",
+    "WB-CH-phosanis-nightmare-nightmare-staff",
+    "WB-CH-phosanis-nightmare-inquisitors-great-helm",
+    "WB-CH-phosanis-nightmare-inquisitors-hauberk",
+    "WB-CH-phosanis-nightmare-inquisitors-plateskirt",
+    "WB-CH-phosanis-nightmare-inquisitors-mace",
+    "WB-CH-artio-claws-of-callisto",
+    "WB-CH-artio-tyrannical-ring",
+    "WB-CH-artio-voidwaker-hilt",
+    "WB-CH-spindel-fangs-of-venenatis",
+    "WB-CH-spindel-treasonous-ring",
+    "WB-CH-spindel-voidwaker-gem",
+    "WB-CH-calvar-ion-skull-of-vetion",
+    "WB-CH-calvar-ion-ring-of-the-gods",
+    "WB-CH-calvar-ion-voidwaker-blade"
+  ],
+  "new_turoth_necklace_status": "HOLD: official implementation1/128 versus captured ordinary Turoth1/129 needs context reconciliation; no favorable-rate substitution",
+  "activation_gates": [
+    "Actual owned target/rank, legal game access and required supplies",
+    "Current-client source/composition/personal earning-time/recipient trace",
+    "Reviewed rank and expansion product prices",
+    "No general historic monolithic-card migration activated"
+  ]
+}

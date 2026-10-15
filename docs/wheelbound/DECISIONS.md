@@ -1595,3 +1595,11 @@ WB-D140/141 are adopted authoring recommendations, not confirmations of reported
 - Quotes: source-model1/64; authored throughput90/120/150/120 kills per hour, not measurements. Existing formula yields175/175/150/175 FP, frozen once per assignment with no actual-duration repricing or KC cap.
 - Gates: preserve actual Slayer37/39/45 requirements for first three; no Slayer40 kill gate on sea snakes. Exact Royal Trouble tunnel-stage/current-client predicate remains unvalidated; quest ID/varplayer/varbit namespaces explicitly distinct. Products require reviewed prices and actual source/receipt adapters before offering.
 - Evidence: OFFICIAL_ELEMENTAL_RATES_A84, ELEMENTAL_CONTEXTS_A78, WATER_ACCESS_SOURCE_MAP_A85; partial Standard draft remains runtime-disabled and no actual account readiness is claimed.
+
+## WB-D154 - Bounded Greater/Superior v2 expansion content
+
+- Status: DELEGATED reviewed draft content,2026-10-15 under WB-D132/current hour continuation. Not a historical all-catalog approval or runtime enablement.
+- Decision: author Spitting Wyvern/Granite longsword, Commander Zilyana/Armadyl crossbow and Saradomin hilt, K'ril/Staff of the Dead and Zamorak hilt as Greater; Kurask/Leaf-bladed battleaxe, combat Vyrewatch Sentinel/Blood shard and normal post-quest Rune dragon/Dragon limbs as Superior. Six canonical keys/eight hunts, three keys per rank before actual account filtering.
+- Source scope: actual item-linked captured Jagex rate statements or explicit captured Jagex-provided source model; semantic distinctions and mediated provenance in A86. No historical tweet refetch/current-client probability experiment claimed. Preserve original normal repeatable off-task/solo routes and exact item/source/form restrictions.
+- Quotes: reauthor existing source-specific throughput/formula into a new draft version; arithmetic equals prior numeric quotes but does not mutate/reprice v1 grants or assignments. Tier labels do not imply relative time/difficulty. No extra starter targets or ordinary boss unlocks.
+- Boundaries: remaining36 old hunts stay outside this bounded promotion; current Turoth necklace official/cached rate discrepancy is held. No guessed alternative/range, source-condition waiver, product price or automatic migration. Runtime/client access/receipt/transaction gates remain required.
