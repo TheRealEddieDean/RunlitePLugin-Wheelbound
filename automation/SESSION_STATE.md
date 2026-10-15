@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: IDLE — A67 complete supplied-monster row review saved; owner released.
+- State: ACTIVE — A68 bounded lower-tier context/access/receipt review; owner wb-a68.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -81,3 +81,7 @@ research/MONSTER_DROP_REVIEW_A67.md + MONSTER_DROP_AUDIT_A67.json contain report
 Validation:6,487 index/display/coverage assertions and22 existing offline tests pass; exact regeneration and all12 manifest hashes/146 decision IDs checked before guarded publication. Historical v1 JSON/CSV/FP unchanged; all runtime flags false. Owning checkpoint releases owner; final remote head/tree/main verification required before saved claim. No production/main changes.
 
 Next: contextual admission/access/identity/receipt/FP review for visible candidates; prioritize normal task-independent sources. Do not present327 display groups as eligible creature count or ready v2 catalog.399 empty captures/444 unresolved classifications remain explicit gaps. Rank unlock topology and A56 permanent-invalidation proposals remain UNANSWERED/NOT_ADOPTED. This completed review supersedes A65/A66 monster-scan/count descriptions, not their historical evidence. No active owner or background task.
+
+## A68 ownership claim
+
+Owner wb-a68; acquired 2026-10-15T01:03:34.921312+00:00; expires 2026-10-15T03:03:34.921312+00:00. Expected remote 173092c2c742c059481c8e69b5bb7e960f1fde39. Scope: seven lower-tier source contexts using committed A67 evidence; document access/identity/receipt holds and a reproducible review packet. No admission, new gameplay decision, FP quote, raw recrawl or production change. Rank topology remains pending.
