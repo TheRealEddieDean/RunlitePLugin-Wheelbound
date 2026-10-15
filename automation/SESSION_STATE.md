@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: IDLE — A74–A83 complete; owner released.
+- State: ACTIVE — hour work block from A84; owner wb-hour-a84.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -111,3 +111,9 @@ Plan: A69 P0/S record exact approved topology and supersession; A70 P1/S owned-r
 Owner wb-a74-a83; acquired 2026-10-15T14:56:39.939215+00:00; expires 2026-10-15T18:56:39.939215+00:00. Starting verified remote bf4d5206deb556e88f5f4de6ed108f857893f9d8; main unchanged. Current user requests ten more checkpoints, continuing prior recommendation delegation.
 
 Planned sequential bounded deliverables (S/M each): A74 Killerwatt/Molanisk full-source identity/access review; A75 Lesser source-context screening from existing capture; A76 elemental source identity/rate caveat packet; A77 selected task-independent Lesser context definitions; A78 proposed/versioned initial bundle content with explicit readiness holds; A79 source-specific authored effort/reward sensitivity; A80 purchase-price/family-frequency sensitivity study (no empirical claims); A81 receipt/adapter trace acceptance packet; A82 integrated four-rank content-gap and source validation; A83 final consistency/continuation/release. Adjust later bounded deliverables to actual evidence rather than admit unsupported sources or invent game facts. Each requires predecessor remote verification; no recrawl, production/main changes or unrelated retirement approval.
+
+## Hour work-block ownership2026-10-15
+
+Owner wb-hour-a84; acquired 2026-10-15T16:28:41.240949+00:00; expires 2026-10-15T18:28:41.240949+00:00. User requests approximately one hour of authorized design/documentation/research work. Verified start ea63bc89da766595d549ef4aedeea1bf379c4f2a; protected main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
+
+Priority/size/dependencies: A84 S targeted exact/range gem evidence check from captured links and current primary lookup, stop at source limitation; A85 M water-snake stage/access/receipt/effort packet; A86 M bounded Greater/Superior semantic source/context/quote packet; A87 M ordinary-income/spin/expense price sensitivity; A88 S honest project workstream/backlog/readiness summary so checkpoint counts are not a completion percentage. Each bounded deliverable publishes/verifies before successor. Reserve final work for validation/checkpoint/release. No production/main changes, no repeated whole-inventory crawl, no arbitrary source proof or silent unrelated decision adoption. Scope may finish fewer or more bounded deliverables according to actual evidence/time. No background work promised.
