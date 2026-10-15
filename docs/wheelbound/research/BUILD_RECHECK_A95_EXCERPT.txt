@@ -1,0 +1,27 @@
+2026-10-15T17:08:24.6180284Z   distribution: temurin
+2026-10-15T17:08:24.6180518Z   java-version: 11
+2026-10-15T17:08:24.7887294Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
+2026-10-15T17:08:24.8111745Z Resolved Java 11.0.32+1 from tool-cache
+2026-10-15T17:08:24.8112392Z Setting Java 11.0.32+1 as the default
+2026-10-15T17:08:24.8201856Z   Distribution: temurin
+2026-10-15T17:08:24.8202296Z   Version: 11.0.32+1
+2026-10-15T17:08:26.5843737Z ##[group]Run bash ./gradlew clean build
+2026-10-15T17:08:26.5844346Z bash ./gradlew clean build
+2026-10-15T17:08:27.2848591Z Downloading https://services.gradle.org/distributions/gradle-8.10-all.zip
+2026-10-15T17:08:33.5313259Z Welcome to Gradle 8.10!
+2026-10-15T17:08:43.3305193Z > Task :clean UP-TO-DATE
+2026-10-15T17:08:55.9282106Z > Task :compileJava
+2026-10-15T17:08:55.9289577Z > Task :processResources
+2026-10-15T17:08:55.9305211Z > Task :classes
+2026-10-15T17:08:56.0273260Z > Task :jar
+2026-10-15T17:08:56.0273976Z > Task :assemble
+2026-10-15T17:08:59.4273319Z > Task :compileTestJava
+2026-10-15T17:08:59.4274153Z > Task :processTestResources NO-SOURCE
+2026-10-15T17:08:59.4274967Z > Task :testClasses
+2026-10-15T17:09:25.3297988Z > Task :test
+2026-10-15T17:09:25.3303479Z > Task :check
+2026-10-15T17:09:25.3306137Z > Task :build
+2026-10-15T17:09:25.3360823Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2026-10-15T17:09:25.3415316Z For more on this, please refer to https://docs.gradle.org/8.10/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2026-10-15T17:09:25.3417656Z BUILD SUCCESSFUL in 58s
+2026-10-15T17:09:26.3294286Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4, gradle/actions/setup-gradle@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

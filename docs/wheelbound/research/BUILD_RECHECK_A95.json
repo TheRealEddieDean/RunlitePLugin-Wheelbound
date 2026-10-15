@@ -1,0 +1,113 @@
+{
+  "version": "build-recheck-a95-v1",
+  "source_commit": "492be499960f3732bd6a08033ef6d521eb2b9e79",
+  "workflow_run": {
+    "id": 38774803140,
+    "head_sha": "492be499960f3732bd6a08033ef6d521eb2b9e79",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-10-15T17:08:16Z",
+    "updated_at": "2026-10-15T17:09:30Z",
+    "event": "push",
+    "html_url": "https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound/actions/runs/38774803140"
+  },
+  "job": {
+    "id": 116559560554,
+    "name": "build",
+    "status": "completed",
+    "conclusion": "success",
+    "run_id": 38774803140,
+    "logs_url": null,
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1
+      },
+      {
+        "name": "Checkout",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2
+      },
+      {
+        "name": "Set up Java",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3
+      },
+      {
+        "name": "Set up Gradle",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4
+      },
+      {
+        "name": "Build",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5
+      },
+      {
+        "name": "Post Set up Gradle",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 8
+      },
+      {
+        "name": "Post Set up Java",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 9
+      },
+      {
+        "name": "Post Checkout",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 10
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 11
+      }
+    ]
+  },
+  "artifact_count": 0,
+  "local": {
+    "java": "OpenJDK17.0.20",
+    "command": "bash ./gradlew --version",
+    "status": "BLOCKED_BEFORE_GRADLE_STARTED",
+    "distribution": "https://services.gradle.org/distributions/gradle-8.10-all.zip",
+    "observed_error": "java.net.SocketException: Network is unreachable",
+    "local_java_tests": "NOT_RUN"
+  },
+  "remote": {
+    "java": "Temurin11.0.32+1",
+    "gradle": "8.10",
+    "command": "bash ./gradlew clean build",
+    "status": "BUILD_SUCCESSFUL",
+    "duration_reported_seconds": 58,
+    "test_task": "EXECUTED_SUCCESSFUL",
+    "executed_case_count": null,
+    "skipped_case_count": null,
+    "test_xml": "NOT_EXPORTED",
+    "resolved_runelite_artifacts": "NOT_EXPORTED",
+    "standard_jar_inspection": "NOT_PERFORMED",
+    "shadow_jar": "NOT_RUN_BY_WORKFLOW",
+    "warnings": [
+      "setup-java v4 deprecated; v5 recommended by current log",
+      "Node20 targeted actions forced to Node24",
+      "Gradle deprecation warnings; exact individual causes not exported by this run"
+    ]
+  },
+  "implementation_authorized": false,
+  "production_changed": false,
+  "wheelbound_client_tests": "NOT_RUN",
+  "report_scope": "Fresh existing-plugin build evidence only. Does not certify Wheelbound implementation, dynamic dependency pinning, package contents or policy.",
+  "log_excerpt_sha256": "43af15825ef67efd90ce48c7227453476d6324a70d80fd8ddd67864bfd13fc92",
+  "unchanged_build_and_production_source_files_checked": 49,
+  "comparison_commit": "ea63bc89da766595d549ef4aedeea1bf379c4f2a"
+}
