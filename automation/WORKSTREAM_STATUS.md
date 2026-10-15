@@ -20,7 +20,7 @@ Current: **design/documentation/research only; production implementation is not 
 | WB-W12 | Production wheels/cards/tree/shops/obligations/Grand | NOT_STARTED_NOT_AUTHORIZED | Implement approved feature modules without changing existing normal plugin behavior; resolve ticket dependencies and policy gates. |
 | WB-W13 | RuneLite adapters, UI and performance | NOT_STARTED_NOT_AUTHORIZED | Implement authorized observable adapters/UI, source traces, accessibility/performance and account isolation. |
 | WB-W14 | End-to-end playtesting and release review | BLOCKED_BY_IMPLEMENTATION | Exercise real account/run scenarios, crash/Pause/recovery and balance with release/Hub review before publishing. |
-| WB-W15 | Current derived design publication | STALE_PENDING_REFRESH | Generate from an exact committed current Markdown revision, visually check and save a versioned derived PDF. |
+| WB-W15 | Current derived design publication | SAVED_DERIVED_CHECKPOINT | Generate from an exact committed current Markdown revision, visually check and save a versioned derived PDF. |
 
 ## Practical next milestones
 
@@ -29,4 +29,4 @@ Current: **design/documentation/research only; production implementation is not 
 3. Obtain explicit implementation authorization, then build the domain/persistence core and approved feature modules in isolated work.
 4. Validate actual client/policy routes, run end-to-end playtesting and release review. No local design model proves these steps.
 
-The historical queue remains available for commit receipts. A48's first bounded batch is complete in its source-limited scope; its later catalog continuation belongs to A64/W02. That status clarification closes no new source gate. A17 stays blocked for actual-client evidence and A33 remains a stale-publication task until the PDF is regenerated and saved. No running/background task is implied by this roadmap.
+The historical queue remains available for commit receipts. A48's first bounded batch is complete in its source-limited scope; its later catalog continuation belongs to A64/W02. That status clarification closes no new source gate. A17 stays blocked for actual-client evidence and A33 is complete for the source135eed73 publication:240 pages, saved version10, exact source/hash and visual checks recorded in automation/PDF_CHECKPOINT.json. The frozen PDF workstream row records its pre-save state; this later receipt closes it. No running/background task is implied by this roadmap.

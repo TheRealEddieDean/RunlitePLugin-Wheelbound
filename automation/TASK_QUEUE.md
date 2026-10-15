@@ -55,7 +55,7 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A32 | Record current user design answers and one-at-a-time choice protocol | P0 | Latest explicit replies2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; gameplay specs; automation | 908aeafe: WB-D111–115 and29 affected files; supersession/one-choice protocol checked; PDF explicitly marked stale |
 
-| WB-A33 | Refresh derived PDF after latest explicit decisions | P1 | A32 committed source; PDF rendering/storage capability | S | TODO | build_pdf; automation/PDF_CHECKPOINT | Generate from new committed Markdown, render/inspect/save next version; published version9 stays marked stale until done |
+| WB-A33 | Refresh derived PDF after latest explicit decisions | P1 | A91 exact committed source; PDF rendering/storage capability | S | DONE (A92, version10) | build_pdf; automation/PDF_CHECKPOINT |240 pages from135eed73; all-page contact/full-size key-page QA; saved guarded version10, receipt in A92 |
 
 | WB-A34 | Record Bounties Shop terminology and Master hilt item objective | P0 | Explicit reply2026-10-12 | S | DONE (Markdown checkpoint) | DECISIONS; GRAND_FATES; affected specs | 7415922e: WB-D116/117 and17 affected specs;117 IDs verified; item-shop scope/old source supersession retained |
 
@@ -224,3 +224,7 @@ Verified predecessor `a9e82a196bf9b273c9d678abe6c8a6a6320b4b36`. Official/captur
 ## A91 — DONE within stated scope: Current publication guide and exact-source PDF pipeline
 
 Verified predecessor `409698c714f2deca01a0c756db773018bad3f33b`. Current reader guide fronts the14-key/16-hunt core, explicit rank supersessions and15 workstreams; dated historical chapter statements remain historical. PDF builder now verifies every included Markdown/builder byte against its full source commit, derives cover date from it and can emit a hash receipt. No PDF refresh claimed before generation/render/storage. Size S/M bounded work; no production/main change. Owning publication requires expected-head guard and exact remote/tree/main verification. Next: Generate PDF from this committed revision; visually inspect every page and save a guarded replacement of the existing publication before closing A33.
+
+## A92 — DONE within stated scope: A33 publication regenerated, visually verified and saved
+
+Verified predecessor `135eed73ad9b1231df49ce196a54b255a1c9ebdb`. PDF240 pages generated from exact committed135eed73,55 Markdown/builder source hashes retained. All-page contact sheets and13 full-size key pages reviewed; zero out-of-bounds blocks, two dirty/exact-source guards pass. Existing publication replaced with guarded saved version10; metadata distinguishes local SHA/size from API-reported storage size. Frozen pre-save W15 status closed by this receipt. Size S/M bounded work; no production/main change. Owning publication requires expected-head guard and exact remote/tree/main verification. Next: Extend the actual-client acceptance plan from the old partial lower-tier packet to the full14-key/16-hunt core; all real traces remain NOT_RUN.

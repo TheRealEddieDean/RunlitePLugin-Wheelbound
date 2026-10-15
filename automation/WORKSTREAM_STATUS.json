@@ -1,5 +1,5 @@
 {
-  "version": "workstreams-a88-v1",
+  "version": "workstreams-a92-publication-receipt",
   "scope": "Project workstream register, not fixed-size checkpoint count or overall completion percentage",
   "project_completion_percent": null,
   "checkpoint_count_is_not_delivery_progress": true,
@@ -120,10 +120,10 @@
     {
       "id": "WB-W15",
       "workstream": "Current derived design publication",
-      "status": "STALE_PENDING_REFRESH",
+      "status": "SAVED_DERIVED_CHECKPOINT",
       "source": "A33; PDF_CHECKPOINT",
       "exit_criteria": "Generate from an exact committed current Markdown revision, visually check and save a versioned derived PDF.",
-      "next_or_limit": "PDF never supersedes Markdown; publication can be refreshed before engineering."
+      "next_or_limit": "Version10 saved from135eed73; publication receipt closes source-time pending row, no gameplay authority change. Refresh after later substantive source changes."
     }
   ]
 }

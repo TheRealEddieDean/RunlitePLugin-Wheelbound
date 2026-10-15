@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — hour work block A91 completed in owning commit; owner wb-hour-a84.
+- State: ACTIVE — hour work block A92 completed in owning commit; owner wb-hour-a84.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -10,9 +10,9 @@
 
 ## Current continuation — hour work block
 
-Latest completed A91: Current publication guide and exact-source PDF pipeline. Verified predecessor `409698c714f2deca01a0c756db773018bad3f33b`. Current reader guide fronts the14-key/16-hunt core, explicit rank supersessions and15 workstreams; dated historical chapter statements remain historical. PDF builder now verifies every included Markdown/builder byte against its full source commit, derives cover date from it and can emit a hash receipt. No PDF refresh claimed before generation/render/storage.
+Latest completed A92: A33 publication regenerated, visually verified and saved. Verified predecessor `135eed73ad9b1231df49ce196a54b255a1c9ebdb`. PDF240 pages generated from exact committed135eed73,55 Markdown/builder source hashes retained. All-page contact sheets and13 full-size key pages reviewed; zero out-of-bounds blocks, two dirty/exact-source guards pass. Existing publication replaced with guarded saved version10; metadata distinguishes local SHA/size from API-reported storage size. Frozen pre-save W15 status closed by this receipt.
 
-Exact next action: Generate PDF from this committed revision; visually inspect every page and save a guarded replacement of the existing publication before closing A33.
+Exact next action: Extend the actual-client acceptance plan from the old partial lower-tier packet to the full14-key/16-hunt core; all real traces remain NOT_RUN.
 
 Existing approved rules and explicit supersessions remain controlling. No source estimate silently certified, no unrelated retirement/task/Coffer/policy approval inferred. Active owner wb-hour-a84 under recorded lease; publish and verify before starting next bounded deliverable. Previous “next” paragraphs are historical where superseded. Owning commit requires final remote head/tree/main verification.
 
