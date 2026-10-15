@@ -39,3 +39,7 @@ The v2 initial bundle must name canonical target keys, supported Lesser contexts
 No current production Wheelbound implementation exists or is authorized by this work. For future legacy design/save fixtures, retain the original single-card version and grant receipts; require an explicit reviewed mapping. Do not grant all ranks, revoke bundle targets, charge again or rewrite an already committed hunt merely because schema names changed. Existing exact committed item/source/reward/context evidence is protected, and A56 invalidation/reconciliation remains independent.
 
 A73 will exercise synthetic entitlement/purchase invariants and list remaining content/client gates. These checks cannot certify a real starter roster, balance, RuneLite API behavior or durable filesystem transactions.
+
+## A79 current starter-content supersession — WB-D151
+
+[Starter v2 draft](CHALLENGE_STARTER_V2.md) now authors four Stronghold source keys/four specific component hunts for the future initial Lesser bundle. Earlier exact-v2-members-NOT_AUTHORED wording is superseded for this partial bundle only. Prices, effort quotes(A80), source/client validation and full four-rank content remain separate. Historical v1 grants/quotes untouched; no activation or guarantee of three actually eligible keys.

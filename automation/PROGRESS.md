@@ -325,3 +325,7 @@ Predecessor verified `92ff827689376f8c4e77da9aa62f8303898703d1`. Four specific c
 ## A78 — elemental item/form packet and conservative sea-snake family
 
 Predecessor verified `7ce36db152b9a0453776a008ac86abf708f9f0b6`. Five pages/four exact gem IDs verified against capture and pinned source; three estimated-rate gem contexts held. Young/hatchling authored as one narrow water-sapphire family with1097/1098, one lottery/diversity key, and no mother credit. No fake Standard-ready pool. Size S/M bounded source/research deliverable; no production/main changes. Exact remote publication verification required. Next: A79 versioned four-source Lesser initial bundle draft using A77 contexts; preserve all old v1 grants.
+
+## A79 — four-source initial Lesser bundle draft
+
+Predecessor verified `c85efa63e6e1c58cb6b08d79d314d9f12e5a2ab9`. WB-D151 DELEGATED future v2 bundle authoring: four Stronghold keys/four exact components; pinned partial catalog, normal boss separation, historical grants preserved.16 hypothetical access masks/five≥3 cases verified; no actual readiness or prices claimed. Size S/M bounded source/research deliverable; no production/main changes. Exact remote publication verification required. Next: A80 source-specific authored effort/FP quotes for the four draft hunts; preserve probability/source caveats.

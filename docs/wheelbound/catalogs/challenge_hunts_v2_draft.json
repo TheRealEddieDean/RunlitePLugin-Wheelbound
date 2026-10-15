@@ -1,0 +1,233 @@
+{
+  "version": "challenge-hunts-v2-draft-a79",
+  "authority": "WB-D151_DELEGATED_DESIGN_CONTENT",
+  "design_status": "PARTIAL_AUTHORED_LESSER_STARTER_ONLY",
+  "runtime_enabled": false,
+  "ready_for_new_offers": false,
+  "source_evidence_path": "research/STRONGHOLD_CONTEXTS_A77.json",
+  "source_evidence_sha256": "62c34bc468fcd22f9f4b40b3aefbe75dd9f17d5381bd1bb37ffdc96f230f32ce",
+  "initial_bundle": {
+    "id": "initial-lesser-v2-draft",
+    "members": [
+      "stronghold-minotaur",
+      "stronghold-flesh-crawler",
+      "stronghold-catablepon",
+      "stronghold-ankou"
+    ],
+    "grant_on": "first paid Lesser purchase only; exact product price still unreviewed",
+    "future_v2_only": true,
+    "historical_v1_grants_preserved": true,
+    "normal_boss_unlocks_granted": false
+  },
+  "creatures": [
+    {
+      "key": "stronghold-minotaur",
+      "name": "Minotaur",
+      "bundle": "initial-lesser-v2-draft",
+      "source_url": "https://oldschool.runescape.wiki/w/Minotaur",
+      "composition_ids": [
+        2481,
+        2482,
+        2483
+      ],
+      "context_id": "stronghold-minotaur-members-repeatable-v2",
+      "requirements": {
+        "rank": "lesser",
+        "world": "normal members world only in initial authored context",
+        "location": "Stronghold of Security floor1",
+        "task_required": false,
+        "quantity": 1,
+        "item_owned_before_assignment_allowed": true,
+        "completion": "fresh active personal exact item from assigned Stronghold source; keep item; once-only",
+        "rate_as_authored_source_model": "3/101",
+        "route_permissions": "Already legal region/floor access, combat equipment and renewable supplies; no assignment-granted access",
+        "status": "AUTHORED_SOURCE_CONTEXT_NOT_RUNTIME_READY"
+      },
+      "grants_normal_boss_unlock": false,
+      "hunts": [
+        "WB-CH2-stronghold-minotaur-9007"
+      ],
+      "runtime_enabled": false
+    },
+    {
+      "key": "stronghold-flesh-crawler",
+      "name": "Flesh Crawler",
+      "bundle": "initial-lesser-v2-draft",
+      "source_url": "https://oldschool.runescape.wiki/w/Flesh_Crawler",
+      "composition_ids": [
+        2498,
+        2499,
+        2500
+      ],
+      "context_id": "stronghold-flesh-crawler-members-repeatable-v2",
+      "requirements": {
+        "rank": "lesser",
+        "world": "normal members world only in initial authored context",
+        "location": "Stronghold of Security floor2",
+        "task_required": false,
+        "quantity": 1,
+        "item_owned_before_assignment_allowed": true,
+        "completion": "fresh active personal exact item from assigned Stronghold source; keep item; once-only",
+        "rate_as_authored_source_model": "3/100",
+        "route_permissions": "Already legal region/floor access, combat equipment and renewable supplies; no assignment-granted access",
+        "status": "AUTHORED_SOURCE_CONTEXT_NOT_RUNTIME_READY"
+      },
+      "grants_normal_boss_unlock": false,
+      "hunts": [
+        "WB-CH2-stronghold-flesh-crawler-9011"
+      ],
+      "runtime_enabled": false
+    },
+    {
+      "key": "stronghold-catablepon",
+      "name": "Catablepon",
+      "bundle": "initial-lesser-v2-draft",
+      "source_url": "https://oldschool.runescape.wiki/w/Catablepon",
+      "composition_ids": [
+        2474,
+        2475,
+        2476
+      ],
+      "context_id": "stronghold-catablepon-members-repeatable-v2",
+      "requirements": {
+        "rank": "lesser",
+        "world": "normal members world only in initial authored context",
+        "location": "Stronghold of Security floor3",
+        "task_required": false,
+        "quantity": 1,
+        "item_owned_before_assignment_allowed": true,
+        "completion": "fresh active personal exact item from assigned Stronghold source; keep item; once-only",
+        "rate_as_authored_source_model": "3/101",
+        "route_permissions": "Already legal region/floor access, combat equipment and renewable supplies; no assignment-granted access",
+        "status": "AUTHORED_SOURCE_CONTEXT_NOT_RUNTIME_READY"
+      },
+      "grants_normal_boss_unlock": false,
+      "hunts": [
+        "WB-CH2-stronghold-catablepon-9010"
+      ],
+      "runtime_enabled": false
+    },
+    {
+      "key": "stronghold-ankou",
+      "name": "Ankou",
+      "bundle": "initial-lesser-v2-draft",
+      "source_url": "https://oldschool.runescape.wiki/w/Ankou",
+      "composition_ids": [
+        2514,
+        2515,
+        2516
+      ],
+      "context_id": "stronghold-ankou-members-repeatable-v2",
+      "requirements": {
+        "rank": "lesser",
+        "world": "normal members world only in initial authored context",
+        "location": "Stronghold of Security floor4",
+        "task_required": false,
+        "quantity": 1,
+        "item_owned_before_assignment_allowed": true,
+        "completion": "fresh active personal exact item from assigned Stronghold source; keep item; once-only",
+        "rate_as_authored_source_model": "3/100",
+        "route_permissions": "Already legal region/floor access, combat equipment and renewable supplies; no assignment-granted access",
+        "status": "AUTHORED_SOURCE_CONTEXT_NOT_RUNTIME_READY"
+      },
+      "grants_normal_boss_unlock": false,
+      "hunts": [
+        "WB-CH2-stronghold-ankou-9008"
+      ],
+      "runtime_enabled": false
+    }
+  ],
+  "hunts": [
+    {
+      "id": "WB-CH2-stronghold-minotaur-9007",
+      "creature_key": "stronghold-minotaur",
+      "rank": "lesser",
+      "specific_item": "Right skull half",
+      "canonical_item_id": 9007,
+      "accepted_drop_item_ids": [
+        9007
+      ],
+      "base_rate": "3/101",
+      "personal_probability_source_model": {
+        "lower": "3/101",
+        "upper": "3/101",
+        "method": "CITED_SINGLE_COMPONENT_DROP_IN_SCOPED_STRONGHOLD_CONTEXT",
+        "not_client_measurement": true
+      },
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "fp_reward": null,
+      "reward_status": "A80_AUTHORED_EFFORT_QUOTE_PENDING",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-stronghold-flesh-crawler-9011",
+      "creature_key": "stronghold-flesh-crawler",
+      "rank": "lesser",
+      "specific_item": "Bottom of sceptre",
+      "canonical_item_id": 9011,
+      "accepted_drop_item_ids": [
+        9011
+      ],
+      "base_rate": "3/100",
+      "personal_probability_source_model": {
+        "lower": "3/100",
+        "upper": "3/100",
+        "method": "CITED_SINGLE_COMPONENT_DROP_IN_SCOPED_STRONGHOLD_CONTEXT",
+        "not_client_measurement": true
+      },
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "fp_reward": null,
+      "reward_status": "A80_AUTHORED_EFFORT_QUOTE_PENDING",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-stronghold-catablepon-9010",
+      "creature_key": "stronghold-catablepon",
+      "rank": "lesser",
+      "specific_item": "Top of sceptre",
+      "canonical_item_id": 9010,
+      "accepted_drop_item_ids": [
+        9010
+      ],
+      "base_rate": "3/101",
+      "personal_probability_source_model": {
+        "lower": "3/101",
+        "upper": "3/101",
+        "method": "CITED_SINGLE_COMPONENT_DROP_IN_SCOPED_STRONGHOLD_CONTEXT",
+        "not_client_measurement": true
+      },
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "fp_reward": null,
+      "reward_status": "A80_AUTHORED_EFFORT_QUOTE_PENDING",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-stronghold-ankou-9008",
+      "creature_key": "stronghold-ankou",
+      "rank": "lesser",
+      "specific_item": "Left skull half",
+      "canonical_item_id": 9008,
+      "accepted_drop_item_ids": [
+        9008
+      ],
+      "base_rate": "3/100",
+      "personal_probability_source_model": {
+        "lower": "3/100",
+        "upper": "3/100",
+        "method": "CITED_SINGLE_COMPONENT_DROP_IN_SCOPED_STRONGHOLD_CONTEXT",
+        "not_client_measurement": true
+      },
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "fp_reward": null,
+      "reward_status": "A80_AUTHORED_EFFORT_QUOTE_PENDING",
+      "runtime_enabled": false
+    }
+  ],
+  "missing_activation_gates": [
+    "Reviewed v2 first-product/rank price payload",
+    "Current-client source/form/region/personal active receipt support",
+    "Source-specific FP quotes A80",
+    "Reviewed legacy entitlement mapping before any migration"
+  ],
+  "other_ranks": "NOT_AUTHORED_HERE; prior v1 29 Greater/15 Superior mappings remain historical, not newly admitted v2 quotes"
+}

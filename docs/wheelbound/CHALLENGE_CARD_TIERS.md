@@ -99,3 +99,7 @@ The [seven-context review](research/LOWER_TIER_CONTEXT_REVIEW_A68.md) advances a
 ## Current shared Challenge targets and purchase contract — WB-D150
 
 [Rank purchases](CHALLENGE_RANK_PURCHASE_CONTRACT.md) grant one shared canonical Challenge target entitlement across reviewed rank contexts; no target repurchase per rank. The first paid Lesser entry includes one reviewed versioned bundle and explicit Lesser enable, atomically; later ranks grant ownership only unless separately opted in at a legal boundary. Target/access/rank ownership remain distinct. Historical v1 six starters/quotes are preserved and not a Lesser-ready bundle. V2 exact bundle/prices/quotes are unfinished; missing payload cannot be sold or labeled free. No normal roster change or blanket legacy four-rank grant.
+
+## A79 current starter-content supersession — WB-D151
+
+[Starter v2 draft](CHALLENGE_STARTER_V2.md) now authors four Stronghold source keys/four specific component hunts for the future initial Lesser bundle. Earlier exact-v2-members-NOT_AUTHORED wording is superseded for this partial bundle only. Prices, effort quotes(A80), source/client validation and full four-rank content remain separate. Historical v1 grants/quotes untouched; no activation or guarantee of three actually eligible keys.

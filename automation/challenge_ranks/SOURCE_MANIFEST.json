@@ -1,5 +1,5 @@
 {
-  "version": "rank-contract-a73-source-v1",
+  "version": "rank-contract-a79-source-v2",
   "scope": "Synthetic design contract inputs only; no runtime source/client proof",
   "sources": [
     {
@@ -8,11 +8,11 @@
     },
     {
       "path": "docs/wheelbound/DECISIONS.md",
-      "sha256": "ccf00d7a935b89d248fb2885365797dffdafd67e66f358a4ef5c199ce4a6f634"
+      "sha256": "8f7b3eef2f8480b55b5e830dc4de842d15802ad9d9d91fd192dd127994a9a864"
     },
     {
       "path": "docs/wheelbound/catalogs/challenge_rank_contract_v1.json",
-      "sha256": "80a2f7c33f7a413498dae24d8637909f3c2cc0fbe6d2aac299f8aab6ac1e432d"
+      "sha256": "5c846b152a8bc5fb02a04edab26325e5bf6faf5971f8d8a83db769083ac0e2c6"
     },
     {
       "path": "docs/wheelbound/CHALLENGE_RANK_CONTROL_CONTRACT.md",
@@ -24,11 +24,12 @@
     },
     {
       "path": "docs/wheelbound/CHALLENGE_RANK_PURCHASE_CONTRACT.md",
-      "sha256": "908a61cc8a9e00fa26d0c61215126f799a8f61cd7fb6ed6d273e233fec06db5e"
+      "sha256": "8021d0dd07630d799af20b762c38442137a76b302fad9a9800ed516cfb2b2d5a"
     },
     {
       "path": "docs/wheelbound/CHALLENGE_RANK_READINESS.md",
-      "sha256": "8ee2ffe58a119544f8d0a27e0fef99ab148460419653339ec1fdfed78c7806f9"
+      "sha256": "1f297587efaccc0fac7c57fe9cc6d4eed7c2d90ded12c0a2a071dcba30db47a5"
     }
-  ]
+  ],
+  "update_reason": "WB-D151 partial bundle content; WB-D147-150 rank/control oracle policy unchanged"
 }

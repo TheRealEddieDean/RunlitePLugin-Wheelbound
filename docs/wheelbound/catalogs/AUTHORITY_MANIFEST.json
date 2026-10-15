@@ -1,5 +1,5 @@
 {
-  "version": "authority-v10-a73-2026-10-15",
+  "version": "authority-v11-a79-2026-10-15",
   "scope": "Documentation metadata only; does not enable gameplay",
   "decision_register": "../DECISIONS.md",
   "catalogs": [
@@ -230,7 +230,7 @@
     {
       "path": "catalogs/challenge_rank_contract_v1.json",
       "version": "challenge-rank-contract-v1-2026-10-15",
-      "sha256": "80a2f7c33f7a413498dae24d8637909f3c2cc0fbe6d2aac299f8aab6ac1e432d",
+      "sha256": "5c846b152a8bc5fb02a04edab26325e5bf6faf5971f8d8a83db769083ac0e2c6",
       "entry_count": 4,
       "authority": "WB-D147_CONFIRMED_WB-D148_150_DELEGATED_DESIGN_ONLY",
       "runtime_enabled": false,
@@ -239,6 +239,21 @@
         "Actual v2 source/receipt/access/reward and first-bundle/price content unfinished",
         "Current-client and durable-transaction validation not executed",
         "Production implementation not authorized"
+      ]
+    },
+    {
+      "path": "catalogs/challenge_hunts_v2_draft.json",
+      "version": "challenge-hunts-v2-draft-a79",
+      "sha256": "ced5aabe064171f970ae1455f59b51117efe7d9cb8f40ab0923b6996c1429d72",
+      "entry_count": 4,
+      "authority": "WB-D151_PARTIAL_DELEGATED_LESSER_DESIGN_CONTENT_ONLY",
+      "runtime_enabled": false,
+      "h3_pinned_input": false,
+      "enable_gates": [
+        "Reviewed v2 first-product/rank price payload",
+        "Current-client source/form/region/personal active receipt support",
+        "Source-specific FP quotes A80",
+        "Reviewed legacy entitlement mapping before any migration"
       ]
     }
   ],
@@ -256,5 +271,6 @@
   "metadata_supersessions": {
     "catalogs/challenge_tier_rules_v2.json#/unlock_structure_proposal": "catalogs/challenge_rank_contract_v1.json",
     "catalogs/challenge_hunt_review_index_v2.json#/unlock_topology": "catalogs/challenge_rank_contract_v1.json"
-  }
+  },
+  "current_partial_challenge_content": "catalogs/challenge_hunts_v2_draft.json"
 }

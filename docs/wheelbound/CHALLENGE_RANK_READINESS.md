@@ -41,3 +41,7 @@ The oracle SOURCE_MANIFEST pins its model, current decision register, rank contr
 ## Continuation
 
 A74 recommended: one bounded exact identity/access/personal-receipt source packet for Killerwatt and Molanisk; stop at unsupported facts rather than admit by name. After remote validation, A75 recommended: Lesser task-independent canonical source shortlist from existing reviewed captures, carrying holds explicitly and without restarting A67 inventory. Later author v2 starter/rewards/prices only from supported contexts. No promise of background work or automatic continuation.
+
+## A79 current starter-content supersession — WB-D151
+
+[Starter v2 draft](CHALLENGE_STARTER_V2.md) now authors four Stronghold source keys/four specific component hunts for the future initial Lesser bundle. Earlier exact-v2-members-NOT_AUTHORED wording is superseded for this partial bundle only. Prices, effort quotes(A80), source/client validation and full four-rank content remain separate. Historical v1 grants/quotes untouched; no activation or guarantee of three actually eligible keys.

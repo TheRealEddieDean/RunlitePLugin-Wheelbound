@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — A78 complete in owning checkpoint; owner wb-a74-a83 continuing authorized sequence.
+- State: ACTIVE — A79 complete in owning checkpoint; owner wb-a74-a83 continuing authorized sequence.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -10,9 +10,9 @@
 
 ## Current continuation — A74–A83
 
-Latest completed A78: elemental item/form packet and conservative sea-snake family. Verified predecessor `7ce36db152b9a0453776a008ac86abf708f9f0b6`. Five pages/four exact gem IDs verified against capture and pinned source; three estimated-rate gem contexts held. Young/hatchling authored as one narrow water-sapphire family with1097/1098, one lottery/diversity key, and no mother credit. No fake Standard-ready pool.
+Latest completed A79: four-source initial Lesser bundle draft. Verified predecessor `c85efa63e6e1c58cb6b08d79d314d9f12e5a2ab9`. WB-D151 DELEGATED future v2 bundle authoring: four Stronghold keys/four exact components; pinned partial catalog, normal boss separation, historical grants preserved.16 hypothetical access masks/five≥3 cases verified; no actual readiness or prices claimed.
 
-Exact next action: A79 versioned four-source Lesser initial bundle draft using A77 contexts; preserve all old v1 grants.
+Exact next action: A80 source-specific authored effort/FP quotes for the four draft hunts; preserve probability/source caveats.
 
 Current source/rank rules remain WB-D144–150. No retired-Fate, task continuation or production approval inferred. Active owner wb-a74-a83 under recorded lease; publish/verify before next deliverable. All earlier next-question/next-task descriptions below are historical where superseded by this section. Owning commit must be remotely verified before saved claim.
 

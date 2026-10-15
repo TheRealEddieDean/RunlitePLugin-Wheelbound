@@ -8,7 +8,7 @@
     "WB-D150"
   ],
   "status": "PASS_SYNTHETIC_ONLY_NOT_RUNTIME",
-  "assertions": 43328,
+  "assertions": 43330,
   "settings_cases": 512,
   "purchase_cases": 1280,
   "offering_scenarios": 7936,

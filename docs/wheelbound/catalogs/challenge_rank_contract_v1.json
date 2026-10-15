@@ -1,14 +1,32 @@
 {
   "version": "challenge-rank-contract-v1-2026-10-15",
-  "authority": ["WB-D147", "WB-D148", "WB-D149", "WB-D150"],
+  "authority": [
+    "WB-D147",
+    "WB-D148",
+    "WB-D149",
+    "WB-D150"
+  ],
   "runtime_enabled": false,
-  "ranks_in_order": ["lesser", "standard", "greater", "superior"],
-  "first_rank_requires": ["ordinary_bossing_lesser", "ordinary_bossing_greater"],
+  "ranks_in_order": [
+    "lesser",
+    "standard",
+    "greater",
+    "superior"
+  ],
+  "first_rank_requires": [
+    "ordinary_bossing_lesser",
+    "ordinary_bossing_greater"
+  ],
   "retain_lower_ownership": true,
   "later_purchase_default_enabled": false,
   "first_purchase_explicitly_enables_lesser": true,
   "allow_all_disabled": true,
-  "settings_boundary_requires_absent": ["assignment", "mandatory_obligation", "pending_offers", "unresolved_selection"],
+  "settings_boundary_requires_absent": [
+    "assignment",
+    "mandatory_obligation",
+    "pending_offers",
+    "unresolved_selection"
+  ],
   "default_offer_slots": 2,
   "upgraded_offer_slots": 3,
   "challenge_family_entries": 1,
@@ -19,7 +37,12 @@
   "duplicate_rank_offers_allowed": true,
   "target_entitlement_shared_across_ranks": true,
   "initial_target_bundle_granted_on": "first paid Lesser purchase only",
-  "v2_bundle_members": null,
+  "v2_bundle_members": [
+    "stronghold-minotaur",
+    "stronghold-flesh-crawler",
+    "stronghold-catablepon",
+    "stronghold-ankou"
+  ],
   "rank_prices": null,
   "numeric_family_frequency_schedule": null,
   "v2_fp_quotes": null,
@@ -28,5 +51,6 @@
   "supersedes_metadata_only": [
     "catalogs/challenge_tier_rules_v2.json#/unlock_structure_proposal",
     "catalogs/challenge_hunt_review_index_v2.json#/unlock_topology"
-  ]
+  ],
+  "bundle_content_authority": "WB-D151; partial v2 draft, no purchasable product"
 }
