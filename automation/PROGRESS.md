@@ -321,3 +321,7 @@ Predecessor verified `92df7c8475c4c90c34f94cb23a53da60b0a4c939`. 483 display gro
 ## A77 — four Stronghold source contexts authored
 
 Predecessor verified `92ff827689376f8c4e77da9aa62f8303898703d1`. Four specific component contexts defined with pinned item/form constants, exact captured HTML note mapping and semantically cited2019 cross-source rates. Ankou Stronghold-only alternative scoped; unrelated footnote/free-world/gem-rate confusion avoided. No live receipt proof. Size S/M bounded source/research deliverable; no production/main changes. Exact remote publication verification required. Next: A78 finish elemental item/form evidence and conservative sea-snake grouping without inventing gem rate certainty.
+
+## A78 — elemental item/form packet and conservative sea-snake family
+
+Predecessor verified `7ce36db152b9a0453776a008ac86abf708f9f0b6`. Five pages/four exact gem IDs verified against capture and pinned source; three estimated-rate gem contexts held. Young/hatchling authored as one narrow water-sapphire family with1097/1098, one lottery/diversity key, and no mother credit. No fake Standard-ready pool. Size S/M bounded source/research deliverable; no production/main changes. Exact remote publication verification required. Next: A79 versioned four-source Lesser initial bundle draft using A77 contexts; preserve all old v1 grants.

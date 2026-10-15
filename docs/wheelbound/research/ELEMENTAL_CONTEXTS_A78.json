@@ -1,0 +1,762 @@
+{
+  "version": "elemental-source-contexts-a78-v1",
+  "source_commit": "42a6f17a6a2e8e478aa763890ecd0181a59dad38",
+  "entries": [
+    {
+      "source_url": "https://oldschool.runescape.wiki/w/Killerwatt",
+      "item": "Air diamond",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Killerwatt",
+        "fetched_at": "2026-10-14T15:29:06.207978+00:00",
+        "sha256": "61b0c531f8926ccc4afacc818d8b4f527b4f5928b70a19171f25ee6fb8f4fa95",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\c19be61e79adaafbe8aaa59a9843234fb9a5ef22fe655b6e715f99065f1af15c.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Killerwatt",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 15:26:34 GMT",
+        "fixture": false
+      },
+      "normalized_source_sha256": "61b0c531f8926ccc4afacc818d8b4f527b4f5928b70a19171f25ee6fb8f4fa95",
+      "raw_file_sha256": "4c9d6cad08624189f7cac144575aff350c444ee6b0ad4906bb5e272ee72909c5",
+      "reported_npc_ids": [
+        470
+      ],
+      "source_context": [
+        "Killerwatts are Slayer monsters located in the Killerwatt plane , accessible through a portal at the top floor of Draynor Manor after completion of Ernest the Chicken . A Slayer level of 37 is required to kill them.",
+        "If a player is not wearing a pair of insulated boots while fighting them, both their Ranged and Melee attacks will have a much higher maximum hit. Even when wearing insulated boots, their attacks are still rapid and highly accurate, and they have an attack range of 13 tiles, meaning it is not possible to safespot them with long ranged weapons. A dwarf multicannon cannot be set up in the Killerwatt plane .",
+        "Killerwatts are a commonly skipped Slayer task due to their relatively high damage output combined with their mediocre drops, except for those seeking their unique air diamond drop.",
+        "While Killerwatts initially appear as passive floating orbs of electricity, they will immediately transform and move towards you when clicked on , rather than when attacked. They will switch between attacking with melee and ranged, depending on the player's distance from them and whether or not they are able to attack the player. For example, attacking a Killerwatt in melee range and then safespotting it will result in it switching to ranged attacks.",
+        "It is recommended to use either Ranged or Magic against them due to their negative ranged defences and weakness to air spells, as well as being able to easily restrict the Killerwatts to ranged attacks. Melee can be used as well if using a weapon such as a Halberd , as careful use of their extra range lets you lock the Killerwatts into using ranged attacks.",
+        "The Killerwatt's damage bonus from the player not wearing insulated boots does not hit through the correct protection prayer.",
+        "Drop rates are estimated based on 63,929 samples from the Drop Rate Project , unless otherwise cited.",
+        "The average Killerwatt kill is worth 7,077.41 .",
+        "There is a 35/140 chance of rolling the herb drop table .",
+        "There is a 5/140 chance of rolling the gem drop table .",
+        "Killerwatts have a single collection log item.",
+        "Killerwatts now drop air diamonds .",
+        "Killerwatts now drop energy potions as a common drop.",
+        "Killerwatts now have a 60% elemental weakness to wind spells .",
+        "The ranged defence of killerwatts has been reduced from 20 to -10. Vannaka no longer assigns players Killerwatt tasks.",
+        "The killerwatt's flickering has been toned down, so the epilepsy warning when entering the killerwatt plane has been removed.",
+        "9m ago - Wroometh",
+        "12m ago - Wroometh",
+        "16m ago - AfterDarq",
+        "24m ago - Crabby"
+      ],
+      "access_infobox": [
+        {
+          "field": "Members",
+          "value": "Yes"
+        },
+        {
+          "field": "Slayer level",
+          "value": "37"
+        },
+        {
+          "field": "Slayer XP",
+          "value": "51 xp"
+        },
+        {
+          "field": "Monster ID",
+          "value": "470"
+        }
+      ],
+      "raw_drop_rows": [
+        {
+          "row_zero_based": 48,
+          "record": {
+            "section": "Drops / Tertiary",
+            "item_name": "Air diamond",
+            "item_links": [
+              {
+                "text": "Air diamond",
+                "href": "https://oldschool.runescape.wiki/w/Air_diamond"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/64",
+              "expression": "1/64",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 64
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Air diamond",
+                "1",
+                "1/64",
+                "401,383",
+                "12,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "html_drop_rows": [
+        {
+          "row_text": "Air diamond 1 1/64 401,383 12,000",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "html_identity_rows": [
+        {
+          "item_id": 34404,
+          "row_text": "Air diamond Slayer N/A"
+        }
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 63,929 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "runtime_enabled": false,
+      "canonical_item": {
+        "symbol": "AIR_DIAMOND",
+        "id": 34404,
+        "line": 90093,
+        "declaration": "public static final int AIR_DIAMOND = 34404;"
+      },
+      "primary_npc_constants": [
+        {
+          "symbol": "SLAYER_KILLERWATT",
+          "id": 469,
+          "line": 2284,
+          "declaration": "public static final int SLAYER_KILLERWATT = 469;"
+        },
+        {
+          "symbol": "SLAYER_KILLERWATT_BALL",
+          "id": 470,
+          "line": 2289,
+          "declaration": "public static final int SLAYER_KILLERWATT_BALL = 470;"
+        }
+      ],
+      "canonical_source_key": "killerwatt",
+      "rate_status": "ESTIMATED_NO_ITEM_CITATION_HOLD",
+      "personal_receipt_tests": "NOT_RUN"
+    },
+    {
+      "source_url": "https://oldschool.runescape.wiki/w/Molanisk",
+      "item": "Earth emerald",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Molanisk",
+        "fetched_at": "2026-10-14T15:29:42.119771+00:00",
+        "sha256": "02182fcdb77805b4419861ccb15dd56b73275bea74afdd3c97fe965c988df58b",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\0f64e42a534466d0d6752b2e8aaa5dbe65de7688de7af641e50e3bd00d5d5c0b.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Molanisk",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 15:26:39 GMT",
+        "fixture": false
+      },
+      "normalized_source_sha256": "02182fcdb77805b4419861ccb15dd56b73275bea74afdd3c97fe965c988df58b",
+      "raw_file_sha256": "9bb2c8b2fdc156ddf808d17bb71905fa9af929766fcaa425908fb45dc087304f",
+      "reported_npc_ids": [
+        1
+      ],
+      "source_context": [
+        "Molanisks are Slayer monsters that require level 39 Slayer to kill giving 52 Slayer experience per kill. A Slayer bell is necessary to initiate combat with them. Since they are only found in the Dorgesh-Kaan South Dungeon , completion of Death to the Dorgeshuun is required to fight molanisks and it is advisable to bring a light source . Molanisks do unusually low damage, meaning a player with half-decent armour should easily be able to kill them with no trouble.",
+        "They are mainly hunted for their earth emerald drop, or as a Slayer assignment from Vannaka .",
+        "Molanisks are found attached to cave walls and must be lured off with a Slayer bell to allow players to attack them. The Slayer bell only works within 3 tiles of the wall the molanisk is attached to. When lured off the wall, they are aggressive towards the player who lured them off with the bell. Molanisks respawn relatively quickly, so players who want to conserve run energy can just stay at the same respawn location. Alternatively, there is a spot south of the fairy ring with two spawns close together.",
+        "Molanisks are relatively weak to both crush and magic attacks.",
+        "If you are getting attacked by another monster, for example a Cave Crawler , and then use the Slayer bell, the Molanisk will attack you and the monster initially attacking you will lose its aggression.",
+        "Drop rates are estimated based on 61,398 samples from the Drop Rate Project , unless otherwise cited.",
+        "The average Molanisk kill is worth 9,791.09 .",
+        "There is a 32/128 chance of rolling the herb drop table .",
+        "There is a 7/128 chance of rolling the gem drop table .",
+        "Molanisks have 2 collection log items.",
+        "Molanisk now drop earth emeralds .",
+        "Molanisk now drop energy potions as a common drop.",
+        "Molanisks now have a 60% elemental weakness to earth spells .",
+        "Chaeldar no longer assigns players Molanisk tasks.",
+        "The first hit on certain Molanisks will no longer give zero experience .",
+        "Duradel no longer assigns players Molanisk tasks.",
+        "9m ago - Wroometh",
+        "12m ago - Wroometh",
+        "17m ago - AfterDarq",
+        "25m ago - Crabby"
+      ],
+      "access_infobox": [
+        {
+          "field": "Members",
+          "value": "Yes"
+        },
+        {
+          "field": "Slayer level",
+          "value": "39"
+        },
+        {
+          "field": "Slayer XP",
+          "value": "52 xp"
+        },
+        {
+          "field": "Monster ID",
+          "value": "1"
+        }
+      ],
+      "raw_drop_rows": [
+        {
+          "row_zero_based": 35,
+          "record": {
+            "section": "Drops / Tertiary",
+            "item_name": "Earth emerald",
+            "item_links": [
+              {
+                "text": "Earth emerald",
+                "href": "https://oldschool.runescape.wiki/w/Earth_emerald"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/64",
+              "expression": "1/64",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 64
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Earth emerald",
+                "1",
+                "1/64",
+                "573,065",
+                "12,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "html_drop_rows": [
+        {
+          "row_text": "Earth emerald 1 1/64 573,065 12,000",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "html_identity_rows": [
+        {
+          "item_id": 34416,
+          "row_text": "Earth emerald Slayer N/A"
+        }
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 61,398 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "runtime_enabled": false,
+      "canonical_item": {
+        "symbol": "EARTH_EMERALD",
+        "id": 34416,
+        "line": 90113,
+        "declaration": "public static final int EARTH_EMERALD = 34416;"
+      },
+      "primary_npc_constants": [
+        {
+          "symbol": "MOLANISK",
+          "id": 1,
+          "line": 16,
+          "declaration": "public static final int MOLANISK = 1;"
+        }
+      ],
+      "canonical_source_key": "molanisk",
+      "rate_status": "ESTIMATED_NO_ITEM_CITATION_HOLD",
+      "personal_receipt_tests": "NOT_RUN"
+    },
+    {
+      "source_url": "https://oldschool.runescape.wiki/w/Infernal_Mage",
+      "item": "Fire ruby",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Infernal_Mage",
+        "fetched_at": "2026-10-14T16:28:12.594402+00:00",
+        "sha256": "d0bad8985322fb6b847eac136ec5150115493979f8b44edfac24891e270dc031",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\851a6c93ad48da508b11613557892f3867c9795178a0a5c9f0b5da3bee4d64ef.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Infernal_Mage",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 15:26:22 GMT",
+        "fixture": false
+      },
+      "normalized_source_sha256": "d0bad8985322fb6b847eac136ec5150115493979f8b44edfac24891e270dc031",
+      "raw_file_sha256": "490f298182cdad52011f29f827bef691645a54c4a690f3f6ced31af0b8525219",
+      "reported_npc_ids": [
+        443,
+        444,
+        445,
+        446,
+        447
+      ],
+      "source_context": [
+        "Infernal Mages are Slayer monsters that require 45 Slayer to kill. They are mainly hunted for their unique drops: the fire ruby , and the rare dark mystic boots and hat drops, and are sometimes hunted for their frequent drops of death runes . Players who plan on fighting them should be wary of their accurate magic attack, although Protect from Magic negates this completely.",
+        "To reach the Infernal Mage area in the 1 st floor [ UK ] 2 nd floor [ US ] of the Slayer Tower , players can take the long way up the south-east stairs, which requires running past aggressive Banshees , so wearing Earmuffs or a Slayer helmet is recommended. Players with 18 Agility can avoid the banshees by using the broken window shortcut for quick access to the stairs.",
+        "Drop rates are estimated based on 31,289 samples from the Drop Rate Project , unless otherwise cited.",
+        "The average Infernal Mage kill is worth 3,541.15 .",
+        "The overall chance of rolling a coin drop is 49/128 with an average value of 4 .",
+        "Infernal Mages have 3 collection log items.",
+        "Infernal mages now drop the fire ruby .",
+        "Chaeldar no longer assigns players Infernal Mage tasks.",
+        "Duradel no longer assigns players Infernal Mage tasks.",
+        "2m ago - YoshiFan12",
+        "2m ago - YoshiFan12",
+        "3m ago - YoshiFan12",
+        "5m ago - Wroometh"
+      ],
+      "access_infobox": [
+        {
+          "field": "Members",
+          "value": "Yes"
+        },
+        {
+          "field": "Slayer level",
+          "value": "45"
+        },
+        {
+          "field": "Slayer XP",
+          "value": "60 xp"
+        },
+        {
+          "field": "Monster ID",
+          "value": "443,444,445,446,447"
+        }
+      ],
+      "raw_drop_rows": [
+        {
+          "row_zero_based": 24,
+          "record": {
+            "section": "Drops / Tertiary",
+            "item_name": "Fire ruby",
+            "item_links": [
+              {
+                "text": "Fire ruby",
+                "href": "https://oldschool.runescape.wiki/w/Fire_ruby"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/64",
+              "expression": "1/64",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 64
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Fire ruby",
+                "1",
+                "1/64",
+                "200,699",
+                "12,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "html_drop_rows": [
+        {
+          "row_text": "Fire ruby 1 1/64 200,699 12,000",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "html_identity_rows": [
+        {
+          "item_id": 34422,
+          "row_text": "Fire ruby Slayer N/A"
+        }
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 31,289 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "runtime_enabled": false,
+      "canonical_item": {
+        "symbol": "FIRE_RUBY",
+        "id": 34422,
+        "line": 90123,
+        "declaration": "public static final int FIRE_RUBY = 34422;"
+      },
+      "primary_npc_constants": [
+        {
+          "symbol": "SLAYER_INFERNAL_MAGE_1",
+          "id": 443,
+          "line": 2154,
+          "declaration": "public static final int SLAYER_INFERNAL_MAGE_1 = 443;"
+        },
+        {
+          "symbol": "SLAYER_INFERNAL_MAGE_2",
+          "id": 444,
+          "line": 2159,
+          "declaration": "public static final int SLAYER_INFERNAL_MAGE_2 = 444;"
+        },
+        {
+          "symbol": "SLAYER_INFERNAL_MAGE_3",
+          "id": 445,
+          "line": 2164,
+          "declaration": "public static final int SLAYER_INFERNAL_MAGE_3 = 445;"
+        },
+        {
+          "symbol": "SLAYER_INFERNAL_MAGE_4",
+          "id": 446,
+          "line": 2169,
+          "declaration": "public static final int SLAYER_INFERNAL_MAGE_4 = 446;"
+        },
+        {
+          "symbol": "SLAYER_INFERNAL_MAGE_5",
+          "id": 447,
+          "line": 2174,
+          "declaration": "public static final int SLAYER_INFERNAL_MAGE_5 = 447;"
+        }
+      ],
+      "canonical_source_key": "infernal-mage",
+      "rate_status": "ESTIMATED_NO_ITEM_CITATION_HOLD",
+      "personal_receipt_tests": "NOT_RUN"
+    },
+    {
+      "source_url": "https://oldschool.runescape.wiki/w/Sea_Snake_Young",
+      "item": "Water sapphire",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Sea_Snake_Young",
+        "fetched_at": "2026-10-14T15:54:06.203409+00:00",
+        "sha256": "a46279bc3714ff4e82c3849fb3d30016ecd84d6a9e1b3297d2d6aaa1d99e215c",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\7d08d1a0b48e6f3c0dd9427f63136c1a5cb495e51f1e40a7d40b4183eff84b74.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Sea_Snake_Young",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 15:27:07 GMT",
+        "fixture": false
+      },
+      "normalized_source_sha256": "a46279bc3714ff4e82c3849fb3d30016ecd84d6a9e1b3297d2d6aaa1d99e215c",
+      "raw_file_sha256": "5a4e028c73f3d9b74af4f2858e481734520e49a4884262c6d2d98ebea92cad84",
+      "reported_npc_ids": [
+        1097
+      ],
+      "source_context": [
+        "Sea snake young are found in the Miscellania and Etceteria dungeon , which can be entered during and after the Royal Trouble quest. A Slayer level of 40 is required to receive a sea snakes Slayer task, but they can be killed at any level. The snakes are poisonous , with the poison starting at 7 damage. Players fighting them should bring poison protection of some sort, such as an antipoison or superantipoison . They attack with Melee and are vulnerable to Magic , especially earth spells . Their unique drop is the water sapphire , which is shared with the sea snake hatchling .",
+        "Players can use the blue eggs halfway through the tunnel as a safespot . A Dwarf multicannon can be used, but with reduced effectiveness due to the area being single-way combat .",
+        "The following drop rates are provided by Jagex, unless otherwise specified.",
+        "The average Sea Snake Young kill is worth 5,304.57 .",
+        "The herb drop table is only rolled in rare circumstances when the player moves to the south-west corner of the snake's location at the moment the drop appears.",
+        "There is a 5/128 chance of rolling the herb drop table .",
+        "The seed drop table is only rolled in rare circumstances when the player moves to the south-west corner of the snake's location at the moment the drop appears.",
+        "There is a 14/128 chance of rolling the uncommon seed drop table .",
+        "There is a 1/128 chance of rolling the gem drop table .",
+        "Sea Snake Young have a single collection log item.",
+        "Sea snake hatchlings & youngs now drop water sapphires .",
+        "Sea snake hatchlings were given a 20% elemental weakness to earth spells .",
+        "9m ago - Microbrews",
+        "15m ago - Kelsey",
+        "16m ago - Kelsey",
+        "16m ago - Kelsey"
+      ],
+      "access_infobox": [
+        {
+          "field": "Members",
+          "value": "Yes"
+        },
+        {
+          "field": "Slayer level",
+          "value": "1 to kill, 40 for task"
+        },
+        {
+          "field": "Slayer XP",
+          "value": "85 xp"
+        },
+        {
+          "field": "Monster ID",
+          "value": "1097"
+        }
+      ],
+      "raw_drop_rows": [
+        {
+          "row_zero_based": 67,
+          "record": {
+            "section": "Drops / Tertiary",
+            "item_name": "Water sapphire",
+            "item_links": [
+              {
+                "text": "Water sapphire",
+                "href": "https://oldschool.runescape.wiki/w/Water_sapphire"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/64",
+              "expression": "1/64",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 64
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Water sapphire",
+                "1",
+                "1/64",
+                "295,347",
+                "12,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "html_drop_rows": [
+        {
+          "row_text": "Water sapphire 1 1/64 295,347 12,000",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "html_identity_rows": [
+        {
+          "item_id": 34410,
+          "row_text": "Water sapphire Slayer N/A"
+        }
+      ],
+      "page_estimate_statements": [],
+      "runtime_enabled": false,
+      "canonical_item": {
+        "symbol": "WATER_SAPPHIRE",
+        "id": 34410,
+        "line": 90103,
+        "declaration": "public static final int WATER_SAPPHIRE = 34410;"
+      },
+      "primary_npc_constants": [
+        {
+          "symbol": "ROYAL_SEA_SNAKE_MEDIUM",
+          "id": 1097,
+          "line": 5292,
+          "declaration": "public static final int ROYAL_SEA_SNAKE_MEDIUM = 1097;"
+        }
+      ],
+      "canonical_source_key": "sea-snake-water-sapphire",
+      "rate_status": "CAPTURE_STATES_JAGEX_PROVIDED_SOURCE_MODEL_NOT_CLIENT_MEASURED",
+      "personal_receipt_tests": "NOT_RUN"
+    },
+    {
+      "source_url": "https://oldschool.runescape.wiki/w/Sea_Snake_Hatchling",
+      "item": "Water sapphire",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Sea_Snake_Hatchling",
+        "fetched_at": "2026-10-14T16:18:29.312678+00:00",
+        "sha256": "7d972397aba348e8ef9be46f32ad2ded0cb31b99274bfbe1e46a1fbd9f6f42bf",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\5825acedd80e763d83fd2a2798ba0368c71ec4158c1263b80d4e191d77b8abb2.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Sea_Snake_Hatchling",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 15:27:07 GMT",
+        "fixture": false
+      },
+      "normalized_source_sha256": "7d972397aba348e8ef9be46f32ad2ded0cb31b99274bfbe1e46a1fbd9f6f42bf",
+      "raw_file_sha256": "44b3ae6ff090c87586bd9ff57d7243e703cc20903ea43e13425271fafc8e5d33",
+      "reported_npc_ids": [
+        1098
+      ],
+      "source_context": [
+        "Sea snake hatchlings are found in the Miscellania and Etceteria dungeon , which can be entered during and after the Royal Trouble quest. A Slayer level of 40 is required to receive a sea snakes Slayer task, but they can be killed at any level. The snakes are poisonous , with the poison starting at 5 damage. Players fighting them should bring poison protection of some sort, such as an antipoison , antipoison+ , or antipoison++ . They attack with Melee and are vulnerable to Magic , particularly earth spells . Their unique drop is the water sapphire , which is shared with the sea snake young .",
+        "Players can use the blue eggs halfway through the tunnel as a safespot , although it is hard to get them to the player due to being a little further away than the sea snake young . A Dwarf multicannon can be used, but with reduced effectiveness due to the area being single-way combat .",
+        "The following drop rates are provided by Jagex, unless otherwise specified.",
+        "The average Sea Snake Hatchling kill is worth 4,764.32 .",
+        "There is a 1/128 chance of rolling the gem drop table .",
+        "Sea Snake Hatchlings have a single collection log item.",
+        "Sea snake hatchlings & youngs now drop water sapphires .",
+        "Sea snake hatchlings were given a 20% elemental weakness to earth spells .",
+        "2m ago - YoshiFan12",
+        "3m ago - YoshiFan12",
+        "3m ago - YoshiFan12",
+        "4m ago - YoshiFan12"
+      ],
+      "access_infobox": [
+        {
+          "field": "Members",
+          "value": "Yes"
+        },
+        {
+          "field": "Slayer level",
+          "value": "1 to kill, 40 for task"
+        },
+        {
+          "field": "Slayer XP",
+          "value": "50 xp"
+        },
+        {
+          "field": "Monster ID",
+          "value": "1098"
+        }
+      ],
+      "raw_drop_rows": [
+        {
+          "row_zero_based": 31,
+          "record": {
+            "section": "Drops / Tertiary",
+            "item_name": "Water sapphire",
+            "item_links": [
+              {
+                "text": "Water sapphire",
+                "href": "https://oldschool.runescape.wiki/w/Water_sapphire"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/64",
+              "expression": "1/64",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 64
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Water sapphire",
+                "1",
+                "1/64",
+                "295,347",
+                "12,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "html_drop_rows": [
+        {
+          "row_text": "Water sapphire 1 1/64 295,347 12,000",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "html_identity_rows": [
+        {
+          "item_id": 34410,
+          "row_text": "Water sapphire Slayer N/A"
+        }
+      ],
+      "page_estimate_statements": [],
+      "runtime_enabled": false,
+      "canonical_item": {
+        "symbol": "WATER_SAPPHIRE",
+        "id": 34410,
+        "line": 90103,
+        "declaration": "public static final int WATER_SAPPHIRE = 34410;"
+      },
+      "primary_npc_constants": [
+        {
+          "symbol": "ROYAL_SEA_SNAKE_BABY",
+          "id": 1098,
+          "line": 5297,
+          "declaration": "public static final int ROYAL_SEA_SNAKE_BABY = 1098;"
+        }
+      ],
+      "canonical_source_key": "sea-snake-water-sapphire",
+      "rate_status": "CAPTURE_STATES_JAGEX_PROVIDED_SOURCE_MODEL_NOT_CLIENT_MEASURED",
+      "personal_receipt_tests": "NOT_RUN"
+    }
+  ],
+  "canonical_source_keys": 4,
+  "display_pages": 5,
+  "new_runtime_eligible_sources": 0,
+  "conservative_sea_snake_family": {
+    "key": "sea-snake-water-sapphire",
+    "accepted_source_composition_ids": [
+      1097,
+      1098
+    ],
+    "specific_item_id": 34410,
+    "diversity_count": 1,
+    "scope": "Only exact young/hatchling encounters in Royal Trouble dungeon with actual legal access; no mother/quest boss or name-prefix inclusion.",
+    "authoring_status": "DELEGATED_CONSERVATIVE_GROUPING_FOR_DRAFT_ONLY"
+  },
+  "runtime_enabled": false
+}
