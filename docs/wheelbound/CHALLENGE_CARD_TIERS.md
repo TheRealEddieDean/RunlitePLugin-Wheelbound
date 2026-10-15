@@ -55,24 +55,18 @@ Examples from supplied cached data for easier-tier review:
 
 Two source rows for Scurrius are contexts, not two creatures. Rate rarity does not guarantee time: a slow1/35 encounter can take longer than a fast1/500 monster. Reward quotes need source-specific effort, not a tier-name multiplier invented here.
 
-## Unlock/control recommendation — proposed, not adopted
+## Confirmed progressive unlocks — WB-D147
 
-The user wants separately unlockable Challenge ranks and control over the hunt being accepted. Four rank identities are adopted; exact prerequisite/offer integration is a material new choice because it changes the old single-card unlock contract.
+The user explicitly confirmed progressive purchases on2026-10-15: **Lesser Challenge → Standard Challenge → Greater Challenge → Superior Challenge**, retaining every lower rank. Each step is a permanent paid rank unlock; no automatic free rank or separate generic-entry charge.
 
-Recommended progression:
-
-| Unlock step | Card gained | Retains |
+| Purchase | Required permanent ownership | Retained ranks |
 | --- | --- | --- |
-|1 | Lesser Challenge | Lesser pool |
-|2 | Standard Challenge | Lesser and Standard |
-|3 | Greater Challenge | Lesser, Standard and Greater |
-|4 | Superior Challenge | All four available ranks |
+| Lesser Challenge | Ordinary Bossing Lesser AND Greater (preserved WB-D124 entry) | Lesser |
+| Standard Challenge | Lesser Challenge | Lesser, Standard |
+| Greater Challenge | Standard Challenge | Lesser, Standard, Greater |
+| Superior Challenge | Greater Challenge | All four |
 
-**PROPOSED:** purchase ranks in that order, keep lower ranks, and let the player opt in/out of owned ranks between assignments before new offers. Higher ownership would not force Superior hunts. Offer labels show the exact rank/range before the creature/item reveal. Creature/item still random within the accepted rank; no choosing an exact item or changing a committed assignment. Changes to enabled ranks cannot refresh persisted offers/randomness or become a reroll.
-
-The old Bossing Lesser AND Greater entry gate, first-card bundled targets, expansion purchases, rank prices, selection controls, per-rank actual≥3 diversity readiness and the existing two/three offer slots need a coherent final integration. No new free Lesser unlock, automatic prerequisite chain, four extra offer slots, generic-card tier picker, changed offer frequencies or underfloor pool has been adopted. Existing general gates remain until explicitly superseded; do not implement conflicting old and proposed paths together.
-
-Alternative to ask about: independent rank purchases after a common entry gate. **Next single question: unlock ranks progressively in order, or purchase each rank independently?** Recommendation: progressive, while retaining/allowing opt-out of owned ranks. Ask/wait before adopting the prerequisite topology. A56 retirement proposal remains unrelated and unapproved.
+Buying Skilling namesakes cannot satisfy Bossing gates. Rank ownership does not unlock normal bosses, bypass actual source access, settle a hunt or grant a ready catalog. The existing starter-target grant belongs to the first Challenge purchase; exact v2 members/prices remain unfinished. Four ranks do not create four extra offer slots. Rank controls, offer integration and per-rank diversity are follow-on work; do not infer them from topology alone.
 
 ## Validation and status
 

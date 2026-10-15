@@ -275,3 +275,7 @@ Predecessor bf213a6bc4f2c34a6693fc42bbaebcae3ffdc12a; guarded claim3f849d6d458af
 ## A68 — bounded lower-tier source context review
 
 Remote predecessor173092c2c742c059481c8e69b5bb7e960f1fde39 verified; guarded claim1408fc07e595de3195ef86f6258a0dbbd1383448. Seven-context packet and validator prepared from committed A67 source evidence: five Standard gem contexts and two Lesser contexts. Found task-only Wilderness Jelly, Infernal Mage page-level rate estimates, sea-snake task/kill-level distinction and source-family issue, Molanisk wall/combat identity lead and Mogre shore/sea access ambiguity. Exact rows/context/input pins retained; ten receipt requirements planned NOT_RUN; conditional effort thresholds checked with rational arithmetic. No admission, new FP or design answer. All13 manifest hashes and22 offline tests pass; owning commit releases owner and requires exact remote/tree/main verification. No fresh source/cached archive revalidation or production change.
+
+## A69 — confirmed progressive rank topology
+
+Verified predecessor `e232e5de920e23cfcc236b26e3e37a00f51dd962`; owning commit contains this deliverable. WB-D147 recorded with precise WB-D124/144 supersession; current tier/spec/UI/persistence references aligned. No prices, roster admissions or new runtime behavior. Validation:147 decision IDs,13 unchanged manifest pins and whitespace. Publication requires exact expected-head update and remote head/tree/main verification; no saved claim until verified.

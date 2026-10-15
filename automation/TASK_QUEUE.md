@@ -130,3 +130,7 @@ Priority user-directed; effort M; dependency A66 + supplied archive. Deliverable
 ## A68 — DONE: bounded lower-tier context/access/receipt review
 
 Priority P1; size M bounded packet; dependencies A67 committed evidence and guarded ownership (no topology answer required for review-only work). Seven source contexts/five Standard and two Lesser; exact source receipts/context preserved, access drafts and specific holds, ten planned receipt cases, conditional effort quantiles without throughput/FP guesses. Deliverables research/LOWER_TIER_CONTEXT_REVIEW_A68.md/.json and tools/wiki_drops/validate_lower_tier_review.py; committed-source validator and22 tests pass. All13 manifest pins checked. No catalog admission/table membership/production change. A64 topology remains NEXT_DESIGN_ANSWER. Next bounded source work is item/form/access/receipt completion for Killerwatt/Molanisk; rank offer/readiness and FP completion remain separate dependencies.
+
+## A69 — DONE in owning checkpoint: confirmed progressive rank topology
+
+Priority P0/P1; size S (A73 M); preceding checkpoint remotely verified. WB-D147 recorded with precise WB-D124/144 supersession; current tier/spec/UI/persistence references aligned. No prices, roster admissions or new runtime behavior. Validation:147 decision IDs,13 unchanged manifest pins and whitespace. Next: A70 owned-rank control/persistence contract under current recommendation delegation.

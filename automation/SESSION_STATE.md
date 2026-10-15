@@ -1,12 +1,20 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — A69–A73 five-checkpoint design integration; owner wb-a69-a73.
+- State: ACTIVE — A69 complete in owning checkpoint; owner wb-a69-a73 continuing sequential plan.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
 - Owning A63 checkpoint contains current rules/tables/release; resolve own SHA from branch history and verify head/tree/main before saved claim. Commit cannot embed itself.
 - Scope: design/docs/research/standalone tools/wiki_drops only; no production gameplay/main/workflow activation authorized.
+
+## Current continuation — A69–A73
+
+Latest completed: A69, confirmed progressive rank topology. Verified predecessor `e232e5de920e23cfcc236b26e3e37a00f51dd962`. WB-D147 recorded with precise WB-D124/144 supersession; current tier/spec/UI/persistence references aligned. No prices, roster admissions or new runtime behavior. Validation:147 decision IDs,13 unchanged manifest pins and whitespace.
+
+Exact next action: A70 owned-rank control/persistence contract under current recommendation delegation.
+
+Confirmed topology WB-D147: Lesser→Standard→Greater→Superior, lower ranks retained. Latest current contracts supersede older pending topology paragraphs below. Production/main changes remain unauthorized; A56 retirement and source/client evidence holds are independent. Owning publication must verify remote head/tree/main. Owner wb-a69-a73 remains active under recorded lease.
 
 ## Latest explicit user change — WB-D144/145
 
@@ -26,13 +34,9 @@ Personal fresh active exact assigned-source drop, meaningful unique/source filte
 - Prior44-hunt v1 JSON/CSV unchanged as historical/source receipts; old human table carries a supersession banner. Old builders/validator reproduce historical policy, not new future pool construction. V1 FP is not automatically a new tier reward.
 - Expanded v2 four-tier roster/rewards/offer integration are explicitly **not complete**. Do not repeat the old v1-complete status as current four-tier readiness. No live/client/gameplay tests performed.
 
-## Exact next single question — unlock topology
+## Topology question resolved — WB-D147
 
-Ask: should the four Challenge ranks unlock progressively **Lesser → Standard → Greater → Superior**, or be independently purchasable after a common entry gate?
-
-Recommendation: progressive separate permanent unlocks while retaining lower ranks, so unlocking Superior never forces its hunts. User's desire for four unlockable rank identities is confirmed; exact dependency topology is still PROPOSED/NOT_ADOPTED. The between-assignment owned-rank enable/disable selector, offer slots/frequencies/tier chooser, old Bossing Lesser AND Greater entry gate, first starter grants, per-rank≥3 actual creature readiness and prices need coherent integration; do not silently grant free Lesser or four extra offer slots. No reselecting/reseeding committed offers.
-
-After answer: verify remote/main/owner, guarded claim, record only precise approved topology/supersession, update specs/checkpoint, validate/publish/verify before next one-at-a-time material design question. Independent safe source review can continue but no final v2 admission until relevant pool/access/receipt/reward/offer contracts are settled.
+User2026-10-15 explicitly approves progressive ranks retaining lower ranks. See current continuation at top; do not ask this again. A69–A73 integration is delegated. Older pending topology notes below are superseded history.
 
 ## Historical evidence and preserved unrelated proposals
 

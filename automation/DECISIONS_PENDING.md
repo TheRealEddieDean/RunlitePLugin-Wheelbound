@@ -67,3 +67,7 @@ WB-D144 explicitly replaces single future Challenge rarity with four unlockable 
 ## A68 review-only continuation
 
 Current one-at-a-time topology question is preserved pending an answer; the2026-10-14 request for context-supported recommendations is used for safe bounded catalog review, not inferred approval of the explicitly pending prerequisite change. See research/LOWER_TIER_CONTEXT_REVIEW_A68.md for seven lower-tier contexts and conservative holds. No new gameplay decision, source admission, reward or per-rank readiness rule adopted. Progression recommendation still Lesser→Standard→Greater→Superior, lower ownership retained; exact enable controls and offer integration are separate.
+
+## A69 current supersession — topology resolved
+
+WB-D147 CONFIRMED2026-10-15: progressive paid Lesser→Standard→Greater→Superior, lower ranks retained. Earlier “current next choice” and A68 topology-pending paragraphs are historical and no longer a question. First Lesser preserves WB-D124 ordinary Bossing Lesser AND Greater entry, without a second generic charge. Next delegated integration is owned-rank controls and immutable offers; catalog/FP/source holds remain.
