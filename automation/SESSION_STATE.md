@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — A72 complete in owning checkpoint; owner wb-a69-a73 continuing sequential plan.
+- State: IDLE — A69–A73 complete; owner released.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -10,11 +10,11 @@
 
 ## Current continuation — A69–A73
 
-Latest completed: A72, shared targets and atomic ranked purchase contract. Verified predecessor `6d7b0031ca53aecd2909e3567f6ae17d79d7f8d9`. WB-D150 DELEGATED; canonical target entitlements shared across ranks, initial bundle only on first paid Lesser, honest underfloor/content/price previews and legacy preservation. Validation:150 unique decisions,13 unchanged manifest pins, whitespace. No concrete v2 price/bundle/receipt support invented.
+Latest completed: A73, synthetic rank acceptance and current readiness handoff. Verified predecessor `6db5c2dfececdd6fcb5e1df4a7f7f2f6900197ae`. Completed A69–A73 five-checkpoint plan. WB-D147 CONFIRMED; WB-D148–150 DELEGATED. A73 provides current declarative rank rules with explicit legacy-metadata supersession and14 disabled authority pins; source-pinned oracle passes43,328 assertions (7,936 offering scenarios,1,280 purchase scenarios,512 settings cases), A68 validator194 checks and22 existing tests. These are synthetic/offline results only, not current-client/durable IO proof. No historical v1/source row/display membership, main or gameplay change.
 
-Exact next action: A73 executable synthetic rank/purchase/offer invariant checks and readiness handoff; release ownership afterward.
+Exact next action: A74 bounded Killerwatt/Molanisk exact item/form/access/personal-receipt source packet; then task-independent Lesser shortlist and reviewed v2 starter/reward/price content. Do not repeat topology/control/family/target-ownership decisions; A56/task/Coffer/policy questions remain separate.
 
-Confirmed topology WB-D147: Lesser→Standard→Greater→Superior, lower ranks retained. Latest current contracts supersede older pending topology paragraphs below. Production/main changes remain unauthorized; A56 retirement and source/client evidence holds are independent. Owning publication must verify remote head/tree/main. Owner wb-a69-a73 remains active under recorded lease.
+Confirmed topology WB-D147: Lesser→Standard→Greater→Superior, lower ranks retained. Latest current contracts supersede older pending topology paragraphs below. Production/main changes remain unauthorized; A56 retirement and source/client evidence holds are independent. Owning publication must verify remote head/tree/main. Owner released, no background work.
 
 ## Latest explicit user change — WB-D144/145
 

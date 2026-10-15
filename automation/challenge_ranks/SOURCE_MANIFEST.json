@@ -1,0 +1,34 @@
+{
+  "version": "rank-contract-a73-source-v1",
+  "scope": "Synthetic design contract inputs only; no runtime source/client proof",
+  "sources": [
+    {
+      "path": "automation/challenge_ranks/check_contract.py",
+      "sha256": "199bb3a99bf9e99d7089df7502bd96d15b8a5d59a2a6078bdbb911a920ed4476"
+    },
+    {
+      "path": "docs/wheelbound/DECISIONS.md",
+      "sha256": "ccf00d7a935b89d248fb2885365797dffdafd67e66f358a4ef5c199ce4a6f634"
+    },
+    {
+      "path": "docs/wheelbound/catalogs/challenge_rank_contract_v1.json",
+      "sha256": "80a2f7c33f7a413498dae24d8637909f3c2cc0fbe6d2aac299f8aab6ac1e432d"
+    },
+    {
+      "path": "docs/wheelbound/CHALLENGE_RANK_CONTROL_CONTRACT.md",
+      "sha256": "a44601d25c2790fb407ba1fc6dd2e0c7d2143b6045473e0795ff3f1a3b5c5b1f"
+    },
+    {
+      "path": "docs/wheelbound/CHALLENGE_RANK_OFFER_CONTRACT.md",
+      "sha256": "0702da008c559582cfda21af88fc2a9824719d312207ae639995cd318b628917"
+    },
+    {
+      "path": "docs/wheelbound/CHALLENGE_RANK_PURCHASE_CONTRACT.md",
+      "sha256": "908a61cc8a9e00fa26d0c61215126f799a8f61cd7fb6ed6d273e233fec06db5e"
+    },
+    {
+      "path": "docs/wheelbound/CHALLENGE_RANK_READINESS.md",
+      "sha256": "8ee2ffe58a119544f8d0a27e0fef99ab148460419653339ec1fdfed78c7806f9"
+    }
+  ]
+}

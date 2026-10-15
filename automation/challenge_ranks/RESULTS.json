@@ -1,0 +1,22 @@
+{
+  "version": "challenge-rank-synthetic-a73-v1",
+  "authority": "DESIGN_ORACLE_ONLY",
+  "decisions": [
+    "WB-D147",
+    "WB-D148",
+    "WB-D149",
+    "WB-D150"
+  ],
+  "status": "PASS_SYNTHETIC_ONLY_NOT_RUNTIME",
+  "assertions": 43328,
+  "settings_cases": 512,
+  "purchase_cases": 1280,
+  "offering_scenarios": 7936,
+  "synthetic_family_q": "1/4",
+  "synthetic_purchase_price": 100,
+  "real_card_weights_or_prices_adopted": false,
+  "model_sha256": "199bb3a99bf9e99d7089df7502bd96d15b8a5d59a2a6078bdbb911a920ed4476",
+  "runtime_enabled": false,
+  "client_durable_io_receipt_tests": "NOT_RUN",
+  "v2_ready_roster": false
+}

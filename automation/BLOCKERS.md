@@ -25,3 +25,7 @@ A54 update2026-10-14 UTC: standalone declared collector successfully retrieved r
 ## A62 authored Challenge table completion
 
 The raw-data intake and finite v1 catalog authoring are no longer blockers:25 creature keys/44 hunts with concrete access/rates/receipt requirements/fixed FP. No live source recrawl required. Remaining activation blocker is separately authorized engineering plus actual current-client personal-source/context/composition/active-time traces and durable settlement tests. Documentation/source inspection does not establish those. Original attachment retained; normal/main/production behavior unchanged.
+
+## A73 scope of remaining Challenge gates
+
+WB-D147–150 closes rank topology/controls/offer/target purchase design integration. This does not remove actual v2 content/price/reward gaps or current-client/durable transaction evidence requirements. See CHALLENGE_RANK_READINESS.md. Existing source/captured inventory is available in committed review packets; request/reopen the original archive only for missing full-page evidence, not to restart completed inventory work. No GitHub capability blocker in this run; owning commits require verified remote writes.

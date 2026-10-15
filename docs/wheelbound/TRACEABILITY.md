@@ -80,3 +80,7 @@ WB-D135/136→I03/I09 frozen per-offer randomness, selected result before reveal
 WB-D138/139→I03/I09 complete-pool readiness classification, full-weight ordinary-empty retries, no unknown/special exclusion, all-empty readiness stop, preserved transaction/random stream and planned recovery acceptance in UNAVAILABLE_SELECTION_CONTRACT.
 
 WB-D140/141→I03/I04/I05/I09 starter sustainability/significance review, no finite-task continuation assumption or dynamic GP inclusion gate. A48 B1 data validates reported fractions/source distinctions only; canonical/context/live/reward support still gates admission.
+
+## Ranked Challenge integration — A69–A73
+
+[Current readiness and continuation](CHALLENGE_RANK_READINESS.md) maps WB-D147 confirmed topology and WB-D148–150 delegated controls/offers/shared-target purchases to contracts, synthetic checks and remaining content/client gates. Run automation/challenge_ranks/check_contract.py for exact mathematical/transaction-model invariants; this is not client/durable-IO proof. V2 bundle/quotes/prices and source admission remain unfinished; production implementation is not authorized.

@@ -46,3 +46,7 @@ Present one design choice at a time. Receive its answer and handle follow-up; au
 ## Explicit research-tool authorization2026-10-13
 
 User requested a tools folder and Python Wiki drop collector with boss/monster classification. This authorizes standalone research collection/parsing/export/test tooling under tools/wiki_drops; it does not authorize production RuneLite gameplay implementation, dependency activation or main changes. Live collection must respect access restrictions and report incomplete/blocked coverage; no all-monster data claim without verified evidence.
+
+## Current continuation delegation2026-10-15
+
+User explicitly approves progressive Challenge ranks retaining lower ranks and requests the next five checkpoints using recommendations. A69–A73 records exact approval separately from delegated controls/offers/target purchase integration, preserving old locked rules and current unknown source evidence. This delegation does not authorize production/main changes, invent factual source support or settle unrelated A56/Coffer/policy material boundaries.

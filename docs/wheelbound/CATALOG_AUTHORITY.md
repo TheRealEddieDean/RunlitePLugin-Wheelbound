@@ -51,7 +51,7 @@ WB-D140/141: prioritize repeatable task-independent starter contexts; hold finit
 
 ## Current Challenge rarity/card supersession — WB-D144/145
 
-[CHALLENGE_CARD_TIERS](CHALLENGE_CARD_TIERS.md) controls future Challenge rank placement: Lesser reciprocal25–50, Standard>50–125, Greater>125–750, Superior>750–5000. Ignore displayed roll-count multiplier for tier classification; preserve raw rolls/personal encounter probability separately. This supersedes old single1/400–1/1500/aggregate-rate bracket statements in this chapter for future selection only. Fresh personal exact assigned-source completion, source/context review and existing settled assignments remain protected. WB-D147 confirms progressive Lesser→Standard→Greater→Superior purchases retaining lower ranks; the preserved ordinary Bossing Lesser AND Greater entry gate attaches to the first paid Lesser Challenge. Enabled-rank control/offer integration and expanded v2 roster/rewards remain follow-on work. Do not treat the preserved v1 roster/FP or lower-tier source leads as a ready four-tier pool. No runtime implementation/main change.
+[CHALLENGE_CARD_TIERS](CHALLENGE_CARD_TIERS.md) controls future Challenge rank placement: Lesser reciprocal25–50, Standard>50–125, Greater>125–750, Superior>750–5000. Ignore displayed roll-count multiplier for tier classification; preserve raw rolls/personal encounter probability separately. This supersedes old single1/400–1/1500/aggregate-rate bracket statements in this chapter for future selection only. Fresh personal exact assigned-source completion, source/context review and existing settled assignments remain protected. WB-D147 confirms progressive Lesser→Standard→Greater→Superior purchases retaining lower ranks; the preserved ordinary Bossing Lesser AND Greater entry gate attaches to the first paid Lesser Challenge. WB-D148–150 now settle enabled-rank control, per-rank readiness, family offers and shared-target purchases; expanded v2 content/quotes remain unfinished. Do not treat the preserved v1 roster/FP or lower-tier source leads as a ready four-tier pool. No runtime implementation/main change.
 
 ## Tier presentation index — A65
 
@@ -60,3 +60,7 @@ catalogs/challenge_hunt_review_index_v2.json/.csv drives CHALLENGE_HUNT_TABLE's 
 ## Monster/boss source partition — A66 / WB-D146
 
 Current user-facing tables are MONSTER_CHALLENGE_HUNT_TABLE.md (90 rows) and BOSS_CHALLENGE_HUNT_TABLE.md (156 rows). Corrected taxonomy determines source_kind in the shared review index/CSV;246 existing rows and45 held rate rows are conserved without cross-listing a source in both tables. New candidates/v2 FP/unlock integration remain unapproved/pending as before. Former single/archive filenames are historical references, not active tables.
+
+## Current Challenge rank metadata — A73
+
+[challenge_rank_contract_v1](catalogs/challenge_rank_contract_v1.json), WB-D147–150, is the current rank/controls/offers/purchase contract companion to Markdown. Authority manifest metadata_supersessions explicitly supersedes the old tier-rules unlock_structure_proposal and source-review-index unlock_topology fields. Preserve those old source-era fields/hashes; they are not a pending topology question. Tier boundaries/mappings and source/display membership remain in their existing files. New rank rules stay runtime-disabled; no actual roster/quote/product activation.

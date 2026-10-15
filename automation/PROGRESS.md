@@ -291,3 +291,17 @@ Verified predecessor `bfe00980939a36331197a1264e8ad385e79a1bad`; owning commit c
 ## A72 — shared targets and atomic ranked purchase contract
 
 Verified predecessor `6d7b0031ca53aecd2909e3567f6ae17d79d7f8d9`; owning commit contains this deliverable. WB-D150 DELEGATED; canonical target entitlements shared across ranks, initial bundle only on first paid Lesser, honest underfloor/content/price previews and legacy preservation. Validation:150 unique decisions,13 unchanged manifest pins, whitespace. No concrete v2 price/bundle/receipt support invented. Publication requires exact expected-head update and remote head/tree/main verification; no saved claim until verified.
+
+## A73 — synthetic rank acceptance and current readiness handoff
+
+Verified predecessor `6db5c2dfececdd6fcb5e1df4a7f7f2f6900197ae`; owning commit contains this deliverable. Completed A69–A73 five-checkpoint plan. WB-D147 CONFIRMED; WB-D148–150 DELEGATED. A73 provides current declarative rank rules with explicit legacy-metadata supersession and14 disabled authority pins; source-pinned oracle passes43,328 assertions (7,936 offering scenarios,1,280 purchase scenarios,512 settings cases), A68 validator194 checks and22 existing tests. These are synthetic/offline results only, not current-client/durable IO proof. No historical v1/source row/display membership, main or gameplay change. Publication requires exact expected-head update and remote head/tree/main verification; no saved claim until verified.
+
+## Verified publication chain for current five-checkpoint run
+
+- Claim e232e5de920e23cfcc236b26e3e37a00f51dd962.
+- A69 e3c8d9848a5b597892b1dc761fc4fe9089918854 — confirmed topology.
+- A70 bfe00980939a36331197a1264e8ad385e79a1bad — owned-rank controls.
+- A71 6d7b0031ca53aecd2909e3567f6ae17d79d7f8d9 — family/rank offers and readiness.
+- A72 6db5c2dfececdd6fcb5e1df4a7f7f2f6900197ae — shared targets and purchases.
+
+Each was remotely verified against exact commit/tree and protected main before starting its successor. A73 is the owning commit of this section; its exact SHA is reported only after final remote verification. Owner released in that publication, no background execution.

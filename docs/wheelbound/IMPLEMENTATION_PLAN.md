@@ -19,3 +19,7 @@ Each phase ends with domain invariants plus live detector evidence where applica
 ## Research checkpoint 2026-10-09
 Source/API and original-rejection audit is recorded in [POLICY_AND_FEASIBILITY](POLICY_AND_FEASIBILITY.md). Begin future implementation with passive observation/local domain state. Restrictive player menus have a policy conflict; shop/GE interception and Coffer proof remain unresolved. Obtain specific policy clarification before implementing controls. No code, live-client test, maintainer message or submission is included in this research phase. Final acceptance requires more than the existing randomizer's prior merge.
 
+
+## Ranked Challenge integration — A69–A73
+
+[Current readiness and continuation](CHALLENGE_RANK_READINESS.md) maps WB-D147 confirmed topology and WB-D148–150 delegated controls/offers/shared-target purchases to contracts, synthetic checks and remaining content/client gates. Run automation/challenge_ranks/check_contract.py for exact mathematical/transaction-model invariants; this is not client/durable-IO proof. V2 bundle/quotes/prices and source admission remain unfinished; production implementation is not authorized.

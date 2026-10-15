@@ -83,3 +83,7 @@ WB-D149 DELEGATED: one Challenge family, same two/three slots, uniform ready ena
 ## A72 — target/purchase integration resolved
 
 WB-D150 DELEGATED: shared canonical target ownership across ranks; one initial bundle on first paid Lesser, no repeat higher-rank bundle or per-rank source repurchase. V2 exact starter members, product price/quote payload and actual source readiness remain content work. Historical v1 bundle is not a Lesser-ready v2 bundle. Next A73 checks the complete synthetic contract and saves the exact unfinished activation gates.
+
+## Current A73 boundary — five checkpoints complete
+
+WB-D147–150 resolves topology, enable controls, family/rank offerings, per-rank diversity and shared-target/bundle purchase integration. Older pending statements about these fields are superseded. No answer is requested for routine delegated continuation. Still unfinished: actual v2 starter/source/context/identity/receipt/reward/price content and numeric family-frequency balance. A56 permanent-invalidation, changed-snapshot reconciliation, task continuation, Coffer/policy and separate legacy CA reward scope remain independent; none is approved by these checkpoints. Next bounded task A74 is Killerwatt/Molanisk source identity/access/receipt completion, without whole-inventory rereview.
