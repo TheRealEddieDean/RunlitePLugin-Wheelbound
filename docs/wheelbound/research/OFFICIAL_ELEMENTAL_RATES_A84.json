@@ -1,0 +1,55 @@
+{
+  "version": "official-elemental-rate-a84-v1",
+  "source_kind": "JAGEX_IMPLEMENTATION_NEWS",
+  "title": "Summer Sweep Up Miscellaneous",
+  "published": "2026-09-02",
+  "blog_updated": "2026-09-03",
+  "url": "https://secure.runescape.com/m=news/summer-sweep-up-miscellaneous?oldschool=1",
+  "retrieved_utc": "2026-10-15T16:30:18.373203+00:00",
+  "verified_section": "New Magic Amulets",
+  "short_rate_quote": "at a rate of 1/64",
+  "rate_quote_sha256": "adce9abab09713b2ff4186f752c4d76353aaa441d0ec5d080c771a1bce937220",
+  "source_maps": [
+    {
+      "creature": "Killerwatt",
+      "item": "Air diamond",
+      "rate": "1/64",
+      "item_id": 34404
+    },
+    {
+      "creature": "Molanisk",
+      "item": "Earth emerald",
+      "rate": "1/64",
+      "item_id": 34416
+    },
+    {
+      "creature": "Infernal Mage",
+      "item": "Fire ruby",
+      "rate": "1/64",
+      "item_id": 34422
+    },
+    {
+      "creature": "Sea Snake Hatchling",
+      "item": "Water sapphire",
+      "rate": "1/64",
+      "item_id": 34410
+    }
+  ],
+  "scope_excluded": [
+    "Sea Snake Young not explicitly named by this primary post",
+    "Not current-client recipient/timing/ownership or future rate immutability proof",
+    "June proposal is not used as implementation proof"
+  ],
+  "supersedes_holds_for": [
+    "Killerwatt Air diamond uncited-rate-only hold",
+    "Molanisk Earth emerald uncited-rate-only hold",
+    "Infernal Mage Fire ruby uncited-rate-only hold"
+  ],
+  "other_holds_retained": [
+    "Actual source/game access and legal supplies",
+    "Canonical composition/region/current-client receipts",
+    "Reviewed source-specific effort/reward quotes",
+    "Rank ownership/target expansion/product price payload"
+  ],
+  "runtime_enabled": false
+}

@@ -1,5 +1,5 @@
 {
-  "version": "rank-contract-a83-source-v4",
+  "version": "rank-contract-hour-source-v5",
   "scope": "Synthetic design contract inputs only; no runtime source/client proof",
   "sources": [
     {
@@ -28,8 +28,8 @@
     },
     {
       "path": "docs/wheelbound/CHALLENGE_RANK_READINESS.md",
-      "sha256": "75ce6121d4f154808e58d5013f5274012a4cdc078a541dfa549ee49756dd237a"
+      "sha256": "9aaa34ac90893cc2ec188f7f3de8157042277ebfbd7bcfde84595a33e4c28ca7"
     }
   ],
-  "update_reason": "Partial content WB-D151/152 plus A83 current status; original WB-D147-150 rank/control invariants unchanged"
+  "update_reason": "A84 primary probability evidence supersedes narrow historical gem holds; rank/control policy unchanged"
 }

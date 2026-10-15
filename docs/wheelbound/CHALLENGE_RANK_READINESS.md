@@ -49,3 +49,7 @@ A74 recommended: one bounded exact identity/access/personal-receipt source packe
 ## Current A74–A83 content checkpoint
 
 [Current content status](CHALLENGE_CONTENT_STATUS.md) supersedes older missing-identity/member/A80-quote descriptions: four Stronghold Lesser draft sources and FP are authored; elemental identities are pinned, three gem probability holds remain. Price/frequency candidates are unadopted, client tests NOT_RUN, full four-rank content unfinished and runtime disabled. Read that status before selecting the next task; do not repeat A67 inventory or resolved rank design.
+
+## A84 probability-evidence supersession
+
+[Official elemental-rate receipt](research/OFFICIAL_ELEMENTAL_RATES_A84.md) resolves the uncited1/64 probability hold for Killerwatt/Molanisk/Infernal Mage using an implementation source. Older missing-exact-gem-rate descriptions are historical. Source-specific access/effort/client validation remains; Young is not independently named by that post. No new runtime-ready pool implied.

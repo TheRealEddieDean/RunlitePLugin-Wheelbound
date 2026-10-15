@@ -361,3 +361,7 @@ Predecessor verified `ff57d0c378caf36d3920918ee6548375480f0fb3`. A74–A83 compl
 - A82 ff57d0c378caf36d3920918ee6548375480f0fb3.
 
 Each complete deliverable was remotely verified by exact head/tree and unchanged main before its successor. A83 owning commit records final release; cannot embed its own SHA. Final response may report actual A83 SHA only after remote verification. No scheduled/background task or client test execution claimed.
+
+## A84 — completed: official elemental probability evidence resolved
+
+Verified predecessor `50e7bd942bdbca1734b906ecc00771ca6fea46ff`. Jagex implementation primary source directly supports1/64 source model for three held gem sources and Hatchling. Historical captured estimates preserved; Young explicitly outside this source scope. Source access/effort/client gates remain. No rate-policy relaxation or new gameplay decision. Size S/M bounded work; no production/main change. Owning publication requires expected-head guard and exact remote/tree/main verification. Next: A85 author exact water-source/access and gem expansion context/quote packet; preserve Young versus Hatchling evidence distinction.

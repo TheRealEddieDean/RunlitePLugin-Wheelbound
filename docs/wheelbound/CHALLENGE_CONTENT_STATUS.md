@@ -36,3 +36,7 @@ A76 aggregates HTML notes across all matching item rows on a source page. Those 
 5. Actual client tracing and durable transactions require separately authorized engineering. A56 retirement, committed-unselected reconciliation, task continuation, Coffer/policy and separate legacy CA reward remain independent open boundaries.
 
 Original collector archive is the known output.zip attachment, SHA256e00babd58e09c047f68df94625cd5b4e77e119952d52c0d0c50b53a7d2b60309. Reopen only for missing full-page facts if scratch expires. Committed packets retain source receipts/rows/constants. No need to restart A67 inventory or re-ask settled rank controls/ownership/offers.
+
+## A84 probability-evidence supersession
+
+[Official elemental-rate receipt](research/OFFICIAL_ELEMENTAL_RATES_A84.md) resolves the uncited1/64 probability hold for Killerwatt/Molanisk/Infernal Mage using an implementation source. Older missing-exact-gem-rate descriptions are historical. Source-specific access/effort/client validation remains; Young is not independently named by that post. No new runtime-ready pool implied.

@@ -1,20 +1,20 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — hour work block from A84; owner wb-hour-a84.
+- State: ACTIVE — hour work block A84 completed in owning commit; owner wb-hour-a84.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
 - Owning A63 checkpoint contains current rules/tables/release; resolve own SHA from branch history and verify head/tree/main before saved claim. Commit cannot embed itself.
 - Scope: design/docs/research/standalone tools/wiki_drops only; no production gameplay/main/workflow activation authorized.
 
-## Current continuation — A74–A83
+## Current continuation — hour work block
 
-Latest completed A83: ten-checkpoint integrated source/content validation and handoff. Verified predecessor `ff57d0c378caf36d3920918ee6548375480f0fb3`. A74–A83 complete: two full gem/NPC identity packets,27-group Lesser screen,483-group rate/note triage, four Stronghold source contexts, five elemental identity pages/conservative snake family, WB-D151 four-key starter draft and WB-D152125/125/150/150 FP quotes. Candidate prices/frequency remain unadopted;32 future client cases all NOT_RUN. Final323 integrated source/primary/quote/schema checks,196 A68 evidence checks,43,330 synthetic rank assertions,64 balance checks and22 existing offline tests pass.15 authority catalog hashes valid; historical v1/source/index/rate-rule/human tables unchanged; main/production preserved.
+Latest completed A84: official elemental probability evidence resolved. Verified predecessor `50e7bd942bdbca1734b906ecc00771ca6fea46ff`. Jagex implementation primary source directly supports1/64 source model for three held gem sources and Hatchling. Historical captured estimates preserved; Young explicitly outside this source scope. Source access/effort/client gates remain. No rate-policy relaxation or new gameplay decision.
 
-Exact next action: A84 bounded item-specific exact/range evidence for estimated gem contexts; A85 water-snake actual stage/receipt/effort; A86 bounded prospective Greater/Superior content review; A87 broader price/frequency economy scenarios. Do not redo A67 inventory or re-ask settled rank design. Full four-rank runtime catalog and product prices/client activation remain unfinished.
+Exact next action: A85 author exact water-source/access and gem expansion context/quote packet; preserve Young versus Hatchling evidence distinction.
 
-Current source/rank/content rules include WB-D144–152; WB-D151/152 are DELEGATED partial content, not explicit user roster/balance approval. No retired-Fate, task continuation or production approval inferred. Owner released; no background task. All earlier next-question/next-task descriptions below are historical where superseded by this section. Owning commit must be remotely verified before saved claim.
+Existing approved rules and explicit supersessions remain controlling. No source estimate silently certified, no unrelated retirement/task/Coffer/policy approval inferred. Active owner wb-hour-a84 under recorded lease; publish and verify before starting next bounded deliverable. Previous “next” paragraphs are historical where superseded. Owning commit requires final remote head/tree/main verification.
 
 ## Latest explicit user change — WB-D144/145
 
