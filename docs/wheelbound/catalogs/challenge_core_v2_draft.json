@@ -1,0 +1,790 @@
+{
+  "version": "challenge-core-v2-a89",
+  "authority": "Compiled WB-D151-154 design fragments; does not admit raw candidate rows",
+  "runtime_enabled": false,
+  "runtime_ready": false,
+  "current_client_tests": "NOT_RUN",
+  "sources": [
+    {
+      "path": "catalogs/challenge_hunts_v2_draft.json",
+      "version": "challenge-hunts-v2-draft-a80",
+      "sha256": "8e5c86a91169ac9613ec93518ff346888fec14581a8a3a8f5b9d77197235092b"
+    },
+    {
+      "path": "catalogs/challenge_standard_expansions_v2_draft.json",
+      "version": "standard-expansion-v2-draft-a85",
+      "sha256": "5625ad04540f8991b2ce30179072e8fe8387da2d918afbef0b8240cc14f53267"
+    },
+    {
+      "path": "catalogs/challenge_greater_superior_v2_draft.json",
+      "version": "greater-superior-expansion-v2-draft-a86",
+      "sha256": "d8e9c93669aa22c67d141d0afc70b0d31ca2f99ae527989c6274d1903a4172c1"
+    }
+  ],
+  "creatures": [
+    {
+      "key": "stronghold-minotaur",
+      "name": "Minotaur",
+      "source_fragment": "catalogs/challenge_hunts_v2_draft.json",
+      "source_context_id": "stronghold-minotaur-members-repeatable-v2",
+      "composition_leads": [
+        2481,
+        2482,
+        2483
+      ],
+      "identity_status": "PINNED_SOURCE_LEADS_NOT_CLIENT_VALIDATED",
+      "minimum_skills": {},
+      "authored_access": {
+        "rank": "lesser",
+        "world": "normal members world only in initial authored context",
+        "location": "Stronghold of Security floor1",
+        "task_required": false,
+        "quantity": 1,
+        "item_owned_before_assignment_allowed": true,
+        "completion": "fresh active personal exact item from assigned Stronghold source; keep item; once-only",
+        "rate_as_authored_source_model": "3/101",
+        "route_permissions": "Already legal region/floor access, combat equipment and renewable supplies; no assignment-granted access",
+        "status": "AUTHORED_SOURCE_CONTEXT_NOT_RUNTIME_READY"
+      },
+      "source_hunt_ids": [
+        "WB-CH2-stronghold-minotaur-9007"
+      ],
+      "target_grant": "initial-lesser-v2-draft",
+      "grants_normal_boss_unlock": false,
+      "runtime_enabled": false
+    },
+    {
+      "key": "stronghold-flesh-crawler",
+      "name": "Flesh Crawler",
+      "source_fragment": "catalogs/challenge_hunts_v2_draft.json",
+      "source_context_id": "stronghold-flesh-crawler-members-repeatable-v2",
+      "composition_leads": [
+        2498,
+        2499,
+        2500
+      ],
+      "identity_status": "PINNED_SOURCE_LEADS_NOT_CLIENT_VALIDATED",
+      "minimum_skills": {},
+      "authored_access": {
+        "rank": "lesser",
+        "world": "normal members world only in initial authored context",
+        "location": "Stronghold of Security floor2",
+        "task_required": false,
+        "quantity": 1,
+        "item_owned_before_assignment_allowed": true,
+        "completion": "fresh active personal exact item from assigned Stronghold source; keep item; once-only",
+        "rate_as_authored_source_model": "3/100",
+        "route_permissions": "Already legal region/floor access, combat equipment and renewable supplies; no assignment-granted access",
+        "status": "AUTHORED_SOURCE_CONTEXT_NOT_RUNTIME_READY"
+      },
+      "source_hunt_ids": [
+        "WB-CH2-stronghold-flesh-crawler-9011"
+      ],
+      "target_grant": "initial-lesser-v2-draft",
+      "grants_normal_boss_unlock": false,
+      "runtime_enabled": false
+    },
+    {
+      "key": "stronghold-catablepon",
+      "name": "Catablepon",
+      "source_fragment": "catalogs/challenge_hunts_v2_draft.json",
+      "source_context_id": "stronghold-catablepon-members-repeatable-v2",
+      "composition_leads": [
+        2474,
+        2475,
+        2476
+      ],
+      "identity_status": "PINNED_SOURCE_LEADS_NOT_CLIENT_VALIDATED",
+      "minimum_skills": {},
+      "authored_access": {
+        "rank": "lesser",
+        "world": "normal members world only in initial authored context",
+        "location": "Stronghold of Security floor3",
+        "task_required": false,
+        "quantity": 1,
+        "item_owned_before_assignment_allowed": true,
+        "completion": "fresh active personal exact item from assigned Stronghold source; keep item; once-only",
+        "rate_as_authored_source_model": "3/101",
+        "route_permissions": "Already legal region/floor access, combat equipment and renewable supplies; no assignment-granted access",
+        "status": "AUTHORED_SOURCE_CONTEXT_NOT_RUNTIME_READY"
+      },
+      "source_hunt_ids": [
+        "WB-CH2-stronghold-catablepon-9010"
+      ],
+      "target_grant": "initial-lesser-v2-draft",
+      "grants_normal_boss_unlock": false,
+      "runtime_enabled": false
+    },
+    {
+      "key": "stronghold-ankou",
+      "name": "Ankou",
+      "source_fragment": "catalogs/challenge_hunts_v2_draft.json",
+      "source_context_id": "stronghold-ankou-members-repeatable-v2",
+      "composition_leads": [
+        2514,
+        2515,
+        2516
+      ],
+      "identity_status": "PINNED_SOURCE_LEADS_NOT_CLIENT_VALIDATED",
+      "minimum_skills": {},
+      "authored_access": {
+        "rank": "lesser",
+        "world": "normal members world only in initial authored context",
+        "location": "Stronghold of Security floor4",
+        "task_required": false,
+        "quantity": 1,
+        "item_owned_before_assignment_allowed": true,
+        "completion": "fresh active personal exact item from assigned Stronghold source; keep item; once-only",
+        "rate_as_authored_source_model": "3/100",
+        "route_permissions": "Already legal region/floor access, combat equipment and renewable supplies; no assignment-granted access",
+        "status": "AUTHORED_SOURCE_CONTEXT_NOT_RUNTIME_READY"
+      },
+      "source_hunt_ids": [
+        "WB-CH2-stronghold-ankou-9008"
+      ],
+      "target_grant": "initial-lesser-v2-draft",
+      "grants_normal_boss_unlock": false,
+      "runtime_enabled": false
+    },
+    {
+      "key": "killerwatt",
+      "name": "Killerwatt",
+      "source_fragment": "catalogs/challenge_standard_expansions_v2_draft.json",
+      "source_context_id": "killerwatt-normal-repeatable-v2",
+      "composition_leads": [
+        469,
+        470
+      ],
+      "identity_status": "PINNED_SOURCE_LEADS_NOT_CLIENT_VALIDATED",
+      "minimum_skills": {
+        "Slayer": 37
+      },
+      "authored_access": "Ernest the Chicken complete; Killerwatt-plane portal access; no cannon placement route. Insulated boots mitigate damage; do not turn recommendation into hard attack gate.",
+      "source_hunt_ids": [
+        "WB-CH2-killerwatt-34404"
+      ],
+      "target_grant": "individual-expansion",
+      "grants_normal_boss_unlock": false,
+      "runtime_enabled": false
+    },
+    {
+      "key": "molanisk",
+      "name": "Molanisk",
+      "source_fragment": "catalogs/challenge_standard_expansions_v2_draft.json",
+      "source_context_id": "molanisk-normal-repeatable-v2",
+      "composition_leads": [
+        1
+      ],
+      "identity_status": "PINNED_SOURCE_LEADS_NOT_CLIENT_VALIDATED",
+      "minimum_skills": {
+        "Slayer": 39
+      },
+      "authored_access": "Death to the Dorgeshuun complete; legal South Dungeon route, usable Slayer bell and necessary legal light/supplies. Bell initiation and loot must be correlated.",
+      "source_hunt_ids": [
+        "WB-CH2-molanisk-34416"
+      ],
+      "target_grant": "individual-expansion",
+      "grants_normal_boss_unlock": false,
+      "runtime_enabled": false
+    },
+    {
+      "key": "infernal-mage",
+      "name": "Infernal Mage",
+      "source_fragment": "catalogs/challenge_standard_expansions_v2_draft.json",
+      "source_context_id": "infernal-mage-normal-repeatable-v2",
+      "composition_leads": [
+        443,
+        444,
+        445,
+        446,
+        447
+      ],
+      "identity_status": "PINNED_SOURCE_LEADS_NOT_CLIENT_VALIDATED",
+      "minimum_skills": {
+        "Slayer": 45
+      },
+      "authored_access": "Legal Slayer Tower route; bypass or protection for Banshees according to selected route, not a universal18 Agility or earmuff kill gate.",
+      "source_hunt_ids": [
+        "WB-CH2-infernal-mage-34422"
+      ],
+      "target_grant": "individual-expansion",
+      "grants_normal_boss_unlock": false,
+      "runtime_enabled": false
+    },
+    {
+      "key": "sea-snake-water-sapphire",
+      "name": "Sea Snake Hatchling",
+      "source_fragment": "catalogs/challenge_standard_expansions_v2_draft.json",
+      "source_context_id": "sea-snake-water-sapphire-normal-repeatable-v2",
+      "composition_leads": [
+        1098
+      ],
+      "identity_status": "PINNED_SOURCE_LEADS_NOT_CLIENT_VALIDATED",
+      "minimum_skills": {},
+      "authored_access": "Actual Royal Trouble snake-tunnel stage/repeatable route supported. Slayer40 is task-only, not kill prerequisite. No Young/mother context in this initial primary-confirmed variant.",
+      "source_hunt_ids": [
+        "WB-CH2-sea-snake-water-sapphire-34410"
+      ],
+      "target_grant": "individual-expansion",
+      "grants_normal_boss_unlock": false,
+      "runtime_enabled": false
+    },
+    {
+      "key": "commander-zilyana",
+      "name": "Commander Zilyana",
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "source_context_id": "commander-zilyana-normal-repeatable-v2",
+      "composition_leads": [
+        2205
+      ],
+      "identity_status": "PINNED_SOURCE_LEADS_NOT_CLIENT_VALIDATED",
+      "minimum_skills": {
+        "Agility": 70
+      },
+      "authored_access": "Verified normal God Wars Dungeon entry; unboosted 70 Agility, ropes installed for route; Saradomin Encampment, ordinary 40 faction KC each entry; solo boss kills only.",
+      "source_hunt_ids": [
+        "WB-CH2-commander-zilyana-11785",
+        "WB-CH2-commander-zilyana-11814"
+      ],
+      "target_grant": "individual-expansion",
+      "grants_normal_boss_unlock": false,
+      "runtime_enabled": false
+    },
+    {
+      "key": "kril-tsutsaroth",
+      "name": "K'ril Tsutsaroth",
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "source_context_id": "kril-tsutsaroth-normal-repeatable-v2",
+      "composition_leads": [
+        3129
+      ],
+      "identity_status": "PINNED_SOURCE_LEADS_NOT_CLIENT_VALIDATED",
+      "minimum_skills": {
+        "Hitpoints": 70
+      },
+      "authored_access": "Verified normal God Wars Dungeon entry; 70 Hitpoints river crossing; Zamorak Fortress; ordinary 40 faction KC each entry; solo boss kills only.",
+      "source_hunt_ids": [
+        "WB-CH2-kril-tsutsaroth-11791",
+        "WB-CH2-kril-tsutsaroth-11816"
+      ],
+      "target_grant": "individual-expansion",
+      "grants_normal_boss_unlock": false,
+      "runtime_enabled": false
+    },
+    {
+      "key": "kurask",
+      "name": "Kurask",
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "source_context_id": "kurask-normal-repeatable-v2",
+      "composition_leads": [
+        410,
+        411
+      ],
+      "identity_status": "PINNED_SOURCE_LEADS_NOT_CLIENT_VALIDATED",
+      "minimum_skills": {
+        "Slayer": 70
+      },
+      "authored_access": "Fremennik Slayer Dungeon; usable leaf-bladed weapon, broad ammunition or Magic Dart; off-task route. Iorwerth/Wilderness/superior contexts not selected.",
+      "source_hunt_ids": [
+        "WB-CH2-kurask-20727"
+      ],
+      "target_grant": "individual-expansion",
+      "grants_normal_boss_unlock": false,
+      "runtime_enabled": false
+    },
+    {
+      "key": "rune-dragon",
+      "name": "Rune dragon",
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "source_context_id": "rune-dragon-normal-repeatable-v2",
+      "composition_leads": [
+        8031,
+        8091
+      ],
+      "identity_status": "PINNED_SOURCE_LEADS_NOT_CLIENT_VALIDATED",
+      "minimum_skills": {},
+      "authored_access": "Dragon Slayer II complete; repeatable eastern Lithkren Vault route; post-quest only, dragonfire/shock combat readiness.",
+      "source_hunt_ids": [
+        "WB-CH2-rune-dragon-21918"
+      ],
+      "target_grant": "individual-expansion",
+      "grants_normal_boss_unlock": false,
+      "runtime_enabled": false
+    },
+    {
+      "key": "spitting-wyvern",
+      "name": "Spitting Wyvern",
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "source_context_id": "spitting-wyvern-normal-repeatable-v2",
+      "composition_leads": [
+        7794
+      ],
+      "identity_status": "PINNED_SOURCE_LEADS_NOT_CLIENT_VALIDATED",
+      "minimum_skills": {
+        "Slayer": 66
+      },
+      "authored_access": "Bone Voyage complete; Fossil Island Wyvern Cave off-task area; owned usable icy-breath protection and sustainable supplies. Other wyvern species remain distinct, unselected sources.",
+      "source_hunt_ids": [
+        "WB-CH2-spitting-wyvern-21646"
+      ],
+      "target_grant": "individual-expansion",
+      "grants_normal_boss_unlock": false,
+      "runtime_enabled": false
+    },
+    {
+      "key": "vyrewatch-sentinel",
+      "name": "Vyrewatch Sentinel",
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "source_context_id": "vyrewatch-sentinel-normal-repeatable-v2",
+      "composition_leads": [
+        9756,
+        9757,
+        9758,
+        9759,
+        9760,
+        9761,
+        9762,
+        9763
+      ],
+      "identity_status": "PINNED_SOURCE_LEADS_NOT_CLIENT_VALIDATED",
+      "minimum_skills": {
+        "Slayer": 38
+      },
+      "authored_access": "Sins of the Father complete; Darkmeyer route and owned usable Blisterwood flail; combat only. Pickpocketed blood shards and venator drops never qualify.",
+      "source_hunt_ids": [
+        "WB-CH2-vyrewatch-sentinel-24777"
+      ],
+      "target_grant": "individual-expansion",
+      "grants_normal_boss_unlock": false,
+      "runtime_enabled": false
+    }
+  ],
+  "hunts": [
+    {
+      "id": "WB-CH2-stronghold-minotaur-9007",
+      "creature_key": "stronghold-minotaur",
+      "rank": "lesser",
+      "specific_item": "Right skull half",
+      "canonical_item_id": 9007,
+      "accepted_drop_item_ids": [
+        9007
+      ],
+      "base_rate": "3/101",
+      "personal_probability_source_model": {
+        "lower": "3/101",
+        "upper": "3/101",
+        "method": "CITED_SINGLE_COMPONENT_DROP_IN_SCOPED_STRONGHOLD_CONTEXT",
+        "not_client_measurement": true
+      },
+      "fp_reward": 125,
+      "reference_expected_hours": "101/540",
+      "authored_reference_kph": 180,
+      "source_quote_version": "challenge-fp-v2-draft-a80",
+      "source_fragment": "catalogs/challenge_hunts_v2_draft.json",
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-stronghold-flesh-crawler-9011",
+      "creature_key": "stronghold-flesh-crawler",
+      "rank": "lesser",
+      "specific_item": "Bottom of sceptre",
+      "canonical_item_id": 9011,
+      "accepted_drop_item_ids": [
+        9011
+      ],
+      "base_rate": "3/100",
+      "personal_probability_source_model": {
+        "lower": "3/100",
+        "upper": "3/100",
+        "method": "CITED_SINGLE_COMPONENT_DROP_IN_SCOPED_STRONGHOLD_CONTEXT",
+        "not_client_measurement": true
+      },
+      "fp_reward": 125,
+      "reference_expected_hours": "2/9",
+      "authored_reference_kph": 150,
+      "source_quote_version": "challenge-fp-v2-draft-a80",
+      "source_fragment": "catalogs/challenge_hunts_v2_draft.json",
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-stronghold-catablepon-9010",
+      "creature_key": "stronghold-catablepon",
+      "rank": "lesser",
+      "specific_item": "Top of sceptre",
+      "canonical_item_id": 9010,
+      "accepted_drop_item_ids": [
+        9010
+      ],
+      "base_rate": "3/101",
+      "personal_probability_source_model": {
+        "lower": "3/101",
+        "upper": "3/101",
+        "method": "CITED_SINGLE_COMPONENT_DROP_IN_SCOPED_STRONGHOLD_CONTEXT",
+        "not_client_measurement": true
+      },
+      "fp_reward": 150,
+      "reference_expected_hours": "101/360",
+      "authored_reference_kph": 120,
+      "source_quote_version": "challenge-fp-v2-draft-a80",
+      "source_fragment": "catalogs/challenge_hunts_v2_draft.json",
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-stronghold-ankou-9008",
+      "creature_key": "stronghold-ankou",
+      "rank": "lesser",
+      "specific_item": "Left skull half",
+      "canonical_item_id": 9008,
+      "accepted_drop_item_ids": [
+        9008
+      ],
+      "base_rate": "3/100",
+      "personal_probability_source_model": {
+        "lower": "3/100",
+        "upper": "3/100",
+        "method": "CITED_SINGLE_COMPONENT_DROP_IN_SCOPED_STRONGHOLD_CONTEXT",
+        "not_client_measurement": true
+      },
+      "fp_reward": 150,
+      "reference_expected_hours": "10/27",
+      "authored_reference_kph": 90,
+      "source_quote_version": "challenge-fp-v2-draft-a80",
+      "source_fragment": "catalogs/challenge_hunts_v2_draft.json",
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-killerwatt-34404",
+      "creature_key": "killerwatt",
+      "rank": "standard",
+      "specific_item": "Air diamond",
+      "canonical_item_id": 34404,
+      "accepted_drop_item_ids": [
+        34404
+      ],
+      "base_rate": "1/64",
+      "personal_probability_source_model": {
+        "lower": "1/64",
+        "upper": "1/64",
+        "method": "JAGEX_IMPLEMENTATION_RATE_NAMED_SOURCE",
+        "primary_evidence": "research/OFFICIAL_ELEMENTAL_RATES_A84.json",
+        "not_client_measurement": true
+      },
+      "fp_reward": 175,
+      "reference_expected_hours": "32/45",
+      "authored_reference_kph": 90,
+      "source_quote_version": "challenge-standard-fp-draft-a85",
+      "source_fragment": "catalogs/challenge_standard_expansions_v2_draft.json",
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-molanisk-34416",
+      "creature_key": "molanisk",
+      "rank": "standard",
+      "specific_item": "Earth emerald",
+      "canonical_item_id": 34416,
+      "accepted_drop_item_ids": [
+        34416
+      ],
+      "base_rate": "1/64",
+      "personal_probability_source_model": {
+        "lower": "1/64",
+        "upper": "1/64",
+        "method": "JAGEX_IMPLEMENTATION_RATE_NAMED_SOURCE",
+        "primary_evidence": "research/OFFICIAL_ELEMENTAL_RATES_A84.json",
+        "not_client_measurement": true
+      },
+      "fp_reward": 175,
+      "reference_expected_hours": "8/15",
+      "authored_reference_kph": 120,
+      "source_quote_version": "challenge-standard-fp-draft-a85",
+      "source_fragment": "catalogs/challenge_standard_expansions_v2_draft.json",
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-infernal-mage-34422",
+      "creature_key": "infernal-mage",
+      "rank": "standard",
+      "specific_item": "Fire ruby",
+      "canonical_item_id": 34422,
+      "accepted_drop_item_ids": [
+        34422
+      ],
+      "base_rate": "1/64",
+      "personal_probability_source_model": {
+        "lower": "1/64",
+        "upper": "1/64",
+        "method": "JAGEX_IMPLEMENTATION_RATE_NAMED_SOURCE",
+        "primary_evidence": "research/OFFICIAL_ELEMENTAL_RATES_A84.json",
+        "not_client_measurement": true
+      },
+      "fp_reward": 150,
+      "reference_expected_hours": "32/75",
+      "authored_reference_kph": 150,
+      "source_quote_version": "challenge-standard-fp-draft-a85",
+      "source_fragment": "catalogs/challenge_standard_expansions_v2_draft.json",
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-sea-snake-water-sapphire-34410",
+      "creature_key": "sea-snake-water-sapphire",
+      "rank": "standard",
+      "specific_item": "Water sapphire",
+      "canonical_item_id": 34410,
+      "accepted_drop_item_ids": [
+        34410
+      ],
+      "base_rate": "1/64",
+      "personal_probability_source_model": {
+        "lower": "1/64",
+        "upper": "1/64",
+        "method": "JAGEX_IMPLEMENTATION_RATE_NAMED_SOURCE",
+        "primary_evidence": "research/OFFICIAL_ELEMENTAL_RATES_A84.json",
+        "not_client_measurement": true
+      },
+      "fp_reward": 175,
+      "reference_expected_hours": "8/15",
+      "authored_reference_kph": 120,
+      "source_quote_version": "challenge-standard-fp-draft-a85",
+      "source_fragment": "catalogs/challenge_standard_expansions_v2_draft.json",
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-commander-zilyana-11785",
+      "creature_key": "commander-zilyana",
+      "rank": "greater",
+      "specific_item": "Armadyl crossbow",
+      "canonical_item_id": 11785,
+      "accepted_drop_item_ids": [
+        11785
+      ],
+      "base_rate": "1/508",
+      "personal_probability_source_model": {
+        "lower": "1/508",
+        "upper": "1/508",
+        "method": "SCOPED_SINGLE_COMPLETE_SOLO_ENCOUNTER_PUBLISHED_SOURCE_MODEL",
+        "source_provenance": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+        "not_client_measurement": true
+      },
+      "fp_reward": 2650,
+      "reference_expected_hours": "127/5",
+      "authored_reference_kph": 20,
+      "source_quote_version": "greater-superior-fp-draft-a86",
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-commander-zilyana-11814",
+      "creature_key": "commander-zilyana",
+      "rank": "greater",
+      "specific_item": "Saradomin hilt",
+      "canonical_item_id": 11814,
+      "accepted_drop_item_ids": [
+        11814
+      ],
+      "base_rate": "1/508",
+      "personal_probability_source_model": {
+        "lower": "1/508",
+        "upper": "1/508",
+        "method": "SCOPED_SINGLE_COMPLETE_SOLO_ENCOUNTER_PUBLISHED_SOURCE_MODEL",
+        "source_provenance": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+        "not_client_measurement": true
+      },
+      "fp_reward": 2650,
+      "reference_expected_hours": "127/5",
+      "authored_reference_kph": 20,
+      "source_quote_version": "greater-superior-fp-draft-a86",
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-kril-tsutsaroth-11791",
+      "creature_key": "kril-tsutsaroth",
+      "rank": "greater",
+      "specific_item": "Staff of the Dead",
+      "canonical_item_id": 11791,
+      "accepted_drop_item_ids": [
+        11791
+      ],
+      "base_rate": "1/508",
+      "personal_probability_source_model": {
+        "lower": "1/508",
+        "upper": "1/508",
+        "method": "SCOPED_SINGLE_COMPLETE_SOLO_ENCOUNTER_PUBLISHED_SOURCE_MODEL",
+        "source_provenance": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+        "not_client_measurement": true
+      },
+      "fp_reward": 2650,
+      "reference_expected_hours": "127/5",
+      "authored_reference_kph": 20,
+      "source_quote_version": "greater-superior-fp-draft-a86",
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-kril-tsutsaroth-11816",
+      "creature_key": "kril-tsutsaroth",
+      "rank": "greater",
+      "specific_item": "Zamorak hilt",
+      "canonical_item_id": 11816,
+      "accepted_drop_item_ids": [
+        11816
+      ],
+      "base_rate": "1/508",
+      "personal_probability_source_model": {
+        "lower": "1/508",
+        "upper": "1/508",
+        "method": "SCOPED_SINGLE_COMPLETE_SOLO_ENCOUNTER_PUBLISHED_SOURCE_MODEL",
+        "source_provenance": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+        "not_client_measurement": true
+      },
+      "fp_reward": 2650,
+      "reference_expected_hours": "127/5",
+      "authored_reference_kph": 20,
+      "source_quote_version": "greater-superior-fp-draft-a86",
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-kurask-20727",
+      "creature_key": "kurask",
+      "rank": "superior",
+      "specific_item": "Leaf-bladed battleaxe",
+      "canonical_item_id": 20727,
+      "accepted_drop_item_ids": [
+        20727
+      ],
+      "base_rate": "1/1026",
+      "personal_probability_source_model": {
+        "lower": "1/1026",
+        "upper": "1/1026",
+        "method": "SCOPED_SINGLE_COMPLETE_SOLO_ENCOUNTER_PUBLISHED_SOURCE_MODEL",
+        "source_provenance": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+        "not_client_measurement": true
+      },
+      "fp_reward": 975,
+      "reference_expected_hours": "171/20",
+      "authored_reference_kph": 120,
+      "source_quote_version": "greater-superior-fp-draft-a86",
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-rune-dragon-21918",
+      "creature_key": "rune-dragon",
+      "rank": "superior",
+      "specific_item": "Dragon limbs",
+      "canonical_item_id": 21918,
+      "accepted_drop_item_ids": [
+        21918
+      ],
+      "base_rate": "1/800",
+      "personal_probability_source_model": {
+        "lower": "1/800",
+        "upper": "1/800",
+        "method": "SCOPED_SINGLE_COMPLETE_SOLO_ENCOUNTER_PUBLISHED_SOURCE_MODEL",
+        "source_provenance": "CAPTURED_PAGE_JAGEX_PROVIDED_RATE_STATEMENT_NOT_DIRECT_PRIMARY_REFETCH",
+        "not_client_measurement": true
+      },
+      "fp_reward": 1900,
+      "reference_expected_hours": "160/9",
+      "authored_reference_kph": 45,
+      "source_quote_version": "greater-superior-fp-draft-a86",
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-spitting-wyvern-21646",
+      "creature_key": "spitting-wyvern",
+      "rank": "greater",
+      "specific_item": "Granite longsword",
+      "canonical_item_id": 21646,
+      "accepted_drop_item_ids": [
+        21646
+      ],
+      "base_rate": "1/512",
+      "personal_probability_source_model": {
+        "lower": "1/512",
+        "upper": "1/512",
+        "method": "SCOPED_SINGLE_COMPLETE_SOLO_ENCOUNTER_PUBLISHED_SOURCE_MODEL",
+        "source_provenance": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+        "not_client_measurement": true
+      },
+      "fp_reward": 975,
+      "reference_expected_hours": "128/15",
+      "authored_reference_kph": 60,
+      "source_quote_version": "greater-superior-fp-draft-a86",
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-vyrewatch-sentinel-24777",
+      "creature_key": "vyrewatch-sentinel",
+      "rank": "superior",
+      "specific_item": "Blood shard",
+      "canonical_item_id": 24777,
+      "accepted_drop_item_ids": [
+        24777
+      ],
+      "base_rate": "1/1500",
+      "personal_probability_source_model": {
+        "lower": "1/1500",
+        "upper": "1/1500",
+        "method": "SCOPED_SINGLE_COMPLETE_SOLO_ENCOUNTER_PUBLISHED_SOURCE_MODEL",
+        "source_provenance": "ACTUAL_ITEM_LINK_TO_CAPTURED_JAGEX_RATE_STATEMENT_NOT_ORIGINAL_TWEET_REFETCH",
+        "not_client_measurement": true
+      },
+      "fp_reward": 1775,
+      "reference_expected_hours": "50/3",
+      "authored_reference_kph": 90,
+      "source_quote_version": "greater-superior-fp-draft-a86",
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "runtime_enabled": false
+    }
+  ],
+  "counts": {
+    "canonical_keys": 14,
+    "hunts": 16,
+    "keys_per_rank": {
+      "lesser": 4,
+      "standard": 4,
+      "greater": 3,
+      "superior": 3
+    },
+    "hunts_per_rank": {
+      "lesser": 4,
+      "standard": 4,
+      "greater": 5,
+      "superior": 3
+    }
+  },
+  "product_prices": null,
+  "numeric_family_schedule": null,
+  "not_in_this_core": [
+    "Remaining36 historical v1 hunts pending prospective context review",
+    "Unadmitted display candidates and alternate/task/group contexts",
+    "Sea Snake Young held variant; Turoth necklace conflicting source rate"
+  ],
+  "activation_gates": [
+    "Actual rank/source ownership and current legally repeatable access",
+    "Supported per-rank>=3 canonical eligible keys with frozen source/quote snapshot",
+    "Actual composition/local-recipient/earning-time/active-state adapter and durable receipts",
+    "Reviewed product prices and numeric offer-family schedule",
+    "Explicit engineering authorization; no main or existing normal behavior changes"
+  ]
+}

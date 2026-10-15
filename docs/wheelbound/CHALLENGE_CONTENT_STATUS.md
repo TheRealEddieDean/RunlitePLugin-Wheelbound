@@ -48,3 +48,7 @@ Original collector archive is the known output.zip attachment, SHA256e00babd58e0
 ## A86 Greater/Superior core content
 
 [Bounded G/S packet](research/GREATER_SUPERIOR_CONTEXTS_A86.md) adds six authored source keys/eight specific hunts, with three canonical keys per rank before actual filtering. Together with Lesser and Standard drafts this gives all-four-rank core design coverage, not a full eligible/runtime catalog.36 old hunts and broader483 display evidence remain separate follow-up; a Turoth official/cached rate discrepancy is explicitly held.
+
+## A89 finite core integration
+
+[Four-rank core](CHALLENGE_CORE_V2.md) compiles14 canonical keys/16 hunts from hash-pinned Lesser, Standard and Greater/Superior drafts. Source/rate/quote/variant drift, duplicate keys/items, accidental activation and stale fragments are rejected by offline checks. It is finite design coverage only; actual eligible counts/prices/client support and broader content remain separate.

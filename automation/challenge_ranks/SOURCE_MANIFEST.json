@@ -31,5 +31,5 @@
       "sha256": "9aaa34ac90893cc2ec188f7f3de8157042277ebfbd7bcfde84595a33e4c28ca7"
     }
   ],
-  "update_reason": "A86 WB-D154 bounded Greater/Superior content; rank/control rules unchanged"
+  "update_reason": "A89 compiled finite core metadata/status, without rank/control rule change"
 }

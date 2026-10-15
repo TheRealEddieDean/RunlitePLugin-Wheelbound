@@ -1,5 +1,5 @@
 {
-  "version": "authority-v14-a86-2026-10-15",
+  "version": "authority-v15-a89-2026-10-15",
   "scope": "Documentation metadata only; does not enable gameplay",
   "decision_register": "../DECISIONS.md",
   "catalogs": [
@@ -284,6 +284,22 @@
         "Reviewed rank and expansion product prices",
         "No general historic monolithic-card migration activated"
       ]
+    },
+    {
+      "path": "catalogs/challenge_core_v2_draft.json",
+      "version": "challenge-core-v2-a89",
+      "sha256": "9d567d4cc616168bdd76571cb7e7994060a2ca74a25a6ec2fba5e96de1c0c4e7",
+      "entry_count": 16,
+      "authority": "COMPILED_WB_D151_154_FINITE_DESIGN_CORE_NOT_RUNTIME",
+      "runtime_enabled": false,
+      "h3_pinned_input": false,
+      "enable_gates": [
+        "Actual rank/source ownership and current legally repeatable access",
+        "Supported per-rank>=3 canonical eligible keys with frozen source/quote snapshot",
+        "Actual composition/local-recipient/earning-time/active-state adapter and durable receipts",
+        "Reviewed product prices and numeric offer-family schedule",
+        "Explicit engineering authorization; no main or existing normal behavior changes"
+      ]
     }
   ],
   "historical_experiments": {
@@ -301,5 +317,6 @@
     "catalogs/challenge_tier_rules_v2.json#/unlock_structure_proposal": "catalogs/challenge_rank_contract_v1.json",
     "catalogs/challenge_hunt_review_index_v2.json#/unlock_topology": "catalogs/challenge_rank_contract_v1.json"
   },
-  "current_partial_challenge_content": "catalogs/challenge_hunts_v2_draft.json"
+  "current_partial_challenge_content": "catalogs/challenge_hunts_v2_draft.json",
+  "current_challenge_core": "catalogs/challenge_core_v2_draft.json"
 }

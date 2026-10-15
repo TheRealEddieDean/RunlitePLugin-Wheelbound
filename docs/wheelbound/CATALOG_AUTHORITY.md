@@ -68,3 +68,7 @@ Current user-facing tables are MONSTER_CHALLENGE_HUNT_TABLE.md (90 rows) and BOS
 ## Current A74–A83 content checkpoint
 
 [Current content status](CHALLENGE_CONTENT_STATUS.md) supersedes older missing-identity/member/A80-quote descriptions: four Stronghold Lesser draft sources and FP are authored; elemental identities are pinned, three gem probability holds remain. Price/frequency candidates are unadopted, client tests NOT_RUN, full four-rank content unfinished and runtime disabled. Read that status before selecting the next task; do not repeat A67 inventory or resolved rank design.
+
+## A89 finite core integration
+
+[Four-rank core](CHALLENGE_CORE_V2.md) compiles14 canonical keys/16 hunts from hash-pinned Lesser, Standard and Greater/Superior drafts. Source/rate/quote/variant drift, duplicate keys/items, accidental activation and stale fragments are rejected by offline checks. It is finite design coverage only; actual eligible counts/prices/client support and broader content remain separate.
