@@ -1,5 +1,5 @@
 {
-  "version": "authority-v12-a80-2026-10-15",
+  "version": "authority-v13-a85-2026-10-15",
   "scope": "Documentation metadata only; does not enable gameplay",
   "decision_register": "../DECISIONS.md",
   "catalogs": [
@@ -253,6 +253,21 @@
         "Reviewed v2 first-product/rank price payload",
         "Current-client source/form/region/personal active receipt support",
         "Reviewed legacy entitlement mapping before any migration"
+      ]
+    },
+    {
+      "path": "catalogs/challenge_standard_expansions_v2_draft.json",
+      "version": "standard-expansion-v2-draft-a85",
+      "sha256": "5625ad04540f8991b2ce30179072e8fe8387da2d918afbef0b8240cc14f53267",
+      "entry_count": 4,
+      "authority": "WB-D153_DELEGATED_STANDARD_DESIGN_CONTENT_ONLY",
+      "runtime_enabled": false,
+      "h3_pinned_input": false,
+      "enable_gates": [
+        "Actual Royal Trouble eligible-stage/region predicate and client trace",
+        "Other source composition/active personal recipient/current-client trace",
+        "Reviewed rank/individual-expansion product prices",
+        "No paid product or runtime adapter activated"
       ]
     }
   ],

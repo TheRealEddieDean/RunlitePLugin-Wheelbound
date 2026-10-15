@@ -1,0 +1,250 @@
+{
+  "version": "standard-expansion-v2-draft-a85",
+  "authority": "WB-D153_DELEGATED_CONTENT_ONLY",
+  "design_status": "FOUR_AUTHORED_STANDARD_SOURCE_KEYS_WITH_QUOTES",
+  "runtime_enabled": false,
+  "ready_for_new_offers": false,
+  "primary_rate_receipt": "research/OFFICIAL_ELEMENTAL_RATES_A84.json",
+  "primary_rate_receipt_sha256": "43380898c8d84c8439f47ebb6d98e8790453291bf6b40b73ec85dfa0b0b3a14f",
+  "identity_receipt": "research/ELEMENTAL_CONTEXTS_A78.json",
+  "identity_receipt_sha256": "09a6b8a7bb5742ab96325f6ae9c2747685bf6b065a3a2f75948232542b894018",
+  "creatures": [
+    {
+      "key": "killerwatt",
+      "name": "Killerwatt",
+      "bundle": "individual-expansion-not-in-initial-bundle",
+      "source_url": "https://oldschool.runescape.wiki/w/Killerwatt",
+      "composition_ids": [
+        469,
+        470
+      ],
+      "context_id": "killerwatt-normal-repeatable-v2",
+      "membership_required": true,
+      "minimum_skills": {
+        "Slayer": 37
+      },
+      "task_requirement": "NONE; no finite Slayer assignment required for selected authored route",
+      "route_requirements": "Ernest the Chicken complete; Killerwatt-plane portal access; no cannon placement route. Insulated boots mitigate damage; do not turn recommendation into hard attack gate.",
+      "requires_legal_supply_route": true,
+      "grants_normal_boss_unlock": false,
+      "hunts": [
+        "WB-CH2-killerwatt-34404"
+      ],
+      "runtime_enabled": false
+    },
+    {
+      "key": "molanisk",
+      "name": "Molanisk",
+      "bundle": "individual-expansion-not-in-initial-bundle",
+      "source_url": "https://oldschool.runescape.wiki/w/Molanisk",
+      "composition_ids": [
+        1
+      ],
+      "context_id": "molanisk-normal-repeatable-v2",
+      "membership_required": true,
+      "minimum_skills": {
+        "Slayer": 39
+      },
+      "task_requirement": "NONE; no finite Slayer assignment required for selected authored route",
+      "route_requirements": "Death to the Dorgeshuun complete; legal South Dungeon route, usable Slayer bell and necessary legal light/supplies. Bell initiation and loot must be correlated.",
+      "requires_legal_supply_route": true,
+      "grants_normal_boss_unlock": false,
+      "hunts": [
+        "WB-CH2-molanisk-34416"
+      ],
+      "runtime_enabled": false
+    },
+    {
+      "key": "infernal-mage",
+      "name": "Infernal Mage",
+      "bundle": "individual-expansion-not-in-initial-bundle",
+      "source_url": "https://oldschool.runescape.wiki/w/Infernal_Mage",
+      "composition_ids": [
+        443,
+        444,
+        445,
+        446,
+        447
+      ],
+      "context_id": "infernal-mage-normal-repeatable-v2",
+      "membership_required": true,
+      "minimum_skills": {
+        "Slayer": 45
+      },
+      "task_requirement": "NONE; no finite Slayer assignment required for selected authored route",
+      "route_requirements": "Legal Slayer Tower route; bypass or protection for Banshees according to selected route, not a universal18 Agility or earmuff kill gate.",
+      "requires_legal_supply_route": true,
+      "grants_normal_boss_unlock": false,
+      "hunts": [
+        "WB-CH2-infernal-mage-34422"
+      ],
+      "runtime_enabled": false
+    },
+    {
+      "key": "sea-snake-water-sapphire",
+      "name": "Sea Snake Hatchling",
+      "bundle": "individual-expansion-not-in-initial-bundle",
+      "source_url": "https://oldschool.runescape.wiki/w/Sea_Snake_Hatchling",
+      "composition_ids": [
+        1098
+      ],
+      "context_id": "sea-snake-water-sapphire-normal-repeatable-v2",
+      "membership_required": true,
+      "minimum_skills": {},
+      "task_requirement": "NONE; no finite Slayer assignment required for selected authored route",
+      "route_requirements": "Actual Royal Trouble snake-tunnel stage/repeatable route supported. Slayer40 is task-only, not kill prerequisite. No Young/mother context in this initial primary-confirmed variant.",
+      "requires_legal_supply_route": true,
+      "grants_normal_boss_unlock": false,
+      "hunts": [
+        "WB-CH2-sea-snake-water-sapphire-34410"
+      ],
+      "runtime_enabled": false
+    }
+  ],
+  "hunts": [
+    {
+      "id": "WB-CH2-killerwatt-34404",
+      "creature_key": "killerwatt",
+      "rank": "standard",
+      "specific_item": "Air diamond",
+      "canonical_item_id": 34404,
+      "accepted_drop_item_ids": [
+        34404
+      ],
+      "quantity": 1,
+      "base_rate": "1/64",
+      "personal_probability_source_model": {
+        "lower": "1/64",
+        "upper": "1/64",
+        "method": "JAGEX_IMPLEMENTATION_RATE_NAMED_SOURCE",
+        "primary_evidence": "research/OFFICIAL_ELEMENTAL_RATES_A84.json",
+        "not_client_measurement": true
+      },
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "reward_quote": {
+        "version": "challenge-standard-fp-draft-a85",
+        "reference_kills_per_hour": 90,
+        "reference_expected_hours": "32/45",
+        "fp_reward": 175,
+        "formula": "25*ceil((100+100*reference_expected_hours)/25)",
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes normal supplies/travel/bell overhead as an assumption",
+        "frozen_quote_no_actual_duration_reprice": true
+      },
+      "fp_reward": 175,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-molanisk-34416",
+      "creature_key": "molanisk",
+      "rank": "standard",
+      "specific_item": "Earth emerald",
+      "canonical_item_id": 34416,
+      "accepted_drop_item_ids": [
+        34416
+      ],
+      "quantity": 1,
+      "base_rate": "1/64",
+      "personal_probability_source_model": {
+        "lower": "1/64",
+        "upper": "1/64",
+        "method": "JAGEX_IMPLEMENTATION_RATE_NAMED_SOURCE",
+        "primary_evidence": "research/OFFICIAL_ELEMENTAL_RATES_A84.json",
+        "not_client_measurement": true
+      },
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "reward_quote": {
+        "version": "challenge-standard-fp-draft-a85",
+        "reference_kills_per_hour": 120,
+        "reference_expected_hours": "8/15",
+        "fp_reward": 175,
+        "formula": "25*ceil((100+100*reference_expected_hours)/25)",
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes normal supplies/travel/bell overhead as an assumption",
+        "frozen_quote_no_actual_duration_reprice": true
+      },
+      "fp_reward": 175,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-infernal-mage-34422",
+      "creature_key": "infernal-mage",
+      "rank": "standard",
+      "specific_item": "Fire ruby",
+      "canonical_item_id": 34422,
+      "accepted_drop_item_ids": [
+        34422
+      ],
+      "quantity": 1,
+      "base_rate": "1/64",
+      "personal_probability_source_model": {
+        "lower": "1/64",
+        "upper": "1/64",
+        "method": "JAGEX_IMPLEMENTATION_RATE_NAMED_SOURCE",
+        "primary_evidence": "research/OFFICIAL_ELEMENTAL_RATES_A84.json",
+        "not_client_measurement": true
+      },
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "reward_quote": {
+        "version": "challenge-standard-fp-draft-a85",
+        "reference_kills_per_hour": 150,
+        "reference_expected_hours": "32/75",
+        "fp_reward": 150,
+        "formula": "25*ceil((100+100*reference_expected_hours)/25)",
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes normal supplies/travel/bell overhead as an assumption",
+        "frozen_quote_no_actual_duration_reprice": true
+      },
+      "fp_reward": 150,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CH2-sea-snake-water-sapphire-34410",
+      "creature_key": "sea-snake-water-sapphire",
+      "rank": "standard",
+      "specific_item": "Water sapphire",
+      "canonical_item_id": 34410,
+      "accepted_drop_item_ids": [
+        34410
+      ],
+      "quantity": 1,
+      "base_rate": "1/64",
+      "personal_probability_source_model": {
+        "lower": "1/64",
+        "upper": "1/64",
+        "method": "JAGEX_IMPLEMENTATION_RATE_NAMED_SOURCE",
+        "primary_evidence": "research/OFFICIAL_ELEMENTAL_RATES_A84.json",
+        "not_client_measurement": true
+      },
+      "completion_contract": "challenge-personal-drop-v2-draft",
+      "reward_quote": {
+        "version": "challenge-standard-fp-draft-a85",
+        "reference_kills_per_hour": 120,
+        "reference_expected_hours": "8/15",
+        "fp_reward": 175,
+        "formula": "25*ceil((100+100*reference_expected_hours)/25)",
+        "throughput_status": "AUTHORED_NOT_MEASURED; includes normal supplies/travel/bell overhead as an assumption",
+        "frozen_quote_no_actual_duration_reprice": true
+      },
+      "fp_reward": 175,
+      "runtime_enabled": false
+    }
+  ],
+  "sea_family_policy": {
+    "key": "sea-snake-water-sapphire",
+    "counts_once": true,
+    "initial_qualifying_composition_ids": [
+      1098
+    ],
+    "held_related_composition_ids": [
+      1097
+    ],
+    "excluded_quest_boss_ids": [
+      1101
+    ],
+    "scope": "Future variant versioning may admit Young after explicit evidence; never refresh committed offers/assignments."
+  },
+  "unresolved_activation": [
+    "Actual Royal Trouble eligible-stage/region predicate and client trace",
+    "Other source composition/active personal recipient/current-client trace",
+    "Reviewed rank/individual-expansion product prices",
+    "No paid product or runtime adapter activated"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "version": "water-access-source-map-a85-v1",
+  "runelite_pin": "42a6f17a6a2e8e478aa763890ecd0181a59dad38",
+  "runelite_sources": [
+    {
+      "path": "runelite-api/src/main/java/net/runelite/api/Quest.java",
+      "sha256": "704572a9474b0302819bcccb07575a5ba0b10df6df5656fd196dc12376fcade3"
+    },
+    {
+      "path": "runelite-api/src/main/java/net/runelite/api/gameval/VarPlayerID.java",
+      "sha256": "cd1d27a88778cbf793941ac9a5379486ae44e4eb55b71127508b91a1ec50d131"
+    },
+    {
+      "path": "runelite-api/src/main/java/net/runelite/api/gameval/VarbitID.java",
+      "sha256": "120a80c4143300039a16aef9bc2039f6d49a9e408624330280a34e2779da3b5c"
+    }
+  ],
+  "quest_helper": {
+    "repo": "Zoinkwiz/quest-helper",
+    "commit": "5f791937a99a676f23c02aa48c4e4d5b50e7edad",
+    "path": "src/main/java/com/questhelper/helpers/quests/royaltrouble/RoyalTrouble.java",
+    "sha256": "6482325f43ac9bf896663a07a7ff6665055770ece0d7e742545c779b67688957",
+    "evidence_role": "Pinned implementation precedent for its own quest routing; not server/client validation"
+  },
+  "distinct_ids": {
+    "quest_enum_id": 123,
+    "varplayer_royal_questvarbits": 730,
+    "varbit_royal_misc": 2141,
+    "varbit_used_mining_prop": 2145,
+    "varbit_lift_stage": 2146,
+    "varbit_rope_location": 2147,
+    "varbit_snake_cutscene": 2157
+  },
+  "source_observations": {
+    "helper_entered_dungeon_condition": "ROYAL_MISC>=60, not sufficient by itself for snake-tunnel access",
+    "helper_later_progress": "separate mining-prop/lift/rope/path and diary/children conditions; a diary mapping TODO is explicitly unverified",
+    "candidate_tunnel_zone_boxes": [
+      [
+        [
+          2540,
+          10242,
+          0
+        ],
+        [
+          2561,
+          10285,
+          0
+        ]
+      ],
+      [
+        [
+          2562,
+          10242,
+          0
+        ],
+        [
+          2590,
+          10260,
+          0
+        ]
+      ],
+      [
+        [
+          2529,
+          10275,
+          0
+        ],
+        [
+          2539,
+          10288,
+          0
+        ]
+      ]
+    ],
+    "boss_zone_must_exclude": [
+      [
+        2608,
+        10272,
+        0
+      ],
+      [
+        2622,
+        10290,
+        0
+      ]
+    ]
+  },
+  "threshold_certified_for_runtime": false,
+  "client_tests": "NOT_RUN",
+  "runtime_enabled": false
+}

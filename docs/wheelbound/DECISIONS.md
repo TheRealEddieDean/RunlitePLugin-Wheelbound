@@ -1586,3 +1586,12 @@ WB-D140/141 are adopted authoring recommendations, not confirmations of reported
 - Evidence: exact probability/source context from A77; arithmetic/quantiles and half/double throughput sensitivity in STARTER_EFFORT_QUOTES_A80. No tier-name multiplier or market floor. Conservative authored source-model quotes do not assert empirical personal probability or a guaranteed finish.
 - Payment: freeze selected quote/version with existing offer/assignment; pay once for a supported fresh active personal exact-source drop. No KC/time cap, actual-duration repricing, partial reward, consumption or paused earning.
 - Scope: only partial v2 four-source draft; all runtime flags false. Rank/product prices, full other-rank roster, access/composition/recipient/client proof remain separate. Historical v1 grants/FP unchanged.
+
+## WB-D153 - Four primary-supported Standard expansion contexts and draft quotes
+
+- Status: DELEGATED content/balance authoring,2026-10-15 under WB-D132 and current hour continuation; not explicit historical roster approval or client validation.
+- Decision: author Killerwatt/Air diamond, Molanisk/Earth emerald, Infernal Mage/Fire ruby and the one-count water-sapphire family with initial Hatchling-only supported context as individual Standard expansions. A84 supplies direct primary rate evidence; A78 supplies pinned item/form identities. No initial bundle addition or ordinary boss unlock.
+- Scope: official source does not independently name Young. Preserve that related variant as held, accepting only1098 for this initial authored family version; no separate Young lottery/diversity key or source repurchase. Existing hypothetical/committed snapshots are never silently rewritten.
+- Quotes: source-model1/64; authored throughput90/120/150/120 kills per hour, not measurements. Existing formula yields175/175/150/175 FP, frozen once per assignment with no actual-duration repricing or KC cap.
+- Gates: preserve actual Slayer37/39/45 requirements for first three; no Slayer40 kill gate on sea snakes. Exact Royal Trouble tunnel-stage/current-client predicate remains unvalidated; quest ID/varplayer/varbit namespaces explicitly distinct. Products require reviewed prices and actual source/receipt adapters before offering.
+- Evidence: OFFICIAL_ELEMENTAL_RATES_A84, ELEMENTAL_CONTEXTS_A78, WATER_ACCESS_SOURCE_MAP_A85; partial Standard draft remains runtime-disabled and no actual account readiness is claimed.

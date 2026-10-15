@@ -8,7 +8,7 @@
     },
     {
       "path": "docs/wheelbound/DECISIONS.md",
-      "sha256": "9a8a774c8ff4ab3d281db08a6bf315982ba539f3420ba0011390c9338d6fe1fe"
+      "sha256": "67a956cda0ff77a7c58bd86e2d5b788c967884398a2d8667f794f64dec0c186b"
     },
     {
       "path": "docs/wheelbound/catalogs/challenge_rank_contract_v1.json",
@@ -31,5 +31,5 @@
       "sha256": "9aaa34ac90893cc2ec188f7f3de8157042277ebfbd7bcfde84595a33e4c28ca7"
     }
   ],
-  "update_reason": "A84 primary probability evidence supersedes narrow historical gem holds; rank/control policy unchanged"
+  "update_reason": "A85 WB-D153 Standard draft content; core rank/control oracle unchanged"
 }

@@ -40,3 +40,7 @@ Original collector archive is the known output.zip attachment, SHA256e00babd58e0
 ## A84 probability-evidence supersession
 
 [Official elemental-rate receipt](research/OFFICIAL_ELEMENTAL_RATES_A84.md) resolves the uncited1/64 probability hold for Killerwatt/Molanisk/Infernal Mage using an implementation source. Older missing-exact-gem-rate descriptions are historical. Source-specific access/effort/client validation remains; Young is not independently named by that post. No new runtime-ready pool implied.
+
+## A85 Standard expansion content
+
+[Standard packet](research/STANDARD_EXPANSION_A85.md) supplies four authored source keys/hunts and175/175/150/175 draft FP. Water family keeps one entitlement/diversity key but initially qualifies Hatchling only; Young is a held variant. Exact quest-stage/current-client proof, actual source ownership/access and reviewed product prices remain gates. No runtime-ready Standard pool claimed.

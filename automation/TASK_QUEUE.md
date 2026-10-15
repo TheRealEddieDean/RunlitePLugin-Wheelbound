@@ -194,3 +194,7 @@ Predecessor verified `ff57d0c378caf36d3920918ee6548375480f0fb3`. A74–A83 compl
 ## A84 — DONE within stated scope: official elemental probability evidence resolved
 
 Verified predecessor `50e7bd942bdbca1734b906ecc00771ca6fea46ff`. Jagex implementation primary source directly supports1/64 source model for three held gem sources and Hatchling. Historical captured estimates preserved; Young explicitly outside this source scope. Source access/effort/client gates remain. No rate-policy relaxation or new gameplay decision. Size S/M bounded work; no production/main change. Owning publication requires expected-head guard and exact remote/tree/main verification. Next: A85 author exact water-source/access and gem expansion context/quote packet; preserve Young versus Hatchling evidence distinction.
+
+## A85 — DONE within stated scope: four Standard expansions and water-access source map
+
+Verified predecessor `662be2d96002bd0319233539ec79d26ca430b97f`. WB-D153 authors four Standard sources with primary-supported rate, exact item/form IDs, actual route/skill distinctions and175/175/150/175 authored FP. Water-stage variable namespaces/peer routing pinned; threshold remains unvalidated, not guessed from dungeon flag. Hatchling initially qualifies, Young held in one-count family. Size S/M bounded work; no production/main change. Owning publication requires expected-head guard and exact remote/tree/main verification. Next: A86 bounded Greater/Superior source/context/quote review; prefer supported finite historical contexts and a primary-confirmed new Turoth item.
