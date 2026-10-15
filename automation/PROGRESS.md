@@ -287,3 +287,7 @@ Verified predecessor `e3c8d9848a5b597892b1dc761fc4fe9089918854`; owning commit c
 ## A71 — ranked offering and per-rank diversity contract
 
 Verified predecessor `bfe00980939a36331197a1264e8ad385e79a1bad`; owning commit contains this deliverable. WB-D149 DELEGATED; concrete family/rank/source sequencing, conditional q/R odds, per-rank≥3 floor and immutable snapshot requirements. Validation:149 unique IDs,13 manifest hashes, whitespace. No new numeric card weight or real catalog admission. Publication requires exact expected-head update and remote head/tree/main verification; no saved claim until verified.
+
+## A72 — shared targets and atomic ranked purchase contract
+
+Verified predecessor `6d7b0031ca53aecd2909e3567f6ae17d79d7f8d9`; owning commit contains this deliverable. WB-D150 DELEGATED; canonical target entitlements shared across ranks, initial bundle only on first paid Lesser, honest underfloor/content/price previews and legacy preservation. Validation:150 unique decisions,13 unchanged manifest pins, whitespace. No concrete v2 price/bundle/receipt support invented. Publication requires exact expected-head update and remote head/tree/main verification; no saved claim until verified.

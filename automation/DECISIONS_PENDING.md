@@ -79,3 +79,7 @@ WB-D148 adopts the future-offer owned-rank selector and safe edit boundary, incl
 ## A71 — offer/rank readiness integration resolved
 
 WB-D149 DELEGATED: one Challenge family, same two/three slots, uniform ready enabled rank committed before display, per-rank≥3 canonical eligible keys and unchanged creature-first/item-second draw. Numeric family schedule, actual v2 members/quotes and client proof remain unfinished; no isolated price/frequency invented. Next shared target/starter purchase integration is A72.
+
+## A72 — target/purchase integration resolved
+
+WB-D150 DELEGATED: shared canonical target ownership across ranks; one initial bundle on first paid Lesser, no repeat higher-rank bundle or per-rank source repurchase. V2 exact starter members, product price/quote payload and actual source readiness remain content work. Historical v1 bundle is not a Lesser-ready v2 bundle. Next A73 checks the complete synthetic contract and saves the exact unfinished activation gates.

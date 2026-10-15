@@ -142,3 +142,7 @@ Priority P0/P1; size S (A73 M); preceding checkpoint remotely verified. WB-D148 
 ## A71 — DONE in owning checkpoint: ranked offering and per-rank diversity contract
 
 Priority P0/P1; size S (A73 M); preceding checkpoint remotely verified. WB-D149 DELEGATED; concrete family/rank/source sequencing, conditional q/R odds, per-rank≥3 floor and immutable snapshot requirements. Validation:149 unique IDs,13 manifest hashes, whitespace. No new numeric card weight or real catalog admission. Next: A72 shared target ownership, first starter bundle and clear purchase/readiness previews.
+
+## A72 — DONE in owning checkpoint: shared targets and atomic ranked purchase contract
+
+Priority P0/P1; size S (A73 M); preceding checkpoint remotely verified. WB-D150 DELEGATED; canonical target entitlements shared across ranks, initial bundle only on first paid Lesser, honest underfloor/content/price previews and legacy preservation. Validation:150 unique decisions,13 unchanged manifest pins, whitespace. No concrete v2 price/bundle/receipt support invented. Next: A73 executable synthetic rank/purchase/offer invariant checks and readiness handoff; release ownership afterward.

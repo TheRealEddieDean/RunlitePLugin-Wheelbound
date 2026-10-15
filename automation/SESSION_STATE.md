@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — A71 complete in owning checkpoint; owner wb-a69-a73 continuing sequential plan.
+- State: ACTIVE — A72 complete in owning checkpoint; owner wb-a69-a73 continuing sequential plan.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -10,9 +10,9 @@
 
 ## Current continuation — A69–A73
 
-Latest completed: A71, ranked offering and per-rank diversity contract. Verified predecessor `bfe00980939a36331197a1264e8ad385e79a1bad`. WB-D149 DELEGATED; concrete family/rank/source sequencing, conditional q/R odds, per-rank≥3 floor and immutable snapshot requirements. Validation:149 unique IDs,13 manifest hashes, whitespace. No new numeric card weight or real catalog admission.
+Latest completed: A72, shared targets and atomic ranked purchase contract. Verified predecessor `6d7b0031ca53aecd2909e3567f6ae17d79d7f8d9`. WB-D150 DELEGATED; canonical target entitlements shared across ranks, initial bundle only on first paid Lesser, honest underfloor/content/price previews and legacy preservation. Validation:150 unique decisions,13 unchanged manifest pins, whitespace. No concrete v2 price/bundle/receipt support invented.
 
-Exact next action: A72 shared target ownership, first starter bundle and clear purchase/readiness previews.
+Exact next action: A73 executable synthetic rank/purchase/offer invariant checks and readiness handoff; release ownership afterward.
 
 Confirmed topology WB-D147: Lesser→Standard→Greater→Superior, lower ranks retained. Latest current contracts supersede older pending topology paragraphs below. Production/main changes remain unauthorized; A56 retirement and source/client evidence holds are independent. Owning publication must verify remote head/tree/main. Owner wb-a69-a73 remains active under recorded lease.
 
