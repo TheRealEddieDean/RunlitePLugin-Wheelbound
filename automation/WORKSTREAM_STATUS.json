@@ -27,7 +27,7 @@
       "status": "PARTIAL_SOURCE_MAPPING",
       "source": "A17/A20/A61/A85",
       "exit_criteria": "Validate initialized skill/quest/stage/region/method/source identity for selected contexts with positive/negative traces.",
-      "next_or_limit": "Water-stage map is a source proposal, not a certified threshold."
+      "next_or_limit": "A93 full-core trace plan62 cases/14 source rows, all NOT_RUN; water-stage map remains unvalidated."
     },
     {
       "id": "WB-W04",

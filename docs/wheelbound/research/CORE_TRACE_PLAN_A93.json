@@ -1,0 +1,1473 @@
+{
+  "version": "core-client-trace-plan-a93-v1",
+  "scope": "Future actual-client acceptance planning; no production adapter, trace, durable IO or approval supplied",
+  "runtime_enabled": false,
+  "client_tests_executed": 0,
+  "sources": [
+    {
+      "path": "catalogs/challenge_core_v2_draft.json",
+      "sha256": "9d567d4cc616168bdd76571cb7e7994060a2ca74a25a6ec2fba5e96de1c0c4e7"
+    },
+    {
+      "path": "research/RECEIPT_TRACE_PLAN_A82.json",
+      "sha256": "74d2d73feecd7258a696c734859e6326133cb43a0a97da5fa5617b5f6f5eacb2"
+    },
+    {
+      "path": "research/WATER_ACCESS_SOURCE_MAP_A85.json",
+      "sha256": "389d253966980ab029d621411b76f31239f163d1d5dbac4274a93431cccd4b3c"
+    }
+  ],
+  "required_derived_receipt_fields": [
+    "account_key",
+    "run_id",
+    "assignment_id",
+    "canonical_source_key",
+    "context_id",
+    "source_composition_id",
+    "actual_region_method_world",
+    "logical_item_id",
+    "quantity",
+    "local_recipient_evidence",
+    "encounter_or_drop_occurrence_id",
+    "earning_time_evidence",
+    "earning_active_state",
+    "delivery_processing_active_state",
+    "frozen_catalog_and_quote_versions",
+    "evidence_journal_key",
+    "settlement_operation_id"
+  ],
+  "derived_fields_are_not_promised_api_fields": true,
+  "trace_envelope": [
+    "Actual client/build and adapter/source versions",
+    "Account/run/assignment and immutable offer/rank/source/context/item/quote snapshots",
+    "Initialized quest/skill/region/world/method and renewable-route observations",
+    "Raw ordered event payloads with provenance; local-recipient and earning-versus-delivery timeline",
+    "Journal/settlement operation identities and before/after balance/spin/assignment records",
+    "Restore/replay result and matched positive/negative control",
+    "Every context/form unsupported until its required observation is resolved"
+  ],
+  "source_matrix": [
+    {
+      "key": "stronghold-minotaur",
+      "context_id": "stronghold-minotaur-members-repeatable-v2",
+      "hunt_ids": [
+        "WB-CH2-stronghold-minotaur-9007"
+      ],
+      "composition_leads": [
+        2481,
+        2482,
+        2483
+      ],
+      "access_source": {
+        "rank": "lesser",
+        "world": "normal members world only in initial authored context",
+        "location": "Stronghold of Security floor1",
+        "task_required": false,
+        "quantity": 1,
+        "item_owned_before_assignment_allowed": true,
+        "completion": "fresh active personal exact item from assigned Stronghold source; keep item; once-only",
+        "rate_as_authored_source_model": "3/101",
+        "route_permissions": "Already legal region/floor access, combat equipment and renewable supplies; no assignment-granted access",
+        "status": "AUTHORED_SOURCE_CONTEXT_NOT_RUNTIME_READY"
+      },
+      "minimum_skills_source": {},
+      "specific_control": "Verify the authored Stronghold floor1 forms; another Minotaur location/name or an assembled sceptre cannot establish this component receipt.",
+      "required_form_result": "For every listed lead, record actual form/loot alias/region/method/recipient/earning-time observation. Unobserved or ambiguous mapping stays unsupported, never default-accept.",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "key": "stronghold-flesh-crawler",
+      "context_id": "stronghold-flesh-crawler-members-repeatable-v2",
+      "hunt_ids": [
+        "WB-CH2-stronghold-flesh-crawler-9011"
+      ],
+      "composition_leads": [
+        2498,
+        2499,
+        2500
+      ],
+      "access_source": {
+        "rank": "lesser",
+        "world": "normal members world only in initial authored context",
+        "location": "Stronghold of Security floor2",
+        "task_required": false,
+        "quantity": 1,
+        "item_owned_before_assignment_allowed": true,
+        "completion": "fresh active personal exact item from assigned Stronghold source; keep item; once-only",
+        "rate_as_authored_source_model": "3/100",
+        "route_permissions": "Already legal region/floor access, combat equipment and renewable supplies; no assignment-granted access",
+        "status": "AUTHORED_SOURCE_CONTEXT_NOT_RUNTIME_READY"
+      },
+      "minimum_skills_source": {},
+      "specific_control": "Verify floor2 encounter and bottom-component loot; another floor/component or a later inventory combination cannot cross-credit.",
+      "required_form_result": "For every listed lead, record actual form/loot alias/region/method/recipient/earning-time observation. Unobserved or ambiguous mapping stays unsupported, never default-accept.",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "key": "stronghold-catablepon",
+      "context_id": "stronghold-catablepon-members-repeatable-v2",
+      "hunt_ids": [
+        "WB-CH2-stronghold-catablepon-9010"
+      ],
+      "composition_leads": [
+        2474,
+        2475,
+        2476
+      ],
+      "access_source": {
+        "rank": "lesser",
+        "world": "normal members world only in initial authored context",
+        "location": "Stronghold of Security floor3",
+        "task_required": false,
+        "quantity": 1,
+        "item_owned_before_assignment_allowed": true,
+        "completion": "fresh active personal exact item from assigned Stronghold source; keep item; once-only",
+        "rate_as_authored_source_model": "3/101",
+        "route_permissions": "Already legal region/floor access, combat equipment and renewable supplies; no assignment-granted access",
+        "status": "AUTHORED_SOURCE_CONTEXT_NOT_RUNTIME_READY"
+      },
+      "minimum_skills_source": {},
+      "specific_control": "Verify floor3 encounter/top-component receipt and distinct occurrence after commitment; previous component in bank cannot credit.",
+      "required_form_result": "For every listed lead, record actual form/loot alias/region/method/recipient/earning-time observation. Unobserved or ambiguous mapping stays unsupported, never default-accept.",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "key": "stronghold-ankou",
+      "context_id": "stronghold-ankou-members-repeatable-v2",
+      "hunt_ids": [
+        "WB-CH2-stronghold-ankou-9008"
+      ],
+      "composition_leads": [
+        2514,
+        2515,
+        2516
+      ],
+      "access_source": {
+        "rank": "lesser",
+        "world": "normal members world only in initial authored context",
+        "location": "Stronghold of Security floor4",
+        "task_required": false,
+        "quantity": 1,
+        "item_owned_before_assignment_allowed": true,
+        "completion": "fresh active personal exact item from assigned Stronghold source; keep item; once-only",
+        "rate_as_authored_source_model": "3/100",
+        "route_permissions": "Already legal region/floor access, combat equipment and renewable supplies; no assignment-granted access",
+        "status": "AUTHORED_SOURCE_CONTEXT_NOT_RUNTIME_READY"
+      },
+      "minimum_skills_source": {},
+      "specific_control": "Verify floor4 context; exclude Wilderness/other Ankou routes and same-name observations without the authored normal members region.",
+      "required_form_result": "For every listed lead, record actual form/loot alias/region/method/recipient/earning-time observation. Unobserved or ambiguous mapping stays unsupported, never default-accept.",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "key": "killerwatt",
+      "context_id": "killerwatt-normal-repeatable-v2",
+      "hunt_ids": [
+        "WB-CH2-killerwatt-34404"
+      ],
+      "composition_leads": [
+        469,
+        470
+      ],
+      "access_source": "Ernest the Chicken complete; Killerwatt-plane portal access; no cannon placement route. Insulated boots mitigate damage; do not turn recommendation into hard attack gate.",
+      "minimum_skills_source": {
+        "Slayer": 37
+      },
+      "specific_control": "Observe passive470 to combat469 transformation and actual loot composition alias; orb interaction alone is not a kill, source receipt or new diversity key.",
+      "required_form_result": "For every listed lead, record actual form/loot alias/region/method/recipient/earning-time observation. Unobserved or ambiguous mapping stays unsupported, never default-accept.",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "key": "molanisk",
+      "context_id": "molanisk-normal-repeatable-v2",
+      "hunt_ids": [
+        "WB-CH2-molanisk-34416"
+      ],
+      "composition_leads": [
+        1
+      ],
+      "access_source": "Death to the Dorgeshuun complete; legal South Dungeon route, usable Slayer bell and necessary legal light/supplies. Bell initiation and loot must be correlated.",
+      "minimum_skills_source": {
+        "Slayer": 39
+      },
+      "specific_control": "Observe exact NPC1 plus supported South Dungeon route/bell initiation and local loot correlation. Bell inventory/use or wall interaction alone is not completion.",
+      "required_form_result": "For every listed lead, record actual form/loot alias/region/method/recipient/earning-time observation. Unobserved or ambiguous mapping stays unsupported, never default-accept.",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "key": "infernal-mage",
+      "context_id": "infernal-mage-normal-repeatable-v2",
+      "hunt_ids": [
+        "WB-CH2-infernal-mage-34422"
+      ],
+      "composition_leads": [
+        443,
+        444,
+        445,
+        446,
+        447
+      ],
+      "access_source": "Legal Slayer Tower route; bypass or protection for Banshees according to selected route, not a universal18 Agility or earmuff kill gate.",
+      "minimum_skills_source": {
+        "Slayer": 45
+      },
+      "specific_control": "Observe each claimed Tower form/loot alias and exact Fire ruby34422; no form accepted solely by shared display name or a combat-level guess.",
+      "required_form_result": "For every listed lead, record actual form/loot alias/region/method/recipient/earning-time observation. Unobserved or ambiguous mapping stays unsupported, never default-accept.",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "key": "sea-snake-water-sapphire",
+      "context_id": "sea-snake-water-sapphire-normal-repeatable-v2",
+      "hunt_ids": [
+        "WB-CH2-sea-snake-water-sapphire-34410"
+      ],
+      "composition_leads": [
+        1098
+      ],
+      "access_source": "Actual Royal Trouble snake-tunnel stage/repeatable route supported. Slayer40 is task-only, not kill prerequisite. No Young/mother context in this initial primary-confirmed variant.",
+      "minimum_skills_source": {},
+      "specific_control": "Hatchling1098 only in the prospective authored context. Young1097/mother1101/boss zone are controls; no enum123/varplayer730/varbit2141 interchange, >=60-only access shortcut or Slayer40 kill gate.",
+      "required_form_result": "For every listed lead, record actual form/loot alias/region/method/recipient/earning-time observation. Unobserved or ambiguous mapping stays unsupported, never default-accept.",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "key": "commander-zilyana",
+      "context_id": "commander-zilyana-normal-repeatable-v2",
+      "hunt_ids": [
+        "WB-CH2-commander-zilyana-11785",
+        "WB-CH2-commander-zilyana-11814"
+      ],
+      "composition_leads": [
+        2205
+      ],
+      "access_source": "Verified normal God Wars Dungeon entry; unboosted 70 Agility, ropes installed for route; Saradomin Encampment, ordinary 40 faction KC each entry; solo boss kills only.",
+      "minimum_skills_source": {
+        "Agility": 70
+      },
+      "specific_control": "Normal solo boss2205, supported Saradomin room/entry and local recipient. Bodyguard/teammate loot does not qualify; crossbow11785 and hilt11814 are separate assigned hunts.",
+      "required_form_result": "For every listed lead, record actual form/loot alias/region/method/recipient/earning-time observation. Unobserved or ambiguous mapping stays unsupported, never default-accept.",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "key": "kril-tsutsaroth",
+      "context_id": "kril-tsutsaroth-normal-repeatable-v2",
+      "hunt_ids": [
+        "WB-CH2-kril-tsutsaroth-11791",
+        "WB-CH2-kril-tsutsaroth-11816"
+      ],
+      "composition_leads": [
+        3129
+      ],
+      "access_source": "Verified normal God Wars Dungeon entry; 70 Hitpoints river crossing; Zamorak Fortress; ordinary 40 faction KC each entry; solo boss kills only.",
+      "minimum_skills_source": {
+        "Hitpoints": 70
+      },
+      "specific_control": "Normal solo boss3129, supported Zamorak room/entry and local recipient. Bodyguard/team allocation cannot qualify; staff11791 and hilt11816 never satisfy one another.",
+      "required_form_result": "For every listed lead, record actual form/loot alias/region/method/recipient/earning-time observation. Unobserved or ambiguous mapping stays unsupported, never default-accept.",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "key": "kurask",
+      "context_id": "kurask-normal-repeatable-v2",
+      "hunt_ids": [
+        "WB-CH2-kurask-20727"
+      ],
+      "composition_leads": [
+        410,
+        411
+      ],
+      "access_source": "Fremennik Slayer Dungeon; usable leaf-bladed weapon, broad ammunition or Magic Dart; off-task route. Iorwerth/Wilderness/superior contexts not selected.",
+      "minimum_skills_source": {
+        "Slayer": 70
+      },
+      "specific_control": "Fremennik off-task route with usable permitted damage method; record actual form/loot mapping. Exclude superior/Iorwerth and unreviewed source variants; no extra source key for an alias.",
+      "required_form_result": "For every listed lead, record actual form/loot alias/region/method/recipient/earning-time observation. Unobserved or ambiguous mapping stays unsupported, never default-accept.",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "key": "rune-dragon",
+      "context_id": "rune-dragon-normal-repeatable-v2",
+      "hunt_ids": [
+        "WB-CH2-rune-dragon-21918"
+      ],
+      "composition_leads": [
+        8031,
+        8091
+      ],
+      "access_source": "Dragon Slayer II complete; repeatable eastern Lithkren Vault route; post-quest only, dragonfire/shock combat readiness.",
+      "minimum_skills_source": {},
+      "specific_control": "Post-quest normal Lithkren only. Test quest/POH/other-context same-name exclusions even if a numeric identity overlaps; constants8031/8091 alone do not prove normal personal loot.",
+      "required_form_result": "For every listed lead, record actual form/loot alias/region/method/recipient/earning-time observation. Unobserved or ambiguous mapping stays unsupported, never default-accept.",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "key": "spitting-wyvern",
+      "context_id": "spitting-wyvern-normal-repeatable-v2",
+      "hunt_ids": [
+        "WB-CH2-spitting-wyvern-21646"
+      ],
+      "composition_leads": [
+        7794
+      ],
+      "access_source": "Bone Voyage complete; Fossil Island Wyvern Cave off-task area; owned usable icy-breath protection and sustainable supplies. Other wyvern species remain distinct, unselected sources.",
+      "minimum_skills_source": {
+        "Slayer": 66
+      },
+      "specific_control": "Normal off-task Fossil Island Spitting source7794; other ordinary wyvern species/Ancient/task-only route do not qualify merely because they can drop the same longsword.",
+      "required_form_result": "For every listed lead, record actual form/loot alias/region/method/recipient/earning-time observation. Unobserved or ambiguous mapping stays unsupported, never default-accept.",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "key": "vyrewatch-sentinel",
+      "context_id": "vyrewatch-sentinel-normal-repeatable-v2",
+      "hunt_ids": [
+        "WB-CH2-vyrewatch-sentinel-24777"
+      ],
+      "composition_leads": [
+        9756,
+        9757,
+        9758,
+        9759,
+        9760,
+        9761,
+        9762,
+        9763
+      ],
+      "access_source": "Sins of the Father complete; Darkmeyer route and owned usable Blisterwood flail; combat only. Pickpocketed blood shards and venator drops never qualify.",
+      "minimum_skills_source": {
+        "Slayer": 38
+      },
+      "specific_control": "Combat Darkmeyer sentinel only. Observe actual form versus reported9756 loot alias; citizen pickpocket and venator blood shards cannot satisfy; no name-prefix identity.",
+      "required_form_result": "For every listed lead, record actual form/loot alias/region/method/recipient/earning-time observation. Unobserved or ambiguous mapping stays unsupported, never default-accept.",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    }
+  ],
+  "cases": [
+    {
+      "id": "WB-CORE-positive-WB-CH2-stronghold-minotaur-9007",
+      "kind": "positive-hunt",
+      "hunt_ids": [
+        "WB-CH2-stronghold-minotaur-9007"
+      ],
+      "source_keys": [
+        "stronghold-minotaur"
+      ],
+      "item_ids": [
+        9007
+      ],
+      "rank": "lesser",
+      "frozen_quote_version": "challenge-fp-v2-draft-a80",
+      "frozen_fp": 125,
+      "scenario": "After current supported commitment, obtain the exact fresh active personal item from the authored legal source/context and correlate earning time separately from delivery.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-positive-WB-CH2-stronghold-flesh-crawler-9011",
+      "kind": "positive-hunt",
+      "hunt_ids": [
+        "WB-CH2-stronghold-flesh-crawler-9011"
+      ],
+      "source_keys": [
+        "stronghold-flesh-crawler"
+      ],
+      "item_ids": [
+        9011
+      ],
+      "rank": "lesser",
+      "frozen_quote_version": "challenge-fp-v2-draft-a80",
+      "frozen_fp": 125,
+      "scenario": "After current supported commitment, obtain the exact fresh active personal item from the authored legal source/context and correlate earning time separately from delivery.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-positive-WB-CH2-stronghold-catablepon-9010",
+      "kind": "positive-hunt",
+      "hunt_ids": [
+        "WB-CH2-stronghold-catablepon-9010"
+      ],
+      "source_keys": [
+        "stronghold-catablepon"
+      ],
+      "item_ids": [
+        9010
+      ],
+      "rank": "lesser",
+      "frozen_quote_version": "challenge-fp-v2-draft-a80",
+      "frozen_fp": 150,
+      "scenario": "After current supported commitment, obtain the exact fresh active personal item from the authored legal source/context and correlate earning time separately from delivery.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-positive-WB-CH2-stronghold-ankou-9008",
+      "kind": "positive-hunt",
+      "hunt_ids": [
+        "WB-CH2-stronghold-ankou-9008"
+      ],
+      "source_keys": [
+        "stronghold-ankou"
+      ],
+      "item_ids": [
+        9008
+      ],
+      "rank": "lesser",
+      "frozen_quote_version": "challenge-fp-v2-draft-a80",
+      "frozen_fp": 150,
+      "scenario": "After current supported commitment, obtain the exact fresh active personal item from the authored legal source/context and correlate earning time separately from delivery.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-positive-WB-CH2-killerwatt-34404",
+      "kind": "positive-hunt",
+      "hunt_ids": [
+        "WB-CH2-killerwatt-34404"
+      ],
+      "source_keys": [
+        "killerwatt"
+      ],
+      "item_ids": [
+        34404
+      ],
+      "rank": "standard",
+      "frozen_quote_version": "challenge-standard-fp-draft-a85",
+      "frozen_fp": 175,
+      "scenario": "After current supported commitment, obtain the exact fresh active personal item from the authored legal source/context and correlate earning time separately from delivery.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-positive-WB-CH2-molanisk-34416",
+      "kind": "positive-hunt",
+      "hunt_ids": [
+        "WB-CH2-molanisk-34416"
+      ],
+      "source_keys": [
+        "molanisk"
+      ],
+      "item_ids": [
+        34416
+      ],
+      "rank": "standard",
+      "frozen_quote_version": "challenge-standard-fp-draft-a85",
+      "frozen_fp": 175,
+      "scenario": "After current supported commitment, obtain the exact fresh active personal item from the authored legal source/context and correlate earning time separately from delivery.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-positive-WB-CH2-infernal-mage-34422",
+      "kind": "positive-hunt",
+      "hunt_ids": [
+        "WB-CH2-infernal-mage-34422"
+      ],
+      "source_keys": [
+        "infernal-mage"
+      ],
+      "item_ids": [
+        34422
+      ],
+      "rank": "standard",
+      "frozen_quote_version": "challenge-standard-fp-draft-a85",
+      "frozen_fp": 150,
+      "scenario": "After current supported commitment, obtain the exact fresh active personal item from the authored legal source/context and correlate earning time separately from delivery.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-positive-WB-CH2-sea-snake-water-sapphire-34410",
+      "kind": "positive-hunt",
+      "hunt_ids": [
+        "WB-CH2-sea-snake-water-sapphire-34410"
+      ],
+      "source_keys": [
+        "sea-snake-water-sapphire"
+      ],
+      "item_ids": [
+        34410
+      ],
+      "rank": "standard",
+      "frozen_quote_version": "challenge-standard-fp-draft-a85",
+      "frozen_fp": 175,
+      "scenario": "After current supported commitment, obtain the exact fresh active personal item from the authored legal source/context and correlate earning time separately from delivery.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-positive-WB-CH2-commander-zilyana-11785",
+      "kind": "positive-hunt",
+      "hunt_ids": [
+        "WB-CH2-commander-zilyana-11785"
+      ],
+      "source_keys": [
+        "commander-zilyana"
+      ],
+      "item_ids": [
+        11785
+      ],
+      "rank": "greater",
+      "frozen_quote_version": "greater-superior-fp-draft-a86",
+      "frozen_fp": 2650,
+      "scenario": "After current supported commitment, obtain the exact fresh active personal item from the authored legal source/context and correlate earning time separately from delivery.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-positive-WB-CH2-commander-zilyana-11814",
+      "kind": "positive-hunt",
+      "hunt_ids": [
+        "WB-CH2-commander-zilyana-11814"
+      ],
+      "source_keys": [
+        "commander-zilyana"
+      ],
+      "item_ids": [
+        11814
+      ],
+      "rank": "greater",
+      "frozen_quote_version": "greater-superior-fp-draft-a86",
+      "frozen_fp": 2650,
+      "scenario": "After current supported commitment, obtain the exact fresh active personal item from the authored legal source/context and correlate earning time separately from delivery.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-positive-WB-CH2-kril-tsutsaroth-11791",
+      "kind": "positive-hunt",
+      "hunt_ids": [
+        "WB-CH2-kril-tsutsaroth-11791"
+      ],
+      "source_keys": [
+        "kril-tsutsaroth"
+      ],
+      "item_ids": [
+        11791
+      ],
+      "rank": "greater",
+      "frozen_quote_version": "greater-superior-fp-draft-a86",
+      "frozen_fp": 2650,
+      "scenario": "After current supported commitment, obtain the exact fresh active personal item from the authored legal source/context and correlate earning time separately from delivery.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-positive-WB-CH2-kril-tsutsaroth-11816",
+      "kind": "positive-hunt",
+      "hunt_ids": [
+        "WB-CH2-kril-tsutsaroth-11816"
+      ],
+      "source_keys": [
+        "kril-tsutsaroth"
+      ],
+      "item_ids": [
+        11816
+      ],
+      "rank": "greater",
+      "frozen_quote_version": "greater-superior-fp-draft-a86",
+      "frozen_fp": 2650,
+      "scenario": "After current supported commitment, obtain the exact fresh active personal item from the authored legal source/context and correlate earning time separately from delivery.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-positive-WB-CH2-kurask-20727",
+      "kind": "positive-hunt",
+      "hunt_ids": [
+        "WB-CH2-kurask-20727"
+      ],
+      "source_keys": [
+        "kurask"
+      ],
+      "item_ids": [
+        20727
+      ],
+      "rank": "superior",
+      "frozen_quote_version": "greater-superior-fp-draft-a86",
+      "frozen_fp": 975,
+      "scenario": "After current supported commitment, obtain the exact fresh active personal item from the authored legal source/context and correlate earning time separately from delivery.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-positive-WB-CH2-rune-dragon-21918",
+      "kind": "positive-hunt",
+      "hunt_ids": [
+        "WB-CH2-rune-dragon-21918"
+      ],
+      "source_keys": [
+        "rune-dragon"
+      ],
+      "item_ids": [
+        21918
+      ],
+      "rank": "superior",
+      "frozen_quote_version": "greater-superior-fp-draft-a86",
+      "frozen_fp": 1900,
+      "scenario": "After current supported commitment, obtain the exact fresh active personal item from the authored legal source/context and correlate earning time separately from delivery.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-positive-WB-CH2-spitting-wyvern-21646",
+      "kind": "positive-hunt",
+      "hunt_ids": [
+        "WB-CH2-spitting-wyvern-21646"
+      ],
+      "source_keys": [
+        "spitting-wyvern"
+      ],
+      "item_ids": [
+        21646
+      ],
+      "rank": "greater",
+      "frozen_quote_version": "greater-superior-fp-draft-a86",
+      "frozen_fp": 975,
+      "scenario": "After current supported commitment, obtain the exact fresh active personal item from the authored legal source/context and correlate earning time separately from delivery.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-positive-WB-CH2-vyrewatch-sentinel-24777",
+      "kind": "positive-hunt",
+      "hunt_ids": [
+        "WB-CH2-vyrewatch-sentinel-24777"
+      ],
+      "source_keys": [
+        "vyrewatch-sentinel"
+      ],
+      "item_ids": [
+        24777
+      ],
+      "rank": "superior",
+      "frozen_quote_version": "greater-superior-fp-draft-a86",
+      "frozen_fp": 1775,
+      "scenario": "After current supported commitment, obtain the exact fresh active personal item from the authored legal source/context and correlate earning time separately from delivery.",
+      "expected": "SETTLE_ONCE_KEEP_ITEM_AT_FROZEN_QUOTE",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-RC-duplicate-callbacks",
+      "scenario": "Server/client adapter callbacks refer to one same loot occurrence.",
+      "expected": "ONE_SETTLEMENT",
+      "boundary": "Canonical event/encounter journal prevents duplicate quote payment.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-duplicate-callbacks"
+    },
+    {
+      "id": "WB-RC-prior-assignment",
+      "scenario": "Matching drop was earned before current assignment commitment.",
+      "expected": "NO_CURRENT_ASSIGNMENT_CREDIT",
+      "boundary": "Do not backdate a fresh assignment start.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-prior-assignment"
+    },
+    {
+      "id": "WB-RC-paused-earning",
+      "scenario": "Matching source drop earned while paused.",
+      "expected": "NO_CREDIT_NO_BACKFILL",
+      "boundary": "Later resume/delivery never converts paused earning to active.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-paused-earning"
+    },
+    {
+      "id": "WB-RC-paused-delivery",
+      "scenario": "Proved active earning but delivery/processing occurs while paused.",
+      "expected": "PRESERVE_SUPPORTED_EVIDENCE_NO_PAUSED_PAYOUT",
+      "boundary": "No reward processing while paused; resume may process proved eligible prior active evidence, not paused earning.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-paused-delivery"
+    },
+    {
+      "id": "WB-RC-unknown-earning-time",
+      "scenario": "Event arrives after resume with no supported earning-time link.",
+      "expected": "PENDING_NO_CREDIT",
+      "boundary": "Unknown is neither active credit nor verified empty.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-unknown-earning-time"
+    },
+    {
+      "id": "WB-RC-wrong-account",
+      "scenario": "Receipt account differs from committed account.",
+      "expected": "NO_CREDIT",
+      "boundary": "No cross-profile mutation.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-wrong-account"
+    },
+    {
+      "id": "WB-RC-wrong-run",
+      "scenario": "Receipt belongs to another run ID.",
+      "expected": "NO_CREDIT",
+      "boundary": "No grant/reward reuse across runs.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-wrong-run"
+    },
+    {
+      "id": "WB-RC-wrong-assignment",
+      "scenario": "Exact item/source receipt was already attached to a different assignment.",
+      "expected": "NO_DUPLICATE_CREDIT",
+      "boundary": "Unique assignment and occurrence bindings.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-wrong-assignment"
+    },
+    {
+      "id": "WB-RC-combined-item",
+      "scenario": "Old components combined into Skull sceptre9013.",
+      "expected": "NO_SOURCE_HUNT_COMPLETION",
+      "boundary": "Inventory transformation is not a new9007/9008/9010/9011 drop.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-combined-item"
+    },
+    {
+      "id": "WB-RC-wrong-minotaur",
+      "scenario": "Same display-name Colosseum Minotaur12812 produces an event.",
+      "expected": "NO_STRONGHOLD_CREDIT",
+      "boundary": "No name-prefix identity.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-wrong-minotaur"
+    },
+    {
+      "id": "WB-RC-wrong-location",
+      "scenario": "Ankou from another dungeon with matching name/component allegation.",
+      "expected": "NO_STRONGHOLD_CREDIT",
+      "boundary": "Actual Stronghold floor/source context is mandatory.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-wrong-location"
+    },
+    {
+      "id": "WB-RC-wrong-world",
+      "scenario": "Correct source/item observed in a free world for this members-only draft.",
+      "expected": "NO_AUTHORED_CONTEXT_CREDIT",
+      "boundary": "Preserve unselected world contexts without auto-enabling them.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-wrong-world"
+    },
+    {
+      "id": "WB-RC-trade",
+      "scenario": "Trade supplies a matching component.",
+      "expected": "NO_CREDIT",
+      "boundary": "Possession change is insufficient.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-trade"
+    },
+    {
+      "id": "WB-RC-bank",
+      "scenario": "Withdrawal of a previously held component.",
+      "expected": "NO_CREDIT",
+      "boundary": "Bank/old-item movement is not fresh source earning.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-bank"
+    },
+    {
+      "id": "WB-RC-inventory-only",
+      "scenario": "Inventory delta matches item with no source-correlated receipt.",
+      "expected": "PENDING_NO_SOURCE_PROOF",
+      "boundary": "Do not infer personal loot from a delta alone.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-inventory-only"
+    },
+    {
+      "id": "WB-RC-teammate",
+      "scenario": "Another player receives the matching item.",
+      "expected": "NO_PERSONAL_CREDIT",
+      "boundary": "Source kill count alone does not establish local recipient.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-teammate"
+    },
+    {
+      "id": "WB-RC-recipient-unknown",
+      "scenario": "Exact source drop event lacks local ownership proof.",
+      "expected": "PENDING_NO_CREDIT",
+      "boundary": "Missing payload evidence cannot be guessed.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-recipient-unknown"
+    },
+    {
+      "id": "WB-RC-adapter-unsupported",
+      "scenario": "Live client composition/event adapter unvalidated.",
+      "expected": "NO_NEW_OFFER_FROM_UNSUPPORTED_CONTEXT",
+      "boundary": "Authored constants/content are not an adapter activation receipt.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-adapter-unsupported"
+    },
+    {
+      "id": "WB-RC-quote-missing",
+      "scenario": "Otherwise accessible target lacks frozen reviewed quote.",
+      "expected": "NO_NEW_OFFER",
+      "boundary": "No zero-FP fallback or postselection quote fabrication.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-quote-missing"
+    },
+    {
+      "id": "WB-RC-settlement-write-failure",
+      "scenario": "Evidence qualifies but durable mutation acknowledgement is lost.",
+      "expected": "RECOVER_SAME_RECEIPT_NO_DOUBLE_PAYMENT",
+      "boundary": "Actual crash/save proof remains future engineering.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-settlement-write-failure"
+    },
+    {
+      "id": "WB-RC-catalog-update",
+      "scenario": "A rate/catalog changes after offers/assignment committed.",
+      "expected": "PRESERVE_COMMITTED_RANK_ITEM_QUOTE",
+      "boundary": "No silent reseed/reprice; detailed invalidation/reconciliation remains separate.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-catalog-update"
+    },
+    {
+      "id": "WB-RC-settings-update",
+      "scenario": "Attempt to disable rank while an offer or assignment is pending.",
+      "expected": "REJECT_SETTINGS_MUTATION",
+      "boundary": "No replacement card or new random seed.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-settings-update"
+    },
+    {
+      "id": "WB-RC-killerwatt-orb",
+      "scenario": "Only passive orb470 interaction observed, no supported combat469 loot trace.",
+      "expected": "NO_GEM_RECEIPT_INFERRED",
+      "boundary": "Transform/kill/source evidence must connect, and estimated-rate context remains held.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-killerwatt-orb"
+    },
+    {
+      "id": "WB-RC-molanisk-bell",
+      "scenario": "Bell interaction near wall observed, no personal fresh34416 receipt.",
+      "expected": "NO_HUNT_COMPLETION",
+      "boundary": "MOLANISK1 constant is identity evidence, not proof an item dropped.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-molanisk-bell"
+    },
+    {
+      "id": "WB-RC-sea-snake-mother",
+      "scenario": "Water sapphire claim from mother/quest boss1101.",
+      "expected": "NO_DRAFT_FAMILY_CREDIT",
+      "boundary": "Draft family accepts only1097/1098 in exact legal dungeon context.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-sea-snake-mother"
+    },
+    {
+      "id": "WB-RC-dispose-after-drop",
+      "scenario": "Qualifying component already settled then combined/chiseled/disposed.",
+      "expected": "NO_CLAWBACK_NO_SECOND_PAYMENT",
+      "boundary": "Player keeps earned reward; no ongoing possession requirement.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-dispose-after-drop"
+    },
+    {
+      "id": "WB-RC-independent-bounty",
+      "scenario": "Valid hunt drop also qualifies for separately once-only permanent item bounty.",
+      "expected": "SEPARATE_KEYS_NO_BOUNTY_RESET",
+      "boundary": "Reject/failure never revokes independently settled qualifying bounty.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-independent-bounty"
+    },
+    {
+      "id": "WB-RC-callback-order",
+      "scenario": "Equivalent source/client events arrive in either order or after reload.",
+      "expected": "SAME_SINGLE_SETTLEMENT_OR_PRESERVED_AMBIGUOUS_EVIDENCE",
+      "boundary": "Do not assume event ordering from API existence.",
+      "required_observations": [
+        "Account/run/assignment/context snapshot",
+        "Local recipient/source/item/earning time",
+        "Persistent evidence and once-only settlement receipt"
+      ],
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false,
+      "kind": "inherited-shared-boundary",
+      "inherited_source_case_id": "WB-RC-callback-order"
+    },
+    {
+      "id": "WB-CORE-water-stage-unknown",
+      "kind": "targeted-boundary",
+      "source_keys": [
+        "sea-snake-water-sapphire"
+      ],
+      "scenario": "Only quest helper entered-dungeon flag is known; tunnel/prop/lift/rope/region evidence absent.",
+      "expected": "NO_NEW_OFFER_FROM_UNKNOWN_ACCESS",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-water-young-held",
+      "kind": "targeted-boundary",
+      "source_keys": [
+        "sea-snake-water-sapphire"
+      ],
+      "scenario": "Water sapphire34410 received from Young1097 after a Hatchling-only assignment.",
+      "expected": "NO_AUTHORED_CONTEXT_CREDIT",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-water-mother-held",
+      "kind": "targeted-boundary",
+      "source_keys": [
+        "sea-snake-water-sapphire"
+      ],
+      "scenario": "Matching item/name or source callback occurs in excluded mother/boss context.",
+      "expected": "NO_AUTHORED_CONTEXT_CREDIT",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-boss-cross-item",
+      "kind": "targeted-boundary",
+      "source_keys": [
+        "commander-zilyana",
+        "kril-tsutsaroth"
+      ],
+      "scenario": "The other reviewed item from the assigned God Wars boss drops while one specific item is assigned.",
+      "expected": "NO_ASSIGNED_ITEM_COMPLETION",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-boss-bodyguard",
+      "kind": "targeted-boundary",
+      "source_keys": [
+        "commander-zilyana",
+        "kril-tsutsaroth"
+      ],
+      "scenario": "Matching inventory delta is concurrent with a bodyguard kill or another player kill.",
+      "expected": "NO_CREDIT_WITHOUT_EXACT_PERSONAL_BOSS_RECEIPT",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-boss-group-allocation",
+      "kind": "targeted-boundary",
+      "source_keys": [
+        "commander-zilyana",
+        "kril-tsutsaroth"
+      ],
+      "scenario": "Local player participates in a group encounter but allocation/solo-context proof is absent.",
+      "expected": "NO_AUTHORED_SOLO_CONTEXT_CREDIT",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-boss-entry-resource",
+      "kind": "targeted-boundary",
+      "source_keys": [
+        "commander-zilyana",
+        "kril-tsutsaroth"
+      ],
+      "scenario": "Boss owned but repeatable faction-KC/entry/supply route is not legally available.",
+      "expected": "NO_NEW_OFFER_NO_FREE_ROUTE_UNLOCK",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-kurask-alternate",
+      "kind": "targeted-boundary",
+      "source_keys": [
+        "kurask"
+      ],
+      "scenario": "Matching axe received from unselected superior/Iorwerth context.",
+      "expected": "NO_AUTHORED_CONTEXT_CREDIT",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-rune-quest-or-poh",
+      "kind": "targeted-boundary",
+      "source_keys": [
+        "rune-dragon"
+      ],
+      "scenario": "Matching source name/ID occurs during quest or in a POH rather than normal post-quest Lithkren.",
+      "expected": "NO_AUTHORED_CONTEXT_CREDIT",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-wyvern-other-species",
+      "kind": "targeted-boundary",
+      "source_keys": [
+        "spitting-wyvern"
+      ],
+      "scenario": "Same longsword received from another wyvern species or unreviewed method/context.",
+      "expected": "NO_ASSIGNED_SOURCE_COMPLETION",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-blood-pickpocket",
+      "kind": "targeted-boundary",
+      "source_keys": [
+        "vyrewatch-sentinel"
+      ],
+      "scenario": "Blood shard comes from pickpocketing rather than the assigned combat sentinel.",
+      "expected": "NO_ASSIGNED_SOURCE_COMPLETION",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-blood-venator",
+      "kind": "targeted-boundary",
+      "source_keys": [
+        "vyrewatch-sentinel"
+      ],
+      "scenario": "Blood shard comes from a venator rather than the assigned sentinel.",
+      "expected": "NO_ASSIGNED_SOURCE_COMPLETION",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-separate-earning-delivery",
+      "kind": "targeted-boundary",
+      "source_keys": [
+        "stronghold-minotaur",
+        "stronghold-flesh-crawler",
+        "stronghold-catablepon",
+        "stronghold-ankou",
+        "killerwatt",
+        "molanisk",
+        "infernal-mage",
+        "sea-snake-water-sapphire",
+        "commander-zilyana",
+        "kril-tsutsaroth",
+        "kurask",
+        "rune-dragon",
+        "spitting-wyvern",
+        "vyrewatch-sentinel"
+      ],
+      "scenario": "Earning occurred active but callback/save processing arrives paused; repeat with paused earning and active delivery.",
+      "expected": "PRESERVE_PROVED_ACTIVE_EVIDENCE_NO_PAUSED_PAYOUT_NO_PAUSED_EARNING_BACKFILL",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-crash-after-journal",
+      "kind": "targeted-boundary",
+      "source_keys": [
+        "stronghold-minotaur",
+        "stronghold-flesh-crawler",
+        "stronghold-catablepon",
+        "stronghold-ankou",
+        "killerwatt",
+        "molanisk",
+        "infernal-mage",
+        "sea-snake-water-sapphire",
+        "commander-zilyana",
+        "kril-tsutsaroth",
+        "kurask",
+        "rune-dragon",
+        "spitting-wyvern",
+        "vyrewatch-sentinel"
+      ],
+      "scenario": "Crash after supported occurrence is durably journaled but before settlement commit.",
+      "expected": "RECOVER_SAME_ASSIGNMENT_QUOTE_OPERATION_ONCE",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-crash-after-settlement",
+      "kind": "targeted-boundary",
+      "source_keys": [
+        "stronghold-minotaur",
+        "stronghold-flesh-crawler",
+        "stronghold-catablepon",
+        "stronghold-ankou",
+        "killerwatt",
+        "molanisk",
+        "infernal-mage",
+        "sea-snake-water-sapphire",
+        "commander-zilyana",
+        "kril-tsutsaroth",
+        "kurask",
+        "rune-dragon",
+        "spitting-wyvern",
+        "vyrewatch-sentinel"
+      ],
+      "scenario": "Crash after settlement is committed but before visual acknowledgment; replay raw callbacks after restore.",
+      "expected": "ONE_TOTAL_PAYOUT_NO_ITEM_CONSUMPTION_NO_NEW_ASSIGNMENT_CREDIT",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-unproved-occurrence-id",
+      "kind": "targeted-boundary",
+      "source_keys": [
+        "stronghold-minotaur",
+        "stronghold-flesh-crawler",
+        "stronghold-catablepon",
+        "stronghold-ankou",
+        "killerwatt",
+        "molanisk",
+        "infernal-mage",
+        "sea-snake-water-sapphire",
+        "commander-zilyana",
+        "kril-tsutsaroth",
+        "kurask",
+        "rune-dragon",
+        "spitting-wyvern",
+        "vyrewatch-sentinel"
+      ],
+      "scenario": "Adapter cannot distinguish one duplicate callback from a second real occurrence from observed data.",
+      "expected": "PENDING_NO_FABRICATED_STABLE_EVENT_ID",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-catalog-version-mismatch",
+      "kind": "targeted-boundary",
+      "source_keys": [
+        "stronghold-minotaur",
+        "stronghold-flesh-crawler",
+        "stronghold-catablepon",
+        "stronghold-ankou",
+        "killerwatt",
+        "molanisk",
+        "infernal-mage",
+        "sea-snake-water-sapphire",
+        "commander-zilyana",
+        "kril-tsutsaroth",
+        "kurask",
+        "rune-dragon",
+        "spitting-wyvern",
+        "vyrewatch-sentinel"
+      ],
+      "scenario": "Live source mapping/quote changes after commitment while old frozen supported receipt remains available.",
+      "expected": "PRESERVE_FROZEN_SNAPSHOT_NO_SILENT_POOL_OR_QUOTE_REWRITE",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    },
+    {
+      "id": "WB-CORE-future-context-safety",
+      "kind": "targeted-boundary",
+      "source_keys": [
+        "stronghold-minotaur",
+        "stronghold-flesh-crawler",
+        "stronghold-catablepon",
+        "stronghold-ankou",
+        "killerwatt",
+        "molanisk",
+        "infernal-mage",
+        "sea-snake-water-sapphire",
+        "commander-zilyana",
+        "kril-tsutsaroth",
+        "kurask",
+        "rune-dragon",
+        "spitting-wyvern",
+        "vyrewatch-sentinel"
+      ],
+      "scenario": "External change invalidates committed selected/unselected context, beyond currently settled policy.",
+      "expected": "HOLD_EXISTING_PAUSE_REJECT_RULES_NO_INFERRED_A56_RETIREMENT",
+      "client_status": "NOT_RUN",
+      "observed_trace": null,
+      "runtime_enabled": false
+    }
+  ],
+  "case_count": 62,
+  "plan_coverage_only": {
+    "keys": 14,
+    "positive_hunts": 16,
+    "inherited_boundaries": 28,
+    "targeted_boundaries": 18
+  },
+  "not_settled": [
+    "A56 no-fault retirement",
+    "Committed-but-unselected invalidation policy",
+    "Task continuation",
+    "Coffer/full-account boundary",
+    "Restrictive-control policy",
+    "Product prices/family schedule",
+    "Engineering authorization"
+  ]
+}
