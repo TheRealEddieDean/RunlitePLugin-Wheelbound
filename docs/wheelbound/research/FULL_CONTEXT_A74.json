@@ -1,0 +1,318 @@
+{
+  "version": "a74-full-context-v1",
+  "archive_sha256": "e00babd58e09c047f68df94625cd5b4e77e119952d52c0d0c50b53a7d2b60309",
+  "primary_repo": "runelite/runelite",
+  "source_commit": "42a6f17a6a2e8e478aa763890ecd0181a59dad38",
+  "primary_sources": [
+    {
+      "path": "runelite-api/src/main/java/net/runelite/api/gameval/ItemID.java",
+      "sha256": "6f00480cae7939de1f5187dda406e7a2029f4280bf2b395b789619847587221d"
+    },
+    {
+      "path": "runelite-api/src/main/java/net/runelite/api/gameval/NpcID.java",
+      "sha256": "6afa1a51c4f03ba60159544e90ec3c8d002337165ea90a9cfcf8510798caf47a"
+    }
+  ],
+  "entries": [
+    {
+      "source_url": "https://oldschool.runescape.wiki/w/Killerwatt",
+      "item": "Air diamond",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Killerwatt",
+        "fetched_at": "2026-10-14T15:29:06.207978+00:00",
+        "sha256": "61b0c531f8926ccc4afacc818d8b4f527b4f5928b70a19171f25ee6fb8f4fa95",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\c19be61e79adaafbe8aaa59a9843234fb9a5ef22fe655b6e715f99065f1af15c.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Killerwatt",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 15:26:34 GMT",
+        "fixture": false
+      },
+      "normalized_source_sha256": "61b0c531f8926ccc4afacc818d8b4f527b4f5928b70a19171f25ee6fb8f4fa95",
+      "raw_file_sha256": "4c9d6cad08624189f7cac144575aff350c444ee6b0ad4906bb5e272ee72909c5",
+      "reported_npc_ids": [
+        470
+      ],
+      "source_context": [
+        "Killerwatts are Slayer monsters located in the Killerwatt plane , accessible through a portal at the top floor of Draynor Manor after completion of Ernest the Chicken . A Slayer level of 37 is required to kill them.",
+        "If a player is not wearing a pair of insulated boots while fighting them, both their Ranged and Melee attacks will have a much higher maximum hit. Even when wearing insulated boots, their attacks are still rapid and highly accurate, and they have an attack range of 13 tiles, meaning it is not possible to safespot them with long ranged weapons. A dwarf multicannon cannot be set up in the Killerwatt plane .",
+        "Killerwatts are a commonly skipped Slayer task due to their relatively high damage output combined with their mediocre drops, except for those seeking their unique air diamond drop.",
+        "While Killerwatts initially appear as passive floating orbs of electricity, they will immediately transform and move towards you when clicked on , rather than when attacked. They will switch between attacking with melee and ranged, depending on the player's distance from them and whether or not they are able to attack the player. For example, attacking a Killerwatt in melee range and then safespotting it will result in it switching to ranged attacks.",
+        "It is recommended to use either Ranged or Magic against them due to their negative ranged defences and weakness to air spells, as well as being able to easily restrict the Killerwatts to ranged attacks. Melee can be used as well if using a weapon such as a Halberd , as careful use of their extra range lets you lock the Killerwatts into using ranged attacks.",
+        "The Killerwatt's damage bonus from the player not wearing insulated boots does not hit through the correct protection prayer.",
+        "Drop rates are estimated based on 63,929 samples from the Drop Rate Project , unless otherwise cited.",
+        "The average Killerwatt kill is worth 7,077.41 .",
+        "There is a 35/140 chance of rolling the herb drop table .",
+        "There is a 5/140 chance of rolling the gem drop table .",
+        "Killerwatts have a single collection log item.",
+        "Killerwatts now drop air diamonds .",
+        "Killerwatts now drop energy potions as a common drop.",
+        "Killerwatts now have a 60% elemental weakness to wind spells .",
+        "The ranged defence of killerwatts has been reduced from 20 to -10. Vannaka no longer assigns players Killerwatt tasks.",
+        "The killerwatt's flickering has been toned down, so the epilepsy warning when entering the killerwatt plane has been removed.",
+        "9m ago - Wroometh",
+        "12m ago - Wroometh",
+        "16m ago - AfterDarq",
+        "24m ago - Crabby"
+      ],
+      "access_infobox": [
+        {
+          "field": "Members",
+          "value": "Yes"
+        },
+        {
+          "field": "Slayer level",
+          "value": "37"
+        },
+        {
+          "field": "Slayer XP",
+          "value": "51 xp"
+        },
+        {
+          "field": "Monster ID",
+          "value": "470"
+        }
+      ],
+      "raw_drop_rows": [
+        {
+          "row_zero_based": 48,
+          "record": {
+            "section": "Drops / Tertiary",
+            "item_name": "Air diamond",
+            "item_links": [
+              {
+                "text": "Air diamond",
+                "href": "https://oldschool.runescape.wiki/w/Air_diamond"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/64",
+              "expression": "1/64",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 64
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Air diamond",
+                "1",
+                "1/64",
+                "401,383",
+                "12,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "html_drop_rows": [
+        {
+          "row_text": "Air diamond 1 1/64 401,383 12,000",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "html_identity_rows": [
+        {
+          "item_id": 34404,
+          "row_text": "Air diamond Slayer N/A"
+        }
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 63,929 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "runtime_enabled": false,
+      "canonical_item": {
+        "symbol": "AIR_DIAMOND",
+        "id": 34404,
+        "line": 90093,
+        "declaration": "public static final int AIR_DIAMOND = 34404;"
+      },
+      "npc_source_constants": [
+        {
+          "symbol": "SLAYER_KILLERWATT",
+          "id": 469,
+          "line": 2284,
+          "declaration": "public static final int SLAYER_KILLERWATT = 469;"
+        },
+        {
+          "symbol": "SLAYER_KILLERWATT_BALL",
+          "id": 470,
+          "line": 2289,
+          "declaration": "public static final int SLAYER_KILLERWATT_BALL = 470;"
+        }
+      ],
+      "review_status": "SOURCE_IDENTITY_VERIFIED_RATE_AND_CLIENT_HOLDS",
+      "rate_status": "PAGE_ESTIMATE_NOT_PROMOTED_TO_EXACT",
+      "client_receipt_status": "NOT_RUN"
+    },
+    {
+      "source_url": "https://oldschool.runescape.wiki/w/Molanisk",
+      "item": "Earth emerald",
+      "capture": {
+        "origin": "network_html",
+        "requested_url": "https://oldschool.runescape.wiki/w/Molanisk",
+        "fetched_at": "2026-10-14T15:29:42.119771+00:00",
+        "sha256": "02182fcdb77805b4419861ccb15dd56b73275bea74afdd3c97fe965c988df58b",
+        "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+        "cache_file": "tools\\wiki_drops\\output\\html\\0f64e42a534466d0d6752b2e8aaa5dbe65de7688de7af641e50e3bd00d5d5c0b.html",
+        "resolved_url": "https://oldschool.runescape.wiki/w/Molanisk",
+        "etag": null,
+        "last_modified": "Wed, 14 Oct 2026 15:26:39 GMT",
+        "fixture": false
+      },
+      "normalized_source_sha256": "02182fcdb77805b4419861ccb15dd56b73275bea74afdd3c97fe965c988df58b",
+      "raw_file_sha256": "9bb2c8b2fdc156ddf808d17bb71905fa9af929766fcaa425908fb45dc087304f",
+      "reported_npc_ids": [
+        1
+      ],
+      "source_context": [
+        "Molanisks are Slayer monsters that require level 39 Slayer to kill giving 52 Slayer experience per kill. A Slayer bell is necessary to initiate combat with them. Since they are only found in the Dorgesh-Kaan South Dungeon , completion of Death to the Dorgeshuun is required to fight molanisks and it is advisable to bring a light source . Molanisks do unusually low damage, meaning a player with half-decent armour should easily be able to kill them with no trouble.",
+        "They are mainly hunted for their earth emerald drop, or as a Slayer assignment from Vannaka .",
+        "Molanisks are found attached to cave walls and must be lured off with a Slayer bell to allow players to attack them. The Slayer bell only works within 3 tiles of the wall the molanisk is attached to. When lured off the wall, they are aggressive towards the player who lured them off with the bell. Molanisks respawn relatively quickly, so players who want to conserve run energy can just stay at the same respawn location. Alternatively, there is a spot south of the fairy ring with two spawns close together.",
+        "Molanisks are relatively weak to both crush and magic attacks.",
+        "If you are getting attacked by another monster, for example a Cave Crawler , and then use the Slayer bell, the Molanisk will attack you and the monster initially attacking you will lose its aggression.",
+        "Drop rates are estimated based on 61,398 samples from the Drop Rate Project , unless otherwise cited.",
+        "The average Molanisk kill is worth 9,791.09 .",
+        "There is a 32/128 chance of rolling the herb drop table .",
+        "There is a 7/128 chance of rolling the gem drop table .",
+        "Molanisks have 2 collection log items.",
+        "Molanisk now drop earth emeralds .",
+        "Molanisk now drop energy potions as a common drop.",
+        "Molanisks now have a 60% elemental weakness to earth spells .",
+        "Chaeldar no longer assigns players Molanisk tasks.",
+        "The first hit on certain Molanisks will no longer give zero experience .",
+        "Duradel no longer assigns players Molanisk tasks.",
+        "9m ago - Wroometh",
+        "12m ago - Wroometh",
+        "17m ago - AfterDarq",
+        "25m ago - Crabby"
+      ],
+      "access_infobox": [
+        {
+          "field": "Members",
+          "value": "Yes"
+        },
+        {
+          "field": "Slayer level",
+          "value": "39"
+        },
+        {
+          "field": "Slayer XP",
+          "value": "52 xp"
+        },
+        {
+          "field": "Monster ID",
+          "value": "1"
+        }
+      ],
+      "raw_drop_rows": [
+        {
+          "row_zero_based": 35,
+          "record": {
+            "section": "Drops / Tertiary",
+            "item_name": "Earth emerald",
+            "item_links": [
+              {
+                "text": "Earth emerald",
+                "href": "https://oldschool.runescape.wiki/w/Earth_emerald"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/64",
+              "expression": "1/64",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 64
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Earth emerald",
+                "1",
+                "1/64",
+                "573,065",
+                "12,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          }
+        }
+      ],
+      "html_drop_rows": [
+        {
+          "row_text": "Earth emerald 1 1/64 573,065 12,000",
+          "reported_item_id": null,
+          "note_fragment_ids": [],
+          "referenced_notes": []
+        }
+      ],
+      "html_identity_rows": [
+        {
+          "item_id": 34416,
+          "row_text": "Earth emerald Slayer N/A"
+        }
+      ],
+      "page_estimate_statements": [
+        "Drop rates are estimated based on 61,398 samples from the Drop Rate Project , unless otherwise cited."
+      ],
+      "runtime_enabled": false,
+      "canonical_item": {
+        "symbol": "EARTH_EMERALD",
+        "id": 34416,
+        "line": 90113,
+        "declaration": "public static final int EARTH_EMERALD = 34416;"
+      },
+      "npc_source_constants": [
+        {
+          "symbol": "MOLANISK",
+          "id": 1,
+          "line": 16,
+          "declaration": "public static final int MOLANISK = 1;"
+        }
+      ],
+      "review_status": "SOURCE_IDENTITY_VERIFIED_RATE_AND_CLIENT_HOLDS",
+      "rate_status": "PAGE_ESTIMATE_NOT_PROMOTED_TO_EXACT",
+      "client_receipt_status": "NOT_RUN"
+    }
+  ],
+  "runtime_enabled": false,
+  "admitted_to_v2": false
+}

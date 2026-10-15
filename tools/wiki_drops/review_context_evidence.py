@@ -11,9 +11,12 @@ PIN = '42a6f17a6a2e8e478aa763890ecd0181a59dad38'
 def constants(path):
     """Only top-level constants: nested Cert/Placeholder values are different IDs."""
     text = Path(path).read_text()
-    return {m[1]: {'id': int(m[2]), 'line': text.count('\n', 0, m.start()) + 1,
-                   'declaration': m[0].strip()}
-            for m in re.finditer(r'^\tpublic static final int (\w+) = (\d+);', text, re.M)}
+    result = {}
+    for line_number, line in enumerate(text.splitlines(), 1):
+        match = re.fullmatch(r'\tpublic static final int (\w+) = (\d+);', line)
+        if match:
+            result[match[1]] = {'id': int(match[2]), 'line': line_number, 'declaration': line.strip()}
+    return result
 
 
 class Capture:
@@ -29,9 +32,12 @@ class Capture:
         assert hashlib.sha256(text.encode()).hexdigest() == page['source_sha256']
         root = scrape.parse_tree(text)
         html_rows = []
+        identity_rows = []
         for node in root.walk():
             if node.tag != 'tr':
                 continue
+            if node.attrs.get('data-item-id', '').isdigit() and any(n.tag == 'a' and n.attrs.get('title') == item for n in node.walk()):
+                identity_rows.append({'item_id': int(node.attrs['data-item-id']), 'row_text': scrape.clean(node.text())})
             cells = [n for n in node.children if getattr(n, 'tag', '') == 'td']
             item_cells = [n for n in cells if 'item-col' in n.attrs.get('class', '').split()]
             if not any(scrape.clean(n.text()) == item for n in item_cells):
@@ -50,6 +56,6 @@ class Capture:
                 'source_context': page['page_context'],
                 'access_infobox': [r for r in page['infobox_fields'] if any(k in r['field'].lower() for k in ['id', 'slayer', 'member'])],
                 'raw_drop_rows': [{'row_zero_based': i, 'record': r} for i, r in enumerate(page['drops']) if r['item_name'] == item],
-                'html_drop_rows': html_rows,
+                'html_drop_rows': html_rows, 'html_identity_rows': identity_rows,
                 'page_estimate_statements': [s for s in page['page_context'] if 'drop rates are estimated' in s.lower()],
                 'runtime_enabled': False}

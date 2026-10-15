@@ -1,20 +1,20 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — A74–A83 ten-checkpoint source/content work; owner wb-a74-a83.
+- State: ACTIVE — A74 complete in owning checkpoint; owner wb-a74-a83 continuing authorized sequence.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
 - Owning A63 checkpoint contains current rules/tables/release; resolve own SHA from branch history and verify head/tree/main before saved claim. Commit cannot embed itself.
 - Scope: design/docs/research/standalone tools/wiki_drops only; no production gameplay/main/workflow activation authorized.
 
-## Current continuation — A69–A73
+## Current continuation — A74–A83
 
-Latest completed: A73, synthetic rank acceptance and current readiness handoff. Verified predecessor `6db5c2dfececdd6fcb5e1df4a7f7f2f6900197ae`. Completed A69–A73 five-checkpoint plan. WB-D147 CONFIRMED; WB-D148–150 DELEGATED. A73 provides current declarative rank rules with explicit legacy-metadata supersession and14 disabled authority pins; source-pinned oracle passes43,328 assertions (7,936 offering scenarios,1,280 purchase scenarios,512 settings cases), A68 validator194 checks and22 existing tests. These are synthetic/offline results only, not current-client/durable IO proof. No historical v1/source row/display membership, main or gameplay change.
+Latest completed A74: full-source gem/NPC identity packet complete. Verified predecessor `b3b1a441cdbe0fad79a6eeee8aaa9f016dd47e19`. Two normalized page hashes and HTML item identities checked against pinned primary constants; Killerwatt combat/orb469/470 distinguished; MOLANISK1 corroborated. Full-page estimate holds retained; prior b3b1a44 was tooling precursor only. No exact-rate/roster/client readiness claim.
 
-Exact next action: A74 bounded Killerwatt/Molanisk exact item/form/access/personal-receipt source packet; then task-independent Lesser shortlist and reviewed v2 starter/reward/price content. Do not repeat topology/control/family/target-ownership decisions; A56/task/Coffer/policy questions remain separate.
+Exact next action: A75 screen all27 Lesser display groups with full source context.
 
-Confirmed topology WB-D147: Lesser→Standard→Greater→Superior, lower ranks retained. Latest current contracts supersede older pending topology paragraphs below. Production/main changes remain unauthorized; A56 retirement and source/client evidence holds are independent. Owning publication must verify remote head/tree/main. Owner released, no background work.
+Current source/rank rules remain WB-D144–150. No retired-Fate, task continuation or production approval inferred. Active owner wb-a74-a83 under recorded lease; publish/verify before next deliverable. All earlier next-question/next-task descriptions below are historical where superseded by this section. Owning commit must be remotely verified before saved claim.
 
 ## Latest explicit user change — WB-D144/145
 

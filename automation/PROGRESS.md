@@ -305,3 +305,7 @@ Verified predecessor `6db5c2dfececdd6fcb5e1df4a7f7f2f6900197ae`; owning commit c
 - A72 6db5c2dfececdd6fcb5e1df4a7f7f2f6900197ae — shared targets and purchases.
 
 Each was remotely verified against exact commit/tree and protected main before starting its successor. A73 is the owning commit of this section; its exact SHA is reported only after final remote verification. Owner released in that publication, no background execution.
+
+## A74 — full-source gem/NPC identity packet complete
+
+Predecessor verified `b3b1a441cdbe0fad79a6eeee8aaa9f016dd47e19`. Two normalized page hashes and HTML item identities checked against pinned primary constants; Killerwatt combat/orb469/470 distinguished; MOLANISK1 corroborated. Full-page estimate holds retained; prior b3b1a44 was tooling precursor only. No exact-rate/roster/client readiness claim. Size S/M bounded source/research deliverable; no production/main changes. Exact remote publication verification required. Next: A75 screen all27 Lesser display groups with full source context.
