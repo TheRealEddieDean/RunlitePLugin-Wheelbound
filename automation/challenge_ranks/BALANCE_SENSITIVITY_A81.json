@@ -1,0 +1,437 @@
+{
+  "version": "a81-candidate-balance-v1",
+  "authority": "SENSITIVITY_RESEARCH_NOT_ADOPTED",
+  "runtime_enabled": false,
+  "prices_adopted": false,
+  "frequency_adopted": false,
+  "reference_uniform_four_starter_fp_mean": "275/2",
+  "reference_mean_is_not_preentry_financing_or_accepted_assignment_distribution": true,
+  "candidate_prices": [
+    {
+      "schedule": "compact",
+      "ranks": [
+        {
+          "rank": "lesser",
+          "candidate_price": 150,
+          "cumulative_price": 150,
+          "reward_equivalent_at_uniform_four_starter_mean": "12/11",
+          "cumulative_reward_equivalent": "12/11"
+        },
+        {
+          "rank": "standard",
+          "candidate_price": 300,
+          "cumulative_price": 450,
+          "reward_equivalent_at_uniform_four_starter_mean": "24/11",
+          "cumulative_reward_equivalent": "36/11"
+        },
+        {
+          "rank": "greater",
+          "candidate_price": 600,
+          "cumulative_price": 1050,
+          "reward_equivalent_at_uniform_four_starter_mean": "48/11",
+          "cumulative_reward_equivalent": "84/11"
+        },
+        {
+          "rank": "superior",
+          "candidate_price": 1200,
+          "cumulative_price": 2250,
+          "reward_equivalent_at_uniform_four_starter_mean": "96/11",
+          "cumulative_reward_equivalent": "180/11"
+        }
+      ],
+      "adopted": false
+    },
+    {
+      "schedule": "middle_trial",
+      "ranks": [
+        {
+          "rank": "lesser",
+          "candidate_price": 250,
+          "cumulative_price": 250,
+          "reward_equivalent_at_uniform_four_starter_mean": "20/11",
+          "cumulative_reward_equivalent": "20/11"
+        },
+        {
+          "rank": "standard",
+          "candidate_price": 500,
+          "cumulative_price": 750,
+          "reward_equivalent_at_uniform_four_starter_mean": "40/11",
+          "cumulative_reward_equivalent": "60/11"
+        },
+        {
+          "rank": "greater",
+          "candidate_price": 1000,
+          "cumulative_price": 1750,
+          "reward_equivalent_at_uniform_four_starter_mean": "80/11",
+          "cumulative_reward_equivalent": "140/11"
+        },
+        {
+          "rank": "superior",
+          "candidate_price": 2000,
+          "cumulative_price": 3750,
+          "reward_equivalent_at_uniform_four_starter_mean": "160/11",
+          "cumulative_reward_equivalent": "300/11"
+        }
+      ],
+      "adopted": false
+    },
+    {
+      "schedule": "high",
+      "ranks": [
+        {
+          "rank": "lesser",
+          "candidate_price": 400,
+          "cumulative_price": 400,
+          "reward_equivalent_at_uniform_four_starter_mean": "32/11",
+          "cumulative_reward_equivalent": "32/11"
+        },
+        {
+          "rank": "standard",
+          "candidate_price": 800,
+          "cumulative_price": 1200,
+          "reward_equivalent_at_uniform_four_starter_mean": "64/11",
+          "cumulative_reward_equivalent": "96/11"
+        },
+        {
+          "rank": "greater",
+          "candidate_price": 1600,
+          "cumulative_price": 2800,
+          "reward_equivalent_at_uniform_four_starter_mean": "128/11",
+          "cumulative_reward_equivalent": "224/11"
+        },
+        {
+          "rank": "superior",
+          "candidate_price": 3200,
+          "cumulative_price": 6000,
+          "reward_equivalent_at_uniform_four_starter_mean": "256/11",
+          "cumulative_reward_equivalent": "480/11"
+        }
+      ],
+      "adopted": false
+    }
+  ],
+  "offering_exposure": [
+    {
+      "candidate_q": "1/10",
+      "slots": 2,
+      "ready_ranks": 1,
+      "per_rank_slot_exposure": "1/10",
+      "any_challenge_offer_probability": "19/100",
+      "a_specific_rank_offer_probability": "19/100",
+      "expected_challenge_slots": "1/5",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "1/10"
+    },
+    {
+      "candidate_q": "1/10",
+      "slots": 2,
+      "ready_ranks": 2,
+      "per_rank_slot_exposure": "1/20",
+      "any_challenge_offer_probability": "19/100",
+      "a_specific_rank_offer_probability": "39/400",
+      "expected_challenge_slots": "1/5",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "2/11"
+    },
+    {
+      "candidate_q": "1/10",
+      "slots": 2,
+      "ready_ranks": 3,
+      "per_rank_slot_exposure": "1/30",
+      "any_challenge_offer_probability": "19/100",
+      "a_specific_rank_offer_probability": "59/900",
+      "expected_challenge_slots": "1/5",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "1/4"
+    },
+    {
+      "candidate_q": "1/10",
+      "slots": 2,
+      "ready_ranks": 4,
+      "per_rank_slot_exposure": "1/40",
+      "any_challenge_offer_probability": "19/100",
+      "a_specific_rank_offer_probability": "79/1600",
+      "expected_challenge_slots": "1/5",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "4/13"
+    },
+    {
+      "candidate_q": "1/10",
+      "slots": 3,
+      "ready_ranks": 1,
+      "per_rank_slot_exposure": "1/10",
+      "any_challenge_offer_probability": "271/1000",
+      "a_specific_rank_offer_probability": "271/1000",
+      "expected_challenge_slots": "3/10",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "1/10"
+    },
+    {
+      "candidate_q": "1/10",
+      "slots": 3,
+      "ready_ranks": 2,
+      "per_rank_slot_exposure": "1/20",
+      "any_challenge_offer_probability": "271/1000",
+      "a_specific_rank_offer_probability": "1141/8000",
+      "expected_challenge_slots": "3/10",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "2/11"
+    },
+    {
+      "candidate_q": "1/10",
+      "slots": 3,
+      "ready_ranks": 3,
+      "per_rank_slot_exposure": "1/30",
+      "any_challenge_offer_probability": "271/1000",
+      "a_specific_rank_offer_probability": "2611/27000",
+      "expected_challenge_slots": "3/10",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "1/4"
+    },
+    {
+      "candidate_q": "1/10",
+      "slots": 3,
+      "ready_ranks": 4,
+      "per_rank_slot_exposure": "1/40",
+      "any_challenge_offer_probability": "271/1000",
+      "a_specific_rank_offer_probability": "4681/64000",
+      "expected_challenge_slots": "3/10",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "4/13"
+    },
+    {
+      "candidate_q": "1/5",
+      "slots": 2,
+      "ready_ranks": 1,
+      "per_rank_slot_exposure": "1/5",
+      "any_challenge_offer_probability": "9/25",
+      "a_specific_rank_offer_probability": "9/25",
+      "expected_challenge_slots": "2/5",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "1/5"
+    },
+    {
+      "candidate_q": "1/5",
+      "slots": 2,
+      "ready_ranks": 2,
+      "per_rank_slot_exposure": "1/10",
+      "any_challenge_offer_probability": "9/25",
+      "a_specific_rank_offer_probability": "19/100",
+      "expected_challenge_slots": "2/5",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "1/3"
+    },
+    {
+      "candidate_q": "1/5",
+      "slots": 2,
+      "ready_ranks": 3,
+      "per_rank_slot_exposure": "1/15",
+      "any_challenge_offer_probability": "9/25",
+      "a_specific_rank_offer_probability": "29/225",
+      "expected_challenge_slots": "2/5",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "3/7"
+    },
+    {
+      "candidate_q": "1/5",
+      "slots": 2,
+      "ready_ranks": 4,
+      "per_rank_slot_exposure": "1/20",
+      "any_challenge_offer_probability": "9/25",
+      "a_specific_rank_offer_probability": "39/400",
+      "expected_challenge_slots": "2/5",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "1/2"
+    },
+    {
+      "candidate_q": "1/5",
+      "slots": 3,
+      "ready_ranks": 1,
+      "per_rank_slot_exposure": "1/5",
+      "any_challenge_offer_probability": "61/125",
+      "a_specific_rank_offer_probability": "61/125",
+      "expected_challenge_slots": "3/5",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "1/5"
+    },
+    {
+      "candidate_q": "1/5",
+      "slots": 3,
+      "ready_ranks": 2,
+      "per_rank_slot_exposure": "1/10",
+      "any_challenge_offer_probability": "61/125",
+      "a_specific_rank_offer_probability": "271/1000",
+      "expected_challenge_slots": "3/5",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "1/3"
+    },
+    {
+      "candidate_q": "1/5",
+      "slots": 3,
+      "ready_ranks": 3,
+      "per_rank_slot_exposure": "1/15",
+      "any_challenge_offer_probability": "61/125",
+      "a_specific_rank_offer_probability": "631/3375",
+      "expected_challenge_slots": "3/5",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "3/7"
+    },
+    {
+      "candidate_q": "1/5",
+      "slots": 3,
+      "ready_ranks": 4,
+      "per_rank_slot_exposure": "1/20",
+      "any_challenge_offer_probability": "61/125",
+      "a_specific_rank_offer_probability": "1141/8000",
+      "expected_challenge_slots": "3/5",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "1/2"
+    },
+    {
+      "candidate_q": "1/4",
+      "slots": 2,
+      "ready_ranks": 1,
+      "per_rank_slot_exposure": "1/4",
+      "any_challenge_offer_probability": "7/16",
+      "a_specific_rank_offer_probability": "7/16",
+      "expected_challenge_slots": "1/2",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "1/4"
+    },
+    {
+      "candidate_q": "1/4",
+      "slots": 2,
+      "ready_ranks": 2,
+      "per_rank_slot_exposure": "1/8",
+      "any_challenge_offer_probability": "7/16",
+      "a_specific_rank_offer_probability": "15/64",
+      "expected_challenge_slots": "1/2",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "2/5"
+    },
+    {
+      "candidate_q": "1/4",
+      "slots": 2,
+      "ready_ranks": 3,
+      "per_rank_slot_exposure": "1/12",
+      "any_challenge_offer_probability": "7/16",
+      "a_specific_rank_offer_probability": "23/144",
+      "expected_challenge_slots": "1/2",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "1/2"
+    },
+    {
+      "candidate_q": "1/4",
+      "slots": 2,
+      "ready_ranks": 4,
+      "per_rank_slot_exposure": "1/16",
+      "any_challenge_offer_probability": "7/16",
+      "a_specific_rank_offer_probability": "31/256",
+      "expected_challenge_slots": "1/2",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "4/7"
+    },
+    {
+      "candidate_q": "1/4",
+      "slots": 3,
+      "ready_ranks": 1,
+      "per_rank_slot_exposure": "1/4",
+      "any_challenge_offer_probability": "37/64",
+      "a_specific_rank_offer_probability": "37/64",
+      "expected_challenge_slots": "3/4",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "1/4"
+    },
+    {
+      "candidate_q": "1/4",
+      "slots": 3,
+      "ready_ranks": 2,
+      "per_rank_slot_exposure": "1/8",
+      "any_challenge_offer_probability": "37/64",
+      "a_specific_rank_offer_probability": "169/512",
+      "expected_challenge_slots": "3/4",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "2/5"
+    },
+    {
+      "candidate_q": "1/4",
+      "slots": 3,
+      "ready_ranks": 3,
+      "per_rank_slot_exposure": "1/12",
+      "any_challenge_offer_probability": "37/64",
+      "a_specific_rank_offer_probability": "397/1728",
+      "expected_challenge_slots": "3/4",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "1/2"
+    },
+    {
+      "candidate_q": "1/4",
+      "slots": 3,
+      "ready_ranks": 4,
+      "per_rank_slot_exposure": "1/16",
+      "any_challenge_offer_probability": "37/64",
+      "a_specific_rank_offer_probability": "721/4096",
+      "expected_challenge_slots": "3/4",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "4/7"
+    },
+    {
+      "candidate_q": "1/3",
+      "slots": 2,
+      "ready_ranks": 1,
+      "per_rank_slot_exposure": "1/3",
+      "any_challenge_offer_probability": "5/9",
+      "a_specific_rank_offer_probability": "5/9",
+      "expected_challenge_slots": "2/3",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "1/3"
+    },
+    {
+      "candidate_q": "1/3",
+      "slots": 2,
+      "ready_ranks": 2,
+      "per_rank_slot_exposure": "1/6",
+      "any_challenge_offer_probability": "5/9",
+      "a_specific_rank_offer_probability": "11/36",
+      "expected_challenge_slots": "2/3",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "1/2"
+    },
+    {
+      "candidate_q": "1/3",
+      "slots": 2,
+      "ready_ranks": 3,
+      "per_rank_slot_exposure": "1/9",
+      "any_challenge_offer_probability": "5/9",
+      "a_specific_rank_offer_probability": "17/81",
+      "expected_challenge_slots": "2/3",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "3/5"
+    },
+    {
+      "candidate_q": "1/3",
+      "slots": 2,
+      "ready_ranks": 4,
+      "per_rank_slot_exposure": "1/12",
+      "any_challenge_offer_probability": "5/9",
+      "a_specific_rank_offer_probability": "23/144",
+      "expected_challenge_slots": "2/3",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "2/3"
+    },
+    {
+      "candidate_q": "1/3",
+      "slots": 3,
+      "ready_ranks": 1,
+      "per_rank_slot_exposure": "1/3",
+      "any_challenge_offer_probability": "19/27",
+      "a_specific_rank_offer_probability": "19/27",
+      "expected_challenge_slots": "1",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "1/3"
+    },
+    {
+      "candidate_q": "1/3",
+      "slots": 3,
+      "ready_ranks": 2,
+      "per_rank_slot_exposure": "1/6",
+      "any_challenge_offer_probability": "19/27",
+      "a_specific_rank_offer_probability": "91/216",
+      "expected_challenge_slots": "1",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "1/2"
+    },
+    {
+      "candidate_q": "1/3",
+      "slots": 3,
+      "ready_ranks": 3,
+      "per_rank_slot_exposure": "1/9",
+      "any_challenge_offer_probability": "19/27",
+      "a_specific_rank_offer_probability": "217/729",
+      "expected_challenge_slots": "1",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "3/5"
+    },
+    {
+      "candidate_q": "1/3",
+      "slots": 3,
+      "ready_ranks": 4,
+      "per_rank_slot_exposure": "1/12",
+      "any_challenge_offer_probability": "19/27",
+      "a_specific_rank_offer_probability": "397/1728",
+      "expected_challenge_slots": "1",
+      "naive_per_rank_family_weight_probability_NOT_ADOPTED": "2/3"
+    }
+  ],
+  "exposure_scenarios": 32,
+  "exact_assertions": 64
+}

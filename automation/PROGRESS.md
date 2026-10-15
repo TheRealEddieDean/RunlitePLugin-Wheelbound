@@ -333,3 +333,7 @@ Predecessor verified `c85efa63e6e1c58cb6b08d79d314d9f12e5a2ab9`. WB-D151 DELEGAT
 ## A80 — four source-specific draft effort/FP quotes
 
 Predecessor verified `e9a8408b1418040775990f4b58a4a08aa2820707`. WB-D152 DELEGATED: quoted four partial Lesser hunts125/125/150/150 FP using exact source-model fractions and explicitly authored180/150/120/90 kph. Median/p90/p95 and half/double throughput sensitivity checked; no measurements, runtime payouts or historical repricing claimed. Size S/M bounded source/research deliverable; no production/main changes. Exact remote publication verification required. Next: A81 bounded rank-price/family-frequency sensitivity study; no automatic adoption of candidate product prices.
+
+## A81 — candidate price and family-frequency sensitivity
+
+Predecessor verified `952cb58e75dff75105561b67c08e21c8c7374a48`. Three progressive candidate price schedules and32 exact q/rank/slot exposure scenarios compared;64 assertions pass. Middle is trial baseline only. Reward-equivalent costs explicitly not preentry financing/playtime; prices/frequency remain unadopted, paid products unavailable without reviewed payload. Size S/M bounded source/research deliverable; no production/main changes. Exact remote publication verification required. Next: A82 concrete future personal source/receipt trace matrix for authored bundle and elemental identity boundaries.

@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — A80 complete in owning checkpoint; owner wb-a74-a83 continuing authorized sequence.
+- State: ACTIVE — A81 complete in owning checkpoint; owner wb-a74-a83 continuing authorized sequence.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -10,9 +10,9 @@
 
 ## Current continuation — A74–A83
 
-Latest completed A80: four source-specific draft effort/FP quotes. Verified predecessor `e9a8408b1418040775990f4b58a4a08aa2820707`. WB-D152 DELEGATED: quoted four partial Lesser hunts125/125/150/150 FP using exact source-model fractions and explicitly authored180/150/120/90 kph. Median/p90/p95 and half/double throughput sensitivity checked; no measurements, runtime payouts or historical repricing claimed.
+Latest completed A81: candidate price and family-frequency sensitivity. Verified predecessor `952cb58e75dff75105561b67c08e21c8c7374a48`. Three progressive candidate price schedules and32 exact q/rank/slot exposure scenarios compared;64 assertions pass. Middle is trial baseline only. Reward-equivalent costs explicitly not preentry financing/playtime; prices/frequency remain unadopted, paid products unavailable without reviewed payload.
 
-Exact next action: A81 bounded rank-price/family-frequency sensitivity study; no automatic adoption of candidate product prices.
+Exact next action: A82 concrete future personal source/receipt trace matrix for authored bundle and elemental identity boundaries.
 
 Current source/rank rules remain WB-D144–150. No retired-Fate, task continuation or production approval inferred. Active owner wb-a74-a83 under recorded lease; publish/verify before next deliverable. All earlier next-question/next-task descriptions below are historical where superseded by this section. Owning commit must be remotely verified before saved claim.
 
