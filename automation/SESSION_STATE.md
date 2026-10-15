@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: IDLE — A68 bounded lower-tier context/access/receipt packet complete; owner released.
+- State: ACTIVE — A69–A73 five-checkpoint design integration; owner wb-a69-a73.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -95,3 +95,9 @@ Seven-context source/access/identity/receipt packet: Killerwatt Air diamond, Mol
 Artifacts research/LOWER_TIER_CONTEXT_REVIEW_A68.md/.json and tools/wiki_drops/validate_lower_tier_review.py. Validator passes committed index/row/metadata hashes, classifications, quantiles and all13 manifest hashes;22 existing offline tests pass. No source recrawl, full-cache/SQLite revalidation, table membership/historical v1 edit, gameplay adoption or implementation. Canonical item IDs/personal current-client traces/throughput/v2 FP remain absent and explicitly held. No claim of ready lower-tier pool.
 
 Owning commit contains release and validated artifacts; resolve its SHA in history, verify exact remote head/tree/main before saved claim. No uncommitted work intended and no active/background owner after publication. Next single material question remains progressive Lesser→Standard→Greater→Superior versus independent rank purchases. Recommendation progressive with lower-rank ownership retained; controls/entry gate/prices/offer integration remain separate. Await answer before adopting topology. Next safe source packet: Killerwatt/Molanisk canonical item/form and exact access/receipt evidence, using additional original source only if required; do not restart A67 inventory.
+
+## A69–A73 ownership and authorized plan
+
+Owner wb-a69-a73; acquired 2026-10-15T14:38:01.100370+00:00; expires 2026-10-15T17:38:01.100370+00:00. Starting verified remote91d402137912bd0266c09c5b648c81f0dec1cf53; main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. User2026-10-15 confirms progressive ranks retaining lower ranks and delegates recommended continuation for five checkpoints. No production implementation.
+
+Plan: A69 P0/S record exact approved topology and supersession; A70 P1/S owned-rank controls/persistence; A71 P1/S offer-family/per-rank readiness integration; A72 P1/S target ownership/starter grant and purchase previews; A73 P1/M executable synthetic acceptance and readiness handoff. Each depends on preceding remotely verified checkpoint. No actual candidate admission, unsupported Wiki fact, arbitrary price or retired-Fate approval inferred. Release after A73.
