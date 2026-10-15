@@ -1,5 +1,5 @@
 {
-  "version": "authority-v8-2026-10-14",
+  "version": "authority-v9-a68-2026-10-15",
   "scope": "Documentation metadata only; does not enable gameplay",
   "decision_register": "../DECISIONS.md",
   "catalogs": [
@@ -211,6 +211,20 @@
       "enable_gates": [
         "Context/access/identity/personal-receipt/FP review still required",
         "399 unsupported monster captures are missing-data gaps; not no-drop proof"
+      ]
+    },
+    {
+      "path": "research/LOWER_TIER_CONTEXT_REVIEW_A68.json",
+      "version": "lower-tier-context-review-a68-v1",
+      "sha256": "24e428c4f2a85960d4732d2be1cf29f0b5f3db0a580c4091930c395c3d712665",
+      "entry_count": 7,
+      "authority": "BOUNDED_SOURCE_CONTEXT_REVIEW_NOT_ADMISSION",
+      "runtime_enabled": false,
+      "h3_pinned_input": false,
+      "enable_gates": [
+        "Canonical item/source-form identity and active personal receipts still unvalidated",
+        "Task/estimate/shore-access and canonical-family holds retained",
+        "V2 rewards and unlock/offer integration still unfinished"
       ]
     }
   ],

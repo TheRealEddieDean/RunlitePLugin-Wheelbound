@@ -89,3 +89,7 @@ Use [monster drops](MONSTER_CHALLENGE_HUNT_TABLE.md) for non-boss sources and [b
 ## Full supplied-monster inventory review — A67
 
 The [monster table](MONSTER_CHALLENGE_HUNT_TABLE.md) now contains327 tiered source/item/rate rows (22 Lesser,34 Standard,164 Greater,107 Superior):18 prior contexts and309 candidates. The full1,437-monster/31,757-row source inventory was reviewed, replacing the monster retrieval whitelist.171 unresolved signature-rate rows and401 significance/activity leads are held visibly;399 captures have no supported drop rows. See the [coverage report](research/MONSTER_DROP_REVIEW_A67.md) and [complete row audit](research/MONSTER_DROP_AUDIT_A67.json). Boss table membership stays156. These supersede A66 display counts only, not approved tier/unlock/completion policies. V2 admission/rewards remain unfinished.
+
+## Lower-tier context review — A68
+
+The [seven-context review](research/LOWER_TIER_CONTEXT_REVIEW_A68.md) advances access/identity/receipt preparation for elemental gems and two Lesser contexts without admitting candidates. Jelly Lesser is task-dependent; Infernal Mage has page-level estimated-rate evidence; sea-snake source grouping and Mogre shore access need precise review. No table membership, FP quote, rank topology or runtime enablement changes.

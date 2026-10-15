@@ -1,0 +1,1145 @@
+{
+  "version": "lower-tier-context-review-a68-v1",
+  "authority": "BOUNDED_COMMITTED_SOURCE_REVIEW_ONLY",
+  "baseline_commit": "173092c2c742c059481c8e69b5bb7e960f1fde39",
+  "guarded_claim_commit": "1408fc07e595de3195ef86f6258a0dbbd1383448",
+  "input_path": "catalogs/challenge_hunt_review_index_v2.json",
+  "input_sha256": "ebb9de6def768f379d26b1bc73da40e836f113cb5492a1d969a9fbd80fef12a1",
+  "original_archive_sha256": "e00babd58e09c047f68df94625cd5b4e77e119952d52c0d0c50b53a7d2b60309",
+  "source_freshness": "Existing 2026-10-14 network captures preserved in committed A67 index; no refetch/full-cache reread/SQLite revalidation or current-source assertion in A68.",
+  "runtime_enabled": false,
+  "common_holds": [
+    "Canonical dropped item ID and any accepted equivalent variants are not supplied by the reviewed row. Empty IDs must remain unknown; do not infer from item name.",
+    "Personal local-recipient/source correlation and earning-time/active-state evidence need current-client traces. Captured source IDs are leads only.",
+    "Common account/region/shop/equipment/supply permissions remain; selecting a hunt grants none.",
+    "Source-specific throughput, personal encounter probability and frozen v2 FP quote are not authored.",
+    "Unlock topology, rank offer integration and canonical per-rank diversity remain unresolved; no admission or runtime enablement."
+  ],
+  "entries": [
+    {
+      "context_id": "killerwatt_air_diamond",
+      "creature": "Killerwatt",
+      "item": "Air diamond",
+      "tier": "standard",
+      "base_rate": "1/64",
+      "source_url": "https://oldschool.runescape.wiki/w/Killerwatt",
+      "status": "REVIEW_PACKET_ONLY_NOT_ADMITTED",
+      "runtime_enabled": false,
+      "canonical_item_id": null,
+      "v2_fp": null,
+      "access_draft_from_capture": [
+        "Members; Slayer 37; Ernest the Chicken completed; access to Killerwatt plane via Draynor Manor portal."
+      ],
+      "route_and_equipment_notes": [
+        "Insulated boots mitigate damage; captured introduction does not prove they are a hard attack prerequisite.",
+        "No cannon route: captured introduction explicitly prohibits setting one up."
+      ],
+      "context_holds": [
+        "Task-independent route is a candidate inference from the captured access description, not a tested off-task trace."
+      ],
+      "source_context": {
+        "reported_npc_ids": [
+          470
+        ],
+        "capture": {
+          "origin": "network_html",
+          "requested_url": "https://oldschool.runescape.wiki/w/Killerwatt",
+          "fetched_at": "2026-10-14T15:29:06.207978+00:00",
+          "sha256": "61b0c531f8926ccc4afacc818d8b4f527b4f5928b70a19171f25ee6fb8f4fa95",
+          "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+          "cache_file": "tools\\wiki_drops\\output\\html\\c19be61e79adaafbe8aaa59a9843234fb9a5ef22fe655b6e715f99065f1af15c.html",
+          "resolved_url": "https://oldschool.runescape.wiki/w/Killerwatt",
+          "etag": null,
+          "last_modified": "Wed, 14 Oct 2026 15:26:34 GMT",
+          "fixture": false
+        },
+        "page_context_first_three_paragraphs": [
+          "Killerwatts are Slayer monsters located in the Killerwatt plane , accessible through a portal at the top floor of Draynor Manor after completion of Ernest the Chicken . A Slayer level of 37 is required to kill them.",
+          "If a player is not wearing a pair of insulated boots while fighting them, both their Ranged and Melee attacks will have a much higher maximum hit. Even when wearing insulated boots, their attacks are still rapid and highly accurate, and they have an attack range of 13 tiles, meaning it is not possible to safespot them with long ranged weapons. A dwarf multicannon cannot be set up in the Killerwatt plane .",
+          "Killerwatts are a commonly skipped Slayer task due to their relatively high damage output combined with their mediocre drops, except for those seeking their unique air diamond drop."
+        ],
+        "footnotes": [
+          {
+            "id": "cite_note-1",
+            "text": "^ Requires completion of Ernest the Chicken"
+          },
+          {
+            "id": "cite_note-nothing-2",
+            "text": "^ The \"nothing\" drop is removed while wearing a ring of wealth ."
+          },
+          {
+            "id": "cite_note-row-3",
+            "text": "^ 2.00 2.01 2.02 2.03 2.04 2.05 2.06 2.07 2.08 2.09 2.10 The drop rate is increased while wearing a ring of wealth due to the \"nothing\" drop being removed."
+          },
+          {
+            "id": "cite_note-legend-4",
+            "text": "^ 3.0 3.1 3.2 Only dropped if Legends' Quest has been finished; if not, a talisman is dropped instead."
+          }
+        ],
+        "access_infobox_fields": [
+          {
+            "field": "Released",
+            "value": "20 February 2006 ( Update )"
+          },
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "37"
+          },
+          {
+            "field": "Monster ID",
+            "value": "470"
+          }
+        ],
+        "warnings": []
+      },
+      "source_rows": [
+        {
+          "creature": "Killerwatt",
+          "item": "Air diamond",
+          "source_url": "https://oldschool.runescape.wiki/w/Killerwatt",
+          "source_sha256": "61b0c531f8926ccc4afacc818d8b4f527b4f5928b70a19171f25ee6fb8f4fa95",
+          "fetched_at": "2026-10-14T15:29:06.207978+00:00",
+          "source_row_zero_based": 48,
+          "raw_record": {
+            "section": "Drops / Tertiary",
+            "item_name": "Air diamond",
+            "item_links": [
+              {
+                "text": "Air diamond",
+                "href": "https://oldschool.runescape.wiki/w/Air_diamond"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/64",
+              "expression": "1/64",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 64
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Air diamond",
+                "1",
+                "1/64",
+                "401,383",
+                "12,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "effort_sensitivity": {
+        "unit": "hypothetical independent qualifying opportunities at the displayed probability; NOT verified personal kills",
+        "expected_opportunities": "64",
+        "median_opportunities": 45,
+        "p90_opportunities": 147,
+        "p95_opportunities": 191,
+        "kill_rate_per_hour": null,
+        "expected_hours": null,
+        "fp_quote": null
+      }
+    },
+    {
+      "context_id": "molanisk_earth_emerald",
+      "creature": "Molanisk",
+      "item": "Earth emerald",
+      "tier": "standard",
+      "base_rate": "1/64",
+      "source_url": "https://oldschool.runescape.wiki/w/Molanisk",
+      "status": "REVIEW_PACKET_ONLY_NOT_ADMITTED",
+      "runtime_enabled": false,
+      "canonical_item_id": null,
+      "v2_fp": null,
+      "access_draft_from_capture": [
+        "Members; Slayer 39; Death to the Dorgeshuun completed; Dorgesh-Kaan South Dungeon access; Slayer bell to initiate combat."
+      ],
+      "route_and_equipment_notes": [
+        "Light source is advised in captured text; exact dungeon darkness/access predicate requires route review.",
+        "Bell interaction must correlate wall form, lured combat form and loot source."
+      ],
+      "context_holds": [
+        "Reported NPC ID 1 is a source value, not a validated RuneLite composition mapping. Preserve it and verify wall/combat form identity before admission."
+      ],
+      "source_context": {
+        "reported_npc_ids": [
+          1
+        ],
+        "capture": {
+          "origin": "network_html",
+          "requested_url": "https://oldschool.runescape.wiki/w/Molanisk",
+          "fetched_at": "2026-10-14T15:29:42.119771+00:00",
+          "sha256": "02182fcdb77805b4419861ccb15dd56b73275bea74afdd3c97fe965c988df58b",
+          "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+          "cache_file": "tools\\wiki_drops\\output\\html\\0f64e42a534466d0d6752b2e8aaa5dbe65de7688de7af641e50e3bd00d5d5c0b.html",
+          "resolved_url": "https://oldschool.runescape.wiki/w/Molanisk",
+          "etag": null,
+          "last_modified": "Wed, 14 Oct 2026 15:26:39 GMT",
+          "fixture": false
+        },
+        "page_context_first_three_paragraphs": [
+          "Molanisks are Slayer monsters that require level 39 Slayer to kill giving 52 Slayer experience per kill. A Slayer bell is necessary to initiate combat with them. Since they are only found in the Dorgesh-Kaan South Dungeon , completion of Death to the Dorgeshuun is required to fight molanisks and it is advisable to bring a light source . Molanisks do unusually low damage, meaning a player with half-decent armour should easily be able to kill them with no trouble.",
+          "They are mainly hunted for their earth emerald drop, or as a Slayer assignment from Vannaka .",
+          "Molanisks are found attached to cave walls and must be lured off with a Slayer bell to allow players to attack them. The Slayer bell only works within 3 tiles of the wall the molanisk is attached to. When lured off the wall, they are aggressive towards the player who lured them off with the bell. Molanisks respawn relatively quickly, so players who want to conserve run energy can just stay at the same respawn location. Alternatively, there is a spot south of the fairy ring with two spawns close together."
+        ],
+        "footnotes": [
+          {
+            "id": "cite_note-nothing-1",
+            "text": "^ The \"nothing\" drop is removed while wearing a ring of wealth ."
+          },
+          {
+            "id": "cite_note-row-2",
+            "text": "^ 2.00 2.01 2.02 2.03 2.04 2.05 2.06 2.07 2.08 2.09 2.10 The drop rate is increased while wearing a ring of wealth due to the \"nothing\" drop being removed."
+          },
+          {
+            "id": "cite_note-legend-3",
+            "text": "^ 3.0 3.1 3.2 Only dropped if Legends' Quest has been finished; if not, a talisman is dropped instead."
+          },
+          {
+            "id": "cite_note-5",
+            "text": "^ The easy clue scroll drop rate increases to 1/121 after unlocking the easy Combat Achievements rewards tier."
+          },
+          {
+            "id": "cite_note-box-6",
+            "text": "^ Clue scrolls will drop as scroll boxes after the completion of X Marks the Spot ."
+          },
+          {
+            "id": "cite_note-Clue_rates_tweet-4",
+            "text": "^ Jagex. Mod Tide's Twitter account . 24 May 2019. Archived from the original on 24 May 2019. Mod Tide: \"I know its been a while since the clue expansion but here is the information on clue scroll drop rates and loot chances! If anything changes I will keep you posted.\""
+          }
+        ],
+        "access_infobox_fields": [
+          {
+            "field": "Released",
+            "value": "20 March 2007 ( Update )"
+          },
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "39"
+          },
+          {
+            "field": "Monster ID",
+            "value": "1"
+          }
+        ],
+        "warnings": []
+      },
+      "source_rows": [
+        {
+          "creature": "Molanisk",
+          "item": "Earth emerald",
+          "source_url": "https://oldschool.runescape.wiki/w/Molanisk",
+          "source_sha256": "02182fcdb77805b4419861ccb15dd56b73275bea74afdd3c97fe965c988df58b",
+          "fetched_at": "2026-10-14T15:29:42.119771+00:00",
+          "source_row_zero_based": 35,
+          "raw_record": {
+            "section": "Drops / Tertiary",
+            "item_name": "Earth emerald",
+            "item_links": [
+              {
+                "text": "Earth emerald",
+                "href": "https://oldschool.runescape.wiki/w/Earth_emerald"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/64",
+              "expression": "1/64",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 64
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Earth emerald",
+                "1",
+                "1/64",
+                "573,065",
+                "12,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "effort_sensitivity": {
+        "unit": "hypothetical independent qualifying opportunities at the displayed probability; NOT verified personal kills",
+        "expected_opportunities": "64",
+        "median_opportunities": 45,
+        "p90_opportunities": 147,
+        "p95_opportunities": 191,
+        "kill_rate_per_hour": null,
+        "expected_hours": null,
+        "fp_quote": null
+      }
+    },
+    {
+      "context_id": "infernal_mage_fire_ruby",
+      "creature": "Infernal Mage",
+      "item": "Fire ruby",
+      "tier": "standard",
+      "base_rate": "1/64",
+      "source_url": "https://oldschool.runescape.wiki/w/Infernal_Mage",
+      "status": "REVIEW_PACKET_ONLY_NOT_ADMITTED",
+      "runtime_enabled": false,
+      "canonical_item_id": null,
+      "v2_fp": null,
+      "access_draft_from_capture": [
+        "Members; Slayer 45; accessible Slayer Tower route."
+      ],
+      "route_and_equipment_notes": [
+        "Earmuffs/Slayer helmet on the Banshee route are recommendations; 18 Agility alternate shortcut is not a universal kill requirement."
+      ],
+      "context_holds": [
+        "Page-level statement: rates estimated from 31,289 Drop Rate Project samples unless otherwise cited. The fire-ruby row has no citation annotation; exact-looking parsed 1/64 is insufficient to certify exact probability or a fully supported range."
+      ],
+      "source_context": {
+        "reported_npc_ids": [
+          443,
+          444,
+          445,
+          446,
+          447
+        ],
+        "capture": {
+          "origin": "network_html",
+          "requested_url": "https://oldschool.runescape.wiki/w/Infernal_Mage",
+          "fetched_at": "2026-10-14T16:28:12.594402+00:00",
+          "sha256": "d0bad8985322fb6b847eac136ec5150115493979f8b44edfac24891e270dc031",
+          "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+          "cache_file": "tools\\wiki_drops\\output\\html\\851a6c93ad48da508b11613557892f3867c9795178a0a5c9f0b5da3bee4d64ef.html",
+          "resolved_url": "https://oldschool.runescape.wiki/w/Infernal_Mage",
+          "etag": null,
+          "last_modified": "Wed, 14 Oct 2026 15:26:22 GMT",
+          "fixture": false
+        },
+        "page_context_first_three_paragraphs": [
+          "Infernal Mages are Slayer monsters that require 45 Slayer to kill. They are mainly hunted for their unique drops: the fire ruby , and the rare dark mystic boots and hat drops, and are sometimes hunted for their frequent drops of death runes . Players who plan on fighting them should be wary of their accurate magic attack, although Protect from Magic negates this completely.",
+          "To reach the Infernal Mage area in the 1 st floor [ UK ] 2 nd floor [ US ] of the Slayer Tower , players can take the long way up the south-east stairs, which requires running past aggressive Banshees , so wearing Earmuffs or a Slayer helmet is recommended. Players with 18 Agility can avoid the banshees by using the broken window shortcut for quick access to the stairs.",
+          "Drop rates are estimated based on 31,289 samples from the Drop Rate Project , unless otherwise cited."
+        ],
+        "footnotes": [
+          {
+            "id": "cite_note-Drop_Rates_V2-1",
+            "text": "^ 1.0 1.1 Envision. \"Drop Rates V2.\" 22 April 2014. Old School RuneScape Forums."
+          }
+        ],
+        "access_infobox_fields": [
+          {
+            "field": "Released",
+            "value": "26 January 2005 ( Update )"
+          },
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "45"
+          },
+          {
+            "field": "Monster ID",
+            "value": "443,444,445,446,447"
+          }
+        ],
+        "warnings": []
+      },
+      "source_rows": [
+        {
+          "creature": "Infernal Mage",
+          "item": "Fire ruby",
+          "source_url": "https://oldschool.runescape.wiki/w/Infernal_Mage",
+          "source_sha256": "d0bad8985322fb6b847eac136ec5150115493979f8b44edfac24891e270dc031",
+          "fetched_at": "2026-10-14T16:28:12.594402+00:00",
+          "source_row_zero_based": 24,
+          "raw_record": {
+            "section": "Drops / Tertiary",
+            "item_name": "Fire ruby",
+            "item_links": [
+              {
+                "text": "Fire ruby",
+                "href": "https://oldschool.runescape.wiki/w/Fire_ruby"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/64",
+              "expression": "1/64",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 64
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Fire ruby",
+                "1",
+                "1/64",
+                "200,699",
+                "12,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "effort_sensitivity": {
+        "unit": "hypothetical independent qualifying opportunities at the displayed probability; NOT verified personal kills",
+        "expected_opportunities": "64",
+        "median_opportunities": 45,
+        "p90_opportunities": 147,
+        "p95_opportunities": 191,
+        "kill_rate_per_hour": null,
+        "expected_hours": null,
+        "fp_quote": null
+      }
+    },
+    {
+      "context_id": "sea_snake_hatchling_water_sapphire",
+      "creature": "Sea Snake Hatchling",
+      "item": "Water sapphire",
+      "tier": "standard",
+      "base_rate": "1/64",
+      "source_url": "https://oldschool.runescape.wiki/w/Sea_Snake_Hatchling",
+      "status": "REVIEW_PACKET_ONLY_NOT_ADMITTED",
+      "runtime_enabled": false,
+      "canonical_item_id": null,
+      "v2_fp": null,
+      "access_draft_from_capture": [
+        "Members; Miscellania and Etceteria dungeon access during or after Royal Trouble; actual accessible quest stage required.",
+        "Captured text explicitly permits killing at any Slayer level; Slayer 40 is a task requirement only."
+      ],
+      "route_and_equipment_notes": [
+        "Poison protection is recommended; do not invent a hard gear prerequisite from that recommendation."
+      ],
+      "context_holds": [
+        "Exact quest-stage/access evidence and item identity still missing. Same item shared with Sea Snake Young; canonical source-family grouping remains reviewed work, not two automatically eligible keys."
+      ],
+      "source_context": {
+        "reported_npc_ids": [
+          1098
+        ],
+        "capture": {
+          "origin": "network_html",
+          "requested_url": "https://oldschool.runescape.wiki/w/Sea_Snake_Hatchling",
+          "fetched_at": "2026-10-14T16:18:29.312678+00:00",
+          "sha256": "7d972397aba348e8ef9be46f32ad2ded0cb31b99274bfbe1e46a1fbd9f6f42bf",
+          "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+          "cache_file": "tools\\wiki_drops\\output\\html\\5825acedd80e763d83fd2a2798ba0368c71ec4158c1263b80d4e191d77b8abb2.html",
+          "resolved_url": "https://oldschool.runescape.wiki/w/Sea_Snake_Hatchling",
+          "etag": null,
+          "last_modified": "Wed, 14 Oct 2026 15:27:07 GMT",
+          "fixture": false
+        },
+        "page_context_first_three_paragraphs": [
+          "Sea snake hatchlings are found in the Miscellania and Etceteria dungeon , which can be entered during and after the Royal Trouble quest. A Slayer level of 40 is required to receive a sea snakes Slayer task, but they can be killed at any level. The snakes are poisonous , with the poison starting at 5 damage. Players fighting them should bring poison protection of some sort, such as an antipoison , antipoison+ , or antipoison++ . They attack with Melee and are vulnerable to Magic , particularly earth spells . Their unique drop is the water sapphire , which is shared with the sea snake young .",
+          "Players can use the blue eggs halfway through the tunnel as a safespot , although it is hard to get them to the player due to being a little further away than the sea snake young . A Dwarf multicannon can be used, but with reduced effectiveness due to the area being single-way combat .",
+          "The following drop rates are provided by Jagex, unless otherwise specified."
+        ],
+        "footnotes": [
+          {
+            "id": "cite_note-nothing-1",
+            "text": "^ The \"nothing\" drop is removed while wearing a ring of wealth ."
+          },
+          {
+            "id": "cite_note-row-2",
+            "text": "^ 2.00 2.01 2.02 2.03 2.04 2.05 2.06 2.07 2.08 2.09 2.10 The drop rate is increased while wearing a ring of wealth due to the \"nothing\" drop being removed."
+          },
+          {
+            "id": "cite_note-legend-3",
+            "text": "^ 3.0 3.1 3.2 Only dropped if Legends' Quest has been finished; if not, a talisman is dropped instead."
+          },
+          {
+            "id": "cite_note-4",
+            "text": "^ The medium clue scroll drop rate increases to 1/121 after unlocking the medium Combat Achievements rewards tier."
+          },
+          {
+            "id": "cite_note-box-5",
+            "text": "^ Clue scrolls will drop as scroll boxes after the completion of X Marks the Spot ."
+          }
+        ],
+        "access_infobox_fields": [
+          {
+            "field": "Released",
+            "value": "22 May 2006 ( Update )"
+          },
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "1 to kill, 40 for task"
+          },
+          {
+            "field": "Monster ID",
+            "value": "1098"
+          }
+        ],
+        "warnings": []
+      },
+      "source_rows": [
+        {
+          "creature": "Sea Snake Hatchling",
+          "item": "Water sapphire",
+          "source_url": "https://oldschool.runescape.wiki/w/Sea_Snake_Hatchling",
+          "source_sha256": "7d972397aba348e8ef9be46f32ad2ded0cb31b99274bfbe1e46a1fbd9f6f42bf",
+          "fetched_at": "2026-10-14T16:18:29.312678+00:00",
+          "source_row_zero_based": 31,
+          "raw_record": {
+            "section": "Drops / Tertiary",
+            "item_name": "Water sapphire",
+            "item_links": [
+              {
+                "text": "Water sapphire",
+                "href": "https://oldschool.runescape.wiki/w/Water_sapphire"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/64",
+              "expression": "1/64",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 64
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Water sapphire",
+                "1",
+                "1/64",
+                "295,347",
+                "12,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "effort_sensitivity": {
+        "unit": "hypothetical independent qualifying opportunities at the displayed probability; NOT verified personal kills",
+        "expected_opportunities": "64",
+        "median_opportunities": 45,
+        "p90_opportunities": 147,
+        "p95_opportunities": 191,
+        "kill_rate_per_hour": null,
+        "expected_hours": null,
+        "fp_quote": null
+      }
+    },
+    {
+      "context_id": "sea_snake_young_water_sapphire",
+      "creature": "Sea Snake Young",
+      "item": "Water sapphire",
+      "tier": "standard",
+      "base_rate": "1/64",
+      "source_url": "https://oldschool.runescape.wiki/w/Sea_Snake_Young",
+      "status": "REVIEW_PACKET_ONLY_NOT_ADMITTED",
+      "runtime_enabled": false,
+      "canonical_item_id": null,
+      "v2_fp": null,
+      "access_draft_from_capture": [
+        "Members; Miscellania and Etceteria dungeon access during or after Royal Trouble; actual accessible quest stage required.",
+        "Captured text explicitly permits killing at any Slayer level; Slayer 40 is a task requirement only."
+      ],
+      "route_and_equipment_notes": [
+        "Poison protection is recommended; do not invent a hard gear prerequisite from that recommendation."
+      ],
+      "context_holds": [
+        "Keep source-specific receipt separate from hatchling; no cross-credit until canonical source-family policy is authored. Do not use these two displays to assert the three-creature readiness floor."
+      ],
+      "source_context": {
+        "reported_npc_ids": [
+          1097
+        ],
+        "capture": {
+          "origin": "network_html",
+          "requested_url": "https://oldschool.runescape.wiki/w/Sea_Snake_Young",
+          "fetched_at": "2026-10-14T15:54:06.203409+00:00",
+          "sha256": "a46279bc3714ff4e82c3849fb3d30016ecd84d6a9e1b3297d2d6aaa1d99e215c",
+          "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+          "cache_file": "tools\\wiki_drops\\output\\html\\7d08d1a0b48e6f3c0dd9427f63136c1a5cb495e51f1e40a7d40b4183eff84b74.html",
+          "resolved_url": "https://oldschool.runescape.wiki/w/Sea_Snake_Young",
+          "etag": null,
+          "last_modified": "Wed, 14 Oct 2026 15:27:07 GMT",
+          "fixture": false
+        },
+        "page_context_first_three_paragraphs": [
+          "Sea snake young are found in the Miscellania and Etceteria dungeon , which can be entered during and after the Royal Trouble quest. A Slayer level of 40 is required to receive a sea snakes Slayer task, but they can be killed at any level. The snakes are poisonous , with the poison starting at 7 damage. Players fighting them should bring poison protection of some sort, such as an antipoison or superantipoison . They attack with Melee and are vulnerable to Magic , especially earth spells . Their unique drop is the water sapphire , which is shared with the sea snake hatchling .",
+          "Players can use the blue eggs halfway through the tunnel as a safespot . A Dwarf multicannon can be used, but with reduced effectiveness due to the area being single-way combat .",
+          "The following drop rates are provided by Jagex, unless otherwise specified."
+        ],
+        "footnotes": [
+          {
+            "id": "cite_note-nothing-1",
+            "text": "^ The \"nothing\" drop is removed while wearing a ring of wealth ."
+          },
+          {
+            "id": "cite_note-row-2",
+            "text": "^ 2.00 2.01 2.02 2.03 2.04 2.05 2.06 2.07 2.08 2.09 2.10 The drop rate is increased while wearing a ring of wealth due to the \"nothing\" drop being removed."
+          },
+          {
+            "id": "cite_note-legend-3",
+            "text": "^ 3.0 3.1 3.2 Only dropped if Legends' Quest has been finished; if not, a talisman is dropped instead."
+          },
+          {
+            "id": "cite_note-4",
+            "text": "^ The medium clue scroll drop rate increases to 1/121 after unlocking the medium Combat Achievements rewards tier."
+          },
+          {
+            "id": "cite_note-box-5",
+            "text": "^ Clue scrolls will drop as scroll boxes after the completion of X Marks the Spot ."
+          }
+        ],
+        "access_infobox_fields": [
+          {
+            "field": "Released",
+            "value": "22 May 2006 ( Update )"
+          },
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "1 to kill, 40 for task"
+          },
+          {
+            "field": "Monster ID",
+            "value": "1097"
+          }
+        ],
+        "warnings": []
+      },
+      "source_rows": [
+        {
+          "creature": "Sea Snake Young",
+          "item": "Water sapphire",
+          "source_url": "https://oldschool.runescape.wiki/w/Sea_Snake_Young",
+          "source_sha256": "a46279bc3714ff4e82c3849fb3d30016ecd84d6a9e1b3297d2d6aaa1d99e215c",
+          "fetched_at": "2026-10-14T15:54:06.203409+00:00",
+          "source_row_zero_based": 67,
+          "raw_record": {
+            "section": "Drops / Tertiary",
+            "item_name": "Water sapphire",
+            "item_links": [
+              {
+                "text": "Water sapphire",
+                "href": "https://oldschool.runescape.wiki/w/Water_sapphire"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "1/64",
+              "expression": "1/64",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 64
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Water sapphire",
+                "1",
+                "1/64",
+                "295,347",
+                "12,000"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "effort_sensitivity": {
+        "unit": "hypothetical independent qualifying opportunities at the displayed probability; NOT verified personal kills",
+        "expected_opportunities": "64",
+        "median_opportunities": 45,
+        "p90_opportunities": 147,
+        "p95_opportunities": 191,
+        "kill_rate_per_hour": null,
+        "expected_hours": null,
+        "fp_quote": null
+      }
+    },
+    {
+      "context_id": "jelly_wilderness_mithril_boots",
+      "creature": "Jelly",
+      "item": "Mithril boots",
+      "tier": "lesser",
+      "base_rate": "1/32",
+      "source_url": "https://oldschool.runescape.wiki/w/Jelly",
+      "status": "REVIEW_PACKET_ONLY_NOT_ADMITTED",
+      "runtime_enabled": false,
+      "canonical_item_id": null,
+      "v2_fp": null,
+      "access_draft_from_capture": [
+        "Members; Slayer 52; Wilderness Slayer Cave access; active matching Slayer task for this specific captured table section."
+      ],
+      "route_and_equipment_notes": [
+        "Normal Fremennik Slayer Dungeon table reports 1/128 (Greater), not this Lesser rate; no replacement or favorable-rate merge."
+      ],
+      "context_holds": [
+        "HELD_TASK_DEPENDENT under WB-D140: finite task continuation/reacquisition policy remains unresolved. Aggregate page IDs 437/11241 need section-specific mapping; cannot accept both blindly."
+      ],
+      "source_context": {
+        "reported_npc_ids": [
+          437,
+          11241
+        ],
+        "capture": {
+          "origin": "network_html",
+          "requested_url": "https://oldschool.runescape.wiki/w/Jelly",
+          "fetched_at": "2026-10-14T15:27:24.529027+00:00",
+          "sha256": "be12379eb9b8166669ae2699ac37def4444452351a2b70d19d8d66162dd8baf4",
+          "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+          "cache_file": "tools\\wiki_drops\\output\\html\\a0aa8f2e962b479f008baa613fab8257fce2d7a368cf04d712c68727917bef34.html",
+          "resolved_url": "https://oldschool.runescape.wiki/w/Jelly",
+          "etag": null,
+          "last_modified": "Wed, 14 Oct 2026 15:26:21 GMT",
+          "fixture": false
+        },
+        "page_context_first_three_paragraphs": [
+          "Jellies are Slayer monsters found in the Fremennik Slayer Dungeon and Wilderness Slayer Cave that require a Slayer level of 52 to kill. They give 75 Slayer experience per kill and drop hard clue scrolls and steel weaponry . Jellies and their variants are the only creatures to drop mithril boots .",
+          "They attack with magical acids that bypass physical defences [ 1 ] (a magic-based melee attack); therefore high magic defence armour, such as dragonhide is effective against their attacks. However, Protect from Melee will prevent all damage from them.",
+          "In the Wilderness cave jellies may only be attacked while on a Slayer task . Here they can be safespotted by using either side of the rockfall in the southern part of the cave, which the Jellies will not wander away from. It is also possible to safespot them by standing on the corner of the rocks in the western section of the chamber or from behind the stones in the hallway south of the jelly chamber."
+        ],
+        "footnotes": [
+          {
+            "id": "cite_note-nothing-3",
+            "text": "^ The \"nothing\" drop is removed while wearing a ring of wealth ."
+          },
+          {
+            "id": "cite_note-row-4",
+            "text": "^ 2.00 2.01 2.02 2.03 2.04 2.05 2.06 2.07 2.08 2.09 2.10 The drop rate is increased while wearing a ring of wealth due to the \"nothing\" drop being removed."
+          },
+          {
+            "id": "cite_note-legend-5",
+            "text": "^ 3.0 3.1 3.2 Only dropped if Legends' Quest has been finished; if not, a talisman is dropped instead."
+          },
+          {
+            "id": "cite_note-7",
+            "text": "^ The hard clue scroll drop rate increases to 1/121 after unlocking the hard Combat Achievements rewards tier."
+          },
+          {
+            "id": "cite_note-box-8",
+            "text": "^ Clue scrolls will drop as scroll boxes after the completion of X Marks the Spot ."
+          },
+          {
+            "id": "cite_note-9",
+            "text": "^ Brimstone keys are only dropped if killed on a Slayer task given by Konar quo Maten ."
+          },
+          {
+            "id": "cite_note-nothing-10",
+            "text": "^ The \"nothing\" drop is removed while wearing a ring of wealth ."
+          },
+          {
+            "id": "cite_note-row-11",
+            "text": "^ 2.00 2.01 2.02 2.03 2.04 2.05 2.06 2.07 2.08 2.09 2.10 The drop rate is increased while wearing a ring of wealth due to the \"nothing\" drop being removed."
+          },
+          {
+            "id": "cite_note-legend-12",
+            "text": "^ 3.0 3.1 3.2 Only dropped if Legends' Quest has been finished; if not, a talisman is dropped instead."
+          },
+          {
+            "id": "cite_note-13",
+            "text": "^ The hard clue scroll rarity changes to 1/32 if a ring of wealth (i) is worn."
+          },
+          {
+            "id": "cite_note-14",
+            "text": "^ The hard clue scroll drop rate increases to 1/60; 1/30 after unlocking the hard Combat Achievements rewards tier."
+          },
+          {
+            "id": "cite_note-box-15",
+            "text": "^ Clue scrolls will drop as scroll boxes after the completion of X Marks the Spot ."
+          },
+          {
+            "id": "cite_note-1",
+            "text": "^ Slayer Master . Old School RuneScape . \"Jellies are nasty cube-like gelatinous creatures which absorb everything they come across into themselves. Their magical acids bypass physical defences.\""
+          },
+          {
+            "id": "cite_note-2",
+            "text": "^ Jagex. Mod Ash's Twitter account . 12 January 2016. Archived from the original on 26 May 2020. Mod Ash: \"It's 1/128, so that's quite unlucky.\""
+          },
+          {
+            "id": "cite_note-drop-6",
+            "text": "^ Envision. \"Drop Rates V2.\" 29 July 2014. Old School RuneScape Forums."
+          }
+        ],
+        "access_infobox_fields": [
+          {
+            "field": "Released",
+            "value": "26 January 2005 ( Update )"
+          },
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "52"
+          },
+          {
+            "field": "Monster ID",
+            "value": "437"
+          },
+          {
+            "field": "Released",
+            "value": "3 February 2022 ( Update )"
+          },
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "52"
+          },
+          {
+            "field": "Monster ID",
+            "value": "11241"
+          }
+        ],
+        "warnings": []
+      },
+      "source_rows": [
+        {
+          "creature": "Jelly",
+          "item": "Mithril boots",
+          "source_url": "https://oldschool.runescape.wiki/w/Jelly",
+          "source_sha256": "be12379eb9b8166669ae2699ac37def4444452351a2b70d19d8d66162dd8baf4",
+          "fetched_at": "2026-10-14T15:27:24.529027+00:00",
+          "source_row_zero_based": 33,
+          "raw_record": {
+            "section": "Drops / Wilderness Slayer Cave drops / Weapons and armour",
+            "item_name": "Mithril boots",
+            "item_links": [
+              {
+                "text": "Mithril boots",
+                "href": "https://oldschool.runescape.wiki/w/Mithril_boots"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "2/64",
+              "expression": "2/64",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 1,
+                "denominator": 32
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Mithril boots",
+                "1",
+                "2/64",
+                "533",
+                "468"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "effort_sensitivity": {
+        "unit": "hypothetical independent qualifying opportunities at the displayed probability; NOT verified personal kills",
+        "expected_opportunities": "32",
+        "median_opportunities": 22,
+        "p90_opportunities": 73,
+        "p95_opportunities": 95,
+        "kill_rate_per_hour": null,
+        "expected_hours": null,
+        "fp_quote": null
+      }
+    },
+    {
+      "context_id": "mogre_shore_mudskipper_hat",
+      "creature": "Mogre",
+      "item": "Mudskipper hat",
+      "tier": "lesser",
+      "base_rate": "5/128",
+      "source_url": "https://oldschool.runescape.wiki/w/Mogre",
+      "status": "REVIEW_PACKET_ONLY_NOT_ADMITTED",
+      "runtime_enabled": false,
+      "canonical_item_id": null,
+      "v2_fp": null,
+      "access_draft_from_capture": [
+        "Members; Slayer 32; shore encounter at Mudskipper Point; fishing explosives interaction at Ominous Fishing Spot."
+      ],
+      "route_and_equipment_notes": [
+        "Capture distinguishes boat/cannon sea encounter from shore fishing-explosive encounter; no sea-source cross-credit."
+      ],
+      "context_holds": [
+        "Captured introduction says miniquest was previously required and explicitly exempts sea encounters; it does not conclusively settle current shore miniquest requirement. Hold precise shore access stage and permitted explosive replenishment until reviewed."
+      ],
+      "source_context": {
+        "reported_npc_ids": [
+          2592
+        ],
+        "capture": {
+          "origin": "network_html",
+          "requested_url": "https://oldschool.runescape.wiki/w/Mogre",
+          "fetched_at": "2026-10-14T15:53:54.095445+00:00",
+          "sha256": "163d382fc8403a6459d23f53ca89a6bc38bd0d512cffea96e206be77e628b6ab",
+          "user_agent": "WheelboundDropCatalog/0.1 (+https://github.com/TheRealEddieDean/RunlitePLugin-Wheelbound)",
+          "cache_file": "tools\\wiki_drops\\output\\html\\aee391f9ee9a0d642864bc1ff8521db1fe0b7839903a6e92472774240eda96a6.html",
+          "resolved_url": "https://oldschool.runescape.wiki/w/Mogre",
+          "etag": null,
+          "last_modified": "Wed, 14 Oct 2026 15:26:36 GMT",
+          "fixture": false
+        },
+        "page_context_first_three_paragraphs": [
+          "Mogres are Slayer monsters and a type of ogre that are found in Mudskipper Point , requiring level 32 Slayer to kill. Mogres appear when disturbed by the player, who must lure them using Fishing explosives on an Ominous Fishing Spot . Previously, they could only be killed by players who had completed the Skippy and the Mogres miniquest . Since the release of Sailing , Mogres swimming in the ocean can now be killed with cannons from the player's boat. Doing so does not require completion of Skippy and the Mogres and does not demand the use of Fishing explosives, but still requires having level 32 Slayer.",
+          "Mogres can only be \"lured\" by clicking Use on the fishing explosives in your inventory, then clicking on the ominous fishing spots while also standing a few tiles away. Although the ominous fishing spots do have an options to \"Lure\" or \"Bait\", both these options do nothing (even with fishing explosives) and instead merely say in chat \"Something seems to have scared all the fishes away...\"",
+          "Mogres are usually killed by players searching for their unique drops of flippers or Mudskipper hats ."
+        ],
+        "footnotes": [
+          {
+            "id": "cite_note-1",
+            "text": "^ Mogre bones are only dropped during Rag and Bone Man II ."
+          }
+        ],
+        "access_infobox_fields": [
+          {
+            "field": "Released",
+            "value": "24 October 2005 ( Update )"
+          },
+          {
+            "field": "Members",
+            "value": "Yes"
+          },
+          {
+            "field": "Slayer level",
+            "value": "32"
+          },
+          {
+            "field": "Monster ID",
+            "value": "2592"
+          }
+        ],
+        "warnings": []
+      },
+      "source_rows": [
+        {
+          "creature": "Mogre",
+          "item": "Mudskipper hat",
+          "source_url": "https://oldschool.runescape.wiki/w/Mogre",
+          "source_sha256": "163d382fc8403a6459d23f53ca89a6bc38bd0d512cffea96e206be77e628b6ab",
+          "fetched_at": "2026-10-14T15:53:54.095445+00:00",
+          "source_row_zero_based": 38,
+          "raw_record": {
+            "section": "Drops / Other",
+            "item_name": "Mudskipper hat",
+            "item_links": [
+              {
+                "text": "Mudskipper hat",
+                "href": "https://oldschool.runescape.wiki/w/Mudskipper_hat"
+              }
+            ],
+            "quantity_raw": "1",
+            "rarity": {
+              "raw": "5/128",
+              "expression": "5/128",
+              "kind": "fraction",
+              "exact_probability": {
+                "numerator": 5,
+                "denominator": 128
+              },
+              "needs_context_review": false,
+              "approximate": false
+            },
+            "annotations": [],
+            "raw_row": {
+              "cells": [
+                "",
+                "Mudskipper hat",
+                "1",
+                "5/128",
+                "Not sold",
+                "0"
+              ],
+              "table_headers": [
+                "",
+                "item",
+                "quantity",
+                "rarity",
+                "price",
+                "high alch"
+              ]
+            },
+            "layout_supported": true,
+            "canonical_item_ids": [],
+            "runtime_enabled": false,
+            "review_status": "UNREVIEWED"
+          },
+          "runtime_enabled": false
+        }
+      ],
+      "effort_sensitivity": {
+        "unit": "hypothetical independent qualifying opportunities at the displayed probability; NOT verified personal kills",
+        "expected_opportunities": "128/5",
+        "median_opportunities": 18,
+        "p90_opportunities": 58,
+        "p95_opportunities": 76,
+        "kill_rate_per_hour": null,
+        "expected_hours": null,
+        "fp_quote": null
+      }
+    }
+  ],
+  "receipt_review_cases": [
+    {
+      "case": "fresh_local_exact_assigned_source",
+      "expected": "Candidate completion only after source/item/context/local ownership and active earning time are supported; settle once; keep item."
+    },
+    {
+      "case": "bought_traded_banked_or_preassignment_item",
+      "expected": "No completion even when inventory item name/ID matches."
+    },
+    {
+      "case": "paused_earning_or_unknown_timing",
+      "expected": "No paused backfill; unknown evidence waits and never becomes a qualifying receipt."
+    },
+    {
+      "case": "duplicate_events_or_reload",
+      "expected": "One receipt/settlement journal key; no duplicate FP or draw."
+    },
+    {
+      "case": "sea_snake_other_form",
+      "expected": "No cross-credit merely because item matches; accepted family/forms must be explicitly authored."
+    },
+    {
+      "case": "jelly_regular_source_for_wilderness_hunt",
+      "expected": "No Lesser credit from normal 1/128 source; exact source section/context remains required."
+    },
+    {
+      "case": "jelly_task_exhausted",
+      "expected": "Existing Pause/Reject/no-reroll applies; no invented off-task permission or automatic task acquisition."
+    },
+    {
+      "case": "mogre_sea_for_shore_hunt",
+      "expected": "No cross-credit; location/method/form required."
+    },
+    {
+      "case": "molanisk_wall_to_combat_form",
+      "expected": "Correlate the combat encounter; wall interaction/uncertain reported NPC ID alone is insufficient."
+    },
+    {
+      "case": "infernal_parser_fraction_but_page_estimate",
+      "expected": "Keep exact-looking bracket display; hold personal exact/range support and FP authoring pending cited evidence."
+    }
+  ]
+}
