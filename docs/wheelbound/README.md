@@ -73,3 +73,7 @@ User-authorized research collector: [tools/wiki_drops README](../../tools/wiki_d
 ## Ranked Challenge integration — A69–A73
 
 [Current readiness and continuation](CHALLENGE_RANK_READINESS.md) maps WB-D147 confirmed topology and WB-D148–150 delegated controls/offers/shared-target purchases to contracts, synthetic checks and remaining content/client gates. Run automation/challenge_ranks/check_contract.py for exact mathematical/transaction-model invariants; this is not client/durable-IO proof. V2 bundle/quotes/prices and source admission remain unfinished; production implementation is not authorized.
+
+## Current A74–A83 content checkpoint
+
+[Current content status](CHALLENGE_CONTENT_STATUS.md) supersedes older missing-identity/member/A80-quote descriptions: four Stronghold Lesser draft sources and FP are authored; elemental identities are pinned, three gem probability holds remain. Price/frequency candidates are unadopted, client tests NOT_RUN, full four-rank content unfinished and runtime disabled. Read that status before selecting the next task; do not repeat A67 inventory or resolved rank design.

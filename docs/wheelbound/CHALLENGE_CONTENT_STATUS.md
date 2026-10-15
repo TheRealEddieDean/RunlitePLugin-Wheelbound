@@ -1,0 +1,38 @@
+# Current ranked Challenge content — A83
+
+Current2026-10-15 checkpoint supersedes older pending-source/member/quote descriptions only where explicitly listed here. Markdown decisions remain authoritative; PDF and historical summaries are not current source of truth.
+
+## Completed in A74–A83
+
+| Checkpoint | Verified deliverable |
+| --- | --- |
+| A74 | Full Killerwatt/Molanisk capture and pinned primary identities; combat/orb split; Molanisk1 corroboration; page-estimate holds preserved |
+| A75 | All27 Lesser display groups/18 source pages context-screened without repeating full inventory |
+| A76 | All483 display groups rate/HTML-note evidence triaged:202 estimated+note,212 estimated/no note,69 no page estimate flag |
+| A77 | Four Stronghold component contexts with pinned item/normal-form constants, actual citation fragments and scoped rate model |
+| A78 | Five elemental pages/four exact item IDs; three estimated contexts held; young/hatchling water-sapphire family counts once |
+| A79 | WB-D151 authored four-source future Lesser initial bundle draft, preserving historical v1 grants |
+| A80 | WB-D152 fixed draft FP125/125/150/150 with authored throughput, exact source-model effort/quantile arithmetic |
+| A81 | Three unadopted price schedules and32 exact family/rank/slot exposure comparisons,64 checks |
+| A82 |32 source-specific future receipt cases, all NOT_RUN with no observed client traces |
+| A83 | Integrated source/constant/quote/schema/hash validation and this exact continuation/status handoff |
+
+[Starter bundle](CHALLENGE_STARTER_V2.md), [partial machine catalog](catalogs/challenge_hunts_v2_draft.json), [integrated results](research/INTEGRATED_VALIDATION_A83.json), [source receipt plan](research/RECEIPT_TRACE_PLAN_A82.md). All runtime flags false; four sources are authored design content, not actually client-eligible targets or the complete four-rank roster.
+
+## Current readiness distinctions
+
+Source IDs are no longer missing for the five elemental pages, but exact uncited estimated gem rate bounds remain missing for Killerwatt/Molanisk/Infernal Mage. Water-sapphire family identity is authored conservatively, while actual quest-stage observation, personal-source callbacks and throughput quote remain unfinished. No Standard three-key ready pool is claimed.
+
+Four-source Lesser members and draft FP are authored now; earlier NOT_AUTHORED-member/A80-quote statements are superseded for that partial catalog only. Actual access/region/composition/client recipient/active-time/durable settlement support is NOT_RUN. Paid product price/payload remains unreviewed, so no product is activated. Price candidates in A81 are not adopted. Historical six-key v1 bundle,44 hunts/quotes and prior receipts remain unchanged; old29 Greater/15 Superior retier mappings are not a newly admitted/requoted v2 roster.
+
+A76 aggregates HTML notes across all matching item rows on a source page. Those are triage links, not row-context rate authentication; a note may concern another same-item mode/section or a non-rate condition. A77 resolves the actual specific component citations semantically. No parser-based category certifies exact personal probability or a confidence interval. Date/source pins identify provenance, not current-live validation.
+
+## Exact next bounded work
+
+1. A84: obtain item-specific exact/range evidence for the three estimated elemental-gem sources, or keep them held; do not invent confidence bounds or recrawl all monsters.
+2. A85: finish water-sapphire actual quest-stage/access/personal receipt and authored effort packet; the current grouped family has one diversity count.
+3. A86: bounded prospective v2 Greater/Superior source/citation/quote review using existing44 historical contexts, preserving frozen v1 inputs/commitments.
+4. A87: expand price/family-frequency balance against ordinary FP/spin/spend assumptions and actual card-choice scenarios before adopting numeric prices.
+5. Actual client tracing and durable transactions require separately authorized engineering. A56 retirement, committed-unselected reconciliation, task continuation, Coffer/policy and separate legacy CA reward remain independent open boundaries.
+
+Original collector archive is the known output.zip attachment, SHA256e00babd58e09c047f68df94625cd5b4e77e119952d52c0d0c50b53a7d2b60309. Reopen only for missing full-page facts if scratch expires. Committed packets retain source receipts/rows/constants. No need to restart A67 inventory or re-ask settled rank controls/ownership/offers.

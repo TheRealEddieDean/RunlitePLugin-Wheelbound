@@ -64,3 +64,7 @@ Current user-facing tables are MONSTER_CHALLENGE_HUNT_TABLE.md (90 rows) and BOS
 ## Current Challenge rank metadata — A73
 
 [challenge_rank_contract_v1](catalogs/challenge_rank_contract_v1.json), WB-D147–150, is the current rank/controls/offers/purchase contract companion to Markdown. Authority manifest metadata_supersessions explicitly supersedes the old tier-rules unlock_structure_proposal and source-review-index unlock_topology fields. Preserve those old source-era fields/hashes; they are not a pending topology question. Tier boundaries/mappings and source/display membership remain in their existing files. New rank rules stay runtime-disabled; no actual roster/quote/product activation.
+
+## Current A74–A83 content checkpoint
+
+[Current content status](CHALLENGE_CONTENT_STATUS.md) supersedes older missing-identity/member/A80-quote descriptions: four Stronghold Lesser draft sources and FP are authored; elemental identities are pinned, three gem probability holds remain. Price/frequency candidates are unadopted, client tests NOT_RUN, full four-rank content unfinished and runtime disabled. Read that status before selecting the next task; do not repeat A67 inventory or resolved rank design.

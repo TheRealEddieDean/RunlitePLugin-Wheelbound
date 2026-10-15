@@ -103,3 +103,7 @@ The [seven-context review](research/LOWER_TIER_CONTEXT_REVIEW_A68.md) advances a
 ## A79 current starter-content supersession — WB-D151
 
 [Starter v2 draft](CHALLENGE_STARTER_V2.md) now authors four Stronghold source keys/four specific component hunts for the future initial Lesser bundle. Earlier exact-v2-members-NOT_AUTHORED wording is superseded for this partial bundle only. Prices, effort quotes(A80), source/client validation and full four-rank content remain separate. Historical v1 grants/quotes untouched; no activation or guarantee of three actually eligible keys.
+
+## Current A74–A83 content checkpoint
+
+[Current content status](CHALLENGE_CONTENT_STATUS.md) supersedes older missing-identity/member/A80-quote descriptions: four Stronghold Lesser draft sources and FP are authored; elemental identities are pinned, three gem probability holds remain. Price/frequency candidates are unadopted, client tests NOT_RUN, full four-rank content unfinished and runtime disabled. Read that status before selecting the next task; do not repeat A67 inventory or resolved rank design.

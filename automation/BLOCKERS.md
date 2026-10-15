@@ -29,3 +29,7 @@ The raw-data intake and finite v1 catalog authoring are no longer blockers:25 cr
 ## A73 scope of remaining Challenge gates
 
 WB-D147–150 closes rank topology/controls/offer/target purchase design integration. This does not remove actual v2 content/price/reward gaps or current-client/durable transaction evidence requirements. See CHALLENGE_RANK_READINESS.md. Existing source/captured inventory is available in committed review packets; request/reopen the original archive only for missing full-page evidence, not to restart completed inventory work. No GitHub capability blocker in this run; owning commits require verified remote writes.
+
+## A83 actual remaining content/evidence gates
+
+A74–A83 resolves pinned gem IDs/Killerwatt forms/Molanisk1 and authors a partial four-source Lesser bundle with draft quotes; those are no longer wholly missing-source/member/quote blockers. Three uncited estimated gem contexts remain held for exact/range evidence. Water-snake actual access/personal receipt/effort, full other-rank v2 catalog, reviewed product price/frequency schedule and actual client/durable proof remain missing. Original archive successfully reopened and hash verified; no GitHub or archive-access blocker in this run. No source recrawl/production activation/actual client traces performed.

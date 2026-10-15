@@ -1,5 +1,5 @@
 {
-  "version": "rank-contract-a80-source-v3",
+  "version": "rank-contract-a83-source-v4",
   "scope": "Synthetic design contract inputs only; no runtime source/client proof",
   "sources": [
     {
@@ -28,8 +28,8 @@
     },
     {
       "path": "docs/wheelbound/CHALLENGE_RANK_READINESS.md",
-      "sha256": "1f297587efaccc0fac7c57fe9cc6d4eed7c2d90ded12c0a2a071dcba30db47a5"
+      "sha256": "75ce6121d4f154808e58d5013f5274012a4cdc078a541dfa549ee49756dd237a"
     }
   ],
-  "update_reason": "WB-D152 partial draft quote content; WB-D147-150 rank/control policy unchanged"
+  "update_reason": "Partial content WB-D151/152 plus A83 current status; original WB-D147-150 rank/control invariants unchanged"
 }

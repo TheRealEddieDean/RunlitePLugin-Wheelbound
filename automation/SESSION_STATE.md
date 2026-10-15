@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — A82 complete in owning checkpoint; owner wb-a74-a83 continuing authorized sequence.
+- State: IDLE — A74–A83 complete; owner released.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -10,11 +10,11 @@
 
 ## Current continuation — A74–A83
 
-Latest completed A82: concrete future personal-receipt trace matrix. Verified predecessor `f727a6ccf8094acefe78b42cba4822c55b7396b3`. 32 source-specific positive/negative/ambiguous future client cases and required derived receipt fields saved against exact draft catalog hash. All NOT_RUN/null traces; paused earning versus processing, duplicates, transformations, wrong sources and independent bounty rules preserved.
+Latest completed A83: ten-checkpoint integrated source/content validation and handoff. Verified predecessor `ff57d0c378caf36d3920918ee6548375480f0fb3`. A74–A83 complete: two full gem/NPC identity packets,27-group Lesser screen,483-group rate/note triage, four Stronghold source contexts, five elemental identity pages/conservative snake family, WB-D151 four-key starter draft and WB-D152125/125/150/150 FP quotes. Candidate prices/frequency remain unadopted;32 future client cases all NOT_RUN. Final323 integrated source/primary/quote/schema checks,196 A68 evidence checks,43,330 synthetic rank assertions,64 balance checks and22 existing offline tests pass.15 authority catalog hashes valid; historical v1/source/index/rate-rule/human tables unchanged; main/production preserved.
 
-Exact next action: A83 integrated offline source/quote/schema/hash validation, current continuation rewrite and final release.
+Exact next action: A84 bounded item-specific exact/range evidence for estimated gem contexts; A85 water-snake actual stage/receipt/effort; A86 bounded prospective Greater/Superior content review; A87 broader price/frequency economy scenarios. Do not redo A67 inventory or re-ask settled rank design. Full four-rank runtime catalog and product prices/client activation remain unfinished.
 
-Current source/rank rules remain WB-D144–150. No retired-Fate, task continuation or production approval inferred. Active owner wb-a74-a83 under recorded lease; publish/verify before next deliverable. All earlier next-question/next-task descriptions below are historical where superseded by this section. Owning commit must be remotely verified before saved claim.
+Current source/rank/content rules include WB-D144–152; WB-D151/152 are DELEGATED partial content, not explicit user roster/balance approval. No retired-Fate, task continuation or production approval inferred. Owner released; no background task. All earlier next-question/next-task descriptions below are historical where superseded by this section. Owning commit must be remotely verified before saved claim.
 
 ## Latest explicit user change — WB-D144/145
 

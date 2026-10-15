@@ -87,3 +87,7 @@ WB-D150 DELEGATED: shared canonical target ownership across ranks; one initial b
 ## Current A73 boundary — five checkpoints complete
 
 WB-D147–150 resolves topology, enable controls, family/rank offerings, per-rank diversity and shared-target/bundle purchase integration. Older pending statements about these fields are superseded. No answer is requested for routine delegated continuation. Still unfinished: actual v2 starter/source/context/identity/receipt/reward/price content and numeric family-frequency balance. A56 permanent-invalidation, changed-snapshot reconciliation, task continuation, Coffer/policy and separate legacy CA reward scope remain independent; none is approved by these checkpoints. Next bounded task A74 is Killerwatt/Molanisk source identity/access/receipt completion, without whole-inventory rereview.
+
+## Current A83 content and decision boundary
+
+WB-D151 DELEGATED future initial Lesser bundle content (four Stronghold sources) and WB-D152 DELEGATED source-specific draft quotes125/125/150/150 now supersede missing-v2-bundle/quote statements for those four only. No further routine content approval question is needed to continue the documented source tasks. Numeric rank/product price and family frequency remain unadopted candidates, not answered by the sensitivity study. Exact estimated-gem evidence, water-snake access/receipt/effort, expanded Greater/Superior content and client proof remain unfinished. A56/task/Coffer/policy/reconciliation/legacy CA scope remain separately unapproved.

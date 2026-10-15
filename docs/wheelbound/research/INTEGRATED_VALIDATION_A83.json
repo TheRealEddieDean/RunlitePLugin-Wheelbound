@@ -1,0 +1,21 @@
+{
+  "version": "integrated-partial-v2-a83-v1",
+  "status": "PASS_OFFLINE_SOURCE_AND_DESIGN_NOT_RUNTIME",
+  "assertions": 323,
+  "starter_keys": 4,
+  "starter_hunts": 4,
+  "draft_fp_quotes": [
+    125,
+    125,
+    150,
+    150
+  ],
+  "rate_evidence_display_groups": 483,
+  "lesser_screen_groups": 27,
+  "planned_client_cases": 32,
+  "executed_client_cases": 0,
+  "full_capture_reproduction": true,
+  "pinned_primary_reproduction": true,
+  "runtime_enabled": false,
+  "full_four_rank_catalog_complete": false
+}
