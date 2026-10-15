@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: IDLE — A69–A73 complete; owner released.
+- State: ACTIVE — A74–A83 ten-checkpoint source/content work; owner wb-a74-a83.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -105,3 +105,9 @@ Owning commit contains release and validated artifacts; resolve its SHA in histo
 Owner wb-a69-a73; acquired 2026-10-15T14:38:01.100370+00:00; expires 2026-10-15T17:38:01.100370+00:00. Starting verified remote91d402137912bd0266c09c5b648c81f0dec1cf53; main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. User2026-10-15 confirms progressive ranks retaining lower ranks and delegates recommended continuation for five checkpoints. No production implementation.
 
 Plan: A69 P0/S record exact approved topology and supersession; A70 P1/S owned-rank controls/persistence; A71 P1/S offer-family/per-rank readiness integration; A72 P1/S target ownership/starter grant and purchase previews; A73 P1/M executable synthetic acceptance and readiness handoff. Each depends on preceding remotely verified checkpoint. No actual candidate admission, unsupported Wiki fact, arbitrary price or retired-Fate approval inferred. Release after A73.
+
+## A74–A83 ownership and plan
+
+Owner wb-a74-a83; acquired 2026-10-15T14:56:39.939215+00:00; expires 2026-10-15T18:56:39.939215+00:00. Starting verified remote bf4d5206deb556e88f5f4de6ed108f857893f9d8; main unchanged. Current user requests ten more checkpoints, continuing prior recommendation delegation.
+
+Planned sequential bounded deliverables (S/M each): A74 Killerwatt/Molanisk full-source identity/access review; A75 Lesser source-context screening from existing capture; A76 elemental source identity/rate caveat packet; A77 selected task-independent Lesser context definitions; A78 proposed/versioned initial bundle content with explicit readiness holds; A79 source-specific authored effort/reward sensitivity; A80 purchase-price/family-frequency sensitivity study (no empirical claims); A81 receipt/adapter trace acceptance packet; A82 integrated four-rank content-gap and source validation; A83 final consistency/continuation/release. Adjust later bounded deliverables to actual evidence rather than admit unsupported sources or invent game facts. Each requires predecessor remote verification; no recrawl, production/main changes or unrelated retirement approval.
