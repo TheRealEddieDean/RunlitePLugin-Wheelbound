@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — hour work block A93 completed in owning commit; owner wb-hour-a84.
+- State: ACTIVE — hour work block A94 completed in owning commit; owner wb-hour-a84.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -10,9 +10,9 @@
 
 ## Current continuation — hour work block
 
-Latest completed A93: Full-core future client trace coverage. Verified predecessor `460f5b4648c95c538ecd1331709a1bc6abc34d7e`. 14 source/form/context rows and62 planned cases cover16 positive hunts,28 inherited shared boundaries and18 targeted controls. Explicit God Wars cross-item/bodyguard/group, alternate Rune/Kurask/wyvern, pickpocket/venator and held water variants; derived receipt fields not promised API fields.14 invalid plan mutations rejected; all actual traces NOT_RUN/null. Corrected A92 source count to62 exact input hashes; PDF source/gameplay unchanged.
+Latest completed A94: Frozen catalog/offer/source version engineering handoff. Verified predecessor `0118594ea74900dcb9a15696bb7287307de21b36`. 14 pinned current inputs,16 hunt identity references and14 source/context/form sets accompany a stage-sensitive compatibility/migration review. Exact recoverable frozen bytes/order/randomness/quotes are separate from current catalog and live access; no schema migrator, retirement, reroll or automatic legacy grants supplied. Read-only source/reference validator passes; runtime/client/migration tests remain NOT_RUN.
 
-Exact next action: Prepare a bounded frozen-offer/catalog version and stale-source engineering handoff without adopting still-open permanent-invalidation or unselected reconciliation policy.
+Exact next action: Perform final cross-artifact/source/hash/standalone checks and preserve exact next unresolved work; use remaining block only for bounded safely finishable evidence/planning.
 
 Existing approved rules and explicit supersessions remain controlling. No source estimate silently certified, no unrelated retirement/task/Coffer/policy approval inferred. Active owner wb-hour-a84 under recorded lease; publish and verify before starting next bounded deliverable. Previous “next” paragraphs are historical where superseded. Owning commit requires final remote head/tree/main verification.
 

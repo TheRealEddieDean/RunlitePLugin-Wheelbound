@@ -1,0 +1,426 @@
+{
+  "version": "frozen-source-handoff-a94-v1",
+  "scope": "Planning references and restore review; no user saved run/sample receipt/migrator",
+  "runtime_enabled": false,
+  "production_migrator_supplied": false,
+  "client_tests": "NOT_RUN",
+  "migration_tests": "NOT_RUN",
+  "case_status": "PLANNING_NOT_RUN",
+  "adopted_new_gameplay_decisions": [],
+  "inputs": [
+    {
+      "path": "docs/wheelbound/catalogs/challenge_rank_contract_v1.json",
+      "sha256": "cbd28fb60d5abb8d8a57c9c26ecdacfb50f4aecd99b20ed4533e9ab211ad32b5"
+    },
+    {
+      "path": "docs/wheelbound/catalogs/challenge_tier_rules_v2.json",
+      "sha256": "405daaaf33c8aaa6f4d52b23f50ecdd0414ef2c203c20fdaecf7b37504ea72c5"
+    },
+    {
+      "path": "docs/wheelbound/catalogs/challenge_core_v2_draft.json",
+      "sha256": "9d567d4cc616168bdd76571cb7e7994060a2ca74a25a6ec2fba5e96de1c0c4e7"
+    },
+    {
+      "path": "docs/wheelbound/catalogs/challenge_hunts_v2_draft.json",
+      "sha256": "8e5c86a91169ac9613ec93518ff346888fec14581a8a3a8f5b9d77197235092b"
+    },
+    {
+      "path": "docs/wheelbound/catalogs/challenge_standard_expansions_v2_draft.json",
+      "sha256": "5625ad04540f8991b2ce30179072e8fe8387da2d918afbef0b8240cc14f53267"
+    },
+    {
+      "path": "docs/wheelbound/catalogs/challenge_greater_superior_v2_draft.json",
+      "sha256": "d8e9c93669aa22c67d141d0afc70b0d31ca2f99ae527989c6274d1903a4172c1"
+    },
+    {
+      "path": "docs/wheelbound/CHALLENGE_ASSIGNMENT_CONTRACT.md",
+      "sha256": "fcdb3e8bfdfa62fbb0a4a87cbf6dac9c469c598b7144f68456796c33681a36cf"
+    },
+    {
+      "path": "docs/wheelbound/UNAVAILABLE_SELECTION_CONTRACT.md",
+      "sha256": "b1f24b6e68b4dd5be2209774de925cb0d712a47a9997d84b5dd4f79daa36d668"
+    },
+    {
+      "path": "docs/wheelbound/CHALLENGE_RANK_CONTROL_CONTRACT.md",
+      "sha256": "a44601d25c2790fb407ba1fc6dd2e0c7d2143b6045473e0795ff3f1a3b5c5b1f"
+    },
+    {
+      "path": "docs/wheelbound/CHALLENGE_RANK_OFFER_CONTRACT.md",
+      "sha256": "0702da008c559582cfda21af88fc2a9824719d312207ae639995cd318b628917"
+    },
+    {
+      "path": "docs/wheelbound/CHALLENGE_RANK_PURCHASE_CONTRACT.md",
+      "sha256": "8021d0dd07630d799af20b762c38442137a76b302fad9a9800ed516cfb2b2d5a"
+    },
+    {
+      "path": "docs/wheelbound/STATE_CONTRACT.md",
+      "sha256": "2bf4bcad9bc9f528bcb70023ad3b6bd5f1ad91e45a07ef3ae296db96084ed81a"
+    },
+    {
+      "path": "docs/wheelbound/research/CORE_TRACE_PLAN_A93.json",
+      "sha256": "cfd7279c334497d13a0568807017b26022a289dd3b87c961711e53127b4995ae"
+    },
+    {
+      "path": "docs/wheelbound/research/FROZEN_SOURCE_HANDOFF_A94.md",
+      "sha256": "71d95fd76c2e5f889dfce0ebeb135f4a800572757f937f96b40762f453b55b39"
+    }
+  ],
+  "current_hunt_identity_references": [
+    {
+      "id": "WB-CH2-stronghold-minotaur-9007",
+      "creature_key": "stronghold-minotaur",
+      "rank": "lesser",
+      "canonical_item_id": 9007,
+      "accepted_drop_item_ids": [
+        9007
+      ],
+      "source_fragment": "catalogs/challenge_hunts_v2_draft.json",
+      "source_quote_version": "challenge-fp-v2-draft-a80",
+      "fp_reward": 125
+    },
+    {
+      "id": "WB-CH2-stronghold-flesh-crawler-9011",
+      "creature_key": "stronghold-flesh-crawler",
+      "rank": "lesser",
+      "canonical_item_id": 9011,
+      "accepted_drop_item_ids": [
+        9011
+      ],
+      "source_fragment": "catalogs/challenge_hunts_v2_draft.json",
+      "source_quote_version": "challenge-fp-v2-draft-a80",
+      "fp_reward": 125
+    },
+    {
+      "id": "WB-CH2-stronghold-catablepon-9010",
+      "creature_key": "stronghold-catablepon",
+      "rank": "lesser",
+      "canonical_item_id": 9010,
+      "accepted_drop_item_ids": [
+        9010
+      ],
+      "source_fragment": "catalogs/challenge_hunts_v2_draft.json",
+      "source_quote_version": "challenge-fp-v2-draft-a80",
+      "fp_reward": 150
+    },
+    {
+      "id": "WB-CH2-stronghold-ankou-9008",
+      "creature_key": "stronghold-ankou",
+      "rank": "lesser",
+      "canonical_item_id": 9008,
+      "accepted_drop_item_ids": [
+        9008
+      ],
+      "source_fragment": "catalogs/challenge_hunts_v2_draft.json",
+      "source_quote_version": "challenge-fp-v2-draft-a80",
+      "fp_reward": 150
+    },
+    {
+      "id": "WB-CH2-killerwatt-34404",
+      "creature_key": "killerwatt",
+      "rank": "standard",
+      "canonical_item_id": 34404,
+      "accepted_drop_item_ids": [
+        34404
+      ],
+      "source_fragment": "catalogs/challenge_standard_expansions_v2_draft.json",
+      "source_quote_version": "challenge-standard-fp-draft-a85",
+      "fp_reward": 175
+    },
+    {
+      "id": "WB-CH2-molanisk-34416",
+      "creature_key": "molanisk",
+      "rank": "standard",
+      "canonical_item_id": 34416,
+      "accepted_drop_item_ids": [
+        34416
+      ],
+      "source_fragment": "catalogs/challenge_standard_expansions_v2_draft.json",
+      "source_quote_version": "challenge-standard-fp-draft-a85",
+      "fp_reward": 175
+    },
+    {
+      "id": "WB-CH2-infernal-mage-34422",
+      "creature_key": "infernal-mage",
+      "rank": "standard",
+      "canonical_item_id": 34422,
+      "accepted_drop_item_ids": [
+        34422
+      ],
+      "source_fragment": "catalogs/challenge_standard_expansions_v2_draft.json",
+      "source_quote_version": "challenge-standard-fp-draft-a85",
+      "fp_reward": 150
+    },
+    {
+      "id": "WB-CH2-sea-snake-water-sapphire-34410",
+      "creature_key": "sea-snake-water-sapphire",
+      "rank": "standard",
+      "canonical_item_id": 34410,
+      "accepted_drop_item_ids": [
+        34410
+      ],
+      "source_fragment": "catalogs/challenge_standard_expansions_v2_draft.json",
+      "source_quote_version": "challenge-standard-fp-draft-a85",
+      "fp_reward": 175
+    },
+    {
+      "id": "WB-CH2-commander-zilyana-11785",
+      "creature_key": "commander-zilyana",
+      "rank": "greater",
+      "canonical_item_id": 11785,
+      "accepted_drop_item_ids": [
+        11785
+      ],
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "source_quote_version": "greater-superior-fp-draft-a86",
+      "fp_reward": 2650
+    },
+    {
+      "id": "WB-CH2-commander-zilyana-11814",
+      "creature_key": "commander-zilyana",
+      "rank": "greater",
+      "canonical_item_id": 11814,
+      "accepted_drop_item_ids": [
+        11814
+      ],
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "source_quote_version": "greater-superior-fp-draft-a86",
+      "fp_reward": 2650
+    },
+    {
+      "id": "WB-CH2-kril-tsutsaroth-11791",
+      "creature_key": "kril-tsutsaroth",
+      "rank": "greater",
+      "canonical_item_id": 11791,
+      "accepted_drop_item_ids": [
+        11791
+      ],
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "source_quote_version": "greater-superior-fp-draft-a86",
+      "fp_reward": 2650
+    },
+    {
+      "id": "WB-CH2-kril-tsutsaroth-11816",
+      "creature_key": "kril-tsutsaroth",
+      "rank": "greater",
+      "canonical_item_id": 11816,
+      "accepted_drop_item_ids": [
+        11816
+      ],
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "source_quote_version": "greater-superior-fp-draft-a86",
+      "fp_reward": 2650
+    },
+    {
+      "id": "WB-CH2-kurask-20727",
+      "creature_key": "kurask",
+      "rank": "superior",
+      "canonical_item_id": 20727,
+      "accepted_drop_item_ids": [
+        20727
+      ],
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "source_quote_version": "greater-superior-fp-draft-a86",
+      "fp_reward": 975
+    },
+    {
+      "id": "WB-CH2-rune-dragon-21918",
+      "creature_key": "rune-dragon",
+      "rank": "superior",
+      "canonical_item_id": 21918,
+      "accepted_drop_item_ids": [
+        21918
+      ],
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "source_quote_version": "greater-superior-fp-draft-a86",
+      "fp_reward": 1900
+    },
+    {
+      "id": "WB-CH2-spitting-wyvern-21646",
+      "creature_key": "spitting-wyvern",
+      "rank": "greater",
+      "canonical_item_id": 21646,
+      "accepted_drop_item_ids": [
+        21646
+      ],
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "source_quote_version": "greater-superior-fp-draft-a86",
+      "fp_reward": 975
+    },
+    {
+      "id": "WB-CH2-vyrewatch-sentinel-24777",
+      "creature_key": "vyrewatch-sentinel",
+      "rank": "superior",
+      "canonical_item_id": 24777,
+      "accepted_drop_item_ids": [
+        24777
+      ],
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json",
+      "source_quote_version": "greater-superior-fp-draft-a86",
+      "fp_reward": 1775
+    }
+  ],
+  "current_canonical_source_references": [
+    {
+      "key": "stronghold-minotaur",
+      "source_context_id": "stronghold-minotaur-members-repeatable-v2",
+      "composition_leads": [
+        2481,
+        2482,
+        2483
+      ],
+      "source_fragment": "catalogs/challenge_hunts_v2_draft.json"
+    },
+    {
+      "key": "stronghold-flesh-crawler",
+      "source_context_id": "stronghold-flesh-crawler-members-repeatable-v2",
+      "composition_leads": [
+        2498,
+        2499,
+        2500
+      ],
+      "source_fragment": "catalogs/challenge_hunts_v2_draft.json"
+    },
+    {
+      "key": "stronghold-catablepon",
+      "source_context_id": "stronghold-catablepon-members-repeatable-v2",
+      "composition_leads": [
+        2474,
+        2475,
+        2476
+      ],
+      "source_fragment": "catalogs/challenge_hunts_v2_draft.json"
+    },
+    {
+      "key": "stronghold-ankou",
+      "source_context_id": "stronghold-ankou-members-repeatable-v2",
+      "composition_leads": [
+        2514,
+        2515,
+        2516
+      ],
+      "source_fragment": "catalogs/challenge_hunts_v2_draft.json"
+    },
+    {
+      "key": "killerwatt",
+      "source_context_id": "killerwatt-normal-repeatable-v2",
+      "composition_leads": [
+        469,
+        470
+      ],
+      "source_fragment": "catalogs/challenge_standard_expansions_v2_draft.json"
+    },
+    {
+      "key": "molanisk",
+      "source_context_id": "molanisk-normal-repeatable-v2",
+      "composition_leads": [
+        1
+      ],
+      "source_fragment": "catalogs/challenge_standard_expansions_v2_draft.json"
+    },
+    {
+      "key": "infernal-mage",
+      "source_context_id": "infernal-mage-normal-repeatable-v2",
+      "composition_leads": [
+        443,
+        444,
+        445,
+        446,
+        447
+      ],
+      "source_fragment": "catalogs/challenge_standard_expansions_v2_draft.json"
+    },
+    {
+      "key": "sea-snake-water-sapphire",
+      "source_context_id": "sea-snake-water-sapphire-normal-repeatable-v2",
+      "composition_leads": [
+        1098
+      ],
+      "source_fragment": "catalogs/challenge_standard_expansions_v2_draft.json"
+    },
+    {
+      "key": "commander-zilyana",
+      "source_context_id": "commander-zilyana-normal-repeatable-v2",
+      "composition_leads": [
+        2205
+      ],
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json"
+    },
+    {
+      "key": "kril-tsutsaroth",
+      "source_context_id": "kril-tsutsaroth-normal-repeatable-v2",
+      "composition_leads": [
+        3129
+      ],
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json"
+    },
+    {
+      "key": "kurask",
+      "source_context_id": "kurask-normal-repeatable-v2",
+      "composition_leads": [
+        410,
+        411
+      ],
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json"
+    },
+    {
+      "key": "rune-dragon",
+      "source_context_id": "rune-dragon-normal-repeatable-v2",
+      "composition_leads": [
+        8031,
+        8091
+      ],
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json"
+    },
+    {
+      "key": "spitting-wyvern",
+      "source_context_id": "spitting-wyvern-normal-repeatable-v2",
+      "composition_leads": [
+        7794
+      ],
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json"
+    },
+    {
+      "key": "vyrewatch-sentinel",
+      "source_context_id": "vyrewatch-sentinel-normal-repeatable-v2",
+      "composition_leads": [
+        9756,
+        9757,
+        9758,
+        9759,
+        9760,
+        9761,
+        9762,
+        9763
+      ],
+      "source_fragment": "catalogs/challenge_greater_superior_v2_draft.json"
+    }
+  ],
+  "still_open": [
+    "A56 permanent ordinary invalidation",
+    "Committed-but-unselected snapshot reconciliation",
+    "Version-specific monolithic/obsolete-CA payload migration",
+    "Task continuation",
+    "Coffer/policy boundaries"
+  ],
+  "immutable_snapshot_requirements": [
+    "Account/run/schema/revision and command/evidence journal identities",
+    "Rank rules/ownership/enabled settings revision",
+    "Exact recoverable original catalog/fragment/context bytes or immutable local verified references",
+    "Frozen ordered canonical rank/source/item pool and probabilities",
+    "Offer set/per-offer rank/randomness commitment",
+    "Selected specific hunt/item/context/version",
+    "Frozen integer FP quote and linked real allocation/reservation receipt",
+    "Supported earning/recipient/occurrence journal and settlement operation",
+    "Outer pause state separate from stored obligation stage"
+  ],
+  "forbidden_inferred_actions": [
+    "Reseed or regenerate committed offers/results",
+    "Assign new item/rank or accept alternate method solely from live catalog",
+    "Grant all four ranks or replace historical starter automatically",
+    "Reprice actual lucky/dry duration",
+    "Retire/refund without the unresolved policy approval",
+    "Reset/delete unknown/corrupted save",
+    "Treat source/parser absence as permanent game impossibility",
+    "Claim API evidence from required derived field names"
+  ]
+}
