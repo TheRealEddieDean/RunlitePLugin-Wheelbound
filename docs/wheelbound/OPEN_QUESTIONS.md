@@ -1,5 +1,7 @@
 # Consequential questions for return
 
+Current project delivery status: [workstreams](../../automation/WORKSTREAM_STATUS.md). Earlier completed checkpoint/checklist items describe their stated scope; they do not mean the mode is implemented. Latest DECISIONS and explicit supersessions control older question wording.
+
 Routine technical selections are delegated, not historical approvals. Implementation is not authorized in the current session; future local state-engine work requires explicit authorization.
 
 | ID | Question and recommendation | Alternatives and impact | Independent work |

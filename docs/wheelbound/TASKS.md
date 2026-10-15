@@ -1,5 +1,7 @@
 # Task navigation
 
+Current project delivery status: [workstreams](../../automation/WORKSTREAM_STATUS.md). Earlier completed checkpoint/checklist items describe their stated scope; they do not mean the mode is implemented. Latest DECISIONS and explicit supersessions control older question wording.
+
 The maintained execution queue is [automation/TASK_QUEUE](../../automation/TASK_QUEUE.md). It splits remaining recovery, catalog validation, next model, pipeline and PDF work into bounded tasks with dependency/effort/done criteria. [SESSION_STATE](../../automation/SESSION_STATE.md) records ownership and exact resume. This file retains earlier project checklist evidence below; outdated access failures are superseded by the preserved S8 transcript and recovery register.
 
 # Task checklist

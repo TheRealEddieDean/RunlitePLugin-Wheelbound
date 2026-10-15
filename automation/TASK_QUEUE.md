@@ -1,5 +1,7 @@
 # Wheelbound autonomous task queue
 
+**Project delivery status:** [WORKSTREAM_STATUS](WORKSTREAM_STATUS.md). Checkpoint counts measure saved bounded work, not a fixed amount remaining or overall completion.
+
 Authoritative design: [decision register](../docs/wheelbound/DECISIONS.md). Operating rules: [protocol](PROTOCOL.md). Sizes are effort estimates, not allowance measurements: XS 2–5m, S 5–15m, M 15–30m, L >30m. Split M/L work before claiming it. Priority P0 precedes P1/P2. DONE means committed deliverable plus stated validation; BLOCKED means an actual dependency is missing. Existing experiments/research are preserved, not restarted.
 
 | ID | Deliverable | Priority | Dependencies | Size | Status | Documentation | Completion criteria |
@@ -83,7 +85,7 @@ Paths without a directory prefix above are under docs/wheelbound/. Selection pol
 
 | WB-A47 | Specify Challenge draw/reveal and non-consuming completion | P0 | A46 remotely verified; current owner | S | DONE (documentation only; owning commit) | CHALLENGE_ASSIGNMENT_CONTRACT; DECISIONS; affected specs | WB-D135–137; odds arithmetic/consistency/scope checks, guarded remote publication |
 
-| WB-A48 | Review bounded Challenge starter/expansion target candidates | P1 | A46/A47; source provenance/limitations | S per candidate batch | PARTIAL — B1 DONE (source-limited) | research/CHALLENGE_CANDIDATE_REVIEW_B1 | Seven hunts/six creatures; fractions/access/continuation gaps; current primary freshness blocked; no enabled/final roster |
+| WB-A48 | Review bounded Challenge starter/expansion target candidates | P1 | A46/A47; source provenance/limitations | S per candidate batch | DONE (bounded B1/source-limited; further catalog in A64/W02) | research/CHALLENGE_CANDIDATE_REVIEW_B1 | Seven hunts/six creatures; fractions/access/continuation gaps; current primary freshness blocked; no enabled/final roster |
 
 | WB-A49 | Record explicit approval of Challenge recommendations | P0 | User approval; guarded ownership | XS | DONE (owning checkpoint) | DECISIONS; contract; checkpoints | WB-D133–137 CONFIRMED with provenance; validation and remote verification before next work |
 
@@ -206,3 +208,7 @@ Verified predecessor `065418461f4002f75d6b2a379e05303efcee2c19`. Six source keys
 ## A87 — DONE within stated scope: ordinary-income and player-choice economy sensitivity
 
 Verified predecessor `cb3ccbbb87dc7e52c60ba4c201d1b6eb21a1fb1e`. 43 scenarios/86,000 hypothetical accounts executed from four-rank source drafts;269 accounting/replay/boundary assertions pass. Explicit source purchases, discretionary spending, owned-versus-ready states, enable/card-choice policies and unpaid censoring modeled. Price/frequency/initial spins remain hypotheses, not adopted game values. Size S/M bounded work; no production/main change. Owning publication requires expected-head guard and exact remote/tree/main verification. Next: A88 truthful workstream backlog and remaining-work map; then integrate four-rank catalog/core validation and retire stale checkpoint-status interpretations.
+
+## A88 — DONE within stated scope: honest project workstream and remaining-work register
+
+Verified predecessor `f98c096bfa9be76fcb1ba3b246ea34080c6e91b1`. 15 substantive workstreams with explicit state/dependencies/exit criteria saved; no numeric overall completion percentage. Historical checkpoint counts no longer imply one remaining task. A48 boundedB1 status clarified without closing broad A64 catalog work; implementation/client/policy/release gates remain explicit. Size S/M bounded work; no production/main change. Owning publication requires expected-head guard and exact remote/tree/main verification. Next: A89 assemble and validate the finite four-rank core; then use remaining hour for source-conflict, broader economy and publication tasks as safely completable.

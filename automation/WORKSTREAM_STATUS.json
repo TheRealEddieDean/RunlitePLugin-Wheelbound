@@ -1,0 +1,129 @@
+{
+  "version": "workstreams-a88-v1",
+  "scope": "Project workstream register, not fixed-size checkpoint count or overall completion percentage",
+  "project_completion_percent": null,
+  "checkpoint_count_is_not_delivery_progress": true,
+  "implementation_authorized": false,
+  "workstreams": [
+    {
+      "id": "WB-W01",
+      "workstream": "Ranked Challenge core design",
+      "status": "AUTHORED_DESIGN_NOT_RUNTIME",
+      "source": "WB-D144\u2013154; three content fragments",
+      "exit_criteria": "Integrate finite16-hunt/14-key core with exact ownership/access/source/quote references; do not confuse it with full candidate catalog.",
+      "next_or_limit": "A89 integration/validation; actual client support separate."
+    },
+    {
+      "id": "WB-W02",
+      "workstream": "Broader Challenge catalog and source conflicts",
+      "status": "PARTIAL",
+      "source": "A48/A64/A76/A86",
+      "exit_criteria": "Review remaining36 historical contexts and selected483 display candidates in bounded packets; explicitly hold/unlist unsupported conditions rather than promise every row.",
+      "next_or_limit": "Resolve Turoth1/128 versus1/129 context; choose next source packet."
+    },
+    {
+      "id": "WB-W03",
+      "workstream": "Actual game-access and identity predicates",
+      "status": "PARTIAL_SOURCE_MAPPING",
+      "source": "A17/A20/A61/A85",
+      "exit_criteria": "Validate initialized skill/quest/stage/region/method/source identity for selected contexts with positive/negative traces.",
+      "next_or_limit": "Water-stage map is a source proposal, not a certified threshold."
+    },
+    {
+      "id": "WB-W04",
+      "workstream": "Ordinary/skilling/boss/quest progression tables",
+      "status": "PARTIAL_DESIGN",
+      "source": "PROGRESSION; FATE_CARDS; CONTENT_CATALOGS",
+      "exit_criteria": "Freeze XP/KC/reward bands, quest-tier mappings/peer gates and missing mastery thresholds against approved rules.",
+      "next_or_limit": "Authored/synthetic proxy tables must not be called historical or final."
+    },
+    {
+      "id": "WB-W05",
+      "workstream": "Prices, income and full-mode economy",
+      "status": "PARTIAL_SENSITIVITY",
+      "source": "ECONOMY; A81/A87; H4",
+      "exit_criteria": "Version coherent purchase/spend/reward/initial-allotment/Defy/GP-to-spin candidates; compare run/spin/expense choices before final adoption.",
+      "next_or_limit": "A87 models a slice and omits major special/bounty/real-progression mechanics."
+    },
+    {
+      "id": "WB-W06",
+      "workstream": "Postcommit recovery and immutable offers",
+      "status": "DECISION_AND_TECHNICAL_OPEN",
+      "source": "A56; UNAVAILABLE_SELECTION_CONTRACT",
+      "exit_criteria": "Settle narrow permanent-invalidation proposal and changed-unselected-snapshot reconciliation without granting general rerolls.",
+      "next_or_limit": "A56 remains proposed; no current authorization to infer an answer."
+    },
+    {
+      "id": "WB-W07",
+      "workstream": "Forced Coffer and account-mode boundaries",
+      "status": "EVIDENCE_BLOCKED",
+      "source": "Q2; TECHNICAL_SPECIFICATIONS",
+      "exit_criteria": "Prove supported donation/quote/recipient/balance/order/failure/headroom behavior; then settle genuine unsupported/full boundary.",
+      "next_or_limit": "Actual client needed; no invented forced-death escape."
+    },
+    {
+      "id": "WB-W08",
+      "workstream": "Exact restrictive-control policy and routes",
+      "status": "REVIEW_AND_EVIDENCE_OPEN",
+      "source": "Q5; POLICY_AND_FEASIBILITY; A23",
+      "exit_criteria": "Validate exact shop/GE/trade behavior and current policy/route coverage; request a specific external review only when authorized.",
+      "next_or_limit": "Peer precedent is not Wheelbound approval; Trade with preserved; no message sent."
+    },
+    {
+      "id": "WB-W09",
+      "workstream": "Separate legacy CA reward scope",
+      "status": "MATERIAL_SCOPE_OPEN",
+      "source": "WB-D116/117; DECISIONS_PENDING",
+      "exit_criteria": "Clarify separately retained boss-mastery/diary reward scope without conflating Master Grand hilt5 or item bounties.",
+      "next_or_limit": "Do not re-ask resolved Master CA tally question."
+    },
+    {
+      "id": "WB-W10",
+      "workstream": "Build/dependency/report/package evidence",
+      "status": "PARTIAL_BASELINE",
+      "source": "A18/A19/A26/A29; DEVELOPMENT_PIPELINE",
+      "exit_criteria": "Export actual resolved dependencies/test XML/artifact inventory from clean supported build; inspect standard JAR.",
+      "next_or_limit": "Earlier remote build passed; reporting and exact reproducibility remain incomplete."
+    },
+    {
+      "id": "WB-W11",
+      "workstream": "Production domain state and durable transactions",
+      "status": "NOT_STARTED_NOT_AUTHORIZED",
+      "source": "I01/I02 handoff; PERSISTENCE",
+      "exit_criteria": "Implement/test account/run state, journals, deterministic commitments, retries, purchases and migrations after explicit engineering authorization.",
+      "next_or_limit": "Existing Python design oracles are not Java implementation."
+    },
+    {
+      "id": "WB-W12",
+      "workstream": "Production wheels/cards/tree/shops/obligations/Grand",
+      "status": "NOT_STARTED_NOT_AUTHORIZED",
+      "source": "IMPLEMENTATION_PLAN phases3\u20137",
+      "exit_criteria": "Implement approved feature modules without changing existing normal plugin behavior; resolve ticket dependencies and policy gates.",
+      "next_or_limit": "Do not assume design artifacts make a playable mode."
+    },
+    {
+      "id": "WB-W13",
+      "workstream": "RuneLite adapters, UI and performance",
+      "status": "NOT_STARTED_NOT_AUTHORIZED",
+      "source": "RUNELITE_INTEGRATION; UI_UX; A17",
+      "exit_criteria": "Implement authorized observable adapters/UI, source traces, accessibility/performance and account isolation.",
+      "next_or_limit": "Actual client cases remain NOT_RUN."
+    },
+    {
+      "id": "WB-W14",
+      "workstream": "End-to-end playtesting and release review",
+      "status": "BLOCKED_BY_IMPLEMENTATION",
+      "source": "TESTING; IMPLEMENTATION_PLAN phase8",
+      "exit_criteria": "Exercise real account/run scenarios, crash/Pause/recovery and balance with release/Hub review before publishing.",
+      "next_or_limit": "No release date, Hub approval or completed-mode claim."
+    },
+    {
+      "id": "WB-W15",
+      "workstream": "Current derived design publication",
+      "status": "STALE_PENDING_REFRESH",
+      "source": "A33; PDF_CHECKPOINT",
+      "exit_criteria": "Generate from an exact committed current Markdown revision, visually check and save a versioned derived PDF.",
+      "next_or_limit": "PDF never supersedes Markdown; publication can be refreshed before engineering."
+    }
+  ]
+}

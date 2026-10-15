@@ -1,4 +1,6 @@
 # Implementation plan
+
+Current project delivery status: [workstreams](../../automation/WORKSTREAM_STATUS.md). Earlier completed checkpoint/checklist items describe their stated scope; they do not mean the mode is implemented. Latest DECISIONS and explicit supersessions control older question wording.
 Implementation remains unauthorized. Future phases:
 1. Feasibility and catalogs; validate API/policy/OSRS facts and identify advisory-only restrictions.
 2. Account state/journal/schema migrations and crash fixtures.

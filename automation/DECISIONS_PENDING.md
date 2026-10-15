@@ -91,3 +91,7 @@ WB-D147–150 resolves topology, enable controls, family/rank offerings, per-ran
 ## Current A83 content and decision boundary
 
 WB-D151 DELEGATED future initial Lesser bundle content (four Stronghold sources) and WB-D152 DELEGATED source-specific draft quotes125/125/150/150 now supersede missing-v2-bundle/quote statements for those four only. No further routine content approval question is needed to continue the documented source tasks. Numeric rank/product price and family frequency remain unadopted candidates, not answered by the sensitivity study. Exact estimated-gem evidence, water-snake access/receipt/effort, expanded Greater/Superior content and client proof remain unfinished. A56/task/Coffer/policy/reconciliation/legacy CA scope remain separately unapproved.
+
+## A88 current workstream/status interpretation
+
+WORKSTREAM_STATUS.md/.json distinguishes completed research from unfinished catalogs/progression/pricing, actual client/policy evidence, production implementation and release. Checkpoint count is not a fixed-total estimate. A48 boundedB1 is complete within its preserved source-limited scope; broader continuation is A64/W02. No new decision/source admission is inferred. Core ranked design is authored, but software/client release remains unimplemented and unauthorized.
