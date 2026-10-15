@@ -21,16 +21,22 @@ def constants(path):
 
 class Capture:
     def __init__(self, directory):
+        self._page_cache = {}
         self.directory = Path(directory)
         self.catalog = json.loads((self.directory / 'catalog.json').read_text())
         self.pages = {p['source_url']: p for p in self.catalog['creatures'] + self.catalog['unclassified_pages']}
 
     def evidence(self, source_url, item):
         page = self.pages[source_url]
-        data = (self.directory / 'html' / (hashlib.sha256(source_url.encode()).hexdigest() + '.html')).read_bytes()
-        text = data.decode('utf-8').replace('\r\n', '\n').replace('\r', '\n')
-        assert hashlib.sha256(text.encode()).hexdigest() == page['source_sha256']
-        root = scrape.parse_tree(text)
+        if source_url not in self._page_cache:
+            data = (self.directory / 'html' / (hashlib.sha256(source_url.encode()).hexdigest() + '.html')).read_bytes()
+            text = data.decode('utf-8').replace('\r\n', '\n').replace('\r', '\n')
+            assert hashlib.sha256(text.encode()).hexdigest() == page['source_sha256']
+            root = scrape.parse_tree(text)
+            if len(self._page_cache) >= 4:
+                self._page_cache.pop(next(iter(self._page_cache)))
+            self._page_cache[source_url] = data, text, root
+        data, text, root = self._page_cache[source_url]
         html_rows = []
         identity_rows = []
         for node in root.walk():

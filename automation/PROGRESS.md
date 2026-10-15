@@ -313,3 +313,7 @@ Predecessor verified `b3b1a441cdbe0fad79a6eeee8aaa9f016dd47e19`. Two normalized 
 ## A75 — all Lesser source contexts screened
 
 Predecessor verified `4fb2de89fad2168f74f5881aac7a3a03342d1131`. All27 Lesser groups across18 pages reviewed using captured raw rows/context and real note links. Seven Cyclops defender rows remain one stateful source; Wilderness Jelly/task, Huey group, sea/shore and estimated-rate holds preserved. Four Stronghold component sources prioritized, not admitted. Size S/M bounded source/research deliverable; no production/main changes. Exact remote publication verification required. Next: A76 full-page rate/citation evidence audit of483 current display groups.
+
+## A76 — all displayed contexts rate/citation triage
+
+Predecessor verified `92df7c8475c4c90c34f94cb23a53da60b0a4c939`. 483 display groups across209 source pages checked for full-page estimate statements and actual HTML note references; counts saved. No note automatically certifies rate; scalar precision is not personal-rate proof. Original tables/v1 unchanged. Size S/M bounded source/research deliverable; no production/main changes. Exact remote publication verification required. Next: A77 resolve four Stronghold component identities and exact item-specific cited context exceptions.
