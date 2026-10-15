@@ -1,0 +1,3521 @@
+{
+  "version": "rank-economy-a87-v1",
+  "status": "SEEDED_SYNTHETIC_SENSITIVITY_NOT_GAME_FORECAST",
+  "scenarios": 43,
+  "accounts_per_scenario": 2000,
+  "accounts_simulated": 86000,
+  "source_inputs": [
+    {
+      "path": "catalogs/challenge_hunts_v2_draft.json",
+      "sha256": "8e5c86a91169ac9613ec93518ff346888fec14581a8a3a8f5b9d77197235092b"
+    },
+    {
+      "path": "catalogs/challenge_standard_expansions_v2_draft.json",
+      "sha256": "5625ad04540f8991b2ce30179072e8fe8387da2d918afbef0b8240cc14f53267"
+    },
+    {
+      "path": "catalogs/challenge_greater_superior_v2_draft.json",
+      "sha256": "d8e9c93669aa22c67d141d0afc70b0d31ca2f99ae527989c6274d1903a4172c1"
+    }
+  ],
+  "model_sha256": "8a3ab911c6edec89dd130d0ab5bfb1d0cbd8b3d6b5d1a7f87832799c0e389a0b",
+  "run_sha256": "64fd6ebbc0a55974d30e8747598d855e6e3e17cc7af88ba5a61b28ddc4fe1ab8",
+  "not_adopted": [
+    "initial100-spin allotment",
+    "100-hour horizon",
+    "ordinary rewards/hours",
+    "card/source prices",
+    "numeric family q",
+    "activity mix",
+    "discretionary spending",
+    "throughput assumptions"
+  ],
+  "omitted": [
+    "actual account progression and unlock access",
+    "actual activity card generation",
+    "Reject/audit failure/violations/Pause",
+    "Defy/Taint/Sacrifice/Grand transitions",
+    "item bounty income and cash/gear economy",
+    "runtime receipt/durable IO"
+  ],
+  "runtime_enabled": false,
+  "results": [
+    {
+      "scenario": "baseline",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.8515,
+      "mean_challenge_completed": 5.862,
+      "mean_final_fp": 2205.0985,
+      "mean_progression_spend": 5597.25,
+      "mean_discretionary_spend": 2597.0765,
+      "active_assignment_censored_fraction": 0.0115,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.999
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.998
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 10,
+        "standard": 22.7635,
+        "greater": 41.2385,
+        "superior": 72.70741482965931
+      },
+      "accepted_rank_completions": {
+        "lesser": 7367,
+        "standard": 4153,
+        "greater": 120,
+        "superior": 84
+      }
+    },
+    {
+      "scenario": "q=0.1",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.1,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.952,
+      "mean_challenge_completed": 3.075,
+      "mean_final_fp": 2035.116,
+      "mean_progression_spend": 5598.775,
+      "mean_discretionary_spend": 2542.6715,
+      "active_assignment_censored_fraction": 0.003,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9995
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9995
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 10,
+        "standard": 22.9065,
+        "greater": 41.676,
+        "superior": 73.87993996998499
+      },
+      "accepted_rank_completions": {
+        "lesser": 3852,
+        "standard": 2242,
+        "greater": 33,
+        "superior": 23
+      }
+    },
+    {
+      "scenario": "q=0.3333333333333333",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.3333333333333333,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.4895,
+      "mean_challenge_completed": 9.3135,
+      "mean_final_fp": 2493.192,
+      "mean_progression_spend": 5589.975,
+      "mean_discretionary_spend": 2688.4955,
+      "active_assignment_censored_fraction": 0.032,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.996
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9955
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 10,
+        "standard": 22.5695,
+        "greater": 40.664,
+        "superior": 70.95680562531392
+      },
+      "accepted_rank_completions": {
+        "lesser": 11626,
+        "standard": 6429,
+        "greater": 353,
+        "superior": 219
+      }
+    },
+    {
+      "scenario": "slots=3",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 3,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.9845,
+      "mean_challenge_completed": 7.927,
+      "mean_final_fp": 2184.007,
+      "mean_progression_spend": 5600,
+      "mean_discretionary_spend": 2589.8055,
+      "active_assignment_censored_fraction": 0.001,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 10,
+        "standard": 22.631,
+        "greater": 40.8725,
+        "superior": 72.3375
+      },
+      "accepted_rank_completions": {
+        "lesser": 10515,
+        "standard": 5321,
+        "greater": 10,
+        "superior": 8
+      }
+    },
+    {
+      "scenario": "boss_activity_share=0.1",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.1,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.9495,
+      "mean_challenge_completed": 2.395,
+      "mean_final_fp": 2027.847,
+      "mean_progression_spend": 5600,
+      "mean_discretionary_spend": 2541.103,
+      "active_assignment_censored_fraction": 0.004,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 10,
+        "standard": 22.9525,
+        "greater": 41.806,
+        "superior": 74.0905
+      },
+      "accepted_rank_completions": {
+        "lesser": 3009,
+        "standard": 1694,
+        "greater": 52,
+        "superior": 35
+      }
+    },
+    {
+      "scenario": "boss_activity_share=0.5",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.5,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.695,
+      "mean_challenge_completed": 11.737,
+      "mean_final_fp": 2503.8965,
+      "mean_progression_spend": 5593.875,
+      "mean_discretionary_spend": 2691.791,
+      "active_assignment_censored_fraction": 0.0205,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9975
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9975
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 10,
+        "standard": 22.3675,
+        "greater": 40.12,
+        "superior": 70.4265664160401
+      },
+      "accepted_rank_completions": {
+        "lesser": 14616,
+        "standard": 8464,
+        "greater": 227,
+        "superior": 167
+      }
+    },
+    {
+      "scenario": "price_schedule=compact",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "compact",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.7825,
+      "mean_challenge_completed": 5.427,
+      "mean_final_fp": 3721.57,
+      "mean_progression_spend": 4100,
+      "mean_discretionary_spend": 2603.7175,
+      "active_assignment_censored_fraction": 0.0155,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 9,
+        "standard": 18.852,
+        "greater": 32.282,
+        "superior": 53.475
+      },
+      "accepted_rank_completions": {
+        "lesser": 6612,
+        "standard": 3950,
+        "greater": 144,
+        "superior": 148
+      }
+    },
+    {
+      "scenario": "price_schedule=high",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "high",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.878,
+      "mean_challenge_completed": 6.425,
+      "mean_final_fp": 127.809,
+      "mean_progression_spend": 7640.475,
+      "mean_discretionary_spend": 2585.416,
+      "active_assignment_censored_fraction": 0.008,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9945
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.132
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 12,
+        "standard": 28.617,
+        "greater": 54.778,
+        "superior": 96.35984848484848
+      },
+      "accepted_rank_completions": {
+        "lesser": 8373,
+        "standard": 4388,
+        "greater": 88,
+        "superior": 1
+      }
+    },
+    {
+      "scenario": "access_capacities=[4, 0, 0, 0]",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          0,
+          0,
+          0
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 100,
+      "mean_challenge_completed": 8.1245,
+      "mean_final_fp": 3477.4395,
+      "mean_progression_spend": 4250,
+      "mean_discretionary_spend": 2571.823,
+      "active_assignment_censored_fraction": 0.0,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 0.0,
+        "greater": 0.0,
+        "superior": 0.0
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 10,
+        "standard": null,
+        "greater": null,
+        "superior": null
+      },
+      "accepted_rank_completions": {
+        "lesser": 16249,
+        "standard": 0,
+        "greater": 0,
+        "superior": 0
+      }
+    },
+    {
+      "scenario": "access_capacities=[4, 3, 0, 0]",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          3,
+          0,
+          0
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 100,
+      "mean_challenge_completed": 7.7015,
+      "mean_final_fp": 3079.1195,
+      "mean_progression_spend": 4700,
+      "mean_discretionary_spend": 2588.143,
+      "active_assignment_censored_fraction": 0.0,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 0.0,
+        "superior": 0.0
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 10,
+        "standard": 22.7635,
+        "greater": null,
+        "superior": null
+      },
+      "accepted_rank_completions": {
+        "lesser": 9544,
+        "standard": 5859,
+        "greater": 0,
+        "superior": 0
+      }
+    },
+    {
+      "scenario": "access_capacities=[2, 4, 3, 3]",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          2,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.4085,
+      "mean_challenge_completed": 3.7165,
+      "mean_final_fp": 2256.0845,
+      "mean_progression_spend": 5590.675,
+      "mean_discretionary_spend": 2612.353,
+      "active_assignment_censored_fraction": 0.034,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9965
+      },
+      "ready_fraction": {
+        "lesser": 0.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9945
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": null,
+        "standard": 23,
+        "greater": 41.4695,
+        "superior": 72.49019607843137
+      },
+      "accepted_rank_completions": {
+        "lesser": 0,
+        "standard": 7035,
+        "greater": 277,
+        "superior": 121
+      }
+    },
+    {
+      "scenario": "target_expansion_price=50",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 50,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.8575,
+      "mean_challenge_completed": 5.452,
+      "mean_final_fp": 3113.337,
+      "mean_progression_spend": 4700,
+      "mean_discretionary_spend": 2600.9505,
+      "active_assignment_censored_fraction": 0.0115,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 10,
+        "standard": 18.878,
+        "greater": 33.5025,
+        "superior": 61.183
+      },
+      "accepted_rank_completions": {
+        "lesser": 6603,
+        "standard": 4047,
+        "greater": 131,
+        "superior": 123
+      }
+    },
+    {
+      "scenario": "target_expansion_price=300",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 300,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.864,
+      "mean_challenge_completed": 6.4015,
+      "mean_final_fp": 837.134,
+      "mean_progression_spend": 6941.15,
+      "mean_discretionary_spend": 2588.791,
+      "active_assignment_censored_fraction": 0.008,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.997
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9965
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 10,
+        "standard": 28.5595,
+        "greater": 52.8055,
+        "superior": 90.01103863522329
+      },
+      "accepted_rank_completions": {
+        "lesser": 8487,
+        "standard": 4193,
+        "greater": 98,
+        "superior": 25
+      }
+    },
+    {
+      "scenario": "discretionary_fraction=0",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.795,
+      "mean_challenge_completed": 5.493,
+      "mean_final_fp": 4832.8625,
+      "mean_progression_spend": 5600,
+      "mean_discretionary_spend": 0,
+      "active_assignment_censored_fraction": 0.016,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 8,
+        "standard": 16.951,
+        "greater": 31.038,
+        "superior": 54.6125
+      },
+      "accepted_rank_completions": {
+        "lesser": 6639,
+        "standard": 4054,
+        "greater": 146,
+        "superior": 147
+      }
+    },
+    {
+      "scenario": "discretionary_fraction=0.5",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.5,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.9105,
+      "mean_challenge_completed": 6.354,
+      "mean_final_fp": 1012.9155,
+      "mean_progression_spend": 4159.35,
+      "mean_discretionary_spend": 5168.822,
+      "active_assignment_censored_fraction": 0.006,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.4965
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.025
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 15,
+        "standard": 33.7485,
+        "greater": 61.6325,
+        "superior": 93.02
+      },
+      "accepted_rank_completions": {
+        "lesser": 8422,
+        "standard": 4212,
+        "greater": 74,
+        "superior": 0
+      }
+    },
+    {
+      "scenario": "enable_policy=lesser_only",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "lesser_only",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 100,
+      "mean_challenge_completed": 8.1245,
+      "mean_final_fp": 2127.4395,
+      "mean_progression_spend": 5600,
+      "mean_discretionary_spend": 2571.823,
+      "active_assignment_censored_fraction": 0.0,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 0.0,
+        "greater": 0.0,
+        "superior": 0.0
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 10,
+        "standard": null,
+        "greater": null,
+        "superior": null
+      },
+      "accepted_rank_completions": {
+        "lesser": 16249,
+        "standard": 0,
+        "greater": 0,
+        "superior": 0
+      }
+    },
+    {
+      "scenario": "enable_policy=highest_only",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "highest_only",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 98.5185,
+      "mean_challenge_completed": 3.0965,
+      "mean_final_fp": 2455.177,
+      "mean_progression_spend": 5577.2,
+      "mean_discretionary_spend": 2675.198,
+      "active_assignment_censored_fraction": 0.0845,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.991
+      },
+      "ready_fraction": {
+        "lesser": 0.0,
+        "standard": 0.0,
+        "greater": 0.0115,
+        "superior": 0.9885
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 10,
+        "standard": 22.7635,
+        "greater": 41.078,
+        "superior": 70.88062721294891
+      },
+      "accepted_rank_completions": {
+        "lesser": 2297,
+        "standard": 2845,
+        "greater": 537,
+        "superior": 514
+      }
+    },
+    {
+      "scenario": "choice=highest_rank",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "highest_rank",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 88.8605,
+      "mean_challenge_completed": 6.775,
+      "mean_final_fp": 3504.5115,
+      "mean_progression_spend": 5499.45,
+      "mean_discretionary_spend": 2996.676,
+      "active_assignment_censored_fraction": 0.525,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.96
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9495
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 10,
+        "standard": 22.7525,
+        "greater": 41.1225,
+        "superior": 64.0279094260137
+      },
+      "accepted_rank_completions": {
+        "lesser": 6160,
+        "standard": 4141,
+        "greater": 2222,
+        "superior": 1027
+      }
+    },
+    {
+      "scenario": "choice=highest_fp",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "highest_fp",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 88.9965,
+      "mean_challenge_completed": 6.7755,
+      "mean_final_fp": 3528.9245,
+      "mean_progression_spend": 5499.525,
+      "mean_discretionary_spend": 3004.838,
+      "active_assignment_censored_fraction": 0.5195,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.96
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9495
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 10,
+        "standard": 22.7525,
+        "greater": 41.1225,
+        "superior": 64.0279094260137
+      },
+      "accepted_rank_completions": {
+        "lesser": 6221,
+        "standard": 4079,
+        "greater": 2268,
+        "superior": 983
+      }
+    },
+    {
+      "scenario": "throughput_multiplier=0.5",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 0.5
+      },
+      "accounts": 2000,
+      "mean_completed": 69.1255,
+      "mean_challenge_completed": 4.374,
+      "mean_final_fp": 299.273,
+      "mean_progression_spend": 5056.1,
+      "mean_discretionary_spend": 1782.427,
+      "active_assignment_censored_fraction": 1.0,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.8815
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.0945
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 10,
+        "standard": 22.7635,
+        "greater": 41.2385,
+        "superior": 70.08465608465609
+      },
+      "accepted_rank_completions": {
+        "lesser": 5833,
+        "standard": 2881,
+        "greater": 34,
+        "superior": 0
+      }
+    },
+    {
+      "scenario": "throughput_multiplier=2",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 2
+      },
+      "accounts": 2000,
+      "mean_completed": 100,
+      "mean_challenge_completed": 5.877,
+      "mean_final_fp": 2225.944,
+      "mean_progression_spend": 5600,
+      "mean_discretionary_spend": 2604.931,
+      "active_assignment_censored_fraction": 0.0,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 10,
+        "standard": 22.7635,
+        "greater": 41.2385,
+        "superior": 72.6965
+      },
+      "accepted_rank_completions": {
+        "lesser": 7374,
+        "standard": 4160,
+        "greater": 129,
+        "superior": 91
+      }
+    },
+    {
+      "scenario": "ordinary_reward=60",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 60,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.915,
+      "mean_challenge_completed": 6.287,
+      "mean_final_fp": 1582.409,
+      "mean_progression_spend": 3360.4,
+      "mean_discretionary_spend": 1643.7085,
+      "active_assignment_censored_fraction": 0.006,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.098
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.023
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 17,
+        "standard": 36.2075,
+        "greater": 64.7085,
+        "superior": 89.54347826086956
+      },
+      "accepted_rank_completions": {
+        "lesser": 8389,
+        "standard": 4118,
+        "greater": 67,
+        "superior": 0
+      }
+    },
+    {
+      "scenario": "ordinary_reward=140",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 140,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.773,
+      "mean_challenge_completed": 5.4585,
+      "mean_final_fp": 5057.1045,
+      "mean_progression_spend": 5600,
+      "mean_discretionary_spend": 3548.863,
+      "active_assignment_censored_fraction": 0.0165,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 8,
+        "standard": 16.997,
+        "greater": 30.356,
+        "superior": 53.5725
+      },
+      "accepted_rank_completions": {
+        "lesser": 6612,
+        "standard": 4005,
+        "greater": 150,
+        "superior": 150
+      }
+    },
+    {
+      "scenario": "hours_horizon=50",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 50,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 69.1255,
+      "mean_challenge_completed": 4.374,
+      "mean_final_fp": 299.273,
+      "mean_progression_spend": 5056.1,
+      "mean_discretionary_spend": 1782.427,
+      "active_assignment_censored_fraction": 1.0,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.8815
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.0945
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 10,
+        "standard": 22.7635,
+        "greater": 41.2385,
+        "superior": 70.08465608465609
+      },
+      "accepted_rank_completions": {
+        "lesser": 5833,
+        "standard": 2881,
+        "greater": 34,
+        "superior": 0
+      }
+    },
+    {
+      "scenario": "hours_horizon=200",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 200,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.25,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 100,
+      "mean_challenge_completed": 5.877,
+      "mean_final_fp": 2225.944,
+      "mean_progression_spend": 5600,
+      "mean_discretionary_spend": 2604.931,
+      "active_assignment_censored_fraction": 0.0,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 10,
+        "standard": 22.7635,
+        "greater": 41.2385,
+        "superior": 72.6965
+      },
+      "accepted_rank_completions": {
+        "lesser": 7374,
+        "standard": 4160,
+        "greater": 129,
+        "superior": 91
+      }
+    },
+    {
+      "scenario": "interaction:shortest:compact:0",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "compact",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.703,
+      "mean_challenge_completed": 5.204,
+      "mean_final_fp": 6343.7625,
+      "mean_progression_spend": 4100,
+      "mean_discretionary_spend": 0,
+      "active_assignment_censored_fraction": 0.0225,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 7,
+        "standard": 13.9755,
+        "greater": 24.2515,
+        "superior": 40.2085
+      },
+      "accepted_rank_completions": {
+        "lesser": 6066,
+        "standard": 3992,
+        "greater": 164,
+        "superior": 186
+      }
+    },
+    {
+      "scenario": "interaction:shortest:compact:0.5",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "compact",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.5,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.837,
+      "mean_challenge_completed": 5.9075,
+      "mean_final_fp": 1093.5325,
+      "mean_progression_spend": 4097.075,
+      "mean_discretionary_spend": 5187.3925,
+      "active_assignment_censored_fraction": 0.0115,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9985
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.997
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 13,
+        "standard": 27.839,
+        "greater": 48.072,
+        "superior": 79.78084252758275
+      },
+      "accepted_rank_completions": {
+        "lesser": 7613,
+        "standard": 4026,
+        "greater": 112,
+        "superior": 64
+      }
+    },
+    {
+      "scenario": "interaction:shortest:middle:0",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.795,
+      "mean_challenge_completed": 5.493,
+      "mean_final_fp": 4832.8625,
+      "mean_progression_spend": 5600,
+      "mean_discretionary_spend": 0,
+      "active_assignment_censored_fraction": 0.016,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 1.0
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 8,
+        "standard": 16.951,
+        "greater": 31.038,
+        "superior": 54.6125
+      },
+      "accepted_rank_completions": {
+        "lesser": 6639,
+        "standard": 4054,
+        "greater": 146,
+        "superior": 147
+      }
+    },
+    {
+      "scenario": "interaction:shortest:middle:0.5",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.5,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.9105,
+      "mean_challenge_completed": 6.354,
+      "mean_final_fp": 1012.9155,
+      "mean_progression_spend": 4159.35,
+      "mean_discretionary_spend": 5168.822,
+      "active_assignment_censored_fraction": 0.006,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.4965
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.025
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 15,
+        "standard": 33.7485,
+        "greater": 61.6325,
+        "superior": 93.02
+      },
+      "accepted_rank_completions": {
+        "lesser": 8422,
+        "standard": 4212,
+        "greater": 74,
+        "superior": 0
+      }
+    },
+    {
+      "scenario": "interaction:shortest:high:0",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "high",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.8485,
+      "mean_challenge_completed": 6.0005,
+      "mean_final_fp": 2565,
+      "mean_progression_spend": 7842.7,
+      "mean_discretionary_spend": 0,
+      "active_assignment_censored_fraction": 0.0115,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.998
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.998
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 9,
+        "standard": 21.5205,
+        "greater": 41.192,
+        "superior": 76.23196392785572
+      },
+      "accepted_rank_completions": {
+        "lesser": 7502,
+        "standard": 4298,
+        "greater": 122,
+        "superior": 79
+      }
+    },
+    {
+      "scenario": "interaction:shortest:high:0.5",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "high",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.5,
+        "enable_policy": "all_owned",
+        "choice": "shortest",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 99.9725,
+      "mean_challenge_completed": 6.6535,
+      "mean_final_fp": 963.1555,
+      "mean_progression_spend": 4200,
+      "mean_discretionary_spend": 5159.532,
+      "active_assignment_censored_fraction": 0.004,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.0
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.0
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 18,
+        "standard": 42.577,
+        "greater": 81.9295,
+        "superior": null
+      },
+      "accepted_rank_completions": {
+        "lesser": 9186,
+        "standard": 4090,
+        "greater": 31,
+        "superior": 0
+      }
+    },
+    {
+      "scenario": "interaction:highest_rank:compact:0",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "compact",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0,
+        "enable_policy": "all_owned",
+        "choice": "highest_rank",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 80.9965,
+      "mean_challenge_completed": 6.28,
+      "mean_final_fp": 7930.1625,
+      "mean_progression_spend": 4081.025,
+      "mean_discretionary_spend": 0,
+      "active_assignment_censored_fraction": 0.706,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9895
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.984
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 7,
+        "standard": 13.9725,
+        "greater": 24.1945,
+        "superior": 37.15142276422764
+      },
+      "accepted_rank_completions": {
+        "lesser": 4611,
+        "standard": 3685,
+        "greater": 2454,
+        "superior": 1810
+      }
+    },
+    {
+      "scenario": "interaction:highest_rank:compact:0.5",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "compact",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.5,
+        "enable_policy": "all_owned",
+        "choice": "highest_rank",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 91.2775,
+      "mean_challenge_completed": 6.7385,
+      "mean_final_fp": 1922.707,
+      "mean_progression_spend": 4033.325,
+      "mean_discretionary_spend": 5952.4305,
+      "active_assignment_censored_fraction": 0.47,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9625
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.943
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 13,
+        "standard": 27.818,
+        "greater": 47.9505,
+        "superior": 70.82078472958642
+      },
+      "accepted_rank_completions": {
+        "lesser": 6509,
+        "standard": 4140,
+        "greater": 2019,
+        "superior": 809
+      }
+    },
+    {
+      "scenario": "interaction:highest_rank:middle:0",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0,
+        "enable_policy": "all_owned",
+        "choice": "highest_rank",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 84.4805,
+      "mean_challenge_completed": 6.549,
+      "mean_final_fp": 6505.525,
+      "mean_progression_spend": 5541.7,
+      "mean_discretionary_spend": 0,
+      "active_assignment_censored_fraction": 0.634,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.977
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9705
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 8,
+        "standard": 16.946,
+        "greater": 30.9535,
+        "superior": 48.81710458526533
+      },
+      "accepted_rank_completions": {
+        "lesser": 5296,
+        "standard": 3908,
+        "greater": 2388,
+        "superior": 1506
+      }
+    },
+    {
+      "scenario": "interaction:highest_rank:middle:0.5",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.5,
+        "enable_policy": "all_owned",
+        "choice": "highest_rank",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 95.3535,
+      "mean_challenge_completed": 7.0075,
+      "mean_final_fp": 877.9745,
+      "mean_progression_spend": 4896.75,
+      "mean_discretionary_spend": 5770.9755,
+      "active_assignment_censored_fraction": 0.3125,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.75
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.4905
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 15,
+        "standard": 33.724,
+        "greater": 61.442,
+        "superior": 87.53720693170234
+      },
+      "accepted_rank_completions": {
+        "lesser": 7496,
+        "standard": 4654,
+        "greater": 1725,
+        "superior": 140
+      }
+    },
+    {
+      "scenario": "interaction:highest_rank:high:0",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "high",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0,
+        "enable_policy": "all_owned",
+        "choice": "highest_rank",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 88.9135,
+      "mean_challenge_completed": 6.891,
+      "mean_final_fp": 4346.8,
+      "mean_progression_spend": 7664.95,
+      "mean_discretionary_spend": 0,
+      "active_assignment_censored_fraction": 0.524,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.95
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9395
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 9,
+        "standard": 21.497,
+        "greater": 41.0675,
+        "superior": 66.26184140500266
+      },
+      "accepted_rank_completions": {
+        "lesser": 6255,
+        "standard": 4307,
+        "greater": 2263,
+        "superior": 957
+      }
+    },
+    {
+      "scenario": "interaction:highest_rank:high:0.5",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "high",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.5,
+        "enable_policy": "all_owned",
+        "choice": "highest_rank",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 98.895,
+      "mean_challenge_completed": 7.192,
+      "mean_final_fp": 1263.559,
+      "mean_progression_spend": 4253.5,
+      "mean_discretionary_spend": 5513.191,
+      "active_assignment_censored_fraction": 0.134,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.0155
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.0025
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 18,
+        "standard": 42.5475,
+        "greater": 81.6805,
+        "superior": 96.4
+      },
+      "accepted_rank_completions": {
+        "lesser": 8601,
+        "standard": 4892,
+        "greater": 891,
+        "superior": 0
+      }
+    },
+    {
+      "scenario": "interaction:highest_fp:compact:0",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "compact",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0,
+        "enable_policy": "all_owned",
+        "choice": "highest_fp",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 81.141,
+      "mean_challenge_completed": 6.295,
+      "mean_final_fp": 7995.1125,
+      "mean_progression_spend": 4081.025,
+      "mean_discretionary_spend": 0,
+      "active_assignment_censored_fraction": 0.6995,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9895
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.984
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 7,
+        "standard": 13.9725,
+        "greater": 24.1945,
+        "superior": 37.15142276422764
+      },
+      "accepted_rank_completions": {
+        "lesser": 4662,
+        "standard": 3650,
+        "greater": 2544,
+        "superior": 1734
+      }
+    },
+    {
+      "scenario": "interaction:highest_fp:compact:0.5",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "compact",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.5,
+        "enable_policy": "all_owned",
+        "choice": "highest_fp",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 91.419,
+      "mean_challenge_completed": 6.753,
+      "mean_final_fp": 1943.483,
+      "mean_progression_spend": 4034.15,
+      "mean_discretionary_spend": 5974.0295,
+      "active_assignment_censored_fraction": 0.4645,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.963
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9435
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 13,
+        "standard": 27.818,
+        "greater": 47.9505,
+        "superior": 70.81611022787493
+      },
+      "accepted_rank_completions": {
+        "lesser": 6572,
+        "standard": 4088,
+        "greater": 2062,
+        "superior": 784
+      }
+    },
+    {
+      "scenario": "interaction:highest_fp:middle:0",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0,
+        "enable_policy": "all_owned",
+        "choice": "highest_fp",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 84.5785,
+      "mean_challenge_completed": 6.557,
+      "mean_final_fp": 6552.025,
+      "mean_progression_spend": 5541.7,
+      "mean_discretionary_spend": 0,
+      "active_assignment_censored_fraction": 0.6315,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.977
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9705
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 8,
+        "standard": 16.946,
+        "greater": 30.9535,
+        "superior": 48.81710458526533
+      },
+      "accepted_rank_completions": {
+        "lesser": 5344,
+        "standard": 3870,
+        "greater": 2465,
+        "superior": 1435
+      }
+    },
+    {
+      "scenario": "interaction:highest_fp:middle:0.5",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "middle",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.5,
+        "enable_policy": "all_owned",
+        "choice": "highest_fp",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 95.4415,
+      "mean_challenge_completed": 7.0165,
+      "mean_final_fp": 876.913,
+      "mean_progression_spend": 4908.7,
+      "mean_discretionary_spend": 5781.862,
+      "active_assignment_censored_fraction": 0.3095,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.755
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.495
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 15,
+        "standard": 33.724,
+        "greater": 61.442,
+        "superior": 87.5030303030303
+      },
+      "accepted_rank_completions": {
+        "lesser": 7568,
+        "standard": 4589,
+        "greater": 1736,
+        "superior": 140
+      }
+    },
+    {
+      "scenario": "interaction:highest_fp:high:0",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "high",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0,
+        "enable_policy": "all_owned",
+        "choice": "highest_fp",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 89.051,
+      "mean_challenge_completed": 6.8915,
+      "mean_final_fp": 4374.2375,
+      "mean_progression_spend": 7666.625,
+      "mean_discretionary_spend": 0,
+      "active_assignment_censored_fraction": 0.519,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9505
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.9395
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 9,
+        "standard": 21.497,
+        "greater": 41.0675,
+        "superior": 66.26184140500266
+      },
+      "accepted_rank_completions": {
+        "lesser": 6321,
+        "standard": 4243,
+        "greater": 2305,
+        "superior": 914
+      }
+    },
+    {
+      "scenario": "interaction:highest_fp:high:0.5",
+      "config": {
+        "starting_fp": 0,
+        "ordinary_prerequisite_cost": 500,
+        "ordinary_reward": 100,
+        "ordinary_hours": 0.75,
+        "completion_spin_window": 100,
+        "hours_horizon": 100,
+        "q": 0.2,
+        "slots": 2,
+        "boss_activity_share": 0.25,
+        "price_schedule": "high",
+        "access_capacities": [
+          4,
+          4,
+          3,
+          3
+        ],
+        "target_expansion_price": 150,
+        "discretionary_fraction": 0.5,
+        "enable_policy": "all_owned",
+        "choice": "highest_fp",
+        "throughput_multiplier": 1.0
+      },
+      "accounts": 2000,
+      "mean_completed": 98.9265,
+      "mean_challenge_completed": 7.199,
+      "mean_final_fp": 1269.272,
+      "mean_progression_spend": 4255.175,
+      "mean_discretionary_spend": 5520.578,
+      "active_assignment_censored_fraction": 0.1305,
+      "owned_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.016
+      },
+      "ready_fraction": {
+        "lesser": 1.0,
+        "standard": 1.0,
+        "greater": 1.0,
+        "superior": 0.0025
+      },
+      "mean_first_ready_completion_conditional": {
+        "lesser": 18,
+        "standard": 42.5475,
+        "greater": 81.6805,
+        "superior": 96.4
+      },
+      "accepted_rank_completions": {
+        "lesser": 8686,
+        "standard": 4812,
+        "greater": 900,
+        "superior": 0
+      }
+    }
+  ],
+  "raw_examples": [
+    {
+      "scenario": "baseline",
+      "seed": 2026101500,
+      "fp": 4155,
+      "earned": 13000,
+      "progression_spend": 5600,
+      "discretionary_spend": 3245,
+      "hours": 92.54444215512817,
+      "completed": 100,
+      "challenge_completed": 11,
+      "owned_ranks": [
+        "greater",
+        "lesser",
+        "standard",
+        "superior"
+      ],
+      "ready_ranks": [
+        "lesser",
+        "standard",
+        "greater",
+        "superior"
+      ],
+      "first_rank_completion": {
+        "lesser": 10,
+        "standard": 16,
+        "greater": 35,
+        "superior": 66
+      },
+      "first_ready_completion": {
+        "lesser": 10,
+        "standard": 22,
+        "greater": 40,
+        "superior": 72
+      },
+      "accepted_ranks": {
+        "lesser": 9,
+        "standard": 1,
+        "greater": 1
+      },
+      "offered_ranks": {
+        "lesser": 9,
+        "standard": 2,
+        "greater": 3
+      },
+      "active_censored": null,
+      "purchase_log": [
+        [
+          7,
+          "ordinary_prerequisites",
+          500
+        ],
+        [
+          10,
+          "lesser",
+          250
+        ],
+        [
+          16,
+          "standard",
+          500
+        ],
+        [
+          18,
+          "target:infernal-mage",
+          150
+        ],
+        [
+          20,
+          "target:killerwatt",
+          150
+        ],
+        [
+          22,
+          "target:molanisk",
+          150
+        ],
+        [
+          35,
+          "greater",
+          1000
+        ],
+        [
+          36,
+          "target:commander-zilyana",
+          150
+        ],
+        [
+          38,
+          "target:kril-tsutsaroth",
+          150
+        ],
+        [
+          40,
+          "target:spitting-wyvern",
+          150
+        ],
+        [
+          66,
+          "superior",
+          2000
+        ],
+        [
+          68,
+          "target:kurask",
+          150
+        ],
+        [
+          70,
+          "target:rune-dragon",
+          150
+        ],
+        [
+          72,
+          "target:vyrewatch-sentinel",
+          150
+        ]
+      ]
+    },
+    {
+      "scenario": "baseline",
+      "seed": 2026101501,
+      "fp": 2128,
+      "earned": 10300,
+      "progression_spend": 5600,
+      "discretionary_spend": 2572,
+      "hours": 69.84085520964244,
+      "completed": 100,
+      "challenge_completed": 7,
+      "owned_ranks": [
+        "greater",
+        "lesser",
+        "standard",
+        "superior"
+      ],
+      "ready_ranks": [
+        "lesser",
+        "standard",
+        "greater",
+        "superior"
+      ],
+      "first_rank_completion": {
+        "lesser": 10,
+        "standard": 17,
+        "greater": 35,
+        "superior": 67
+      },
+      "first_ready_completion": {
+        "lesser": 10,
+        "standard": 23,
+        "greater": 41,
+        "superior": 73
+      },
+      "accepted_ranks": {
+        "lesser": 7
+      },
+      "offered_ranks": {
+        "lesser": 7,
+        "standard": 1,
+        "greater": 3,
+        "superior": 2
+      },
+      "active_censored": null,
+      "purchase_log": [
+        [
+          7,
+          "ordinary_prerequisites",
+          500
+        ],
+        [
+          10,
+          "lesser",
+          250
+        ],
+        [
+          17,
+          "standard",
+          500
+        ],
+        [
+          19,
+          "target:infernal-mage",
+          150
+        ],
+        [
+          21,
+          "target:killerwatt",
+          150
+        ],
+        [
+          23,
+          "target:molanisk",
+          150
+        ],
+        [
+          35,
+          "greater",
+          1000
+        ],
+        [
+          37,
+          "target:commander-zilyana",
+          150
+        ],
+        [
+          39,
+          "target:kril-tsutsaroth",
+          150
+        ],
+        [
+          41,
+          "target:spitting-wyvern",
+          150
+        ],
+        [
+          67,
+          "superior",
+          2000
+        ],
+        [
+          69,
+          "target:kurask",
+          150
+        ],
+        [
+          71,
+          "target:rune-dragon",
+          150
+        ],
+        [
+          73,
+          "target:vyrewatch-sentinel",
+          150
+        ]
+      ]
+    },
+    {
+      "scenario": "baseline",
+      "seed": 2026101502,
+      "fp": 2128,
+      "earned": 10300,
+      "progression_spend": 5600,
+      "discretionary_spend": 2572,
+      "hours": 70.42250274527564,
+      "completed": 100,
+      "challenge_completed": 7,
+      "owned_ranks": [
+        "greater",
+        "lesser",
+        "standard",
+        "superior"
+      ],
+      "ready_ranks": [
+        "lesser",
+        "standard",
+        "greater",
+        "superior"
+      ],
+      "first_rank_completion": {
+        "lesser": 10,
+        "standard": 17,
+        "greater": 36,
+        "superior": 67
+      },
+      "first_ready_completion": {
+        "lesser": 10,
+        "standard": 22,
+        "greater": 41,
+        "superior": 73
+      },
+      "accepted_ranks": {
+        "lesser": 5,
+        "standard": 2
+      },
+      "offered_ranks": {
+        "lesser": 5,
+        "standard": 3,
+        "greater": 2,
+        "superior": 1
+      },
+      "active_censored": null,
+      "purchase_log": [
+        [
+          7,
+          "ordinary_prerequisites",
+          500
+        ],
+        [
+          10,
+          "lesser",
+          250
+        ],
+        [
+          17,
+          "standard",
+          500
+        ],
+        [
+          19,
+          "target:infernal-mage",
+          150
+        ],
+        [
+          21,
+          "target:killerwatt",
+          150
+        ],
+        [
+          22,
+          "target:molanisk",
+          150
+        ],
+        [
+          36,
+          "greater",
+          1000
+        ],
+        [
+          38,
+          "target:commander-zilyana",
+          150
+        ],
+        [
+          40,
+          "target:kril-tsutsaroth",
+          150
+        ],
+        [
+          41,
+          "target:spitting-wyvern",
+          150
+        ],
+        [
+          67,
+          "superior",
+          2000
+        ],
+        [
+          69,
+          "target:kurask",
+          150
+        ],
+        [
+          71,
+          "target:rune-dragon",
+          150
+        ],
+        [
+          73,
+          "target:vyrewatch-sentinel",
+          150
+        ]
+      ]
+    },
+    {
+      "scenario": "enable_policy=lesser_only",
+      "seed": 2026101500,
+      "fp": 2280,
+      "earned": 10500,
+      "progression_spend": 5600,
+      "discretionary_spend": 2620,
+      "hours": 66.5932053091378,
+      "completed": 100,
+      "challenge_completed": 13,
+      "owned_ranks": [
+        "greater",
+        "lesser",
+        "standard",
+        "superior"
+      ],
+      "ready_ranks": [
+        "lesser"
+      ],
+      "first_rank_completion": {
+        "lesser": 10,
+        "standard": 16,
+        "greater": 35,
+        "superior": 66
+      },
+      "first_ready_completion": {
+        "lesser": 10
+      },
+      "accepted_ranks": {
+        "lesser": 13
+      },
+      "offered_ranks": {
+        "lesser": 16
+      },
+      "active_censored": null,
+      "purchase_log": [
+        [
+          7,
+          "ordinary_prerequisites",
+          500
+        ],
+        [
+          10,
+          "lesser",
+          250
+        ],
+        [
+          16,
+          "standard",
+          500
+        ],
+        [
+          18,
+          "target:infernal-mage",
+          150
+        ],
+        [
+          20,
+          "target:killerwatt",
+          150
+        ],
+        [
+          22,
+          "target:molanisk",
+          150
+        ],
+        [
+          35,
+          "greater",
+          1000
+        ],
+        [
+          36,
+          "target:commander-zilyana",
+          150
+        ],
+        [
+          38,
+          "target:kril-tsutsaroth",
+          150
+        ],
+        [
+          40,
+          "target:spitting-wyvern",
+          150
+        ],
+        [
+          66,
+          "superior",
+          2000
+        ],
+        [
+          68,
+          "target:kurask",
+          150
+        ],
+        [
+          69,
+          "target:rune-dragon",
+          150
+        ],
+        [
+          71,
+          "target:vyrewatch-sentinel",
+          150
+        ]
+      ]
+    },
+    {
+      "scenario": "enable_policy=lesser_only",
+      "seed": 2026101501,
+      "fp": 2242,
+      "earned": 10450,
+      "progression_spend": 5600,
+      "discretionary_spend": 2608,
+      "hours": 68.48173424606928,
+      "completed": 100,
+      "challenge_completed": 11,
+      "owned_ranks": [
+        "greater",
+        "lesser",
+        "standard",
+        "superior"
+      ],
+      "ready_ranks": [
+        "lesser"
+      ],
+      "first_rank_completion": {
+        "lesser": 10,
+        "standard": 17,
+        "greater": 35,
+        "superior": 66
+      },
+      "first_ready_completion": {
+        "lesser": 10
+      },
+      "accepted_ranks": {
+        "lesser": 11
+      },
+      "offered_ranks": {
+        "lesser": 12
+      },
+      "active_censored": null,
+      "purchase_log": [
+        [
+          7,
+          "ordinary_prerequisites",
+          500
+        ],
+        [
+          10,
+          "lesser",
+          250
+        ],
+        [
+          17,
+          "standard",
+          500
+        ],
+        [
+          19,
+          "target:infernal-mage",
+          150
+        ],
+        [
+          21,
+          "target:killerwatt",
+          150
+        ],
+        [
+          23,
+          "target:molanisk",
+          150
+        ],
+        [
+          35,
+          "greater",
+          1000
+        ],
+        [
+          37,
+          "target:commander-zilyana",
+          150
+        ],
+        [
+          39,
+          "target:kril-tsutsaroth",
+          150
+        ],
+        [
+          41,
+          "target:spitting-wyvern",
+          150
+        ],
+        [
+          66,
+          "superior",
+          2000
+        ],
+        [
+          68,
+          "target:kurask",
+          150
+        ],
+        [
+          70,
+          "target:rune-dragon",
+          150
+        ],
+        [
+          72,
+          "target:vyrewatch-sentinel",
+          150
+        ]
+      ]
+    },
+    {
+      "scenario": "enable_policy=lesser_only",
+      "seed": 2026101502,
+      "fp": 2090,
+      "earned": 10250,
+      "progression_spend": 5600,
+      "discretionary_spend": 2560,
+      "hours": 69.46807949481213,
+      "completed": 100,
+      "challenge_completed": 8,
+      "owned_ranks": [
+        "greater",
+        "lesser",
+        "standard",
+        "superior"
+      ],
+      "ready_ranks": [
+        "lesser"
+      ],
+      "first_rank_completion": {
+        "lesser": 10,
+        "standard": 17,
+        "greater": 36,
+        "superior": 67
+      },
+      "first_ready_completion": {
+        "lesser": 10
+      },
+      "accepted_ranks": {
+        "lesser": 8
+      },
+      "offered_ranks": {
+        "lesser": 8
+      },
+      "active_censored": null,
+      "purchase_log": [
+        [
+          7,
+          "ordinary_prerequisites",
+          500
+        ],
+        [
+          10,
+          "lesser",
+          250
+        ],
+        [
+          17,
+          "standard",
+          500
+        ],
+        [
+          19,
+          "target:infernal-mage",
+          150
+        ],
+        [
+          21,
+          "target:killerwatt",
+          150
+        ],
+        [
+          22,
+          "target:molanisk",
+          150
+        ],
+        [
+          36,
+          "greater",
+          1000
+        ],
+        [
+          38,
+          "target:commander-zilyana",
+          150
+        ],
+        [
+          40,
+          "target:kril-tsutsaroth",
+          150
+        ],
+        [
+          41,
+          "target:spitting-wyvern",
+          150
+        ],
+        [
+          67,
+          "superior",
+          2000
+        ],
+        [
+          69,
+          "target:kurask",
+          150
+        ],
+        [
+          71,
+          "target:rune-dragon",
+          150
+        ],
+        [
+          73,
+          "target:vyrewatch-sentinel",
+          150
+        ]
+      ]
+    },
+    {
+      "scenario": "enable_policy=highest_only",
+      "seed": 2026101500,
+      "fp": 4080,
+      "earned": 12900,
+      "progression_spend": 5600,
+      "discretionary_spend": 3220,
+      "hours": 88.51388918617343,
+      "completed": 100,
+      "challenge_completed": 8,
+      "owned_ranks": [
+        "greater",
+        "lesser",
+        "standard",
+        "superior"
+      ],
+      "ready_ranks": [
+        "superior"
+      ],
+      "first_rank_completion": {
+        "lesser": 10,
+        "standard": 16,
+        "greater": 34,
+        "superior": 66
+      },
+      "first_ready_completion": {
+        "lesser": 10,
+        "standard": 22,
+        "greater": 40,
+        "superior": 72
+      },
+      "accepted_ranks": {
+        "lesser": 2,
+        "standard": 3,
+        "superior": 3
+      },
+      "offered_ranks": {
+        "lesser": 2,
+        "standard": 3,
+        "greater": 6,
+        "superior": 9
+      },
+      "active_censored": null,
+      "purchase_log": [
+        [
+          7,
+          "ordinary_prerequisites",
+          500
+        ],
+        [
+          10,
+          "lesser",
+          250
+        ],
+        [
+          16,
+          "standard",
+          500
+        ],
+        [
+          18,
+          "target:infernal-mage",
+          150
+        ],
+        [
+          20,
+          "target:killerwatt",
+          150
+        ],
+        [
+          22,
+          "target:molanisk",
+          150
+        ],
+        [
+          34,
+          "greater",
+          1000
+        ],
+        [
+          36,
+          "target:commander-zilyana",
+          150
+        ],
+        [
+          38,
+          "target:kril-tsutsaroth",
+          150
+        ],
+        [
+          40,
+          "target:spitting-wyvern",
+          150
+        ],
+        [
+          66,
+          "superior",
+          2000
+        ],
+        [
+          68,
+          "target:kurask",
+          150
+        ],
+        [
+          70,
+          "target:rune-dragon",
+          150
+        ],
+        [
+          72,
+          "target:vyrewatch-sentinel",
+          150
+        ]
+      ]
+    },
+    {
+      "scenario": "enable_policy=highest_only",
+      "seed": 2026101501,
+      "fp": 3366,
+      "earned": 11950,
+      "progression_spend": 5600,
+      "discretionary_spend": 2984,
+      "hours": 83.28057370974308,
+      "completed": 100,
+      "challenge_completed": 6,
+      "owned_ranks": [
+        "greater",
+        "lesser",
+        "standard",
+        "superior"
+      ],
+      "ready_ranks": [
+        "superior"
+      ],
+      "first_rank_completion": {
+        "lesser": 10,
+        "standard": 17,
+        "greater": 35,
+        "superior": 67
+      },
+      "first_ready_completion": {
+        "lesser": 10,
+        "standard": 23,
+        "greater": 40,
+        "superior": 73
+      },
+      "accepted_ranks": {
+        "lesser": 1,
+        "standard": 3,
+        "superior": 2
+      },
+      "offered_ranks": {
+        "lesser": 1,
+        "standard": 4,
+        "greater": 4,
+        "superior": 7
+      },
+      "active_censored": null,
+      "purchase_log": [
+        [
+          7,
+          "ordinary_prerequisites",
+          500
+        ],
+        [
+          10,
+          "lesser",
+          250
+        ],
+        [
+          17,
+          "standard",
+          500
+        ],
+        [
+          19,
+          "target:infernal-mage",
+          150
+        ],
+        [
+          21,
+          "target:killerwatt",
+          150
+        ],
+        [
+          23,
+          "target:molanisk",
+          150
+        ],
+        [
+          35,
+          "greater",
+          1000
+        ],
+        [
+          36,
+          "target:commander-zilyana",
+          150
+        ],
+        [
+          38,
+          "target:kril-tsutsaroth",
+          150
+        ],
+        [
+          40,
+          "target:spitting-wyvern",
+          150
+        ],
+        [
+          67,
+          "superior",
+          2000
+        ],
+        [
+          69,
+          "target:kurask",
+          150
+        ],
+        [
+          71,
+          "target:rune-dragon",
+          150
+        ],
+        [
+          73,
+          "target:vyrewatch-sentinel",
+          150
+        ]
+      ]
+    },
+    {
+      "scenario": "enable_policy=highest_only",
+      "seed": 2026101502,
+      "fp": 1995,
+      "earned": 10125,
+      "progression_spend": 5600,
+      "discretionary_spend": 2530,
+      "hours": 72.30477066825549,
+      "completed": 100,
+      "challenge_completed": 3,
+      "owned_ranks": [
+        "greater",
+        "lesser",
+        "standard",
+        "superior"
+      ],
+      "ready_ranks": [
+        "superior"
+      ],
+      "first_rank_completion": {
+        "lesser": 10,
+        "standard": 17,
+        "greater": 36,
+        "superior": 68
+      },
+      "first_ready_completion": {
+        "lesser": 10,
+        "standard": 22,
+        "greater": 41,
+        "superior": 74
+      },
+      "accepted_ranks": {
+        "lesser": 2,
+        "standard": 1
+      },
+      "offered_ranks": {
+        "lesser": 2,
+        "standard": 1,
+        "greater": 5,
+        "superior": 2
+      },
+      "active_censored": null,
+      "purchase_log": [
+        [
+          7,
+          "ordinary_prerequisites",
+          500
+        ],
+        [
+          10,
+          "lesser",
+          250
+        ],
+        [
+          17,
+          "standard",
+          500
+        ],
+        [
+          19,
+          "target:infernal-mage",
+          150
+        ],
+        [
+          21,
+          "target:killerwatt",
+          150
+        ],
+        [
+          22,
+          "target:molanisk",
+          150
+        ],
+        [
+          36,
+          "greater",
+          1000
+        ],
+        [
+          38,
+          "target:commander-zilyana",
+          150
+        ],
+        [
+          40,
+          "target:kril-tsutsaroth",
+          150
+        ],
+        [
+          41,
+          "target:spitting-wyvern",
+          150
+        ],
+        [
+          68,
+          "superior",
+          2000
+        ],
+        [
+          70,
+          "target:kurask",
+          150
+        ],
+        [
+          72,
+          "target:rune-dragon",
+          150
+        ],
+        [
+          74,
+          "target:vyrewatch-sentinel",
+          150
+        ]
+      ]
+    }
+  ]
+}

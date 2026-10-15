@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — hour work block A86 completed in owning commit; owner wb-hour-a84.
+- State: ACTIVE — hour work block A87 completed in owning commit; owner wb-hour-a84.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -10,9 +10,9 @@
 
 ## Current continuation — hour work block
 
-Latest completed A86: three-key-per-rank Greater/Superior core draft. Verified predecessor `065418461f4002f75d6b2a379e05303efcee2c19`. Six source keys/eight specific-item hunts semantically reviewed and reauthored with exact scoped source/rate/access/quote records; three keys per rank before filtering. Captured citations differentiated from original primary retrieval.36 historical hunts and conflicting Turoth rate held; all old artifacts unchanged.
+Latest completed A87: ordinary-income and player-choice economy sensitivity. Verified predecessor `cb3ccbbb87dc7e52c60ba4c201d1b6eb21a1fb1e`. 43 scenarios/86,000 hypothetical accounts executed from four-rank source drafts;269 accounting/replay/boundary assertions pass. Explicit source purchases, discretionary spending, owned-versus-ready states, enable/card-choice policies and unpaid censoring modeled. Price/frequency/initial spins remain hypotheses, not adopted game values.
 
-Exact next action: A87 broader ordinary-income/spin/expense economy sensitivity using all-four-rank authored core, without turning assumptions into locked prices.
+Exact next action: A88 truthful workstream backlog and remaining-work map; then integrate four-rank catalog/core validation and retire stale checkpoint-status interpretations.
 
 Existing approved rules and explicit supersessions remain controlling. No source estimate silently certified, no unrelated retirement/task/Coffer/policy approval inferred. Active owner wb-hour-a84 under recorded lease; publish and verify before starting next bounded deliverable. Previous “next” paragraphs are historical where superseded. Owning commit requires final remote head/tree/main verification.
 
