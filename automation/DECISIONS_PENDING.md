@@ -1,5 +1,14 @@
 # Major decisions pending
 
+## Current A97 continuation — read before historical notes
+
+Rank topology WB-D147 is confirmed and WB-D148–154 integration/finite content authoring is complete within documented scope. No resolved rank question should be re-asked. A89 core has14 keys/16 hunts; A93 has62 future client cases, all NOT_RUN. Numeric prices/family schedule remain unadopted; candidate source rows and reference throughput are not actual-client support. PDF version10 is a saved derivative of135eed73, with later A93–A96 planning/evidence supplements outside that snapshot.
+
+The next **material user decision remains A56 no-fault retirement for externally proven permanent impossibility of an unresolved selected ordinary Fate**. Recommendation remains yes with its narrow evidence/ordinary-only/no-reward/no-spin-minting limits, but it is PROPOSED and NOT_ADOPTED. Ask that one question and await the answer before applying it. Committed-unselected snapshot reconciliation, task continuation, Coffer/policy evidence and separate legacy CA reward scope are independent. Safe independent next source packet: Gargoyle primary rate image/top-floor finish-to-loot map or Shaman canyon access/personal allocation; Turoth sword estimate and necklace conflict remain held. Do not restart full inventory or treat checkpoint counts as a project total.
+
+The older pending/next descriptions below are preserved chronological records, superseded only by their explicit later decisions and current navigation above.
+
+
 Authority: docs/wheelbound/DECISIONS.md. Latest gameplay approvals2026-10-12 extend through WB-D131; current2026-10-13 delegation is WB-D132 and adopted recommendations WB-D133–137. Ask one choice at a time, discuss its answer, and automatically present the next single choice until the user says stop. Do not repeat approved rules.
 
 ## Resolved current answers

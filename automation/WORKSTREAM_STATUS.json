@@ -1,5 +1,5 @@
 {
-  "version": "workstreams-a92-publication-receipt",
+  "version": "workstreams-a97-final-hour",
   "scope": "Project workstream register, not fixed-size checkpoint count or overall completion percentage",
   "project_completion_percent": null,
   "checkpoint_count_is_not_delivery_progress": true,
@@ -11,15 +11,15 @@
       "status": "AUTHORED_DESIGN_NOT_RUNTIME",
       "source": "WB-D144\u2013154; three content fragments",
       "exit_criteria": "Integrate finite16-hunt/14-key core with exact ownership/access/source/quote references; do not confuse it with full candidate catalog.",
-      "next_or_limit": "A89 integration/validation; actual client support separate."
+      "next_or_limit": "A89 authored integration/validation complete; actual account/client support separate."
     },
     {
       "id": "WB-W02",
       "workstream": "Broader Challenge catalog and source conflicts",
       "status": "PARTIAL",
-      "source": "A48/A64/A76/A86",
+      "source": "A48/A64/A76/A86/A90/A96",
       "exit_criteria": "Review remaining36 historical contexts and selected483 display candidates in bounded packets; explicitly hold/unlist unsupported conditions rather than promise every row.",
-      "next_or_limit": "Resolve Turoth1/128 versus1/129 context; choose next source packet."
+      "next_or_limit": "A96 three-context batch admits none; bounded Gargoyle image or Shaman canyon source work next; Turoth remains held."
     },
     {
       "id": "WB-W03",
@@ -81,9 +81,9 @@
       "id": "WB-W10",
       "workstream": "Build/dependency/report/package evidence",
       "status": "PARTIAL_BASELINE",
-      "source": "A18/A19/A26/A29; DEVELOPMENT_PIPELINE",
+      "source": "A18/A19/A26/A29/A95; DEVELOPMENT_PIPELINE",
       "exit_criteria": "Export actual resolved dependencies/test XML/artifact inventory from clean supported build; inspect standard JAR.",
-      "next_or_limit": "Earlier remote build passed; reporting and exact reproducibility remain incomplete."
+      "next_or_limit": "Fresh clean build38774803140 passes; zero artifacts, resolved dependency/XML/JAR reporting still missing; local distribution fetch blocked."
     },
     {
       "id": "WB-W11",

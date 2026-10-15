@@ -1,7 +1,7 @@
 {
   "version": "integrated-partial-v2-a83-v1",
   "status": "PASS_OFFLINE_SOURCE_AND_DESIGN_NOT_RUNTIME",
-  "assertions": 323,
+  "assertions": 329,
   "starter_keys": 4,
   "starter_hunts": 4,
   "draft_fp_quotes": [

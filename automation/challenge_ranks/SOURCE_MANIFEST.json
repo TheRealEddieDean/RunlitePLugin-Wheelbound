@@ -28,8 +28,8 @@
     },
     {
       "path": "docs/wheelbound/CHALLENGE_RANK_READINESS.md",
-      "sha256": "9aaa34ac90893cc2ec188f7f3de8157042277ebfbd7bcfde84595a33e4c28ca7"
+      "sha256": "b48c8a4460e8a05765c0c6b5e07d2b800ad309677de3cf1f75780e6ed3f0dbaa"
     }
   ],
-  "update_reason": "A89 compiled finite core metadata/status, without rank/control rule change"
+  "update_reason": "A97 current readiness navigation supersedes historical missing-content/source-rate/trace-plan summaries; no rank rules/model changed"
 }

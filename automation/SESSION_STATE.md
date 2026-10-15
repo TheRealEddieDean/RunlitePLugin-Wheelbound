@@ -1,7 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — hour work block A96 completed in owning commit; owner wb-hour-a84.
+- State: IDLE — hour work block complete; owner released.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -10,11 +10,11 @@
 
 ## Current continuation — hour work block
 
-Latest completed A96: Three-context broader-source evidence packet. Verified predecessor `6c868cc768c6473f3bcd14df89066caa8f36ac32`. Turoth sword11902 uncited estimate held; Gargoyle maul4153 page-level developer-table/image provenance isolated but image not newly read; Shaman warhammer13576 exact1/3000 confirmed from directly read May29,2024 implementation news. Canonical IDs/forms, task-independent candidate routes, finishing/live-dead/canyon-versus-cave controls and remaining receipt/quote holds preserved. Three-context capture/row/constant/rank validator passes; no core admission or FP invented.
+Latest completed A97: End-of-hour validation, current navigation and ownership release. Verified predecessor `29b0e18626e30c17097158e5ed66e584e48ea6b4`. Completed A84–A96 bounded evidence/content/economy/core/publication/trace/version/build/source packets and final A97 navigation/validation. Finite core14 keys/16 hunts;43,336 rank assertions,329 historical-partial source assertions,269 economy checks,22 collector tests,12 core and14 plan mutations rejected; full-core62 real-client cases all NOT_RUN.18 authority hashes valid; original v1/source display files and production/build/workflow bytes preserved. PDF240pages saved version10 from exact135eed73/62 input hashes, later evidence/planning supplements explicitly separate. Fresh existing-plugin CI passed; local Gradle distribution network failure and missing CI artifacts persist. No open material policy adopted, no implementation or main change.
 
-Exact next action: Final validation and end-of-hour release; next bounded source work Gargoyle primary image/top-floor receipt or Shaman canyon allocation/access, with all unresolved material questions preserved.
+Exact next action: Ask the one A56 permanent ordinary invalidation question and wait before adopting. Independent next source packet: Gargoyle primary table-image/top-floor finishing-to-loot map (image web read blocked) or Shaman canyon access/personal allocation/effort. Preserve held Turoth sword estimate/necklace discrepancy; then coherent price/progression/full-economy work. Recheck remote/ownership first; no repeated rank/inventory research.
 
-Existing approved rules and explicit supersessions remain controlling. No source estimate silently certified, no unrelated retirement/task/Coffer/policy approval inferred. Active owner wb-hour-a84 under recorded lease; publish and verify before starting next bounded deliverable. Previous “next” paragraphs are historical where superseded. Owning commit requires final remote head/tree/main verification.
+Existing approved rules and explicit supersessions remain controlling. No source estimate silently certified, no unrelated retirement/task/Coffer/policy approval inferred. Owner released; no background task. Previous “next” paragraphs are historical where superseded. Owning commit requires final remote head/tree/main verification.
 
 ## Latest explicit user change — WB-D144/145
 

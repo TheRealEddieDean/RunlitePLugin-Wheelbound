@@ -1,4 +1,12 @@
-# Current ranked Challenge content — A83
+# Current ranked Challenge content — A97
+
+## Current navigation and explicit supersessions
+
+A84–A96 are complete within their bounded scopes. [Finite core](CHALLENGE_CORE_V2.md):14 canonical keys/16 hunts, rank keys4/4/3/3 and hunts4/4/5/3. All runtime flags remain false. A84 resolves the three named elemental1/64 probability holds; A85 authors four Standard contexts/quotes with Hatchling-only water form and actual-stage hold; A86 authors bounded G/S content/quotes. [A87 economy](research/RANK_ECONOMY_A87.md) remains synthetic, prices/family frequency unadopted. [A93 full-core trace plan](research/CORE_TRACE_PLAN_A93.md) has62 planned cases and zero actual traces; [A94 frozen-source handoff](research/FROZEN_SOURCE_HANDOFF_A94.md) preserves versioned commitments without settling recovery policy. [A96 candidate batch](research/BROADER_SOURCE_BATCH_A96.md) admits none of its three sources into the core.
+
+Older NOT_AUTHORED/source-ID/missing-gem-rate/next-A74–A87/only-four-positive-plan statements below are historical where these precise records supersede them. Actual owned/enabled/access/source/recipient/timing support, current-client/durable tests, broader catalog and reviewed product pricing remain unfinished. [Project workstreams](../../automation/WORKSTREAM_STATUS.md) distinguish design from playable delivery; checkpoint counts are not overall completion. A56 retirement, unselected snapshot reconciliation, task/Coffer/policy and separate legacy CA reward boundaries remain open. No new gameplay decision or implementation permission follows from this navigation refresh.
+
+## Preserved earlier checkpoint details
 
 Current2026-10-15 checkpoint supersedes older pending-source/member/quote descriptions only where explicitly listed here. Markdown decisions remain authoritative; PDF and historical summaries are not current source of truth.
 
