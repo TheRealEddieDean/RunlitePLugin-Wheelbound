@@ -1,14 +1,20 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: IDLE — hour work block complete; owner released.
+- State: ACTIVE — wb-a98-a100; bounded documentation/economy planning block.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
 - Owning A63 checkpoint contains current rules/tables/release; resolve own SHA from branch history and verify head/tree/main before saved claim. Commit cannot embed itself.
 - Scope: design/docs/research/standalone tools/wiki_drops only; no production gameplay/main/workflow activation authorized.
 
-## Current continuation — hour work block
+## Active continuation — A98–A100
+
+Owner wb-a98-a100; acquired 2026-10-16T01:54:37.003922+00:00; expires 2026-10-16T03:54:37.003922+00:00. Expected remote 8337c82416486dbdd0f51c37915a11124c2482a9; protected main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. No active owner at start.
+
+User requests approximately30 minutes of context-supported recommended documentation/planning. New answer: permanent external invalidation is niche; move on. A98 P0/XS records explicit deferral, removes the repeated blocking question, preserves Pause/Reject. A99 P1/M authors a coherent cross-system economy-input and trial plan from existing candidates, without adopting arbitrary prices. A100 P1/S validates and releases the checkpoint. Each completed deliverable is published and remotely verified before its successor. No production/main changes or live evidence claims.
+
+## Historical A97 continuation — superseded next-question navigation
 
 Latest completed A97: End-of-hour validation, current navigation and ownership release. Verified predecessor `29b0e18626e30c17097158e5ed66e584e48ea6b4`. Completed A84–A96 bounded evidence/content/economy/core/publication/trace/version/build/source packets and final A97 navigation/validation. Finite core14 keys/16 hunts;43,336 rank assertions,329 historical-partial source assertions,269 economy checks,22 collector tests,12 core and14 plan mutations rejected; full-core62 real-client cases all NOT_RUN.18 authority hashes valid; original v1/source display files and production/build/workflow bytes preserved. PDF240pages saved version10 from exact135eed73/62 input hashes, later evidence/planning supplements explicitly separate. Fresh existing-plugin CI passed; local Gradle distribution network failure and missing CI artifacts persist. No open material policy adopted, no implementation or main change.
 
