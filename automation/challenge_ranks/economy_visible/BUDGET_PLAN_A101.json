@@ -1,0 +1,430 @@
+{
+  "version": "a101-cross-system-budget-v1",
+  "status": "ILLUSTRATIVE_CANDIDATE_ARITHMETIC_NOT_GAMEPLAY_PRICES",
+  "predecessor": "ce39c550145d2d7b421932e5c471a0536b2f4079",
+  "runtime_enabled": false,
+  "rank_schedules": {
+    "compact": [
+      150,
+      300,
+      600,
+      1200
+    ],
+    "middle": [
+      250,
+      500,
+      1000,
+      2000
+    ],
+    "high": [
+      400,
+      800,
+      1600,
+      3200
+    ]
+  },
+  "competing_carts": {
+    "none": 0,
+    "third_offer": 1000,
+    "ge": 2500,
+    "satchel_6_and_10": 1050,
+    "third_offer_and_ge": 3500
+  },
+  "source_inputs": [
+    {
+      "path": "docs/wheelbound/ECONOMY.md",
+      "sha256": "03c57a38dde79a5c6f6c4f79ce75de0cf3ed26c28240f5766bf577fa75161308"
+    },
+    {
+      "path": "docs/wheelbound/PROGRESSION.md",
+      "sha256": "aee1ed75f4b3e09d708a9141c11a1f32843860e05e855c91a37ea80a74abd0cc"
+    },
+    {
+      "path": "docs/wheelbound/DEFY_FATE.md",
+      "sha256": "1eac4ec64adb5541e73c608b3701be2e08b9c7c299e317f543716b87db6c9012"
+    },
+    {
+      "path": "docs/wheelbound/CHALLENGE_RANK_PURCHASE_CONTRACT.md",
+      "sha256": "8021d0dd07630d799af20b762c38442137a76b302fad9a9800ed516cfb2b2d5a"
+    },
+    {
+      "path": "docs/wheelbound/simulation/parameters.json",
+      "sha256": "192b70e7f1cf622a3f16159f72aed74b04f00ce2c7e304ea0bf48bbcaaf4be68"
+    },
+    {
+      "path": "docs/wheelbound/simulation/h4/parameters.json",
+      "sha256": "fe6cb15a3eaf5da14d4b884ee169765c60b6b8759aa02ac9b02850d9c6b232d0"
+    }
+  ],
+  "assumptions": [
+    "500 prerequisite FP is only an ordinary card budget, not boss/tree/access unlock cost",
+    "9 hypothetical expansion keys excludes all four included Lesser bundle keys",
+    "2 reused keys is a sensitivity branch, not a published ownership map or new entitlement grant",
+    "150 per expansion and optional carts are historical candidate prices only",
+    "No income/time/FP debt/initial spins/Grand completion modeled"
+  ],
+  "rows": [
+    {
+      "rank_schedule": "compact",
+      "hypothetically_reused_target_keys": 0,
+      "competing_cart": "none",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 2250,
+      "expansion_count": 9,
+      "expansion_price": 150,
+      "expansion_total": 1350,
+      "competing_sink_total": 0,
+      "illustrative_fp_budget": 4100
+    },
+    {
+      "rank_schedule": "compact",
+      "hypothetically_reused_target_keys": 0,
+      "competing_cart": "third_offer",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 2250,
+      "expansion_count": 9,
+      "expansion_price": 150,
+      "expansion_total": 1350,
+      "competing_sink_total": 1000,
+      "illustrative_fp_budget": 5100
+    },
+    {
+      "rank_schedule": "compact",
+      "hypothetically_reused_target_keys": 0,
+      "competing_cart": "ge",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 2250,
+      "expansion_count": 9,
+      "expansion_price": 150,
+      "expansion_total": 1350,
+      "competing_sink_total": 2500,
+      "illustrative_fp_budget": 6600
+    },
+    {
+      "rank_schedule": "compact",
+      "hypothetically_reused_target_keys": 0,
+      "competing_cart": "satchel_6_and_10",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 2250,
+      "expansion_count": 9,
+      "expansion_price": 150,
+      "expansion_total": 1350,
+      "competing_sink_total": 1050,
+      "illustrative_fp_budget": 5150
+    },
+    {
+      "rank_schedule": "compact",
+      "hypothetically_reused_target_keys": 0,
+      "competing_cart": "third_offer_and_ge",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 2250,
+      "expansion_count": 9,
+      "expansion_price": 150,
+      "expansion_total": 1350,
+      "competing_sink_total": 3500,
+      "illustrative_fp_budget": 7600
+    },
+    {
+      "rank_schedule": "compact",
+      "hypothetically_reused_target_keys": 2,
+      "competing_cart": "none",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 2250,
+      "expansion_count": 7,
+      "expansion_price": 150,
+      "expansion_total": 1050,
+      "competing_sink_total": 0,
+      "illustrative_fp_budget": 3800
+    },
+    {
+      "rank_schedule": "compact",
+      "hypothetically_reused_target_keys": 2,
+      "competing_cart": "third_offer",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 2250,
+      "expansion_count": 7,
+      "expansion_price": 150,
+      "expansion_total": 1050,
+      "competing_sink_total": 1000,
+      "illustrative_fp_budget": 4800
+    },
+    {
+      "rank_schedule": "compact",
+      "hypothetically_reused_target_keys": 2,
+      "competing_cart": "ge",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 2250,
+      "expansion_count": 7,
+      "expansion_price": 150,
+      "expansion_total": 1050,
+      "competing_sink_total": 2500,
+      "illustrative_fp_budget": 6300
+    },
+    {
+      "rank_schedule": "compact",
+      "hypothetically_reused_target_keys": 2,
+      "competing_cart": "satchel_6_and_10",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 2250,
+      "expansion_count": 7,
+      "expansion_price": 150,
+      "expansion_total": 1050,
+      "competing_sink_total": 1050,
+      "illustrative_fp_budget": 4850
+    },
+    {
+      "rank_schedule": "compact",
+      "hypothetically_reused_target_keys": 2,
+      "competing_cart": "third_offer_and_ge",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 2250,
+      "expansion_count": 7,
+      "expansion_price": 150,
+      "expansion_total": 1050,
+      "competing_sink_total": 3500,
+      "illustrative_fp_budget": 7300
+    },
+    {
+      "rank_schedule": "middle",
+      "hypothetically_reused_target_keys": 0,
+      "competing_cart": "none",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 3750,
+      "expansion_count": 9,
+      "expansion_price": 150,
+      "expansion_total": 1350,
+      "competing_sink_total": 0,
+      "illustrative_fp_budget": 5600
+    },
+    {
+      "rank_schedule": "middle",
+      "hypothetically_reused_target_keys": 0,
+      "competing_cart": "third_offer",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 3750,
+      "expansion_count": 9,
+      "expansion_price": 150,
+      "expansion_total": 1350,
+      "competing_sink_total": 1000,
+      "illustrative_fp_budget": 6600
+    },
+    {
+      "rank_schedule": "middle",
+      "hypothetically_reused_target_keys": 0,
+      "competing_cart": "ge",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 3750,
+      "expansion_count": 9,
+      "expansion_price": 150,
+      "expansion_total": 1350,
+      "competing_sink_total": 2500,
+      "illustrative_fp_budget": 8100
+    },
+    {
+      "rank_schedule": "middle",
+      "hypothetically_reused_target_keys": 0,
+      "competing_cart": "satchel_6_and_10",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 3750,
+      "expansion_count": 9,
+      "expansion_price": 150,
+      "expansion_total": 1350,
+      "competing_sink_total": 1050,
+      "illustrative_fp_budget": 6650
+    },
+    {
+      "rank_schedule": "middle",
+      "hypothetically_reused_target_keys": 0,
+      "competing_cart": "third_offer_and_ge",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 3750,
+      "expansion_count": 9,
+      "expansion_price": 150,
+      "expansion_total": 1350,
+      "competing_sink_total": 3500,
+      "illustrative_fp_budget": 9100
+    },
+    {
+      "rank_schedule": "middle",
+      "hypothetically_reused_target_keys": 2,
+      "competing_cart": "none",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 3750,
+      "expansion_count": 7,
+      "expansion_price": 150,
+      "expansion_total": 1050,
+      "competing_sink_total": 0,
+      "illustrative_fp_budget": 5300
+    },
+    {
+      "rank_schedule": "middle",
+      "hypothetically_reused_target_keys": 2,
+      "competing_cart": "third_offer",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 3750,
+      "expansion_count": 7,
+      "expansion_price": 150,
+      "expansion_total": 1050,
+      "competing_sink_total": 1000,
+      "illustrative_fp_budget": 6300
+    },
+    {
+      "rank_schedule": "middle",
+      "hypothetically_reused_target_keys": 2,
+      "competing_cart": "ge",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 3750,
+      "expansion_count": 7,
+      "expansion_price": 150,
+      "expansion_total": 1050,
+      "competing_sink_total": 2500,
+      "illustrative_fp_budget": 7800
+    },
+    {
+      "rank_schedule": "middle",
+      "hypothetically_reused_target_keys": 2,
+      "competing_cart": "satchel_6_and_10",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 3750,
+      "expansion_count": 7,
+      "expansion_price": 150,
+      "expansion_total": 1050,
+      "competing_sink_total": 1050,
+      "illustrative_fp_budget": 6350
+    },
+    {
+      "rank_schedule": "middle",
+      "hypothetically_reused_target_keys": 2,
+      "competing_cart": "third_offer_and_ge",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 3750,
+      "expansion_count": 7,
+      "expansion_price": 150,
+      "expansion_total": 1050,
+      "competing_sink_total": 3500,
+      "illustrative_fp_budget": 8800
+    },
+    {
+      "rank_schedule": "high",
+      "hypothetically_reused_target_keys": 0,
+      "competing_cart": "none",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 6000,
+      "expansion_count": 9,
+      "expansion_price": 150,
+      "expansion_total": 1350,
+      "competing_sink_total": 0,
+      "illustrative_fp_budget": 7850
+    },
+    {
+      "rank_schedule": "high",
+      "hypothetically_reused_target_keys": 0,
+      "competing_cart": "third_offer",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 6000,
+      "expansion_count": 9,
+      "expansion_price": 150,
+      "expansion_total": 1350,
+      "competing_sink_total": 1000,
+      "illustrative_fp_budget": 8850
+    },
+    {
+      "rank_schedule": "high",
+      "hypothetically_reused_target_keys": 0,
+      "competing_cart": "ge",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 6000,
+      "expansion_count": 9,
+      "expansion_price": 150,
+      "expansion_total": 1350,
+      "competing_sink_total": 2500,
+      "illustrative_fp_budget": 10350
+    },
+    {
+      "rank_schedule": "high",
+      "hypothetically_reused_target_keys": 0,
+      "competing_cart": "satchel_6_and_10",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 6000,
+      "expansion_count": 9,
+      "expansion_price": 150,
+      "expansion_total": 1350,
+      "competing_sink_total": 1050,
+      "illustrative_fp_budget": 8900
+    },
+    {
+      "rank_schedule": "high",
+      "hypothetically_reused_target_keys": 0,
+      "competing_cart": "third_offer_and_ge",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 6000,
+      "expansion_count": 9,
+      "expansion_price": 150,
+      "expansion_total": 1350,
+      "competing_sink_total": 3500,
+      "illustrative_fp_budget": 11350
+    },
+    {
+      "rank_schedule": "high",
+      "hypothetically_reused_target_keys": 2,
+      "competing_cart": "none",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 6000,
+      "expansion_count": 7,
+      "expansion_price": 150,
+      "expansion_total": 1050,
+      "competing_sink_total": 0,
+      "illustrative_fp_budget": 7550
+    },
+    {
+      "rank_schedule": "high",
+      "hypothetically_reused_target_keys": 2,
+      "competing_cart": "third_offer",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 6000,
+      "expansion_count": 7,
+      "expansion_price": 150,
+      "expansion_total": 1050,
+      "competing_sink_total": 1000,
+      "illustrative_fp_budget": 8550
+    },
+    {
+      "rank_schedule": "high",
+      "hypothetically_reused_target_keys": 2,
+      "competing_cart": "ge",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 6000,
+      "expansion_count": 7,
+      "expansion_price": 150,
+      "expansion_total": 1050,
+      "competing_sink_total": 2500,
+      "illustrative_fp_budget": 10050
+    },
+    {
+      "rank_schedule": "high",
+      "hypothetically_reused_target_keys": 2,
+      "competing_cart": "satchel_6_and_10",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 6000,
+      "expansion_count": 7,
+      "expansion_price": 150,
+      "expansion_total": 1050,
+      "competing_sink_total": 1050,
+      "illustrative_fp_budget": 8600
+    },
+    {
+      "rank_schedule": "high",
+      "hypothetically_reused_target_keys": 2,
+      "competing_cart": "third_offer_and_ge",
+      "ordinary_card_prerequisite_budget": 500,
+      "rank_total": 6000,
+      "expansion_count": 7,
+      "expansion_price": 150,
+      "expansion_total": 1050,
+      "competing_sink_total": 3500,
+      "illustrative_fp_budget": 11050
+    }
+  ],
+  "validation": "30 rows recomputed; all totals conserved;2 reused keys subtract300 in every matching pair",
+  "not_executed": "No new full-mode simulation or real account traces"
+}

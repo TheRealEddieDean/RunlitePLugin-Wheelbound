@@ -1,0 +1,37 @@
+{
+  "version": "a101-final-validation-v1",
+  "predecessor": "ce39c550145d2d7b421932e5c471a0536b2f4079",
+  "starting_remote": "8337c82416486dbdd0f51c37915a11124c2482a9",
+  "authority_catalog_hashes_verified": 18,
+  "unique_decisions": 155,
+  "budget_rows": 30,
+  "new_research_links_checked": 7,
+  "protected_production_build_workflow_files_unchanged": 51,
+  "historical_a87_v1_display_core_unchanged": [
+    "automation/challenge_ranks/economy/model.py",
+    "automation/challenge_ranks/economy/run.py",
+    "automation/challenge_ranks/economy/checks.py",
+    "automation/challenge_ranks/economy/RESULTS_A87.json",
+    "docs/wheelbound/catalogs/challenge_hunts_v1.json",
+    "docs/wheelbound/catalogs/challenge_hunts_v1.csv",
+    "docs/wheelbound/catalogs/challenge_core_v2_draft.json",
+    "docs/wheelbound/MONSTER_CHALLENGE_HUNT_TABLE.md",
+    "docs/wheelbound/BOSS_CHALLENGE_HUNT_TABLE.md"
+  ],
+  "a100_check_count": 1050,
+  "rank_assertions": 43336,
+  "collector_tests": 22,
+  "core_invalid_mutations_rejected": 12,
+  "trace_plan_invalid_mutations_rejected": 14,
+  "actual_client_cases": {
+    "planned": 62,
+    "run": 0
+  },
+  "runtime_enabled": false,
+  "implementation_authorized": false,
+  "new_full_mode_simulation_executed": false,
+  "notes": [
+    "Source/hash/arithmetic/scope/link checks passed locally; owning commit still requires guarded remote publication and verification.",
+    "Current PDF unchanged at135eed73 source; later Markdown is authoritative."
+  ]
+}

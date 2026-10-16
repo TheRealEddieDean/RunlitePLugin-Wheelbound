@@ -1,20 +1,24 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — wb-a98-a100; bounded documentation/economy planning block.
+- State: IDLE — A98–A101 complete; owner released after publication.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
 - Owning A63 checkpoint contains current rules/tables/release; resolve own SHA from branch history and verify head/tree/main before saved claim. Commit cannot embed itself.
 - Scope: design/docs/research/standalone tools/wiki_drops only; no production gameplay/main/workflow activation authorized.
 
-## Active continuation — A98–A100
+## Current continuation — A101 release
 
-A98 completed against verified claim c7a37944e146ce13c9c96e7b83146a91967acb12: WB-D155 defers A56 by explicit user direction. A99 audit confirms hidden-target information leakage in historical A87; numeric choices cannot guide final prices. A100 completed separate corrected visible-offer study:43 scenarios/86,000 synthetic windows,1,050 checks. Next A101: coherent cross-system economy-input plan, validation/release; do not re-ask A56. Older next-question paragraphs below are superseded. Owner remains wb-a98-a100 until final release.
+Session wb-a98-a100 began at8337c82416486dbdd0f51c37915a11124c2482a9; protected main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. Guarded claim c7a37944e146ce13c9c96e7b83146a91967acb12, A98 user deferral83aa7f58b37bc16740b63dbc104cd22566a119b6, A99 audit21ddc97fa07fe35ba5dfa9fa0c7df7833b76b973, A100 corrected studyce39c550145d2d7b421932e5c471a0536b2f4079 verified remotely. Shell push lacks credentials; connected GitHub guarded tree/commit/ref publication works.
 
-Owner wb-a98-a100; acquired 2026-10-16T01:54:37.003922+00:00; expires 2026-10-16T03:54:37.003922+00:00. Expected remote 8337c82416486dbdd0f51c37915a11124c2482a9; protected main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. No active owner at start.
+Completed: WB-D155 explicit user direction to move on from niche A56 permanent invalidation. It is DEFERRED_BY_USER, not approved/rejected, not a blocking next question; preserve Pause/Reject. A99 found A87 hidden-target choice leakage and marked historical interpretation limits. A100 separate visible-rank model chooses first, reveals selected creature/item afterward;43 scenarios/86,000 synthetic windows and1,050 checks. A10130 candidate budget sums and combined economy plan with A102–A107 bounded follow-ons. No numeric prices, q or new gameplay rule adopted; no full-mode simulation/live test performed.
 
-User requests approximately30 minutes of context-supported recommended documentation/planning. New answer: permanent external invalidation is niche; move on. A98 P0/XS records explicit deferral, removes the repeated blocking question, preserves Pause/Reject. A99 P1/M authors a coherent cross-system economy-input and trial plan from existing candidates, without adopting arbitrary prices. A100 P1/S validates and releases the checkpoint. Each completed deliverable is published and remotely verified before its successor. No production/main changes or live evidence claims.
+Validation:43,336 rank assertions;12 core mutations and14 trace-plan mutations rejected;22 collector tests;1,050 A100 checks;18 authority hashes; historical A87 model/results and v1/source display/core/production/build/workflow bytes preserved against starting remote. All62 client cases remain NOT_RUN. See A100 validation receipt and A101 final receipt for exact executed scope. Derived PDF remains version10/source135eed73, not refreshed for this block.
+
+Exact next action: Recheck remote/ownership, then A102 ordinary XP/KC/quest quantity/reward table draft per research/FULL_ECONOMY_PLAN_A101.md. Use context-supported recommendations; no production coding. Follow with explicit normal-boss→Challenge entitlement reuse/product/gate mapping before a combined economy model. Source expansion remains independent (Gargoyle primary image/Shaman canyon packet; Turoth conflicts held). Do not restart inventories, re-ask resolved ranks or re-ask deferred A56. Separate Coffer/policy/task/reconciliation/legacy CA evidence/scope remains untouched.
+
+Owner released; no active/background task. Owning A101 commit must be resolved from history and exact head/tree/main verified before claiming remotely saved. Uncommitted work should be empty after verification. All older next paragraphs below are historical where superseded by this continuation.
 
 ## Historical A97 continuation — superseded next-question navigation
 

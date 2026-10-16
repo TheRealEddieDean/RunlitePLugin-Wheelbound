@@ -1,4 +1,6 @@
 # Wheelbound source of truth
+
+Current continuation A101: [corrected visible-card economy study](research/RANK_ECONOMY_VISIBLE_A100.md) and [combined progression/economy plan](research/FULL_ECONOMY_PLAN_A101.md). A56 rare permanent invalidation is deferred by user (WB-D155), not the next blocking question. A102 ordinary quantity/reward draft is next; no production implementation is authorized.
 Recovery checkpoint: 2026-10-10. Branch: wheelbound-mode. Documentation only; implementation is not authorized.
 
 Read [DECISIONS](DECISIONS.md) before changing mechanics, then [BLUEPRINT](BLUEPRINT.md). Current user instructions override historical proposals. CONFIRMED gameplay means supported by direct current instruction or retrieved user decision. Technical-evidence records explicitly identify source inspection and must not be mistaken for user approval. UNVERIFIED means recoverable intent without accessible approval evidence. BALANCE_TBD and TECHNICAL_TBD remain open, not implementation defaults.

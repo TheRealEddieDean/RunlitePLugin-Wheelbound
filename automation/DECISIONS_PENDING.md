@@ -1,5 +1,7 @@
 # Major decisions pending
 
+Current A101 next task: A102 ordinary quantity/reward table draft under existing recommendation delegation. Numeric schedules remain draft; coherent economy work is active next priority. Do not re-ask A56 (WB-D155). A99/A100 correct a research-model information boundary without a new gameplay decision; all62 client cases remain NOT_RUN.
+
 ## Current A98 — permanent-invalidation proposal deferred by user
 
 WB-D155 records the user's answer: “This is very niche and i dont think will come up, move on”. A56 is DEFERRED_BY_USER, not approved or rejected. Stop presenting it as the next blocking question; reopen only at the user's request or if a concrete case requires it. Existing immutable assignments, Pause/Reject and no-reroll rules remain. No retirement, refund, free spin or new fallback is adopted. Changed-unselected-snapshot reconciliation remains separately open.

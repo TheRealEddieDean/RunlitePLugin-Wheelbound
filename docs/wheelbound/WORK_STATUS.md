@@ -1,5 +1,9 @@
 # Work status and deterministic resume
 
+## Current A101 continuation
+
+A98 records WB-D155 user deferral; A99 audits hidden-target information leakage; A100 separately corrects visible-card choices and executes43 scenarios/86,000 synthetic windows with1,050 checks. A101 supplies30 illustrative budget sums and a [combined economy plan](research/FULL_ECONOMY_PLAN_A101.md). Next A102 ordinary quantity/reward draft, then explicit product/reuse mapping. No price adoption, actual-client evidence or implementation. Older next-question text is historical where superseded here.
+
 ## Current A98 — permanent-invalidation proposal deferred by user
 
 WB-D155 records the user's answer: “This is very niche and i dont think will come up, move on”. A56 is DEFERRED_BY_USER, not approved or rejected. Stop presenting it as the next blocking question; reopen only at the user's request or if a concrete case requires it. Existing immutable assignments, Pause/Reject and no-reroll rules remain. No retirement, refund, free spin or new fallback is adopted. Changed-unselected-snapshot reconciliation remains separately open.

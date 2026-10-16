@@ -260,3 +260,7 @@ P1/S; verified predecessor83aa7f58b37bc16740b63dbc104cd22566a119b6. Confirmed A8
 ## A100 — DONE: Corrected visible-card economy model and bounded sensitivity
 
 P1/M; verified predecessor21ddc97fa07fe35ba5dfa9fa0c7df7833b76b973. New economy_visible version chooses only from public rank/pool expectations then reveals the selected target.43 scenarios/86,000 synthetic windows,1,050 checks; old A87 model/results unchanged. Re-pinned current decision register for WB-D155 and reran43,336 rank checks,12 core mutations/14 trace-plan mutations rejected,22 collector tests passed. All62 client cases NOT_RUN; no prices/gameplay changes. Next A101: cross-system economy-input/trial plan and final release. Owning publication requires remote/tree/main verification.
+
+## A101 — DONE: Cross-system economy budget, ordered plan and release
+
+P1/S; verified predecessorce39c550145d2d7b421932e5c471a0536b2f4079.30 illustrative budget sums across3 rank ladders/2 reuse assumptions/5 competing carts; sums and300FP reuse differences checked. Full-economy input matrix separates existing authority/candidates/gaps; A102–A107 bounded deliverables ordered. Next A102 ordinary quantity/reward draft; all prices unadopted, A56 deferred, source/client/production gates preserved. Final source/hash/links/scope checks and guarded publication required before saved claim. Owning commit releases owner; no background work.

@@ -1,5 +1,5 @@
 {
-  "version": "workstreams-a98-user-deferral",
+  "version": "workstreams-a101-visible-economy-plan",
   "scope": "Project workstream register, not fixed-size checkpoint count or overall completion percentage",
   "project_completion_percent": null,
   "checkpoint_count_is_not_delivery_progress": true,
@@ -41,9 +41,9 @@
       "id": "WB-W05",
       "workstream": "Prices, income and full-mode economy",
       "status": "PARTIAL_SENSITIVITY",
-      "source": "ECONOMY; A81/A87; H4",
+      "source": "ECONOMY; A99 audit; A100 corrected study; A101 combined plan",
       "exit_criteria": "Version coherent purchase/spend/reward/initial-allotment/Defy/GP-to-spin candidates; compare run/spin/expense choices before final adoption.",
-      "next_or_limit": "A87 models a slice and omits major special/bounty/real-progression mechanics."
+      "next_or_limit": "A10043 scenarios/86000 synthetic windows correct hidden-information choice. A10130 budget sums and ordered next packets; full-mode integration still unfinished. Next A102 ordinary quantity/reward table draft."
     },
     {
       "id": "WB-W06",
