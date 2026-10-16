@@ -49,3 +49,7 @@ Animation can yield/resume without consuming a new spin or drawing a replacement
 | Zero spins and empty pools | No spin refill or bypass of existing Defy/Grand gates |
 
 Source/access/client proof, Java persistence and runtime tests remain future gated work. Historical simulations/oracles are not rewritten by these new policy decisions.
+
+## A98 deferral — WB-D155
+
+The user deferred the rare permanent external invalidation proposal and asked to move on. It is not a blocking next question and is not adopted. Existing committed-target preservation, Pause/Reject and no-reroll rules continue. Separate changed-unselected-snapshot reconciliation remains open; no new refund or spin release is authorized.

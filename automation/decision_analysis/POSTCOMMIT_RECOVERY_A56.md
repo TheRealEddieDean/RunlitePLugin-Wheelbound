@@ -1,5 +1,7 @@
 # A56 — Q6 postcommit recovery boundary
 
+> A98 / WB-D155: DEFERRED_BY_USER, NOT_ADOPTED. The user called this niche and asked to move on. The question/instructions below are historical, not the current continuation. Preserve existing Pause/Reject; do not repeatedly prompt for this exception.
+
 Planning only,2026-10-13 America/Chicago. Starting verified checkpoint `d2cb5db13b95254f4444f5e8789972fc9376c3b7`, tree `7e9f0a3a6ba5665fcb52547443d28bb0648bf7d1`; guarded claim `bb940943496720f718d0433346376380d403e1be`. [Sixteen-case planning matrix](POSTCOMMIT_RECOVERY_A56.json). No runtime tests, fixtures/model executions or new adopted decisions.
 
 ## Existing rules and the actual remaining gap

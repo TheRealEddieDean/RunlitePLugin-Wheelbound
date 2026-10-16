@@ -1,5 +1,12 @@
 # Consequential questions for return
 
+## Current A98 — permanent-invalidation proposal deferred by user
+
+WB-D155 records the user's answer: “This is very niche and i dont think will come up, move on”. A56 is DEFERRED_BY_USER, not approved or rejected. Stop presenting it as the next blocking question; reopen only at the user's request or if a concrete case requires it. Existing immutable assignments, Pause/Reject and no-reroll rules remain. No retirement, refund, free spin or new fallback is adopted. Changed-unselected-snapshot reconciliation remains separately open.
+
+Next authorized work is coherent progression/economy planning using existing candidates, with source/client holds preserved. No implementation authorization.
+
+
 Current project delivery status: [workstreams](../../automation/WORKSTREAM_STATUS.md). Earlier completed checkpoint/checklist items describe their stated scope; they do not mean the mode is implemented. Latest DECISIONS and explicit supersessions control older question wording.
 
 Routine technical selections are delegated, not historical approvals. Implementation is not authorized in the current session; future local state-engine work requires explicit authorization.

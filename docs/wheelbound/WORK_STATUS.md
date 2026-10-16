@@ -1,5 +1,12 @@
 # Work status and deterministic resume
 
+## Current A98 — permanent-invalidation proposal deferred by user
+
+WB-D155 records the user's answer: “This is very niche and i dont think will come up, move on”. A56 is DEFERRED_BY_USER, not approved or rejected. Stop presenting it as the next blocking question; reopen only at the user's request or if a concrete case requires it. Existing immutable assignments, Pause/Reject and no-reroll rules remain. No retirement, refund, free spin or new fallback is adopted. Changed-unselected-snapshot reconciliation remains separately open.
+
+Next authorized work is coherent progression/economy planning using existing candidates, with source/client holds preserved. No implementation authorization.
+
+
 Current checkpoint2026-10-13 (America/Chicago). Branch wheelbound-mode; protected main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. Source of truth: committed Markdown/explicit supersession records. PDF version9 remains stale; A33 unfinished.
 
 Recovered research and130,080 historical synthetic trajectories remain intact. Current decision register has141 unique entries; WB-D132 records explicit current delegation, WB-D133–137 were explicitly confirmed2026-10-13 after their in-game explanation; WB-D138/139 are next adopted delegated recommendations, not historical approvals. A46 remote c5baba520228ffa85b541e742459a27039bdbd9e verified; A47 owning commit adds [Challenge assignment contract](CHALLENGE_ASSIGNMENT_CONTRACT.md), personal-rate context, post-card reveal, uniform creature/item draw and non-consuming completion. Observe final owning SHA from branch history/SESSION_STATE; it cannot be embedded in itself.

@@ -1603,3 +1603,12 @@ WB-D140/141 are adopted authoring recommendations, not confirmations of reported
 - Source scope: actual item-linked captured Jagex rate statements or explicit captured Jagex-provided source model; semantic distinctions and mediated provenance in A86. No historical tweet refetch/current-client probability experiment claimed. Preserve original normal repeatable off-task/solo routes and exact item/source/form restrictions.
 - Quotes: reauthor existing source-specific throughput/formula into a new draft version; arithmetic equals prior numeric quotes but does not mutate/reprice v1 grants or assignments. Tier labels do not imply relative time/difficulty. No extra starter targets or ordinary boss unlocks.
 - Boundaries: remaining36 old hunts stay outside this bounded promotion; current Turoth necklace official/cached rate discrepancy is held. No guessed alternative/range, source-condition waiver, product price or automatic migration. Runtime/client access/receipt/transaction gates remain required.
+
+## WB-D155 - Defer rare permanent ordinary-Fate invalidation proposal
+
+- Status: CONFIRMED workflow/scope direction,2026-10-15 America/Chicago; proposed gameplay exception remains DEFERRED_BY_USER / NOT_ADOPTED.
+- Source: current answer to A56 recommendation: “This is very niche and i dont think will come up, move on”.
+- Decision: move on from A56; do not repeatedly ask or make its resolution a prerequisite for unrelated design/research. Preserve the proposal as historical analysis, available only if the user revisits it or a concrete case requires review.
+- Preserved rules: committed assignments remain immutable; existing free Pause and ordinary Reject retain their approved costs/consequences. No no-fault retirement, refund, extra spin, reward or automatic replacement is approved. This answer does not reject every possible future recovery design.
+- Supersession: replaces A97 and older navigation directing the next session to ask A56 and wait. Separate changed-unselected-snapshot, task-continuation, Coffer/policy and legacy CA scope are not answered.
+- Acceptance: current continuation does not solicit A56 again; no production code or retirement implementation; independent economy/progression planning continues.

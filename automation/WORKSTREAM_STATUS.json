@@ -1,5 +1,5 @@
 {
-  "version": "workstreams-a97-final-hour",
+  "version": "workstreams-a98-user-deferral",
   "scope": "Project workstream register, not fixed-size checkpoint count or overall completion percentage",
   "project_completion_percent": null,
   "checkpoint_count_is_not_delivery_progress": true,
@@ -48,10 +48,10 @@
     {
       "id": "WB-W06",
       "workstream": "Postcommit recovery and immutable offers",
-      "status": "DECISION_AND_TECHNICAL_OPEN",
-      "source": "A56; UNAVAILABLE_SELECTION_CONTRACT",
-      "exit_criteria": "Settle narrow permanent-invalidation proposal and changed-unselected-snapshot reconciliation without granting general rerolls.",
-      "next_or_limit": "A56 remains proposed; no current authorization to infer an answer."
+      "status": "PARTIAL_TECHNICAL_OPEN_RARE_EXCEPTION_DEFERRED",
+      "source": "WB-D155; A56; UNAVAILABLE_SELECTION_CONTRACT",
+      "exit_criteria": "Preserve immutable commitments and reconcile changed unselected snapshots without general rerolls; no new rare retirement exception required for independent work.",
+      "next_or_limit": "User directed move on from niche A56; do not repeatedly ask. Existing Pause/Reject remains; changed-unselected snapshot reconciliation separate."
     },
     {
       "id": "WB-W07",

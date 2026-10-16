@@ -1,5 +1,12 @@
 # Major decisions pending
 
+## Current A98 — permanent-invalidation proposal deferred by user
+
+WB-D155 records the user's answer: “This is very niche and i dont think will come up, move on”. A56 is DEFERRED_BY_USER, not approved or rejected. Stop presenting it as the next blocking question; reopen only at the user's request or if a concrete case requires it. Existing immutable assignments, Pause/Reject and no-reroll rules remain. No retirement, refund, free spin or new fallback is adopted. Changed-unselected-snapshot reconciliation remains separately open.
+
+Next authorized work is coherent progression/economy planning using existing candidates, with source/client holds preserved. No implementation authorization.
+
+
 ## Current A97 continuation — read before historical notes
 
 Rank topology WB-D147 is confirmed and WB-D148–154 integration/finite content authoring is complete within documented scope. No resolved rank question should be re-asked. A89 core has14 keys/16 hunts; A93 has62 future client cases, all NOT_RUN. Numeric prices/family schedule remain unadopted; candidate source rows and reference throughput are not actual-client support. PDF version10 is a saved derivative of135eed73, with later A93–A96 planning/evidence supplements outside that snapshot.

@@ -11,7 +11,7 @@ Current: **design/documentation/research only; production implementation is not 
 | WB-W03 | Actual game-access and identity predicates | PARTIAL_SOURCE_MAPPING | Validate initialized skill/quest/stage/region/method/source identity for selected contexts with positive/negative traces. |
 | WB-W04 | Ordinary/skilling/boss/quest progression tables | PARTIAL_DESIGN | Freeze XP/KC/reward bands, quest-tier mappings/peer gates and missing mastery thresholds against approved rules. |
 | WB-W05 | Prices, income and full-mode economy | PARTIAL_SENSITIVITY | Version coherent purchase/spend/reward/initial-allotment/Defy/GP-to-spin candidates; compare run/spin/expense choices before final adoption. |
-| WB-W06 | Postcommit recovery and immutable offers | DECISION_AND_TECHNICAL_OPEN | Settle narrow permanent-invalidation proposal and changed-unselected-snapshot reconciliation without granting general rerolls. |
+| WB-W06 | Postcommit recovery and immutable offers | DECISION_AND_TECHNICAL_OPEN | A56 deferred by user (WB-D155); preserve Pause/Reject. Changed-unselected-snapshot reconciliation remains open; no general rerolls. |
 | WB-W07 | Forced Coffer and account-mode boundaries | EVIDENCE_BLOCKED | Prove supported donation/quote/recipient/balance/order/failure/headroom behavior; then settle genuine unsupported/full boundary. |
 | WB-W08 | Exact restrictive-control policy and routes | REVIEW_AND_EVIDENCE_OPEN | Validate exact shop/GE/trade behavior and current policy/route coverage; request a specific external review only when authorized. |
 | WB-W09 | Separate legacy CA reward scope | MATERIAL_SCOPE_OPEN | Clarify separately retained boss-mastery/diary reward scope without conflating Master Grand hilt5 or item bounties. |
