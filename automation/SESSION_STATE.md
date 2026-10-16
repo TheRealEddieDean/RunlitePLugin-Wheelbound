@@ -10,7 +10,7 @@
 
 ## Active continuation — A98–A100
 
-A98 completed against verified claim c7a37944e146ce13c9c96e7b83146a91967acb12: WB-D155 defers A56 by explicit user direction. Current next task: bounded cross-system economy study audit/plan; do not re-ask A56. Older next-question paragraphs below are superseded. Owner remains wb-a98-a100 until final release.
+A98 completed against verified claim c7a37944e146ce13c9c96e7b83146a91967acb12: WB-D155 defers A56 by explicit user direction. A99 audit confirms hidden-target information leakage in historical A87; numeric choices cannot guide final prices. Next A100: separate corrected visible-offer study and noninterference checks; do not re-ask A56. Older next-question paragraphs below are superseded. Owner remains wb-a98-a100 until final release.
 
 Owner wb-a98-a100; acquired 2026-10-16T01:54:37.003922+00:00; expires 2026-10-16T03:54:37.003922+00:00. Expected remote 8337c82416486dbdd0f51c37915a11124c2482a9; protected main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. No active owner at start.
 

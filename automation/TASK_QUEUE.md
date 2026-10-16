@@ -252,3 +252,7 @@ Verified predecessor `29b0e18626e30c17097158e5ed66e584e48ea6b4`. Completed A84�
 ## A98 — DONE: Explicit deferral and current navigation
 
 P0/XS; dependency verified claim c7a37944e146ce13c9c96e7b83146a91967acb12. WB-D155 records user direction to move on from niche permanent-invalidation. Current question/selection/workstream navigation supersedes A97; proposal remains unadopted, Pause/Reject unchanged. Validation: unique decision IDs, parseable workstream JSON, scoped Markdown/JSON diff and no production/main changes. Owning commit requires exact remote/tree/main verification. Next A99: audit existing economy model against visible-offer contract before choosing new balance work.
+
+## A99 — DONE: Economy model information-boundary audit
+
+P1/S; verified predecessor83aa7f58b37bc16740b63dbc104cd22566a119b6. Confirmed A87 draws target/item before card selection and exposes exact hidden effort/reward to strategy. Audit JSON/Markdown pin historical model/results; interpretation banner does not rewrite them. Existing accounting evidence remains scoped, prices unadopted. Validated source expressions/contracts, JSON and unchanged old model/results. Next A100: separately version corrected visible-card selection study with meaningful hidden-RNG noninterference checks. Owning commit requires remote/tree/main verification.

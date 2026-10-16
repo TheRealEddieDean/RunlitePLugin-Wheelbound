@@ -1,5 +1,7 @@
 # Ordinary-income, ownership and source-access economy study — A87
 
+> A99 audit: historical model exposes the realised hidden hunt to its card-choice policies, contrary to WB-D135/136/149. Choice-dependent numeric outcomes are not compliant strategy results. Preserve these executed historical outputs; see A99 audit record and corrected A100 study.
+
 A reproducible43-scenario/86,000-account **synthetic sensitivity study**,2,000 seeded accounts each, using the authored four-rank core content. It is not a real-account forecast or final economy. Model/source hashes, scenario parameters, summaries and representative ledgers are in automation/challenge_ranks/economy/RESULTS_A87.json. The separate269-assertion suite checks accounting/replay, unquoted horizon censoring, underfloor pools, shared target purchases and explicit lower-rank opt-in. No production code, API or live client was exercised.
 
 ## Assumptions, not adopted rules

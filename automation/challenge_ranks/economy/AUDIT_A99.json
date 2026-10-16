@@ -1,0 +1,30 @@
+{
+  "version": "a99-economy-information-audit-v1",
+  "status": "CONFIRMED_MODEL_CONTRACT_MISMATCH",
+  "runtime_enabled": false,
+  "predecessor": "83aa7f58b37bc16740b63dbc104cd22566a119b6",
+  "historical_model_sha256": "8a3ab911c6edec89dd130d0ab5bfb1d0cbd8b3d6b5d1a7f87832799c0e389a0b",
+  "historical_results_sha256": "fe60379dad37380c492004932f157a6f2975395fbf83505f6d445eadfd07c7c7",
+  "findings": [
+    {
+      "id": "A99-F01",
+      "severity": "material_for_interpreting_choice_results",
+      "source": "automation/challenge_ranks/economy/model.py:card/selection",
+      "observed": "Specific creature/item and exact reward/reference effort are drawn before selection and included in offers passed to choice policy.",
+      "required": "WB-D135/136/149: choose visible rank card before drawing/revealing exact creature/item.",
+      "impact": "Shortest and highest-FP strategies exploit hidden future target data. Highest-rank tie-break can also use hidden exact reward. Published A87 choice/acceptance/readiness/FP summaries cannot establish compliant player outcomes.",
+      "disposition": "Preserve historical results; mark superseded for compliant choice interpretation; make a separately versioned corrected study."
+    }
+  ],
+  "unchanged_findings": [
+    "FP accounting checks remain scoped evidence of their actual historical model",
+    "Ownership and readiness are distinct by approved contract independently of simulation",
+    "Geometric dry tails are not a gameplay cap",
+    "Numeric prices, q, ordinary income and access profiles remain hypotheses"
+  ],
+  "follow_on": {
+    "id": "A100",
+    "deliverable": "Separate visible-rank model; public-information-only selection, target draw after selected card, seeded replay/noninterference checks and bounded sensitivity results",
+    "gate": "Do not retune or adopt prices from old hidden-information result"
+  }
+}
