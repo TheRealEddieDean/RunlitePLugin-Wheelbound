@@ -86,3 +86,7 @@ All44 [boss drop table](BOSS_CHALLENGE_HUNT_TABLE.md) and [monster drop table](M
 ## A80 partial v2 starter quote supersession — WB-D152
 
 [Starter effort/quotes](research/STARTER_EFFORT_QUOTES_A80.md) now supplies authored fixed draft rewards125/125/150/150 FP for Minotaur/Flesh Crawler/Catablepon/Ankou. Earlier missing-A80-quotes wording is superseded for those four only. Throughput is authored, not measured; prices/client gates and full four-rank content remain unfinished. No historical repricing or runtime enablement.
+
+## Current economy evidence — A99/A100
+
+A99 found hidden-target information leakage in historical A87 card choices. Its executed output remains historical; do not use choice-dependent figures to finalize prices. [A100 corrected visible-card study](research/RANK_ECONOMY_VISIBLE_A100.md) executes43 scenarios/86,000 synthetic windows and1,050 checks with target draw after card selection. Numeric prices and q remain hypotheses; ordinary progression, competing sinks, bounty/Defy/GP economy and real-client support still require coherent follow-on work. No approved rule/reward or existing assignment is changed.

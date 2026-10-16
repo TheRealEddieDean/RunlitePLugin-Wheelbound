@@ -256,3 +256,7 @@ P0/XS; dependency verified claim c7a37944e146ce13c9c96e7b83146a91967acb12. WB-D1
 ## A99 — DONE: Economy model information-boundary audit
 
 P1/S; verified predecessor83aa7f58b37bc16740b63dbc104cd22566a119b6. Confirmed A87 draws target/item before card selection and exposes exact hidden effort/reward to strategy. Audit JSON/Markdown pin historical model/results; interpretation banner does not rewrite them. Existing accounting evidence remains scoped, prices unadopted. Validated source expressions/contracts, JSON and unchanged old model/results. Next A100: separately version corrected visible-card selection study with meaningful hidden-RNG noninterference checks. Owning commit requires remote/tree/main verification.
+
+## A100 — DONE: Corrected visible-card economy model and bounded sensitivity
+
+P1/M; verified predecessor21ddc97fa07fe35ba5dfa9fa0c7df7833b76b973. New economy_visible version chooses only from public rank/pool expectations then reveals the selected target.43 scenarios/86,000 synthetic windows,1,050 checks; old A87 model/results unchanged. Re-pinned current decision register for WB-D155 and reran43,336 rank checks,12 core mutations/14 trace-plan mutations rejected,22 collector tests passed. All62 client cases NOT_RUN; no prices/gameplay changes. Next A101: cross-system economy-input/trial plan and final release. Owning publication requires remote/tree/main verification.

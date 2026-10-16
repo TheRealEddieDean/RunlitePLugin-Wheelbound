@@ -1,5 +1,5 @@
 {
-  "version": "rank-contract-hour-source-v5",
+  "version": "rank-contract-a100-user-deferral-v6",
   "scope": "Synthetic design contract inputs only; no runtime source/client proof",
   "sources": [
     {
@@ -8,7 +8,7 @@
     },
     {
       "path": "docs/wheelbound/DECISIONS.md",
-      "sha256": "dbdbab6aa97a8ecf396ce1c2d4d02c99666f1d5d99fe167ad771afc30e5326df"
+      "sha256": "ac51b17759a02b0ab977fb92b1b55ed2280ca49b3e5aa9fa037d81c4b8fdb17f"
     },
     {
       "path": "docs/wheelbound/catalogs/challenge_rank_contract_v1.json",
@@ -31,5 +31,5 @@
       "sha256": "b48c8a4460e8a05765c0c6b5e07d2b800ad309677de3cf1f75780e6ed3f0dbaa"
     }
   ],
-  "update_reason": "A97 current readiness navigation supersedes historical missing-content/source-rate/trace-plan summaries; no rank rules/model changed"
+  "update_reason": "WB-D155 defers rare invalidation; ranked gameplay rules unchanged; revalidate current decision register intentionally."
 }

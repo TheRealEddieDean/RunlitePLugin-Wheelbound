@@ -1,0 +1,26 @@
+{
+  "version": "a100-validation-v1",
+  "checks": 1050,
+  "status": "PASS_OFFLINE_ONLY",
+  "actual_client": "NOT_RUN",
+  "inputs": [
+    {
+      "path": "automation/challenge_ranks/economy_visible/model.py",
+      "sha256": "d06d00b1af9575a4a25809e4856f2c81acefa8b02d2b1ac3646010ac17402269"
+    },
+    {
+      "path": "automation/challenge_ranks/economy_visible/run.py",
+      "sha256": "fb436eb4454fc310580a2eb2746f37f45093f5bf80e6f280ae1a26d3132ede49"
+    },
+    {
+      "path": "automation/challenge_ranks/economy_visible/checks.py",
+      "sha256": "594d65938595ea3f1b651a04384db93485c00b00e83762ed9a17f81de8694820"
+    },
+    {
+      "path": "automation/challenge_ranks/economy_visible/RESULTS_A100.json",
+      "sha256": "eba976ca44e9480a852c0fbed45c1770b907a37b156bfe93ede413ec723fc87c"
+    }
+  ],
+  "historical_a87_unchanged": true,
+  "runtime_enabled": false
+}
