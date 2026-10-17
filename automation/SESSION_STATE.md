@@ -1,14 +1,18 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: IDLE — A98–A101 complete; owner released after publication.
+- State: ACTIVE — wb-ui-gf4; documentation/reference selection only.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
 - Owning A63 checkpoint contains current rules/tables/release; resolve own SHA from branch history and verify head/tree/main before saved claim. Commit cannot embed itself.
 - Scope: design/docs/research/standalone tools/wiki_drops only; no production gameplay/main/workflow activation authorized.
 
-## Current continuation — A101 release
+## Active UI-GF4 selection checkpoint
+
+Owner wb-ui-gf4; acquired 2026-10-17T02:36:06.098258+00:00; expires 2026-10-17T03:36:06.098258+00:00. Verified remote a6e1d0d533c7e33191932890d87008fba42a16ac; main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. User selects GF4 for now and asks to save to GitHub with RuneLite image rules. Scope: preserve selected original PNG under docs only, record design approval/taint clarification, source current image requirements; no runtime artwork/code change. No prior active owner.
+
+## Historical A101 release
 
 Session wb-a98-a100 began at8337c82416486dbdd0f51c37915a11124c2482a9; protected main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. Guarded claim c7a37944e146ce13c9c96e7b83146a91967acb12, A98 user deferral83aa7f58b37bc16740b63dbc104cd22566a119b6, A99 audit21ddc97fa07fe35ba5dfa9fa0c7df7833b76b973, A100 corrected studyce39c550145d2d7b421932e5c471a0536b2f4079 verified remotely. Shell push lacks credentials; connected GitHub guarded tree/commit/ref publication works.
 
