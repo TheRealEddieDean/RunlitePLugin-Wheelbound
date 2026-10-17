@@ -1,5 +1,5 @@
 {
-  "version": "rank-contract-a100-user-deferral-v6",
+  "version": "rank-contract-gf4-visual-baseline-v7",
   "scope": "Synthetic design contract inputs only; no runtime source/client proof",
   "sources": [
     {
@@ -8,7 +8,7 @@
     },
     {
       "path": "docs/wheelbound/DECISIONS.md",
-      "sha256": "ac51b17759a02b0ab977fb92b1b55ed2280ca49b3e5aa9fa037d81c4b8fdb17f"
+      "sha256": "69c98c11b4494efeea8edaba732d42e1198690605b5bdf9c1b955c3049bc374b"
     },
     {
       "path": "docs/wheelbound/catalogs/challenge_rank_contract_v1.json",
@@ -31,5 +31,5 @@
       "sha256": "b48c8a4460e8a05765c0c6b5e07d2b800ad309677de3cf1f75780e6ed3f0dbaa"
     }
   ],
-  "update_reason": "WB-D155 defers rare invalidation; ranked gameplay rules unchanged; revalidate current decision register intentionally."
+  "update_reason": "Re-pin current decision register for visual-only WB-D156 and existing Taint slice clarification WB-D157; no ranked contract changes."
 }

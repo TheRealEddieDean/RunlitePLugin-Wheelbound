@@ -433,3 +433,7 @@ P1/M; verified predecessor21ddc97fa07fe35ba5dfa9fa0c7df7833b76b973. New economy_
 ## A101 — DONE: Cross-system economy budget, ordered plan and release
 
 P1/S; verified predecessorce39c550145d2d7b421932e5c471a0536b2f4079.30 illustrative budget sums across3 rank ladders/2 reuse assumptions/5 competing carts; sums and300FP reuse differences checked. Full-economy input matrix separates existing authority/candidates/gaps; A102–A107 bounded deliverables ordered. Next A102 ordinary quantity/reward draft; all prices unadopted, A56 deferred, source/client/production gates preserved. Final source/hash/links/scope checks and guarded publication required before saved claim. Owning commit releases owner; no background work.
+
+## UI-GF4 — selected visual reference and constraints (P0/S)
+
+Verified claim049316fdf2510fb596af1a806b0d04fca1b24ac9. WB-D156 selected GF4 for now; original1,666,269-byte PNG/hash/provenance retained under docs only. WB-D157 confirms separate Taint slice. Official listing-icon48×72/JAR-resource guidance checked, separate from recommendations. Validate original blob/hash, decision uniqueness, Markdown links, current rank manifest and protected-source equality; guarded publication/remote verification required. Owner released in owning checkpoint. No runtime/main changes. A102 reserved ordinary reward work remains independent.

@@ -79,3 +79,5 @@ User-authorized research collector: [tools/wiki_drops README](../../tools/wiki_d
 ## Current A74–A83 content checkpoint
 
 [Current content status](CHALLENGE_CONTENT_STATUS.md) supersedes older missing-identity/member/A80-quote descriptions: four Stronghold Lesser draft sources and FP are authored; elemental identities are pinned, three gem probability holds remain. Price/frequency candidates are unadopted, client tests NOT_RUN, full four-rank content unfinished and runtime disabled. Read that status before selecting the next task; do not repeat A67 inventory or resolved rank design.
+
+Selected UI baseline: [Grand Fate GF4](design/GRAND_FATE_GF4.md), WB-D156. Taint remains its own special slice, WB-D157.

@@ -78,3 +78,7 @@ WB-D140/141: prioritize repeatable task-independent starter contexts; hold finit
 ## Current ranked Challenge offering — WB-D149
 
 [Rank offering contract](CHALLENGE_RANK_OFFER_CONTRACT.md) preserves two/three total slots and one Challenge family. Each Challenge offer uniformly commits a ready enabled rank before display; player selects the visible rank card, then uniform canonical creature/item within it. Require≥3 actually eligible canonical keys **within that rank**, supported context and reviewed v2 quote. Extra ranks divide the existing family share; no fourfold family boost, extra slots, rank picker or forced distinct rank offers. Numeric family weights remain BALANCE_TBD. Frozen offers/settings/pools do not refresh on restore. This supersedes older rank/floor/offer-integration proposals only; production is disabled.
+
+## Current selected Grand Fate style — WB-D156/157
+
+[GF4 reference and RuneLite image constraints](design/GRAND_FATE_GF4.md) is the user-selected current Grand Fate baseline: restrained OSRS-like red slices, iron chain ring, perimeter skulls and spikes. No production asset or other wheel approved. Generated tainted ordinary activity wedges are not gameplay authority: Taint is its own special slice.

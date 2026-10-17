@@ -1,0 +1,21 @@
+{
+  "version": "gf4-selected-reference-v1",
+  "decision": "WB-D156",
+  "taint_clarification": "WB-D157",
+  "status": "USER_SELECTED_VISUAL_BASELINE_NOT_RUNTIME",
+  "path": "references/grand-fate-gf4-selected.png",
+  "sha256": "845c1d815fa388039de1cde62355f7ea2724269344e05430a9cca0eca47c2cf7",
+  "git_blob": "98e140f1957fabdc27edf006ba90fedd10ee84a7",
+  "width": 1215,
+  "height": 1295,
+  "bytes": 1666269,
+  "provenance": "AI-generated GF4 Double Chain concept selected in current conversation",
+  "runtime_enabled": false,
+  "source": "https://github.com/runelite/plugin-hub",
+  "source_checked_local_date": "2026-10-16",
+  "official_listing_icon_max_pixels": [
+    48,
+    72
+  ],
+  "no_global_overlay_image_size_limit_inferred": true
+}

@@ -1,16 +1,18 @@
 # Wheelbound session checkpoint and ownership
 
 - Session ID: wb-20261014-challenge-tiers
-- State: ACTIVE — wb-ui-gf4; documentation/reference selection only.
+- State: IDLE — UI-GF4 selection saved in owning checkpoint; owner released.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
 - Owning A63 checkpoint contains current rules/tables/release; resolve own SHA from branch history and verify head/tree/main before saved claim. Commit cannot embed itself.
 - Scope: design/docs/research/standalone tools/wiki_drops only; no production gameplay/main/workflow activation authorized.
 
-## Active UI-GF4 selection checkpoint
+## Current UI-GF4 selection checkpoint
 
-Owner wb-ui-gf4; acquired 2026-10-17T02:36:06.098258+00:00; expires 2026-10-17T03:36:06.098258+00:00. Verified remote a6e1d0d533c7e33191932890d87008fba42a16ac; main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. User selects GF4 for now and asks to save to GitHub with RuneLite image rules. Scope: preserve selected original PNG under docs only, record design approval/taint clarification, source current image requirements; no runtime artwork/code change. No prior active owner.
+Verified predecessor/claim049316fdf2510fb596af1a806b0d04fca1b24ac9 from a6e1d0d533c7e33191932890d87008fba42a16ac; protected main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. WB-D156 records user selection of GF4 for now; exact original PNG and hash/provenance under docs/wheelbound/design. WB-D157 preserves explicit Taint-as-own-slice clarification, superseding generated ordinary-activity taint depictions. Current official Hub48×72 listing-icon/resource-JAR rules distinguished from recommendations. No runtime image/code, root icon or main changes; no implementation authorization implied.
+
+Owner wb-ui-gf4 released in owning checkpoint. Verify remote commit/tree/main before saved claim. Next: discuss/revise selected Grand style if user requests, otherwise await their next wheel choice; do not select other wheels automatically. Independent design queue still begins A102 ordinary quantity/reward draft as previously recorded. No background work. PDF remains older derived checkpoint. Prior A101 continuation below remains relevant to independent economy work.
 
 ## Historical A101 release
 

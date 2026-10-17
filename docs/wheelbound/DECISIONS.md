@@ -1612,3 +1612,19 @@ WB-D140/141 are adopted authoring recommendations, not confirmations of reported
 - Preserved rules: committed assignments remain immutable; existing free Pause and ordinary Reject retain their approved costs/consequences. No no-fault retirement, refund, extra spin, reward or automatic replacement is approved. This answer does not reject every possible future recovery design.
 - Supersession: replaces A97 and older navigation directing the next session to ask A56 and wait. Separate changed-unselected-snapshot, task-continuation, Coffer/policy and legacy CA scope are not answered.
 - Acceptance: current continuation does not solicit A56 again; no production code or retirement implementation; independent economy/progression planning continues.
+
+## WB-D156 - GF4 Grand Fate visual style selected for now
+
+- Status: CONFIRMED current visual baseline,2026-10-16 America/Chicago. User: “GF4 Lets lock that in for now”; explicitly requests GitHub preservation and RuneLite image restrictions.
+- Selection: GF4 / Double Chain from the six revised Grand Fate concepts. Preserve restrained OSRS/RuneLite-like style, muted red/burgundy slices, small game-like icons, plain central SPIN button, iron-gray chain outer rim in place of gold, small skulls at perimeter anchor positions and outward iron spikes. Exact selected reference is design/references/grand-fate-gf4-selected.png, SHA256845c1d815fa388039de1cde62355f7ea2724269344e05430a9cca0eca47c2cf7.
+- Scope: approval of an editable visual baseline, not a release-ready asset, immutable pixel dimensions or exact decoration count. Generated labels/icon depictions are illustrative; existing five Grand goals/equal odds remain. No other wheel variant selected. One wheel at a time.
+- Supersession: earlier ornate fantasy concepts and revised gold-rim Grand concept are unselected exploration; GF4 is current Grand visual reference.
+- Implementation boundary: preserve original PNG in documentation, outside runtime resources. Future authorized implementation draws dynamic slices, text, icons, pointer and theme decoration separately. Do not flatten live UI into this screenshot or import its illustrative item icons as verified game sprites. Existing plugin behavior/main/icon.png unchanged.
+- Compliance: design/GRAND_FATE_GF4.md separates verified Hub icon/resource rules from engineering recommendations. No Hub/policy approval or production coding authorization implied.
+
+## WB-D157 - Taint remains its own wheel slice
+
+- Status: CONFIRMED explicit user clarification,2026-10-16 America/Chicago.
+- Source: “they will be their own slice on the wheel and not like agility is now tainted”.
+- Decision: a Taint outcome is a distinct special slice, not an Agility/other ordinary activity slice converted into a tainted assignment. Purple chains/poison are visual language for Taint; do not recolor ordinary activity slices to imply their rules changed.
+- Supersession: the revised generated Taint concept showing purple Fishing/Cooking/Thieving wedges is illustrative and rejected as mechanic representation. Preserve approved special capacity/weight/Punishment behavior. No separate new standalone Taint gameplay wheel adopted.
