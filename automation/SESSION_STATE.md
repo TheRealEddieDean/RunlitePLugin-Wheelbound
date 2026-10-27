@@ -1,5 +1,10 @@
 # Wheelbound session checkpoint and ownership
 
+## Current integration authority — WB-D159
+
+User permanently authorized implementation under WB-D158 and now permits opening and merging verified implementation PRs into wheelbound-mode without per-PR approval, until revoked. PR1 code and checkpoint builds passed at head252ae08c3005eaa3349d88e8874ee6747b594ffd (runs40599875895/40599868156). This authority-only follow-up must pass CI before the guarded PR merge. After merge, verify source HEAD and continue I01b from that head. master/main stay protected; no background task implied.
+
+
 ## Verified implementation receipt — 2026-10-27
 
 WB-D158 permanently authorizes production implementation. Code commit 938a0d8840373e027ac6ca993670f982737d647d passed GitHub PR run 40599594587 (merge tree e94dc79666267532a4395cfcf6d4c14f1a270558): clean build and dependency-manifest task successful, 79 JUnit tests, zero failures/errors/skips, including nine RunLifecycle tests. Artifact 12778275353 exports XML/HTML and dependency hashes. Resolved Gradle8.10/JDK11.0.32.1/RuneLite client+api+jshell1.13.4. I00 build/test/dependency evidence and I01a lifecycle foundation complete within this scope; full packaging/live-client validation and I01b persistence are unfinished.

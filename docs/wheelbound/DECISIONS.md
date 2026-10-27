@@ -1,5 +1,13 @@
 # Decision register
 
+## WB-D159 - Standing permission to open and merge implementation PRs
+
+- Status: CONFIRMED, explicit user, 2026-10-27 America/Chicago.
+- Source: “yes for now auto do everything feel free to open prs and merge them into that source branch”.
+- Decision: authorize implementation PR creation and merging into wheelbound-mode without individual approval, until revoked. Verify exact head and successful applicable build/tests, review changes and respect protections; no bypass of failing checks. Use expected-head merge protection and verify resulting source HEAD.
+- Preserved boundaries: master/main protected; unresolved gameplay/design and concrete policy/client evidence remain gated; no Plugin Hub submission or person-directed messages authorized.
+
+
 ## WB-D158 - Permanent production implementation authorization
 
 - Status: CONFIRMED, explicit user, 2026-10-27 America/Chicago.
