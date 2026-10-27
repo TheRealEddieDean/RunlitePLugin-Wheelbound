@@ -29,13 +29,24 @@ public final class RunDocument
         {
             if (!commands.add(receipt.commandId())) { throw new IllegalArgumentException("Duplicate command ID"); }
             if (previous != null && (receipt.beforeRevision() != previous.afterRevision()
-                || receipt.operation() == previous.operation() || receipt.obligation() != previous.obligation()))
+                || !follows(previous, receipt)))
             { throw new IllegalArgumentException("Broken lifecycle receipt chain"); }
             previous = receipt;
         }
         if (previous != null && (previous.afterRevision() != lifecycle.revision()
             || previous.state() != lifecycle.state() || previous.obligation() != lifecycle.obligation()))
         { throw new IllegalArgumentException("Receipt head does not match snapshot"); }
+    }
+
+    private boolean follows(RunReceipt previous, RunReceipt next)
+    {
+        switch (next.operation())
+        {
+            case PAUSE: return previous.state() == RunLifecycle.State.ACTIVE && next.obligation() == previous.obligation();
+            case RESUME: return previous.state() == RunLifecycle.State.PAUSED && next.obligation() == previous.obligation();
+            case DRAW: return previous.state() == RunLifecycle.State.ACTIVE && previous.obligation() == RunLifecycle.Obligation.NONE;
+            default: return false;
+        }
     }
 
     public RunLifecycle lifecycle() { return lifecycle; }

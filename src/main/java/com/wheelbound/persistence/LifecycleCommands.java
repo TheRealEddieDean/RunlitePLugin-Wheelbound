@@ -19,6 +19,7 @@ public final class LifecycleCommands
     {
         Objects.requireNonNull(commandId, "commandId");
         Objects.requireNonNull(operation, "operation");
+        if (operation == RunReceipt.Operation.DRAW) { throw new IllegalArgumentException("Use the draw transaction service"); }
         RunDocument current = store.load().orElseThrow(() -> new IOException("Run has not been initialized"));
         if (!current.lifecycle().identity().equals(identity)) { throw new IllegalArgumentException("Foreign run context"); }
         for (RunReceipt receipt : current.receipts())

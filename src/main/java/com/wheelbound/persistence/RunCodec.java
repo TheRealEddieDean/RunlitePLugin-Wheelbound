@@ -3,6 +3,8 @@ package com.wheelbound.persistence;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonArray;
+import com.wheelbound.domain.DrawCommitment;
+import com.wheelbound.domain.WeightedPool;
 import java.util.ArrayList;
 import java.util.List;
 import com.google.gson.JsonObject;
@@ -20,7 +22,7 @@ import java.util.UUID;
 /** Inject RuneLite's Gson. Never deserialize directly into domain objects bypassing their validation. */
 public final class RunCodec
 {
-    public static final int SCHEMA = 2;
+    public static final int SCHEMA = 3;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -46,6 +48,7 @@ public final class RunCodec
             item.addProperty("afterRevision", receipt.afterRevision());
             item.addProperty("state", receipt.state().name());
             item.addProperty("obligation", receipt.obligation().name());
+            if (receipt.draw() != null) { item.add("draw", encodeDraw(receipt.draw())); }
             receipts.add(item);
         }
         payload.add("receipts", receipts);
@@ -69,7 +72,7 @@ public final class RunCodec
             JsonObject envelope = new JsonParser().parse(new String(bytes, StandardCharsets.UTF_8)).getAsJsonObject();
             keys(envelope, Set.of("schemaVersion", "payload", "sha256"));
             long schema = integer(envelope, "schemaVersion");
-            if (schema != 1 && schema != SCHEMA) { throw new IOException("Unsupported snapshot schema; preserve original"); }
+            if (schema != 1 && schema != 2 && schema != SCHEMA) { throw new IOException("Unsupported snapshot schema; preserve original"); }
             String text = string(envelope, "payload");
             if (!sha256(text.getBytes(StandardCharsets.UTF_8)).equals(string(envelope, "sha256")))
             { throw new IOException("Snapshot checksum mismatch"); }
@@ -83,21 +86,53 @@ public final class RunCodec
                 RunLifecycle.State.valueOf(string(payload, "state")),
                 RunLifecycle.Obligation.valueOf(string(payload, "obligation")));
             List<RunReceipt> receipts = new ArrayList<>();
-            if (schema == SCHEMA)
+            if (schema >= 2)
             {
                 for (JsonElement element : payload.getAsJsonArray("receipts"))
                 {
                     JsonObject item = element.getAsJsonObject();
-                    keys(item, Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation"));
+                    boolean hasDraw = schema == SCHEMA && "DRAW".equals(string(item, "operation"));
+                    keys(item, hasDraw
+                        ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "draw")
+                        : Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation"));
                     receipts.add(new RunReceipt(UUID.fromString(string(item, "commandId")),
                         RunReceipt.Operation.valueOf(string(item, "operation")), integer(item, "beforeRevision"),
                         integer(item, "afterRevision"), RunLifecycle.State.valueOf(string(item, "state")),
-                        RunLifecycle.Obligation.valueOf(string(item, "obligation"))));
+                        RunLifecycle.Obligation.valueOf(string(item, "obligation")),
+                        hasDraw ? decodeDraw(item.get("draw")) : null));
                 }
             }
             return new RunDocument(lifecycle, string(payload, "catalogVersion"), receipts);
         }
         catch (RuntimeException ex) { throw new IOException("Invalid snapshot; preserve original", ex); }
+    }
+
+    private JsonElement encodeDraw(DrawCommitment draw)
+    {
+        JsonObject result = new JsonObject();
+        result.addProperty("version", draw.pool().version());
+        result.addProperty("ticket", draw.ticket());
+        JsonArray entries = new JsonArray();
+        for (WeightedPool.Entry entry : draw.pool().entries())
+        {
+            JsonObject item = new JsonObject(); item.addProperty("id", entry.id()); item.addProperty("weight", entry.weight());
+            entries.add(item);
+        }
+        result.add("entries", entries);
+        return result;
+    }
+
+    private DrawCommitment decodeDraw(JsonElement element)
+    {
+        JsonObject value = element.getAsJsonObject();
+        keys(value, Set.of("version", "ticket", "entries"));
+        List<WeightedPool.Entry> entries = new ArrayList<>();
+        for (JsonElement member : value.getAsJsonArray("entries"))
+        {
+            JsonObject item = member.getAsJsonObject(); keys(item, Set.of("id", "weight"));
+            entries.add(new WeightedPool.Entry(string(item, "id"), Math.toIntExact(integer(item, "weight"))));
+        }
+        return new DrawCommitment(new WeightedPool(string(value, "version"), entries), Math.toIntExact(integer(value, "ticket")));
     }
 
     static void keys(JsonObject object, Set<String> expected)
