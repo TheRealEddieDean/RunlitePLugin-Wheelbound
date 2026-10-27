@@ -1,7 +1,14 @@
 # Implementation plan
 
+## Current authority — WB-D158, 2026-10-27
+
+The user permanently lifted the documentation/research-only and no-production-code restrictions and requested implementation from the beginning of the planned pipeline. Production Java, tests, build/CI and required existing-plugin integration are authorized. This supersedes older “no implementation authorized”, “no production changes” and “wheelbound-mode exclusively” statements as standing restrictions throughout the repository; historical statements about work actually performed remain historical evidence. Use isolated implementation branches based on wheelbound-mode and PRs targeting wheelbound-mode. Preserve master/main. This does not approve unresolved gameplay/balance rules, waive concrete client/policy evidence gates, authorize messaging others or authorize Plugin Hub submission. Do not repeatedly ask for implementation permission.
+
+Current sequence: WB-I00 build evidence, WB-I01a lifecycle foundation, then WB-I01b durable account-separated aggregate/journal and replay fixtures. UI theme work follows the foundational sequence at the user’s request.
+
+
 Current project delivery status: [workstreams](../../automation/WORKSTREAM_STATUS.md). Earlier completed checkpoint/checklist items describe their stated scope; they do not mean the mode is implemented. Latest DECISIONS and explicit supersessions control older question wording.
-Implementation remains unauthorized. Future phases:
+Implementation is authorized by WB-D158. Planned phases:
 1. Feasibility and catalogs; validate API/policy/OSRS facts and identify advisory-only restrictions.
 2. Account state/journal/schema migrations and crash fixtures.
 3. Weighted Master wheel, edits, Satchel, duplicate/enhancement pricing.

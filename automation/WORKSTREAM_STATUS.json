@@ -1,9 +1,9 @@
 {
-  "version": "workstreams-a101-visible-economy-plan",
+  "version": "implementation-i01a",
   "scope": "Project workstream register, not fixed-size checkpoint count or overall completion percentage",
   "project_completion_percent": null,
   "checkpoint_count_is_not_delivery_progress": true,
-  "implementation_authorized": false,
+  "implementation_authorized": true,
   "workstreams": [
     {
       "id": "WB-W01",
@@ -88,15 +88,15 @@
     {
       "id": "WB-W11",
       "workstream": "Production domain state and durable transactions",
-      "status": "NOT_STARTED_NOT_AUTHORIZED",
+      "status": "FOUNDATION_IMPLEMENTED_CI_PENDING",
       "source": "I01/I02 handoff; PERSISTENCE",
       "exit_criteria": "Implement/test account/run state, journals, deterministic commitments, retries, purchases and migrations after explicit engineering authorization.",
-      "next_or_limit": "Existing Python design oracles are not Java implementation."
+      "next_or_limit": "I01b durable aggregate/journal next; lifecycle is not complete persistence or client session validation."
     },
     {
       "id": "WB-W12",
       "workstream": "Production wheels/cards/tree/shops/obligations/Grand",
-      "status": "NOT_STARTED_NOT_AUTHORIZED",
+      "status": "NOT_STARTED_AUTHORIZED",
       "source": "IMPLEMENTATION_PLAN phases3\u20137",
       "exit_criteria": "Implement approved feature modules without changing existing normal plugin behavior; resolve ticket dependencies and policy gates.",
       "next_or_limit": "Do not assume design artifacts make a playable mode."
@@ -104,7 +104,7 @@
     {
       "id": "WB-W13",
       "workstream": "RuneLite adapters, UI and performance",
-      "status": "NOT_STARTED_NOT_AUTHORIZED",
+      "status": "NOT_STARTED_AUTHORIZED",
       "source": "RUNELITE_INTEGRATION; UI_UX; A17",
       "exit_criteria": "Implement authorized observable adapters/UI, source traces, accessibility/performance and account isolation.",
       "next_or_limit": "Actual client cases remain NOT_RUN."
@@ -125,5 +125,6 @@
       "exit_criteria": "Generate from an exact committed current Markdown revision, visually check and save a versioned derived PDF.",
       "next_or_limit": "Version10 saved from135eed73; publication receipt closes source-time pending row, no gameplay authority change. Refresh after later substantive source changes."
     }
-  ]
+  ],
+  "implementation_authority": "WB-D158"
 }

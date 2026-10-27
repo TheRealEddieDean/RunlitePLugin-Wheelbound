@@ -1,5 +1,15 @@
 # Decision register
 
+## WB-D158 - Permanent production implementation authorization
+
+- Status: CONFIRMED, explicit user, 2026-10-27 America/Chicago.
+- Source: “I would like to lift that rule permenatnly ... start at the beginning when we did all the planning to start the actual coding”.
+- Decision: permanently lift the research/documentation-only and no-production-implementation rules; begin the planned engineering pipeline at WB-I00/I01. Implement approved behavior in bounded verified milestones without asking again for general coding permission.
+- Branch scope: implementation branches based on wheelbound-mode, PRs targeting wheelbound-mode; master/main protected. Supersedes older wheelbound-mode-only writing restriction for implementation work.
+- Preserved boundaries: unresolved mechanics/prices remain unadopted; actual-client evidence/policy gates still apply to affected adapters. No Plugin Hub submission or person-directed messages authorized. Design reference PNGs remain provenance, not shipping screenshots.
+- UI sequencing: the prior GF4/B3 theme objective is deferred behind the initial state/persistence/deterministic-selection foundation; visual choices remain unchanged.
+
+
 Sources S1-S5 and access limits are defined in [README](README.md). Approval provenance is separate from mechanic status. UNVERIFIED is not a rejected rule; do not implement it as historically approved. Rationales labelled inferred are reconstruction explanations, not quotes. IDs never reused; revisions append supersession notes.
 
 ## WB-D001 - Optional challenge; no rankings or integrity labels

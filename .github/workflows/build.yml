@@ -1,5 +1,8 @@
 name: Build Wheelbound
 
+permissions:
+  contents: read
+
 on:
   push:
   pull_request:
@@ -7,6 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,4 +25,16 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Build
-        run: bash ./gradlew clean build
+        run: bash ./gradlew --init-script docs/wheelbound/research/dependency_manifest.init.gradle clean build wbResolvedDependencyManifest --console=plain
+
+      - name: Preserve test and resolved dependency evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2; recorded in CI_ACTION_PINS.json
+        with:
+          name: wheelbound-build-${{ github.sha }}
+          path: |
+            build/test-results/test/*.xml
+            build/reports/tests/test/**
+            build/reports/wheelbound/**
+          if-no-files-found: warn
+          retention-days: 14

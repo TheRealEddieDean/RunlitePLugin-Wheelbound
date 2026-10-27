@@ -1,5 +1,17 @@
 # Wheelbound session checkpoint and ownership
 
+## Current implementation checkpoint — WB-I01a, 2026-10-27
+
+- State: IDLE after this bounded milestone; no background task.
+- Source verified: b55a5404ce450267b8d9acbe477a593bbe2729dc.
+- Work branch: implementation/run-state-foundation; PR target wheelbound-mode. No master/main/source branch mutation.
+- Authority: WB-D158 permanently authorizes implementation; old design-only restrictions are superseded.
+- Produced: immutable RunIdentity and RunLifecycle Java foundation; nine JUnit tests cover all obligation stages across pause/resume, stale revisions, account/profile/run isolation, terminal states, invalid inputs and overflow. No live adapter, run creation, persistence or settlement is implemented in this slice.
+- Validation: local wrapper clean build failed before compilation (Java network unreachable); local javac unavailable. Full Gradle/JUnit validation is delegated to this branch's existing GitHub CI. See PR/CI for the exact final result; no local pass claimed.
+- Next: WB-I01b durable versioned aggregate/journal using supported RuneLite serialization, preserved invalid originals, command/payload replay and atomic acknowledgement/crash fixtures; then persisted deterministic selection. Do not treat the immediate-observation revision guard as a durable receipt/session protocol.
+- Existing normal-wheel rendering, gameplay and resources are unchanged. UI themes remain queued behind initial engineering foundation. Outstanding design/client/policy evidence holds remain.
+
+
 - Session ID: wb-20261014-challenge-tiers
 - State: IDLE — UI-GF4 selection saved in owning checkpoint; owner released.
 - Branch: wheelbound-mode only.

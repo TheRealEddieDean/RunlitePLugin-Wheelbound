@@ -1,5 +1,12 @@
 # Development pipeline
 
+## Current authority — WB-D158, 2026-10-27
+
+The user permanently lifted the documentation/research-only and no-production-code restrictions and requested implementation from the beginning of the planned pipeline. Production Java, tests, build/CI and required existing-plugin integration are authorized. This supersedes older “no implementation authorized”, “no production changes” and “wheelbound-mode exclusively” statements as standing restrictions throughout the repository; historical statements about work actually performed remain historical evidence. Use isolated implementation branches based on wheelbound-mode and PRs targeting wheelbound-mode. Preserve master/main. This does not approve unresolved gameplay/balance rules, waive concrete client/policy evidence gates, authorize messaging others or authorize Plugin Hub submission. Do not repeatedly ask for implementation permission.
+
+WB-I01 is split into bounded milestones: I01a immutable account/run identity and lifecycle; I01b supported serialization, durable aggregate/journal and recovery; I01c persisted deterministic selection; I01d disabled-by-default preview and client account/session adapter. I01a is not completion of I01.
+
+
 ## Verified repository configuration
 Source inspected at dc76720971c3e15c2e831a27b1505dd25054267f on 2026-10-09. Source review is complete. The earlier local wrapper attempt failed; successful remote CI at e6d445c8 is now verified in [build baseline](research/BUILD_BASELINE.md). These are distinct environments.
 
