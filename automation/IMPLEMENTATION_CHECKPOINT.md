@@ -18,3 +18,11 @@ PR2 merged at393a2fe699b8382001c3d9da14324114805f67bb; final code f4bc723f15f42a
 AtomicRunStore uses a caller-supplied plugin directory, opaque identity paths, per-run file locks, exact expected revisions, forced temporary writes and atomic replacement with last-good backup. Corrupt/foreign/future data and interrupted temporary files fail closed without deletion. Eight JUnit cases include injected pre/post-replace IO failures and real temporary-file/lock tests. No non-atomic fallback; unsupported directory force/atomic moves fail rather than claiming platform support. This is local foundation storage, not a complete journal or live plugin adapter. Pending files require explicit recovery; no destructive automatic recovery is implemented.
 
 Next: durable lifecycle command receipts/replay; no additional gameplay rule decisions needed.
+
+## I01b.3 prepared — durable lifecycle commands
+
+PR3 merged at8d987651bb0c90a0053e122dea4acb73741a975a, code38a7b81f8a3a52dbd27dc0c2cd119beabec82093; runs40603093612/40603089365 passed. Real filesystem tests include exclusive locking and pre/post-replace failure injection.
+
+Schema2 persists lifecycle command receipts and state together; schema1 foundation documents can be decoded into an empty-journal document without changing their original bytes. This is not a full-mode migration. New PAUSE/RESUME commands enforce identity/revision, retain obligations, and publish only after persistence. Exact command replay returns its original receipt even after later commands; changed-operation/revision collisions fail. New commands already at their requested state are rejected without changing revision or creating receipts. No money/spin/reward logic exists in this service. Six additional tests cover restart replay, collisions, stale/foreign contexts, lost acknowledgements, no-op/uninitialized input, legacy decode and journal invariants.
+
+Next: frozen weighted draw commitments with their own immutable request/result journal and restart/no-reroll fixtures. Live activation remains disabled/unwired; current foundation snapshot is not a complete gameplay save.

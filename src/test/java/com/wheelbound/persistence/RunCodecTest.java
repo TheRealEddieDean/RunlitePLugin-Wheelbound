@@ -60,7 +60,7 @@ public class RunCodecTest
 
     @Test public void futureSchemasAndUnknownFieldsAreNotSilentlyAccepted()
     {
-        JsonObject envelope = envelope(); envelope.addProperty("schemaVersion", 2);
+        JsonObject envelope = envelope(); envelope.addProperty("schemaVersion", 999);
         assertThrows(IOException.class, () -> codec.decode(bytes(envelope), id));
         assertThrows(IOException.class, () -> codec.decode(alteredPayload("futureData", new JsonPrimitive("retained")), id));
         assertThrows(IOException.class, () -> codec.decode(alteredPayload("state", null), id));
