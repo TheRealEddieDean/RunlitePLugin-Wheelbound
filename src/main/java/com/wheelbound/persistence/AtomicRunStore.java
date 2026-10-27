@@ -27,7 +27,7 @@ public final class AtomicRunStore
     private final RunIdentity identity;
     private final String name;
     private final CommitHook hook;
-    private boolean uncertain;
+    private volatile boolean uncertain;
 
     public AtomicRunStore(Path pluginDirectory, RunCodec codec, RunIdentity identity)
     { this(pluginDirectory, codec, identity, ignored -> {}); }
