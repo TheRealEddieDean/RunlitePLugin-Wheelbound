@@ -1,5 +1,7 @@
 # Wheelbound session checkpoint and ownership
 
+Current engineering continuation: [implementation checkpoint](IMPLEMENTATION_CHECKPOINT.md). Its four-PR batch supersedes historical next-task navigation below. WB-D158/159 authorize production implementation and verified PR integration.
+
 ## Current integration authority — WB-D159
 
 User permanently authorized implementation under WB-D158 and now permits opening and merging verified implementation PRs into wheelbound-mode without per-PR approval, until revoked. PR1 code and checkpoint builds passed at head252ae08c3005eaa3349d88e8874ee6747b594ffd (runs40599875895/40599868156). This authority-only follow-up must pass CI before the guarded PR merge. After merge, verify source HEAD and continue I01b from that head. master/main stay protected; no background task implied.
