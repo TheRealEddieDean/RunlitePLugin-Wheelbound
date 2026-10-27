@@ -50,13 +50,13 @@ public final class RunCodec
         if (bytes.length == 0 || bytes.length > MAX_BYTES) { throw new IOException("Invalid snapshot length"); }
         try
         {
-            JsonObject envelope = JsonParser.parseString(new String(bytes, StandardCharsets.UTF_8)).getAsJsonObject();
+            JsonObject envelope = new JsonParser().parse(new String(bytes, StandardCharsets.UTF_8)).getAsJsonObject();
             keys(envelope, Set.of("schemaVersion", "payload", "sha256"));
             if (integer(envelope, "schemaVersion") != SCHEMA) { throw new IOException("Unsupported snapshot schema; preserve original"); }
             String text = string(envelope, "payload");
             if (!sha256(text.getBytes(StandardCharsets.UTF_8)).equals(string(envelope, "sha256")))
             { throw new IOException("Snapshot checksum mismatch"); }
-            JsonObject payload = JsonParser.parseString(text).getAsJsonObject();
+            JsonObject payload = new JsonParser().parse(text).getAsJsonObject();
             keys(payload, Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion"));
             RunIdentity identity = new RunIdentity(string(payload, "accountKey"), UUID.fromString(string(payload, "runId")));
             if (!identity.equals(expected)) { throw new IOException("Foreign account/profile/run snapshot"); }

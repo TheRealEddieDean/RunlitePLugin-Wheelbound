@@ -17,7 +17,7 @@ public class RunCodecTest
     private byte[] bytes(JsonObject value) { return gson.toJson(value).getBytes(StandardCharsets.UTF_8); }
     private JsonObject envelope()
     {
-        return JsonParser.parseString(new String(codec.encode(new RunDocument(
+        return new JsonParser().parse(new String(codec.encode(new RunDocument(
             new RunLifecycle(id, 12, RunLifecycle.State.PAUSED, RunLifecycle.Obligation.SETTLEMENT_PENDING), "catalog-v1")),
             StandardCharsets.UTF_8)).getAsJsonObject();
     }
@@ -25,7 +25,7 @@ public class RunCodecTest
     private byte[] alteredPayload(String key, JsonElement value)
     {
         JsonObject envelope = envelope();
-        JsonObject payload = JsonParser.parseString(envelope.get("payload").getAsString()).getAsJsonObject();
+        JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
         if (value == null) { payload.remove(key); } else { payload.add(key, value); }
         String text = gson.toJson(payload);
         envelope.addProperty("payload", text);
