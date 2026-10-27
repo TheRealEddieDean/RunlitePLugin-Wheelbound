@@ -2,6 +2,9 @@ package com.wheelbound.persistence;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
+import com.google.gson.JsonArray;
+import java.util.ArrayList;
+import java.util.List;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.wheelbound.domain.RunIdentity;
@@ -17,7 +20,7 @@ import java.util.UUID;
 /** Inject RuneLite's Gson. Never deserialize directly into domain objects bypassing their validation. */
 public final class RunCodec
 {
-    public static final int SCHEMA = 1;
+    public static final int SCHEMA = 2;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -33,6 +36,19 @@ public final class RunCodec
         payload.addProperty("state", run.state().name());
         payload.addProperty("obligation", run.obligation().name());
         payload.addProperty("catalogVersion", document.catalogVersion());
+        JsonArray receipts = new JsonArray();
+        for (RunReceipt receipt : document.receipts())
+        {
+            JsonObject item = new JsonObject();
+            item.addProperty("commandId", receipt.commandId().toString());
+            item.addProperty("operation", receipt.operation().name());
+            item.addProperty("beforeRevision", receipt.beforeRevision());
+            item.addProperty("afterRevision", receipt.afterRevision());
+            item.addProperty("state", receipt.state().name());
+            item.addProperty("obligation", receipt.obligation().name());
+            receipts.add(item);
+        }
+        payload.add("receipts", receipts);
         String text = gson.toJson(payload);
         JsonObject envelope = new JsonObject();
         envelope.addProperty("schemaVersion", SCHEMA);
@@ -52,18 +68,34 @@ public final class RunCodec
         {
             JsonObject envelope = new JsonParser().parse(new String(bytes, StandardCharsets.UTF_8)).getAsJsonObject();
             keys(envelope, Set.of("schemaVersion", "payload", "sha256"));
-            if (integer(envelope, "schemaVersion") != SCHEMA) { throw new IOException("Unsupported snapshot schema; preserve original"); }
+            long schema = integer(envelope, "schemaVersion");
+            if (schema != 1 && schema != SCHEMA) { throw new IOException("Unsupported snapshot schema; preserve original"); }
             String text = string(envelope, "payload");
             if (!sha256(text.getBytes(StandardCharsets.UTF_8)).equals(string(envelope, "sha256")))
             { throw new IOException("Snapshot checksum mismatch"); }
             JsonObject payload = new JsonParser().parse(text).getAsJsonObject();
-            keys(payload, Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion"));
+            keys(payload, schema == 1
+                ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion")
+                : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts"));
             RunIdentity identity = new RunIdentity(string(payload, "accountKey"), UUID.fromString(string(payload, "runId")));
             if (!identity.equals(expected)) { throw new IOException("Foreign account/profile/run snapshot"); }
             RunLifecycle lifecycle = new RunLifecycle(identity, integer(payload, "revision"),
                 RunLifecycle.State.valueOf(string(payload, "state")),
                 RunLifecycle.Obligation.valueOf(string(payload, "obligation")));
-            return new RunDocument(lifecycle, string(payload, "catalogVersion"));
+            List<RunReceipt> receipts = new ArrayList<>();
+            if (schema == SCHEMA)
+            {
+                for (JsonElement element : payload.getAsJsonArray("receipts"))
+                {
+                    JsonObject item = element.getAsJsonObject();
+                    keys(item, Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation"));
+                    receipts.add(new RunReceipt(UUID.fromString(string(item, "commandId")),
+                        RunReceipt.Operation.valueOf(string(item, "operation")), integer(item, "beforeRevision"),
+                        integer(item, "afterRevision"), RunLifecycle.State.valueOf(string(item, "state")),
+                        RunLifecycle.Obligation.valueOf(string(item, "obligation"))));
+                }
+            }
+            return new RunDocument(lifecycle, string(payload, "catalogVersion"), receipts);
         }
         catch (RuntimeException ex) { throw new IOException("Invalid snapshot; preserve original", ex); }
     }
