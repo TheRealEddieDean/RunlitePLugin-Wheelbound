@@ -1,5 +1,7 @@
 # Wheelbound autonomous task queue
 
+Current engineering continuation: [implementation checkpoint](IMPLEMENTATION_CHECKPOINT.md). Its four-PR batch supersedes historical next-task navigation below. WB-D158/159 authorize production implementation and verified PR integration.
+
 ## Current engineering queue — WB-D158
 
 | ID | Deliverable | Status | Next validation |
