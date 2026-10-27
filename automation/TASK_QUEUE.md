@@ -1,5 +1,18 @@
 # Wheelbound autonomous task queue
 
+## Current engineering queue — WB-D158
+
+| ID | Deliverable | Status | Next validation |
+| --- | --- | --- | --- |
+| WB-I00 | Wrapper/build baseline and export dependency/test evidence | DONE_REMOTE_CI; local wrapper network blocked | Run40599594587 clean build;79 tests pass; artifact12778275353 dependency/test reports |
+| WB-I01a | Immutable account/run identity and pause lifecycle | DONE_REMOTE_CI | Nine domain cases pass with all70 existing regression tests |
+| WB-I01b | Durable account-separated aggregate/journal | NOT_STARTED_AUTHORIZED | Crash, corrupt/future schema, command replay/payload collision fixtures |
+| WB-I01c | Persisted deterministic selection | NOT_STARTED_AUTHORIZED | Same committed outcome after restart; no second debit |
+| WB-I01d | Disabled-by-default preview/client identity adapter | NOT_STARTED_AUTHORIZED | Account/session swap invalidation and legacy regressions |
+
+Historical research queue below is preserved; counts do not indicate remaining engineering scope.
+
+
 **Project delivery status:** [WORKSTREAM_STATUS](WORKSTREAM_STATUS.md). Checkpoint counts measure saved bounded work, not a fixed amount remaining or overall completion.
 
 Authoritative design: [decision register](../docs/wheelbound/DECISIONS.md). Operating rules: [protocol](PROTOCOL.md). Sizes are effort estimates, not allowance measurements: XS 2–5m, S 5–15m, M 15–30m, L >30m. Split M/L work before claiming it. Priority P0 precedes P1/P2. DONE means committed deliverable plus stated validation; BLOCKED means an actual dependency is missing. Existing experiments/research are preserved, not restarted.

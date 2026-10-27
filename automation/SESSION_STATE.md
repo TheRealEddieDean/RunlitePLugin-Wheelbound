@@ -1,5 +1,31 @@
 # Wheelbound session checkpoint and ownership
 
+## Current integration authority — WB-D159
+
+User permanently authorized implementation under WB-D158 and now permits opening and merging verified implementation PRs into wheelbound-mode without per-PR approval, until revoked. PR1 code and checkpoint builds passed at head252ae08c3005eaa3349d88e8874ee6747b594ffd (runs40599875895/40599868156). This authority-only follow-up must pass CI before the guarded PR merge. After merge, verify source HEAD and continue I01b from that head. master/main stay protected; no background task implied.
+
+
+## Verified implementation receipt — 2026-10-27
+
+WB-D158 permanently authorizes production implementation. Code commit 938a0d8840373e027ac6ca993670f982737d647d passed GitHub PR run 40599594587 (merge tree e94dc79666267532a4395cfcf6d4c14f1a270558): clean build and dependency-manifest task successful, 79 JUnit tests, zero failures/errors/skips, including nine RunLifecycle tests. Artifact 12778275353 exports XML/HTML and dependency hashes. Resolved Gradle8.10/JDK11.0.32.1/RuneLite client+api+jshell1.13.4. I00 build/test/dependency evidence and I01a lifecycle foundation complete within this scope; full packaging/live-client validation and I01b persistence are unfinished.
+
+Initial CI exposed the existing unsupported-profile list missing The Fractured Archive in the drifting latest.release dependency; the exact explicit test expectation was updated without creating a speculative boss profile. Legacy design_checks.py fails its hard-coded eight-catalog assertion on BOTH starting b55a540 and this branch (manifest now has18); initial document/link/hash checks pass. This is a separate pre-existing documentation-validator defect, not a Java test failure. Local Java wrapper networking and absence of javac prevent local compilation; remote CI supplies the actual pass.
+
+Next: I01b versioned durable aggregate/journal, preserved invalid originals, duplicate command/payload collision and crash/replay fixtures using supported RuneLite serialization. Current immediate-observation guards do not implement durable receipt replay, session tokens, persistence or live account adapters. UI themes remain queued. PR1 targets wheelbound-mode; source and master/main untouched. Owner released; no background task.
+
+
+## Current implementation checkpoint — WB-I01a, 2026-10-27
+
+- State: IDLE after this bounded milestone; no background task.
+- Source verified: b55a5404ce450267b8d9acbe477a593bbe2729dc.
+- Work branch: implementation/run-state-foundation; PR target wheelbound-mode. No master/main/source branch mutation.
+- Authority: WB-D158 permanently authorizes implementation; old design-only restrictions are superseded.
+- Produced: immutable RunIdentity and RunLifecycle Java foundation; nine JUnit tests cover all obligation stages across pause/resume, stale revisions, account/profile/run isolation, terminal states, invalid inputs and overflow. No live adapter, run creation, persistence or settlement is implemented in this slice.
+- Validation: local wrapper clean build failed before compilation (Java network unreachable); local javac unavailable. Full Gradle/JUnit validation is delegated to this branch's existing GitHub CI. See PR/CI for the exact final result; no local pass claimed.
+- Next: WB-I01b durable versioned aggregate/journal using supported RuneLite serialization, preserved invalid originals, command/payload replay and atomic acknowledgement/crash fixtures; then persisted deterministic selection. Do not treat the immediate-observation revision guard as a durable receipt/session protocol.
+- Existing normal-wheel rendering, gameplay and resources are unchanged. UI themes remain queued behind initial engineering foundation. Outstanding design/client/policy evidence holds remain.
+
+
 - Session ID: wb-20261014-challenge-tiers
 - State: IDLE — UI-GF4 selection saved in owning checkpoint; owner released.
 - Branch: wheelbound-mode only.

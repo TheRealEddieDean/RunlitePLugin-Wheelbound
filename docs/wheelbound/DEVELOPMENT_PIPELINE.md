@@ -1,5 +1,21 @@
 # Development pipeline
 
+## Verified implementation receipt — 2026-10-27
+
+WB-D158 permanently authorizes production implementation. Code commit 938a0d8840373e027ac6ca993670f982737d647d passed GitHub PR run 40599594587 (merge tree e94dc79666267532a4395cfcf6d4c14f1a270558): clean build and dependency-manifest task successful, 79 JUnit tests, zero failures/errors/skips, including nine RunLifecycle tests. Artifact 12778275353 exports XML/HTML and dependency hashes. Resolved Gradle8.10/JDK11.0.32.1/RuneLite client+api+jshell1.13.4. I00 build/test/dependency evidence and I01a lifecycle foundation complete within this scope; full packaging/live-client validation and I01b persistence are unfinished.
+
+Initial CI exposed the existing unsupported-profile list missing The Fractured Archive in the drifting latest.release dependency; the exact explicit test expectation was updated without creating a speculative boss profile. Legacy design_checks.py fails its hard-coded eight-catalog assertion on BOTH starting b55a540 and this branch (manifest now has18); initial document/link/hash checks pass. This is a separate pre-existing documentation-validator defect, not a Java test failure. Local Java wrapper networking and absence of javac prevent local compilation; remote CI supplies the actual pass.
+
+Next: I01b versioned durable aggregate/journal, preserved invalid originals, duplicate command/payload collision and crash/replay fixtures using supported RuneLite serialization. Current immediate-observation guards do not implement durable receipt replay, session tokens, persistence or live account adapters. UI themes remain queued. PR1 targets wheelbound-mode; source and master/main untouched. Owner released; no background task.
+
+
+## Current authority — WB-D158, 2026-10-27
+
+The user permanently lifted the documentation/research-only and no-production-code restrictions and requested implementation from the beginning of the planned pipeline. Production Java, tests, build/CI and required existing-plugin integration are authorized. This supersedes older “no implementation authorized”, “no production changes” and “wheelbound-mode exclusively” statements as standing restrictions throughout the repository; historical statements about work actually performed remain historical evidence. Use isolated implementation branches based on wheelbound-mode and PRs targeting wheelbound-mode. Preserve master/main. This does not approve unresolved gameplay/balance rules, waive concrete client/policy evidence gates, authorize messaging others or authorize Plugin Hub submission. Do not repeatedly ask for implementation permission.
+
+WB-I01 is split into bounded milestones: I01a immutable account/run identity and lifecycle; I01b supported serialization, durable aggregate/journal and recovery; I01c persisted deterministic selection; I01d disabled-by-default preview and client account/session adapter. I01a is not completion of I01.
+
+
 ## Verified repository configuration
 Source inspected at dc76720971c3e15c2e831a27b1505dd25054267f on 2026-10-09. Source review is complete. The earlier local wrapper attempt failed; successful remote CI at e6d445c8 is now verified in [build baseline](research/BUILD_BASELINE.md). These are distinct environments.
 
