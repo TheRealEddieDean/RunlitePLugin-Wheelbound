@@ -1,5 +1,14 @@
 # Verified progress
 
+## Verified implementation receipt — 2026-10-27
+
+WB-D158 permanently authorizes production implementation. Code commit 938a0d8840373e027ac6ca993670f982737d647d passed GitHub PR run 40599594587 (merge tree e94dc79666267532a4395cfcf6d4c14f1a270558): clean build and dependency-manifest task successful, 79 JUnit tests, zero failures/errors/skips, including nine RunLifecycle tests. Artifact 12778275353 exports XML/HTML and dependency hashes. Resolved Gradle8.10/JDK11.0.32.1/RuneLite client+api+jshell1.13.4. I00 build/test/dependency evidence and I01a lifecycle foundation complete within this scope; full packaging/live-client validation and I01b persistence are unfinished.
+
+Initial CI exposed the existing unsupported-profile list missing The Fractured Archive in the drifting latest.release dependency; the exact explicit test expectation was updated without creating a speculative boss profile. Legacy design_checks.py fails its hard-coded eight-catalog assertion on BOTH starting b55a540 and this branch (manifest now has18); initial document/link/hash checks pass. This is a separate pre-existing documentation-validator defect, not a Java test failure. Local Java wrapper networking and absence of javac prevent local compilation; remote CI supplies the actual pass.
+
+Next: I01b versioned durable aggregate/journal, preserved invalid originals, duplicate command/payload collision and crash/replay fixtures using supported RuneLite serialization. Current immediate-observation guards do not implement durable receipt replay, session tokens, persistence or live account adapters. UI themes remain queued. PR1 targets wheelbound-mode; source and master/main untouched. Owner released; no background task.
+
+
 ## Current implementation checkpoint — WB-I01a, 2026-10-27
 
 - State: IDLE after this bounded milestone; no background task.

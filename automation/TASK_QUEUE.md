@@ -4,8 +4,8 @@
 
 | ID | Deliverable | Status | Next validation |
 | --- | --- | --- | --- |
-| WB-I00 | Wrapper/build baseline and export dependency/test evidence | CI_PENDING; local wrapper network blocked | GitHub clean build, resolved dependency manifest and test reports |
-| WB-I01a | Immutable account/run identity and pause lifecycle | IMPLEMENTED_CI_PENDING | Nine domain JUnit cases plus normal-wheel regressions |
+| WB-I00 | Wrapper/build baseline and export dependency/test evidence | DONE_REMOTE_CI; local wrapper network blocked | Run40599594587 clean build;79 tests pass; artifact12778275353 dependency/test reports |
+| WB-I01a | Immutable account/run identity and pause lifecycle | DONE_REMOTE_CI | Nine domain cases pass with all70 existing regression tests |
 | WB-I01b | Durable account-separated aggregate/journal | NOT_STARTED_AUTHORIZED | Crash, corrupt/future schema, command replay/payload collision fixtures |
 | WB-I01c | Persisted deterministic selection | NOT_STARTED_AUTHORIZED | Same committed outcome after restart; no second debit |
 | WB-I01d | Disabled-by-default preview/client identity adapter | NOT_STARTED_AUTHORIZED | Account/session swap invalidation and legacy regressions |
