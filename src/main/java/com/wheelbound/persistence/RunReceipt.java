@@ -30,6 +30,19 @@ public final class RunReceipt
         this.afterRevision = afterRevision;
     }
 
+    @Override public boolean equals(Object value)
+    {
+        if (this == value) { return true; }
+        if (!(value instanceof RunReceipt)) { return false; }
+        RunReceipt other = (RunReceipt) value;
+        return commandId.equals(other.commandId) && operation == other.operation
+            && beforeRevision == other.beforeRevision && afterRevision == other.afterRevision
+            && state == other.state && obligation == other.obligation;
+    }
+
+    @Override public int hashCode()
+    { return Objects.hash(commandId, operation, beforeRevision, afterRevision, state, obligation); }
+
     public UUID commandId() { return commandId; }
     public Operation operation() { return operation; }
     public long beforeRevision() { return beforeRevision; }

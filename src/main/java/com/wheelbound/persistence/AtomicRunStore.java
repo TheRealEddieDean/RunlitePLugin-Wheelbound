@@ -69,6 +69,13 @@ public final class AtomicRunStore
             Optional<RunDocument> current = read();
             long actual = current.map(d -> d.lifecycle().revision()).orElse(-1L);
             if (actual != expectedRevision) { throw new IOException("Stale stored revision"); }
+            if (current.isPresent())
+            {
+                java.util.List<RunReceipt> history = current.get().receipts();
+                if (next.receipts().size() < history.size()
+                    || !next.receipts().subList(0, history.size()).equals(history))
+                { throw new IOException("Cannot discard or rewrite committed receipts"); }
+            }
             try
             {
                 forceFile(pendingPath(), bytes);

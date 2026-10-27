@@ -79,6 +79,16 @@ public class LifecycleCommandsTest
         assertEquals(0, codec.decode(codec.encode(restored), id).lifecycle().revision());
     }
 
+    @Test public void storageCannotTruncateCommittedReceipts() throws Exception
+    {
+        initialize();
+        new LifecycleCommands(store()).execute(id, UUID.randomUUID(), 0, RunReceipt.Operation.PAUSE);
+        RunDocument missingHistory = new RunDocument(new RunLifecycle(id, 2,
+            RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.ACTIVE_OBJECTIVE), "v1");
+        assertThrows(IOException.class, () -> store().write(missingHistory, 1));
+        assertEquals(1, store().load().get().receipts().size());
+    }
+
     @Test public void invalidJournalChainAndHeadCannotLoadOrConstruct() throws Exception
     {
         RunReceipt receipt = new RunReceipt(UUID.randomUUID(), RunReceipt.Operation.PAUSE, 0, 1,
