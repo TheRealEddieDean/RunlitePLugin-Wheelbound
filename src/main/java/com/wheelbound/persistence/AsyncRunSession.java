@@ -28,7 +28,8 @@ public final class AsyncRunSession
         current = null;
     }
 
-    /** Returns true only if this open was published. Superseded reads return false;
+    /** Returns true only if this open was published. Superseded queued reads skip storage;
+     * reads already in progress may finish but cannot publish. Superseded reads return false;
      * read/submission failures complete exceptionally and never restore an old session.
      * Cancelling the returned future is not a disconnect; call disconnect explicitly.
      */
@@ -42,6 +43,13 @@ public final class AsyncRunSession
         try
         {
             worker.execute(() -> {
+                boolean superseded;
+                synchronized (this) { superseded = generation != request; }
+                if (superseded)
+                {
+                    result.complete(false);
+                    return;
+                }
                 RunSession candidate = new RunSession();
                 try
                 {

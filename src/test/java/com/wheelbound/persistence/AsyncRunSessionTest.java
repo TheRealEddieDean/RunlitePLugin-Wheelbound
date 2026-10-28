@@ -6,6 +6,8 @@ import com.wheelbound.domain.RunLifecycle;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.RejectedExecutionException;
 import org.junit.Rule;
@@ -77,5 +79,42 @@ public class AsyncRunSessionTest
         AtomicRunStore store = new AtomicRunStore(folder.getRoot().toPath(), new RunCodec(new Gson()), id);
         assertTrue(rejected.connect(store, id).isCompletedExceptionally());
         assertFalse(rejected.capture().isPresent());
+    }
+
+    @Test public void disconnectedQueuedReadSkipsCorruptStorage() throws Exception
+    {
+        RunIdentity id = new RunIdentity("account:profile", UUID.randomUUID());
+        AtomicRunStore corrupt = store(id, true);
+        byte[] original = "corrupt snapshot".getBytes(StandardCharsets.UTF_8);
+        Files.write(corrupt.snapshotPath(), original);
+        CompletableFuture<Boolean> opened = session.connect(corrupt, id);
+        session.disconnect();
+        tasks.remove(0).run();
+        // A storage read would fail exceptionally rather than complete normally.
+        assertFalse(opened.join());
+        assertFalse(session.capture().isPresent());
+        assertArrayEquals(original, Files.readAllBytes(corrupt.snapshotPath()));
+    }
+
+    @Test public void supersededCorruptReadCannotAffectNewestSession() throws Exception
+    {
+        RunIdentity oldId = new RunIdentity("old:profile", UUID.randomUUID());
+        AtomicRunStore corrupt = store(oldId, true);
+        Files.write(corrupt.snapshotPath(), "corrupt snapshot".getBytes(StandardCharsets.UTF_8));
+        CompletableFuture<Boolean> stale = session.connect(corrupt, oldId);
+        RunIdentity freshId = new RunIdentity("fresh:profile", UUID.randomUUID());
+        CompletableFuture<Boolean> latest = session.connect(store(freshId, true), freshId);
+        tasks.remove(1).run();
+        RunSession.Token fresh = session.capture().get();
+        tasks.remove(0).run();
+        assertFalse(stale.join());
+        assertTrue(latest.join());
+        assertTrue(session.accepts(fresh));
+        // Current requests must still report corrupt storage, not silently skip it.
+        CompletableFuture<Boolean> failed = session.connect(corrupt, oldId);
+        tasks.remove(0).run();
+        assertTrue(failed.isCompletedExceptionally());
+        assertFalse(session.accepts(fresh));
+        assertFalse(session.capture().isPresent());
     }
 }
