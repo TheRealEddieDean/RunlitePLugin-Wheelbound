@@ -1,5 +1,30 @@
 # Current implementation checkpoint
 
+## I01d caller-supplied preview directory slice - 2026-10-27
+
+Added a FoundationPreview constructor binding an injected plugin directory and RunCodec,
+plus identity-only connect. No default/global directory lookup or construction-time IO.
+Disabled connects submit no work; enabled opens use AsyncRunSession and existing-save
+semantics. Invalid identity invalidates previous tokens before rejecting the request.
+The existing explicit-store API remains available. This is an unwired injection seam;
+no claim of RuneLite directory-provider or live identity integration is made.
+
+Four focused JUnit tests cover delayed filesystem access/default-disabled behavior,
+missing-save refusal without snapshot creation, existing-save opening/profile isolation,
+exclusive use of the injected directory and invalid-input token invalidation.
+Attempted FoundationPreviewTest and AsyncRunSessionTest via gradlew.bat with
+--gradle-user-home .gradle-local test --offline --no-daemon --console=plain.
+FAILED BEFORE COMPILATION: Gradle 8.10 distribution unavailable; wrapper download
+blocked with SocketException / Permission denied. No new tests executed or pass claimed.
+Static review checked worker delegation, directory use and fail-closed invalid input.
+
+Next: execute focused and legacy suites in an available build environment; then wire
+the supported RuneLite directory provider, opt-in preview UI/config and verified identity
+events with fresh baselines. No run creation, gameplay, detector/reward or recovery UI
+activation. Legacy Master Wheel unchanged. Current request forbids Git operations and
+external paths/secrets/workflows; none inspected. No background work or publication.
+
+
 ## I01d opt-in preview gate slice - 2026-10-27
 
 Added unwired `FoundationPreview`, a read-only wrapper over `AsyncRunSession`.
