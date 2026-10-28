@@ -1,3 +1,27 @@
+## Latest local continuation - baseline sampling callback, 2026-10-27
+
+One bounded I01d increment adds FoundationPreview.sampleBaseline(token, sampler).
+It checks the current token before invoking sampling, clears prior observation admission,
+and acknowledges only after successful sampling against the same session. Sampling
+exceptions propagate with admission closed; a session replacement during sampling cannot
+admit the replacement. Caller must use its serialized client callback path and replace
+old samples without awarding progress. This helper remains unwired and cannot verify
+sample contents or the caller thread. Three focused JUnit tests added for sampling order,
+stale token refusal, failure/retry and replacement-session isolation.
+
+PARTIAL_UNVERIFIED: attempted FoundationPreviewTest, AsyncRunSessionTest and legacy
+WheelboundBehaviorTest using gradlew.bat --gradle-user-home .gradle-local test with
+--offline --no-daemon --console=plain. Wrapper failed before compilation because local
+Gradle 8.10 is absent and download returned SocketException / Permission denied.
+No tests executed or new pass claimed. Static review checked admission and reentrant
+session-change paths. Legacy Master Wheel files unchanged; gameplay remains disabled.
+
+Next: execute focused and legacy suites in an available build environment, then supported
+RuneLite directory-provider wiring, opt-in UI/config, verified account/profile events
+and actual client baseline sampling. No Git operations, external-path inspection,
+credentials/secrets or workflows accessed. No publication or background work. IDLE.
+Current user restrictions supersede historical publication instructions below.
+
 ## I01d fresh observation baseline gate - 2026-10-27
 
 FoundationPreview now exposes establishBaseline(token) and acceptsObservation(token).
