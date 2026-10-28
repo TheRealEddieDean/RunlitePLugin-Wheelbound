@@ -183,6 +183,61 @@ public class FoundationPreviewTest
         assertTrue(preview.acceptsObservation(current));
     }
 
+    @Test public void samplingAdmitsOnlyAfterFreshSamplesAreCaptured() throws Exception
+    {
+        preview.setEnabled(true);
+        preview.connect(store(), identity); tasks.remove(0).run();
+        RunSession.Token token = preview.capture().get();
+        assertTrue(preview.establishBaseline(token));
+        int[] samples = {0};
+        assertTrue(preview.sampleBaseline(token, () -> {
+            assertFalse(preview.acceptsObservation(token));
+            samples[0]++;
+        }));
+        assertEquals(1, samples[0]);
+        assertTrue(preview.acceptsObservation(token));
+        preview.disconnect();
+        assertFalse(preview.sampleBaseline(token, () -> samples[0]++));
+        assertEquals(1, samples[0]);
+    }
+
+    @Test public void failedSamplingRevokesPreviousBaselineAndCanRetry() throws Exception
+    {
+        preview.setEnabled(true);
+        preview.connect(store(), identity); tasks.remove(0).run();
+        RunSession.Token token = preview.capture().get();
+        assertTrue(preview.establishBaseline(token));
+        RuntimeException failure = new IllegalStateException("sample unavailable");
+        try
+        {
+            preview.sampleBaseline(token, () -> { throw failure; });
+            fail("Sampling failure must reach the adapter");
+        }
+        catch (RuntimeException expected) { assertSame(failure, expected); }
+        assertTrue(preview.accepts(token));
+        assertFalse(preview.acceptsObservation(token));
+        assertTrue(preview.sampleBaseline(token, () -> { }));
+        assertTrue(preview.acceptsObservation(token));
+    }
+
+    @Test public void sessionChangeDuringSamplingCannotAdmitReplacementSession() throws Exception
+    {
+        AtomicRunStore store = store();
+        preview.setEnabled(true);
+        preview.connect(store, identity); tasks.remove(0).run();
+        RunSession.Token token = preview.capture().get();
+        assertFalse(preview.sampleBaseline(token, () -> {
+            preview.disconnect();
+            preview.connect(store, identity);
+            tasks.remove(0).run();
+        }));
+        RunSession.Token replacement = preview.capture().get();
+        assertFalse(preview.accepts(token));
+        assertFalse(preview.acceptsObservation(replacement));
+        assertTrue(preview.sampleBaseline(replacement, () -> { }));
+        assertTrue(preview.acceptsObservation(replacement));
+    }
+
     @Test public void disableAndDisconnectEachRequireAnotherBaseline() throws Exception
     {
         AtomicRunStore store = store();

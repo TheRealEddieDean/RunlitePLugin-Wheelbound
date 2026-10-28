@@ -89,6 +89,19 @@ public final class FoundationPreview
         return true;
     }
 
+    /** Runs fresh sampling on the caller's serialized client callback path, never a
+     * storage completion thread. The sampler must replace its old samples and must
+     * not award progress. Admission stays closed on failure or a session boundary
+     * during sampling. Exceptions propagate to the adapter with admission closed.
+     */
+    public synchronized boolean sampleBaseline(RunSession.Token token, Runnable sampler)
+    {
+        if (!accepts(token)) { return false; }
+        baseline = null;
+        Objects.requireNonNull(sampler, "sampler").run();
+        return establishBaseline(token);
+    }
+
     /** Admission for future observation adapters; raw capture/accepts only identify
      * the storage session and do not certify that client baselines were initialized.
      */
