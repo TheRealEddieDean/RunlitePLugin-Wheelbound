@@ -1,5 +1,27 @@
 # Current implementation checkpoint
 
+## I01d session coordinator slice — 2026-10-27
+
+Implemented `RunSession` behind the disabled mode boundary. It opens existing saves only,
+issues opaque per-session/revision callback tokens, invalidates them on disconnect and
+lifecycle commands, and closes observation admission after failed reads or commands.
+Historical command replay refreshes from the actual persisted head rather than the old
+receipt. Pause retains the committed obligation; reconnect never backfills observations.
+Callers must perform storage work on a worker thread and disconnect on logout, hopping,
+profile changes and shutdown. This coordinator is not yet wired to RuneLite events.
+
+Validation: local Gradle 8.10 `test --offline --no-daemon --console=plain`, using the
+existing Gradle cache and installed JDK 17 with Java release 11 compilation, passed
+117 tests with zero failures/errors/skips. Four new tests exercise actual temporary-file
+storage, same-revision reconnect, foreign-session tokens, pause/resume, historical replay,
+failed commands/open and lost acknowledgement. This is not JDK 11 CI or live-client proof.
+
+Next: wire opt-in foundation preview to supported plugin-directory injection and verified
+account/profile events, with asynchronous stale-result guards and reinitialized observation
+baselines. No first-run activation, gameplay, detector, recovery UI or Hub release is enabled.
+Changes remain on the isolated `agent/i01d-session-adapter-20261027-222408` branch pending
+review/CI; no PR or merge is claimed for this slice.
+
 ## Current verified batch release — 2026-10-27
 
 WB-D158/159 authorize coding and verified PR integration. This release checkpoint belongs to PR5; verify its exact final head, CI and source merge before reporting merged. No background work after the owning merge.
