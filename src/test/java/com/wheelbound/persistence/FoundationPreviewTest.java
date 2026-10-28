@@ -238,6 +238,40 @@ public class FoundationPreviewTest
         assertTrue(preview.acceptsObservation(replacement));
     }
 
+    @Test public void samplerCannotAcknowledgeOrNestSamplingBeforeItReturns() throws Exception
+    {
+        preview.setEnabled(true);
+        preview.connect(store(), identity); tasks.remove(0).run();
+        RunSession.Token token = preview.capture().get();
+        assertTrue(preview.sampleBaseline(token, () -> {
+            assertFalse(preview.establishBaseline(token));
+            assertFalse(preview.sampleBaseline(token, () -> fail("Nested sampler must not run")));
+            assertFalse(preview.acceptsObservation(token));
+        }));
+        assertTrue(preview.acceptsObservation(token));
+    }
+
+    @Test public void reentrantAcknowledgementFollowedByFailureLeavesAdmissionClosed() throws Exception
+    {
+        preview.setEnabled(true);
+        preview.connect(store(), identity); tasks.remove(0).run();
+        RunSession.Token token = preview.capture().get();
+        assertTrue(preview.establishBaseline(token));
+        AssertionError failure = new AssertionError("sampling interrupted");
+        try
+        {
+            preview.sampleBaseline(token, () -> {
+                assertFalse(preview.establishBaseline(token));
+                throw failure;
+            });
+            fail("Failure must propagate");
+        }
+        catch (AssertionError expected) { assertSame(failure, expected); }
+        assertFalse(preview.acceptsObservation(token));
+        assertTrue(preview.sampleBaseline(token, () -> { }));
+        assertTrue(preview.acceptsObservation(token));
+    }
+
     @Test public void disableAndDisconnectEachRequireAnotherBaseline() throws Exception
     {
         AtomicRunStore store = store();
