@@ -1,5 +1,14 @@
 # Wheelbound autonomous task queue
 
+Latest bounded I01d continuation (2026-10-27): caller-supplied preview directory/codec
+constructor and identity-only existing-save connect added, with four focused tests.
+Status PARTIAL_UNVERIFIED: Gradle 8.10 absent in workspace-local cache; focused test
+attempt blocked before compilation. Next run focused/legacy suites, then actual RuneLite
+directory-provider integration, UI/config, verified identity events and fresh baselines.
+Gameplay remains disabled; legacy Master Wheel untouched; no Git operations performed.
+This supersedes earlier local-next navigation below.
+
+
 Latest bounded I01d continuation (2026-10-27): unwired default-disabled
 FoundationPreview gate and four focused tests added. Status PARTIAL_UNVERIFIED:
 workspace-local Gradle distribution absent; focused execution blocked before compilation.

@@ -1,5 +1,19 @@
 # Wheelbound session checkpoint and ownership
 
+## Latest local continuation - directory injection, 2026-10-27
+
+IDLE after one bounded I01d increment: FoundationPreview can now bind a caller-supplied
+plugin directory and codec and open an existing save using a verified identity. No
+filesystem work occurs during construction or disabled connects; reads stay on the
+injected worker. Invalid identity closes prior admission. Four focused tests added.
+Status PARTIAL_UNVERIFIED: focused Gradle attempt failed before compilation because
+the workspace-local Gradle 8.10 distribution is absent and download was blocked.
+Next: run focused and legacy tests, then preview UI/config, verified account/profile
+events and fresh observation baselines. Actual RuneLite directory-provider wiring is
+still unfinished. Gameplay disabled; legacy Master Wheel untouched. No Git operations,
+external-path/credential/secret/workflow inspection or background work performed.
+
+
 ## Latest local continuation - opt-in gate, 2026-10-27
 
 IDLE after one bounded I01d increment: unwired FoundationPreview now gates existing-save
