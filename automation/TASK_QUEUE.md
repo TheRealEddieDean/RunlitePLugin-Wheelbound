@@ -1,5 +1,12 @@
 # Wheelbound autonomous task queue
 
+Latest local I01d increment (2026-10-27): session coordinator already present;
+asynchronous existing-save opener and four stale-read/failure tests now added.
+Status PARTIAL_UNVERIFIED: Gradle distribution unavailable with workspace-local cache,
+so new tests have not run. Next run focused tests plus legacy suite, then implement
+opt-in preview, plugin-directory and verified identity event wiring with fresh baselines.
+No gameplay activation or Git operations. This supersedes older NOT_STARTED I01d rows.
+
 Current engineering continuation: [implementation checkpoint](IMPLEMENTATION_CHECKPOINT.md). Its four-PR batch supersedes historical next-task navigation below. WB-D158/159 authorize production implementation and verified PR integration.
 
 ## Current engineering queue — WB-D158

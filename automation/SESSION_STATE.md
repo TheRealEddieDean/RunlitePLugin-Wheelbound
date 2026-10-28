@@ -1,5 +1,16 @@
 # Wheelbound session checkpoint and ownership
 
+## Latest local continuation - 2026-10-27
+
+IDLE after bounded I01d asynchronous opener increment. `AsyncRunSession` now guards
+worker read publication against disconnect and superseding account/profile requests.
+Four focused tests added; execution blocked before compilation by unavailable Gradle
+distribution with workspace-local cache. No test pass claimed for this increment.
+See IMPLEMENTATION_CHECKPOINT.md for scope and validation limits. Next: run tests,
+then opt-in preview/live identity wiring and fresh observation baselines. Gameplay
+remains disabled; legacy Master Wheel unchanged. No Git operations or external source
+inspection performed; no commit/PR/merge claimed. No background work.
+
 Current engineering continuation: [implementation checkpoint](IMPLEMENTATION_CHECKPOINT.md). Its four-PR batch supersedes historical next-task navigation below. WB-D158/159 authorize production implementation and verified PR integration.
 
 ## Current integration authority — WB-D159
