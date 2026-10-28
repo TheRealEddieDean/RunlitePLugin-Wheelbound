@@ -1,5 +1,27 @@
 # Current implementation checkpoint
 
+## I01d asynchronous opener slice - 2026-10-27
+
+Added unwired `AsyncRunSession`, with an injected storage worker executor and a fresh
+generation per open/disconnect. Workers load private sessions; only the latest request
+can publish. Disconnect immediately closes admission without waiting for IO. Failed
+reads/submissions never restore prior admission or initialize missing runs. Future
+completion is not observation evidence; capture a fresh token. Cancellation is not
+disconnect, as documented on the API.
+
+Four focused JUnit tests added: disconnect during queued read, reversed profile reads
+and token invalidation, missing-run failure without creation, rejected submission.
+Tests NOT EXECUTED: default wrapper failed creating its external cache lock; retry with
+workspace-local `--gradle-user-home .gradle-local` could not obtain Gradle 8.10 because
+download was blocked. The prior 117-test receipt applies only to the predecessor.
+
+Next: run new tests and legacy suite in an available build environment, then implement
+opt-in preview, plugin-directory injection, verified account/profile events and fresh
+observation baselines. No live event/UI wiring, commands, run creation or gameplay
+activation in this slice. Legacy Master Wheel files unchanged. No Git operations,
+remote verification, PR or merge performed; current user restrictions supersede older
+publication instructions below.
+
 ## I01d session coordinator slice — 2026-10-27
 
 Implemented `RunSession` behind the disabled mode boundary. It opens existing saves only,
