@@ -19,6 +19,7 @@ public final class FoundationPreview
     private final RunCodec codec;
     private boolean enabled;
     private RunSession.Token baseline;
+    private boolean sampling;
 
     public FoundationPreview(Executor worker)
     {
@@ -84,7 +85,7 @@ public final class FoundationPreview
      */
     public synchronized boolean establishBaseline(RunSession.Token token)
     {
-        if (!accepts(token)) { return false; }
+        if (sampling || !accepts(token)) { return false; }
         baseline = token;
         return true;
     }
@@ -96,9 +97,18 @@ public final class FoundationPreview
      */
     public synchronized boolean sampleBaseline(RunSession.Token token, Runnable sampler)
     {
-        if (!accepts(token)) { return false; }
+        if (sampling || !accepts(token)) { return false; }
         baseline = null;
-        Objects.requireNonNull(sampler, "sampler").run();
+        sampling = true;
+        try
+        {
+            Objects.requireNonNull(sampler, "sampler").run();
+        }
+        finally
+        {
+            sampling = false;
+            baseline = null;
+        }
         return establishBaseline(token);
     }
 
@@ -107,7 +117,7 @@ public final class FoundationPreview
      */
     public synchronized boolean acceptsObservation(RunSession.Token token)
     {
-        return baseline != null && accepts(baseline) && accepts(token);
+        return !sampling && baseline != null && accepts(baseline) && accepts(token);
     }
 
     public synchronized Optional<RunSession.Token> capture()

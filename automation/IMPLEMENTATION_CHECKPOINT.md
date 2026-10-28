@@ -1,3 +1,26 @@
+## Latest local continuation - non-reentrant baseline sampling, 2026-10-27
+
+One bounded I01d hardening increment closes reentrant baseline admission during
+FoundationPreview.sampleBaseline. Direct acknowledgement and nested sampling now
+return false while sampling; nested callbacks never run. A finally block clears the
+sampling guard and baseline on all exits, including Errors, before successful sampling
+may acknowledge its original token. Session replacement still cannot admit a stale token.
+Two focused JUnit tests cover reentrant acknowledgement/nested refusal and failure
+cleanup followed by retry. Preview remains unwired and disabled by default; no gameplay
+activation or legacy Master Wheel changes.
+
+PARTIAL_UNVERIFIED: attempted FoundationPreviewTest, AsyncRunSessionTest and legacy
+WheelboundBehaviorTest with workspace-local --gradle-user-home .gradle-local test
+--offline --no-daemon --console=plain. Gradle 8.10 was unavailable; wrapper download
+failed with SocketException / Permission denied before compilation. No tests executed
+or new pass claimed. Static review checked normal, exceptional and reentrant exits.
+
+Next: execute focused and legacy suites in an available build environment, then supported
+RuneLite directory-provider wiring, opt-in UI/config, verified account/profile boundaries
+and actual client baseline sampling. No Git operations, external-path inspection,
+credentials, secrets or workflows accessed. No publication or background work. IDLE.
+Current user restrictions supersede historical publication instructions below.
+
 ## Latest local continuation - baseline sampling callback, 2026-10-27
 
 One bounded I01d increment adds FoundationPreview.sampleBaseline(token, sampler).
