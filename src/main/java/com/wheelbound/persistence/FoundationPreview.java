@@ -18,6 +18,7 @@ public final class FoundationPreview
     private final Path pluginDirectory;
     private final RunCodec codec;
     private boolean enabled;
+    private RunSession.Token baseline;
 
     public FoundationPreview(Executor worker)
     {
@@ -44,6 +45,7 @@ public final class FoundationPreview
         if (!enabled) { return CompletableFuture.completedFuture(false); }
         // Invalidate admission even when adapter input is invalid.
         session.disconnect();
+        baseline = null;
         if (pluginDirectory == null)
         {
             throw new IllegalStateException("Preview storage directory was not supplied");
@@ -58,19 +60,41 @@ public final class FoundationPreview
     public synchronized void setEnabled(boolean value)
     {
         enabled = value;
-        if (!value) { session.disconnect(); }
+        if (!value) { baseline = null; session.disconnect(); }
     }
 
     public synchronized CompletableFuture<Boolean> connect(AtomicRunStore store, RunIdentity identity)
     {
         if (!enabled) { return CompletableFuture.completedFuture(false); }
+        baseline = null;
         return session.connect(store, identity);
     }
 
     /** Session boundaries retain opt-in, but require an explicit fresh connect. */
     public synchronized void disconnect()
     {
+        baseline = null;
         session.disconnect();
+    }
+
+    /** Call only after capturing fresh client observation baselines for this token.
+     * The adapter must capture the token before sampling, on its serialized client
+     * callback path. Neither storage completion nor old/paused samples qualify.
+     * This acknowledgement contains no observations and awards no progress.
+     */
+    public synchronized boolean establishBaseline(RunSession.Token token)
+    {
+        if (!accepts(token)) { return false; }
+        baseline = token;
+        return true;
+    }
+
+    /** Admission for future observation adapters; raw capture/accepts only identify
+     * the storage session and do not certify that client baselines were initialized.
+     */
+    public synchronized boolean acceptsObservation(RunSession.Token token)
+    {
+        return baseline != null && accepts(baseline) && accepts(token);
     }
 
     public synchronized Optional<RunSession.Token> capture()
