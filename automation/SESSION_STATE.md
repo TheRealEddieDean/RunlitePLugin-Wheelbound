@@ -1,3 +1,30 @@
+## Latest local continuation - skip superseded queued opens, 2026-10-28
+
+One bounded I01d increment: AsyncRunSession checks request generation when a queued
+worker begins and returns false before storage access if disconnected or superseded.
+Reads already in progress still use the existing publication guard; no IO cancellation
+is claimed. Future completion stays outside the new generation-check lock. Cancelling
+only the returned future retains its documented non-disconnect semantics.
+
+Two focused JUnit tests use corrupt snapshots to distinguish skipped reads from read
+failures: disconnect before worker execution; replacement session publishing before an
+old corrupt request executes. They also check preserved corrupt bytes, fresh token
+admission and exceptional failure/admission closure for a current corrupt request.
+Static review covered the early-return and existing post-read generation guard.
+
+PARTIAL_UNVERIFIED: attempted AsyncRunSessionTest, FoundationPreviewTest and legacy
+WheelboundBehaviorTest with gradlew.bat --gradle-user-home .gradle-local test --offline
+--no-daemon --console=plain and the three --tests filters. Gradle 8.10 was absent;
+wrapper download failed with SocketException / Permission denied before compilation.
+No tests executed or new pass claimed.
+
+Next: execute focused and legacy tests in an available build environment, then supported
+RuneLite directory-provider wiring, opt-in UI/config, verified account/profile boundaries
+and actual client baseline sampling. Preview remains unwired/default-disabled; incomplete
+gameplay stays disabled and legacy Master Wheel unchanged. No Git operations, external
+path inspection, credential/secret access or workflow access performed. No publication
+or background work. IDLE. Current user restrictions supersede historical instructions.
+
 ## Latest local continuation - non-reentrant baseline sampling, 2026-10-27
 
 One bounded I01d hardening increment closes reentrant baseline admission during
