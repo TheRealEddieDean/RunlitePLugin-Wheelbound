@@ -1,3 +1,16 @@
+## Latest local continuation - fresh baseline admission, 2026-10-27
+
+IDLE after one bounded I01d increment: FoundationPreview now requires explicit fresh
+baseline acknowledgement before acceptsObservation admits callbacks. Raw session token
+capture/acceptance remains separate. Reconnect, disable and disconnect invalidate the
+baseline; stale tokens cannot initialize a replacement session. Three focused tests added.
+PARTIAL_UNVERIFIED: focused and legacy Gradle attempt failed before compilation because
+workspace-local Gradle 8.10 is absent and its download was blocked. No test pass claimed.
+Next: execute tests, then supported directory-provider wiring, opt-in UI/config and verified
+identity/client baseline sampling. Gameplay disabled; legacy Master Wheel unchanged.
+No Git operations or external-path/credential/secret/workflow inspection performed.
+No background work. This continuation supersedes older next-task navigation below.
+
 # Wheelbound session checkpoint and ownership
 
 ## Latest local continuation - directory injection, 2026-10-27

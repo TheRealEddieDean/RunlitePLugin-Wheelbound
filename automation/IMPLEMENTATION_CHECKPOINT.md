@@ -1,3 +1,31 @@
+## I01d fresh observation baseline gate - 2026-10-27
+
+FoundationPreview now exposes establishBaseline(token) and acceptsObservation(token).
+An existing-save open only establishes a storage session. Future adapters must capture
+its token, sample fresh client baselines on their serialized client callback path, then
+acknowledge that token before admitting subsequent observations. The acknowledgement
+stores no sample and awards no progress. Raw capture/accepts retain session-only meaning.
+Reconnect (including invalid input), disable and disconnect clear baseline admission;
+stale or foreign tokens cannot establish it. Failed stale acknowledgement does not replace
+a valid current baseline. No live adapter calls this API yet, and actual fresh sampling
+remains unfinished; the API cannot itself verify caller-provided sampling occurred.
+
+Three focused JUnit tests cover open-without-baseline refusal, fresh token acceptance,
+same-revision reconnect and stale-token refusal, and disable/disconnect invalidation.
+Attempted: gradlew.bat --gradle-user-home .gradle-local test
+--tests com.wheelbound.persistence.FoundationPreviewTest
+--tests com.wheelbound.persistence.AsyncRunSessionTest
+--tests com.wheelbound.WheelboundBehaviorTest --offline --no-daemon --console=plain.
+FAILED BEFORE COMPILATION: Gradle 8.10 distribution absent; wrapper download blocked
+with SocketException / Permission denied. No tests executed or new pass claimed.
+Static review checked synchronized admission and invalidation paths. PARTIAL_UNVERIFIED.
+
+Next: run focused and legacy suites in an available build environment, then supported
+RuneLite directory-provider wiring, opt-in UI/config, verified identity events and actual
+client baseline sampling. Gameplay remains disabled and legacy Master Wheel untouched.
+No Git operations, external paths, credentials, secrets or workflows accessed. No background
+work or publication. Current user restrictions override historical publication directions.
+
 # Current implementation checkpoint
 
 ## I01d caller-supplied preview directory slice - 2026-10-27

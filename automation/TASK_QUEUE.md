@@ -1,3 +1,10 @@
+Latest bounded I01d continuation (2026-10-27): fresh baseline admission gate added to
+FoundationPreview with three focused tests. PARTIAL_UNVERIFIED: focused preview/session
+and legacy behavior test attempt blocked before compilation by missing workspace-local
+Gradle 8.10 and denied download. Next run tests, then directory-provider/UI/config and
+verified identity/client baseline integration. No gameplay activation or Git operations.
+This supersedes older local-next navigation below.
+
 # Wheelbound autonomous task queue
 
 Latest bounded I01d continuation (2026-10-27): caller-supplied preview directory/codec

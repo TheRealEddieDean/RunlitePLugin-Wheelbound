@@ -150,4 +150,56 @@ public class FoundationPreviewTest
         assertFalse(bound.capture().isPresent());
         assertTrue(tasks.isEmpty());
     }
+
+    @Test public void openRequiresExplicitFreshBaselineBeforeObservationAdmission() throws Exception
+    {
+        preview.setEnabled(true);
+        preview.connect(store(), identity); tasks.remove(0).run();
+        RunSession.Token token = preview.capture().get();
+        assertTrue(preview.accepts(token));
+        assertFalse(preview.acceptsObservation(token));
+        assertFalse(preview.establishBaseline(null));
+        assertTrue(preview.establishBaseline(token));
+        assertTrue(preview.acceptsObservation(preview.capture().get()));
+        assertFalse(preview.acceptsObservation(null));
+    }
+
+    @Test public void reconnectCannotReuseBaselineEvenAtSamePersistedRevision() throws Exception
+    {
+        AtomicRunStore store = store();
+        preview.setEnabled(true);
+        preview.connect(store, identity); tasks.remove(0).run();
+        RunSession.Token old = preview.capture().get();
+        assertTrue(preview.establishBaseline(old));
+        CompletableFuture<Boolean> fresh = preview.connect(store, identity);
+        assertFalse(preview.acceptsObservation(old));
+        assertFalse(preview.establishBaseline(old));
+        tasks.remove(0).run();
+        assertTrue(fresh.join());
+        RunSession.Token current = preview.capture().get();
+        assertFalse(preview.acceptsObservation(current));
+        assertFalse(preview.establishBaseline(old));
+        assertTrue(preview.establishBaseline(current));
+        assertTrue(preview.acceptsObservation(current));
+    }
+
+    @Test public void disableAndDisconnectEachRequireAnotherBaseline() throws Exception
+    {
+        AtomicRunStore store = store();
+        preview.setEnabled(true);
+        preview.connect(store, identity); tasks.remove(0).run();
+        RunSession.Token old = preview.capture().get();
+        assertTrue(preview.establishBaseline(old));
+        preview.setEnabled(false);
+        preview.setEnabled(true);
+        assertFalse(preview.acceptsObservation(old));
+        assertFalse(preview.establishBaseline(old));
+        preview.connect(store, identity); tasks.remove(0).run();
+        RunSession.Token current = preview.capture().get();
+        assertFalse(preview.acceptsObservation(current));
+        assertTrue(preview.establishBaseline(current));
+        preview.disconnect();
+        assertFalse(preview.acceptsObservation(current));
+        assertFalse(preview.establishBaseline(current));
+    }
 }
