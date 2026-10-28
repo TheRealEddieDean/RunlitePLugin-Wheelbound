@@ -22,11 +22,13 @@ public final class AtomicRunStore
 {
     enum Boundary { TEMP_FORCED, REPLACED }
     interface CommitHook { void at(Boundary boundary) throws IOException; }
+    interface DirectoryForcer { void force(Path directory) throws IOException; }
     private final Path root;
     private final RunCodec codec;
     private final RunIdentity identity;
     private final String name;
     private final CommitHook hook;
+    private final DirectoryForcer directoryForcer;
     private volatile boolean uncertain;
 
     public AtomicRunStore(Path pluginDirectory, RunCodec codec, RunIdentity identity)
@@ -34,10 +36,18 @@ public final class AtomicRunStore
 
     AtomicRunStore(Path pluginDirectory, RunCodec codec, RunIdentity identity, CommitHook hook)
     {
+        this(pluginDirectory, codec, identity, hook,
+            directoryForcer(System.getProperty("os.name", ""), AtomicRunStore::forceDirectory));
+    }
+
+    AtomicRunStore(Path pluginDirectory, RunCodec codec, RunIdentity identity, CommitHook hook,
+        DirectoryForcer directoryForcer)
+    {
         this.root = Objects.requireNonNull(pluginDirectory, "pluginDirectory").resolve("runs-v1");
         this.codec = Objects.requireNonNull(codec, "codec");
         this.identity = Objects.requireNonNull(identity, "identity");
         this.hook = Objects.requireNonNull(hook, "hook");
+        this.directoryForcer = Objects.requireNonNull(directoryForcer, "directoryForcer");
         name = RunCodec.sha256((identity.accountKey() + "\0" + identity.runId()).getBytes(StandardCharsets.UTF_8));
     }
 
@@ -57,7 +67,11 @@ public final class AtomicRunStore
         return Optional.of(codec.decode(Files.readAllBytes(snapshotPath()), identity));
     }
 
-    /** expectedRevision=-1 creates revision zero only. Success is returned after file/directory force. */
+    /**
+     * expectedRevision=-1 creates revision zero only. Files are forced before atomic replacement.
+     * Directory entries are also forced except on Windows, where Java cannot open directories
+     * as FileChannels; directory-entry durability across power loss is not guaranteed there.
+     */
     public void write(RunDocument next, long expectedRevision) throws IOException
     {
         if (expectedRevision < -1 || !identity.equals(next.lifecycle().identity())
@@ -86,10 +100,10 @@ public final class AtomicRunStore
                     forceFile(backupPending, Files.readAllBytes(snapshotPath()));
                     Files.move(backupPending, previousPath(), StandardCopyOption.ATOMIC_MOVE, StandardCopyOption.REPLACE_EXISTING);
                 }
-                forceDirectory();
+                directoryForcer.force(root);
                 Files.move(pendingPath(), snapshotPath(), StandardCopyOption.ATOMIC_MOVE, StandardCopyOption.REPLACE_EXISTING);
                 hook.at(Boundary.REPLACED);
-                forceDirectory();
+                directoryForcer.force(root);
                 return null;
             }
             catch (IOException | RuntimeException ex)
@@ -110,9 +124,17 @@ public final class AtomicRunStore
         }
     }
 
-    private void forceDirectory() throws IOException
+    static DirectoryForcer directoryForcer(String osName, DirectoryForcer supported)
     {
-        try (FileChannel directory = FileChannel.open(root, StandardOpenOption.READ)) { directory.force(true); }
+        // Skip the unsupported operation up front, never infer support from AccessDeniedException:
+        // real permission failures from file writes, moves, locks, and supported directory force
+        // must still propagate to the caller.
+        return osName.startsWith("Windows") ? ignored -> {} : supported;
+    }
+
+    private static void forceDirectory(Path directoryPath) throws IOException
+    {
+        try (FileChannel directory = FileChannel.open(directoryPath, StandardOpenOption.READ)) { directory.force(true); }
     }
 
     private interface IOAction<T> { T run() throws IOException; }
