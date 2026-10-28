@@ -1,5 +1,28 @@
 # Current implementation checkpoint
 
+## I01d opt-in preview gate slice - 2026-10-27
+
+Added unwired `FoundationPreview`, a read-only wrapper over `AsyncRunSession`.
+Opt-in starts false for each instance and is not persisted. Disabled connects return
+false without submitting storage work. Disabling invalidates tokens and pending reads;
+re-enabling does not reconnect. Disconnect retains opt-in but requires a fresh explicit
+connect with caller-verified identity. This API neither creates runs nor enables gameplay.
+
+Four focused JUnit tests added for disabled startup, disable/re-enable during a queued
+read, published-token invalidation, and disconnect/reconnect with process-local opt-in.
+Attempted focused FoundationPreviewTest and AsyncRunSessionTest using the workspace-local
+Gradle cache (`--gradle-user-home .gradle-local test --offline --no-daemon --console=plain`).
+The wrapper failed before compilation: Gradle 8.10 distribution absent and download
+blocked with SocketException / Permission denied. No tests executed or new pass claimed.
+Static review checked gate/session locking and pending-read invalidation behavior.
+
+Next: execute focused and legacy tests in an available build environment, then add
+plugin-directory injection, opt-in UI/config integration, verified account/profile event
+wiring and fresh observation baselines. Preview remains unwired; no first-run creation,
+gameplay, reward/detector or recovery UI activation. Legacy Master Wheel untouched.
+No Git operations, external-path inspection, secrets or workflows accessed. No background
+work. Current user restrictions supersede historical publication instructions below.
+
 ## I01d asynchronous opener slice - 2026-10-27
 
 Added unwired `AsyncRunSession`, with an injected storage worker executor and a fresh
