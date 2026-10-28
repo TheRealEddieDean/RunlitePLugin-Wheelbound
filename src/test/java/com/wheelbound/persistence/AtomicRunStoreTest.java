@@ -100,4 +100,62 @@ public class AtomicRunStoreTest
         assertThrows(IllegalArgumentException.class, () -> store.write(document(2), -1));
         assertFalse(store.load().isPresent());
     }
+
+    @Test public void windowsSkipsUnsupportedDirectoryForceAndRetainsAtomicSnapshots() throws Exception
+    {
+        AtomicRunStore.DirectoryForcer windows = AtomicRunStore.directoryForcer("Windows 11", path -> {
+            throw new AccessDeniedException(path.toString());
+        });
+        AtomicRunStore store = new AtomicRunStore(folder.getRoot().toPath(), codec, id, ignored -> {}, windows);
+        store.write(document(0), -1);
+        store.write(document(1), 0);
+        assertEquals(1, store().load().get().lifecycle().revision());
+        assertEquals(0, codec.decode(Files.readAllBytes(store.previousPath()), id).lifecycle().revision());
+        assertFalse(Files.exists(store.pendingPath()));
+    }
+
+    @Test public void supportedPlatformsForceDirectoryBeforeAndAfterReplacement() throws Exception
+    {
+        for (String platform : new String[] {"Linux", "Mac OS X", "Darwin", ""})
+        {
+            Path base = folder.newFolder().toPath();
+            java.util.List<Boolean> replaced = new java.util.ArrayList<>();
+            AtomicRunStore.DirectoryForcer forcer = AtomicRunStore.directoryForcer(platform, path -> {
+                assertEquals(base.resolve("runs-v1"), path);
+                replaced.add(Files.exists(path.resolve(store().snapshotPath().getFileName())));
+            });
+            AtomicRunStore store = new AtomicRunStore(base, codec, id, ignored -> {}, forcer);
+            store.write(document(0), -1);
+            assertEquals(java.util.Arrays.asList(false, true), replaced);
+        }
+    }
+
+    @Test public void directoryAccessDeniedPropagatesAndRequiresReconciliation() throws Exception
+    {
+        for (int failAt : new int[] {1, 2})
+        {
+            Path base = folder.newFolder().toPath();
+            AccessDeniedException denied = new AccessDeniedException(base.toString());
+            int[] calls = {0};
+            AtomicRunStore.DirectoryForcer forcer = AtomicRunStore.directoryForcer("Linux", path -> {
+                if (++calls[0] == failAt) { throw denied; }
+            });
+            AtomicRunStore store = new AtomicRunStore(base, codec, id, ignored -> {}, forcer);
+            assertSame(denied, assertThrows(AccessDeniedException.class, () -> store.write(document(0), -1)));
+            assertEquals(failAt == 1, Files.exists(store.pendingPath()));
+            assertEquals(failAt == 2, Files.exists(store.snapshotPath()));
+            assertThrows(IOException.class, () -> store.write(document(0), -1));
+        }
+    }
+
+    @Test public void windowsDoesNotSuppressUnrelatedAccessDenied() throws Exception
+    {
+        AccessDeniedException denied = new AccessDeniedException("snapshot replacement");
+        AtomicRunStore store = new AtomicRunStore(folder.getRoot().toPath(), codec, id, boundary -> {
+            if (boundary == AtomicRunStore.Boundary.REPLACED) { throw denied; }
+        }, AtomicRunStore.directoryForcer("Windows 10", ignored -> fail("Unsupported directory force")));
+        assertSame(denied, assertThrows(AccessDeniedException.class, () -> store.write(document(0), -1)));
+        assertEquals(0, store().load().get().lifecycle().revision());
+        assertThrows(IOException.class, () -> store.write(document(1), 0));
+    }
 }
