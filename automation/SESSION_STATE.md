@@ -1,5 +1,17 @@
 # Wheelbound session checkpoint and ownership
 
+## Latest local continuation - opt-in gate, 2026-10-27
+
+IDLE after one bounded I01d increment: unwired FoundationPreview now gates existing-save
+opens behind process-local opt-in, disabled by default. Disable invalidates queued reads
+and tokens; enable alone never reconnects. Four focused tests added. Focused test attempt
+failed before compilation because the workspace-local Gradle distribution is unavailable
+and download is blocked; no new test pass claimed. See IMPLEMENTATION_CHECKPOINT.md.
+Next: run focused/legacy tests, then plugin-directory injection, preview UI/config,
+verified identity events and fresh observation baselines. Gameplay remains disabled and
+legacy Master Wheel unchanged. No Git operations or external-path/workflow inspection;
+no commit/PR/merge or background work claimed. Older continuation below is historical.
+
 ## Latest local continuation - 2026-10-27
 
 IDLE after bounded I01d asynchronous opener increment. `AsyncRunSession` now guards

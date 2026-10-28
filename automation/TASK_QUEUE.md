@@ -1,5 +1,12 @@
 # Wheelbound autonomous task queue
 
+Latest bounded I01d continuation (2026-10-27): unwired default-disabled
+FoundationPreview gate and four focused tests added. Status PARTIAL_UNVERIFIED:
+workspace-local Gradle distribution absent; focused execution blocked before compilation.
+Next execute focused/legacy tests, then plugin-directory injection, preview UI/config,
+verified identity event wiring and fresh baselines. Gameplay remains disabled.
+This supersedes older local-next navigation below; no Git operations performed.
+
 Latest local I01d increment (2026-10-27): session coordinator already present;
 asynchronous existing-save opener and four stale-read/failure tests now added.
 Status PARTIAL_UNVERIFIED: Gradle distribution unavailable with workspace-local cache,
