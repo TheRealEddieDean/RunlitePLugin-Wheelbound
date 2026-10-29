@@ -14,6 +14,69 @@ import static com.wheelbound.domain.SliceInventory.*;
 
 public class SliceInventoryTest
 {
+    @Test public void newPurchaseProposalEstablishesBaselineAndContinuesAfterLastCopyDestruction()
+    {
+        SliceInventory original = new SliceInventory(wheel(), List.of(slice("questing")),
+            SatchelTier.BASE, unlocks(), history());
+        UUID firstId = UUID.randomUUID();
+        SliceInventory first = original.proposeNewPurchase(firstId, "woodcutting");
+        Slice bought = first.activeWheel().slices().get(5);
+        assertEquals(firstId, bought.id());
+        assertEquals("woodcutting", bought.activity());
+        assertEquals(Enhancement.BASE, bought.enhancement());
+        assertEquals(4, bought.weightUnits());
+        assertEquals(0, first.acquisitionHistory().get("woodcutting").paidDuplicates());
+        SliceInventory second = first.proposeNewPurchase(UUID.randomUUID(), "woodcutting");
+        assertEquals(1, second.acquisitionHistory().get("woodcutting").paidDuplicates());
+        SliceInventory destroyed = second.proposeDestruction(Set.of(firstId,
+            second.activeWheel().slices().get(6).id()));
+        SliceInventory reacquired = destroyed.proposeNewPurchase(UUID.randomUUID(), "woodcutting");
+        assertEquals(2, reacquired.acquisitionHistory().get("woodcutting").paidDuplicates());
+        assertEquals(1, original.proposeNewPurchase(UUID.randomUUID(), "combat")
+            .acquisitionHistory().get("combat").paidDuplicates());
+        assertEquals(8, original.proposeNewPurchase(UUID.randomUUID(), "questing")
+            .acquisitionHistory().get("questing").paidDuplicates());
+        assertFalse(original.acquisitionHistory().containsKey("woodcutting"));
+        assertEquals(5, original.activeWheel().slices().size());
+        assertEquals(original.stored(), reacquired.stored());
+        assertEquals(original.unlockedActivities(), reacquired.unlockedActivities());
+        assertEquals(original.satchelTier(), reacquired.satchelTier());
+        assertSame(original.activeWheel().slices().get(0), reacquired.activeWheel().slices().get(0));
+        assertEquals(1, reacquired.acquisitionHistory().get("mining").paidDuplicates());
+    }
+
+    @Test public void newPurchaseRejectsIdentityCapacityLockedAndOverflowWithoutChangingHistory()
+    {
+        Slice stored = slice("questing");
+        Map<String, AcquisitionHistory> histories = new HashMap<>(history());
+        histories.put("questing", new AcquisitionHistory(Long.MAX_VALUE));
+        SliceInventory original = new SliceInventory(wheel(), List.of(stored), SatchelTier.BASE,
+            unlocks(), histories);
+        for (UUID owned : List.of(stored.id(), original.activeWheel().slices().get(0).id()))
+        { assertThrows(IllegalArgumentException.class, () -> original.proposeNewPurchase(owned, "combat")); }
+        for (String invalid : List.of("locked", "", " combat"))
+        { assertThrows(IllegalArgumentException.class,
+            () -> original.proposeNewPurchase(UUID.randomUUID(), invalid)); }
+        assertThrows(NullPointerException.class, () -> original.proposeNewPurchase(null, "combat"));
+        assertThrows(NullPointerException.class, () -> original.proposeNewPurchase(UUID.randomUUID(), null));
+        assertThrows(ArithmeticException.class,
+            () -> original.proposeNewPurchase(UUID.randomUUID(), "questing"));
+        List<Slice> active = new ArrayList<>(original.activeWheel().slices());
+        while (active.size() < 24) { active.add(Slice.special(UUID.randomUUID(), Kind.TAINT, 4)); }
+        SliceInventory full = new SliceInventory(new ActiveWheel(active), List.of(), SatchelTier.BASE,
+            unlocks(), histories);
+        assertThrows(IllegalArgumentException.class,
+            () -> full.proposeNewPurchase(UUID.randomUUID(), "woodcutting"));
+        assertFalse(full.acquisitionHistory().containsKey("woodcutting"));
+        assertEquals(24, full.activeWheel().slices().size());
+        assertEquals(histories, original.acquisitionHistory());
+        assertEquals(List.of(stored), original.stored());
+        SliceInventory proposed = original.proposeNewPurchase(UUID.randomUUID(), "combat");
+        assertThrows(IllegalArgumentException.class,
+            () -> proposed.proposeNewPurchase(proposed.activeWheel().slices().get(5).id(), "combat"));
+        assertEquals(1, proposed.acquisitionHistory().get("combat").paidDuplicates());
+    }
+
     @Test public void questingStorageAndReturnPreserveInstanceAndLifetimeHistory()
     {
         Slice questing = slice("questing");
