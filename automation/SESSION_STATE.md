@@ -1,3 +1,34 @@
+## Current local continuation - active wheel snapshot, 2026-10-29
+
+IDLE after bounded WB-WHL-02 (S). Reconciled current domain/persistence/plugin and test
+inventories with recorded merged receipts; no remote verification or Git operations.
+Existing backlog classifications stand except WHL-02 is now PARTIAL_UNVERIFIED.
+I01d was not selected or modified. This supersedes historical next-task directions.
+
+ActiveWheel provides immutable UUID slice identities, ordinary activity keys and individual
+weights, separate Taint/Sacrifice kinds, shared 24-slot capacity and minimum five ordinary
+slices across three activities. Exact ordinary quarter weights 4/5/6/8/12 implement
+1/1.25/1.5/2/3. Special weights are explicit inputs; no unresolved Taint default adopted.
+Reordering requires an exact identity permutation and preserves instances and modifiers.
+Duplicate IDs, invalid weights and total overflow fail closed. Canonical activity catalog
+admission remains a caller responsibility. Authority: WB-D005/006/008/010/096/157,
+WHEELS.md and DEFY_FATE.md. No purchasing, Defy progression or spin authorization.
+
+Three JUnit methods added for capacity/diversity, weights/reorder/immutability and malformed
+snapshots/overflow. javac --release 11 compiled ActiveWheel and ProgressionGraph successfully
+into build/wheelbound-domain-check. Production compilation is not a JUnit pass.
+Attempted gradlew.bat --gradle-user-home .gradle-local test --offline --no-daemon
+--console=plain with ActiveWheelTest, ProgressionGraphTest and WheelboundBehaviorTest.
+Missing Gradle 8.10 and blocked download (SocketException / Permission denied) prevented
+compilation; no focused or legacy JUnit tests ran. Supervisor must execute these suites.
+
+WHL-02 remains PARTIAL pending executed tests and catalog/aggregate integration. WHL-07
+odds UI remains TODO. Next eligible gameplay increment: WB-WHL-03 immutable owned-slice
+and Satchel inventory after reading WB-D011/118/121 and storage capacity decisions.
+Paid edits, counters and durable spins remain separate prerequisites. Legacy Master Wheel
+unchanged; incomplete mode remains unwired/default-disabled. No external path, credential,
+secret or workflow access, publication or background work. Supervisor handles Git/CI.
+
 ## Current local continuation - progression prerequisites, 2026-10-28
 
 IDLE after WB-FND-01 source/backlog audit and one bounded WB-TREE-02 increment.
