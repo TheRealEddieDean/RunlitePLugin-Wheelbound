@@ -1,3 +1,36 @@
+## Current local continuation - Fate Point ledger arithmetic, 2026-10-29
+
+IDLE after bounded WB-ECON-01 increment (S). Reconciled domain and test inventories,
+plugin/config wiring and recorded I01a/b/c merged receipts; no Git or remote verification.
+FND-01 stays DONE. TREE-02, WHL-02/03/05 and ECON-01 are PARTIAL_UNVERIFIED;
+other audited PARTIAL/TODO/BLOCKED statuses stand. Historical next-task text below
+is superseded by this continuation. I01d was not selected or changed.
+
+FatePointLedger implements immutable starting balance and ordered positive-amount
+EARNING/DISCRETIONARY_COST/PENALTY entries. Earnings recover debt; penalties may
+create debt; discretionary costs require full funds. Restoring history validates each
+intermediate balance, rejecting spend-before-earn even when final funds would suffice.
+Exact long arithmetic rejects overflow without wrapping/clamping; no gameplay cap is
+adopted. Authority: WB-D105, ECONOMY and STATE_CONTRACT. No prices, reward eligibility,
+paused processing, command deduplication, receipts or durable settlement are implemented.
+Trusted caller authorization remains required; ledger append is only arithmetic/history.
+
+Three focused JUnit methods authored for debt/recovery/exact funds, insufficient funds,
+restoration ordering, defensive copies, invalid inputs and both overflow boundaries.
+Java 11 production compilation passed for ledger, inventory, wheel and graph.
+Gradle focused ledger/inventory and legacy WheelboundBehaviorTest attempt failed before
+compilation: absent Gradle 8.10 distribution download denied (SocketException).
+No JUnit tests ran. Supervisor must run focused and legacy suites before verification.
+
+Next eligible bounded task: revision-checked replay-safe FP command/receipt integration
+with the durable run aggregate, before paid slice/history transitions (FND-11/ECON-08).
+Read existing receipt/store and frozen-quote contracts first; keep product amounts and
+catalog payloads gated on reviewed authority. ECON-01 remains partial until durable
+integration and executed tests. WHL-03 movement, WHL-04/05 purchases and WHL-11
+Questing edit enforcement remain unfinished. Legacy Master Wheel source unchanged;
+incomplete gameplay remains unwired/default-disabled. No Git, external-path, credential,
+secret or workflow access. Supervisor handles publication and CI.
+
 ## Current local continuation - lifetime purchase classification, 2026-10-29
 
 IDLE after bounded WB-WHL-05 classification increment (XS/S). Reconciled domain,
