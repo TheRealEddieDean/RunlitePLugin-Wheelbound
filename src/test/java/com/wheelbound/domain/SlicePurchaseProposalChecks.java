@@ -11,6 +11,7 @@ public final class SlicePurchaseProposalChecks
     {
         successfulProposals();
         rejectedProposals();
+        receiptRequestBinding();
         System.out.println("SlicePurchaseProposalChecks passed");
     }
 
@@ -85,6 +86,43 @@ public final class SlicePurchaseProposalChecks
         rejects(() -> new SlicePurchaseProposal.Quote("new", "q", "v", 0, PurchaseKind.FIRST_INSTANCE, 0));
         rejects(() -> new SlicePurchaseProposal.Quote("new", "q", "v", 1, PurchaseKind.FIRST_INSTANCE, 1));
         check(ledger.entries().isEmpty() && seed.activeWheel().slices().size() == 5);
+    }
+
+    static void receiptRequestBinding()
+    {
+        RunLifecycle run = run(7, RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.NONE);
+        UUID command = UUID.randomUUID(), instance = UUID.randomUUID();
+        SlicePurchaseProposal.Quote original = quote("new", 0, 5);
+        SlicePurchaseProposal proposal = propose(run, new FatePointLedger(20, List.of()),
+            inventory(), command, instance, original);
+        SlicePurchaseReceipt receipt = proposal.receipt();
+        check(receipt.matches(run.identity(), command, 7, instance, quote("new", 0, 5)));
+        check(!receipt.matches(run.identity(), command, 8, instance, original));
+        check(!receipt.matches(run.identity(), UUID.randomUUID(), 7, instance, original));
+        check(!receipt.matches(run.identity(), command, 7, UUID.randomUUID(), original));
+        check(!receipt.matches(new RunIdentity("foreign", run.identity().runId()), command, 7, instance, original));
+        check(!receipt.matches(new RunIdentity(run.identity().accountKey(), UUID.randomUUID()),
+            command, 7, instance, original));
+        for (SlicePurchaseProposal.Quote changed : List.of(
+            new SlicePurchaseProposal.Quote("other", original.key(), original.version(), 5, PurchaseKind.FIRST_INSTANCE, 0),
+            new SlicePurchaseProposal.Quote("new", "other", original.version(), 5, PurchaseKind.FIRST_INSTANCE, 0),
+            new SlicePurchaseProposal.Quote("new", original.key(), "other", 5, PurchaseKind.FIRST_INSTANCE, 0),
+            quote("new", 0, 6), quote("new", 1, 5)))
+        { check(!receipt.matches(run.identity(), command, 7, instance, changed)); }
+        check(!receipt.matches(run.identity(), command, 7, instance, null));
+        SlicePurchaseProposal.Quote duplicate = quote("new", 1, 5);
+        SlicePurchaseReceipt decoded = new SlicePurchaseReceipt(run.identity(), instance, duplicate, receipt.debit());
+        check(!decoded.matches(run.identity(), command, 7, instance, quote("new", 2, 5)));
+        // A later proposal must not replace the original balance/revision response.
+        SlicePurchaseProposal later = propose(proposal.lifecycle(), proposal.ledger(), proposal.inventory(),
+            UUID.randomUUID(), UUID.randomUUID(), duplicate);
+        check(later.ledger().balance() == 10 && receipt.debit().balance() == 15);
+        check(receipt.debit().afterRevision() == 8 && receipt.identity().equals(run.identity()));
+        for (FatePointDebits.Receipt changed : List.of(
+            new FatePointDebits.Receipt(command, 7, 8, "other", original.version(), 5, 15),
+            new FatePointDebits.Receipt(command, 7, 8, original.key(), "other", 5, 15),
+            new FatePointDebits.Receipt(command, 7, 8, original.key(), original.version(), 6, 14)))
+        { rejects(() -> new SlicePurchaseReceipt(run.identity(), instance, original, changed)); }
     }
 
     private static SlicePurchaseProposal propose(RunLifecycle run, FatePointLedger ledger,

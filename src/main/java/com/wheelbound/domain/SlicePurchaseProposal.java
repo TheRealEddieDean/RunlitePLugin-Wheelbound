@@ -92,6 +92,10 @@ public final class SlicePurchaseProposal
     public UUID instanceId() { return instanceId; }
     public Quote quote() { return quote; }
 
+    /** Proposed receipt only; publish it after atomic aggregate persistence acknowledgement. */
+    public SlicePurchaseReceipt receipt()
+    { return new SlicePurchaseReceipt(lifecycle.identity(), instanceId, quote, debit); }
+
     private static String text(String value)
     {
         if (Objects.requireNonNull(value, "quote text").isEmpty() || !value.equals(value.trim()))

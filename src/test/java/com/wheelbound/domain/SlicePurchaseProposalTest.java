@@ -9,4 +9,7 @@ public class SlicePurchaseProposalTest
 
     @Test public void rejectsWrongTierContextCapacityIdentityAndUnaffordablePurchases()
     { SlicePurchaseProposalChecks.rejectedProposals(); }
+
+    @Test public void bindsEveryPurchaseRequestFieldAndRetainsOriginalResponse()
+    { SlicePurchaseProposalChecks.receiptRequestBinding(); }
 }

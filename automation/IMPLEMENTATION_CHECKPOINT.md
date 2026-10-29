@@ -1,3 +1,26 @@
+## Recovered checkpoint - typed purchase receipt, 2026-10-29
+
+Recovered the capacity-interrupted increment on agent/autonomous-20261029-172520.
+Original base: 28fbc6b1c0627184c19984cfe019f9bafb8cc7e1 (merged PR #35).
+SlicePurchaseReceipt freezes run/account identity, command ID, original revision,
+instance ID, activity, quote key/version/amount, purchase kind and duplicate ordinal,
+and retains the original debit balance/revision response after later proposals.
+Its constructor rejects quote/debit disagreement. This is an in-memory value only;
+it does not establish price authority, persistence acknowledgement or durable replay.
+Gameplay remains unwired/default-disabled; legacy Master Wheel code is unchanged.
+
+Validation: full Gradle 8.10 test suite passed, 196 tests, zero failures/errors,
+using a writable copied dependency cache, --offline and a separate build directory.
+The sandbox could not use the default cache or clean older build files; no tests
+were disabled and no build/source settings were changed to bypass validation.
+No PR has been opened or merged for this recovered checkpoint during debugging.
+Supervisor restart resumes testing/publication of this same reviewed increment,
+requiring successful CI and original base/head verification before any later merge.
+
+Next bounded unit: schema/journal integration of the typed purchase receipt, then
+an atomic purchase command with failed-write/lost-acknowledgement/restart tests.
+Related gameplay tasks remain PARTIAL_UNVERIFIED; do not claim durable purchases.
+
 ## Current local continuation - combined purchase proposal, 2026-10-29
 
 IDLE after bounded WB-WHL-04/05 and WB-ECON-08 dependency increment (S).
