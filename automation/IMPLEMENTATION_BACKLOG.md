@@ -1,4 +1,4 @@
-# Wheelbound implementation backlog â€” initial decomposition
+# Wheelbound implementation backlog Ã¢â‚¬â€ initial decomposition
 
 > Planning inventory, not a claim that every item is unimplemented or independently PR-sized. Reconcile against the current source tree and merged PRs before execution. This file does not supersede approved decisions, implementation checkpoints, or evidence gates.
 
@@ -6,7 +6,7 @@
 
 - Source of truth: `docs/wheelbound/DECISIONS.md` and subsystem specs; current code and merged CI evidence determine DONE status.
 - Default each item to `PLANNED_REVIEW`: inspect code first, then mark DONE / PARTIAL / TODO / BLOCKED with evidence. Never redo completed functionality.
-- Execute in dependency order: FND â†’ core WHL/FAT/ECON â†’ subsystems â†’ integrated REL. Independent UI/catalog work can proceed when safe.
+- Execute in dependency order: FND Ã¢â€ â€™ core WHL/FAT/ECON Ã¢â€ â€™ subsystems Ã¢â€ â€™ integrated REL. Independent UI/catalog work can proceed when safe.
 - Split any item exceeding a 30-minute Codex session into bounded testable increments. One ID is not necessarily one PR.
 - Never invent unresolved numeric prices, eligibility, source evidence, client APIs or policy approvals. Keep dependent behavior disabled until verified.
 - Preserve legacy Master Wheel behavior and appearance; GF4 is Grand Fate and B3 is Bossing. No main/master merge or Plugin Hub submission.
@@ -97,7 +97,7 @@ Do not select I01d without a concrete failing test or required dependency.
 | --- | --- | --- |
 | WB-WHL-01 | Preserve legacy normal-wheel rendering | TODO |
 | WB-WHL-02 | Define immutable 24-slot active wheel model | PARTIAL |
-| WB-WHL-03 | Implement slice ownership and storage inventory | TODO |
+| WB-WHL-03 | Implement slice ownership and storage inventory | PARTIAL |
 | WB-WHL-04 | Implement paid slice add/remove transaction | TODO |
 | WB-WHL-05 | Implement purchase escalation on reacquisition | TODO |
 | WB-WHL-06 | Implement active-slot replacement at capacity | TODO |
@@ -159,7 +159,7 @@ Do not select I01d without a concrete failing test or required dependency.
 | ID | Implementation unit | Initial status |
 | --- | --- | --- |
 | WB-QST-01 | Implement quest eligibility snapshot | PARTIAL |
-| WB-QST-02 | Implement 1â€“3 quest display and upgrade capacities | TODO |
+| WB-QST-02 | Implement 1Ã¢â‚¬â€œ3 quest display and upgrade capacities | TODO |
 | WB-QST-03 | Implement qualify-only toggle | PARTIAL |
 | WB-QST-04 | Implement deterministic quest selection | PARTIAL |
 | WB-QST-05 | Implement quest completion event evidence | TODO |
@@ -282,3 +282,19 @@ Do not select I01d without a concrete failing test or required dependency.
 - Separate historical CA rewards from the item Bounties Shop and Master hilt requirement.
 - Previously deferred permanent-invalidation proposal stays deferred; do not implement a guessed fallback.
 - No autonomous agent should treat a backlog row as permission to override `DECISIONS.md` or the protocol.
+
+## Reconciliation update - owned inventory, 2026-10-29
+
+WB-WHL-03 is PARTIAL_UNVERIFIED. SliceInventory and three focused JUnit methods now
+cover immutable active/stored ownership, approved 3/6/10/15 Satchel capacities, ordinary-only
+storage, unique cross-location IDs, retained unlocks and explicit lifetime acquisition
+history independent of current copies. Starting baseline and paid duplicates are separate;
+unlock-only activities are permitted. Stored Questing retains its instance/modifiers.
+No movement/purchase/destruction transitions, replay receipts, FP transactions, catalog
+admission or durable aggregate integration are implemented. WHL-04/05/11 remain TODO.
+All other reconciled statuses stand; existing merged receipts were not remotely verified.
+Java 11 production compilation passed. Gradle failed before test compilation because its
+missing 8.10 distribution could not download (Permission denied); no JUnit pass claimed.
+Next bounded unit: acquisition-history purchase transition/lifetime classification after
+reading transaction contracts; prices stay unadopted. Paid wheel edits require FP and
+atomic receipt prerequisites. Do not select I01d absent a concrete blocking dependency.

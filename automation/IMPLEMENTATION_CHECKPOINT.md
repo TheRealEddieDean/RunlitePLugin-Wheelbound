@@ -1,3 +1,41 @@
+## Current local continuation - owned slice inventory, 2026-10-29
+
+IDLE after bounded WB-WHL-03 snapshot increment (S). Reconciled source/test inventory
+against backlog and existing merged receipts; no Git operations or remote verification.
+WB-FND-01 remains DONE; TREE-02/WHL-02 remain PARTIAL_UNVERIFIED; WHL-03 is now
+PARTIAL_UNVERIFIED. Other PARTIAL/TODO/BLOCKED classifications remain unchanged.
+I01d was not selected. Current user restrictions supersede historical publication rules.
+
+SliceInventory validates an immutable active-wheel/Satchel ownership snapshot. Approved
+Satchel tiers hold 3/6/10/15 ordinary instances independently of the 24 active slots.
+UUIDs must be unique across both locations; Taint/Sacrifice cannot enter storage.
+Ordinary instances require retained unlock and explicit acquisition history. Baseline
+presence is distinct from paid duplicate count, and survives zero current copies;
+unlock-only activities need no acquisition record. Stored instances retain IDs and
+individual enhancements, including Questing. No paid movement, purchases, destruction,
+refunds, grants, price selection, persistence or gameplay activation is implemented.
+Snapshot restoration must supply trustworthy history and canonical catalog keys; this
+model cannot establish historical evidence from current ownership. WB-D011/106/118/121
+and WHEELS govern this increment. Questing destruction remains a future edit rejection.
+
+Three JUnit methods authored for capacities, defensive copies, retained acquisition
+history, stored Questing identity/upgrades, duplicate IDs, special storage and malformed
+ownership. javac --release 11 successfully compiled SliceInventory, ActiveWheel and
+ProgressionGraph into build/wheelbound-domain-check. This is not a JUnit pass.
+Attempted Gradle SliceInventoryTest, ActiveWheelTest, ProgressionGraphTest and legacy
+WheelboundBehaviorTest with workspace-local Gradle home, offline/no-daemon options.
+Missing Gradle 8.10 triggered download; Permission denied stopped before compilation.
+No JUnit tests ran. Supervisor must execute focused and legacy suites.
+
+Next eligible bounded gameplay work: WB-WHL-03 acquisition-history purchase transition
+and WB-WHL-05 lifetime classification, with immutable replay-safe receipt semantics;
+read approved transaction contracts first. Do not adopt unapproved numeric prices.
+Paid storage/reactivation and WB-WHL-04 require FP ledger/atomic transaction prerequisites;
+WHL-11 destruction enforcement belongs in those edits. Complete aggregate persistence,
+catalog admission and executed tests remain required before WHL-03 can be DONE.
+Legacy Master Wheel unchanged; mode remains unwired/default-disabled. No external-path,
+credential, secret or workflow access. Supervisor handles Git/PR/CI/merge operations.
+
 ## Current local continuation - active wheel snapshot, 2026-10-29
 
 IDLE after bounded WB-WHL-02 (S). Reconciled current domain/persistence/plugin and test
@@ -232,7 +270,7 @@ activation in this slice. Legacy Master Wheel files unchanged. No Git operations
 remote verification, PR or merge performed; current user restrictions supersede older
 publication instructions below.
 
-## I01d session coordinator slice â€” 2026-10-27
+## I01d session coordinator slice Ã¢â‚¬â€ 2026-10-27
 
 Implemented `RunSession` behind the disabled mode boundary. It opens existing saves only,
 issues opaque per-session/revision callback tokens, invalidates them on disconnect and
@@ -254,7 +292,7 @@ baselines. No first-run activation, gameplay, detector, recovery UI or Hub relea
 Changes remain on the isolated `agent/i01d-session-adapter-20261027-222408` branch pending
 review/CI; no PR or merge is claimed for this slice.
 
-## Current verified batch release â€” 2026-10-27
+## Current verified batch release Ã¢â‚¬â€ 2026-10-27
 
 WB-D158/159 authorize coding and verified PR integration. This release checkpoint belongs to PR5; verify its exact final head, CI and source merge before reporting merged. No background work after the owning merge.
 
@@ -283,7 +321,7 @@ Four-PR batch starts from verified 0407530abef2ebd79eef5a78207c1c880225d2bf (PR1
 
 Local wrapper Java networking remains unavailable; full Gradle/JUnit checks run in GitHub CI before each merge. Existing obsolete documentation validator catalog-count defect remains separately recorded. Check each PR's exact head and CI result before marking merged. No live client/runtime activation or Hub submission in this batch. Checkpoints on a PR describe prepared scope until its CI/merge is verified.
 
-## I01b.2 prepared â€” atomic snapshots
+## I01b.2 prepared Ã¢â‚¬â€ atomic snapshots
 
 PR2 merged at393a2fe699b8382001c3d9da14324114805f67bb; final code f4bc723f15f42a6b43637dee4f54d2021ebadd31 passed runs40602782885/40602775250. Gson parser compatibility corrected against actual RuneLite dependency.
 
@@ -291,7 +329,7 @@ AtomicRunStore uses a caller-supplied plugin directory, opaque identity paths, p
 
 Next: durable lifecycle command receipts/replay; no additional gameplay rule decisions needed.
 
-## I01b.3 prepared â€” durable lifecycle commands
+## I01b.3 prepared Ã¢â‚¬â€ durable lifecycle commands
 
 PR3 merged at8d987651bb0c90a0053e122dea4acb73741a975a, code38a7b81f8a3a52dbd27dc0c2cd119beabec82093; runs40603093612/40603089365 passed. Real filesystem tests include exclusive locking and pre/post-replace failure injection.
 
@@ -299,7 +337,7 @@ Schema2 persists lifecycle command receipts and state together; schema1 foundati
 
 Next: frozen weighted draw commitments with their own immutable request/result journal and restart/no-reroll fixtures. Live activation remains disabled/unwired; current foundation snapshot is not a complete gameplay save.
 
-## I01c foundation prepared â€” immutable weighted draw commitments
+## I01c foundation prepared Ã¢â‚¬â€ immutable weighted draw commitments
 
 PR4 merged atdfcef5cbbc8b1cdc47e323a0ab9b7cd894a437fc; final coded81df900f3b897edbd33461277856e2f8192db98 passed runs40603506804/40603501702. Lifecycle receipts and snapshot commit together; storage rejects history removal/rewrite.
 
@@ -307,4 +345,4 @@ WeightedPool retains ordered positive-weight canonical IDs and its explicit cata
 
 Scope: foundation transaction only, NOT a live Master spin, reviewed eligibility generator, spin charge, card offering or complete gameplay save. Caller-supplied synthetic pools test the protocol; they do not admit real content. Existing shipped wheel paths are unchanged. Live preview/account-session adapter, complete aggregate fields, spin/FP transactions, explicit pending-file recovery and cross-platform durability remain next work. Unsupported atomic/directory-force operations fail closed; no platform-wide power-loss guarantee is claimed. No Hub submission.
 
-Batch target: four additional PRs (2â€“5), merged sequentially only after full CI success. Resolve exact final PR5 head/run/merge remotely before claiming completion. Latest merged receipts are carried in subsequent checkpoints and this session's final report.
+Batch target: four additional PRs (2Ã¢â‚¬â€œ5), merged sequentially only after full CI success. Resolve exact final PR5 head/run/merge remotely before claiming completion. Latest merged receipts are carried in subsequent checkpoints and this session's final report.
