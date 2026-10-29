@@ -24,7 +24,7 @@ import java.util.UUID;
 /** Inject RuneLite's Gson. Never deserialize directly into domain objects bypassing their validation. */
 public final class RunCodec
 {
-    public static final int SCHEMA = 4;
+    public static final int SCHEMA = 5;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -56,6 +56,15 @@ public final class RunCodec
             item.addProperty("state", receipt.state().name());
             item.addProperty("obligation", receipt.obligation().name());
             if (receipt.draw() != null) { item.add("draw", encodeDraw(receipt.draw())); }
+            if (receipt.debit() != null)
+            {
+                JsonObject debit = new JsonObject();
+                debit.addProperty("quoteKey", receipt.debit().quoteKey());
+                debit.addProperty("quoteVersion", receipt.debit().quoteVersion());
+                debit.addProperty("amount", receipt.debit().amount());
+                debit.addProperty("balance", receipt.debit().balance());
+                item.add("debit", debit);
+            }
             receipts.add(item);
         }
         payload.add("receipts", receipts);
@@ -119,14 +128,27 @@ public final class RunCodec
                 {
                     JsonObject item = element.getAsJsonObject();
                     boolean hasDraw = schema >= 3 && "DRAW".equals(string(item, "operation"));
-                    keys(item, hasDraw
+                    boolean hasDebit = schema >= 5 && "FP_DEBIT".equals(string(item, "operation"));
+                    keys(item, hasDebit
+                        ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "debit")
+                        : hasDraw
                         ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "draw")
                         : Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation"));
+                    com.wheelbound.domain.FatePointDebits.Receipt debit = null;
+                    if (hasDebit)
+                    {
+                        JsonObject data = item.getAsJsonObject("debit");
+                        keys(data, Set.of("quoteKey", "quoteVersion", "amount", "balance"));
+                        debit = new com.wheelbound.domain.FatePointDebits.Receipt(
+                            UUID.fromString(string(item, "commandId")), integer(item, "beforeRevision"),
+                            integer(item, "afterRevision"), string(data, "quoteKey"), string(data, "quoteVersion"),
+                            integer(data, "amount"), integer(data, "balance"));
+                    }
                     receipts.add(new RunReceipt(UUID.fromString(string(item, "commandId")),
                         RunReceipt.Operation.valueOf(string(item, "operation")), integer(item, "beforeRevision"),
                         integer(item, "afterRevision"), RunLifecycle.State.valueOf(string(item, "state")),
                         RunLifecycle.Obligation.valueOf(string(item, "obligation")),
-                        hasDraw ? decodeDraw(item.get("draw")) : null));
+                        hasDraw ? decodeDraw(item.get("draw")) : null, debit));
                 }
             }
             Optional<FatePointLedger> fatePoints = Optional.empty();
