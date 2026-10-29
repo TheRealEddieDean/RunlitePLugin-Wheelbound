@@ -1,3 +1,41 @@
+## Current local continuation - combined purchase proposal, 2026-10-29
+
+IDLE after bounded WB-WHL-04/05 and WB-ECON-08 dependency increment (S).
+This supersedes older next-task prose. Reconciled domain, persistence, focused tests
+and recorded I01a/b/c receipts without Git or remote merge verification. Existing
+SliceInventory already has enhancement, new purchase, storage/reactivation, stored
+replacement, purchase-with-destruction/storage and destruction proposals. Schema 6
+already persists inventory; standalone durable debits exist. These are partial systems,
+not complete gameplay. FND-01 remains DONE; FND-10/12 remain PARTIAL; FND-11,
+ECON-01/08, TREE-02 and WHL-02/03/04/05/06/07/11/12 remain PARTIAL_UNVERIFIED.
+Other TODO and decision/evidence BLOCKED rows retain status. I01d was not selected.
+
+SlicePurchaseProposal now combines a frozen activity/kind/duplicate-tier quote input,
+new base instance, lifetime acquisition history, ledger debit and one lifecycle revision.
+It rejects quote-tier mismatch, stale/foreign/inactive context, obligations, insufficient
+funds, owned UUID collisions, invalid capacity and revision overflow without changing
+the input snapshots. Authority: WB-D105/106/118 and STATE_CONTRACT. Quote construction
+does not authorize prices. Only available-slot purchases are supported by this proposal.
+This is not a typed durable purchase receipt or replay service. Historical UUID freshness,
+complete pending-draw/offer/edit-boundary checks, catalog/quote authority and cross-operation
+command-ID validation remain responsibilities of the future aggregate command. Never
+persist the returned debit separately from inventory/history and a purchase receipt.
+No prices adopted; Master Wheel unchanged; gameplay remains unwired/default-disabled.
+
+Validation: javac --release 11 compiled all production domain classes and executable
+SlicePurchaseProposalChecks; checks passed for first/duplicate/reacquisition, exact funds,
+immutability and rejection cases. Two focused JUnit methods added using the same checks.
+Gradle focused purchase/inventory and legacy WheelboundBehaviorTest attempt failed before
+compilation: missing Gradle 8.10 download denied (SocketException). No JUnit or legacy
+pass claimed. Supervisor must run these suites when the build distribution is available.
+
+Next bounded unit: typed durable purchase receipt binding identity, original revision,
+quote/activity/tier/amount and fresh instance ID, plus schema/journal validation. Then add
+one atomic aggregate purchase command and failed-write/lost-acknowledgement/restart tests.
+Preserve standalone debit/lifecycle/draw compatibility and original replay responses.
+No external paths, credentials, secrets, workflows or Git accessed. Supervisor handles
+commits, PRs, CI and merges.
+
 ## Current local continuation - FP debit proposals, 2026-10-29
 
 IDLE after bounded WB-ECON-08 / WB-FND-11 prerequisite increment (S).
