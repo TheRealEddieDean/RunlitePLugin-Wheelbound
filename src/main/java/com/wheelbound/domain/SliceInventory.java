@@ -115,6 +115,27 @@ public final class SliceInventory
     public Map<String, AcquisitionHistory> acquisitionHistory() { return acquisitionHistory; }
 
     /**
+     * Propose a new base ordinary instance in an available active slot (WB-D106/118).
+     * The supplied ID must be fresh across both owned locations. Only the returned proposal
+     * advances history; this snapshot remains unchanged. Repeating a proposal is not replay
+     * protection. A caller must validate the frozen quote against classifyNewPurchase and
+     * atomically persist debit, inventory and command receipt before publishing success.
+     * No payment, grant, edit authorization or full-wheel replacement is performed here.
+     */
+    public SliceInventory proposeNewPurchase(UUID instanceId, String activity)
+    {
+        Objects.requireNonNull(instanceId, "instanceId");
+        PurchaseClassification classification = classifyNewPurchase(activity);
+        java.util.ArrayList<ActiveWheel.Slice> active = new java.util.ArrayList<>(activeWheel.slices());
+        active.add(ActiveWheel.Slice.ordinary(instanceId, activity, ActiveWheel.Enhancement.BASE));
+        java.util.Map<String, AcquisitionHistory> history = new java.util.HashMap<>(acquisitionHistory);
+        history.put(activity, new AcquisitionHistory(classification.kind() == PurchaseKind.FIRST_INSTANCE
+            ? 0 : classification.duplicateOrdinal()));
+        return new SliceInventory(new ActiveWheel(active), stored, satchelTier,
+            unlockedActivities, history);
+    }
+
+    /**
      * Propose storing an active ordinary instance (including Questing), preserving its identity.
      * This is not a free edit or payment authorization. The aggregate caller must enforce the
      * legal edit boundary, identity/revision and reviewed FP quote, then persist the debit,

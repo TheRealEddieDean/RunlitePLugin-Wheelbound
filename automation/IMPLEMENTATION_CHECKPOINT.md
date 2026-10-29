@@ -1,3 +1,46 @@
+## Current local continuation - new-instance acquisition proposals, 2026-10-29
+
+IDLE after bounded WB-WHL-04/05 gameplay increment (S). Reconciled domain inventory,
+FP ledger/debits, RunDocument/RunReceipt and existing tests with recorded I01a/b/c
+merged-work receipts. No Git operations or remote verification. FND-01 stays DONE;
+FND-10/12 and existing PARTIAL rows stay partial. TREE-02, WHL-02/03/05/11 and
+ECON-01/08 stay PARTIAL_UNVERIFIED. WB-WHL-04 is now PARTIAL_UNVERIFIED for an
+in-memory product proposal only; paid transactions remain unfinished. FND-11 and
+WHL-06 stay TODO; remaining TODO and evidence/decision BLOCKED rows stand. Existing
+storage/destruction proposals and schema-4 optional FP snapshots are present; typed
+debit journal receipts, durable inventory and complete gameplay aggregate are absent.
+This supersedes older claims of no acquisition transition. I01d was not selected.
+
+SliceInventory.proposeNewPurchase proposes a fresh base ordinary active instance and
+its lifetime history together. First acquisition establishes baseline at zero paid
+duplicates; a starting-grant baseline or any retained history advances the next paid
+duplicate ordinal, including after last-copy destruction. UUID collisions across active
+and stored ownership, locked/malformed activities, overflow and full active capacity
+fail without mutating the original. Other instances, modifiers, unlocks, Satchel tier,
+storage and unrelated history survive. Authority: WB-D105/106/118/121, WHEELS and
+STATE_CONTRACT. No prices, new storage-purchase route or unresolved rules adopted.
+Repeated proposals are not replay protection. A trusted aggregate command must validate
+identity/revision/legal edit boundary and reviewed quote, then atomically persist debit,
+complete inventory/history and receipt before success. No durable/authorized purchase,
+full-wheel replacement or plugin/UI wiring claimed. Master Wheel source unchanged;
+incomplete gameplay remains unwired/default-disabled.
+
+Two focused JUnit methods authored for first/starting/duplicate/reacquisition cases,
+base weight, retained instances/history, collision/capacity/invalid-input/overflow and
+immutable failure. javac --release 11 compiled all production domain sources. Local
+dependency-free purchase smoke passed (first acquisition, destruction/reacquisition,
+identity collision and full capacity). Gradle SliceInventoryTest/ActiveWheelTest and
+WheelboundBehaviorTest attempt failed before compilation: missing Gradle 8.10 download
+returned SocketException Permission denied. No JUnit or legacy regression pass claimed.
+Supervisor must execute those suites.
+
+Next bounded required dependency: typed debit receipts in the unified revision journal,
+explicit schema compatibility, mixed-operation restoration and cross-operation command
+ID collision rejection. Then persist inventory and couple approved debit with complete
+new-instance/history mutation; test failed writes, lost acknowledgements and restarts.
+Reviewed quote payloads remain required. No external paths, credentials, secrets,
+workflows or Git accessed. Supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - Satchel movement proposals, 2026-10-29
 
 IDLE after bounded WB-WHL-03/11 gameplay increment (S). Reconciled production domain,
@@ -532,7 +575,7 @@ activation in this slice. Legacy Master Wheel files unchanged. No Git operations
 remote verification, PR or merge performed; current user restrictions supersede older
 publication instructions below.
 
-## I01d session coordinator slice Ã¢â‚¬â€ 2026-10-27
+## I01d session coordinator slice ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-10-27
 
 Implemented `RunSession` behind the disabled mode boundary. It opens existing saves only,
 issues opaque per-session/revision callback tokens, invalidates them on disconnect and
@@ -554,7 +597,7 @@ baselines. No first-run activation, gameplay, detector, recovery UI or Hub relea
 Changes remain on the isolated `agent/i01d-session-adapter-20261027-222408` branch pending
 review/CI; no PR or merge is claimed for this slice.
 
-## Current verified batch release Ã¢â‚¬â€ 2026-10-27
+## Current verified batch release ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2026-10-27
 
 WB-D158/159 authorize coding and verified PR integration. This release checkpoint belongs to PR5; verify its exact final head, CI and source merge before reporting merged. No background work after the owning merge.
 
@@ -583,7 +626,7 @@ Four-PR batch starts from verified 0407530abef2ebd79eef5a78207c1c880225d2bf (PR1
 
 Local wrapper Java networking remains unavailable; full Gradle/JUnit checks run in GitHub CI before each merge. Existing obsolete documentation validator catalog-count defect remains separately recorded. Check each PR's exact head and CI result before marking merged. No live client/runtime activation or Hub submission in this batch. Checkpoints on a PR describe prepared scope until its CI/merge is verified.
 
-## I01b.2 prepared Ã¢â‚¬â€ atomic snapshots
+## I01b.2 prepared ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â atomic snapshots
 
 PR2 merged at393a2fe699b8382001c3d9da14324114805f67bb; final code f4bc723f15f42a6b43637dee4f54d2021ebadd31 passed runs40602782885/40602775250. Gson parser compatibility corrected against actual RuneLite dependency.
 
@@ -591,7 +634,7 @@ AtomicRunStore uses a caller-supplied plugin directory, opaque identity paths, p
 
 Next: durable lifecycle command receipts/replay; no additional gameplay rule decisions needed.
 
-## I01b.3 prepared Ã¢â‚¬â€ durable lifecycle commands
+## I01b.3 prepared ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â durable lifecycle commands
 
 PR3 merged at8d987651bb0c90a0053e122dea4acb73741a975a, code38a7b81f8a3a52dbd27dc0c2cd119beabec82093; runs40603093612/40603089365 passed. Real filesystem tests include exclusive locking and pre/post-replace failure injection.
 
@@ -599,7 +642,7 @@ Schema2 persists lifecycle command receipts and state together; schema1 foundati
 
 Next: frozen weighted draw commitments with their own immutable request/result journal and restart/no-reroll fixtures. Live activation remains disabled/unwired; current foundation snapshot is not a complete gameplay save.
 
-## I01c foundation prepared Ã¢â‚¬â€ immutable weighted draw commitments
+## I01c foundation prepared ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â immutable weighted draw commitments
 
 PR4 merged atdfcef5cbbc8b1cdc47e323a0ab9b7cd894a437fc; final coded81df900f3b897edbd33461277856e2f8192db98 passed runs40603506804/40603501702. Lifecycle receipts and snapshot commit together; storage rejects history removal/rewrite.
 
@@ -607,4 +650,4 @@ WeightedPool retains ordered positive-weight canonical IDs and its explicit cata
 
 Scope: foundation transaction only, NOT a live Master spin, reviewed eligibility generator, spin charge, card offering or complete gameplay save. Caller-supplied synthetic pools test the protocol; they do not admit real content. Existing shipped wheel paths are unchanged. Live preview/account-session adapter, complete aggregate fields, spin/FP transactions, explicit pending-file recovery and cross-platform durability remain next work. Unsupported atomic/directory-force operations fail closed; no platform-wide power-loss guarantee is claimed. No Hub submission.
 
-Batch target: four additional PRs (2Ã¢â‚¬â€œ5), merged sequentially only after full CI success. Resolve exact final PR5 head/run/merge remotely before claiming completion. Latest merged receipts are carried in subsequent checkpoints and this session's final report.
+Batch target: four additional PRs (2ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“5), merged sequentially only after full CI success. Resolve exact final PR5 head/run/merge remotely before claiming completion. Latest merged receipts are carried in subsequent checkpoints and this session's final report.
