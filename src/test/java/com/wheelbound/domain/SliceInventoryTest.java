@@ -14,6 +14,69 @@ import static com.wheelbound.domain.SliceInventory.*;
 
 public class SliceInventoryTest
 {
+    @Test public void destructionPreservesSurvivorsUnlocksAndLifetimePricing()
+    {
+        Slice extra = slice("mining");
+        List<Slice> active = new ArrayList<>(wheel().slices());
+        active.add(extra);
+        Slice stored = slice("questing");
+        Slice removable = slice("mining");
+        SliceInventory original = new SliceInventory(new ActiveWheel(active),
+            List.of(stored, removable), SatchelTier.BASE, unlocks(), history());
+        SliceInventory result = original.proposeDestruction(Set.of(extra.id(), removable.id()));
+        assertEquals(active.subList(0, 5), result.activeWheel().slices());
+        assertEquals(List.of(stored), result.stored());
+        assertSame(stored, result.stored().get(0));
+        assertEquals(original.acquisitionHistory(), result.acquisitionHistory());
+        assertEquals(original.unlockedActivities(), result.unlockedActivities());
+        assertEquals(original.satchelTier(), result.satchelTier());
+        assertEquals(2, result.classifyNewPurchase("mining").duplicateOrdinal());
+        assertEquals(6, original.activeWheel().slices().size());
+        assertEquals(2, original.stored().size());
+        // Destroying the last copy still retains its lifetime purchase tier and unlock.
+        SliceInventory last = new SliceInventory(wheel(), List.of(slice("woodcutting")),
+            SatchelTier.BASE, unlocks(), Map.of("mining", new AcquisitionHistory(1),
+                "fishing", new AcquisitionHistory(1), "combat", new AcquisitionHistory(0),
+                "woodcutting", new AcquisitionHistory(4)));
+        SliceInventory empty = last.proposeDestruction(Set.of(last.stored().get(0).id()));
+        assertTrue(empty.stored().isEmpty());
+        assertEquals(5, empty.classifyNewPurchase("woodcutting").duplicateOrdinal());
+    }
+
+    @Test public void destructionRejectsProtectedUnknownAndInvalidFinalWheelAtomically()
+    {
+        Slice questing = slice("questing");
+        Slice special = Slice.special(UUID.randomUUID(), Kind.TAINT, 4);
+        Slice sacrifice = Slice.special(UUID.randomUUID(), Kind.SACRIFICE, 4);
+        List<Slice> active = new ArrayList<>(wheel().slices());
+        active.addAll(List.of(questing, special, sacrifice));
+        Slice storedQuesting = slice("questing");
+        Slice removable = slice("mining");
+        SliceInventory inventory = new SliceInventory(new ActiveWheel(active),
+            List.of(storedQuesting, removable), SatchelTier.BASE, unlocks(), history());
+        for (UUID forbidden : List.of(questing.id(), storedQuesting.id(), special.id(),
+            sacrifice.id(), UUID.randomUUID()))
+        {
+            assertThrows(IllegalArgumentException.class,
+                () -> inventory.proposeDestruction(Set.of(removable.id(), forbidden)));
+        }
+        assertThrows(IllegalArgumentException.class, () -> inventory.proposeDestruction(Set.of()));
+        assertThrows(NullPointerException.class, () -> inventory.proposeDestruction(null));
+        assertEquals(List.of(storedQuesting, removable), inventory.stored());
+        SliceInventory minimum = new SliceInventory(wheel(), List.of(), SatchelTier.BASE,
+            unlocks(), history());
+        assertThrows(IllegalArgumentException.class,
+            () -> minimum.proposeDestruction(Set.of(minimum.activeWheel().slices().get(0).id())));
+        // Six ordinary instances but only one Combat: removing it leaves five across two activities.
+        List<Slice> six = new ArrayList<>(wheel().slices());
+        six.add(slice("mining"));
+        SliceInventory diversity = new SliceInventory(new ActiveWheel(six), List.of(),
+            SatchelTier.BASE, unlocks(), history());
+        assertThrows(IllegalArgumentException.class,
+            () -> diversity.proposeDestruction(Set.of(six.get(2).id())));
+        assertEquals(6, diversity.activeWheel().slices().size());
+    }
+
     @Test public void purchaseClassificationUsesLifetimeEvidenceAndNeverAdvancesIt()
     {
         SliceInventory inventory = new SliceInventory(wheel(), List.of(), SatchelTier.BASE,

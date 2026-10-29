@@ -8,7 +8,7 @@ import java.util.Set;
 import java.util.UUID;
 
 /**
- * Immutable ownership snapshot. No purchases, paid movement, destruction or grants.
+ * Immutable ownership snapshot and proposed free destruction. No purchases, paid movement or grants.
  * Catalog admission and acquisition evidence are responsibilities of the restoring caller.
  */
 public final class SliceInventory
@@ -113,6 +113,40 @@ public final class SliceInventory
     public SatchelTier satchelTier() { return satchelTier; }
     public Set<String> unlockedActivities() { return unlockedActivities; }
     public Map<String, AcquisitionHistory> acquisitionHistory() { return acquisitionHistory; }
+
+    /**
+     * Propose permanent, no-refund destruction of explicitly selected owned ordinary instances.
+     * WB-D105/106/118/121: retain unlocks/history, protect Questing, validate the final wheel.
+     * This does not authorize an edit or publish success. The aggregate command caller must
+     * enforce identity/revision/legal edit boundary and persist inventory and receipt atomically.
+     * Catalog keys must be canonical (Questing is "questing").
+     */
+    public SliceInventory proposeDestruction(Set<UUID> selectedIds)
+    {
+        Set<UUID> remaining = new HashSet<>(Set.copyOf(selectedIds));
+        if (remaining.isEmpty()) { throw new IllegalArgumentException("No destruction selected"); }
+        java.util.ArrayList<ActiveWheel.Slice> active = new java.util.ArrayList<>();
+        java.util.ArrayList<ActiveWheel.Slice> storage = new java.util.ArrayList<>();
+        for (ActiveWheel.Slice slice : activeWheel.slices())
+        {
+            if (remaining.remove(slice.id())) { requireDestroyable(slice); }
+            else { active.add(slice); }
+        }
+        for (ActiveWheel.Slice slice : stored)
+        {
+            if (remaining.remove(slice.id())) { requireDestroyable(slice); }
+            else { storage.add(slice); }
+        }
+        if (!remaining.isEmpty()) { throw new IllegalArgumentException("Unknown owned slice ID"); }
+        return new SliceInventory(new ActiveWheel(active), storage, satchelTier,
+            unlockedActivities, acquisitionHistory);
+    }
+
+    private static void requireDestroyable(ActiveWheel.Slice slice)
+    {
+        if (slice.kind() != ActiveWheel.Kind.ORDINARY || "questing".equals(slice.activity()))
+        { throw new IllegalArgumentException("Slice cannot be destroyed"); }
+    }
 
     /**
      * Classify a proposed new ordinary instance using retained lifetime evidence (WB-D118).
