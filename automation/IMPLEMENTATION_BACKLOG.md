@@ -58,6 +58,18 @@ is absent and wrapper download returned Permission denied. No test pass claimed.
 Next eligible gameplay increment: WB-WHL-02 immutable 24-slot active-wheel model after
 reading its exact ordinary-count/activity/weight/special-slice decisions. Do not resume
 optional I01d hardening absent a concrete failing test or required dependency.
+## Reconciliation update - 2026-10-29
+
+WB-WHL-02 now PARTIAL_UNVERIFIED: immutable ActiveWheel and three focused JUnit methods
+cover persistent identities, shared 24 slots, ordinary five/three minimum, exact enhancement
+weights and permutation-only reorder. Special weights are explicit; no Taint default adopted.
+Java 11 production compilation passed for ActiveWheel and ProgressionGraph. Gradle failed
+before compilation (missing distribution, blocked download); no JUnit pass. Catalog and
+aggregate integration remain unfinished. Other audited statuses stand; recorded merged
+receipts were not remotely reverified. WHL-07 odds UI and WHL-03 inventory remain TODO.
+Next eligible unit: WB-WHL-03 owned-slice/Satchel inventory, reading WB-D011/118/121 first.
+Do not select I01d without a concrete failing test or required dependency.
+
 ## Coding inventory
 
 ### Foundation and account lifecycle (14)
@@ -84,7 +96,7 @@ optional I01d hardening absent a concrete failing test or required dependency.
 | ID | Implementation unit | Initial status |
 | --- | --- | --- |
 | WB-WHL-01 | Preserve legacy normal-wheel rendering | TODO |
-| WB-WHL-02 | Define immutable 24-slot active wheel model | TODO |
+| WB-WHL-02 | Define immutable 24-slot active wheel model | PARTIAL |
 | WB-WHL-03 | Implement slice ownership and storage inventory | TODO |
 | WB-WHL-04 | Implement paid slice add/remove transaction | TODO |
 | WB-WHL-05 | Implement purchase escalation on reacquisition | TODO |
