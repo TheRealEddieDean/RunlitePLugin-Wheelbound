@@ -16,7 +16,10 @@ public class SliceInventoryTest
 {
     @Test public void enhancementAdvancesOnlySelectedInstanceAndPreservesOwnershipHistory()
     {
-        SliceInventory original = new SliceInventory(wheel(), List.of(slice("questing")),
+        List<Slice> active = new ArrayList<>(wheel().slices());
+        Slice starting = active.get(0);
+        active.set(0, Slice.ordinary(starting.id(), starting.activity(), Enhancement.BASE));
+        SliceInventory original = new SliceInventory(new ActiveWheel(active), List.of(slice("questing")),
             SatchelTier.BASE, unlocks(), history());
         Slice selected = original.activeWheel().slices().get(0);
         SliceInventory current = original;
