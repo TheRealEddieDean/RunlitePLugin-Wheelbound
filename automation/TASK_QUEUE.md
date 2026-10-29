@@ -1,3 +1,46 @@
+## Current local continuation - ordinary destruction proposals, 2026-10-29
+
+IDLE after bounded WB-WHL-03/11 gameplay increment (S). Current user instruction
+supersedes historical Git/publication requirements; no Git operations or remote merge
+verification performed. Reconciled domain inventory, persistence/receipt sources and
+focused tests with recorded I01a/b/c evidence: FND-01 remains DONE; FND-10/12 remain
+PARTIAL; TREE-02, WHL-02/03/05 and ECON-01/08 remain PARTIAL_UNVERIFIED. WHL-11 is
+now PARTIAL_UNVERIFIED for destruction protection only. FND-11, paid WHL-04/06,
+Satchel movement, complete gameplay integration and other TODO units remain unfinished.
+Evidence/decision BLOCKED rows remain blocked. Earlier claims of no FP serialization
+are superseded by existing schema 4; debit receipts are still absent from RunReceipt.
+I01d was not selected. No optional foundation refinement undertaken.
+
+SliceInventory.proposeDestruction returns an immutable proposed snapshot for explicit
+owned instance IDs across active/storage locations. It rejects Questing, Taint,
+Sacrifice, unknown IDs and empty selections; final ActiveWheel validation enforces
+five ordinary slices across three activities. Survivors retain identity/modifiers/order;
+unlocks, lifetime acquisition history and Satchel tier survive without refund/reset.
+A failed compound proposal leaves the original inventory intact. Authority: WB-D105,
+106, 118 and 121 plus WHEELS/STATE_CONTRACT. Canonical catalog keys are trusted input;
+Questing key is questing. This is a proposal, not an authorized/durable edit: future
+aggregate caller must enforce account/run/revision/legal boundary and persist receipt
+and full state before success. No movement, paid edit, forced-special insertion,
+serialization or live UI/plugin wiring is claimed. Master Wheel source unchanged;
+incomplete gameplay remains unwired/default-disabled.
+
+Two focused JUnit methods added for active/stored compound destruction, retained
+lifetime price after last-copy loss, protected/special/unknown selections, immutable
+failure and final count/diversity. javac --release 11 compiled all production domain
+sources. Dependency-free executable smoke passed for successful removal, retained
+instances/history, Questing/unknown/empty rejection and five/three guards. Gradle
+SliceInventoryTest/ActiveWheelTest/WheelboundBehaviorTest failed before compilation:
+missing Gradle 8.10 distribution download denied (SocketException). No JUnit/CI or
+legacy regression pass claimed; supervisor must execute these suites.
+
+Next required dependency for paid gameplay: typed debit receipts in the unified
+revision journal, schema compatibility, mixed-operation validation/restoration and
+cross-operation ID collision rejection; then atomic debit/product mutation with
+failed-write/lost-acknowledgement/restart tests. Current free destruction proposal
+also needs aggregate lifecycle/replay integration before activation. Reviewed quote
+payloads remain required; numeric candidates are not adopted. No external paths,
+credentials, secrets or workflows accessed. Supervisor handles Git/PR/CI/merges.
+
 ## Current local continuation - FP snapshot schema, 2026-10-29
 
 IDLE after bounded WB-FND-10/12 and WB-ECON-01 prerequisite increment (S).
