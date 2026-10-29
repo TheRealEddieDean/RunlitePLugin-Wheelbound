@@ -1,6 +1,8 @@
 package com.wheelbound.persistence;
 
 import com.wheelbound.domain.RunLifecycle;
+import com.wheelbound.domain.FatePointLedger;
+import java.util.Optional;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
@@ -13,12 +15,19 @@ public final class RunDocument
     private final RunLifecycle lifecycle;
     private final String catalogVersion;
     private final List<RunReceipt> receipts;
+    private final FatePointLedger fatePoints;
 
     public RunDocument(RunLifecycle lifecycle, String catalogVersion)
     { this(lifecycle, catalogVersion, List.of()); }
 
     public RunDocument(RunLifecycle lifecycle, String catalogVersion, List<RunReceipt> receipts)
+    { this(lifecycle, catalogVersion, receipts, Optional.empty()); }
+
+    /** Empty means unavailable legacy FP state, never an inferred zero balance. */
+    public RunDocument(RunLifecycle lifecycle, String catalogVersion, List<RunReceipt> receipts,
+        Optional<FatePointLedger> fatePoints)
     {
+        this.fatePoints = Objects.requireNonNull(fatePoints, "fatePoints").orElse(null);
         this.lifecycle = Objects.requireNonNull(lifecycle, "lifecycle");
         this.catalogVersion = Objects.requireNonNull(catalogVersion, "catalogVersion");
         if (catalogVersion.trim().isEmpty()) { throw new IllegalArgumentException("Empty catalog version"); }
@@ -52,4 +61,5 @@ public final class RunDocument
     public RunLifecycle lifecycle() { return lifecycle; }
     public String catalogVersion() { return catalogVersion; }
     public List<RunReceipt> receipts() { return receipts; }
+    public Optional<FatePointLedger> fatePoints() { return Optional.ofNullable(fatePoints); }
 }

@@ -1,3 +1,42 @@
+## Current local continuation - FP snapshot schema, 2026-10-29
+
+IDLE after bounded WB-FND-10/12 and WB-ECON-01 prerequisite increment (S).
+Reconciled domain, persistence, command services and focused test sources with the
+recorded I01a/b/c receipts; no Git operations or remote merge verification. FND-01
+remains DONE. FND-10/12 remain PARTIAL; TREE-02, WHL-02/03/05 and ECON-01/08
+remain PARTIAL_UNVERIFIED. FND-11 remains TODO: no durable debit command exists.
+Other TODO, PARTIAL and evidence-BLOCKED rows stand. I01d was not selected.
+This entry supersedes historical next-task text; no complete gameplay is claimed.
+
+RunDocument now carries optional immutable FatePointLedger. RunCodec schema 4 persists
+starting balance and ordered typed ledger entries and reconstructs via domain validation.
+Absent legacy FP stays explicitly unavailable, never an invented zero or starting grant.
+Schemas 1/2/3 remain readable; schema-3 draw decoding is independent of the current
+schema constant. Schema-4 missing/unknown fields, invalid entries, intermediate
+unaffordable spending and overflow fail closed. LifecycleCommands and DurableWheelDraws
+carry existing FP state through writes and replay. AtomicRunStore uses this codec as
+before. The ledger remains trusted snapshot data, not proof of reward authorization,
+a command journal, or an implemented purchase. No debit receipts are serialized yet.
+Authority: WB-D105 and STATE_CONTRACT/PERSISTENCE; numeric prices remain unadopted.
+Master Wheel behavior source unchanged; incomplete gameplay remains unwired/disabled.
+
+Five focused JUnit methods authored: ledger roundtrip, legacy absent-state preservation,
+malformed/overspent/overflow ledger rejection, schema-3 draw compatibility, and FP
+preservation across persisted pause/resume/draw/restart replay. javac --release 11
+compiled all domain sources plus RunReceipt and RunDocument successfully. RunCodec and
+command-service compilation require unavailable dependencies and were not verified.
+Gradle focused codec/draw/lifecycle and legacy WheelboundBehaviorTest failed before
+compilation: missing Gradle 8.10 download denied (SocketException). No JUnit tests ran.
+Supervisor must execute focused and legacy suites; no current CI pass is claimed.
+
+Next bounded task: typed debit receipts in the unified revision journal, mixed-operation
+restoration/validation and cross-operation command-ID collision rejection. Then add the
+atomic debit service with failed-write/lost-acknowledgement/restart tests, followed by
+reviewed paid slice-instance/lifetime-history mutation for WHL-04/05. Do not enable a
+standalone gameplay debit without its complete product mutation and reviewed quote.
+No external paths, credentials, secrets, workflows or Git accessed. Supervisor handles
+publication, CI and merges.
+
 ## Current local continuation - validated debit history restoration, 2026-10-29
 
 IDLE after bounded WB-ECON-08 prerequisite increment (S). Reconciled existing domain,

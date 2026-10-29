@@ -23,6 +23,26 @@ public class DurableWheelDrawsTest
     private void initialize(RunLifecycle.State state, RunLifecycle.Obligation obligation) throws Exception
     { store().write(new RunDocument(new RunLifecycle(id, 0, state, obligation), "v1"), -1); }
 
+    @Test public void fpHistorySurvivesPauseResumeDrawAndRestartReplay() throws Exception
+    {
+        FatePointLedger ledger = new FatePointLedger(10, List.of(
+            new FatePointLedger.Entry(FatePointLedger.Kind.PENALTY, 12)));
+        store().write(new RunDocument(new RunLifecycle(id, 0, RunLifecycle.State.ACTIVE,
+            RunLifecycle.Obligation.NONE), "v1", List.of(), Optional.of(ledger)), -1);
+        new LifecycleCommands(store()).execute(id, UUID.randomUUID(), 0, RunReceipt.Operation.PAUSE);
+        new LifecycleCommands(store()).execute(id, UUID.randomUUID(), 1, RunReceipt.Operation.RESUME);
+        UUID draw = UUID.randomUUID();
+        new DurableWheelDraws(store(), bound -> 0).commit(id, draw, 2, pool);
+        new DurableWheelDraws(store(), bound -> { throw new AssertionError("Replay redrew"); })
+            .commit(id, draw, 2, pool);
+        FatePointLedger restored = store().load().get().fatePoints().get();
+        assertEquals(10, restored.startingBalance());
+        assertEquals(-2, restored.balance());
+        assertEquals(1, restored.entries().size());
+        assertEquals(FatePointLedger.Kind.PENALTY, restored.entries().get(0).kind());
+        assertEquals(12, restored.entries().get(0).amount());
+    }
+
     @Test public void everyTicketRespectsExactWeightsAndBoundaries()
     {
         Map<String, Integer> counts = new HashMap<>();

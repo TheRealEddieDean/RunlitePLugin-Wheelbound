@@ -72,3 +72,14 @@ WB-D138/139: [unavailable selection contract](UNAVAILABLE_SELECTION_CONTRACT.md)
 ## Current shared Challenge targets and purchase contract — WB-D150
 
 [Rank purchases](CHALLENGE_RANK_PURCHASE_CONTRACT.md) grant one shared canonical Challenge target entitlement across reviewed rank contexts; no target repurchase per rank. The first paid Lesser entry includes one reviewed versioned bundle and explicit Lesser enable, atomically; later ranks grant ownership only unless separately opted in at a legal boundary. Target/access/rank ownership remain distinct. Historical v1 six starters/quotes are preserved and not a Lesser-ready bundle. V2 exact bundle/prices/quotes are unfinished; missing payload cannot be sold or labeled free. No normal roster change or blanket legacy four-rank grant.
+# Implemented FP snapshot compatibility (2026-10-29)
+
+Foundation RunCodec schema 4 adds `fatePoints`: explicit null means FP state is
+unavailable; otherwise it contains `startingBalance` and ordered `entries` with
+`kind` and positive `amount`. Decode validates every intermediate balance through
+FatePointLedger, including discretionary affordability and exact arithmetic.
+Schemas 1/2/3 remain readable with FP unavailable; re-encoding preserves that
+absence and does not assign starting funds. Lifecycle and draw commands preserve
+the ledger. This is a trusted snapshot representation only: typed debit receipts,
+mixed-operation journal validation, durable debit/product mutation and migration
+from legacy gameplay evidence remain unfinished. No paid gameplay is enabled.
