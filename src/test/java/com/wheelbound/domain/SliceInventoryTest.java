@@ -14,6 +14,43 @@ import static com.wheelbound.domain.SliceInventory.*;
 
 public class SliceInventoryTest
 {
+    @Test public void purchaseClassificationUsesLifetimeEvidenceAndNeverAdvancesIt()
+    {
+        SliceInventory inventory = new SliceInventory(wheel(), List.of(), SatchelTier.BASE,
+            unlocks(), history());
+        PurchaseClassification first = inventory.classifyNewPurchase("woodcutting");
+        assertEquals(PurchaseKind.FIRST_INSTANCE, first.kind());
+        assertThrows(IllegalStateException.class, first::duplicateOrdinal);
+        // Starting grant baseline means the first paid new instance is duplicate tier one.
+        assertEquals(PurchaseKind.PAID_DUPLICATE, inventory.classifyNewPurchase("combat").kind());
+        assertEquals(1, inventory.classifyNewPurchase("combat").duplicateOrdinal());
+        assertEquals(2, inventory.classifyNewPurchase("mining").duplicateOrdinal());
+        // No currently owned Questing copies does not restore first-instance pricing.
+        for (int i = 0; i < 3; i++)
+        { assertEquals(8, inventory.classifyNewPurchase("questing").duplicateOrdinal()); }
+        SliceInventory stored = new SliceInventory(inventory.activeWheel(), List.of(slice("questing")),
+            SatchelTier.BASE, unlocks(), history());
+        assertEquals(8, stored.classifyNewPurchase("questing").duplicateOrdinal());
+        assertEquals(7, inventory.acquisitionHistory().get("questing").paidDuplicates());
+        assertFalse(inventory.acquisitionHistory().containsKey("woodcutting"));
+        assertTrue(inventory.stored().isEmpty());
+    }
+
+    @Test public void purchaseClassificationRejectsLockedMalformedAndOverflowInputs()
+    {
+        Map<String, AcquisitionHistory> history = new HashMap<>(history());
+        history.put("questing", new AcquisitionHistory(Long.MAX_VALUE));
+        history.put("combat", new AcquisitionHistory(Long.MAX_VALUE - 1));
+        SliceInventory inventory = new SliceInventory(wheel(), List.of(), SatchelTier.BASE,
+            unlocks(), history);
+        assertEquals(Long.MAX_VALUE, inventory.classifyNewPurchase("combat").duplicateOrdinal());
+        assertThrows(ArithmeticException.class, () -> inventory.classifyNewPurchase("questing"));
+        assertEquals(Long.MAX_VALUE, inventory.acquisitionHistory().get("questing").paidDuplicates());
+        for (String key : List.of("locked", "", " mining", "mining "))
+        { assertThrows(IllegalArgumentException.class, () -> inventory.classifyNewPurchase(key)); }
+        assertThrows(NullPointerException.class, () -> inventory.classifyNewPurchase(null));
+    }
+
     private static Slice slice(String activity)
     { return Slice.ordinary(UUID.randomUUID(), activity, Enhancement.FOURTH); }
 
