@@ -48,6 +48,9 @@ public final class RunCodec
         JsonArray receipts = new JsonArray();
         for (RunReceipt receipt : document.receipts())
         {
+            // Schema 7 must validate complete purchase effects before these can be persisted.
+            if (receipt.purchase() != null)
+            { throw new IllegalArgumentException("Purchase journal requires schema 7"); }
             JsonObject item = new JsonObject();
             item.addProperty("commandId", receipt.commandId().toString());
             item.addProperty("operation", receipt.operation().name());

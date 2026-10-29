@@ -1,6 +1,7 @@
 package com.wheelbound.persistence;
 
 import com.wheelbound.domain.RunLifecycle;
+import com.wheelbound.domain.SlicePurchaseReceipt;
 import com.wheelbound.domain.DrawCommitment;
 import com.wheelbound.domain.FatePointDebits;
 import java.util.Objects;
@@ -9,7 +10,8 @@ import java.util.UUID;
 /** Immutable command identity, request and original response, persisted with the resulting snapshot. */
 public final class RunReceipt
 {
-    public enum Operation { PAUSE, RESUME, DRAW, FP_DEBIT }
+    public enum Operation { PAUSE, RESUME, DRAW, FP_DEBIT, SLICE_PURCHASE }
+    private final SlicePurchaseReceipt purchase;
     private final FatePointDebits.Receipt debit;
     private final DrawCommitment draw;
     private final UUID commandId;
@@ -30,6 +32,12 @@ public final class RunReceipt
     public RunReceipt(UUID commandId, Operation operation, long beforeRevision, long afterRevision,
         RunLifecycle.State state, RunLifecycle.Obligation obligation, DrawCommitment draw,
         FatePointDebits.Receipt debit)
+    { this(commandId, operation, beforeRevision, afterRevision, state, obligation, draw, debit, null); }
+
+    /** Typed envelope only; aggregate validation and schema support remain separate requirements. */
+    public RunReceipt(UUID commandId, Operation operation, long beforeRevision, long afterRevision,
+        RunLifecycle.State state, RunLifecycle.Obligation obligation, DrawCommitment draw,
+        FatePointDebits.Receipt debit, SlicePurchaseReceipt purchase)
     {
         this.commandId = Objects.requireNonNull(commandId, "commandId");
         this.operation = Objects.requireNonNull(operation, "operation");
@@ -46,6 +54,13 @@ public final class RunReceipt
             || (debit != null && (!commandId.equals(debit.commandId())
                 || beforeRevision != debit.beforeRevision() || afterRevision != debit.afterRevision())))
         { throw new IllegalArgumentException("Invalid debit receipt identity"); }
+        if ((operation == Operation.SLICE_PURCHASE) != (purchase != null)
+            || (purchase != null && (obligation != RunLifecycle.Obligation.NONE
+                || !commandId.equals(purchase.debit().commandId())
+                || beforeRevision != purchase.debit().beforeRevision()
+                || afterRevision != purchase.debit().afterRevision())))
+        { throw new IllegalArgumentException("Invalid purchase receipt identity or boundary"); }
+        this.purchase = purchase;
         this.debit = debit;
         this.draw = draw;
         this.beforeRevision = beforeRevision;
@@ -60,11 +75,24 @@ public final class RunReceipt
         return commandId.equals(other.commandId) && operation == other.operation
             && beforeRevision == other.beforeRevision && afterRevision == other.afterRevision
             && state == other.state && obligation == other.obligation && Objects.equals(draw, other.draw)
-            && Objects.equals(debitKey(), other.debitKey());
+            && Objects.equals(debitKey(), other.debitKey())
+            && Objects.equals(purchaseKey(), other.purchaseKey());
     }
 
     @Override public int hashCode()
-    { return Objects.hash(commandId, operation, beforeRevision, afterRevision, state, obligation, draw, debitKey()); }
+    { return Objects.hash(commandId, operation, beforeRevision, afterRevision, state, obligation, draw, debitKey(), purchaseKey()); }
+
+    private Object purchaseKey()
+    {
+        if (purchase == null) { return null; }
+        FatePointDebits.Receipt response = purchase.debit();
+        return java.util.List.of(purchase.identity(), purchase.instanceId(), purchase.quote().activity(),
+            purchase.quote().key(), purchase.quote().version(), purchase.quote().amount(),
+            purchase.quote().kind(), purchase.quote().duplicateOrdinal(), response.commandId(),
+            response.beforeRevision(), response.afterRevision(), response.balance());
+    }
+
+    public SlicePurchaseReceipt purchase() { return purchase; }
 
     private Object debitKey()
     {
