@@ -9,6 +9,56 @@ public class FatePointDebitsTest
 {
     private final RunIdentity identity = new RunIdentity("local-profile", UUID.randomUUID());
 
+    @Test public void restoresOriginalResponsesAndCanContinueWithoutRepeatingDebits()
+    {
+        FatePointDebits initial = seed(7, RunLifecycle.State.ACTIVE, 20);
+        UUID command = UUID.randomUUID();
+        FatePointDebits head = initial.debit(identity, command, 7, "product", "v1", 5)
+            .proposed().debit(identity, UUID.randomUUID(), 8, "other", "v2", 3).proposed();
+        FatePointDebits restored = FatePointDebits.restore(initial.lifecycle(), initial.ledger(), head.receipts());
+        assertEquals(12, restored.ledger().balance());
+        assertEquals(9, restored.lifecycle().revision());
+        assertEquals(RunLifecycle.Obligation.ACTIVE_OBJECTIVE, restored.lifecycle().obligation());
+        FatePointDebits.Result replay = restored.debit(identity, command, 7, "product", "v1", 5);
+        assertSame(restored, replay.proposed());
+        assertEquals(15, replay.receipt().balance());
+        assertEquals(2, restored.ledger().entries().size());
+        assertEquals(10, restored.debit(identity, UUID.randomUUID(), 9, "third", "v1", 2)
+            .proposed().ledger().balance());
+        assertThrows(IllegalArgumentException.class,
+            () -> restored.debit(identity, command, 7, "product", "v2", 5));
+        assertTrue(FatePointDebits.restore(initial.lifecycle(), initial.ledger(), List.of()).receipts().isEmpty());
+    }
+
+    @Test public void restorationRejectsCorruptReorderedRepeatedAndUnaffordableHistory()
+    {
+        FatePointDebits initial = seed(7, RunLifecycle.State.ACTIVE, 20);
+        FatePointDebits head = initial.debit(identity, UUID.randomUUID(), 7, "product", "v1", 5)
+            .proposed().debit(identity, UUID.randomUUID(), 8, "other", "v1", 3).proposed();
+        FatePointDebits.Receipt first = head.receipts().get(0);
+        FatePointDebits.Receipt second = head.receipts().get(1);
+        FatePointDebits.Receipt wrongBalance = new FatePointDebits.Receipt(first.commandId(), 7, 8,
+            "product", "v1", 5, 14);
+        FatePointDebits.Receipt reused = new FatePointDebits.Receipt(first.commandId(), 8, 9,
+            "other", "v1", 3, 12);
+        for (List<FatePointDebits.Receipt> history : List.of(List.of(wrongBalance),
+            List.of(second, first), List.of(first, first), List.of(first, reused)))
+        {
+            assertThrows(IllegalArgumentException.class,
+                () -> FatePointDebits.restore(initial.lifecycle(), initial.ledger(), history));
+        }
+        assertThrows(IllegalArgumentException.class, () -> FatePointDebits.restore(initial.lifecycle(),
+            new FatePointLedger(4, List.of()), head.receipts()));
+        assertThrows(IllegalArgumentException.class, () -> FatePointDebits.restore(
+            seed(7, RunLifecycle.State.PAUSED, 20).lifecycle(), initial.ledger(), head.receipts()));
+        assertThrows(IllegalArgumentException.class, () -> new FatePointDebits.Receipt(
+            first.commandId(), 7, 9, "product", "v1", 5, 15));
+        assertThrows(IllegalArgumentException.class, () -> new FatePointDebits.Receipt(
+            first.commandId(), Long.MAX_VALUE, Long.MIN_VALUE, "product", "v1", 5, 15));
+        assertEquals(20, initial.ledger().balance());
+        assertTrue(initial.receipts().isEmpty());
+    }
+
     private FatePointDebits seed(long revision, RunLifecycle.State state, long balance)
     {
         return new FatePointDebits(new RunLifecycle(identity, revision, state,

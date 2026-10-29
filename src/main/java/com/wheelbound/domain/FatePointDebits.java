@@ -23,10 +23,16 @@ public final class FatePointDebits
         private final long amount;
         private final long balance;
 
-        private Receipt(UUID commandId, long beforeRevision, long afterRevision,
+        /** Decoded data still requires stream validation through restore(). */
+        public Receipt(UUID commandId, long beforeRevision, long afterRevision,
             String quoteKey, String quoteVersion, long amount, long balance)
         {
-            this.commandId = commandId;
+            this.commandId = Objects.requireNonNull(commandId, "commandId");
+            requireText(quoteKey);
+            requireText(quoteVersion);
+            if (beforeRevision < 0 || beforeRevision == Long.MAX_VALUE
+                || afterRevision != beforeRevision + 1 || amount <= 0 || balance < 0)
+            { throw new IllegalArgumentException("Invalid debit receipt"); }
             this.beforeRevision = beforeRevision;
             this.afterRevision = afterRevision;
             this.quoteKey = quoteKey;
@@ -72,6 +78,30 @@ public final class FatePointDebits
     public RunLifecycle lifecycle() { return lifecycle; }
     public FatePointLedger ledger() { return ledger; }
     public List<Receipt> receipts() { return receipts; }
+
+    /**
+     * Rebuilds a contiguous debit-only stream from its trusted original seed, validating
+     * every recorded result against arithmetic and lifecycle rules. The seed must precede
+     * these debits, not contain their resulting ledger. This is not a save migration or
+     * an acknowledgement of durability; mixed-operation journals need aggregate validation.
+     */
+    public static FatePointDebits restore(RunLifecycle seedLifecycle, FatePointLedger seedLedger,
+        List<Receipt> history)
+    {
+        FatePointDebits current = new FatePointDebits(seedLifecycle, seedLedger);
+        for (Receipt recorded : List.copyOf(history))
+        {
+            if (recorded.beforeRevision() != current.lifecycle.revision())
+            { throw new IllegalArgumentException("Noncontiguous debit history"); }
+            Result result = current.debit(seedLifecycle.identity(), recorded.commandId(),
+                recorded.beforeRevision(), recorded.quoteKey(), recorded.quoteVersion(), recorded.amount());
+            if (result.proposed() == current || result.receipt().balance() != recorded.balance()
+                || result.receipt().afterRevision() != recorded.afterRevision())
+            { throw new IllegalArgumentException("Debit receipt disagrees with reconstructed state"); }
+            current = result.proposed();
+        }
+        return current;
+    }
 
     public Result debit(RunIdentity identity, UUID commandId, long expectedRevision,
         String quoteKey, String quoteVersion, long amount)

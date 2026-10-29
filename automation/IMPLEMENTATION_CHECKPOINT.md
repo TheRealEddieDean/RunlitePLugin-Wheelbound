@@ -1,3 +1,37 @@
+## Current local continuation - validated debit history restoration, 2026-10-29
+
+IDLE after bounded WB-ECON-08 prerequisite increment (S). Reconciled existing domain,
+persistence and focused test sources against the backlog and recorded merged I01a/b/c
+receipts; no Git operations or remote merge verification. FND-01 remains DONE;
+TREE-02, WHL-02/03/05, ECON-01/08 remain PARTIAL_UNVERIFIED. FND-11 remains TODO.
+Other PARTIAL/TODO/BLOCKED rows retain their status. This supersedes older next-task
+text. I01d was not selected. No complete gameplay purchase is claimed.
+
+FatePointDebits.restore reconstructs a contiguous debit-only proposal stream from its
+trusted original lifecycle/ledger seed and typed receipts. It validates each revision,
+affordability and recorded resulting balance, rejects duplicate command IDs, and restores
+original-response replay after later debits. Receipt construction validates local fields.
+The original seed must precede these receipts; a post-debit ledger is not a seed. Mixed
+lifecycle/draw/reward histories still require complete aggregate validation. Account/run
+identity comes from the trusted enclosing seed; receipts are not independently portable
+identity evidence. No save schema, file durability, prices, products or live wiring added.
+Authority: WB-D105 and STATE_CONTRACT. Master Wheel source unchanged; gameplay disabled.
+
+Two focused JUnit tests added for restoration/continuation/replay and corrupt balances,
+reordering, repeated IDs, inactive seed, insufficient seed funds and invalid revisions.
+javac --release 11 compiled all domain production sources. A dependency-free executable
+smoke check passed for restoration, original-response replay and corrupt/duplicate rejection.
+Gradle focused debit/ledger and legacy WheelboundBehaviorTest attempt failed before test
+compilation: missing Gradle 8.10 distribution download denied (SocketException).
+No JUnit tests ran; supervisor must run focused and legacy suites. Smoke is not JUnit/CI.
+
+Next remaining task: integrate FP ledger and typed receipts into the versioned RunDocument,
+RunCodec and AtomicRunStore. Define explicit legacy-schema compatibility without inventing
+starting FP; preserve FP through lifecycle/draw operations; reject cross-operation command
+ID reuse; test failed writes, lost acknowledgements and restart replay. Then couple reviewed
+debits to slice instance/lifetime-history mutation. No external paths, credentials, secrets,
+workflows or Git accessed. Supervisor handles publication, CI and merges.
+
 ## Current local continuation - FP debit proposals, 2026-10-29
 
 IDLE after bounded WB-ECON-08 / WB-FND-11 prerequisite increment (S).
