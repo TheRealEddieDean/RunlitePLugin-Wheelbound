@@ -9,7 +9,7 @@ import java.util.UUID;
  * Immutable debit proposals, never persistence acknowledgements or purchase authorization.
  * A trusted caller must validate the reviewed quote, product and legal action boundary,
  * then persist lifecycle, ledger, product changes and receipts together before publishing.
- * This component is deliberately not wired to the playable plugin or foundation store.
+ * Persistence adapters may consume these proposals; the playable plugin remains unwired.
  */
 public final class FatePointDebits
 {

@@ -1,3 +1,43 @@
+## Current local continuation - durable debit commands, 2026-10-29
+
+IDLE after bounded WB-FND-11 / WB-ECON-08 durable debit command increment (S).
+This entry supersedes older next-task text. Reconciled domain, schema-5 persistence,
+command services and focused tests against the backlog and historical merge receipts.
+No Git operations or remote merge verification. FND-01 remains DONE; FND-10/12 remain
+PARTIAL. FND-11 and ECON-08 remain PARTIAL_UNVERIFIED, now including the standalone
+durable debit service. TREE-02, WHL-02/03/04/05/06/07/11/12 and ECON-01 remain
+PARTIAL_UNVERIFIED. Other TODO and decision/evidence BLOCKED rows retain status.
+No completed gameplay or integrated paid transaction is claimed. I01d was not selected.
+
+DurableFatePointDebits uses AtomicRunStore to write lifecycle, ledger and typed receipt
+in one revision-checked replacement before returning success. Exact replay restores the
+original response after later mixed operations, including while paused. Changed quote,
+amount/revision, foreign identity and cross-operation command-ID reuse fail closed.
+Missing legacy FP is unavailable, never inferred zero. Debit proposals preserve pending
+obligations. Failed writes retain the store's pending/reconciliation behavior; lost
+acknowledgements can replay the committed receipt after reopen. Authority: WB-D105 and
+STATE_CONTRACT. Quote references are not authorization; no candidate prices adopted.
+This unwired primitive must not be called separately to pay for inventory changes:
+product mutations still require one complete aggregate transaction with the debit.
+Master Wheel source unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Five JUnit methods authored for restart/mixed-operation replay and original balance,
+lost acknowledgements, failed replacement/pending-file blocking, request/identity and
+lifecycle/draw command-ID collisions, stale/inactive/invalid/insufficient requests and
+missing legacy FP. Gradle focused DurableFatePointDebitsTest/DebitJournalTest/
+DurableWheelDrawsTest and legacy WheelboundBehaviorTest attempt failed before compilation:
+missing Gradle 8.10 distribution download denied (SocketException Permission denied).
+No JUnit or legacy suite ran; new service/codec compilation is NOT claimed. All domain
+production sources plus RunDocument/RunReceipt and existing DebitJournalChecks compiled
+with javac --release 11; DebitJournalChecks passed. Supervisor must run the new tests.
+
+Next required bounded gameplay dependency: persist SliceInventory in the versioned run
+aggregate/codec, preserve it through all existing commands and test schema compatibility.
+Then atomically couple reviewed debit, new-instance/lifetime-history and product changes,
+with failed-write/lost-acknowledgement/restart fixtures. Paid WHL-04/05/06 remains unfinished.
+No external paths, credentials, secrets, workflow access or Git operations were used.
+Supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - typed debit journal, 2026-10-29
 
 IDLE after bounded WB-FND-11 / WB-ECON-08 typed-journal prerequisite increment (S).
