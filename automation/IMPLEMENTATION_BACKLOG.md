@@ -1,3 +1,47 @@
+## Current local continuation - inventory persistence, 2026-10-29
+
+IDLE after bounded WB-FND-10/12 and WB-WHL-03 inventory persistence increment (S).
+This supersedes earlier next-task prose. Reconciled production domain, persistence,
+command and focused-test inventory against the backlog and recorded I01a/b/c receipts.
+Recorded merges were not remotely verified; no Git operations. FND-01 remains DONE.
+FND-10/12 remain PARTIAL; FND-11/ECON-08 remain PARTIAL_UNVERIFIED. TREE-02,
+WHL-02/03/04/05/06/07/11/12 and ECON-01 remain PARTIAL_UNVERIFIED. All other
+unstarted TODO and decision/evidence BLOCKED rows retain status. No complete gameplay
+or paid wheel transaction is claimed. I01d was not selected or changed.
+
+RunDocument now carries optional SliceInventory. RunCodec schema 6 persists ordered
+active/stored UUIDs, ordinary enhancement tiers, explicit special weights, Satchel tier,
+retained unlocks and independent lifetime acquisition history (including destroyed copies
+and unlock-only activities). InventoryJson restores through validated domain constructors,
+rejects duplicate unlock/history entries and unknown fields, and derives ordinary weights
+from tiers. Schemas 1-5 retain unavailable inventory, never a fabricated starting wheel
+or reset purchase history. Current schema requires explicit inventory or null. Lifecycle,
+draw and standalone debit commands preserve inventory through revisioned writes.
+Authority: WB-D105/106/118/121 and STATE_CONTRACT/PERSISTENCE. No prices, grants,
+catalog admission, transaction provenance or authorization are invented. This remains
+an incomplete aggregate; live gameplay is unwired/default-disabled. Master Wheel source
+is unchanged. Historical acquired-state restoration still requires trusted evidence.
+
+Five focused JUnit methods authored for complete inventory round trip, schemas 1-5 and
+explicit null/missing-field compatibility, malformed inventory and duplicate rejection,
+failed replacement/pending blocking, and mixed-command/lost-acknowledgement replay after
+reopen. Updated schema downgrade fixtures to omit the new inventory field. Java 11
+compilation passed for all domain sources, RunDocument/RunReceipt and dependency-free
+InventoryDocumentChecks/DebitJournalChecks; both checks passed. Gradle focused inventory,
+codec, debit journal, durable debit and legacy WheelboundBehaviorTest attempt failed
+before compilation: missing Gradle 8.10 distribution download denied (SocketException).
+No JUnit/legacy pass or codec/service compilation is claimed. Supervisor must execute
+the new and affected persistence suites, including lifecycle and durable draws.
+
+Next bounded gameplay unit: add a typed inventory-purchase receipt and atomic aggregate
+command coupling an explicitly authorized reviewed debit, new instance and lifetime
+history mutation. Persist all effects in one write; reject cross-operation command-ID
+reuse, retain original replay response, and test failure/lost acknowledgement/restart.
+Do not call the standalone debit service separately to pay for inventory changes.
+Prices/catalog authority and legal edit-boundary validation remain required before live
+use; WHL-04/05/06 remain unfinished. No external paths, credentials, secrets, workflows
+or Git accessed. Supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - durable debit commands, 2026-10-29
 
 IDLE after bounded WB-FND-11 / WB-ECON-08 durable debit command increment (S).
