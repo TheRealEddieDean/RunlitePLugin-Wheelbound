@@ -195,6 +195,41 @@ public final class SliceInventory
             unlockedActivities, acquisitionHistory);
     }
 
+    /**
+     * Propose exchanging an active ordinary instance with an explicitly selected stored one.
+     * Validate only the final composition: neither a temporary 25th slot nor a temporary
+     * sixth/invalid ordinary configuration is published. Both instances retain identity and
+     * modifiers, including Questing; no acquisition or destruction takes place.
+     * This is a compound storage/reactivation proposal, not a free swap authorization.
+     * The aggregate caller must validate the legal edit boundary and reviewed costs for both
+     * movements and atomically persist debit, inventory and replay receipt before success.
+     */
+    public SliceInventory proposeStoredReplacement(UUID activeId, UUID storedId)
+    {
+        Objects.requireNonNull(activeId, "activeId");
+        Objects.requireNonNull(storedId, "storedId");
+        java.util.ArrayList<ActiveWheel.Slice> active = new java.util.ArrayList<>(activeWheel.slices());
+        java.util.ArrayList<ActiveWheel.Slice> storage = new java.util.ArrayList<>(stored);
+        for (int i = 0; i < active.size(); i++)
+        {
+            ActiveWheel.Slice outgoing = active.get(i);
+            if (!outgoing.id().equals(activeId)) { continue; }
+            if (outgoing.kind() != ActiveWheel.Kind.ORDINARY)
+            { throw new IllegalArgumentException("Special slices cannot enter Satchel"); }
+            for (int j = 0; j < storage.size(); j++)
+            {
+                ActiveWheel.Slice incoming = storage.get(j);
+                if (!incoming.id().equals(storedId)) { continue; }
+                active.set(i, incoming);
+                storage.set(j, outgoing);
+                return new SliceInventory(new ActiveWheel(active), storage, satchelTier,
+                    unlockedActivities, acquisitionHistory);
+            }
+            throw new IllegalArgumentException("Slice not stored");
+        }
+        throw new IllegalArgumentException("Slice not active");
+    }
+
     private static ActiveWheel.Slice removeInstance(List<ActiveWheel.Slice> slices, UUID id)
     {
         for (int i = 0; i < slices.size(); i++)

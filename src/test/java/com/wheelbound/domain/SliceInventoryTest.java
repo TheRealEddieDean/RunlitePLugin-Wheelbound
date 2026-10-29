@@ -14,6 +14,68 @@ import static com.wheelbound.domain.SliceInventory.*;
 
 public class SliceInventoryTest
 {
+    @Test public void storedReplacementPreservesInstancesAtFullWheelAndSatchelCapacity()
+    {
+        List<Slice> active = new ArrayList<>(wheel().slices());
+        Slice questing = slice("questing");
+        active.add(questing);
+        while (active.size() < CAPACITY)
+        { active.add(Slice.special(UUID.randomUUID(), Kind.TAINT, 4)); }
+        Slice incoming = slice("mining");
+        List<Slice> storage = List.of(slice("fishing"), incoming, slice("questing"));
+        SliceInventory original = new SliceInventory(new ActiveWheel(active), storage,
+            SatchelTier.BASE, unlocks(), history());
+        SliceInventory result = original.proposeStoredReplacement(questing.id(), incoming.id());
+        assertEquals(CAPACITY, result.activeWheel().slices().size());
+        assertSame(incoming, result.activeWheel().slices().get(5));
+        assertSame(questing, result.stored().get(1));
+        for (int i = 0; i < active.size(); i++)
+        { if (i != 5) { assertSame(active.get(i), result.activeWheel().slices().get(i)); } }
+        assertSame(storage.get(0), result.stored().get(0));
+        assertSame(storage.get(2), result.stored().get(2));
+        assertEquals(original.acquisitionHistory(), result.acquisitionHistory());
+        assertEquals(original.unlockedActivities(), result.unlockedActivities());
+        assertEquals(original.satchelTier(), result.satchelTier());
+        assertEquals(active, original.activeWheel().slices());
+        assertEquals(storage, original.stored());
+        SliceInventory restored = result.proposeStoredReplacement(incoming.id(), questing.id());
+        assertEquals(active, restored.activeWheel().slices());
+        assertEquals(storage, restored.stored());
+    }
+
+    @Test public void storedReplacementValidatesFinalDiversityAndExplicitLocations()
+    {
+        List<Slice> active = List.of(slice("mining"), slice("mining"), slice("fishing"),
+            slice("fishing"), slice("combat"));
+        Slice incoming = slice("mining");
+        SliceInventory original = new SliceInventory(new ActiveWheel(active), List.of(incoming),
+            SatchelTier.BASE, unlocks(), history());
+        assertThrows(IllegalArgumentException.class,
+            () -> original.proposeStoredReplacement(active.get(4).id(), incoming.id()));
+        assertEquals(5, original.proposeStoredReplacement(active.get(0).id(), incoming.id())
+            .activeWheel().slices().size());
+        for (UUID id : List.of(UUID.randomUUID(), incoming.id()))
+        { assertThrows(IllegalArgumentException.class,
+            () -> original.proposeStoredReplacement(id, incoming.id())); }
+        for (UUID id : List.of(UUID.randomUUID(), active.get(0).id()))
+        { assertThrows(IllegalArgumentException.class,
+            () -> original.proposeStoredReplacement(active.get(0).id(), id)); }
+        for (Kind kind : List.of(Kind.TAINT, Kind.SACRIFICE))
+        {
+            Slice special = Slice.special(UUID.randomUUID(), kind, 4);
+            List<Slice> withSpecial = new ArrayList<>(active);
+            withSpecial.add(special);
+            SliceInventory inventory = new SliceInventory(new ActiveWheel(withSpecial),
+                List.of(incoming), SatchelTier.BASE, unlocks(), history());
+            assertThrows(IllegalArgumentException.class,
+                () -> inventory.proposeStoredReplacement(special.id(), incoming.id()));
+        }
+        assertThrows(NullPointerException.class, () -> original.proposeStoredReplacement(null, incoming.id()));
+        assertThrows(NullPointerException.class, () -> original.proposeStoredReplacement(active.get(0).id(), null));
+        assertEquals(active, original.activeWheel().slices());
+        assertEquals(List.of(incoming), original.stored());
+    }
+
     @Test public void enhancementAdvancesOnlySelectedInstanceAndPreservesOwnershipHistory()
     {
         List<Slice> active = new ArrayList<>(wheel().slices());

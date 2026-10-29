@@ -1,3 +1,41 @@
+## Current local continuation - stored replacement proposal, 2026-10-29
+
+IDLE after bounded WB-WHL-06 product-proposal increment (S).
+Read protocol, session, queue, pending decisions, checkpoint and backlog; reconciled
+ActiveWheel/SliceInventory, tests and recorded I01a/b/c merged receipts. No Git or
+remote verification performed. FND-01 remains DONE; existing partial/unverified,
+unstarted and evidence/decision-blocked statuses stand except WHL-06 is now
+PARTIAL_UNVERIFIED. This entry supersedes historical WHL-06 TODO statements.
+I01d was not selected. No complete paid gameplay implementation is claimed.
+
+SliceInventory.proposeStoredReplacement exchanges explicitly selected active ordinary
+and stored instances in one immutable proposal, validating final five/three/24 and
+Satchel capacity. Full wheel/full Satchel exchange preserves UUIDs, enhancements,
+other instances, unlocks and lifetime history. Questing moves without destruction;
+Taint/Sacrifice, foreign/wrong-location IDs and invalid final diversity fail closed.
+Authority: WB-D105/106/118/121 and WHEELS final-state atomic edit contract.
+This is compound storage/reactivation only, with both reviewed movement costs still
+required. No free swap, new-instance replacement, special insertion, price adoption,
+authorization, debit, persistence, receipt or UI/live wiring was added. Master Wheel
+source unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Two focused JUnit methods authored for full capacities, exact instance/order/history
+preservation, reverse exchange, minimum wheel acceptance, diversity rejection,
+specials, locations, nulls and immutable failure. javac --release 11 compiled all
+production domain sources. Dependency-free ReplacementSmoke passed full-capacity
+Questing exchange/reversal, minimum-wheel diversity rejection, special rejection and
+immutability/history checks. Initial smoke fixture incorrectly retained Questing as
+a fourth activity for diversity rejection; corrected to a five-ordinary/three-activity
+fixture and reran successfully. Gradle focused inventory and legacy behavior attempt
+failed before compilation: missing Gradle 8.10 download denied (SocketException).
+No JUnit or legacy regression pass claimed; supervisor must execute those suites.
+
+Next required dependency for paid gameplay: typed debit receipts in the unified revision
+journal, explicit schema compatibility, mixed-operation restoration and cross-operation
+command-ID collision rejection; then durable inventory and atomic reviewed debit/product
+commands with failed-write/lost-acknowledgement/restart tests. WHL-06 remains incomplete
+for authorized durable replacement and other replacement routes. No external paths,
+credentials, secrets, workflows or Git accessed. Supervisor handles publication and CI.
 ## Current local continuation - raw wheel odds, 2026-10-29
 
 IDLE after bounded WB-WHL-07 raw-odds snapshot increment (S).
@@ -604,12 +642,12 @@ inspection performed; no commit/PR/merge claimed. No background work.
 
 Current engineering continuation: [implementation checkpoint](IMPLEMENTATION_CHECKPOINT.md). Its four-PR batch supersedes historical next-task navigation below. WB-D158/159 authorize production implementation and verified PR integration.
 
-## Current integration authority ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â WB-D159
+## Current integration authority ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â WB-D159
 
 User permanently authorized implementation under WB-D158 and now permits opening and merging verified implementation PRs into wheelbound-mode without per-PR approval, until revoked. PR1 code and checkpoint builds passed at head252ae08c3005eaa3349d88e8874ee6747b594ffd (runs40599875895/40599868156). This authority-only follow-up must pass CI before the guarded PR merge. After merge, verify source HEAD and continue I01b from that head. master/main stay protected; no background task implied.
 
 
-## Verified implementation receipt ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-10-27
+## Verified implementation receipt ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â 2026-10-27
 
 WB-D158 permanently authorizes production implementation. Code commit 938a0d8840373e027ac6ca993670f982737d647d passed GitHub PR run 40599594587 (merge tree e94dc79666267532a4395cfcf6d4c14f1a270558): clean build and dependency-manifest task successful, 79 JUnit tests, zero failures/errors/skips, including nine RunLifecycle tests. Artifact 12778275353 exports XML/HTML and dependency hashes. Resolved Gradle8.10/JDK11.0.32.1/RuneLite client+api+jshell1.13.4. I00 build/test/dependency evidence and I01a lifecycle foundation complete within this scope; full packaging/live-client validation and I01b persistence are unfinished.
 
@@ -618,7 +656,7 @@ Initial CI exposed the existing unsupported-profile list missing The Fractured A
 Next: I01b versioned durable aggregate/journal, preserved invalid originals, duplicate command/payload collision and crash/replay fixtures using supported RuneLite serialization. Current immediate-observation guards do not implement durable receipt replay, session tokens, persistence or live account adapters. UI themes remain queued. PR1 targets wheelbound-mode; source and master/main untouched. Owner released; no background task.
 
 
-## Current implementation checkpoint ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â WB-I01a, 2026-10-27
+## Current implementation checkpoint ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â WB-I01a, 2026-10-27
 
 - State: IDLE after this bounded milestone; no background task.
 - Source verified: b55a5404ce450267b8d9acbe477a593bbe2729dc.
@@ -631,7 +669,7 @@ Next: I01b versioned durable aggregate/journal, preserved invalid originals, dup
 
 
 - Session ID: wb-20261014-challenge-tiers
-- State: IDLE ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â UI-GF4 selection saved in owning checkpoint; owner released.
+- State: IDLE ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â UI-GF4 selection saved in owning checkpoint; owner released.
 - Branch: wheelbound-mode only.
 - Starting remote head:c62d381e4392845bce76d0738fc176af13374661; guarded claimbcaa9a874626d2b1ea85a03b23d85c9f412cac83.
 - Protected main:c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
@@ -640,7 +678,7 @@ Next: I01b versioned durable aggregate/journal, preserved invalid originals, dup
 
 ## Current UI-GF4 selection checkpoint
 
-Verified predecessor/claim049316fdf2510fb596af1a806b0d04fca1b24ac9 from a6e1d0d533c7e33191932890d87008fba42a16ac; protected main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. WB-D156 records user selection of GF4 for now; exact original PNG and hash/provenance under docs/wheelbound/design. WB-D157 preserves explicit Taint-as-own-slice clarification, superseding generated ordinary-activity taint depictions. Current official Hub48ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â72 listing-icon/resource-JAR rules distinguished from recommendations. No runtime image/code, root icon or main changes; no implementation authorization implied.
+Verified predecessor/claim049316fdf2510fb596af1a806b0d04fca1b24ac9 from a6e1d0d533c7e33191932890d87008fba42a16ac; protected main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. WB-D156 records user selection of GF4 for now; exact original PNG and hash/provenance under docs/wheelbound/design. WB-D157 preserves explicit Taint-as-own-slice clarification, superseding generated ordinary-activity taint depictions. Current official Hub48ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â72 listing-icon/resource-JAR rules distinguished from recommendations. No runtime image/code, root icon or main changes; no implementation authorization implied.
 
 Owner wb-ui-gf4 released in owning checkpoint. Verify remote commit/tree/main before saved claim. Next: discuss/revise selected Grand style if user requests, otherwise await their next wheel choice; do not select other wheels automatically. Independent design queue still begins A102 ordinary quantity/reward draft as previously recorded. No background work. PDF remains older derived checkpoint. Prior A101 continuation below remains relevant to independent economy work.
 
@@ -648,27 +686,27 @@ Owner wb-ui-gf4 released in owning checkpoint. Verify remote commit/tree/main be
 
 Session wb-a98-a100 began at8337c82416486dbdd0f51c37915a11124c2482a9; protected main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. Guarded claim c7a37944e146ce13c9c96e7b83146a91967acb12, A98 user deferral83aa7f58b37bc16740b63dbc104cd22566a119b6, A99 audit21ddc97fa07fe35ba5dfa9fa0c7df7833b76b973, A100 corrected studyce39c550145d2d7b421932e5c471a0536b2f4079 verified remotely. Shell push lacks credentials; connected GitHub guarded tree/commit/ref publication works.
 
-Completed: WB-D155 explicit user direction to move on from niche A56 permanent invalidation. It is DEFERRED_BY_USER, not approved/rejected, not a blocking next question; preserve Pause/Reject. A99 found A87 hidden-target choice leakage and marked historical interpretation limits. A100 separate visible-rank model chooses first, reveals selected creature/item afterward;43 scenarios/86,000 synthetic windows and1,050 checks. A10130 candidate budget sums and combined economy plan with A102ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“A107 bounded follow-ons. No numeric prices, q or new gameplay rule adopted; no full-mode simulation/live test performed.
+Completed: WB-D155 explicit user direction to move on from niche A56 permanent invalidation. It is DEFERRED_BY_USER, not approved/rejected, not a blocking next question; preserve Pause/Reject. A99 found A87 hidden-target choice leakage and marked historical interpretation limits. A100 separate visible-rank model chooses first, reveals selected creature/item afterward;43 scenarios/86,000 synthetic windows and1,050 checks. A10130 candidate budget sums and combined economy plan with A102ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œA107 bounded follow-ons. No numeric prices, q or new gameplay rule adopted; no full-mode simulation/live test performed.
 
 Validation:43,336 rank assertions;12 core mutations and14 trace-plan mutations rejected;22 collector tests;1,050 A100 checks;18 authority hashes; historical A87 model/results and v1/source display/core/production/build/workflow bytes preserved against starting remote. All62 client cases remain NOT_RUN. See A100 validation receipt and A101 final receipt for exact executed scope. Derived PDF remains version10/source135eed73, not refreshed for this block.
 
-Exact next action: Recheck remote/ownership, then A102 ordinary XP/KC/quest quantity/reward table draft per research/FULL_ECONOMY_PLAN_A101.md. Use context-supported recommendations; no production coding. Follow with explicit normal-bossÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢Challenge entitlement reuse/product/gate mapping before a combined economy model. Source expansion remains independent (Gargoyle primary image/Shaman canyon packet; Turoth conflicts held). Do not restart inventories, re-ask resolved ranks or re-ask deferred A56. Separate Coffer/policy/task/reconciliation/legacy CA evidence/scope remains untouched.
+Exact next action: Recheck remote/ownership, then A102 ordinary XP/KC/quest quantity/reward table draft per research/FULL_ECONOMY_PLAN_A101.md. Use context-supported recommendations; no production coding. Follow with explicit normal-bossÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢Challenge entitlement reuse/product/gate mapping before a combined economy model. Source expansion remains independent (Gargoyle primary image/Shaman canyon packet; Turoth conflicts held). Do not restart inventories, re-ask resolved ranks or re-ask deferred A56. Separate Coffer/policy/task/reconciliation/legacy CA evidence/scope remains untouched.
 
 Owner released; no active/background task. Owning A101 commit must be resolved from history and exact head/tree/main verified before claiming remotely saved. Uncommitted work should be empty after verification. All older next paragraphs below are historical where superseded by this continuation.
 
-## Historical A97 continuation ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â superseded next-question navigation
+## Historical A97 continuation ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â superseded next-question navigation
 
-Latest completed A97: End-of-hour validation, current navigation and ownership release. Verified predecessor `29b0e18626e30c17097158e5ed66e584e48ea6b4`. Completed A84ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“A96 bounded evidence/content/economy/core/publication/trace/version/build/source packets and final A97 navigation/validation. Finite core14 keys/16 hunts;43,336 rank assertions,329 historical-partial source assertions,269 economy checks,22 collector tests,12 core and14 plan mutations rejected; full-core62 real-client cases all NOT_RUN.18 authority hashes valid; original v1/source display files and production/build/workflow bytes preserved. PDF240pages saved version10 from exact135eed73/62 input hashes, later evidence/planning supplements explicitly separate. Fresh existing-plugin CI passed; local Gradle distribution network failure and missing CI artifacts persist. No open material policy adopted, no implementation or main change.
+Latest completed A97: End-of-hour validation, current navigation and ownership release. Verified predecessor `29b0e18626e30c17097158e5ed66e584e48ea6b4`. Completed A84ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œA96 bounded evidence/content/economy/core/publication/trace/version/build/source packets and final A97 navigation/validation. Finite core14 keys/16 hunts;43,336 rank assertions,329 historical-partial source assertions,269 economy checks,22 collector tests,12 core and14 plan mutations rejected; full-core62 real-client cases all NOT_RUN.18 authority hashes valid; original v1/source display files and production/build/workflow bytes preserved. PDF240pages saved version10 from exact135eed73/62 input hashes, later evidence/planning supplements explicitly separate. Fresh existing-plugin CI passed; local Gradle distribution network failure and missing CI artifacts persist. No open material policy adopted, no implementation or main change.
 
 Exact next action: Ask the one A56 permanent ordinary invalidation question and wait before adopting. Independent next source packet: Gargoyle primary table-image/top-floor finishing-to-loot map (image web read blocked) or Shaman canyon access/personal allocation/effort. Preserve held Turoth sword estimate/necklace discrepancy; then coherent price/progression/full-economy work. Recheck remote/ownership first; no repeated rank/inventory research.
 
-Existing approved rules and explicit supersessions remain controlling. No source estimate silently certified, no unrelated retirement/task/Coffer/policy approval inferred. Owner released; no background task. Previous ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œnextÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â paragraphs are historical where superseded. Owning commit requires final remote head/tree/main verification.
+Existing approved rules and explicit supersessions remain controlling. No source estimate silently certified, no unrelated retirement/task/Coffer/policy approval inferred. Owner released; no background task. Previous ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“nextÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â paragraphs are historical where superseded. Owning commit requires final remote head/tree/main verification.
 
-## Latest explicit user change ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â WB-D144/145
+## Latest explicit user change ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â WB-D144/145
 
-User2026-10-14 specifies four separately unlockable item-hunt Challenge ranks: Lesser1/25ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“1/50; Standard1/50ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“1/125; Greater1/125ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“1/750; Superior1/750ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“1/5000. These final structured ranges supersede the same message's preliminary1/60/max1000 and the prior single1/400ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“1/1500 band. Ignore the displayed2ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â in2ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â1/75 **for bracket placement**; classify as1/75. Preserve raw counts/conditions/personal encounter probability separately; never call per-roll rate exact per-kill rate.
+User2026-10-14 specifies four separately unlockable item-hunt Challenge ranks: Lesser1/25ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ1/50; Standard1/50ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ1/125; Greater1/125ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ1/750; Superior1/750ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ1/5000. These final structured ranges supersede the same message's preliminary1/60/max1000 and the prior single1/400ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ1/1500 band. Ignore the displayed2ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â in2ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â1/75 **for bracket placement**; classify as1/75. Preserve raw counts/conditions/personal encounter probability separately; never call per-roll rate exact per-kill rate.
 
-WB-D145 delegated shared-edge convention: reciprocal denominator D=1/p; Lesser25ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤DÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤50, Standard50<DÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤125, Greater125<DÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤750, Superior750<DÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤5000. Shared boundaries go to easier rank, no duplicate same-context entries. Non-unit fractions compared exactly. Alternatives/task/party/approximation need explicit context review; no convenient-rate fallback.
+WB-D145 delegated shared-edge convention: reciprocal denominator D=1/p; Lesser25ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤DÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤50, Standard50<DÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤125, Greater125<DÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤750, Superior750<DÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤5000. Shared boundaries go to easier rank, no duplicate same-context entries. Non-unit fractions compared exactly. Alternatives/task/party/approximation need explicit context review; no convenient-rate fallback.
 
 Personal fresh active exact assigned-source drop, meaningful unique/source filtering, previous ownership allowed, non-consuming/once-only completion, no reroll/pity and normal Bossing L/S/G mechanics remain. New Challenge ranks are distinct from ordinary KC-card names.
 
@@ -682,21 +720,21 @@ Personal fresh active exact assigned-source drop, meaningful unique/source filte
 - Prior44-hunt v1 JSON/CSV unchanged as historical/source receipts; old human table carries a supersession banner. Old builders/validator reproduce historical policy, not new future pool construction. V1 FP is not automatically a new tier reward.
 - Expanded v2 four-tier roster/rewards/offer integration are explicitly **not complete**. Do not repeat the old v1-complete status as current four-tier readiness. No live/client/gameplay tests performed.
 
-## Topology question resolved ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â WB-D147
+## Topology question resolved ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â WB-D147
 
-User2026-10-15 explicitly approves progressive ranks retaining lower ranks. See current continuation at top; do not ask this again. A69ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“A73 integration is delegated. Older pending topology notes below are superseded history.
+User2026-10-15 explicitly approves progressive ranks retaining lower ranks. See current continuation at top; do not ask this again. A69ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œA73 integration is delegated. Older pending topology notes below are superseded history.
 
 ## Historical evidence and preserved unrelated proposals
 
 Original output.zip user attachment libfile_12514dfedef0819184279d6d84d380ff, SHA256e00babd58e09c047f68df94625cd5b4e77e119952d52c0d0c50b53a7d2b60309.2,929 parsed pages/44,447 raw rows; partial discovery, no all-game completeness claim. Corrected taxonomy1,437 monsters/161 bosses/855 non-creatures/32 components/444 unresolved. No raw edits/bulk cache commit or source recrawl; prepare attachment again if scratch expires.
 
-A62 historical checkpointc62d381e4392845bce76d0738fc176af13374661/treeb119090f3919616ad482e5fe613075bc3a67efee completed old finite25-key/44-hunt v1 with six starter unlocks/325ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“18,925 FP under old rate policy. A54/A55/A58/A59/A60/A61 evidence and143 prior decisions remain preserved except explicit WB-D144/145 supersessions. PDF stale.
+A62 historical checkpointc62d381e4392845bce76d0738fc176af13374661/treeb119090f3919616ad482e5fe613075bc3a67efee completed old finite25-key/44-hunt v1 with six starter unlocks/325ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ18,925 FP under old rate policy. A54/A55/A58/A59/A60/A61 evidence and143 prior decisions remain preserved except explicit WB-D144/145 supersessions. PDF stale.
 
 A56 Q6 permanent ordinary invalidation stays PROPOSED/NOT_ADOPTED; no answer inferred from tiers. Existing Pause/Reject/no-reroll applies. Committed-but-unselected reconciliation, task-continuation, Coffer Q2, policy Q5 and separate legacy CA rewards remain independent. Current-client identity/composition/ownership/timing traces and engineering remain future activation gates. No background execution/quota/production completion claim. Owner released.
 
 A65 claim 2026-10-14T18:55:13.612274+00:00 expires 2026-10-14T20:55:13.612274+00:00; expected head05706461ff2c5dcb327a2d83d2d5c227b383d5fe. User requests CHALLENGE_HUNT_TABLE include entries under each tier. Display existing reviewed hunts plus explicit source candidates without admitting unresolved contexts or changing unlock topology/rewards.
 
-## Latest A65 ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â requested CHALLENGE_HUNT_TABLE update complete
+## Latest A65 ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â requested CHALLENGE_HUNT_TABLE update complete
 
 Starting remote05706461ff2c5dcb327a2d83d2d5c227b383d5fe; guarded claim888b915ef744accf16a4adb6511927b098b5903e. User explicitly selected GitHub and asked to update that file to include entries in every tier. CHALLENGE_HUNT_TABLE.md now has all four tier sections, every44 prior reviewed hunt reclassified, and202 new candidate source/item/rate groups from a named-signature item scan. Display totals: Lesser6, Standard12, Greater157 (29 prior+128 candidates), Superior71 (15 prior+56 candidates);45 unresolved source rows held separately. These are display groups, NOT eligible creature/roster counts.
 
@@ -708,7 +746,7 @@ Current next material question remains A64 progressive-versus-independent card u
 
 A66 acquisition 2026-10-14T19:07:20.956355+00:00 expires 2026-10-14T21:07:20.956355+00:00; expected remote98ae9450bb51ed8ed9b8c8234b88210c06ce3cd4. Explicit user clarification: two current monster/boss drop tables, both new tiers; rename old current/archive files and fix content/source classification/links. No new unlock topology, roster, reward or production approval.
 
-## Historical A66 ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â monster and boss documents separated
+## Historical A66 ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â monster and boss documents separated
 
 Starting98ae9450bb51ed8ed9b8c8234b88210c06ce3cd4; guarded claim37bf1aeaaebe5b053d43056debf0a18c60cfd622. User clarified the two intended current files: ordinary monster drop rates expanded to new tiers, and boss-only drop rates. MONSTER_CHALLENGE_HUNT_TABLE.md now has90 entries (18 prior reviewed/72 candidates); BOSS_CHALLENGE_HUNT_TABLE.md has156 (26 prior/130 candidates). Both are current four-tier drop-rate tables, NOT an archived monster list. Old CHALLENGE_HUNT_TABLE.md and CHALLENGE_HUNT_TABLE_V1_ARCHIVE.md removed/renamed from active tree; historical originals remain accessible in Git history.
 
@@ -722,7 +760,7 @@ A66 source/display validator2,194 assertions and22 offline tests pass. Regenerat
 
 Owner wb-a67; acquired 2026-10-14T19:20:30.706356+00:00; expires 2026-10-14T21:20:30.706372+00:00. Expected head bf213a6bc4f2c34a6693fc42bbaebcae3ffdc12a. Review every supplied corrected monster and every drop; replace monster name whitelist with explicit complete row dispositions, expand meaningful candidates, preserve held conditions. No boss expansion or gameplay policy adoption.
 
-## Current A67 ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â every supplied corrected monster and drop audited
+## Current A67 ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â every supplied corrected monster and drop audited
 
 Starting bf213a6bc4f2c34a6693fc42bbaebcae3ffdc12a; guarded claim3f849d6d458afff67e2d3f12734cdf69bc320bc0. Explicit request after missing Killerwatt/Air diamond: review all supplied monsters and their drops. Completed1,437 corrected MONSTER captures/31,757 rows/1,803 distinct names, with explicit per-item judgements and per-page exhaustive row-index dispositions. No silent monster retrieval whitelist; pinned input change requires new inventory review. Corrected taxonomy unchanged;161 bosses/855 non-creatures/32 components/444 unresolved not silently relabeled.
 
@@ -738,7 +776,7 @@ Next: contextual admission/access/identity/receipt/FP review for visible candida
 
 Owner wb-a68; acquired 2026-10-15T01:03:34.921312+00:00; expires 2026-10-15T03:03:34.921312+00:00. Expected remote 173092c2c742c059481c8e69b5bb7e960f1fde39. Scope: seven lower-tier source contexts using committed A67 evidence; document access/identity/receipt holds and a reproducible review packet. No admission, new gameplay decision, FP quote, raw recrawl or production change. Rank topology remains pending.
 
-## Latest A68 ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â bounded lower-tier context review complete
+## Latest A68 ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â bounded lower-tier context review complete
 
 Verified starting remote 173092c2c742c059481c8e69b5bb7e960f1fde39; guarded claim 1408fc07e595de3195ef86f6258a0dbbd1383448. Prior main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa preserved. Current user requests approximately30 minutes of context-supported work while preserving one-at-a-time material decisions. Unlock topology remains unanswered; no inferred approval.
 
@@ -746,15 +784,15 @@ Seven-context source/access/identity/receipt packet: Killerwatt Air diamond, Mol
 
 Artifacts research/LOWER_TIER_CONTEXT_REVIEW_A68.md/.json and tools/wiki_drops/validate_lower_tier_review.py. Validator passes committed index/row/metadata hashes, classifications, quantiles and all13 manifest hashes;22 existing offline tests pass. No source recrawl, full-cache/SQLite revalidation, table membership/historical v1 edit, gameplay adoption or implementation. Canonical item IDs/personal current-client traces/throughput/v2 FP remain absent and explicitly held. No claim of ready lower-tier pool.
 
-Owning commit contains release and validated artifacts; resolve its SHA in history, verify exact remote head/tree/main before saved claim. No uncommitted work intended and no active/background owner after publication. Next single material question remains progressive LesserÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢StandardÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢GreaterÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢Superior versus independent rank purchases. Recommendation progressive with lower-rank ownership retained; controls/entry gate/prices/offer integration remain separate. Await answer before adopting topology. Next safe source packet: Killerwatt/Molanisk canonical item/form and exact access/receipt evidence, using additional original source only if required; do not restart A67 inventory.
+Owning commit contains release and validated artifacts; resolve its SHA in history, verify exact remote head/tree/main before saved claim. No uncommitted work intended and no active/background owner after publication. Next single material question remains progressive LesserÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢StandardÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢GreaterÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢Superior versus independent rank purchases. Recommendation progressive with lower-rank ownership retained; controls/entry gate/prices/offer integration remain separate. Await answer before adopting topology. Next safe source packet: Killerwatt/Molanisk canonical item/form and exact access/receipt evidence, using additional original source only if required; do not restart A67 inventory.
 
-## A69ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“A73 ownership and authorized plan
+## A69ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œA73 ownership and authorized plan
 
 Owner wb-a69-a73; acquired 2026-10-15T14:38:01.100370+00:00; expires 2026-10-15T17:38:01.100370+00:00. Starting verified remote91d402137912bd0266c09c5b648c81f0dec1cf53; main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa. User2026-10-15 confirms progressive ranks retaining lower ranks and delegates recommended continuation for five checkpoints. No production implementation.
 
 Plan: A69 P0/S record exact approved topology and supersession; A70 P1/S owned-rank controls/persistence; A71 P1/S offer-family/per-rank readiness integration; A72 P1/S target ownership/starter grant and purchase previews; A73 P1/M executable synthetic acceptance and readiness handoff. Each depends on preceding remotely verified checkpoint. No actual candidate admission, unsupported Wiki fact, arbitrary price or retired-Fate approval inferred. Release after A73.
 
-## A74ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“A83 ownership and plan
+## A74ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œA83 ownership and plan
 
 Owner wb-a74-a83; acquired 2026-10-15T14:56:39.939215+00:00; expires 2026-10-15T18:56:39.939215+00:00. Starting verified remote bf4d5206deb556e88f5f4de6ed108f857893f9d8; main unchanged. Current user requests ten more checkpoints, continuing prior recommendation delegation.
 
