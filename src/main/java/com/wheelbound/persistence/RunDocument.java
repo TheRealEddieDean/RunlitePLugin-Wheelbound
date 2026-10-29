@@ -2,6 +2,7 @@ package com.wheelbound.persistence;
 
 import com.wheelbound.domain.RunLifecycle;
 import com.wheelbound.domain.FatePointLedger;
+import com.wheelbound.domain.SliceInventory;
 import java.util.Optional;
 import java.util.HashSet;
 import java.util.List;
@@ -16,6 +17,7 @@ public final class RunDocument
     private final String catalogVersion;
     private final List<RunReceipt> receipts;
     private final FatePointLedger fatePoints;
+    private final SliceInventory inventory;
 
     public RunDocument(RunLifecycle lifecycle, String catalogVersion)
     { this(lifecycle, catalogVersion, List.of()); }
@@ -26,7 +28,13 @@ public final class RunDocument
     /** Empty means unavailable legacy FP state, never an inferred zero balance. */
     public RunDocument(RunLifecycle lifecycle, String catalogVersion, List<RunReceipt> receipts,
         Optional<FatePointLedger> fatePoints)
+    { this(lifecycle, catalogVersion, receipts, fatePoints, Optional.empty()); }
+
+    /** Missing legacy inventory is unavailable; never infer lifetime history from ownership. */
+    public RunDocument(RunLifecycle lifecycle, String catalogVersion, List<RunReceipt> receipts,
+        Optional<FatePointLedger> fatePoints, Optional<SliceInventory> inventory)
     {
+        this.inventory = Objects.requireNonNull(inventory, "inventory").orElse(null);
         this.fatePoints = Objects.requireNonNull(fatePoints, "fatePoints").orElse(null);
         this.lifecycle = Objects.requireNonNull(lifecycle, "lifecycle");
         this.catalogVersion = Objects.requireNonNull(catalogVersion, "catalogVersion");
@@ -88,4 +96,5 @@ public final class RunDocument
     public String catalogVersion() { return catalogVersion; }
     public List<RunReceipt> receipts() { return receipts; }
     public Optional<FatePointLedger> fatePoints() { return Optional.ofNullable(fatePoints); }
+    public Optional<SliceInventory> inventory() { return Optional.ofNullable(inventory); }
 }

@@ -10,6 +10,8 @@ import static org.junit.Assert.*;
 
 public class DebitJournalTest
 {
+    private String gsonText(JsonObject value) { return new Gson().newBuilder().serializeNulls().create().toJson(value); }
+
     @Test public void validatesMixedJournalAndRejectsCorruption()
     { DebitJournalChecks.main(new String[0]); }
 
@@ -23,6 +25,11 @@ public class DebitJournalTest
         assertEquals(source.receipts().hashCode(), restored.receipts().hashCode());
         assertEquals(13, restored.fatePoints().get().balance());
         JsonObject envelope = new JsonParser().parse(new String(encoded, StandardCharsets.UTF_8)).getAsJsonObject();
+        JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
+        payload.remove("inventory");
+        String text = gsonText(payload);
+        envelope.addProperty("payload", text);
+        envelope.addProperty("sha256", RunCodec.sha256(text.getBytes(StandardCharsets.UTF_8)));
         envelope.addProperty("schemaVersion", 4);
         assertThrows(IOException.class, () -> codec.decode(new Gson().toJson(envelope)
             .getBytes(StandardCharsets.UTF_8), source.lifecycle().identity()));
@@ -35,6 +42,11 @@ public class DebitJournalTest
         Gson gson = new Gson();
         RunCodec codec = new RunCodec(gson);
         JsonObject envelope = new JsonParser().parse(new String(codec.encode(source), StandardCharsets.UTF_8)).getAsJsonObject();
+        JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
+        payload.remove("inventory");
+        String text = gsonText(payload);
+        envelope.addProperty("payload", text);
+        envelope.addProperty("sha256", RunCodec.sha256(text.getBytes(StandardCharsets.UTF_8)));
         envelope.addProperty("schemaVersion", 4);
         RunDocument restored = codec.decode(gson.toJson(envelope).getBytes(StandardCharsets.UTF_8), source.lifecycle().identity());
         assertEquals(13, restored.fatePoints().get().balance());

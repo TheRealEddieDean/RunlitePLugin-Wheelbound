@@ -24,7 +24,7 @@ import java.util.UUID;
 /** Inject RuneLite's Gson. Never deserialize directly into domain objects bypassing their validation. */
 public final class RunCodec
 {
-    public static final int SCHEMA = 5;
+    public static final int SCHEMA = 6;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -86,6 +86,8 @@ public final class RunCodec
             fp.add("entries", entries);
         }
         payload.add("fatePoints", fp == null ? com.google.gson.JsonNull.INSTANCE : fp);
+        payload.add("inventory", document.inventory().isPresent()
+            ? InventoryJson.encode(document.inventory().get()) : com.google.gson.JsonNull.INSTANCE);
         String text = gson.toJson(payload);
         JsonObject envelope = new JsonObject();
         envelope.addProperty("schemaVersion", SCHEMA);
@@ -115,7 +117,9 @@ public final class RunCodec
                 ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion")
                 : schema < 4
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts")
-                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints"));
+                    : schema < 6
+                    ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints")
+                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory"));
             RunIdentity identity = new RunIdentity(string(payload, "accountKey"), UUID.fromString(string(payload, "runId")));
             if (!identity.equals(expected)) { throw new IOException("Foreign account/profile/run snapshot"); }
             RunLifecycle lifecycle = new RunLifecycle(identity, integer(payload, "revision"),
@@ -166,7 +170,9 @@ public final class RunCodec
                 }
                 fatePoints = Optional.of(new FatePointLedger(integer(fp, "startingBalance"), entries));
             }
-            return new RunDocument(lifecycle, string(payload, "catalogVersion"), receipts, fatePoints);
+            return new RunDocument(lifecycle, string(payload, "catalogVersion"), receipts, fatePoints,
+                schema >= 6 && !payload.get("inventory").isJsonNull()
+                    ? Optional.of(InventoryJson.decode(payload.getAsJsonObject("inventory"))) : Optional.empty());
         }
         catch (RuntimeException ex) { throw new IOException("Invalid snapshot; preserve original", ex); }
     }
