@@ -230,6 +230,46 @@ public final class SliceInventory
         throw new IllegalArgumentException("Slice not active");
     }
 
+    /**
+     * Propose a new base purchase replacing an explicitly selected, destroyable active instance.
+     * WB-D105/106/118/121: destruction refunds nothing and retains lifetime history/unlocks.
+     * Only the final wheel is validated, allowing replacement at 24 slots or five ordinary
+     * slices. The new UUID must differ from every currently owned UUID, including the outgoing
+     * one. This proposal supplies no price, authorization, debit or replay protection; callers
+     * must validate the reviewed purchase quote and atomically persist payment, inventory and
+     * receipt. Questing and special destruction are forbidden; storage is a separate route.
+     */
+    public SliceInventory proposePurchaseReplacingDestroyed(UUID activeId, UUID instanceId, String activity)
+    {
+        Objects.requireNonNull(activeId, "activeId");
+        Objects.requireNonNull(instanceId, "instanceId");
+        PurchaseClassification classification = classifyNewPurchase(activity);
+        for (ActiveWheel.Slice slice : activeWheel.slices())
+        {
+            if (slice.id().equals(instanceId))
+            { throw new IllegalArgumentException("Purchase requires fresh instance ID"); }
+        }
+        for (ActiveWheel.Slice slice : stored)
+        {
+            if (slice.id().equals(instanceId))
+            { throw new IllegalArgumentException("Purchase requires fresh instance ID"); }
+        }
+        java.util.ArrayList<ActiveWheel.Slice> active = new java.util.ArrayList<>(activeWheel.slices());
+        for (int i = 0; i < active.size(); i++)
+        {
+            ActiveWheel.Slice outgoing = active.get(i);
+            if (!outgoing.id().equals(activeId)) { continue; }
+            requireDestroyable(outgoing);
+            active.set(i, ActiveWheel.Slice.ordinary(instanceId, activity, ActiveWheel.Enhancement.BASE));
+            java.util.Map<String, AcquisitionHistory> history = new java.util.HashMap<>(acquisitionHistory);
+            history.put(activity, new AcquisitionHistory(classification.kind() == PurchaseKind.FIRST_INSTANCE
+                ? 0 : classification.duplicateOrdinal()));
+            return new SliceInventory(new ActiveWheel(active), stored, satchelTier,
+                unlockedActivities, history);
+        }
+        throw new IllegalArgumentException("Slice not active");
+    }
+
     private static ActiveWheel.Slice removeInstance(List<ActiveWheel.Slice> slices, UUID id)
     {
         for (int i = 0; i < slices.size(); i++)

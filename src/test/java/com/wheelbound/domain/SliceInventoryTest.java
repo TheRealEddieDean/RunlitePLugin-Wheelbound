@@ -14,6 +14,81 @@ import static com.wheelbound.domain.SliceInventory.*;
 
 public class SliceInventoryTest
 {
+    @Test public void destructivePurchaseReplacementValidatesFinalStateAndRetainsLifetimeHistory()
+    {
+        List<Slice> active = new ArrayList<>(wheel().slices());
+        while (active.size() < CAPACITY)
+        { active.add(Slice.special(UUID.randomUUID(), Kind.TAINT, 4)); }
+        List<Slice> storage = List.of(slice("questing"), slice("mining"), slice("fishing"));
+        SliceInventory original = new SliceInventory(new ActiveWheel(active), storage,
+            SatchelTier.BASE, unlocks(), history());
+        UUID fresh = UUID.randomUUID();
+        SliceInventory result = original.proposePurchaseReplacingDestroyed(active.get(2).id(), fresh, "woodcutting");
+        assertEquals(CAPACITY, result.activeWheel().slices().size());
+        Slice purchased = result.activeWheel().slices().get(2);
+        assertEquals(fresh, purchased.id());
+        assertEquals("woodcutting", purchased.activity());
+        assertEquals(Enhancement.BASE, purchased.enhancement());
+        for (int i = 0; i < active.size(); i++)
+        { if (i != 2) { assertSame(active.get(i), result.activeWheel().slices().get(i)); } }
+        assertEquals(storage, result.stored());
+        assertEquals(original.unlockedActivities(), result.unlockedActivities());
+        assertEquals(original.satchelTier(), result.satchelTier());
+        assertEquals(0, result.acquisitionHistory().get("woodcutting").paidDuplicates());
+        assertSame(original.acquisitionHistory().get("combat"), result.acquisitionHistory().get("combat"));
+        SliceInventory reacquired = result.proposePurchaseReplacingDestroyed(fresh, UUID.randomUUID(), "combat");
+        assertEquals(1, reacquired.acquisitionHistory().get("combat").paidDuplicates());
+        assertEquals(0, reacquired.acquisitionHistory().get("woodcutting").paidDuplicates());
+        assertEquals(active, original.activeWheel().slices());
+        assertFalse(original.acquisitionHistory().containsKey("woodcutting"));
+        // A remove-first implementation would reject this five-ordinary configuration.
+        SliceInventory minimum = new SliceInventory(wheel(), List.of(), SatchelTier.BASE, unlocks(), history());
+        assertEquals(5, minimum.proposePurchaseReplacingDestroyed(minimum.activeWheel().slices().get(2).id(),
+            UUID.randomUUID(), "woodcutting").activeWheel().slices().size());
+    }
+
+    @Test public void destructivePurchaseReplacementRejectsProtectedSlicesCollisionsAndInvalidFinalState()
+    {
+        List<Slice> active = new ArrayList<>(wheel().slices());
+        active.add(slice("questing"));
+        active.add(Slice.special(UUID.randomUUID(), Kind.TAINT, 4));
+        active.add(Slice.special(UUID.randomUUID(), Kind.SACRIFICE, 4));
+        Slice stored = slice("mining");
+        SliceInventory original = new SliceInventory(new ActiveWheel(active), List.of(stored),
+            SatchelTier.BASE, unlocks(), history());
+        UUID outgoing = active.get(0).id();
+        for (Slice selected : active.subList(5, 8))
+        { assertThrows(IllegalArgumentException.class, () -> original.proposePurchaseReplacingDestroyed(
+            selected.id(), UUID.randomUUID(), "mining")); }
+        for (UUID reused : List.of(outgoing, active.get(1).id(), stored.id()))
+        { assertThrows(IllegalArgumentException.class,
+            () -> original.proposePurchaseReplacingDestroyed(outgoing, reused, "mining")); }
+        for (UUID absent : List.of(stored.id(), UUID.randomUUID()))
+        { assertThrows(IllegalArgumentException.class,
+            () -> original.proposePurchaseReplacingDestroyed(absent, UUID.randomUUID(), "mining")); }
+        for (String invalid : List.of("locked", " mining", ""))
+        { assertThrows(IllegalArgumentException.class,
+            () -> original.proposePurchaseReplacingDestroyed(outgoing, UUID.randomUUID(), invalid)); }
+        SliceInventory minimum = new SliceInventory(wheel(), List.of(), SatchelTier.BASE, unlocks(), history());
+        assertThrows(IllegalArgumentException.class, () -> minimum.proposePurchaseReplacingDestroyed(
+            minimum.activeWheel().slices().get(2).id(), UUID.randomUUID(), "mining"));
+        Map<String, AcquisitionHistory> overflow = new HashMap<>(history());
+        overflow.put("mining", new AcquisitionHistory(Long.MAX_VALUE));
+        SliceInventory max = new SliceInventory(new ActiveWheel(active), List.of(stored),
+            SatchelTier.BASE, unlocks(), overflow);
+        assertThrows(ArithmeticException.class,
+            () -> max.proposePurchaseReplacingDestroyed(outgoing, UUID.randomUUID(), "mining"));
+        assertThrows(NullPointerException.class,
+            () -> original.proposePurchaseReplacingDestroyed(null, UUID.randomUUID(), "mining"));
+        assertThrows(NullPointerException.class,
+            () -> original.proposePurchaseReplacingDestroyed(outgoing, null, "mining"));
+        assertThrows(NullPointerException.class,
+            () -> original.proposePurchaseReplacingDestroyed(outgoing, UUID.randomUUID(), null));
+        assertEquals(active, original.activeWheel().slices());
+        assertEquals(List.of(stored), original.stored());
+        assertEquals(1, original.acquisitionHistory().get("mining").paidDuplicates());
+    }
+
     @Test public void storedReplacementPreservesInstancesAtFullWheelAndSatchelCapacity()
     {
         List<Slice> active = new ArrayList<>(wheel().slices());

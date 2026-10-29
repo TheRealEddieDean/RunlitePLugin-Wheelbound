@@ -1,3 +1,46 @@
+## Current local continuation - destructive purchase replacement, 2026-10-29
+
+IDLE after bounded WB-WHL-06 new-instance/destruction proposal increment (S).
+Read required automation records and WB-D105/106/118/121 supersession entries plus
+WHEELS. Reconciled domain, persistence, focused tests and recorded I01a/b/c merge
+receipts; no Git operations or remote merge verification. FND-01 remains DONE;
+FND-10/12 remain PARTIAL. TREE-02, WHL-02/03/04/05/06/07/11/12 and ECON-01/08
+remain PARTIAL_UNVERIFIED. FND-11 remains TODO for integrated durable spin/FP
+transactions. Other unstarted TODO and decision/evidence BLOCKED rows stand.
+Schema 4 optional FP snapshots and in-memory debit receipt restoration do not supply
+typed debit entries in the unified durable journal, inventory persistence or paid edits.
+This entry supersedes older next-task/status prose; I01d was not selected.
+
+SliceInventory.proposePurchaseReplacingDestroyed replaces an explicitly selected
+active destroyable ordinary instance with a fresh base instance in the same position.
+Final five/three/24 validation permits full-wheel and five-ordinary replacements
+without publishing an invalid intermediate wheel. Full Satchel does not block destruction.
+New UUID cannot equal any currently owned ID, including the outgoing one. Questing,
+specials, wrong locations, locked activities, invalid diversity and history overflow
+fail closed. Proposal retains unlocks, storage, unaffected instances and lifetime
+history; only the incoming activity advances its first/duplicate classification.
+No refund, price adoption, edit authorization, debit, durable receipt, replay protection
+or live plugin/UI wiring is supplied. Historical destroyed UUID uniqueness still needs
+aggregate receipt/history enforcement; this snapshot only knows currently owned IDs.
+Master Wheel production source unchanged; incomplete gameplay remains unwired/disabled.
+
+Two focused JUnit methods authored for full wheel/full Satchel, minimum-wheel acceptance,
+first acquisition/reacquisition, base tier/order/history retention, protected slices,
+identity/location collisions, invalid activity/diversity, nulls and overflow. All domain
+production sources compiled with javac --release 11. Dependency-free
+DestructiveReplacementSmoke passed full/minimum capacity, history/reacquisition,
+protected/special slices, ID/location collision and immutable failure checks. Its initial
+compile encountered a PowerShell UTF-8 BOM; saved without BOM and reran successfully.
+Gradle SliceInventoryTest and WheelboundBehaviorTest failed before compilation because
+the missing Gradle 8.10 distribution download returned SocketException Permission denied.
+No JUnit or legacy regression pass claimed; supervisor must run those suites.
+
+Next required bounded dependency: typed FP debit receipts in the unified revision journal,
+explicit schema compatibility, mixed-operation restoration and cross-operation command-ID
+collision rejection. Then durable inventory and atomic reviewed debit/product commands
+with failed-write/lost-acknowledgement/restart tests. WHL-06 remains incomplete for paid
+replacement and new-purchase-with-storage routing. No external paths, credentials,
+secrets, workflows or Git accessed; supervisor handles commits, PRs, CI and merges.
 ## Current local continuation - stored replacement proposal, 2026-10-29
 
 IDLE after bounded WB-WHL-06 product-proposal increment (S).
