@@ -27,7 +27,8 @@ public class RunCodecTest
         JsonObject envelope = envelope();
         JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
         if (value == null) { payload.remove(key); } else { payload.add(key, value); }
-        String text = gson.toJson(payload);
+        // Preserve unrelated required nulls so each corruption tests its intended field.
+        String text = gson.newBuilder().serializeNulls().create().toJson(payload);
         envelope.addProperty("payload", text);
         envelope.addProperty("sha256", RunCodec.sha256(text.getBytes(StandardCharsets.UTF_8)));
         return bytes(envelope);
@@ -101,6 +102,18 @@ public class RunCodecTest
         assertEquals(15, restored.entries().get(1).amount());
     }
 
+    @Test public void unavailableLedgerIsExplicitNullWithoutChangingInjectedGson() throws Exception
+    {
+        JsonObject envelope = envelope();
+        JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
+        assertTrue(payload.has("fatePoints"));
+        assertTrue(payload.get("fatePoints").isJsonNull());
+        assertFalse(codec.decode(bytes(envelope), id).fatePoints().isPresent());
+        JsonObject probe = new JsonObject();
+        probe.add("absent", JsonNull.INSTANCE);
+        assertEquals("{}", gson.toJson(probe));
+    }
+
     @Test public void legacySchemasPreserveAbsentFpWithoutInventingZero() throws Exception
     {
         for (int schema = 1; schema <= 3; schema++)
@@ -135,7 +148,7 @@ public class RunCodecTest
         DrawCommitment draw = new DrawCommitment(new WeightedPool("pool-v1",
             java.util.List.of(new WeightedPool.Entry("chosen", 1))), 0);
         RunReceipt receipt = new RunReceipt(UUID.randomUUID(), RunReceipt.Operation.DRAW, 0, 1,
-            RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.ACTIVE_OBJECTIVE, draw);
+            RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.OFFERS_COMMITTED, draw);
         RunDocument document = new RunDocument(new RunLifecycle(id, 1, receipt.state(), receipt.obligation()),
             "v1", java.util.List.of(receipt));
         JsonObject envelope = new JsonParser().parse(new String(codec.encode(document), StandardCharsets.UTF_8)).getAsJsonObject();

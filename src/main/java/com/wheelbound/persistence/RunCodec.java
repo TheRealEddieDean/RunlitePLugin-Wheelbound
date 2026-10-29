@@ -28,7 +28,12 @@ public final class RunCodec
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
-    public RunCodec(Gson gson) { this.gson = Objects.requireNonNull(gson, "gson"); }
+    public RunCodec(Gson gson)
+    {
+        // Schema 4 requires an explicit null for unavailable legacy FP state.
+        // Derive a writer that preserves it without changing the injected Gson.
+        this.gson = Objects.requireNonNull(gson, "gson").newBuilder().serializeNulls().create();
+    }
 
     public byte[] encode(RunDocument document)
     {

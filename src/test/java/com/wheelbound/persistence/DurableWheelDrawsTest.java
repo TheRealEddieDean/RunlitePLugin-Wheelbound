@@ -135,10 +135,22 @@ public class DurableWheelDrawsTest
         UUID command = UUID.randomUUID(); new LifecycleCommands(store()).execute(id, command, 0, RunReceipt.Operation.PAUSE);
         byte[] bytes = codec.encode(store().load().get());
         JsonObject envelope = new JsonParser().parse(new String(bytes, StandardCharsets.UTF_8)).getAsJsonObject();
+        // Schema 2 predates FP state; changing only the envelope version leaves an invalid payload.
+        JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
+        payload.remove("fatePoints");
+        String text = gson.toJson(payload);
         envelope.addProperty("schemaVersion", 2);
+        envelope.addProperty("payload", text);
+        envelope.addProperty("sha256", RunCodec.sha256(text.getBytes(StandardCharsets.UTF_8)));
         RunDocument restored = codec.decode(gson.toJson(envelope).getBytes(StandardCharsets.UTF_8), id);
+        assertEquals(1, restored.receipts().size());
         assertEquals(command, restored.receipts().get(0).commandId());
+        assertEquals(RunReceipt.Operation.PAUSE, restored.receipts().get(0).operation());
         assertNull(restored.receipts().get(0).draw());
+        assertFalse(restored.fatePoints().isPresent());
+        RunDocument upgraded = codec.decode(codec.encode(restored), id);
+        assertEquals(command, upgraded.receipts().get(0).commandId());
+        assertFalse(upgraded.fatePoints().isPresent());
     }
 
     @Test public void invalidSerializedTicketIsRejectedEvenWithRecomputedChecksum() throws Exception
