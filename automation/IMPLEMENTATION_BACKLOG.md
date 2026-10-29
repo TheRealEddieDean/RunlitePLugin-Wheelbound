@@ -1,3 +1,42 @@
+## Current local continuation - FP debit proposals, 2026-10-29
+
+IDLE after bounded WB-ECON-08 / WB-FND-11 prerequisite increment (S).
+Reconciled domain, persistence and test inventory with recorded merged I01a/b/c receipts.
+RunDocument still persists only lifecycle/draw state; no complete gameplay aggregate or
+FP serialization exists. Recorded merges were not remotely verified; no Git operations.
+FND-01 remains DONE. TREE-02, WHL-02/03/05 and ECON-01 remain PARTIAL_UNVERIFIED.
+ECON-08 is now PARTIAL_UNVERIFIED for in-memory debit replay only. FND-11 remains TODO
+for atomic durable FP/spin integration. Other partial/TODO/evidence-blocked rows stand.
+This supersedes historical next-task text. I01d was not selected or changed.
+
+FatePointDebits supplies immutable proposed lifecycle revision, ledger and debit receipts.
+Commands bind account/run identity, UUID, original revision, quote key/version and amount.
+Exact replay returns the original receipt after later debits without changing current state;
+changed payload/identity, stale revision, inactive runs, invalid amounts, insufficient funds
+and revision overflow fail closed. Existing obligations survive successful proposals.
+No reviewed prices are adopted: a quote reference does not prove quote authorization.
+Trusted callers must validate product/legal-boundary/quote authority and persist complete
+product changes, ledger, lifecycle and receipts atomically before publishing success.
+This is not durable replay protection: the seed constructor accepts trusted state only,
+not restored receipts. No purchases, rewards, evidence deduplication, refunds, crash recovery,
+serialization or live plugin wiring are implemented. Authority: WB-D105 and STATE_CONTRACT.
+Master Wheel source is unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Three focused JUnit methods authored for original-response replay after later commands,
+quote/amount/revision collisions, foreign account/run, inactive/stale requests, insufficient
+funds, invalid input, immutability and overflow. javac --release 11 compiled all domain
+sources successfully. Gradle focused debit/ledger and legacy WheelboundBehaviorTest attempt
+failed before compilation: missing Gradle 8.10 distribution download denied (SocketException).
+No JUnit tests ran; supervisor must execute focused and legacy suites.
+
+Next bounded unit: integrate FP state and typed debit receipts into the versioned run
+aggregate/codec and AtomicRunStore with explicit schema compatibility and replay restoration.
+Preserve FP state through lifecycle/draw commands, reject cross-operation command-ID reuse,
+and test failed writes/lost acknowledgements/restarts before claiming durable transactions.
+Then couple approved debit to new-instance/lifetime-history mutation for WHL-04/05.
+No external paths, credentials, secrets, workflow access or Git operations were used.
+Supervisor handles publication and CI.
+
 ## Current local continuation - Fate Point ledger arithmetic, 2026-10-29
 
 IDLE after bounded WB-ECON-01 increment (S). Reconciled domain and test inventories,
@@ -129,8 +168,8 @@ Do not select I01d without a concrete failing test or required dependency.
 | ID | Implementation unit | Initial status |
 | --- | --- | --- |
 | WB-WHL-01 | Preserve legacy normal-wheel rendering | TODO |
-| WB-WHL-02 | Define immutable 24-slot active wheel model | PARTIAL |
-| WB-WHL-03 | Implement slice ownership and storage inventory | PARTIAL |
+| WB-WHL-02 | Define immutable 24-slot active wheel model | PARTIAL_UNVERIFIED |
+| WB-WHL-03 | Implement slice ownership and storage inventory | PARTIAL_UNVERIFIED |
 | WB-WHL-04 | Implement paid slice add/remove transaction | TODO |
 | WB-WHL-05 | Implement purchase escalation on reacquisition | PARTIAL_UNVERIFIED |
 | WB-WHL-06 | Implement active-slot replacement at capacity | TODO |
@@ -215,7 +254,7 @@ Do not select I01d without a concrete failing test or required dependency.
 | ID | Implementation unit | Initial status |
 | --- | --- | --- |
 | WB-TREE-01 | Implement four progression branches | TODO |
-| WB-TREE-02 | Implement AND/OR prerequisite graph engine | PARTIAL |
+| WB-TREE-02 | Implement AND/OR prerequisite graph engine | PARTIAL_UNVERIFIED |
 | WB-TREE-03 | Implement progressive unlock retention | TODO |
 | WB-TREE-04 | Implement tier-count unlock gates | TODO |
 | WB-TREE-05 | Implement unlock purchases and immutable receipts | TODO |
@@ -233,7 +272,7 @@ Do not select I01d without a concrete failing test or required dependency.
 | WB-ECON-05 | Implement Wheel Builder shop transactions | TODO |
 | WB-ECON-06 | Implement vendor unlock shop and access gates | TODO |
 | WB-ECON-07 | Implement Bounties Shop entitlement catalog | TODO |
-| WB-ECON-08 | Implement purchase replay and refund prevention | TODO |
+| WB-ECON-08 | Implement purchase replay and refund prevention | PARTIAL_UNVERIFIED |
 | WB-ECON-09 | Implement candidate economy schedules behind approval gates | BLOCKED |
 
 ### Defy Fate and taint (8)
