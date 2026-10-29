@@ -270,6 +270,39 @@ public final class SliceInventory
         throw new IllegalArgumentException("Slice not active");
     }
 
+    /**
+     * Propose buying a base instance into an explicitly selected active ordinary slot while
+     * preserving the outgoing instance in Satchel (WB-D106/118/121), including Questing.
+     * Only the final composition is validated; storage must have room. No automatic
+     * destruction fallback is permitted. This supplies neither payment nor authorization:
+     * the aggregate caller must validate reviewed purchase and storage costs, enforce fresh
+     * historical IDs and atomically persist debit, inventory, history and replay receipt.
+     */
+    public SliceInventory proposePurchaseReplacingStored(UUID activeId, UUID instanceId, String activity)
+    {
+        Objects.requireNonNull(activeId, "activeId");
+        Objects.requireNonNull(instanceId, "instanceId");
+        PurchaseClassification classification = classifyNewPurchase(activity);
+        java.util.ArrayList<ActiveWheel.Slice> active = new java.util.ArrayList<>(activeWheel.slices());
+        for (int i = 0; i < active.size(); i++)
+        {
+            ActiveWheel.Slice outgoing = active.get(i);
+            if (!outgoing.id().equals(activeId)) { continue; }
+            if (outgoing.kind() != ActiveWheel.Kind.ORDINARY)
+            { throw new IllegalArgumentException("Special slices cannot enter Satchel"); }
+            active.set(i, ActiveWheel.Slice.ordinary(instanceId, activity, ActiveWheel.Enhancement.BASE));
+            java.util.ArrayList<ActiveWheel.Slice> storage = new java.util.ArrayList<>(stored);
+            storage.add(outgoing);
+            java.util.Map<String, AcquisitionHistory> history = new java.util.HashMap<>(acquisitionHistory);
+            history.put(activity, new AcquisitionHistory(classification.kind() == PurchaseKind.FIRST_INSTANCE
+                ? 0 : classification.duplicateOrdinal()));
+            // The outgoing instance remains owned, so constructor validation also rejects its ID reuse.
+            return new SliceInventory(new ActiveWheel(active), storage, satchelTier,
+                unlockedActivities, history);
+        }
+        throw new IllegalArgumentException("Slice not active");
+    }
+
     private static ActiveWheel.Slice removeInstance(List<ActiveWheel.Slice> slices, UUID id)
     {
         for (int i = 0; i < slices.size(); i++)

@@ -1,3 +1,44 @@
+## Current local continuation - purchase with storage replacement, 2026-10-29
+
+IDLE after bounded WB-WHL-06 purchase/storage proposal increment (S).
+Reconciled SliceInventory proposals, focused tests, schema-4 RunDocument/RunCodec,
+RunReceipt and in-memory FatePointDebits against backlog and recorded I01a/b/c receipts.
+Recorded merges were not remotely verified; no Git operations performed. FND-01 remains
+DONE; FND-10/12 remain PARTIAL. TREE-02, WHL-02/03/04/05/06/07/11/12 and ECON-01/08
+remain PARTIAL_UNVERIFIED. FND-11 remains TODO for integrated durable transactions.
+Other unstarted TODO and decision/evidence BLOCKED rows retain their status. This entry
+supersedes older next-task prose. I01d was not selected. Chose the independently testable
+remaining WHL-06 product route while the larger durable-command dependency stays open.
+
+SliceInventory.proposePurchaseReplacingStored proposes a fresh base ordinary instance
+in the explicitly selected active position and appends the exact outgoing ordinary
+instance to Satchel, including enhanced Questing. Final five/three/24 and Satchel limits
+are validated without invalid intermediate removal/insertion. Owned UUID reuse (including
+outgoing), specials, wrong locations, locked activities, invalid diversity and history
+overflow fail closed. Only incoming activity acquisition history advances in the proposal;
+unlocks, unaffected instances and other history survive. Authority: WB-D106/118/121 and
+WHEELS atomic final-state edits. No storage fallback, prices, payment, authorization,
+durable receipts, historical destroyed-ID uniqueness or live wiring is supplied. Both
+reviewed storage and purchase costs remain required at the future aggregate boundary.
+Master Wheel source unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Two focused JUnit methods authored for full wheel/five ordinary, enhanced Questing,
+first/duplicate history, ordering/identity, full Satchel, locations/collisions, specials,
+diversity, malformed/null inputs, overflow and immutable failure. All production domain
+sources compiled with javac --release 11. Dependency-free StorageReplacementSmoke passed
+full-wheel Questing storage, first/duplicate history, UUID collisions, diversity/capacity,
+special rejection and immutability. Focused SliceInventoryTest and legacy
+WheelboundBehaviorTest Gradle attempt failed before compilation: missing Gradle 8.10
+download denied (SocketException). No JUnit or legacy regression pass claimed.
+Supervisor must run these suites and handles commits, PRs, CI and merges.
+
+Next required bounded dependency: typed FP debit receipts in the unified revision journal,
+explicit schema compatibility, mixed-operation restoration and cross-operation command-ID
+collision rejection. Then persist inventory and atomically couple reviewed debit/product
+commands, testing failed writes, lost acknowledgements and restarts. WHL-06 remains
+incomplete for paid durable replacement. No external paths, credentials, secrets,
+workflow access or Git operations were used.
+
 ## Current local continuation - destructive purchase replacement, 2026-10-29
 
 IDLE after bounded WB-WHL-06 new-instance/destruction proposal increment (S).
