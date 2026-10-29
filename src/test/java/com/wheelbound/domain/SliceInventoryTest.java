@@ -14,6 +14,61 @@ import static com.wheelbound.domain.SliceInventory.*;
 
 public class SliceInventoryTest
 {
+    @Test public void enhancementAdvancesOnlySelectedInstanceAndPreservesOwnershipHistory()
+    {
+        SliceInventory original = new SliceInventory(wheel(), List.of(slice("questing")),
+            SatchelTier.BASE, unlocks(), history());
+        Slice selected = original.activeWheel().slices().get(0);
+        SliceInventory current = original;
+        for (Enhancement tier : List.of(Enhancement.FIRST, Enhancement.SECOND,
+            Enhancement.THIRD, Enhancement.FOURTH))
+        {
+            current = current.proposeEnhancement(selected.id(), tier);
+            Slice upgraded = current.activeWheel().slices().get(0);
+            assertEquals(selected.id(), upgraded.id());
+            assertEquals(selected.activity(), upgraded.activity());
+            assertEquals(tier, upgraded.enhancement());
+            assertEquals(tier.weightUnits(), upgraded.weightUnits());
+            assertEquals(original.activeWheel().totalWeightUnits() - selected.weightUnits()
+                + tier.weightUnits(), current.activeWheel().totalWeightUnits());
+            for (int i = 1; i < original.activeWheel().slices().size(); i++)
+            { assertSame(original.activeWheel().slices().get(i), current.activeWheel().slices().get(i)); }
+            assertEquals(original.stored(), current.stored());
+            assertEquals(original.acquisitionHistory(), current.acquisitionHistory());
+            assertEquals(original.unlockedActivities(), current.unlockedActivities());
+            assertEquals(original.satchelTier(), current.satchelTier());
+        }
+        assertEquals(Enhancement.BASE, selected.enhancement());
+        SliceInventory maximum = current;
+        for (Enhancement tier : Enhancement.values())
+        { assertThrows(IllegalArgumentException.class, () -> maximum.proposeEnhancement(selected.id(), tier)); }
+    }
+
+    @Test public void enhancementRejectsStaleSkippedForeignStoredAndSpecialSelections()
+    {
+        List<Slice> active = new ArrayList<>(wheel().slices());
+        Slice questing = Slice.ordinary(UUID.randomUUID(), "questing", Enhancement.BASE);
+        active.add(questing);
+        Slice taint = Slice.special(UUID.randomUUID(), Kind.TAINT, 4);
+        Slice sacrifice = Slice.special(UUID.randomUUID(), Kind.SACRIFICE, 4);
+        active.add(taint);
+        active.add(sacrifice);
+        Slice stored = slice("questing");
+        SliceInventory original = new SliceInventory(new ActiveWheel(active), List.of(stored),
+            SatchelTier.BASE, unlocks(), history());
+        for (UUID id : List.of(stored.id(), taint.id(), sacrifice.id(), UUID.randomUUID()))
+        { assertThrows(IllegalArgumentException.class, () -> original.proposeEnhancement(id, Enhancement.FIRST)); }
+        for (Enhancement tier : List.of(Enhancement.BASE, Enhancement.SECOND, Enhancement.THIRD, Enhancement.FOURTH))
+        { assertThrows(IllegalArgumentException.class, () -> original.proposeEnhancement(questing.id(), tier)); }
+        assertThrows(NullPointerException.class, () -> original.proposeEnhancement(null, Enhancement.FIRST));
+        assertThrows(NullPointerException.class, () -> original.proposeEnhancement(questing.id(), null));
+        SliceInventory upgraded = original.proposeEnhancement(questing.id(), Enhancement.FIRST);
+        assertThrows(IllegalArgumentException.class, () -> upgraded.proposeEnhancement(questing.id(), Enhancement.FIRST));
+        assertEquals(Enhancement.FIRST, upgraded.activeWheel().slices().get(5).enhancement());
+        assertEquals(active, original.activeWheel().slices());
+        assertEquals(List.of(stored), original.stored());
+    }
+
     @Test public void newPurchaseProposalEstablishesBaselineAndContinuesAfterLastCopyDestruction()
     {
         SliceInventory original = new SliceInventory(wheel(), List.of(slice("questing")),

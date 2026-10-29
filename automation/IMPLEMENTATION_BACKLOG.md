@@ -1,3 +1,41 @@
+## Current local continuation - sequential enhancement proposals, 2026-10-29
+
+IDLE after bounded WB-WHL-12 increment (S), authority WB-D010/096/106 and WHEELS.
+Reconciled source/test inventory and recorded I01a/b/c merge receipts; no Git operations
+or remote verification. FND-01 remains DONE. FND-10/12 remain PARTIAL; TREE-02,
+WHL-02/03/04/05/11 and ECON-01/08 remain PARTIAL_UNVERIFIED. WHL-12 is now
+PARTIAL_UNVERIFIED for active ordinary instance enhancement proposals only. FND-11,
+WHL-06 and other unstarted rows remain TODO; evidence/decision BLOCKED rows stand.
+Schema 4 optional FP snapshots exist, but typed debit journal receipts, durable inventory,
+complete gameplay aggregate and authorized paid edits remain unfinished. Historical
+next-task statements below are superseded by this entry. I01d was not selected.
+
+SliceInventory.proposeEnhancement requires an explicit next destination tier for an
+active ordinary UUID. It preserves activity, identity, order, other instances, storage,
+unlocks, Satchel tier and lifetime history, deriving exact quarter-unit weight from the
+approved ladder. Skipped/same/lower/max-tier, special, stored, unknown and null selections
+fail without mutating the original. Questing may be enhanced as an ordinary instance.
+No stored enhancement route, mastery entitlement, quote/price, edit authorization, debit,
+replay protection or live plugin/UI wiring is implemented. Trusted aggregate callers must
+validate mastery/legal edit/identity/revision and reviewed destination-tier quote, then
+atomically persist debit, full inventory and receipt. No unresolved balance adopted.
+Master Wheel source unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Two focused JUnit methods authored for all four transitions, independent same-activity
+instances, identity/history/weight preservation, Questing, stale/skipped/max/invalid targets
+and immutable failure. javac --release 11 compiled all production domain sources.
+Dependency-free local EnhancementSmoke passed sequential/stale/skipped/unknown checks.
+Gradle SliceInventoryTest/ActiveWheelTest/WheelboundBehaviorTest failed before compilation:
+missing Gradle 8.10 distribution could not download (SocketException Permission denied).
+No JUnit or legacy regression pass claimed; supervisor must execute those suites.
+
+Next required bounded dependency for paid gameplay: typed debit receipts in the unified
+revision journal, explicit schema compatibility, mixed-operation restoration and command-ID
+collision rejection. Then durable inventory and atomic reviewed debit/product mutations,
+with failed-write/lost-acknowledgement/restart tests. Mastery catalog/gates and full paid
+WHL-12 integration remain unfinished. No external paths, secrets, credentials, workflows
+or Git accessed. Supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - new-instance acquisition proposals, 2026-10-29
 
 IDLE after bounded WB-WHL-04/05 gameplay increment (S). Reconciled domain inventory,
@@ -268,7 +306,7 @@ Questing edit enforcement remain unfinished. Legacy Master Wheel source unchange
 incomplete gameplay remains unwired/default-disabled. No Git, external-path, credential,
 secret or workflow access. Supervisor handles publication and CI.
 
-# Wheelbound implementation backlog ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â initial decomposition
+# Wheelbound implementation backlog ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â initial decomposition
 
 > Planning inventory, not a claim that every item is unimplemented or independently PR-sized. Reconcile against the current source tree and merged PRs before execution. This file does not supersede approved decisions, implementation checkpoints, or evidence gates.
 
@@ -276,7 +314,7 @@ secret or workflow access. Supervisor handles publication and CI.
 
 - Source of truth: `docs/wheelbound/DECISIONS.md` and subsystem specs; current code and merged CI evidence determine DONE status.
 - Default each item to `PLANNED_REVIEW`: inspect code first, then mark DONE / PARTIAL / TODO / BLOCKED with evidence. Never redo completed functionality.
-- Execute in dependency order: FND ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ core WHL/FAT/ECON ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ subsystems ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ integrated REL. Independent UI/catalog work can proceed when safe.
+- Execute in dependency order: FND ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ core WHL/FAT/ECON ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ subsystems ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ integrated REL. Independent UI/catalog work can proceed when safe.
 - Split any item exceeding a 30-minute Codex session into bounded testable increments. One ID is not necessarily one PR.
 - Never invent unresolved numeric prices, eligibility, source evidence, client APIs or policy approvals. Keep dependent behavior disabled until verified.
 - Preserve legacy Master Wheel behavior and appearance; GF4 is Grand Fate and B3 is Bossing. No main/master merge or Plugin Hub submission.
@@ -376,7 +414,7 @@ Do not select I01d without a concrete failing test or required dependency.
 | WB-WHL-09 | Implement valid-empty landing free retry | TODO |
 | WB-WHL-10 | Implement all-unavailable readiness stop | TODO |
 | WB-WHL-11 | Implement Questing indestructible storage behavior | PARTIAL_UNVERIFIED |
-| WB-WHL-12 | Implement slice mastery weight upgrades | TODO |
+| WB-WHL-12 | Implement slice mastery weight upgrades | PARTIAL_UNVERIFIED |
 
 ### Grand Fate (7)
 
@@ -429,7 +467,7 @@ Do not select I01d without a concrete failing test or required dependency.
 | ID | Implementation unit | Initial status |
 | --- | --- | --- |
 | WB-QST-01 | Implement quest eligibility snapshot | PARTIAL |
-| WB-QST-02 | Implement 1ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“3 quest display and upgrade capacities | TODO |
+| WB-QST-02 | Implement 1ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ3 quest display and upgrade capacities | TODO |
 | WB-QST-03 | Implement qualify-only toggle | PARTIAL |
 | WB-QST-04 | Implement deterministic quest selection | PARTIAL |
 | WB-QST-05 | Implement quest completion event evidence | TODO |

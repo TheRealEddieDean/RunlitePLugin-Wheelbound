@@ -115,6 +115,32 @@ public final class SliceInventory
     public Map<String, AcquisitionHistory> acquisitionHistory() { return acquisitionHistory; }
 
     /**
+     * Propose the next sequential enhancement for an active ordinary instance (WB-D010/106).
+     * The explicit destination prevents an old tier quote from silently buying another tier.
+     * No mastery entitlement, edit authorization, price approval or payment is supplied here.
+     * The aggregate caller must validate these gates and atomically persist the debit,
+     * complete inventory and replay receipt. Stored-instance enhancement is not offered.
+     */
+    public SliceInventory proposeEnhancement(UUID activeId, ActiveWheel.Enhancement destination)
+    {
+        Objects.requireNonNull(activeId, "activeId");
+        Objects.requireNonNull(destination, "destination");
+        java.util.ArrayList<ActiveWheel.Slice> active = new java.util.ArrayList<>(activeWheel.slices());
+        for (int i = 0; i < active.size(); i++)
+        {
+            ActiveWheel.Slice selected = active.get(i);
+            if (!selected.id().equals(activeId)) { continue; }
+            if (selected.kind() != ActiveWheel.Kind.ORDINARY
+                || destination.ordinal() != selected.enhancement().ordinal() + 1)
+            { throw new IllegalArgumentException("Requires next ordinary enhancement tier"); }
+            active.set(i, ActiveWheel.Slice.ordinary(selected.id(), selected.activity(), destination));
+            return new SliceInventory(new ActiveWheel(active), stored, satchelTier,
+                unlockedActivities, acquisitionHistory);
+        }
+        throw new IllegalArgumentException("Slice not active");
+    }
+
+    /**
      * Propose a new base ordinary instance in an available active slot (WB-D106/118).
      * The supplied ID must be fresh across both owned locations. Only the returned proposal
      * advances history; this snapshot remains unchanged. Repeating a proposal is not replay
