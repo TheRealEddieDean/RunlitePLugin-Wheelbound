@@ -1,3 +1,38 @@
+## Current local continuation - validated purchase chains, 2026-10-29
+
+IDLE after a bounded WB-WHL-04/05, WB-ECON-08 and WB-FND-11 prerequisite (S).
+This supersedes older next-task prose. Reconciled current domain/persistence code,
+executable checks and recorded prior merge receipts locally; no Git or remote checks.
+FND-01 remains DONE; FND-10/12 PARTIAL; FND-11, ECON-01/08, TREE-02 and
+WHL-02/03/04/05/06/07/11/12 remain PARTIAL_UNVERIFIED. Other TODO/partial/BLOCKED
+rows retain their statuses. No complete gameplay system is claimed. I01d not selected.
+
+RunDocument now admits subsequent SLICE_PURCHASE receipts only after ACTIVE/NONE.
+Admission retains full ledger suffix/original-balance, identity, base active ownership,
+unique purchase instance and consecutive lifetime-tier validation. Added executable
+checks for first-to-duplicate chains, original response retention, missing second debit
+or inventory, tier gaps, reused instance IDs, command collisions, reversed revisions,
+paused/pending-offer predecessors and resume-to-purchase compatibility. Existing JUnit
+PurchaseJournalTest invokes these checks. This is in-memory chain admission only.
+Schema remains 6 and refuses purchase encoding; no durable purchase command or price
+adoption. Trusted legacy prefixes and before/after inventory/UUID freshness remain
+command/store responsibilities. Master Wheel unchanged; gameplay remains disabled.
+Authority: targeted WB-D105/106/118 and STATE_CONTRACT transaction requirements.
+
+Validation: javac --release 11 compiled all domain classes, RunDocument, RunReceipt
+and PurchaseAggregateChecks/PurchaseJournalChecks; both executable checks passed.
+Gradle focused PurchaseJournalTest, PurchaseReceiptJsonTest, RunCodecTest and legacy
+WheelboundBehaviorTest failed before compilation: missing Gradle 8.10 distribution,
+download denied (SocketException). No JUnit/legacy pass claimed.
+
+Next bounded unit: integrate PurchaseReceiptJson into schema 7 with schema-6 compatibility
+and aggregate tampering tests, retaining all evidence/chain checks and strict field sets.
+Then validate before/after inventory and historical UUID freshness in command/store path,
+with reviewed catalog/quote and complete edit-boundary gates, before atomic purchases.
+Failed-write/lost-ack/restart coverage remains required. Price/evidence holds stand.
+No external paths, credentials, secrets, workflows or Git operations accessed.
+Supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - typed purchase journal envelope, 2026-10-29
 
 IDLE after a bounded WB-WHL-04/05, WB-ECON-08 and WB-FND-11 prerequisite (S).

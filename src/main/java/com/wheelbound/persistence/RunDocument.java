@@ -134,6 +134,8 @@ public final class RunDocument
             case PAUSE: return previous.state() == RunLifecycle.State.ACTIVE && next.obligation() == previous.obligation();
             case RESUME: return previous.state() == RunLifecycle.State.PAUSED && next.obligation() == previous.obligation();
             case FP_DEBIT: return previous.state() == RunLifecycle.State.ACTIVE && next.obligation() == previous.obligation();
+            case SLICE_PURCHASE: return previous.state() == RunLifecycle.State.ACTIVE
+                && previous.obligation() == RunLifecycle.Obligation.NONE;
             case DRAW: return previous.state() == RunLifecycle.State.ACTIVE && previous.obligation() == RunLifecycle.Obligation.NONE;
             default: return false;
         }
