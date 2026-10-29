@@ -1,3 +1,37 @@
+## Current local continuation - typed purchase journal envelope, 2026-10-29
+
+IDLE after a bounded WB-WHL-04/05, WB-ECON-08 and WB-FND-11 prerequisite (S).
+This supersedes older next-task prose. Reconciled production domain/persistence,
+focused tests and recorded merge receipts locally; no Git or remote verification.
+FND-01 remains DONE; FND-10/12 PARTIAL; FND-11, ECON-01/08, TREE-02 and
+WHL-02/03/04/05/06/07/11/12 remain PARTIAL_UNVERIFIED. Other TODO/partial/blocked
+rows retain their audited status. I01d was not selected. Evidence/price holds remain.
+
+RunReceipt now supports a typed SLICE_PURCHASE envelope. It requires matching command
+and original revisions, active state, no obligation, exactly the purchase payload and
+no standalone debit/draw payload. Equality/hash include frozen identity, instance,
+activity, quote, lifetime tier and original response so future append-only history
+checks can detect rewrites. This is an envelope prerequisite, not aggregate admission,
+price authorization, schema integration or durable replay. Schema 6 encoding explicitly
+rejects purchase entries instead of dropping their payload. Existing constructors and
+standalone debit/lifecycle/draw semantics remain. WB-D105/106/118 are authority;
+no price adoption, live wiring or Master Wheel changes. Gameplay remains disabled.
+
+Validation: javac --release 11 compiled all domain classes, RunReceipt and dependency-free
+PurchaseJournalChecks; executable checks passed. Two JUnit methods added for these
+checks and schema-6 rejection. Gradle focused PurchaseJournalTest, PurchaseReceiptJsonTest,
+RunCodecTest and legacy WheelboundBehaviorTest attempt failed before compilation:
+missing Gradle 8.10 distribution download denied (SocketException). No JUnit/legacy pass
+claimed. Supervisor must execute these suites with available build tooling.
+
+Next bounded unit: complete schema-7 PurchaseReceiptJson integration and aggregate
+validation against account/run, ledger, lifetime history and historical instance IDs;
+add schema-6 compatibility/tampering tests. Do not simply permit SLICE_PURCHASE in
+RunDocument.follows or remove the codec guard without this validation. Then implement
+one authorized atomic aggregate command with failed-write/lost-ack/restart tests.
+No external paths, secrets, credentials, workflows or Git operations accessed.
+Supervisor handles commits, PRs, CI and merges.
+
 ## Recovered checkpoint - typed purchase receipt, 2026-10-29
 
 Recovered the capacity-interrupted increment on agent/autonomous-20261029-172520.
