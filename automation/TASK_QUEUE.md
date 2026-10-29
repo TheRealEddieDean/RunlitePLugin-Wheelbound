@@ -1,3 +1,38 @@
+## Current local continuation - purchase receipt JSON prerequisite, 2026-10-29
+
+IDLE after bounded WB-WHL-04/05, WB-ECON-08 and WB-FND-11 prerequisite (XS/S).
+This continuation supersedes older next-task prose. Reconciled current domain and
+persistence code against recovered receipt checkpoint and backlog. Typed purchase
+receipt/proposal exist; RunReceipt still supports lifecycle/draw/standalone debit only;
+RunCodec remains schema 6 with inventory. No durable purchase command exists.
+Recorded merged work was not independently verified; no Git operations performed.
+FND-01 remains DONE; FND-10/12 remain PARTIAL; FND-11, ECON-01/08, TREE-02 and
+WHL-02/03/04/05/06/07/11/12 remain PARTIAL_UNVERIFIED. Other TODO/partial/blocked
+rows retain status. Evidence and numeric-price holds remain. I01d was not selected.
+
+Added package-private PurchaseReceiptJson, a strict serializer/parser for every frozen
+purchase request field and original debit response. It validates expected account/run,
+exact fields, numeric types and domain invariants through constructors. Focused JUnit
+coverage authored for first/duplicate round trips, original response, missing/unknown
+fields, foreign identity, numeric strings and invalid duplicate ordinal. This independently
+reviewable prerequisite does not change the save schema or claim journal integration,
+atomicity, authorization, inventory/history validation or durable replay. WB-D105/106/118
+remain authority; no prices adopted. Master Wheel unchanged; gameplay unwired/disabled.
+
+Validation attempted: gradlew.bat --gradle-user-home .gradle-local test --tests
+com.wheelbound.persistence.PurchaseReceiptJsonTest --tests
+com.wheelbound.persistence.RunCodecTest --tests com.wheelbound.WheelboundBehaviorTest
+--offline --no-daemon --console=plain. Failed before compilation: missing Gradle 8.10
+wrapper distribution attempted download, denied SocketException. No compilation/JUnit
+or legacy regression pass claimed. No external paths, credentials, secrets, workflows
+or Git operations accessed. Supervisor must run these suites with available tooling.
+
+Next bounded unit: integrate PurchaseReceiptJson into a schema-7 SLICE_PURCHASE journal
+operation; validate identity, command/revision, ledger, lifetime history and historical
+instance-ID consistency, with schema-6 compatibility and tampering tests. Then implement
+the atomic authorized aggregate purchase command and failed-write/lost-ack/restart tests.
+Supervisor handles commits, PRs, CI and merges.
+
 ## Recovered checkpoint - typed purchase receipt, 2026-10-29
 
 Recovered the capacity-interrupted increment on agent/autonomous-20261029-172520.
