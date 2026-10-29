@@ -13,6 +13,31 @@ import java.util.UUID;
  */
 public final class SliceInventory
 {
+    public enum PurchaseKind { FIRST_INSTANCE, PAID_DUPLICATE }
+
+    /** Price-ladder input only, not a quote, purchase authorization or receipt. */
+    public static final class PurchaseClassification
+    {
+        private final PurchaseKind kind;
+        private final long duplicateOrdinal;
+
+        private PurchaseClassification(PurchaseKind kind, long duplicateOrdinal)
+        {
+            this.kind = kind;
+            this.duplicateOrdinal = duplicateOrdinal;
+        }
+
+        public PurchaseKind kind() { return kind; }
+
+        /** One-based duplicate tier; first-instance pricing has no duplicate tier. */
+        public long duplicateOrdinal()
+        {
+            if (kind != PurchaseKind.PAID_DUPLICATE)
+            { throw new IllegalStateException("First instance has no duplicate ordinal"); }
+            return duplicateOrdinal;
+        }
+    }
+
     public enum SatchelTier
     {
         BASE(3), FIRST(6), SECOND(10), THIRD(15);
@@ -88,4 +113,23 @@ public final class SliceInventory
     public SatchelTier satchelTier() { return satchelTier; }
     public Set<String> unlockedActivities() { return unlockedActivities; }
     public Map<String, AcquisitionHistory> acquisitionHistory() { return acquisitionHistory; }
+
+    /**
+     * Classify a proposed new ordinary instance using retained lifetime evidence (WB-D118).
+     * Never use this for movement of an existing instance. Does not reserve capacity,
+     * validate edit readiness, freeze prices or advance history. A future transaction must
+     * revalidate this snapshot and atomically persist debit, instance, history and receipt.
+     */
+    public PurchaseClassification classifyNewPurchase(String activity)
+    {
+        Objects.requireNonNull(activity, "activity");
+        validateKey(activity);
+        if (!unlockedActivities.contains(activity))
+        { throw new IllegalArgumentException("Purchase requires activity unlock"); }
+        AcquisitionHistory history = acquisitionHistory.get(activity);
+        if (history == null)
+        { return new PurchaseClassification(PurchaseKind.FIRST_INSTANCE, 0); }
+        return new PurchaseClassification(PurchaseKind.PAID_DUPLICATE,
+            Math.addExact(history.paidDuplicates(), 1));
+    }
 }

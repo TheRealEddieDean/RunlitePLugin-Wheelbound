@@ -99,7 +99,7 @@ Do not select I01d without a concrete failing test or required dependency.
 | WB-WHL-02 | Define immutable 24-slot active wheel model | PARTIAL |
 | WB-WHL-03 | Implement slice ownership and storage inventory | PARTIAL |
 | WB-WHL-04 | Implement paid slice add/remove transaction | TODO |
-| WB-WHL-05 | Implement purchase escalation on reacquisition | TODO |
+| WB-WHL-05 | Implement purchase escalation on reacquisition | PARTIAL_UNVERIFIED |
 | WB-WHL-06 | Implement active-slot replacement at capacity | TODO |
 | WB-WHL-07 | Implement weighted odds display and previews | TODO |
 | WB-WHL-08 | Implement deterministic Master Wheel spin commitment | PARTIAL |
@@ -298,3 +298,38 @@ missing 8.10 distribution could not download (Permission denied); no JUnit pass 
 Next bounded unit: acquisition-history purchase transition/lifetime classification after
 reading transaction contracts; prices stay unadopted. Paid wheel edits require FP and
 atomic receipt prerequisites. Do not select I01d absent a concrete blocking dependency.
+
+## Current local continuation - lifetime purchase classification, 2026-10-29
+
+IDLE after bounded WB-WHL-05 classification increment (XS/S). Reconciled domain,
+persistence, plugin/config and test inventories against backlog and recorded I01a/b/c
+merge receipts. No Git operations or remote verification. WB-FND-01 remains DONE;
+TREE-02/WHL-02/WHL-03 remain PARTIAL_UNVERIFIED. WHL-05 is PARTIAL_UNVERIFIED.
+Other PARTIAL/TODO/BLOCKED statuses stand; no complete gameplay purchase is claimed.
+I01d was not selected. Current user restrictions supersede publication instructions.
+
+SliceInventory.classifyNewPurchase implements WB-D118 lifetime classification only.
+Unlocked activities without acquisition evidence use FIRST_INSTANCE; a starting baseline
+uses PAID_DUPLICATE ordinal 1; subsequent paid history uses count + 1, even with no
+current copies. Stored copies do not change classification. Locked/malformed keys and
+counter overflow fail closed. Calls never advance history or mutate ownership. This is
+not a quote, receipt, readiness check, purchase transition or price adoption. Caller must
+provide trustworthy history; empty ownership cannot establish never-owned status.
+Read WB-D011/106/118/121, WHEELS and STATE_CONTRACT/PERSISTENCE before implementation.
+
+Two focused JUnit methods added for first/starting/duplicate/reacquisition/storage cases,
+repeat-call immutability, malformed/locked/null keys and long boundary overflow.
+javac --release 11 compiled SliceInventory, ActiveWheel and ProgressionGraph successfully.
+Attempted Gradle SliceInventoryTest, ActiveWheelTest, ProgressionGraphTest and legacy
+WheelboundBehaviorTest using workspace-local Gradle home, offline/no-daemon options.
+Missing Gradle 8.10 attempted download and failed Permission denied before compilation.
+No JUnit tests ran; supervisor must execute focused and legacy suites.
+
+Next eligible bounded dependency: WB-ECON-01 immutable FP ledger/balance validation,
+reading approved negative-balance, penalty and discretionary-cost rules first. Then
+implement revision-checked, replay-safe durable debit/new-instance/history receipts
+before WHL-04/05 purchase transitions. Frozen reviewed prices/catalog payloads remain
+required; no candidate amounts may be activated. WHL-03 inventory transitions, WHL-11
+Questing edit enforcement and aggregate persistence remain unfinished. Legacy Master
+Wheel source unchanged; incomplete gameplay remains unwired/default-disabled. No external
+path, credential, secret or workflow access. Supervisor handles Git/PR/CI/merge.
