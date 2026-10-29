@@ -43,6 +43,7 @@ public final class PurchaseAggregateChecks
 
     public static void main(String[] args)
     {
+        validatesPurchaseChains();
         for (String activity : List.of("smithing", "mining"))
         {
             SliceInventory before = inventory();
@@ -96,5 +97,68 @@ public final class PurchaseAggregateChecks
             { throw new AssertionError("Original purchase response changed after later debit"); }
         }
         System.out.println("Purchase aggregate checks passed");
+    }
+
+    /** Validate the complete payment/history/ownership evidence before admitting a chain. */
+    private static void validatesPurchaseChains()
+    {
+        RunLifecycle initial = new RunLifecycle(ID, 0, RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.NONE);
+        SlicePurchaseProposal first = SlicePurchaseProposal.propose(initial,
+            new FatePointLedger(100, List.of()), inventory(), ID, UUID.randomUUID(), 0, UUID.randomUUID(),
+            new SlicePurchaseProposal.Quote("smithing", "synthetic", "v1", 7,
+                SliceInventory.PurchaseKind.FIRST_INSTANCE, 0));
+        SlicePurchaseProposal second = SlicePurchaseProposal.propose(first.lifecycle(), first.ledger(),
+            first.inventory(), ID, UUID.randomUUID(), 1, UUID.randomUUID(),
+            new SlicePurchaseProposal.Quote("smithing", "synthetic", "v1", 9,
+                SliceInventory.PurchaseKind.PAID_DUPLICATE, 1));
+        List<RunReceipt> chain = List.of(envelope(first.receipt()), envelope(second.receipt()));
+        RunDocument accepted = new RunDocument(second.lifecycle(), "synthetic", chain,
+            Optional.of(second.ledger()), Optional.of(second.inventory()));
+        if (accepted.receipts().get(0).purchase().debit().balance() != 93
+            || accepted.fatePoints().get().balance() != 84)
+        { throw new AssertionError("Purchase chain rewrote original response"); }
+        rejects(() -> new RunDocument(second.lifecycle(), "synthetic", chain,
+            Optional.of(first.ledger()), Optional.of(second.inventory())));
+        rejects(() -> new RunDocument(second.lifecycle(), "synthetic", chain,
+            Optional.of(second.ledger()), Optional.of(first.inventory())));
+        rejects(() -> new RunDocument(second.lifecycle(), "synthetic",
+            List.of(envelope(second.receipt()), envelope(first.receipt())),
+            Optional.of(second.ledger()), Optional.of(second.inventory())));
+        FatePointDebits.Receipt reusedCommandDebit = new FatePointDebits.Receipt(
+            first.debit().commandId(), 1, 2, "synthetic", "v1", 9, 84);
+        SlicePurchaseReceipt reusedCommand = new SlicePurchaseReceipt(ID, second.receipt().instanceId(),
+            second.receipt().quote(), reusedCommandDebit);
+        rejects(() -> new RunDocument(second.lifecycle(), "synthetic",
+            List.of(envelope(first.receipt()), envelope(reusedCommand)),
+            Optional.of(second.ledger()), Optional.of(second.inventory())));
+
+        // Both forged payloads individually match the final inventory, but their
+        // lifetime sequence or instance reuse must still fail aggregate admission.
+        SlicePurchaseReceipt skipped = new SlicePurchaseReceipt(ID, first.receipt().instanceId(),
+            new SlicePurchaseProposal.Quote("smithing", "synthetic", "v1", 7,
+                SliceInventory.PurchaseKind.PAID_DUPLICATE, 3), first.debit());
+        rejects(() -> new RunDocument(second.lifecycle(), "synthetic",
+            List.of(envelope(skipped), envelope(second.receipt())),
+            Optional.of(second.ledger()), Optional.of(second.inventory())));
+        SlicePurchaseReceipt reused = new SlicePurchaseReceipt(ID, first.receipt().instanceId(),
+            second.receipt().quote(), second.debit());
+        rejects(() -> new RunDocument(second.lifecycle(), "synthetic",
+            List.of(envelope(first.receipt()), envelope(reused)),
+            Optional.of(second.ledger()), Optional.of(second.inventory())));
+
+        RunReceipt paused = new RunReceipt(UUID.randomUUID(), RunReceipt.Operation.PAUSE, 0, 1,
+            RunLifecycle.State.PAUSED, RunLifecycle.Obligation.NONE);
+        rejects(() -> new RunDocument(second.lifecycle(), "synthetic",
+            List.of(paused, envelope(second.receipt())), Optional.of(second.ledger()), Optional.of(second.inventory())));
+        RunReceipt pending = new RunReceipt(UUID.randomUUID(), RunReceipt.Operation.RESUME, 0, 1,
+            RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.OFFERS_COMMITTED);
+        rejects(() -> new RunDocument(second.lifecycle(), "synthetic",
+            List.of(pending, envelope(second.receipt())), Optional.of(second.ledger()), Optional.of(second.inventory())));
+
+        RunReceipt resumed = new RunReceipt(UUID.randomUUID(), RunReceipt.Operation.RESUME, 0, 1,
+            RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.NONE);
+        // Trusted legacy prefix permits a first journaled duplicate after resume.
+        new RunDocument(second.lifecycle(), "synthetic", List.of(resumed, envelope(second.receipt())),
+            Optional.of(second.ledger()), Optional.of(second.inventory()));
     }
 }
