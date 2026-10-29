@@ -3,6 +3,10 @@ package com.wheelbound.persistence;
 import com.wheelbound.domain.RunLifecycle;
 import com.wheelbound.domain.FatePointLedger;
 import com.wheelbound.domain.SliceInventory;
+import com.wheelbound.domain.ActiveWheel;
+import com.wheelbound.domain.FatePointDebits;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 import java.util.HashSet;
 import java.util.List;
@@ -51,6 +55,7 @@ public final class RunDocument
             previous = receipt;
         }
         validateDebits();
+        validatePurchases();
         if (previous != null && (previous.afterRevision() != lifecycle.revision()
             || previous.state() != lifecycle.state() || previous.obligation() != lifecycle.obligation()))
         { throw new IllegalArgumentException("Receipt head does not match snapshot"); }
@@ -60,7 +65,7 @@ public final class RunDocument
      * operations preserve FP; future earning operations require their own validation. */
     private void validateDebits()
     {
-        long count = receipts.stream().filter(r -> r.debit() != null).count();
+        long count = receipts.stream().filter(r -> payment(r) != null).count();
         if (count == 0) { return; }
         if (fatePoints == null || count > fatePoints.entries().size())
         { throw new IllegalArgumentException("Debit journal lacks ledger entries"); }
@@ -69,14 +74,56 @@ public final class RunDocument
             fatePoints.entries().subList(0, index));
         for (RunReceipt receipt : receipts)
         {
-            if (receipt.debit() == null) { continue; }
+            FatePointDebits.Receipt debit = payment(receipt);
+            if (debit == null) { continue; }
             FatePointLedger.Entry entry = fatePoints.entries().get(index++);
             if (entry.kind() != FatePointLedger.Kind.DISCRETIONARY_COST
-                || entry.amount() != receipt.debit().amount())
+                || entry.amount() != debit.amount())
             { throw new IllegalArgumentException("Debit journal disagrees with ledger"); }
             reconstructed = reconstructed.append(entry);
-            if (reconstructed.balance() != receipt.debit().balance())
+            if (reconstructed.balance() != debit.balance())
             { throw new IllegalArgumentException("Debit response disagrees with ledger"); }
+        }
+    }
+
+    private static FatePointDebits.Receipt payment(RunReceipt receipt)
+    { return receipt.purchase() == null ? receipt.debit() : receipt.purchase().debit(); }
+
+    /**
+     * Purchase evidence is checked even while schema 6 refuses to encode it. Current
+     * journal operations cannot move, enhance or destroy inventory, so each purchased
+     * instance must still be active at base tier. Future typed edits must extend this
+     * validation rather than treating missing ownership as evidence of destruction.
+     * The initial ledger/history prefix remains trusted legacy state; it cannot prove
+     * historical UUID freshness. A future command must check its pre-write snapshot.
+     */
+    private void validatePurchases()
+    {
+        Set<UUID> instances = new HashSet<>();
+        Map<String, Long> tiers = new HashMap<>();
+        for (RunReceipt receipt : receipts)
+        {
+            if (receipt.purchase() == null) { continue; }
+            com.wheelbound.domain.SlicePurchaseReceipt purchase = receipt.purchase();
+            if (!purchase.identity().equals(lifecycle.identity()) || inventory == null
+                || !instances.add(purchase.instanceId()))
+            { throw new IllegalArgumentException("Foreign, repeated or unavailable purchase inventory"); }
+            String activity = purchase.quote().activity();
+            long ordinal = purchase.quote().duplicateOrdinal();
+            Long previous = tiers.put(activity, ordinal);
+            if (previous != null && (previous == Long.MAX_VALUE || ordinal != previous + 1))
+            { throw new IllegalArgumentException("Broken lifetime purchase sequence"); }
+            boolean owned = inventory.activeWheel().slices().stream().anyMatch(slice ->
+                slice.id().equals(purchase.instanceId()) && slice.kind() == ActiveWheel.Kind.ORDINARY
+                    && activity.equals(slice.activity()) && slice.enhancement() == ActiveWheel.Enhancement.BASE);
+            if (!owned)
+            { throw new IllegalArgumentException("Purchase instance disagrees with inventory"); }
+        }
+        for (Map.Entry<String, Long> tier : tiers.entrySet())
+        {
+            SliceInventory.AcquisitionHistory history = inventory.acquisitionHistory().get(tier.getKey());
+            if (history == null || history.paidDuplicates() != tier.getValue())
+            { throw new IllegalArgumentException("Purchase journal disagrees with lifetime history"); }
         }
     }
 
