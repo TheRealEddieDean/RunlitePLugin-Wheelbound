@@ -5,6 +5,8 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonArray;
 import com.wheelbound.domain.DrawCommitment;
 import com.wheelbound.domain.WeightedPool;
+import com.wheelbound.domain.FatePointLedger;
+import java.util.Optional;
 import java.util.ArrayList;
 import java.util.List;
 import com.google.gson.JsonObject;
@@ -22,11 +24,16 @@ import java.util.UUID;
 /** Inject RuneLite's Gson. Never deserialize directly into domain objects bypassing their validation. */
 public final class RunCodec
 {
-    public static final int SCHEMA = 3;
+    public static final int SCHEMA = 4;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
-    public RunCodec(Gson gson) { this.gson = Objects.requireNonNull(gson, "gson"); }
+    public RunCodec(Gson gson)
+    {
+        // Schema 4 requires an explicit null for unavailable legacy FP state.
+        // Derive a writer that preserves it without changing the injected Gson.
+        this.gson = Objects.requireNonNull(gson, "gson").newBuilder().serializeNulls().create();
+    }
 
     public byte[] encode(RunDocument document)
     {
@@ -52,6 +59,24 @@ public final class RunCodec
             receipts.add(item);
         }
         payload.add("receipts", receipts);
+        // An explicit null preserves legacy absence without inventing starting FP.
+        JsonObject fp = null;
+        if (document.fatePoints().isPresent())
+        {
+            FatePointLedger ledger = document.fatePoints().get();
+            fp = new JsonObject();
+            fp.addProperty("startingBalance", ledger.startingBalance());
+            JsonArray entries = new JsonArray();
+            for (FatePointLedger.Entry entry : ledger.entries())
+            {
+                JsonObject item = new JsonObject();
+                item.addProperty("kind", entry.kind().name());
+                item.addProperty("amount", entry.amount());
+                entries.add(item);
+            }
+            fp.add("entries", entries);
+        }
+        payload.add("fatePoints", fp == null ? com.google.gson.JsonNull.INSTANCE : fp);
         String text = gson.toJson(payload);
         JsonObject envelope = new JsonObject();
         envelope.addProperty("schemaVersion", SCHEMA);
@@ -72,14 +97,16 @@ public final class RunCodec
             JsonObject envelope = new JsonParser().parse(new String(bytes, StandardCharsets.UTF_8)).getAsJsonObject();
             keys(envelope, Set.of("schemaVersion", "payload", "sha256"));
             long schema = integer(envelope, "schemaVersion");
-            if (schema != 1 && schema != 2 && schema != SCHEMA) { throw new IOException("Unsupported snapshot schema; preserve original"); }
+            if (schema < 1 || schema > SCHEMA) { throw new IOException("Unsupported snapshot schema; preserve original"); }
             String text = string(envelope, "payload");
             if (!sha256(text.getBytes(StandardCharsets.UTF_8)).equals(string(envelope, "sha256")))
             { throw new IOException("Snapshot checksum mismatch"); }
             JsonObject payload = new JsonParser().parse(text).getAsJsonObject();
             keys(payload, schema == 1
                 ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion")
-                : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts"));
+                : schema < 4
+                    ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts")
+                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints"));
             RunIdentity identity = new RunIdentity(string(payload, "accountKey"), UUID.fromString(string(payload, "runId")));
             if (!identity.equals(expected)) { throw new IOException("Foreign account/profile/run snapshot"); }
             RunLifecycle lifecycle = new RunLifecycle(identity, integer(payload, "revision"),
@@ -91,7 +118,7 @@ public final class RunCodec
                 for (JsonElement element : payload.getAsJsonArray("receipts"))
                 {
                     JsonObject item = element.getAsJsonObject();
-                    boolean hasDraw = schema == SCHEMA && "DRAW".equals(string(item, "operation"));
+                    boolean hasDraw = schema >= 3 && "DRAW".equals(string(item, "operation"));
                     keys(item, hasDraw
                         ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "draw")
                         : Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation"));
@@ -102,7 +129,22 @@ public final class RunCodec
                         hasDraw ? decodeDraw(item.get("draw")) : null));
                 }
             }
-            return new RunDocument(lifecycle, string(payload, "catalogVersion"), receipts);
+            Optional<FatePointLedger> fatePoints = Optional.empty();
+            if (schema >= 4 && !payload.get("fatePoints").isJsonNull())
+            {
+                JsonObject fp = payload.getAsJsonObject("fatePoints");
+                keys(fp, Set.of("startingBalance", "entries"));
+                List<FatePointLedger.Entry> entries = new ArrayList<>();
+                for (JsonElement element : fp.getAsJsonArray("entries"))
+                {
+                    JsonObject item = element.getAsJsonObject();
+                    keys(item, Set.of("kind", "amount"));
+                    entries.add(new FatePointLedger.Entry(FatePointLedger.Kind.valueOf(string(item, "kind")),
+                        integer(item, "amount")));
+                }
+                fatePoints = Optional.of(new FatePointLedger(integer(fp, "startingBalance"), entries));
+            }
+            return new RunDocument(lifecycle, string(payload, "catalogVersion"), receipts, fatePoints);
         }
         catch (RuntimeException ex) { throw new IOException("Invalid snapshot; preserve original", ex); }
     }

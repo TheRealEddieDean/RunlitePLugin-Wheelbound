@@ -27,7 +27,8 @@ public class RunCodecTest
         JsonObject envelope = envelope();
         JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
         if (value == null) { payload.remove(key); } else { payload.add(key, value); }
-        String text = gson.toJson(payload);
+        // Preserve unrelated required nulls so each corruption tests its intended field.
+        String text = gson.newBuilder().serializeNulls().create().toJson(payload);
         envelope.addProperty("payload", text);
         envelope.addProperty("sha256", RunCodec.sha256(text.getBytes(StandardCharsets.UTF_8)));
         return bytes(envelope);
@@ -84,4 +85,82 @@ public class RunCodecTest
 
     @Test public void oversizedFilesAreRejectedBeforeParsing()
     { assertThrows(IOException.class, () -> codec.decode(new byte[RunCodec.MAX_BYTES + 1], id)); }
+
+    @Test public void ledgerRoundTripsDebtAndOrderedHistory() throws Exception
+    {
+        FatePointLedger ledger = new FatePointLedger(-5, java.util.List.of(
+            new FatePointLedger.Entry(FatePointLedger.Kind.EARNING, 20),
+            new FatePointLedger.Entry(FatePointLedger.Kind.DISCRETIONARY_COST, 15),
+            new FatePointLedger.Entry(FatePointLedger.Kind.PENALTY, 7)));
+        RunDocument source = new RunDocument(new RunLifecycle(id, 0, RunLifecycle.State.ACTIVE,
+            RunLifecycle.Obligation.NONE), "v1", java.util.List.of(), java.util.Optional.of(ledger));
+        FatePointLedger restored = codec.decode(codec.encode(source), id).fatePoints().get();
+        assertEquals(-5, restored.startingBalance());
+        assertEquals(-7, restored.balance());
+        assertEquals(3, restored.entries().size());
+        assertEquals(FatePointLedger.Kind.DISCRETIONARY_COST, restored.entries().get(1).kind());
+        assertEquals(15, restored.entries().get(1).amount());
+    }
+
+    @Test public void unavailableLedgerIsExplicitNullWithoutChangingInjectedGson() throws Exception
+    {
+        JsonObject envelope = envelope();
+        JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
+        assertTrue(payload.has("fatePoints"));
+        assertTrue(payload.get("fatePoints").isJsonNull());
+        assertFalse(codec.decode(bytes(envelope), id).fatePoints().isPresent());
+        JsonObject probe = new JsonObject();
+        probe.add("absent", JsonNull.INSTANCE);
+        assertEquals("{}", gson.toJson(probe));
+    }
+
+    @Test public void legacySchemasPreserveAbsentFpWithoutInventingZero() throws Exception
+    {
+        for (int schema = 1; schema <= 3; schema++)
+        {
+            JsonObject envelope = envelope();
+            JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
+            payload.remove("fatePoints");
+            if (schema == 1) { payload.remove("receipts"); }
+            String text = gson.toJson(payload);
+            envelope.addProperty("schemaVersion", schema);
+            envelope.addProperty("payload", text);
+            envelope.addProperty("sha256", RunCodec.sha256(text.getBytes(StandardCharsets.UTF_8)));
+            RunDocument restored = codec.decode(bytes(envelope), id);
+            assertFalse(restored.fatePoints().isPresent());
+            assertFalse(codec.decode(codec.encode(restored), id).fatePoints().isPresent());
+        }
+    }
+
+    @Test public void malformedLedgerAndInvalidIntermediateSpendingFailClosed()
+    {
+        for (String json : new String[]{
+            "{\"startingBalance\":0,\"entries\":[{\"kind\":\"DISCRETIONARY_COST\",\"amount\":1},{\"kind\":\"EARNING\",\"amount\":2}]}",
+            "{\"startingBalance\":9223372036854775807,\"entries\":[{\"kind\":\"EARNING\",\"amount\":1}]}",
+            "{\"startingBalance\":0,\"entries\":[{\"kind\":\"EARNING\",\"amount\":\"1\"}]}",
+            "{\"startingBalance\":0,\"entries\":[],\"balance\":99}"})
+        { assertThrows(IOException.class, () -> codec.decode(alteredPayload("fatePoints", new JsonParser().parse(json)), id)); }
+        assertThrows(IOException.class, () -> codec.decode(alteredPayload("fatePoints", null), id));
+    }
+
+    @Test public void schemaThreeDrawRemainsReadableAfterSchemaUpgrade() throws Exception
+    {
+        DrawCommitment draw = new DrawCommitment(new WeightedPool("pool-v1",
+            java.util.List.of(new WeightedPool.Entry("chosen", 1))), 0);
+        RunReceipt receipt = new RunReceipt(UUID.randomUUID(), RunReceipt.Operation.DRAW, 0, 1,
+            RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.OFFERS_COMMITTED, draw);
+        RunDocument document = new RunDocument(new RunLifecycle(id, 1, receipt.state(), receipt.obligation()),
+            "v1", java.util.List.of(receipt));
+        JsonObject envelope = new JsonParser().parse(new String(codec.encode(document), StandardCharsets.UTF_8)).getAsJsonObject();
+        JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
+        payload.remove("fatePoints");
+        String text = gson.toJson(payload);
+        envelope.addProperty("schemaVersion", 3);
+        envelope.addProperty("payload", text);
+        envelope.addProperty("sha256", RunCodec.sha256(text.getBytes(StandardCharsets.UTF_8)));
+        RunDocument restored = codec.decode(bytes(envelope), id);
+        assertEquals(0, restored.receipts().get(0).draw().ticket());
+        assertEquals("pool-v1", restored.receipts().get(0).draw().pool().version());
+        assertFalse(restored.fatePoints().isPresent());
+    }
 }
