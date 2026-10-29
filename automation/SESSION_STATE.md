@@ -1,3 +1,44 @@
+## Current local continuation - typed debit journal, 2026-10-29
+
+IDLE after bounded WB-FND-11 / WB-ECON-08 typed-journal prerequisite increment (S).
+Reconciled production domain/persistence and test inventory with recorded I01a/b/c
+merge receipts; no Git or remote verification. FND-01 remains DONE. FND-10/12 remain
+PARTIAL; TREE-02, WHL-02/03/04/05/06/07/11/12 and ECON-01/08 remain
+PARTIAL_UNVERIFIED. FND-11 is now PARTIAL_UNVERIFIED for typed durable journal format
+only. All other unstarted TODO and decision/evidence BLOCKED rows retain status.
+This entry supersedes older next-task/status prose. I01d was not selected.
+
+RunReceipt now carries FP_DEBIT with frozen quote key/version, amount and original
+balance, validating command identity and revision binding. RunDocument accepts mixed
+lifecycle/draw/debit revision chains, rejects cross-operation duplicate command IDs,
+preserves obligations and validates debit receipts against the ledger suffix after a
+trusted legacy prefix. Current lifecycle/draw operations cannot change FP. Future
+reward/penalty commands require explicit journal validation extensions. LifecycleCommands
+rejects operation-specific commands rather than treating them as resume.
+RunCodec schema 5 writes typed debit payloads; schemas 1-4 remain readable, with older
+schemas refusing debit payloads. Legacy missing FP remains unavailable, never zero.
+Authority: WB-D105 and STATE_CONTRACT. No quote authorization or prices adopted.
+
+All production domain classes plus RunReceipt/RunDocument and DebitJournalChecks
+compiled with javac --release 11. Dependency-free checks passed mixed pause/resume
+and two-debit history, original response retention, absent ledger, amount/balance
+mismatches, foreign receipt identity, cross-operation ID collision, inactive chain,
+missing debit payload and unjournaled trailing ledger mutation rejection.
+Three JUnit methods authored for these checks, codec round trip, schema-4 compatibility
+and old-schema debit refusal. Gradle focused DebitJournalTest/RunCodecTest/
+LifecycleCommandsTest/DurableWheelDrawsTest and legacy WheelboundBehaviorTest attempt
+failed before compilation: Gradle 8.10 distribution missing, download SocketException
+Permission denied. Codec/service compilation and JUnit/legacy passes are NOT claimed;
+supervisor must run them. Master Wheel source unchanged; gameplay stays unwired/disabled.
+
+Next bounded unit: durable debit command service using AtomicRunStore, exact replay from
+typed journal, changed-payload/cross-operation collision checks, failed writes, lost
+acknowledgements and restart tests. Then persist inventory and couple reviewed debit
+and product changes atomically. Current format support is not a paid transaction,
+complete aggregate, purchase/refund prevention or integrated spin/FP implementation.
+No external paths, credentials, secrets, workflows or Git accessed. Supervisor handles
+commits, PRs, CI and merges.
+
 ## Current local continuation - purchase with storage replacement, 2026-10-29
 
 IDLE after bounded WB-WHL-06 purchase/storage proposal increment (S).

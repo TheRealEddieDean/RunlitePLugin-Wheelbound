@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.UUID;
 
-/** Foundation snapshot and complete lifecycle receipt journal, not the playable-mode aggregate. */
+/** Foundation snapshot and lifecycle/draw/debit journal, not the playable-mode aggregate. */
 public final class RunDocument
 {
     private final RunLifecycle lifecycle;
@@ -42,9 +42,34 @@ public final class RunDocument
             { throw new IllegalArgumentException("Broken lifecycle receipt chain"); }
             previous = receipt;
         }
+        validateDebits();
         if (previous != null && (previous.afterRevision() != lifecycle.revision()
             || previous.state() != lifecycle.state() || previous.obligation() != lifecycle.obligation()))
         { throw new IllegalArgumentException("Receipt head does not match snapshot"); }
+    }
+
+    /** Debit entries follow a trusted legacy ledger prefix. Other current journal
+     * operations preserve FP; future earning operations require their own validation. */
+    private void validateDebits()
+    {
+        long count = receipts.stream().filter(r -> r.debit() != null).count();
+        if (count == 0) { return; }
+        if (fatePoints == null || count > fatePoints.entries().size())
+        { throw new IllegalArgumentException("Debit journal lacks ledger entries"); }
+        int index = fatePoints.entries().size() - Math.toIntExact(count);
+        FatePointLedger reconstructed = new FatePointLedger(fatePoints.startingBalance(),
+            fatePoints.entries().subList(0, index));
+        for (RunReceipt receipt : receipts)
+        {
+            if (receipt.debit() == null) { continue; }
+            FatePointLedger.Entry entry = fatePoints.entries().get(index++);
+            if (entry.kind() != FatePointLedger.Kind.DISCRETIONARY_COST
+                || entry.amount() != receipt.debit().amount())
+            { throw new IllegalArgumentException("Debit journal disagrees with ledger"); }
+            reconstructed = reconstructed.append(entry);
+            if (reconstructed.balance() != receipt.debit().balance())
+            { throw new IllegalArgumentException("Debit response disagrees with ledger"); }
+        }
     }
 
     private boolean follows(RunReceipt previous, RunReceipt next)
@@ -53,6 +78,7 @@ public final class RunDocument
         {
             case PAUSE: return previous.state() == RunLifecycle.State.ACTIVE && next.obligation() == previous.obligation();
             case RESUME: return previous.state() == RunLifecycle.State.PAUSED && next.obligation() == previous.obligation();
+            case FP_DEBIT: return previous.state() == RunLifecycle.State.ACTIVE && next.obligation() == previous.obligation();
             case DRAW: return previous.state() == RunLifecycle.State.ACTIVE && previous.obligation() == RunLifecycle.Obligation.NONE;
             default: return false;
         }

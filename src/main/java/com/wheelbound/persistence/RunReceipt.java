@@ -2,13 +2,15 @@ package com.wheelbound.persistence;
 
 import com.wheelbound.domain.RunLifecycle;
 import com.wheelbound.domain.DrawCommitment;
+import com.wheelbound.domain.FatePointDebits;
 import java.util.Objects;
 import java.util.UUID;
 
 /** Immutable command identity, request and original response, persisted with the resulting snapshot. */
 public final class RunReceipt
 {
-    public enum Operation { PAUSE, RESUME, DRAW }
+    public enum Operation { PAUSE, RESUME, DRAW, FP_DEBIT }
+    private final FatePointDebits.Receipt debit;
     private final DrawCommitment draw;
     private final UUID commandId;
     private final Operation operation;
@@ -23,6 +25,11 @@ public final class RunReceipt
 
     public RunReceipt(UUID commandId, Operation operation, long beforeRevision, long afterRevision,
         RunLifecycle.State state, RunLifecycle.Obligation obligation, DrawCommitment draw)
+    { this(commandId, operation, beforeRevision, afterRevision, state, obligation, draw, null); }
+
+    public RunReceipt(UUID commandId, Operation operation, long beforeRevision, long afterRevision,
+        RunLifecycle.State state, RunLifecycle.Obligation obligation, DrawCommitment draw,
+        FatePointDebits.Receipt debit)
     {
         this.commandId = Objects.requireNonNull(commandId, "commandId");
         this.operation = Objects.requireNonNull(operation, "operation");
@@ -35,6 +42,11 @@ public final class RunReceipt
         if ((operation == Operation.DRAW) != (draw != null)
             || (operation == Operation.DRAW && obligation != RunLifecycle.Obligation.OFFERS_COMMITTED))
         { throw new IllegalArgumentException("Invalid draw receipt"); }
+        if ((operation == Operation.FP_DEBIT) != (debit != null)
+            || (debit != null && (!commandId.equals(debit.commandId())
+                || beforeRevision != debit.beforeRevision() || afterRevision != debit.afterRevision())))
+        { throw new IllegalArgumentException("Invalid debit receipt identity"); }
+        this.debit = debit;
         this.draw = draw;
         this.beforeRevision = beforeRevision;
         this.afterRevision = afterRevision;
@@ -47,11 +59,20 @@ public final class RunReceipt
         RunReceipt other = (RunReceipt) value;
         return commandId.equals(other.commandId) && operation == other.operation
             && beforeRevision == other.beforeRevision && afterRevision == other.afterRevision
-            && state == other.state && obligation == other.obligation && Objects.equals(draw, other.draw);
+            && state == other.state && obligation == other.obligation && Objects.equals(draw, other.draw)
+            && Objects.equals(debitKey(), other.debitKey());
     }
 
     @Override public int hashCode()
-    { return Objects.hash(commandId, operation, beforeRevision, afterRevision, state, obligation, draw); }
+    { return Objects.hash(commandId, operation, beforeRevision, afterRevision, state, obligation, draw, debitKey()); }
+
+    private Object debitKey()
+    {
+        return debit == null ? null : java.util.List.of(debit.commandId(), debit.beforeRevision(),
+            debit.afterRevision(), debit.quoteKey(), debit.quoteVersion(), debit.amount(), debit.balance());
+    }
+
+    public FatePointDebits.Receipt debit() { return debit; }
 
     public DrawCommitment draw() { return draw; }
     public UUID commandId() { return commandId; }
