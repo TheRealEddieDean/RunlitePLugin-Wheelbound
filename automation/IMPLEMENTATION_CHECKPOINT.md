@@ -1,3 +1,41 @@
+## Current local continuation - stored replacement proposal, 2026-10-29
+
+IDLE after bounded WB-WHL-06 product-proposal increment (S).
+Read protocol, session, queue, pending decisions, checkpoint and backlog; reconciled
+ActiveWheel/SliceInventory, tests and recorded I01a/b/c merged receipts. No Git or
+remote verification performed. FND-01 remains DONE; existing partial/unverified,
+unstarted and evidence/decision-blocked statuses stand except WHL-06 is now
+PARTIAL_UNVERIFIED. This entry supersedes historical WHL-06 TODO statements.
+I01d was not selected. No complete paid gameplay implementation is claimed.
+
+SliceInventory.proposeStoredReplacement exchanges explicitly selected active ordinary
+and stored instances in one immutable proposal, validating final five/three/24 and
+Satchel capacity. Full wheel/full Satchel exchange preserves UUIDs, enhancements,
+other instances, unlocks and lifetime history. Questing moves without destruction;
+Taint/Sacrifice, foreign/wrong-location IDs and invalid final diversity fail closed.
+Authority: WB-D105/106/118/121 and WHEELS final-state atomic edit contract.
+This is compound storage/reactivation only, with both reviewed movement costs still
+required. No free swap, new-instance replacement, special insertion, price adoption,
+authorization, debit, persistence, receipt or UI/live wiring was added. Master Wheel
+source unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Two focused JUnit methods authored for full capacities, exact instance/order/history
+preservation, reverse exchange, minimum wheel acceptance, diversity rejection,
+specials, locations, nulls and immutable failure. javac --release 11 compiled all
+production domain sources. Dependency-free ReplacementSmoke passed full-capacity
+Questing exchange/reversal, minimum-wheel diversity rejection, special rejection and
+immutability/history checks. Initial smoke fixture incorrectly retained Questing as
+a fourth activity for diversity rejection; corrected to a five-ordinary/three-activity
+fixture and reran successfully. Gradle focused inventory and legacy behavior attempt
+failed before compilation: missing Gradle 8.10 download denied (SocketException).
+No JUnit or legacy regression pass claimed; supervisor must execute those suites.
+
+Next required dependency for paid gameplay: typed debit receipts in the unified revision
+journal, explicit schema compatibility, mixed-operation restoration and cross-operation
+command-ID collision rejection; then durable inventory and atomic reviewed debit/product
+commands with failed-write/lost-acknowledgement/restart tests. WHL-06 remains incomplete
+for authorized durable replacement and other replacement routes. No external paths,
+credentials, secrets, workflows or Git accessed. Supervisor handles publication and CI.
 ## Current local continuation - raw wheel odds, 2026-10-29
 
 IDLE after bounded WB-WHL-07 raw-odds snapshot increment (S).
@@ -650,7 +688,7 @@ activation in this slice. Legacy Master Wheel files unchanged. No Git operations
 remote verification, PR or merge performed; current user restrictions supersede older
 publication instructions below.
 
-## I01d session coordinator slice ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-10-27
+## I01d session coordinator slice ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â 2026-10-27
 
 Implemented `RunSession` behind the disabled mode boundary. It opens existing saves only,
 issues opaque per-session/revision callback tokens, invalidates them on disconnect and
@@ -672,7 +710,7 @@ baselines. No first-run activation, gameplay, detector, recovery UI or Hub relea
 Changes remain on the isolated `agent/i01d-session-adapter-20261027-222408` branch pending
 review/CI; no PR or merge is claimed for this slice.
 
-## Current verified batch release ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â 2026-10-27
+## Current verified batch release ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â 2026-10-27
 
 WB-D158/159 authorize coding and verified PR integration. This release checkpoint belongs to PR5; verify its exact final head, CI and source merge before reporting merged. No background work after the owning merge.
 
@@ -701,7 +739,7 @@ Four-PR batch starts from verified 0407530abef2ebd79eef5a78207c1c880225d2bf (PR1
 
 Local wrapper Java networking remains unavailable; full Gradle/JUnit checks run in GitHub CI before each merge. Existing obsolete documentation validator catalog-count defect remains separately recorded. Check each PR's exact head and CI result before marking merged. No live client/runtime activation or Hub submission in this batch. Checkpoints on a PR describe prepared scope until its CI/merge is verified.
 
-## I01b.2 prepared ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â atomic snapshots
+## I01b.2 prepared ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â atomic snapshots
 
 PR2 merged at393a2fe699b8382001c3d9da14324114805f67bb; final code f4bc723f15f42a6b43637dee4f54d2021ebadd31 passed runs40602782885/40602775250. Gson parser compatibility corrected against actual RuneLite dependency.
 
@@ -709,7 +747,7 @@ AtomicRunStore uses a caller-supplied plugin directory, opaque identity paths, p
 
 Next: durable lifecycle command receipts/replay; no additional gameplay rule decisions needed.
 
-## I01b.3 prepared ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â durable lifecycle commands
+## I01b.3 prepared ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â durable lifecycle commands
 
 PR3 merged at8d987651bb0c90a0053e122dea4acb73741a975a, code38a7b81f8a3a52dbd27dc0c2cd119beabec82093; runs40603093612/40603089365 passed. Real filesystem tests include exclusive locking and pre/post-replace failure injection.
 
@@ -717,7 +755,7 @@ Schema2 persists lifecycle command receipts and state together; schema1 foundati
 
 Next: frozen weighted draw commitments with their own immutable request/result journal and restart/no-reroll fixtures. Live activation remains disabled/unwired; current foundation snapshot is not a complete gameplay save.
 
-## I01c foundation prepared ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â immutable weighted draw commitments
+## I01c foundation prepared ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â immutable weighted draw commitments
 
 PR4 merged atdfcef5cbbc8b1cdc47e323a0ab9b7cd894a437fc; final coded81df900f3b897edbd33461277856e2f8192db98 passed runs40603506804/40603501702. Lifecycle receipts and snapshot commit together; storage rejects history removal/rewrite.
 
@@ -725,4 +763,4 @@ WeightedPool retains ordered positive-weight canonical IDs and its explicit cata
 
 Scope: foundation transaction only, NOT a live Master spin, reviewed eligibility generator, spin charge, card offering or complete gameplay save. Caller-supplied synthetic pools test the protocol; they do not admit real content. Existing shipped wheel paths are unchanged. Live preview/account-session adapter, complete aggregate fields, spin/FP transactions, explicit pending-file recovery and cross-platform durability remain next work. Unsupported atomic/directory-force operations fail closed; no platform-wide power-loss guarantee is claimed. No Hub submission.
 
-Batch target: four additional PRs (2ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“5), merged sequentially only after full CI success. Resolve exact final PR5 head/run/merge remotely before claiming completion. Latest merged receipts are carried in subsequent checkpoints and this session's final report.
+Batch target: four additional PRs (2ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ5), merged sequentially only after full CI success. Resolve exact final PR5 head/run/merge remotely before claiming completion. Latest merged receipts are carried in subsequent checkpoints and this session's final report.

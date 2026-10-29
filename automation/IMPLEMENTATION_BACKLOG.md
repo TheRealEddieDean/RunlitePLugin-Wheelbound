@@ -1,3 +1,41 @@
+## Current local continuation - stored replacement proposal, 2026-10-29
+
+IDLE after bounded WB-WHL-06 product-proposal increment (S).
+Read protocol, session, queue, pending decisions, checkpoint and backlog; reconciled
+ActiveWheel/SliceInventory, tests and recorded I01a/b/c merged receipts. No Git or
+remote verification performed. FND-01 remains DONE; existing partial/unverified,
+unstarted and evidence/decision-blocked statuses stand except WHL-06 is now
+PARTIAL_UNVERIFIED. This entry supersedes historical WHL-06 TODO statements.
+I01d was not selected. No complete paid gameplay implementation is claimed.
+
+SliceInventory.proposeStoredReplacement exchanges explicitly selected active ordinary
+and stored instances in one immutable proposal, validating final five/three/24 and
+Satchel capacity. Full wheel/full Satchel exchange preserves UUIDs, enhancements,
+other instances, unlocks and lifetime history. Questing moves without destruction;
+Taint/Sacrifice, foreign/wrong-location IDs and invalid final diversity fail closed.
+Authority: WB-D105/106/118/121 and WHEELS final-state atomic edit contract.
+This is compound storage/reactivation only, with both reviewed movement costs still
+required. No free swap, new-instance replacement, special insertion, price adoption,
+authorization, debit, persistence, receipt or UI/live wiring was added. Master Wheel
+source unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Two focused JUnit methods authored for full capacities, exact instance/order/history
+preservation, reverse exchange, minimum wheel acceptance, diversity rejection,
+specials, locations, nulls and immutable failure. javac --release 11 compiled all
+production domain sources. Dependency-free ReplacementSmoke passed full-capacity
+Questing exchange/reversal, minimum-wheel diversity rejection, special rejection and
+immutability/history checks. Initial smoke fixture incorrectly retained Questing as
+a fourth activity for diversity rejection; corrected to a five-ordinary/three-activity
+fixture and reran successfully. Gradle focused inventory and legacy behavior attempt
+failed before compilation: missing Gradle 8.10 download denied (SocketException).
+No JUnit or legacy regression pass claimed; supervisor must execute those suites.
+
+Next required dependency for paid gameplay: typed debit receipts in the unified revision
+journal, explicit schema compatibility, mixed-operation restoration and cross-operation
+command-ID collision rejection; then durable inventory and atomic reviewed debit/product
+commands with failed-write/lost-acknowledgement/restart tests. WHL-06 remains incomplete
+for authorized durable replacement and other replacement routes. No external paths,
+credentials, secrets, workflows or Git accessed. Supervisor handles publication and CI.
 ## Current local continuation - raw wheel odds, 2026-10-29
 
 IDLE after bounded WB-WHL-07 raw-odds snapshot increment (S).
@@ -343,7 +381,7 @@ Questing edit enforcement remain unfinished. Legacy Master Wheel source unchange
 incomplete gameplay remains unwired/default-disabled. No Git, external-path, credential,
 secret or workflow access. Supervisor handles publication and CI.
 
-# Wheelbound implementation backlog ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â initial decomposition
+# Wheelbound implementation backlog ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â initial decomposition
 
 > Planning inventory, not a claim that every item is unimplemented or independently PR-sized. Reconcile against the current source tree and merged PRs before execution. This file does not supersede approved decisions, implementation checkpoints, or evidence gates.
 
@@ -351,7 +389,7 @@ secret or workflow access. Supervisor handles publication and CI.
 
 - Source of truth: `docs/wheelbound/DECISIONS.md` and subsystem specs; current code and merged CI evidence determine DONE status.
 - Default each item to `PLANNED_REVIEW`: inspect code first, then mark DONE / PARTIAL / TODO / BLOCKED with evidence. Never redo completed functionality.
-- Execute in dependency order: FND ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ core WHL/FAT/ECON ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ subsystems ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ integrated REL. Independent UI/catalog work can proceed when safe.
+- Execute in dependency order: FND ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢ core WHL/FAT/ECON ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢ subsystems ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢ integrated REL. Independent UI/catalog work can proceed when safe.
 - Split any item exceeding a 30-minute Codex session into bounded testable increments. One ID is not necessarily one PR.
 - Never invent unresolved numeric prices, eligibility, source evidence, client APIs or policy approvals. Keep dependent behavior disabled until verified.
 - Preserve legacy Master Wheel behavior and appearance; GF4 is Grand Fate and B3 is Bossing. No main/master merge or Plugin Hub submission.
@@ -445,7 +483,7 @@ Do not select I01d without a concrete failing test or required dependency.
 | WB-WHL-03 | Implement slice ownership and storage inventory | PARTIAL_UNVERIFIED |
 | WB-WHL-04 | Implement paid slice add/remove transaction | PARTIAL_UNVERIFIED |
 | WB-WHL-05 | Implement purchase escalation on reacquisition | PARTIAL_UNVERIFIED |
-| WB-WHL-06 | Implement active-slot replacement at capacity | TODO |
+| WB-WHL-06 | Implement active-slot replacement at capacity | PARTIAL_UNVERIFIED |
 | WB-WHL-07 | Implement weighted odds display and previews | PARTIAL_UNVERIFIED |
 | WB-WHL-08 | Implement deterministic Master Wheel spin commitment | PARTIAL |
 | WB-WHL-09 | Implement valid-empty landing free retry | TODO |
@@ -504,7 +542,7 @@ Do not select I01d without a concrete failing test or required dependency.
 | ID | Implementation unit | Initial status |
 | --- | --- | --- |
 | WB-QST-01 | Implement quest eligibility snapshot | PARTIAL |
-| WB-QST-02 | Implement 1ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“3 quest display and upgrade capacities | TODO |
+| WB-QST-02 | Implement 1ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ3 quest display and upgrade capacities | TODO |
 | WB-QST-03 | Implement qualify-only toggle | PARTIAL |
 | WB-QST-04 | Implement deterministic quest selection | PARTIAL |
 | WB-QST-05 | Implement quest completion event evidence | TODO |
