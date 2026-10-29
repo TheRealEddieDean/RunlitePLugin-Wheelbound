@@ -1,3 +1,45 @@
+## Current local continuation - purchase aggregate evidence validation, 2026-10-29
+
+IDLE after a bounded WB-WHL-04/05, WB-ECON-08 and WB-FND-11 prerequisite (S).
+This supersedes older next-task prose. Reconciled domain, persistence and focused tests
+against the current backlog and recorded merge receipts locally; no Git or remote checks.
+FND-01 remains DONE; FND-10/12 PARTIAL; FND-11, ECON-01/08, TREE-02 and
+WHL-02/03/04/05/06/07/11/12 remain PARTIAL_UNVERIFIED. Other TODO/partial/BLOCKED
+rows retain their audited status. Evidence/price holds remain; I01d was not selected.
+
+RunDocument now validates purchase payments in the same ledger suffix as standalone
+debits, including each original response balance. Purchase evidence must match account/run,
+active base-tier instance/activity and final lifetime history. Repeated purchase instance
+IDs and nonconsecutive per-activity tiers are rejected by the evidence validator. This
+closes the first-receipt admission gap; existing chain rules still reject subsequent
+SLICE_PURCHASE operations. Current journal operations cannot move/enhance/destroy inventory;
+future typed edits must explicitly extend this conservative ownership validation.
+The legacy ledger/history prefix is trusted; historical UUID freshness against that prefix
+and before/after inventory transitions still require command/store validation. These checks
+are necessary evidence checks, not proof of authorization or complete aggregate admission.
+Schema remains 6 and still refuses purchase encoding. No durable purchase command, price
+adoption or live wiring. Master Wheel source unchanged; gameplay remains disabled.
+Authority read: WB-D105/106/118 and targeted STATE_CONTRACT transaction requirements.
+
+Validation: javac --release 11 compiled all domain classes, RunDocument, RunReceipt and
+dependency-free PurchaseAggregateChecks/PurchaseJournalChecks. Both executable checks
+passed. Coverage includes first/duplicate purchases, missing FP/inventory, missing/wrong
+ledger debit, wrong original balance, foreign account/run, missing/stored/enhanced/wrong-
+activity instance, wrong lifetime history and original purchase response after later debit.
+JUnit delegates to these checks; schema-6 refusal test now uses a valid aggregate fixture.
+Gradle focused PurchaseJournalTest, PurchaseReceiptJsonTest, RunCodecTest and legacy
+WheelboundBehaviorTest failed before compilation: missing Gradle 8.10 distribution,
+download denied (SocketException). No JUnit/legacy pass claimed; supervisor must run them.
+
+Next bounded unit: finish schema-7 PurchaseReceiptJson integration with validated purchase
+chain admission and schema-6 compatibility/tampering tests. Validate before/after inventory
+and historical instance freshness in the store/command path before claiming atomic purchase;
+then implement authorized command with failed-write/lost-ack/restart tests. Do not simply
+remove the codec guard or permit purchases in follows. Full pending draw/offer/edit-boundary,
+reviewed catalog/quote authority and cross-operation replay checks remain required.
+No external paths, credentials, secrets, workflows or Git operations accessed.
+Supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - typed purchase journal envelope, 2026-10-29
 
 IDLE after a bounded WB-WHL-04/05, WB-ECON-08 and WB-FND-11 prerequisite (S).
