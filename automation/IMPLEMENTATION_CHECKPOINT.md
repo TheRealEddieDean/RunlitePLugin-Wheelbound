@@ -1,3 +1,32 @@
+## Current local continuation - progression prerequisites, 2026-10-28
+
+IDLE after WB-FND-01 source/backlog audit and one bounded WB-TREE-02 increment.
+Current user constraints supersede older next-task/publication instructions below.
+All 131 backlog rows now distinguish DONE / PARTIAL / TODO / BLOCKED with a scoped
+reconciliation. Recorded merged I01a/b/c receipts remain historical evidence; no Git or
+remote verification performed. I01d was not selected or modified.
+
+Production ProgressionGraph implements immutable nested AND/OR ownership prerequisites,
+explicit roots, unknown-reference and cycle validation, and rejection of already-owned
+unlock candidates. Evaluating prerequisites never purchases, grants benefits or adds
+wheel slices. No production catalog, prices, client wiring or gameplay activation added.
+Authority: WB-D093; Challenge entry/rank test examples follow WB-D124 and WB-D147.
+Three focused JUnit methods cover the complete nested boolean truth table, exact
+Bossing-vs-Skilling identity, predecessor ownership, defensive copies, malformed rules,
+unknown ownership and cycles (including an alternative root that must not hide a cycle).
+
+PARTIAL_UNVERIFIED: attempted gradlew.bat --gradle-user-home .gradle-local test --offline
+--no-daemon --console=plain --tests com.wheelbound.domain.ProgressionGraphTest
+--tests com.wheelbound.WheelboundBehaviorTest. Wrapper attempted missing Gradle 8.10
+and failed with SocketException / Permission denied before compilation. No tests ran.
+Static inspection completed; old build reports do not validate current source.
+
+Next: supervisor runs focused and legacy tests in an available build environment.
+Next eligible implementation: WB-WHL-02 immutable 24-slot active-wheel model, reading
+exact approved ordinary minimum/activity/special/weight rules first. WB-TREE-02 remains
+partial until tests and catalog integration; purchasing/benefits remain separate tasks.
+Legacy Master Wheel source unchanged; incomplete gameplay remains disabled. No Git,
+external-path/credential/secret/workflow access, publication or background work.
 ## Latest local continuation - skip superseded queued opens, 2026-10-28
 
 One bounded I01d increment: AsyncRunSession checks request generation when a queued
@@ -172,7 +201,7 @@ activation in this slice. Legacy Master Wheel files unchanged. No Git operations
 remote verification, PR or merge performed; current user restrictions supersede older
 publication instructions below.
 
-## I01d session coordinator slice — 2026-10-27
+## I01d session coordinator slice â€” 2026-10-27
 
 Implemented `RunSession` behind the disabled mode boundary. It opens existing saves only,
 issues opaque per-session/revision callback tokens, invalidates them on disconnect and
@@ -194,7 +223,7 @@ baselines. No first-run activation, gameplay, detector, recovery UI or Hub relea
 Changes remain on the isolated `agent/i01d-session-adapter-20261027-222408` branch pending
 review/CI; no PR or merge is claimed for this slice.
 
-## Current verified batch release — 2026-10-27
+## Current verified batch release â€” 2026-10-27
 
 WB-D158/159 authorize coding and verified PR integration. This release checkpoint belongs to PR5; verify its exact final head, CI and source merge before reporting merged. No background work after the owning merge.
 
@@ -223,7 +252,7 @@ Four-PR batch starts from verified 0407530abef2ebd79eef5a78207c1c880225d2bf (PR1
 
 Local wrapper Java networking remains unavailable; full Gradle/JUnit checks run in GitHub CI before each merge. Existing obsolete documentation validator catalog-count defect remains separately recorded. Check each PR's exact head and CI result before marking merged. No live client/runtime activation or Hub submission in this batch. Checkpoints on a PR describe prepared scope until its CI/merge is verified.
 
-## I01b.2 prepared — atomic snapshots
+## I01b.2 prepared â€” atomic snapshots
 
 PR2 merged at393a2fe699b8382001c3d9da14324114805f67bb; final code f4bc723f15f42a6b43637dee4f54d2021ebadd31 passed runs40602782885/40602775250. Gson parser compatibility corrected against actual RuneLite dependency.
 
@@ -231,7 +260,7 @@ AtomicRunStore uses a caller-supplied plugin directory, opaque identity paths, p
 
 Next: durable lifecycle command receipts/replay; no additional gameplay rule decisions needed.
 
-## I01b.3 prepared — durable lifecycle commands
+## I01b.3 prepared â€” durable lifecycle commands
 
 PR3 merged at8d987651bb0c90a0053e122dea4acb73741a975a, code38a7b81f8a3a52dbd27dc0c2cd119beabec82093; runs40603093612/40603089365 passed. Real filesystem tests include exclusive locking and pre/post-replace failure injection.
 
@@ -239,7 +268,7 @@ Schema2 persists lifecycle command receipts and state together; schema1 foundati
 
 Next: frozen weighted draw commitments with their own immutable request/result journal and restart/no-reroll fixtures. Live activation remains disabled/unwired; current foundation snapshot is not a complete gameplay save.
 
-## I01c foundation prepared — immutable weighted draw commitments
+## I01c foundation prepared â€” immutable weighted draw commitments
 
 PR4 merged atdfcef5cbbc8b1cdc47e323a0ab9b7cd894a437fc; final coded81df900f3b897edbd33461277856e2f8192db98 passed runs40603506804/40603501702. Lifecycle receipts and snapshot commit together; storage rejects history removal/rewrite.
 
@@ -247,4 +276,4 @@ WeightedPool retains ordered positive-weight canonical IDs and its explicit cata
 
 Scope: foundation transaction only, NOT a live Master spin, reviewed eligibility generator, spin charge, card offering or complete gameplay save. Caller-supplied synthetic pools test the protocol; they do not admit real content. Existing shipped wheel paths are unchanged. Live preview/account-session adapter, complete aggregate fields, spin/FP transactions, explicit pending-file recovery and cross-platform durability remain next work. Unsupported atomic/directory-force operations fail closed; no platform-wide power-loss guarantee is claimed. No Hub submission.
 
-Batch target: four additional PRs (2–5), merged sequentially only after full CI success. Resolve exact final PR5 head/run/merge remotely before claiming completion. Latest merged receipts are carried in subsequent checkpoints and this session's final report.
+Batch target: four additional PRs (2â€“5), merged sequentially only after full CI success. Resolve exact final PR5 head/run/merge remotely before claiming completion. Latest merged receipts are carried in subsequent checkpoints and this session's final report.
