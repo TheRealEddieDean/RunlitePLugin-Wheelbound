@@ -14,6 +14,74 @@ import static com.wheelbound.domain.SliceInventory.*;
 
 public class SliceInventoryTest
 {
+    @Test public void questingStorageAndReturnPreserveInstanceAndLifetimeHistory()
+    {
+        Slice questing = slice("questing");
+        Slice existingStored = slice("mining");
+        List<Slice> active = new ArrayList<>(wheel().slices());
+        active.add(questing);
+        SliceInventory original = new SliceInventory(new ActiveWheel(active),
+            List.of(existingStored), SatchelTier.BASE, unlocks(), history());
+        SliceInventory stored = original.proposeStorage(questing.id());
+        assertEquals(active.subList(0, 5), stored.activeWheel().slices());
+        assertEquals(List.of(existingStored, questing), stored.stored());
+        assertSame(questing, stored.stored().get(1));
+        SliceInventory returned = stored.proposeReactivation(questing.id());
+        assertEquals(active, returned.activeWheel().slices());
+        assertSame(questing, returned.activeWheel().slices().get(5));
+        assertEquals(Enhancement.FOURTH, questing.enhancement());
+        assertEquals(12, questing.weightUnits());
+        assertEquals(List.of(existingStored), returned.stored());
+        assertEquals(original.acquisitionHistory(), returned.acquisitionHistory());
+        assertEquals(original.unlockedActivities(), returned.unlockedActivities());
+        assertEquals(original.satchelTier(), returned.satchelTier());
+        assertEquals(8, returned.classifyNewPurchase("questing").duplicateOrdinal());
+        assertEquals(active, original.activeWheel().slices());
+        assertEquals(List.of(existingStored), original.stored());
+        assertThrows(IllegalArgumentException.class, () -> stored.proposeStorage(questing.id()));
+        assertThrows(IllegalArgumentException.class, () -> returned.proposeReactivation(questing.id()));
+    }
+
+    @Test public void movementRejectsCapacitySpecialWrongLocationAndInvalidFinalWheel()
+    {
+        List<Slice> active = new ArrayList<>(wheel().slices());
+        Slice extra = slice("questing");
+        Slice taint = Slice.special(UUID.randomUUID(), Kind.TAINT, 4);
+        Slice sacrifice = Slice.special(UUID.randomUUID(), Kind.SACRIFICE, 4);
+        active.addAll(List.of(extra, taint, sacrifice));
+        List<Slice> storage = List.of(slice("mining"), slice("fishing"), slice("questing"));
+        SliceInventory full = new SliceInventory(new ActiveWheel(active), storage,
+            SatchelTier.BASE, unlocks(), history());
+        for (UUID id : List.of(extra.id(), taint.id(), sacrifice.id(), storage.get(0).id(), UUID.randomUUID()))
+        { assertThrows(IllegalArgumentException.class, () -> full.proposeStorage(id)); }
+        assertThrows(IllegalArgumentException.class, () -> full.proposeReactivation(extra.id()));
+        assertThrows(IllegalArgumentException.class, () -> full.proposeReactivation(UUID.randomUUID()));
+        assertThrows(NullPointerException.class, () -> full.proposeStorage(null));
+        assertThrows(NullPointerException.class, () -> full.proposeReactivation(null));
+        assertEquals(active, full.activeWheel().slices());
+        assertEquals(storage, full.stored());
+        // Special storage remains forbidden even when there is room.
+        SliceInventory room = new SliceInventory(new ActiveWheel(active), List.of(),
+            SatchelTier.BASE, unlocks(), history());
+        assertThrows(IllegalArgumentException.class, () -> room.proposeStorage(taint.id()));
+        assertThrows(IllegalArgumentException.class, () -> room.proposeStorage(sacrifice.id()));
+        SliceInventory minimum = new SliceInventory(wheel(), List.of(), SatchelTier.BASE, unlocks(), history());
+        assertThrows(IllegalArgumentException.class,
+            () -> minimum.proposeStorage(minimum.activeWheel().slices().get(0).id()));
+        List<Slice> six = new ArrayList<>(wheel().slices());
+        six.add(slice("mining"));
+        SliceInventory diversity = new SliceInventory(new ActiveWheel(six), List.of(),
+            SatchelTier.BASE, unlocks(), history());
+        assertThrows(IllegalArgumentException.class, () -> diversity.proposeStorage(six.get(2).id()));
+        while (active.size() < 24) { active.add(slice("mining")); }
+        SliceInventory fullWheel = new SliceInventory(new ActiveWheel(active), storage,
+            SatchelTier.BASE, unlocks(), history());
+        assertThrows(IllegalArgumentException.class,
+            () -> fullWheel.proposeReactivation(storage.get(0).id()));
+        assertEquals(24, fullWheel.activeWheel().slices().size());
+        assertEquals(storage, fullWheel.stored());
+    }
+
     @Test public void destructionPreservesSurvivorsUnlocksAndLifetimePricing()
     {
         Slice extra = slice("mining");

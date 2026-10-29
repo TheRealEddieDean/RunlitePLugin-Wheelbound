@@ -8,7 +8,7 @@ import java.util.Set;
 import java.util.UUID;
 
 /**
- * Immutable ownership snapshot and proposed free destruction. No purchases, paid movement or grants.
+ * Immutable ownership snapshot and proposed edits. No authorized purchases, paid movement or grants.
  * Catalog admission and acquisition evidence are responsibilities of the restoring caller.
  */
 public final class SliceInventory
@@ -113,6 +113,49 @@ public final class SliceInventory
     public SatchelTier satchelTier() { return satchelTier; }
     public Set<String> unlockedActivities() { return unlockedActivities; }
     public Map<String, AcquisitionHistory> acquisitionHistory() { return acquisitionHistory; }
+
+    /**
+     * Propose storing an active ordinary instance (including Questing), preserving its identity.
+     * This is not a free edit or payment authorization. The aggregate caller must enforce the
+     * legal edit boundary, identity/revision and reviewed FP quote, then persist the debit,
+     * complete inventory and replay receipt atomically before publishing success.
+     */
+    public SliceInventory proposeStorage(UUID activeId)
+    {
+        Objects.requireNonNull(activeId, "activeId");
+        java.util.ArrayList<ActiveWheel.Slice> active = new java.util.ArrayList<>(activeWheel.slices());
+        ActiveWheel.Slice selected = removeInstance(active, activeId);
+        if (selected.kind() != ActiveWheel.Kind.ORDINARY)
+        { throw new IllegalArgumentException("Special slices cannot enter Satchel"); }
+        java.util.ArrayList<ActiveWheel.Slice> storage = new java.util.ArrayList<>(stored);
+        storage.add(selected);
+        return new SliceInventory(new ActiveWheel(active), storage, satchelTier,
+            unlockedActivities, acquisitionHistory);
+    }
+
+    /**
+     * Propose returning a stored instance to the end of the active wheel, without acquisition.
+     * Uses the same paid-command requirements as proposeStorage; no price or debit is supplied here.
+     */
+    public SliceInventory proposeReactivation(UUID storedId)
+    {
+        Objects.requireNonNull(storedId, "storedId");
+        java.util.ArrayList<ActiveWheel.Slice> storage = new java.util.ArrayList<>(stored);
+        ActiveWheel.Slice selected = removeInstance(storage, storedId);
+        java.util.ArrayList<ActiveWheel.Slice> active = new java.util.ArrayList<>(activeWheel.slices());
+        active.add(selected);
+        return new SliceInventory(new ActiveWheel(active), storage, satchelTier,
+            unlockedActivities, acquisitionHistory);
+    }
+
+    private static ActiveWheel.Slice removeInstance(List<ActiveWheel.Slice> slices, UUID id)
+    {
+        for (int i = 0; i < slices.size(); i++)
+        {
+            if (slices.get(i).id().equals(id)) { return slices.remove(i); }
+        }
+        throw new IllegalArgumentException("Slice not in requested location");
+    }
 
     /**
      * Propose permanent, no-refund destruction of explicitly selected owned ordinary instances.

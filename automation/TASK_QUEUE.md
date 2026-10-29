@@ -1,3 +1,42 @@
+## Current local continuation - Satchel movement proposals, 2026-10-29
+
+IDLE after bounded WB-WHL-03/11 gameplay increment (S). Reconciled production domain,
+persistence, focused tests and recorded I01a/b/c merge evidence. No Git operations or
+remote verification. FND-01 remains DONE; FND-10/12 and other existing PARTIAL rows
+remain partial. TREE-02, WHL-02/03/05/11 and ECON-01/08 remain PARTIAL_UNVERIFIED.
+FND-11 and paid WHL-04/06 remain TODO; evidence/decision BLOCKED rows stay blocked.
+Schema 4 already persists optional FP snapshots; RunReceipt still lacks typed debits.
+This supersedes older claims that movement proposals do not exist. I01d not selected.
+
+SliceInventory.proposeStorage/proposeReactivation now produce validated immutable
+same-instance movement proposals. Ordinary Questing may enter normal capacity-limited
+storage and return with UUID, enhancement, weight, unlocks and lifetime history intact.
+Wrong-location/unknown IDs, special storage, full Satchel/wheel and invalid final five
+ordinary/three activity configurations fail without changing the original inventory.
+Survivor order is preserved; destination appends the moved instance. Authority: WB-D106,
+118, 121 and WHEELS/STATE_CONTRACT. No new gameplay price or unresolved policy adopted.
+These proposals do not authorize free movement: a future aggregate command must enforce
+identity, revision, legal edit boundary, reviewed quote and atomic debit/full-state/receipt
+persistence before success. No durable movement, purchase, full-wheel replacement,
+forced-special displacement or live plugin/UI wiring claimed. Master Wheel source
+unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Two focused JUnit methods added for Questing roundtrip identity/history preservation,
+wrong-location/null/unknown IDs, special restrictions, capacities, count/diversity and
+immutable failures. javac --release 11 compiled all production domain sources. A local
+dependency-free executable smoke passed for roundtrip and rejection paths. Gradle
+SliceInventoryTest/ActiveWheelTest/WheelboundBehaviorTest attempt failed before compilation:
+missing Gradle 8.10 distribution download denied (SocketException). No JUnit/CI or legacy
+regression pass claimed. Supervisor must execute those suites.
+
+Next required bounded dependency: typed debit receipts in the unified revision journal,
+with explicit schema compatibility, mixed-operation restoration/validation and command-ID
+collision rejection; then atomic debit plus complete product mutation and failed-write,
+lost-acknowledgement/restart tests. Preserve optional legacy FP absence. Durable inventory
+serialization/commands are also unfinished. Reviewed quote payloads remain required.
+No external paths, credentials, secrets, workflows or Git accessed. Supervisor handles
+commits, PRs, CI and merges.
+
 ## Current local continuation - ordinary destruction proposals, 2026-10-29
 
 IDLE after bounded WB-WHL-03/11 gameplay increment (S). Current user instruction
