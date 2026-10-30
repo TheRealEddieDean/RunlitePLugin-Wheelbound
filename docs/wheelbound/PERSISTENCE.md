@@ -181,3 +181,16 @@ absence or a later paused head. This is preparation only: generic store writes s
 reject activation mutations. The future atomic command must perform preparation under
 its write lock, admit the session and publish success only after persistence. Java 11
 executable fixtures pass; Gradle/JUnit and file durability remain unverified here.
+
+## Local atomic Grand activation command - 2026-10-30
+
+AtomicRunStore.activateGrandFate derives the next aggregate under the run write lock
+using GrandActivationAdmission.prepare, then commits through the same forced pending,
+backup and atomic replacement path as generic writes. Exact replay preserves the
+current aggregate without writing; expectedRevision must match the current saved head.
+Generic writes still reject activation/history/current-attempt mutations. Failed
+persistence requires reopening and reconciling; pending files remain fail-closed.
+This supersedes earlier atomic-command UNSTARTED notes. IMPLEMENTED_UNVERIFIED:
+Gradle/JUnit/Gson store validation is blocked before compilation by inherited wrapper
+cache lock access. Trusted session/source admission and live gameplay remain unwired;
+no spin/FP charge or evidence acceptance is introduced.

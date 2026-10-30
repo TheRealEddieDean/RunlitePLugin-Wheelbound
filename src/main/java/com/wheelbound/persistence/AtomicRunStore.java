@@ -116,6 +116,29 @@ public final class AtomicRunStore
         });
     }
 
+    /**
+     * Commit a frozen activation against the locked saved head. Derives the entire
+     * transition internally; exact replay preserves later state without writing.
+     * Trusted client session/source admission remains a caller prerequisite before
+     * exposing gameplay. Reopen and reconcile after persistence failure.
+     */
+    public com.wheelbound.domain.GrandActivationReceipt activateGrandFate(
+        com.wheelbound.domain.GrandActivationReceipt request, long expectedRevision) throws IOException
+    {
+        Objects.requireNonNull(request, "request");
+        if (!identity.equals(request.identity()))
+        { throw new IllegalArgumentException("Foreign run context"); }
+        return locked(() -> {
+            if (uncertain) { throw new IOException("Reopen and reconcile after failed persistence"); }
+            RunDocument current = read().orElseThrow(() -> new IOException("Saved run is unavailable"));
+            final RunDocument next;
+            try { next = GrandActivationAdmission.prepare(current, request, identity, expectedRevision); }
+            catch (IllegalArgumentException ex) { throw new IOException("Invalid Grand activation transition", ex); }
+            if (next != current) { persist(codec.encode(next), true); }
+            return request;
+        });
+    }
+
     private Optional<RunDocument> read() throws IOException
     {
         if (Files.exists(pendingPath())) { throw new IOException("Interrupted write retained; reconciliation required"); }
@@ -197,28 +220,34 @@ public final class AtomicRunStore
             }
             try { PurchaseTransition.validate(current.orElse(null), next); }
             catch (IllegalArgumentException ex) { throw new IOException("Invalid purchase transition", ex); }
-            try
-            {
-                forceFile(pendingPath(), bytes);
-                hook.at(Boundary.TEMP_FORCED);
-                if (current.isPresent())
-                {
-                    Path backupPending = root.resolve(name + ".previous-pending");
-                    forceFile(backupPending, Files.readAllBytes(snapshotPath()));
-                    Files.move(backupPending, previousPath(), StandardCopyOption.ATOMIC_MOVE, StandardCopyOption.REPLACE_EXISTING);
-                }
-                directoryForcer.force(root);
-                Files.move(pendingPath(), snapshotPath(), StandardCopyOption.ATOMIC_MOVE, StandardCopyOption.REPLACE_EXISTING);
-                hook.at(Boundary.REPLACED);
-                directoryForcer.force(root);
-                return null;
-            }
-            catch (IOException | RuntimeException ex)
-            {
-                uncertain = true;
-                throw ex;
-            }
+            persist(bytes, current.isPresent());
+            return null;
         });
+    }
+
+    /** Physical commit; caller holds the lock and has validated the transition. */
+    private void persist(byte[] bytes, boolean hasCurrent) throws IOException
+    {
+        try
+        {
+            forceFile(pendingPath(), bytes);
+            hook.at(Boundary.TEMP_FORCED);
+            if (hasCurrent)
+            {
+                Path backupPending = root.resolve(name + ".previous-pending");
+                forceFile(backupPending, Files.readAllBytes(snapshotPath()));
+                Files.move(backupPending, previousPath(), StandardCopyOption.ATOMIC_MOVE, StandardCopyOption.REPLACE_EXISTING);
+            }
+            directoryForcer.force(root);
+            Files.move(pendingPath(), snapshotPath(), StandardCopyOption.ATOMIC_MOVE, StandardCopyOption.REPLACE_EXISTING);
+            hook.at(Boundary.REPLACED);
+            directoryForcer.force(root);
+        }
+        catch (IOException | RuntimeException ex)
+        {
+            uncertain = true;
+            throw ex;
+        }
     }
 
     private void forceFile(Path path, byte[] bytes) throws IOException
