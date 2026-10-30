@@ -43,6 +43,47 @@ public final class GrandFateAttempt
     public GrandFateChecklist checklist() { return checklist; }
     public GrandFateChecklist.Objective objective() { return objective; }
 
+    /** A structural success proposal, never proof of verified or durable completion. */
+    public static final class Success
+    {
+        private final RunLifecycle lifecycle;
+        private final GrandFateProgress progress;
+
+        private Success(RunLifecycle lifecycle, GrandFateProgress progress)
+        {
+            this.lifecycle = lifecycle;
+            this.progress = progress;
+        }
+
+        public RunLifecycle lifecycle() { return lifecycle; }
+        public GrandFateProgress progress() { return progress; }
+    }
+
+    /**
+     * WB-D104: retain completed components and end the selected attempt after success.
+     * The caller must first authenticate evidence, validate the live session and settle
+     * off-task audit, then atomically persist the receipt and complete aggregate before
+     * publication. References alone grant no authority. This unwired proposal performs
+     * none of those checks and awards neither a run win nor rewards. Even the final
+     * component leaves the run ACTIVE pending a separately authorized completion command.
+     * Exact command replay belongs to that durable boundary, not this transition.
+     */
+    public Success proposeSuccess(RunLifecycle current, GrandFateProgress progress,
+        GrandFateProgress.Evidence reference, RunIdentity expectedIdentity, long expectedRevision)
+    {
+        checkCurrent(current, expectedIdentity, expectedRevision);
+        Objects.requireNonNull(progress, "progress");
+        Objects.requireNonNull(reference, "reference");
+        if (!checklist.seal().equals(progress.checklist().seal())
+            || !checklist.completed().equals(progress.checklist().completed())
+            || reference.objective() != objective)
+        { throw new IllegalArgumentException("Evidence must extend the selected attempt checklist"); }
+        GrandFateProgress extended = progress.appendReference(reference, current.revision());
+        return new Success(new RunLifecycle(current.identity(),
+            Math.addExact(current.revision(), 1), RunLifecycle.State.ACTIVE,
+            RunLifecycle.Obligation.NONE), extended);
+    }
+
     /**
      * Failure/exit proposal only: retains every checklist component and returns to
      * no active Fate. Any off-task audit/mandatory settlement must be handled by the
@@ -55,6 +96,13 @@ public final class GrandFateAttempt
     public RunLifecycle endUnsuccessful(RunLifecycle current,
         RunIdentity expectedIdentity, long expectedRevision)
     {
+        checkCurrent(current, expectedIdentity, expectedRevision);
+        return new RunLifecycle(lifecycle.identity(), Math.addExact(lifecycle.revision(), 1),
+            RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.NONE);
+    }
+
+    private void checkCurrent(RunLifecycle current, RunIdentity expectedIdentity, long expectedRevision)
+    {
         Objects.requireNonNull(current, "current");
         if (!lifecycle.identity().equals(expectedIdentity) || lifecycle.revision() != expectedRevision
             || !current.identity().equals(lifecycle.identity())
@@ -62,7 +110,5 @@ public final class GrandFateAttempt
             || current.state() != RunLifecycle.State.ACTIVE
             || current.obligation() != RunLifecycle.Obligation.ACTIVE_OBJECTIVE)
         { throw new IllegalArgumentException("Stale or foreign attempt context"); }
-        return new RunLifecycle(lifecycle.identity(), Math.addExact(lifecycle.revision(), 1),
-            RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.NONE);
     }
 }
