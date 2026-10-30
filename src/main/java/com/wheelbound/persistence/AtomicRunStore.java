@@ -126,7 +126,7 @@ public final class AtomicRunStore
         com.wheelbound.domain.GrandActivationReceipt request, long expectedRevision) throws IOException
     {
         Objects.requireNonNull(request, "request");
-        if (!identity.equals(request.identity()))
+        if (!identity.equals(request.attempt().lifecycle().identity()))
         { throw new IllegalArgumentException("Foreign run context"); }
         return locked(() -> {
             if (uncertain) { throw new IOException("Reopen and reconcile after failed persistence"); }
