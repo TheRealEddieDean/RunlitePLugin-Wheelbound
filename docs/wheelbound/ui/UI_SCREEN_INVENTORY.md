@@ -36,4 +36,3 @@ Preview boards provide composition, not working controls. Their component breakd
 First useful connected milestone: WB-UI-10/12/13/14/17 plus existing EXT-IDENTITY prerequisites: an actual saved-run status sidebar with FP/debt/lifecycle and sealed Grand checklist. It is read-only until command/evidence services exist; do not claim an active Fate tracker from just lifecycle data. WB-UI-11/15 then opens the same data in one Hub. Obtain Category B layout approval for 17/31 before final integration. In parallel, 18/19/20/21/22/23 establishes the actual-data Tree renderer; 28 waits for atomic progression purchases.
 
 No general reset/respec, unapproved history retention, new reward family or emergency retirement flow is introduced. A56 stays deferred. Genuine remaining gameplay ambiguity is documented as a service/content hold, not resolved by choosing a convenient UI.
-

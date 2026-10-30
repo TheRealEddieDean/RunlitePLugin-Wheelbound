@@ -676,4 +676,3 @@ Category A permits autonomous merging of that bounded task after required checks
 - Testing requirements: Actual client screenshots/manual routes, backend evidence gates, no misleading stubs; no Plugin Hub submission. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
 - Visual review: **Category B; review artifact and exact revision approval required before final visual merge**.
 - Autonomous merge permitted: **No for final visuals; isolated nonvisual scaffolding may merge under Category A with final styling disabled**. Never infer approval from this TODO record.
-
