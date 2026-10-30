@@ -62,6 +62,37 @@ public final class AtomicRunStore
     { return locked(this::read); }
 
     /**
+     * Recover an exact run-start seal after restart or lost acknowledgement, without
+     * sampling or writing. Absence is not permission to create a run or retrofit a
+     * legacy save. Eligibility and the initial atomic creation remain caller concerns.
+     * Pending/corrupt saves fail closed through the normal locked read.
+     */
+    public Optional<com.wheelbound.domain.SealedGrandFate> committedGrandFate(
+        com.wheelbound.domain.SealedGrandFate request) throws IOException
+    {
+        Objects.requireNonNull(request, "request");
+        if (!identity.equals(request.identity()))
+        { throw new IllegalArgumentException("Foreign run context"); }
+        return locked(() -> {
+            Optional<RunDocument> current = read();
+            if (!current.isPresent()) { return Optional.empty(); }
+            Optional<com.wheelbound.domain.SealedGrandFate> sealed = current.get().grandFate();
+            if (sealed.isPresent())
+            {
+                if (!sealed.get().equals(request))
+                { throw new IOException("Run already has a different Grand Fate sealing request"); }
+                return sealed;
+            }
+            for (RunReceipt receipt : current.get().receipts())
+            {
+                if (request.commandId().equals(receipt.commandId()))
+                { throw new IOException("Command ID belongs to a different operation"); }
+            }
+            return Optional.empty();
+        });
+    }
+
+    /**
      * Read the original persisted purchase response after a restart or lost acknowledgement.
      * Pending/corrupt snapshots still require reconciliation. A command belonging to another
      * operation is a collision, not an absent purchase. This query never executes a purchase;

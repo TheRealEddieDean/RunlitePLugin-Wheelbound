@@ -56,6 +56,46 @@ public class GrandFatePersistenceTest
         }
     }
 
+    @Test public void exactSealRecoveryRejectsChangedRequestsWithoutWriting() throws Exception
+    {
+        AtomicRunStore store = new AtomicRunStore(folder.getRoot().toPath(), codec, id);
+        assertFalse(store.committedGrandFate(sealed(0)).isPresent());
+        store.write(document(0, Optional.of(sealed(0))), -1);
+        byte[] original = Files.readAllBytes(store.snapshotPath());
+        AtomicRunStore reopened = new AtomicRunStore(folder.getRoot().toPath(), codec, id);
+        assertEquals(sealed(0), reopened.committedGrandFate(sealed(0)).get());
+        assertThrows(IOException.class, () -> reopened.committedGrandFate(sealed(1)));
+        assertThrows(IOException.class, () -> reopened.committedGrandFate(
+            new SealedGrandFate(id, UUID.randomUUID(), GrandFatePool.atTicket(0))));
+        assertThrows(IllegalArgumentException.class, () -> reopened.committedGrandFate(
+            new SealedGrandFate(new RunIdentity("other", id.runId()), command, GrandFatePool.atTicket(0))));
+        assertArrayEquals(original, Files.readAllBytes(store.snapshotPath()));
+        assertFalse(Files.exists(store.pendingPath()));
+    }
+
+    @Test public void sealRecoveryRetainsLegacyAbsenceAndRejectsOperationCollision() throws Exception
+    {
+        AtomicRunStore store = new AtomicRunStore(folder.getRoot().toPath(), codec, id);
+        store.write(document(0, Optional.empty()), -1);
+        assertFalse(store.committedGrandFate(sealed(0)).isPresent());
+        new LifecycleCommands(store).execute(id, command, 0, RunReceipt.Operation.PAUSE);
+        assertThrows(IOException.class, () -> store.committedGrandFate(sealed(0)));
+        assertFalse(store.load().get().grandFate().isPresent());
+    }
+
+    @Test public void sealRecoveryFailsClosedOnPendingAndCorruptSnapshots() throws Exception
+    {
+        AtomicRunStore store = new AtomicRunStore(folder.getRoot().toPath(), codec, id);
+        store.write(document(0, Optional.of(sealed(0))), -1);
+        Files.write(store.pendingPath(), new byte[] {1});
+        assertThrows(IOException.class, () -> store.committedGrandFate(sealed(0)));
+        Files.delete(store.pendingPath());
+        byte[] corrupt = new byte[] {1, 2, 3};
+        Files.write(store.snapshotPath(), corrupt);
+        assertThrows(IOException.class, () -> store.committedGrandFate(sealed(0)));
+        assertArrayEquals(corrupt, Files.readAllBytes(store.snapshotPath()));
+    }
+
     @Test public void schemasOneThroughSevenNeverInferDestiny() throws Exception
     {
         for (int schema = 1; schema <= 7; schema++)
