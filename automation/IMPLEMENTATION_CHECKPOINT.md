@@ -1,3 +1,41 @@
+## Current local continuation - Grand Fate checklist model, 2026-10-29
+
+IDLE after bounded WB-GFD-05 objective-model increment (S). Supersedes older next-task
+prose. Reconciled inspected pool/seal, RunDocument, stage/recovery store, lifecycle and
+focused tests against the backlog. No Git/remote verification; historical merge claims
+remain unverified. FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/06 and previously audited
+wheel/economy/tree/transaction rows retain PARTIAL_UNVERIFIED. GFD-05 now
+PARTIAL_UNVERIFIED; GFD-03/04/07 TODO. Existing decision/client/price BLOCKED rows held.
+I01d not selected. No complete gameplay system claimed.
+
+GrandFateChecklist binds immutable required/completed/unfinished objective sets to the
+original SealedGrandFate. WB-D104 defines four independent Awakened boss objectives;
+other destinies have one objective each. Radiant remains full-set construction, with no
+invented contract breakdown; WB-D117 Master is hilt5 only, with no CA-point/history gate.
+Restore accepts already validated progress only, rejects foreign/null components and
+copies all input. It does not detect evidence, mutate a run, reserve an attempt or award
+a win. No production observation path calls it. No aggregate/codec changes; persisted
+checklist evidence and receipts remain unfinished. Master Wheel unchanged; incomplete
+gameplay remains unwired/default-disabled.
+
+Validation: javac --release 11 compiled all current domain sources and four executable
+fixtures from source. GrandFateChecklistChecks, GrandFateActivationChecks,
+GrandFatePoolChecks and SealedGrandFateChecks passed. Checklist checks cover every goal,
+each Awakened progress prefix, complete/unfinished partitions, foreign/null rejection,
+input/output immutability and exact hilt5/full-Radiant objective shape. JUnit adapter added.
+Gradle GrandFateChecklistTest, GrandFateActivationTest, GrandFatePersistenceTest and
+WheelboundBehaviorTest failed before compilation: missing Gradle 8.10; distribution
+download denied (SocketException). No JUnit/persistence/codec/legacy pass claimed.
+
+Next bounded gameplay unit: persist identity-bound checklist progress and validated
+evidence provenance with explicit schema migration and preservation checks before durable
+attempt activation. Legacy absence must not infer verified progress. Define atomic
+attempt/receipt boundaries under WB-D104/117; no Master spin debit. Actual detectors and
+item mappings remain client-validation-gated; no fabricated verification sources.
+GFD-02 stage-to-activation/original creation replay remains unfinished; WB-D092 fresh-account
+predicate remains TECH_TBD. Run focused JUnit/persistence and legacy suites when dependencies
+are available. Local edits only; supervisor handles commits/PRs/CI/merges. No external
+paths, credentials, secrets, workflows or Git operations accessed.
 ## Current local continuation - Grand obligation gate, 2026-10-29
 
 IDLE after bounded WB-GFD-06 lifecycle prerequisite (XS/S). Supersedes older next-task
