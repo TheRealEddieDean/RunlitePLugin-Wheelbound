@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 public class MasterSelectionProvenanceJsonTest
 {
-    private MasterSelectionProvenance fixture(ActiveWheel.Kind special, int emptyCount, boolean resolved)
+    static MasterSelectionProvenance fixture(ActiveWheel.Kind special, int emptyCount, boolean resolved)
     {
         List<ActiveWheel.Slice> slices = new ArrayList<>();
         Map<UUID, MasterSelectionReadiness.Classification> classifications = new HashMap<>();

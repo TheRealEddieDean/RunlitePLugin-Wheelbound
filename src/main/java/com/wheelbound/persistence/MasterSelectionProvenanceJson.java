@@ -16,7 +16,7 @@ import java.util.UUID;
 /**
  * Standalone version-1 frozen selection payload. Restores through domain validation;
  * it does not authenticate stream continuity/evidence or admit a durable selection.
- * Not yet integrated into RunCodec: legacy absence remains absence.
+ * Schema 14 embeds this payload; legacy absence remains absence.
  */
 final class MasterSelectionProvenanceJson
 {

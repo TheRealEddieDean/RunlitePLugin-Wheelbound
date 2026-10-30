@@ -24,7 +24,7 @@ import java.util.UUID;
 /** Inject RuneLite's Gson. Never deserialize directly into domain objects bypassing their validation. */
 public final class RunCodec
 {
-    public static final int SCHEMA = 13;
+    public static final int SCHEMA = 14;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -128,6 +128,9 @@ public final class RunCodec
                 document.grandProgress().isPresent() ? document.grandProgress().get().checklist()
                     : com.wheelbound.domain.GrandFateChecklist.initial(document.grandFate().get()))
             : com.google.gson.JsonNull.INSTANCE);
+        payload.add("pendingMasterSelection", document.pendingMasterSelection().isPresent()
+            ? MasterSelectionProvenanceJson.encode(document.pendingMasterSelection().get())
+            : com.google.gson.JsonNull.INSTANCE);
         String text = gson.toJson(payload);
         JsonObject envelope = new JsonObject();
         envelope.addProperty("schemaVersion", SCHEMA);
@@ -169,7 +172,9 @@ public final class RunCodec
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal")
                     : schema == 11
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations")
-                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt"));
+                    : schema < 14
+                    ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt")
+                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection"));
             RunIdentity identity = new RunIdentity(string(payload, "accountKey"), UUID.fromString(string(payload, "runId")));
             if (!identity.equals(expected)) { throw new IOException("Foreign account/profile/run snapshot"); }
             RunLifecycle lifecycle = new RunLifecycle(identity, integer(payload, "revision"),
@@ -288,7 +293,10 @@ public final class RunCodec
             }
             return new RunDocument(lifecycle, string(payload, "catalogVersion"), receipts, fatePoints,
                 schema >= 6 && !payload.get("inventory").isJsonNull()
-                    ? Optional.of(InventoryJson.decode(payload.getAsJsonObject("inventory"))) : Optional.empty(), grandFate, progress, journal, activations, currentAttempt);
+                    ? Optional.of(InventoryJson.decode(payload.getAsJsonObject("inventory"))) : Optional.empty(), grandFate, progress, journal, activations, currentAttempt,
+                schema >= 14 && !payload.get("pendingMasterSelection").isJsonNull()
+                    ? Optional.of(MasterSelectionProvenanceJson.decode(payload.getAsJsonObject("pendingMasterSelection")))
+                    : Optional.empty());
         }
         catch (RuntimeException ex) { throw new IOException("Invalid snapshot; preserve original", ex); }
     }

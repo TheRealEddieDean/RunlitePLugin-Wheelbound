@@ -1,3 +1,53 @@
+## Current local continuation - schema-14 unresolved Master selection, 2026-10-30
+
+IDLE after bounded WB-WHL-08/09/10 aggregate representation prerequisite (S).
+Reconciled provenance/readiness/standalone codec, RunDocument/RunCodec, generic store
+and Grand activation admission against WB-D138/139. Existing DRAW requires a valid
+OFFERS_COMMITTED outcome; it was not reused for unresolved empty prefixes. No I01d
+work or Git/merged-state verification. Current user restrictions supersede historical
+publication and external-path instructions.
+
+RunDocument now retains optional unresolved MasterSelectionProvenance. Existing
+constructors preserve absence. Schema 14 embeds the version-1 payload with explicit
+null; schemas 1-13 decode to absence. Resolved ordinary/special landings, terminal or
+obligated heads, concurrent Grand attempts, catalog disagreement and transaction-ID
+collisions with retained operation/seal/activation/evidence history fail closed.
+Frozen wheel/evidence/stream declarations are retained, not authenticated or refreshed.
+Generic store writes reject introduction, preservation or removal of pending selection
+before creating pending files: operation-specific commands (including pending-aware
+Pause/Resume) remain required. New Grand activation cannot discard pending selection;
+historical activation replay retains the supplied aggregate unchanged. Existing Master
+Wheel source unchanged; incomplete gameplay stays unwired/default-disabled.
+
+Reconciliation: WB-WHL-08 PARTIAL; aggregate/codec/store-guard subunit
+IMPLEMENTED_UNVERIFIED overall, structural aggregate/admission compiled and verified.
+WB-WHL-09 TODO for actual automatic retries; WB-WHL-10 PARTIAL_UNVERIFIED.
+FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED;
+GFD-03/04 TODO; REL-02 PARTIAL. Existing decision/evidence BLOCKED rows stand.
+Selection command admission, reviewed eligibility, trusted source/session, sampling,
+once-only spin allocation, suspension/revalidation, evidence acceptance and settlement
+remain unfinished. No durability or playable gameplay completion claim.
+
+Validation: Java 11 compiled all domain sources plus RunDocument, RunReceipt,
+GrandActivationAdmission and dependency-free fixtures into build/continuation-pending-selection.
+PendingMasterSelectionChecks, readiness, provenance and Grand activation preparation
+fixtures PASSED. New JUnit PendingMasterSelectionTest covers active/paused zero/long
+prefix text round-trips, explicit null, schema-13 migration, schema-14 missing-field
+rejection, invalid contexts and generic store introduction/discard/preservation refusal.
+Existing legacy-schema fixture builders now strip the schema-14 field appropriately.
+Focused Gradle pending-selection/provenance-codec/RunCodec/activation-envelope/legacy
+attempt failed before compilation: inherited wrapper-cache lock Access is denied.
+Gson codec, store and JUnit/legacy regressions NOT_RUN. GRADLE_USER_HOME unchanged;
+no cache workaround or external-path inspection.
+
+Next: execute PendingMasterSelectionTest, MasterSelectionProvenanceJsonTest, RunCodecTest,
+GrandActivationEnvelopeTest and affected migration/store/legacy regressions when inherited
+Gradle dependencies are accessible. Then implement a bounded operation-specific pending
+selection command under the store lock, with revision/identity/transaction collision
+checks and exact replay preservation, before enabling automatic retry or pending-aware
+lifecycle commands. Do not invent RNG continuity, changed-snapshot reconciliation or
+allocation timing. Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - versioned Master selection payload, 2026-10-30
 
 IDLE after bounded WB-WHL-08/09/10 payload prerequisite (S). Reconciled current

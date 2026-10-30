@@ -189,6 +189,11 @@ public final class AtomicRunStore
                 { throw new IOException("Run already exists with a different initial request or later state"); }
                 return null;
             }
+            // Block introduction and loss through generic writes until a dedicated
+            // command can validate retained provenance under this lock.
+            if (next.pendingMasterSelection().isPresent()
+                || current.map(d -> d.pendingMasterSelection().isPresent()).orElse(false))
+            { throw new IOException("Pending Master selection requires operation-specific command"); }
             long actual = current.map(d -> d.lifecycle().revision()).orElse(-1L);
             if (actual != expectedRevision) { throw new IOException("Stale stored revision"); }
             if (current.isPresent())

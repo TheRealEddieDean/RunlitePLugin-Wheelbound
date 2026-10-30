@@ -37,6 +37,7 @@ public class GrandCurrentAttemptAggregateTest
     {
         JsonObject envelope = new JsonParser().parse(new String(bytes, StandardCharsets.UTF_8)).getAsJsonObject();
         JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
+        if (schema < 14) { payload.remove("pendingMasterSelection"); }
         edit.accept(payload);
         String text = gson.toJson(payload);
         envelope.addProperty("schemaVersion", schema);
