@@ -17,6 +17,7 @@ import java.util.UUID;
 /** Foundation snapshot and lifecycle/draw/payment journal, not the playable-mode aggregate. */
 public final class RunDocument
 {
+    private final com.wheelbound.domain.GrandFateProgress grandProgress;
     private final RunLifecycle lifecycle;
     private final String catalogVersion;
     private final List<RunReceipt> receipts;
@@ -44,8 +45,23 @@ public final class RunDocument
     public RunDocument(RunLifecycle lifecycle, String catalogVersion, List<RunReceipt> receipts,
         Optional<FatePointLedger> fatePoints, Optional<SliceInventory> inventory,
         Optional<com.wheelbound.domain.SealedGrandFate> grandFate)
+    { this(lifecycle, catalogVersion, receipts, fatePoints, inventory, grandFate, Optional.empty()); }
+
+    /** Structural references only; no completion authorization or trusted evidence resolution. */
+    public RunDocument(RunLifecycle lifecycle, String catalogVersion, List<RunReceipt> receipts,
+        Optional<FatePointLedger> fatePoints, Optional<SliceInventory> inventory,
+        Optional<com.wheelbound.domain.SealedGrandFate> grandFate,
+        Optional<com.wheelbound.domain.GrandFateProgress> grandProgress)
     {
+        Objects.requireNonNull(lifecycle, "lifecycle");
         this.grandFate = Objects.requireNonNull(grandFate, "grandFate").orElse(null);
+        com.wheelbound.domain.GrandFateProgress supplied =
+            Objects.requireNonNull(grandProgress, "grandProgress").orElse(null);
+        if (supplied != null && (this.grandFate == null
+            || !this.grandFate.equals(supplied.checklist().seal())))
+        { throw new IllegalArgumentException("Progress requires its original Grand seal"); }
+        this.grandProgress = supplied == null ? null : new com.wheelbound.domain.GrandFateProgress(
+            this.grandFate, lifecycle.revision(), supplied.evidence().values());
         if (this.grandFate != null && !this.grandFate.identity().equals(lifecycle.identity()))
         { throw new IllegalArgumentException("Foreign Grand Fate identity"); }
         this.inventory = Objects.requireNonNull(inventory, "inventory").orElse(null);
@@ -65,6 +81,9 @@ public final class RunDocument
             { throw new IllegalArgumentException("Broken lifecycle receipt chain"); }
             previous = receipt;
         }
+        if (this.grandProgress != null && this.grandProgress.evidence().values().stream()
+            .anyMatch(reference -> commands.contains(reference.receiptId())))
+        { throw new IllegalArgumentException("Grand evidence collides with operation journal"); }
         validateDebits();
         validatePurchases();
         if (previous != null && (previous.afterRevision() != lifecycle.revision()
@@ -153,6 +172,9 @@ public final class RunDocument
     }
 
     public RunLifecycle lifecycle() { return lifecycle; }
+    /** Absent legacy references never imply completed objectives. */
+    public Optional<com.wheelbound.domain.GrandFateProgress> grandProgress()
+    { return Optional.ofNullable(grandProgress); }
     public String catalogVersion() { return catalogVersion; }
     public List<RunReceipt> receipts() { return receipts; }
     public Optional<FatePointLedger> fatePoints() { return Optional.ofNullable(fatePoints); }
