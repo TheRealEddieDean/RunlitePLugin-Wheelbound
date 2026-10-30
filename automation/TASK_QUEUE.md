@@ -1,3 +1,38 @@
+## Current local continuation - asynchronous Pause/Resume command, 2026-10-30
+
+IDLE after bounded lifecycle/Grand admission increment (S). Reconciled domain,
+schema-13/store, synchronous and asynchronous session implementations and tests.
+Activation preparation/store/session/async paths already exist; no duplicate work.
+FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED;
+GFD-03/04 TODO. REL-02 remains PARTIAL. Other audited partial/TODO and concrete
+BLOCKED rows stand. Merged state not verified (Git prohibited); no I01d work.
+
+AsyncRunSession.execute now queues only Pause/Resume, invalidates callback admission
+at submission, skips superseded queued commands, and refreshes the durable head
+through RunSession. Shared typed submission logic preserves Grand activation behavior.
+A started write can commit after disconnect but cannot overwrite a newer connection.
+Resume is not fresh-baseline or trusted-source admission. Authority WB-D002/114,
+STATE_CONTRACT; Grand rules WB-D089/104 with WB-D117 supersession remain intact.
+No client wiring, rewards, evidence acceptance, off-task settlement or gameplay enablement.
+Master Wheel source unchanged; incomplete gameplay stays disabled.
+
+Focused JUnit fixtures added for queued Pause, retained obligation, Resume, historical
+replay at a newer active head, superseded Pause, stale Resume failure, a real cross-thread
+blocked write/disconnect/new-connection race, and activation lost-ack/reconnect replay
+with unchanged snapshot bytes. Tests authored, NOT_RUN. Gradle focused async/session/
+GrandActivationStore/Master Wheel attempt failed before compilation: inherited wrapper
+cache lock access denied. No cache override or external-path inspection. New async code
+IMPLEMENTED_UNVERIFIED; no durability claim. Java 11 compilation of all domain sources
+plus RunDocument/RunReceipt/admission and GrandActivationPreparationChecks passed;
+preparation executable fixture passed. That check does not compile async/session/store.
+
+Next: execute AsyncRunSessionTest, RunSessionTest, GrandActivationStoreTest,
+AtomicRunStoreTest, schema-13/legacy codec and Master Wheel regressions when inherited
+dependencies are accessible. Add a blocked activation/new-connection cross-thread fixture;
+then reconcile trusted source/session and fresh-baseline prerequisites for the next
+bounded gameplay increment. Evidence acceptance/off-task settlement remain UNSTARTED.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - asynchronous Grand activation command, 2026-10-30
 
 IDLE after bounded WB-GFD-06/07 asynchronous command increment (S).
