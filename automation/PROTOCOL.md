@@ -1,3 +1,39 @@
+## Current local continuation - atomic Grand activation command, 2026-10-30
+
+IDLE after bounded WB-GFD-06/07 store command increment (S).
+Reconciled preparation, schema-13 envelopes, history/current-attempt validation and
+store guards against code/tests. Prior preparation prerequisites are implemented.
+AtomicRunStore.activateGrandFate is now IMPLEMENTED_UNVERIFIED, superseding the
+previous UNSTARTED record. FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07
+PARTIAL_UNVERIFIED; GFD-03/04 TODO. Other partial/TODO and evidence/decision BLOCKED
+statuses stand. No Git or independent merged-state verification; I01d not selected.
+
+The dedicated command derives the entire next snapshot through admission while
+holding the write lock, then shares the existing forced pending/backup/atomic-replace
+path with ordinary writes. No caller-supplied activation snapshot is admitted.
+Exact replay writes nothing; stale/occupied/colliding requests fail before pending
+creation. Failed persistence makes the instance uncertain; reopen/reconcile required.
+Generic activation/history/current-attempt mutation guards remain. No FP/spin charge,
+trusted session/source admission, evidence acceptance, off-task settlement or client
+wiring. Master Wheel unchanged; incomplete gameplay stays disabled. Authority
+WB-D089/104 with WB-D117 supersession and STATE_CONTRACT/PERSISTENCE.
+
+Java 11 compilation of all domain sources plus aggregate/admission and preparation
+executable fixture passed; preparation fixture passed. New JUnit store tests authored
+for commit/restart/exact replay, stale/occupied heads, negative FP retention, pending
+failure/original preservation, uncertain instance and lost acknowledgement recovery.
+Focused Gradle store/Master Wheel attempt failed before compilation: inherited
+wrapper-cache lock access denied. Store/JUnit/Gson/Master Wheel NOT_RUN; new store
+code not compiled by the dependency-free check. No verified durability claim.
+No cache override, external-path inspection, Git operations or workflow access.
+
+Next: execute GrandActivationStoreTest, AtomicRunStoreTest, schema-13/legacy codec
+and Master Wheel regressions when inherited dependencies are accessible; expand
+store fixtures across all goals/objectives and later paused/absent activity replay.
+Then select a bounded trusted-session/source admission increment after reconciling
+its existing lifecycle prerequisites. Evidence acceptance and off-task settlement
+remain UNSTARTED. Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - complete Grand activation snapshot preparation, 2026-10-30
 
 IDLE after bounded WB-GFD-06/07 aggregate preparation prerequisite (XS/S).
