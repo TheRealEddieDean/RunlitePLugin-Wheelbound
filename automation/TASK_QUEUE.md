@@ -1,3 +1,38 @@
+## Current local continuation - monotonic Grand progress extension, 2026-10-29
+
+IDLE after bounded WB-GFD-05 acceptance prerequisite (XS/S). Supersedes older next-task
+prose. Reconciled current progress/checklist/attempt code, schema-9/store guards and tests
+with backlog: FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED;
+GFD-03/04 TODO. Existing audited wheel/economy/tree partial and decision/client/price
+BLOCKED rows stand. Historical merged work not reverified; no Git operations. I01d not
+selected. No completed gameplay system claimed.
+
+GrandFateProgress.appendReference proposes an immutable monotonic extension: retains
+all prior references, rejects replacing completed objectives and reusing receipt IDs,
+binds the full original seal, validates retained references against the supplied current
+revision, and requires new evidence at exactly the next aggregate revision. Exact full
+reference replay returns the retained value, including at Long.MAX_VALUE; new extension
+at overflow rejects. Authority WB-D089/104 and WB-D117 supersession, STATE_CONTRACT.
+This validates structure only. It does not authenticate evidence, validate active session/
+attempt eligibility, atomically accept receipts, settle attempts or award completion.
+Existing store prohibition on progress mutation remains. No live caller added; incomplete
+gameplay remains disabled. Master Wheel source unchanged.
+
+Validation: Java 11 compiled all domain sources and Grand executable fixtures from source
+into build/continuation-grand-extension. All seven executable fixtures passed: extension, progress, attempt, checklist,
+activation, pool and seal. JUnit adapter authored. Focused Gradle progress/persistence/codec/legacy attempt
+failed before compilation: missing Gradle 8.10, wrapper download denied (SocketException).
+No JUnit, codec/store or Master Wheel regression pass claimed.
+
+Next: full trusted evidence receipt contract and atomic acceptance with identity/session/
+active-attempt validation, receipt collision protection and replay/restart/lost-ack tests;
+then durable attempt state/receipts. These commands remain UNSTARTED. Add command-copy
+progress-retention and populated corruption fixtures and execute schema/migration/store/
+legacy regressions when dependencies exist. Client detectors/item mappings and WB-D092
+fresh-account predicate remain gated. This prerequisite does not complete GFD-05 or
+permit wiring. Local edits only; supervisor handles Git/PR/CI/merges. No external paths,
+credentials, secrets or workflows accessed.
+
 ## Current local continuation - schema-9 Grand progress references, 2026-10-29
 
 IDLE after bounded WB-GFD-05 persistence increment (S). Supersedes older next-task prose.
