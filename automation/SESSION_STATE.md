@@ -1,3 +1,39 @@
+## Current local continuation - Grand evidence receipt payload, 2026-10-29
+
+IDLE after bounded WB-GFD-05/07 receipt prerequisite (S). Supersedes older next-task
+prose. Reconciled domain attempts/progress, schema-9 aggregate/codec, store guards
+and backlog rows: FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07 remain
+PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing wheel/economy/tree partial and
+client/decision/price BLOCKED rows stand. Historical merged-work claims not
+reverified; no Git operations or I01d work. No complete gameplay system claimed.
+
+GrandEvidenceReceipt binds the full original seal/objective, command UUID, exact
+activated-attempt revision, source session and opaque namespaced source-event key.
+Full payload equality supports future replay collision checking; sameSourceEvent
+identifies same-run/session/namespace/event collisions even with different commands,
+objectives or seals. Proposal checks current supplied session and exact selected
+attempt, delegates lifecycle/progress checks and preserves earlier components.
+Authority WB-D089/104 and WB-D117 supersession, STATE_CONTRACT. This is structural,
+publicly constructible data, not authenticated evidence or session admission.
+No actual source detector/key mapping, cross-session event reconciliation, off-task
+settlement, durable replay, atomic uniqueness or persistence acceptance is supplied.
+Existing progress mutation prohibition remains; Master Wheel unchanged; incomplete
+gameplay remains unwired/default-disabled. No unresolved item mappings invented.
+
+Validation: javac --release 11 compiled all domain sources and nine Grand executable
+fixtures into build/continuation-grand-receipt; all nine passed (receipt, success,
+activation, attempt, checklist, pool, progress, extension, seal). JUnit adapter authored. Focused Gradle receipt/success/persistence/Master
+Wheel attempt failed before compilation: missing Gradle 8.10, wrapper download denied
+(SocketException). No JUnit, codec/store or Master Wheel regression pass claimed.
+
+Next: durable attempt state/activation receipts and full receipt codec/journal with
+identity/current-session admission, source authentication, off-task settlement ordering,
+command/source collision protection and restart/exact replay/lost-ack tests. Atomic
+acceptance remains UNSTARTED; this payload does not complete GFD-05/07 or permit
+wiring. Command-copy retention and populated-store corruption coverage remain open.
+Client detectors and WB-D092 fresh-account predicate remain gated. Local edits only;
+supervisor handles Git/PR/CI/merges. No external paths, credentials, secrets or workflows.
+
 ## Current local continuation - Grand attempt success proposal, 2026-10-29
 
 IDLE after bounded WB-GFD-05/07 success-transition increment (S). Supersedes older
