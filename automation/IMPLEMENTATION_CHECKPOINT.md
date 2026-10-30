@@ -1,3 +1,47 @@
+## Current local continuation - purchase store transition checks, 2026-10-29
+
+IDLE after bounded WB-WHL-04/05, WB-ECON-08 and WB-FND-11 prerequisite (S).
+This supersedes older next-task prose. Reconciled schema-7 RunCodec, RunDocument,
+AtomicRunStore, purchase proposals and tests locally against recorded continuation.
+No Git/remote verification. FND-01 remains DONE; FND-10/12 PARTIAL; FND-11,
+ECON-01/08, TREE-02 and WHL-02/03/04/05/06/07/11/12 remain PARTIAL_UNVERIFIED.
+Other TODO/PARTIAL/BLOCKED rows retain their audited statuses. Schema serialization
+and proposal/receipt prerequisites exist; no complete gameplay purchase is claimed.
+I01d not selected. Price/catalog and client-evidence holds remain authoritative.
+
+PurchaseTransition now re-derives one available-slot purchase from the saved lifecycle,
+ledger and inventory inside AtomicRunStore's locked pre-write validation. It requires
+existing saved state, one added purchase receipt, unchanged catalog, exact ordered
+active/stored instances/modifiers, Satchel tier, unlocks, all lifetime history and ledger
+prefix plus debit. Current ownership UUID collisions and retained purchase-journal IDs
+are rejected. Append-only receipt checks remain; invalid transitions fail before pending
+file creation and do not mark the store uncertain. Authority: WB-D105/106/118 and
+STATE_CONTRACT. No quote approval, live purchase command, replay service or full edit
+boundary is supplied. Historical destroyed IDs not represented in existing ownership
+or typed purchase receipts cannot be inferred: future typed destruction/edit receipts
+must retain and validate identity provenance before admitting those commands. Existing
+nonpurchase snapshot behavior is unchanged. Master Wheel unchanged; gameplay unwired.
+
+Validation: javac --release 11 compiled all domain classes, RunDocument, RunReceipt,
+PurchaseTransition and three dependency-free executable checks. PurchaseTransitionChecks,
+PurchaseAggregateChecks and PurchaseJournalChecks passed. Tests cover valid first and
+subsequent duplicate purchases, original response, multi-receipt admission rejection,
+missing/paused prior state, catalog change, unrelated enhancement/storage/reordering,
+lifetime tampering, rewritten ledger prefix, owned UUID collision and immutability.
+JUnit store tests authored for rejection before pending-file creation, saved-byte retention
+and successful write after rejected validation. Gradle focused PurchaseTransitionTest,
+PurchaseJournalTest and legacy WheelboundBehaviorTest failed before compilation: missing
+Gradle 8.10 distribution download denied (SocketException). AtomicRunStore integration
+and JUnit changes were not compiled/executed here; no legacy regression pass claimed.
+
+Next bounded unit: execute focused store/codec and legacy suites with available build
+dependencies, then add failed-write/lost-ack/restart purchase persistence fixtures. Before
+an authorized atomic purchase command, supply reviewed quote/catalog validation and
+complete pending-draw/offer/edit-boundary gates. Preserve UUID provenance when introducing
+any durable destruction/edit command. Purchases remain disabled; schema 7 and this
+validator alone do not authorize them. Supervisor handles commits, PRs, CI and merges.
+No external paths, credentials, secrets, workflows or Git operations accessed.
+
 ## Current local continuation - schema-7 purchase journal, 2026-10-29
 
 IDLE after bounded WB-WHL-04/05, WB-ECON-08 and WB-FND-11 prerequisite (S).
