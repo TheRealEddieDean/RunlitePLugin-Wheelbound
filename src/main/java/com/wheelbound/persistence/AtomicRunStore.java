@@ -139,6 +139,24 @@ public final class AtomicRunStore
         });
     }
 
+    /** Pause/Resume and its receipt commit together, retaining unresolved selections.
+     * Exact historical replay returns its original receipt without rewriting the head. */
+    public RunReceipt changeLifecycle(RunIdentity expectedIdentity, UUID commandId,
+        long expectedRevision, RunReceipt.Operation operation) throws IOException
+    {
+        if (!identity.equals(expectedIdentity))
+        { throw new IllegalArgumentException("Foreign run context"); }
+        return locked(() -> {
+            if (uncertain) { throw new IOException("Reopen and reconcile after failed persistence"); }
+            RunDocument current = read().orElseThrow(() -> new IOException("Run has not been initialized"));
+            RunDocument next = LifecycleAdmission.prepare(current, expectedIdentity, commandId,
+                expectedRevision, operation);
+            if (next != current) { persist(codec.encode(next), true); }
+            return next.receipts().stream().filter(r -> r.commandId().equals(commandId))
+                .findFirst().orElseThrow(() -> new IOException("Lifecycle receipt is unavailable"));
+        });
+    }
+
     private Optional<RunDocument> read() throws IOException
     {
         if (Files.exists(pendingPath())) { throw new IOException("Interrupted write retained; reconciliation required"); }

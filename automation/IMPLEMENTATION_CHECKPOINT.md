@@ -1,3 +1,42 @@
+## Current local continuation - pending-selection Pause/Resume, 2026-10-30
+
+IDLE after bounded WB-WHL-08/10 and WB-REL-02 lifecycle dependency (S).
+Reconciled schema-14 pending representation, generic write guards, LifecycleCommands,
+RunSession/AsyncRunSession and WB-D138/139. Found Pause/Resume could not preserve a
+pending selection through generic writes. Added LifecycleAdmission and operation-specific
+AtomicRunStore.changeLifecycle; LifecycleCommands now delegates to the locked command.
+Admission, identity/revision/replay validation, snapshot derivation and persistence share
+one lock. Pending transcript, opaque stream state, reasons, wheel, FP and other aggregate
+fields survive Pause/Resume unchanged. Historical replay returns the original receipt
+without rewriting a newer head. Aggregate checks reject transaction/history ID collisions.
+Generic pending writes remain refused. Resume does not revalidate evidence or resume RNG.
+Existing Master Wheel source unchanged; incomplete gameplay stays unwired/default-disabled.
+
+Reconciliation: WB-WHL-08 PARTIAL; WB-WHL-09 TODO (automatic retry unstarted);
+WB-WHL-10 PARTIAL_UNVERIFIED; WB-REL-02 PARTIAL; FND-01 DONE; FND-10/12 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing decision/evidence
+BLOCKED rows stand. This command is IMPLEMENTED_UNVERIFIED for disk persistence;
+pure admission compiled and checked. No Git/merged-state verification or I01d work.
+
+Validation: Java 11 compiled all domain sources, aggregate/receipt, Grand activation
+admission and new lifecycle admission. PendingLifecycleChecks and PendingMasterSelectionChecks
+PASSED, including zero/one/513 prefixes, immutable FP/provenance, historical replay,
+stale/foreign/colliding requests and wrong operations. JUnit tests authored for restart,
+exact replay without byte changes, transaction collision before pending creation, failed
+write/original preservation, uncertain store and lost acknowledgement/reopen replay.
+Focused Gradle pending/lifecycle/session/async/store/Master Wheel attempt failed before
+compilation: inherited wrapper-cache lock Access is denied. Store/Gson/JUnit/legacy
+NOT_RUN. GRADLE_USER_HOME unchanged; no cache workaround or external-path inspection.
+
+Next: run PendingLifecycleTest, LifecycleCommandsTest, PendingMasterSelectionTest,
+RunSessionTest, AsyncRunSessionTest, AtomicRunStoreTest and legacy regressions when
+inherited dependencies are accessible. Then implement bounded operation-specific pending
+selection creation/admission under the store lock with a versioned journal/replay contract.
+Reviewed eligibility, trusted source/session admission, actual sampling, once-only spin
+allocation, automatic retries, suspension/revalidation and settlement remain unfinished.
+Do not invent RNG continuity, allocation timing or changed-snapshot reconciliation.
+Local edits only; supervisor handles Git/PR/CI/merge. No playable completion claim.
+
 ## Current local continuation - schema-14 unresolved Master selection, 2026-10-30
 
 IDLE after bounded WB-WHL-08/09/10 aggregate representation prerequisite (S).
