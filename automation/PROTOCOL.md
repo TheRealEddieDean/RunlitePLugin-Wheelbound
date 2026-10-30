@@ -1,3 +1,47 @@
+## Current local continuation - versioned Master selection payload, 2026-10-30
+
+IDLE after bounded WB-WHL-08/09/10 payload prerequisite (S). Reconciled current
+MasterSelectionProvenance/readiness, DrawCommitment, InventoryJson, RunCodec,
+RunDocument, RunReceipt and DurableWheelDraws against WB-D138/139. Existing DRAW
+requires OFFERS_COMMITTED and cannot represent unresolved empty retries. No duplicate
+transcript or draw engine. No Git operations; merged state not independently verified.
+No I01d work. User restrictions supersede historical Git/claim publication instructions.
+
+MasterSelectionProvenanceJson now provides standalone version-1 JSON encode/decode,
+retaining transaction/catalog/snapshot identities, full ordered wheel/enhancements,
+exact classifications/reasons, original weighted draw commitments and opaque stream
+states. Decode restores through domain validation; duplicate classifications, unknown
+fields/version, inconsistent pools and post-valid redraws fail closed. Classification
+encoding follows wheel order. Existing InventoryJson slice helpers are reused with
+package visibility; inventory wire format is unchanged. Stream/evidence declarations
+are not authenticated. No aggregate/schema change, disk persistence, sampling, debit,
+automatic retry, suspension/reconciliation, live admission or client wiring. Existing
+Master Wheel source unchanged; incomplete gameplay remains disabled.
+
+Reconciliation: WB-WHL-08 PARTIAL; payload subunit IMPLEMENTED_UNVERIFIED.
+WB-WHL-09 TODO for actual automatic retry; WB-WHL-10 PARTIAL_UNVERIFIED overall.
+FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED;
+GFD-03/04 TODO; REL-02 PARTIAL. Existing decision/evidence BLOCKED rows stand.
+Reviewed eligibility, trusted source/session, evidence acceptance and settlement remain
+unfinished. No completed gameplay or verified durability claim.
+
+Validation: Java 11 compiled all domain production sources and readiness/provenance
+executable fixtures into build/continuation-provenance-json; both fixtures PASSED.
+This does not compile the Gson codec. New JUnit codec tests cover text round-trip,
+empty/long prefixes, ordinary and both special final outcomes, exact re-encoding,
+input isolation and malformed/inconsistent payloads. Focused Gradle codec/provenance/
+legacy WheelboundBehaviorTest failed before compilation: inherited wrapper-cache
+lock Access is denied. Codec/JUnit/legacy NOT_RUN. GRADLE_USER_HOME unchanged;
+no cache workaround or external-path inspection.
+
+Next: execute MasterSelectionProvenanceJsonTest and focused domain/inventory/legacy
+regressions when inherited Gradle dependencies are accessible. Then add a bounded
+versioned aggregate representation for unresolved selection with explicit legacy absence,
+followed by operation-specific store integration before automatic retries. Do not reuse
+DRAW/OFFERS_COMMITTED for empty prefixes, invent a stream algorithm or implement
+unresolved changed-snapshot reconciliation. Local edits only; supervisor handles Git,
+PRs, CI and merges.
+
 ## Current local continuation - Master selection readiness policy, 2026-10-30
 
 IDLE after bounded WB-WHL-10 precommit readiness increment (S). Reconciled domain,

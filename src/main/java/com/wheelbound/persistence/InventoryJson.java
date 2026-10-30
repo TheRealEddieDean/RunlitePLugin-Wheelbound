@@ -38,7 +38,7 @@ final class InventoryJson
         return result;
     }
 
-    private static JsonArray encodeSlices(List<ActiveWheel.Slice> slices)
+    static JsonArray encodeSlices(List<ActiveWheel.Slice> slices)
     {
         JsonArray result = new JsonArray();
         for (ActiveWheel.Slice slice : slices)
@@ -81,7 +81,7 @@ final class InventoryJson
             SliceInventory.SatchelTier.valueOf(RunCodec.string(value, "satchelTier")), unlocks, history);
     }
 
-    private static List<ActiveWheel.Slice> decodeSlices(JsonArray values)
+    static List<ActiveWheel.Slice> decodeSlices(JsonArray values)
     {
         List<ActiveWheel.Slice> result = new ArrayList<>();
         for (JsonElement element : values)
