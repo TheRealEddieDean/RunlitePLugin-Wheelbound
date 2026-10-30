@@ -1,3 +1,40 @@
+## Current local continuation - Grand evidence journal model, 2026-10-30
+
+IDLE after bounded WB-GFD-05/07 journal prerequisite (S). Supersedes older next-task
+prose. Reconciled domain receipt/attempt/progress, schema-9 aggregate/codec and store
+with backlog. FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07 remain
+PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing wheel/economy/tree partial and
+client/decision/price BLOCKED rows stand. Historical merged-work claims not reverified;
+no Git operations or I01d work. No complete gameplay system claimed.
+
+GrandEvidenceJournal retains immutable full receipt payloads in accepted-revision order,
+requires exact one-to-one resolution of progress references, rejects command-payload
+and same-session source-event collisions, and proposes monotonic receipt/progress append.
+Exact full replay returns the journal after later revisions without requiring the expired
+attempt/session; identity, current head and retained-prefix validation still apply.
+Restore rejects missing, duplicate, unordered and future receipts. Authority WB-D089/104
+and WB-D117 supersession, STATE_CONTRACT. This is an in-memory structural prerequisite,
+not durable replay, source authentication, session admission or atomic acceptance.
+Cross-session event reconciliation and cross-operation command uniqueness remain open.
+No codec, store, client caller, awards or spin debit added. Existing progress mutation
+prohibition stays; Master Wheel unchanged; incomplete gameplay remains disabled.
+
+Validation: javac --release 11 compiled all domain sources and ten Grand executable
+fixtures into build/continuation-grand-journal; all ten passed. Journal covered all five
+goals, replay through Long.MAX_VALUE, stale heads, command/source collisions, mismatched
+sessions, exact restore, missing/future/duplicate/unordered receipts and immutability.
+JUnit adapter authored. Focused Gradle journal/receipt/persistence/Master Wheel attempt
+failed before compilation: inherited Gradle wrapper cache lock access denied. No cache
+override, JUnit, codec/store or Master Wheel regression pass claimed.
+
+Next: durable attempt state/activation receipts and versioned full receipt journal codec,
+then atomic acceptance with trusted identity/session/source admission, off-task settlement
+ordering, global command/source collision protection and restart/lost-ack tests. These
+remain UNSTARTED; this model does not complete GFD-05/07 or permit wiring. Command-copy
+retention/populated-store corruption coverage remains open. Client detectors/item mappings
+and WB-D092 fresh-account predicate remain gated. Local edits only; supervisor handles
+Git/PR/CI/merges. No credentials, secrets or workflows accessed.
+
 ## Current local continuation - Grand evidence receipt payload, 2026-10-29
 
 IDLE after bounded WB-GFD-05/07 receipt prerequisite (S). Supersedes older next-task
