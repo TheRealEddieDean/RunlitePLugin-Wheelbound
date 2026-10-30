@@ -174,6 +174,9 @@ public final class AtomicRunStore
                 { throw new IOException("Cannot add, discard or replace sealed Grand Fate on an existing run"); }
                 // No evidence-acceptance command exists yet. Ordinary writes must preserve
                 // explicit absence as well as every structural reference exactly.
+                if (!current.get().grandCurrentAttempt().map(a -> a.activation()).equals(
+                    next.grandCurrentAttempt().map(a -> a.activation())))
+                { throw new IOException("Current Grand attempt mutation requires atomic activation/evidence command"); }
                 if (current.get().grandActivations().isPresent() != next.grandActivations().isPresent()
                     || (current.get().grandActivations().isPresent()
                         && !current.get().grandActivations().get().receipts().equals(next.grandActivations().get().receipts())))

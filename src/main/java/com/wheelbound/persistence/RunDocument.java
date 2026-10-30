@@ -259,6 +259,15 @@ public final class RunDocument
 
     public Optional<com.wheelbound.domain.GrandActivationHistory> grandActivations()
     { return Optional.ofNullable(grandActivations); }
+    /** Reconcile retained activity to a new head; never infer activity from history. */
+    Optional<com.wheelbound.domain.GrandCurrentAttempt> retainedGrandAttempt(RunLifecycle next)
+    {
+        return grandCurrentAttempt().map(attempt -> com.wheelbound.domain.GrandCurrentAttempt.restore(
+            attempt.activation().commandId(), grandActivations, next,
+            grandProgress == null ? com.wheelbound.domain.GrandFateChecklist.initial(grandFate)
+                : grandProgress.checklist()));
+    }
+
     public Optional<com.wheelbound.domain.GrandCurrentAttempt> grandCurrentAttempt()
     { return Optional.ofNullable(grandCurrentAttempt); }
     public RunLifecycle lifecycle() { return lifecycle; }
