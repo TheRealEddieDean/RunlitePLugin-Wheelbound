@@ -4,6 +4,8 @@ import com.wheelbound.domain.RunIdentity;
 import com.wheelbound.domain.GrandActivationReceipt;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.UUID;
+import java.io.IOException;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 
@@ -90,7 +92,34 @@ public final class AsyncRunSession
         GrandActivationReceipt receipt, long expectedRevision)
     {
         Objects.requireNonNull(receipt, "receipt");
-        CompletableFuture<Optional<GrandActivationReceipt>> result = new CompletableFuture<>();
+        return submit(target -> target.activateGrandFate(receipt, expectedRevision));
+    }
+
+    /** Worker-thread Pause/Resume boundary. Admission closes before queuing, including
+     * historical replay; a replay refreshes from the actual durable head. Resume does
+     * not authenticate observation sources or establish a fresh gameplay baseline.
+     * Supersession, disconnect and cancellation follow activateGrandFate semantics.
+     */
+    public synchronized CompletableFuture<Optional<RunReceipt>> execute(UUID commandId,
+        long expectedRevision, RunReceipt.Operation operation)
+    {
+        Objects.requireNonNull(commandId, "commandId");
+        Objects.requireNonNull(operation, "operation");
+        if (operation != RunReceipt.Operation.PAUSE && operation != RunReceipt.Operation.RESUME)
+        { throw new IllegalArgumentException("Use the operation-specific transaction service"); }
+        return submit(target -> target.execute(commandId, expectedRevision, operation));
+    }
+
+    @FunctionalInterface
+    private interface Command<T>
+    {
+        T execute(RunSession target) throws IOException;
+    }
+
+    /** Called while holding this session's monitor. Never hold it during storage IO. */
+    private <T> CompletableFuture<Optional<T>> submit(Command<T> command)
+    {
+        CompletableFuture<Optional<T>> result = new CompletableFuture<>();
         if (current == null)
         {
             result.completeExceptionally(new IllegalStateException("No connected run"));
@@ -113,7 +142,7 @@ public final class AsyncRunSession
                 }
                 try
                 {
-                    GrandActivationReceipt committed = target.activateGrandFate(receipt, expectedRevision);
+                    T committed = command.execute(target);
                     synchronized (this)
                     {
                         if (generation == request) { current = target; }

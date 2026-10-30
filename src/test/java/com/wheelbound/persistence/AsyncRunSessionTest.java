@@ -9,6 +9,11 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.RejectedExecutionException;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+import java.io.IOException;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
@@ -42,6 +47,118 @@ public class AsyncRunSessionTest
                 java.util.List.of()))), -1);
         return new GrandActivationReceipt(UUID.randomUUID(), id, 0, checklist,
             checklist.required().iterator().next());
+    }
+
+    @Test public void lifecycleCommandsCloseAdmissionAndReplayActualHead() throws Exception
+    {
+        RunIdentity id = new RunIdentity("pause:profile", UUID.randomUUID());
+        AtomicRunStore target = store(id, true);
+        session.connect(target, id); tasks.remove(0).run();
+        RunSession.Token before = session.capture().get();
+        UUID pauseId = UUID.randomUUID();
+        CompletableFuture<java.util.Optional<RunReceipt>> pause =
+            session.execute(pauseId, 0, RunReceipt.Operation.PAUSE);
+        assertFalse(session.accepts(before)); assertFalse(pause.isDone());
+        assertEquals(0, target.load().get().lifecycle().revision());
+        tasks.remove(0).run();
+        assertEquals(RunLifecycle.State.PAUSED, pause.join().get().state());
+        assertFalse(session.capture().isPresent());
+        session.execute(UUID.randomUUID(), 1, RunReceipt.Operation.RESUME);
+        tasks.remove(0).run();
+        RunSession.Token resumed = session.capture().get();
+        CompletableFuture<java.util.Optional<RunReceipt>> replay =
+            session.execute(pauseId, 0, RunReceipt.Operation.PAUSE);
+        tasks.remove(0).run();
+        assertEquals(pause.join(), replay.join());
+        assertFalse(session.accepts(resumed)); assertTrue(session.capture().isPresent());
+        assertEquals(2, target.load().get().receipts().size());
+        assertEquals(RunLifecycle.Obligation.ACTIVE_OBJECTIVE, target.load().get().lifecycle().obligation());
+        assertThrows(IllegalArgumentException.class,
+            () -> session.execute(UUID.randomUUID(), 2, RunReceipt.Operation.DRAW));
+    }
+
+    @Test public void supersededPauseSkipsStorageAndStaleResumeFailsClosed() throws Exception
+    {
+        RunIdentity id = new RunIdentity("pause:profile", UUID.randomUUID());
+        AtomicRunStore target = store(id, true);
+        session.connect(target, id); tasks.remove(0).run();
+        CompletableFuture<java.util.Optional<RunReceipt>> skipped =
+            session.execute(UUID.randomUUID(), 0, RunReceipt.Operation.PAUSE);
+        session.connect(target, id); tasks.remove(1).run();
+        RunSession.Token fresh = session.capture().get();
+        tasks.remove(0).run();
+        assertFalse(skipped.join().isPresent()); assertTrue(session.accepts(fresh));
+        assertEquals(0, target.load().get().lifecycle().revision());
+        session.execute(UUID.randomUUID(), 0, RunReceipt.Operation.PAUSE); tasks.remove(0).run();
+        CompletableFuture<java.util.Optional<RunReceipt>> failed =
+            session.execute(UUID.randomUUID(), 0, RunReceipt.Operation.RESUME);
+        tasks.remove(0).run();
+        assertTrue(failed.isCompletedExceptionally()); assertFalse(session.capture().isPresent());
+        assertEquals(RunLifecycle.State.PAUSED, target.load().get().lifecycle().state());
+        assertEquals(1, target.load().get().receipts().size());
+    }
+
+    @Test public void blockedPauseCannotRestoreAdmissionOverNewConnection() throws Exception
+    {
+        RunIdentity oldId = new RunIdentity("old:profile", UUID.randomUUID());
+        store(oldId, true);
+        RunIdentity newId = new RunIdentity("new:profile", UUID.randomUUID());
+        AtomicRunStore freshStore = store(newId, true);
+        CountDownLatch writing = new CountDownLatch(1), release = new CountDownLatch(1);
+        AtomicRunStore blocked = new AtomicRunStore(folder.getRoot().toPath(), new RunCodec(new Gson()), oldId,
+            boundary -> {
+                if (boundary == AtomicRunStore.Boundary.REPLACED)
+                {
+                    writing.countDown();
+                    try
+                    {
+                        if (!release.await(5, TimeUnit.SECONDS)) { throw new IOException("Timed out waiting for release"); }
+                    }
+                    catch (InterruptedException ex) { Thread.currentThread().interrupt(); throw new IOException(ex); }
+                }
+            });
+        ExecutorService workers = Executors.newFixedThreadPool(2);
+        AsyncRunSession threaded = new AsyncRunSession(workers);
+        try
+        {
+            assertTrue(threaded.connect(blocked, oldId).get(5, TimeUnit.SECONDS));
+            RunSession.Token old = threaded.capture().get();
+            CompletableFuture<java.util.Optional<RunReceipt>> pause =
+                threaded.execute(UUID.randomUUID(), 0, RunReceipt.Operation.PAUSE);
+            assertTrue(writing.await(5, TimeUnit.SECONDS));
+            threaded.disconnect();
+            assertTrue(threaded.connect(freshStore, newId).get(5, TimeUnit.SECONDS));
+            RunSession.Token fresh = threaded.capture().get();
+            release.countDown();
+            assertTrue(pause.get(5, TimeUnit.SECONDS).isPresent());
+            assertTrue(threaded.accepts(fresh)); assertFalse(threaded.accepts(old));
+            assertEquals(RunLifecycle.State.PAUSED, store(oldId, false).load().get().lifecycle().state());
+        }
+        finally
+        {
+            release.countDown(); workers.shutdownNow();
+            assertTrue(workers.awaitTermination(5, TimeUnit.SECONDS));
+        }
+    }
+
+    @Test public void activationLostAcknowledgementReconnectsAndReplaysOnce() throws Exception
+    {
+        RunIdentity id = new RunIdentity("grand:profile", UUID.randomUUID());
+        GrandActivationReceipt request = initializeGrand(id);
+        AtomicRunStore failing = new AtomicRunStore(folder.getRoot().toPath(), new RunCodec(new Gson()), id,
+            boundary -> { if (boundary == AtomicRunStore.Boundary.REPLACED) { throw new IOException("Lost ack"); } });
+        session.connect(failing, id); tasks.remove(0).run();
+        CompletableFuture<java.util.Optional<GrandActivationReceipt>> failed = session.activateGrandFate(request, 0);
+        tasks.remove(0).run();
+        assertTrue(failed.isCompletedExceptionally()); assertFalse(session.capture().isPresent());
+        AtomicRunStore reopened = store(id, false);
+        byte[] committed = Files.readAllBytes(reopened.snapshotPath());
+        session.connect(reopened, id); tasks.remove(0).run();
+        CompletableFuture<java.util.Optional<GrandActivationReceipt>> replay = session.activateGrandFate(request, 1);
+        tasks.remove(0).run();
+        assertEquals(request, replay.join().get()); assertTrue(session.capture().isPresent());
+        assertEquals(1, reopened.load().get().receipts().size());
+        assertArrayEquals(committed, Files.readAllBytes(reopened.snapshotPath()));
     }
 
     @Test public void activationClosesAdmissionWhileQueuedAndReplaysPausedHead() throws Exception
