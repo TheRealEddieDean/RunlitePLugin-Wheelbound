@@ -1,6 +1,7 @@
 package com.wheelbound.domain;
 
 import java.util.Collection;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.EnumMap;
 import java.util.HashSet;
@@ -60,7 +61,8 @@ public final class GrandFateProgress
     /**
      * Restore explicit validated references at a known aggregate revision. Empty
      * input means no verified progress; legacy absence must not synthesize entries.
-     * The future codec/store must resolve receipts and enforce monotonic retention.
+     * The trusted acceptance boundary must resolve full receipts; structural
+     * references alone never establish authenticity or completion authority.
      */
     public GrandFateProgress(SealedGrandFate seal, long currentRevision,
         Collection<Evidence> references)
@@ -85,4 +87,38 @@ public final class GrandFateProgress
 
     public GrandFateChecklist checklist() { return checklist; }
     public Map<GrandFateChecklist.Objective, Evidence> evidence() { return evidence; }
+
+    /**
+     * Propose a monotonic extension after the caller has verified the full evidence
+     * receipt. A new reference must belong to the next aggregate revision. Exact
+     * reference replay retains this value without consuming another revision;
+     * completed objectives and receipt IDs can never be reassigned.
+     *
+     * Structural validation only: currentRevision must be read under the future
+     * durable command lock. This method neither authenticates receipts nor checks
+     * lifecycle/session/attempt eligibility, persists a receipt, or awards completion.
+     * The caller must preserve explicit legacy absence and must not publish this
+     * proposal before atomically persisting the full receipt and resulting aggregate.
+     */
+    public GrandFateProgress appendReference(Evidence reference, long currentRevision)
+    {
+        Objects.requireNonNull(reference, "reference");
+        // Validate the retained prefix even on replay; future progress cannot be
+        // smuggled through by supplying an older aggregate revision.
+        new GrandFateProgress(checklist.seal(), currentRevision, evidence.values());
+        if (!checklist.seal().equals(reference.seal()))
+        { throw new IllegalArgumentException("Foreign Grand evidence seal"); }
+        Evidence existing = evidence.get(reference.objective());
+        if (existing != null)
+        {
+            if (existing.equals(reference)) { return this; }
+            throw new IllegalArgumentException("Completed Grand objective cannot be replaced");
+        }
+        long nextRevision = Math.addExact(currentRevision, 1);
+        if (reference.verifiedRevision() != nextRevision)
+        { throw new IllegalArgumentException("New Grand evidence requires next aggregate revision"); }
+        Collection<Evidence> extended = new ArrayList<>(evidence.values());
+        extended.add(reference);
+        return new GrandFateProgress(checklist.seal(), nextRevision, extended);
+    }
 }
