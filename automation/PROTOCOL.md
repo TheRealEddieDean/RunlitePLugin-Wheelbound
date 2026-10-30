@@ -1,3 +1,38 @@
+## Current local continuation - explicit Grand current-attempt model, 2026-10-30
+
+IDLE after bounded WB-GFD-06/07 current-attempt structural increment (XS/S), split
+from versioned aggregate integration. Reconciled existing activation history/receipt,
+attempt/checklist/lifecycle, RunDocument and domain fixtures. FND-01 remains DONE;
+FND-10/12 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO.
+Other existing partial/TODO/BLOCKED rows stand. Merged work not independently
+reverified (Git prohibited). I01d was not selected. No full gameplay completion.
+
+GrandCurrentAttempt restores an explicitly supplied activation command against exact
+history seal, identity, head, unchanged checklist prefix and ACTIVE_OBJECTIVE obligation.
+Only ACTIVE/PAUSED states are accepted; unknown commands, stale heads, foreign seals,
+completed/changed prefixes and superseded attempts fail closed. No attempt is inferred
+from history presence. Pause/resume retain the original activation payload while using
+revision-checked lifecycle transitions. Restore is structural, not proof of intervening
+settlement or live session/source admission. Original GrandFateAttempt transition APIs
+are unchanged and still reject later heads. Authority WB-D089/104, WB-D117 supersession,
+STATE_CONTRACT and PERSISTENCE. Master Wheel unchanged; gameplay stays default-disabled.
+
+Validation: Java 11 compilation of all domain sources and 12 Grand executable fixtures
+passed; all 12 fixtures executed successfully. Expanded current-attempt fixture passed again, covering all five goals, retained
+Awakened prefixes, pause/resume, foreign identity/seal, unknown/missing/superseded
+commands, every invalid lifecycle state/obligation, stale head and Long.MAX_VALUE.
+Focused Gradle current-attempt/Master Wheel attempt failed before compilation because
+inherited wrapper-cache lock access was denied. No cache override or external path
+inspection. JUnit/codec/store/Master Wheel checks remain NOT_RUN.
+
+Next eligible increment: versioned current-attempt serialization and aggregate integration
+with explicit legacy absence, lifecycle/debit/draw retention, store mutation guards and
+restart/corruption tests. Schema remains 11; durable current-attempt persistence remains
+UNSTARTED. Atomic activation/evidence acceptance, trusted session/source admission,
+off-task settlement, global collisions and lost-ack tests remain UNSTARTED. Prior
+schema-10/11 Gson/store regressions still need execution with inherited dependencies.
+WB-D092/client mappings remain gated. Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - aggregate Grand activation history, 2026-10-30
 
 IDLE after bounded WB-GFD-06/07 history-retention increment (S), split from separately
