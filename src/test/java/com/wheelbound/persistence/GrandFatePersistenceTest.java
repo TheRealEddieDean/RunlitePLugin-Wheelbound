@@ -28,6 +28,80 @@ public class GrandFatePersistenceTest
             RunLifecycle.Obligation.NONE), "v1", List.of(), Optional.empty(), Optional.empty(), evidence);
     }
 
+    private RunDocument staged(String catalog, int ticket)
+    {
+        return new RunDocument(new RunLifecycle(id, 0, RunLifecycle.State.NOT_STARTED,
+            RunLifecycle.Obligation.NONE), catalog, List.of(), Optional.empty(), Optional.empty(),
+            Optional.of(sealed(ticket)));
+    }
+
+    @Test public void stagesOnceAndReplaysOnlyTheWholeInitialRequest() throws Exception
+    {
+        AtomicRunStore store = new AtomicRunStore(folder.getRoot().toPath(), codec, id);
+        assertEquals(sealed(0), store.stageGrandFate(staged("v1", 0)));
+        byte[] original = Files.readAllBytes(store.snapshotPath());
+        AtomicRunStore reopened = new AtomicRunStore(folder.getRoot().toPath(), codec, id,
+            boundary -> { throw new AssertionError("Replay must not write"); });
+        assertEquals(sealed(0), reopened.stageGrandFate(staged("v1", 0)));
+        assertThrows(IOException.class, () -> reopened.stageGrandFate(staged("changed", 0)));
+        assertThrows(IOException.class, () -> reopened.stageGrandFate(staged("v1", 1)));
+        assertThrows(IllegalArgumentException.class,
+            () -> reopened.stageGrandFate(document(0, Optional.of(sealed(0)))));
+        RunDocument missingSeal = new RunDocument(staged("v1", 0).lifecycle(), "v1");
+        assertThrows(IllegalArgumentException.class, () -> reopened.stageGrandFate(missingSeal));
+        assertArrayEquals(original, Files.readAllBytes(store.snapshotPath()));
+        assertEquals(RunLifecycle.State.NOT_STARTED, reopened.load().get().lifecycle().state());
+        assertFalse(Files.exists(store.pendingPath()));
+    }
+
+    @Test public void stagingCannotResealLegacyState() throws Exception
+    {
+        AtomicRunStore store = new AtomicRunStore(folder.getRoot().toPath(), codec, id);
+        store.write(document(0, Optional.empty()), -1);
+        byte[] original = Files.readAllBytes(store.snapshotPath());
+        assertThrows(IOException.class, () -> store.stageGrandFate(staged("v1", 0)));
+        assertArrayEquals(original, Files.readAllBytes(store.snapshotPath()));
+        assertFalse(Files.exists(store.pendingPath()));
+    }
+
+    @Test public void stagingCannotOverwriteLaterStateButSealRecoveryStillWorks() throws Exception
+    {
+        AtomicRunStore store = new AtomicRunStore(folder.getRoot().toPath(), codec, id);
+        store.stageGrandFate(staged("v1", 0));
+        // Low-level snapshot fixture only: this is not an authorized activation workflow.
+        store.write(document(1, Optional.of(sealed(0))), 0);
+        byte[] original = Files.readAllBytes(store.snapshotPath());
+        assertThrows(IOException.class, () -> store.stageGrandFate(staged("v1", 0)));
+        assertEquals(sealed(0), store.committedGrandFate(sealed(0)).get());
+        assertArrayEquals(original, Files.readAllBytes(store.snapshotPath()));
+    }
+
+    @Test public void failedStagingRetainsPendingAndBlocksRetryAcrossRestart() throws Exception
+    {
+        AtomicRunStore store = new AtomicRunStore(folder.getRoot().toPath(), codec, id,
+            boundary -> { if (boundary == AtomicRunStore.Boundary.TEMP_FORCED) { throw new IOException("failure"); } });
+        assertThrows(IOException.class, () -> store.stageGrandFate(staged("v1", 0)));
+        byte[] pending = Files.readAllBytes(store.pendingPath());
+        assertFalse(Files.exists(store.snapshotPath()));
+        assertThrows(IOException.class, () -> store.stageGrandFate(staged("v1", 0)));
+        AtomicRunStore reopened = new AtomicRunStore(folder.getRoot().toPath(), codec, id);
+        assertThrows(IOException.class, () -> reopened.stageGrandFate(staged("v1", 1)));
+        assertArrayEquals(pending, Files.readAllBytes(store.pendingPath()));
+    }
+
+    @Test public void lostStagingAcknowledgementRecoversOriginalAfterRestart() throws Exception
+    {
+        AtomicRunStore store = new AtomicRunStore(folder.getRoot().toPath(), codec, id,
+            boundary -> { if (boundary == AtomicRunStore.Boundary.REPLACED) { throw new IOException("lost ack"); } });
+        assertThrows(IOException.class, () -> store.stageGrandFate(staged("v1", 0)));
+        assertThrows(IOException.class, () -> store.stageGrandFate(staged("v1", 0)));
+        byte[] original = Files.readAllBytes(store.snapshotPath());
+        AtomicRunStore reopened = new AtomicRunStore(folder.getRoot().toPath(), codec, id);
+        assertEquals(sealed(0), reopened.stageGrandFate(staged("v1", 0)));
+        assertArrayEquals(original, Files.readAllBytes(store.snapshotPath()));
+        assertFalse(Files.exists(store.pendingPath()));
+    }
+
     private JsonObject json(byte[] value)
     { return new JsonParser().parse(new String(value, StandardCharsets.UTF_8)).getAsJsonObject(); }
 
