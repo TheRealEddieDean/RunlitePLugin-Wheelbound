@@ -17,6 +17,7 @@ import java.util.UUID;
 /** Foundation snapshot and lifecycle/draw/payment journal, not the playable-mode aggregate. */
 public final class RunDocument
 {
+    private final com.wheelbound.domain.GrandActivationHistory grandActivations;
     private final com.wheelbound.domain.GrandEvidenceJournal grandJournal;
     private final com.wheelbound.domain.GrandFateProgress grandProgress;
     private final RunLifecycle lifecycle;
@@ -62,6 +63,18 @@ public final class RunDocument
         Optional<com.wheelbound.domain.GrandFateProgress> grandProgress,
         Optional<com.wheelbound.domain.GrandEvidenceJournal> grandJournal)
     {
+        this(lifecycle, catalogVersion, receipts, fatePoints, inventory, grandFate, grandProgress,
+            grandJournal, Optional.empty());
+    }
+
+    /** Original activation payloads; history never identifies the current attempt. */
+    public RunDocument(RunLifecycle lifecycle, String catalogVersion, List<RunReceipt> receipts,
+        Optional<FatePointLedger> fatePoints, Optional<SliceInventory> inventory,
+        Optional<com.wheelbound.domain.SealedGrandFate> grandFate,
+        Optional<com.wheelbound.domain.GrandFateProgress> grandProgress,
+        Optional<com.wheelbound.domain.GrandEvidenceJournal> grandJournal,
+        Optional<com.wheelbound.domain.GrandActivationHistory> grandActivations)
+    {
         Objects.requireNonNull(lifecycle, "lifecycle");
         this.grandFate = Objects.requireNonNull(grandFate, "grandFate").orElse(null);
         com.wheelbound.domain.GrandFateProgress supplied =
@@ -81,6 +94,12 @@ public final class RunDocument
             this.grandProgress, lifecycle.revision(), journal.receipts().values());
         if (this.grandFate != null && !this.grandFate.identity().equals(lifecycle.identity()))
         { throw new IllegalArgumentException("Foreign Grand Fate identity"); }
+        com.wheelbound.domain.GrandActivationHistory activations =
+            Objects.requireNonNull(grandActivations, "grandActivations").orElse(null);
+        if (activations != null && !activations.seal().equals(this.grandFate))
+        { throw new IllegalArgumentException("Activation history requires exact original seal"); }
+        this.grandActivations = activations == null ? null : new com.wheelbound.domain.GrandActivationHistory(
+            this.grandFate, lifecycle.revision(), activations.receipts().values());
         this.inventory = Objects.requireNonNull(inventory, "inventory").orElse(null);
         this.fatePoints = Objects.requireNonNull(fatePoints, "fatePoints").orElse(null);
         this.lifecycle = Objects.requireNonNull(lifecycle, "lifecycle");
@@ -101,6 +120,25 @@ public final class RunDocument
         if (this.grandProgress != null && this.grandProgress.evidence().values().stream()
             .anyMatch(reference -> commands.contains(reference.receiptId())))
         { throw new IllegalArgumentException("Grand evidence collides with operation journal"); }
+        if (this.grandActivations != null)
+        {
+            for (com.wheelbound.domain.GrandActivationReceipt activation : this.grandActivations.receipts().values())
+            {
+                if (commands.contains(activation.commandId()) || (this.grandProgress != null
+                    && this.grandProgress.evidence().values().stream()
+                        .anyMatch(reference -> reference.receiptId().equals(activation.commandId()))))
+                { throw new IllegalArgumentException("Grand activation command collision"); }
+                if (!activation.attempt().checklist().completed().isEmpty()
+                    && (this.grandProgress == null || !this.grandProgress.checklist().completed()
+                        .containsAll(activation.attempt().checklist().completed())))
+                { throw new IllegalArgumentException("Activation prefix missing from aggregate progress"); }
+                for (com.wheelbound.domain.GrandFateChecklist.Objective completed : activation.attempt().checklist().completed())
+                {
+                    if (this.grandProgress.evidence().get(completed).verifiedRevision() > activation.beforeRevision())
+                    { throw new IllegalArgumentException("Activation prefix contains later evidence"); }
+                }
+            }
+        }
         validateDebits();
         validatePurchases();
         if (previous != null && (previous.afterRevision() != lifecycle.revision()
@@ -188,6 +226,8 @@ public final class RunDocument
         }
     }
 
+    public Optional<com.wheelbound.domain.GrandActivationHistory> grandActivations()
+    { return Optional.ofNullable(grandActivations); }
     public RunLifecycle lifecycle() { return lifecycle; }
     public Optional<com.wheelbound.domain.GrandEvidenceJournal> grandJournal()
     { return Optional.ofNullable(grandJournal); }

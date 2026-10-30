@@ -108,6 +108,7 @@ public class GrandFatePersistenceTest
     private byte[] envelope(JsonObject payload, int schema)
     {
         if (schema < 10) { payload.remove("grandJournal"); }
+        if (schema < 11) { payload.remove("grandActivations"); }
         String text = gson.toJson(payload);
         JsonObject result = new JsonObject();
         result.addProperty("schemaVersion", schema);
