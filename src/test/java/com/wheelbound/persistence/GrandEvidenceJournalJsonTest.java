@@ -36,7 +36,8 @@ public class GrandEvidenceJournalJsonTest
                 java.nio.charset.StandardCharsets.UTF_8)).getAsJsonObject();
             JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
             payload.remove("grandJournal");
-            String text = gson.toJson(payload);
+            // Preserve required explicit nulls while constructing a valid schema-9 payload.
+            String text = gson.newBuilder().serializeNulls().create().toJson(payload);
             envelope.addProperty("schemaVersion", 9);
             envelope.addProperty("payload", text);
             envelope.addProperty("sha256", RunCodec.sha256(text.getBytes(java.nio.charset.StandardCharsets.UTF_8)));
@@ -92,7 +93,8 @@ public class GrandEvidenceJournalJsonTest
                 java.nio.charset.StandardCharsets.UTF_8)).getAsJsonObject();
             JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
             corrupt.accept(payload);
-            String text = gson.toJson(payload);
+            // Keep unrelated fields intact so each case tests its intended corruption.
+            String text = gson.newBuilder().serializeNulls().create().toJson(payload);
             envelope.addProperty("payload", text);
             envelope.addProperty("sha256", RunCodec.sha256(text.getBytes(java.nio.charset.StandardCharsets.UTF_8)));
             byte[] bytes = gson.toJson(envelope).getBytes(java.nio.charset.StandardCharsets.UTF_8);
