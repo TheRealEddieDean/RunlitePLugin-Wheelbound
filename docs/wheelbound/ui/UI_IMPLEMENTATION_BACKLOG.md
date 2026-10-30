@@ -8,7 +8,7 @@ Audit base `223950c`; tasks are implementation specifications, not completed cod
 
 Each task is XS/S/M (2–30 minute bounded increment); split further if actual scope exceeds 30 minutes. UI scaffolding must not wait for full gameplay; live actions must wait for authoritative services. New task implementation status is TODO (not started), except existing reusable foundations identified separately in the audit. Delivery readiness below is distinct from implementation status. After implementation use PARTIAL, PARTIAL_UNVERIFIED, DONE only with evidence; BLOCKED for unmet evidence/dependencies and AWAITING_VISUAL_APPROVAL for a review build whose final merge lacks approval. Existing class presence alone cannot satisfy DONE.
 
-Category A permits autonomous merging of that bounded task after required checks under existing authority, once this planning PR is approved/merged. Category B permits isolated technical scaffolding but **does not permit final visual implementation merge without recorded user approval**. This planning PR itself must not be merged automatically. No new permission to submit to Plugin Hub or adopt prices.
+The user has approved the initial 36-screen simple UI and explicitly authorized merging PR #58. Standard-control implementations may proceed under existing autonomous authority after required checks. Earlier Category B labels concern future elaborate visual treatments, not the now-approved plain screens. Decorative tree/artwork tasks below are DEFERRED; no permission to submit to Plugin Hub, invent prices or enable unsupported gameplay is granted. See [approved handoff](UI_IMPLEMENTATION_HANDOFF.md).
 
 ## External prerequisites
 
@@ -43,42 +43,42 @@ Category A permits autonomous merging of that bounded task after required checks
 | WB-UI-14 | WB-UI-02 | Common objective/resource/error components | P0/S | DEPENDENCIES | A |
 | WB-UI-15 | WB-UI-01 | Route container and navigation scaffolding | P0/M | DEPENDENCIES | A |
 | WB-UI-16 | WB-UI-09 | Command pending/result presenter | P0/M | DEPENDENCIES | A |
-| WB-UI-17 | WB-UI-02 | Read-only gameplay sidebar integration | P0/M | DEPENDENCIES | B |
+| WB-UI-17 | WB-UI-02 | Read-only gameplay sidebar integration | P0/M | DEPENDENCIES | A (plain UI approved) |
 | WB-UI-18 | WB-TREE-01 | Progression catalog and decision trace contract | P0/S | IMMEDIATE | A |
 | WB-UI-19 | WB-TREE-02 | Read-only prerequisite expression visitor | P0/M | DEPENDENCIES | A |
 | WB-UI-20 | WB-TREE-04 | Unique purchased-count gate projection | P0/M | DEPENDENCIES | A |
-| WB-UI-21 | WB-TREE-01 | Deterministic cluster layout model | P0/M | DEPENDENCIES | A |
-| WB-UI-22 | WB-TREE-06 | Pan and zoom geometry | P0/S | IMMEDIATE | A |
-| WB-UI-23 | WB-TREE-06 | Tree rendering surface and HiDPI layering | P0/M | DEPENDENCIES | A |
-| WB-UI-24 | WB-TREE-06 | Node states and path semantics | P0/M | DEPENDENCIES | A |
-| WB-UI-25 | WB-TREE-06 | Tree hit testing and keyboard selection | P0/S | DEPENDENCIES | A |
-| WB-UI-26 | WB-TREE-06 | Node inspector and hover tooltips | P0/M | DEPENDENCIES | A |
-| WB-UI-27 | WB-TREE-06 | Search, branch focus and prerequisite routes | P0/M | DEPENDENCIES | A |
+| WB-UI-21 | WB-TREE-01 | Deterministic cluster layout model | P2/M | DEFERRED | A |
+| WB-UI-22 | WB-TREE-06 | Pan and zoom geometry | P2/S | DEFERRED | A |
+| WB-UI-23 | WB-TREE-06 | Tree rendering surface and HiDPI layering | P2/M | DEFERRED | A |
+| WB-UI-24 | WB-TREE-06 | Node states and path semantics | P2/M | DEFERRED | A |
+| WB-UI-25 | WB-TREE-06 | Tree hit testing and keyboard selection | P2/S | DEFERRED | A |
+| WB-UI-26 | WB-TREE-06 | Shared upgrade inspector; later tree tooltips | P0/M | DEPENDENCIES | A |
+| WB-UI-27 | WB-TREE-06 | Search, branch focus and prerequisite routes | P2/M | DEFERRED | A |
 | WB-UI-28 | WB-TREE-05 | Tree confirmation and durable purchase binding | P0/M | DEPENDENCIES | A |
 | WB-UI-29 | WB-UI-08 | Initial plain progression list and accessible view | P0/S | DEPENDENCIES | A |
-| WB-UI-30 | WB-TREE-06 | Fate Tree visual review build | P1/M | DEPENDENCIES | B |
-| WB-UI-31 | WB-UI-01 | Hub and sidebar visual review build | P1/M | DEPENDENCIES | B |
-| WB-UI-32 | WB-UI-03 | Fate offer/card presentation | P1/M | DEPENDENCIES | B |
-| WB-UI-33 | WB-UI-02 | Objective activation and settlement details | P1/M | DEPENDENCIES | B |
-| WB-UI-34 | WB-GFD-03 | Grand onboarding and sealed checklist | P1/M | DEPENDENCIES | B |
-| WB-UI-35 | WB-UI-04 | GF4 classpath decoration integration | P1/M | DEPENDENCIES | A |
-| WB-UI-36 | WB-UI-05 | B3 classpath decoration integration | P1/M | DEPENDENCIES | A |
-| WB-UI-37 | WB-QST-02 | Quest choices and empty-retry notice | P1/M | DEPENDENCIES | B |
-| WB-UI-38 | WB-FAT-10 | Challenge ranks and eligibility inspector | P1/M | DEPENDENCIES | B |
-| WB-UI-39 | WB-WHL-03 | Builder inventory and slot inspector | P1/M | DEPENDENCIES | B |
+| WB-UI-30 | WB-TREE-06 | Fate Tree visual review build | P2/M | DEFERRED | B |
+| WB-UI-31 | WB-UI-01 | Hub and sidebar visual review build | P1/M | DEPENDENCIES | A (plain UI approved) |
+| WB-UI-32 | WB-UI-03 | Fate offer/card presentation | P1/M | DEPENDENCIES | A (plain UI approved) |
+| WB-UI-33 | WB-UI-02 | Objective activation and settlement details | P1/M | DEPENDENCIES | A (plain UI approved) |
+| WB-UI-34 | WB-GFD-03 | Grand onboarding and sealed checklist | P1/M | DEPENDENCIES | A (plain UI approved) |
+| WB-UI-35 | WB-UI-04 | GF4 classpath decoration integration | P2/M | DEFERRED | A |
+| WB-UI-36 | WB-UI-05 | B3 classpath decoration integration | P2/M | DEFERRED | A |
+| WB-UI-37 | WB-QST-02 | Quest choices and empty-retry notice | P1/M | DEPENDENCIES | A (plain UI approved) |
+| WB-UI-38 | WB-FAT-10 | Challenge ranks and eligibility inspector | P1/M | DEPENDENCIES | A (plain UI approved) |
+| WB-UI-39 | WB-WHL-03 | Builder inventory and slot inspector | P1/M | DEPENDENCIES | A (plain UI approved) |
 | WB-UI-40 | WB-WHL-11 | Builder legal edit draft presenter | P1/M | DEPENDENCIES | A |
 | WB-UI-41 | WB-WHL-04 | Builder paid change confirmation | P1/M | DEPENDENCIES | A |
-| WB-UI-42 | WB-ECON-04 | Shop catalog/ownership presentation | P1/M | DEPENDENCIES | B |
+| WB-UI-42 | WB-ECON-04 | Shop catalog/ownership presentation | P1/M | DEPENDENCIES | A (plain UI approved) |
 | WB-UI-43 | WB-ECON-08 | Shop transaction presenter binding | P1/M | DEPENDENCIES | A |
-| WB-UI-44 | WB-BNT-04 | Bounties list and automatic reward feedback | P2/M | DEPENDENCIES | B |
-| WB-UI-45 | WB-DEF-01 | Zero-spins and Defy consequence review | P2/M | DEPENDENCIES | B |
-| WB-UI-46 | WB-UI-06 | Taint/Punishment wheel design checkpoint | P2/M | DEPENDENCIES | B |
-| WB-UI-47 | WB-PUN-05 | Punishment and sacrifice pending objective | P2/M | DEPENDENCIES | B |
+| WB-UI-44 | WB-BNT-04 | Bounties list and automatic reward feedback | P2/M | DEPENDENCIES | A (plain UI approved) |
+| WB-UI-45 | WB-DEF-01 | Zero-spins and Defy consequence review | P2/M | DEPENDENCIES | A (plain UI approved) |
+| WB-UI-46 | WB-UI-06 | Taint/Punishment wheel design checkpoint | P2/M | DEFERRED | B |
+| WB-UI-47 | WB-PUN-05 | Punishment and sacrifice pending objective | P2/M | DEPENDENCIES | A (plain UI approved) |
 | WB-UI-48 | WB-DEF-08 | Pardon debt restoration confirmation | P2/M | DEPENDENCIES | A |
 | WB-UI-49 | WB-UI-07 | Settings, help and evidence notifications | P2/M | DEPENDENCIES | A |
 | WB-UI-50 | WB-UI-08 | UI lifecycle and legacy regression acceptance | P2/M | DEPENDENCIES | A |
-| WB-UI-51 | WB-UI-08 | Tree performance and visual acceptance | P2/M | DEPENDENCIES | A |
-| WB-UI-52 | WB-REL-12 | Complete mode UI visual acceptance milestone | P2/M | DEPENDENCIES | B |
+| WB-UI-51 | WB-UI-08 | Tree performance and visual acceptance | P2/M | DEFERRED | A |
+| WB-UI-52 | WB-REL-12 | Initial plain-UI acceptance milestone | P2/M | DEPENDENCIES | A (plain UI approved) |
 
 ## WB-UI-10 — Shared tokens and text primitives
 
@@ -188,8 +188,8 @@ Category A permits autonomous merging of that bounded task after required checks
 - Likely files/modules (proposed paths unless already in source): `ui/ModeSidebar; WheelboundPlugin`.
 - Priority / estimated complexity: **P0 / M**; split at a reviewable boundary if needed.
 - Testing requirements: Real session disconnect/reconnect and legacy wheel regressions; final layout review. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
-- Visual review: **Category B; review artifact and exact revision approval required before final visual merge**.
-- Autonomous merge permitted: **No for final visuals; isolated nonvisual scaffolding may merge under Category A with final styling disabled**. Never infer approval from this TODO record.
+- Visual review: **Initial plain controls APPROVED by the user; elaborate visual treatment remains deferred**.
+- Autonomous merge permitted: **Yes for the approved plain-control implementation after required checks; future elaborate visuals need separate review**. Never infer approval from this TODO record.
 
 
 ## WB-UI-18 — Progression catalog and decision trace contract
@@ -239,10 +239,10 @@ Category A permits autonomous merging of that bounded task after required checks
 - Parent: **WB-TREE-01**; existing partial code is reuse input, not completed child scope.
 - Description / expected behavior / acceptance: Compute four branch lanes, vertical tiers and circular square-node peer clusters keyed by production IDs; annotations not products.
 - Approved authority and proposed UI specification: FATE_TREE_DESIGN.md + PROGRESSION.md (D093/095/124/147–150); canonical DECISIONS overrides unresolved historical wording. This packet's visual compositions remain proposed.
-- Current implementation status: **TODO — not started**. Readiness: blocked by the dependencies below.
+- Current implementation status: **DEFERRED — not implemented**. Outside the initial plain-control build; retain for later visual upgrade.
 - Dependencies (must be verified complete for live integration): WB-UI-19, WB-UI-20.
 - Likely files/modules (proposed paths unless already in source): `ui/tree/TreeLayout`.
-- Priority / estimated complexity: **P0 / M**; split at a reviewable boundary if needed.
+- Priority / estimated complexity: **P2 / M**; split at a reviewable boundary if needed.
 - Testing requirements: Determinism, labels non-overlap, missing node IDs fail; no dependency from coordinates. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
 - Visual review: **Category A; component inspection, no new major composition approved**.
 - Autonomous merge permitted: **Yes for this bounded Category A task after checks, once planning PR merges**. Never infer approval from this TODO record.
@@ -253,10 +253,10 @@ Category A permits autonomous merging of that bounded task after required checks
 - Parent: **WB-TREE-06**; existing partial code is reuse input, not completed child scope.
 - Description / expected behavior / acceptance: Pure invertible transform, cursor anchored wheel zoom, clamped scale, Fit/Reset and resize behavior.
 - Approved authority and proposed UI specification: FATE_TREE_DESIGN.md + PROGRESSION.md (D093/095/124/147–150); canonical DECISIONS overrides unresolved historical wording. This packet's visual compositions remain proposed.
-- Current implementation status: **TODO — not started**. Readiness: immediately implementable.
+- Current implementation status: **DEFERRED — not implemented**. Outside the initial plain-control build; retain for later visual upgrade.
 - Dependencies (must be verified complete for live integration): None.
 - Likely files/modules (proposed paths unless already in source): `ui/tree/TreeViewTransform`.
-- Priority / estimated complexity: **P0 / S**; split at a reviewable boundary if needed.
+- Priority / estimated complexity: **P2 / S**; split at a reviewable boundary if needed.
 - Testing requirements: Round trips, extreme coordinates, cursor anchor, zero-size viewport and invalid values. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
 - Visual review: **Category A; component inspection, no new major composition approved**.
 - Autonomous merge permitted: **Yes for this bounded Category A task after checks, once planning PR merges**. Never infer approval from this TODO record.
@@ -267,10 +267,10 @@ Category A permits autonomous merging of that bounded task after required checks
 - Parent: **WB-TREE-06**; existing partial code is reuse input, not completed child scope.
 - Description / expected behavior / acceptance: Paint edges behind square glyphs, preserve default device transform and cull viewport; real catalog only in connected view.
 - Approved authority and proposed UI specification: FATE_TREE_DESIGN.md + PROGRESSION.md (D093/095/124/147–150); canonical DECISIONS overrides unresolved historical wording. This packet's visual compositions remain proposed.
-- Current implementation status: **TODO — not started**. Readiness: blocked by the dependencies below.
+- Current implementation status: **DEFERRED — not implemented**. Outside the initial plain-control build; retain for later visual upgrade.
 - Dependencies (must be verified complete for live integration): WB-UI-21, WB-UI-22.
 - Likely files/modules (proposed paths unless already in source): `ui/tree/TreeCanvas`.
-- Priority / estimated complexity: **P0 / M**; split at a reviewable boundary if needed.
+- Priority / estimated complexity: **P2 / M**; split at a reviewable boundary if needed.
 - Testing requirements: Headless 1x/2x bounds and clip renders; no game/storage calls while painting. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
 - Visual review: **Category A; component inspection, no new major composition approved**.
 - Autonomous merge permitted: **Yes for this bounded Category A task after checks, once planning PR merges**. Never infer approval from this TODO record.
@@ -281,10 +281,10 @@ Category A permits autonomous merging of that bounded task after required checks
 - Parent: **WB-TREE-06**; existing partial code is reuse input, not completed child scope.
 - Description / expected behavior / acceptance: Separate ownership, unlock prerequisites, affordability, support and selection; purchased paths gold with text/glyph equivalents.
 - Approved authority and proposed UI specification: FATE_TREE_DESIGN.md + PROGRESSION.md (D093/095/124/147–150); canonical DECISIONS overrides unresolved historical wording. This packet's visual compositions remain proposed.
-- Current implementation status: **TODO — not started**. Readiness: blocked by the dependencies below.
+- Current implementation status: **DEFERRED — not implemented**. Outside the initial plain-control build; retain for later visual upgrade.
 - Dependencies (must be verified complete for live integration): WB-UI-23, WB-UI-13.
 - Likely files/modules (proposed paths unless already in source): `ui/tree/TreeStateProjection`.
-- Priority / estimated complexity: **P0 / M**; split at a reviewable boundary if needed.
+- Priority / estimated complexity: **P2 / M**; split at a reviewable boundary if needed.
 - Testing requirements: State matrix includes owned but unavailable, unknown price, debt and retained lower ranks. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
 - Visual review: **Category A; component inspection, no new major composition approved**.
 - Autonomous merge permitted: **Yes for this bounded Category A task after checks, once planning PR merges**. Never infer approval from this TODO record.
@@ -295,22 +295,22 @@ Category A permits autonomous merging of that bounded task after required checks
 - Parent: **WB-TREE-06**; existing partial code is reuse input, not completed child scope.
 - Description / expected behavior / acceptance: Inverse hit testing, click/drag threshold, directional selection and Enter detail; no purchase on drag or hover.
 - Approved authority and proposed UI specification: FATE_TREE_DESIGN.md + PROGRESSION.md (D093/095/124/147–150); canonical DECISIONS overrides unresolved historical wording. This packet's visual compositions remain proposed.
-- Current implementation status: **TODO — not started**. Readiness: blocked by the dependencies below.
+- Current implementation status: **DEFERRED — not implemented**. Outside the initial plain-control build; retain for later visual upgrade.
 - Dependencies (must be verified complete for live integration): WB-UI-23.
 - Likely files/modules (proposed paths unless already in source): `ui/tree/TreeInteraction`.
-- Priority / estimated complexity: **P0 / S**; split at a reviewable boundary if needed.
+- Priority / estimated complexity: **P2 / S**; split at a reviewable boundary if needed.
 - Testing requirements: Boundaries at zoom extremes, drag release over button, Tab/arrows/Escape. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
 - Visual review: **Category A; component inspection, no new major composition approved**.
 - Autonomous merge permitted: **Yes for this bounded Category A task after checks, once planning PR merges**. Never infer approval from this TODO record.
 
 
-## WB-UI-26 — Node inspector and hover tooltips
+## WB-UI-26 — Shared upgrade inspector; later tree tooltips
 
 - Parent: **WB-TREE-06**; existing partial code is reuse input, not completed child scope.
 - Description / expected behavior / acceptance: Readable benefit/quote/reason and ALL/ANY/count explanations; tooltip screen clamping and keyboard parity.
 - Approved authority and proposed UI specification: FATE_TREE_DESIGN.md + PROGRESSION.md (D093/095/124/147–150); canonical DECISIONS overrides unresolved historical wording. This packet's visual compositions remain proposed.
 - Current implementation status: **TODO — not started**. Readiness: blocked by the dependencies below.
-- Dependencies (must be verified complete for live integration): WB-UI-24, WB-UI-25.
+- Dependencies (must be verified complete for live integration): WB-UI-18, WB-UI-19, WB-UI-20, WB-UI-14. Initial detail/requirements panel works without canvas, pan/zoom or custom glyphs; hover belongs to a later renderer.
 - Likely files/modules (proposed paths unless already in source): `ui/tree/NodeInspector`.
 - Priority / estimated complexity: **P0 / M**; split at a reviewable boundary if needed.
 - Testing requirements: Long nested expressions, missing prices and viewport edges; no unescaped text. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
@@ -323,10 +323,10 @@ Category A permits autonomous merging of that bounded task after required checks
 - Parent: **WB-TREE-06**; existing partial code is reuse input, not completed child scope.
 - Description / expected behavior / acceptance: Search actual metadata, center selection, dim others and highlight alternatives; never infer cheapest route without prices.
 - Approved authority and proposed UI specification: FATE_TREE_DESIGN.md + PROGRESSION.md (D093/095/124/147–150); canonical DECISIONS overrides unresolved historical wording. This packet's visual compositions remain proposed.
-- Current implementation status: **TODO — not started**. Readiness: blocked by the dependencies below.
+- Current implementation status: **DEFERRED — not implemented**. Outside the initial plain-control build; retain for later visual upgrade.
 - Dependencies (must be verified complete for live integration): WB-UI-26.
 - Likely files/modules (proposed paths unless already in source): `ui/tree/TreeSearch`.
-- Priority / estimated complexity: **P0 / M**; split at a reviewable boundary if needed.
+- Priority / estimated complexity: **P2 / M**; split at a reviewable boundary if needed.
 - Testing requirements: Duplicate names/stable IDs, no results, AND/OR alternatives and hidden branch restore. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
 - Visual review: **Category A; component inspection, no new major composition approved**.
 - Autonomous merge permitted: **Yes for this bounded Category A task after checks, once planning PR merges**. Never infer approval from this TODO record.
@@ -365,10 +365,10 @@ Category A permits autonomous merging of that bounded task after required checks
 - Parent: **WB-TREE-06**; existing partial code is reuse input, not completed child scope.
 - Description / expected behavior / acceptance: Produce actual catalog review at overview/normal/detail scale with inspector; test-only fixtures clearly labeled.
 - Approved authority and proposed UI specification: FATE_TREE_DESIGN.md + PROGRESSION.md (D093/095/124/147–150); canonical DECISIONS overrides unresolved historical wording. This packet's visual compositions remain proposed.
-- Current implementation status: **TODO — not started**. Readiness: blocked by the dependencies below.
+- Current implementation status: **DEFERRED — not implemented**. Outside the initial plain-control build; retain for later visual upgrade.
 - Dependencies (must be verified complete for live integration): WB-UI-27, WB-UI-29.
 - Likely files/modules (proposed paths unless already in source): `ui/tree/*; review screenshots`.
-- Priority / estimated complexity: **P1 / M**; split at a reviewable boundary if needed.
+- Priority / estimated complexity: **P2 / M**; split at a reviewable boundary if needed.
 - Testing requirements: Manual readability/resize/mixed DPI plus recorded approval on exact revision before final visuals merge. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
 - Visual review: **Category B; review artifact and exact revision approval required before final visual merge**.
 - Autonomous merge permitted: **No for final visuals; isolated nonvisual scaffolding may merge under Category A with final styling disabled**. Never infer approval from this TODO record.
@@ -384,8 +384,8 @@ Category A permits autonomous merging of that bounded task after required checks
 - Likely files/modules (proposed paths unless already in source): `ui/HubPanel; ModeSidebar`.
 - Priority / estimated complexity: **P1 / M**; split at a reviewable boundary if needed.
 - Testing requirements: Screenshots of active/paused/unsupported/error; preserve Master regression. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
-- Visual review: **Category B; review artifact and exact revision approval required before final visual merge**.
-- Autonomous merge permitted: **No for final visuals; isolated nonvisual scaffolding may merge under Category A with final styling disabled**. Never infer approval from this TODO record.
+- Visual review: **Initial plain controls APPROVED by the user; elaborate visual treatment remains deferred**.
+- Autonomous merge permitted: **Yes for the approved plain-control implementation after required checks; future elaborate visuals need separate review**. Never infer approval from this TODO record.
 
 
 ## WB-UI-32 — Fate offer/card presentation
@@ -398,8 +398,8 @@ Category A permits autonomous merging of that bounded task after required checks
 - Likely files/modules (proposed paths unless already in source): `ui/fate/OfferPanel`.
 - Priority / estimated complexity: **P1 / M**; split at a reviewable boundary if needed.
 - Testing requirements: Frozen restore, no reroll/boss picker, distinct same-type targets; final layout review. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
-- Visual review: **Category B; review artifact and exact revision approval required before final visual merge**.
-- Autonomous merge permitted: **No for final visuals; isolated nonvisual scaffolding may merge under Category A with final styling disabled**. Never infer approval from this TODO record.
+- Visual review: **Initial plain controls APPROVED by the user; elaborate visual treatment remains deferred**.
+- Autonomous merge permitted: **Yes for the approved plain-control implementation after required checks; future elaborate visuals need separate review**. Never infer approval from this TODO record.
 
 
 ## WB-UI-33 — Objective activation and settlement details
@@ -412,8 +412,8 @@ Category A permits autonomous merging of that bounded task after required checks
 - Likely files/modules (proposed paths unless already in source): `ui/fate/ObjectiveDetail`.
 - Priority / estimated complexity: **P1 / M**; split at a reviewable boundary if needed.
 - Testing requirements: Unsupported evidence, stale result, paused/restored and pending settlement; no manual reward mint. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
-- Visual review: **Category B; review artifact and exact revision approval required before final visual merge**.
-- Autonomous merge permitted: **No for final visuals; isolated nonvisual scaffolding may merge under Category A with final styling disabled**. Never infer approval from this TODO record.
+- Visual review: **Initial plain controls APPROVED by the user; elaborate visual treatment remains deferred**.
+- Autonomous merge permitted: **Yes for the approved plain-control implementation after required checks; future elaborate visuals need separate review**. Never infer approval from this TODO record.
 
 
 ## WB-UI-34 — Grand onboarding and sealed checklist
@@ -426,8 +426,8 @@ Category A permits autonomous merging of that bounded task after required checks
 - Likely files/modules (proposed paths unless already in source): `ui/grand/*`.
 - Priority / estimated complexity: **P1 / M**; split at a reviewable boundary if needed.
 - Testing requirements: Restore same seal, unfinished components, attempt gate/one reroll, unknown fresh-account predicate disabled. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
-- Visual review: **Category B; review artifact and exact revision approval required before final visual merge**.
-- Autonomous merge permitted: **No for final visuals; isolated nonvisual scaffolding may merge under Category A with final styling disabled**. Never infer approval from this TODO record.
+- Visual review: **Initial plain controls APPROVED by the user; elaborate visual treatment remains deferred**.
+- Autonomous merge permitted: **Yes for the approved plain-control implementation after required checks; future elaborate visuals need separate review**. Never infer approval from this TODO record.
 
 
 ## WB-UI-35 — GF4 classpath decoration integration
@@ -435,10 +435,10 @@ Category A permits autonomous merging of that bounded task after required checks
 - Parent: **WB-UI-04**; existing partial code is reuse input, not completed child scope.
 - Description / expected behavior / acceptance: Use selected GF4 geometry and small licensed assets; docs PNG remains reference, preserve equal goals and stationary pointer.
 - Approved authority and proposed UI specification: UI_ARCHITECTURE.md + UI_DESIGN_SYSTEM.md + parent subsystem specification; canonical DECISIONS overrides unresolved historical wording. This packet's visual compositions remain proposed.
-- Current implementation status: **TODO — not started**. Readiness: blocked by the dependencies below.
+- Current implementation status: **DEFERRED — not implemented**. Outside the initial plain-control build; retain for later visual upgrade.
 - Dependencies (must be verified complete for live integration): WB-UI-10; EXT-WHEEL-THEME.
 - Likely files/modules (proposed paths unless already in source): `wheel theme/resource loader`.
-- Priority / estimated complexity: **P1 / M**; split at a reviewable boundary if needed.
+- Priority / estimated complexity: **P2 / M**; split at a reviewable boundary if needed.
 - Testing requirements: Packaged JAR load, transparency/clipping, skip same result and unchanged Master; approved GF4 baseline preserved. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
 - Visual review: **Category A; component inspection, no new major composition approved**.
 - Autonomous merge permitted: **Yes for this bounded Category A task after checks, once planning PR merges**. Never infer approval from this TODO record.
@@ -449,10 +449,10 @@ Category A permits autonomous merging of that bounded task after required checks
 - Parent: **WB-UI-05**; existing partial code is reuse input, not completed child scope.
 - Description / expected behavior / acceptance: Simple stone rim/four blue gems; no ornate first concept, baked categories or Grand skulls/chains.
 - Approved authority and proposed UI specification: UI_ARCHITECTURE.md + UI_DESIGN_SYSTEM.md + parent subsystem specification; canonical DECISIONS overrides unresolved historical wording. This packet's visual compositions remain proposed.
-- Current implementation status: **TODO — not started**. Readiness: blocked by the dependencies below.
+- Current implementation status: **DEFERRED — not implemented**. Outside the initial plain-control build; retain for later visual upgrade.
 - Dependencies (must be verified complete for live integration): WB-UI-10; EXT-WHEEL-THEME.
 - Likely files/modules (proposed paths unless already in source): `wheel theme/resource loader`.
-- Priority / estimated complexity: **P1 / M**; split at a reviewable boundary if needed.
+- Priority / estimated complexity: **P2 / M**; split at a reviewable boundary if needed.
 - Testing requirements: Packaged JAR, scaling, pointer and mode-specific theme; compare selection spec, no claimed missing PNG provenance. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
 - Visual review: **Category A; component inspection, no new major composition approved**.
 - Autonomous merge permitted: **Yes for this bounded Category A task after checks, once planning PR merges**. Never infer approval from this TODO record.
@@ -468,8 +468,8 @@ Category A permits autonomous merging of that bounded task after required checks
 - Likely files/modules (proposed paths unless already in source): `ui/fate/QuestChoices`.
 - Priority / estimated complexity: **P1 / M**; split at a reviewable boundary if needed.
 - Testing requirements: Retain slice/weights, no extra debit, restored choices unchanged; do not hardcode conflicting historical counts. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
-- Visual review: **Category B; review artifact and exact revision approval required before final visual merge**.
-- Autonomous merge permitted: **No for final visuals; isolated nonvisual scaffolding may merge under Category A with final styling disabled**. Never infer approval from this TODO record.
+- Visual review: **Initial plain controls APPROVED by the user; elaborate visual treatment remains deferred**.
+- Autonomous merge permitted: **Yes for the approved plain-control implementation after required checks; future elaborate visuals need separate review**. Never infer approval from this TODO record.
 
 
 ## WB-UI-38 — Challenge ranks and eligibility inspector
@@ -482,8 +482,8 @@ Category A permits autonomous merging of that bounded task after required checks
 - Likely files/modules (proposed paths unless already in source): `ui/challenge/*`.
 - Priority / estimated complexity: **P1 / M**; split at a reviewable boundary if needed.
 - Testing requirements: All off, underfloor owned, no extra slots, no target choice; fresh exact drop instruction. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
-- Visual review: **Category B; review artifact and exact revision approval required before final visual merge**.
-- Autonomous merge permitted: **No for final visuals; isolated nonvisual scaffolding may merge under Category A with final styling disabled**. Never infer approval from this TODO record.
+- Visual review: **Initial plain controls APPROVED by the user; elaborate visual treatment remains deferred**.
+- Autonomous merge permitted: **Yes for the approved plain-control implementation after required checks; future elaborate visuals need separate review**. Never infer approval from this TODO record.
 
 
 ## WB-UI-39 — Builder inventory and slot inspector
@@ -496,8 +496,8 @@ Category A permits autonomous merging of that bounded task after required checks
 - Likely files/modules (proposed paths unless already in source): `ui/builder/*; SliceInventory projection`.
 - Priority / estimated complexity: **P1 / M**; split at a reviewable boundary if needed.
 - Testing requirements: Actual inventory fixture, capped slots, long names, special slices and stale account clear; final layout review. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
-- Visual review: **Category B; review artifact and exact revision approval required before final visual merge**.
-- Autonomous merge permitted: **No for final visuals; isolated nonvisual scaffolding may merge under Category A with final styling disabled**. Never infer approval from this TODO record.
+- Visual review: **Initial plain controls APPROVED by the user; elaborate visual treatment remains deferred**.
+- Autonomous merge permitted: **Yes for the approved plain-control implementation after required checks; future elaborate visuals need separate review**. Never infer approval from this TODO record.
 
 
 ## WB-UI-40 — Builder legal edit draft presenter
@@ -538,8 +538,8 @@ Category A permits autonomous merging of that bounded task after required checks
 - Likely files/modules (proposed paths unless already in source): `ui/shop/*`.
 - Priority / estimated complexity: **P1 / M**; split at a reviewable boundary if needed.
 - Testing requirements: Unknown price disabled, bought but inaccessible, search/filter; layout review before merge. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
-- Visual review: **Category B; review artifact and exact revision approval required before final visual merge**.
-- Autonomous merge permitted: **No for final visuals; isolated nonvisual scaffolding may merge under Category A with final styling disabled**. Never infer approval from this TODO record.
+- Visual review: **Initial plain controls APPROVED by the user; elaborate visual treatment remains deferred**.
+- Autonomous merge permitted: **Yes for the approved plain-control implementation after required checks; future elaborate visuals need separate review**. Never infer approval from this TODO record.
 
 
 ## WB-UI-43 — Shop transaction presenter binding
@@ -566,8 +566,8 @@ Category A permits autonomous merging of that bounded task after required checks
 - Likely files/modules (proposed paths unless already in source): `ui/bounty/*`.
 - Priority / estimated complexity: **P2 / M**; split at a reviewable boundary if needed.
 - Testing requirements: Paid once, paused no backfill, failure preserves reward, unsupported acquisition not successful. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
-- Visual review: **Category B; review artifact and exact revision approval required before final visual merge**.
-- Autonomous merge permitted: **No for final visuals; isolated nonvisual scaffolding may merge under Category A with final styling disabled**. Never infer approval from this TODO record.
+- Visual review: **Initial plain controls APPROVED by the user; elaborate visual treatment remains deferred**.
+- Autonomous merge permitted: **Yes for the approved plain-control implementation after required checks; future elaborate visuals need separate review**. Never infer approval from this TODO record.
 
 
 ## WB-UI-45 — Zero-spins and Defy consequence review
@@ -580,8 +580,8 @@ Category A permits autonomous merging of that bounded task after required checks
 - Likely files/modules (proposed paths unless already in source): `ui/risk/DefyPanel`.
 - Priority / estimated complexity: **P2 / M**; split at a reviewable boundary if needed.
 - Testing requirements: No extra slots, restored pending choice, Questing storage-only, no guessed numeric refill. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
-- Visual review: **Category B; review artifact and exact revision approval required before final visual merge**.
-- Autonomous merge permitted: **No for final visuals; isolated nonvisual scaffolding may merge under Category A with final styling disabled**. Never infer approval from this TODO record.
+- Visual review: **Initial plain controls APPROVED by the user; elaborate visual treatment remains deferred**.
+- Autonomous merge permitted: **Yes for the approved plain-control implementation after required checks; future elaborate visuals need separate review**. Never infer approval from this TODO record.
 
 
 ## WB-UI-46 — Taint/Punishment wheel design checkpoint
@@ -589,7 +589,7 @@ Category A permits autonomous merging of that bounded task after required checks
 - Parent: **WB-UI-06**; existing partial code is reuse input, not completed child scope.
 - Description / expected behavior / acceptance: Produce restrained distinct special-slice and punishment style studies; keep Master/GF4/B3 unchanged; no gameplay enablement.
 - Approved authority and proposed UI specification: UI_ARCHITECTURE.md + UI_DESIGN_SYSTEM.md + parent subsystem specification; canonical DECISIONS overrides unresolved historical wording. This packet's visual compositions remain proposed.
-- Current implementation status: **TODO — not started**. Readiness: blocked by the dependencies below.
+- Current implementation status: **DEFERRED — not implemented**. Outside the initial plain-control build; retain for later visual upgrade.
 - Dependencies (must be verified complete for live integration): WB-UI-14.
 - Likely files/modules (proposed paths unless already in source): `ui/risk/review artifacts`.
 - Priority / estimated complexity: **P2 / M**; split at a reviewable boundary if needed.
@@ -608,8 +608,8 @@ Category A permits autonomous merging of that bounded task after required checks
 - Likely files/modules (proposed paths unless already in source): `ui/risk/ObligationPanel`.
 - Priority / estimated complexity: **P2 / M**; split at a reviewable boundary if needed.
 - Testing requirements: Restart obligation, paused processing, unknown bank distinct from empty; unsupported Coffer stays disabled. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
-- Visual review: **Category B; review artifact and exact revision approval required before final visual merge**.
-- Autonomous merge permitted: **No for final visuals; isolated nonvisual scaffolding may merge under Category A with final styling disabled**. Never infer approval from this TODO record.
+- Visual review: **Initial plain controls APPROVED by the user; elaborate visual treatment remains deferred**.
+- Autonomous merge permitted: **Yes for the approved plain-control implementation after required checks; future elaborate visuals need separate review**. Never infer approval from this TODO record.
 
 
 ## WB-UI-48 — Pardon debt restoration confirmation
@@ -659,7 +659,7 @@ Category A permits autonomous merging of that bounded task after required checks
 - Parent: **WB-UI-08**; existing partial code is reuse input, not completed child scope.
 - Description / expected behavior / acceptance: Measure recorded hardware/scale, 500-node test fixture, repaint/hit/search budgets and responsive resize.
 - Approved authority and proposed UI specification: UI_ARCHITECTURE.md + UI_DESIGN_SYSTEM.md + parent subsystem specification; canonical DECISIONS overrides unresolved historical wording. This packet's visual compositions remain proposed.
-- Current implementation status: **TODO — not started**. Readiness: blocked by the dependencies below.
+- Current implementation status: **DEFERRED — not implemented**. Outside the initial plain-control build; retain for later visual upgrade.
 - Dependencies (must be verified complete for live integration): WB-UI-23, WB-UI-25, WB-UI-29.
 - Likely files/modules (proposed paths unless already in source): `ui/tree benchmarks; review capture`.
 - Priority / estimated complexity: **P2 / M**; split at a reviewable boundary if needed.
@@ -668,15 +668,15 @@ Category A permits autonomous merging of that bounded task after required checks
 - Autonomous merge permitted: **Yes for this bounded Category A task after checks, once planning PR merges**. Never infer approval from this TODO record.
 
 
-## WB-UI-52 — Complete mode UI visual acceptance milestone
+## WB-UI-52 — Initial plain-UI acceptance milestone
 
 - Parent: **WB-REL-12**; existing partial code is reuse input, not completed child scope.
-- Description / expected behavior / acceptance: Review every connected major screen and failure state; final Category B implementation only after exact-revision user approval.
+- Description / expected behavior / acceptance: Review all 36 plain-control screens/flows and their connected or honestly unsupported states; initial visual direction is user-approved. Future elaborate styling remains deferred.
 - Approved authority and proposed UI specification: UI_ARCHITECTURE.md + UI_DESIGN_SYSTEM.md + parent subsystem specification; canonical DECISIONS overrides unresolved historical wording. This packet's visual compositions remain proposed.
 - Current implementation status: **TODO — not started**. Readiness: blocked by the dependencies below.
-- Dependencies (must be verified complete for live integration): WB-UI-10, WB-UI-11, WB-UI-12, WB-UI-13, WB-UI-14, WB-UI-15, WB-UI-16, WB-UI-17, WB-UI-18, WB-UI-19, WB-UI-20, WB-UI-21, WB-UI-22, WB-UI-23, WB-UI-24, WB-UI-25, WB-UI-26, WB-UI-27, WB-UI-28, WB-UI-29, WB-UI-30, WB-UI-31, WB-UI-32, WB-UI-33, WB-UI-34, WB-UI-35, WB-UI-36, WB-UI-37, WB-UI-38, WB-UI-39, WB-UI-40, WB-UI-41, WB-UI-42, WB-UI-43, WB-UI-44, WB-UI-45, WB-UI-46, WB-UI-47, WB-UI-48, WB-UI-49, WB-UI-50, WB-UI-51; EXT-LIVE.
+- Dependencies (must be verified complete for live integration): WB-UI-10, WB-UI-11, WB-UI-12, WB-UI-13, WB-UI-14, WB-UI-15, WB-UI-16, WB-UI-17, WB-UI-18, WB-UI-19, WB-UI-20, WB-UI-26, WB-UI-28, WB-UI-29, WB-UI-31, WB-UI-32, WB-UI-33, WB-UI-34, WB-UI-37, WB-UI-38, WB-UI-39, WB-UI-40, WB-UI-41, WB-UI-42, WB-UI-43, WB-UI-44, WB-UI-45, WB-UI-47, WB-UI-48, WB-UI-49, WB-UI-50; relevant EXT-* live capabilities. Deferred art/canvas tasks are not prerequisites for initial plain-UI acceptance.
 - Likely files/modules (proposed paths unless already in source): `review evidence and beta checklist`.
 - Priority / estimated complexity: **P2 / M**; split at a reviewable boundary if needed.
 - Testing requirements: Actual client screenshots/manual routes, backend evidence gates, no misleading stubs; no Plugin Hub submission. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
-- Visual review: **Category B; review artifact and exact revision approval required before final visual merge**.
-- Autonomous merge permitted: **No for final visuals; isolated nonvisual scaffolding may merge under Category A with final styling disabled**. Never infer approval from this TODO record.
+- Visual review: **Initial plain controls APPROVED by the user; elaborate visual treatment remains deferred**.
+- Autonomous merge permitted: **Yes for the approved plain-control implementation after required checks; future elaborate visuals need separate review**. Never infer approval from this TODO record.

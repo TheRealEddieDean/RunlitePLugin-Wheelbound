@@ -1,5 +1,7 @@
 # Source audit and integration evidence
 
+> **APPROVED initial simple UI.** [Implementation handoff, delivery milestones and approval record](UI_IMPLEMENTATION_HANDOFF.md). Plain-control implementations may proceed after checks; optional visual polish is deferred.
+
 ## Scope and evidence
 
 Inspected local clone of remote `wheelbound-mode` at `223950c` on 2026-10-29 (Chicago). Read current headers plus operative sections of SESSION_STATE, PROTOCOL, TASK_QUEUE, DECISIONS_PENDING and IMPLEMENTATION_BACKLOG; DECISIONS and relevant subsystem/design specs; all production source inventory, concrete Swing entry points, progression evaluator and test/build inventory. Historical continuation headers are repeated and sometimes contradictory: current code and latest explicit decisions take precedence.

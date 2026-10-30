@@ -1,5 +1,7 @@
 # Current direction: simple UI first
 
+> **APPROVED initial simple UI.** [Implementation handoff, delivery milestones and approval record](UI_IMPLEMENTATION_HANDOFF.md). Plain-control implementations may proceed after checks; optional visual polish is deferred.
+
 > [36-screen simple UI coverage and delivery order](SIMPLE_UI_SCREEN_COVERAGE.md) · [Navigable plain-control preview](previews/simple-screens.html). These expand existing task acceptance; they are not implemented plugin screens.
 
 User instruction, 2026-10-29 America/Chicago: “lets just go super simple for the UI for now just normal buttons until i get a hold of it”; “things may change after i test it some”.
@@ -19,7 +21,7 @@ This direction supersedes the decorative and visual-polish requirements in this 
 
 The 43 IDs remain traceable; do not delete task history or treat deferred appearance as completed. Deliver ordinary controls and real-state integration first. WB-UI-10 means minimal reusable host styling, not a custom theme. WB-UI-18–20 provide graph/catalog rules; WB-UI-29 can supply the first simple progression list. Its prerequisite explanations may be factored out of WB-UI-26 without waiting for the custom canvas. WB-UI-21–27/30/51 graphical presentation and performance work is deferred where unnecessary for that list. WB-UI-35/36 preserve approved wheel directions but do not block ordinary navigation/status screens. WB-UI-46 final special-wheel art is deferred. Do not let visual-only dependencies block independent standard-control screens.
 
-Existing major mockups and the later interactive tree/Shop/bounty exploration are reference ideas, not the initial implementation target. Final aesthetic choices remain open. No additional visual-approval ceremony is needed for routine standard buttons, labels and functional scaffolding within the already authorized scope. Do not interpret this as approval of the prior elaborate Category B designs or permission to merge the planning PR itself.
+Existing major mockups and the later interactive tree/Shop/bounty exploration are reference ideas, not the initial implementation target. Final aesthetic choices remain open. No additional visual-approval ceremony is needed for routine standard buttons, labels and functional scaffolding within the already authorized scope. The user subsequently approved this simple direction and explicitly authorized merging PR #58; prior elaborate Category B designs remain unapproved.
 
 ## Build for the later UI upgrade
 

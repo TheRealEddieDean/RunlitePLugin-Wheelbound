@@ -1,5 +1,7 @@
 # Complete screen inventory and interaction plan
 
+> **APPROVED initial simple UI.** [Implementation handoff, delivery milestones and approval record](UI_IMPLEMENTATION_HANDOFF.md). Plain-control implementations may proceed after checks; optional visual polish is deferred.
+
 > [36-screen simple UI coverage and delivery order](SIMPLE_UI_SCREEN_COVERAGE.md) · [Navigable plain-control preview](previews/simple-screens.html). These expand existing task acceptance; they are not implemented plugin screens.
 
 Audit status is source-inspected, not live-client verification. Numeric task IDs below mean WB-UI-XX. All new previews are proposed layouts with illustrative state; approved Master/GF4/B3 are preserved. Rejected/superseded manual bounty claiming, Challenge CA objectives, arbitrary rerolls and invented Slayer-final-tier UI are excluded.
@@ -35,6 +37,6 @@ All major pages use ResourceStrip → route heading/search → primary content �
 
 Preview boards provide composition, not working controls. Their component breakdown follows this inventory and the design system; task details specify services and testing. Missing backend data displays an explanation and disabled action. A paid list must never offer placeholder prices or “free” unknown costs.
 
-First useful connected milestone: WB-UI-10/12/13/14/17 plus existing EXT-IDENTITY prerequisites: an actual saved-run status sidebar with FP/debt/lifecycle and sealed Grand checklist. It is read-only until command/evidence services exist; do not claim an active Fate tracker from just lifecycle data. WB-UI-11/15 then opens the same data in one Hub. Obtain Category B layout approval for 17/31 before final integration. In parallel, 18/19/20/21/22/23 establishes the actual-data Tree renderer; 28 waits for atomic progression purchases.
+First useful connected milestone: WB-UI-10/12/13/14/17 plus existing EXT-IDENTITY prerequisites: an actual saved-run status sidebar with FP/debt/lifecycle and sealed Grand checklist. It is read-only until command/evidence services exist; do not claim an active Fate tracker from just lifecycle data. WB-UI-11/15 then opens the same data in one Hub. The user approved the plain 17/31 layouts; implement them under the current handoff. In parallel, 18/19/20/21/22/23 establishes the actual-data Tree renderer; 28 waits for atomic progression purchases.
 
 No general reset/respec, unapproved history retention, new reward family or emergency retirement flow is introduced. A56 stays deferred. Genuine remaining gameplay ambiguity is documented as a service/content hold, not resolved by choosing a convenient UI.

@@ -34,10 +34,16 @@ for md in UI.rglob('*.md'):
         assert (md.parent/link.split('#')[0]).exists(),(md,link)
 for svg in (UI/'previews').glob('*.svg'):ET.parse(svg)
 assert len(list((UI/'previews').glob('*.svg')))==10
-immediate=sum('immediately implementable' in s for s in tasks.values())
-category_b=sum('Category B; review artifact' in s for s in tasks.values())
-print(f'PASS: {len(tasks)} unique detailed tasks, acyclic dependencies, parents, queue IDs, links, 10 SVGs')
-print(f'Readiness: {immediate} immediate / {len(tasks)-immediate} dependency-gated; {category_b} Category B final-visual gates overlap readiness counts')
+deferred={key for key,section in tasks.items() if '**DEFERRED — not implemented**' in section}
+active=set(tasks)-deferred
+assert len(deferred)==11 and len(active)==32
+immediate=sum('immediately implementable' in tasks[key] for key in active)
+assert immediate==4
+for key in active:
+    dep=re.search(r'Dependencies .*?: (.*?)\.',tasks[key]).group(1)
+    assert not (set(re.findall(r'WB-UI-\d+',dep)) & deferred),key
+print(f'PASS: {len(tasks)} detailed tasks, acyclic dependencies, parents, queue IDs, links, 10 SVGs')
+print(f'Initial scope: {len(active)} tasks ({immediate} immediate / {len(active)-immediate} dependent); {len(deferred)} deferred visual tasks')
 
 # Plain-control coverage must remain aligned with its preview and existing tasks.
 import json

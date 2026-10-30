@@ -1,5 +1,7 @@
 # Simple UI coverage — 36 screens and flows
 
+> **APPROVED initial simple UI.** [Implementation handoff, delivery milestones and approval record](UI_IMPLEMENTATION_HANDOFF.md). Plain-control implementations may proceed after checks; optional visual polish is deferred.
+
 Current user direction: cover as much approved functionality as practical using ordinary controls, with replaceable views for later upgrades. This is a screen-level acceptance expansion of the existing **43 UI tasks**, not 36 extra coding tasks or a claim of production implementation. [Simple UI direction](SIMPLE_UI_FIRST.md) wins over earlier visual mockups.
 
 [Open the navigable layout prototype](previews/simple-screens.html). The [machine-readable screen manifest](previews/simple-screens.json) drives the same 36 local preview routes. All gameplay commands are disabled in the prototype; local navigation, row inspection, Back and preference selection are functional. No game account/session is accessed.

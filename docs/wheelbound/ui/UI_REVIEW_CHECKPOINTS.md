@@ -2,7 +2,15 @@
 
 > **Current direction: [simple UI first](SIMPLE_UI_FIRST.md).** Use normal buttons and functional lists for initial testing; decorative styling and complex tree presentation are deferred. Earlier mockups are exploratory.
 
-All new layout concepts are **PROPOSED / AWAITING VISUAL APPROVAL**, not approved runtime UI. Approval of this planning PR permits scheduling and Category A foundations; it does not approve every pictured layout. No final Category B merge without user approval of the reviewed artifact/revision. Keep unrelated backend work moving.
+## Current approval — initial simple UI
+
+The user approved the 36-screen plain-control prototype reviewed at design commit `b47919e0e2bf27cb151fd38be21562a2b1522ad1`, then instructed: “this will work for now, please create a backlog for builing this out etc and then do a pr and merege everything and document with an md file”. This explicitly approves ordinary buttons, lists/panels, initial routes/flows and a replaceable-view architecture, and authorizes merging PR #58 after checks. Prototype route navigation is not production gameplay implementation.
+
+No additional visual approval is needed for those initial standard controls. Functional refinements remain provisional for user testing. Complex tree art, marquee Shop lights and older decorative compositions are **DEFERRED / NOT APPROVED FOR INITIAL BUILD**. Existing Master/GF4/B3 selections remain preserved. Backend prices/evidence and current-client requirements are not approved by a visual review.
+
+## Historical / future styled concepts
+
+The rows below retain the earlier artistic review history. They do not block ordinary implementation of the approved simple screens. See [handoff](UI_IMPLEMENTATION_HANDOFF.md) for current scope and execution order.
 
 | Checkpoint | Artifact | Approval state | Allowed before approval |
 | --- | --- | --- | --- |
@@ -18,4 +26,4 @@ All new layout concepts are **PROPOSED / AWAITING VISUAL APPROVAL**, not approve
 | Risk/recovery and new wheels | previews/risk-recovery.svg | Awaiting review; final Taint/Punishment wheel art outstanding | Consequence models and disabled evidence states |
 | Settings/help | previews/settings-help.svg | Awaiting review for main layout | Text, warnings and preference foundations |
 
-Review one material choice at a time. Start with Fate Tree composition, then Hub. Record response, artifact hash/revision and scope here in the next reviewed change; do not rewrite historical gameplay decisions to call a proposal approved. If approval changes composition, revise dependent screenshots and task acceptance. Do not ask the user to approve backend evidence claims through a visual selection.
+For a later decorative redesign, review one material choice at a time. The initial plain UI can be built now; do not re-ask its approval. Record response, artifact hash/revision and scope here in the next reviewed change; do not rewrite historical gameplay decisions to call a proposal approved. If approval changes composition, revise dependent screenshots and task acceptance. Do not ask the user to approve backend evidence claims through a visual selection.
