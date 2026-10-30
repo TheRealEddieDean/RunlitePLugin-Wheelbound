@@ -17,6 +17,7 @@ import java.util.UUID;
 /** Foundation snapshot and lifecycle/draw/payment journal, not the playable-mode aggregate. */
 public final class RunDocument
 {
+    private final com.wheelbound.domain.GrandCurrentAttempt grandCurrentAttempt;
     private final com.wheelbound.domain.GrandActivationHistory grandActivations;
     private final com.wheelbound.domain.GrandEvidenceJournal grandJournal;
     private final com.wheelbound.domain.GrandFateProgress grandProgress;
@@ -75,6 +76,19 @@ public final class RunDocument
         Optional<com.wheelbound.domain.GrandEvidenceJournal> grandJournal,
         Optional<com.wheelbound.domain.GrandActivationHistory> grandActivations)
     {
+        this(lifecycle, catalogVersion, receipts, fatePoints, inventory, grandFate, grandProgress,
+            grandJournal, grandActivations, Optional.empty());
+    }
+
+    /** Explicit structural current state; never inferred from activation history. */
+    public RunDocument(RunLifecycle lifecycle, String catalogVersion, List<RunReceipt> receipts,
+        Optional<FatePointLedger> fatePoints, Optional<SliceInventory> inventory,
+        Optional<com.wheelbound.domain.SealedGrandFate> grandFate,
+        Optional<com.wheelbound.domain.GrandFateProgress> grandProgress,
+        Optional<com.wheelbound.domain.GrandEvidenceJournal> grandJournal,
+        Optional<com.wheelbound.domain.GrandActivationHistory> grandActivations,
+        Optional<com.wheelbound.domain.GrandCurrentAttempt> grandCurrentAttempt)
+    {
         Objects.requireNonNull(lifecycle, "lifecycle");
         this.grandFate = Objects.requireNonNull(grandFate, "grandFate").orElse(null);
         com.wheelbound.domain.GrandFateProgress supplied =
@@ -100,6 +114,23 @@ public final class RunDocument
         { throw new IllegalArgumentException("Activation history requires exact original seal"); }
         this.grandActivations = activations == null ? null : new com.wheelbound.domain.GrandActivationHistory(
             this.grandFate, lifecycle.revision(), activations.receipts().values());
+        com.wheelbound.domain.GrandCurrentAttempt attempt =
+            Objects.requireNonNull(grandCurrentAttempt, "grandCurrentAttempt").orElse(null);
+        if (attempt != null)
+        {
+            if (this.grandActivations == null
+                || !attempt.lifecycle().identity().equals(lifecycle.identity())
+                || attempt.lifecycle().revision() != lifecycle.revision()
+                || attempt.lifecycle().state() != lifecycle.state()
+                || attempt.lifecycle().obligation() != lifecycle.obligation()
+                || !attempt.activation().equals(this.grandActivations.receipts().get(attempt.activation().commandId())))
+            { throw new IllegalArgumentException("Current attempt requires exact aggregate context"); }
+            this.grandCurrentAttempt = com.wheelbound.domain.GrandCurrentAttempt.restore(
+                attempt.activation().commandId(), this.grandActivations, lifecycle,
+                this.grandProgress == null ? com.wheelbound.domain.GrandFateChecklist.initial(this.grandFate)
+                    : this.grandProgress.checklist());
+        }
+        else { this.grandCurrentAttempt = null; }
         this.inventory = Objects.requireNonNull(inventory, "inventory").orElse(null);
         this.fatePoints = Objects.requireNonNull(fatePoints, "fatePoints").orElse(null);
         this.lifecycle = Objects.requireNonNull(lifecycle, "lifecycle");
@@ -228,6 +259,8 @@ public final class RunDocument
 
     public Optional<com.wheelbound.domain.GrandActivationHistory> grandActivations()
     { return Optional.ofNullable(grandActivations); }
+    public Optional<com.wheelbound.domain.GrandCurrentAttempt> grandCurrentAttempt()
+    { return Optional.ofNullable(grandCurrentAttempt); }
     public RunLifecycle lifecycle() { return lifecycle; }
     public Optional<com.wheelbound.domain.GrandEvidenceJournal> grandJournal()
     { return Optional.ofNullable(grandJournal); }
