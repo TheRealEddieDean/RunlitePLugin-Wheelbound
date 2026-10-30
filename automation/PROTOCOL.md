@@ -1,3 +1,36 @@
+## Current local continuation - Grand activation receipt payload, 2026-10-30
+
+IDLE after bounded WB-GFD-06/07 activation-receipt prerequisite (XS/S).
+Reconciled current attempt/checklist/receipt/journal, aggregate schema 10 and prior
+checkpoint against backlog. FND-01 remains DONE; FND-10/12 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing wheel/economy/tree
+partial and decision/client/price BLOCKED statuses stand. Merged-work history was
+not reverified; no Git operations or I01d work. No complete gameplay claimed.
+
+GrandActivationReceipt retains command UUID, original before/after revisions, full
+original seal, completed checklist prefix and explicitly selected unfinished objective.
+Restore reconstructs the original gated transition; proposal checks current lifecycle,
+identity and revision. Full payload equality distinguishes command collisions, changed
+prefixes and selections. This is structural data only, not session admission, durable
+replay or a persistence command. No spin debit, client caller or feature enablement.
+Authority WB-D089/104 with WB-D117 supersession and STATE_CONTRACT/PERSISTENCE.
+Master Wheel unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Validation: Java 11 compilation of all domain sources and Grand executable fixtures
+passed; all eleven Grand executable fixtures passed in build/continuation-grand-activation-receipt. JUnit adapter
+added. Focused Gradle attempt failed before compilation: inherited wrapper-cache lock
+access denied. No cache override or external-path inspection; no JUnit, codec/store or
+Master Wheel regression pass claimed.
+
+Next eligible gameplay increment: versioned activation-receipt/attempt persistence,
+with explicit legacy absence and restart/payload-collision tests, followed by atomic
+activation and trusted evidence acceptance. These remain UNSTARTED. Require trusted
+identity/session/source admission, off-task settlement ordering, global command/source
+collision checks and lost-ack tests before wiring. Schema-10 serializer/migration/store
+and legacy regressions, populated-journal debit/draw retention and payload-replacement
+store fixtures remain open. Save retention and receipt payloads do not complete GFD-05/07.
+WB-D092 and client/item mappings remain gated. Local edits only; supervisor handles Git.
+
 ## Current local continuation - aggregate Grand journal retention, 2026-10-30
 
 IDLE after bounded WB-GFD-05/07 schema-10 retention increment (S). Supersedes older
