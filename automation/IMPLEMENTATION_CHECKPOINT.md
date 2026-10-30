@@ -1,3 +1,38 @@
+## Current local continuation - combined Grand activation proposal, 2026-10-30
+
+IDLE after bounded WB-GFD-06/07 proposal increment (S). Reconciled domain activation,
+history/current-attempt, schema-12 aggregate/store guards and focused tests. FND-01
+remains DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04
+TODO. Existing other partial/TODO/decision and evidence BLOCKED rows stand. Merged
+work not independently reverified (Git prohibited). No I01d work.
+
+GrandActivationProposal combines one revision, original receipt, appended history and
+explicit current attempt. New requests require exact current payload, identity/head,
+ACTIVE/NONE and unfinished objective. Exact historical replay returns the original
+receipt while preserving current lifecycle/history/explicit attempt absence or presence,
+including paused or ended attempts; it never reactivates a historical attempt. Inputs
+remain immutable. No spin/FP field or charge, persistence or client wiring is added.
+Authority WB-D089/104 with WB-D117 supersession, STATE_CONTRACT and PERSISTENCE.
+Caller still must authenticate sessions, reject pending draws/offers and global command
+collisions, and atomically commit the complete aggregate. Gameplay stays disabled;
+Master Wheel source unchanged. This is a proposal, not an atomic activation command.
+
+Validation: Java 11 domain compilation and all 13 Grand executable fixtures passed.
+New activation proposal checks
+passed across all five goals/every objective, new activation, pause and ended-attempt
+replay at Long.MAX_VALUE, original-response identity, immutable inputs, stale/foreign
+context, changed payload, all inactive states/obligations and seal-command collision.
+JUnit wrapper authored. Focused Gradle current/history/aggregate/codec/store/Master Wheel
+attempt failed before compilation: inherited wrapper-cache lock access denied. No
+cache override or external-path inspection; Gson/JUnit/store/Master Wheel NOT_RUN.
+
+Next: atomic aggregate activation command with operation receipt/journal-chain design,
+legacy explicit-history admission, global collision checks and store operation guards,
+then failed-write/lost-ack/restart tests. Current generic store guards deliberately
+still reject activation mutations. Trusted source/session admission, evidence acceptance
+and off-task settlement remain UNSTARTED. Schema-12/11/10 serializer/migration/store
+regressions still require inherited dependencies. Local edits only; supervisor handles
+Git/PR/CI/merge. No complete gameplay or durability claim.
 ## Current local continuation - schema-12 Grand current attempt, 2026-10-30
 
 IDLE after bounded WB-GFD-06/07 aggregate persistence increment (S). Reconciled
