@@ -1,3 +1,38 @@
+## Current local continuation - structural current-attempt aggregate, 2026-10-30
+
+IDLE after bounded WB-GFD-06/07 aggregate-validation increment (XS/S), split from
+schema integration. Reconciled RunDocument, schema-11 codec, current-attempt/history
+models and focused fixtures. FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07
+PARTIAL_UNVERIFIED; GFD-03/04 TODO. Other partial/TODO/evidence and decision BLOCKED
+rows stand. Merged work not independently reverified (Git prohibited). No I01d work.
+
+RunDocument now optionally holds an explicit GrandCurrentAttempt, checking exact
+original activation payload, history, lifecycle identity/revision/state/obligation and
+current checklist prefix. Missing history, changed payload, completed prefix and
+superseded attempts fail closed. Legacy constructors retain explicit absence; history
+never implies activity. RunCodec schema 11 rejects populated current attempts before
+encoding to prevent silent loss pending versioned support. Authority WB-D089/104 with
+WB-D117 supersession, STATE_CONTRACT and PERSISTENCE. Structural only: no durable
+current-attempt state, atomic activation, evidence admission, spin debit or client wiring.
+Master Wheel unchanged; incomplete gameplay stays default-disabled.
+
+Validation: Java 11 compilation of all domain sources plus RunDocument/RunReceipt and
+two aggregate executable fixtures passed; both fixtures passed. Expanded current-attempt
+fixture also passed with retained completed-prefix coverage. Covers all five goals/every
+objective, active/paused/resumed/Long.MAX_VALUE, missing history, stale lifecycle,
+changed selection, completed prefix and superseded activation. Focused Gradle JUnit and
+Master Wheel attempt failed before compilation: inherited wrapper-cache lock access
+denied. Codec-guard JUnit test authored but NOT_RUN; no Gson/store/legacy pass claimed.
+No cache override or external-path inspection. Local edits only; supervisor handles Git.
+
+Next eligible increment: schema-12 current-attempt serialization, explicit legacy absence,
+lifecycle/debit/draw copy retention, store add/drop/replacement guards and restart/corruption
+fixtures. Remove the schema-11 encode guard only when new schema retains full state.
+Durable current-attempt persistence remains UNSTARTED. Atomic activation/evidence
+acceptance, trusted session/source admission, off-task settlement, global collisions and
+lost-ack tests remain UNSTARTED. Prior schema-10/11 Gson/store tests still need execution.
+WB-D092/client mappings remain gated; no full gameplay completion claimed.
+
 ## Current local continuation - Grand current-attempt JSON, 2026-10-30
 
 IDLE after bounded WB-GFD-06/07 standalone serialization increment (S), split from

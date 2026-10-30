@@ -37,6 +37,8 @@ public final class RunCodec
 
     public byte[] encode(RunDocument document)
     {
+        if (document.grandCurrentAttempt().isPresent())
+        { throw new IllegalArgumentException("Schema 11 cannot retain a current Grand attempt"); }
         RunLifecycle run = document.lifecycle();
         JsonObject payload = new JsonObject();
         payload.addProperty("accountKey", run.identity().accountKey());
