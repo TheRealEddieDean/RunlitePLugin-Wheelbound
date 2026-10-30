@@ -106,6 +106,17 @@ does not establish trusted session admission, settlement or a durable activation
 Gson/JUnit restart tests are authored but remain unexecuted because the inherited
 Gradle wrapper-cache lock is inaccessible.
 
+## Local aggregate activation admission - 2026-10-30
+
+GrandActivationAdmission is a read-only prerequisite to the future atomic command.
+It requires explicit activation history and rejects request IDs used by the seal,
+operation journal or Grand evidence references. It delegates exact replay and new
+activation to GrandActivationProposal; replay preserves later pending obligations.
+Missing legacy history is unavailable and cannot be synthesized by this boundary.
+This API neither authenticates a session nor commits or publishes activation. The
+eventual command must execute admission under its write lock and persist an operation
+envelope with the entire resulting aggregate. Current generic store guards remain.
+
 ## Local schema-11 activation-history increment - 2026-10-30
 
 The unwired foundation aggregate retains optional full original activation history.
