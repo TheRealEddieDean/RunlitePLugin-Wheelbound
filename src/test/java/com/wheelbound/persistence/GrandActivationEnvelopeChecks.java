@@ -3,6 +3,7 @@ package com.wheelbound.persistence;
 import com.wheelbound.domain.*;
 import java.util.List;
 import java.util.UUID;
+import java.util.Optional;
 
 /** Dependency-free fixture also invoked by JUnit. */
 public final class GrandActivationEnvelopeChecks
@@ -52,6 +53,33 @@ public final class GrandActivationEnvelopeChecks
                 rejects(() -> new RunReceipt(command, RunReceipt.Operation.GRAND_ACTIVATION,
                     0, 1, RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.ACTIVE_OBJECTIVE));
                 rejects(() -> new RunDocument(original.attempt().lifecycle(), "test", List.of(envelope)));
+                GrandActivationHistory history = new GrandActivationHistory(checklist.seal(),
+                    Long.MAX_VALUE, List.of(original));
+                RunDocument aggregate = aggregate(original.attempt().lifecycle(), history, List.of(envelope));
+                check(GrandActivationAdmission.propose(aggregate, original, identity, Long.MAX_VALUE)
+                    .isReplay());
+                check(aggregate.grandCurrentAttempt().isEmpty());
+                RunLifecycle pausedHead = new RunLifecycle(identity, Long.MAX_VALUE,
+                    RunLifecycle.State.PAUSED, RunLifecycle.Obligation.ACTIVE_OBJECTIVE);
+                RunReceipt missing = new RunReceipt(UUID.randomUUID(), RunReceipt.Operation.PAUSE,
+                    Long.MAX_VALUE - 1, Long.MAX_VALUE, RunLifecycle.State.PAUSED,
+                    RunLifecycle.Obligation.ACTIVE_OBJECTIVE);
+                rejects(() -> aggregate(pausedHead, history, List.of(missing)));
+                RunReceipt resume = new RunReceipt(UUID.randomUUID(), RunReceipt.Operation.RESUME,
+                    Long.MAX_VALUE - 2, Long.MAX_VALUE - 1, RunLifecycle.State.ACTIVE,
+                    RunLifecycle.Obligation.NONE);
+                aggregate(original.attempt().lifecycle(), history, List.of(resume, envelope));
+                RunReceipt blocked = new RunReceipt(UUID.randomUUID(), RunReceipt.Operation.RESUME,
+                    Long.MAX_VALUE - 2, Long.MAX_VALUE - 1, RunLifecycle.State.ACTIVE,
+                    RunLifecycle.Obligation.PUNISHMENT_PENDING);
+                rejects(() -> aggregate(original.attempt().lifecycle(), history, List.of(blocked, envelope)));
+                GrandActivationReceipt changed = new GrandActivationReceipt(UUID.randomUUID(), identity,
+                    Long.MAX_VALUE - 1, checklist, objective);
+                rejects(() -> aggregate(original.attempt().lifecycle(), history,
+                    List.of(RunReceipt.grandActivation(changed))));
+                rejects(() -> aggregate(original.attempt().lifecycle(),
+                    new GrandActivationHistory(checklist.seal(), Long.MAX_VALUE, List.of(changed)),
+                    List.of(envelope)));
             }
         }
         rejects(() -> RunReceipt.grandActivation(null));
@@ -59,5 +87,12 @@ public final class GrandActivationEnvelopeChecks
             0, 1, RunLifecycle.State.PAUSED, RunLifecycle.Obligation.NONE);
         check(pause.activation() == null && pause.equals(pause));
         System.out.println("Grand activation envelope checks passed");
+    }
+
+    private static RunDocument aggregate(RunLifecycle lifecycle, GrandActivationHistory history,
+        List<RunReceipt> operations)
+    {
+        return new RunDocument(lifecycle, "test", operations, Optional.empty(), Optional.empty(),
+            Optional.of(history.seal()), Optional.empty(), Optional.empty(), Optional.of(history));
     }
 }

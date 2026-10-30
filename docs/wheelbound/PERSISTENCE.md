@@ -143,3 +143,16 @@ These guards run before pending snapshot creation. This is structural persistenc
 not live activation or evidence admission; incomplete gameplay stays disabled.
 Java 11 domain/aggregate fixtures pass. Gson/store/JUnit/migration and Master Wheel
 regressions remain NOT_RUN: inherited Gradle wrapper-cache lock access was denied.
+
+## Local structural activation journal validation - 2026-10-30
+
+RunDocument accepts GRAND_ACTIVATION envelopes only when their complete original
+payload equals the independently retained activation history entry. A retained
+predecessor must be ACTIVE/NONE; ordinary chain and head checks still apply.
+History activations after the first retained operation's before-revision require
+matching typed envelopes. Older history prefixes remain supported. Arbitrary shared
+command IDs are rejected; exact typed admission replay preserves current state and
+never infers a current attempt from history. RunCodec schema 12 refuses documents
+containing these envelopes before serialization, pending versioned payload support.
+This is structural validation, not a durable activation command or session admission.
+Existing store transition guards and disabled gameplay remain in force.

@@ -37,6 +37,8 @@ public final class RunCodec
 
     public byte[] encode(RunDocument document)
     {
+        if (document.receipts().stream().anyMatch(r -> r.activation() != null))
+        { throw new IllegalArgumentException("Activation journal encoding requires a versioned schema"); }
         RunLifecycle run = document.lifecycle();
         JsonObject payload = new JsonObject();
         payload.addProperty("accountKey", run.identity().accountKey());

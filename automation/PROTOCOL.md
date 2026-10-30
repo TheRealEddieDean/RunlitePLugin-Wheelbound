@@ -1,3 +1,36 @@
+## Current local continuation - Grand activation journal validation, 2026-10-30
+
+IDLE after bounded WB-GFD-06/07 structural journal integration (S). Reconciled
+proposal/admission/envelope, schema-12 aggregate/codec and executable fixtures.
+FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED;
+GFD-03/04 TODO. Other partial/TODO and decision/evidence BLOCKED rows stand.
+No Git operations or merged-state verification; I01d not selected.
+
+RunDocument now accepts typed activation envelopes only with exact original history
+payloads, validates ACTIVE/NONE predecessor boundaries, rejects cross-operation IDs,
+and requires history activations within the retained operation span to have matching
+envelopes. Earlier legacy history prefixes remain allowed; history never synthesizes
+current activity. Admission permits exact typed replay, preserving explicit absence.
+RunCodec explicitly refuses activation envelopes until versioned payload support,
+preventing schema-12 silent loss. No atomic command/store acknowledgement, spin/FP
+charge, evidence admission or client wiring. Authority WB-D089/104 with WB-D117
+supersession, STATE_CONTRACT/PERSISTENCE. Master Wheel unchanged; gameplay disabled.
+
+Validation: all 13 Grand domain and five persistence executable fixtures passed.
+Java 11 compilation of all domain sources, aggregate/admission and Grand
+executable fixtures passed. Expanded envelope fixture passed for all five goals/every
+objective, Long.MAX_VALUE replay, absent current attempt, valid predecessor, blocked
+obligation, missing history/envelope and payload mismatch. Focused Gradle attempt
+failed before compilation: inherited wrapper-cache lock access denied. No cache
+override or external-path inspection. Codec guard JUnit authored but NOT_RUN;
+Gson/store/Master Wheel remain NOT_RUN. No verified durability claim.
+
+Next eligible increment: versioned activation-envelope codec support and migration/
+corruption tests, then operation-specific store transition guards and atomic activation.
+Failed-write/lost-ack/restart, trusted session/source admission, evidence acceptance
+and off-task settlement remain UNSTARTED. Schema-12 current-attempt persistence stays
+IMPLEMENTED_UNVERIFIED. Supervisor handles Git/PR/CI/merge; local edits only.
+
 ## Current local continuation - typed Grand activation operation envelope, 2026-10-30
 
 IDLE after bounded WB-GFD-06/07 journal-envelope prerequisite (XS).
