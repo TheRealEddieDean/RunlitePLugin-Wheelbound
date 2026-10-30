@@ -1761,3 +1761,26 @@ required; no candidate amounts may be activated. WHL-03 inventory transitions, W
 Questing edit enforcement and aggregate persistence remain unfinished. Legacy Master
 Wheel source unchanged; incomplete gameplay remains unwired/default-disabled. No external
 path, credential, secret or workflow access. Supervisor handles Git/PR/CI/merge.
+
+
+## UI child-task decomposition — 2026-10-29
+
+The separate [UI implementation packet](../docs/wheelbound/ui/UI_IMPLEMENTATION_BACKLOG.md)
+provides WB-UI-10 through WB-UI-52 as bounded child increments of existing parent rows.
+The discoverable index is appended to [TASK_QUEUE](TASK_QUEUE.md). Existing WB-UI-01..09,
+TREE, WHL, GFD, BOS, FAT, QST, ECON, DEF, PUN, BNT and REL scope/status is not deleted or
+completed by this design work. Reconcile code before starting; never duplicate parent
+implementation. Use full child dependencies/acceptance and Category B visual merge gates.
+Five independent foundations are ready; live transactions remain service/evidence gated.
+This planning PR needs user approval to merge; ordinary unrelated automation continues.
+Read [UI audit](../docs/wheelbound/ui/UI_AUDIT.md) for the unverified Windows supervisor
+runtime-discovery boundary and the normal-refresh verification required after merge.
+
+
+## Approved simple UI implementation — PR #58
+
+The user approved the 36-screen simple UI and explicitly authorized this planning PR's merge. Read [UI_IMPLEMENTATION_HANDOFF](../docs/wheelbound/ui/UI_IMPLEMENTATION_HANDOFF.md), the detailed [UI backlog](../docs/wheelbound/ui/UI_IMPLEMENTATION_BACKLOG.md) and [36-screen matrix](../docs/wheelbound/ui/SIMPLE_UI_SCREEN_COVERAGE.md).
+
+Existing WB-UI-10..52 IDs remain; 32 increments are initial plain-UI scope and 11 optional visual/art increments are DEFERRED (21,22,23,24,25,27,30,35,36,46,51). Four independent initial foundations: WB-UI-10/11/12/18. WB-UI-26 and WB-UI-29 no longer wait for a custom canvas. Earlier Category B labels in the original index refer to future decorative concepts; the initial ordinary controls are now approved. Do not mark any Java UI task DONE from this documentation/prototype merge.
+
+Respect the current in-flight gameplay task and existing claim/refresh procedure. Once a UI task is legitimately selected, follow the new handoff's dependency order; do not restart or reconfigure the supervisor. Read-only panels can proceed without missing mutation services; unavailable actions stay disabled and explained. Live account, evidence, reviewed quote and atomic transaction dependencies remain required. No new gameplay rules, pricing, Plugin Hub submission or feature enablement is authorized by visual approval.

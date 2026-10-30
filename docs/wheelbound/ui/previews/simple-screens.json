@@ -1,0 +1,1415 @@
+[
+  {
+    "id": "overview",
+    "group": "Core",
+    "title": "Run overview",
+    "task": "WB-UI-13/14/31",
+    "kind": "status",
+    "summary": "Run state, Fate Points, spins and the outstanding obligation.",
+    "fields": [
+      [
+        "Run status",
+        "Not connected"
+      ],
+      [
+        "Fate Points / debt",
+        "Unavailable"
+      ],
+      [
+        "Remaining spins",
+        "Unavailable"
+      ],
+      [
+        "Current Fate",
+        "No connected assignment"
+      ]
+    ],
+    "links": [
+      [
+        "View active Fate",
+        "objective"
+      ],
+      [
+        "Open wheel",
+        "master"
+      ],
+      [
+        "Grand Fate progress",
+        "grand-progress"
+      ],
+      [
+        "Pause / resume",
+        "pause"
+      ]
+    ],
+    "blocked": "Connect a supported saved run before gameplay actions are available.",
+    "binding": "Identity-bound lifecycle, ledger, spin state and obligation snapshot; absent values are not zero."
+  },
+  {
+    "id": "sidebar",
+    "group": "Core",
+    "title": "Gameplay sidebar",
+    "task": "WB-UI-17",
+    "kind": "status",
+    "summary": "A narrow status panel with the information needed during normal play.",
+    "fields": [
+      [
+        "State",
+        "Not connected"
+      ],
+      [
+        "FP / spins",
+        "Unavailable"
+      ],
+      [
+        "Active objective",
+        "Unavailable"
+      ],
+      [
+        "Progress / tolerance",
+        "Unavailable"
+      ]
+    ],
+    "links": [
+      [
+        "Open Wheelbound",
+        "overview"
+      ],
+      [
+        "Current wheel",
+        "master"
+      ],
+      [
+        "Fate Tree",
+        "progression"
+      ],
+      [
+        "Bounties",
+        "bounties"
+      ]
+    ],
+    "blocked": "Gameplay actions depend on the supported current account.",
+    "binding": "Same immutable snapshot/presenter as Overview; host sidebar width wraps without horizontal scrolling."
+  },
+  {
+    "id": "account",
+    "group": "Core",
+    "title": "Mode and account setup",
+    "task": "WB-UI-12/13/49",
+    "kind": "form",
+    "summary": "Explicit opt-in, connected account identity and save availability.",
+    "fields": [
+      [
+        "Wheelbound mode",
+        "Off until supported opt-in"
+      ],
+      [
+        "Connected profile",
+        "Unavailable"
+      ],
+      [
+        "Saved run",
+        "Not inspected"
+      ]
+    ],
+    "choices": [
+      "Keep normal wheel mode",
+      "Inspect supported Wheelbound save"
+    ],
+    "action": "Connect Wheelbound mode",
+    "links": [
+      [
+        "Inspect save status",
+        "save"
+      ],
+      [
+        "Start eligibility",
+        "start"
+      ]
+    ],
+    "blocked": "Live identity/directory/session binding is required; no guessed account identity.",
+    "binding": "FoundationPreview/AsyncRunSession plus supported live identity adapter; no editing account IDs in UI."
+  },
+  {
+    "id": "save",
+    "group": "Core",
+    "title": "Save status and recovery",
+    "task": "WB-UI-13/49/50",
+    "kind": "status",
+    "summary": "Show readable save health and safe recovery choices.",
+    "fields": [
+      [
+        "Save state",
+        "Not loaded"
+      ],
+      [
+        "Schema / revision",
+        "Unavailable"
+      ],
+      [
+        "Pending write",
+        "Unknown"
+      ],
+      [
+        "Recovery action",
+        "Await supported inspection"
+      ]
+    ],
+    "links": [
+      [
+        "Account setup",
+        "account"
+      ],
+      [
+        "Recent receipts",
+        "receipts"
+      ]
+    ],
+    "blocked": "Do not reset, overwrite or mark a corrupt/newer save recovered from this screen.",
+    "binding": "Typed codec/store inspection; preserve files and obligation, show uncertainty distinctly from empty/new save."
+  },
+  {
+    "id": "start",
+    "group": "Core",
+    "title": "Start-run eligibility",
+    "task": "WB-UI-34",
+    "kind": "checklist",
+    "summary": "Check the protected tutorial/mainland flow before creating a run.",
+    "rows": [
+      [
+        "Supported account identity",
+        "Unknown"
+      ],
+      [
+        "Tutorial / mainland state",
+        "Unknown"
+      ],
+      [
+        "Fresh-account eligibility",
+        "Unknown"
+      ],
+      [
+        "Existing run conflict",
+        "Not inspected"
+      ]
+    ],
+    "action": "Begin Grand Fate selection",
+    "links": [
+      [
+        "Grand Fate reveal",
+        "grand-draw"
+      ]
+    ],
+    "blocked": "Unknown eligibility blocks creation; this is not a free reset/new-run escape.",
+    "binding": "Authoritative initialization predicate, durable seal/staging and original-command replay."
+  },
+  {
+    "id": "pause",
+    "group": "Core",
+    "title": "Pause and resume",
+    "task": "WB-UI-16/33",
+    "kind": "confirm",
+    "summary": "Pause preserves the run and its outstanding obligations.",
+    "fields": [
+      [
+        "Current state",
+        "Unavailable"
+      ],
+      [
+        "Active obligation",
+        "Unavailable"
+      ]
+    ],
+    "consequences": [
+      "Paused gains do not advance objectives or pay new rewards.",
+      "Existing Fate, progress and obligations remain.",
+      "Resuming requires the same validated run context."
+    ],
+    "action": "Confirm pause / resume",
+    "links": [
+      [
+        "Back to overview",
+        "overview"
+      ]
+    ],
+    "blocked": "Await a connected lifecycle and the permitted transition.",
+    "binding": "Revision-checked lifecycle gateway; no view-only pause flag or automatic clearing of obligations."
+  },
+  {
+    "id": "master",
+    "group": "Fates",
+    "title": "Master Wheel access",
+    "task": "WB-UI-15; WB-WHL-01/08",
+    "kind": "status",
+    "summary": "Open the existing wheel with its current appearance and behavior.",
+    "fields": [
+      [
+        "Committed pool",
+        "Unavailable"
+      ],
+      [
+        "Readiness",
+        "Not connected"
+      ],
+      [
+        "Spin charge",
+        "From authoritative command"
+      ]
+    ],
+    "action": "Open existing Master Wheel",
+    "links": [
+      [
+        "Fate offering screen",
+        "offers"
+      ],
+      [
+        "Wheel Builder",
+        "builder"
+      ],
+      [
+        "Zero-spins flow",
+        "zero-spins"
+      ]
+    ],
+    "blocked": "This prototype does not draw, reroll or replace the existing Master Wheel.",
+    "binding": "Existing popup renderer plus mode commitment/readiness; skip animation reveals the same committed result."
+  },
+  {
+    "id": "offers",
+    "group": "Fates",
+    "title": "Fate offerings",
+    "task": "WB-UI-32",
+    "kind": "list",
+    "summary": "Standard target first, then frozen offers, then random target selection.",
+    "columns": [
+      "Offering",
+      "Target / rules",
+      "Availability"
+    ],
+    "rows": [
+      [
+        "Standard offering A",
+        "Committed target A",
+        "Await offer snapshot"
+      ],
+      [
+        "Standard offering B",
+        "Committed target B",
+        "Await offer snapshot"
+      ],
+      [
+        "Third offering",
+        "After approved capacity upgrade",
+        "Locked until owned"
+      ]
+    ],
+    "action": "Select committed offering",
+    "links": [
+      [
+        "Boss eligibility",
+        "bosses"
+      ],
+      [
+        "Challenge hunt details",
+        "hunt"
+      ]
+    ],
+    "blocked": "No boss picker or reroll. The UI never generates replacement offers.",
+    "binding": "Immutable durable offers, distinct starting Standard targets, two/three capacity and card-before-target sequence."
+  },
+  {
+    "id": "cards",
+    "group": "Fates",
+    "title": "Owned Fate Cards",
+    "task": "WB-UI-32/42",
+    "kind": "list",
+    "summary": "Inspect permanently owned types and offering upgrades.",
+    "columns": [
+      "Card family",
+      "Ownership",
+      "Effect"
+    ],
+    "rows": [
+      [
+        "Standard",
+        "From saved ownership",
+        "Default offering family"
+      ],
+      [
+        "Lesser",
+        "From saved ownership",
+        "Approved reduced target / reward"
+      ],
+      [
+        "Greater",
+        "From saved ownership",
+        "Approved increased target / reward"
+      ],
+      [
+        "Challenge",
+        "See owned ranks",
+        "Fresh assigned-item hunt"
+      ]
+    ],
+    "links": [
+      [
+        "Shop upgrades",
+        "shop"
+      ],
+      [
+        "Challenge ranks",
+        "ranks"
+      ],
+      [
+        "New offering view",
+        "offers"
+      ]
+    ],
+    "blocked": "Owning a card does not select a boss or make a target eligible.",
+    "binding": "Versioned card ownership/offer catalog; normal and Challenge families remain distinct."
+  },
+  {
+    "id": "objective",
+    "group": "Fates",
+    "title": "Active Fate detail",
+    "task": "WB-UI-33",
+    "kind": "status",
+    "summary": "One objective panel reused for XP, combat, boss KC, quests and Slayer.",
+    "fields": [
+      [
+        "Assignment / type",
+        "Unavailable"
+      ],
+      [
+        "Target / source",
+        "Unavailable"
+      ],
+      [
+        "Verified progress",
+        "Unavailable"
+      ],
+      [
+        "Restrictions / tolerance",
+        "Unavailable"
+      ],
+      [
+        "Reward quote",
+        "Unavailable"
+      ]
+    ],
+    "links": [
+      [
+        "Pause / resume",
+        "pause"
+      ],
+      [
+        "Reject consequence review",
+        "reject"
+      ],
+      [
+        "Completion result",
+        "complete"
+      ],
+      [
+        "Tolerance warning",
+        "tolerance"
+      ]
+    ],
+    "blocked": "No manual completion credit from this screen; only supported evidence may satisfy an objective.",
+    "binding": "Committed assignment snapshot, type-specific progress projection and atomic settlement capability."
+  },
+  {
+    "id": "quests",
+    "group": "Fates",
+    "title": "Quest choices",
+    "task": "WB-UI-37",
+    "kind": "list",
+    "summary": "Display the actual committed quest choices and qualification reasons.",
+    "columns": [
+      "Quest",
+      "Qualification",
+      "State"
+    ],
+    "rows": [
+      [
+        "Committed quest choice",
+        "Actual prerequisite reasons",
+        "Await assignment snapshot"
+      ]
+    ],
+    "action": "Select permitted quest",
+    "links": [
+      [
+        "Active Fate",
+        "objective"
+      ]
+    ],
+    "blocked": "Unknown data is not empty. Known-empty landing retries free with the slice retained.",
+    "binding": "Resolved backend choice capacity/tier mapping; saved choices do not refresh on reopen."
+  },
+  {
+    "id": "bosses",
+    "group": "Fates",
+    "title": "Boss eligibility",
+    "task": "WB-UI-32/38",
+    "kind": "list",
+    "summary": "Read-only pool membership, unlock status and actual eligibility.",
+    "columns": [
+      "Encounter",
+      "Owned / unlocked",
+      "Eligible reason"
+    ],
+    "rows": [
+      [
+        "Catalog encounter",
+        "From saved unlocks",
+        "From supported account snapshot"
+      ]
+    ],
+    "links": [
+      [
+        "Fate offerings",
+        "offers"
+      ],
+      [
+        "Vendor access",
+        "vendors"
+      ]
+    ],
+    "blocked": "Inspecting a boss does not choose the assignment or unlock its access requirements.",
+    "binding": "Actual committed eligible pool; eligibility filters affect only legal future selections."
+  },
+  {
+    "id": "hunt",
+    "group": "Fates",
+    "title": "Challenge item hunt",
+    "task": "WB-UI-33/38",
+    "kind": "status",
+    "summary": "The exact assigned item, creature and qualifying source context.",
+    "fields": [
+      [
+        "Challenge rank",
+        "Unavailable"
+      ],
+      [
+        "Assigned item",
+        "Reveal after committed selection"
+      ],
+      [
+        "Assigned source / context",
+        "Unavailable"
+      ],
+      [
+        "Reviewed reward",
+        "Unavailable"
+      ],
+      [
+        "Qualifying fresh drop",
+        "No supported evidence"
+      ]
+    ],
+    "links": [
+      [
+        "Challenge readiness",
+        "ranks"
+      ],
+      [
+        "Active Fate",
+        "objective"
+      ]
+    ],
+    "blocked": "Old items, withdrawals and other uniques do not satisfy this assignment. No pity kill cap.",
+    "binding": "Frozen one-item/source/rank/reward assignment and supported fresh active personal drop receipt."
+  },
+  {
+    "id": "complete",
+    "group": "Fates",
+    "title": "Completion and reward result",
+    "task": "WB-UI-16/33",
+    "kind": "status",
+    "summary": "Show the saved settlement outcome after durable acknowledgment.",
+    "fields": [
+      [
+        "Settlement",
+        "Not received"
+      ],
+      [
+        "FP change",
+        "Unavailable"
+      ],
+      [
+        "Spin / obligation result",
+        "Unavailable"
+      ],
+      [
+        "Receipt",
+        "Unavailable"
+      ]
+    ],
+    "links": [
+      [
+        "Recent receipts",
+        "receipts"
+      ],
+      [
+        "Back to overview",
+        "overview"
+      ]
+    ],
+    "blocked": "A proposed transition is not successful settlement; lost acknowledgment is reconciled using the same command ID.",
+    "binding": "Atomic settlement receipt and current snapshot; never award or debit from rendered UI state."
+  },
+  {
+    "id": "reject",
+    "group": "Fates",
+    "title": "Reject / failure consequences",
+    "task": "WB-UI-16/33",
+    "kind": "confirm",
+    "summary": "Review exact consequences before a permitted Reject action.",
+    "fields": [
+      [
+        "FP change / debt",
+        "From approved settlement quote"
+      ],
+      [
+        "Spin consequence",
+        "From approved settlement quote"
+      ],
+      [
+        "Mandatory follow-up",
+        "From current obligation rules"
+      ]
+    ],
+    "consequences": [
+      "Show forfeited objective reward and mandatory punishment where applicable.",
+      "Independent bounty rewards already paid are retained.",
+      "Pending settlement survives closing and reopening."
+    ],
+    "action": "Confirm Reject",
+    "links": [
+      [
+        "Cancel and return",
+        "objective"
+      ]
+    ],
+    "blocked": "No guessed numeric loss, punishment or recovery waiver.",
+    "binding": "Current identity/revision, approved consequence quote and atomic Reject/failure gateway."
+  },
+  {
+    "id": "tolerance",
+    "group": "Fates",
+    "title": "Off-task tolerance warning",
+    "task": "WB-UI-14/33/49",
+    "kind": "status",
+    "summary": "Explain off-task XP and the remaining allowance.",
+    "fields": [
+      [
+        "Tracked off-task XP",
+        "Unavailable"
+      ],
+      [
+        "Remaining allowance",
+        "From active Fate rules"
+      ],
+      [
+        "Penalty / failure status",
+        "Await authoritative processing"
+      ]
+    ],
+    "links": [
+      [
+        "Active restrictions",
+        "objective"
+      ],
+      [
+        "Pause / resume",
+        "pause"
+      ]
+    ],
+    "blocked": "The warning does not settle a penalty or invent a new tolerance value.",
+    "binding": "Supported XP attribution, active objective boundary and domain audit/settlement state."
+  },
+  {
+    "id": "grand-draw",
+    "group": "Grand Fate",
+    "title": "Grand Fate reveal",
+    "task": "WB-UI-34/35",
+    "kind": "status",
+    "summary": "Reveal the sealed initial destiny using the selected GF4 wheel when available.",
+    "fields": [
+      [
+        "Sealed destiny",
+        "Unavailable"
+      ],
+      [
+        "Original draw receipt",
+        "Unavailable"
+      ],
+      [
+        "Initial reroll",
+        "Only if still permitted by sealed initialization state"
+      ]
+    ],
+    "action": "Reveal sealed result",
+    "links": [
+      [
+        "Grand checklist",
+        "grand-progress"
+      ],
+      [
+        "Initialization eligibility",
+        "start"
+      ]
+    ],
+    "blocked": "Five equal-weight approved goals; no new draw from reopening, no arbitrary extra reroll.",
+    "binding": "Original Grand seal/staging and explicitly allowed one initial reroll transition; renderer never supplies randomness."
+  },
+  {
+    "id": "grand-progress",
+    "group": "Grand Fate",
+    "title": "Grand Fate checklist",
+    "task": "WB-UI-34",
+    "kind": "checklist",
+    "summary": "Display the selected destiny and its retained verified components.",
+    "rows": [
+      [
+        "Selected goal",
+        "Read from original seal"
+      ],
+      [
+        "Required components",
+        "Read from sealed checklist"
+      ],
+      [
+        "Verified completed components",
+        "Supported persisted references only"
+      ]
+    ],
+    "links": [
+      [
+        "Attempt unfinished component",
+        "grand-attempt"
+      ],
+      [
+        "Grand Fate reveal",
+        "grand-draw"
+      ]
+    ],
+    "blocked": "Master goal is hilt 5; Awakened components retain independent progress; Radiant uses the approved full-set objective.",
+    "binding": "Identity-bound sealed checklist/progress; reference structure alone is not authenticated completion evidence."
+  },
+  {
+    "id": "grand-attempt",
+    "group": "Grand Fate",
+    "title": "Grand Fate attempt",
+    "task": "WB-UI-34",
+    "kind": "confirm",
+    "summary": "Begin a permitted attempt on an unfinished sealed component.",
+    "fields": [
+      [
+        "Selected unfinished component",
+        "Unavailable"
+      ],
+      [
+        "Active Fate / obligation gate",
+        "Unknown"
+      ],
+      [
+        "Attempt readiness",
+        "Unknown"
+      ]
+    ],
+    "consequences": [
+      "Existing mandatory obligations block entry.",
+      "Grand attempt has no Master spin charge.",
+      "Previously verified component progress remains."
+    ],
+    "action": "Begin Grand attempt",
+    "links": [
+      [
+        "Return to checklist",
+        "grand-progress"
+      ]
+    ],
+    "blocked": "Trusted evidence, durable attempt commands and settlement remain required.",
+    "binding": "Current lifecycle/seal/progress plus revision-checked durable attempt service; no UI-only activation."
+  },
+  {
+    "id": "progression",
+    "group": "Progression & shops",
+    "title": "Fate Tree — simple list",
+    "task": "WB-UI-18/19/20/29",
+    "kind": "list",
+    "summary": "Four branches in a plain upgrade list; the graphical tree can replace this view later.",
+    "columns": [
+      "Branch",
+      "Content",
+      "State"
+    ],
+    "rows": [
+      [
+        "Skilling",
+        "Skill unlocks and approved count gates",
+        "Catalog / ownership required"
+      ],
+      [
+        "Questing",
+        "Approved quest-tier progression",
+        "Catalog / ownership required"
+      ],
+      [
+        "Combat / Bossing",
+        "Combat, boss and Challenge progression",
+        "Catalog / ownership required"
+      ],
+      [
+        "Fate Manipulation",
+        "Approved Fate upgrades",
+        "Catalog / ownership required"
+      ]
+    ],
+    "links": [
+      [
+        "Inspect an upgrade",
+        "upgrade"
+      ],
+      [
+        "Owned Fate cards",
+        "cards"
+      ]
+    ],
+    "blocked": "No custom graph renderer is required for this first list; shared catalog/rules remain authoritative.",
+    "binding": "One production catalog and prerequisite projection shared with future tree renderer; no duplicated visual-only rules."
+  },
+  {
+    "id": "upgrade",
+    "group": "Progression & shops",
+    "title": "Upgrade and prerequisites",
+    "task": "WB-UI-26/28/29",
+    "kind": "status",
+    "summary": "Readable benefit, ALL/ANY/count requirements and a standard Unlock button.",
+    "fields": [
+      [
+        "Selected upgrade",
+        "From actual catalog selection"
+      ],
+      [
+        "Ownership / support",
+        "Unavailable"
+      ],
+      [
+        "ALL / ANY requirements",
+        "From graph expression"
+      ],
+      [
+        "Unique purchase milestone",
+        "Distinct purchased unlock count"
+      ],
+      [
+        "FP cost / balance",
+        "Reviewed quote required"
+      ]
+    ],
+    "action": "Review unlock purchase",
+    "links": [
+      [
+        "Purchase confirmation",
+        "purchase"
+      ],
+      [
+        "Back to upgrade list",
+        "progression"
+      ]
+    ],
+    "blocked": "Unknown prices are not free. Higher Challenge ranks retain lower ownership.",
+    "binding": "Graph visitor/unique-count evaluator, catalog quote and atomic entitlement+debit+benefit transaction."
+  },
+  {
+    "id": "builder",
+    "group": "Progression & shops",
+    "title": "Wheel Builder",
+    "task": "WB-UI-39/40/41",
+    "kind": "list",
+    "summary": "A simple list of active slice instances and available slot capacity.",
+    "columns": [
+      "Active slice instance",
+      "Weight / activity odds",
+      "Allowed action"
+    ],
+    "rows": [
+      [
+        "Saved slice UUID / activity",
+        "Exact saved weights and odds",
+        "Domain capability"
+      ],
+      [
+        "Special slice",
+        "Explicit special weights",
+        "Special rules apply"
+      ],
+      [
+        "Questing slice",
+        "Saved instance",
+        "Store; never Destroy"
+      ]
+    ],
+    "links": [
+      [
+        "Open Satchel",
+        "satchel"
+      ],
+      [
+        "Review slice edit",
+        "slice-edit"
+      ],
+      [
+        "Existing wheel",
+        "master"
+      ]
+    ],
+    "blocked": "Validate five ordinary slices, three distinct activities and 24 total slots together.",
+    "binding": "Actual SliceInventory/ActiveWheel/WheelOdds read model; edits use real legal-boundary/transaction services."
+  },
+  {
+    "id": "satchel",
+    "group": "Progression & shops",
+    "title": "Satchel / stored slices",
+    "task": "WB-UI-39/40",
+    "kind": "list",
+    "summary": "Stored instances, capacity and legal reactivation.",
+    "columns": [
+      "Stored instance",
+      "Enhancement / history",
+      "Capacity / action"
+    ],
+    "rows": [
+      [
+        "Saved stored slice",
+        "From instance metadata",
+        "Reactivate when legal"
+      ]
+    ],
+    "action": "Review reactivation",
+    "links": [
+      [
+        "Active wheel inventory",
+        "builder"
+      ],
+      [
+        "Review edit",
+        "slice-edit"
+      ]
+    ],
+    "blocked": "Reactivating the same instance does not count as a new purchase or new lifetime acquisition.",
+    "binding": "Shared inventory instance identity, Satchel capacity and authoritative edit validation."
+  },
+  {
+    "id": "slice-edit",
+    "group": "Progression & shops",
+    "title": "Slice edit confirmation",
+    "task": "WB-UI-40/41",
+    "kind": "confirm",
+    "summary": "Preview one legal add, store, reactivate, replace, enhance or destroy operation.",
+    "fields": [
+      [
+        "Operation / selected instance",
+        "From local validated draft"
+      ],
+      [
+        "Before / after active slots",
+        "Exact domain preview"
+      ],
+      [
+        "Satchel capacity",
+        "Exact domain preview"
+      ],
+      [
+        "Price / enhancement loss",
+        "Reviewed quote and consequence preview"
+      ]
+    ],
+    "consequences": [
+      "Cancel or Undo leaves saved inventory unchanged.",
+      "Questing cannot be destroyed; capacity and activity minima remain valid.",
+      "Inventory, lifetime history and any debit commit together."
+    ],
+    "action": "Confirm legal slice edit",
+    "links": [
+      [
+        "Cancel draft",
+        "builder"
+      ]
+    ],
+    "blocked": "In-memory inventory/purchase proposals alone are not durable successful edits.",
+    "binding": "Draft presenter, current edit boundary, versioned quote and atomic inventory transaction receipt."
+  },
+  {
+    "id": "shop",
+    "group": "Progression & shops",
+    "title": "Shop — upgrades and products",
+    "task": "WB-UI-42/43",
+    "kind": "list",
+    "summary": "Ordinary product rows and normal buttons; no flashing sign.",
+    "columns": [
+      "Section",
+      "Product data",
+      "Price"
+    ],
+    "rows": [
+      [
+        "Fate Cards",
+        "Actual catalog offerings / ownership",
+        "Reviewed quote"
+      ],
+      [
+        "Wheel Builder",
+        "Slice and capacity products",
+        "Reviewed quote"
+      ],
+      [
+        "Vendor Unlocks",
+        "Access entitlements",
+        "Reviewed quote"
+      ],
+      [
+        "Fate’s Pardon",
+        "Taint-debt restoration",
+        "Reviewed fixed quote"
+      ]
+    ],
+    "links": [
+      [
+        "Owned cards",
+        "cards"
+      ],
+      [
+        "Vendors",
+        "vendors"
+      ],
+      [
+        "Fate’s Pardon",
+        "pardon"
+      ],
+      [
+        "Purchase confirmation",
+        "purchase"
+      ]
+    ],
+    "blocked": "Unreviewed products cannot be purchased. No provisional numeric schedules become prices through the UI.",
+    "binding": "Versioned product catalog, owned entitlements, availability and shared purchase gateway."
+  },
+  {
+    "id": "vendors",
+    "group": "Progression & shops",
+    "title": "Vendor unlocks",
+    "task": "WB-UI-42/43/49",
+    "kind": "list",
+    "summary": "Vendor entitlement, actual access and restriction evidence are separate.",
+    "columns": [
+      "Vendor",
+      "Permanent ownership",
+      "Current access / reason"
+    ],
+    "rows": [
+      [
+        "Catalog vendor",
+        "From entitlements",
+        "Supported access/evidence status"
+      ]
+    ],
+    "action": "Review vendor unlock",
+    "links": [
+      [
+        "Purchase confirmation",
+        "purchase"
+      ],
+      [
+        "Settings / help",
+        "settings"
+      ]
+    ],
+    "blocked": "Do not claim unsupported access enforcement works. Retain Trade with and show the approved local notice.",
+    "binding": "Vendor product gateway and independently supported interaction/location/policy adapter capability."
+  },
+  {
+    "id": "ranks",
+    "group": "Progression & shops",
+    "title": "Challenge ranks and readiness",
+    "task": "WB-UI-38/42/43",
+    "kind": "list",
+    "summary": "Owned, enabled and ready are distinct for each retained rank.",
+    "columns": [
+      "Rank",
+      "Owned / enabled",
+      "Ready eligible targets"
+    ],
+    "rows": [
+      [
+        "Lesser",
+        "From current settings",
+        "Per-rank ≥3 canonical eligible keys"
+      ],
+      [
+        "Standard",
+        "From current settings",
+        "Per-rank ≥3 canonical eligible keys"
+      ],
+      [
+        "Greater",
+        "From current settings",
+        "Per-rank ≥3 canonical eligible keys"
+      ],
+      [
+        "Superior",
+        "From current settings",
+        "Per-rank ≥3 canonical eligible keys"
+      ]
+    ],
+    "links": [
+      [
+        "Purchase prerequisite detail",
+        "upgrade"
+      ],
+      [
+        "Assigned hunt",
+        "hunt"
+      ]
+    ],
+    "blocked": "Changes apply only at the approved safe boundary. All off is allowed; no per-target toggles or four extra offer slots.",
+    "binding": "D147–150 progressive ownership/shared bundle/target entitlements and future-offer rank settings capability."
+  },
+  {
+    "id": "bounties",
+    "group": "Progression & shops",
+    "title": "Bounties",
+    "task": "WB-UI-44",
+    "kind": "list",
+    "summary": "Item icon, description and Fate Points in compact rows.",
+    "columns": [
+      "Item icon / name",
+      "Objective / availability",
+      "Fate Points"
+    ],
+    "rows": [
+      [
+        "Actual catalog item",
+        "Approved item goal and qualifying source",
+        "Reviewed reward"
+      ],
+      [
+        "Completed item goal",
+        "Paid receipt shown once",
+        "Persisted reward"
+      ]
+    ],
+    "links": [
+      [
+        "Reward receipts",
+        "receipts"
+      ]
+    ],
+    "blocked": "No Claim button: qualifying active rewards pay automatically. Paused gains do not backfill.",
+    "binding": "Actual bounty catalog, entitlements and independent once-only acquisition/reward receipts; no failure clawback."
+  },
+  {
+    "id": "purchase",
+    "group": "Progression & shops",
+    "title": "Shared purchase confirmation",
+    "task": "WB-UI-16/28/41/43",
+    "kind": "confirm",
+    "summary": "One confirmation pattern reused by upgrades, slices and shop products.",
+    "fields": [
+      [
+        "Product / benefit",
+        "From selected catalog product"
+      ],
+      [
+        "Quote version / price",
+        "Reviewed authoritative quote"
+      ],
+      [
+        "Balance after purchase",
+        "Exact validated preview"
+      ],
+      [
+        "Prerequisites / boundary",
+        "Current service validation"
+      ]
+    ],
+    "consequences": [
+      "Disable repeated submit while pending.",
+      "State or quote changes require another review.",
+      "Lost acknowledgment reconciles the same command ID."
+    ],
+    "action": "Confirm purchase",
+    "links": [
+      [
+        "Cancel and return to shop",
+        "shop"
+      ]
+    ],
+    "blocked": "Only durable acknowledgment shows success; never debit ledger separately from product grant.",
+    "binding": "Typed revision/identity/quote-bound product gateway and idempotent atomic receipt."
+  },
+  {
+    "id": "zero-spins",
+    "group": "Risk & recovery",
+    "title": "Zero-spins decision",
+    "task": "WB-UI-45",
+    "kind": "status",
+    "summary": "When no spins remain, show only the legal Grand or Defy routes.",
+    "fields": [
+      [
+        "Remaining spins",
+        "From saved state"
+      ],
+      [
+        "Mandatory obligation",
+        "From saved lifecycle"
+      ]
+    ],
+    "links": [
+      [
+        "Review Grand attempt",
+        "grand-attempt"
+      ],
+      [
+        "Review Defy Fate",
+        "defy"
+      ]
+    ],
+    "blocked": "Do not grant spins, bypass an obligation or start a Grand attempt merely by navigating here.",
+    "binding": "Authoritative zero-spin capability and current Grand/Defy eligibility."
+  },
+  {
+    "id": "defy",
+    "group": "Risk & recovery",
+    "title": "Defy Fate consequences",
+    "task": "WB-UI-45",
+    "kind": "confirm",
+    "summary": "Show the actual refill, special odds and displacement together.",
+    "fields": [
+      [
+        "Spin refill",
+        "Approved grant"
+      ],
+      [
+        "Taint / Sacrifice probabilities",
+        "Exact committed rules"
+      ],
+      [
+        "Full-wheel displacement",
+        "Legal instance / storage consequences"
+      ]
+    ],
+    "consequences": [
+      "Taint is its own special slice, not a recolored skill.",
+      "24 shared slots remain; Questing can only be displaced through legal storage.",
+      "Preview permanent consequences before one durable command."
+    ],
+    "action": "Confirm Defy Fate",
+    "links": [
+      [
+        "Cancel",
+        "zero-spins"
+      ],
+      [
+        "Mandatory obligation",
+        "punishment"
+      ]
+    ],
+    "blocked": "No guessed grants, weights, extra slots or invented replacement rules.",
+    "binding": "Current wheel state, approved Defy rules, legal full-capacity selection and atomic grant/injection receipt."
+  },
+  {
+    "id": "punishment",
+    "group": "Risk & recovery",
+    "title": "Taint and Punishment obligation",
+    "task": "WB-UI-46/47",
+    "kind": "status",
+    "summary": "Plain pending-task details before special-wheel artwork is added.",
+    "fields": [
+      [
+        "Mandatory task",
+        "From committed punishment"
+      ],
+      [
+        "Restrictions / progress",
+        "Supported evidence only"
+      ],
+      [
+        "Taint task cost",
+        "One spin where applicable"
+      ],
+      [
+        "Punishment completion",
+        "No additional spin charge"
+      ]
+    ],
+    "links": [
+      [
+        "Pause / resume",
+        "pause"
+      ],
+      [
+        "Sacrifice evidence",
+        "sacrifice"
+      ]
+    ],
+    "blocked": "Obligation survives close/restart. Opening a task does not count as completing it.",
+    "binding": "Committed punishment/taint state, trusted progress and mandatory settlement service; preserve Master/GF4/B3 themes."
+  },
+  {
+    "id": "sacrifice",
+    "group": "Risk & recovery",
+    "title": "Sacrifice / Coffer evidence",
+    "task": "WB-UI-47",
+    "kind": "status",
+    "summary": "Explain pending donation eligibility and missing verification.",
+    "fields": [
+      [
+        "Donation obligation",
+        "From saved state"
+      ],
+      [
+        "Eligible item evidence",
+        "Unknown"
+      ],
+      [
+        "Supported Coffer receipt",
+        "Unavailable"
+      ],
+      [
+        "Task cost",
+        "One spin where applicable"
+      ]
+    ],
+    "links": [
+      [
+        "Obligation detail",
+        "punishment"
+      ],
+      [
+        "Evidence / save status",
+        "save"
+      ]
+    ],
+    "blocked": "Known no eligible item: acquire an eligible item worth at least 10,000 GP. Unknown bank evidence requires refresh, not that assumption.",
+    "binding": "Verified current-client Coffer adapter only; no guessed donation, forced death or invented obligation waiver."
+  },
+  {
+    "id": "pardon",
+    "group": "Risk & recovery",
+    "title": "Fate’s Pardon",
+    "task": "WB-UI-48",
+    "kind": "confirm",
+    "summary": "Review fixed-price taint-debt removal separately from normal unlocking.",
+    "fields": [
+      [
+        "Taint debt / status",
+        "From saved state"
+      ],
+      [
+        "Restored status",
+        "Banned → Locked where applicable"
+      ],
+      [
+        "Cost",
+        "Reviewed fixed quote"
+      ]
+    ],
+    "consequences": [
+      "Unlimited purchases; no remaining-use counter.",
+      "Removes taint debt only.",
+      "Separate unlock or gamble action is still required after restoration."
+    ],
+    "action": "Review Pardon purchase",
+    "links": [
+      [
+        "Purchase confirmation",
+        "purchase"
+      ],
+      [
+        "Cancel",
+        "shop"
+      ]
+    ],
+    "blocked": "No invented price or forgiveness of unrelated obligations/penalties.",
+    "binding": "Atomic taint-only restoration plus approved fixed-price debit and replay receipt."
+  },
+  {
+    "id": "receipts",
+    "group": "Utilities",
+    "title": "Notifications and recent receipts",
+    "task": "WB-UI-13/49",
+    "kind": "list",
+    "summary": "Read-only durable events and concise notices.",
+    "columns": [
+      "Event",
+      "Recorded result",
+      "State"
+    ],
+    "rows": [
+      [
+        "No connected receipts",
+        "Connect supported save",
+        "Unavailable"
+      ]
+    ],
+    "links": [
+      [
+        "Completion result",
+        "complete"
+      ],
+      [
+        "Save / account status",
+        "save"
+      ]
+    ],
+    "blocked": "No fabricated prior-run history, replayed reward animation or claim action.",
+    "binding": "Bounded persisted receipts/notifications with once-only acknowledgment display and no private account identifiers."
+  },
+  {
+    "id": "settings",
+    "group": "Utilities",
+    "title": "Settings and help",
+    "task": "WB-UI-49",
+    "kind": "form",
+    "summary": "Plain preferences and short instructions; richer visuals can be added later.",
+    "fields": [
+      [
+        "Reduced motion",
+        "Local preference"
+      ],
+      [
+        "Eligibility options",
+        "Only supported legal future selections"
+      ],
+      [
+        "Challenge rank changes",
+        "Only at permitted boundary"
+      ]
+    ],
+    "choices": [
+      "Normal motion",
+      "Reduced motion"
+    ],
+    "action": "Apply gameplay settings",
+    "links": [
+      [
+        "Challenge rank settings",
+        "ranks"
+      ],
+      [
+        "Account setup",
+        "account"
+      ],
+      [
+        "Objective / restrictions help",
+        "objective"
+      ]
+    ],
+    "blocked": "Preferences never refresh a committed offer or weaken evidence requirements.",
+    "binding": "View-only preferences separate from authoritative legal gameplay settings commands; help follows current decisions."
+  }
+]

@@ -1948,3 +1948,67 @@ P1/S; verified predecessorce39c550145d2d7b421932e5c471a0536b2f4079.30 illustrati
 ## UI-GF4 ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â selected visual reference and constraints (P0/S)
 
 Verified claim049316fdf2510fb596af1a806b0d04fca1b24ac9. WB-D156 selected GF4 for now; original1,666,269-byte PNG/hash/provenance retained under docs only. WB-D157 confirms separate Taint slice. Official listing-icon48ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â72/JAR-resource guidance checked, separate from recommendations. Validate original blob/hash, decision uniqueness, Markdown links, current rank manifest and protected-source equality; guarded publication/remote verification required. Owner released in owning checkpoint. No runtime/main changes. A102 reserved ordinary reward work remains independent.
+
+
+## UI planning discovery — concurrent design packet, 2026-10-29
+
+Independent design workstream `design/wheelbound-ui-planning`; no claim on active gameplay work or supervisor lifecycle. Existing current continuation and task history above remain intact. These children decompose existing UI/TREE/WHL/FAT/ECON/GFD/PUN/BNT scope; do not implement both parent and child independently. Read [detailed UI backlog](../docs/wheelbound/ui/UI_IMPLEMENTATION_BACKLOG.md) before selecting a child; dependencies/acceptance/visual gates are mandatory. The full [design packet](../docs/wheelbound/ui/README.md) is proposed UI architecture, not gameplay changes or blanket visual approval.
+
+All rows below are TODO (not started). IMMEDIATE means independent foundation work; DEPENDENCIES requires the detailed dependency list to be satisfied. Category A may use existing autonomous merge authority after this planning PR merges and checks pass. Category B final visual merge requires a recorded exact-revision user approval; technical nonvisual scaffolding may proceed separately. **Do not auto-merge the design planning PR itself.** This supplements normal selection; it does not override an in-flight task or reprioritize the current gameplay increment.
+
+| ID | Existing parent | Child increment | Priority / size | Readiness | Category |
+| --- | --- | --- | --- | --- | --- |
+| WB-UI-10 | WB-UI-08 | Shared tokens and text primitives | P0/S | IMMEDIATE | A |
+| WB-UI-11 | WB-UI-01 | Owned window controller | P0/M | IMMEDIATE | A |
+| WB-UI-12 | WB-UI-09 | Immutable UI snapshot and capability contract | P0/S | IMMEDIATE | A |
+| WB-UI-13 | WB-UI-02 | Read-only durable state projection | P0/M | DEPENDENCIES | A |
+| WB-UI-14 | WB-UI-02 | Common objective/resource/error components | P0/S | DEPENDENCIES | A |
+| WB-UI-15 | WB-UI-01 | Route container and navigation scaffolding | P0/M | DEPENDENCIES | A |
+| WB-UI-16 | WB-UI-09 | Command pending/result presenter | P0/M | DEPENDENCIES | A |
+| WB-UI-17 | WB-UI-02 | Read-only gameplay sidebar integration | P0/M | DEPENDENCIES | B |
+| WB-UI-18 | WB-TREE-01 | Progression catalog and decision trace contract | P0/S | IMMEDIATE | A |
+| WB-UI-19 | WB-TREE-02 | Read-only prerequisite expression visitor | P0/M | DEPENDENCIES | A |
+| WB-UI-20 | WB-TREE-04 | Unique purchased-count gate projection | P0/M | DEPENDENCIES | A |
+| WB-UI-21 | WB-TREE-01 | Deterministic cluster layout model | P0/M | DEPENDENCIES | A |
+| WB-UI-22 | WB-TREE-06 | Pan and zoom geometry | P0/S | IMMEDIATE | A |
+| WB-UI-23 | WB-TREE-06 | Tree rendering surface and HiDPI layering | P0/M | DEPENDENCIES | A |
+| WB-UI-24 | WB-TREE-06 | Node states and path semantics | P0/M | DEPENDENCIES | A |
+| WB-UI-25 | WB-TREE-06 | Tree hit testing and keyboard selection | P0/S | DEPENDENCIES | A |
+| WB-UI-26 | WB-TREE-06 | Node inspector and hover tooltips | P0/M | DEPENDENCIES | A |
+| WB-UI-27 | WB-TREE-06 | Search, branch focus and prerequisite routes | P0/M | DEPENDENCIES | A |
+| WB-UI-28 | WB-TREE-05 | Tree confirmation and durable purchase binding | P0/M | DEPENDENCIES | A |
+| WB-UI-29 | WB-UI-08 | Accessible progression list alternative | P0/S | DEPENDENCIES | A |
+| WB-UI-30 | WB-TREE-06 | Fate Tree visual review build | P1/M | DEPENDENCIES | B |
+| WB-UI-31 | WB-UI-01 | Hub and sidebar visual review build | P1/M | DEPENDENCIES | B |
+| WB-UI-32 | WB-UI-03 | Fate offer/card presentation | P1/M | DEPENDENCIES | B |
+| WB-UI-33 | WB-UI-02 | Objective activation and settlement details | P1/M | DEPENDENCIES | B |
+| WB-UI-34 | WB-GFD-03 | Grand onboarding and sealed checklist | P1/M | DEPENDENCIES | B |
+| WB-UI-35 | WB-UI-04 | GF4 classpath decoration integration | P1/M | DEPENDENCIES | A |
+| WB-UI-36 | WB-UI-05 | B3 classpath decoration integration | P1/M | DEPENDENCIES | A |
+| WB-UI-37 | WB-QST-02 | Quest choices and empty-retry notice | P1/M | DEPENDENCIES | B |
+| WB-UI-38 | WB-FAT-10 | Challenge ranks and eligibility inspector | P1/M | DEPENDENCIES | B |
+| WB-UI-39 | WB-WHL-03 | Builder inventory and slot inspector | P1/M | DEPENDENCIES | B |
+| WB-UI-40 | WB-WHL-11 | Builder legal edit draft presenter | P1/M | DEPENDENCIES | A |
+| WB-UI-41 | WB-WHL-04 | Builder paid change confirmation | P1/M | DEPENDENCIES | A |
+| WB-UI-42 | WB-ECON-04 | Shop catalog/ownership presentation | P1/M | DEPENDENCIES | B |
+| WB-UI-43 | WB-ECON-08 | Shop transaction presenter binding | P1/M | DEPENDENCIES | A |
+| WB-UI-44 | WB-BNT-04 | Bounties list and automatic reward feedback | P2/M | DEPENDENCIES | B |
+| WB-UI-45 | WB-DEF-01 | Zero-spins and Defy consequence review | P2/M | DEPENDENCIES | B |
+| WB-UI-46 | WB-UI-06 | Taint/Punishment wheel design checkpoint | P2/M | DEPENDENCIES | B |
+| WB-UI-47 | WB-PUN-05 | Punishment and sacrifice pending objective | P2/M | DEPENDENCIES | B |
+| WB-UI-48 | WB-DEF-08 | Pardon debt restoration confirmation | P2/M | DEPENDENCIES | A |
+| WB-UI-49 | WB-UI-07 | Settings, help and evidence notifications | P2/M | DEPENDENCIES | A |
+| WB-UI-50 | WB-UI-08 | UI lifecycle and legacy regression acceptance | P2/M | DEPENDENCIES | A |
+| WB-UI-51 | WB-UI-08 | Tree performance and visual acceptance | P2/M | DEPENDENCIES | A |
+| WB-UI-52 | WB-REL-12 | Complete mode UI visual acceptance milestone | P2/M | DEPENDENCIES | B |
+
+Discovery limitation: tracked supervisor scripts/Windows prompt are absent. Repository links and task format are verified against the documented human/agent workflow; runtime discovery has NOT been tested. After merge, verify one normal refresh log discovers WB-UI-10 or another ready child. If a fixed parser/truncated prompt ignores this section, document the missing consumption rule and request approval for a minimal runner change; do not change scripts/schedule silently. Do not stop the running supervisor.
+
+
+## Approved simple UI implementation — PR #58
+
+The user approved the 36-screen simple UI and explicitly authorized this planning PR's merge. Read [UI_IMPLEMENTATION_HANDOFF](../docs/wheelbound/ui/UI_IMPLEMENTATION_HANDOFF.md), the detailed [UI backlog](../docs/wheelbound/ui/UI_IMPLEMENTATION_BACKLOG.md) and [36-screen matrix](../docs/wheelbound/ui/SIMPLE_UI_SCREEN_COVERAGE.md).
+
+Existing WB-UI-10..52 IDs remain; 32 increments are initial plain-UI scope and 11 optional visual/art increments are DEFERRED (21,22,23,24,25,27,30,35,36,46,51). Four independent initial foundations: WB-UI-10/11/12/18. WB-UI-26 and WB-UI-29 no longer wait for a custom canvas. Earlier Category B labels in the original index refer to future decorative concepts; the initial ordinary controls are now approved. Do not mark any Java UI task DONE from this documentation/prototype merge.
+
+Respect the current in-flight gameplay task and existing claim/refresh procedure. Once a UI task is legitimately selected, follow the new handoff's dependency order; do not restart or reconfigure the supervisor. Read-only panels can proceed without missing mutation services; unavailable actions stay disabled and explained. Live account, evidence, reviewed quote and atomic transaction dependencies remain required. No new gameplay rules, pricing, Plugin Hub submission or feature enablement is authorized by visual approval.
