@@ -104,6 +104,31 @@ public final class MasterSelectionProvenance
     public boolean hasValidLanding()
     { return !landings.isEmpty() && landings.get(landings.size() - 1).kind() != MasterSelectionReadiness.Landing.EMPTY_ORDINARY_RETRY; }
 
+    /**
+     * Proposes the next supplied draw on this frozen transcript. The count and opaque
+     * state guard the exact prefix, including streams whose state strings can repeat.
+     * This does not sample, authenticate stream continuity, revalidate evidence, debit
+     * an allocation or persist. A durable caller must admit and save the proposal under
+     * its lock before publishing it; stale requests must not be retried on a new prefix.
+     */
+    public MasterSelectionProvenance append(UUID expectedTransactionId, int expectedDrawCount,
+        String expectedStreamState, Step next)
+    {
+        Objects.requireNonNull(expectedTransactionId, "expectedTransactionId");
+        Objects.requireNonNull(expectedStreamState, "expectedStreamState");
+        Objects.requireNonNull(next, "next");
+        if (!transactionId.equals(expectedTransactionId) || drawCount() != expectedDrawCount
+            || !currentStreamState().equals(expectedStreamState))
+        { throw new IllegalArgumentException("Stale or foreign selection prefix"); }
+        if (hasValidLanding())
+        { throw new IllegalStateException("Cannot redraw a valid landing"); }
+        List<Step> steps = new ArrayList<>();
+        for (Landing landing : landings) { steps.add(landing.step()); }
+        steps.add(next);
+        return new MasterSelectionProvenance(transactionId, snapshotVersion, catalogVersion,
+            streamDescriptor, initialStreamState, readiness, steps);
+    }
+
     private static String canonical(String value)
     {
         Objects.requireNonNull(value, "identity/state");

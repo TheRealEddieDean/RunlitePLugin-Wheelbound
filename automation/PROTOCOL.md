@@ -1,3 +1,43 @@
+## Current local continuation - guarded Master transcript advancement, 2026-10-30
+
+IDLE after bounded WB-WHL-09 supplied-draw transition increment (S), authority
+WB-D138/139. Reconciled current readiness/provenance, schema-14 pending aggregate,
+Pause/Resume admission, receipt operations and continuation records. Pending creation
+still needs a distinct versioned operation journal; DRAW requires OFFERS_COMMITTED.
+Selected a smaller independently testable retry transition rather than inventing that
+journal, RNG continuity or allocation timing. No I01d work or Git/merged-state check.
+
+MasterSelectionProvenance.append proposes one supplied commitment against the exact
+transaction ID, raw draw count and opaque stream state. Repeated state strings cannot
+bypass the count check. Frozen identity, readiness, full-weight pool, reasons and all
+prior steps survive; changed pools, stale/foreign prefixes and redraw after an ordinary
+or special valid landing fail closed. Original transcript is immutable on success/failure.
+Caller still must authenticate/revalidate and atomically persist under operation admission.
+This is not sampling, an automatic retry loop, spin allocation or durable command.
+Existing Master Wheel unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Reconciliation: WB-WHL-09 PARTIAL (guarded domain advancement verified; automatic retry
+execution UNSTARTED); WB-WHL-08 PARTIAL; WB-WHL-10 PARTIAL_UNVERIFIED; REL-02 PARTIAL;
+FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO.
+Existing decision/evidence BLOCKED rows stand. Recorded merged work not independently
+verified because Git is prohibited. No playable gameplay or durability completion claim.
+
+Validation: javac --release 11 compiled all domain production sources and executable
+fixtures into build/continuation-selection-append. MasterSelectionAppendChecks,
+MasterSelectionProvenanceChecks and MasterSelectionReadinessChecks PASSED. New checks
+cover 513 empty prefixes, repeated opaque states, stale count/state, foreign transaction,
+changed pool, null step, unchanged predecessors, ordinary/Taint/Sacrifice resolution and
+post-valid refusal. JUnit wrapper added. Focused Gradle provenance/pending lifecycle/
+pending aggregate/legacy attempt failed before compilation: inherited wrapper-cache lock
+Access is denied. JUnit/store/legacy NOT_RUN; GRADLE_USER_HOME unchanged, no workaround.
+
+Next: operation-specific pending-selection creation/admission with a versioned journal
+and exact replay contract under the store lock, before automatic retry execution. Run
+focused pending/lifecycle/session/store/codec/legacy suites when inherited dependencies
+are accessible. Trusted eligibility/session evidence, sampling, once-only allocation,
+suspension/revalidation and settlement remain unfinished. Changed-snapshot reconciliation
+is unresolved; never silently reseed. Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - pending-selection Pause/Resume, 2026-10-30
 
 IDLE after bounded WB-WHL-08/10 and WB-REL-02 lifecycle dependency (S).
