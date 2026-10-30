@@ -1,3 +1,43 @@
+## Current local continuation - original Master selection creation receipt, 2026-10-30
+
+IDLE after bounded WB-WHL-08 creation-journal payload prerequisite (S), WB-D138/139.
+Reconciled current domain readiness/provenance/append, schema-14 pending aggregate,
+Pause/Resume admission and existing continuation statuses. Pending creation still has no
+operation-specific journal/store admission. Selected its original request payload as an
+independently testable increment. No I01d, Git operations or merged-state verification.
+
+MasterSelectionCreationReceipt retains run identity, original before/after revision and
+zero-draw provenance. Full original-payload equality/hash compares transaction, snapshot,
+catalog, opaque stream descriptor/state, ordered slice IDs/kinds/activities/enhancements/
+weights and all classifications/reasons across reconstructed objects. Negative/overflow
+revisions and already-advanced prefixes fail closed. Original receipt survives independent
+transcript advancement. This is structural data, not trusted evidence, session admission,
+spin authorization/allocation, a versioned wire journal or a durable command.
+
+Reconciliation: WB-WHL-08 PARTIAL; original creation payload DONE offline, versioned
+codec/journal and locked creation admission UNSTARTED. WB-WHL-09 PARTIAL (automatic
+retry execution UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED; REL-02 PARTIAL; FND-01 DONE;
+FND-10/12 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing
+blocked decision/evidence rows stand. Existing Master Wheel unchanged; incomplete
+mechanics remain unwired/default-disabled. No playable or durability completion claim.
+
+Validation: javac --release 11 compiled all domain production sources and focused fixtures
+into build/continuation-selection-creation. MasterSelectionCreationChecks PASSED, covering
+16 changed-request variants, original replay/hash, nullable special fields, prefix refusal,
+immutability and revision boundaries. Existing append/provenance/readiness fixtures PASSED.
+Focused Gradle creation/provenance/pending/legacy attempt failed before compilation:
+inherited wrapper-cache lock Access is denied. JUnit/store/legacy NOT_RUN. Inherited
+GRADLE_USER_HOME unchanged; no cache workaround or external-path inspection.
+
+Next: versioned original-creation payload codec and retained journal validation, then
+operation-specific pending-selection creation/admission with exact replay under the store
+lock. Reconcile aggregate transaction-ID collision rules before journal integration (the
+pending transaction must correspond to its own original receipt). Do not reuse DRAW,
+which requires OFFERS_COMMITTED. Trusted source/session eligibility, sampling, once-only
+allocation, automatic retries, suspension/revalidation and settlement remain unfinished.
+Changed-snapshot reconciliation stays unresolved; never silently reseed. Local edits only;
+supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - guarded Master transcript advancement, 2026-10-30
 
 IDLE after bounded WB-WHL-09 supplied-draw transition increment (S), authority
