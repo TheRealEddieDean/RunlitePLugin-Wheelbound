@@ -22,6 +22,7 @@ public final class RunDocument
     private final List<RunReceipt> receipts;
     private final FatePointLedger fatePoints;
     private final SliceInventory inventory;
+    private final com.wheelbound.domain.SealedGrandFate grandFate;
 
     public RunDocument(RunLifecycle lifecycle, String catalogVersion)
     { this(lifecycle, catalogVersion, List.of()); }
@@ -37,7 +38,16 @@ public final class RunDocument
     /** Missing legacy inventory is unavailable; never infer lifetime history from ownership. */
     public RunDocument(RunLifecycle lifecycle, String catalogVersion, List<RunReceipt> receipts,
         Optional<FatePointLedger> fatePoints, Optional<SliceInventory> inventory)
+    { this(lifecycle, catalogVersion, receipts, fatePoints, inventory, Optional.empty()); }
+
+    /** Legacy absence is unavailable; evidence alone does not authorize onboarding. */
+    public RunDocument(RunLifecycle lifecycle, String catalogVersion, List<RunReceipt> receipts,
+        Optional<FatePointLedger> fatePoints, Optional<SliceInventory> inventory,
+        Optional<com.wheelbound.domain.SealedGrandFate> grandFate)
     {
+        this.grandFate = Objects.requireNonNull(grandFate, "grandFate").orElse(null);
+        if (this.grandFate != null && !this.grandFate.identity().equals(lifecycle.identity()))
+        { throw new IllegalArgumentException("Foreign Grand Fate identity"); }
         this.inventory = Objects.requireNonNull(inventory, "inventory").orElse(null);
         this.fatePoints = Objects.requireNonNull(fatePoints, "fatePoints").orElse(null);
         this.lifecycle = Objects.requireNonNull(lifecycle, "lifecycle");
@@ -48,7 +58,8 @@ public final class RunDocument
         RunReceipt previous = null;
         for (RunReceipt receipt : this.receipts)
         {
-            if (!commands.add(receipt.commandId())) { throw new IllegalArgumentException("Duplicate command ID"); }
+            if ((this.grandFate != null && this.grandFate.commandId().equals(receipt.commandId()))
+                || !commands.add(receipt.commandId())) { throw new IllegalArgumentException("Duplicate command ID"); }
             if (previous != null && (receipt.beforeRevision() != previous.afterRevision()
                 || !follows(previous, receipt)))
             { throw new IllegalArgumentException("Broken lifecycle receipt chain"); }
@@ -146,4 +157,5 @@ public final class RunDocument
     public List<RunReceipt> receipts() { return receipts; }
     public Optional<FatePointLedger> fatePoints() { return Optional.ofNullable(fatePoints); }
     public Optional<SliceInventory> inventory() { return Optional.ofNullable(inventory); }
+    public Optional<com.wheelbound.domain.SealedGrandFate> grandFate() { return Optional.ofNullable(grandFate); }
 }
