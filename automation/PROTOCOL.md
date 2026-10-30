@@ -1,3 +1,37 @@
+## Current local continuation - exact Grand Fate recovery lookup, 2026-10-29
+
+IDLE after bounded WB-GFD-02 recovery increment. Supersedes prior next-task prose.
+Reconciled pool/evidence, aggregate/schema-8 preservation, store and persistence test
+sources against backlog. No Git or remote checks; historical merge claims unverified.
+FND-01 stays DONE; FND-10/12 PARTIAL; GFD-01/02 and previously audited wheel,
+economy/tree/transaction rows remain PARTIAL_UNVERIFIED. GFD-03 through 07 TODO;
+existing decision/client/price BLOCKED rows remain held. I01d not selected.
+
+AtomicRunStore.committedGrandFate reads the original seal under the existing lock,
+identity/checksum/aggregate validation and matches the full supplied request. Changed
+identity, command or commitment and operation collisions fail closed. Missing saves
+and legacy absence return empty, never creation/retry authorization. Pending/corrupt
+saves retain normal reconciliation requirements. Read-only; no randomness or write.
+Authority WB-D003/089/092/117 and STATE_CONTRACT replay requirements. This is a
+recovery prerequisite, not the atomic new-run command or onboarding eligibility.
+Master Wheel unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Added three JUnit fixtures for restart/exact replay, changed requests and byte
+retention, legacy absence/operation collision, pending/corrupt rejection. Gradle
+GrandFatePersistenceTest, RunCodecTest and WheelboundBehaviorTest failed before
+compilation: Gradle 8.10 absent, distribution download denied (SocketException).
+No JUnit/store/codec/legacy test pass claimed. Java 11 compiled current domain,
+RunDocument, RunReceipt, PurchaseTransition and changed AtomicRunStore against the
+existing workspace RunCodec class (codec source not rebuilt). SealedGrandFateChecks
+and GrandFatePoolChecks passed. No stubs or test bypasses used.
+
+Next: execute focused persistence/codec and legacy suites when dependencies exist.
+Then implement the atomic new-run sealing boundary with exact-request replay and
+failed-write/lost-ack/restart fixtures. Fresh-account activation predicate remains
+TECH_TBD under WB-D092: do not infer eligibility or retrofit legacy saves. Split
+eligible command work from unavailable client predicate evidence. GFD-02 remains
+unfinished. Local edits only; supervisor handles commits, PRs, CI and merges.
+No external paths, credentials, secrets, workflows or Git operations accessed.
 ## Current local continuation - Grand Fate schema and preservation, 2026-10-29
 
 IDLE after bounded WB-GFD-02 persistence increment (S). Supersedes older next-task
