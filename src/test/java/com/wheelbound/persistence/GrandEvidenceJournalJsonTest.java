@@ -39,7 +39,7 @@ public class GrandEvidenceJournalJsonTest
             GrandEvidenceJournal original = journal(ticket);
             JsonObject encoded = GrandEvidenceJournalJson.encode(original, Long.MAX_VALUE);
             GrandEvidenceJournal restored = GrandEvidenceJournalJson.decode(
-                JsonParser.parseString(encoded.toString()).getAsJsonObject(), original.progress(), Long.MAX_VALUE);
+                new JsonParser().parse(encoded.toString()).getAsJsonObject(), original.progress(), Long.MAX_VALUE);
             assertEquals(original.receipts(), restored.receipts());
             assertEquals(encoded, GrandEvidenceJournalJson.encode(restored, Long.MAX_VALUE));
             GrandEvidenceReceipt receipt = restored.receipts().values().iterator().next();
