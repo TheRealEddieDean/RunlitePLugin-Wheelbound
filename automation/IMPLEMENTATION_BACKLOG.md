@@ -1,3 +1,41 @@
+## Current local continuation - Grand attempt transition proposals, 2026-10-29
+
+IDLE after bounded WB-GFD-07 model increment (S), superseding older next-task prose.
+Reconciled local pool, seal, checklist, lifecycle and attempt code/tests with backlog.
+Historical merge claims remain unverified; no Git operations performed. FND-01 DONE;
+FND-10/12 PARTIAL; GFD-01/02/05/06 retain PARTIAL_UNVERIFIED. GFD-07 now
+PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing audited wheel/economy/tree statuses and
+client/decision/price BLOCKED rows stand. I01d not selected. No complete gameplay claimed.
+
+GrandFateAttempt proposes explicit selection of one unfinished sealed objective,
+ACTIVE_OBJECTIVE activation, and unsuccessful exit back to NONE with retained checklist.
+Identity, revision, lifecycle obligations, foreign/completed objectives and overflow reject.
+Authority WB-D089/104/117. No spins, randomness, evidence detection, successful completion,
+penalty settlement or awards are performed. Model values are proposals only; a future
+atomic boundary must persist full state and receipts and handle off-task audit/settlement
+before publishing. This smaller independently testable increment establishes transition
+semantics without prematurely adding durable state lacking provenance. It is unwired;
+Master Wheel unchanged and incomplete gameplay remains disabled.
+
+Validation: javac --release 11 compiled every current domain source and five executable
+fixtures from source. GrandFateAttemptChecks, GrandFateChecklistChecks,
+GrandFateActivationChecks, GrandFatePoolChecks and SealedGrandFateChecks passed.
+Attempt checks cover five goals, retained Awakened prefixes, explicit retry, all blocked
+state/obligation combinations, foreign account/run, stale revisions, wrong/completed goals
+and activation/exit overflow. JUnit adapter authored. Gradle GrandFateAttemptTest,
+GrandFateChecklistTest, GrandFatePersistenceTest and WheelboundBehaviorTest failed before
+compilation: missing Gradle 8.10; download denied (SocketException). No JUnit, codec,
+persistence or legacy regression pass claimed.
+
+Next bounded task: persist identity-bound checklist progress and evidence provenance with
+explicit migration and preservation checks; then durable attempt state/receipts with exact
+replay, restart and lost-ack tests. Legacy absence must never imply verified progress.
+Do not wire these proposals without current durable revision and settlement checks. Actual
+detectors/item mappings remain client-validation-gated. GFD-02 activation/original-request
+replay and WB-D092 fresh-account predicate remain unfinished/TECH_TBD. Local edits only;
+supervisor handles commits/PRs/CI/merges. No external paths, credentials, secrets or workflows
+accessed. User restrictions supersede historical publication/branch/ownership procedures.
+
 ## Current local continuation - Grand Fate checklist model, 2026-10-29
 
 IDLE after bounded WB-GFD-05 objective-model increment (S). Supersedes older next-task
@@ -1295,7 +1333,7 @@ Do not select I01d without a concrete failing test or required dependency.
 | WB-GFD-04 | Implement GF4 theme assets within RuneLite constraints | TODO |
 | WB-GFD-05 | Implement Grand Fate completion evidence model | PARTIAL_UNVERIFIED |
 | WB-GFD-06 | Implement Grand Fate activation obligation gate | PARTIAL_UNVERIFIED |
-| WB-GFD-07 | Implement Grand Fate attempts without Master spin charge | TODO |
+| WB-GFD-07 | Implement Grand Fate attempts without Master spin charge | PARTIAL_UNVERIFIED |
 
 ### Fate assignments and cards (14)
 
