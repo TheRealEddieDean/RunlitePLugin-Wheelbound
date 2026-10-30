@@ -1,3 +1,38 @@
+## Current local continuation - schema-12 Grand current attempt, 2026-10-30
+
+IDLE after bounded WB-GFD-06/07 aggregate persistence increment (S). Reconciled
+RunDocument/current-attempt JSON/history, schema-11 codec, all lifecycle/debit/draw
+copy sites, store guards and legacy fixtures. FND-01 DONE; FND-10/12 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Other previously audited
+partial/TODO/evidence and decision BLOCKED rows stand. Merged work not independently
+reverified (Git prohibited). No I01d work or complete gameplay claim.
+
+Schema 12 persists explicit optional full current-attempt payload, restored against
+independent history/lifecycle/checklist. Schemas 1-11 retain explicit absence; history
+never implies activity. Lifecycle/debit copies reconcile the retained attempt to the
+new head; draw copy retains absence and remains forbidden during active obligations.
+Store rejects attempt add/drop/original-payload replacement before pending-file creation.
+Authority WB-D089/104 with WB-D117 supersession, STATE_CONTRACT and PERSISTENCE.
+Master Wheel source unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Validation: Java 11 compilation of all domain sources plus RunDocument/RunReceipt and
+two aggregate executable fixtures passed; both fixtures passed, including new retained
+head/payload, absent-history non-inference and incompatible-obligation checks.
+Focused Gradle schema/current/history/journal/codec/store/Master Wheel attempt failed
+before compilation: inherited wrapper-cache lock access denied. No cache override or
+external-path inspection. New Gson/JUnit/store checks NOT_RUN, not a verified durability
+claim. Authored all-five-goal active/paused/Long.MAX_VALUE restart, every objective and
+retained prefix, schema-11 absence, lifecycle/debit retention, blocked draw, store
+add/drop/replacement and checksum-valid corruption/original-byte preservation tests.
+Updated older-schema fixture field removal. Local edits only; supervisor handles Git.
+
+Next: execute schema-12/11/10 Gson, migration, store and Master Wheel regressions with
+inherited dependencies available. Then bounded atomic activation proposal/command and
+replay tests; trusted session/source admission, evidence acceptance, off-task settlement,
+global collisions and lost-ack tests remain UNSTARTED. Durable current-attempt schema
+code is now IMPLEMENTED_UNVERIFIED, superseding earlier UNSTARTED notes; live gameplay
+activation remains UNSTARTED. WB-D092/client mappings remain gated.
+
 ## Current local continuation - structural current-attempt aggregate, 2026-10-30
 
 IDLE after bounded WB-GFD-06/07 aggregate-validation increment (XS/S), split from

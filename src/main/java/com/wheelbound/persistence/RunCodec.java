@@ -24,7 +24,7 @@ import java.util.UUID;
 /** Inject RuneLite's Gson. Never deserialize directly into domain objects bypassing their validation. */
 public final class RunCodec
 {
-    public static final int SCHEMA = 11;
+    public static final int SCHEMA = 12;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -37,8 +37,6 @@ public final class RunCodec
 
     public byte[] encode(RunDocument document)
     {
-        if (document.grandCurrentAttempt().isPresent())
-        { throw new IllegalArgumentException("Schema 11 cannot retain a current Grand attempt"); }
         RunLifecycle run = document.lifecycle();
         JsonObject payload = new JsonObject();
         payload.addProperty("accountKey", run.identity().accountKey());
@@ -122,6 +120,12 @@ public final class RunCodec
         payload.add("grandActivations", document.grandActivations().isPresent()
             ? GrandActivationHistoryJson.encode(document.grandActivations().get(), document.lifecycle().revision())
             : com.google.gson.JsonNull.INSTANCE);
+        payload.add("grandCurrentAttempt", document.grandCurrentAttempt().isPresent()
+            ? GrandCurrentAttemptJson.encode(document.grandCurrentAttempt().get(),
+                document.grandActivations().get(), document.lifecycle(),
+                document.grandProgress().isPresent() ? document.grandProgress().get().checklist()
+                    : com.wheelbound.domain.GrandFateChecklist.initial(document.grandFate().get()))
+            : com.google.gson.JsonNull.INSTANCE);
         String text = gson.toJson(payload);
         JsonObject envelope = new JsonObject();
         envelope.addProperty("schemaVersion", SCHEMA);
@@ -161,7 +165,9 @@ public final class RunCodec
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress")
                     : schema == 10
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal")
-                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations"));
+                    : schema == 11
+                    ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations")
+                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt"));
             RunIdentity identity = new RunIdentity(string(payload, "accountKey"), UUID.fromString(string(payload, "runId")));
             if (!identity.equals(expected)) { throw new IOException("Foreign account/profile/run snapshot"); }
             RunLifecycle lifecycle = new RunLifecycle(identity, integer(payload, "revision"),
@@ -253,9 +259,17 @@ public final class RunCodec
                 activations = Optional.of(GrandActivationHistoryJson.decode(payload.getAsJsonObject("grandActivations"),
                     grandFate.orElseThrow(() -> new IllegalArgumentException("Activation history requires seal")), lifecycle.revision()));
             }
+            Optional<com.wheelbound.domain.GrandCurrentAttempt> currentAttempt = Optional.empty();
+            if (schema >= 12 && !payload.get("grandCurrentAttempt").isJsonNull())
+            {
+                currentAttempt = Optional.of(GrandCurrentAttemptJson.decode(payload.getAsJsonObject("grandCurrentAttempt"),
+                    activations.orElseThrow(() -> new IllegalArgumentException("Current attempt requires history")),
+                    lifecycle, progress.isPresent() ? progress.get().checklist()
+                        : com.wheelbound.domain.GrandFateChecklist.initial(grandFate.get())));
+            }
             return new RunDocument(lifecycle, string(payload, "catalogVersion"), receipts, fatePoints,
                 schema >= 6 && !payload.get("inventory").isJsonNull()
-                    ? Optional.of(InventoryJson.decode(payload.getAsJsonObject("inventory"))) : Optional.empty(), grandFate, progress, journal, activations);
+                    ? Optional.of(InventoryJson.decode(payload.getAsJsonObject("inventory"))) : Optional.empty(), grandFate, progress, journal, activations, currentAttempt);
         }
         catch (RuntimeException ex) { throw new IOException("Invalid snapshot; preserve original", ex); }
     }

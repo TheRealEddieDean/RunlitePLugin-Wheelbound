@@ -118,3 +118,17 @@ activate gameplay or debit a Master spin. Atomic activation/current-attempt and 
 acceptance remain unfinished. Dependency-free aggregate checks passed; Gson/JUnit/store
 and Master Wheel checks were blocked before compilation by inherited wrapper-cache
 lock access denial, so schema migration/restart tests remain unexecuted.
+
+## Schema 12 explicit current Grand attempt - implementation checkpoint
+
+RunCodec schema 12 writes `grandCurrentAttempt` as explicit null or the version-1
+full original activation payload. Decode validates it against independently decoded
+activation history, lifecycle and checklist. Schemas 1-11 restore absence, even with
+populated history. Ordinary lifecycle/debit copies retain and reconcile explicit
+activity to the new head; Master-style draws remain blocked by its obligation.
+AtomicRunStore rejects adding, dropping or changing the original activation payload
+on existing saves until an operation-specific activation/evidence command exists.
+These guards run before pending snapshot creation. This is structural persistence,
+not live activation or evidence admission; incomplete gameplay stays disabled.
+Java 11 domain/aggregate fixtures pass. Gson/store/JUnit/migration and Master Wheel
+regressions remain NOT_RUN: inherited Gradle wrapper-cache lock access was denied.

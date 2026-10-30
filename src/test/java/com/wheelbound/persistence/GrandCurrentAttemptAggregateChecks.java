@@ -39,6 +39,19 @@ public final class GrandCurrentAttemptAggregateChecks
                             RunLifecycle.Obligation.ACTIVE_OBJECTIVE), initial)))
                 {
                     RunDocument aggregate = document(attempt.lifecycle(), seal, history, attempt, null);
+                    if (attempt.lifecycle().revision() < Long.MAX_VALUE)
+                    {
+                        RunLifecycle next = new RunLifecycle(id, attempt.lifecycle().revision() + 1,
+                            attempt.lifecycle().state(), attempt.lifecycle().obligation());
+                        GrandCurrentAttempt copied = aggregate.retainedGrandAttempt(next).get();
+                        if (!copied.activation().equals(activation) || copied.lifecycle().revision() != next.revision())
+                        { throw new AssertionError("Retained current attempt lost its payload/head"); }
+                        RunDocument absent = document(attempt.lifecycle(), seal, history, null, null);
+                        if (absent.retainedGrandAttempt(next).isPresent())
+                        { throw new AssertionError("History inferred activity"); }
+                        rejects(() -> aggregate.retainedGrandAttempt(new RunLifecycle(id, next.revision(),
+                            next.state(), RunLifecycle.Obligation.NONE)));
+                    }
                     if (!aggregate.grandCurrentAttempt().get().activation().equals(activation))
                     { throw new AssertionError("Original activation lost"); }
                     if (document(attempt.lifecycle(), seal, history, null, null).grandCurrentAttempt().isPresent())
