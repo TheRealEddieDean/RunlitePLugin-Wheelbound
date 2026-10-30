@@ -83,3 +83,13 @@ absence and does not assign starting funds. Lifecycle and draw commands preserve
 the ledger. This is a trusted snapshot representation only: typed debit receipts,
 mixed-operation journal validation, durable debit/product mutation and migration
 from legacy gameplay evidence remain unfinished. No paid gameplay is enabled.
+
+### Schema-10 structural Grand evidence retention (2026-10-30)
+
+The current foundation codec writes an explicit optional `grandJournal` full-payload
+field. Schemas 1-9 restore absence, including schema-9 saves containing progress
+references; references never synthesize source receipts. Present journals must resolve
+exactly the aggregate progress and original seal at the current revision. Existing
+lifecycle/debit/draw commands preserve payloads and existing-store writes reject journal
+mutation until trusted evidence admission is implemented. This format does not provide
+authentication, attempt settlement, completion awards or authorization to enable gameplay.

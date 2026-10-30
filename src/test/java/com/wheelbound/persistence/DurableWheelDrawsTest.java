@@ -137,7 +137,7 @@ public class DurableWheelDrawsTest
         JsonObject envelope = new JsonParser().parse(new String(bytes, StandardCharsets.UTF_8)).getAsJsonObject();
         // Schema 2 predates FP state; changing only the envelope version leaves an invalid payload.
         JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
-        payload.remove("fatePoints"); payload.remove("inventory"); payload.remove("grandFate"); payload.remove("grandProgress");
+        payload.remove("fatePoints"); payload.remove("inventory"); payload.remove("grandFate"); payload.remove("grandProgress"); payload.remove("grandJournal");
         String text = gson.toJson(payload);
         envelope.addProperty("schemaVersion", 2);
         envelope.addProperty("payload", text);

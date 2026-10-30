@@ -39,6 +39,17 @@ public final class GrandProgressAggregateChecks
             RunDocument restored = document(id, 2, seal, progress, List.of());
             check(restored.grandProgress().get().evidence().get(reference.objective()).equals(reference));
             check(document(id, Long.MAX_VALUE, seal, progress, List.of()).grandProgress().isPresent());
+            GrandEvidenceReceipt payload = new GrandEvidenceReceipt(seal, reference.objective(),
+                receiptId, 1, UUID.randomUUID(), "fixture", "event");
+            GrandEvidenceJournal journal = new GrandEvidenceJournal(progress, 2, List.of(payload));
+            RunLifecycle head = new RunLifecycle(id, 2, RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.NONE);
+            RunDocument full = new RunDocument(head, "test", List.of(), Optional.empty(), Optional.empty(),
+                Optional.of(seal), Optional.of(progress), Optional.of(journal));
+            check(full.grandJournal().get().receipts().equals(journal.receipts()));
+            rejects(() -> new RunDocument(head, "test", List.of(), Optional.empty(), Optional.empty(),
+                Optional.of(seal), Optional.empty(), Optional.of(journal)));
+            rejects(() -> new RunDocument(head, "test", List.of(), Optional.empty(), Optional.empty(),
+                Optional.of(seal), Optional.of(empty), Optional.of(journal)));
             RunReceipt collision = new RunReceipt(receiptId, RunReceipt.Operation.PAUSE, 1, 2,
                 RunLifecycle.State.PAUSED, RunLifecycle.Obligation.NONE);
             rejects(() -> document(id, 2, seal, progress, List.of(collision)));

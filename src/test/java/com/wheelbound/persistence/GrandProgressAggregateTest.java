@@ -35,6 +35,7 @@ public class GrandProgressAggregateTest
     {
         JsonObject envelope = new JsonParser().parse(new String(codec.encode(document), StandardCharsets.UTF_8)).getAsJsonObject();
         JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
+        if (schema < 10) { payload.remove("grandJournal"); }
         edit.accept(payload);
         String text = gson.toJson(payload);
         envelope.addProperty("schemaVersion", schema);

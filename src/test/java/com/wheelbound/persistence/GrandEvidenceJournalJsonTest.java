@@ -13,6 +13,100 @@ import static org.junit.Assert.*;
 
 public class GrandEvidenceJournalJsonTest
 {
+    private RunDocument document(GrandEvidenceJournal journal, long revision, boolean retain)
+    {
+        return new RunDocument(new RunLifecycle(identity, revision, RunLifecycle.State.ACTIVE,
+            RunLifecycle.Obligation.NONE), "test", List.of(), java.util.Optional.empty(),
+            java.util.Optional.empty(), java.util.Optional.of(journal.progress().checklist().seal()),
+            java.util.Optional.of(journal.progress()), retain ? java.util.Optional.of(journal) : java.util.Optional.empty());
+    }
+
+    @Test public void aggregateCodecRoundTripsAndLegacyNineDoesNotInventJournal() throws Exception
+    {
+        com.google.gson.Gson gson = new com.google.gson.Gson();
+        RunCodec codec = new RunCodec(gson);
+        for (int ticket = 0; ticket < 5; ticket++)
+        {
+            GrandEvidenceJournal journal = journal(ticket);
+            RunDocument before = document(journal, 20, true);
+            RunDocument after = codec.decode(codec.encode(before), identity);
+            assertEquals(journal.receipts(), after.grandJournal().get().receipts());
+            assertArrayEquals(codec.encode(before), codec.encode(after));
+            JsonObject envelope = new JsonParser().parse(new String(codec.encode(before),
+                java.nio.charset.StandardCharsets.UTF_8)).getAsJsonObject();
+            JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
+            payload.remove("grandJournal");
+            // Preserve required explicit nulls while constructing a valid schema-9 payload.
+            String text = gson.newBuilder().serializeNulls().create().toJson(payload);
+            envelope.addProperty("schemaVersion", 9);
+            envelope.addProperty("payload", text);
+            envelope.addProperty("sha256", RunCodec.sha256(text.getBytes(java.nio.charset.StandardCharsets.UTF_8)));
+            RunDocument legacy = codec.decode(gson.toJson(envelope).getBytes(java.nio.charset.StandardCharsets.UTF_8), identity);
+            assertFalse(legacy.grandJournal().isPresent());
+            assertEquals(journal.progress().evidence(), legacy.grandProgress().get().evidence());
+            assertFalse(codec.decode(codec.encode(legacy), identity).grandJournal().isPresent());
+        }
+    }
+
+    @Test public void restartPauseResumeRetainsPayloadAndStoreRejectsDroppingOrAddingJournal() throws Exception
+    {
+        GrandEvidenceJournal journal = journal(3);
+        RunCodec codec = new RunCodec(new com.google.gson.Gson());
+        java.nio.file.Path root = java.nio.file.Files.createTempDirectory(java.nio.file.Path.of("build"), "grand-journal-store-");
+        AtomicRunStore store = new AtomicRunStore(root, codec, identity);
+        // Restore a populated fixture; no evidence-admission command exists yet.
+        java.nio.file.Files.createDirectories(store.snapshotPath().getParent());
+        java.nio.file.Files.write(store.snapshotPath(), codec.encode(document(journal, 20, true)));
+        LifecycleCommands commands = new LifecycleCommands(store);
+        commands.execute(identity, UUID.randomUUID(), 20, RunReceipt.Operation.PAUSE);
+        commands.execute(identity, UUID.randomUUID(), 21, RunReceipt.Operation.RESUME);
+        AtomicRunStore reopened = new AtomicRunStore(root, codec, identity);
+        RunDocument current = reopened.load().get();
+        assertEquals(journal.receipts(), current.grandJournal().get().receipts());
+        byte[] original = java.nio.file.Files.readAllBytes(store.snapshotPath());
+        assertThrows(java.io.IOException.class, () -> store.write(document(journal, 23, false), 22));
+        assertArrayEquals(original, java.nio.file.Files.readAllBytes(store.snapshotPath()));
+        assertFalse(java.nio.file.Files.exists(store.pendingPath()));
+        java.nio.file.Path legacyRoot = java.nio.file.Files.createTempDirectory(java.nio.file.Path.of("build"), "grand-journal-legacy-");
+        AtomicRunStore legacy = new AtomicRunStore(legacyRoot, codec, identity);
+        java.nio.file.Files.createDirectories(legacy.snapshotPath().getParent());
+        java.nio.file.Files.write(legacy.snapshotPath(), codec.encode(document(journal, 20, false)));
+        assertThrows(java.io.IOException.class, () -> legacy.write(document(journal, 21, true), 20));
+        assertFalse(java.nio.file.Files.exists(legacy.pendingPath()));
+    }
+
+    @Test public void checksumValidJournalCorruptionFailsClosedWithoutReplacingSnapshot() throws Exception
+    {
+        com.google.gson.Gson gson = new com.google.gson.Gson();
+        RunCodec codec = new RunCodec(gson);
+        RunDocument document = document(journal(3), 20, true);
+        List<java.util.function.Consumer<JsonObject>> corruptions = List.of(
+            p -> p.remove("grandJournal"),
+            p -> p.add("grandProgress", com.google.gson.JsonNull.INSTANCE),
+            p -> p.getAsJsonObject("grandJournal").addProperty("version", 2),
+            p -> p.getAsJsonObject("grandJournal").getAsJsonArray("receipts").remove(0),
+            p -> p.getAsJsonObject("grandJournal").getAsJsonArray("receipts").get(0)
+                .getAsJsonObject().addProperty("attemptRevision", 20));
+        for (java.util.function.Consumer<JsonObject> corrupt : corruptions)
+        {
+            JsonObject envelope = new JsonParser().parse(new String(codec.encode(document),
+                java.nio.charset.StandardCharsets.UTF_8)).getAsJsonObject();
+            JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
+            corrupt.accept(payload);
+            // Keep unrelated fields intact so each case tests its intended corruption.
+            String text = gson.newBuilder().serializeNulls().create().toJson(payload);
+            envelope.addProperty("payload", text);
+            envelope.addProperty("sha256", RunCodec.sha256(text.getBytes(java.nio.charset.StandardCharsets.UTF_8)));
+            byte[] bytes = gson.toJson(envelope).getBytes(java.nio.charset.StandardCharsets.UTF_8);
+            java.nio.file.Path root = java.nio.file.Files.createTempDirectory(java.nio.file.Path.of("build"), "grand-journal-corrupt-");
+            AtomicRunStore store = new AtomicRunStore(root, codec, identity);
+            java.nio.file.Files.createDirectories(store.snapshotPath().getParent());
+            java.nio.file.Files.write(store.snapshotPath(), bytes);
+            assertThrows(java.io.IOException.class, store::load);
+            assertArrayEquals(bytes, java.nio.file.Files.readAllBytes(store.snapshotPath()));
+            assertFalse(java.nio.file.Files.exists(store.pendingPath()));
+        }
+    }
     private final RunIdentity identity = new RunIdentity("journal-json", UUID.randomUUID());
 
     private GrandEvidenceJournal journal(int ticket)
