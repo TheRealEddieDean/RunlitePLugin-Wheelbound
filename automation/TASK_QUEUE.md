@@ -1,3 +1,41 @@
+## Current local continuation - aggregate Grand activation admission, 2026-10-30
+
+IDLE after bounded WB-GFD-06/07 read-only aggregate admission increment (XS/S),
+split from atomic command/journal integration. Reconciled GrandActivationProposal,
+RunDocument operation chain and collision validation, explicit history/current attempt,
+and existing executable fixtures. FND-01 DONE; FND-10/12 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Other partial/TODO and
+concrete decision/evidence BLOCKED statuses stand. Merged work not independently
+reverified (Git prohibited). No I01d work or complete gameplay claim.
+
+GrandActivationAdmission now checks aggregate operation/seal/evidence command-ID
+collisions before delegating to the combined domain proposal. Explicit history is
+required: legacy absence never becomes empty history. New commands require the
+existing ACTIVE/NONE boundary (including no pending draw/offers/mandatory settlement).
+Historical replay preserves later obligations and explicit current-attempt absence.
+No aggregate mutation, journal envelope, persistence acknowledgement, session admission,
+spin/FP charge or client wiring. Generic store activation guards remain intact.
+Authority WB-D089/104 with WB-D117 supersession, STATE_CONTRACT and PERSISTENCE.
+Master Wheel unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Validation: Java 11 compilation passed for all domain sources, RunDocument/RunReceipt,
+new admission and executable Grand fixtures. All 14 Grand domain fixtures passed.
+New admission and both aggregate fixtures
+passed, covering all five goals/every objective, immutable inputs, unavailable legacy
+history, stale/foreign requests, seal/operation/evidence collisions, all pending
+obligations and original replay at Long.MAX_VALUE without reactivation.
+Focused Gradle admission/proposal/aggregate/Master Wheel attempt failed before compilation:
+inherited wrapper-cache lock access denied. No cache override or external-path inspection.
+JUnit/Gson/store/Master Wheel remain NOT_RUN; no durability claim.
+
+Next eligible increment: operation receipt/journal-chain integration for atomic activation,
+explicit legacy-history admission policy and operation-specific store guards, followed by
+failed-write/lost-ack/restart tests. The read-only aggregate admission prerequisite is
+IMPLEMENTED with executable validation; atomic activation remains UNSTARTED. Trusted
+session/source admission, evidence acceptance and off-task settlement remain UNSTARTED.
+Schema-12/11/10 serializer/migration/store regressions require inherited dependencies.
+Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - combined Grand activation proposal, 2026-10-30
 
 IDLE after bounded WB-GFD-06/07 proposal increment (S). Reconciled domain activation,
