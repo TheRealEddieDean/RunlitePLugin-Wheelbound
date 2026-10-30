@@ -111,8 +111,11 @@ public class GrandCurrentAttemptAggregateTest
         assertThrows(IllegalStateException.class, () -> new DurableWheelDraws(store, bound -> {
             throw new AssertionError("Must not draw during Grand attempt");
         }).commit(id, UUID.randomUUID(), 4, new WeightedPool("test", List.of(new WeightedPool.Entry("x", 1)))));
-        RunLifecycle next = new RunLifecycle(id, 5, restored.lifecycle().state(), restored.lifecycle().obligation());
-        RunDocument dropped = new RunDocument(next, "test", restored.receipts(), restored.fatePoints(), restored.inventory(),
+        RunLifecycle next = new RunLifecycle(id, 5, RunLifecycle.State.PAUSED, restored.lifecycle().obligation());
+        List<RunReceipt> nextReceipts = new ArrayList<>(restored.receipts());
+        nextReceipts.add(new RunReceipt(UUID.randomUUID(), RunReceipt.Operation.PAUSE, 4, 5,
+            next.state(), next.obligation()));
+        RunDocument dropped = new RunDocument(next, "test", nextReceipts, restored.fatePoints(), restored.inventory(),
             restored.grandFate(), restored.grandProgress(), restored.grandJournal(), restored.grandActivations());
         assertThrows(IOException.class, () -> store.write(dropped, 4));
         assertArrayEquals(original, Files.readAllBytes(store.snapshotPath()));
@@ -124,7 +127,7 @@ public class GrandCurrentAttemptAggregateTest
         GrandActivationReceipt replacement = new GrandActivationReceipt(prior.commandId(), id, 0, checklist, other);
         GrandActivationHistory replacedHistory = new GrandActivationHistory(restored.grandFate().get(), 5, List.of(replacement));
         GrandCurrentAttempt replacedAttempt = GrandCurrentAttempt.restore(replacement.commandId(), replacedHistory, next, checklist);
-        RunDocument replaced = new RunDocument(next, "test", restored.receipts(), restored.fatePoints(), restored.inventory(),
+        RunDocument replaced = new RunDocument(next, "test", nextReceipts, restored.fatePoints(), restored.inventory(),
             restored.grandFate(), restored.grandProgress(), restored.grandJournal(), Optional.of(replacedHistory),
             Optional.of(replacedAttempt));
         assertThrows(IOException.class, () -> store.write(replaced, 4));
@@ -135,7 +138,7 @@ public class GrandCurrentAttemptAggregateTest
             restored.fatePoints(), restored.inventory(), restored.grandFate(), restored.grandProgress(),
             restored.grandJournal(), restored.grandActivations())));
         byte[] absent = Files.readAllBytes(store.snapshotPath());
-        RunDocument added = new RunDocument(next, "test", restored.receipts(), restored.fatePoints(), restored.inventory(),
+        RunDocument added = new RunDocument(next, "test", nextReceipts, restored.fatePoints(), restored.inventory(),
             restored.grandFate(), restored.grandProgress(), restored.grandJournal(), restored.grandActivations(),
             restored.retainedGrandAttempt(next));
         assertThrows(IOException.class, () -> store.write(added, 4));

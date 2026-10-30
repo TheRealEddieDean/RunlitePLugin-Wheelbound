@@ -87,6 +87,7 @@ public class PurchaseJournalTest
         old.addProperty("schemaVersion", 6);
         JsonObject legacyPayload = json(old.get("payload").getAsString().getBytes(StandardCharsets.UTF_8));
         legacyPayload.remove("grandFate"); legacyPayload.remove("grandProgress"); legacyPayload.remove("grandJournal"); legacyPayload.remove("grandActivations");
+        legacyPayload.remove("grandCurrentAttempt");
         String legacyText = gson.toJson(legacyPayload);
         old.addProperty("payload", legacyText);
         old.addProperty("sha256", RunCodec.sha256(legacyText.getBytes(StandardCharsets.UTF_8)));
