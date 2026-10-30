@@ -38,3 +38,20 @@ immediate=sum('immediately implementable' in s for s in tasks.values())
 category_b=sum('Category B; review artifact' in s for s in tasks.values())
 print(f'PASS: {len(tasks)} unique detailed tasks, acyclic dependencies, parents, queue IDs, links, 10 SVGs')
 print(f'Readiness: {immediate} immediate / {len(tasks)-immediate} dependency-gated; {category_b} Category B final-visual gates overlap readiness counts')
+
+# Plain-control coverage must remain aligned with its preview and existing tasks.
+import json
+manifest=json.loads((UI/'previews/simple-screens.json').read_text())
+assert len(manifest)==36
+screen_ids={s['id'] for s in manifest}
+assert len(screen_ids)==36
+preview=(UI/'previews/simple-screens.html').read_text()
+embedded=preview.split('<script type="application/json" id="ws-screen-data">',1)[1].split('</script>',1)[0]
+assert json.loads(embedded)==manifest
+for screen in manifest:
+    for label,dest in screen.get('links',[]): assert dest in screen_ids,(screen['id'],dest)
+    for task in re.findall(r'WB-UI-\d+',screen['task']): assert task in tasks,(screen['id'],task)
+    for field in ['title','kind','summary','blocked','binding']: assert screen.get(field),(screen['id'],field)
+assert 'button(s.action,null,true)' in preview
+assert len(preview.encode())<1_000_000
+print('PASS: 36 simple screens, valid routes/task mappings, preview manifest parity and disabled gameplay commands')

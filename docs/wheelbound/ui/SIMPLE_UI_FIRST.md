@@ -1,5 +1,7 @@
 # Current direction: simple UI first
 
+> [36-screen simple UI coverage and delivery order](SIMPLE_UI_SCREEN_COVERAGE.md) · [Navigable plain-control preview](previews/simple-screens.html). These expand existing task acceptance; they are not implemented plugin screens.
+
 User instruction, 2026-10-29 America/Chicago: “lets just go super simple for the UI for now just normal buttons until i get a hold of it”; “things may change after i test it some”.
 
 This direction supersedes the decorative and visual-polish requirements in this packet for the initial usable version. The first UI is provisional and should be easy to adjust after hands-on testing. Existing gameplay decisions, service/evidence gates and Master/GF4/B3 selections remain intact.

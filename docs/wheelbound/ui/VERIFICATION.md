@@ -33,3 +33,9 @@ No Java/Gradle tests were run for this documentation-only change. No production 
 Final Taint/Punishment wheel art, whole-catalog four-branch Tree review and connected-client screenshots remain outstanding. GF4 reference stays unchanged; B3 original selected image is absent in repository and its committed selection text is used. Prices/catalog/access/current-client and atomic transaction holds remain as documented.
 
 Planning branch must be reviewed and approved before merge. No auto-merge enabled or merge performed by this workstream.
+
+## Simple UI coverage expansion
+
+36 unique screen/flow routes now map to the existing 43 implementation tasks: 6 Core, 10 Fates, 3 Grand Fate, 10 Progression/shops, 5 Risk/recovery and 2 Utilities. These are review prototypes and expanded acceptance, not production screens. Ordinary host controls replace decorative presentation for the initial testable version; WB-UI-29 no longer depends on the custom canvas. All mutation/evidence/price gates remain.
+
+Validated the manifest’s unique IDs, navigation destinations, task mappings, embedded-data parity and command-disabled defaults, plus Node JavaScript syntax. Existing planning ID/link/dependency checks still pass. Chromium is not installed in this workspace, so browser interaction/layout rendering was not executed and no desktop/client pass is claimed for the new prototype. Earlier PNG inspection applies to the earlier wireframes only. Independent gameplay work remains untouched; planning PR remains unmerged.

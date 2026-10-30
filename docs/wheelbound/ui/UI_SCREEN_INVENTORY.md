@@ -1,5 +1,7 @@
 # Complete screen inventory and interaction plan
 
+> [36-screen simple UI coverage and delivery order](SIMPLE_UI_SCREEN_COVERAGE.md) · [Navigable plain-control preview](previews/simple-screens.html). These expand existing task acceptance; they are not implemented plugin screens.
+
 Audit status is source-inspected, not live-client verification. Numeric task IDs below mean WB-UI-XX. All new previews are proposed layouts with illustrative state; approved Master/GF4/B3 are preserved. Rejected/superseded manual bounty claiming, Challenge CA objectives, arbitrary rerolls and invented Slayer-final-tier UI are excluded.
 
 | Screen/system | Implementation status | Surface | Expected interaction / components | Tasks | Preview |

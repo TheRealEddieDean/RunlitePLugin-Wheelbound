@@ -1,5 +1,7 @@
 # UI implementation backlog
 
+> **Screen-level acceptance:** [36 simple screens and flows](SIMPLE_UI_SCREEN_COVERAGE.md) expand the existing 43 tasks without duplicate coding scope. Deliver ordinary reusable controls broadly; unavailable mutation services block their actions, not independent screens. Fancy-visual dependencies are deferred under SIMPLE_UI_FIRST.
+
 > **Current direction: [simple UI first](SIMPLE_UI_FIRST.md).** Use normal buttons and functional lists for initial testing; decorative styling and complex tree presentation are deferred. Earlier mockups are exploratory.
 
 Audit base `223950c`; tasks are implementation specifications, not completed code. New IDs WB-UI-10 onward are child increments of existing parent scope. No existing task is removed or renamed. [Audit](UI_AUDIT.md), [architecture](UI_ARCHITECTURE.md), [visual system](UI_DESIGN_SYSTEM.md), [tree](FATE_TREE_DESIGN.md) and [inventory](UI_SCREEN_INVENTORY.md) apply to every row. Canonical [decisions](../DECISIONS.md) and backend specs remain authority.
@@ -53,7 +55,7 @@ Category A permits autonomous merging of that bounded task after required checks
 | WB-UI-26 | WB-TREE-06 | Node inspector and hover tooltips | P0/M | DEPENDENCIES | A |
 | WB-UI-27 | WB-TREE-06 | Search, branch focus and prerequisite routes | P0/M | DEPENDENCIES | A |
 | WB-UI-28 | WB-TREE-05 | Tree confirmation and durable purchase binding | P0/M | DEPENDENCIES | A |
-| WB-UI-29 | WB-UI-08 | Accessible progression list alternative | P0/S | DEPENDENCIES | A |
+| WB-UI-29 | WB-UI-08 | Initial plain progression list and accessible view | P0/S | DEPENDENCIES | A |
 | WB-UI-30 | WB-TREE-06 | Fate Tree visual review build | P1/M | DEPENDENCIES | B |
 | WB-UI-31 | WB-UI-01 | Hub and sidebar visual review build | P1/M | DEPENDENCIES | B |
 | WB-UI-32 | WB-UI-03 | Fate offer/card presentation | P1/M | DEPENDENCIES | B |
@@ -344,13 +346,13 @@ Category A permits autonomous merging of that bounded task after required checks
 - Autonomous merge permitted: **Yes for this bounded Category A task after checks, once planning PR merges**. Never infer approval from this TODO record.
 
 
-## WB-UI-29 — Accessible progression list alternative
+## WB-UI-29 — Initial plain progression list and accessible view
 
 - Parent: **WB-UI-08**; existing partial code is reuse input, not completed child scope.
-- Description / expected behavior / acceptance: Keyboard/screen-reader list mirrors selected node and graph state; no separate rules or purchases.
+- Description / expected behavior / acceptance: Implement the initial plain progression list and detail from the shared catalog/rules, with keyboard/screen-reader access and ordinary Unlock button; future graph view reuses the same state/actions. No canvas dependency or duplicate rules.
 - Approved authority and proposed UI specification: FATE_TREE_DESIGN.md + PROGRESSION.md (D093/095/124/147–150); canonical DECISIONS overrides unresolved historical wording. This packet's visual compositions remain proposed.
 - Current implementation status: **TODO — not started**. Readiness: blocked by the dependencies below.
-- Dependencies (must be verified complete for live integration): WB-UI-26.
+- Dependencies (must be verified complete for live integration): WB-UI-18, WB-UI-19, WB-UI-20, WB-UI-14. Live ownership uses WB-UI-13; live purchases additionally require EXT-TREE-TX.
 - Likely files/modules (proposed paths unless already in source): `ui/tree/ProgressionList`.
 - Priority / estimated complexity: **P0 / S**; split at a reviewable boundary if needed.
 - Testing requirements: Every catalog node reachable; focus/selection parity and long labels. Run focused existing parent regressions where affected; record exact command/result and distinguish headless from actual-client checks.
