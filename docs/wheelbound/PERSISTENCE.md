@@ -170,3 +170,14 @@ remain in place; atomic activation, session admission, evidence acceptance and l
 client integration remain unfinished and disabled. No Master spin or FP charge added.
 Focused Gson/JUnit/migration and Master Wheel checks remain NOT_RUN because the
 inherited Gradle wrapper-cache lock was inaccessible before compilation.
+
+## Local complete activation snapshot preparation - 2026-10-30
+
+GrandActivationAdmission.prepare combines admission and the immutable domain proposal
+into one complete RunDocument with a typed activation envelope, history and current
+attempt. It preserves catalog, FP, inventory, seal, progress and full evidence payloads.
+Exact replay returns the supplied document unchanged, even with explicit current-attempt
+absence or a later paused head. This is preparation only: generic store writes still
+reject activation mutations. The future atomic command must perform preparation under
+its write lock, admit the session and publish success only after persistence. Java 11
+executable fixtures pass; Gradle/JUnit and file durability remain unverified here.
