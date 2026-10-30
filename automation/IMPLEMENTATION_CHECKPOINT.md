@@ -1,3 +1,43 @@
+## Current local continuation - aggregate Grand activation history, 2026-10-30
+
+IDLE after bounded WB-GFD-06/07 history-retention increment (S), split from separately
+validated current-attempt persistence. Reconciled RunDocument/schema-10 codec/store,
+activation history/JSON, evidence progress and all existing command-copy sites against
+the backlog. FND-01 remains DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07 remain
+PARTIAL_UNVERIFIED; GFD-03/04 TODO. Other partial/TODO/BLOCKED rows stand. Merged work
+not independently reverified (user prohibits Git). I01d not selected.
+
+RunDocument optionally retains full original GrandActivationHistory and validates exact
+seal/head, completed-prefix inclusion and timing, and command collisions with lifecycle,
+draw/payment and evidence references. Schema 11 stores explicit null or the versioned
+full history; schemas 1-10 restore explicit absence. Lifecycle/debit/draw copies retain
+history. AtomicRunStore rejects addition/removal/payload replacement on existing saves
+before pending-file creation. History does not identify a current attempt or prove
+settlement/session admission. No current-attempt field, activation command, evidence
+acceptance, award, spin charge or client wiring. Master Wheel unchanged; incomplete
+gameplay remains default-disabled. Authority WB-D089/104 with WB-D117 supersession,
+STATE_CONTRACT and PERSISTENCE.
+
+Validation: Java 11 compilation of all domain sources plus RunDocument/RunReceipt,
+two aggregate fixtures and 11 Grand domain fixtures passed. Both aggregate fixtures
+and all 11 domain fixtures passed in build/continuation-grand-schema11. Following the
+prefix-timing check, RunDocument and the expanded activation aggregate fixture were
+recompiled and that fixture passed again. These checks do not execute Gson/store code.
+Focused Gradle activation aggregate/codec/store/Master Wheel attempt failed before
+compilation: inherited wrapper-cache lock access denied. No cache override or external
+path inspection. Gson/JUnit/store/Master Wheel checks remain NOT_RUN. Authored all-five
+goal payload restart, schema-10 absence, store add/drop/replacement, populated-history
+resume/debit/draw retention and checksum-valid corruption/original-byte preservation.
+Legacy schema fixture helpers updated. No full gameplay completion claimed.
+
+Next eligible increment: separately validated durable current-attempt state, explicitly
+independent of the last history entry, with pause/resume reconciliation and versioned
+aggregate integration. Execute schema-11/10 serializers, migrations, store and legacy
+regressions when inherited dependencies are accessible. Atomic activation/evidence
+acceptance, trusted identity/session/source admission, off-task settlement, global
+collision handling and lost-ack tests remain UNSTARTED. WB-D092/client mappings remain
+gated. Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - Grand activation history JSON, 2026-10-30
 
 IDLE after bounded WB-GFD-06/07 history serialization prerequisite (S), split from

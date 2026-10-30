@@ -24,7 +24,7 @@ import java.util.UUID;
 /** Inject RuneLite's Gson. Never deserialize directly into domain objects bypassing their validation. */
 public final class RunCodec
 {
-    public static final int SCHEMA = 10;
+    public static final int SCHEMA = 11;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -117,6 +117,9 @@ public final class RunCodec
         payload.add("grandJournal", document.grandJournal().isPresent()
             ? GrandEvidenceJournalJson.encode(document.grandJournal().get(), document.lifecycle().revision())
             : com.google.gson.JsonNull.INSTANCE);
+        payload.add("grandActivations", document.grandActivations().isPresent()
+            ? GrandActivationHistoryJson.encode(document.grandActivations().get(), document.lifecycle().revision())
+            : com.google.gson.JsonNull.INSTANCE);
         String text = gson.toJson(payload);
         JsonObject envelope = new JsonObject();
         envelope.addProperty("schemaVersion", SCHEMA);
@@ -154,7 +157,9 @@ public final class RunCodec
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate")
                     : schema == 9
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress")
-                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal"));
+                    : schema == 10
+                    ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal")
+                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations"));
             RunIdentity identity = new RunIdentity(string(payload, "accountKey"), UUID.fromString(string(payload, "runId")));
             if (!identity.equals(expected)) { throw new IOException("Foreign account/profile/run snapshot"); }
             RunLifecycle lifecycle = new RunLifecycle(identity, integer(payload, "revision"),
@@ -240,9 +245,15 @@ public final class RunCodec
                 journal = Optional.of(GrandEvidenceJournalJson.decode(payload.getAsJsonObject("grandJournal"),
                     progress.orElseThrow(() -> new IllegalArgumentException("Journal requires progress")), lifecycle.revision()));
             }
+            Optional<com.wheelbound.domain.GrandActivationHistory> activations = Optional.empty();
+            if (schema >= 11 && !payload.get("grandActivations").isJsonNull())
+            {
+                activations = Optional.of(GrandActivationHistoryJson.decode(payload.getAsJsonObject("grandActivations"),
+                    grandFate.orElseThrow(() -> new IllegalArgumentException("Activation history requires seal")), lifecycle.revision()));
+            }
             return new RunDocument(lifecycle, string(payload, "catalogVersion"), receipts, fatePoints,
                 schema >= 6 && !payload.get("inventory").isJsonNull()
-                    ? Optional.of(InventoryJson.decode(payload.getAsJsonObject("inventory"))) : Optional.empty(), grandFate, progress, journal);
+                    ? Optional.of(InventoryJson.decode(payload.getAsJsonObject("inventory"))) : Optional.empty(), grandFate, progress, journal, activations);
         }
         catch (RuntimeException ex) { throw new IOException("Invalid snapshot; preserve original", ex); }
     }

@@ -93,3 +93,16 @@ exactly the aggregate progress and original seal at the current revision. Existi
 lifecycle/debit/draw commands preserve payloads and existing-store writes reject journal
 mutation until trusted evidence admission is implemented. This format does not provide
 authentication, attempt settlement, completion awards or authorization to enable gameplay.
+
+## Local schema-11 activation-history increment - 2026-10-30
+
+The unwired foundation aggregate retains optional full original activation history.
+Schemas 1-10 retain explicit absence; schema 11 writes null or versioned ordered
+payloads. Exact seal/head, completed-prefix timing and operation/evidence command
+collisions are checked structurally. Existing command copies retain history and ordinary
+store writes cannot add, discard or replace it. This does not persist current attempt
+state, infer activity from the last receipt, authenticate evidence, settle obligations,
+activate gameplay or debit a Master spin. Atomic activation/current-attempt and trusted
+acceptance remain unfinished. Dependency-free aggregate checks passed; Gson/JUnit/store
+and Master Wheel checks were blocked before compilation by inherited wrapper-cache
+lock access denial, so schema migration/restart tests remain unexecuted.

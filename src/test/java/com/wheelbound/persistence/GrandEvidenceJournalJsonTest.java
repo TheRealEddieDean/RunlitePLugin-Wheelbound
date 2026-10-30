@@ -35,7 +35,7 @@ public class GrandEvidenceJournalJsonTest
             JsonObject envelope = new JsonParser().parse(new String(codec.encode(before),
                 java.nio.charset.StandardCharsets.UTF_8)).getAsJsonObject();
             JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
-            payload.remove("grandJournal");
+            payload.remove("grandJournal"); payload.remove("grandActivations");
             // Preserve required explicit nulls while constructing a valid schema-9 payload.
             String text = gson.newBuilder().serializeNulls().create().toJson(payload);
             envelope.addProperty("schemaVersion", 9);
