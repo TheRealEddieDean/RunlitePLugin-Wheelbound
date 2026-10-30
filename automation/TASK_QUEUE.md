@@ -1,3 +1,41 @@
+## Current local continuation - versioned Master creation receipt JSON, 2026-10-30
+
+IDLE after bounded WB-WHL-08 creation-journal codec prerequisite (S), WB-D138/139.
+Reconciled current creation receipt, readiness/provenance/append, schema-14 pending
+aggregate and continuation records. Original creation payload already exists; no duplicate
+model or I01d work. No Git operations or independent merged-state verification.
+
+Added standalone MasterSelectionCreationReceiptJson version 1. It retains account/run,
+original before/after revision and the complete zero-draw provenance payload through the
+existing provenance codec. Strict field/version/type, expected identity, exact integer,
+revision continuity/overflow and domain checks reject malformed or advanced requests.
+No aggregate schema change, journal integration, store command, sampling, spin allocation,
+automatic retry, evidence authentication or gameplay enablement. Legacy Master unchanged.
+
+Reconciliation: WB-WHL-08 PARTIAL; original creation domain payload DONE offline;
+versioned receipt codec IMPLEMENTED_UNVERIFIED; retained journal validation and locked
+creation admission UNSTARTED. WB-WHL-09 PARTIAL (automatic retry UNSTARTED);
+WB-WHL-10 PARTIAL_UNVERIFIED; REL-02 PARTIAL; FND-01 DONE; FND-10/12 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing blocked rows stand.
+
+Validation: Java 11 compiled all domain production sources and creation/append/provenance/
+readiness executable fixtures into build/continuation-selection-creation-json; all four
+PASSED. This does not compile the Gson codec. New JUnit tests cover text round-trip,
+ordinary/Taint/Sacrifice payloads, exact original equality/hash, revision boundaries,
+input isolation, foreign identity, malformed fields and empty/resolved prefix rejection.
+Focused Gradle creation JSON/provenance JSON/creation domain/legacy attempt failed before
+compilation: inherited wrapper-cache lock Access is denied. Codec/JUnit/store/legacy
+NOT_RUN. GRADLE_USER_HOME unchanged; no cache workaround or external-path inspection.
+
+Next: run MasterSelectionCreationReceiptJsonTest and focused provenance/pending/legacy
+suites when inherited dependencies are accessible. Implement retained creation-journal
+validation, then aggregate representation and operation-specific creation admission under
+the store lock with exact original replay. Reconcile pending transaction versus its own
+creation receipt; never reuse DRAW/OFFERS_COMMITTED for an unresolved selection. Trusted
+source/session evidence, once-only allocation, sampling, automatic retries, suspension/
+revalidation and settlement remain unfinished. Changed-snapshot reconciliation unresolved;
+never silently reseed. Local edits only; supervisor handles commits/PRs/CI/merges.
+
 ## Current local continuation - original Master selection creation receipt, 2026-10-30
 
 IDLE after bounded WB-WHL-08 creation-journal payload prerequisite (S), WB-D138/139.
