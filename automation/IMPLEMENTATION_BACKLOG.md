@@ -1761,3 +1761,17 @@ required; no candidate amounts may be activated. WHL-03 inventory transitions, W
 Questing edit enforcement and aggregate persistence remain unfinished. Legacy Master
 Wheel source unchanged; incomplete gameplay remains unwired/default-disabled. No external
 path, credential, secret or workflow access. Supervisor handles Git/PR/CI/merge.
+
+
+## UI child-task decomposition — 2026-10-29
+
+The separate [UI implementation packet](../docs/wheelbound/ui/UI_IMPLEMENTATION_BACKLOG.md)
+provides WB-UI-10 through WB-UI-52 as bounded child increments of existing parent rows.
+The discoverable index is appended to [TASK_QUEUE](TASK_QUEUE.md). Existing WB-UI-01..09,
+TREE, WHL, GFD, BOS, FAT, QST, ECON, DEF, PUN, BNT and REL scope/status is not deleted or
+completed by this design work. Reconcile code before starting; never duplicate parent
+implementation. Use full child dependencies/acceptance and Category B visual merge gates.
+Five independent foundations are ready; live transactions remain service/evidence gated.
+This planning PR needs user approval to merge; ordinary unrelated automation continues.
+Read [UI audit](../docs/wheelbound/ui/UI_AUDIT.md) for the unverified Windows supervisor
+runtime-discovery boundary and the normal-refresh verification required after merge.
