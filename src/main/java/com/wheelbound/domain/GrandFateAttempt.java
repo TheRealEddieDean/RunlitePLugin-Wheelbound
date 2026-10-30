@@ -48,10 +48,19 @@ public final class GrandFateAttempt
      * no active Fate. Any off-task audit/mandatory settlement must be handled by the
      * future atomic command; this method cannot discharge such a settlement.
      * Explicit activation is required for a subsequent attempt.
+     * Supply the current durable lifecycle inside the transaction. Any intervening
+     * revision (including pause/resume) requires future durable attempt reconciliation;
+     * this proposal cannot clear a newer obligation or reactivate a paused run.
      */
-    public RunLifecycle endUnsuccessful(RunIdentity expectedIdentity, long expectedRevision)
+    public RunLifecycle endUnsuccessful(RunLifecycle current,
+        RunIdentity expectedIdentity, long expectedRevision)
     {
-        if (!lifecycle.identity().equals(expectedIdentity) || lifecycle.revision() != expectedRevision)
+        Objects.requireNonNull(current, "current");
+        if (!lifecycle.identity().equals(expectedIdentity) || lifecycle.revision() != expectedRevision
+            || !current.identity().equals(lifecycle.identity())
+            || current.revision() != lifecycle.revision()
+            || current.state() != RunLifecycle.State.ACTIVE
+            || current.obligation() != RunLifecycle.Obligation.ACTIVE_OBJECTIVE)
         { throw new IllegalArgumentException("Stale or foreign attempt context"); }
         return new RunLifecycle(lifecycle.identity(), Math.addExact(lifecycle.revision(), 1),
             RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.NONE);

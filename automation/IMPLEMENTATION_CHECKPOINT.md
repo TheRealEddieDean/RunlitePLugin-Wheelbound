@@ -1,3 +1,37 @@
+## Current local continuation - interrupted Grand attempt increment finished, 2026-10-29
+
+IDLE. Preserved and finished the existing WB-GFD-07 transition-proposal increment;
+no successor task started. Inspected existing domain/test edits and reconciled them
+against current backlog. WB-GFD-07 remains PARTIAL_UNVERIFIED, not complete gameplay.
+FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06 PARTIAL_UNVERIFIED; GFD-03/04 TODO.
+Existing decision/client/price BLOCKED and other audited statuses stand. Historical
+merge claims were not reverified; no Git operations. I01d was not selected.
+
+GrandFateAttempt.endUnsuccessful now requires the current lifecycle in addition to
+expected identity/revision. It rejects changed revisions, paused/resumed runs, foreign
+runs and every state/obligation except ACTIVE/ACTIVE_OBJECTIVE at the activation
+revision. It cannot silently clear a new settlement or reactivate a paused run.
+The future atomic boundary must supply current durable state; these immutable proposals
+still do not persist, settle off-task penalties or authorize publication. Authority:
+WB-D089/104 and WB-D117 supersession. Master Wheel unchanged; gameplay remains unwired.
+
+Validation: javac --release 11 compiled all current domain sources and five executable
+fixtures from source into build/continuation-grand-attempt. GrandFateAttemptChecks,
+GrandFateChecklistChecks, GrandFateActivationChecks, GrandFatePoolChecks and
+SealedGrandFateChecks all passed. Added exit coverage for null/foreign/current lifecycle,
+pause/resume, and all incompatible state/obligation combinations; prior activation,
+retained progress, retry and overflow coverage retained. Focused Gradle JUnit/persistence
+and WheelboundBehaviorTest attempt failed before compilation: Gradle 8.10 absent;
+wrapper download denied (SocketException). No JUnit/persistence/legacy pass claimed.
+
+Next remaining task (not started): identity-bound checklist/evidence persistence with
+explicit migration and preservation checks, followed by durable attempt receipts and
+restart/exact-replay/lost-ack coverage. Pause/resume attempt reconciliation also belongs
+to that durable boundary. Legacy absence must not imply progress. Actual detectors and
+item mappings remain client-gated; WB-D092 fresh-account predicate remains TECH_TBD.
+Local edits only; supervisor handles commits/PRs/CI/merges. No external paths,
+credentials, secrets or workflows accessed.
+
 ## Current local continuation - Grand attempt transition proposals, 2026-10-29
 
 IDLE after bounded WB-GFD-07 model increment (S), superseding older next-task prose.
