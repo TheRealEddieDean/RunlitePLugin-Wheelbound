@@ -130,6 +130,28 @@ public final class AtomicRunStore
      * as FileChannels; directory-entry durability across power loss is not guaranteed there.
      */
     public void write(RunDocument next, long expectedRevision) throws IOException
+    { write(next, expectedRevision, false); }
+
+    /**
+     * Atomically stage a prepared run-start request without activating gameplay.
+     * The caller freezes randomness before calling and retains the whole request on failure.
+     * Only an identical initial snapshot is replayable here; after later mutations use
+     * committedGrandFate for recovery. This does not establish fresh-account eligibility,
+     * authorize activation, supply starting grants or retrofit existing saves.
+     */
+    public com.wheelbound.domain.SealedGrandFate stageGrandFate(RunDocument initial) throws IOException
+    {
+        Objects.requireNonNull(initial, "initial");
+        if (initial.lifecycle().revision() != 0
+            || initial.lifecycle().state() != com.wheelbound.domain.RunLifecycle.State.NOT_STARTED
+            || initial.lifecycle().obligation() != com.wheelbound.domain.RunLifecycle.Obligation.NONE
+            || !initial.receipts().isEmpty() || !initial.grandFate().isPresent())
+        { throw new IllegalArgumentException("Expected an unstarted revision-zero sealed request"); }
+        write(initial, -1, true);
+        return initial.grandFate().get();
+    }
+
+    private void write(RunDocument next, long expectedRevision, boolean replayInitial) throws IOException
     {
         if (expectedRevision < -1 || !identity.equals(next.lifecycle().identity())
             || next.lifecycle().revision() != Math.addExact(expectedRevision, 1))
@@ -138,6 +160,12 @@ public final class AtomicRunStore
         locked(() -> {
             if (uncertain) { throw new IOException("Reopen and reconcile after failed persistence"); }
             Optional<RunDocument> current = read();
+            if (replayInitial && current.isPresent())
+            {
+                if (!java.util.Arrays.equals(bytes, codec.encode(current.get())))
+                { throw new IOException("Run already exists with a different initial request or later state"); }
+                return null;
+            }
             long actual = current.map(d -> d.lifecycle().revision()).orElse(-1L);
             if (actual != expectedRevision) { throw new IOException("Stale stored revision"); }
             if (current.isPresent())
