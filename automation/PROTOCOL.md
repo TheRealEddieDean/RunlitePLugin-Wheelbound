@@ -1,3 +1,42 @@
+## Current local continuation - fixed Grand Fate pool, 2026-10-29
+
+IDLE after bounded WB-GFD-01 gameplay increment (S). Supersedes older next-task
+prose. Reconciled local domain/persistence/tests against current continuation and
+backlog; no Git/remote verification. FND-01 remains DONE; FND-10/12 PARTIAL;
+FND-11, ECON-01/08, TREE-02 and WHL-02/03/04/05/06/07/11/12 remain
+PARTIAL_UNVERIFIED. Purchase recovery fixtures already exist; their JUnit execution
+remains blocked by unavailable Gradle. Reviewed prices/catalog remain unresolved.
+Other TODO/PARTIAL/BLOCKED statuses retain their audited meaning. I01d not selected.
+
+GrandFatePool supplies the five fixed equal-weight outcomes with explicit stable
+identities and version, deterministic ticket commitments and strict full-pool restore
+validation. Goals: Inferno, Fortis Colosseum, Radiant Oathplate, Awakened DT2 and
+Master hilt 5. Authority: WB-D003 and WB-D117; GRAND_FATES.md. No eligibility
+filtering or account-based reweighting. This completes the isolated pool model,
+not run-start sealing, no-reroll persistence, onboarding, attempts or completion
+evidence. WB-GFD-01 is PARTIAL_UNVERIFIED pending JUnit/integration acceptance;
+GFD-02 through GFD-07 remain TODO. Master Wheel unchanged; gameplay unwired and
+default-disabled.
+
+Validation: javac --release 11 compiled all current domain sources, RunDocument,
+RunReceipt, PurchaseTransition and four executable checks. GrandFatePoolChecks,
+PurchaseTransitionChecks, PurchaseAggregateChecks and PurchaseJournalChecks passed.
+New JUnit adapter authored, not executed. Focused PurchasePersistenceTest,
+PurchaseTransitionTest, PurchaseJournalTest, RunCodecTest and WheelboundBehaviorTest
+Gradle attempt failed before compilation: workspace Gradle 8.10 missing, wrapper
+download denied (SocketException). No JUnit, codec/store or legacy regression pass
+claimed. No dependency stubs or test bypasses.
+
+Next eligible gameplay increment: WB-GFD-02 typed sealed Grand Fate evidence in the
+run aggregate, preserving the fixed pool and original commitment across restart;
+split schema/store integration if necessary. Read WB-D003/089/092/117 and run-start
+transaction contracts first. Generic DurableWheelDraws commits an ordinary offer
+obligation and is not a Grand run-start sealing API. Preserve schema compatibility
+and never infer a destiny for legacy saves lacking one. Execute the focused JUnit
+and legacy suites when build dependencies become available. Purchase commands still
+require reviewed quote/catalog and full edit-boundary gates. No external paths,
+credentials, secrets, workflows or Git accessed; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - purchase recovery lookup and fixtures, 2026-10-29
 
 IDLE after bounded WB-WHL-04/05, WB-ECON-08 and WB-FND-11 prerequisite (S).
