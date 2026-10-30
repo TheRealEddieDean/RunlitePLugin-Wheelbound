@@ -1,3 +1,39 @@
+## Current local continuation - Grand activation history JSON, 2026-10-30
+
+IDLE after bounded WB-GFD-06/07 history serialization prerequisite (S), split from
+aggregate integration. Reconciled history/receipt/domain checks, standalone receipt
+serializer and schema-10 continuation. FND-01 remains DONE; FND-10/12 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing partial, TODO and
+BLOCKED statuses stand. Merged work not independently reverified (Git prohibited).
+I01d not selected; no complete gameplay implementation claimed.
+
+GrandActivationHistoryJson provides a standalone version-1 full ordered payload,
+including original seal identity/draw even for empty histories. It delegates original
+receipt decoding and validates exact independent seal/current head, ordering, command
+uniqueness, nonoverlapping revisions and monotonic completed prefixes. Legacy absence
+is not synthesized. History does not identify current activity, prove intervening
+settlement or authenticate sessions. Schema remains 10; no aggregate/store mutation,
+spin debit, award or client wiring. Authority WB-D089/104 with WB-D117 supersession,
+STATE_CONTRACT/PERSISTENCE. Master Wheel unchanged; gameplay stays default-disabled.
+
+Java 11 compilation of all domain sources and 11 Grand executable fixtures passed; all 11 fixtures passed in build/continuation-grand-history-json. These do not execute the new Gson serializer.
+
+Validation: focused Gradle history JSON/receipt JSON/Master Wheel attempt failed before
+compilation because inherited wrapper-cache lock access was denied. No cache override
+or external-path inspection. New Gson/JUnit serializer tests remain NOT_RUN. Authored
+all-five-goal text restarts, empty history, retained completed prefixes, original replay,
+Long.MAX_VALUE, changed selection, regressing prefixes, reversed/duplicate/conflicting
+commands, malformed payloads, foreign seals and stale heads.
+
+Next eligible increment: aggregate schema integration of optional activation history
+and separately validated current attempt, explicit legacy absence, lifecycle/debit/draw
+copy retention, store mutation guards and restart/collision tests. Do not infer active
+attempt from the last history entry. Schema-10 and new serializer tests still need
+execution with inherited dependencies available. Atomic activation/evidence acceptance,
+trusted identity/session/source admission, off-task settlement, global command/source
+collisions and lost-ack tests remain UNSTARTED. WB-D092/client mappings remain gated.
+Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - Grand activation history, 2026-10-30
 
 IDLE after bounded WB-GFD-06/07 activation-history prerequisite (S), split from
