@@ -1,3 +1,47 @@
+## Current local continuation - frozen Master selection provenance, 2026-10-30
+
+IDLE after bounded WB-WHL-08/09/10 transcript prerequisite (S). Reconciled
+DrawCommitment, WeightedPool, ActiveWheel, MasterSelectionReadiness, DurableWheelDraws,
+RunReceipt and AtomicRunStore against current continuations and WB-D138/139.
+Existing DRAW commits one result to OFFERS_COMMITTED; it does not represent unresolved
+empty retries or a recoverable RNG stream. No duplicate draw/store implementation.
+Git/merged state not verified (user prohibits Git). No I01d work.
+
+MasterSelectionProvenance retains transaction, snapshot/catalog versions, frozen full
+wheel/readiness, opaque caller-supplied stream descriptor/initial and per-step states,
+and ordered DrawCommitments with derived landing kinds/reasons. Restore validates exact
+ordered full-weight pools and rejects any draw after a valid ordinary or special landing.
+Empty prefixes have no retry cap. Raw draw count is explicitly not a PRNG cursor or spin
+allocation count. Stream states are declarations, not verified deterministic continuity.
+No sampling, seed generation, automatic retry, debit/reward, durable storage, suspension
+command, reconciliation, offer commitment or runtime admission. Master Wheel unchanged;
+incomplete gameplay remains unwired/default-disabled.
+
+Reconciliation: WB-WHL-08 remains PARTIAL; transcript subunit implemented/offline verified.
+WB-WHL-09 remains TODO for actual automatic retry; WB-WHL-10 PARTIAL_UNVERIFIED overall.
+FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED;
+GFD-03/04 TODO; REL-02 PARTIAL. Other audited statuses and concrete evidence/decision
+BLOCKED rows stand. No finished gameplay or merged-work claim.
+
+Validation: javac --release 11 compiled all domain production sources and both Master
+readiness/provenance executable fixtures into build/continuation-master-provenance.
+Both fixtures PASSED. New checks cover retained reasons/tickets/states, all raw weighted
+tickets, immutable restore/input isolation, long empty prefix, altered order/version/pool,
+noncanonical identities, blocked readiness, both mandatory special kinds and rejection
+of post-valid redraws. JUnit wrapper authored. Focused Gradle provenance/readiness/legacy
+WheelboundBehaviorTest failed before compilation: inherited wrapper-cache lock Access
+is denied. JUnit and legacy NOT_RUN; inherited GRADLE_USER_HOME unchanged, no cache
+workaround or external-path inspection. No durability or stream authenticity claim.
+
+Next eligible bounded increment: versioned provenance payload round-trip with exact
+frozen classifications, wheel, commitments and opaque stream state retention; then
+aggregate/store integration for unresolved selection before any automatic retry engine.
+Do not route empty retries through existing DRAW/OFFERS_COMMITTED or invent a stream
+algorithm/changed-snapshot reconciliation. Reviewed eligibility, lifecycle/spin admission,
+trusted source/session evidence, settlement and actual retry execution remain unfinished.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
+
 ## Current local continuation - Master selection readiness policy, 2026-10-30
 
 IDLE after bounded WB-WHL-10 precommit readiness increment (S). Reconciled domain,
