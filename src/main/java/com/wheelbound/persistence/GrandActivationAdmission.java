@@ -51,12 +51,14 @@ public final class GrandActivationAdmission
             || current.grandProgress().map(progress -> progress.evidence().values().stream()
                 .anyMatch(reference -> reference.receiptId().equals(request.commandId()))).orElse(false))
         { throw new IllegalArgumentException("Grand activation command collides with another operation"); }
-        // Pending draws/offers and all mandatory settlements are represented by the
-        // lifecycle obligation. The domain proposal checks that boundary only for new
-        // commands: historical replay must preserve a later pending obligation.
+        // The lifecycle guards committed obligations. Unresolved precommit selections
+        // have their own aggregate guard below; historical replay preserves both.
         GrandFateChecklist checklist = current.grandProgress().map(progress -> progress.checklist())
             .orElseGet(() -> GrandFateChecklist.initial(history.seal()));
-        return GrandActivationProposal.propose(current.lifecycle(), checklist, history,
+        GrandActivationProposal proposal = GrandActivationProposal.propose(current.lifecycle(), checklist, history,
             current.grandCurrentAttempt(), request, expectedIdentity, expectedRevision);
+        if (!proposal.isReplay() && current.pendingMasterSelection().isPresent())
+        { throw new IllegalArgumentException("Unresolved Master selection requires reconciliation before activation"); }
+        return proposal;
     }
 }

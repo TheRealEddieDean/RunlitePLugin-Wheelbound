@@ -22,6 +22,7 @@ public final class RunDocument
     private final com.wheelbound.domain.GrandEvidenceJournal grandJournal;
     private final com.wheelbound.domain.GrandFateProgress grandProgress;
     private final RunLifecycle lifecycle;
+    private final com.wheelbound.domain.MasterSelectionProvenance pendingMasterSelection;
     private final String catalogVersion;
     private final List<RunReceipt> receipts;
     private final FatePointLedger fatePoints;
@@ -89,7 +90,30 @@ public final class RunDocument
         Optional<com.wheelbound.domain.GrandActivationHistory> grandActivations,
         Optional<com.wheelbound.domain.GrandCurrentAttempt> grandCurrentAttempt)
     {
+        this(lifecycle, catalogVersion, receipts, fatePoints, inventory, grandFate, grandProgress,
+            grandJournal, grandActivations, grandCurrentAttempt, Optional.empty());
+    }
+
+    /** Schema-14 structural unresolved selection; absence never starts a selection.
+     * Does not authenticate evidence/stream continuity or authorize selection. */
+    public RunDocument(RunLifecycle lifecycle, String catalogVersion, List<RunReceipt> receipts,
+        Optional<FatePointLedger> fatePoints, Optional<SliceInventory> inventory,
+        Optional<com.wheelbound.domain.SealedGrandFate> grandFate,
+        Optional<com.wheelbound.domain.GrandFateProgress> grandProgress,
+        Optional<com.wheelbound.domain.GrandEvidenceJournal> grandJournal,
+        Optional<com.wheelbound.domain.GrandActivationHistory> grandActivations,
+        Optional<com.wheelbound.domain.GrandCurrentAttempt> grandCurrentAttempt,
+        Optional<com.wheelbound.domain.MasterSelectionProvenance> pendingMasterSelection)
+    {
         Objects.requireNonNull(lifecycle, "lifecycle");
+        this.pendingMasterSelection = Objects.requireNonNull(pendingMasterSelection, "pendingMasterSelection").orElse(null);
+        if (this.pendingMasterSelection != null
+            && (this.pendingMasterSelection.hasValidLanding()
+                || !this.pendingMasterSelection.catalogVersion().equals(catalogVersion)
+                || (lifecycle.state() != RunLifecycle.State.ACTIVE && lifecycle.state() != RunLifecycle.State.PAUSED)
+                || lifecycle.obligation() != RunLifecycle.Obligation.NONE
+                || grandCurrentAttempt.isPresent()))
+        { throw new IllegalArgumentException("Pending Master selection requires unresolved unobligated active/paused context"); }
         this.grandFate = Objects.requireNonNull(grandFate, "grandFate").orElse(null);
         com.wheelbound.domain.GrandFateProgress supplied =
             Objects.requireNonNull(grandProgress, "grandProgress").orElse(null);
@@ -178,6 +202,16 @@ public final class RunDocument
                     { throw new IllegalArgumentException("Activation prefix contains later evidence"); }
                 }
             }
+        }
+        if (this.pendingMasterSelection != null)
+        {
+            UUID transaction = this.pendingMasterSelection.transactionId();
+            if (commands.contains(transaction)
+                || (this.grandFate != null && this.grandFate.commandId().equals(transaction))
+                || (this.grandActivations != null && this.grandActivations.receipts().containsKey(transaction))
+                || (this.grandProgress != null && this.grandProgress.evidence().values().stream()
+                    .anyMatch(reference -> reference.receiptId().equals(transaction))))
+            { throw new IllegalArgumentException("Pending selection transaction collides with retained history"); }
         }
         validateDebits();
         validatePurchases();
@@ -282,6 +316,8 @@ public final class RunDocument
     public Optional<com.wheelbound.domain.GrandCurrentAttempt> grandCurrentAttempt()
     { return Optional.ofNullable(grandCurrentAttempt); }
     public RunLifecycle lifecycle() { return lifecycle; }
+    public Optional<com.wheelbound.domain.MasterSelectionProvenance> pendingMasterSelection()
+    { return Optional.ofNullable(pendingMasterSelection); }
     public Optional<com.wheelbound.domain.GrandEvidenceJournal> grandJournal()
     { return Optional.ofNullable(grandJournal); }
     /** Absent legacy references never imply completed objectives. */
