@@ -1,3 +1,44 @@
+## Current local continuation - typed Grand Fate sealing evidence, 2026-10-29
+
+IDLE after bounded WB-GFD-02 prerequisite increment (S). This supersedes older
+next-task prose. Reconciled current GrandFatePool, RunDocument, codec/store and
+focused test sources against the backlog and recorded local continuation. No Git
+or remote verification; prior merged-work claims remain historical records.
+FND-01 remains DONE; FND-10/12 PARTIAL; existing PARTIAL_UNVERIFIED wheel,
+economy, tree and transaction rows retain their audited status. WB-GFD-01 remains
+PARTIAL_UNVERIFIED. WB-GFD-02 is now PARTIAL_UNVERIFIED: typed evidence only.
+GFD-03 through GFD-07 remain TODO. Decision/client/price BLOCKED rows remain held.
+I01d was not selected. No complete gameplay system or durable sealing is claimed.
+
+SealedGrandFate freezes account/run identity, command ID and full DrawCommitment.
+Construction validates the exact fixed pool; restore consumes no randomness.
+Value equality and exact-request matching detect changed identity, command or draw.
+Authority: WB-D003/089/092/117 and STATE_CONTRACT run-start/transaction contracts.
+This value does not verify fresh-account onboarding, acknowledge a write, seal a
+RunDocument, authorize attempts or supply a completion signal. Legacy saves remain
+without inferred destiny. Production aggregate, codec and store remain unchanged;
+Master Wheel unchanged and incomplete gameplay remains unwired/default-disabled.
+
+Validation: javac --release 11 compiled all current domain sources, RunDocument,
+RunReceipt, PurchaseTransition and the two Grand Fate executable checks.
+SealedGrandFateChecks and GrandFatePoolChecks passed. Coverage includes all five
+outcomes, reconstructed value/hash equality, cross-account/run/command/draw
+mismatches, missing fields and unsupported/partial pool rejection. New JUnit
+adapter authored. Gradle SealedGrandFateTest, GrandFatePoolTest and legacy
+WheelboundBehaviorTest failed before compilation: workspace Gradle 8.10 absent,
+wrapper download denied (SocketException). No JUnit/legacy/codec/store pass claimed.
+No dependency stubs, external paths, credentials, secrets, workflows or Git accessed.
+
+Next bounded increment: add optional typed evidence to RunDocument together with
+schema migration/encoding and store preservation checks so a write cannot silently
+drop or replace destiny. Preserve absent legacy state, bind identity and reject
+resealing, including across unrelated lifecycle/payment writes. Split into smaller
+fail-closed increments if needed; do not expose a new aggregate field to persistence
+without explicit codec handling. Then implement the atomic new-run sealing boundary
+and crash/restart/lost-ack fixtures. Generic DurableWheelDraws is not that API.
+Run focused JUnit and legacy tests when build dependencies are available. Supervisor
+handles commits, PRs, CI and merges; local changes are not claimed committed.
+
 ## Current local continuation - fixed Grand Fate pool, 2026-10-29
 
 IDLE after bounded WB-GFD-01 gameplay increment (S). Supersedes older next-task
