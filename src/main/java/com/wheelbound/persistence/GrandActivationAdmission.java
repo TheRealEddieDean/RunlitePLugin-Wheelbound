@@ -5,7 +5,9 @@ import com.wheelbound.domain.GrandActivationProposal;
 import com.wheelbound.domain.GrandActivationReceipt;
 import com.wheelbound.domain.GrandFateChecklist;
 import com.wheelbound.domain.RunIdentity;
+import java.util.ArrayList;
 import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Read-only aggregate admission for the future atomic activation command.
@@ -17,6 +19,24 @@ import java.util.Objects;
 public final class GrandActivationAdmission
 {
     private GrandActivationAdmission() { }
+
+    /**
+     * Prepare the complete, immutable snapshot for a future atomic command. Exact
+     * replay returns the supplied snapshot unchanged, including explicit absence of
+     * a current attempt. This does not write, acknowledge success or admit a session;
+     * the store still refuses activation mutations through its generic write API.
+     */
+    public static RunDocument prepare(RunDocument current, GrandActivationReceipt request,
+        RunIdentity expectedIdentity, long expectedRevision)
+    {
+        GrandActivationProposal proposal = propose(current, request, expectedIdentity, expectedRevision);
+        if (proposal.isReplay()) { return current; }
+        ArrayList<RunReceipt> receipts = new ArrayList<>(current.receipts());
+        receipts.add(RunReceipt.grandActivation(proposal.receipt()));
+        return new RunDocument(proposal.lifecycle(), current.catalogVersion(), receipts,
+            current.fatePoints(), current.inventory(), current.grandFate(), current.grandProgress(),
+            current.grandJournal(), Optional.of(proposal.history()), proposal.currentAttempt());
+    }
 
     public static GrandActivationProposal propose(RunDocument current,
         GrandActivationReceipt request, RunIdentity expectedIdentity, long expectedRevision)

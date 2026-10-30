@@ -1,3 +1,36 @@
+## Current local continuation - complete Grand activation snapshot preparation, 2026-10-30
+
+IDLE after bounded WB-GFD-06/07 aggregate preparation prerequisite (XS/S).
+Reconciled domain proposal/admission, typed envelopes, schema-13 codec, aggregate
+constructors and generic store guards. Existing prerequisites are present; atomic
+store activation is still UNSTARTED. FND-01 DONE; FND-10/12 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Other existing partial,
+TODO and decision/evidence BLOCKED statuses stand. No Git or merged-state verification;
+I01d not selected. Current user restrictions supersede historical publication steps.
+
+GrandActivationAdmission.prepare builds the complete immutable proposed aggregate:
+one typed receipt, extended activation history, current attempt and lifecycle head.
+Catalog, FP, inventory, seal, progress and evidence journal are retained. Exact replay
+returns the supplied document unchanged, including absent current activity and later
+paused heads. No persistence acknowledgement, session admission, spin/FP charge or
+client wiring. Generic store guards still reject activation. Master Wheel unchanged;
+incomplete gameplay remains unwired/default-disabled. Authority WB-D089/104 with
+WB-D117 supersession and STATE_CONTRACT/PERSISTENCE.
+
+Java 11 compilation of all domain sources, aggregate/admission and new executable
+fixture passed. Expanded preparation fixture passed for all five goals, every objective
+and retained prefix, present/absent inventory and journal, negative FP retention,
+immutable input, typed receipt append, replay, stale/occupied head and Long.MAX_VALUE.
+Focused Gradle failed before compilation: inherited wrapper-cache lock access denied.
+No cache override or external-path inspection. JUnit/Gson/store/Master Wheel NOT_RUN;
+no new verified durability claim. All 13 Grand domain and six persistence executable fixtures passed.
+
+Next eligible increment: operation-specific store transition validation and atomic
+activation using prepare under the write lock, followed by failed-write/lost-ack/restart
+fixtures and schema-13/legacy Gson/store/Master Wheel regressions when dependencies
+are accessible. Trusted session/source admission, evidence acceptance and off-task
+settlement remain UNSTARTED. Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - schema-13 Grand activation envelopes, 2026-10-30
 
 IDLE after bounded WB-GFD-06/07 versioned activation-envelope codec increment (S).
