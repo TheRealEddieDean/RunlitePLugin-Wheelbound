@@ -1,3 +1,37 @@
+## Current local continuation - Grand activation session command, 2026-10-30
+
+IDLE after bounded WB-GFD-06/07 session-command increment (XS/S).
+Reconciled current activation preparation, schema-13/store command and RunSession
+against code/tests and WB-D089/104 with WB-D117 supersession. Atomic activation
+already exists as IMPLEMENTED_UNVERIFIED; no duplicate implementation or I01d work.
+FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED;
+GFD-03/04 TODO. Other prior partial/TODO and evidence/decision BLOCKED rows stand.
+Merged state was not independently verified: Git operations prohibited.
+
+RunSession.activateGrandFate now invalidates old callback generations before the
+operation-specific store command, reloads the actual durable lifecycle after success
+or exact replay, and disconnects on IO/runtime failure. Historical replay preserves
+a later paused head. This is a worker-thread command boundary only, not trusted
+source authentication or fresh-baseline admission. No client wiring, evidence
+acceptance, off-task settlement, spin/FP charge or gameplay enablement. Master Wheel
+source unchanged; incomplete gameplay remains disabled.
+
+Focused JUnit tests authored for token invalidation, replay at a later paused head,
+stale-head failure without save mutation and lost-ack reconnect/exact replay.
+Gradle RunSession/GrandActivationStore/AtomicRunStore/Master Wheel attempt failed
+before compilation: inherited wrapper-cache lock access denied. JUnit/store/Gson/
+Master Wheel NOT_RUN; session code remains IMPLEMENTED_UNVERIFIED. No cache override
+or external-path inspection. Java 11 compilation of all domain sources plus
+RunDocument/RunReceipt/admission and GrandActivationPreparationChecks passed;
+preparation executable fixture passed. This does not compile the session/store.
+
+Next: execute focused session/store, schema-13/legacy codec and Master Wheel tests
+when inherited dependencies are accessible. Then reconcile AsyncRunSession and
+implement a bounded asynchronous activation command boundary; trusted session/source
+and fresh-baseline admission remain unfinished, as do evidence acceptance and
+off-task settlement. No live gameplay completion or verified durability claim.
+Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - atomic Grand activation command, 2026-10-30
 
 IDLE after bounded WB-GFD-06/07 store command increment (S).
