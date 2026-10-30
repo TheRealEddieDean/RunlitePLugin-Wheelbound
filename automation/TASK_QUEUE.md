@@ -1,3 +1,39 @@
+## Current local continuation - schema-7 purchase journal, 2026-10-29
+
+IDLE after bounded WB-WHL-04/05, WB-ECON-08 and WB-FND-11 prerequisite (S).
+This supersedes older next-task prose. Reconciled RunCodec, RunDocument, typed receipt,
+inventory/proposal and focused test sources against the latest local continuation.
+Recorded merged work remains historical evidence; no Git or remote checks performed.
+FND-01 remains DONE; FND-10/12 PARTIAL; FND-11, ECON-01/08, TREE-02 and
+WHL-02/03/04/05/06/07/11/12 remain PARTIAL_UNVERIFIED. Other TODO/PARTIAL/BLOCKED
+rows retain their audited statuses. No complete gameplay system claimed; I01d not selected.
+
+RunCodec now writes schema 7 purchase payloads using PurchaseReceiptJson and reads them
+through typed envelope and RunDocument payment/ownership/lifetime-chain validation.
+Schema 1-6 decoding remains; schema 6 cannot admit purchase payloads. Strict operation
+field sets retain standalone lifecycle/draw/debit separation. Tests authored for a first
+and duplicate chain, original balances, deterministic re-encoding, schema-6 inventory/FP
+compatibility and checksum-valid malformed/foreign/missing/extra fields, mismatched
+ledger/history/instance/command evidence. This is serialization only, not an authorized
+purchase command, quote/catalog approval or proof of atomic durable purchases.
+Authority: WB-D105/106/118 and STATE_CONTRACT transaction/migration requirements.
+Master Wheel unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Validation: javac --release 11 compiled all domain classes, RunDocument, RunReceipt
+and PurchaseAggregateChecks/PurchaseJournalChecks; both executable checks passed.
+Gradle focused PurchaseJournalTest, PurchaseReceiptJsonTest, RunCodecTest and legacy
+WheelboundBehaviorTest failed before compilation: Gradle 8.10 absent and download denied
+(SocketException). Codec/JUnit changes have NOT been compiled/executed here; no legacy
+regression pass claimed. Supervisor must run these suites with available dependencies.
+
+Next bounded unit: validate before/after purchase inventory and historical UUID freshness
+in the command/store boundary, preserving original responses and append-only receipts.
+Then reviewed quote/catalog and full pending-draw/offer/edit-boundary gates are required
+before an atomic purchase command, with failed-write/lost-ack/restart tests. Price and
+client-evidence holds remain; do not enable purchases merely because schema 7 exists.
+No external paths, credentials, secrets, workflows or Git operations accessed.
+Supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - validated purchase chains, 2026-10-29
 
 IDLE after a bounded WB-WHL-04/05, WB-ECON-08 and WB-FND-11 prerequisite (S).
