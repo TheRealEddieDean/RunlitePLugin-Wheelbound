@@ -172,6 +172,13 @@ public final class AtomicRunStore
             {
                 if (!current.get().grandFate().equals(next.grandFate()))
                 { throw new IOException("Cannot add, discard or replace sealed Grand Fate on an existing run"); }
+                // No evidence-acceptance command exists yet. Ordinary writes must preserve
+                // explicit absence as well as every structural reference exactly.
+                if (current.get().grandProgress().isPresent() != next.grandProgress().isPresent()
+                    || (current.get().grandProgress().isPresent()
+                        && !current.get().grandProgress().get().evidence().equals(
+                            next.grandProgress().get().evidence())))
+                { throw new IOException("Cannot change Grand progress without a verified evidence command"); }
                 java.util.List<RunReceipt> history = current.get().receipts();
                 if (next.receipts().size() < history.size()
                     || !next.receipts().subList(0, history.size()).equals(history))

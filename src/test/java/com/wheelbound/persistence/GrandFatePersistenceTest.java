@@ -174,7 +174,7 @@ public class GrandFatePersistenceTest
     {
         for (int schema = 1; schema <= 7; schema++)
         {
-            JsonObject value = payload(); value.remove("grandFate");
+            JsonObject value = payload(); value.remove("grandFate"); value.remove("grandProgress");
             if (schema < 6) { value.remove("inventory"); }
             if (schema < 4) { value.remove("fatePoints"); }
             if (schema == 1) { value.remove("receipts"); }

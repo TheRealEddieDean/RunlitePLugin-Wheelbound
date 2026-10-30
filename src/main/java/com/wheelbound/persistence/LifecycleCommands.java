@@ -36,7 +36,7 @@ public final class LifecycleCommands
         if (next == current.lifecycle()) { throw new IllegalStateException("Already in requested lifecycle state"); }
         RunReceipt receipt = new RunReceipt(commandId, operation, expectedRevision, next.revision(), next.state(), next.obligation());
         List<RunReceipt> receipts = new ArrayList<>(current.receipts()); receipts.add(receipt);
-        store.write(new RunDocument(next, current.catalogVersion(), receipts, current.fatePoints(), current.inventory(), current.grandFate()), expectedRevision);
+        store.write(new RunDocument(next, current.catalogVersion(), receipts, current.fatePoints(), current.inventory(), current.grandFate(), current.grandProgress()), expectedRevision);
         return receipt;
     }
 }

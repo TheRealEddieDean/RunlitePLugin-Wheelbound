@@ -47,6 +47,7 @@ public class InventoryPersistenceTest
     private byte[] bytes(JsonObject payload, int schema)
     {
         if (schema < 8) { payload.remove("grandFate"); }
+        if (schema < 9) { payload.remove("grandProgress"); }
         String text = gson.toJson(payload);
         JsonObject envelope = new JsonObject();
         envelope.addProperty("schemaVersion", schema); envelope.addProperty("payload", text);

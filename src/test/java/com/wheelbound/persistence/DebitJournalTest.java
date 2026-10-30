@@ -26,7 +26,7 @@ public class DebitJournalTest
         assertEquals(13, restored.fatePoints().get().balance());
         JsonObject envelope = new JsonParser().parse(new String(encoded, StandardCharsets.UTF_8)).getAsJsonObject();
         JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
-        payload.remove("inventory"); payload.remove("grandFate");
+        payload.remove("inventory"); payload.remove("grandFate"); payload.remove("grandProgress");
         String text = gsonText(payload);
         envelope.addProperty("payload", text);
         envelope.addProperty("sha256", RunCodec.sha256(text.getBytes(StandardCharsets.UTF_8)));
@@ -43,7 +43,7 @@ public class DebitJournalTest
         RunCodec codec = new RunCodec(gson);
         JsonObject envelope = new JsonParser().parse(new String(codec.encode(source), StandardCharsets.UTF_8)).getAsJsonObject();
         JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
-        payload.remove("inventory"); payload.remove("grandFate");
+        payload.remove("inventory"); payload.remove("grandFate"); payload.remove("grandProgress");
         String text = gsonText(payload);
         envelope.addProperty("payload", text);
         envelope.addProperty("sha256", RunCodec.sha256(text.getBytes(StandardCharsets.UTF_8)));
