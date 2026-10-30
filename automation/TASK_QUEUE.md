@@ -1,3 +1,37 @@
+## Current local continuation - Grand progress aggregate prerequisite, 2026-10-29
+
+IDLE after bounded WB-GFD-05 aggregate increment (S). Supersedes older next-task prose.
+Reconciled domain pool/seal/checklist/progress/attempt sources, RunDocument, schema-8
+codec/store and focused fixtures with the backlog. FND-01 DONE; FND-10/12 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing wheel/economy/tree
+partial and decision/client/price BLOCKED rows stand. Historical merges unverified;
+no Git operations or I01d work. No complete gameplay implementation claimed.
+
+RunDocument can carry optional structural GrandFateProgress references, validating the
+exact original seal (including empty progress), current aggregate revision and receipt-ID
+separation from existing operations. Legacy constructors retain explicit absence. References
+are immutable and do not establish authenticity or completion authority. Schema 8 encoding
+rejects any present progress, including empty, before serialization to prevent silent loss.
+This is an aggregate prerequisite only: no progress persistence or production wiring.
+Authority WB-D089/104/117 and STATE_CONTRACT. Master Wheel source unchanged; incomplete
+gameplay remains disabled. No unresolved mapping, reward, price or eligibility invented.
+
+Validation: Java 11 compiled all domain sources plus RunDocument/RunReceipt and executable
+Grand fixtures from source into build/continuation-grand-aggregate. Aggregate fixture covers
+all five goals, explicit absence/empty progress, original seal, foreign identity, future
+revision, operation-ID collisions, unrelated receipts and Long.MAX_VALUE. Focused JUnit
+adapter and schema-8 refusal test authored. Gradle attempt failed before compilation because
+Gradle 8.10 is unavailable and its wrapper download was denied (SocketException). No JUnit,
+codec/store or legacy Master Wheel regression pass claimed.
+
+Next remaining task: versioned progress-reference codec with explicit legacy absence,
+store preservation and command-copy propagation; resolve full trusted evidence receipts
+before accepting completed progress. Current codec refuses this field, so callers must not
+use it in durable commands yet. Then durable attempt receipts, restart/exact replay/lost-ack
+and pause/resume reconciliation. GFD-05 remains partial. Client detectors/item mappings and
+WB-D092 fresh-account predicate remain gated. Local edits only; supervisor handles Git,
+PRs, CI and merges. No external paths, credentials, secrets or workflows accessed.
+
 ## Current local continuation - Grand progress evidence references, 2026-10-29
 
 IDLE after bounded WB-GFD-05 provenance prerequisite. Supersedes older next-task prose.
