@@ -90,6 +90,8 @@ public final class AtomicRunStore
                     || !next.receipts().subList(0, history.size()).equals(history))
                 { throw new IOException("Cannot discard or rewrite committed receipts"); }
             }
+            try { PurchaseTransition.validate(current.orElse(null), next); }
+            catch (IllegalArgumentException ex) { throw new IOException("Invalid purchase transition", ex); }
             try
             {
                 forceFile(pendingPath(), bytes);
