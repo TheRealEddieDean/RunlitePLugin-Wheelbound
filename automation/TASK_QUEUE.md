@@ -1,3 +1,39 @@
+## Current local continuation - Grand progress evidence references, 2026-10-29
+
+IDLE after bounded WB-GFD-05 provenance prerequisite. Supersedes older next-task prose.
+Reconciled Grand pool/seal/checklist/attempt code and tests with current backlog: FND-01
+DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO.
+Existing wheel/economy/tree statuses and client/decision/price BLOCKED rows stand.
+Historical merge claims unverified; no Git operations. I01d not selected.
+
+GrandFateProgress restores a checklist from explicit immutable evidence references,
+binding each objective to the full original seal, receipt UUID and positive verified
+run revision. Rejects foreign seals/account/run, wrong goals, duplicate objectives or
+receipt IDs, seal-command collisions and future revisions; copies all input. Empty
+references imply no verified progress. Structure only: authenticity, receipt resolution,
+source/session/context validation and monotonic durable retention remain unfinished.
+No detector, award, attempt settlement or persistence is implemented by this increment.
+Authority WB-D089/104/117 and STATE_CONTRACT. Master Wheel source unchanged; incomplete
+gameplay remains unwired/default-disabled. No unresolved item mappings invented.
+
+Validation: javac --release 11 compiled every domain source and six executable fixtures
+from source into build/continuation-grand-progress. GrandFateProgressChecks,
+GrandFateAttemptChecks, GrandFateChecklistChecks, GrandFateActivationChecks,
+GrandFatePoolChecks and SealedGrandFateChecks passed. Progress fixtures cover all five
+goals, retained Awakened prefixes, exact reconstructed seal, foreign identities/seals,
+duplicate references, nulls, immutability and revision boundaries through Long.MAX_VALUE.
+JUnit adapter authored. Focused Gradle progress/persistence/legacy attempt failed before
+compilation: Gradle 8.10 absent, wrapper download denied (SocketException). No JUnit,
+codec/store or Master Wheel regression pass claimed.
+
+Next remaining task: integrate progress references with the versioned aggregate/codec,
+explicit legacy absence and store preservation checks; resolve full trusted evidence
+receipts before accepting completed progress. Then durable attempt state/receipts with
+restart/exact replay/lost-ack and pause/resume reconciliation. These remain unstarted;
+this prerequisite does not complete GFD-05 or permit wiring. Client detectors and exact
+item mappings remain gated; WB-D092 fresh-account predicate remains TECH_TBD.
+Local edits only; supervisor handles Git/PR/CI/merges. No external paths, credentials,
+secrets or workflows accessed.
 ## Current local continuation - interrupted Grand attempt increment finished, 2026-10-29
 
 IDLE. Preserved and finished the existing WB-GFD-07 transition-proposal increment;
