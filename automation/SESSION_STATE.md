@@ -1,3 +1,41 @@
+## Current local continuation - full Grand journal JSON payload, 2026-10-30
+
+IDLE after bounded WB-GFD-05/07 serialization increment (S). Supersedes older
+next-task prose. Reconciled receipt/journal/attempt/progress, RunDocument/schema-9
+codec and store guard with backlog. FND-01 remains DONE; FND-10/12 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Other audited wheel,
+economy/tree partial and client/decision/price BLOCKED statuses stand. No merged
+work reverified, Git operations or I01d work. No completed gameplay system claimed.
+
+GrandEvidenceJournalJson adds a strict version-1 full-payload representation with
+original account/run/seal command/full frozen draw and ordered receipt objective,
+command, activated-attempt revision, source session/namespace/event key. Decode
+requires independently restored progress and exact original seal; domain validation
+rejects missing/duplicate/unordered/future/unresolved receipts and source collisions.
+Empty is explicit; absent legacy references never synthesize payloads. Shared draw
+JSON helpers now package-static. RunCodec remains schema 9; no aggregate field,
+store integration, durable acceptance, client caller, award or spin debit added.
+Authority WB-D089/104 and WB-D117 supersession, STATE_CONTRACT/PERSISTENCE.
+Master Wheel unchanged; incomplete gameplay remains disabled.
+
+Validation: javac --release 11 compiled all domain sources and ten Grand executable fixtures into build/continuation-grand-journal-json; all ten passed.
+Focused JUnit serializer tests authored for all five goals, Unicode keys, empty/full
+text round trips, replay after later heads through Long.MAX_VALUE, full-payload
+collision checking, foreign seal, malformed/missing/unknown fields, unsupported
+versions, missing/duplicate/reversed receipts, source collisions and stale heads.
+Gradle serializer/journal/Master Wheel attempt failed before compilation: inherited
+wrapper-cache lock access denied. No cache override or external-path inspection;
+new Gson serializer/JUnit compilation/execution and Master Wheel regression NOT_RUN.
+
+Next: compile/run new serializer tests when inherited dependencies are accessible;
+integrate optional full journal into a new aggregate schema with explicit legacy
+absence, command-copy retention, store mutation guards and corruption/migration
+coverage. Durable attempt state/activation receipts and atomic acceptance remain
+UNSTARTED, requiring trusted identity/session/source admission, off-task settlement,
+global collision checks and restart/lost-ack tests before wiring. This standalone
+serializer does not complete GFD-05/07. Client mappings and WB-D092 remain gated.
+Local edits only; supervisor handles Git/PR/CI/merges.
+
 ## Current local continuation - Grand evidence journal model, 2026-10-30
 
 IDLE after bounded WB-GFD-05/07 journal prerequisite (S). Supersedes older next-task
