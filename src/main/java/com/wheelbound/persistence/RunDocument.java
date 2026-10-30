@@ -141,6 +141,9 @@ public final class RunDocument
         RunReceipt previous = null;
         for (RunReceipt receipt : this.receipts)
         {
+            // History and journal must share a transition validator before this is durable.
+            if (receipt.operation() == RunReceipt.Operation.GRAND_ACTIVATION)
+            { throw new IllegalArgumentException("Grand activation journal integration is unavailable"); }
             if ((this.grandFate != null && this.grandFate.commandId().equals(receipt.commandId()))
                 || !commands.add(receipt.commandId())) { throw new IllegalArgumentException("Duplicate command ID"); }
             if (previous != null && (receipt.beforeRevision() != previous.afterRevision()

@@ -1,3 +1,39 @@
+## Current local continuation - typed Grand activation operation envelope, 2026-10-30
+
+IDLE after bounded WB-GFD-06/07 journal-envelope prerequisite (XS).
+Reconciled newer proposal/admission code and continuation records: those prerequisites
+already exist despite older PROTOCOL next-work text. Schema-12 current-attempt persistence
+remains IMPLEMENTED_UNVERIFIED. FND-01 DONE; FND-10/12 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Other partial/TODO and
+concrete decision/evidence BLOCKED statuses stand. Merged work not independently
+reverified (Git prohibited). I01d not selected.
+
+RunReceipt now has a typed GRAND_ACTIVATION envelope built only from the full original
+GrandActivationReceipt. Identity/revisions, ACTIVE/ACTIVE_OBJECTIVE response and full
+payload equality/hash are retained; draw/debit/purchase payloads are absent. Generic
+constructors cannot fabricate payload-free activation envelopes. RunDocument explicitly
+rejects this operation until history/journal transition validation and schema integration
+are implemented, preventing schema-12 silent payload loss. No aggregate mutation,
+store acknowledgement, spin/FP charge, session admission or client wiring is enabled.
+Authority WB-D089/104 with WB-D117 supersession, STATE_CONTRACT and PERSISTENCE.
+Master Wheel unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Validation: Java 11 compilation of all domain sources, RunDocument/RunReceipt and
+aggregate admission passed. New executable envelope fixture passed for all five goals,
+every objective, original payload/equality, changed objective/command, Long.MAX_VALUE,
+missing payload, null input, legacy pause and fail-closed aggregate admission.
+Focused Gradle envelope/Master Wheel attempt failed before compilation: inherited
+wrapper-cache lock access denied. No cache override or external-path inspection.
+JUnit/Gson/store/Master Wheel remain NOT_RUN; no durability claim.
+
+Next eligible increment: integrate activation envelopes with aggregate operation-chain
+and exact history validation, then versioned codec support and operation-specific store
+transition guards. Existing cross-operation collision rejection must recognize only the
+matching typed envelope, never arbitrary shared IDs. Atomic activation, failed-write/
+lost-ack/restart tests, trusted session/source admission, evidence acceptance and off-task
+settlement remain UNSTARTED. Legacy history absence remains unavailable; do not infer it.
+Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - aggregate Grand activation admission, 2026-10-30
 
 IDLE after bounded WB-GFD-06/07 read-only aggregate admission increment (XS/S),

@@ -10,7 +10,8 @@ import java.util.UUID;
 /** Immutable command identity, request and original response, persisted with the resulting snapshot. */
 public final class RunReceipt
 {
-    public enum Operation { PAUSE, RESUME, DRAW, FP_DEBIT, SLICE_PURCHASE }
+    public enum Operation { PAUSE, RESUME, DRAW, FP_DEBIT, SLICE_PURCHASE, GRAND_ACTIVATION }
+    private final com.wheelbound.domain.GrandActivationReceipt activation;
     private final SlicePurchaseReceipt purchase;
     private final FatePointDebits.Receipt debit;
     private final DrawCommitment draw;
@@ -38,7 +39,28 @@ public final class RunReceipt
     public RunReceipt(UUID commandId, Operation operation, long beforeRevision, long afterRevision,
         RunLifecycle.State state, RunLifecycle.Obligation obligation, DrawCommitment draw,
         FatePointDebits.Receipt debit, SlicePurchaseReceipt purchase)
+    { this(commandId, operation, beforeRevision, afterRevision, state, obligation, draw, debit, purchase, null); }
+
+    /** Original response envelope only; aggregate journal integration remains unavailable. */
+    public static RunReceipt grandActivation(com.wheelbound.domain.GrandActivationReceipt activation)
     {
+        Objects.requireNonNull(activation, "activation");
+        return new RunReceipt(activation.commandId(), Operation.GRAND_ACTIVATION,
+            activation.beforeRevision(), activation.afterRevision(), RunLifecycle.State.ACTIVE,
+            RunLifecycle.Obligation.ACTIVE_OBJECTIVE, null, null, null, activation);
+    }
+
+    private RunReceipt(UUID commandId, Operation operation, long beforeRevision, long afterRevision,
+        RunLifecycle.State state, RunLifecycle.Obligation obligation, DrawCommitment draw,
+        FatePointDebits.Receipt debit, SlicePurchaseReceipt purchase,
+        com.wheelbound.domain.GrandActivationReceipt activation)
+    {
+        this.activation = activation;
+        if ((operation == Operation.GRAND_ACTIVATION) != (activation != null)
+            || (activation != null && (obligation != RunLifecycle.Obligation.ACTIVE_OBJECTIVE
+                || !commandId.equals(activation.commandId())
+                || beforeRevision != activation.beforeRevision() || afterRevision != activation.afterRevision())))
+        { throw new IllegalArgumentException("Invalid Grand activation receipt identity or boundary"); }
         this.commandId = Objects.requireNonNull(commandId, "commandId");
         this.operation = Objects.requireNonNull(operation, "operation");
         this.state = Objects.requireNonNull(state, "state");
@@ -76,11 +98,14 @@ public final class RunReceipt
             && beforeRevision == other.beforeRevision && afterRevision == other.afterRevision
             && state == other.state && obligation == other.obligation && Objects.equals(draw, other.draw)
             && Objects.equals(debitKey(), other.debitKey())
-            && Objects.equals(purchaseKey(), other.purchaseKey());
+            && Objects.equals(purchaseKey(), other.purchaseKey())
+            && Objects.equals(activation, other.activation);
     }
 
     @Override public int hashCode()
-    { return Objects.hash(commandId, operation, beforeRevision, afterRevision, state, obligation, draw, debitKey(), purchaseKey()); }
+    { return Objects.hash(commandId, operation, beforeRevision, afterRevision, state, obligation, draw, debitKey(), purchaseKey(), activation); }
+
+    public com.wheelbound.domain.GrandActivationReceipt activation() { return activation; }
 
     private Object purchaseKey()
     {
