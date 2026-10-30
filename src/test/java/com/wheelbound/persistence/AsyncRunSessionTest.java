@@ -1,8 +1,7 @@
 package com.wheelbound.persistence;
 
 import com.google.gson.Gson;
-import com.wheelbound.domain.RunIdentity;
-import com.wheelbound.domain.RunLifecycle;
+import com.wheelbound.domain.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -30,6 +29,88 @@ public class AsyncRunSessionTest
                 RunLifecycle.Obligation.ACTIVE_OBJECTIVE), "fixture"), -1);
         }
         return store;
+    }
+
+    private GrandActivationReceipt initializeGrand(RunIdentity id) throws Exception
+    {
+        SealedGrandFate seal = new SealedGrandFate(id, UUID.randomUUID(), GrandFatePool.atTicket(0));
+        GrandFateChecklist checklist = GrandFateChecklist.initial(seal);
+        store(id, false).write(new RunDocument(new RunLifecycle(id, 0, RunLifecycle.State.ACTIVE,
+            RunLifecycle.Obligation.NONE), "fixture", java.util.List.of(), java.util.Optional.empty(),
+            java.util.Optional.empty(), java.util.Optional.of(seal), java.util.Optional.empty(),
+            java.util.Optional.empty(), java.util.Optional.of(new GrandActivationHistory(seal, 0,
+                java.util.List.of()))), -1);
+        return new GrandActivationReceipt(UUID.randomUUID(), id, 0, checklist,
+            checklist.required().iterator().next());
+    }
+
+    @Test public void activationClosesAdmissionWhileQueuedAndReplaysPausedHead() throws Exception
+    {
+        RunIdentity id = new RunIdentity("grand:profile", UUID.randomUUID());
+        GrandActivationReceipt request = initializeGrand(id);
+        AtomicRunStore target = store(id, false);
+        session.connect(target, id); tasks.remove(0).run();
+        RunSession.Token before = session.capture().get();
+        CompletableFuture<java.util.Optional<GrandActivationReceipt>> command = session.activateGrandFate(request, 0);
+        assertFalse(session.accepts(before)); assertFalse(session.capture().isPresent());
+        assertFalse(command.isDone()); assertEquals(0, target.load().get().lifecycle().revision());
+        tasks.remove(0).run();
+        assertEquals(request, command.join().get());
+        assertTrue(session.accepts(session.capture().get())); assertFalse(session.accepts(before));
+        new LifecycleCommands(target).execute(id, UUID.randomUUID(), 1, RunReceipt.Operation.PAUSE);
+        CompletableFuture<java.util.Optional<GrandActivationReceipt>> replay = session.activateGrandFate(request, 2);
+        tasks.remove(0).run();
+        assertEquals(request, replay.join().get()); assertFalse(session.capture().isPresent());
+        assertEquals(2, target.load().get().receipts().size());
+    }
+
+    @Test public void supersededQueuedActivationDoesNotWriteOrReplaceNewSession() throws Exception
+    {
+        RunIdentity id = new RunIdentity("grand:profile", UUID.randomUUID());
+        GrandActivationReceipt request = initializeGrand(id);
+        AtomicRunStore target = store(id, false);
+        session.connect(target, id); tasks.remove(0).run();
+        CompletableFuture<java.util.Optional<GrandActivationReceipt>> command = session.activateGrandFate(request, 0);
+        session.disconnect();
+        session.connect(target, id); tasks.remove(1).run();
+        RunSession.Token fresh = session.capture().get();
+        tasks.remove(0).run();
+        assertFalse(command.join().isPresent()); assertTrue(session.accepts(fresh));
+        assertEquals(0, target.load().get().lifecycle().revision());
+    }
+
+    @Test public void disconnectDuringCommittedWriteCannotRestoreAdmission() throws Exception
+    {
+        RunIdentity id = new RunIdentity("grand:profile", UUID.randomUUID());
+        GrandActivationReceipt request = initializeGrand(id);
+        AtomicRunStore target = new AtomicRunStore(folder.getRoot().toPath(), new RunCodec(new Gson()), id,
+            boundary -> { if (boundary == AtomicRunStore.Boundary.REPLACED) { session.disconnect(); } });
+        session.connect(target, id); tasks.remove(0).run();
+        CompletableFuture<java.util.Optional<GrandActivationReceipt>> command = session.activateGrandFate(request, 0);
+        tasks.remove(0).run();
+        assertEquals(request, command.join().get()); assertFalse(session.capture().isPresent());
+        assertEquals(1, store(id, false).load().get().lifecycle().revision());
+    }
+
+    @Test public void failedActivationAndRejectedSubmissionCloseAdmission() throws Exception
+    {
+        RunIdentity id = new RunIdentity("grand:profile", UUID.randomUUID());
+        GrandActivationReceipt request = initializeGrand(id);
+        AtomicRunStore target = store(id, false);
+        session.connect(target, id); tasks.remove(0).run();
+        CompletableFuture<java.util.Optional<GrandActivationReceipt>> failed = session.activateGrandFate(request, 9);
+        tasks.remove(0).run();
+        assertTrue(failed.isCompletedExceptionally()); assertFalse(session.capture().isPresent());
+        assertEquals(0, target.load().get().lifecycle().revision());
+        AsyncRunSession rejected = new AsyncRunSession(task -> {
+            if (tasks.isEmpty()) { tasks.add(task); }
+            else { throw new RejectedExecutionException(); }
+        });
+        rejected.connect(target, id); tasks.get(0).run();
+        RunSession.Token before = rejected.capture().get();
+        assertTrue(rejected.activateGrandFate(request, 0).isCompletedExceptionally());
+        assertFalse(rejected.accepts(before)); assertFalse(rejected.capture().isPresent());
+        assertEquals(0, target.load().get().lifecycle().revision());
     }
 
     @Test public void disconnectWhileReadQueuedCannotReconnect() throws Exception
