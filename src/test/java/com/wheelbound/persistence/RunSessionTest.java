@@ -22,6 +22,63 @@ public class RunSessionTest
         RunSession session = new RunSession(); session.connect(store(), id); return session;
     }
 
+    private GrandActivationReceipt initializeGrand() throws Exception
+    {
+        SealedGrandFate seal = new SealedGrandFate(id, UUID.randomUUID(), GrandFatePool.atTicket(0));
+        GrandFateChecklist checklist = GrandFateChecklist.initial(seal);
+        store().write(new RunDocument(new RunLifecycle(id, 0, RunLifecycle.State.ACTIVE,
+            RunLifecycle.Obligation.NONE), "fixture", java.util.List.of(), java.util.Optional.empty(),
+            java.util.Optional.empty(), java.util.Optional.of(seal), java.util.Optional.empty(),
+            java.util.Optional.empty(), java.util.Optional.of(new GrandActivationHistory(seal, 0,
+                java.util.List.of()))), -1);
+        return new GrandActivationReceipt(UUID.randomUUID(), id, 0, checklist,
+            checklist.required().iterator().next());
+    }
+
+    @Test public void grandActivationInvalidatesCallbacksAndReplayRetainsPausedHead() throws Exception
+    {
+        GrandActivationReceipt request = initializeGrand();
+        RunSession session = new RunSession(); session.connect(store(), id);
+        RunSession.Token before = session.capture().get();
+        assertEquals(request, session.activateGrandFate(request, 0));
+        assertFalse(session.accepts(before));
+        RunSession.Token activated = session.capture().get();
+        assertTrue(session.accepts(activated));
+        assertEquals(request, session.activateGrandFate(request, 1));
+        assertFalse(session.accepts(activated));
+        session.execute(UUID.randomUUID(), 1, RunReceipt.Operation.PAUSE);
+        assertEquals(request, session.activateGrandFate(request, 2));
+        assertFalse(session.capture().isPresent());
+        assertEquals(2, store().load().get().lifecycle().revision());
+        assertEquals(2, store().load().get().receipts().size());
+    }
+
+    @Test public void invalidGrandCommandClosesAdmissionWithoutChangingSave() throws Exception
+    {
+        GrandActivationReceipt request = initializeGrand();
+        RunSession session = new RunSession(); session.connect(store(), id);
+        RunSession.Token before = session.capture().get();
+        assertThrows(IOException.class, () -> session.activateGrandFate(request, 9));
+        assertFalse(session.accepts(before)); assertFalse(session.capture().isPresent());
+        assertEquals(0, store().load().get().lifecycle().revision());
+        assertThrows(IllegalStateException.class, () -> session.activateGrandFate(request, 0));
+    }
+
+    @Test public void grandLostAcknowledgementRequiresReconnectBeforeExactReplay() throws Exception
+    {
+        GrandActivationReceipt request = initializeGrand();
+        AtomicRunStore failing = new AtomicRunStore(folder.getRoot().toPath(), new RunCodec(new Gson()), id,
+            boundary -> { if (boundary == AtomicRunStore.Boundary.REPLACED) { throw new IOException("Lost ack"); } });
+        RunSession session = new RunSession(); session.connect(failing, id);
+        RunSession.Token before = session.capture().get();
+        assertThrows(IOException.class, () -> session.activateGrandFate(request, 0));
+        assertFalse(session.accepts(before)); assertFalse(session.capture().isPresent());
+        session.connect(store(), id);
+        assertEquals(request, session.activateGrandFate(request, 1));
+        assertTrue(session.capture().isPresent());
+        assertEquals(1, store().load().get().receipts().size());
+    }
+
     @Test public void reconnectSameRevisionRejectsPreviousSessionAndForeignTokens() throws Exception
     {
         RunSession session = open(); RunSession.Token before = session.capture().get();

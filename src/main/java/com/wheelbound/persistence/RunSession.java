@@ -1,6 +1,7 @@
 package com.wheelbound.persistence;
 
 import com.wheelbound.domain.RunIdentity;
+import com.wheelbound.domain.GrandActivationReceipt;
 import com.wheelbound.domain.RunLifecycle;
 import java.io.IOException;
 import java.util.Objects;
@@ -59,6 +60,29 @@ public final class RunSession
     {
         return token != null && token.generation == generation && current != null
             && current.acceptsObservation(token.identity, token.revision);
+    }
+
+    /** Worker-thread command boundary, including historical replay while paused.
+     * Invalidates callbacks before storage and refreshes from the durable head.
+     * Does not establish fresh baselines or authenticate gameplay evidence sources.
+     */
+    public synchronized GrandActivationReceipt activateGrandFate(GrandActivationReceipt request,
+        long expectedRevision) throws IOException
+    {
+        if (store == null) { throw new IllegalStateException("No connected run"); }
+        AtomicRunStore target = store;
+        generation = new Object();
+        try
+        {
+            GrandActivationReceipt receipt = target.activateGrandFate(request, expectedRevision);
+            current = target.load().orElseThrow(() -> new IOException("Run disappeared")).lifecycle();
+            return receipt;
+        }
+        catch (IOException | RuntimeException ex)
+        {
+            disconnect();
+            throw ex;
+        }
     }
 
     /** Replays durable commands using their original revision; refreshes from the actual head,
