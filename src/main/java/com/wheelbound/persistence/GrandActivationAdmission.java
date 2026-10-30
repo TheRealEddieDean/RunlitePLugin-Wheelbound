@@ -25,7 +25,8 @@ public final class GrandActivationAdmission
         Objects.requireNonNull(request, "request");
         GrandActivationHistory history = current.grandActivations().orElseThrow(
             () -> new IllegalArgumentException("Grand activation history is unavailable"));
-        if (current.receipts().stream().anyMatch(r -> r.commandId().equals(request.commandId()))
+        if (current.receipts().stream().anyMatch(r -> r.commandId().equals(request.commandId())
+                && !request.equals(r.activation()))
             || current.grandFate().get().commandId().equals(request.commandId())
             || current.grandProgress().map(progress -> progress.evidence().values().stream()
                 .anyMatch(reference -> reference.receiptId().equals(request.commandId()))).orElse(false))

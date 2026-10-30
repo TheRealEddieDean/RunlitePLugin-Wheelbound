@@ -141,9 +141,10 @@ public final class RunDocument
         RunReceipt previous = null;
         for (RunReceipt receipt : this.receipts)
         {
-            // History and journal must share a transition validator before this is durable.
-            if (receipt.operation() == RunReceipt.Operation.GRAND_ACTIVATION)
-            { throw new IllegalArgumentException("Grand activation journal integration is unavailable"); }
+            if (receipt.operation() == RunReceipt.Operation.GRAND_ACTIVATION
+                && (this.grandActivations == null || !receipt.activation().equals(
+                    this.grandActivations.receipts().get(receipt.commandId()))))
+            { throw new IllegalArgumentException("Activation journal requires exact history payload"); }
             if ((this.grandFate != null && this.grandFate.commandId().equals(receipt.commandId()))
                 || !commands.add(receipt.commandId())) { throw new IllegalArgumentException("Duplicate command ID"); }
             if (previous != null && (receipt.beforeRevision() != previous.afterRevision()
@@ -158,7 +159,12 @@ public final class RunDocument
         {
             for (com.wheelbound.domain.GrandActivationReceipt activation : this.grandActivations.receipts().values())
             {
-                if (commands.contains(activation.commandId()) || (this.grandProgress != null
+                RunReceipt matching = this.receipts.stream()
+                    .filter(r -> r.commandId().equals(activation.commandId())).findFirst().orElse(null);
+                if ((matching != null && !activation.equals(matching.activation()))
+                    || (matching == null && !this.receipts.isEmpty()
+                        && activation.afterRevision() > this.receipts.get(0).beforeRevision())
+                    || (this.grandProgress != null
                     && this.grandProgress.evidence().values().stream()
                         .anyMatch(reference -> reference.receiptId().equals(activation.commandId()))))
                 { throw new IllegalArgumentException("Grand activation command collision"); }
@@ -256,6 +262,8 @@ public final class RunDocument
             case SLICE_PURCHASE: return previous.state() == RunLifecycle.State.ACTIVE
                 && previous.obligation() == RunLifecycle.Obligation.NONE;
             case DRAW: return previous.state() == RunLifecycle.State.ACTIVE && previous.obligation() == RunLifecycle.Obligation.NONE;
+            case GRAND_ACTIVATION: return previous.state() == RunLifecycle.State.ACTIVE
+                && previous.obligation() == RunLifecycle.Obligation.NONE;
             default: return false;
         }
     }
