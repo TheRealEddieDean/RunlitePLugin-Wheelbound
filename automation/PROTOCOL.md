@@ -1,3 +1,41 @@
+## Current local continuation - aggregate Grand journal retention, 2026-10-30
+
+IDLE after bounded WB-GFD-05/07 schema-10 retention increment (S). Supersedes older
+next-task prose. Reconciled domain journal/receipt/progress, aggregate, codec, existing
+lifecycle/debit/draw copies and store guards. FND-01 DONE; FND-10/12 PARTIAL;
+GFD-01/02/05/06/07 remain PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing wheel,
+economy/tree partial and client/decision/price BLOCKED rows stand. No merged work
+reverified, Git operations or I01d work; no complete gameplay system claimed.
+
+RunDocument optionally retains the full GrandEvidenceJournal, requiring exact original
+seal/progress and revalidating all payloads at the aggregate head. RunCodec schema 10
+stores explicit null or versioned full payload; schemas 1-9 restore explicit absence
+without manufacturing receipts from references. Lifecycle, FP debit and draw copies
+retain the journal. AtomicRunStore rejects journal addition/removal/payload changes on
+existing saves before pending-file creation. Initial fixture restore is structural only,
+not trusted evidence admission. Legacy migration fixtures updated. Authority WB-D089/104
+with WB-D117 supersession and STATE_CONTRACT/PERSISTENCE. Master Wheel unchanged;
+incomplete gameplay remains unwired/default-disabled.
+
+Validation: javac --release 11 compiled all domain sources plus RunDocument/RunReceipt;
+the aggregate fixture and all ten Grand domain executable fixtures passed in
+build/continuation-grand-schema10.
+Focused Gradle serializer/aggregate/Master Wheel attempt failed before compilation:
+inherited wrapper-cache lock access denied. No cache override or external-path inspection.
+New Gson codec/store/JUnit sources remain NOT_RUN, and no Master Wheel regression pass
+is claimed. Authored all-five-goal full codec round trips, schema-9 reference-only
+migration, restart/pause/resume retention, store add/drop rejection and checksum-valid
+journal corruption with original-byte retention. Aggregate executable checks now cover
+full journal retention and mismatched/missing aggregate progress rejection.
+
+Next: execute schema-10 serializer/migration/store and legacy regressions with inherited
+dependencies available; add populated-journal debit/draw retention and payload-replacement
+store fixtures. Then durable attempt state/activation receipts and atomic acceptance
+with trusted identity/session/source admission, off-task settlement, global collision
+checks and restart/lost-ack tests. These commands remain UNSTARTED; save retention does
+not complete GFD-05/07 or permit wiring. WB-D092 and client/item mappings remain gated.
+Local edits only; supervisor handles Git/PR/CI/merges.
+
 ## Current local continuation - full Grand journal JSON payload, 2026-10-30
 
 IDLE after bounded WB-GFD-05/07 serialization increment (S). Supersedes older

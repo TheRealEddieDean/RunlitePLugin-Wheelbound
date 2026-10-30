@@ -47,7 +47,7 @@ public final class DurableWheelDraws
         RunReceipt receipt = new RunReceipt(commandId, RunReceipt.Operation.DRAW, expectedRevision, nextRevision,
             next.state(), next.obligation(), draw);
         List<RunReceipt> receipts = new ArrayList<>(current.receipts()); receipts.add(receipt);
-        store.write(new RunDocument(next, current.catalogVersion(), receipts, current.fatePoints(), current.inventory(), current.grandFate(), current.grandProgress()), expectedRevision);
+        store.write(new RunDocument(next, current.catalogVersion(), receipts, current.fatePoints(), current.inventory(), current.grandFate(), current.grandProgress(), current.grandJournal()), expectedRevision);
         return draw;
     }
 }

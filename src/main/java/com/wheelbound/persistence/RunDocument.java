@@ -17,6 +17,7 @@ import java.util.UUID;
 /** Foundation snapshot and lifecycle/draw/payment journal, not the playable-mode aggregate. */
 public final class RunDocument
 {
+    private final com.wheelbound.domain.GrandEvidenceJournal grandJournal;
     private final com.wheelbound.domain.GrandFateProgress grandProgress;
     private final RunLifecycle lifecycle;
     private final String catalogVersion;
@@ -52,6 +53,14 @@ public final class RunDocument
         Optional<FatePointLedger> fatePoints, Optional<SliceInventory> inventory,
         Optional<com.wheelbound.domain.SealedGrandFate> grandFate,
         Optional<com.wheelbound.domain.GrandFateProgress> grandProgress)
+    { this(lifecycle, catalogVersion, receipts, fatePoints, inventory, grandFate, grandProgress, Optional.empty()); }
+
+    /** Full structural payloads; legacy absence never synthesizes evidence. */
+    public RunDocument(RunLifecycle lifecycle, String catalogVersion, List<RunReceipt> receipts,
+        Optional<FatePointLedger> fatePoints, Optional<SliceInventory> inventory,
+        Optional<com.wheelbound.domain.SealedGrandFate> grandFate,
+        Optional<com.wheelbound.domain.GrandFateProgress> grandProgress,
+        Optional<com.wheelbound.domain.GrandEvidenceJournal> grandJournal)
     {
         Objects.requireNonNull(lifecycle, "lifecycle");
         this.grandFate = Objects.requireNonNull(grandFate, "grandFate").orElse(null);
@@ -62,6 +71,14 @@ public final class RunDocument
         { throw new IllegalArgumentException("Progress requires its original Grand seal"); }
         this.grandProgress = supplied == null ? null : new com.wheelbound.domain.GrandFateProgress(
             this.grandFate, lifecycle.revision(), supplied.evidence().values());
+        com.wheelbound.domain.GrandEvidenceJournal journal =
+            Objects.requireNonNull(grandJournal, "grandJournal").orElse(null);
+        if (journal != null && (this.grandProgress == null
+            || !journal.progress().checklist().seal().equals(this.grandFate)
+            || !journal.progress().evidence().equals(this.grandProgress.evidence())))
+        { throw new IllegalArgumentException("Journal requires exact aggregate progress"); }
+        this.grandJournal = journal == null ? null : new com.wheelbound.domain.GrandEvidenceJournal(
+            this.grandProgress, lifecycle.revision(), journal.receipts().values());
         if (this.grandFate != null && !this.grandFate.identity().equals(lifecycle.identity()))
         { throw new IllegalArgumentException("Foreign Grand Fate identity"); }
         this.inventory = Objects.requireNonNull(inventory, "inventory").orElse(null);
@@ -172,6 +189,8 @@ public final class RunDocument
     }
 
     public RunLifecycle lifecycle() { return lifecycle; }
+    public Optional<com.wheelbound.domain.GrandEvidenceJournal> grandJournal()
+    { return Optional.ofNullable(grandJournal); }
     /** Absent legacy references never imply completed objectives. */
     public Optional<com.wheelbound.domain.GrandFateProgress> grandProgress()
     { return Optional.ofNullable(grandProgress); }

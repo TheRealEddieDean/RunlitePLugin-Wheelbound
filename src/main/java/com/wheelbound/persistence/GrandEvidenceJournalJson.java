@@ -15,10 +15,10 @@ import java.util.Set;
 import java.util.UUID;
 
 /**
- * Versioned full-payload representation for the future aggregate journal field.
+ * Versioned full-payload representation for the optional aggregate journal field.
  * Decoding requires separately restored progress and its original seal; it never
- * upgrades legacy references into receipts. This format is not wired to saves
- * or evidence admission and supplies neither authentication nor atomic acceptance.
+ * upgrades legacy references into receipts. Save retention supplies neither
+ * authentication nor atomic evidence acceptance.
  */
 final class GrandEvidenceJournalJson
 {
