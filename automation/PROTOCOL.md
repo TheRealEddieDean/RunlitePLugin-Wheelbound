@@ -1,3 +1,33 @@
+## Current local continuation - schema-13 Grand activation envelopes, 2026-10-30
+
+IDLE after bounded WB-GFD-06/07 versioned activation-envelope codec increment (S).
+Reconciled schema-12 guard, typed envelopes, aggregate/admission/history, existing
+migration fixtures and store mutation guards against the current backlog. FND-01 DONE;
+FND-10/12 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO.
+Other previously audited partial/TODO and decision/evidence BLOCKED statuses stand.
+No Git operations or independent merged-state verification. I01d was not selected.
+
+Schema 13 now retains full original activation envelopes using the version-1 payload.
+Decode checks exact seal and outer command/revision/response before aggregate history
+and operation-chain validation. Schemas 1-12 preserve prior layouts/explicit absence;
+history never creates activity or envelopes. Schema-13 codec IMPLEMENTED_UNVERIFIED:
+Gson/JUnit tests authored for all five goals/every objective, ACTIVE/PAUSED and maximum
+heads, explicit current-attempt presence/absence, byte-stable restart, schema-12 migration,
+checksum-valid corruption and input preservation. Supersedes schema-12 encode refusal.
+Authority WB-D089/104 with WB-D117 supersession, STATE_CONTRACT and PERSISTENCE.
+
+Focused Gradle attempt failed before compilation: inherited wrapper-cache lock access
+denied. Gson/JUnit/store/Master Wheel checks NOT_RUN. No cache override or external-path
+inspection. No verified codec/durability claim. Java 11 compilation of all domain sources, RunDocument/RunReceipt/admission and
+fixtures passed; all 13 Grand domain and five persistence executable fixtures passed. Master Wheel source unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Next eligible increment: operation-specific store transition guards and atomic activation,
+with failure/lost-ack/restart tests; execute schema-13 and legacy Gson/store/Master Wheel
+regressions when inherited dependencies are accessible. Atomic activation, trusted session/
+source admission, evidence acceptance and off-task settlement remain UNSTARTED. Existing
+store history/current-attempt mutation guards remain intact. No spin/FP charge or client
+wiring. Supervisor handles Git/PR/CI/merge; local edits only.
+
 ## Current local continuation - Grand activation journal validation, 2026-10-30
 
 IDLE after bounded WB-GFD-06/07 structural journal integration (S). Reconciled

@@ -156,3 +156,17 @@ never infers a current attempt from history. RunCodec schema 12 refuses document
 containing these envelopes before serialization, pending versioned payload support.
 This is structural validation, not a durable activation command or session admission.
 Existing store transition guards and disabled gameplay remain in force.
+
+## Schema 13 Grand activation journal payload - 2026-10-30
+
+RunCodec schema 13 retains each GRAND_ACTIVATION envelope's full version-1 original
+activation payload. Decode checks the independent sealed Grand Fate, exact outer
+command/revision/response fields, then existing aggregate history and operation-chain
+invariants. Missing, extra, mismatched and pre-schema-13 activation envelopes fail
+closed. Schemas 1-12 retain their prior layouts and explicit activity/history absence;
+encoding a migrated history never synthesizes operation envelopes or current activity.
+This supersedes the schema-12 encode refusal above. Existing store mutation guards
+remain in place; atomic activation, session admission, evidence acceptance and live
+client integration remain unfinished and disabled. No Master spin or FP charge added.
+Focused Gson/JUnit/migration and Master Wheel checks remain NOT_RUN because the
+inherited Gradle wrapper-cache lock was inaccessible before compilation.

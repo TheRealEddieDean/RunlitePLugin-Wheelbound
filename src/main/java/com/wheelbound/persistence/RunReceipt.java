@@ -41,7 +41,7 @@ public final class RunReceipt
         FatePointDebits.Receipt debit, SlicePurchaseReceipt purchase)
     { this(commandId, operation, beforeRevision, afterRevision, state, obligation, draw, debit, purchase, null); }
 
-    /** Original response envelope; durable codec/store integration remains unavailable. */
+    /** Original response envelope; store command integration remains a separate requirement. */
     public static RunReceipt grandActivation(com.wheelbound.domain.GrandActivationReceipt activation)
     {
         Objects.requireNonNull(activation, "activation");

@@ -24,7 +24,7 @@ import java.util.UUID;
 /** Inject RuneLite's Gson. Never deserialize directly into domain objects bypassing their validation. */
 public final class RunCodec
 {
-    public static final int SCHEMA = 12;
+    public static final int SCHEMA = 13;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -37,8 +37,6 @@ public final class RunCodec
 
     public byte[] encode(RunDocument document)
     {
-        if (document.receipts().stream().anyMatch(r -> r.activation() != null))
-        { throw new IllegalArgumentException("Activation journal encoding requires a versioned schema"); }
         RunLifecycle run = document.lifecycle();
         JsonObject payload = new JsonObject();
         payload.addProperty("accountKey", run.identity().accountKey());
@@ -68,6 +66,8 @@ public final class RunCodec
                 item.add("debit", debit);
             }
             if (receipt.purchase() != null) { item.add("purchase", PurchaseReceiptJson.encode(receipt.purchase())); }
+            if (receipt.activation() != null)
+            { item.add("activation", GrandActivationReceiptJson.encode(receipt.activation(), run.revision())); }
             receipts.add(item);
         }
         payload.add("receipts", receipts);
@@ -175,40 +175,6 @@ public final class RunCodec
             RunLifecycle lifecycle = new RunLifecycle(identity, integer(payload, "revision"),
                 RunLifecycle.State.valueOf(string(payload, "state")),
                 RunLifecycle.Obligation.valueOf(string(payload, "obligation")));
-            List<RunReceipt> receipts = new ArrayList<>();
-            if (schema >= 2)
-            {
-                for (JsonElement element : payload.getAsJsonArray("receipts"))
-                {
-                    JsonObject item = element.getAsJsonObject();
-                    boolean hasDraw = schema >= 3 && "DRAW".equals(string(item, "operation"));
-                    boolean hasDebit = schema >= 5 && "FP_DEBIT".equals(string(item, "operation"));
-                    boolean hasPurchase = schema >= 7 && "SLICE_PURCHASE".equals(string(item, "operation"));
-                    keys(item, hasPurchase
-                        ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "purchase")
-                        : hasDebit
-                        ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "debit")
-                        : hasDraw
-                        ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "draw")
-                        : Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation"));
-                    com.wheelbound.domain.FatePointDebits.Receipt debit = null;
-                    if (hasDebit)
-                    {
-                        JsonObject data = item.getAsJsonObject("debit");
-                        keys(data, Set.of("quoteKey", "quoteVersion", "amount", "balance"));
-                        debit = new com.wheelbound.domain.FatePointDebits.Receipt(
-                            UUID.fromString(string(item, "commandId")), integer(item, "beforeRevision"),
-                            integer(item, "afterRevision"), string(data, "quoteKey"), string(data, "quoteVersion"),
-                            integer(data, "amount"), integer(data, "balance"));
-                    }
-                    receipts.add(new RunReceipt(UUID.fromString(string(item, "commandId")),
-                        RunReceipt.Operation.valueOf(string(item, "operation")), integer(item, "beforeRevision"),
-                        integer(item, "afterRevision"), RunLifecycle.State.valueOf(string(item, "state")),
-                        RunLifecycle.Obligation.valueOf(string(item, "obligation")),
-                        hasDraw ? decodeDraw(item.get("draw")) : null, debit,
-                        hasPurchase ? PurchaseReceiptJson.decode(item.getAsJsonObject("purchase"), identity) : null));
-                }
-            }
             Optional<FatePointLedger> fatePoints = Optional.empty();
             if (schema >= 4 && !payload.get("fatePoints").isJsonNull())
             {
@@ -231,6 +197,57 @@ public final class RunCodec
                 keys(grand, Set.of("commandId", "draw"));
                 grandFate = Optional.of(new com.wheelbound.domain.SealedGrandFate(identity,
                     UUID.fromString(string(grand, "commandId")), decodeDraw(grand.get("draw"))));
+            }
+            List<RunReceipt> receipts = new ArrayList<>();
+            if (schema >= 2)
+            {
+                for (JsonElement element : payload.getAsJsonArray("receipts"))
+                {
+                    JsonObject item = element.getAsJsonObject();
+                    boolean hasDraw = schema >= 3 && "DRAW".equals(string(item, "operation"));
+                    boolean hasDebit = schema >= 5 && "FP_DEBIT".equals(string(item, "operation"));
+                    boolean hasPurchase = schema >= 7 && "SLICE_PURCHASE".equals(string(item, "operation"));
+                    boolean hasActivation = schema >= 13 && "GRAND_ACTIVATION".equals(string(item, "operation"));
+                    keys(item, hasActivation
+                        ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "activation")
+                        : hasPurchase
+                        ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "purchase")
+                        : hasDebit
+                        ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "debit")
+                        : hasDraw
+                        ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "draw")
+                        : Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation"));
+                    if (hasActivation)
+                    {
+                        RunReceipt receipt = RunReceipt.grandActivation(GrandActivationReceiptJson.decode(
+                            item.getAsJsonObject("activation"), grandFate.orElseThrow(
+                                () -> new IllegalArgumentException("Activation envelope requires seal")), lifecycle.revision()));
+                        if (!receipt.commandId().equals(UUID.fromString(string(item, "commandId")))
+                            || receipt.beforeRevision() != integer(item, "beforeRevision")
+                            || receipt.afterRevision() != integer(item, "afterRevision")
+                            || !receipt.state().name().equals(string(item, "state"))
+                            || !receipt.obligation().name().equals(string(item, "obligation")))
+                        { throw new IllegalArgumentException("Activation envelope disagrees with original response"); }
+                        receipts.add(receipt);
+                        continue;
+                    }
+                    com.wheelbound.domain.FatePointDebits.Receipt debit = null;
+                    if (hasDebit)
+                    {
+                        JsonObject data = item.getAsJsonObject("debit");
+                        keys(data, Set.of("quoteKey", "quoteVersion", "amount", "balance"));
+                        debit = new com.wheelbound.domain.FatePointDebits.Receipt(
+                            UUID.fromString(string(item, "commandId")), integer(item, "beforeRevision"),
+                            integer(item, "afterRevision"), string(data, "quoteKey"), string(data, "quoteVersion"),
+                            integer(data, "amount"), integer(data, "balance"));
+                    }
+                    receipts.add(new RunReceipt(UUID.fromString(string(item, "commandId")),
+                        RunReceipt.Operation.valueOf(string(item, "operation")), integer(item, "beforeRevision"),
+                        integer(item, "afterRevision"), RunLifecycle.State.valueOf(string(item, "state")),
+                        RunLifecycle.Obligation.valueOf(string(item, "obligation")),
+                        hasDraw ? decodeDraw(item.get("draw")) : null, debit,
+                        hasPurchase ? PurchaseReceiptJson.decode(item.getAsJsonObject("purchase"), identity) : null));
+                }
             }
             Optional<com.wheelbound.domain.GrandFateProgress> progress = Optional.empty();
             if (schema >= 9 && !payload.get("grandProgress").isJsonNull())
