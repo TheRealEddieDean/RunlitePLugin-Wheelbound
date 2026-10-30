@@ -24,7 +24,7 @@ import java.util.UUID;
 /** Inject RuneLite's Gson. Never deserialize directly into domain objects bypassing their validation. */
 public final class RunCodec
 {
-    public static final int SCHEMA = 6;
+    public static final int SCHEMA = 7;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -48,9 +48,6 @@ public final class RunCodec
         JsonArray receipts = new JsonArray();
         for (RunReceipt receipt : document.receipts())
         {
-            // Schema 7 must validate complete purchase effects before these can be persisted.
-            if (receipt.purchase() != null)
-            { throw new IllegalArgumentException("Purchase journal requires schema 7"); }
             JsonObject item = new JsonObject();
             item.addProperty("commandId", receipt.commandId().toString());
             item.addProperty("operation", receipt.operation().name());
@@ -68,6 +65,7 @@ public final class RunCodec
                 debit.addProperty("balance", receipt.debit().balance());
                 item.add("debit", debit);
             }
+            if (receipt.purchase() != null) { item.add("purchase", PurchaseReceiptJson.encode(receipt.purchase())); }
             receipts.add(item);
         }
         payload.add("receipts", receipts);
@@ -136,7 +134,10 @@ public final class RunCodec
                     JsonObject item = element.getAsJsonObject();
                     boolean hasDraw = schema >= 3 && "DRAW".equals(string(item, "operation"));
                     boolean hasDebit = schema >= 5 && "FP_DEBIT".equals(string(item, "operation"));
-                    keys(item, hasDebit
+                    boolean hasPurchase = schema >= 7 && "SLICE_PURCHASE".equals(string(item, "operation"));
+                    keys(item, hasPurchase
+                        ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "purchase")
+                        : hasDebit
                         ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "debit")
                         : hasDraw
                         ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "draw")
@@ -155,7 +156,8 @@ public final class RunCodec
                         RunReceipt.Operation.valueOf(string(item, "operation")), integer(item, "beforeRevision"),
                         integer(item, "afterRevision"), RunLifecycle.State.valueOf(string(item, "state")),
                         RunLifecycle.Obligation.valueOf(string(item, "obligation")),
-                        hasDraw ? decodeDraw(item.get("draw")) : null, debit));
+                        hasDraw ? decodeDraw(item.get("draw")) : null, debit,
+                        hasPurchase ? PurchaseReceiptJson.decode(item.getAsJsonObject("purchase"), identity) : null));
                 }
             }
             Optional<FatePointLedger> fatePoints = Optional.empty();

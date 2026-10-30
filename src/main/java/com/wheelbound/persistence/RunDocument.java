@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.UUID;
 
-/** Foundation snapshot and lifecycle/draw/debit journal, not the playable-mode aggregate. */
+/** Foundation snapshot and lifecycle/draw/payment journal, not the playable-mode aggregate. */
 public final class RunDocument
 {
     private final RunLifecycle lifecycle;
@@ -90,7 +90,7 @@ public final class RunDocument
     { return receipt.purchase() == null ? receipt.debit() : receipt.purchase().debit(); }
 
     /**
-     * Purchase evidence is checked even while schema 6 refuses to encode it. Current
+     * Purchase evidence is checked before schema-7 encoding and after decoding. Current
      * journal operations cannot move, enhance or destroy inventory, so each purchased
      * instance must still be active at base tier. Future typed edits must extend this
      * validation rather than treating missing ownership as evidence of destruction.

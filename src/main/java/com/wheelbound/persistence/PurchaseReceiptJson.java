@@ -9,7 +9,7 @@ import com.wheelbound.domain.SlicePurchaseReceipt;
 import java.util.Set;
 import java.util.UUID;
 
-/** Strict purchase receipt representation for future aggregate journal integration.
+/** Strict purchase receipt representation for schema-7 aggregate journals.
  * Parsing preserves the original response; it establishes neither authority nor durability. */
 final class PurchaseReceiptJson
 {
