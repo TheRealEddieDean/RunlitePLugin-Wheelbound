@@ -1,3 +1,35 @@
+## Current local continuation - Grand obligation gate, 2026-10-29
+
+IDLE after bounded WB-GFD-06 lifecycle prerequisite (XS/S). Supersedes older next-task
+prose. Reconciled Grand pool/seal, schema-8 aggregate, stage/recovery store methods,
+lifecycle and test sources. No Git/remote verification: historical merge claims remain
+unverified. FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02 and audited wheel/economy/tree/
+transaction rows remain PARTIAL_UNVERIFIED. GFD-06 now PARTIAL_UNVERIFIED; GFD-03/04/05/07
+remain TODO; existing decision/client/price BLOCKED rows held. I01d not selected.
+
+RunLifecycle.permitsGrandFateActivation is the single read-only lifecycle prerequisite:
+ACTIVE, Obligation.NONE, matching account/run identity and current revision. Every
+pending Fate, offer, punishment, sacrifice and settlement stage blocks. No spin, level
+or playtime gate. Authority WB-D089/104, WB-D117 supersession and STATE_CONTRACT.
+It reserves nothing and does not activate an attempt; a future atomic command must
+check the current durable revision plus sealed destiny and unfinished objective.
+Master Wheel unchanged; incomplete gameplay stays unwired/default-disabled.
+
+Java 11 compiled all current domain sources and three executable fixtures from source.
+GrandFateActivationChecks, GrandFatePoolChecks and SealedGrandFateChecks passed.
+Activation checks exhaust all state/obligation combinations, stale/foreign/null context,
+pause/resume retention, no mutation and maximum revision. JUnit adapter authored.
+Gradle GrandFateActivationTest, GrandFatePersistenceTest, RunCodecTest and
+WheelboundBehaviorTest failed before compilation: Gradle 8.10 missing, distribution
+download denied (SocketException). No JUnit/persistence/codec/legacy pass claimed.
+
+Next bounded gameplay unit: WB-GFD-05 typed unfinished-objective/checklist model under
+WB-D104/117, independent of live completion detectors; then durable attempt activation
+using this gate and no Master spin charge. Do not invent event mappings or fresh-account
+eligibility. GFD-02 staging-to-activation/original creation replay remains unfinished;
+WB-D092 fresh-account predicate remains TECH_TBD. Execute focused JUnit/persistence and
+legacy suites when dependencies are available. Local edits only; supervisor handles
+commits/PRs/CI/merges. No external paths, credentials, secrets, workflows or Git accessed.
 ## Current local continuation - atomic Grand Fate staging, 2026-10-29
 
 IDLE after bounded WB-GFD-02 staging increment (S). Supersedes older next-task prose.

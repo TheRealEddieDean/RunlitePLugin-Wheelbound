@@ -37,6 +37,20 @@ public final class RunLifecycle
     public State state() { return state; }
     public Obligation obligation() { return obligation; }
 
+    /**
+     * WB-D089/104: a Grand attempt can replace an ordinary assignment opportunity only
+     * when no Fate or mandatory settlement remains. Zero spins is not a restriction.
+     * This is the lifecycle prerequisite only: callers still need the sealed destiny,
+     * unfinished objective and supported attempt context before committing activation.
+     * Evaluate against the current durable revision inside the activation transaction;
+     * this read-only predicate neither reserves an opportunity nor starts an attempt.
+     */
+    public boolean permitsGrandFateActivation(RunIdentity expectedIdentity, long expectedRevision)
+    {
+        return state == State.ACTIVE && obligation == Obligation.NONE
+            && identity.equals(expectedIdentity) && revision == expectedRevision;
+    }
+
     /** WB-D002/WB-D114: pausing retains the obligation and never clears a commitment. */
     public RunLifecycle pause(RunIdentity expectedIdentity, long expectedRevision)
     {
