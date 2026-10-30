@@ -94,6 +94,18 @@ lifecycle/debit/draw commands preserve payloads and existing-store writes reject
 mutation until trusted evidence admission is implemented. This format does not provide
 authentication, attempt settlement, completion awards or authorization to enable gameplay.
 
+## Standalone current-attempt payload - 2026-10-30
+
+GrandCurrentAttemptJson version 1 retains the full original activation receipt,
+including its explicit command, selection, completed prefix and original seal.
+Decoding requires independent history, current lifecycle and checklist, and exact
+receipt equality with that history. Encoding also rejects stale lifecycle snapshots.
+It never infers an attempt from the last history entry. Aggregate integration and
+explicit legacy absence remain future work; RunCodec stays schema 11. This payload
+does not establish trusted session admission, settlement or a durable activation.
+Gson/JUnit restart tests are authored but remain unexecuted because the inherited
+Gradle wrapper-cache lock is inaccessible.
+
 ## Local schema-11 activation-history increment - 2026-10-30
 
 The unwired foundation aggregate retains optional full original activation history.

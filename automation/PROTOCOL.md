@@ -1,3 +1,38 @@
+## Current local continuation - Grand current-attempt JSON, 2026-10-30
+
+IDLE after bounded WB-GFD-06/07 standalone serialization increment (S), split from
+aggregate integration. Reconciled current-attempt/history/receipt code, schema-11
+aggregate and focused fixtures. FND-01 remains DONE; FND-10/12 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing other partial,
+TODO and evidence/decision BLOCKED rows stand. Merged work not independently
+reverified (Git prohibited). I01d not selected; no complete gameplay claimed.
+
+GrandCurrentAttemptJson provides version-1 full original activation payload and
+restores only against independently supplied history, lifecycle and checklist.
+Exact payload equality prevents a matching command UUID from hiding changed
+selection/prefix/revision. Encoding rejects stale snapshots; restore rejects unknown,
+superseded, missing and inconsistent attempts through existing domain validation.
+History presence never synthesizes current activity. Authority WB-D089/104 with
+WB-D117 supersession, STATE_CONTRACT and PERSISTENCE. Structural serialization only;
+aggregate schema stays 11. Master Wheel unchanged; gameplay stays default-disabled.
+
+Validation: Java 11 compilation of all domain sources and 12 Grand executable
+fixtures passed; all 12 fixtures passed. These do not execute Gson serialization.
+Focused Gradle current-attempt JSON/Master Wheel attempt failed before compilation:
+inherited wrapper-cache lock access denied. No cache override or external-path
+inspection. New Gson/JUnit serializer tests and Master Wheel regression NOT_RUN.
+Authored text restarts for all five goals, every objective, retained completed prefix,
+pause/resume and Long.MAX_VALUE; malformed/version/unknown fields, missing/changed/
+superseded activation, stale context and completed-checklist rejection.
+
+Next eligible increment: schema integration of explicit optional current attempt,
+legacy absence, lifecycle/debit/draw retention, store mutation guards and restart/
+corruption tests. Durable aggregate current-attempt persistence remains UNSTARTED.
+Atomic activation/evidence acceptance, trusted session/source admission, off-task
+settlement, global collisions and lost-ack tests remain UNSTARTED. Prior schema-10/11
+Gson/store regressions remain unexecuted. WB-D092/client mappings remain gated.
+Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - explicit Grand current-attempt model, 2026-10-30
 
 IDLE after bounded WB-GFD-06/07 current-attempt structural increment (XS/S), split
