@@ -1,5 +1,7 @@
 # Review checkpoints
 
+> **Current direction: [simple UI first](SIMPLE_UI_FIRST.md).** Use normal buttons and functional lists for initial testing; decorative styling and complex tree presentation are deferred. Earlier mockups are exploratory.
+
 All new layout concepts are **PROPOSED / AWAITING VISUAL APPROVAL**, not approved runtime UI. Approval of this planning PR permits scheduling and Category A foundations; it does not approve every pictured layout. No final Category B merge without user approval of the reviewed artifact/revision. Keep unrelated backend work moving.
 
 | Checkpoint | Artifact | Approval state | Allowed before approval |

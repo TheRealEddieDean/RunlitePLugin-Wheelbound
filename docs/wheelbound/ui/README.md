@@ -1,5 +1,7 @@
 # Wheelbound UI planning packet
 
+> **Current direction: [simple UI first](SIMPLE_UI_FIRST.md).** Use normal buttons and functional lists for initial testing; decorative styling and complex tree presentation are deferred. Earlier mockups are exploratory.
+
 Prepared 2026-10-29 America/Chicago. Audit base: `223950ca4088fb69cb3ca918376a52140eca630d` (merged PR #57). This packet proposes UI architecture and layouts; it does not approve final visuals, change gameplay or claim working mode screens.
 
 - [Audit and integration evidence](UI_AUDIT.md)

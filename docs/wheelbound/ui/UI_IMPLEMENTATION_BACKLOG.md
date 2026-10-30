@@ -1,5 +1,7 @@
 # UI implementation backlog
 
+> **Current direction: [simple UI first](SIMPLE_UI_FIRST.md).** Use normal buttons and functional lists for initial testing; decorative styling and complex tree presentation are deferred. Earlier mockups are exploratory.
+
 Audit base `223950c`; tasks are implementation specifications, not completed code. New IDs WB-UI-10 onward are child increments of existing parent scope. No existing task is removed or renamed. [Audit](UI_AUDIT.md), [architecture](UI_ARCHITECTURE.md), [visual system](UI_DESIGN_SYSTEM.md), [tree](FATE_TREE_DESIGN.md) and [inventory](UI_SCREEN_INVENTORY.md) apply to every row. Canonical [decisions](../DECISIONS.md) and backend specs remain authority.
 
 Each task is XS/S/M (2–30 minute bounded increment); split further if actual scope exceeds 30 minutes. UI scaffolding must not wait for full gameplay; live actions must wait for authoritative services. New task implementation status is TODO (not started), except existing reusable foundations identified separately in the audit. Delivery readiness below is distinct from implementation status. After implementation use PARTIAL, PARTIAL_UNVERIFIED, DONE only with evidence; BLOCKED for unmet evidence/dependencies and AWAITING_VISUAL_APPROVAL for a review build whose final merge lacks approval. Existing class presence alone cannot satisfy DONE.

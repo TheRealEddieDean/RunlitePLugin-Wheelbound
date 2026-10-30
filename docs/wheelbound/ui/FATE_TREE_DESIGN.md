@@ -1,5 +1,7 @@
 # Fate Tree interaction and Java2D design
 
+> **Current direction: [simple UI first](SIMPLE_UI_FIRST.md).** Use normal buttons and functional lists for initial testing; decorative styling and complex tree presentation are deferred. Earlier mockups are exploratory.
+
 Status: first review concept, Category B. [Preview](previews/fate-tree.svg). Diagram uses real approved Tier-I names and the five-of-nine gate with illustrative ownership; it is a layout study, not a complete catalog or current account state. No preview-only nodes may enter the runtime graph.
 
 ## Layout and rule authority

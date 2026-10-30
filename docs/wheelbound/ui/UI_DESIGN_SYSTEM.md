@@ -1,5 +1,7 @@
 # Restrained stone and parchment design system
 
+> **Current direction: [simple UI first](SIMPLE_UI_FIRST.md).** Use normal buttons and functional lists for initial testing; decorative styling and complex tree presentation are deferred. Earlier mockups are exploratory.
+
 Status: Category A reusable foundations; final screen composition is Category B. Preserve WheelStyle's existing Master rendering and gold constant (219,180,94). Do not apply a new global Swing LookAndFeel.
 
 | Token | Proposed value | Use |
