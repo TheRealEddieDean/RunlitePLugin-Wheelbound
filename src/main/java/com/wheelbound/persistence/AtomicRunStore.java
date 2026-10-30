@@ -1,6 +1,7 @@
 package com.wheelbound.persistence;
 
 import com.wheelbound.domain.RunIdentity;
+import com.wheelbound.domain.SlicePurchaseReceipt;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
@@ -13,6 +14,7 @@ import java.nio.file.StandardCopyOption;
 import java.nio.file.StandardOpenOption;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.UUID;
 
 /**
  * Local single-writer foundation snapshots. The future adapter supplies Plugin.getPluginDirectory().
@@ -58,6 +60,30 @@ public final class AtomicRunStore
 
     public Optional<RunDocument> load() throws IOException
     { return locked(this::read); }
+
+    /**
+     * Read the original persisted purchase response after a restart or lost acknowledgement.
+     * Pending/corrupt snapshots still require reconciliation. A command belonging to another
+     * operation is a collision, not an absent purchase. This query never executes a purchase;
+     * callers must match the full original request before treating it as a replay response.
+     * Absence alone does not authorize retrying a command or establish quote authority.
+     */
+    public Optional<SlicePurchaseReceipt> committedPurchase(UUID commandId) throws IOException
+    {
+        Objects.requireNonNull(commandId, "commandId");
+        return locked(() -> {
+            Optional<RunDocument> current = read();
+            if (!current.isPresent()) { return Optional.empty(); }
+            for (RunReceipt receipt : current.get().receipts())
+            {
+                if (!commandId.equals(receipt.commandId())) { continue; }
+                if (receipt.purchase() == null)
+                { throw new IOException("Command ID belongs to a different operation"); }
+                return Optional.of(receipt.purchase());
+            }
+            return Optional.empty();
+        });
+    }
 
     private Optional<RunDocument> read() throws IOException
     {

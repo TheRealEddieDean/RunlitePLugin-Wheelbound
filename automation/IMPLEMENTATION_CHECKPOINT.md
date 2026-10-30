@@ -1,3 +1,40 @@
+## Current local continuation - purchase recovery lookup and fixtures, 2026-10-29
+
+IDLE after bounded WB-WHL-04/05, WB-ECON-08 and WB-FND-11 prerequisite (S).
+This supersedes older next-task prose. Reconciled current proposal, receipt, schema-7
+codec, aggregate, store validator and test sources with recorded local checkpoints.
+No Git/remote verification. FND-01 remains DONE; FND-10/12 PARTIAL; FND-11,
+ECON-01/08, TREE-02 and WHL-02/03/04/05/06/07/11/12 remain PARTIAL_UNVERIFIED.
+Other TODO/PARTIAL/BLOCKED rows retain audited statuses. No finished gameplay purchase
+is claimed. I01d not selected; price/catalog, client and policy holds remain.
+
+AtomicRunStore.committedPurchase now reads the original typed purchase receipt under
+the existing lock and identity/checksum/aggregate validation. Missing commands return
+empty; a command belonging to another operation throws. Pending/corrupt saves still
+fail closed. This read-only query neither retries nor authorizes purchases; callers
+must match the full frozen request before replaying a response. Absence is not retry
+authorization. Existing write uncertainty/reconciliation rules are preserved.
+Authority: WB-D105/106/118 and STATE_CONTRACT transaction/crash requirements.
+
+Four JUnit fixtures authored for first/duplicate restart with original response,
+failed pre-replacement writes retaining the original and blocking retry, lost ack
+restoring one debit/instance/receipt, operation collision, account separation and
+corrupt-save retention. Synthetic quotes only. Fixtures have NOT compiled/executed:
+Gradle 8.10 is missing in the workspace and wrapper download failed Permission denied
+(SocketException), before compilation. No JUnit/store/codec/legacy pass claimed.
+Java 11 compilation passed for all current domain sources, RunDocument, RunReceipt,
+PurchaseTransition and changed AtomicRunStore against the existing workspace RunCodec
+class (codec source was not rebuilt). PurchaseTransitionChecks, PurchaseAggregateChecks
+and PurchaseJournalChecks passed. No dependency stubs or build bypasses were used.
+
+Next bounded unit: execute PurchasePersistenceTest, PurchaseTransitionTest,
+PurchaseJournalTest, RunCodecTest and WheelboundBehaviorTest with available dependencies.
+Then supply reviewed quote/catalog validation and complete pending-draw/offer/edit gates
+before implementing an authorized atomic purchase command and exact-request replay.
+Preserve historical UUID provenance for future destruction/edit receipts. Gameplay stays
+unwired/default-disabled; Master Wheel unchanged. No external paths, credentials,
+secrets, workflows or Git operations accessed. Supervisor handles commits, PRs and CI.
+
 ## Current local continuation - purchase store transition checks, 2026-10-29
 
 IDLE after bounded WB-WHL-04/05, WB-ECON-08 and WB-FND-11 prerequisite (S).
