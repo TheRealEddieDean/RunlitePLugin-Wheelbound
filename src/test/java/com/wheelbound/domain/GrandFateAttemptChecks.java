@@ -36,10 +36,26 @@ public final class GrandFateAttemptChecks
                 check(attempt.lifecycle().obligation() == RunLifecycle.Obligation.ACTIVE_OBJECTIVE);
                 check(ready.revision() == 4 && ready.obligation() == RunLifecycle.Obligation.NONE);
                 rejects(() -> GrandFateAttempt.activate(attempt.lifecycle(), progress, objective, identity, 5));
-                rejects(() -> attempt.endUnsuccessful(identity, 4));
-                rejects(() -> attempt.endUnsuccessful(foreign, 5));
-                rejects(() -> attempt.endUnsuccessful(foreignRun, 5));
-                RunLifecycle ended = attempt.endUnsuccessful(identity, 5);
+                rejects(() -> attempt.endUnsuccessful(attempt.lifecycle(), identity, 4));
+                rejects(() -> attempt.endUnsuccessful(attempt.lifecycle(), foreign, 5));
+                rejects(() -> attempt.endUnsuccessful(attempt.lifecycle(), foreignRun, 5));
+                rejects(() -> attempt.endUnsuccessful(null, identity, 5));
+                RunLifecycle paused = attempt.lifecycle().pause(identity, 5);
+                rejects(() -> attempt.endUnsuccessful(paused, identity, 5));
+                rejects(() -> attempt.endUnsuccessful(paused.resume(identity, 6), identity, 5));
+                rejects(() -> attempt.endUnsuccessful(new RunLifecycle(foreignRun, 5,
+                    RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.ACTIVE_OBJECTIVE), identity, 5));
+                for (RunLifecycle.State exitState : RunLifecycle.State.values())
+                {
+                    for (RunLifecycle.Obligation exitObligation : RunLifecycle.Obligation.values())
+                    {
+                        if (exitState == RunLifecycle.State.ACTIVE
+                            && exitObligation == RunLifecycle.Obligation.ACTIVE_OBJECTIVE) { continue; }
+                        RunLifecycle changed = new RunLifecycle(identity, 5, exitState, exitObligation);
+                        rejects(() -> attempt.endUnsuccessful(changed, identity, 5));
+                    }
+                }
+                RunLifecycle ended = attempt.endUnsuccessful(attempt.lifecycle(), identity, 5);
                 check(ended.revision() == 6 && ended.obligation() == RunLifecycle.Obligation.NONE);
                 check(progress.completed().equals(completed) && progress.isUnfinished(objective));
                 check(GrandFateAttempt.activate(ended, progress, objective, identity, 6).lifecycle().revision() == 7);
@@ -74,7 +90,7 @@ public final class GrandFateAttemptChecks
             RunLifecycle penultimate = new RunLifecycle(identity, Long.MAX_VALUE - 1, RunLifecycle.State.ACTIVE,
                 RunLifecycle.Obligation.NONE);
             GrandFateAttempt last = GrandFateAttempt.activate(penultimate, initial, selected, identity, Long.MAX_VALUE - 1);
-            rejects(() -> last.endUnsuccessful(identity, Long.MAX_VALUE));
+            rejects(() -> last.endUnsuccessful(last.lifecycle(), identity, Long.MAX_VALUE));
         }
         System.out.println("Grand Fate attempt checks passed");
     }
