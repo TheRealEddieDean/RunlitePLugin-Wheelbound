@@ -1,6 +1,7 @@
 package com.wheelbound.persistence;
 
 import com.wheelbound.domain.RunIdentity;
+import com.wheelbound.domain.GrandActivationReceipt;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
@@ -77,6 +78,62 @@ public final class AsyncRunSession
     public synchronized Optional<RunSession.Token> capture()
     {
         return current == null ? Optional.empty() : current.capture();
+    }
+
+    /** Queues activation on the storage worker and immediately closes callback admission.
+     * Empty means superseded before execution, with no command sent to storage. Once
+     * started, a command may commit even after disconnect; its receipt still completes
+     * the future, but cannot restore that session. Cancellation is not disconnect.
+     * This boundary does not authenticate sources or establish observation baselines.
+     */
+    public synchronized CompletableFuture<Optional<GrandActivationReceipt>> activateGrandFate(
+        GrandActivationReceipt receipt, long expectedRevision)
+    {
+        Objects.requireNonNull(receipt, "receipt");
+        CompletableFuture<Optional<GrandActivationReceipt>> result = new CompletableFuture<>();
+        if (current == null)
+        {
+            result.completeExceptionally(new IllegalStateException("No connected run"));
+            return result;
+        }
+        RunSession target = current;
+        current = null;
+        generation = new Object();
+        Object request = generation;
+        try
+        {
+            worker.execute(() -> {
+                boolean superseded;
+                synchronized (this) { superseded = generation != request; }
+                if (superseded)
+                {
+                    target.disconnect();
+                    result.complete(Optional.empty());
+                    return;
+                }
+                try
+                {
+                    GrandActivationReceipt committed = target.activateGrandFate(receipt, expectedRevision);
+                    synchronized (this)
+                    {
+                        if (generation == request) { current = target; }
+                        else { target.disconnect(); }
+                    }
+                    result.complete(Optional.of(committed));
+                }
+                catch (Exception ex)
+                {
+                    target.disconnect();
+                    result.completeExceptionally(ex);
+                }
+            });
+        }
+        catch (RuntimeException ex)
+        {
+            target.disconnect();
+            result.completeExceptionally(ex);
+        }
+        return result;
     }
 
     public synchronized boolean accepts(RunSession.Token token)
