@@ -70,7 +70,7 @@ public class PurchaseJournalTest
     {
         RunDocument source = document();
         byte[] encoded = codec.encode(source);
-        assertEquals(7, json(encoded).get("schemaVersion").getAsInt());
+        assertEquals(RunCodec.SCHEMA, json(encoded).get("schemaVersion").getAsInt());
         RunDocument restored = codec.decode(encoded, identity);
         assertEquals(source.receipts(), restored.receipts());
         assertEquals(93, restored.receipts().get(0).purchase().debit().balance());
@@ -85,10 +85,15 @@ public class PurchaseJournalTest
             Optional.of(new FatePointLedger(100, List.of())), Optional.of(PurchaseAggregateChecks.inventory()));
         JsonObject old = json(codec.encode(legacy));
         old.addProperty("schemaVersion", 6);
+        JsonObject legacyPayload = json(old.get("payload").getAsString().getBytes(StandardCharsets.UTF_8));
+        legacyPayload.remove("grandFate");
+        String legacyText = gson.toJson(legacyPayload);
+        old.addProperty("payload", legacyText);
+        old.addProperty("sha256", RunCodec.sha256(legacyText.getBytes(StandardCharsets.UTF_8)));
         RunDocument restored = codec.decode(bytes(old), identity);
         assertTrue(restored.inventory().isPresent());
         assertEquals(100, restored.fatePoints().get().balance());
-        assertEquals(7, json(codec.encode(restored)).get("schemaVersion").getAsInt());
+        assertEquals(RunCodec.SCHEMA, json(codec.encode(restored)).get("schemaVersion").getAsInt());
         JsonObject disguised = json(codec.encode(document()));
         disguised.addProperty("schemaVersion", 6);
         assertThrows(IOException.class, () -> codec.decode(bytes(disguised), identity));

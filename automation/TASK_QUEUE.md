@@ -1,3 +1,44 @@
+## Current local continuation - Grand Fate schema and preservation, 2026-10-29
+
+IDLE after bounded WB-GFD-02 persistence increment (S). Supersedes older next-task
+prose. Reconciled current pool/evidence, aggregate, codec, store, mutation services
+and focused test sources against the backlog. No Git or remote verification;
+historical merge claims were not reverified. FND-01 remains DONE; FND-10/12
+PARTIAL; GFD-01/02 and previously audited wheel/economy/tree/transaction rows remain
+PARTIAL_UNVERIFIED. GFD-03 through GFD-07 remain TODO. Existing decision/client/price
+BLOCKED rows remain held. I01d not selected. No complete gameplay system claimed.
+
+RunDocument now carries optional identity-bound SealedGrandFate and rejects reuse
+of its command ID in the operation journal. Schema 8 explicitly encodes absence or
+the original command and full validated commitment; schemas 1-7 restore absence,
+never infer a destiny. The identity comes from the validated run envelope.
+AtomicRunStore rejects adding, dropping or changing evidence on an existing run
+before pending-file creation. Lifecycle, debit and ordinary draw services preserve
+it. Initial low-level writes can carry evidence; this does not implement or authorize
+fresh-account onboarding or a production new-run sealing command. Authority:
+WB-D003/089/092/117 and STATE_CONTRACT. Master Wheel unchanged; gameplay unwired
+and default-disabled. No unresolved prices, client evidence or onboarding predicate invented.
+
+Validation: javac --release 11 compiled all current domain sources, RunDocument,
+RunReceipt and PurchaseTransition. SealedGrandFateChecks, GrandFatePoolChecks,
+PurchaseAggregateChecks and PurchaseJournalChecks passed. New GrandFatePersistenceTest
+covers five-outcome round trips, schemas 1-7, checksum-valid malformed evidence,
+foreign identity, seal mutation/removal/command collisions, restart, pause/resume,
+debit/draw preservation and rejection of legacy resealing. Older schema fixtures
+updated. These JUnit/codec/store changes have NOT compiled/executed: focused Gradle
+attempt failed before compilation because workspace Gradle 8.10 is absent and
+wrapper download returned SocketException Permission denied. No codec/store/legacy
+pass claimed; no dependency stubs or test bypasses. Local edits only, no Git operations.
+
+Next bounded unit: execute GrandFatePersistenceTest, RunCodecTest, PurchaseJournalTest,
+InventoryPersistenceTest, DebitJournalTest, LifecycleCommandsTest, DurableWheelDrawsTest,
+DurableFatePointDebitsTest and WheelboundBehaviorTest when dependencies are available.
+Then implement the authorized atomic new-run sealing boundary with exact-request
+replay, failed-write/lost-ack/restart fixtures and explicit fresh-account eligibility
+handling; do not infer missing onboarding evidence or retrofit legacy saves. Schema
+8 and low-level write support alone do not complete WB-GFD-02. No external paths,
+credentials, secrets or workflows accessed. Supervisor handles commits/PRs/CI/merges.
+
 ## Current local continuation - typed Grand Fate sealing evidence, 2026-10-29
 
 IDLE after bounded WB-GFD-02 prerequisite increment (S). This supersedes older

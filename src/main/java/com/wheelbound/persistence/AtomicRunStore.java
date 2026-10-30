@@ -111,6 +111,8 @@ public final class AtomicRunStore
             if (actual != expectedRevision) { throw new IOException("Stale stored revision"); }
             if (current.isPresent())
             {
+                if (!current.get().grandFate().equals(next.grandFate()))
+                { throw new IOException("Cannot add, discard or replace sealed Grand Fate on an existing run"); }
                 java.util.List<RunReceipt> history = current.get().receipts();
                 if (next.receipts().size() < history.size()
                     || !next.receipts().subList(0, history.size()).equals(history))
