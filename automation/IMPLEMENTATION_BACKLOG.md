@@ -1,3 +1,39 @@
+## Current local continuation - schema-9 Grand progress references, 2026-10-29
+
+IDLE after bounded WB-GFD-05 persistence increment (S). Supersedes older next-task prose.
+Reconciled current domain progress/attempt, aggregate, codec, store and command-copy code
+against backlog. FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED;
+GFD-03/04 TODO. Existing audited wheel/economy/tree partial and decision/client/price
+BLOCKED rows stand. Historical merged work remains unverified; no Git operations.
+I01d not selected. No complete gameplay system claimed.
+
+RunCodec schema 9 encodes explicit absent/null, empty and populated structural progress
+references. Original seal/identity derive from the validated aggregate envelope; each entry
+carries objective, receipt UUID and verified revision. Schemas 1-8 restore explicit absence.
+Strict field and domain validation rejects malformed, duplicate, future or colliding entries.
+These are references only: no authenticity, source/session validation or completion award.
+AtomicRunStore rejects adding/removing/changing progress on existing runs before pending-file
+creation until a trusted evidence command exists. Lifecycle, debit and draw copies preserve
+progress. Legacy schema fixtures updated. Authority WB-D089/104/117 and STATE_CONTRACT.
+Master Wheel unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Validation: javac --release 11 compiled every domain source plus RunDocument/RunReceipt
+and GrandProgressAggregateChecks into build/continuation-grand-schema9; fixture passed.
+Authored JUnit all-five-goal/absence/empty/full exact round trips, schema-8 absence, checksum-
+valid malformed entries, restart and store rejection/byte retention. These new codec/store
+sources and tests have NOT compiled/executed: focused Gradle progress/persistence/codec/
+legacy attempt failed before compilation, missing Gradle 8.10 and wrapper download denied
+(SocketException). No JUnit, codec/store or Master Wheel regression pass claimed.
+
+Next: execute focused schema/migration/store/command and legacy regressions when dependencies
+exist; add pause/resume/debit/draw progress-retention coverage and populated-store corruption
+fixtures. Resolve full trusted evidence receipts and atomic acceptance before recording actual
+completed progress; then durable attempt state/receipts with replay/restart/lost-ack tests.
+Those acceptance/attempt commands remain unstarted. Client detectors/item mappings and WB-D092
+fresh-account predicate remain gated. This increment does not complete GFD-05 or authorize
+wiring. Local edits only; supervisor handles Git/PR/CI/merges. No external paths, credentials,
+secrets or workflows accessed.
+
 ## Current local continuation - Grand progress aggregate prerequisite, 2026-10-29
 
 IDLE after bounded WB-GFD-05 aggregate increment (S). Supersedes older next-task prose.

@@ -24,7 +24,7 @@ import java.util.UUID;
 /** Inject RuneLite's Gson. Never deserialize directly into domain objects bypassing their validation. */
 public final class RunCodec
 {
-    public static final int SCHEMA = 8;
+    public static final int SCHEMA = 9;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -37,8 +37,6 @@ public final class RunCodec
 
     public byte[] encode(RunDocument document)
     {
-        if (document.grandProgress().isPresent())
-        { throw new IllegalArgumentException("Grand progress requires a supported evidence schema"); }
         RunLifecycle run = document.lifecycle();
         JsonObject payload = new JsonObject();
         payload.addProperty("accountKey", run.identity().accountKey());
@@ -100,6 +98,22 @@ public final class RunCodec
             grand.add("draw", encodeDraw(sealed.commitment()));
         }
         payload.add("grandFate", grand == null ? com.google.gson.JsonNull.INSTANCE : grand);
+        // References preserve provenance structure only; decoding cannot authenticate receipts.
+        JsonArray progress = null;
+        if (document.grandProgress().isPresent())
+        {
+            progress = new JsonArray();
+            for (com.wheelbound.domain.GrandFateProgress.Evidence reference
+                : document.grandProgress().get().evidence().values())
+            {
+                JsonObject item = new JsonObject();
+                item.addProperty("objective", reference.objective().name());
+                item.addProperty("receiptId", reference.receiptId().toString());
+                item.addProperty("verifiedRevision", reference.verifiedRevision());
+                progress.add(item);
+            }
+        }
+        payload.add("grandProgress", progress == null ? com.google.gson.JsonNull.INSTANCE : progress);
         String text = gson.toJson(payload);
         JsonObject envelope = new JsonObject();
         envelope.addProperty("schemaVersion", SCHEMA);
@@ -133,7 +147,9 @@ public final class RunCodec
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints")
                     : schema < 8
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory")
-                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate"));
+                    : schema == 8
+                    ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate")
+                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress"));
             RunIdentity identity = new RunIdentity(string(payload, "accountKey"), UUID.fromString(string(payload, "runId")));
             if (!identity.equals(expected)) { throw new IOException("Foreign account/profile/run snapshot"); }
             RunLifecycle lifecycle = new RunLifecycle(identity, integer(payload, "revision"),
@@ -196,9 +212,26 @@ public final class RunCodec
                 grandFate = Optional.of(new com.wheelbound.domain.SealedGrandFate(identity,
                     UUID.fromString(string(grand, "commandId")), decodeDraw(grand.get("draw"))));
             }
+            Optional<com.wheelbound.domain.GrandFateProgress> progress = Optional.empty();
+            if (schema >= 9 && !payload.get("grandProgress").isJsonNull())
+            {
+                com.wheelbound.domain.SealedGrandFate seal = grandFate.orElseThrow(
+                    () -> new IllegalArgumentException("Grand progress requires a seal"));
+                List<com.wheelbound.domain.GrandFateProgress.Evidence> references = new ArrayList<>();
+                for (JsonElement element : payload.getAsJsonArray("grandProgress"))
+                {
+                    JsonObject item = element.getAsJsonObject();
+                    keys(item, Set.of("objective", "receiptId", "verifiedRevision"));
+                    references.add(new com.wheelbound.domain.GrandFateProgress.Evidence(seal,
+                        com.wheelbound.domain.GrandFateChecklist.Objective.valueOf(string(item, "objective")),
+                        UUID.fromString(string(item, "receiptId")), integer(item, "verifiedRevision")));
+                }
+                progress = Optional.of(new com.wheelbound.domain.GrandFateProgress(
+                    seal, lifecycle.revision(), references));
+            }
             return new RunDocument(lifecycle, string(payload, "catalogVersion"), receipts, fatePoints,
                 schema >= 6 && !payload.get("inventory").isJsonNull()
-                    ? Optional.of(InventoryJson.decode(payload.getAsJsonObject("inventory"))) : Optional.empty(), grandFate);
+                    ? Optional.of(InventoryJson.decode(payload.getAsJsonObject("inventory"))) : Optional.empty(), grandFate, progress);
         }
         catch (RuntimeException ex) { throw new IOException("Invalid snapshot; preserve original", ex); }
     }
