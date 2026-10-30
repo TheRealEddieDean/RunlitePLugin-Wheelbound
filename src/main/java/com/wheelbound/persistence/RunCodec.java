@@ -236,7 +236,7 @@ public final class RunCodec
         catch (RuntimeException ex) { throw new IOException("Invalid snapshot; preserve original", ex); }
     }
 
-    private JsonElement encodeDraw(DrawCommitment draw)
+    static JsonElement encodeDraw(DrawCommitment draw)
     {
         JsonObject result = new JsonObject();
         result.addProperty("version", draw.pool().version());
@@ -251,7 +251,7 @@ public final class RunCodec
         return result;
     }
 
-    private DrawCommitment decodeDraw(JsonElement element)
+    static DrawCommitment decodeDraw(JsonElement element)
     {
         JsonObject value = element.getAsJsonObject();
         keys(value, Set.of("version", "ticket", "entries"));
