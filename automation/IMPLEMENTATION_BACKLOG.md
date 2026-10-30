@@ -1,3 +1,45 @@
+## Current local continuation - Master selection readiness policy, 2026-10-30
+
+IDLE after bounded WB-WHL-10 precommit readiness increment (S). Reconciled domain,
+store/session/async activation, FoundationPreview baseline sampling, tests and current
+continuations. Grand activation already exists; baseline acknowledgement/sampling also
+exists but trusted source verification and live evidence acceptance remain unfinished.
+No duplicate activation/baseline implementation or I01d work. Git/merged state not
+verified under the user's prohibition. Existing decision/evidence BLOCKED rows stand.
+
+MasterSelectionReadiness now validates exact per-slice classification coverage over an
+immutable full-weight ActiveWheel. UNKNOWN/UNSUPPORTED blocks every landing; all
+verified-empty ordinary outcomes stop before selection; at least one assignable outcome
+permits structural landing classification. Supported Taint/Sacrifice remains selectable;
+specials cannot be classified as empty retries. Reasons and classifications are retained
+without changing ownership, tiers or weights. Authority WB-D111/120/138/139 and
+UNAVAILABLE_SELECTION_CONTRACT. Caller classifications are declarations, not proof.
+No RNG, debit, retry execution/history, catalog verifier, persistence, reconciliation,
+client wiring or gameplay enablement. Existing Master Wheel source unchanged.
+
+WB-WHL-10 is PARTIAL_UNVERIFIED overall: policy implemented and offline verified;
+reviewed eligibility, lifecycle/spin admission and durable command integration UNSTARTED.
+WB-WHL-09 remains TODO for the actual automatic retry; landing policy alone is not a
+retry implementation. FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07
+PARTIAL_UNVERIFIED; GFD-03/04 TODO; REL-02 PARTIAL. Other audited statuses stand.
+
+Validation: javac --release 11 compiled every domain production source and the new
+MasterSelectionReadinessChecks fixture; executable checks PASSED. Covers all-empty,
+valid-plus-empty, unknown/unsupported precedence, missing/foreign coverage, immutable
+inputs, reasons, unchanged full weights and both mandatory special kinds. JUnit wrapper
+authored. Focused Gradle readiness/AsyncRunSession/Master Wheel attempt failed before
+compilation: inherited wrapper-cache lock Access is denied. JUnit and legacy regressions
+NOT_RUN; no cache override or external-path inspection, no durability claim.
+
+Next eligible gameplay increment: immutable frozen precommit selection/retry provenance
+under WB-D138/139 (transaction/catalog/snapshot identity, existing deterministic draw
+commitments and retained empty reasons). Reconcile DrawCommitment and store before work;
+never regenerate a stream or implement unresolved changed-snapshot reconciliation.
+Actual eligibility detectors, trusted session/source evidence admission, off-task settlement
+and blocked activation/new-connection race fixture remain unfinished. Run focused
+readiness/async/session/store/schema-13/legacy/Master Wheel tests when inherited Gradle
+access is restored. Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - asynchronous Pause/Resume command, 2026-10-30
 
 IDLE after bounded lifecycle/Grand admission increment (S). Reconciled domain,
@@ -2353,7 +2395,7 @@ Do not select I01d without a concrete failing test or required dependency.
 | WB-WHL-07 | Implement weighted odds display and previews | PARTIAL_UNVERIFIED |
 | WB-WHL-08 | Implement deterministic Master Wheel spin commitment | PARTIAL |
 | WB-WHL-09 | Implement valid-empty landing free retry | TODO |
-| WB-WHL-10 | Implement all-unavailable readiness stop | TODO |
+| WB-WHL-10 | Implement all-unavailable readiness stop | PARTIAL_UNVERIFIED |
 | WB-WHL-11 | Implement Questing indestructible storage behavior | PARTIAL_UNVERIFIED |
 | WB-WHL-12 | Implement slice mastery weight upgrades | PARTIAL_UNVERIFIED |
 
