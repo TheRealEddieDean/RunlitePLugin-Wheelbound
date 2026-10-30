@@ -1,3 +1,43 @@
+## Current local continuation - Grand activation JSON payload, 2026-10-30
+
+IDLE after bounded WB-GFD-06/07 standalone serializer increment (S). Reconciled
+GrandActivationReceipt/Attempt/Checklist, schema-10 aggregate/codec and existing journal
+serializer/tests against the current backlog. Activation payload exists; activation
+serialization was absent. FND-01 remains DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07
+PARTIAL_UNVERIFIED; GFD-03/04 TODO. Other previously audited partial, TODO and BLOCKED
+rows stand. Merged-work history not reverified (user prohibits Git operations).
+I01d not selected; no complete gameplay system claimed.
+
+GrandActivationReceiptJson supplies version-1 full original payload encoding/decoding:
+identity, original seal/draw, command, exact before/after revisions, selected unfinished
+objective and completed prefix. Restore reconstructs the original gated transition,
+checks the independently supplied exact seal and rejects future-head receipts,
+duplicate/foreign/completed objectives, malformed fields and unsupported versions.
+Receipt equality retains selection/prefix collision distinctions after text restart
+and later heads. Authority WB-D089/104 with WB-D117 supersession and
+STATE_CONTRACT/PERSISTENCE. This is standalone structural serialization only.
+Schema stays 10; aggregate attempt/receipt retention, explicit legacy absence,
+store commands and durable replay remain UNSTARTED. No session/source admission,
+spin debit, award or client wiring. Master Wheel unchanged; incomplete gameplay
+remains unwired/default-disabled.
+
+Validation: javac --release 11 compiled all domain sources and eleven Grand executable
+fixtures; all eleven passed in build/continuation-grand-activation-json. Focused Gradle activation serializer,
+receipt and Master Wheel attempt failed before compilation: inherited wrapper-cache
+lock access denied. No cache override or external-path inspection. New Gson/JUnit
+serializer sources and Master Wheel regression NOT_RUN. Authored text round trips
+for all five goals, retained Awakened prefix, Long.MAX_VALUE, changed selection/prefix
+with same command, malformed payloads, foreign seals and stale heads.
+
+Next eligible increment: integrate optional activation receipts/durable attempt state
+into a new aggregate schema, preserving explicit legacy absence and original payloads
+across command copies, with store mutation guards and restart/collision tests. Then
+atomic activation/evidence acceptance, trusted identity/session/source admission,
+off-task settlement ordering, global command/source collisions and lost-ack tests.
+Existing schema-10 serializer/migration/store/legacy checks and populated-journal
+copy/payload-replacement fixtures remain open. Client/item mappings and WB-D092 stay
+gated. Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - Grand activation receipt payload, 2026-10-30
 
 IDLE after bounded WB-GFD-06/07 activation-receipt prerequisite (XS/S).
