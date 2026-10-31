@@ -56,6 +56,7 @@ public final class MasterCurrentSpecialObligationChecks
                     continue;
                 }
                 var current = MasterCurrentSpecialObligation.restore(obligation, history, spins, head);
+                com.wheelbound.persistence.MasterCurrentSpecialAggregateChecks.verify(current, history);
                 var paused = current.pause(identity, 10);
                 var restored = MasterCurrentSpecialObligation.restore(obligation, history, spins, paused.lifecycle());
                 var resumed = restored.resume(identity, 11);
