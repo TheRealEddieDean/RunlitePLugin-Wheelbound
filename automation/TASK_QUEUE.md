@@ -1,3 +1,46 @@
+## Current local continuation - Taint lifecycle preparation, 2026-10-31
+
+IDLE after bounded WB-WHL-08 prerequisite increment (S). Reconciled current source,
+fixtures and latest aggregate-retention checkpoint against WB-D013/018/058/120/138/139/155.
+Existing special preparation, current context and aggregate retention reused. No I01d,
+Git operations or merged-state verification; supervisor owns publication. Local edits only.
+
+MasterTaintLifecyclePreparation couples actual-prefix-bound terminal history, original
+spin reservation and typed response with ACTIVE/PUNISHMENT_PENDING current context at
+the terminal afterRevision. Exact retained replay requires explicit current obligation,
+not history/reservation alone, and preserves ACTIVE/PAUSED context and original accounting.
+Ordinary and Sacrifice requests fail closed; Sacrifice route payloads remain required.
+This is an immutable proposal, NOT atomic aggregate publication, punishment selection,
+spin debit/settlement, RunReceipt, durable storage or gameplay admission. No timing rule
+was adopted. Existing Master Wheel unchanged; incomplete gameplay remains disabled.
+
+Fresh Java 11 domain/aggregate/preparation compilation PASSED into
+build/continuation-taint-lifecycle after correcting the standalone source selection.
+Expanded MasterSpecialTerminalPreparationChecks PASSED (0/1/513 retries,
+1/7/Long.MAX_VALUE balances, active/paused replay, missing current context, stale revision,
+changed transcript, zero balance, ordinary/Sacrifice refusal and source immutability).
+MasterCurrentSpecialAggregateChecks (including current-context checks) and
+MasterTerminalReservationPreparationChecks PASSED. Existing JUnit wrapper covers the
+expanded checks. Focused Gradle/JUnit/legacy attempt failed before compilation: inherited
+wrapper-cache lock Access is denied. JUnit/legacy NOT_RUN; GRADLE_USER_HOME unchanged.
+No external inspection or cache workaround; no full-suite claim.
+
+Reconciliation: Taint lifecycle proposal DONE offline; JUnit verification pending.
+WB-WHL-08 remains PARTIAL: atomic publication, RunReceipt, current-special codec and
+locked/session admission UNSTARTED. Ordinary assignment and stage-specific Sacrifice
+routes UNSTARTED. WB-WHL-09 PARTIAL (automatic retries UNSTARTED); WB-WHL-10
+PARTIAL_UNVERIFIED. Schema-18 and complete copy-path integration retain existing
+IMPLEMENTED_UNVERIFIED status; other audited partial/unstarted/blocked holds stand.
+
+Next: typed Taint terminal RunReceipt and aggregate-chain validation, then atomic
+publication of lifecycle/history/reservation/current obligation using this proposal.
+Do not claim publication from a proposal or reconstruct missing current obligation on
+replay. Add lossless versioned current-special codec before storage admission; preserve
+encoding refusal meanwhile. Sacrifice needs supported route payloads before admission.
+Settlement, grants, sampling, retries, suspension/revalidation and changed-snapshot
+recovery remain unfinished. WB-D155 adopts no retirement rule. Run focused JUnit and
+legacy tests when inherited dependencies become accessible.
+
 ## Current local continuation - aggregate current special retention, 2026-10-31
 
 IDLE after bounded WB-WHL-08 aggregate retention increment (S). Reconciled latest
