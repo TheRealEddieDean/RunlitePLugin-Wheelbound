@@ -1,6 +1,9 @@
 package com.wheelbound.persistence;
 
 import com.wheelbound.domain.RunIdentity;
+import com.wheelbound.domain.MasterOrdinaryPoolEvidence;
+import com.wheelbound.domain.MasterSelectionReadiness;
+import java.util.Map;
 import com.wheelbound.domain.GrandActivationReceipt;
 import com.wheelbound.domain.MasterSelectionCreationReceipt;
 import java.util.Objects;
@@ -81,6 +84,26 @@ public final class AsyncRunSession
     public synchronized Optional<RunSession.Token> capture()
     {
         return current == null ? Optional.empty() : current.capture();
+    }
+
+    /** Queues read-only durable-head assembly. Evidence is frozen before queuing;
+     * tokens establish no detector/catalog authority. Outer empty means superseded
+     * before execution. Started reads can finish after disconnect, but cannot restore
+     * admission; their result is advisory and must never authorize a later draw.
+     */
+    public synchronized CompletableFuture<Optional<MasterSelectionReadiness>> masterReadiness(
+        RunSession.Token token, String snapshotVersion,
+        Map<String, MasterOrdinaryPoolEvidence> ordinaryPools)
+    {
+        if (current == null || !current.accepts(token))
+        {
+            CompletableFuture<Optional<MasterSelectionReadiness>> rejected = new CompletableFuture<>();
+            rejected.completeExceptionally(new IllegalArgumentException("Stale or foreign Master readiness callback"));
+            return rejected;
+        }
+        Objects.requireNonNull(snapshotVersion, "snapshotVersion");
+        Map<String, MasterOrdinaryPoolEvidence> frozen = Map.copyOf(ordinaryPools);
+        return submit(target -> target.masterReadiness(token, snapshotVersion, frozen));
     }
 
     /** Queues activation on the storage worker and immediately closes callback admission.
