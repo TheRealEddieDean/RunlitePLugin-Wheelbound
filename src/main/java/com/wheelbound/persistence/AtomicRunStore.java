@@ -61,6 +61,25 @@ public final class AtomicRunStore
     public Optional<RunDocument> load() throws IOException
     { return locked(this::read); }
 
+    /** Recover the exact original creation without replacing an advanced pending
+     * transcript. Missing history is not permission to create, reseed or retry.
+     * Corrupt/pending saves and uncertain store instances require reconciliation. */
+    public Optional<com.wheelbound.domain.MasterSelectionCreationReceipt> committedMasterSelection(
+        com.wheelbound.domain.MasterSelectionCreationReceipt request) throws IOException
+    {
+        Objects.requireNonNull(request, "request");
+        if (!identity.equals(request.identity()))
+        { throw new IllegalArgumentException("Foreign run context"); }
+        return locked(() -> {
+            if (uncertain) { throw new IOException("Reopen and reconcile after failed persistence"); }
+            Optional<RunDocument> current = read();
+            if (!current.isPresent()) { return Optional.empty(); }
+            try { return MasterCreationRecovery.find(current.get(), request); }
+            catch (IllegalArgumentException ex)
+            { throw new IOException("Conflicting Master creation recovery request", ex); }
+        });
+    }
+
     /**
      * Recover an exact run-start seal after restart or lost acknowledgement, without
      * sampling or writing. Absence is not permission to create a run or retrofit a
