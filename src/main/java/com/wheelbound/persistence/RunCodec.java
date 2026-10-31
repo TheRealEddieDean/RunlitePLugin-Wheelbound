@@ -24,7 +24,7 @@ import java.util.UUID;
 /** Inject RuneLite's Gson. Never deserialize directly into domain objects bypassing their validation. */
 public final class RunCodec
 {
-    public static final int SCHEMA = 15;
+    public static final int SCHEMA = 16;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -68,6 +68,8 @@ public final class RunCodec
             if (receipt.purchase() != null) { item.add("purchase", PurchaseReceiptJson.encode(receipt.purchase())); }
             if (receipt.activation() != null)
             { item.add("activation", GrandActivationReceiptJson.encode(receipt.activation(), run.revision())); }
+            if (receipt.masterCreation() != null)
+            { item.add("masterCreation", MasterSelectionCreationReceiptJson.encode(receipt.masterCreation())); }
             receipts.add(item);
         }
         payload.add("receipts", receipts);
@@ -218,7 +220,10 @@ public final class RunCodec
                     boolean hasDebit = schema >= 5 && "FP_DEBIT".equals(string(item, "operation"));
                     boolean hasPurchase = schema >= 7 && "SLICE_PURCHASE".equals(string(item, "operation"));
                     boolean hasActivation = schema >= 13 && "GRAND_ACTIVATION".equals(string(item, "operation"));
-                    keys(item, hasActivation
+                    boolean hasCreation = schema >= 16 && "MASTER_SELECTION_CREATION".equals(string(item, "operation"));
+                    keys(item, hasCreation
+                        ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "masterCreation")
+                        : hasActivation
                         ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "activation")
                         : hasPurchase
                         ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "purchase")
@@ -227,6 +232,19 @@ public final class RunCodec
                         : hasDraw
                         ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "draw")
                         : Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation"));
+                    if (hasCreation)
+                    {
+                        RunReceipt receipt = RunReceipt.masterSelectionCreation(MasterSelectionCreationReceiptJson.decode(
+                            item.getAsJsonObject("masterCreation"), identity));
+                        if (!receipt.commandId().equals(UUID.fromString(string(item, "commandId")))
+                            || receipt.beforeRevision() != integer(item, "beforeRevision")
+                            || receipt.afterRevision() != integer(item, "afterRevision")
+                            || !receipt.state().name().equals(string(item, "state"))
+                            || !receipt.obligation().name().equals(string(item, "obligation")))
+                        { throw new IllegalArgumentException("Creation envelope disagrees with original response"); }
+                        receipts.add(receipt);
+                        continue;
+                    }
                     if (hasActivation)
                     {
                         RunReceipt receipt = RunReceipt.grandActivation(GrandActivationReceiptJson.decode(

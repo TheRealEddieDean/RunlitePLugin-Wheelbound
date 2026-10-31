@@ -1,3 +1,46 @@
+## Current local continuation - schema-16 typed Master creation chain, 2026-10-30
+
+IDLE after bounded WB-WHL-08 aggregate/codec increment (S), WB-D138/139.
+Reconciled current code, executable checks, typed envelope, recovery, schema-15 history
+and continuation records. Existing retained history/recovery reused; no duplicate system.
+Recorded merged work not independently verified because Git operations are prohibited.
+
+RunDocument now admits a typed creation only with its exact retained original history.
+Only that matching operation may share the pending/history transaction ID; foreign,
+changed and cross-operation collisions still fail. A creation within the retained chain's
+revision interval cannot be omitted. Chain predecessors must be ACTIVE/NONE; Pause/Resume
+preserves original requests, pending prefixes and FP. Schema 16 serializes the full typed
+payload, reconstructs through its validated factory and compares every envelope response
+field. Schemas 1-15 cannot admit this operation; existing legacy absence rules stand.
+No locked creation command, evidence authentication, sampling or gameplay wiring added.
+
+Validation: javac --release 11 compiled all domain production plus RunDocument, RunReceipt,
+LifecycleAdmission and MasterCreationRecovery and five executable fixtures into
+build/continuation-master-operation. MasterCreationOperationChecks,
+MasterCreationEnvelopeChecks, MasterCreationRecoveryChecks, MasterCreationAggregateChecks
+and PendingLifecycleChecks PASSED. New checks cover zero/one/513 empty prefixes, exact
+history, missing/changed history, omitted chain operation, paused/obligated predecessors,
+recovery and lifecycle replay/preservation. JUnit tests authored for round-trip, schema-15
+compatibility/refusal, envelope tampering and disk restart/lifecycle recovery preservation.
+Focused Gradle operation/envelope/aggregate/recovery/RunCodec/legacy attempt failed before
+compilation: inherited wrapper-cache lock Access is denied. JUnit/Gson/store/legacy NOT_RUN.
+GRADLE_USER_HOME unchanged; no external inspection or cache workaround.
+
+Reconciliation: WB-WHL-08 PARTIAL. Typed envelope and aggregate chain verified offline;
+schema-16 codec/disk integration IMPLEMENTED_UNVERIFIED. Locked creation admission
+UNSTARTED. WB-WHL-09 PARTIAL (automatic retry UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED;
+REL-02 PARTIAL; FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED;
+GFD-03/04 TODO. Existing decision/evidence BLOCKED rows stand. No I01d work.
+
+Next: locked operation-specific Master creation admission with exact original replay,
+stale revision refusal, global ID uniqueness and advanced-prefix preservation. Execute
+focused codec/migration/store/lifecycle and legacy suites with accessible inherited build
+dependencies. Trusted session/evidence, once-only allocation, sampling, automatic retry,
+suspension/revalidation and settlement remain unfinished. Changed-snapshot reconciliation
+remains unresolved; WB-D155 defers the old A56 question without adopting retirement.
+Master Wheel unchanged; incomplete gameplay remains disabled. Local edits only; supervisor
+handles commits, PRs, CI and merges. No durable or playable completion claim.
+
 ## Current local continuation - typed Master creation operation envelope, 2026-10-30
 
 IDLE after bounded WB-WHL-08 receipt-chain prerequisite (S), WB-D138/139.
