@@ -1,3 +1,41 @@
+## Current local continuation - read-only Master recovery session boundary, 2026-10-30
+
+IDLE after bounded WB-WHL-08 recovery-session increment (S), WB-D138/139.
+Reconciled current creation admission, locked recovery, schema-16 operation, session
+APIs and focused tests against the backlog. Existing components reused; I01d not selected.
+Merged work/branch state not independently verified because Git operations are prohibited.
+
+RunSession.committedMasterSelection performs read-only exact-original recovery,
+invalidates tokens, refreshes the actual durable lifecycle even on absence and
+disconnects on failure. AsyncRunSession exposes it on the existing storage worker:
+outer Optional absence means superseded before execution; inner absence means a
+completed lookup found no original. Neither authorizes creation, retry or reseeding.
+Queued supersession skips storage; started work cannot restore a superseded session.
+Tests added for absence with unchanged bytes/no pending write, paused 513-prefix
+recovery, superseded lookup against unreadable disk, conflicting requests, synchronous
+token invalidation and missing-save failure. New session code/tests IMPLEMENTED_UNVERIFIED.
+
+Validation: javac --release 11 compiled all domain production and dependency-free
+aggregate/admission/recovery/lifecycle helpers into build/continuation-master-session-recovery.
+MasterCreationAdmissionChecks, MasterCreationRecoveryChecks, MasterCreationOperationChecks
+and PendingLifecycleChecks PASSED. Focused Gradle creation-session/store/codec/legacy
+attempt failed before compilation: inherited wrapper-cache lock Access is denied.
+No JUnit/session/store/codec/legacy pass claimed; GRADLE_USER_HOME unchanged.
+
+Reconciliation: WB-WHL-08 PARTIAL; pure admission/recovery verified offline, locked
+store/schema-16/session integration IMPLEMENTED_UNVERIFIED. WB-WHL-09 PARTIAL with
+automatic retry UNSTARTED; WB-WHL-10 PARTIAL_UNVERIFIED; FND-01 DONE; FND-10/12 and
+REL-02 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing
+client/decision/evidence BLOCKED rows stand. Master Wheel unchanged; gameplay disabled.
+
+Next: execute expanded MasterCreationSessionTest, MasterCreationStoreTest and focused
+session/recovery/codec/migration/lifecycle/legacy suites with accessible inherited
+build dependencies. Then select bounded trusted session/evidence admission before
+once-only allocation, sampling and automatic retry. Suspension, changed-snapshot
+reconciliation and settlement remain unfinished. WB-D155 adopts no retirement rule.
+Local edits only; no Git, external-path inspection, credentials, secrets or workflows.
+Supervisor handles commits, PRs, CI and merges. No playable/durable completion claim.
+
 ## Current local continuation - Master creation session boundary, 2026-10-30
 
 IDLE after bounded WB-WHL-08 session increment (S), WB-D138/139.

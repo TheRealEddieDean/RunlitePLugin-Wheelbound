@@ -132,6 +132,71 @@ public class MasterCreationSessionTest
         assertEquals(4, store().load().get().lifecycle().revision());
     }
 
+    @Test public void recoveryDistinguishesAbsenceAndPreservesPausedAdvancedHead() throws Exception
+    {
+        AtomicRunStore target = initialize();
+        connect(target);
+        byte[] before = Files.readAllBytes(target.snapshotPath());
+        RunSession.Token old = session.capture().get();
+        CompletableFuture<Optional<Optional<MasterSelectionCreationReceipt>>> absent =
+            session.committedMasterSelection(request);
+        assertFalse(session.accepts(old)); assertFalse(absent.isDone());
+        tasks.remove(0).run();
+        assertTrue(absent.join().isPresent()); assertFalse(absent.join().get().isPresent());
+        assertTrue(session.capture().isPresent()); assertFalse(session.accepts(old));
+        assertArrayEquals(before, Files.readAllBytes(target.snapshotPath()));
+        assertFalse(Files.exists(target.pendingPath()));
+
+        RunDocument paused = LifecycleAdmission.prepare(MasterCreationOperationChecks.fixture(513),
+            request.identity(), UUID.randomUUID(), 6, RunReceipt.Operation.PAUSE);
+        Files.write(target.snapshotPath(), codec.encode(paused));
+        byte[] saved = Files.readAllBytes(target.snapshotPath());
+        CompletableFuture<Optional<Optional<MasterSelectionCreationReceipt>>> found =
+            session.committedMasterSelection(request);
+        tasks.remove(0).run();
+        assertEquals(request, found.join().get().get());
+        assertEquals(0, found.join().get().get().initial().drawCount());
+        assertFalse(session.capture().isPresent());
+        assertEquals(513, target.load().get().pendingMasterSelection().get().drawCount());
+        assertArrayEquals(saved, Files.readAllBytes(target.snapshotPath()));
+    }
+
+    @Test public void supersededRecoverySkipsUnreadableDiskAndPreservesFreshSession() throws Exception
+    {
+        AtomicRunStore target = initialize();
+        connect(target);
+        CompletableFuture<Optional<Optional<MasterSelectionCreationReceipt>>> skipped =
+            session.committedMasterSelection(request);
+        CompletableFuture<Boolean> opened = session.connect(target, request.identity());
+        tasks.remove(1).run(); assertTrue(opened.join());
+        RunSession.Token fresh = session.capture().get();
+        Files.write(target.pendingPath(), new byte[] { 1 });
+        tasks.remove(0).run();
+        assertFalse(skipped.join().isPresent()); assertTrue(session.accepts(fresh));
+    }
+
+    @Test public void recoveryConflictAndMissingSaveCloseAdmission() throws Exception
+    {
+        AtomicRunStore target = initialize();
+        Files.write(target.snapshotPath(), codec.encode(source));
+        connect(target);
+        byte[] saved = Files.readAllBytes(target.snapshotPath());
+        CompletableFuture<Optional<Optional<MasterSelectionCreationReceipt>>> conflict =
+            session.committedMasterSelection(new MasterSelectionCreationReceipt(request.identity(), 2, request.initial()));
+        tasks.remove(0).run();
+        assertTrue(conflict.isCompletedExceptionally()); assertFalse(session.capture().isPresent());
+        assertArrayEquals(saved, Files.readAllBytes(target.snapshotPath()));
+        RunSession direct = new RunSession();
+        direct.connect(target, request.identity());
+        RunSession.Token old = direct.capture().get();
+        assertEquals(request, direct.committedMasterSelection(request).get());
+        assertFalse(direct.accepts(old));
+        Files.delete(target.snapshotPath());
+        assertThrows(IOException.class, () -> direct.committedMasterSelection(request));
+        assertFalse(direct.capture().isPresent());
+        assertFalse(Files.exists(target.snapshotPath()));
+    }
+
     @Test public void synchronousBoundaryInvalidatesTokensAndFailsClosed() throws Exception
     {
         AtomicRunStore target = initialize();

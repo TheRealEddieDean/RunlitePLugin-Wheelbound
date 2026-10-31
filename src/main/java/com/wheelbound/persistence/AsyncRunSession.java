@@ -108,6 +108,19 @@ public final class AsyncRunSession
         return submit(target -> target.createMasterSelection(request));
     }
 
+    /** Read-only recovery on the storage worker, closing callback admission immediately.
+     * Outer empty means superseded before execution; inner empty means the lookup
+     * completed without an exact retained creation. Neither permits creation/reseeding.
+     * A started lookup may complete after disconnect but cannot restore the session.
+     * Failures close admission; cancellation is not disconnect.
+     */
+    public synchronized CompletableFuture<Optional<Optional<MasterSelectionCreationReceipt>>> committedMasterSelection(
+        MasterSelectionCreationReceipt request)
+    {
+        Objects.requireNonNull(request, "request");
+        return submit(target -> target.committedMasterSelection(request));
+    }
+
     /** Worker-thread Pause/Resume boundary. Admission closes before queuing, including
      * historical replay; a replay refreshes from the actual durable head. Resume does
      * not authenticate observation sources or establish a fresh gameplay baseline.
