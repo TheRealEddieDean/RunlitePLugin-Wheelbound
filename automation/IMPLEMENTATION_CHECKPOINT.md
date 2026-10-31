@@ -1,3 +1,55 @@
+## Current local continuation - terminal Master selection receipts, 2026-10-31
+
+IDLE after bounded WB-WHL-08 terminal-transcript/replay prerequisite (S).
+Reconciled existing creation, recovery, readiness/session and provenance code/tests.
+Existing code has no spin balance/allocation aggregate. Reused the validated append
+and original creation equality rather than repeating I01d or adding charge timing.
+WB-D013/018/058/120/138/139 preserve ordinary completion/Reject consumption, exactly
+one eventual ordinary/special spin, and no empty-retry charge. WB-D155 remains deferred.
+Merged work and branch state not independently verified: Git operations prohibited.
+Current user restrictions supersede historical Git/publication instructions.
+
+MasterSelectionResolutionReceipt binds identity, separate command ID, revision interval,
+original zero-draw creation and the entire terminal transcript. Its pure prepare method
+appends one supplied terminal step to the retained unresolved prefix; empty-only results
+and redrawing a valid result are refused. Restored receipts require a valid landing and
+exact frozen creation match. Full equality retains all raw tickets and opaque states,
+including empty steps. MasterSelectionResolutions restores ordered immutable receipts,
+rejects duplicate command/selection IDs, creation/resolution ID collisions, foreign/future/
+overlapping histories and changed replay payloads. Exact replay returns the original.
+These are structural prerequisites only: no allocation balance/debit, assignment commit,
+trusted evidence/RNG authentication, codec/store/session integration or gameplay wiring.
+Future durable admission must match retained creation history, preserve the actual durable
+prefix, enforce global operation IDs and commit assignment/accounting together. No new
+allocation or ordinary consumption timing adopted. Legacy Master Wheel unchanged;
+incomplete gameplay remains unwired/default-disabled.
+
+Validation: javac --release 11 compiled the production/fixture graph into
+build/continuation-master-resolution. MasterSelectionResolutionChecks PASSED: zero/513
+empty prefixes, ordinary/Taint/Sacrifice terminal results, terminal preparation, replay,
+changed prefix/state/revision, foreign identity/run/creation, invalid revisions/overflow,
+duplicate selection/command, cross-ID collisions, immutable history and ordered restore.
+MasterSelectionAppendChecks, MasterAggregateEvidenceChecks, MasterWheelEvidenceChecks
+and MasterOrdinaryPoolEvidenceChecks PASSED. Focused JUnit wrapper authored.
+Gradle resolution/readiness-session/legacy attempt failed before compilation: inherited
+wrapper-cache lock Access is denied. JUnit/session/codec/store/legacy NOT_RUN; inherited
+GRADLE_USER_HOME unchanged. No external cache inspection/workaround or Git operations.
+
+Reconciliation: terminal receipt/preparation/replay prerequisite DONE offline; persistence
+and gameplay admission UNSTARTED. WB-WHL-08 remains PARTIAL, WB-WHL-09 PARTIAL (automatic
+retry UNSTARTED), WB-WHL-10 PARTIAL_UNVERIFIED. Existing creation/schema-16/session disk
+integration stays IMPLEMENTED_UNVERIFIED. Trusted detectors, reviewed complete catalogs
+and special adapters remain evidence gated. FND-01 DONE; FND-10/12 and REL-02 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Other BLOCKED rows stand. No
+unfinished gameplay marked implemented/playable and no complete durable allocation claim.
+
+Next: bounded terminal receipt JSON/aggregate retention, matching retained creations and
+actual pending prefixes; then operation-specific locked/session admission before accounting,
+sampling and automatic retry. Run focused resolution/readiness/creation/store/codec/migration/
+legacy JUnit suites when inherited dependencies are accessible. Started-read supersession
+and executor-rejection coverage remains unfinished. Suspension/revalidation, changed-snapshot
+reconciliation and settlement remain unfinished. Supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - session-qualified Master readiness, 2026-10-30
 
 IDLE after bounded WB-WHL-08/10 read-only session increment (S), WB-D138/139.
