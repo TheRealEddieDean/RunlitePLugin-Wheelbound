@@ -158,8 +158,13 @@ public final class MasterSelectionResolutionChecks
                     check(allocation.selectedSliceId().equals(new UUID(0, special == null ? 5 : 6)));
                     check(allocation.transactionId().equals(creation.transactionId()));
                     check(allocation.commandId().equals(receipt.commandId()) && allocation.resolution() == receipt);
+                    MasterSpinState spinState = new MasterSpinState(1, identity, 9, spins,
+                        java.util.Optional.empty()).reserve(head, allocation);
+                    check(spinState.allotted() == spins && spinState.available() == spins - 1);
+                    check(spinState.reservation().get().selectedKind() == allocation.selectedKind());
                     MasterSelectionResolutionReceipt restored = new MasterSelectionResolutionReceipt(
                         receipt.commandId(), 9, creation, terminal);
+                    check(spinState.replay(identity, 10, restored) == allocation);
                     check(allocation.replay(identity, 10, restored) == allocation);
                     check(allocation.replay(identity, Long.MAX_VALUE, restored) == allocation);
                     rejects(() -> allocation.replay(identity, 9, restored));
