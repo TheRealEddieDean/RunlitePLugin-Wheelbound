@@ -1,3 +1,48 @@
+## Current local continuation - complete ordinary-pool evidence reduction, 2026-10-30
+
+IDLE after bounded WB-WHL-08/10 complete-pool structural prerequisite (S), WB-D138/139.
+Reconciled code and tests: read-only recovery session and token-qualified creation already
+exist; neither was selected again. Reused MasterSelectionReadiness and its full-weight
+policy. Recorded merged work and branch state not independently verified; no Git operations.
+No I01d work. Current user restrictions supersede historical Git/publication instructions.
+
+MasterOrdinaryPoolEvidence requires a nonempty declared catalog family set and exactly
+matching immutable per-family classifications. Missing/foreign families fail closed.
+Unsupported/unknown evidence blocks readiness; only all-known-empty families establish
+ordinary emptiness. A ready normal family plus empty Challenge stays assignable. Context
+qualification rejects foreign account/run, revision, snapshot, catalog, activity and special
+outcomes. Detailed reasons are retained. This is structural reduction of declarations,
+NOT trusted detector authentication, catalog completeness proof or gameplay admission.
+Required families must come from a reviewed catalog; no concrete family catalog adopted.
+No persistence/schema change, spin allocation, sampling, automatic retry or plugin wiring.
+
+Validation: javac --release 11 compiled new production code and dependency-free fixtures
+with production/test source resolution into build/continuation-master-pool-evidence.
+MasterOrdinaryPoolEvidenceChecks, MasterSelectionReadinessChecks, MasterCreationAdmissionChecks,
+MasterCreationRecoveryChecks, MasterCreationOperationChecks and PendingLifecycleChecks PASSED.
+New checks exhaust all availability pairs and cover coverage, immutability, stale/foreign
+context, special refusal, full-weight valid/empty landing, all-empty stop and unknown wait.
+Initial fixture compilation omitted test-source resolution; corrected compilation passed.
+JUnit wrapper authored. Focused Gradle new evidence/creation-session/store/legacy attempt
+failed before compilation: inherited wrapper-cache lock Access is denied. JUnit/store/session/
+codec/legacy NOT_RUN; GRADLE_USER_HOME unchanged; no external inspection or workaround.
+
+Reconciliation: new pure reduction DONE offline. WB-WHL-08 PARTIAL; trusted complete-pool
+adapter/session admission UNSTARTED and client-evidence gated. Locked store/schema-16/session
+integration remains IMPLEMENTED_UNVERIFIED. WB-WHL-09 PARTIAL (automatic retry UNSTARTED);
+WB-WHL-10 PARTIAL_UNVERIFIED overall; FND-01 DONE; FND-10/12 and REL-02 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing decision/client/evidence
+BLOCKED rows stand. No unfinished gameplay is marked implemented or playable.
+
+Next: run focused evidence/readiness/creation/session/store/codec/migration/legacy JUnit
+suites with accessible inherited dependencies. Then bounded complete-wheel evidence assembly
+matching current aggregate inventory/catalog and session context, reusing this reducer;
+trusted detector sources and reviewed complete family catalogs remain required before live
+admission. Once-only spin allocation, sampling, automatic retry, suspension, changed-snapshot
+reconciliation and settlement remain unfinished. WB-D155 adopts no retirement rule.
+Legacy Master Wheel unchanged; incomplete gameplay remains unwired/default-disabled.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - Master creation session boundary, 2026-10-30
 
 IDLE after bounded WB-WHL-08 session increment (S), WB-D138/139.
