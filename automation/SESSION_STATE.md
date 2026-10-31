@@ -1,3 +1,49 @@
+## Current local continuation - lifecycle-bound current special context, 2026-10-31
+
+IDLE after bounded WB-WHL-08 lifecycle-binding prerequisite (S). Reconciled latest
+coupled-special continuation against production preparation, special payload, spin state,
+terminal history and focused fixtures. Read WB-D013/018/058/120/138/139/155 and
+STATE_CONTRACT stage rules. No I01d or Git operations; merged work was not independently
+verified. Supervisor owns commits, PRs, CI and merges. Local edits only.
+
+MasterCurrentSpecialObligation structurally binds an explicitly supplied special payload
+to exact retained terminal history, original spin reservation and ACTIVE/PAUSED lifecycle.
+Rejects missing/changed history or reservation, future/foreign state, later superseding
+terminal history, terminal outer states and incompatible obligation stage families.
+Pause/Resume preserve the original payload, accounting and stage without another allocation.
+Taint accepts PUNISHMENT_PENDING; Sacrifice accepts existing SACRIFICE_* stages only.
+This validates the stage family, NOT stage-specific candidates/tasks/acquisition/receipts.
+No stage selection, transition, settlement timing, debit or gameplay admission was added.
+Model remains unwired; Master Wheel unchanged and incomplete gameplay default-disabled.
+
+Fresh javac --release 11 compilation of all domain production sources plus focused
+fixtures PASSED into build/continuation-current-special. Updated
+MasterCurrentSpecialObligationChecks PASSED: both specials, 0/1/513 empty prefixes,
+1/7/Long.MAX_VALUE balances, every lifecycle obligation, Pause/Resume preservation,
+changed transcript/command, missing reservation/history, future state, stale/foreign
+Pause, superseding resolution and source immutability. MasterSpecialObligationChecks
+and MasterSelectionResolutionChecks also PASSED. JUnit wrapper authored. Focused
+Gradle/JUnit/legacy attempt failed before compilation: inherited wrapper-cache lock
+Access is denied. JUnit/legacy NOT_RUN; GRADLE_USER_HOME unchanged, no cache workaround
+or external inspection. No full-suite claim.
+
+Reconciliation: coupled special proposal and new structural lifecycle-bound context DONE
+offline; JUnit wrapper IMPLEMENTED_UNVERIFIED. Lifecycle/current-obligation aggregate
+integration is still UNSTARTED (domain prerequisite only completed). WB-WHL-08 PARTIAL;
+WB-WHL-09 PARTIAL (automatic retries UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED.
+Schema-18 codec integration remains IMPLEMENTED_UNVERIFIED. Ordinary assignment,
+atomic aggregate publication, RunReceipt/codec and locked/session admission UNSTARTED.
+Other audited partial/unstarted/blocked rows and decision/evidence holds stand.
+
+Next: retain explicit current special context in RunDocument with exact lifecycle/history/
+reservation invariants, mutually exclusive activity, and preservation through every copy
+path. Refuse encoding until a lossless versioned codec exists. Then implement supported
+atomic terminal publication using coupled preparation; stage-specific special payloads
+remain required before admission. Do not infer current obligation from history or admit
+ordinary assignments via special payloads. Settlement, grants, sampling, retry execution,
+suspension/revalidation and changed-snapshot recovery remain unfinished. WB-D155 adopts
+no retirement rule. Run focused JUnit/legacy checks when inherited cache is accessible.
+
 ## Current local continuation - coupled special terminal preparation, 2026-10-31
 
 IDLE after bounded WB-WHL-08 integration increment (S). Reconciled source and focused
