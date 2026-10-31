@@ -1,3 +1,46 @@
+## Current local continuation - pure Master creation admission, 2026-10-30
+
+IDLE after bounded WB-WHL-08 aggregate-admission dependency (S), WB-D138/139.
+Reconciled schema-16 typed operation, retained journal, recovery and lifecycle helpers
+against current code/tests. Reused existing components; no I01d or Git operations.
+Recorded merged work not independently verified under the user's Git prohibition.
+
+MasterCreationAdmission.prepare constructs a zero-draw pending selection, retained
+original journal and typed operation at one new revision. Requires explicit history,
+exact identity/revision/catalog, ACTIVE/NONE and no pending selection/current Grand
+attempt. Recovery enforces global retained-ID collisions and full original equality.
+Exact replay returns the complete current head unchanged, including advanced empty
+prefixes, Pause and historical originals whose pending selection is gone. Preserves
+FP and all unrelated aggregate payloads. Pure preparation only: no trusted session/
+evidence authentication, spin allocation, sampling, store write or gameplay enablement.
+
+Validation: javac --release 11 compiled all domain production and focused aggregate/
+receipt/lifecycle/recovery/admission sources into build/continuation-master-admission.
+PendingLifecycleChecks, MasterCreationAggregateChecks, MasterCreationOperationChecks
+and MasterCreationAdmissionChecks PASSED. Admission covers new snapshot/original/typed
+receipt, input immutability, FP preservation, exact historical/paused replay, zero/one/
+513 prefixes, stale/foreign/catalog requests, missing history, lifecycle obligations,
+existing pending selections, changed originals and operation-ID collisions. Expanded
+admission checks recompiled and PASSED. JUnit wrapper authored. Focused Gradle admission/
+operation/recovery/RunCodec/legacy attempt failed before compilation: inherited wrapper
+cache lock Access is denied. JUnit/Gson/store/legacy NOT_RUN. GRADLE_USER_HOME unchanged;
+no external inspection, cache workaround, credentials or workflow access.
+
+Reconciliation: WB-WHL-08 PARTIAL. Pure creation admission dependency DONE offline;
+locked operation-specific creation command UNSTARTED; schema-16 codec/disk integration
+IMPLEMENTED_UNVERIFIED. WB-WHL-09 PARTIAL (automatic retry UNSTARTED); WB-WHL-10
+PARTIAL_UNVERIFIED; REL-02 PARTIAL; FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07
+PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing evidence/decision BLOCKED rows stand.
+
+Next: bounded locked operation-specific creation command using this preparation and
+existing physical commit/recovery, with restart/lost-acknowledgement and unchanged-disk
+refusal tests. Execute focused codec/migration/store/lifecycle and legacy suites with
+accessible inherited dependencies. Trusted session/evidence, once-only allocation,
+sampling, automatic retry, suspension/revalidation and settlement remain unfinished.
+Changed-snapshot reconciliation unresolved; WB-D155 does not adopt retirement.
+Master Wheel unchanged; incomplete gameplay stays unwired/default-disabled. Local edits
+only; supervisor handles commits, PRs, CI and merges. No durable/playable completion claim.
+
 ## Current local continuation - schema-16 typed Master creation chain, 2026-10-30
 
 IDLE after bounded WB-WHL-08 aggregate/codec increment (S), WB-D138/139.
