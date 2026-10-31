@@ -39,6 +39,8 @@ public final class RunCodec
     {
         if (document.currentMasterSpecial().isPresent())
         { throw new IllegalArgumentException("Current Master special requires a lossless versioned codec"); }
+        if (document.receipts().stream().anyMatch(receipt -> receipt.taintTerminal() != null))
+        { throw new IllegalArgumentException("Taint terminal requires a lossless versioned codec" ); }
         RunLifecycle run = document.lifecycle();
         JsonObject payload = new JsonObject();
         payload.addProperty("accountKey", run.identity().accountKey());

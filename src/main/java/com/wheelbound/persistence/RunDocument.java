@@ -341,6 +341,16 @@ public final class RunDocument
         this.currentMasterSpecial = special == null ? null
             : com.wheelbound.domain.MasterCurrentSpecialObligation.restore(
                 special, this.masterResolutions, this.masterSpins, lifecycle);
+        for (RunReceipt receipt : this.receipts)
+        {
+            if (receipt.taintTerminal() != null)
+            {
+                receipt.taintTerminal().validateRetained(this);
+                if (this.currentMasterSpecial == null)
+                { throw new IllegalArgumentException("Taint operation requires explicit current obligation"); }
+                this.currentMasterSpecial.obligation().validateResolution(receipt.taintTerminal().resolution());
+            }
+        }
         validateDebits();
         validatePurchases();
         if (previous != null && (previous.afterRevision() != lifecycle.revision()
@@ -431,6 +441,8 @@ public final class RunDocument
             case SLICE_PURCHASE: return previous.state() == RunLifecycle.State.ACTIVE
                 && previous.obligation() == RunLifecycle.Obligation.NONE;
             case DRAW: return previous.state() == RunLifecycle.State.ACTIVE && previous.obligation() == RunLifecycle.Obligation.NONE;
+            case MASTER_TAINT_TERMINAL: return previous.state() == RunLifecycle.State.ACTIVE
+                && previous.obligation() == RunLifecycle.Obligation.NONE;
             case MASTER_SELECTION_CREATION: return previous.state() == RunLifecycle.State.ACTIVE
                 && previous.obligation() == RunLifecycle.Obligation.NONE;
             case GRAND_ACTIVATION: return previous.state() == RunLifecycle.State.ACTIVE

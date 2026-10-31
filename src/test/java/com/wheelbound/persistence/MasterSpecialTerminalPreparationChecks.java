@@ -40,10 +40,30 @@ public final class MasterSpecialTerminalPreparationChecks
                     && lifecycle.current().spins().available() == balance - 1
                     && lifecycle.terminal().response().equals(prepared.response()));
                 var published = new RunDocument(lifecycle.current().lifecycle(), source.catalogVersion(),
-                    List.of(), source.fatePoints(), source.inventory(), source.grandFate(), source.grandProgress(),
+                    List.of(RunReceipt.masterTaintTerminal(prepared.response())), source.fatePoints(), source.inventory(), source.grandFate(), source.grandProgress(),
                     source.grandJournal(), source.grandActivations(), source.grandCurrentAttempt(), Optional.empty(),
                     source.masterCreations(), Optional.of(lifecycle.terminal().resolutions()),
                     Optional.of(lifecycle.terminal().spins()), Optional.of(lifecycle.current().obligation()));
+                var envelope = published.receipts().get(0);
+                check(envelope.operation() == RunReceipt.Operation.MASTER_TAINT_TERMINAL
+                    && envelope.equals(RunReceipt.masterTaintTerminal(MasterTerminalOperationProposal.restore(request, balance)))
+                    && envelope.hashCode() == RunReceipt.masterTaintTerminal(prepared.response()).hashCode());
+                check(!envelope.equals(RunReceipt.masterTaintTerminal(MasterTerminalOperationProposal.restore(request,
+                    balance == 1 ? 2 : 1))));
+                rejects(() -> new RunReceipt(request.commandId(), RunReceipt.Operation.MASTER_TAINT_TERMINAL,
+                    5, 6, RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.PUNISHMENT_PENDING));
+                rejects(() -> new RunDocument(published.lifecycle(), source.catalogVersion(), published.receipts(),
+                    source.fatePoints(), source.inventory(), source.grandFate(), source.grandProgress(),
+                    source.grandJournal(), source.grandActivations(), source.grandCurrentAttempt(), Optional.empty(),
+                    source.masterCreations(), Optional.of(lifecycle.terminal().resolutions()),
+                    Optional.of(lifecycle.terminal().spins()), Optional.empty()));
+                rejects(() -> new RunDocument(published.lifecycle(), source.catalogVersion(),
+                    List.of(RunReceipt.masterTaintTerminal(MasterTerminalOperationProposal.restore(request,
+                        balance == 1 ? 2 : 1))), source.fatePoints(), source.inventory(), source.grandFate(),
+                    source.grandProgress(), source.grandJournal(), source.grandActivations(),
+                    source.grandCurrentAttempt(), Optional.empty(), source.masterCreations(),
+                    Optional.of(lifecycle.terminal().resolutions()), Optional.of(lifecycle.terminal().spins()),
+                    Optional.of(lifecycle.current().obligation())));
                 var specialPaused = LifecycleAdmission.prepare(published, published.lifecycle().identity(),
                     UUID.randomUUID(), 6, RunReceipt.Operation.PAUSE);
                 check(MasterTaintLifecyclePreparation.prepare(published, request).current()
@@ -58,7 +78,8 @@ public final class MasterSpecialTerminalPreparationChecks
                         new MasterSelectionProvenance.Step(new DrawCommitment(pending.pool(),
                             pending.pool().totalWeight() - 1), "terminal"))));
             }
-            else { rejects(() -> MasterTaintLifecyclePreparation.prepare(source, request)); }
+            else { rejects(() -> MasterTaintLifecyclePreparation.prepare(source, request));
+                rejects(() -> RunReceipt.masterTaintTerminal(prepared.response())); }
             var paused = LifecycleAdmission.prepare(retained, retained.lifecycle().identity(),
                 UUID.randomUUID(), 6, RunReceipt.Operation.PAUSE);
             var replay = MasterSpecialTerminalPreparation.prepare(paused, request);
