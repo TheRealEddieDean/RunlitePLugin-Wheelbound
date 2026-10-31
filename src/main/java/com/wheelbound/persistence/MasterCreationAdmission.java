@@ -40,6 +40,6 @@ public final class MasterCreationAdmission
         return new RunDocument(next, current.catalogVersion(), operations, current.fatePoints(),
             current.inventory(), current.grandFate(), current.grandProgress(), current.grandJournal(),
             current.grandActivations(), current.grandCurrentAttempt(), Optional.of(request.initial()),
-            Optional.of(new MasterSelectionCreationJournal(head.identity(), next.revision(), originals)));
+            Optional.of(new MasterSelectionCreationJournal(head.identity(), next.revision(), originals)), current.masterResolutions());
     }
 }

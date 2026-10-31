@@ -5,7 +5,7 @@ import com.wheelbound.domain.MasterSelectionResolutions;
 import java.util.Objects;
 import java.util.UUID;
 
-/** Structural prerequisite for future aggregate retention; never publishes an assignment or debit. */
+/** Structural aggregate history validation; never publishes an assignment or debit. */
 public final class MasterResolutionBinding
 {
     private MasterResolutionBinding() { }
@@ -28,6 +28,8 @@ public final class MasterResolutionBinding
                     && c.beforeRevision() < receipt.afterRevision()))
             { throw new IllegalArgumentException("Later creation precedes terminal resolution"); }
             rejectCollision(head, receipt.commandId());
+            if (head.pendingMasterSelection().filter(p -> p.transactionId().equals(receipt.commandId())).isPresent())
+            { throw new IllegalArgumentException("Resolution command collides with pending selection"); }
             if (head.receipts().stream().anyMatch(r ->
                 r.beforeRevision() < receipt.afterRevision() && r.afterRevision() > receipt.beforeRevision()))
             { throw new IllegalArgumentException("Resolution overlaps another aggregate operation"); }

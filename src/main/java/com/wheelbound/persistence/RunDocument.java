@@ -22,6 +22,7 @@ public final class RunDocument
     private final com.wheelbound.domain.GrandEvidenceJournal grandJournal;
     private final com.wheelbound.domain.GrandFateProgress grandProgress;
     private final RunLifecycle lifecycle;
+    private final com.wheelbound.domain.MasterSelectionResolutions masterResolutions;
     private final com.wheelbound.domain.MasterSelectionCreationJournal masterCreations;
     private final com.wheelbound.domain.MasterSelectionProvenance pendingMasterSelection;
     private final String catalogVersion;
@@ -121,7 +122,28 @@ public final class RunDocument
         Optional<com.wheelbound.domain.MasterSelectionProvenance> pendingMasterSelection,
         Optional<com.wheelbound.domain.MasterSelectionCreationJournal> masterCreations)
     {
+        this(lifecycle, catalogVersion, receipts, fatePoints, inventory, grandFate, grandProgress,
+            grandJournal, grandActivations, grandCurrentAttempt, pendingMasterSelection, masterCreations,
+            Optional.empty());
+    }
+
+    /** Structural terminal history only; no assignment, spin accounting or persistence authority.
+     * Absent legacy history is unavailable, never evidence of no previous resolutions. */
+    public RunDocument(RunLifecycle lifecycle, String catalogVersion, List<RunReceipt> receipts,
+        Optional<FatePointLedger> fatePoints, Optional<SliceInventory> inventory,
+        Optional<com.wheelbound.domain.SealedGrandFate> grandFate,
+        Optional<com.wheelbound.domain.GrandFateProgress> grandProgress,
+        Optional<com.wheelbound.domain.GrandEvidenceJournal> grandJournal,
+        Optional<com.wheelbound.domain.GrandActivationHistory> grandActivations,
+        Optional<com.wheelbound.domain.GrandCurrentAttempt> grandCurrentAttempt,
+        Optional<com.wheelbound.domain.MasterSelectionProvenance> pendingMasterSelection,
+        Optional<com.wheelbound.domain.MasterSelectionCreationJournal> masterCreations,
+        Optional<com.wheelbound.domain.MasterSelectionResolutions> masterResolutions)
+    {
         Objects.requireNonNull(lifecycle, "lifecycle");
+        this.masterResolutions = Objects.requireNonNull(masterResolutions, "masterResolutions")
+            .map(history -> new com.wheelbound.domain.MasterSelectionResolutions(history.identity(),
+                lifecycle.revision(), history.receipts().values())).orElse(null);
         com.wheelbound.domain.MasterSelectionCreationJournal creations =
             Objects.requireNonNull(masterCreations, "masterCreations").orElse(null);
         if (creations != null && !creations.identity().equals(lifecycle.identity()))
@@ -257,6 +279,8 @@ public final class RunDocument
             if (this.pendingMasterSelection != null)
             { this.masterCreations.matchPending(this.pendingMasterSelection, lifecycle.identity(), lifecycle.revision()); }
         }
+        if (this.masterResolutions != null)
+        { MasterResolutionBinding.validateHistory(this, this.masterResolutions); }
         validateDebits();
         validatePurchases();
         if (previous != null && (previous.afterRevision() != lifecycle.revision()
@@ -370,6 +394,8 @@ public final class RunDocument
     { return Optional.ofNullable(grandCurrentAttempt); }
     public Optional<com.wheelbound.domain.MasterSelectionCreationJournal> masterCreations()
     { return Optional.ofNullable(masterCreations); }
+    public Optional<com.wheelbound.domain.MasterSelectionResolutions> masterResolutions()
+    { return Optional.ofNullable(masterResolutions); }
     public RunLifecycle lifecycle() { return lifecycle; }
     public Optional<com.wheelbound.domain.MasterSelectionProvenance> pendingMasterSelection()
     { return Optional.ofNullable(pendingMasterSelection); }

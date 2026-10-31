@@ -37,6 +37,9 @@ public final class RunCodec
 
     public byte[] encode(RunDocument document)
     {
+        // Schema 16 cannot represent terminal history. Never silently discard it.
+        if (document.masterResolutions().isPresent())
+        { throw new IllegalArgumentException("Master resolution retention requires a future snapshot schema"); }
         RunLifecycle run = document.lifecycle();
         JsonObject payload = new JsonObject();
         payload.addProperty("accountKey", run.identity().accountKey());
