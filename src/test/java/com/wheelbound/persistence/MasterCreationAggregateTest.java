@@ -30,7 +30,8 @@ public class MasterCreationAggregateTest
         JsonObject envelope = new JsonParser().parse(new String(codec.encode(source), StandardCharsets.UTF_8)).getAsJsonObject();
         JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
         payload.remove("masterCreations");
-        String text = new Gson().toJson(payload);
+        // Preserve required explicit nulls; only masterCreations is absent in schema 14.
+        String text = new GsonBuilder().serializeNulls().create().toJson(payload);
         envelope.addProperty("payload", text);
         envelope.addProperty("sha256", RunCodec.sha256(text.getBytes(StandardCharsets.UTF_8)));
         byte[] missing = new Gson().toJson(envelope).getBytes(StandardCharsets.UTF_8);
