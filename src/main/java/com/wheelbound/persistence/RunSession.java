@@ -63,6 +63,25 @@ public final class RunSession
             && current.acceptsObservation(token.identity, token.revision);
     }
 
+    /** Immediate callback qualification only; never authenticates eligibility evidence. */
+    synchronized boolean acceptsMasterCreation(Token token, MasterSelectionCreationReceipt request)
+    {
+        return accepts(token) && request != null && token.identity.equals(request.identity())
+            && token.revision == request.beforeRevision();
+    }
+
+    /** New callback submission, qualified against this connection and revision.
+     * Rejected callbacks leave the current connection intact and perform no IO.
+     * Historical recovery/replay uses the explicit request-only APIs instead.
+     */
+    public synchronized MasterSelectionCreationReceipt createMasterSelection(Token token,
+        MasterSelectionCreationReceipt request) throws IOException
+    {
+        if (!acceptsMasterCreation(token, request))
+        { throw new IllegalArgumentException("Stale or foreign Master creation callback"); }
+        return createMasterSelection(request);
+    }
+
     /** Read-only recovery of the exact original request. Absence never authorizes
      * creation or a fresh stream. Refreshes the durable lifecycle and invalidates
      * callbacks even when absent; failures require reconnecting.

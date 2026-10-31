@@ -1,3 +1,44 @@
+## Current local continuation - token-qualified Master creation callback, 2026-10-30
+
+IDLE after bounded WB-WHL-08 callback admission increment (S), WB-D138/139.
+Reconciled current code/tests: read-only recovery-session integration already exists;
+not selected again. Creation admission/recovery/typed operation and worker supersession
+reused. Merged work and branch state not independently verified; no Git operations.
+
+RunSession and AsyncRunSession now provide token-qualified creation overloads. They
+require the current active connection token and matching request identity/revision.
+Stale, foreign, null and consumed callbacks fail before IO; rejected callbacks preserve
+the fresh connection. Async validation precedes admission closure/worker scheduling,
+then repeats on the worker. Existing queued supersession skips storage. Request-only
+APIs remain available for explicit historical replay/recovery. This is immediate callback
+qualification only, NOT trusted eligibility evidence, baseline authentication or allocation.
+Three focused JUnit tests cover reconnect/foreign/null/revision rejection, duplicate queued
+submission, successful qualified creation, consumed revision, explicit recovery and queued
+disconnect against unreadable storage. New session code/tests IMPLEMENTED_UNVERIFIED.
+
+Validation: javac --release 11 compiled dependency-free admission/recovery/operation and
+lifecycle fixtures using production source resolution into build/continuation-master-callback.
+MasterCreationAdmissionChecks, MasterCreationRecoveryChecks, MasterCreationOperationChecks
+and PendingLifecycleChecks PASSED. These do not compile/verify session changes. Focused
+Gradle MasterCreationSessionTest, MasterCreationStoreTest and WheelboundBehaviorTest
+attempt failed before compilation: inherited wrapper-cache lock Access is denied.
+No JUnit/session/store/codec/legacy pass claimed. GRADLE_USER_HOME unchanged.
+
+Reconciliation: WB-WHL-08 PARTIAL; pure admission/recovery verified offline, locked store,
+schema-16/session integration and callback gate IMPLEMENTED_UNVERIFIED. WB-WHL-09 PARTIAL
+(automatic retry UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED; FND-01 DONE; FND-10/12 and
+REL-02 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing client,
+decision and evidence BLOCKED rows stand. No I01d work; no gameplay completion claim.
+
+Next: run expanded MasterCreationSessionTest and focused store/session/codec/migration/
+lifecycle/legacy suites with accessible inherited dependencies. Then implement a bounded
+trusted complete-pool evidence admission dependency; tokens alone are insufficient.
+Once-only spin allocation, sampling, automatic retries, suspension, changed-snapshot
+reconciliation and settlement remain unfinished. WB-D155 adopts no retirement rule.
+Legacy Master Wheel unchanged; incomplete gameplay stays unwired/default-disabled.
+Local edits only; no external-path inspection, credentials, secrets or workflows.
+Supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - read-only Master recovery session boundary, 2026-10-30
 
 IDLE after bounded WB-WHL-08 recovery-session increment (S), WB-D138/139.

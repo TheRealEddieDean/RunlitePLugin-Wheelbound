@@ -108,6 +108,22 @@ public final class AsyncRunSession
         return submit(target -> target.createMasterSelection(request));
     }
 
+    /** Qualifies the callback before closing admission or scheduling storage, then
+     * rechecks on the worker. A rejected callback cannot invalidate a fresh session.
+     * Tokens establish no baseline or complete-pool evidence authority.
+     */
+    public synchronized CompletableFuture<Optional<MasterSelectionCreationReceipt>> createMasterSelection(
+        RunSession.Token token, MasterSelectionCreationReceipt request)
+    {
+        if (current == null || !current.acceptsMasterCreation(token, request))
+        {
+            CompletableFuture<Optional<MasterSelectionCreationReceipt>> rejected = new CompletableFuture<>();
+            rejected.completeExceptionally(new IllegalArgumentException("Stale or foreign Master creation callback"));
+            return rejected;
+        }
+        return submit(target -> target.createMasterSelection(token, request));
+    }
+
     /** Read-only recovery on the storage worker, closing callback admission immediately.
      * Outer empty means superseded before execution; inner empty means the lookup
      * completed without an exact retained creation. Neither permits creation/reseeding.
