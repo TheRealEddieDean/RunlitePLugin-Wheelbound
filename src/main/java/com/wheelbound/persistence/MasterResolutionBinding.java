@@ -27,11 +27,12 @@ public final class MasterResolutionBinding
                 c.beforeRevision() > receipt.creation().beforeRevision()
                     && c.beforeRevision() < receipt.afterRevision()))
             { throw new IllegalArgumentException("Later creation precedes terminal resolution"); }
-            rejectCollision(head, receipt.commandId());
+            rejectCollision(head, receipt.commandId(), receipt);
             if (head.pendingMasterSelection().filter(p -> p.transactionId().equals(receipt.commandId())).isPresent())
             { throw new IllegalArgumentException("Resolution command collides with pending selection"); }
             if (head.receipts().stream().anyMatch(r ->
-                r.beforeRevision() < receipt.afterRevision() && r.afterRevision() > receipt.beforeRevision()))
+                r.beforeRevision() < receipt.afterRevision() && r.afterRevision() > receipt.beforeRevision()
+                    && (r.taintTerminal() == null || !r.taintTerminal().resolution().equals(receipt))))
             { throw new IllegalArgumentException("Resolution overlaps another aggregate operation"); }
             if (head.pendingMasterSelection().filter(p -> p.transactionId().equals(receipt.transactionId())).isPresent())
             { throw new IllegalArgumentException("Resolved selection is still pending"); }
@@ -64,9 +65,13 @@ public final class MasterResolutionBinding
     }
 
     private static void rejectCollision(RunDocument head, UUID command)
+    { rejectCollision(head, command, null); }
+
+    private static void rejectCollision(RunDocument head, UUID command, MasterSelectionResolutionReceipt exact)
     {
         if (head.masterCreations().get().receipts().containsKey(command)
-            || head.receipts().stream().anyMatch(r -> r.commandId().equals(command))
+            || head.receipts().stream().anyMatch(r -> r.commandId().equals(command)
+                && (exact == null || r.taintTerminal() == null || !r.taintTerminal().resolution().equals(exact)))
             || head.grandFate().filter(s -> s.commandId().equals(command)).isPresent()
             || head.grandActivations().filter(h -> h.receipts().containsKey(command)).isPresent()
             || head.grandProgress().filter(p -> p.evidence().values().stream()

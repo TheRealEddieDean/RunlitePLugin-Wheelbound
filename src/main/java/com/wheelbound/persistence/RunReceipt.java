@@ -10,7 +10,8 @@ import java.util.UUID;
 /** Immutable command identity, request and original response, persisted with the resulting snapshot. */
 public final class RunReceipt
 {
-    public enum Operation { PAUSE, RESUME, DRAW, FP_DEBIT, SLICE_PURCHASE, GRAND_ACTIVATION, MASTER_SELECTION_CREATION }
+    public enum Operation { PAUSE, RESUME, DRAW, FP_DEBIT, SLICE_PURCHASE, GRAND_ACTIVATION, MASTER_SELECTION_CREATION, MASTER_TAINT_TERMINAL }
+    private final MasterTerminalOperationProposal taintTerminal;
     private final com.wheelbound.domain.MasterSelectionCreationReceipt masterCreation;
     private final com.wheelbound.domain.GrandActivationReceipt activation;
     private final SlicePurchaseReceipt purchase;
@@ -73,7 +74,31 @@ public final class RunReceipt
         FatePointDebits.Receipt debit, SlicePurchaseReceipt purchase,
         com.wheelbound.domain.GrandActivationReceipt activation,
         com.wheelbound.domain.MasterSelectionCreationReceipt masterCreation)
+    { this(commandId, operation, beforeRevision, afterRevision, state, obligation, draw, debit,
+        purchase, activation, masterCreation, null); }
+
+    /** Structural response only; publication and storage admission remain separate. */
+    public static RunReceipt masterTaintTerminal(MasterTerminalOperationProposal response)
     {
+        Objects.requireNonNull(response, "response");
+        var special = new com.wheelbound.domain.MasterSpecialObligation(response.resolution());
+        if (special.requirement() != com.wheelbound.domain.MasterSpecialObligation.Requirement.MANDATORY_PUNISHMENT)
+        { throw new IllegalArgumentException("Taint terminal requires mandatory punishment"); }
+        return new RunReceipt(response.commandId(), Operation.MASTER_TAINT_TERMINAL,
+            response.beforeRevision(), response.afterRevision(), RunLifecycle.State.ACTIVE,
+            RunLifecycle.Obligation.PUNISHMENT_PENDING, null, null, null, null, null, response);
+    }
+
+    private RunReceipt(UUID commandId, Operation operation, long beforeRevision, long afterRevision,
+        RunLifecycle.State state, RunLifecycle.Obligation obligation, DrawCommitment draw,
+        FatePointDebits.Receipt debit, SlicePurchaseReceipt purchase,
+        com.wheelbound.domain.GrandActivationReceipt activation,
+        com.wheelbound.domain.MasterSelectionCreationReceipt masterCreation,
+        MasterTerminalOperationProposal taintTerminal)
+    {
+        if ((operation == Operation.MASTER_TAINT_TERMINAL) != (taintTerminal != null))
+        { throw new IllegalArgumentException("Taint terminal requires typed original response"); }
+        this.taintTerminal = taintTerminal;
         this.masterCreation = masterCreation;
         if ((operation == Operation.MASTER_SELECTION_CREATION) != (masterCreation != null)
             || (masterCreation != null && (obligation != RunLifecycle.Obligation.NONE
@@ -126,11 +151,14 @@ public final class RunReceipt
             && Objects.equals(debitKey(), other.debitKey())
             && Objects.equals(purchaseKey(), other.purchaseKey())
             && Objects.equals(activation, other.activation)
-            && Objects.equals(masterCreation, other.masterCreation);
+            && Objects.equals(masterCreation, other.masterCreation)
+            && Objects.equals(taintTerminal, other.taintTerminal);
     }
 
     @Override public int hashCode()
-    { return Objects.hash(commandId, operation, beforeRevision, afterRevision, state, obligation, draw, debitKey(), purchaseKey(), activation, masterCreation); }
+    { return Objects.hash(commandId, operation, beforeRevision, afterRevision, state, obligation, draw, debitKey(), purchaseKey(), activation, masterCreation, taintTerminal); }
+
+    public MasterTerminalOperationProposal taintTerminal() { return taintTerminal; }
 
     public com.wheelbound.domain.MasterSelectionCreationReceipt masterCreation() { return masterCreation; }
 
