@@ -1,3 +1,49 @@
+## Current local continuation - special obligation payload, 2026-10-31
+
+IDLE after bounded WB-WHL-08 special-obligation payload increment (S). Reconciled
+current source/tests and typed-response continuation with WB-D013/018/058/120/138/139/155.
+Existing reservation preparation, typed response, history binding and schema-18 codec
+already exist; reused their boundaries. No I01d or Git operations. Merged state was
+not independently verified; supervisor owns commits, PRs, CI and merges.
+
+MasterSpecialObligation is an immutable structural payload bound to the full terminal
+resolution. Taint requires mandatory Punishment; Sacrifice requires mandatory Sacrifice.
+Selected slice and requirement derive from the frozen terminal draw, never caller flags.
+Exact restored receipts compare equally; changed command or transcript fails binding.
+Ordinary landings fail closed and still require their own supported assignment payload.
+No punishment/candidate/route selection, lifecycle stage transition, debit, settlement,
+codec integration or aggregate publication is implemented by this payload. Missing
+candidates do not waive Sacrifice. No gameplay rules or timing decisions were added.
+Master Wheel unchanged; incomplete gameplay stays unwired/default-disabled.
+
+Fresh javac --release 11 compilation from production/fixture sources PASSED into
+build/continuation-special-obligation. MasterSpecialObligationChecks PASSED for both
+specials, 0/1/513 empty prefixes, equality/hash, exact restored binding, changed stream
+and command, ordinary refusal and source immutability. Existing
+MasterSelectionResolutionChecks PASSED (including allocation checks). JUnit wrapper
+authored. Focused Gradle special/resolution/legacy attempt failed before compilation:
+inherited wrapper-cache lock Access is denied. JUnit/legacy NOT_RUN; inherited
+GRADLE_USER_HOME unchanged, no external inspection or cache workaround.
+
+Reconciliation: structural special-obligation payload DONE offline; JUnit wrapper
+IMPLEMENTED_UNVERIFIED. Ordinary assignment payload UNSTARTED. Typed atomic terminal
+operation remains PARTIAL: RunReceipt/codec integration, atomic history/reservation/
+current-obligation publication and locked/session admission remain UNSTARTED. Schema-18
+integration remains IMPLEMENTED_UNVERIFIED. WB-WHL-08 PARTIAL; WB-WHL-09 PARTIAL
+(automatic retry execution UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED. Other audited
+partial/unstarted/blocked rows and evidence holds stand; no completed gameplay claim.
+
+Next: integrate the supported special payload with typed response and atomic in-memory
+terminal publication, retaining actual pending-prefix validation, exact original accounting
+and current obligation together. Require lifecycle/aggregate invariants and copy-path
+preservation before RunReceipt/versioned codec and locked/session admission. Ordinary
+assignment generation remains separate and must not be admitted using this special-only
+payload. Settlement, grants, sampling, retry execution, suspension/revalidation and
+changed-snapshot recovery remain unfinished. WB-D155 adopts no retirement rule.
+Run focused Gradle and legacy checks when inherited dependencies become accessible.
+Local edits only; supervisor handles publication.
+
+
 ## Current local continuation - aggregate-backed terminal reservation preparation, 2026-10-31
 
 IDLE after bounded WB-WHL-08 preparation increment (S). Reconciled source/tests with
