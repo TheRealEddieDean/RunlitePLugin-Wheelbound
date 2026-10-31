@@ -24,7 +24,8 @@ public final class MasterCreationRecovery
             return Optional.of(current.masterCreations().get().replay(request,
                 current.lifecycle().identity(), current.lifecycle().revision()));
         }
-        if (current.receipts().stream().anyMatch(r -> r.commandId().equals(id))
+        if (current.masterResolutions().filter(h -> h.receipts().containsKey(id)).isPresent()
+            || current.receipts().stream().anyMatch(r -> r.commandId().equals(id))
             || current.grandFate().filter(s -> s.commandId().equals(id)).isPresent()
             || current.grandActivations().filter(h -> h.receipts().containsKey(id)).isPresent()
             || current.grandProgress().filter(p -> p.evidence().values().stream()

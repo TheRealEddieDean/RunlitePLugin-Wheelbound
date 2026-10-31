@@ -1,3 +1,55 @@
+## Current local continuation - structural terminal aggregate retention, 2026-10-31
+
+IDLE after bounded WB-WHL-08 structural retention increment (S).
+Read current continuation records and targeted WB-D120/138/139/155 decisions.
+Reconciled code/tests: terminal receipts, ordered collection, standalone JSON and binding
+already exist; reused them. No I01d work. Git/branch/merged state not independently
+verified because Git operations are prohibited. Supervisor owns publication.
+
+RunDocument now optionally retains MasterSelectionResolutions and validates history
+against the exact original creations, identity/revision, pending selection, operation
+intervals and global command namespace. Legacy absence remains distinct from explicit
+empty history. Lifecycle, creation, Grand activation, draw and FP-debit copy paths carry
+the optional history. Creation recovery rejects resolution-command reuse; direct Grand
+activation proposal also rejects it. Exact creation replay preserves the resolved head.
+No terminal admission, assignment or spin debit is introduced.
+
+This is an intentionally bounded structural increment: schema 16 explicitly REFUSES
+encoding any present terminal history (including empty) instead of dropping it. Existing
+absence remains schema-16 compatible. Versioned aggregate JSON/migration is UNSTARTED;
+standalone JSON remains IMPLEMENTED_UNVERIFIED. Durable terminal publication must wait
+for versioned retention plus atomic assignment/accounting and locked/session admission.
+
+Validation: Java 11 source compilation PASSED for aggregate/admission/binding graph and
+focused executable fixtures into build/continuation-resolution-aggregate.
+MasterResolutionAggregateChecks, MasterResolutionBindingChecks,
+MasterSelectionResolutionChecks, MasterSelectionAppendChecks,
+MasterCreationAggregateChecks and PendingLifecycleChecks PASSED. New checks cover
+0/1/513 empty prefixes, history preservation through pause/resume and next creation,
+creation exact replay, legacy versus empty, future/foreign/missing-original/still-pending
+history, seal/operation/creation command collisions and source immutability.
+JUnit wrapper and schema-16 refusal/legacy-roundtrip test authored.
+Focused Gradle aggregate/RunCodec/legacy attempt failed before compilation on inherited
+wrapper-cache lock Access is denied. JUnit/codec/legacy NOT_RUN; Gson-dependent store/
+draw/debit integration edits remain IMPLEMENTED_UNVERIFIED. GRADLE_USER_HOME unchanged;
+no cache workaround, external inspection, credentials, workflows or Git access.
+
+Reconciliation: structural aggregate retention DONE offline; copy/codec JUnit coverage
+IMPLEMENTED_UNVERIFIED. WB-WHL-08 remains PARTIAL; WB-WHL-09 PARTIAL (automatic retry
+UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED. Creation/schema-16/session integration remains
+IMPLEMENTED_UNVERIFIED. Other audited PARTIAL/TODO/BLOCKED rows stand; trusted detectors,
+reviewed catalogs and special adapters remain evidence gated. Legacy Master Wheel
+unchanged; incomplete mode remains unwired/default-disabled. No playable gameplay claim.
+
+Next eligible unit: versioned aggregate resolution codec/migration, replacing the explicit
+schema-16 refusal only when complete. Preserve legacy absence and all history; cover
+malformed, foreign, future, collision, pending and old-schema upgrade cases. Then typed
+terminal operation with atomic assignment/spin accounting before locked/session admission.
+Run focused JUnit/codec/store/session/migration/legacy suites when inherited dependencies
+are accessible. Sampling, automatic retry, suspension/revalidation, settlement and
+changed-snapshot reconciliation remain unfinished; WB-D155 adopts no retirement rule.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - terminal aggregate binding prerequisite, 2026-10-31
 
 IDLE after bounded WB-WHL-08 structural binding increment (S).

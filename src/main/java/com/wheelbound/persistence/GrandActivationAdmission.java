@@ -36,7 +36,7 @@ public final class GrandActivationAdmission
         return new RunDocument(proposal.lifecycle(), current.catalogVersion(), receipts,
             current.fatePoints(), current.inventory(), current.grandFate(), current.grandProgress(),
             current.grandJournal(), Optional.of(proposal.history()), proposal.currentAttempt(),
-            current.pendingMasterSelection(), current.masterCreations());
+            current.pendingMasterSelection(), current.masterCreations(), current.masterResolutions());
     }
 
     public static GrandActivationProposal propose(RunDocument current,
@@ -46,7 +46,8 @@ public final class GrandActivationAdmission
         Objects.requireNonNull(request, "request");
         GrandActivationHistory history = current.grandActivations().orElseThrow(
             () -> new IllegalArgumentException("Grand activation history is unavailable"));
-        if (current.receipts().stream().anyMatch(r -> r.commandId().equals(request.commandId())
+        if (current.masterResolutions().filter(h -> h.receipts().containsKey(request.commandId())).isPresent()
+            || current.receipts().stream().anyMatch(r -> r.commandId().equals(request.commandId())
                 && !request.equals(r.activation()))
             || current.grandFate().get().commandId().equals(request.commandId())
             || current.grandProgress().map(progress -> progress.evidence().values().stream()
