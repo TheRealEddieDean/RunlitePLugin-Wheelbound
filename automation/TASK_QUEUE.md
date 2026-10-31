@@ -1,3 +1,47 @@
+## Current local continuation - complete-wheel evidence assembly, 2026-10-30
+
+IDLE after bounded WB-WHL-08/10 structural assembly increment (S), WB-D138/139.
+Reconciled existing ordinary-pool reduction, readiness, inventory and creation/session
+code against continuation records. Reused those components; no I01d work. Merged work
+and branch state not independently verified because Git operations are prohibited.
+Current user restrictions supersede historical publication instructions.
+
+MasterWheelEvidence.assemble uses the supplied inventory's active wheel and requires
+exactly one context-matching complete ordinary pool per distinct active activity.
+Duplicate slices share activity evidence while preserving IDs, enhancements and weights;
+stored activities cannot enter the selection pool. Missing/foreign activity evidence and
+foreign identity/revision/snapshot/catalog fail closed. Taint and Sacrifice remain explicit
+UNSUPPORTED blockers until supported special-obligation evidence adapters exist.
+This is structural assembly only, not current-aggregate/session authentication, reviewed
+catalog proof, live detector evidence, draw/debit authority or gameplay admission.
+No schema, persistence, sampling, allocation, automatic retry or plugin wiring changed.
+
+Validation: javac --release 11 compiled assembly and dependency-free fixtures using
+production/test source resolution into build/continuation-master-wheel-evidence.
+MasterWheelEvidenceChecks, MasterOrdinaryPoolEvidenceChecks and
+MasterSelectionReadinessChecks PASSED. Initial new fixture lacked inventory acquisition
+history; corrected fixture compiled and passed. JUnit wrapper authored. Focused Gradle
+pool/readiness/legacy attempt failed before compilation: inherited wrapper-cache lock
+Access is denied. JUnit/session/store/codec/migration/legacy NOT_RUN; no external cache
+inspection/workaround and GRADLE_USER_HOME unchanged.
+
+Reconciliation: pure ordinary reduction and wheel assembly DONE offline. WB-WHL-08
+PARTIAL; trusted aggregate/session evidence admission UNSTARTED and client-evidence gated.
+Locked store/schema-16/session integration IMPLEMENTED_UNVERIFIED. WB-WHL-09 PARTIAL
+(automatic retry UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED overall; FND-01 DONE;
+FND-10/12 and REL-02 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO.
+Existing decision/client/evidence BLOCKED rows stand. No gameplay completion claim.
+
+Next: execute MasterWheelEvidenceTest and focused pool/readiness/creation/session/store/
+codec/migration/legacy suites with accessible inherited dependencies. Next implementation
+increment: bind this assembly to the actual aggregate identity/revision/catalog/inventory
+and qualified session context without admitting caller-selected stale inventory. Trusted
+detectors, reviewed complete family catalogs and special evidence adapters remain required
+before live admission. Once-only allocation, sampling, automatic retry, suspension,
+changed-snapshot reconciliation and settlement remain unfinished; WB-D155 adopts no
+retirement rule. Legacy Master Wheel unchanged; incomplete gameplay unwired/default-disabled.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - complete ordinary-pool evidence reduction, 2026-10-30
 
 IDLE after bounded WB-WHL-08/10 complete-pool structural prerequisite (S), WB-D138/139.
