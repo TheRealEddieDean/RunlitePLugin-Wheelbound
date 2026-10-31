@@ -22,6 +22,7 @@ public final class RunDocument
     private final com.wheelbound.domain.GrandEvidenceJournal grandJournal;
     private final com.wheelbound.domain.GrandFateProgress grandProgress;
     private final RunLifecycle lifecycle;
+    private final com.wheelbound.domain.MasterSpinState masterSpins;
     private final com.wheelbound.domain.MasterSelectionResolutions masterResolutions;
     private final com.wheelbound.domain.MasterSelectionCreationJournal masterCreations;
     private final com.wheelbound.domain.MasterSelectionProvenance pendingMasterSelection;
@@ -140,6 +141,26 @@ public final class RunDocument
         Optional<com.wheelbound.domain.MasterSelectionCreationJournal> masterCreations,
         Optional<com.wheelbound.domain.MasterSelectionResolutions> masterResolutions)
     {
+        this(lifecycle, catalogVersion, receipts, fatePoints, inventory, grandFate, grandProgress,
+            grandJournal, grandActivations, grandCurrentAttempt, pendingMasterSelection, masterCreations,
+            masterResolutions, Optional.empty());
+    }
+
+    /** Explicit structural spin state and original reservation; no command or settlement authority.
+     * Legacy absence never supplies an initial balance. Retention is in-memory until codec support. */
+    public RunDocument(RunLifecycle lifecycle, String catalogVersion, List<RunReceipt> receipts,
+        Optional<FatePointLedger> fatePoints, Optional<SliceInventory> inventory,
+        Optional<com.wheelbound.domain.SealedGrandFate> grandFate,
+        Optional<com.wheelbound.domain.GrandFateProgress> grandProgress,
+        Optional<com.wheelbound.domain.GrandEvidenceJournal> grandJournal,
+        Optional<com.wheelbound.domain.GrandActivationHistory> grandActivations,
+        Optional<com.wheelbound.domain.GrandCurrentAttempt> grandCurrentAttempt,
+        Optional<com.wheelbound.domain.MasterSelectionProvenance> pendingMasterSelection,
+        Optional<com.wheelbound.domain.MasterSelectionCreationJournal> masterCreations,
+        Optional<com.wheelbound.domain.MasterSelectionResolutions> masterResolutions,
+        Optional<com.wheelbound.domain.MasterSpinState> masterSpins)
+    {
+        this.masterSpins = Objects.requireNonNull(masterSpins, "masterSpins").orElse(null);
         Objects.requireNonNull(lifecycle, "lifecycle");
         this.masterResolutions = Objects.requireNonNull(masterResolutions, "masterResolutions")
             .map(history -> new com.wheelbound.domain.MasterSelectionResolutions(history.identity(),
@@ -281,6 +302,18 @@ public final class RunDocument
         }
         if (this.masterResolutions != null)
         { MasterResolutionBinding.validateHistory(this, this.masterResolutions); }
+        if (this.masterSpins != null)
+        {
+            if (!this.masterSpins.identity().equals(lifecycle.identity())
+                || this.masterSpins.revision() > lifecycle.revision())
+            { throw new IllegalArgumentException("Foreign or future Master spin state"); }
+            this.masterSpins.reservation().ifPresent(allocation -> {
+                if (this.masterResolutions == null || !allocation.resolution().equals(
+                    this.masterResolutions.receipts().get(allocation.commandId()))
+                    || this.pendingMasterSelection != null || this.grandCurrentAttempt != null)
+                { throw new IllegalArgumentException("Reservation requires exact terminal history and no concurrent selection"); }
+            });
+        }
         validateDebits();
         validatePurchases();
         if (previous != null && (previous.afterRevision() != lifecycle.revision()
@@ -396,6 +429,8 @@ public final class RunDocument
     { return Optional.ofNullable(masterCreations); }
     public Optional<com.wheelbound.domain.MasterSelectionResolutions> masterResolutions()
     { return Optional.ofNullable(masterResolutions); }
+    public Optional<com.wheelbound.domain.MasterSpinState> masterSpins()
+    { return Optional.ofNullable(masterSpins); }
     public RunLifecycle lifecycle() { return lifecycle; }
     public Optional<com.wheelbound.domain.MasterSelectionProvenance> pendingMasterSelection()
     { return Optional.ofNullable(pendingMasterSelection); }
