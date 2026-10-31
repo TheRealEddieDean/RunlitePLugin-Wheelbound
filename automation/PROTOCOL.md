@@ -1,3 +1,40 @@
+## Current local continuation - pending Master creation matching, 2026-10-30
+
+IDLE after bounded WB-WHL-08 pending-to-original matching dependency (S), WB-D138/139.
+Reconciled existing receipt, journal, standalone codecs and schema-14 aggregate. Journal
+JSON already exists; no duplicate codec, I01d work or Git operations. Recorded merged
+work not independently verified under the user prohibition.
+
+MasterSelectionCreationJournal.matchPending validates unresolved zero/long empty prefixes
+against the exact retained original frozen request and explicit identity/current head.
+Rejects missing history, changed frozen identity/evidence/reasons/initial stream fields,
+resolved outcomes and pending selections older than a later retained creation. Returns
+the original receipt, never an advanced replacement. Independently reconstructed equal
+payloads match by value. This structural helper does not authenticate stream continuity
+or prove preservation of a previously committed prefix; locked admission must do both
+appropriate checks. No aggregate/schema/store change or gameplay enablement.
+
+Reconciliation: WB-WHL-08 PARTIAL; original receipt/journal domain validation and pending
+matching DONE offline; receipt/journal JSON IMPLEMENTED_UNVERIFIED; aggregate integration
+and locked creation admission UNSTARTED. WB-WHL-09 PARTIAL (automatic retry UNSTARTED);
+WB-WHL-10 PARTIAL_UNVERIFIED; REL-02 PARTIAL; FND-01 DONE; FND-10/12 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing blocked rows stand.
+
+Validation: Java 11 compiled all domain production and five executable fixtures into
+build/continuation-pending-match. Creation-journal, creation, append, provenance and
+readiness checks PASSED. Expanded journal fixture rerun PASSED after reason-mutation
+coverage. Existing JUnit wrapper includes the expanded checks. Focused Gradle journal,
+journal-JSON and legacy attempt failed before compilation: inherited wrapper-cache lock
+Access is denied. JUnit/codec/store/legacy NOT_RUN; GRADLE_USER_HOME unchanged.
+
+Next: optional aggregate journal representation and versioned encoding with explicit
+legacy absence, global command-ID uniqueness and this pending-to-original check. Preserve
+journal through lifecycle commands and reject generic mutation. Then locked creation
+admission with exact replay and prior-prefix preservation. Trusted session/evidence,
+once-only allocation, sampling, automatic retry, suspension/revalidation and settlement
+remain unfinished; changed-snapshot reconciliation unresolved. Existing Master Wheel
+source unchanged; incomplete gameplay stays unwired/default-disabled. Local edits only;
+supervisor handles commits, PRs, CI and merges. No durable/playable completion claim.
 ## Current local continuation - retained Master creation journal, 2026-10-30
 
 IDLE after bounded WB-WHL-08 retained-journal validation increment (S), WB-D138/139.

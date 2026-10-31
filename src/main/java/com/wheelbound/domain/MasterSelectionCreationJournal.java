@@ -44,6 +44,32 @@ public final class MasterSelectionCreationJournal
     /** Original commit order, including selections no longer pending. */
     public Map<UUID, MasterSelectionCreationReceipt> receipts() { return receipts; }
 
+    /**
+     * Match an unresolved transcript to its retained original at this head. Later
+     * empty draws may advance opaque state, but cannot replace any frozen request
+     * field. This is structural matching, not proof of authentic stream continuity.
+     * Aggregate admission must still enforce global command uniqueness and preserve
+     * the previously committed draw prefix atomically.
+     */
+    public MasterSelectionCreationReceipt matchPending(MasterSelectionProvenance pending,
+        RunIdentity expectedIdentity, long currentRevision)
+    {
+        Objects.requireNonNull(pending, "pending");
+        MasterSelectionCreationReceipt original = receipts.get(pending.transactionId());
+        if (original == null || pending.hasValidLanding())
+        { throw new IllegalArgumentException("Pending selection requires an unresolved retained creation"); }
+        MasterSelectionProvenance zero = new MasterSelectionProvenance(pending.transactionId(),
+            pending.snapshotVersion(), pending.catalogVersion(), pending.streamDescriptor(),
+            pending.initialStreamState(), pending.readiness(), java.util.List.of());
+        replay(new MasterSelectionCreationReceipt(expectedIdentity, original.beforeRevision(), zero),
+            expectedIdentity, currentRevision);
+        MasterSelectionCreationReceipt latest = null;
+        for (MasterSelectionCreationReceipt receipt : receipts.values()) { latest = receipt; }
+        if (original != latest)
+        { throw new IllegalArgumentException("Pending selection predates a later creation"); }
+        return original;
+    }
+
     /** Return the retained original, never the newer pending transcript. */
     public MasterSelectionCreationReceipt replay(MasterSelectionCreationReceipt request,
         RunIdentity expectedIdentity, long currentRevision)
