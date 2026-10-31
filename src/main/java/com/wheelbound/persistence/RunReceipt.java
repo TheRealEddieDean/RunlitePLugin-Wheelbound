@@ -10,7 +10,8 @@ import java.util.UUID;
 /** Immutable command identity, request and original response, persisted with the resulting snapshot. */
 public final class RunReceipt
 {
-    public enum Operation { PAUSE, RESUME, DRAW, FP_DEBIT, SLICE_PURCHASE, GRAND_ACTIVATION }
+    public enum Operation { PAUSE, RESUME, DRAW, FP_DEBIT, SLICE_PURCHASE, GRAND_ACTIVATION, MASTER_SELECTION_CREATION }
+    private final com.wheelbound.domain.MasterSelectionCreationReceipt masterCreation;
     private final com.wheelbound.domain.GrandActivationReceipt activation;
     private final SlicePurchaseReceipt purchase;
     private final FatePointDebits.Receipt debit;
@@ -54,7 +55,32 @@ public final class RunReceipt
         RunLifecycle.State state, RunLifecycle.Obligation obligation, DrawCommitment draw,
         FatePointDebits.Receipt debit, SlicePurchaseReceipt purchase,
         com.wheelbound.domain.GrandActivationReceipt activation)
+    { this(commandId, operation, beforeRevision, afterRevision, state, obligation, draw, debit,
+        purchase, activation, null); }
+
+    /** Zero-draw original response only; does not authorize selection or allocate a spin. */
+    public static RunReceipt masterSelectionCreation(
+        com.wheelbound.domain.MasterSelectionCreationReceipt creation)
     {
+        Objects.requireNonNull(creation, "creation");
+        return new RunReceipt(creation.transactionId(), Operation.MASTER_SELECTION_CREATION,
+            creation.beforeRevision(), creation.afterRevision(), RunLifecycle.State.ACTIVE,
+            RunLifecycle.Obligation.NONE, null, null, null, null, creation);
+    }
+
+    private RunReceipt(UUID commandId, Operation operation, long beforeRevision, long afterRevision,
+        RunLifecycle.State state, RunLifecycle.Obligation obligation, DrawCommitment draw,
+        FatePointDebits.Receipt debit, SlicePurchaseReceipt purchase,
+        com.wheelbound.domain.GrandActivationReceipt activation,
+        com.wheelbound.domain.MasterSelectionCreationReceipt masterCreation)
+    {
+        this.masterCreation = masterCreation;
+        if ((operation == Operation.MASTER_SELECTION_CREATION) != (masterCreation != null)
+            || (masterCreation != null && (obligation != RunLifecycle.Obligation.NONE
+                || !commandId.equals(masterCreation.transactionId())
+                || beforeRevision != masterCreation.beforeRevision()
+                || afterRevision != masterCreation.afterRevision())))
+        { throw new IllegalArgumentException("Invalid Master creation receipt identity or boundary"); }
         this.activation = activation;
         if ((operation == Operation.GRAND_ACTIVATION) != (activation != null)
             || (activation != null && (obligation != RunLifecycle.Obligation.ACTIVE_OBJECTIVE
@@ -99,11 +125,14 @@ public final class RunReceipt
             && state == other.state && obligation == other.obligation && Objects.equals(draw, other.draw)
             && Objects.equals(debitKey(), other.debitKey())
             && Objects.equals(purchaseKey(), other.purchaseKey())
-            && Objects.equals(activation, other.activation);
+            && Objects.equals(activation, other.activation)
+            && Objects.equals(masterCreation, other.masterCreation);
     }
 
     @Override public int hashCode()
-    { return Objects.hash(commandId, operation, beforeRevision, afterRevision, state, obligation, draw, debitKey(), purchaseKey(), activation); }
+    { return Objects.hash(commandId, operation, beforeRevision, afterRevision, state, obligation, draw, debitKey(), purchaseKey(), activation, masterCreation); }
+
+    public com.wheelbound.domain.MasterSelectionCreationReceipt masterCreation() { return masterCreation; }
 
     public com.wheelbound.domain.GrandActivationReceipt activation() { return activation; }
 
