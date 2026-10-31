@@ -210,4 +210,61 @@ public class MasterCreationSessionTest
             new MasterSelectionCreationReceipt(request.identity(), 2, request.initial())));
         assertFalse(direct.accepts(fresh)); assertFalse(direct.capture().isPresent());
     }
+
+    @Test public void qualifiedCallbackRejectsOldConnectionWithoutClosingFreshOne() throws Exception
+    {
+        AtomicRunStore target = initialize();
+        connect(target);
+        RunSession.Token old = session.capture().get();
+        connect(target);
+        RunSession.Token fresh = session.capture().get();
+        byte[] saved = Files.readAllBytes(target.snapshotPath());
+        assertTrue(session.createMasterSelection(old, request).isCompletedExceptionally());
+        assertTrue(session.createMasterSelection(null, request).isCompletedExceptionally());
+        assertTrue(session.createMasterSelection(fresh, null).isCompletedExceptionally());
+        assertTrue(session.createMasterSelection(fresh, new MasterSelectionCreationReceipt(
+            request.identity(), 2, request.initial())).isCompletedExceptionally());
+        assertTrue(tasks.isEmpty()); assertTrue(session.accepts(fresh));
+        assertArrayEquals(saved, Files.readAllBytes(target.snapshotPath()));
+        CompletableFuture<Optional<MasterSelectionCreationReceipt>> created =
+            session.createMasterSelection(fresh, request);
+        assertFalse(session.accepts(fresh));
+        assertTrue(session.createMasterSelection(fresh, request).isCompletedExceptionally());
+        assertEquals(1, tasks.size());
+        tasks.remove(0).run(); assertEquals(request, created.join().get());
+        assertEquals(4, target.load().get().lifecycle().revision());
+    }
+
+    @Test public void qualifiedSynchronousCallbackRejectsForeignTokenAndConsumedRevision() throws Exception
+    {
+        AtomicRunStore target = initialize();
+        RunSession direct = new RunSession(); direct.connect(target, request.identity());
+        RunSession other = new RunSession(); other.connect(target, request.identity());
+        RunSession.Token fresh = direct.capture().get();
+        assertThrows(IllegalArgumentException.class,
+            () -> direct.createMasterSelection(other.capture().get(), request));
+        assertTrue(direct.accepts(fresh));
+        assertEquals(request, direct.createMasterSelection(fresh, request));
+        RunSession.Token advanced = direct.capture().get();
+        byte[] saved = Files.readAllBytes(target.snapshotPath());
+        assertThrows(IllegalArgumentException.class, () -> direct.createMasterSelection(fresh, request));
+        assertThrows(IllegalArgumentException.class, () -> direct.createMasterSelection(advanced, request));
+        assertTrue(direct.accepts(advanced));
+        assertArrayEquals(saved, Files.readAllBytes(target.snapshotPath()));
+        assertEquals(request, direct.committedMasterSelection(request).get());
+    }
+
+    @Test public void qualifiedQueuedCallbackSkipsStorageAfterDisconnect() throws Exception
+    {
+        AtomicRunStore target = initialize(); connect(target);
+        byte[] saved = Files.readAllBytes(target.snapshotPath());
+        CompletableFuture<Optional<MasterSelectionCreationReceipt>> queued =
+            session.createMasterSelection(session.capture().get(), request);
+        session.disconnect();
+        Files.write(target.pendingPath(), new byte[] { 1 });
+        tasks.remove(0).run();
+        assertFalse(queued.join().isPresent()); assertFalse(session.capture().isPresent());
+        assertArrayEquals(saved, Files.readAllBytes(target.snapshotPath()));
+        assertArrayEquals(new byte[] { 1 }, Files.readAllBytes(target.pendingPath()));
+    }
 }
