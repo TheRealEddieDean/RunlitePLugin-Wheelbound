@@ -1,3 +1,41 @@
+## Current local continuation - ordered terminal resolution JSON, 2026-10-31
+
+IDLE after bounded WB-WHL-08 ordered resolution collection codec increment (XS/S).
+Reconciled code/tests with latest continuation: domain terminal receipt/preparation and
+ordered replay collection exist; individual receipt JSON exists; collection JSON was
+absent. Added MasterSelectionResolutionsJson version 1, preserving ordered receipts,
+identity, full terminal transcripts and explicit empty histories. Decode delegates to
+receipt and collection validation for foreign/future/duplicate/overlapping histories;
+encode revalidates against the supplied head. No silent sorting or history truncation.
+No schema bump, aggregate retention, durable-prefix admission or gameplay wiring.
+No I01d work. Merged state not independently verified: user prohibits Git operations.
+Current user restrictions supersede historical Git/publication/cache instructions.
+
+Focused JUnit tests authored for ordered text round trips, exact replay, empty and
+513-empty-prefix histories, input immutability, malformed/foreign/duplicate/disordered
+payloads and stale heads. Codec/JUnit IMPLEMENTED_UNVERIFIED: focused Gradle failed
+before compilation on inherited wrapper-cache lock Access is denied. Inherited
+GRADLE_USER_HOME unchanged; no external cache inspection or workaround. Java 11 compiled
+dependency-free resolution/append fixtures into build/continuation-resolution-collection;
+MasterSelectionResolutionChecks and MasterSelectionAppendChecks PASSED. No JSON/JUnit/legacy pass claimed.
+
+Reconciliation: domain terminal prerequisite DONE offline; standalone receipt and ordered
+collection JSON IMPLEMENTED_UNVERIFIED. Aggregate retention and locked/session admission
+UNSTARTED. WB-WHL-08 PARTIAL; WB-WHL-09 PARTIAL (automatic retry UNSTARTED);
+WB-WHL-10 PARTIAL_UNVERIFIED. Existing creation/schema-16/session integration remains
+IMPLEMENTED_UNVERIFIED. Other audited PARTIAL/TODO/BLOCKED rows stand. Trusted detectors,
+reviewed catalogs and special adapters remain evidence gated. No complete gameplay claim.
+Legacy Master Wheel unchanged; incomplete gameplay remains unwired/default-disabled.
+WB-D120/138/139 preserved; WB-D155 adopts no retirement or reconciliation policy.
+
+Next: run MasterSelectionResolutionsJsonTest, MasterSelectionResolutionReceiptJsonTest
+and focused provenance/creation/session/store/codec/migration/legacy suites when inherited
+dependencies are accessible. Then bounded aggregate retention matching retained creations,
+actual pending prefixes and global command uniqueness; atomic assignment/accounting must
+precede locked/session admission. Sampling, automatic retry, suspension/revalidation,
+settlement and changed-snapshot reconciliation remain unfinished. Local edits only;
+supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - terminal receipt JSON payload, 2026-10-31
 
 IDLE after bounded WB-WHL-08 terminal receipt codec increment (XS/S).
