@@ -1,3 +1,43 @@
+## Current local continuation - locked Master creation command, 2026-10-30
+
+IDLE after bounded WB-WHL-08 persistence increment (S), WB-D138/139.
+Reconciled current preparation/recovery, typed schema-16 operation and physical store
+against code/tests. Reused existing admission and persistence; no I01d or Git operations.
+Recorded merged work not independently verified under the user's Git prohibition.
+
+AtomicRunStore.createMasterSelection reads and prepares under the single-writer lock,
+committing pending selection, retained original and typed operation together. Exact replay
+returns the retained original without writing or replacing advanced/paused state. Stale,
+foreign, missing-history, pending/corrupt and uncertain contexts fail closed. Persistence
+failure requires reopening/reconciliation; no silent retry. Trusted session/evidence,
+spin allocation and sampling remain separate unfinished gameplay prerequisites.
+
+Validation: javac --release 11 compiled domain and dependency-free persistence helpers
+and executable fixtures into build/continuation-master-store. MasterCreationAdmissionChecks,
+MasterCreationRecoveryChecks, MasterCreationOperationChecks and PendingLifecycleChecks
+PASSED. Initial broad fixture compilation omitted two existing helper dependencies;
+corrected source list compiled successfully. New MasterCreationStoreTest covers complete
+commit/restart, backup preservation, exact replay, 513-prefix paused preservation, stale/
+changed refusal with unchanged bytes, missing/legacy/corrupt/foreign refusal, pending-file
+refusal and injected TEMP_FORCED/REPLACED failures with reopen/lost-ack recovery.
+Focused Gradle store/admission/recovery/RunCodec/legacy attempt failed before compilation:
+inherited wrapper-cache lock Access is denied. Store/JUnit/Gson/legacy NOT_RUN; new store
+command IMPLEMENTED_UNVERIFIED. GRADLE_USER_HOME unchanged; no external inspection,
+cache workaround, credentials, workflows or Git access.
+
+Reconciliation: WB-WHL-08 PARTIAL; pure admission/recovery verified offline, locked command
+and schema-16 disk integration IMPLEMENTED_UNVERIFIED. WB-WHL-09 PARTIAL (automatic retry
+UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED; FND-01 DONE; FND-10/12 and REL-02 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing evidence/decision BLOCKED
+rows stand. Master Wheel unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Next: execute MasterCreationStoreTest and focused codec/migration/lifecycle/recovery and
+legacy suites with accessible inherited dependencies. Then bounded session integration
+for the locked creation/recovery API with stale/superseded callback tests, before trusted
+evidence admission, once-only allocation, sampling and automatic retry. Suspension,
+changed-snapshot reconciliation and settlement remain unfinished; WB-D155 adopts no
+retirement rule. Local edits only; supervisor handles commits, PRs, CI and merges.
+No durable/playable completion claim.
 ## Current local continuation - pure Master creation admission, 2026-10-30
 
 IDLE after bounded WB-WHL-08 aggregate-admission dependency (S), WB-D138/139.

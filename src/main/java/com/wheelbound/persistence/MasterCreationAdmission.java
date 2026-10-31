@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Optional;
 
-/** Pure preparation for a future locked creation command. Does not authenticate
+/** Pure preparation for the locked creation command. Does not authenticate
  * evidence/session, allocate spins, sample, persist or authorize gameplay. */
 public final class MasterCreationAdmission
 {
@@ -15,7 +15,7 @@ public final class MasterCreationAdmission
 
     /** Exact historical replay preserves the complete current head and pending prefix.
      * New requests require explicit history; legacy absence cannot establish uniqueness.
-     * The eventual command must invoke this under its lock after trusted admission. */
+     * The store invokes this under its lock; trusted gameplay admission is separate. */
     public static RunDocument prepare(RunDocument current, MasterSelectionCreationReceipt request)
     {
         Objects.requireNonNull(current, "current");

@@ -80,6 +80,30 @@ public final class AtomicRunStore
         });
     }
 
+    /** Commit a frozen zero-draw Master selection against the locked saved head.
+     * Exact replay returns the original response without rewriting later state.
+     * This persists preparation only: trusted session/evidence admission, spin
+     * allocation and sampling remain prerequisites of the future gameplay service.
+     * Reopen and reconcile after any persistence failure; retain the full request.
+     */
+    public com.wheelbound.domain.MasterSelectionCreationReceipt createMasterSelection(
+        com.wheelbound.domain.MasterSelectionCreationReceipt request) throws IOException
+    {
+        Objects.requireNonNull(request, "request");
+        if (!identity.equals(request.identity()))
+        { throw new IllegalArgumentException("Foreign run context"); }
+        return locked(() -> {
+            if (uncertain) { throw new IOException("Reopen and reconcile after failed persistence"); }
+            RunDocument current = read().orElseThrow(() -> new IOException("Saved run is unavailable"));
+            final RunDocument next;
+            try { next = MasterCreationAdmission.prepare(current, request); }
+            catch (IllegalArgumentException ex)
+            { throw new IOException("Invalid Master creation transition", ex); }
+            if (next != current) { persist(codec.encode(next), true); }
+            return next.masterCreations().get().receipts().get(request.transactionId());
+        });
+    }
+
     /**
      * Recover an exact run-start seal after restart or lost acknowledgement, without
      * sampling or writing. Absence is not permission to create a run or retrofit a
