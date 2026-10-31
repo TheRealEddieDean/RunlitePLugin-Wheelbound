@@ -1,3 +1,45 @@
+## Current local continuation - aggregate-bound Master evidence, 2026-10-30
+
+IDLE after bounded WB-WHL-08/10 aggregate binding increment (S), WB-D138/139.
+Reconciled existing ordinary reduction, complete-wheel assembly, creation/session code
+and focused fixtures. Reused these components; no I01d work. Merged work and branch
+state not independently verified: user prohibits Git operations. Local edits only.
+
+MasterAggregateEvidence.assemble derives identity/revision/catalog/inventory from one
+RunDocument and checks expected identity/revision, ACTIVE/NONE and no pending Master
+selection or Grand attempt. Legacy absent inventory fails closed. Callers cannot supply
+an alternate inventory/catalog. Existing complete-pool validation preserves full weights.
+This pure read-only boundary is not durable-head acquisition, session qualification,
+trusted detector authentication, reviewed catalog proof or draw/debit authority.
+Snapshot freshness still requires a trusted source; no reservation or gameplay wiring.
+
+Validation: javac --release 11 compiled production and dependency-free fixture graph in
+build/continuation-master-aggregate-evidence. MasterAggregateEvidenceChecks PASSED,
+covering aggregate wheel identity, FP/revision immutability, foreign account/run, stale
+revision/snapshot/catalog, absent inventory, all non-ACTIVE states, all obligations and
+pending selection refusal. Initial fixture reused absent legacy inventory; corrected
+fixture supplies explicit valid inventory and passes. MasterWheelEvidenceChecks and
+MasterOrdinaryPoolEvidenceChecks PASSED. JUnit wrapper authored. Focused Gradle attempt
+failed before compilation: inherited wrapper-cache lock Access is denied. JUnit/legacy
+NOT_RUN; GRADLE_USER_HOME unchanged; no external inspection or cache workaround.
+
+Reconciliation: pure reduction, wheel assembly and aggregate binding DONE offline.
+WB-WHL-08 PARTIAL; actual storage-head/session qualification UNSTARTED. Trusted evidence
+and reviewed catalogs remain client/evidence gated. Locked creation/schema-16/session
+integration IMPLEMENTED_UNVERIFIED. WB-WHL-09 PARTIAL (automatic retry UNSTARTED);
+WB-WHL-10 PARTIAL_UNVERIFIED overall. FND-01 DONE; FND-10/12 and REL-02 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing BLOCKED rows stand.
+No unfinished gameplay marked complete. Master Wheel unchanged; incomplete mode disabled.
+
+Next: session-qualified read-only assembly from the actual storage head, with stale and
+superseded callback coverage, reusing MasterAggregateEvidence. Run focused aggregate/
+wheel/pool/readiness/creation/session/store/codec/migration/legacy JUnit suites when
+inherited dependencies are accessible. Trusted detectors/catalogs/special adapters,
+once-only allocation, sampling, automatic retry, suspension and settlement remain
+unfinished. Changed-snapshot reconciliation unresolved; WB-D155 adopts no retirement.
+Supervisor handles commits, PRs, CI and merges.
+
+
 ## Current local continuation - complete-wheel evidence assembly, 2026-10-30
 
 IDLE after bounded WB-WHL-08/10 structural assembly increment (S), WB-D138/139.
