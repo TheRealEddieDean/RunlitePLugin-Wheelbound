@@ -1,3 +1,44 @@
+## Current local continuation - retained Master creation journal, 2026-10-30
+
+IDLE after bounded WB-WHL-08 retained-journal validation increment (S), WB-D138/139.
+Reconciled creation receipt/JSON, provenance/append, existing journal conventions and
+current continuation records. Original payload and standalone codec already exist;
+no duplicate implementation, I01d or Git operations. Merged work not independently
+verified under the user's Git prohibition.
+
+MasterSelectionCreationJournal now restores immutable ordered original creation receipts
+against an explicit run identity/current revision. Foreign, future, duplicate, unordered
+and overlapping entries fail closed; intervening revisions are permitted. Exact replay
+returns the retained original at a newer head and rejects changed full payloads, unknown
+IDs, foreign identity and a head older than retained history. Empty history is structural
+only, not inferred legacy provenance. Global cross-journal collisions and pending-to-own-
+receipt matching remain aggregate responsibilities. No append/creation authorization,
+aggregate schema change, journal codec, store command, sampling, spin allocation, evidence
+authentication or gameplay enablement. Existing Master Wheel source unchanged.
+
+Reconciliation: WB-WHL-08 PARTIAL; original creation payload and retained journal domain
+validation DONE offline; receipt JSON IMPLEMENTED_UNVERIFIED; aggregate/journal codec
+and locked creation admission UNSTARTED. WB-WHL-09 PARTIAL (automatic retry UNSTARTED);
+WB-WHL-10 PARTIAL_UNVERIFIED; REL-02 PARTIAL; FND-01 DONE; FND-10/12 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing blocked rows stand.
+
+Validation: javac --release 11 compiled all domain production sources plus focused
+creation-journal/creation/append/provenance/readiness executable fixtures into
+build/continuation-selection-journal; all five PASSED. New JUnit wrapper authored.
+Focused Gradle journal/creation/creation-JSON/legacy attempt failed before compilation:
+inherited wrapper-cache lock Access is denied. JUnit/codec/store/legacy NOT_RUN.
+GRADLE_USER_HOME unchanged; no cache workaround or external-path inspection.
+
+Next: aggregate representation plus versioned retained-journal encoding, reconciling a
+pending transaction with its own original receipt while preserving global history ID
+uniqueness and explicit legacy absence. Then implement operation-specific creation
+admission under the store lock with exact original replay. Run focused JUnit/codec/
+pending/lifecycle/store/legacy suites when inherited dependencies are accessible.
+Trusted session/evidence, once-only allocation, sampling, automatic retry, suspension/
+revalidation and settlement remain unfinished; changed-snapshot reconciliation unresolved.
+Incomplete gameplay stays unwired/default-disabled. Local edits only; supervisor handles
+commits, PRs, CI and merges. No playable or durable completion claim.
+
 ## Current local continuation - guarded Master transcript advancement, 2026-10-30
 
 IDLE after bounded WB-WHL-09 supplied-draw transition increment (S), authority
