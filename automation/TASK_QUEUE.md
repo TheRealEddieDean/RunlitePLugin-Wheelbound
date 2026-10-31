@@ -1,3 +1,44 @@
+## Current local continuation - atomic in-memory Taint terminal operation, 2026-10-31
+
+IDLE after bounded WB-WHL-08 publication increment (S). Reconciled production and
+focused fixtures with the typed Taint receipt continuation and WB-D013/018/058/120/
+138/139/155. Existing lifecycle preparation, typed receipt, current-special retention
+and schema-18 support reused. Older UNSTARTED entries for these prerequisites are
+superseded. No Git operations or merged-state verification; supervisor owns publication.
+
+MasterTaintTerminalOperation.prepare returns one immutable RunDocument publishing
+ACTIVE/PUNISHMENT_PENDING lifecycle, actual-pending-prefix-bound terminal history,
+original spin reservation, explicit mandatory obligation and typed operation receipt.
+Pending selection clears only in the returned aggregate. Exact retained replay returns
+the same head across Pause/Resume; missing typed receipt or changed transcript fails
+closed. Ordinary and Sacrifice landings remain unsupported. No punishment selection,
+settlement, additional charge, timing decision, storage admission or gameplay enablement.
+Existing Master Wheel unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Fresh javac --release 11 production/domain/fixture compilation PASSED into
+build/continuation-taint-operation after narrowing standalone source selection.
+Expanded MasterSpecialTerminalPreparationChecks PASSED for 0/1/513 empty prefixes,
+1/7/Long.MAX_VALUE balances, atomic publication, active/paused/resumed exact replay,
+missing-envelope and changed-transcript refusal, unsupported outcomes and immutable source.
+MasterResolutionBindingChecks, MasterCurrentSpecialAggregateChecks (including current
+context checks) and MasterTerminalReservationPreparationChecks PASSED.
+Focused Gradle terminal/JUnit/legacy attempt failed before compilation: inherited
+wrapper-cache lock Access is denied. JUnit/codec/legacy NOT_RUN. GRADLE_USER_HOME
+unchanged; no external inspection, cache workaround or full-suite claim.
+
+Reconciliation: atomic in-memory Taint terminal publication DONE offline; JUnit wrapper
+IMPLEMENTED_UNVERIFIED. WB-WHL-08 PARTIAL. Lossless terminal/current-special codecs
+and locked/session admission remain UNSTARTED; encoding refusal retained. Ordinary
+assignment and supported Sacrifice route payloads UNSTARTED. WB-WHL-09 PARTIAL
+(automatic retries UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED. Schema-18/full integration
+remain IMPLEMENTED_UNVERIFIED. Other audited partial/unstarted/blocked evidence holds stand.
+
+Next: lossless versioned typed Taint terminal response and current-special codec support,
+with migration, corruption and exact-accounting round-trip coverage before locked/session
+admission. Preserve explicit legacy absence and original receipt/current-context binding.
+Settlement, grants, sampling, retry execution, suspension/revalidation and changed-snapshot
+recovery remain unfinished. WB-D155 adopts no retirement rule. Local edits only.
+
 ## Current local continuation - typed Taint terminal receipt, 2026-10-31
 
 IDLE after bounded WB-WHL-08 receipt/aggregate increment (S). Reconciled latest
