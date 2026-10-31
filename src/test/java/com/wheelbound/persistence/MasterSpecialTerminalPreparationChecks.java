@@ -45,6 +45,30 @@ public final class MasterSpecialTerminalPreparationChecks
                     source.masterCreations(), Optional.of(lifecycle.terminal().resolutions()),
                     Optional.of(lifecycle.terminal().spins()), Optional.of(lifecycle.current().obligation()));
                 var envelope = published.receipts().get(0);
+                var atomic = MasterTaintTerminalOperation.prepare(source, request);
+                check(atomic.lifecycle().revision() == 6
+                    && atomic.lifecycle().obligation() == RunLifecycle.Obligation.PUNISHMENT_PENDING
+                    && atomic.pendingMasterSelection().isEmpty()
+                    && atomic.masterSpins().orElseThrow().available() == balance - 1
+                    && atomic.currentMasterSpecial().orElseThrow().obligation().equals(prepared.obligation())
+                    && atomic.receipts().equals(published.receipts()));
+                check(MasterTaintTerminalOperation.prepare(atomic, request) == atomic);
+                var atomicPaused = LifecycleAdmission.prepare(atomic, atomic.lifecycle().identity(),
+                    UUID.randomUUID(), 6, RunReceipt.Operation.PAUSE);
+                check(MasterTaintTerminalOperation.prepare(atomicPaused, request) == atomicPaused);
+                var resumed = LifecycleAdmission.prepare(atomicPaused, atomic.lifecycle().identity(),
+                    UUID.randomUUID(), 7, RunReceipt.Operation.RESUME);
+                check(MasterTaintTerminalOperation.prepare(resumed, request) == resumed
+                    && resumed.masterSpins().orElseThrow().available() == balance - 1);
+                var noEnvelope = new RunDocument(atomic.lifecycle(), atomic.catalogVersion(), List.of(),
+                    atomic.fatePoints(), atomic.inventory(), atomic.grandFate(), atomic.grandProgress(),
+                    atomic.grandJournal(), atomic.grandActivations(), atomic.grandCurrentAttempt(),
+                    Optional.empty(), atomic.masterCreations(), atomic.masterResolutions(), atomic.masterSpins(),
+                    Optional.of(atomic.currentMasterSpecial().orElseThrow().obligation()));
+                rejects(() -> MasterTaintTerminalOperation.prepare(noEnvelope, request));
+                var changedAtomic = MasterSelectionResolutionReceipt.prepare(request.commandId(), 5, creation, pending,
+                    new MasterSelectionProvenance.Step(new DrawCommitment(pending.pool(), pending.pool().totalWeight() - 1), "changed"));
+                rejects(() -> MasterTaintTerminalOperation.prepare(atomic, changedAtomic));
                 check(envelope.operation() == RunReceipt.Operation.MASTER_TAINT_TERMINAL
                     && envelope.equals(RunReceipt.masterTaintTerminal(MasterTerminalOperationProposal.restore(request, balance)))
                     && envelope.hashCode() == RunReceipt.masterTaintTerminal(prepared.response()).hashCode());
@@ -79,6 +103,7 @@ public final class MasterSpecialTerminalPreparationChecks
                             pending.pool().totalWeight() - 1), "terminal"))));
             }
             else { rejects(() -> MasterTaintLifecyclePreparation.prepare(source, request));
+                rejects(() -> MasterTaintTerminalOperation.prepare(source, request));
                 rejects(() -> RunReceipt.masterTaintTerminal(prepared.response())); }
             var paused = LifecycleAdmission.prepare(retained, retained.lifecycle().identity(),
                 UUID.randomUUID(), 6, RunReceipt.Operation.PAUSE);
@@ -93,12 +118,14 @@ public final class MasterSpecialTerminalPreparationChecks
                 new MasterSelectionProvenance.Step(new DrawCommitment(pending.pool(), 16), "ordinary"));
             rejects(() -> MasterSpecialTerminalPreparation.prepare(source, ordinary));
             rejects(() -> MasterTaintLifecyclePreparation.prepare(source, ordinary));
+            rejects(() -> MasterTaintTerminalOperation.prepare(source, ordinary));
             rejects(() -> MasterSpecialTerminalPreparation.prepare(fixture(kind, count, 0), request));
             rejects(() -> MasterTaintLifecyclePreparation.prepare(fixture(kind, count, 0), request));
             var stopped = LifecycleAdmission.prepare(source, source.lifecycle().identity(), UUID.randomUUID(),
                 5, RunReceipt.Operation.PAUSE);
             rejects(() -> MasterSpecialTerminalPreparation.prepare(stopped, request));
             rejects(() -> MasterTaintLifecyclePreparation.prepare(stopped, request));
+            rejects(() -> MasterTaintTerminalOperation.prepare(stopped, request));
             check(source.pendingMasterSelection().orElseThrow() == pending
                 && source.masterSpins().orElseThrow().reservation().isEmpty()
                 && source.masterResolutions().isEmpty() && source.lifecycle().revision() == 5);
