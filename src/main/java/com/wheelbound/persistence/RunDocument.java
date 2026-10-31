@@ -187,10 +187,10 @@ public final class RunDocument
         RunReceipt previous = null;
         for (RunReceipt receipt : this.receipts)
         {
-            // Envelope prerequisite exists; aggregate/codec admission is not implemented yet.
-            // Refuse before a store can serialize an incomplete operation payload.
-            if (receipt.operation() == RunReceipt.Operation.MASTER_SELECTION_CREATION)
-            { throw new IllegalArgumentException("Master creation operation admission is unavailable"); }
+            if (receipt.masterCreation() != null
+                && (this.masterCreations == null || !receipt.masterCreation().equals(
+                    this.masterCreations.receipts().get(receipt.commandId()))))
+            { throw new IllegalArgumentException("Creation operation requires exact original history"); }
             if (receipt.operation() == RunReceipt.Operation.GRAND_ACTIVATION
                 && (this.grandActivations == null || !receipt.activation().equals(
                     this.grandActivations.receipts().get(receipt.commandId()))))
@@ -232,7 +232,7 @@ public final class RunDocument
         if (this.pendingMasterSelection != null)
         {
             UUID transaction = this.pendingMasterSelection.transactionId();
-            if (commands.contains(transaction)
+            if ((commands.contains(transaction) && !matchingCreation(transaction))
                 || (this.grandFate != null && this.grandFate.commandId().equals(transaction))
                 || (this.grandActivations != null && this.grandActivations.receipts().containsKey(transaction))
                 || (this.grandProgress != null && this.grandProgress.evidence().values().stream()
@@ -243,7 +243,11 @@ public final class RunDocument
         {
             for (UUID transaction : this.masterCreations.receipts().keySet())
             {
-                if (commands.contains(transaction)
+                if (!matchingCreation(transaction) && !this.receipts.isEmpty()
+                    && this.masterCreations.receipts().get(transaction).afterRevision()
+                        > this.receipts.get(0).beforeRevision())
+                { throw new IllegalArgumentException("Creation missing from retained operation chain"); }
+                if ((commands.contains(transaction) && !matchingCreation(transaction))
                     || (this.grandFate != null && this.grandFate.commandId().equals(transaction))
                     || (this.grandActivations != null && this.grandActivations.receipts().containsKey(transaction))
                     || (this.grandProgress != null && this.grandProgress.evidence().values().stream()
@@ -258,6 +262,13 @@ public final class RunDocument
         if (previous != null && (previous.afterRevision() != lifecycle.revision()
             || previous.state() != lifecycle.state() || previous.obligation() != lifecycle.obligation()))
         { throw new IllegalArgumentException("Receipt head does not match snapshot"); }
+    }
+
+    private boolean matchingCreation(UUID transaction)
+    {
+        return masterCreations != null && receipts.stream().anyMatch(r ->
+            r.commandId().equals(transaction) && r.masterCreation() != null
+                && r.masterCreation().equals(masterCreations.receipts().get(transaction)));
     }
 
     /** Debit entries follow a trusted legacy ledger prefix. Other current journal
@@ -336,6 +347,8 @@ public final class RunDocument
             case SLICE_PURCHASE: return previous.state() == RunLifecycle.State.ACTIVE
                 && previous.obligation() == RunLifecycle.Obligation.NONE;
             case DRAW: return previous.state() == RunLifecycle.State.ACTIVE && previous.obligation() == RunLifecycle.Obligation.NONE;
+            case MASTER_SELECTION_CREATION: return previous.state() == RunLifecycle.State.ACTIVE
+                && previous.obligation() == RunLifecycle.Obligation.NONE;
             case GRAND_ACTIVATION: return previous.state() == RunLifecycle.State.ACTIVE
                 && previous.obligation() == RunLifecycle.Obligation.NONE;
             default: return false;
