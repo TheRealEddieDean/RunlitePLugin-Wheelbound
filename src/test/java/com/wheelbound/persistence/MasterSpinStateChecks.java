@@ -30,6 +30,13 @@ public final class MasterSpinStateChecks
             {
                 var initial = new MasterSpinState(1, identity, 5, balance, Optional.empty());
                 var allocation = MasterTerminalPreparation.prepare(head, balance, receipt).allocation();
+                var decodedAllocation = MasterSpinAllocation.restore(receipt, balance);
+                if (decodedAllocation.spinsBefore() != balance || decodedAllocation.spinsAfter() != balance - 1
+                    || decodedAllocation.replay(identity, 6, receipt) != decodedAllocation
+                    || decodedAllocation.fpDelta() != 0 || decodedAllocation.spinDelta() != -1)
+                { throw new AssertionError("Restoration changed original accounting"); }
+                rejects(() -> MasterSpinAllocation.restore(receipt, 0));
+                rejects(() -> MasterSpinAllocation.restore(receipt, -1));
                 var reserved = initial.reserve(lifecycle, allocation);
                 var restored = new MasterSpinState(reserved.version(), identity, 6,
                     reserved.allotted(), reserved.reservation());

@@ -38,6 +38,12 @@ public final class MasterSpinAllocation
         return new MasterSpinAllocation(resolution, spins);
     }
 
+    /** Restore original accounting only; aggregate retention and authority require separate validation. */
+    public static MasterSpinAllocation restore(MasterSelectionResolutionReceipt resolution, long spinsBefore)
+    {
+        return new MasterSpinAllocation(resolution, spinsBefore);
+    }
+
     /**
      * Validate a retained allocation for exact replay, including paused/later heads.
      * Returns original accounting, never subtracts from the current balance. The
