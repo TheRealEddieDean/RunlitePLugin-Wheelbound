@@ -1,3 +1,49 @@
+## Current local continuation - Master creation session boundary, 2026-10-30
+
+IDLE after bounded WB-WHL-08 session increment (S), WB-D138/139.
+Reconciled locked creation/recovery, schema-16 typed operation, admission fixtures and
+RunSession/AsyncRunSession against the current backlog. Reused existing worker queue
+and supersession semantics. Recorded merged work not independently verified; branch
+not inspected because Git operations are prohibited. No I01d selected.
+
+RunSession.createMasterSelection invalidates callbacks before the operation-specific
+locked store command, reloads the actual durable lifecycle after creation/exact replay,
+and disconnects on failure. AsyncRunSession.createMasterSelection immediately closes
+admission and uses the existing storage-worker submission boundary. Superseded queued
+commands skip storage; started commands may commit but cannot restore a disconnected
+or superseded session. No new random stream, automatic retry or gameplay wiring.
+
+MasterCreationSessionTest adds six focused JUnit cases: queued callback invalidation,
+creation and paused 513-prefix replay with unchanged bytes, queued supersession retaining
+a fresh connection, stale/rejected command fail-closed behavior, lost-ack reopen/exact
+replay, disconnect during commit and synchronous token invalidation/failure. These tests
+and the changed session production classes are IMPLEMENTED_UNVERIFIED pending compilation
+with accessible dependencies; no JUnit/store/legacy pass claimed.
+
+Validation: javac --release 11 compiled all domain production and dependency-free
+aggregate/admission/recovery/lifecycle helpers into build/continuation-master-session.
+MasterCreationAdmissionChecks, MasterCreationRecoveryChecks, MasterCreationOperationChecks
+and PendingLifecycleChecks PASSED. First compile omitted GrandActivationAdmission used
+by an existing fixture; corrected source list compiled successfully. Focused Gradle
+MasterCreationSessionTest/store/session/RunCodec/legacy attempt failed before compilation:
+inherited Gradle wrapper-cache lock Access is denied. GRADLE_USER_HOME unchanged; no
+external cache inspection/workaround, credentials, workflows or Git access.
+
+Reconciliation: WB-WHL-08 PARTIAL. Pure admission/recovery verified offline; locked store,
+schema-16 disk integration and new session boundary IMPLEMENTED_UNVERIFIED. WB-WHL-09
+PARTIAL (automatic retry UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED; FND-01 DONE;
+FND-10/12 and REL-02 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO.
+Existing evidence/decision BLOCKED rows stand. No complete/playable gameplay claim.
+Legacy Master Wheel unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Next: execute MasterCreationSessionTest, MasterCreationStoreTest and focused existing
+session/codec/migration/lifecycle/recovery and legacy suites with accessible inherited
+dependencies. Then bounded read-only creation-recovery session integration, preserving
+absence versus creation authority and stale/superseded callback behavior. Trusted session/
+evidence admission, once-only spin allocation, sampling, automatic retries, suspension,
+changed-snapshot reconciliation and settlement remain unfinished. WB-D155 adopts no
+retirement rule. Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - locked Master creation command, 2026-10-30
 
 IDLE after bounded WB-WHL-08 persistence increment (S), WB-D138/139.
