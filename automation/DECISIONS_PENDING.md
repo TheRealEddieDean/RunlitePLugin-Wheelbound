@@ -1,3 +1,46 @@
+## Current local continuation - versioned Master spin reservation state, 2026-10-31
+
+IDLE after bounded WB-WHL-08 spin-state model increment (S). Reconciled source/tests
+with terminal preparation, schema-17 history and WB-D013/018/058/120/138/139/155.
+Existing allocation and aggregate-prefix binding reused; no I01d. Git/merged state
+not independently verified because user prohibits Git operations. Local edits only.
+
+MasterSpinState version 1 structurally retains explicit identity/revision, allotted
+balance and an optional outstanding MasterSpinAllocation. Reserving preserves allotted
+spins and reduces available spins by exactly one; it does not consume the eventual
+completion/Reject or special charge. Restore validates identity, revision and original
+balance. Exact replay returns the retained allocation without subtracting again.
+Unknown versions, negative values, foreign/stale/occupied state and mismatched balances
+fail closed. No balance is inferred from history or initialized for legacy absence.
+This is an immutable in-memory state model, NOT durable retention or publication.
+
+Java 11 source compilation PASSED in build/continuation-spin-state. New
+MasterSpinStateChecks PASSED; MasterTerminalPreparationChecks,
+MasterResolutionBindingChecks, MasterResolutionAggregateChecks and extended
+MasterSelectionResolutionChecks PASSED. Coverage includes ordinary/Taint/Sacrifice,
+0/1/513 empty prefixes, 1/7/Long.MAX_VALUE balances, zero exhaustion, duplicate
+reservation, exact/changed/foreign/stale replay, explicit restore, unsupported versions,
+inactive/occupied heads and source immutability. JUnit wrapper authored.
+Focused Gradle spin-state/terminal/RunCodec/legacy attempt failed before compilation:
+inherited wrapper-cache lock Access is denied. JUnit/codec/legacy NOT_RUN;
+GRADLE_USER_HOME unchanged, no cache workaround or external inspection.
+
+Reconciliation: structural spin-state/reservation model DONE offline; JUnit
+IMPLEMENTED_UNVERIFIED. Durable spin/allocation aggregate retention, versioned JSON
+and typed atomic terminal operation/assignment remain UNSTARTED. WB-WHL-08 PARTIAL;
+WB-WHL-09 PARTIAL (automatic retries UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED.
+Schema-17 and creation/store/session integration remain IMPLEMENTED_UNVERIFIED.
+Other audited statuses and decision/client/catalog evidence gates stand. Master Wheel
+unchanged; incomplete gameplay remains unwired/default-disabled. No playable claim.
+
+Next: retain optional spin state in RunDocument, preserving explicit legacy absence
+across copy paths; validate reservation against retained terminal history, then add
+versioned codec/migration coverage. Do not admit terminal commands until typed operation,
+actual pending-prefix binding, reservation/history/obligation publication and exact
+retained replay are atomic. Settlement, grants, sampling, automatic retry execution,
+suspension/revalidation and changed-snapshot reconciliation remain unfinished.
+WB-D155 adopts no retirement rule. Supervisor handles commits, PRs, CI and merges.
+
 # Major decisions pending
 
 Current A101 next task: A102 ordinary quantity/reward table draft under existing recommendation delegation. Numeric schedules remain draft; coherent economy work is active next priority. Do not re-ask A56 (WB-D155). A99/A100 correct a research-model information boundary without a new gameplay decision; all62 client cases remain NOT_RUN.
