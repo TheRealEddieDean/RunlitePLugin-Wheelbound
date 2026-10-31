@@ -1,3 +1,48 @@
+## Current local continuation - exact Master creation recovery, 2026-10-30
+
+IDLE after bounded WB-WHL-08 read-only recovery increment (S), WB-D138/139.
+Reconciled current aggregate, retained original journal, pending-prefix matching,
+locked store queries and executable fixtures. Existing schema-15 integration reused.
+Recorded merged work not independently verified; no Git operations or I01d work.
+
+MasterCreationRecovery matches the full original request against retained history,
+including original revision, and rejects foreign identity, changed payload and IDs
+already retained by other operations, seals, activation/evidence or legacy pending state.
+AtomicRunStore.committedMasterSelection invokes recovery under the store lock, refuses
+uncertain instances, and uses normal pending/corrupt-save checks. Returns the original
+zero-draw receipt without replacing later pending prefixes or lifecycle state. Unknown
+IDs return absence only; absence never authorizes creation, retry or reseeding.
+Historical originals remain recoverable after their pending selection is gone.
+
+Reconciliation: WB-WHL-08 PARTIAL. Aggregate/domain/recovery contracts verified offline;
+schema-15 codec and disk integration, including this recovery query, IMPLEMENTED_UNVERIFIED.
+Locked creation admission UNSTARTED. WB-WHL-09 PARTIAL (automatic retry UNSTARTED);
+WB-WHL-10 PARTIAL_UNVERIFIED; REL-02 PARTIAL; FND-01 DONE; FND-10/12 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing decision/evidence
+BLOCKED rows stand. Existing Master Wheel unchanged; incomplete gameplay stays disabled.
+
+Validation: javac --release 11 compiled all domain production, RunDocument/RunReceipt,
+LifecycleAdmission and MasterCreationRecovery plus three executable fixtures into
+build/continuation-master-recovery. MasterCreationRecoveryChecks,
+MasterCreationAggregateChecks and PendingLifecycleChecks PASSED (zero/one/513 prefixes,
+Pause, historical recovery, absent IDs, changed payload/revision, foreign identity,
+legacy pending and operation/seal collision rejection). New JUnit recovery tests cover
+restart, original receipt vs advanced prefix, unchanged snapshot bytes, pending/corrupt
+save refusal and uncertain-instance/reopen behavior after lost acknowledgement.
+Focused Gradle recovery/aggregate/pending lifecycle/RunCodec/legacy attempt failed before
+compilation: inherited wrapper-cache lock Access is denied. JUnit/store/Gson/legacy
+NOT_RUN. GRADLE_USER_HOME unchanged; no external cache workaround or inspection.
+
+Next: execute focused JUnit recovery/aggregate/codec/migration/lifecycle/store and legacy
+suites with accessible inherited dependencies. Then implement bounded locked creation
+admission, first reconciling how its revision participates in the contiguous RunReceipt
+chain (current aggregate requires operation receipt head to equal lifecycle revision).
+Retain full originals and global IDs, reject stale requests and preserve advanced prefixes
+on replay. Trusted session/evidence, once-only allocation, sampling, automatic retries,
+suspension/revalidation and settlement remain unfinished. Changed-snapshot reconciliation
+remains unresolved. No playable/durable completion claim. Local edits only; supervisor
+handles commits, PRs, CI and merges. User restrictions supersede historical publication rules.
+
 ## Current local continuation - schema-15 Master creation aggregate, 2026-10-30
 
 IDLE after bounded WB-WHL-08 aggregate journal integration increment (S), WB-D138/139.
