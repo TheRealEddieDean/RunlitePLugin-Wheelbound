@@ -22,6 +22,7 @@ public final class RunDocument
     private final com.wheelbound.domain.GrandEvidenceJournal grandJournal;
     private final com.wheelbound.domain.GrandFateProgress grandProgress;
     private final RunLifecycle lifecycle;
+    private final com.wheelbound.domain.MasterSelectionCreationJournal masterCreations;
     private final com.wheelbound.domain.MasterSelectionProvenance pendingMasterSelection;
     private final String catalogVersion;
     private final List<RunReceipt> receipts;
@@ -105,7 +106,28 @@ public final class RunDocument
         Optional<com.wheelbound.domain.GrandCurrentAttempt> grandCurrentAttempt,
         Optional<com.wheelbound.domain.MasterSelectionProvenance> pendingMasterSelection)
     {
+        this(lifecycle, catalogVersion, receipts, fatePoints, inventory, grandFate, grandProgress,
+            grandJournal, grandActivations, grandCurrentAttempt, pendingMasterSelection, Optional.empty());
+    }
+
+    /** Structural original creation history; absent legacy history is not empty history. */
+    public RunDocument(RunLifecycle lifecycle, String catalogVersion, List<RunReceipt> receipts,
+        Optional<FatePointLedger> fatePoints, Optional<SliceInventory> inventory,
+        Optional<com.wheelbound.domain.SealedGrandFate> grandFate,
+        Optional<com.wheelbound.domain.GrandFateProgress> grandProgress,
+        Optional<com.wheelbound.domain.GrandEvidenceJournal> grandJournal,
+        Optional<com.wheelbound.domain.GrandActivationHistory> grandActivations,
+        Optional<com.wheelbound.domain.GrandCurrentAttempt> grandCurrentAttempt,
+        Optional<com.wheelbound.domain.MasterSelectionProvenance> pendingMasterSelection,
+        Optional<com.wheelbound.domain.MasterSelectionCreationJournal> masterCreations)
+    {
         Objects.requireNonNull(lifecycle, "lifecycle");
+        com.wheelbound.domain.MasterSelectionCreationJournal creations =
+            Objects.requireNonNull(masterCreations, "masterCreations").orElse(null);
+        if (creations != null && !creations.identity().equals(lifecycle.identity()))
+        { throw new IllegalArgumentException("Foreign Master creation history"); }
+        this.masterCreations = creations == null ? null : new com.wheelbound.domain.MasterSelectionCreationJournal(
+            lifecycle.identity(), lifecycle.revision(), creations.receipts().values());
         this.pendingMasterSelection = Objects.requireNonNull(pendingMasterSelection, "pendingMasterSelection").orElse(null);
         if (this.pendingMasterSelection != null
             && (this.pendingMasterSelection.hasValidLanding()
@@ -213,6 +235,20 @@ public final class RunDocument
                     .anyMatch(reference -> reference.receiptId().equals(transaction))))
             { throw new IllegalArgumentException("Pending selection transaction collides with retained history"); }
         }
+        if (this.masterCreations != null)
+        {
+            for (UUID transaction : this.masterCreations.receipts().keySet())
+            {
+                if (commands.contains(transaction)
+                    || (this.grandFate != null && this.grandFate.commandId().equals(transaction))
+                    || (this.grandActivations != null && this.grandActivations.receipts().containsKey(transaction))
+                    || (this.grandProgress != null && this.grandProgress.evidence().values().stream()
+                        .anyMatch(reference -> reference.receiptId().equals(transaction))))
+                { throw new IllegalArgumentException("Master creation collides with retained history"); }
+            }
+            if (this.pendingMasterSelection != null)
+            { this.masterCreations.matchPending(this.pendingMasterSelection, lifecycle.identity(), lifecycle.revision()); }
+        }
         validateDebits();
         validatePurchases();
         if (previous != null && (previous.afterRevision() != lifecycle.revision()
@@ -315,6 +351,8 @@ public final class RunDocument
 
     public Optional<com.wheelbound.domain.GrandCurrentAttempt> grandCurrentAttempt()
     { return Optional.ofNullable(grandCurrentAttempt); }
+    public Optional<com.wheelbound.domain.MasterSelectionCreationJournal> masterCreations()
+    { return Optional.ofNullable(masterCreations); }
     public RunLifecycle lifecycle() { return lifecycle; }
     public Optional<com.wheelbound.domain.MasterSelectionProvenance> pendingMasterSelection()
     { return Optional.ofNullable(pendingMasterSelection); }

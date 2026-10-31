@@ -1,3 +1,48 @@
+## Current local continuation - schema-15 Master creation aggregate, 2026-10-30
+
+IDLE after bounded WB-WHL-08 aggregate journal integration increment (S), WB-D138/139.
+Reconciled code, executable fixtures, receipt/journal codecs, schema-14 aggregate and
+current continuation records. Existing receipt, journal and pending matching reused.
+No I01d or Git operations; historical merged work not independently verified.
+
+RunDocument now retains optional MasterSelectionCreationJournal, revalidates run identity
+and revision, rejects collisions with operation/seal/activation/evidence history, and
+matches a pending selection to its retained latest original when history is explicit.
+Legacy pending state without history remains structurally representable but does not
+authorize creation/retry. Schema 15 embeds the existing version-1 journal codec with
+explicit null; schemas 1-14 restore absent history, never inferred empty history.
+Pause/Resume preserves originals and pending transcript. Grand activation also preserves
+history and aggregate validation rejects collisions. Generic writes reject introduction,
+preservation and removal while either head contains explicit creation history, before
+pending-file creation; dedicated command admission is still required. Migration fixture
+builders strip the new field for older schemas. Existing Master Wheel source unchanged;
+incomplete gameplay remains unwired/default-disabled.
+
+Reconciliation: WB-WHL-08 PARTIAL. Receipt/journal domain and pending matching DONE
+offline; structural aggregate/lifecycle integration verified offline; schema-15 codec
+and disk integration IMPLEMENTED_UNVERIFIED. Locked creation admission UNSTARTED.
+WB-WHL-09 PARTIAL (automatic retry UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED;
+REL-02 PARTIAL; FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07
+PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing decision/evidence BLOCKED rows stand.
+
+Validation: javac --release 11 compiled all domain production, RunDocument/RunReceipt,
+LifecycleAdmission/GrandActivationAdmission and eight executable fixtures into
+build/continuation-master-aggregate. Aggregate, pending lifecycle, pending selection,
+creation journal, creation, append, provenance and readiness checks PASSED. New JUnit
+MasterCreationAggregateTest covers JSON round-trip, schema-14 absence, schema-15 missing
+field refusal, explicit empty vs absent history, restart/lifecycle replay preservation,
+and generic write refusal without disk changes. Focused Gradle aggregate/pending/lifecycle/
+RunCodec/legacy attempt failed before compilation: inherited wrapper-cache lock Access
+is denied. Gson/JUnit/store/legacy NOT_RUN; GRADLE_USER_HOME unchanged; no workaround.
+
+Next: run MasterCreationAggregateTest and affected codec/migration/lifecycle/store/legacy
+suites with accessible inherited dependencies. Then implement locked operation-specific
+creation admission retaining exact original requests, global ID uniqueness, stale revision
+refusal and exact replay without replacing advanced pending prefixes. Trusted session/
+evidence, once-only spin allocation, sampling, automatic retries, suspension/revalidation
+and settlement remain unfinished; changed-snapshot reconciliation remains unresolved.
+No playable/durability completion claim. Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - pending Master creation matching, 2026-10-30
 
 IDLE after bounded WB-WHL-08 pending-to-original matching dependency (S), WB-D138/139.
