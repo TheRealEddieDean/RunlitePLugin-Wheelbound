@@ -187,6 +187,10 @@ public final class RunDocument
         RunReceipt previous = null;
         for (RunReceipt receipt : this.receipts)
         {
+            // Envelope prerequisite exists; aggregate/codec admission is not implemented yet.
+            // Refuse before a store can serialize an incomplete operation payload.
+            if (receipt.operation() == RunReceipt.Operation.MASTER_SELECTION_CREATION)
+            { throw new IllegalArgumentException("Master creation operation admission is unavailable"); }
             if (receipt.operation() == RunReceipt.Operation.GRAND_ACTIVATION
                 && (this.grandActivations == null || !receipt.activation().equals(
                     this.grandActivations.receipts().get(receipt.commandId()))))

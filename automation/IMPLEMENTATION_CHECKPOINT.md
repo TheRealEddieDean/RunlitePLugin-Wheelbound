@@ -1,3 +1,44 @@
+## Current local continuation - typed Master creation operation envelope, 2026-10-30
+
+IDLE after bounded WB-WHL-08 receipt-chain prerequisite (S), WB-D138/139.
+Reconciled retained creation history, recovery, schema 15 and operation-chain invariants.
+Existing DRAW requires OFFERS_COMMITTED; unresolved creation needs its own operation.
+RunReceipt.masterSelectionCreation now retains the exact original zero-draw request,
+transaction ID and before/after revisions with ACTIVE/NONE response. Full payload equality
+and hashing include the creation; untyped constructors cannot forge the new operation.
+RunDocument explicitly refuses this operation until aggregate/codec admission exists,
+preventing premature serialization with an omitted payload. No schema/store/gameplay wiring.
+
+Validation: javac --release 11 compiled all domain production plus RunDocument, RunReceipt,
+LifecycleAdmission and MasterCreationRecovery and four executable fixtures into
+build/continuation-master-envelope. MasterCreationEnvelopeChecks, MasterCreationRecoveryChecks,
+MasterCreationAggregateChecks and PendingLifecycleChecks PASSED. Envelope covers original
+payload retention, equal reconstructed values, foreign/changed payload inequality, revision
+boundaries through Long.MAX_VALUE, null/untyped rejection and premature aggregate refusal.
+JUnit wrapper added. Focused Gradle envelope/recovery/aggregate/pending/codec/legacy attempt
+failed before compilation: inherited wrapper-cache lock Access is denied. JUnit/Gson/store/
+legacy NOT_RUN; GRADLE_USER_HOME unchanged, no external inspection or cache workaround.
+
+Reconciliation: WB-WHL-08 remains PARTIAL. Original receipt/journal, structural aggregate,
+recovery and typed envelope verified offline; existing schema-15 codec/disk work remains
+IMPLEMENTED_UNVERIFIED. New operation aggregate/schema integration and locked creation
+admission UNSTARTED. WB-WHL-09 PARTIAL (automatic retries UNSTARTED); WB-WHL-10
+PARTIAL_UNVERIFIED; REL-02 PARTIAL; FND-01 DONE; FND-10/12 PARTIAL; GFD-01/02/05/06/07
+PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing evidence/decision BLOCKED rows stand.
+Recorded merged work not independently verified; no Git operations or I01d work.
+
+Next: integrate typed creation operation into aggregate receipt-chain validation and a new
+schema, matching exact retained originals while allowing only that matching operation ID
+in pending/history collision checks. Enforce ACTIVE/NONE lifecycle continuity, unchanged
+FP and preserved originals through Pause/Resume; keep old schemas explicit legacy absence.
+Then locked creation admission with stale refusal, exact replay and advanced-prefix
+preservation. Run focused JUnit/migration/store/legacy suites with accessible inherited
+dependencies. Trusted session/evidence, once-only allocation, sampling, automatic retry,
+suspension/revalidation and settlement remain unfinished; changed-snapshot reconciliation
+unresolved. WB-D155 supersedes old A56 ask-again navigation; no retirement rule adopted.
+Master Wheel unchanged; incomplete gameplay remains disabled. Local edits only; supervisor
+handles commits, PRs, CI and merges. No durable or playable completion claim.
+
 ## Current local continuation - exact Master creation recovery, 2026-10-30
 
 IDLE after bounded WB-WHL-08 read-only recovery increment (S), WB-D138/139.
