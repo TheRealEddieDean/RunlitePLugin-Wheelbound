@@ -70,7 +70,7 @@ public class LifecycleCommandsTest
         initialize(); byte[] original = Files.readAllBytes(store().snapshotPath());
         JsonObject envelope = new JsonParser().parse(new String(original, StandardCharsets.UTF_8)).getAsJsonObject();
         JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
-        payload.remove("receipts"); payload.remove("fatePoints"); payload.remove("inventory"); payload.remove("grandFate"); payload.remove("grandProgress"); payload.remove("grandJournal"); payload.remove("grandActivations"); payload.remove("grandCurrentAttempt"); payload.remove("pendingMasterSelection"); payload.remove("masterCreations"); payload.remove("masterResolutions"); String text = gson.toJson(payload);
+        payload.remove("receipts"); payload.remove("fatePoints"); payload.remove("inventory"); payload.remove("grandFate"); payload.remove("grandProgress"); payload.remove("grandJournal"); payload.remove("grandActivations"); payload.remove("grandCurrentAttempt"); payload.remove("pendingMasterSelection"); payload.remove("masterCreations"); payload.remove("masterResolutions"); payload.remove("masterSpins"); String text = gson.toJson(payload);
         envelope.addProperty("schemaVersion", 1); envelope.addProperty("payload", text);
         envelope.addProperty("sha256", RunCodec.sha256(text.getBytes(StandardCharsets.UTF_8)));
         byte[] legacy = gson.toJson(envelope).getBytes(StandardCharsets.UTF_8); byte[] copy = legacy.clone();

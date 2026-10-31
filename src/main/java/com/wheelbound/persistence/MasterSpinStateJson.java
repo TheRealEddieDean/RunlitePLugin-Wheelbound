@@ -10,7 +10,7 @@ import java.util.Set;
 import java.util.UUID;
 
 /**
- * Standalone versioned structural payload, not yet admitted by RunCodec.
+ * Versioned structural payload retained by RunCodec schema 18.
  * Does not establish retained terminal membership, storage authority or settlement.
  * Legacy absence belongs to the enclosing schema and must never become zero here.
  */

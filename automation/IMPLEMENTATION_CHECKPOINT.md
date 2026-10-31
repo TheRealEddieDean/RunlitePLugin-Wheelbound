@@ -1,3 +1,45 @@
+## Current local continuation - schema-18 Master spin retention, 2026-10-31
+
+IDLE after bounded WB-WHL-08 persistence increment (S). Reconciled source and focused
+fixtures against WB-D013/018/058/120/138/139/155. Existing spin model, allocation restore,
+aggregate binding and versioned JSON reused. No I01d. Git/merged state not independently
+verified because current user prohibits Git operations; supervisor owns publication.
+
+RunCodec schema 18 retains optional masterSpins using MasterSpinStateJson version 1.
+Explicit null preserves legacy absence; explicit unreserved zero remains present.
+Reserved original balance and full terminal receipt round-trip through model validation
+and RunDocument retained-history binding. Schemas 1-17 keep strict original field sets
+and restore absent spins; schema 17 rejects the new field. No inferred balance or new
+allocation on decode. Updated old-schema migration fixtures to omit masterSpins and
+replaced the prior encoding-refusal test with retention coverage.
+
+Java 11 dependency-free domain/aggregate compilation PASSED into
+build/continuation-spin-schema (existing dependency-free fixture classes reused).
+MasterSpinAggregateChecks, MasterSpinStateChecks, MasterResolutionAggregateChecks,
+MasterResolutionBindingChecks and MasterTerminalPreparationChecks PASSED. These checks
+do not compile or execute Gson/RunCodec/JUnit integration.
+Focused JUnit coverage authored for 0/1/513 empty prefixes, 1/7/Long.MAX_VALUE reserved
+balances, unreserved zero/boundaries, exact replay, Pause persistence, schema-17 migration,
+missing/malformed/foreign/future/inconsistent spin state and missing/mismatched terminal
+history, preserving input bytes. Gradle focused codec/JSON/aggregate/RunCodec/legacy attempt
+failed before compilation: inherited wrapper-cache lock Access is denied. Codec/JUnit/
+migration/legacy NOT_RUN; schema-18 integration IMPLEMENTED_UNVERIFIED. GRADLE_USER_HOME
+unchanged; no cache workaround or external inspection. No full-suite claim.
+
+Reconciliation: structural spin model/aggregate and allocation restore remain DONE offline;
+standalone JSON and schema-18 durable codec integration IMPLEMENTED_UNVERIFIED (integration
+no longer UNSTARTED). Typed atomic terminal operation, assignment and locked/session
+admission remain UNSTARTED. WB-WHL-08 PARTIAL; WB-WHL-09 PARTIAL (automatic retries
+UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED. Other audited statuses/evidence holds stand.
+Master Wheel unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Next: run focused JSON/codec/migration and legacy tests when inherited dependencies are
+accessible, then implement typed atomic actual-pending-prefix-bound terminal history,
+reservation and obligation publication with exact retained replay before locked/session
+admission. Settlement, grants, sampling, automatic retries, suspension/revalidation and
+changed-snapshot reconciliation remain unfinished. WB-D155 adopts no retirement rule.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - standalone Master spin JSON payload, 2026-10-31
 
 IDLE after bounded WB-WHL-08 versioned payload increment (S). Reconciled current

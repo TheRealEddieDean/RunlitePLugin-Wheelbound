@@ -53,7 +53,7 @@ public class MasterResolutionAggregateTest
         RunDocument source = MasterCreationAggregateChecks.fixture(1);
         for (int schema : new int[] {15, 16})
         {
-            byte[] old = mutate(source, schema, p -> p.remove("masterResolutions"));
+            byte[] old = mutate(source, schema, p -> { p.remove("masterResolutions"); p.remove("masterSpins"); });
             byte[] unchanged = old.clone();
             RunDocument restored = codec.decode(old, source.lifecycle().identity());
             assertFalse(restored.masterResolutions().isPresent());
@@ -81,7 +81,7 @@ public class MasterResolutionAggregateTest
             });
         for (Consumer<JsonObject> change : changes)
         {
-            byte[] bytes = mutate(source, 17, change);
+            byte[] bytes = mutate(source, RunCodec.SCHEMA, change);
             byte[] unchanged = bytes.clone();
             assertThrows(IOException.class, () -> codec.decode(bytes, source.lifecycle().identity()));
             assertArrayEquals(unchanged, bytes);

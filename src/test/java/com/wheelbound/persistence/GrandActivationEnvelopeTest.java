@@ -49,6 +49,7 @@ public class GrandActivationEnvelopeTest
         if (schema < 14) { payload.remove("pendingMasterSelection"); }
         if (schema < 15) { payload.remove("masterCreations"); }
         if (schema < 17) { payload.remove("masterResolutions"); }
+        if (schema < 18) { payload.remove("masterSpins"); }
         edit.accept(payload);
         String text = gson.toJson(payload);
         envelope.addProperty("schemaVersion", schema);

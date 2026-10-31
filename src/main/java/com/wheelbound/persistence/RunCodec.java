@@ -24,7 +24,7 @@ import java.util.UUID;
 /** Inject RuneLite's Gson. Never deserialize directly into domain objects bypassing their validation. */
 public final class RunCodec
 {
-    public static final int SCHEMA = 17;
+    public static final int SCHEMA = 18;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -37,8 +37,6 @@ public final class RunCodec
 
     public byte[] encode(RunDocument document)
     {
-        if (document.masterSpins().isPresent())
-        { throw new IllegalArgumentException("Master spin state requires a future versioned codec"); }
         RunLifecycle run = document.lifecycle();
         JsonObject payload = new JsonObject();
         payload.addProperty("accountKey", run.identity().accountKey());
@@ -141,6 +139,9 @@ public final class RunCodec
         payload.add("masterResolutions", document.masterResolutions().isPresent()
             ? MasterSelectionResolutionsJson.encode(document.masterResolutions().get(), run.revision())
             : com.google.gson.JsonNull.INSTANCE);
+        payload.add("masterSpins", document.masterSpins().isPresent()
+            ? MasterSpinStateJson.encode(document.masterSpins().get(), run.revision())
+            : com.google.gson.JsonNull.INSTANCE);
         String text = gson.toJson(payload);
         JsonObject envelope = new JsonObject();
         envelope.addProperty("schemaVersion", SCHEMA);
@@ -188,7 +189,9 @@ public final class RunCodec
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection")
                     : schema < 17
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations")
-                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions"));
+                    : schema == 17
+                    ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions")
+                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions", "masterSpins"));
             RunIdentity identity = new RunIdentity(string(payload, "accountKey"), UUID.fromString(string(payload, "runId")));
             if (!identity.equals(expected)) { throw new IOException("Foreign account/profile/run snapshot"); }
             RunLifecycle lifecycle = new RunLifecycle(identity, integer(payload, "revision"),
@@ -332,6 +335,9 @@ public final class RunCodec
                         identity, lifecycle.revision())) : Optional.empty(),
                 schema >= 17 && !payload.get("masterResolutions").isJsonNull()
                     ? Optional.of(MasterSelectionResolutionsJson.decode(payload.getAsJsonObject("masterResolutions"),
+                        identity, lifecycle.revision())) : Optional.empty(),
+                schema >= 18 && !payload.get("masterSpins").isJsonNull()
+                    ? Optional.of(MasterSpinStateJson.decode(payload.getAsJsonObject("masterSpins"),
                         identity, lifecycle.revision())) : Optional.empty());
         }
         catch (RuntimeException ex) { throw new IOException("Invalid snapshot; preserve original", ex); }

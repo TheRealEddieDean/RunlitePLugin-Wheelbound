@@ -29,7 +29,7 @@ public class MasterCreationAggregateTest
         RunDocument source = MasterCreationAggregateChecks.fixture(0);
         JsonObject envelope = new JsonParser().parse(new String(codec.encode(source), StandardCharsets.UTF_8)).getAsJsonObject();
         JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
-        payload.remove("masterCreations"); payload.remove("masterResolutions");
+        payload.remove("masterCreations"); payload.remove("masterResolutions"); payload.remove("masterSpins");
         // Preserve required explicit nulls; only masterCreations is absent in schema 14.
         String text = new GsonBuilder().serializeNulls().create().toJson(payload);
         envelope.addProperty("payload", text);
