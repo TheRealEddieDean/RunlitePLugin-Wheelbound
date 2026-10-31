@@ -63,6 +63,29 @@ public final class RunSession
             && current.acceptsObservation(token.identity, token.revision);
     }
 
+    /** Read-only recovery of the exact original request. Absence never authorizes
+     * creation or a fresh stream. Refreshes the durable lifecycle and invalidates
+     * callbacks even when absent; failures require reconnecting.
+     */
+    public synchronized Optional<MasterSelectionCreationReceipt> committedMasterSelection(
+        MasterSelectionCreationReceipt request) throws IOException
+    {
+        if (store == null) { throw new IllegalStateException("No connected run"); }
+        AtomicRunStore target = store;
+        generation = new Object();
+        try
+        {
+            Optional<MasterSelectionCreationReceipt> receipt = target.committedMasterSelection(request);
+            current = target.load().orElseThrow(() -> new IOException("Run disappeared")).lifecycle();
+            return receipt;
+        }
+        catch (IOException | RuntimeException ex)
+        {
+            disconnect();
+            throw ex;
+        }
+    }
+
     /** Persists the supplied frozen creation on the storage worker, including exact
      * historical replay. Invalidates callbacks and reloads the actual durable head.
      * This does not authenticate evidence, allocate spins or sample outcomes.
