@@ -1,3 +1,39 @@
+## Current local continuation - coupled special terminal preparation, 2026-10-31
+
+IDLE after bounded WB-WHL-08 integration increment (S). Reconciled source and focused
+checks with WB-D013/018/058/120/138/139/155. Existing reservation preparation, typed
+response, special payload and schema-18 retention reused. No I01d or Git operations;
+merged state not independently verified. Supervisor owns publication.
+
+MasterSpecialTerminalPreparation couples terminal history, reserved spin state, typed
+original response and derived mandatory special obligation from one validated head.
+It restores the response from the prepared allocation rather than preparing twice.
+Ordinary landings fail closed. Retained replay preserves original accounting across
+Pause; a proposal does NOT prove current-obligation publication. No lifecycle stage,
+aggregate publication, RunReceipt/codec, settlement or locked/session admission added.
+Master Wheel unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Fresh javac --release 11 source compilation PASSED into build/continuation-special-terminal.
+MasterSpecialTerminalPreparationChecks and MasterTerminalOperationProposalChecks PASSED.
+Coverage: Taint/Sacrifice, 0/1/513 empty prefixes, 1/7/Long.MAX_VALUE balances, paired
+history/accounting/obligation, paused retained replay, changed payload, ordinary and
+zero-balance refusal, paused new-append refusal and source immutability. JUnit wrapper
+authored. Focused Gradle/JUnit/legacy attempt failed before compilation: inherited
+wrapper-cache lock Access is denied. GRADLE_USER_HOME unchanged; no cache workaround
+or external inspection. JUnit/legacy NOT_RUN; schema-18 remains IMPLEMENTED_UNVERIFIED.
+
+Reconciliation: coupled special proposal DONE offline; wrapper IMPLEMENTED_UNVERIFIED.
+WB-WHL-08 remains PARTIAL; WB-WHL-09 PARTIAL (automatic retry execution UNSTARTED);
+WB-WHL-10 PARTIAL_UNVERIFIED. Ordinary assignment, atomic aggregate current-obligation
+publication, RunReceipt/codec and locked/session admission remain UNSTARTED. Existing
+partial/unstarted/blocked rows and evidence holds stand; no complete gameplay claim.
+
+Next: lifecycle/current-special-obligation aggregate invariants and copy-path preservation,
+then atomic publication using this coupled preparation, then versioned codec/RunReceipt
+and locked/session admission. Do not admit ordinary assignments via special-only payloads.
+Settlement, grants, sampling, retry execution and suspension/revalidation remain unfinished;
+changed-snapshot recovery stays open. WB-D155 adopts no retirement rule. Local edits only.
+
 ## Current local continuation - special obligation payload, 2026-10-31
 
 IDLE after bounded WB-WHL-08 special-obligation payload increment (S). Reconciled
