@@ -2,6 +2,7 @@ package com.wheelbound.persistence;
 
 import com.wheelbound.domain.RunIdentity;
 import com.wheelbound.domain.GrandActivationReceipt;
+import com.wheelbound.domain.MasterSelectionCreationReceipt;
 import com.wheelbound.domain.RunLifecycle;
 import java.io.IOException;
 import java.util.Objects;
@@ -60,6 +61,30 @@ public final class RunSession
     {
         return token != null && token.generation == generation && current != null
             && current.acceptsObservation(token.identity, token.revision);
+    }
+
+    /** Persists the supplied frozen creation on the storage worker, including exact
+     * historical replay. Invalidates callbacks and reloads the actual durable head.
+     * This does not authenticate evidence, allocate spins or sample outcomes.
+     * Any failure requires reconnecting before further commands or observations.
+     */
+    public synchronized MasterSelectionCreationReceipt createMasterSelection(
+        MasterSelectionCreationReceipt request) throws IOException
+    {
+        if (store == null) { throw new IllegalStateException("No connected run"); }
+        AtomicRunStore target = store;
+        generation = new Object();
+        try
+        {
+            MasterSelectionCreationReceipt receipt = target.createMasterSelection(request);
+            current = target.load().orElseThrow(() -> new IOException("Run disappeared")).lifecycle();
+            return receipt;
+        }
+        catch (IOException | RuntimeException ex)
+        {
+            disconnect();
+            throw ex;
+        }
     }
 
     /** Worker-thread command boundary, including historical replay while paused.

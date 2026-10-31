@@ -2,6 +2,7 @@ package com.wheelbound.persistence;
 
 import com.wheelbound.domain.RunIdentity;
 import com.wheelbound.domain.GrandActivationReceipt;
+import com.wheelbound.domain.MasterSelectionCreationReceipt;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
@@ -93,6 +94,18 @@ public final class AsyncRunSession
     {
         Objects.requireNonNull(receipt, "receipt");
         return submit(target -> target.activateGrandFate(receipt, expectedRevision));
+    }
+
+    /** Queues a frozen Master creation using the operation-specific store command.
+     * Closes callbacks immediately; supersession and cancellation follow activation
+     * semantics. Exact replay reloads the current head, including Pause and retained
+     * draw prefixes. No trusted evidence, spin allocation or sampling is established.
+     */
+    public synchronized CompletableFuture<Optional<MasterSelectionCreationReceipt>> createMasterSelection(
+        MasterSelectionCreationReceipt request)
+    {
+        Objects.requireNonNull(request, "request");
+        return submit(target -> target.createMasterSelection(request));
     }
 
     /** Worker-thread Pause/Resume boundary. Admission closes before queuing, including
