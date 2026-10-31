@@ -1,3 +1,45 @@
+## Current local continuation - aggregate-backed terminal reservation preparation, 2026-10-31
+
+IDLE after bounded WB-WHL-08 preparation increment (S). Reconciled source/tests with
+schema-18 continuation and WB-D013/018/058/120/138/139/155. Spin state, reservation,
+terminal binding and codec already exist; reused them. No I01d. Git/merged state not
+independently verified because user prohibits Git operations; supervisor owns publication.
+
+MasterTerminalReservationPreparation prepares terminal history and reserved spin state
+from one supplied RunDocument's explicit balance, without a caller balance override.
+New append reuses actual pending-prefix binding and exact-head reservation validation.
+Legacy absent balance, zero, stale spin revision, absent/shortened pending prefix and
+paused new append fail closed. Exact historical replay requires retained terminal history
+AND its original reservation; returns original accounting across Pause without rebuilding
+or taking another spin. Changed command/payload fails closed. Source remains immutable.
+This is a proposal only, NOT typed atomic publication, assignment, obligation, storage
+admission or settlement. Master Wheel unchanged; incomplete gameplay unwired/disabled.
+
+Fresh Java 11 source compilation passed into build/continuation-terminal-reservation,
+including production dependencies and dependency-free fixtures (no cached fixture reuse).
+MasterTerminalReservationPreparationChecks PASSED, including 0/1/513 empty prefixes,
+1/7/Long.MAX_VALUE balances, replay, changed payload, unavailable state and immutability.
+MasterSpinAggregateChecks, MasterTerminalPreparationChecks, MasterSpinStateChecks,
+MasterResolutionBindingChecks and MasterResolutionAggregateChecks also PASSED.
+Focused Gradle reservation/codec/JSON/legacy attempt failed before compilation: inherited
+wrapper-cache lock Access is denied. JUnit/JSON/codec/migration/legacy NOT_RUN;
+schema-18 integration remains IMPLEMENTED_UNVERIFIED. GRADLE_USER_HOME unchanged;
+no cache workaround, external inspection or full-suite claim.
+
+Reconciliation: aggregate-backed reservation preparation DONE offline; JUnit wrapper
+IMPLEMENTED_UNVERIFIED. WB-WHL-08 PARTIAL; WB-WHL-09 PARTIAL (automatic retries
+UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED. Typed atomic terminal operation, actual
+assignment/obligation publication and locked/session admission remain UNSTARTED.
+Other audited statuses and evidence holds stand; no completed gameplay claim.
+
+Next: typed atomic terminal operation publishing actual-prefix-bound history, reservation
+and supported assignment/obligation together, with retained exact replay, before locked/
+session admission. Reuse this preparation; never infer balance from history. Settlement,
+grants, sampling, retry execution, suspension/revalidation and changed-snapshot recovery
+remain unfinished. WB-D155 adopts no retirement rule. Run focused Gradle integration and
+legacy checks when inherited dependencies become accessible. Local edits only;
+supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - schema-18 Master spin retention, 2026-10-31
 
 IDLE after bounded WB-WHL-08 persistence increment (S). Reconciled source and focused
