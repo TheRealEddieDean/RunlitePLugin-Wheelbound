@@ -51,7 +51,7 @@ public final class DurableFatePointDebits
         List<RunReceipt> history = new ArrayList<>(current.receipts());
         history.add(receipt);
         store.write(new RunDocument(proposed.lifecycle(), current.catalogVersion(), history,
-            Optional.of(proposed.ledger()), current.inventory(), current.grandFate(), current.grandProgress(), current.grandJournal(), current.grandActivations(), current.retainedGrandAttempt(proposed.lifecycle()), current.pendingMasterSelection(), current.masterCreations(), current.masterResolutions()), expectedRevision);
+            Optional.of(proposed.ledger()), current.inventory(), current.grandFate(), current.grandProgress(), current.grandJournal(), current.grandActivations(), current.retainedGrandAttempt(proposed.lifecycle()), current.pendingMasterSelection(), current.masterCreations(), current.masterResolutions(), current.masterSpins()), expectedRevision);
         return result.receipt();
     }
 }

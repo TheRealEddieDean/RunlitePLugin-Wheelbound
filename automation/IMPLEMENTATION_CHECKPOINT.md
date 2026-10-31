@@ -1,3 +1,45 @@
+## Current local continuation - aggregate Master spin retention, 2026-10-31
+
+IDLE after bounded WB-WHL-08 structural aggregate increment (S). Reconciled source/tests
+with spin-state, terminal preparation, schema-17 and WB-D013/018/058/120/138/139/155.
+Existing allocation/history binding reused; no I01d. Git/merged state not independently
+verified because Git is prohibited. Local edits only; supervisor owns publication.
+
+RunDocument optionally retains explicit MasterSpinState, preserving legacy absence.
+Validates identity/revision; reservations require exact retained terminal receipts and
+exclude concurrent pending Master selection/Grand attempt. Lifecycle, creation,
+activation, draw and FP-debit production copy paths preserve state. Pause/Resume retain
+original accounting without consuming spins. New creation conflicts with a reservation;
+exact historical replay remains available. Structural in-memory retention only: no
+assignment, settlement, storage authority or terminal command admission. Schema-17
+encoding explicitly refuses present spin state to prevent silent loss; absent legacy
+encoding unchanged. No schema bump, Master Wheel change or gameplay enablement.
+
+Java 11 compilation PASSED in build/continuation-spin-aggregate.
+MasterSpinAggregateChecks PASSED: 0/1/513 prefixes, 1/7/Long.MAX_VALUE balances,
+Pause/Resume, replay, absent/mismatched history, foreign/future state, new-selection
+conflict, explicit zero, creation-copy preservation and source immutability.
+MasterSpinStateChecks, MasterTerminalPreparationChecks, MasterResolutionBindingChecks
+and MasterResolutionAggregateChecks PASSED. JUnit wrapper/codec-refusal test authored.
+Focused Gradle aggregate/spin-state/RunCodec/legacy attempt failed before compilation:
+inherited wrapper-cache lock Access is denied. JUnit/codec/legacy NOT_RUN. Inherited
+GRADLE_USER_HOME unchanged; no cache workaround or external inspection. No full-suite claim.
+
+Reconciliation: structural aggregate spin retention DONE offline; JUnit/codec refusal
+IMPLEMENTED_UNVERIFIED. Durable versioned spin/allocation JSON and migrations UNSTARTED;
+typed atomic terminal operation/assignment UNSTARTED. WB-WHL-08 PARTIAL; WB-WHL-09
+PARTIAL (automatic retries UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED. Schema-17 and
+creation/store/session integration remain IMPLEMENTED_UNVERIFIED. Other audited statuses
+and evidence holds stand. Incomplete gameplay remains unwired/default-disabled.
+
+Next: versioned spin-state/allocation JSON and RunCodec migration coverage; replace
+encoding refusal only with lossless validation. Preserve legacy absence, never infer
+balance. Then typed atomic actual-pending-prefix-bound history/reservation/obligation
+publication and exact retained replay before locked/session admission. Settlement,
+grants, sampling, automatic retries, suspension/revalidation and changed-snapshot
+reconciliation remain unfinished. WB-D155 adopts no retirement rule. No playable claim.
+Supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - versioned Master spin reservation state, 2026-10-31
 
 IDLE after bounded WB-WHL-08 spin-state model increment (S). Reconciled source/tests

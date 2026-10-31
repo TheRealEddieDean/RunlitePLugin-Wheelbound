@@ -37,6 +37,8 @@ public final class RunCodec
 
     public byte[] encode(RunDocument document)
     {
+        if (document.masterSpins().isPresent())
+        { throw new IllegalArgumentException("Master spin state requires a future versioned codec"); }
         RunLifecycle run = document.lifecycle();
         JsonObject payload = new JsonObject();
         payload.addProperty("accountKey", run.identity().accountKey());
