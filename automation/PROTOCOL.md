@@ -1,3 +1,43 @@
+## Current local continuation - terminal spin allocation proposal, 2026-10-31
+
+IDLE after bounded WB-WHL-08 allocation prerequisite (S). Reconciled current code,
+tests and schema-17 continuation with WB-D120/138/139/155 and STATE_CONTRACT,
+PERSISTENCE and GAME_RULES. Terminal receipts, aggregate retention/binding and schema-17
+codec already exist; reused them. No I01d. Git/branch/merged state not independently
+verified because Git operations are prohibited; supervisor owns publication.
+
+MasterSpinAllocation is a pure immutable accounting proposal bound to an exact terminal
+receipt. Requires matching ACTIVE/NONE identity/revision and positive allotted spins;
+proposes one reserved spin irrespective of empty retry count, exposes original outcome
+and zero FP delta. Exact retained replay returns original accounting without taking a
+current balance or subtracting again; changed/foreign/stale replay fails closed.
+This does not establish durable retention, current storage/evidence authority, assignment,
+ordinary consumption/settlement timing or a live debit. Atomic aggregate publication,
+typed terminal operation and locked/session admission remain UNSTARTED. No persistence
+schema change or plugin wiring. Legacy Master Wheel unchanged; incomplete mode disabled.
+
+Java 11 source compilation PASSED in build/continuation-spin-allocation. Extended the
+existing executable/JUnit resolution fixture for ordinary/Taint/Sacrifice, 0/1/513 empty
+prefixes, balances 1/7/Long.MAX_VALUE, replay, zero/negative spins, foreign/stale contexts,
+all inactive states and occupied obligations. Resolution/allocation executable PASSED.
+MasterResolutionAggregateChecks and MasterResolutionBindingChecks PASSED.
+Focused Gradle resolution/aggregate/RunCodec/legacy attempt failed before compilation:
+inherited wrapper-cache lock Access is denied. JUnit/codec/legacy NOT_RUN; schema-17 and
+creation/store/session integration remain IMPLEMENTED_UNVERIFIED. GRADLE_USER_HOME
+unchanged; no cache workaround, external inspection, credentials, workflows or Git access.
+
+Reconciliation: allocation proposal DONE offline; durable allocation/assignment UNSTARTED.
+WB-WHL-08 PARTIAL; WB-WHL-09 PARTIAL (automatic retry UNSTARTED); WB-WHL-10
+PARTIAL_UNVERIFIED. Other audited PARTIAL/TODO/BLOCKED rows stand; trusted detectors,
+reviewed catalogs and special adapters remain evidence gated. No playable gameplay claim.
+Next: integrate typed terminal operation with atomic aggregate allocation/obligation and
+versioned persistence, preserving ordinary reservation versus completion/Reject settlement.
+Reuse resolution binding; require actual pending prefix and once-only retained replay.
+Locked/session admission waits for that model. Run focused JUnit/codec/migration/session/
+store/legacy suites when inherited dependencies are accessible. Sampling, automatic retry,
+suspension/revalidation, settlement and changed-snapshot reconciliation remain unfinished;
+WB-D155 adopts no retirement rule. Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - schema-17 terminal history retention, 2026-10-31
 
 IDLE after bounded WB-WHL-08 versioned persistence increment (S).

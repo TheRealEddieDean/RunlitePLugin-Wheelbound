@@ -49,6 +49,7 @@ public final class MasterSelectionResolutionChecks
 
     public static void main(String[] args)
     {
+        allocationChecks();
         RunIdentity identity = new RunIdentity("offline", UUID.randomUUID());
         for (ActiveWheel.Kind special : new ActiveWheel.Kind[] { null, ActiveWheel.Kind.TAINT, ActiveWheel.Kind.SACRIFICE })
         {
@@ -131,5 +132,62 @@ public final class MasterSelectionResolutionChecks
             rejects(() -> new MasterSelectionResolutions(identity, 13, List.of(crossCollision, next)));
         }
         System.out.println("Master selection resolution checks passed");
+    }
+
+    private static void allocationChecks()
+    {
+        RunIdentity identity = new RunIdentity("allocation-offline", UUID.randomUUID());
+        for (ActiveWheel.Kind special : new ActiveWheel.Kind[] { null, ActiveWheel.Kind.TAINT, ActiveWheel.Kind.SACRIFICE })
+        {
+            for (int emptyCount : new int[] { 0, 1, 513 })
+            {
+                MasterSelectionProvenance zero = start(special);
+                MasterSelectionCreationReceipt creation = new MasterSelectionCreationReceipt(identity, 2, zero);
+                MasterSelectionProvenance pending = zero;
+                for (int i = 0; i < emptyCount; i++) { pending = append(pending, 0, "empty" + i); }
+                MasterSelectionProvenance terminal = append(pending, zero.pool().totalWeight() - 1, "terminal");
+                MasterSelectionResolutionReceipt receipt = new MasterSelectionResolutionReceipt(
+                    UUID.randomUUID(), 9, creation, terminal);
+                RunLifecycle head = new RunLifecycle(identity, 9, RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.NONE);
+                for (long spins : new long[] { 1, 7, Long.MAX_VALUE })
+                {
+                    MasterSpinAllocation allocation = MasterSpinAllocation.prepare(head, spins, receipt);
+                    check(allocation.spinsBefore() == spins && allocation.spinsAfter() == spins - 1);
+                    check(allocation.spinDelta() == -1 && allocation.fpDelta() == 0);
+                    check(allocation.selectedKind() == (special == null ? ActiveWheel.Kind.ORDINARY : special));
+                    check(allocation.selectedSliceId().equals(new UUID(0, special == null ? 5 : 6)));
+                    check(allocation.transactionId().equals(creation.transactionId()));
+                    check(allocation.commandId().equals(receipt.commandId()) && allocation.resolution() == receipt);
+                    MasterSelectionResolutionReceipt restored = new MasterSelectionResolutionReceipt(
+                        receipt.commandId(), 9, creation, terminal);
+                    check(allocation.replay(identity, 10, restored) == allocation);
+                    check(allocation.replay(identity, Long.MAX_VALUE, restored) == allocation);
+                    rejects(() -> allocation.replay(identity, 9, restored));
+                    rejects(() -> allocation.replay(new RunIdentity("foreign", identity.runId()), 10, restored));
+                    rejects(() -> allocation.replay(identity, 10, new MasterSelectionResolutionReceipt(
+                        UUID.randomUUID(), 9, creation, terminal)));
+                    check(allocation.spinsAfter() == spins - 1 && head.revision() == 9);
+                }
+                rejects(() -> MasterSpinAllocation.prepare(head, 0, receipt));
+                rejects(() -> MasterSpinAllocation.prepare(head, -1, receipt));
+                rejects(() -> MasterSpinAllocation.prepare(new RunLifecycle(identity, 8,
+                    RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.NONE), 1, receipt));
+                rejects(() -> MasterSpinAllocation.prepare(new RunLifecycle(new RunIdentity("foreign", identity.runId()), 9,
+                    RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.NONE), 1, receipt));
+                for (RunLifecycle.State state : RunLifecycle.State.values())
+                {
+                    if (state != RunLifecycle.State.ACTIVE)
+                    { rejects(() -> MasterSpinAllocation.prepare(new RunLifecycle(identity, 9, state,
+                        RunLifecycle.Obligation.NONE), 1, receipt)); }
+                }
+                for (RunLifecycle.Obligation obligation : RunLifecycle.Obligation.values())
+                {
+                    if (obligation != RunLifecycle.Obligation.NONE)
+                    { rejects(() -> MasterSpinAllocation.prepare(new RunLifecycle(identity, 9,
+                        RunLifecycle.State.ACTIVE, obligation), 1, receipt)); }
+                }
+                check(pending.drawCount() == emptyCount && !pending.hasValidLanding());
+            }
+        }
     }
 }
