@@ -1,3 +1,50 @@
+## Current local continuation - typed terminal response proposal, 2026-10-31
+
+IDLE after bounded WB-WHL-08 operation-envelope prerequisite (S). Reconciled source,
+fixtures and current continuation with WB-D013/018/058/120/138/139/155. Existing
+reservation preparation, spin state, history binding and schema-18 retention reused.
+No I01d. Git/merged state was not independently verified: user prohibits Git operations;
+supervisor owns commits, PRs, CI and merges. Local edits only.
+
+MasterTerminalOperationProposal retains a typed original terminal resolution and its
+explicit original one-spin accounting. Preparation uses the aggregate-backed reservation
+preparation. Structural restoration requires a positive explicit balance; equality/hash
+include that original balance as well as the full resolution. validateRetained requires
+exact retained history AND reservation and rejects changed original accounting. It never
+prepares a new append during replay. Pause/Resume preserve the original response. This
+is NOT an admitted RunReceipt, atomic aggregate publication, assignment or obligation.
+No schema change, storage/session admission, charge timing change or gameplay enablement.
+Legacy Master Wheel unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Fresh javac --release 11 compilation from production and fixture sources PASSED into
+build/continuation-terminal-operation, with no cached fixture reuse. New
+MasterTerminalOperationProposalChecks PASSED: 0/1/513 empty prefixes, balances
+1/7/Long.MAX_VALUE, equality/hash, restored response, exact retained and paused/resumed
+replay, changed balance/payload/command, missing reservation/history, invalid balance,
+unresolved-head refusal and source immutability. MasterTerminalReservationPreparationChecks,
+MasterSpinAggregateChecks, MasterSpinStateChecks, MasterResolutionBindingChecks and
+MasterResolutionAggregateChecks also PASSED. JUnit wrapper authored.
+Focused Gradle operation/reservation/RunCodec/legacy attempt failed before compilation:
+inherited wrapper-cache lock Access is denied. JUnit/codec/migration/legacy NOT_RUN;
+GRADLE_USER_HOME unchanged, no cache workaround or external inspection. Schema-18
+integration remains IMPLEMENTED_UNVERIFIED. No full-suite or playable-mode claim.
+
+Reconciliation: typed terminal response proposal DONE offline; JUnit wrapper
+IMPLEMENTED_UNVERIFIED. Full typed atomic terminal operation remains PARTIAL, with
+RunReceipt/codec integration, supported assignment/obligation publication and locked/
+session admission UNSTARTED. Existing preparation remains DONE offline. WB-WHL-08
+PARTIAL; WB-WHL-09 PARTIAL (automatic retries UNSTARTED); WB-WHL-10
+PARTIAL_UNVERIFIED. Other audited partial/unstarted/blocked statuses and evidence holds
+stand. No unresolved gameplay decision adopted; WB-D155 still adopts no retirement.
+
+Next: implement supported immutable assignment/obligation payload before integrating
+this typed response into RunReceipt and atomically publishing history/reservation/current
+obligation together. Do not admit a terminal command with only this proposal. Reuse
+actual pending-prefix validation and retain exact original accounting for replay. Then
+versioned operation retention and locked/session admission. Settlement, grants, sampling,
+retry execution, suspension/revalidation and changed-snapshot recovery remain unfinished.
+Run focused Gradle integration/legacy checks when inherited dependencies are accessible.
+
 ## Current local continuation - aggregate-backed terminal reservation preparation, 2026-10-31
 
 IDLE after bounded WB-WHL-08 preparation increment (S). Reconciled source/tests with
