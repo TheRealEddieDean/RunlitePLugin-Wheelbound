@@ -1,3 +1,48 @@
+## Current local continuation - terminal aggregate binding prerequisite, 2026-10-31
+
+IDLE after bounded WB-WHL-08 structural binding increment (S).
+Reconciled current domain receipts, ordered collection/JSON, RunDocument creation
+history and pending prefixes. Existing terminal domain preparation is DONE offline;
+standalone JSON remains IMPLEMENTED_UNVERIFIED. Aggregate retention, schema migration,
+locked/session terminal admission and assignment/accounting remain UNSTARTED.
+No I01d selected. Merged/branch state not independently verified: Git is prohibited.
+Current user restrictions supersede historical Git/publication/cache instructions.
+
+Added MasterResolutionBinding.validateHistory/validateAppend as a pure prerequisite.
+Checks exact retained originals, aggregate identity/revision, later-creation ordering,
+pending-versus-resolved exclusion and command collisions with creations, lifecycle
+operations, Grand seal, activations and evidence. Rejects overlapping operation revisions.
+Terminal append requires the supplied ACTIVE head and its actual unresolved prefix;
+rebuilding the receipt through existing prepare rejects truncated/rewritten empty draws.
+No aggregate field/schema change, persistence, replay admission, trusted evidence/RNG,
+spin allocation, assignment, automatic retry or plugin wiring is implemented here.
+
+Java 11 source compilation PASSED into build/continuation-resolution-binding.
+MasterResolutionBindingChecks PASSED (0/1/513 prefixes, immutability, stale/foreign/
+absent history, missing pending, paused state, changed/shortened prefix, seal/operation
+collisions, historical binding and conflicting revision). Existing resolution, append,
+creation aggregate and pending lifecycle executable checks PASSED. JUnit wrapper authored.
+Focused Gradle binding/collection-JSON/legacy attempt failed before compilation:
+inherited wrapper-cache lock Access is denied. JUnit/JSON/legacy NOT_RUN; no full-suite
+pass claimed. GRADLE_USER_HOME unchanged; no external inspection/cache workaround.
+
+Reconciliation: binding prerequisite DONE offline, JUnit IMPLEMENTED_UNVERIFIED;
+aggregate retention still UNSTARTED. WB-WHL-08 PARTIAL; WB-WHL-09 PARTIAL (automatic
+retry UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED. Existing creation/schema-16/session
+integration IMPLEMENTED_UNVERIFIED. Other audited PARTIAL/TODO/BLOCKED rows stand;
+trusted detectors, reviewed catalogs and special adapters remain evidence gated.
+Legacy Master Wheel unchanged; incomplete mode remains unwired/default-disabled.
+WB-D120/138/139 preserved; WB-D155 supplies no retirement/reconciliation rule.
+
+Next: add optional structural resolution retention to RunDocument with explicit legacy
+absence, preservation across all aggregate copy paths, global replay collision guards
+and versioned codec/migration coverage. Reuse this binding; reconcile its operation
+validation when adding a typed terminal operation. Assignment/spin accounting must be
+atomic before locked/session terminal admission. Sampling, automatic retries,
+suspension/revalidation, settlement and changed-snapshot reconciliation remain unfinished.
+Run focused JUnit/codec/session/store/migration/legacy suites when inherited dependencies
+are accessible. Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - ordered terminal resolution JSON, 2026-10-31
 
 IDLE after bounded WB-WHL-08 ordered resolution collection codec increment (XS/S).
