@@ -24,7 +24,7 @@ import java.util.UUID;
 /** Inject RuneLite's Gson. Never deserialize directly into domain objects bypassing their validation. */
 public final class RunCodec
 {
-    public static final int SCHEMA = 16;
+    public static final int SCHEMA = 17;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -37,9 +37,6 @@ public final class RunCodec
 
     public byte[] encode(RunDocument document)
     {
-        // Schema 16 cannot represent terminal history. Never silently discard it.
-        if (document.masterResolutions().isPresent())
-        { throw new IllegalArgumentException("Master resolution retention requires a future snapshot schema"); }
         RunLifecycle run = document.lifecycle();
         JsonObject payload = new JsonObject();
         payload.addProperty("accountKey", run.identity().accountKey());
@@ -139,6 +136,9 @@ public final class RunCodec
         payload.add("masterCreations", document.masterCreations().isPresent()
             ? MasterSelectionCreationJournalJson.encode(document.masterCreations().get(), run.revision())
             : com.google.gson.JsonNull.INSTANCE);
+        payload.add("masterResolutions", document.masterResolutions().isPresent()
+            ? MasterSelectionResolutionsJson.encode(document.masterResolutions().get(), run.revision())
+            : com.google.gson.JsonNull.INSTANCE);
         String text = gson.toJson(payload);
         JsonObject envelope = new JsonObject();
         envelope.addProperty("schemaVersion", SCHEMA);
@@ -184,7 +184,9 @@ public final class RunCodec
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt")
                     : schema == 14
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection")
-                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations"));
+                    : schema < 17
+                    ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations")
+                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions"));
             RunIdentity identity = new RunIdentity(string(payload, "accountKey"), UUID.fromString(string(payload, "runId")));
             if (!identity.equals(expected)) { throw new IOException("Foreign account/profile/run snapshot"); }
             RunLifecycle lifecycle = new RunLifecycle(identity, integer(payload, "revision"),
@@ -325,6 +327,9 @@ public final class RunCodec
                     : Optional.empty(),
                 schema >= 15 && !payload.get("masterCreations").isJsonNull()
                     ? Optional.of(MasterSelectionCreationJournalJson.decode(payload.getAsJsonObject("masterCreations"),
+                        identity, lifecycle.revision())) : Optional.empty(),
+                schema >= 17 && !payload.get("masterResolutions").isJsonNull()
+                    ? Optional.of(MasterSelectionResolutionsJson.decode(payload.getAsJsonObject("masterResolutions"),
                         identity, lifecycle.revision())) : Optional.empty());
         }
         catch (RuntimeException ex) { throw new IOException("Invalid snapshot; preserve original", ex); }

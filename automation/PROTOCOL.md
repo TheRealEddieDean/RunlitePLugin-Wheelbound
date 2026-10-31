@@ -1,3 +1,47 @@
+## Current local continuation - schema-17 terminal history retention, 2026-10-31
+
+IDLE after bounded WB-WHL-08 versioned persistence increment (S).
+Reconciled current code/tests and continuation records against WB-D120/138/139/155.
+Structural aggregate retention and binding already exist; reused them. No I01d work.
+Git/branch/merged state not independently verified: user prohibits Git operations.
+Current user restrictions supersede historical Git/publication/cache instructions.
+
+RunCodec schema 17 replaces the schema-16 encoding refusal with optional versioned
+masterResolutions JSON. Explicit null preserves legacy absence; explicit empty history
+remains present. Decoding reuses the ordered journal codec and RunDocument binding for
+identity/revision, exact original creations, pending exclusion and global collisions.
+Schemas 1-16 retain their strict old field sets and restore absent terminal history;
+re-encoding upgrades to schema 17 without inventing history. Old readers reject schema 17.
+No typed terminal operation, assignment, spin debit, locked/session terminal admission,
+automatic retries, trusted detector/catalog authority or gameplay wiring introduced.
+
+Focused JUnit coverage authored for exact 0/1/513-prefix round trips, explicit empty
+versus absent, schema 15/16 migration, malformed/missing/future-version/foreign history,
+future revision, missing originals, pending conflict, command collision and old-schema
+field rejection. Updated earlier schema migration fixtures to omit the new field.
+Java 11 dependency-free aggregate/binding/resolution/append graph compiled successfully
+into build/continuation-resolution-schema. Aggregate, binding and terminal-resolution
+and append executable checks PASSED.
+Gradle focused aggregate/RunCodec/legacy attempt failed before compilation: inherited
+wrapper-cache lock Access is denied. Gson/JUnit/codec/migration/legacy NOT_RUN; new
+schema integration IMPLEMENTED_UNVERIFIED. GRADLE_USER_HOME unchanged; no external
+inspection/cache workaround, credentials, workflows or Git access.
+
+Reconciliation: structural aggregate retention/binding DONE offline; schema-17 codec and
+migration coverage IMPLEMENTED_UNVERIFIED, no longer UNSTARTED. WB-WHL-08 PARTIAL;
+WB-WHL-09 PARTIAL (automatic retry UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED.
+Existing creation/session integration remains IMPLEMENTED_UNVERIFIED. Other audited
+PARTIAL/TODO/BLOCKED rows stand; trusted detectors, reviewed catalogs and special
+adapters remain evidence gated. Legacy Master Wheel unchanged; incomplete mode disabled.
+
+Next: execute focused resolution codec/aggregate, migration, creation, store/session and
+legacy suites when inherited dependencies are accessible. Then implement a bounded typed
+terminal operation/atomic assignment and spin-accounting increment after reconciling
+existing allocation contracts. Locked/session terminal admission must wait for that
+atomic model. Sampling, automatic retries, suspension/revalidation, settlement and
+changed-snapshot reconciliation remain unfinished; WB-D155 adopts no retirement rule.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - terminal aggregate binding prerequisite, 2026-10-31
 
 IDLE after bounded WB-WHL-08 structural binding increment (S).

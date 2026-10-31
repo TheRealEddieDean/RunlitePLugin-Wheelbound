@@ -62,7 +62,9 @@ public class MasterCreationOperationTest
         RunDocument legacy = MasterCreationAggregateChecks.fixture(0);
         JsonObject envelope = new JsonParser().parse(new String(codec.encode(legacy), StandardCharsets.UTF_8)).getAsJsonObject();
         envelope.addProperty("schemaVersion", 15);
-        RunDocument restored = codec.decode(new Gson().toJson(envelope).getBytes(StandardCharsets.UTF_8), legacy.lifecycle().identity());
+        JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
+        payload.remove("masterResolutions");
+        RunDocument restored = codec.decode(encodeEnvelope(envelope, payload), legacy.lifecycle().identity());
         assertEquals(legacy.masterCreations().get().receipts(), restored.masterCreations().get().receipts());
     }
 
