@@ -40,6 +40,7 @@ public final class LifecycleAdmission
         // Aggregate construction also checks IDs against selection/seal/evidence/history.
         return new RunDocument(next, current.catalogVersion(), receipts, current.fatePoints(),
             current.inventory(), current.grandFate(), current.grandProgress(), current.grandJournal(),
-            current.grandActivations(), current.retainedGrandAttempt(next), current.pendingMasterSelection());
+            current.grandActivations(), current.retainedGrandAttempt(next), current.pendingMasterSelection(),
+            current.masterCreations());
     }
 }

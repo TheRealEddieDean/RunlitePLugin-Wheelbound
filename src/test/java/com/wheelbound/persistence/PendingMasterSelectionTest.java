@@ -55,7 +55,7 @@ public class PendingMasterSelectionTest
         JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
         assertTrue(payload.get("pendingMasterSelection").isJsonNull());
         // Missing is invalid in schema 14, and unavailable in schema 13.
-        payload.remove("pendingMasterSelection");
+        payload.remove("pendingMasterSelection"); payload.remove("masterCreations");
         byte[] missing = edited(envelope, payload, 14);
         assertThrows(IOException.class, () -> codec.decode(missing, id));
         RunDocument legacy = codec.decode(edited(envelope, payload, 13), id);

@@ -35,7 +35,8 @@ public final class GrandActivationAdmission
         receipts.add(RunReceipt.grandActivation(proposal.receipt()));
         return new RunDocument(proposal.lifecycle(), current.catalogVersion(), receipts,
             current.fatePoints(), current.inventory(), current.grandFate(), current.grandProgress(),
-            current.grandJournal(), Optional.of(proposal.history()), proposal.currentAttempt());
+            current.grandJournal(), Optional.of(proposal.history()), proposal.currentAttempt(),
+            current.pendingMasterSelection(), current.masterCreations());
     }
 
     public static GrandActivationProposal propose(RunDocument current,

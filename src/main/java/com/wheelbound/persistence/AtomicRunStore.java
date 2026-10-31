@@ -209,7 +209,9 @@ public final class AtomicRunStore
             }
             // Block introduction and loss through generic writes until a dedicated
             // command can validate retained provenance under this lock.
-            if (next.pendingMasterSelection().isPresent()
+            if (next.masterCreations().isPresent()
+                || current.map(d -> d.masterCreations().isPresent()).orElse(false)
+                || next.pendingMasterSelection().isPresent()
                 || current.map(d -> d.pendingMasterSelection().isPresent()).orElse(false))
             { throw new IOException("Pending Master selection requires operation-specific command"); }
             long actual = current.map(d -> d.lifecycle().revision()).orElse(-1L);
