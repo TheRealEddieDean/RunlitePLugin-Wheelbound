@@ -1,3 +1,43 @@
+## Current local continuation - versioned Master creation journal JSON, 2026-10-30
+
+IDLE after bounded WB-WHL-08 retained-journal encoding increment (S), WB-D138/139.
+Reconciled original receipt/codec, journal domain, pending aggregate and existing
+continuation records. Existing provenance, guarded advancement and receipt validation
+were not duplicated. No I01d or Git operations; merged state not independently verified.
+
+MasterSelectionCreationJournalJson version 1 retains explicit run identity and ordered
+full original creation receipts through the existing receipt codec. Encode revalidates
+against the supplied current revision; decode restores through journal domain validation.
+Foreign, malformed, duplicate, unordered, overlapping and future history fails closed.
+An explicit empty journal still validates identity/head; absent legacy provenance is not
+inferred. This standalone codec does not change the aggregate schema or store commands,
+authenticate evidence, allocate spins, sample or enable gameplay. Legacy Master unchanged.
+
+Reconciliation: WB-WHL-08 PARTIAL; receipt/journal domain validation DONE offline;
+receipt and journal JSON IMPLEMENTED_UNVERIFIED; aggregate integration and locked creation
+admission UNSTARTED. WB-WHL-09 PARTIAL (automatic retry UNSTARTED); WB-WHL-10
+PARTIAL_UNVERIFIED; REL-02 PARTIAL; FND-01 DONE; FND-10/12 PARTIAL;
+GFD-01/02/05/06/07 PARTIAL_UNVERIFIED; GFD-03/04 TODO. Existing blocked rows stand.
+No playable or durable completion claim. Incomplete gameplay remains unwired/default-disabled.
+
+Validation: Java 11 compiled all domain sources and five focused executable fixtures
+into build/continuation-selection-journal-json. Creation-journal, creation, append,
+provenance and readiness checks PASSED. New JUnit journal codec tests cover text round-trip,
+ordered historical replay, input isolation, explicit empty history, revision boundaries,
+malformed/foreign payloads, duplicate/overlapping/unordered/future entries and encode at
+an older head. Focused Gradle journal-JSON/receipt-JSON/journal-domain/legacy attempt
+failed before compilation: inherited wrapper-cache lock Access is denied. Codec/JUnit/
+store/legacy NOT_RUN. GRADLE_USER_HOME unchanged; no cache workaround or external access.
+
+Next: run MasterSelectionCreationJournalJsonTest and focused receipt/pending/lifecycle/
+store/legacy suites when inherited dependencies are accessible. Integrate optional journal
+into the versioned aggregate with explicit legacy absence, global command-ID uniqueness
+and pending-to-own-original-receipt matching, then locked operation-specific creation
+admission with exact replay. Preserve journals through lifecycle commands and reject
+generic mutation. Trusted source/session evidence, once-only allocation, sampling,
+automatic retries, suspension/revalidation and settlement remain unfinished. Changed-
+snapshot reconciliation unresolved; never silently reseed. Supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - retained Master creation journal, 2026-10-30
 
 IDLE after bounded WB-WHL-08 retained-journal validation increment (S), WB-D138/139.
