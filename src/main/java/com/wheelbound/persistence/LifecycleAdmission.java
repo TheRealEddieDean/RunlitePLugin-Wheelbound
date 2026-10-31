@@ -41,6 +41,6 @@ public final class LifecycleAdmission
         return new RunDocument(next, current.catalogVersion(), receipts, current.fatePoints(),
             current.inventory(), current.grandFate(), current.grandProgress(), current.grandJournal(),
             current.grandActivations(), current.retainedGrandAttempt(next), current.pendingMasterSelection(),
-            current.masterCreations(), current.masterResolutions(), current.masterSpins());
+            current.masterCreations(), current.masterResolutions(), current.masterSpins(), current.currentMasterSpecial().map(value -> value.obligation()));
     }
 }

@@ -22,6 +22,7 @@ public final class RunDocument
     private final com.wheelbound.domain.GrandEvidenceJournal grandJournal;
     private final com.wheelbound.domain.GrandFateProgress grandProgress;
     private final RunLifecycle lifecycle;
+    private final com.wheelbound.domain.MasterCurrentSpecialObligation currentMasterSpecial;
     private final com.wheelbound.domain.MasterSpinState masterSpins;
     private final com.wheelbound.domain.MasterSelectionResolutions masterResolutions;
     private final com.wheelbound.domain.MasterSelectionCreationJournal masterCreations;
@@ -159,6 +160,25 @@ public final class RunDocument
         Optional<com.wheelbound.domain.MasterSelectionCreationJournal> masterCreations,
         Optional<com.wheelbound.domain.MasterSelectionResolutions> masterResolutions,
         Optional<com.wheelbound.domain.MasterSpinState> masterSpins)
+    {
+        this(lifecycle, catalogVersion, receipts, fatePoints, inventory, grandFate, grandProgress,
+            grandJournal, grandActivations, grandCurrentAttempt, pendingMasterSelection, masterCreations,
+            masterResolutions, masterSpins, Optional.empty());
+    }
+
+    /** Explicit current special context; structural retention only, no gameplay admission. */
+    public RunDocument(RunLifecycle lifecycle, String catalogVersion, List<RunReceipt> receipts,
+        Optional<FatePointLedger> fatePoints, Optional<SliceInventory> inventory,
+        Optional<com.wheelbound.domain.SealedGrandFate> grandFate,
+        Optional<com.wheelbound.domain.GrandFateProgress> grandProgress,
+        Optional<com.wheelbound.domain.GrandEvidenceJournal> grandJournal,
+        Optional<com.wheelbound.domain.GrandActivationHistory> grandActivations,
+        Optional<com.wheelbound.domain.GrandCurrentAttempt> grandCurrentAttempt,
+        Optional<com.wheelbound.domain.MasterSelectionProvenance> pendingMasterSelection,
+        Optional<com.wheelbound.domain.MasterSelectionCreationJournal> masterCreations,
+        Optional<com.wheelbound.domain.MasterSelectionResolutions> masterResolutions,
+        Optional<com.wheelbound.domain.MasterSpinState> masterSpins,
+        Optional<com.wheelbound.domain.MasterSpecialObligation> currentMasterSpecial)
     {
         this.masterSpins = Objects.requireNonNull(masterSpins, "masterSpins").orElse(null);
         Objects.requireNonNull(lifecycle, "lifecycle");
@@ -314,6 +334,13 @@ public final class RunDocument
                 { throw new IllegalArgumentException("Reservation requires exact terminal history and no concurrent selection"); }
             });
         }
+        var special = Objects.requireNonNull(currentMasterSpecial, "currentMasterSpecial").orElse(null);
+        if (special != null && (this.masterResolutions == null || this.masterSpins == null
+            || this.pendingMasterSelection != null || this.grandCurrentAttempt != null))
+        { throw new IllegalArgumentException("Current special requires exclusive retained context"); }
+        this.currentMasterSpecial = special == null ? null
+            : com.wheelbound.domain.MasterCurrentSpecialObligation.restore(
+                special, this.masterResolutions, this.masterSpins, lifecycle);
         validateDebits();
         validatePurchases();
         if (previous != null && (previous.afterRevision() != lifecycle.revision()
@@ -431,6 +458,8 @@ public final class RunDocument
     { return Optional.ofNullable(masterResolutions); }
     public Optional<com.wheelbound.domain.MasterSpinState> masterSpins()
     { return Optional.ofNullable(masterSpins); }
+    public Optional<com.wheelbound.domain.MasterCurrentSpecialObligation> currentMasterSpecial()
+    { return Optional.ofNullable(currentMasterSpecial); }
     public RunLifecycle lifecycle() { return lifecycle; }
     public Optional<com.wheelbound.domain.MasterSelectionProvenance> pendingMasterSelection()
     { return Optional.ofNullable(pendingMasterSelection); }

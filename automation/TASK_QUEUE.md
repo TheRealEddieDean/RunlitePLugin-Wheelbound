@@ -1,3 +1,45 @@
+## Current local continuation - aggregate current special retention, 2026-10-31
+
+IDLE after bounded WB-WHL-08 aggregate retention increment (S). Reconciled latest
+lifecycle-bound context against production preparation, history, spin state and copy
+paths; WB-D013/018/058/120/138/139/155 remain authoritative. No I01d or Git operations.
+Merged state not independently verified; supervisor owns publication.
+
+RunDocument now optionally retains explicit MasterCurrentSpecialObligation, restoring
+its lifecycle/history/original reservation binding on construction. Pending selection
+and Grand current attempt are excluded. Absence never infers current activity from
+history. Production lifecycle, debit, draw, creation and Grand activation copy paths
+preserve the explicit payload and revalidate it against the resulting lifecycle.
+Pause/Resume retain requirement, stage and original accounting. RunCodec refuses
+present current-special state until a lossless versioned codec exists. Legacy absence
+remains supported. Structural retention only: no special stage selection, task/candidate
+payload, terminal publication, settlement or gameplay admission. Master Wheel unchanged;
+incomplete gameplay remains unwired/default-disabled.
+
+Fresh javac --release 11 production domain/aggregate/lifecycle compilation PASSED into
+build/continuation-special-aggregate. MasterCurrentSpecialAggregateChecks and expanded
+MasterCurrentSpecialObligationChecks PASSED for Taint/Sacrifice, 0/1/513 retries,
+1/7/Long.MAX_VALUE balances, every supported stage, Pause/Resume, explicit absence,
+incompatible lifecycle and existing malformed context cases. JUnit wrapper authored.
+Focused Gradle/JUnit/legacy attempt failed before compilation: inherited wrapper-cache
+lock Access is denied. JUnit/codec/legacy NOT_RUN. GRADLE_USER_HOME unchanged; no cache
+workaround or external inspection. No full-suite claim.
+
+Reconciliation: structural current-special aggregate retention DONE offline; complete
+copy-path integration and encoding refusal IMPLEMENTED_UNVERIFIED beyond the compiled
+lifecycle path. Schema-18 integration remains IMPLEMENTED_UNVERIFIED. WB-WHL-08 PARTIAL;
+WB-WHL-09 PARTIAL (automatic retries UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED. Ordinary
+assignment, atomic terminal publication, current-special versioned codec, RunReceipt
+and locked/session admission remain UNSTARTED. Existing blocked/evidence holds stand.
+
+Next: implement supported atomic in-memory terminal publication using coupled special
+preparation and explicit lifecycle stage with existing invariants, without admitting
+stage-specific routes lacking payloads. Then lossless versioned current-special codec,
+RunReceipt and locked/session admission. Settlement, grants, sampling, retry execution,
+suspension/revalidation and changed-snapshot recovery remain unfinished. WB-D155 adopts
+no retirement rule. Run focused JUnit/codec/legacy checks when inherited cache is usable.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - lifecycle-bound current special context, 2026-10-31
 
 IDLE after bounded WB-WHL-08 lifecycle-binding prerequisite (S). Reconciled latest

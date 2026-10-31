@@ -37,6 +37,8 @@ public final class RunCodec
 
     public byte[] encode(RunDocument document)
     {
+        if (document.currentMasterSpecial().isPresent())
+        { throw new IllegalArgumentException("Current Master special requires a lossless versioned codec"); }
         RunLifecycle run = document.lifecycle();
         JsonObject payload = new JsonObject();
         payload.addProperty("accountKey", run.identity().accountKey());
