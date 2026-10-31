@@ -1,6 +1,9 @@
 package com.wheelbound.persistence;
 
 import com.wheelbound.domain.RunIdentity;
+import com.wheelbound.domain.MasterOrdinaryPoolEvidence;
+import com.wheelbound.domain.MasterSelectionReadiness;
+import java.util.Map;
 import com.wheelbound.domain.GrandActivationReceipt;
 import com.wheelbound.domain.MasterSelectionCreationReceipt;
 import com.wheelbound.domain.RunLifecycle;
@@ -61,6 +64,32 @@ public final class RunSession
     {
         return token != null && token.generation == generation && current != null
             && current.acceptsObservation(token.identity, token.revision);
+    }
+
+    /** Read-only worker boundary against the actual durable head. The token qualifies
+     * this connection, not the evidence source. No reservation or draw authority is
+     * returned; subsequent commitment must revalidate. Failures after IO begins close
+     * admission. Rejected callbacks perform no IO and preserve the fresh connection.
+     */
+    public synchronized MasterSelectionReadiness masterReadiness(Token token, String snapshotVersion,
+        Map<String, MasterOrdinaryPoolEvidence> ordinaryPools) throws IOException
+    {
+        if (!accepts(token))
+        { throw new IllegalArgumentException("Stale or foreign Master readiness callback"); }
+        generation = new Object();
+        try
+        {
+            RunDocument head = store.load().orElseThrow(() -> new IOException("Run disappeared"));
+            MasterSelectionReadiness readiness = MasterAggregateEvidence.assemble(head, token.identity,
+                token.revision, snapshotVersion, ordinaryPools);
+            current = head.lifecycle();
+            return readiness;
+        }
+        catch (IOException | RuntimeException ex)
+        {
+            disconnect();
+            throw ex;
+        }
     }
 
     /** Immediate callback qualification only; never authenticates eligibility evidence. */

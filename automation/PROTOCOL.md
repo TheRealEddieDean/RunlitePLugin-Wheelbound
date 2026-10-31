@@ -1,3 +1,47 @@
+## Current local continuation - session-qualified Master readiness, 2026-10-30
+
+IDLE after bounded WB-WHL-08/10 read-only session increment (S), WB-D138/139.
+Reconciled existing pool/wheel/aggregate reducers, token-qualified creation, recovery,
+locked store and asynchronous session queue. Reused them; no I01d work. Merged work
+and branch state not independently verified because user prohibits Git operations.
+Current user restrictions supersede historical Git/publication instructions.
+
+RunSession.masterReadiness qualifies the connection token before IO, invalidates old
+callbacks and loads the actual locked storage head for MasterAggregateEvidence assembly.
+Foreign/stale/occupied/unavailable heads and evidence errors fail closed. AsyncRunSession
+freezes the evidence map before queuing, closes callback admission immediately, and
+uses existing supersession behavior: queued superseded reads skip IO; started reads
+cannot restore superseded sessions. Results are advisory snapshots, never reservations,
+trusted detector/catalog proof, baseline freshness, allocation or draw authority.
+No plugin wiring, schema change, gameplay enablement or legacy Master Wheel edits.
+
+MasterReadinessSessionTest authored for read-only bytes/pending preservation, frozen
+queued maps, stale durable revision, superseded unreadable storage, stale token rejection,
+evidence mismatch and unreadable-head disconnection. Review corrected its initial wheel
+fixture to meet the existing five-slice/three-activity invariant. Session/JUnit integration
+is IMPLEMENTED_UNVERIFIED: Gradle failed before compilation on inherited wrapper-cache
+lock Access is denied. GRADLE_USER_HOME unchanged; no external cache inspection/workaround.
+Java 11 compiled the dependency-free production/fixture graph into
+build/continuation-master-readiness-session. MasterAggregateEvidenceChecks,
+MasterWheelEvidenceChecks and MasterOrdinaryPoolEvidenceChecks PASSED.
+
+Reconciliation: pure reduction/wheel/aggregate checks DONE offline; durable-head session
+assembly now IMPLEMENTED_UNVERIFIED, no longer UNSTARTED. WB-WHL-08 remains PARTIAL;
+locked creation/schema-16/session disk integration remains IMPLEMENTED_UNVERIFIED.
+WB-WHL-09 PARTIAL (automatic retry UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED overall.
+FND-01 DONE; FND-10/12 and REL-02 PARTIAL; GFD-01/02/05/06/07 PARTIAL_UNVERIFIED;
+GFD-03/04 TODO. Existing decision/client/evidence BLOCKED rows stand. Trusted detectors,
+reviewed family catalogs and special evidence adapters remain unfinished/evidence gated.
+No complete/playable gameplay claim; incomplete mode remains unwired/default-disabled.
+
+Next: compile/run MasterReadinessSessionTest and focused session/creation/store/codec/
+migration/legacy suites when inherited dependencies are accessible. Extend started-read
+supersession and executor-rejection coverage; then implement bounded once-only allocation
+preparation using approved existing spin rules and immutable replay receipts, after
+reconciling existing allocation code. Sampling, automatic retries, suspension/revalidation,
+changed-snapshot reconciliation and settlement remain unfinished. WB-D155 adopts no
+retirement rule. Supervisor handles commits, PRs, CI and merges; local edits only.
+
 ## Current local continuation - aggregate-bound Master evidence, 2026-10-30
 
 IDLE after bounded WB-WHL-08/10 aggregate binding increment (S), WB-D138/139.
