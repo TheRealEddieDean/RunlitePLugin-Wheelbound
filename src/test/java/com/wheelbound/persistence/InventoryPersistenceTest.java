@@ -49,7 +49,7 @@ public class InventoryPersistenceTest
         if (schema < 8) { payload.remove("grandFate"); }
         if (schema < 9) { payload.remove("grandProgress"); }
         if (schema < 10) { payload.remove("grandJournal"); }
-        if (schema < 11) { payload.remove("grandActivations"); payload.remove("grandCurrentAttempt"); payload.remove("pendingMasterSelection"); payload.remove("masterCreations"); }
+        if (schema < 11) { payload.remove("grandActivations"); payload.remove("grandCurrentAttempt"); payload.remove("pendingMasterSelection"); payload.remove("masterCreations"); payload.remove("masterResolutions"); }
         String text = gson.toJson(payload);
         JsonObject envelope = new JsonObject();
         envelope.addProperty("schemaVersion", schema); envelope.addProperty("payload", text);

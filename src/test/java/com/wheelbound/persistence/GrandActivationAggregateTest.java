@@ -34,7 +34,7 @@ public class GrandActivationAggregateTest
             assertEquals(receipt, restored.grandActivations().get().replay(receipt, id, 40));
             JsonObject envelope = new JsonParser().parse(new String(codec.encode(original), StandardCharsets.UTF_8)).getAsJsonObject();
             JsonObject payload = new JsonParser().parse(envelope.get("payload").getAsString()).getAsJsonObject();
-            payload.remove("grandActivations"); payload.remove("grandCurrentAttempt"); payload.remove("pendingMasterSelection"); payload.remove("masterCreations");
+            payload.remove("grandActivations"); payload.remove("grandCurrentAttempt"); payload.remove("pendingMasterSelection"); payload.remove("masterCreations"); payload.remove("masterResolutions");
             String text = gson.newBuilder().serializeNulls().create().toJson(payload);
             envelope.addProperty("schemaVersion", 10);
             envelope.addProperty("payload", text);
