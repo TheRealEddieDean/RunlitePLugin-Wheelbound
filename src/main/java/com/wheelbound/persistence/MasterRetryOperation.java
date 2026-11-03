@@ -1,15 +1,44 @@
 package com.wheelbound.persistence;
 
 import com.wheelbound.domain.RunLifecycle;
+import com.wheelbound.domain.RunIdentity;
+import com.wheelbound.domain.MasterOrdinaryPoolEvidence;
+import com.wheelbound.domain.MasterSelectionProvenance;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.UUID;
+import java.util.function.Function;
 
 /** Pure atomic publication proposal. Current evidence must separately be qualified
  * under the storage lock; this operation does not authenticate evidence or RNG. */
 public final class MasterRetryOperation
 {
     private MasterRetryOperation() { }
+
+    /** Prepare a fresh unresolved batch and its atomic update from the same head.
+     * The caller must supply trusted current evidence and a side-effect-free source
+     * under its storage lock. This does not save, authenticate RNG, or admit replay.
+     * Valid landings require the separate terminal accounting path.
+     */
+    public static RunDocument prepareFresh(RunDocument head,
+        RunIdentity identity, UUID commandId, long revision,
+        UUID transactionId, int drawCount, String streamState, String snapshotVersion,
+        Map<String, MasterOrdinaryPoolEvidence> pools,
+        int budget, Function<MasterSelectionProvenance, MasterSelectionProvenance.Step> source)
+    {
+        Objects.requireNonNull(head, "head");
+        Objects.requireNonNull(commandId, "commandId");
+        // Refuse reuse and overflow before invoking a draw source. Historical replay
+        // must use the exact retained response, never freshly sampled work.
+        if (head.receipts().stream().anyMatch(r -> r.commandId().equals(commandId)))
+        { throw new IllegalArgumentException("Retry command ID already retained"); }
+        Math.addExact(revision, 1);
+        var result = MasterRetryContinuation.prepare(head, identity, revision, transactionId,
+            drawCount, streamState, snapshotVersion, pools, budget, source);
+        return prepare(head, MasterRetryOperationProposal.prepare(head, commandId, result));
+    }
 
     public static RunDocument prepare(RunDocument head, MasterRetryOperationProposal request)
     {

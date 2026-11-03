@@ -1,3 +1,46 @@
+## Current local continuation - composed fresh retry preparation, 2026-11-03
+
+IDLE after bounded WB-WHL-09 preparation increment (XS/S). Supersedes older
+next-task prose. Read current continuation records and protocol; reconciled retry
+production/tests against WB-D138/139. Existing domain restoration/publication and
+terminal copy correction DONE offline. Candidate schema-20 reader/writer and JSON
+remain IMPLEMENTED_UNVERIFIED. No Git or merged-state verification; supervisor
+owns publication. No I01d selected. A56 remains deferred.
+
+MasterRetryOperation.prepareFresh now composes current-evidence qualification,
+bounded supplied draws, typed unresolved response and atomic in-memory publication
+against one head. Retained command IDs and revision overflow are refused before
+source invocation. Changed/unready evidence retains the exact prefix in a suspension
+response; valid landings refuse this unresolved path. Source failures leave the head
+unchanged. Caller must provide trusted evidence and a side-effect-free source under
+its eventual storage lock. This is preparation only: no storage/session caller,
+evidence/RNG authentication, durable replay, saved suspension or gameplay activation.
+Existing Master Wheel behavior preserved; incomplete gameplay remains disabled.
+
+Focused dependency-free Java 11 compilation and retry operation/response/continuation/
+proposal/prefix-binding/batch Checks passed. Operation checks now cover composition
+for 0/1/513 retained empties, all availability statuses, zero suspension draws,
+unchanged balances, stale revision/reused command before sampling, valid-result
+refusal and source-failure immutability. Existing JUnit wrapper runs these checks,
+but JUnit itself remains UNVERIFIED. Gradle snapshot/JSON/RunCodec/legacy attempt
+failed BEFORE compilation: inherited wrapper-cache lock Access is denied.
+GRADLE_USER_HOME unchanged; no external inspection or cache workaround.
+
+Reconciliation: WB-WHL-09 PARTIAL. Fresh composed preparation DONE offline; codec
+candidate/JSON IMPLEMENTED_UNVERIFIED. Public schema-20 activation, locked current-
+evidence storage admission, exact durable replay, automatic durable retry execution
+and persisted suspension UNSTARTED. WB-WHL-08 PARTIAL: ordinary assignments and
+supported Sacrifice route payloads UNSTARTED. WB-WHL-10 PARTIAL_UNVERIFIED. Other
+partial/unstarted and client/catalog/decision BLOCKED holds stand. No complete
+gameplay claim or new gameplay decision.
+
+Next: run MasterRetrySnapshotReadTest, MasterRetryOperationProposalJsonTest,
+RunCodecTest, MasterRetryOperationTest and legacy regression with inherited build
+dependencies accessible. Fix failures before promoting schema 20. Then integrate
+locked evidence admission and durable replay, preserving original responses, exact
+streams/accounting and same-transaction suspension. Local edits only; supervisor
+handles commits, PRs, CI and merges.
+
 ## Current local continuation - gated schema-20 retry writer candidate, 2026-11-03
 
 IDLE after bounded WB-WHL-09 writer-preparation increment (S). Supersedes older

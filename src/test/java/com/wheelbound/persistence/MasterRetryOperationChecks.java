@@ -10,6 +10,7 @@ public final class MasterRetryOperationChecks
         for (int count : new int[] {0, 1, 513})
         {
             var head = MasterRetryContinuationChecks.fixture(count);
+            freshPreparation(head, count);
             for (var availability : MasterSelectionReadiness.Availability.values())
             {
                 var request = MasterRetryOperationProposal.prepare(head, new UUID(80, count),
@@ -59,6 +60,64 @@ public final class MasterRetryOperationChecks
             }
         }
         System.out.println("MasterRetryOperationChecks PASSED");
+    }
+
+    private static void freshPreparation(RunDocument head, int count)
+    {
+        var pending = head.pendingMasterSelection().get();
+        var id = head.lifecycle().identity();
+        var calls = new java.util.concurrent.atomic.AtomicInteger();
+        java.util.function.Function<MasterSelectionProvenance, MasterSelectionProvenance.Step> source = p -> {
+            calls.incrementAndGet();
+            return new MasterSelectionProvenance.Step(new DrawCommitment(p.pool(), 0), "next");
+        };
+        for (var availability : MasterSelectionReadiness.Availability.values())
+        {
+            Map<String, MasterOrdinaryPoolEvidence> pools = new HashMap<>();
+            for (int i = 0; i < 5; i++)
+            {
+                String activity = "activity-" + i;
+                pools.put(activity, new MasterOrdinaryPoolEvidence(id, 1, "snapshot", "catalog", activity,
+                    Set.of("normal"), Map.of("normal", new MasterSelectionReadiness.Classification(
+                        i == 4 ? availability : MasterSelectionReadiness.Availability.VERIFIED_EMPTY,
+                        "complete offline fixture"))));
+            }
+            calls.set(0);
+            var next = MasterRetryOperation.prepareFresh(head, id, new UUID(95, count), 1,
+                pending.transactionId(), count, "repeated", "snapshot", pools, 2, source);
+            boolean continued = availability == MasterSelectionReadiness.Availability.ASSIGNABLE;
+            var response = next.receipts().get(1).masterRetry();
+            check(calls.get() == (continued ? 2 : 0)
+                && next.lifecycle().revision() == 2
+                && response.status() == (continued ? MasterRetryContinuation.Status.PROPOSED
+                    : MasterRetryContinuation.Status.SUSPENDED)
+                && response.after().drawCount() == count + (continued ? 2 : 0)
+                && next.fatePoints().equals(head.fatePoints())
+                && next.masterSpins().equals(head.masterSpins()));
+            if (!continued) { check(response.after() == pending); }
+            calls.set(0);
+            rejects(() -> MasterRetryOperation.prepareFresh(head, id, head.receipts().get(0).commandId(),
+                1, pending.transactionId(), count, "repeated", "snapshot", pools, 2, source));
+            rejects(() -> MasterRetryOperation.prepareFresh(head, id, new UUID(96, count),
+                0, pending.transactionId(), count, "repeated", "snapshot", pools, 2, source));
+            check(calls.get() == 0);
+            if (continued)
+            {
+                rejects(() -> MasterRetryOperation.prepareFresh(head, id, new UUID(97, count), 1,
+                    pending.transactionId(), count, "repeated", "snapshot", pools, 2,
+                    p -> new MasterSelectionProvenance.Step(new DrawCommitment(p.pool(), 19), "valid")));
+                try
+                {
+                    MasterRetryOperation.prepareFresh(head, id, new UUID(98, count), 1,
+                        pending.transactionId(), count, "repeated", "snapshot", pools, 2,
+                        p -> { throw new IllegalStateException("source failed"); });
+                    throw new AssertionError("Expected source failure");
+                }
+                catch (IllegalStateException expected) { }
+            }
+            check(head.lifecycle().revision() == 1 && head.receipts().size() == 1
+                && head.pendingMasterSelection().get() == pending);
+        }
     }
 
     private static RunDocument copy(RunDocument head, Optional<MasterSelectionProvenance> pending,
