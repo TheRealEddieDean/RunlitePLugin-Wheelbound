@@ -5,7 +5,7 @@ import java.util.*;
 
 public final class MasterRetryOperationProposalChecks
 {
-    private static MasterRetryContinuation.Result result(RunDocument head,
+    static MasterRetryContinuation.Result result(RunDocument head,
         MasterSelectionReadiness.Availability availability, int ticket, String state)
     {
         var pending = head.pendingMasterSelection().get();
@@ -13,12 +13,12 @@ public final class MasterRetryOperationProposalChecks
         for (int i = 0; i < 5; i++)
         {
             String activity = "activity-" + i;
-            pools.put(activity, new MasterOrdinaryPoolEvidence(head.lifecycle().identity(), 1,
+            pools.put(activity, new MasterOrdinaryPoolEvidence(head.lifecycle().identity(), head.lifecycle().revision(),
                 "snapshot", "catalog", activity, Set.of("normal"), Map.of("normal",
                 new MasterSelectionReadiness.Classification(i == 4 ? availability
                     : MasterSelectionReadiness.Availability.VERIFIED_EMPTY, "complete offline fixture"))));
         }
-        return MasterRetryContinuation.prepare(head, head.lifecycle().identity(), 1,
+        return MasterRetryContinuation.prepare(head, head.lifecycle().identity(), head.lifecycle().revision(),
             pending.transactionId(), pending.drawCount(), pending.currentStreamState(),
             "snapshot", pools, 2, p -> new MasterSelectionProvenance.Step(
                 new DrawCommitment(p.pool(), ticket), state));

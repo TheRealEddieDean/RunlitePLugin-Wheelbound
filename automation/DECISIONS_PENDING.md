@@ -1,3 +1,51 @@
+## Current local continuation - atomic in-memory retry publication, 2026-11-03
+
+IDLE after bounded WB-WHL-09 aggregate increment (S). Reconciled current source and
+focused checks: batch, current-evidence preparation, prefix binding, typed proposal
+and RunReceipt envelope already exist (DONE offline). Taint store/session/async and
+schema-19 remain IMPLEMENTED_UNVERIFIED. Older contrary continuation records are
+superseded. WB-D138/139 and existing accounting/special rules remain authoritative.
+No Git operations or merged-state verification; supervisor owns publication. No I01d.
+
+MasterRetryOperation now prepares one atomic in-memory revision/pending-prefix/typed
+response update, preserving other aggregate fields and balances. Exact retained replay
+returns the current head with its original response retained, including after later
+batches and Pause/Resume; changed command payloads fail closed. Aggregate validation
+binds retry history to retained creation, ordered prefixes and the current pending or
+later terminal transcript. Missing creation/transcript, shortened or changed states
+are refused. Schema-19 encoding explicitly refuses retry-bearing aggregates pending
+versioned lossless persistence. No durable suspension, trusted RNG/evidence admission,
+storage/session command or gameplay wiring. Existing Master Wheel unchanged; incomplete
+gameplay remains disabled. This is structural publication, not evidence authentication.
+
+Fresh javac --release 11 compilation PASSED using build/continuation-retry-publication/
+sources.txt (dependency-free domain/aggregate/Checks selection). New
+MasterRetryOperationChecks and existing MasterRetryOperationProposalChecks,
+MasterRetryPrefixBindingChecks, MasterRetryContinuationChecks and
+MasterEmptyRetryBatchChecks PASSED. New checks cover 0/1/513 prefixes, each availability,
+continuation/suspension, multiple batches, exact replay after Pause/Resume/later updates,
+missing/shortened/changed transcript, missing creation, stale request, command collision,
+source immutability and unchanged accounting. They do not exercise a terminal copy path.
+Focused Gradle retry/JUnit/legacy attempt failed BEFORE compilation: inherited wrapper
+cache lock Access is denied. JUnit wrapper and codec-refusal test IMPLEMENTED_UNVERIFIED;
+no Gson/codec/storage/session/JUnit/legacy pass claimed. GRADLE_USER_HOME unchanged;
+no external inspection, cache workaround, credentials or workflow access.
+
+Reconciliation: WB-WHL-09 PARTIAL. Atomic in-memory retry publication DONE offline;
+versioned retry persistence, exact durable replay, locked current-evidence admission,
+automatic durable retry execution and durable suspension remain UNSTARTED. WB-WHL-08
+PARTIAL: ordinary assignment and supported Sacrifice route payloads UNSTARTED.
+WB-WHL-10 PARTIAL_UNVERIFIED. Other partial/unstarted/blocked statuses and live-client,
+catalog and decision holds stand. No complete gameplay claim.
+
+Next: add terminal-operation copy-path coverage, then versioned lossless retry payload/
+response encoding and migrations before removing the explicit codec refusal. Follow
+with locked current-evidence storage/session admission and durable replay. Preserve
+all prefixes/accounting and WB-D139 same-transaction suspension. Never silently reconcile
+changed snapshots/catalogs or authenticate stale evidence using structural payloads.
+Run focused Gradle and legacy checks when inherited dependencies are accessible.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - schema-19 Master special retention, 2026-11-03
 
 IDLE after bounded WB-WHL-08 persistence integration increment (S). Reconciled latest
