@@ -6,6 +6,7 @@ import com.wheelbound.domain.MasterSelectionReadiness;
 import java.util.Map;
 import com.wheelbound.domain.GrandActivationReceipt;
 import com.wheelbound.domain.MasterSelectionCreationReceipt;
+import com.wheelbound.domain.MasterSelectionResolutionReceipt;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
@@ -173,6 +174,32 @@ public final class AsyncRunSession
         if (operation != RunReceipt.Operation.PAUSE && operation != RunReceipt.Operation.RESUME)
         { throw new IllegalArgumentException("Use the operation-specific transaction service"); }
         return submit(target -> target.execute(commandId, expectedRevision, operation));
+    }
+
+    /** Queues frozen Taint commitment or exact replay, closing callbacks immediately.
+     * Superseded queued commands skip IO; started commands can commit after disconnect
+     * but cannot restore admission. Cancellation is not disconnect.
+     */
+    public synchronized CompletableFuture<Optional<MasterTerminalOperationProposal>> commitMasterTaint(
+        MasterSelectionResolutionReceipt request)
+    {
+        Objects.requireNonNull(request, "request");
+        return submit(target -> target.commitMasterTaint(request));
+    }
+
+    /** Rejects stale callbacks before invalidation/queuing and rechecks on the worker.
+     * Tokens do not authenticate the frozen draw or eligibility evidence.
+     */
+    public synchronized CompletableFuture<Optional<MasterTerminalOperationProposal>> commitMasterTaint(
+        RunSession.Token token, MasterSelectionResolutionReceipt request)
+    {
+        if (current == null || !current.acceptsMasterTaint(token, request))
+        {
+            CompletableFuture<Optional<MasterTerminalOperationProposal>> rejected = new CompletableFuture<>();
+            rejected.completeExceptionally(new IllegalArgumentException("Stale or foreign Master Taint callback"));
+            return rejected;
+        }
+        return submit(target -> target.commitMasterTaint(token, request));
     }
 
     @FunctionalInterface
