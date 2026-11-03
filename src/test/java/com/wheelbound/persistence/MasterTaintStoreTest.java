@@ -28,7 +28,7 @@ public class MasterTaintStoreTest
         return target;
     }
 
-    private MasterSelectionResolutionReceipt request(RunDocument source, long ticket, String stream)
+    private MasterSelectionResolutionReceipt request(RunDocument source, int ticket, String stream)
     {
         var pending = source.pendingMasterSelection().orElseThrow();
         var creation = source.masterCreations().orElseThrow().receipts().get(pending.transactionId());
@@ -126,7 +126,7 @@ public class MasterTaintStoreTest
         var missing = store(folder.newFolder().toPath(), source, ignored -> {});
         assertThrows(IOException.class, () -> missing.commitMasterTaint(request(source)));
         try (var channel = java.nio.channels.FileChannel.open(target.lockPath(),
-            java.nio.file.StandardOpenOption.WRITE);
+            java.nio.file.StandardOpenOption.CREATE, java.nio.file.StandardOpenOption.WRITE);
             var lock = channel.lock())
         { assertThrows(IOException.class, () -> target.commitMasterTaint(request(source))); }
         assertArrayEquals(original, Files.readAllBytes(target.snapshotPath()));
