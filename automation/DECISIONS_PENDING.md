@@ -1,3 +1,50 @@
+## Current local continuation - schema-19 Master special retention, 2026-11-03
+
+IDLE after bounded WB-WHL-08 persistence integration increment (S). Reconciled latest
+continuations with production/fixtures and WB-D013/018/058/120/138/139/155. Atomic
+in-memory Taint publication, typed response, explicit current-special retention and both
+standalone JSON payloads already exist; reused these boundaries. Older UNSTARTED records
+for these are superseded. No I01d or Git operations. Merged state not independently
+verified; supervisor owns commits, PRs, CI and merges.
+
+RunCodec schema 19 explicitly retains currentMasterSpecial and MASTER_TAINT_TERMINAL's
+original typed response. Removed encoding refusals only in favor of versioned lossless
+payloads. Decode binds explicit special to retained history, original reservation and
+current lifecycle, then RunDocument validates the typed response against that context.
+Outer command/revisions/state/obligation must match the original response. Schemas 1-18
+retain their strict field sets and absent current-special context; history never infers
+an obligation or balance. Updated historical migration fixtures to omit the new field.
+Structural Sacrifice context round-trip does not provide a supported route or task.
+Master Wheel unchanged; incomplete gameplay remains unwired/default-disabled.
+
+Fresh javac --release 11 compilation of dependency-free domain/persistence and Checks
+fixtures PASSED into build/continuation-special-schema19, with fresh source selection.
+MasterSpecialTerminalPreparationChecks, MasterCurrentSpecialAggregateChecks (including
+current-context checks), MasterResolutionBindingChecks and
+MasterTerminalOperationProposalChecks PASSED. This compilation EXCLUDES Gson/RunCodec/
+JUnit. Focused schema-19/current-special/typed-response/spin-codec/RunCodec/legacy Gradle
+attempt failed BEFORE compilation: inherited wrapper-cache lock Access is denied.
+Schema-19 integration and new JUnit tests are IMPLEMENTED_UNVERIFIED; no codec, migration,
+JUnit or legacy pass claimed. Inherited GRADLE_USER_HOME unchanged; no external inspection
+or cache workaround. Tests authored for 0/1/513 prefixes, 1/7/Long.MAX_VALUE original
+balances, Active/Pause/Resume exact response replay, changed command refusal, explicit
+structural Sacrifice, schema-18 absence/reservation migration, envelope disagreement,
+missing history/reservation/current context and input-byte preservation on rejection.
+
+Reconciliation: WB-WHL-08 remains PARTIAL. RunCodec migration/integration is now
+IMPLEMENTED_UNVERIFIED, no longer UNSTARTED. Standalone JSON remains
+IMPLEMENTED_UNVERIFIED. Locked/session admission remains UNSTARTED; ordinary assignments
+and supported Sacrifice route payloads UNSTARTED. WB-WHL-09 PARTIAL (automatic retry
+execution UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED. Other partial/unstarted/blocked rows
+and decision/client/catalog evidence holds stand. No unfinished gameplay marked complete.
+
+Next: execute focused JSON/codec/migration and legacy tests when inherited dependencies
+are accessible, then implement locked atomic Taint terminal admission reusing the existing
+in-memory operation with exact retained replay and actual pending-prefix validation.
+Keep unsupported ordinary/Sacrifice commands refused. Settlement, grants, sampling,
+retry execution, suspension/revalidation and changed-snapshot recovery remain unfinished.
+WB-D155 adopts no retirement rule. Local edits only; supervisor handles publication.
+
 ## Current local continuation - aggregate-backed terminal reservation preparation, 2026-10-31
 
 IDLE after bounded WB-WHL-08 preparation increment (S). Reconciled source/tests with

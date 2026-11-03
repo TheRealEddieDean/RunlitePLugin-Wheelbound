@@ -133,7 +133,7 @@ public final class MasterSpecialTerminalPreparationChecks
         System.out.println("MasterSpecialTerminalPreparationChecks PASSED");
     }
 
-    private static RunDocument fixture(ActiveWheel.Kind kind, int count, long balance)
+    static RunDocument fixture(ActiveWheel.Kind kind, int count, long balance)
     {
         var slices = new ArrayList<ActiveWheel.Slice>();
         var evidence = new HashMap<UUID, MasterSelectionReadiness.Classification>();
