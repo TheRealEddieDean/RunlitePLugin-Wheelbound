@@ -55,9 +55,17 @@ public final class MasterResolutionBinding
         var original = head.masterCreations().get().matchPending(pending,
             head.lifecycle().identity(), head.lifecycle().revision());
         rejectCollision(head, proposed.commandId());
-        var terminal = proposed.resolved().landings().get(proposed.resolved().drawCount() - 1).step();
-        if (!proposed.equals(MasterSelectionResolutionReceipt.prepare(proposed.commandId(),
-            head.lifecycle().revision(), original, pending, terminal)))
+        // A yielded retry batch may include several empty landings before its
+        // terminal step. Rebuild only the suffix from the actual retained prefix;
+        // comparing the complete receipt also rejects altered earlier landings.
+        var resolved = pending;
+        for (int i = pending.drawCount(); i < proposed.resolved().drawCount(); i++)
+        {
+            resolved = resolved.append(resolved.transactionId(), resolved.drawCount(),
+                resolved.currentStreamState(), proposed.resolved().landings().get(i).step());
+        }
+        if (!proposed.equals(new MasterSelectionResolutionReceipt(proposed.commandId(),
+            head.lifecycle().revision(), original, resolved)))
         { throw new IllegalArgumentException("Terminal transcript changed durable prefix"); }
         var combined = new java.util.ArrayList<>(history.receipts().values());
         combined.add(proposed);
