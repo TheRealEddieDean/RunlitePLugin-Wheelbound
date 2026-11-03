@@ -38,6 +38,7 @@ public final class MasterRetryResponseChecks
             var terminal = MasterSelectionResolutionReceipt.prepare(new UUID(95, 2), 6, creation, after,
                 new MasterSelectionProvenance.Step(new DrawCommitment(after.pool(), after.pool().totalWeight() - 1), "terminal"));
             var resolved = MasterTaintTerminalOperation.prepare(next, terminal);
+            check(MasterRetryRecovery.find(resolved, restored).get() == request);
             check(resolved.pendingMasterSelection().isEmpty()
                 && resolved.masterSpins().orElseThrow().available() == 6
                 && resolved.lifecycle().obligation() == RunLifecycle.Obligation.PUNISHMENT_PENDING
@@ -46,6 +47,7 @@ public final class MasterRetryResponseChecks
                 && MasterRetryOperation.prepare(resolved, restored) == resolved);
             var paused = LifecycleAdmission.prepare(resolved, request.identity(), new UUID(95, 3), 7,
                 RunReceipt.Operation.PAUSE);
+            check(MasterRetryRecovery.find(paused, restored).get() == request);
             check(restored.validateRetained(paused) == restored
                 && MasterRetryOperation.prepare(paused, restored) == paused);
             var resumed = LifecycleAdmission.prepare(paused, request.identity(), new UUID(95, 4), 8,
