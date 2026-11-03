@@ -1,3 +1,61 @@
+## Current local continuation - historical retry responses and terminal copy fix, 2026-11-03
+
+IDLE after bounded WB-WHL-09 increment (S). Supersedes earlier next-task prose.
+Reconciled source/tests with the original-head restoration checkpoint: batch,
+evidence preparation, prefix binding, typed envelope, in-memory publication and
+original-head restoration already exist (DONE offline). Standalone JSON, Taint
+store/session/async and schema-19 remain IMPLEMENTED_UNVERIFIED. No Git operations
+or merged-state verification; supervisor owns publication. I01d not selected.
+WB-D138/139 remain authoritative; no gameplay decision was added or changed.
+
+MasterRetryOperationProposal.restoreResponse reconstructs historical response fields
+against their retained original creation and exact original draw boundary, without
+using a later head as an original active head. validateRetained requires the exact
+retained operation envelope and aggregate transcript/history binding. This is structural
+restoration, not evidence authentication or durable replay. Historical creation lookup
+now scopes matchPending to the response's own creation, so later creations do not
+invalidate old retries; current pending validation still requires the latest creation.
+
+Terminal copy-path checks exposed a production defect: retry publication preserved an
+old spin-state revision, causing the next Taint reservation to fail stale. Publication
+and Pause/Resume now advance unreserved spin-state revision with the run while retaining its balance
+and reservation. Existing reserved snapshots remain unchanged across Pause/Resume.
+Tests cover retry -> Pause -> Resume -> Taint, plus 0/1/513 empty prefixes,
+continuation/suspension, exact
+restored equality/hash, terminal Taint publication, one reservation, paused/resumed
+retained replay, changed tickets/states/command/status, invalid boundaries, foreign
+identity, creation collisions, terminal-payload refusal and input immutability.
+Historical lookup is tested with a later creation journal only; no later playable
+selection or unsupported settlement transition is claimed.
+
+Fresh javac --release 11 compilation PASSED using
+build/continuation-retry-response/sources.txt into build/continuation-retry-response.
+MasterRetryResponseChecks PASSED. Retry operation/proposal/prefix/continuation,
+special terminal, terminal proposal and empty retry batch checks PASSED offline.
+These checks exclude Gson/JSON/RunCodec, storage/session adapters and JUnit.
+Focused Gradle response/publication/legacy attempt failed BEFORE compilation:
+inherited wrapper-cache lock Access is denied. New JUnit wrapper remains
+IMPLEMENTED_UNVERIFIED; no JUnit, JSON, codec, storage, session or legacy pass claimed.
+GRADLE_USER_HOME unchanged; no cache workaround, external inspection or workflow access.
+
+Reconciliation: WB-WHL-09 PARTIAL. Historical structural response restoration and
+terminal copy-path correction DONE offline. Versioned aggregate/history JSON encoding
+and migrations, exact durable replay, locked current-evidence admission, automatic
+durable retries and persisted suspension remain UNSTARTED. Schema-19 still refuses
+retry-bearing aggregates. WB-WHL-08 PARTIAL: ordinary assignment and supported
+Sacrifice route payloads UNSTARTED. WB-WHL-10 PARTIAL_UNVERIFIED. Other partial,
+unstarted and decision/client/catalog BLOCKED statuses stand. Existing Master Wheel
+unchanged; incomplete gameplay remains disabled. No complete gameplay claim.
+
+Next: versioned lossless historical retry response/aggregate encoding and migrations,
+using restoreResponse rather than original-head restore when decoding historical
+responses. Remove codec refusal only with focused codec/migration/round-trip checks.
+Then locked evidence admission and durable replay, preserving exact transcripts,
+accounting and WB-D139 same-transaction suspension. No settlement or later
+selection may be invented to work around unfinished transitions. Run focused JUnit,
+JSON/codec and legacy tests when inherited build dependencies are accessible.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - original-head retry payload restoration, 2026-11-03
 
 IDLE after bounded WB-WHL-09 persistence prerequisite (S). Reconciled production and
