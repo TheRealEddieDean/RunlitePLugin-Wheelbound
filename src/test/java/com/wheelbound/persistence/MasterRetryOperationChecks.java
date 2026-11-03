@@ -97,6 +97,10 @@ public final class MasterRetryOperationChecks
             1, pending.transactionId(), count, pending.currentStreamState(), "snapshot", Map.of(),
             2, p -> { absentCalls.incrementAndGet(); throw new AssertionError("Unexpected sampling"); }));
         check(absentCalls.get() == 0 && head.masterSpins().isEmpty());
+        rejects(() -> MasterRetryOperation.prepareFunded(head, id, new UUID(121, count),
+            1, pending.transactionId(), count, pending.currentStreamState(), "snapshot", Map.of(),
+            2, p -> { absentCalls.incrementAndGet(); throw new AssertionError("Unexpected sampling"); }));
+        check(absentCalls.get() == 0 && head.masterSpins().isEmpty());
         for (long balance : new long[] {0, 1, Long.MAX_VALUE})
         {
             var spins = new MasterSpinState(1, id, 1, balance, Optional.empty());
@@ -115,7 +119,7 @@ public final class MasterRetryOperationChecks
                             : MasterSelectionReadiness.Availability.VERIFIED_EMPTY, "fixture"))));
             }
             var calls = new java.util.concurrent.atomic.AtomicInteger();
-            java.util.function.Supplier<RunDocument> prepare = () -> MasterRetryOperation.prepareFresh(
+            java.util.function.Supplier<RunDocument> prepare = () -> MasterRetryOperation.prepareFunded(
                 funded, id, new UUID(117, count), 1, pending.transactionId(), count,
                 pending.currentStreamState(), "snapshot", pools, 2, p -> {
                     calls.incrementAndGet();
@@ -158,6 +162,18 @@ public final class MasterRetryOperationChecks
                     && next.masterSpins().orElseThrow().available() == balance
                     && next.masterSpins().orElseThrow().revision() == 2
                     && next.pendingMasterSelection().orElseThrow().drawCount() == count + 2);
+                var response = next.receipts().get(1).masterRetry();
+                check(MasterRetryOperation.prepare(next, response) == next
+                    && MasterRetryRecovery.find(next, response).orElseThrow() == response);
+                calls.set(0);
+                rejects(() -> MasterRetryOperation.prepareFunded(funded, id,
+                    new UUID(122, count), 1, pending.transactionId(), count,
+                    pending.currentStreamState(), "snapshot", pools, 2, p -> {
+                        calls.incrementAndGet();
+                        return new MasterSelectionProvenance.Step(new DrawCommitment(p.pool(), 19), "valid");
+                    }));
+                check(calls.get() == 1 && funded.pendingMasterSelection().orElseThrow() == pending
+                    && funded.masterSpins().orElseThrow() == spins);
                 calls.set(0);
                 var terminal = MasterRetryOperation.prepareFundedSelection(funded, id,
                     new UUID(120, count), 1, pending.transactionId(), count,

@@ -17,6 +17,23 @@ public final class MasterRetryOperation
 {
     private MasterRetryOperation() { }
 
+    /** Prepare an unresolved funded retry and its complete aggregate update.
+     * Both continuation and suspension retain explicit accounting without a debit.
+     * Valid landings are refused by proposal construction and must use terminal
+     * admission with the exact result from prepareFundedSelection instead. This
+     * does not authenticate evidence/RNG, save, or authorize live gameplay.
+     */
+    public static RunDocument prepareFunded(RunDocument head,
+        RunIdentity identity, UUID commandId, long revision,
+        UUID transactionId, int drawCount, String streamState, String snapshotVersion,
+        Map<String, MasterOrdinaryPoolEvidence> pools,
+        int budget, Function<MasterSelectionProvenance, MasterSelectionProvenance.Step> source)
+    {
+        var result = prepareFundedSelection(head, identity, commandId, revision, transactionId,
+            drawCount, streamState, snapshotVersion, pools, budget, source);
+        return prepare(head, MasterRetryOperationProposal.prepare(head, commandId, result));
+    }
+
     /** Funded preparation boundary for a future locked gameplay caller. Legacy
      * snapshots without explicit spin accounting cannot authorize sampling. The
      * continuation still permits evidence-driven suspension at zero balance;
