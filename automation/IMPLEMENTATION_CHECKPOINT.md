@@ -1,3 +1,49 @@
+## Current local continuation - explicit funded retry preparation, 2026-11-03
+
+IDLE after bounded WB-WHL-09 admission prerequisite (XS/S). Supersedes older
+next-task prose. Reconciled source and focused checks: retry sampling, publication,
+restoration and exact domain recovery exist (DONE offline). Read-only locked store
+and session recovery, candidate schema-20 codec and JSON are IMPLEMENTED_UNVERIFIED.
+No Git operations or merged-state verification; supervisor owns publication. No I01d.
+
+MasterRetryOperation.prepareFundedSelection requires explicit Master spin accounting
+before delegating to evidence-gated selection preparation. Legacy absent accounting
+cannot authorize this path and is never synthesized. Ready evidence still requires
+an available unreserved spin; zero-balance changed evidence may suspend the exact
+prefix without sampling. Valid landings return the exact sampled transcript for a
+separate terminal path. Existing structural preparation remains available to legacy
+fixtures. This is a pure admission prerequisite, NOT locked evidence authentication,
+durable execution, saved suspension, settlement or feature activation. No production
+caller is wired; existing Master Wheel unchanged and incomplete gameplay disabled.
+
+Fresh javac --release 11 compilation PASSED into build/continuation-retry-funded-admission
+using build/continuation-retry-sampled-taint/sources.txt. Dependency-free operation,
+continuation, response, proposal, prefix-binding, special-terminal and empty-batch
+Checks PASSED. After adding terminal handoff coverage, fresh compilation and operation
+checks rerun PASSED. New checks cover absent accounting, balances 0/1/Long.MAX_VALUE,
+0/1/513 retained draws, zero source calls on refusal/suspension, exact prefix retention,
+positive-balance continuation without debit and once-only valid landing handoff.
+Existing JUnit wrapper includes these checks, but JUnit remains UNVERIFIED.
+Focused Gradle session/store/snapshot/JSON/RunCodec/legacy attempt failed BEFORE
+compilation: inherited wrapper-cache lock Access is denied. No storage/codec/JUnit/
+legacy pass claimed. GRADLE_USER_HOME unchanged; no cache workaround or external
+inspection, credentials, workflows or Git operations.
+
+Reconciliation: WB-WHL-09 PARTIAL; funded pure preparation DONE offline. Public
+schema-20 activation, verified durable replay, locked current-evidence admission,
+automatic durable retries and persisted suspension remain UNSTARTED. WB-WHL-08
+PARTIAL: ordinary assignment and supported Sacrifice route payloads UNSTARTED.
+WB-WHL-10 PARTIAL_UNVERIFIED. Other partial/unstarted and client/catalog/decision
+BLOCKED holds stand. WB-D138/139 authoritative; A56 deferred. No new decision.
+
+Next: run MasterRetrySessionRecoveryTest, MasterRetryStoreRecoveryTest,
+MasterRetrySnapshotReadTest, MasterRetryOperationProposalJsonTest, RunCodecTest,
+MasterRetryOperationTest and session/store/legacy regressions with inherited build
+dependencies accessible. Fix failures before schema-20 activation or retry writes.
+Then implement locked current-evidence admission and durable execution using explicit
+accounting, exact original responses/streams and same-transaction suspension. Special
+evidence adapters remain required. Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - retry session response recovery, 2026-11-03
 
 IDLE after bounded WB-WHL-09 session recovery increment (S). This section supersedes

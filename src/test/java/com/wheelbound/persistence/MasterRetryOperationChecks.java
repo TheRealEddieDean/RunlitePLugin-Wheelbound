@@ -92,6 +92,11 @@ public final class MasterRetryOperationChecks
     {
         var pending = head.pendingMasterSelection().orElseThrow();
         var id = head.lifecycle().identity();
+        var absentCalls = new java.util.concurrent.atomic.AtomicInteger();
+        rejects(() -> MasterRetryOperation.prepareFundedSelection(head, id, new UUID(118, count),
+            1, pending.transactionId(), count, pending.currentStreamState(), "snapshot", Map.of(),
+            2, p -> { absentCalls.incrementAndGet(); throw new AssertionError("Unexpected sampling"); }));
+        check(absentCalls.get() == 0 && head.masterSpins().isEmpty());
         for (long balance : new long[] {0, 1, Long.MAX_VALUE})
         {
             var spins = new MasterSpinState(1, id, 1, balance, Optional.empty());
@@ -116,15 +121,26 @@ public final class MasterRetryOperationChecks
                     calls.incrementAndGet();
                     return new MasterSelectionProvenance.Step(new DrawCommitment(p.pool(), 0), "next");
                 });
+            java.util.function.Supplier<MasterRetryContinuation.Result> fundedSelection = () ->
+                MasterRetryOperation.prepareFundedSelection(funded, id, new UUID(119, count), 1,
+                    pending.transactionId(), count, pending.currentStreamState(), "snapshot", pools,
+                    2, p -> {
+                        calls.incrementAndGet();
+                        return new MasterSelectionProvenance.Step(new DrawCommitment(p.pool(), 0), "next");
+                    });
             if (balance == 0)
             {
                 rejects(() -> prepare.get());
+                rejects(() -> fundedSelection.get());
                 check(calls.get() == 0);
                 pools.put("activity-4", new MasterOrdinaryPoolEvidence(id, 1, "snapshot", "catalog",
                     "activity-4", Set.of("normal"), Map.of("normal",
                         new MasterSelectionReadiness.Classification(
                             MasterSelectionReadiness.Availability.UNKNOWN, "not ready"))));
                 var suspended = prepare.get();
+                var fundedSuspension = fundedSelection.get();
+                check(fundedSuspension.status() == MasterRetryContinuation.Status.SUSPENDED
+                    && fundedSuspension.prefix() == pending);
                 check(calls.get() == 0 && suspended.pendingMasterSelection().orElseThrow() == pending
                     && suspended.receipts().get(1).masterRetry().status()
                         == MasterRetryContinuation.Status.SUSPENDED
@@ -132,11 +148,26 @@ public final class MasterRetryOperationChecks
             }
             else
             {
+                var selection = fundedSelection.get();
+                check(calls.get() == 2 && selection.status() == MasterRetryContinuation.Status.PROPOSED
+                    && selection.prefix().drawCount() == count + 2
+                    && !selection.prefix().hasValidLanding());
+                calls.set(0);
                 var next = prepare.get();
                 check(calls.get() == 2 && next.masterSpins().orElseThrow().allotted() == balance
                     && next.masterSpins().orElseThrow().available() == balance
                     && next.masterSpins().orElseThrow().revision() == 2
                     && next.pendingMasterSelection().orElseThrow().drawCount() == count + 2);
+                calls.set(0);
+                var terminal = MasterRetryOperation.prepareFundedSelection(funded, id,
+                    new UUID(120, count), 1, pending.transactionId(), count,
+                    pending.currentStreamState(), "snapshot", pools, 2, p -> {
+                        calls.incrementAndGet();
+                        return new MasterSelectionProvenance.Step(new DrawCommitment(p.pool(), 19), "valid");
+                    });
+                check(calls.get() == 1 && terminal.prefix().hasValidLanding()
+                    && terminal.prefix().drawCount() == count + 1
+                    && terminal.prefix().currentStreamState().equals("valid"));
             }
             check(funded.pendingMasterSelection().orElseThrow() == pending
                 && funded.masterSpins().orElseThrow() == spins
