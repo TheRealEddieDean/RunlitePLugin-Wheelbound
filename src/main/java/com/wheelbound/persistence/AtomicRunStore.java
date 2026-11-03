@@ -61,6 +61,32 @@ public final class AtomicRunStore
     public Optional<RunDocument> load() throws IOException
     { return locked(this::read); }
 
+    /** Commit frozen Taint history, original spin reservation, mandatory obligation
+     * and typed response together against the locked durable head. Exact replay
+     * returns the retained response without rewriting later lifecycle state.
+     * This boundary does not authenticate sampling or client evidence, select a
+     * punishment, settle the reservation or admit ordinary/Sacrifice assignments.
+     * Retain the full request and reopen after any persistence failure.
+     */
+    public MasterTerminalOperationProposal commitMasterTaint(
+        com.wheelbound.domain.MasterSelectionResolutionReceipt request) throws IOException
+    {
+        Objects.requireNonNull(request, "request");
+        if (!identity.equals(request.identity()))
+        { throw new IllegalArgumentException("Foreign run context"); }
+        return locked(() -> {
+            if (uncertain) { throw new IOException("Reopen and reconcile after failed persistence"); }
+            RunDocument current = read().orElseThrow(() -> new IOException("Saved run is unavailable"));
+            final RunDocument next;
+            try { next = MasterTaintTerminalOperation.prepare(current, request); }
+            catch (IllegalArgumentException ex)
+            { throw new IOException("Invalid Master Taint transition", ex); }
+            if (next != current) { persist(codec.encode(next), true); }
+            return next.receipts().stream().filter(r -> r.commandId().equals(request.commandId()))
+                .findFirst().orElseThrow(() -> new IOException("Taint receipt is unavailable")).taintTerminal();
+        });
+    }
+
     /** Recover the exact original creation without replacing an advanced pending
      * transcript. Missing history is not permission to create, reseed or retry.
      * Corrupt/pending saves and uncertain store instances require reconciliation. */
