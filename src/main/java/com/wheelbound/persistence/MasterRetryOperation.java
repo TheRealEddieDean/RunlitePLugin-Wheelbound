@@ -17,6 +17,25 @@ public final class MasterRetryOperation
 {
     private MasterRetryOperation() { }
 
+    /** Funded preparation boundary for a future locked gameplay caller. Legacy
+     * snapshots without explicit spin accounting cannot authorize sampling. The
+     * continuation still permits evidence-driven suspension at zero balance;
+     * ready evidence must pass its unreserved-spin gate. No persistence or evidence
+     * authentication is supplied here, and valid results require terminal admission.
+     */
+    public static MasterRetryContinuation.Result prepareFundedSelection(RunDocument head,
+        RunIdentity identity, UUID commandId, long revision,
+        UUID transactionId, int drawCount, String streamState, String snapshotVersion,
+        Map<String, MasterOrdinaryPoolEvidence> pools,
+        int budget, Function<MasterSelectionProvenance, MasterSelectionProvenance.Step> source)
+    {
+        Objects.requireNonNull(head, "head");
+        if (!head.masterSpins().isPresent())
+        { throw new IllegalArgumentException("Explicit Master spin accounting required"); }
+        return prepareFreshSelection(head, identity, commandId, revision, transactionId,
+            drawCount, streamState, snapshotVersion, pools, budget, source);
+    }
+
     /** Prepare a fresh unresolved batch and its atomic update from the same head.
      * The caller must supply trusted current evidence and a side-effect-free source
      * under its storage lock. This does not save, authenticate RNG, or admit replay.
