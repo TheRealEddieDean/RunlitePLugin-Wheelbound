@@ -13,6 +13,73 @@ public class MasterRetrySnapshotReadTest
 {
     private final RunCodec codec = new RunCodec(new Gson());
 
+    @Test public void candidateWriterRetainsMultipleHistoricalResponses() throws Exception
+    {
+        for (int count : new int[] {0, 1, 128, 513})
+        {
+            var source = MasterSpecialTerminalPreparationChecks.fixture(ActiveWheel.Kind.TAINT, count, 7);
+            var before = source.pendingMasterSelection().orElseThrow();
+            var creation = source.masterCreations().orElseThrow().receipts().get(before.transactionId());
+            var after = before.append(before.transactionId(), count, before.currentStreamState(),
+                new MasterSelectionProvenance.Step(new DrawCommitment(before.pool(), 0), "repeated"));
+            var first = MasterRetryOperationProposal.restoreResponse(creation, creation.identity(),
+                new UUID(99, 1), 5, count, after, MasterRetryContinuation.Status.PROPOSED);
+            var next = MasterRetryOperation.prepare(source, first);
+            var second = MasterRetryOperationProposal.restoreResponse(creation, creation.identity(),
+                new UUID(99, 2), 6, after.drawCount(), after, MasterRetryContinuation.Status.SUSPENDED);
+            var suspended = MasterRetryOperation.prepare(next, second);
+            var terminal = MasterSelectionResolutionReceipt.prepare(new UUID(99, 3), 7, creation, after,
+                new MasterSelectionProvenance.Step(new DrawCommitment(after.pool(),
+                    after.pool().totalWeight() - 1), "terminal"));
+            var resolved = MasterTaintTerminalOperation.prepare(suspended, terminal);
+            var paused = LifecycleAdmission.prepare(resolved, first.identity(), new UUID(99, 4), 8,
+                RunReceipt.Operation.PAUSE);
+            var resumed = LifecycleAdmission.prepare(paused, first.identity(), new UUID(99, 5), 9,
+                RunReceipt.Operation.RESUME);
+            for (var head : new RunDocument[] {next, suspended, resolved, paused, resumed})
+            {
+                // Independent handcrafted fixture verifies fields as well as decode compatibility.
+                var expected = bytes(payload(source, head), 20);
+                if (expected.length > RunCodec.MAX_BYTES)
+                {
+                    assertEquals(513, count);
+                    assertThrows(IllegalArgumentException.class, () -> codec.encodeRetryCandidate(head));
+                    continue;
+                }
+                var encoded = codec.encodeRetryCandidate(head);
+                assertEquals(new JsonParser().parse(new String(expected, StandardCharsets.UTF_8)),
+                    new JsonParser().parse(new String(encoded, StandardCharsets.UTF_8)));
+                var restored = codec.decode(encoded, first.identity());
+                assertEquals(head.receipts(), restored.receipts());
+                assertArrayEquals(encoded, codec.encodeRetryCandidate(restored));
+                assertSame(restored, MasterRetryOperation.prepare(restored, first));
+                if (head != next)
+                { assertSame(restored, MasterRetryOperation.prepare(restored, second)); }
+                assertEquals(head.masterSpins().orElseThrow().available(),
+                    restored.masterSpins().orElseThrow().available());
+                assertEquals(head.lifecycle().state(), restored.lifecycle().state());
+                assertEquals(head.lifecycle().obligation(), restored.lifecycle().obligation());
+                assertThrows(IllegalArgumentException.class, () -> codec.encode(restored));
+            }
+            assertEquals(5, source.lifecycle().revision());
+            assertSame(before, source.pendingMasterSelection().orElseThrow());
+        }
+    }
+
+    @Test public void candidateWriterMigratesSchema19WithoutInventingHistory() throws Exception
+    {
+        var source = MasterSpecialTerminalPreparationChecks.fixture(ActiveWheel.Kind.TAINT, 1, 7);
+        var oldBytes = codec.encode(source);
+        var oldHead = codec.decode(oldBytes, source.lifecycle().identity());
+        var candidate = codec.encodeRetryCandidate(oldHead);
+        assertEquals(20, new JsonParser().parse(new String(candidate, StandardCharsets.UTF_8))
+            .getAsJsonObject().get("schemaVersion").getAsInt());
+        var restored = codec.decode(candidate, source.lifecycle().identity());
+        assertEquals(source.receipts(), restored.receipts());
+        assertArrayEquals(oldBytes, codec.encode(restored));
+        assertArrayEquals(candidate, codec.encodeRetryCandidate(restored));
+    }
+
     @Test public void restoresOriginalResponsesAcrossTerminalAndPause() throws Exception
     {
         for (int count : new int[] {0, 1, 128, 513})
