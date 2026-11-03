@@ -25,6 +25,9 @@ import java.util.UUID;
 public final class RunCodec
 {
     public static final int SCHEMA = 19;
+    // Reader-first migration: keep the writer's retry refusal until schema-20
+    // round-trip and migration checks can run with the real Gson dependency.
+    private static final int READ_SCHEMA = 20;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -170,7 +173,7 @@ public final class RunCodec
             JsonObject envelope = new JsonParser().parse(new String(bytes, StandardCharsets.UTF_8)).getAsJsonObject();
             keys(envelope, Set.of("schemaVersion", "payload", "sha256"));
             long schema = integer(envelope, "schemaVersion");
-            if (schema < 1 || schema > SCHEMA) { throw new IOException("Unsupported snapshot schema; preserve original"); }
+            if (schema < 1 || schema > READ_SCHEMA) { throw new IOException("Unsupported snapshot schema; preserve original"); }
             String text = string(envelope, "payload");
             if (!sha256(text.getBytes(StandardCharsets.UTF_8)).equals(string(envelope, "sha256")))
             { throw new IOException("Snapshot checksum mismatch"); }
@@ -230,6 +233,10 @@ public final class RunCodec
                 grandFate = Optional.of(new com.wheelbound.domain.SealedGrandFate(identity,
                     UUID.fromString(string(grand, "commandId")), decodeDraw(grand.get("draw"))));
             }
+            Optional<com.wheelbound.domain.MasterSelectionCreationJournal> creations =
+                schema >= 15 && !payload.get("masterCreations").isJsonNull()
+                    ? Optional.of(MasterSelectionCreationJournalJson.decode(payload.getAsJsonObject("masterCreations"),
+                        identity, lifecycle.revision())) : Optional.empty();
             List<RunReceipt> receipts = new ArrayList<>();
             if (schema >= 2)
             {
@@ -242,7 +249,10 @@ public final class RunCodec
                     boolean hasActivation = schema >= 13 && "GRAND_ACTIVATION".equals(string(item, "operation"));
                     boolean hasCreation = schema >= 16 && "MASTER_SELECTION_CREATION".equals(string(item, "operation"));
                     boolean hasTaint = schema >= 19 && "MASTER_TAINT_TERMINAL".equals(string(item, "operation"));
-                    keys(item, hasTaint
+                    boolean hasRetry = schema >= 20 && "MASTER_RETRY".equals(string(item, "operation"));
+                    keys(item, hasRetry
+                        ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "masterRetry")
+                        : hasTaint
                         ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "taintTerminal")
                         : hasCreation
                         ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "masterCreation")
@@ -255,6 +265,25 @@ public final class RunCodec
                         : hasDraw
                         ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "draw")
                         : Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation"));
+                    if (hasRetry)
+                    {
+                        JsonObject retry = item.getAsJsonObject("masterRetry");
+                        JsonObject after = retry.getAsJsonObject("after");
+                        var creation = creations.orElseThrow(
+                            () -> new IllegalArgumentException("Retry response requires creation history"))
+                            .receipts().get(UUID.fromString(string(after, "transactionId")));
+                        if (creation == null) { throw new IllegalArgumentException("Missing retry creation"); }
+                        RunReceipt receipt = RunReceipt.masterRetry(
+                            MasterRetryOperationProposalJson.decodeResponse(retry, creation));
+                        if (!receipt.commandId().equals(UUID.fromString(string(item, "commandId")))
+                            || receipt.beforeRevision() != integer(item, "beforeRevision")
+                            || receipt.afterRevision() != integer(item, "afterRevision")
+                            || !receipt.state().name().equals(string(item, "state"))
+                            || !receipt.obligation().name().equals(string(item, "obligation")))
+                        { throw new IllegalArgumentException("Retry envelope disagrees with original response"); }
+                        receipts.add(receipt);
+                        continue;
+                    }
                     if (hasTaint)
                     {
                         RunReceipt receipt = RunReceipt.masterTaintTerminal(MasterTaintTerminalResponseJson.decode(
@@ -373,9 +402,7 @@ public final class RunCodec
                 schema >= 14 && !payload.get("pendingMasterSelection").isJsonNull()
                     ? Optional.of(MasterSelectionProvenanceJson.decode(payload.getAsJsonObject("pendingMasterSelection")))
                     : Optional.empty(),
-                schema >= 15 && !payload.get("masterCreations").isJsonNull()
-                    ? Optional.of(MasterSelectionCreationJournalJson.decode(payload.getAsJsonObject("masterCreations"),
-                        identity, lifecycle.revision())) : Optional.empty(),
+                creations,
                 resolutions, spins, special);
         }
         catch (RuntimeException ex) { throw new IOException("Invalid snapshot; preserve original", ex); }
