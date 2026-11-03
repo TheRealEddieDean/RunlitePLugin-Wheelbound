@@ -61,6 +61,28 @@ public final class AtomicRunStore
     public Optional<RunDocument> load() throws IOException
     { return locked(this::read); }
 
+    /** Recover the original retry response from the locked durable head. Requires
+     * the original immutable payload; absence never authorizes sampling, reseeding
+     * or a new selection. This read-only boundary does not enable retry writes or
+     * authenticate current evidence. Pending/corrupt saves and uncertain instances
+     * must be reconciled before recovery, even when a response was once retained.
+     */
+    public Optional<MasterRetryOperationProposal> committedMasterRetry(
+        MasterRetryOperationProposal request) throws IOException
+    {
+        Objects.requireNonNull(request, "request");
+        if (!identity.equals(request.identity()))
+        { throw new IllegalArgumentException("Foreign run context"); }
+        return locked(() -> {
+            if (uncertain) { throw new IOException("Reopen and reconcile after failed persistence"); }
+            Optional<RunDocument> current = read();
+            if (!current.isPresent()) { return Optional.empty(); }
+            try { return MasterRetryRecovery.find(current.get(), request); }
+            catch (IllegalArgumentException ex)
+            { throw new IOException("Conflicting Master retry recovery request", ex); }
+        });
+    }
+
     /** Commit one terminal draw extending the saved pending prefix, frozen Taint
      * history, original spin reservation, mandatory obligation
      * and typed response together against the locked durable head. Exact replay
