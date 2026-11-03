@@ -25,14 +25,20 @@ public final class MasterRetryOperationProposal
     private MasterRetryOperationProposal(RunDocument head, UUID commandId,
         MasterRetryContinuation.Result result)
     {
+        this(head, commandId, Objects.requireNonNull(result, "result").prefix(), result.status());
+    }
+
+    private MasterRetryOperationProposal(RunDocument head, UUID commandId,
+        MasterSelectionProvenance after, MasterRetryContinuation.Status status)
+    {
         this.identity = head.lifecycle().identity();
         this.commandId = Objects.requireNonNull(commandId, "commandId");
         this.beforeRevision = head.lifecycle().revision();
         Math.addExact(beforeRevision, 1);
         this.before = head.pendingMasterSelection().orElseThrow(
             () -> new IllegalArgumentException("Missing pending selection"));
-        this.after = Objects.requireNonNull(result, "result").prefix();
-        this.status = result.status();
+        this.after = Objects.requireNonNull(after, "after");
+        this.status = Objects.requireNonNull(status, "status");
         validateAgainst(head);
         if (status == MasterRetryContinuation.Status.SUSPENDED
             ? after.drawCount() != before.drawCount() : after.drawCount() <= before.drawCount())
@@ -55,6 +61,22 @@ public final class MasterRetryOperationProposal
     public static MasterRetryOperationProposal prepare(RunDocument head, UUID commandId,
         MasterRetryContinuation.Result result)
     { return new MasterRetryOperationProposal(Objects.requireNonNull(head, "head"), commandId, result); }
+
+    /** Restore only against the exact original head. This validates structure and
+     * prefix continuity; it does not authenticate current evidence or admit replay.
+     */
+    public static MasterRetryOperationProposal restore(RunDocument original, RunIdentity identity,
+        UUID commandId, long beforeRevision, int beforeDrawCount,
+        MasterSelectionProvenance after, MasterRetryContinuation.Status status)
+    {
+        Objects.requireNonNull(original, "original");
+        if (!original.lifecycle().identity().equals(identity)
+            || original.lifecycle().revision() != beforeRevision
+            || original.pendingMasterSelection().orElseThrow(
+                () -> new IllegalArgumentException("Missing original retry prefix")).drawCount() != beforeDrawCount)
+        { throw new IllegalArgumentException("Retry restoration requires exact original head"); }
+        return new MasterRetryOperationProposal(original, commandId, after, status);
+    }
 
     /** Exact original head only; this method deliberately grants no historical replay. */
     public void validateAgainst(RunDocument head)
