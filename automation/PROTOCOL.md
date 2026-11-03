@@ -1,3 +1,48 @@
+## Current local continuation - locked Taint terminal admission, 2026-11-03
+
+IDLE after bounded WB-WHL-08 storage admission increment (S). Reconciled production
+and focused fixtures with the schema-19 continuation and WB-D013/018/058/120/138/139/155.
+Atomic in-memory publication, typed response, explicit current special and schema-19
+retention already exist; older UNSTARTED records for those are superseded. No Git
+operations or merged-state verification; supervisor owns publication. I01d not selected.
+
+AtomicRunStore.commitMasterTaint validates identity and derives the entire transition
+from the locked saved head using MasterTaintTerminalOperation. It atomically persists
+actual-prefix-bound terminal history, original spin reservation, mandatory pending
+Punishment context and typed response. Exact retained replay returns the original
+response without rewriting later state. Missing/corrupt/pending saves and uncertain
+instances fail closed. Ordinary and Sacrifice requests remain refused. No evidence
+authentication, sampling, punishment selection, settlement or feature enablement.
+Existing Master Wheel behavior unchanged; incomplete gameplay remains disabled.
+
+Added MasterTaintStoreTest for 0/1/513 prefixes, 1/7/Long.MAX_VALUE balances, restart
+and paused replay without writes, changed streams, unsupported outcomes, stale heads,
+foreign/missing/locked heads, shortened pending prefix, zero balance, pre-replacement
+failure and post-replacement lost acknowledgement. Focused Gradle store/RunCodec/legacy
+attempt failed BEFORE compilation: inherited wrapper-cache lock Access is denied.
+Storage code and new JUnit tests are IMPLEMENTED_UNVERIFIED. No storage/codec/JUnit/
+legacy pass claimed; inherited GRADLE_USER_HOME unchanged and no external inspection
+or cache workaround. Fresh javac --release 11 domain/aggregate/Checks compilation
+PASSED, excluding AtomicRunStore, Gson/JSON/RunCodec, session adapters and JUnit.
+MasterSpecialTerminalPreparationChecks, MasterResolutionBindingChecks,
+MasterCurrentSpecialAggregateChecks and MasterTerminalOperationProposalChecks PASSED.
+Initial offline source selection included dependent adapters and failed; corrected
+selection compiled successfully. New store production code is not covered by javac.
+
+Reconciliation: WB-WHL-08 remains PARTIAL. Locked Taint storage admission is now
+IMPLEMENTED_UNVERIFIED, no longer UNSTARTED. Session/async admission remains UNSTARTED;
+schema-19 and standalone JSON remain IMPLEMENTED_UNVERIFIED. Ordinary assignments and
+supported Sacrifice route payloads remain UNSTARTED. WB-WHL-09 PARTIAL (automatic retry
+execution UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED. Other partial/unstarted/blocked rows
+and decision/client/catalog evidence holds stand. No complete gameplay claim.
+
+Next: run MasterTaintStoreTest, schema-19/JSON/migration and legacy checks when inherited
+dependencies are accessible, then add synchronous/session and async Taint admission
+with immediate callback qualification, invalidation before IO, durable-head refresh,
+exact historical replay and disconnect on failure. Settlement, grants, sampling,
+retry execution, suspension/revalidation and changed-snapshot recovery remain unfinished.
+WB-D155 adopts no retirement rule. Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - schema-19 Master special retention, 2026-11-03
 
 IDLE after bounded WB-WHL-08 persistence integration increment (S). Reconciled latest
