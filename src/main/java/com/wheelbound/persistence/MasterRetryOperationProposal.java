@@ -128,8 +128,7 @@ public final class MasterRetryOperationProposal
         Objects.requireNonNull(head, "head");
         if (!identity.equals(head.lifecycle().identity()) || beforeRevision != head.lifecycle().revision())
         { throw new IllegalArgumentException("Stale or foreign retry operation"); }
-        if (head.receipts().stream().anyMatch(r -> r.commandId().equals(commandId)))
-        { throw new IllegalArgumentException("Retry command ID already retained"); }
+        MasterRetryRecovery.requireUnused(head, commandId);
         MasterRetryPrefixBinding.validate(head, before);
         if (head.pendingMasterSelection().get().drawCount() != before.drawCount())
         { throw new IllegalArgumentException("Retry operation requires its exact original prefix"); }

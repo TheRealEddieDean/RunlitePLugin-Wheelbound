@@ -126,6 +126,19 @@ public final class MasterRetryOperationChecks
             rejects(() -> MasterRetryOperation.prepareFresh(head, id, new UUID(96, count),
                 0, pending.transactionId(), count, "repeated", "snapshot", pools, 2, source));
             check(calls.get() == 0);
+            // Historical contexts may retain creation history without its generic
+            // envelope. A collision there must still fail before sampling.
+            var journalOnly = new RunDocument(head.lifecycle(), head.catalogVersion(), List.of(),
+                head.fatePoints(), head.inventory(), head.grandFate(), head.grandProgress(),
+                head.grandJournal(), head.grandActivations(), head.grandCurrentAttempt(),
+                head.pendingMasterSelection(), head.masterCreations());
+            rejects(() -> MasterRetryOperation.prepareFresh(journalOnly, id, pending.transactionId(),
+                1, pending.transactionId(), count, "repeated", "snapshot", pools, 2, source));
+            check(calls.get() == 0);
+            rejects(() -> MasterRetryOperationProposal.prepare(journalOnly, pending.transactionId(),
+                MasterRetryOperationProposalChecks.result(journalOnly, availability, 0, "collision")));
+            check(journalOnly.receipts().isEmpty()
+                && journalOnly.pendingMasterSelection().get() == pending);
             if (continued)
             {
                 rejects(() -> MasterRetryOperation.prepareFresh(head, id, new UUID(97, count), 1,

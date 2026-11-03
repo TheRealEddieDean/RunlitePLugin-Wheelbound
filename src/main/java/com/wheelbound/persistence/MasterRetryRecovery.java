@@ -2,6 +2,7 @@ package com.wheelbound.persistence;
 
 import java.util.Objects;
 import java.util.Optional;
+import java.util.UUID;
 
 /** Read-only exact-response recovery; absence never authorizes drawing or admission. */
 public final class MasterRetryRecovery
@@ -27,7 +28,17 @@ public final class MasterRetryRecovery
             { throw new IllegalArgumentException("Retry command reused for different request"); }
             return Optional.of(retained.validateRetained(current));
         }
-        var id = request.commandId();
+        requireUnused(current, request.commandId());
+        return Optional.empty();
+    }
+
+    /** Shared fresh-command guard; call before invoking any retry draw source. */
+    static void requireUnused(RunDocument current, UUID id)
+    {
+        Objects.requireNonNull(current, "current");
+        Objects.requireNonNull(id, "commandId");
+        if (current.receipts().stream().anyMatch(r -> r.commandId().equals(id)))
+        { throw new IllegalArgumentException("Retry command ID already retained"); }
         if (current.masterCreations().filter(h -> h.receipts().containsKey(id)).isPresent()
             || current.masterResolutions().filter(h -> h.receipts().containsKey(id)).isPresent()
             || current.grandFate().filter(s -> s.commandId().equals(id)).isPresent()
@@ -36,6 +47,5 @@ public final class MasterRetryRecovery
                 .anyMatch(e -> e.receiptId().equals(id))).isPresent()
             || current.pendingMasterSelection().filter(p -> p.transactionId().equals(id)).isPresent())
         { throw new IllegalArgumentException("Command exists without original retry response"); }
-        return Optional.empty();
     }
 }
