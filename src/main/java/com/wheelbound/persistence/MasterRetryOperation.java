@@ -32,8 +32,7 @@ public final class MasterRetryOperation
         Objects.requireNonNull(commandId, "commandId");
         // Refuse reuse and overflow before invoking a draw source. Historical replay
         // must use the exact retained response, never freshly sampled work.
-        if (head.receipts().stream().anyMatch(r -> r.commandId().equals(commandId)))
-        { throw new IllegalArgumentException("Retry command ID already retained"); }
+        MasterRetryRecovery.requireUnused(head, commandId);
         Math.addExact(revision, 1);
         var result = MasterRetryContinuation.prepare(head, identity, revision, transactionId,
             drawCount, streamState, snapshotVersion, pools, budget, source);

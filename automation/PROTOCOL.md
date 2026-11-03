@@ -1,3 +1,43 @@
+## Current local continuation - retry command admission guard, 2026-11-03
+
+IDLE after bounded WB-WHL-09 command-admission increment (XS/S). Supersedes
+older next-task prose. Reconciled current retry production and focused tests:
+preparation/publication/restoration/exact domain recovery exist and are DONE offline.
+Candidate schema-20 reader/writer and JSON remain IMPLEMENTED_UNVERIFIED.
+No Git operations or merged-state verification; supervisor owns publication. No I01d.
+WB-D138/139 remain authoritative; A56 and existing decision/evidence holds stand.
+
+MasterRetryRecovery.requireUnused now shares the existing retained-command collision
+rules with fresh preparation and original-head proposal validation. Generic receipts,
+creation/resolution journals, Grand sealing/activation/evidence and pending transaction
+IDs cannot be reused for fresh retries. The guard runs before any draw source. Exact
+retained replay still follows its original response path. Focused checks cover a
+creation journal without the generic envelope at 0/1/513 retained empty draws,
+continuation and suspension classifications, zero source calls and head immutability.
+No new gameplay decision, persistence admission or feature activation.
+
+Fresh javac --release 11 compilation PASSED into build/continuation-retry-command-guard
+using the existing response source manifest plus MasterRetryRecovery. Focused operation,
+response, proposal, continuation, prefix-binding and empty-batch Checks PASSED.
+Gradle snapshot/JSON/RunCodec/operation/response/
+legacy attempt failed BEFORE compilation: inherited wrapper-cache lock Access is denied.
+No JUnit/codec/storage/legacy pass claimed. GRADLE_USER_HOME unchanged; no external
+inspection, cache workaround, credentials, workflow access or Git operations.
+
+Reconciliation: WB-WHL-09 PARTIAL. Fresh command guard DONE offline. Public schema-20
+activation, locked current-evidence admission, exact durable replay, automatic durable
+retry execution and persisted suspension remain UNSTARTED. WB-WHL-08 PARTIAL:
+ordinary assignments and supported Sacrifice route payloads UNSTARTED. WB-WHL-10
+PARTIAL_UNVERIFIED. Other partial/unstarted and client/catalog/decision BLOCKED
+holds stand. Existing Master Wheel unchanged; incomplete gameplay remains disabled.
+
+Next: run MasterRetrySnapshotReadTest, MasterRetryOperationProposalJsonTest,
+RunCodecTest, MasterRetryOperationTest, MasterRetryResponseTest and legacy regression
+with inherited dependencies accessible. Fix failures before promoting schema 20.
+Then integrate locked evidence admission and durable replay, preserving original
+responses, exact streams/accounting and same-transaction suspension. Local edits only;
+supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - composed fresh retry preparation, 2026-11-03
 
 IDLE after bounded WB-WHL-09 preparation increment (XS/S). Supersedes older
