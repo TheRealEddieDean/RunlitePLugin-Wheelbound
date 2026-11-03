@@ -1,3 +1,44 @@
+## Current local continuation - exact retry response recovery, 2026-11-03
+
+IDLE after bounded WB-WHL-09 read-only recovery increment (XS/S). Supersedes
+older next-task prose. Reconciled current continuations, retry production and checks
+against WB-D138/139. Retry preparation/publication/restoration already exist;
+no Git or merged-state verification. No I01d selected. A56 remains deferred.
+
+MasterRetryRecovery.find now returns the original retained immutable response for
+an exact payload, including independently restored payloads after later batches,
+Pause/Resume and terminal Taint resolution. Foreign identities, changed payloads
+and conflicting retained commands fail closed. Missing response returns empty;
+absence never authorizes sampling or admission. Creation/terminal/Grand evidence
+ID collisions are refused. This is read-only domain recovery, not durable replay,
+locked admission, current-evidence authentication or gameplay activation.
+
+Fresh javac --release 11 compilation PASSED using the existing dependency-free
+response source manifest plus MasterRetryRecovery. Operation and response Checks
+PASSED after final edits. Proposal, continuation, prefix-binding and empty-batch
+Checks also PASSED. Coverage includes 0/1/513 retained empties, equal restored
+payload returning the original object, later batches, Pause/Resume, terminal Taint,
+absent responses, foreign account and changed/non-retry command collision.
+Existing JUnit wrappers include these Checks, but JUnit remains UNVERIFIED.
+Focused Gradle snapshot/JSON/RunCodec/operation/legacy attempt failed BEFORE
+compilation: inherited wrapper-cache lock Access is denied. No cache workaround,
+external inspection or GRADLE_USER_HOME override. No codec/storage/legacy pass.
+
+Reconciliation: WB-WHL-09 PARTIAL. Exact in-memory response recovery DONE offline;
+candidate schema-20 reader/writer and JSON IMPLEMENTED_UNVERIFIED. Public schema-20
+activation, locked current-evidence storage admission, exact durable replay,
+automatic durable retry execution and persisted suspension UNSTARTED. WB-WHL-08
+PARTIAL: ordinary assignments and supported Sacrifice payloads UNSTARTED.
+WB-WHL-10 PARTIAL_UNVERIFIED. Other partial/unstarted and client/catalog/decision
+BLOCKED holds stand. Existing Master Wheel unchanged; incomplete gameplay disabled.
+
+Next: run MasterRetrySnapshotReadTest, MasterRetryOperationProposalJsonTest,
+RunCodecTest, MasterRetryOperationTest, MasterRetryResponseTest and legacy regression
+with inherited dependencies accessible; fix failures before promoting schema 20.
+Then integrate locked current-evidence admission and durable replay, using original
+responses and preserving exact streams/accounting and same-transaction suspension.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - composed fresh retry preparation, 2026-11-03
 
 IDLE after bounded WB-WHL-09 preparation increment (XS/S). Supersedes older

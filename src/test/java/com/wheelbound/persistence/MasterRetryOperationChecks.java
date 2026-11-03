@@ -16,6 +16,13 @@ public final class MasterRetryOperationChecks
                 var request = MasterRetryOperationProposal.prepare(head, new UUID(80, count),
                     MasterRetryOperationProposalChecks.result(head, availability, 0, "retry"));
                 var next = MasterRetryOperation.prepare(head, request);
+                check(MasterRetryRecovery.find(head, request).isEmpty());
+                check(MasterRetryRecovery.find(next, request).get() == request);
+                var restored = MasterRetryOperationProposal.restoreResponse(
+                    head.masterCreations().get().receipts().get(request.before().transactionId()),
+                    request.identity(), request.commandId(), request.beforeRevision(),
+                    request.before().drawCount(), request.after(), request.status());
+                check(restored != request && MasterRetryRecovery.find(next, restored).get() == request);
                 check(next.lifecycle().revision() == 2 && next.receipts().size() == 2
                     && next.pendingMasterSelection().get() == request.after()
                     && next.masterSpins().equals(head.masterSpins())
@@ -27,6 +34,7 @@ public final class MasterRetryOperationChecks
                 var paused = LifecycleAdmission.prepare(next, request.identity(), new UUID(81, count),
                     2, RunReceipt.Operation.PAUSE);
                 check(MasterRetryOperation.prepare(paused, request) == paused);
+                check(MasterRetryRecovery.find(paused, restored).get() == request);
                 var resumed = LifecycleAdmission.prepare(paused, request.identity(), new UUID(82, count),
                     3, RunReceipt.Operation.RESUME);
                 check(MasterRetryOperation.prepare(resumed, request) == resumed);
@@ -36,6 +44,7 @@ public final class MasterRetryOperationChecks
                 var later = MasterRetryOperation.prepare(resumed, laterRequest);
                 check(later.lifecycle().revision() == 5
                     && MasterRetryOperation.prepare(later, request) == later);
+                check(MasterRetryRecovery.find(later, restored).get() == request);
                 if (request.status() != MasterRetryContinuation.Status.SUSPENDED)
                 { rejects(() -> copy(next, head.pendingMasterSelection(), next.masterCreations())); }
                 // A suspension has the same transcript, so shortening is only observable for continuations.
@@ -53,6 +62,22 @@ public final class MasterRetryOperationChecks
                     MasterRetryOperationProposalChecks.result(head,
                         MasterSelectionReadiness.Availability.ASSIGNABLE, 1, "different"));
                 rejects(() -> MasterRetryOperation.prepare(next, changed));
+                rejects(() -> MasterRetryRecovery.find(next, changed));
+                var collision = MasterRetryOperationProposal.restoreResponse(
+                    head.masterCreations().get().receipts().get(request.before().transactionId()),
+                    request.identity(), paused.receipts().get(2).commandId(), request.beforeRevision(),
+                    request.before().drawCount(), request.after(), request.status());
+                rejects(() -> MasterRetryRecovery.find(paused, collision));
+                var absentRequest = MasterRetryOperationProposal.restoreResponse(
+                    head.masterCreations().get().receipts().get(request.before().transactionId()),
+                    request.identity(), new UUID(99, count), request.beforeRevision(),
+                    request.before().drawCount(), request.after(), request.status());
+                // An unrelated request is absent, never freshly prepared by recovery.
+                check(MasterRetryRecovery.find(head, absentRequest).isEmpty());
+                var foreign = new RunDocument(new RunLifecycle(
+                    new RunIdentity("foreign", request.identity().runId()), 0,
+                    RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.NONE), "catalog");
+                rejects(() -> MasterRetryRecovery.find(foreign, request));
                 rejects(() -> MasterRetryOperation.prepare(
                     MasterRetryContinuationChecks.fixture(count + 1), request));
                 check(head.lifecycle().revision() == 1 && head.receipts().size() == 1
