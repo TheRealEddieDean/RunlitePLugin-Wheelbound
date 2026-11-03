@@ -1,3 +1,52 @@
+## Current local continuation - retry session response recovery, 2026-11-03
+
+IDLE after bounded WB-WHL-09 session recovery increment (S). This section supersedes
+older next-task prose. Reconciled current source/tests: retry sampling, publication,
+restoration and exact domain recovery exist (DONE offline); locked store recovery,
+candidate schema-20 reader/writer and JSON remain IMPLEMENTED_UNVERIFIED. No Git or
+merged-state verification; publication belongs to the supervisor. No I01d selected.
+
+RunSession.committedMasterRetry now retrieves the original immutable response through
+the existing locked store lookup, invalidates callbacks before IO and refreshes the
+actual durable lifecycle, including Pause and later revisions. Any failure disconnects.
+AsyncRunSession queues the read through its existing worker/supersession boundary;
+outer absence means skipped before execution, inner absence means no retained response.
+Neither grants draw authority. Null asynchronous requests preserve the fresh session.
+The adapters are unwired and IMPLEMENTED_UNVERIFIED; no retry writes or activation.
+Existing Master Wheel behavior preserved; incomplete gameplay remains disabled.
+
+Added MasterRetrySessionRecoveryTest fixtures for 0/1/128 retained empty draws,
+continuation/suspension, later batches/Pause, exact historical recovery, absent responses,
+callback invalidation, command conflicts, superseded queued reads, rejected worker
+submission and disappeared saves. Tests assert unchanged bytes and no pending save.
+Only tests install candidate snapshots. No production caller uses the candidate writer.
+
+Fresh javac --release 11 compilation into build/continuation-retry-session-recovery
+using build/continuation-retry-sampled-taint/sources.txt PASSED. Dependency-free retry
+operation, response, proposal, continuation, prefix-binding, special-terminal and
+empty-batch Checks PASSED. This excludes new sessions/tests, AtomicRunStore, codec,
+Gson and JUnit. Focused Gradle storage/codec/legacy and new session suites failed
+BEFORE compilation: inherited wrapper-cache lock Access is denied. New Java session
+methods and JUnit remain UNVERIFIED. GRADLE_USER_HOME unchanged; no workaround,
+external inspection, credentials, workflows or Git operations.
+
+Reconciliation: WB-WHL-09 PARTIAL. Read-only locked storage and session recovery are
+IMPLEMENTED_UNVERIFIED. Public schema-20 activation, verified durable replay, locked
+current-evidence admission, automatic durable retries and persisted suspension remain
+UNSTARTED. WB-WHL-08 PARTIAL: ordinary assignments and supported Sacrifice route
+payloads UNSTARTED. WB-WHL-10 PARTIAL_UNVERIFIED. Other partial/unstarted and blocked
+client/catalog/decision holds stand. WB-D120/138/139 remain authoritative; A56 deferred.
+No new gameplay decision or completed gameplay claim.
+
+Next: run MasterRetrySessionRecoveryTest, MasterRetryStoreRecoveryTest, RunSessionTest,
+AsyncRunSessionTest, AtomicRunStoreTest, MasterRetrySnapshotReadTest,
+MasterRetryOperationProposalJsonTest, RunCodecTest and legacy regression when inherited
+dependencies are accessible. Fix failures before schema-20 activation or retry writes.
+Then implement locked current-evidence admission/durable execution while preserving
+exact original responses, streams/accounting and same-transaction suspension. Special
+evidence adapters remain required. Local changes only; supervisor handles Git/PR/CI/merge.
+
+
 ## Current local continuation - locked retry response recovery, 2026-11-03
 
 IDLE after bounded WB-WHL-09 read-only storage increment (S). Supersedes older
