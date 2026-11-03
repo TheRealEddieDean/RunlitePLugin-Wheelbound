@@ -1,3 +1,46 @@
+## Current local continuation - typed retry RunReceipt envelope, 2026-11-03
+
+IDLE after bounded WB-WHL-09 envelope prerequisite (XS/S). Reconciled source and
+focused fixtures: batch, evidence-gated continuation, actual-prefix binding and typed
+proposal already exist (DONE offline). Taint store/session/async and schema-19 remain
+IMPLEMENTED_UNVERIFIED. Earlier UNSTARTED records for those are superseded. No Git
+operations or merged-state verification; supervisor owns publication. I01d not selected.
+WB-D138/139 and existing accounting/special decisions remain authoritative.
+
+RunReceipt.masterRetry retains the exact immutable original proposal, command,
+revision boundary, continuation/suspension status and full transcript through its typed
+payload. Equality/hash include that payload. Generic construction of MASTER_RETRY
+without the payload fails closed. RunDocument explicitly refuses these envelopes
+until atomic aggregate publication is implemented, preventing lossy schema-19 encoding.
+This is an envelope prerequisite only, not an admitted command, persisted suspension,
+revision advance, historical replay authorization or live-evidence authentication.
+Existing Master Wheel behavior unchanged; incomplete gameplay remains disabled.
+
+Fresh javac --release 11 compilation using the existing dependency-free source manifest
+PASSED into build/continuation-retry-envelope. MasterRetryOperationProposalChecks,
+MasterRetryPrefixBindingChecks, MasterRetryContinuationChecks and
+MasterEmptyRetryBatchChecks PASSED. Envelope checks cover 0/1/513 prefixes, exact
+restored equality/hash, response fields, suspension versus continuation, untyped
+construction refusal and premature aggregate admission refusal. Compilation excludes
+Gson/RunCodec, storage/session adapters and JUnit. Focused Gradle payload/legacy
+attempt failed BEFORE compilation: inherited wrapper-cache lock Access is denied.
+No JUnit or legacy pass claimed. GRADLE_USER_HOME unchanged; no cache workaround.
+An initial Python edit command was unavailable and made no edits; apply_patch succeeded.
+
+Reconciliation: WB-WHL-09 PARTIAL. Typed RunReceipt envelope DONE offline; atomic
+aggregate publication, exact durable replay, automatic durable retries and persisted
+suspension UNSTARTED. WB-WHL-08 PARTIAL: ordinary assignment and supported Sacrifice
+route payloads UNSTARTED. WB-WHL-10 PARTIAL_UNVERIFIED. Other partial/unstarted/blocked
+statuses and live-client/catalog/decision evidence holds stand. No complete gameplay claim.
+
+Next: implement atomic in-memory retry publication with original-response replay and
+aggregate/history validation, then remove the temporary aggregate refusal only when
+invariants and copy-path tests pass. Follow with versioned persistence and locked
+current-evidence admission. Preserve accounting and exact prefixes; never authenticate
+stale evidence using structural payloads or silently reconcile changed snapshots/catalogs.
+Run focused Gradle and legacy checks when inherited dependencies are accessible.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - typed unresolved retry payload, 2026-11-03
 
 IDLE after bounded WB-WHL-09 operation-payload increment (XS/S). Reconciled current
