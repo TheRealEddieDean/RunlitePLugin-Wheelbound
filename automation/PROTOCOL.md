@@ -1,3 +1,54 @@
+## Current local continuation - typed unresolved retry payload, 2026-11-03
+
+IDLE after bounded WB-WHL-09 operation-payload increment (XS/S). Reconciled current
+continuations with production and focused checks before selection. Retry batch,
+evidence-gated continuation and actual-prefix binding already exist and are DONE
+offline; older UNSTARTED statements for these are superseded. Taint store/session/
+async and schema-19 remain IMPLEMENTED_UNVERIFIED. No Git operations or merged-state
+verification; supervisor owns publication. I01d not selected. WB-D013/018/058/120/
+138/139/155/157 remain authoritative; no gameplay decision changed.
+
+MasterRetryOperationProposal retains command, identity, original/next revision,
+original pending prefix, resulting unresolved prefix and continuation/suspension
+status. Preparation validates against the actual head and retained creation. Equal
+restored payloads compare equally, including every raw ticket/intermediate stream
+state, original draw count and status. Changed command/ticket/state differs. A
+suspension retains the exact prefix; a continuation must advance it. Valid landings,
+retained command IDs, changed prefix and stale/paused heads fail closed. Validation
+requires the original head and does not authorize historical replay. No aggregate
+publication, actual revision advance, RunReceipt, persisted marker, live evidence/
+RNG authentication, storage/session admission or feature wiring. Master Wheel
+behavior unchanged; incomplete gameplay remains disabled.
+
+Fresh javac --release 11 compilation of prior dependency-free source manifest plus
+new production/Checks files PASSED into build/continuation-retry-operation. New
+MasterRetryOperationProposalChecks and existing MasterRetryPrefixBindingChecks,
+MasterRetryContinuationChecks and MasterEmptyRetryBatchChecks PASSED. Coverage uses
+0/1/513 retained empties, restored equality/hash, differing command/tickets/states,
+suspension statuses, terminal refusal, reused command, changed prefix, Pause and
+source immutability/no accounting. Initial fixture used long for an int ticket;
+corrected before successful compilation. Manifest excludes storage/session adapters,
+Gson/RunCodec and JUnit. Focused payload/binding/continuation/legacy Gradle attempt
+failed BEFORE compilation: inherited wrapper-cache lock Access is denied. New JUnit
+wrapper IMPLEMENTED_UNVERIFIED; no JUnit/legacy pass claimed. GRADLE_USER_HOME
+unchanged; no external inspection or cache workaround.
+
+Reconciliation: WB-WHL-09 PARTIAL. Typed unresolved operation payload now DONE
+offline; atomic aggregate publication, exact durable replay, automatic durable retry
+execution and persisted suspension remain UNSTARTED. WB-WHL-08 PARTIAL; ordinary
+assignment and supported Sacrifice route payloads UNSTARTED. WB-WHL-10 remains
+PARTIAL_UNVERIFIED. Other partial/unstarted/blocked statuses and client/catalog/
+decision evidence holds stand; no complete gameplay claim. WB-D155 adds no retirement.
+
+Next: integrate the typed payload with operation-specific RunReceipt and atomic
+aggregate publication, preserving exact original response, accounting and all copy
+paths; then versioned persistence and locked current-evidence admission. A structural
+payload alone must never admit stale evidence or silently reconcile changed snapshots/
+catalogs. Valid landings require terminal accounting/obligation publication. Trusted
+adapters, sampling, assignments and settlement remain unfinished. Run focused Gradle
+and legacy checks when inherited dependencies are accessible. Local edits only;
+supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - bounded empty retry proposal, 2026-11-03
 
 IDLE after bounded WB-WHL-09 supplied-draw orchestration increment (S). Reconciled
