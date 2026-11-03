@@ -1,3 +1,49 @@
+## Current local continuation - standalone Taint response JSON, 2026-10-31
+
+IDLE after bounded WB-WHL-08 persistence dependency increment (S). Reconciled
+production/fixtures against latest atomic Taint continuation and WB-D013/018/058/
+120/138/139/155. Atomic in-memory Taint publication, typed receipt, explicit current
+special and original reservation already exist; older UNSTARTED records for these
+are superseded. No Git operations; merged state not independently verified.
+
+Added MasterTaintTerminalResponseJson version 1, retaining full terminal receipt and
+explicit original spinsBefore. Reuses strict receipt decoding and typed Taint gate;
+ordinary/Sacrifice payloads, unknown/missing fields, unsupported versions, malformed
+numbers, foreign identity and inconsistent nested revisions fail closed. Restores
+original accounting without another allocation. Structural decoding grants no replay
+or storage authority; aggregate retained-history/reservation/current-special binding
+remains required. RunCodec refusal retained; standalone payload is not durable-save
+integration. No gameplay decision, settlement, Master Wheel change or enablement.
+
+Focused JUnit tests authored for 0/1/513 empty prefixes, 1/7/Long.MAX_VALUE balances,
+text round-trip, equality/hash, typed receipt equality, exact allocation replay,
+changed-accounting inequality, corruption/unsupported-outcome refusal and input
+immutability. Gradle focused response/preparation/legacy attempt failed before
+compilation: inherited wrapper-cache lock Access is denied. New JSON/JUnit code is
+IMPLEMENTED_UNVERIFIED; no codec/legacy pass claimed. GRADLE_USER_HOME unchanged;
+no external inspection or cache workaround. Fresh Java 11 dependency-free production
+and fixture compilation PASSED after correcting standalone source selection; this
+excludes JSON/Gson/JUnit and does not verify the new codec.
+MasterSpecialTerminalPreparationChecks, MasterTerminalOperationProposalChecks,
+MasterResolutionBindingChecks and MasterCurrentSpecialAggregateChecks (including
+current-context checks) PASSED from those freshly compiled sources.
+
+Reconciliation: WB-WHL-08 PARTIAL; standalone typed Taint response JSON now
+IMPLEMENTED_UNVERIFIED, no longer UNSTARTED. Current-special versioned JSON and
+RunCodec migration/integration remain UNSTARTED; locked/session admission UNSTARTED.
+Ordinary assignment and supported Sacrifice route payloads UNSTARTED. WB-WHL-09
+PARTIAL (automatic retries UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED. Schema-18/full
+integration remains IMPLEMENTED_UNVERIFIED. Other audited partial/unstarted/blocked
+rows and evidence holds stand; no unfinished gameplay marked complete. I01d not selected.
+
+Next: run focused JSON tests when inherited Gradle dependencies are accessible; add
+explicit current-special JSON using retained history/reservation/lifecycle validation,
+then lossless RunCodec schema migration for both payloads with legacy absence,
+corruption and Pause/Resume exact replay coverage before locked/session admission.
+Settlement, grants, sampling, automatic retries, suspension/revalidation and changed-
+snapshot recovery remain unfinished. WB-D155 adopts no retirement rule. Local edits
+only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - atomic in-memory Taint terminal operation, 2026-10-31
 
 IDLE after bounded WB-WHL-08 publication increment (S). Reconciled production and
