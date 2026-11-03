@@ -42,6 +42,21 @@ public final class RunCodec
     {
         if (document.receipts().stream().anyMatch(receipt -> receipt.masterRetry() != null))
         { throw new IllegalArgumentException("Retry persistence requires a versioned lossless payload"); }
+        return encode(document, SCHEMA);
+    }
+
+    /** Candidate migration writer for codec verification only. Storage continues to use
+     * encode until lossless round-trip and migration checks pass with real dependencies.
+     * This is not a public persistence API; production callers must keep using encode.
+     */
+    byte[] encodeRetryCandidate(RunDocument document)
+    {
+        MasterRetryHistoryBinding.validate(Objects.requireNonNull(document, "document"));
+        return encode(document, READ_SCHEMA);
+    }
+
+    private byte[] encode(RunDocument document, int schema)
+    {
         RunLifecycle run = document.lifecycle();
         JsonObject payload = new JsonObject();
         payload.addProperty("accountKey", run.identity().accountKey());
@@ -77,6 +92,8 @@ public final class RunCodec
             { item.add("masterCreation", MasterSelectionCreationReceiptJson.encode(receipt.masterCreation())); }
             if (receipt.taintTerminal() != null)
             { item.add("taintTerminal", MasterTaintTerminalResponseJson.encode(receipt.taintTerminal())); }
+            if (receipt.masterRetry() != null)
+            { item.add("masterRetry", MasterRetryOperationProposalJson.encode(receipt.masterRetry())); }
             receipts.add(item);
         }
         payload.add("receipts", receipts);
@@ -155,7 +172,7 @@ public final class RunCodec
             : com.google.gson.JsonNull.INSTANCE);
         String text = gson.toJson(payload);
         JsonObject envelope = new JsonObject();
-        envelope.addProperty("schemaVersion", SCHEMA);
+        envelope.addProperty("schemaVersion", schema);
         envelope.addProperty("payload", text);
         envelope.addProperty("sha256", sha256(text.getBytes(StandardCharsets.UTF_8)));
         byte[] bytes = gson.toJson(envelope).getBytes(StandardCharsets.UTF_8);
