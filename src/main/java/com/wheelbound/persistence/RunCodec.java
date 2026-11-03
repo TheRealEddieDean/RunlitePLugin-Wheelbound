@@ -24,7 +24,7 @@ import java.util.UUID;
 /** Inject RuneLite's Gson. Never deserialize directly into domain objects bypassing their validation. */
 public final class RunCodec
 {
-    public static final int SCHEMA = 18;
+    public static final int SCHEMA = 19;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -37,10 +37,6 @@ public final class RunCodec
 
     public byte[] encode(RunDocument document)
     {
-        if (document.currentMasterSpecial().isPresent())
-        { throw new IllegalArgumentException("Current Master special requires a lossless versioned codec"); }
-        if (document.receipts().stream().anyMatch(receipt -> receipt.taintTerminal() != null))
-        { throw new IllegalArgumentException("Taint terminal requires a lossless versioned codec" ); }
         RunLifecycle run = document.lifecycle();
         JsonObject payload = new JsonObject();
         payload.addProperty("accountKey", run.identity().accountKey());
@@ -74,6 +70,8 @@ public final class RunCodec
             { item.add("activation", GrandActivationReceiptJson.encode(receipt.activation(), run.revision())); }
             if (receipt.masterCreation() != null)
             { item.add("masterCreation", MasterSelectionCreationReceiptJson.encode(receipt.masterCreation())); }
+            if (receipt.taintTerminal() != null)
+            { item.add("taintTerminal", MasterTaintTerminalResponseJson.encode(receipt.taintTerminal())); }
             receipts.add(item);
         }
         payload.add("receipts", receipts);
@@ -146,6 +144,10 @@ public final class RunCodec
         payload.add("masterSpins", document.masterSpins().isPresent()
             ? MasterSpinStateJson.encode(document.masterSpins().get(), run.revision())
             : com.google.gson.JsonNull.INSTANCE);
+        payload.add("currentMasterSpecial", document.currentMasterSpecial().isPresent()
+            ? MasterCurrentSpecialObligationJson.encode(document.currentMasterSpecial().get(),
+                document.masterResolutions().get(), document.masterSpins().get(), run)
+            : com.google.gson.JsonNull.INSTANCE);
         String text = gson.toJson(payload);
         JsonObject envelope = new JsonObject();
         envelope.addProperty("schemaVersion", SCHEMA);
@@ -195,7 +197,9 @@ public final class RunCodec
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations")
                     : schema == 17
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions")
-                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions", "masterSpins"));
+                    : schema == 18
+                    ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions", "masterSpins")
+                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions", "masterSpins", "currentMasterSpecial"));
             RunIdentity identity = new RunIdentity(string(payload, "accountKey"), UUID.fromString(string(payload, "runId")));
             if (!identity.equals(expected)) { throw new IOException("Foreign account/profile/run snapshot"); }
             RunLifecycle lifecycle = new RunLifecycle(identity, integer(payload, "revision"),
@@ -235,7 +239,10 @@ public final class RunCodec
                     boolean hasPurchase = schema >= 7 && "SLICE_PURCHASE".equals(string(item, "operation"));
                     boolean hasActivation = schema >= 13 && "GRAND_ACTIVATION".equals(string(item, "operation"));
                     boolean hasCreation = schema >= 16 && "MASTER_SELECTION_CREATION".equals(string(item, "operation"));
-                    keys(item, hasCreation
+                    boolean hasTaint = schema >= 19 && "MASTER_TAINT_TERMINAL".equals(string(item, "operation"));
+                    keys(item, hasTaint
+                        ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "taintTerminal")
+                        : hasCreation
                         ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "masterCreation")
                         : hasActivation
                         ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "activation")
@@ -246,6 +253,19 @@ public final class RunCodec
                         : hasDraw
                         ? Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation", "draw")
                         : Set.of("commandId", "operation", "beforeRevision", "afterRevision", "state", "obligation"));
+                    if (hasTaint)
+                    {
+                        RunReceipt receipt = RunReceipt.masterTaintTerminal(MasterTaintTerminalResponseJson.decode(
+                            item.getAsJsonObject("taintTerminal"), identity));
+                        if (!receipt.commandId().equals(UUID.fromString(string(item, "commandId")))
+                            || receipt.beforeRevision() != integer(item, "beforeRevision")
+                            || receipt.afterRevision() != integer(item, "afterRevision")
+                            || !receipt.state().name().equals(string(item, "state"))
+                            || !receipt.obligation().name().equals(string(item, "obligation")))
+                        { throw new IllegalArgumentException("Taint envelope disagrees with original response"); }
+                        receipts.add(receipt);
+                        continue;
+                    }
                     if (hasCreation)
                     {
                         RunReceipt receipt = RunReceipt.masterSelectionCreation(MasterSelectionCreationReceiptJson.decode(
@@ -328,6 +348,23 @@ public final class RunCodec
                     lifecycle, progress.isPresent() ? progress.get().checklist()
                         : com.wheelbound.domain.GrandFateChecklist.initial(grandFate.get())));
             }
+            Optional<com.wheelbound.domain.MasterSelectionResolutions> resolutions =
+                schema >= 17 && !payload.get("masterResolutions").isJsonNull()
+                    ? Optional.of(MasterSelectionResolutionsJson.decode(payload.getAsJsonObject("masterResolutions"),
+                        identity, lifecycle.revision())) : Optional.empty();
+            Optional<com.wheelbound.domain.MasterSpinState> spins =
+                schema >= 18 && !payload.get("masterSpins").isJsonNull()
+                    ? Optional.of(MasterSpinStateJson.decode(payload.getAsJsonObject("masterSpins"),
+                        identity, lifecycle.revision())) : Optional.empty();
+            Optional<com.wheelbound.domain.MasterSpecialObligation> special = Optional.empty();
+            if (schema >= 19 && !payload.get("currentMasterSpecial").isJsonNull())
+            {
+                special = Optional.of(MasterCurrentSpecialObligationJson.decode(
+                    payload.getAsJsonObject("currentMasterSpecial"),
+                    resolutions.orElseThrow(() -> new IllegalArgumentException("Current special requires history")),
+                    spins.orElseThrow(() -> new IllegalArgumentException("Current special requires spins")),
+                    lifecycle).obligation());
+            }
             return new RunDocument(lifecycle, string(payload, "catalogVersion"), receipts, fatePoints,
                 schema >= 6 && !payload.get("inventory").isJsonNull()
                     ? Optional.of(InventoryJson.decode(payload.getAsJsonObject("inventory"))) : Optional.empty(), grandFate, progress, journal, activations, currentAttempt,
@@ -337,12 +374,7 @@ public final class RunCodec
                 schema >= 15 && !payload.get("masterCreations").isJsonNull()
                     ? Optional.of(MasterSelectionCreationJournalJson.decode(payload.getAsJsonObject("masterCreations"),
                         identity, lifecycle.revision())) : Optional.empty(),
-                schema >= 17 && !payload.get("masterResolutions").isJsonNull()
-                    ? Optional.of(MasterSelectionResolutionsJson.decode(payload.getAsJsonObject("masterResolutions"),
-                        identity, lifecycle.revision())) : Optional.empty(),
-                schema >= 18 && !payload.get("masterSpins").isJsonNull()
-                    ? Optional.of(MasterSpinStateJson.decode(payload.getAsJsonObject("masterSpins"),
-                        identity, lifecycle.revision())) : Optional.empty());
+                resolutions, spins, special);
         }
         catch (RuntimeException ex) { throw new IOException("Invalid snapshot; preserve original", ex); }
     }

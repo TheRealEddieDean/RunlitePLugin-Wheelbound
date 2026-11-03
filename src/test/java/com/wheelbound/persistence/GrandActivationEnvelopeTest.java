@@ -50,6 +50,7 @@ public class GrandActivationEnvelopeTest
         if (schema < 15) { payload.remove("masterCreations"); }
         if (schema < 17) { payload.remove("masterResolutions"); }
         if (schema < 18) { payload.remove("masterSpins"); }
+        if (schema < 19) { payload.remove("currentMasterSpecial"); }
         edit.accept(payload);
         String text = gson.toJson(payload);
         envelope.addProperty("schemaVersion", schema);

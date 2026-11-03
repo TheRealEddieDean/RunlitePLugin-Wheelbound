@@ -7,7 +7,7 @@ import java.util.Set;
 /**
  * Versioned original Taint response payload. Structural decoding grants no replay
  * authority: retained history, reservation and current obligation must still bind.
- * Not yet wired into RunCodec; its loss-prevention refusal remains required.
+ * Retained by RunCodec schema 19 together with explicit aggregate context.
  */
 final class MasterTaintTerminalResponseJson
 {

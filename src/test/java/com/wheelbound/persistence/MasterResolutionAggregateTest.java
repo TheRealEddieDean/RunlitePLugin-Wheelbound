@@ -53,7 +53,7 @@ public class MasterResolutionAggregateTest
         RunDocument source = MasterCreationAggregateChecks.fixture(1);
         for (int schema : new int[] {15, 16})
         {
-            byte[] old = mutate(source, schema, p -> { p.remove("masterResolutions"); p.remove("masterSpins"); });
+            byte[] old = mutate(source, schema, p -> { p.remove("masterResolutions"); p.remove("masterSpins"); p.remove("currentMasterSpecial"); });
             byte[] unchanged = old.clone();
             RunDocument restored = codec.decode(old, source.lifecycle().identity());
             assertFalse(restored.masterResolutions().isPresent());

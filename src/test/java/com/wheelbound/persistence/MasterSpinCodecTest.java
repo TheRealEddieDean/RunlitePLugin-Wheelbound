@@ -73,7 +73,7 @@ public class MasterSpinCodecTest
     @Test public void schema17MigratesWithoutInferringSpinsAndRejectsNewField() throws Exception
     {
         RunDocument head = MasterResolutionAggregateChecks.resolved(1);
-        byte[] old = mutate(head, 17, p -> p.remove("masterSpins"));
+        byte[] old = mutate(head, 17, p -> { p.remove("masterSpins"); p.remove("currentMasterSpecial"); });
         byte[] original = old.clone();
         var restored = codec.decode(old, head.lifecycle().identity());
         assertFalse(restored.masterSpins().isPresent());
