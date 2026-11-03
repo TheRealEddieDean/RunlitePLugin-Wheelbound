@@ -1,3 +1,49 @@
+## Current local continuation - locked retry response recovery, 2026-11-03
+
+IDLE after bounded WB-WHL-09 read-only storage increment (S). Supersedes older
+next-task prose. Reconciled retry preparation, sampled Taint publication, original
+response restoration and exact in-memory recovery against current code/tests and
+WB-D120/138/139. These domain pieces remain DONE offline. Candidate schema-20
+reader/writer and JSON remain IMPLEMENTED_UNVERIFIED. No Git operations or merged-
+state verification; supervisor owns publication. No I01d or new gameplay decision.
+
+AtomicRunStore.committedMasterRetry now looks up the exact retained immutable retry
+response under the existing save lock, using MasterRetryRecovery and the decoded
+current head. It refuses foreign requests, payload/command conflicts, locked,
+corrupt/pending saves and uncertain instances. Absence grants no draw authority.
+It never rewrites snapshots or invokes evidence/RNG. This read-only storage boundary
+is IMPLEMENTED_UNVERIFIED, not verified durable replay or retry write admission.
+Public encoding stays schema 19; no candidate writer is called by production storage.
+Existing Master Wheel unchanged; incomplete gameplay remains disabled.
+
+Added MasterRetryStoreRecoveryTest fixtures for 0/1/128 retained empties, continuation
+and suspension, later batches, terminal Taint, Pause/Resume, reopen, exact historical
+response, unchanged save bytes/accounting, absent save/response, altered payload,
+lifecycle-command collision, foreign identity, overlapping lock, pending/corrupt saves
+and lost-acknowledgement uncertainty. Candidate snapshots are installed only in tests.
+These JUnit fixtures and the new store method remain UNVERIFIED. Focused Gradle
+storage/retry snapshot/JSON/RunCodec/legacy attempt failed BEFORE compilation because
+the inherited wrapper-cache lock is inaccessible. GRADLE_USER_HOME unchanged; no
+cache workaround or external inspection. Fresh Java 11 dependency-free compilation
+and retry operation/response/proposal/continuation/prefix-binding/special-terminal
+Checks PASSED; this excludes AtomicRunStore, codec, Gson and JUnit.
+
+Reconciliation: WB-WHL-09 PARTIAL. Read-only locked storage recovery is now
+IMPLEMENTED_UNVERIFIED rather than UNSTARTED. Public schema-20 writer activation,
+locked current-evidence admission, verified exact durable replay, automatic durable
+retry execution and persisted suspension remain UNSTARTED. WB-WHL-08 PARTIAL:
+ordinary assignments and supported Sacrifice route payloads UNSTARTED. WB-WHL-10
+PARTIAL_UNVERIFIED. Existing client/catalog/decision BLOCKED holds and other partial/
+unstarted statuses stand; A56 remains deferred. No complete gameplay claim.
+
+Next: run MasterRetryStoreRecoveryTest, AtomicRunStoreTest,
+MasterRetrySnapshotReadTest, MasterRetryOperationProposalJsonTest, RunCodecTest and
+legacy regression when inherited dependencies are accessible. Fix failures before
+schema-20 activation or retry writes. Then implement locked current-evidence admission
+and durable retry execution, preserving original responses, exact streams/accounting
+and WB-D139 same-transaction suspension. Special adapters remain evidence gated.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - retry spin availability guard, 2026-11-03
 
 IDLE after bounded WB-WHL-09 allocation-gate increment (XS/S). Supersedes older
