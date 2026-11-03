@@ -1,3 +1,47 @@
+## Current local continuation - evidence-gated pending retry preparation, 2026-11-03
+
+IDLE after bounded WB-WHL-09 preparation increment (S). Reconciled actual source,
+focused fixtures and latest continuations with WB-D013/018/058/120/138/139/155/157.
+Bounded retry proposal already exists and passes offline; Taint store/session/async
+and schema-19 remain IMPLEMENTED_UNVERIFIED, superseding older UNSTARTED records.
+No Git or merged-state verification; supervisor owns publication. I01d not selected.
+
+MasterRetryContinuation prepares from the actual aggregate pending prefix and
+retained creation history, qualifying identity/revision/transaction/draw count/state
+before source invocation. Current ordinary evidence is assembled from aggregate
+inventory/catalog. Unknown, unsupported, all-empty, changed snapshot, wheel or
+classification returns SUSPENDED with the exact original prefix and no draw.
+Matching READY evidence delegates to the bounded batch proposal. Reasons and wheel
+order are conservatively compared; no changed-evidence reconciliation is invented.
+Result is a pure proposal, not a durable suspension marker or admitted transaction.
+No evidence authentication, accounting, terminal publication, sampling or wiring.
+Master Wheel behavior unchanged; incomplete gameplay remains disabled.
+
+Fresh javac --release 11 compilation of the prior dependency-free source manifest
+plus new production and Checks files PASSED into build/continuation-retry-evidence.
+MasterRetryContinuationChecks PASSED for 0/1/513 prefixes, valid stop, budget yield,
+unknown/unsupported/all-empty and changed-but-ready eligibility, changed snapshot,
+stale/foreign/count/state rejection, Pause, missing evidence, invalid budget, source
+failure and immutability. MasterEmptyRetryBatchChecks and
+MasterCreationAdmissionChecks also PASSED. Manifest excludes storage/session adapters,
+Gson/JSON/RunCodec and JUnit. Focused Gradle continuation/retry/legacy attempt failed
+BEFORE compilation: inherited wrapper-cache lock Access is denied. JUnit wrapper
+IMPLEMENTED_UNVERIFIED; no JUnit or legacy pass claimed. GRADLE_USER_HOME unchanged;
+no external inspection or cache workaround.
+
+Reconciliation: WB-WHL-09 PARTIAL: current-head/evidence-gated retry preparation DONE
+offline, automatic durable retry execution and persisted suspension UNSTARTED.
+WB-WHL-08 PARTIAL (ordinary assignment and supported Sacrifice route UNSTARTED);
+WB-WHL-10 PARTIAL_UNVERIFIED. Other partial/unstarted/blocked rows and client/catalog/
+decision evidence holds stand. No complete gameplay claim; WB-D155 adds no retirement.
+
+Next: add operation-specific atomic pending-prefix continuation/suspension retention
+with exact replay and locked current evidence, preserving all history and stream state.
+Do not persist a valid landing as unresolved or bypass terminal accounting/obligation.
+Changed snapshots/catalogs still need explicit reconciliation. Trusted adapters,
+sampling, durable retries, assignments and settlement remain unfinished. Run focused
+Gradle and legacy tests when inherited dependencies are accessible. Local edits only.
+
 ## Current local continuation - bounded empty retry proposal, 2026-11-03
 
 IDLE after bounded WB-WHL-09 supplied-draw orchestration increment (S). Reconciled
