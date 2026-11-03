@@ -6,6 +6,7 @@ import com.wheelbound.domain.MasterSelectionReadiness;
 import java.util.Map;
 import com.wheelbound.domain.GrandActivationReceipt;
 import com.wheelbound.domain.MasterSelectionCreationReceipt;
+import com.wheelbound.domain.MasterSelectionResolutionReceipt;
 import com.wheelbound.domain.RunLifecycle;
 import java.io.IOException;
 import java.util.Objects;
@@ -58,6 +59,44 @@ public final class RunSession
     {
         return current != null && current.state() == RunLifecycle.State.ACTIVE
             ? Optional.of(new Token(generation, current)) : Optional.empty();
+    }
+
+    /** Qualifies an immediate callback only; establishes no draw/evidence authority. */
+    synchronized boolean acceptsMasterTaint(Token token, MasterSelectionResolutionReceipt request)
+    {
+        return accepts(token) && request != null && token.identity.equals(request.identity())
+            && token.revision == request.beforeRevision();
+    }
+
+    public synchronized MasterTerminalOperationProposal commitMasterTaint(Token token,
+        MasterSelectionResolutionReceipt request) throws IOException
+    {
+        if (!acceptsMasterTaint(token, request))
+        { throw new IllegalArgumentException("Stale or foreign Master Taint callback"); }
+        return commitMasterTaint(request);
+    }
+
+    /** Worker boundary for frozen Taint commitment and exact historical replay.
+     * Invalidates callbacks before IO and refreshes the actual durable head, including
+     * Pause. Any failure disconnects. Does not select or settle a Punishment.
+     */
+    public synchronized MasterTerminalOperationProposal commitMasterTaint(
+        MasterSelectionResolutionReceipt request) throws IOException
+    {
+        if (store == null) { throw new IllegalStateException("No connected run"); }
+        AtomicRunStore target = store;
+        generation = new Object();
+        try
+        {
+            MasterTerminalOperationProposal response = target.commitMasterTaint(request);
+            current = target.load().orElseThrow(() -> new IOException("Run disappeared")).lifecycle();
+            return response;
+        }
+        catch (IOException | RuntimeException ex)
+        {
+            disconnect();
+            throw ex;
+        }
     }
 
     public synchronized boolean accepts(Token token)

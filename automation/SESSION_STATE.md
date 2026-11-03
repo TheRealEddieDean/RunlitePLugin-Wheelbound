@@ -1,3 +1,54 @@
+## Current local continuation - Taint session admission, 2026-11-03
+
+IDLE after bounded WB-WHL-08 session/async admission increment (S). Reconciled
+production and focused tests with the locked-store/schema-19 continuations and
+WB-D013/018/058/120/138/139/155/157. Existing typed terminal operation, retained
+special context, schema-19 codec and locked store command reused. Older UNSTARTED
+records for these boundaries are superseded by this continuation. No Git operations;
+merged state not independently verified. No I01d selected.
+
+RunSession now provides token-qualified and explicit request-only commitMasterTaint
+boundaries. Immediate callbacks require current generation, identity and request
+beforeRevision; rejection performs no IO and preserves fresh admission. Accepted
+commands invalidate callbacks before IO, call the operation-specific locked command,
+and refresh from the actual durable lifecycle, including historical paused replay.
+IO/runtime failure disconnects. AsyncRunSession provides both overloads using existing
+worker submission: admission closes immediately, superseded queued commands skip IO,
+and started commands may finish after disconnect without restoring admission.
+Tokens establish no evidence or RNG authority. No Punishment selection/settlement,
+ordinary assignment, Sacrifice route, sampling, plugin wiring or feature enablement.
+Existing Master Wheel behavior unchanged; incomplete gameplay stays disabled.
+
+MasterTaintSessionTest authored for synchronous stale rejection, exact paused replay,
+changed-payload failure, async stale/wrong-revision/null callback rejection before queue,
+immediate invalidation, queued supersession preserving fresh connection, disconnect at
+replacement, lost acknowledgement/reconnect replay without another debit, and rejected
+executor submission. Focused Gradle session/store/RunCodec/legacy attempt failed BEFORE
+compilation: inherited wrapper-cache lock Access is denied. New adapters and JUnit tests
+are IMPLEMENTED_UNVERIFIED; no session/store/codec/JUnit/legacy pass claimed. Inherited
+GRADLE_USER_HOME unchanged; no external inspection/cache workaround. Fresh Java 11
+compilation using the prior dependency-free source manifest passed into
+build/continuation-taint-session. This EXCLUDES modified session adapters, AtomicRunStore,
+Gson/JSON/RunCodec and JUnit. MasterSpecialTerminalPreparationChecks,
+MasterCurrentSpecialAggregateChecks, MasterResolutionBindingChecks and
+MasterTerminalOperationProposalChecks PASSED.
+
+Reconciliation: WB-WHL-08 remains PARTIAL. Synchronous/session and async Taint admission
+are now IMPLEMENTED_UNVERIFIED, no longer UNSTARTED. Locked store, schema-19 and standalone
+JSON remain IMPLEMENTED_UNVERIFIED. Ordinary assignment and supported Sacrifice route
+payloads remain UNSTARTED. WB-WHL-09 remains PARTIAL (automatic retry execution UNSTARTED),
+WB-WHL-10 PARTIAL_UNVERIFIED. Other partial/unstarted/blocked rows and decision/client/
+catalog evidence holds stand. No complete gameplay claim.
+
+Next: execute MasterTaintSessionTest, MasterTaintStoreTest, schema-19/JSON/migration and
+legacy checks when inherited dependencies are accessible, including new adapter compile.
+Then select a bounded WB-WHL-09 automatic empty-retry increment from existing durable
+pending-prefix/readiness operations; inspect committed suspension/revalidation contracts
+before adding execution. Do not infer changed-snapshot recovery or supported ordinary/
+Sacrifice assignment payloads. Settlement, grants, sampling, retry execution and
+suspension/revalidation remain unfinished. WB-D155 adopts no retirement rule.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - locked Taint terminal admission, 2026-11-03
 
 IDLE after bounded WB-WHL-08 storage admission increment (S). Reconciled production
