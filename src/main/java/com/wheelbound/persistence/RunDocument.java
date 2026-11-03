@@ -250,8 +250,6 @@ public final class RunDocument
         RunReceipt previous = null;
         for (RunReceipt receipt : this.receipts)
         {
-            if (receipt.masterRetry() != null)
-            { throw new IllegalArgumentException("Retry aggregate publication is not supported yet"); }
             if (receipt.masterCreation() != null
                 && (this.masterCreations == null || !receipt.masterCreation().equals(
                     this.masterCreations.receipts().get(receipt.commandId()))))
@@ -353,6 +351,7 @@ public final class RunDocument
                 this.currentMasterSpecial.obligation().validateResolution(receipt.taintTerminal().resolution());
             }
         }
+        MasterRetryHistoryBinding.validate(this);
         validateDebits();
         validatePurchases();
         if (previous != null && (previous.afterRevision() != lifecycle.revision()
@@ -443,6 +442,7 @@ public final class RunDocument
             case SLICE_PURCHASE: return previous.state() == RunLifecycle.State.ACTIVE
                 && previous.obligation() == RunLifecycle.Obligation.NONE;
             case DRAW: return previous.state() == RunLifecycle.State.ACTIVE && previous.obligation() == RunLifecycle.Obligation.NONE;
+            case MASTER_RETRY:
             case MASTER_TAINT_TERMINAL: return previous.state() == RunLifecycle.State.ACTIVE
                 && previous.obligation() == RunLifecycle.Obligation.NONE;
             case MASTER_SELECTION_CREATION: return previous.state() == RunLifecycle.State.ACTIVE

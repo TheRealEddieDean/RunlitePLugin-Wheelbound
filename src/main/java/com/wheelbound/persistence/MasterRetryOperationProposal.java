@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
-/** Immutable unresolved continuation/suspension payload. This is not an admitted
- * receipt or saved suspension marker. Publication must qualify current evidence
+/** Immutable unresolved continuation/suspension payload. This is not a durably admitted
+ * receipt or saved suspension marker. Storage admission must qualify current evidence
  * under its lock and retain the original response for durable replay.
  */
 public final class MasterRetryOperationProposal

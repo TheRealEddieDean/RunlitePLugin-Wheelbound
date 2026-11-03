@@ -37,6 +37,8 @@ public final class RunCodec
 
     public byte[] encode(RunDocument document)
     {
+        if (document.receipts().stream().anyMatch(receipt -> receipt.masterRetry() != null))
+        { throw new IllegalArgumentException("Retry persistence requires a versioned lossless payload"); }
         RunLifecycle run = document.lifecycle();
         JsonObject payload = new JsonObject();
         payload.addProperty("accountKey", run.identity().accountKey());
