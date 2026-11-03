@@ -1,3 +1,46 @@
+## Current local continuation - retry spin availability guard, 2026-11-03
+
+IDLE after bounded WB-WHL-09 allocation-gate increment (XS/S). Supersedes older
+next-task prose. Reconciled existing source/tests: fresh sampling, sampled Taint
+publication, unresolved publication, restoration and in-memory recovery exist (DONE
+offline). Candidate schema-20 reader/writer and JSON remain IMPLEMENTED_UNVERIFIED.
+No Git operations or merged-state verification; supervisor owns publication. No I01d.
+
+MasterRetryContinuation now refuses ready-evidence sampling when explicit spin state
+has no available spin or an outstanding reservation. Empty retries cannot bypass
+WB-D139's existing zero-spin gate. Evidence-driven suspension still preserves the
+same transaction/prefix without sampling or charging, including at zero balance.
+Legacy absent spin state remains absent and supplies no gameplay admission authority.
+The ordinary-only evidence assembler still marks specials unsupported; sampled Taint
+publication does not authenticate evidence. No new decision, adapter or activation.
+Existing Master Wheel unchanged; incomplete gameplay remains disabled.
+
+Fresh javac --release 11 compilation PASSED into build/continuation-retry-spin-gate
+using build/continuation-retry-sampled-taint/sources.txt. Dependency-free operation,
+continuation, response, proposal, prefix-binding, special terminal and empty-batch
+Checks PASSED. New operation checks cover 0/1/513 retained draws, balances 0/1/
+Long.MAX_VALUE, refusal before source calls, zero-balance suspension, unchanged input,
+retained transcript and no debit on positive-balance empty retries. Final operation
+checks rerun PASSED after adding suspension coverage. Existing JUnit wrapper includes
+them, but JUnit is UNVERIFIED. Focused Gradle snapshot/JSON/RunCodec/special/operation/
+response/legacy attempt failed BEFORE compilation: inherited wrapper-cache lock
+Access is denied. GRADLE_USER_HOME unchanged; no cache workaround or external inspection.
+
+Reconciliation: WB-WHL-09 PARTIAL; explicit spin gate DONE offline. Public schema-20
+activation, locked current-evidence admission, exact durable replay, automatic durable
+execution and persisted suspension remain UNSTARTED. WB-WHL-08 PARTIAL: ordinary
+assignments and supported Sacrifice route payloads UNSTARTED. WB-WHL-10 remains
+PARTIAL_UNVERIFIED. Other partial/unstarted and client/catalog/decision BLOCKED holds
+stand. WB-D138/139 and existing evidence/decision holds remain authoritative.
+
+Next: run MasterRetrySnapshotReadTest, MasterRetryOperationProposalJsonTest,
+RunCodecTest, MasterSpecialTerminalPreparationTest, MasterRetryOperationTest,
+MasterRetryResponseTest and legacy regression when inherited dependencies are
+accessible. Fix failures before schema-20 activation. Then implement locked evidence
+admission and durable replay, preserving exact streams/accounting and same-transaction
+suspension. Special evidence adapters remain required before qualified special draws.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - retry command admission guard, 2026-11-03
 
 IDLE after bounded WB-WHL-09 command-admission increment (XS/S). Supersedes
