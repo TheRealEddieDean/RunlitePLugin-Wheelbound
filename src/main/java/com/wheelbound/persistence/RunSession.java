@@ -173,6 +173,30 @@ public final class RunSession
         }
     }
 
+    /** Read-only recovery of the original retry response, including while paused.
+     * Invalidates callbacks before IO and refreshes from the actual durable head.
+     * An absent response grants no sampling or continuation authority. Any failure
+     * disconnects; callers must retain the original immutable request for recovery.
+     */
+    public synchronized Optional<MasterRetryOperationProposal> committedMasterRetry(
+        MasterRetryOperationProposal request) throws IOException
+    {
+        if (store == null) { throw new IllegalStateException("No connected run"); }
+        AtomicRunStore target = store;
+        generation = new Object();
+        try
+        {
+            Optional<MasterRetryOperationProposal> response = target.committedMasterRetry(request);
+            current = target.load().orElseThrow(() -> new IOException("Run disappeared")).lifecycle();
+            return response;
+        }
+        catch (IOException | RuntimeException ex)
+        {
+            disconnect();
+            throw ex;
+        }
+    }
+
     /** Persists the supplied frozen creation on the storage worker, including exact
      * historical replay. Invalidates callbacks and reloads the actual durable head.
      * This does not authenticate evidence, allocate spins or sample outcomes.

@@ -161,6 +161,19 @@ public final class AsyncRunSession
         return submit(target -> target.committedMasterSelection(request));
     }
 
+    /** Read-only retry response recovery on the storage worker. Callback admission
+     * closes immediately. Outer empty means superseded before execution; inner empty
+     * means no retained response. Neither grants draw authority. Started reads may
+     * finish after disconnect but cannot restore the session. Cancellation is not
+     * disconnect; failures close admission.
+     */
+    public synchronized CompletableFuture<Optional<Optional<MasterRetryOperationProposal>>> committedMasterRetry(
+        MasterRetryOperationProposal request)
+    {
+        Objects.requireNonNull(request, "request");
+        return submit(target -> target.committedMasterRetry(request));
+    }
+
     /** Worker-thread Pause/Resume boundary. Admission closes before queuing, including
      * historical replay; a replay refreshes from the actual durable head. Resume does
      * not authenticate observation sources or establish a fresh gameplay baseline.
