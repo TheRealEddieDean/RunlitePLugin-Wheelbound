@@ -59,8 +59,12 @@ public final class MasterRetryContinuation
             || fresh.status() != MasterSelectionReadiness.Status.READY
             || !sameEvidence(pending.readiness(), fresh))
         { return new Result(Status.SUSPENDED, pending); }
-        return new Result(Status.PROPOSED, MasterEmptyRetryBatch.propose(pending,
-            transactionId, drawCount, streamState, budget, source));
+        var proposed = MasterEmptyRetryBatch.propose(pending,
+            transactionId, drawCount, streamState, budget, source);
+        // Only unresolved proposals may enter the future pending-prefix command.
+        // Valid landings remain exclusively on the terminal accounting path.
+        if (!proposed.hasValidLanding()) { MasterRetryPrefixBinding.validate(current, proposed); }
+        return new Result(Status.PROPOSED, proposed);
     }
 
     private static boolean sameEvidence(MasterSelectionReadiness frozen, MasterSelectionReadiness fresh)

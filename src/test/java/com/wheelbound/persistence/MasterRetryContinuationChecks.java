@@ -23,7 +23,7 @@ public final class MasterRetryContinuationChecks
         return result;
     }
 
-    private static RunDocument fixture(int count)
+    static RunDocument fixture(int count)
     {
         var slices = new ArrayList<ActiveWheel.Slice>();
         var history = new HashMap<String, SliceInventory.AcquisitionHistory>();

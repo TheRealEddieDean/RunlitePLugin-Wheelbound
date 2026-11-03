@@ -1,3 +1,51 @@
+## Current local continuation - actual retry-prefix binding, 2026-11-03
+
+IDLE after bounded WB-WHL-09 structural admission prerequisite (XS/S). Read current
+continuations before targeted protocol, decision and production/test inspection.
+Evidence-gated MasterRetryContinuation already exists and is DONE offline; older
+UNSTARTED statements are superseded. Taint store/session/async and schema-19 remain
+IMPLEMENTED_UNVERIFIED. No Git operations or merged-state verification; supervisor
+owns publication. I01d not selected. This smaller increment does not complete the
+next larger atomic continuation/suspension operation.
+
+MasterRetryPrefixBinding validates an unresolved candidate against the actual
+aggregate pending prefix and retained creation, preserving every raw draw ticket
+and opaque intermediate stream state. Shortened/foreign/changed-original prefixes,
+rewritten earlier draws/states, valid landings and paused heads fail closed. Exact
+restored prefixes are structurally accepted for suspension preparation, without
+claiming durable replay. MasterRetryContinuation uses this check for empty-only
+batch proposals; valid results still require terminal accounting and obligation.
+No aggregate publication, revision advance, receipt, suspension marker, evidence/RNG
+authentication or feature wiring. Existing Master Wheel behavior unchanged;
+incomplete gameplay remains disabled. WB-D138/139 and existing accounting preserved.
+
+Fresh javac --release 11 compilation using the prior dependency-free source manifest
+plus the new production/Checks files PASSED into build/continuation-retry-binding.
+MasterRetryPrefixBindingChecks, MasterRetryContinuationChecks and
+MasterEmptyRetryBatchChecks PASSED. Binding checks cover 0/1/513 prefixes, exact
+restoration, empty extension, changed ticket with identical outcome, changed earlier
+state, shortening, descriptor replacement, foreign transaction, valid landing,
+Pause and source immutability. Manifest excludes storage/session adapters,
+Gson/RunCodec and JUnit. Focused Gradle binding/continuation/batch/legacy attempt
+failed BEFORE compilation: inherited wrapper-cache lock Access is denied. JUnit
+wrapper IMPLEMENTED_UNVERIFIED; no JUnit/legacy pass claimed. GRADLE_USER_HOME
+unchanged; no cache workaround or external inspection.
+
+Reconciliation: WB-WHL-09 PARTIAL: bounded evidence-gated proposal and actual-prefix
+binding DONE offline; operation-specific atomic publication, exact durable replay,
+automatic durable retry execution and persisted suspension UNSTARTED. WB-WHL-08
+PARTIAL; ordinary assignment and supported Sacrifice route payloads UNSTARTED.
+WB-WHL-10 PARTIAL_UNVERIFIED. Other partial/unstarted/blocked rows and client/catalog/
+decision evidence holds stand; no complete gameplay claim. WB-D155 adds no retirement.
+
+Next: implement a bounded operation-specific continuation/suspension payload and
+atomic aggregate publication using this binding, then versioned persistence and
+locked current-evidence admission. Preserve original stream/history; never store
+valid landings as unresolved or bypass terminal accounting. Changed snapshots/
+catalogs need explicit reconciliation. Trusted adapters, sampling, assignments and
+settlement remain unfinished. Run focused Gradle and legacy checks when inherited
+dependencies are accessible. Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - evidence-gated pending retry preparation, 2026-11-03
 
 IDLE after bounded WB-WHL-09 preparation increment (S). Reconciled actual source,
