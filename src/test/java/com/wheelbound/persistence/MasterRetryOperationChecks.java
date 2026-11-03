@@ -11,6 +11,7 @@ public final class MasterRetryOperationChecks
         {
             var head = MasterRetryContinuationChecks.fixture(count);
             freshPreparation(head, count);
+            explicitSpinGate(head, count);
             for (var availability : MasterSelectionReadiness.Availability.values())
             {
                 var request = MasterRetryOperationProposal.prepare(head, new UUID(80, count),
@@ -85,6 +86,62 @@ public final class MasterRetryOperationChecks
             }
         }
         System.out.println("MasterRetryOperationChecks PASSED");
+    }
+
+    private static void explicitSpinGate(RunDocument head, int count)
+    {
+        var pending = head.pendingMasterSelection().orElseThrow();
+        var id = head.lifecycle().identity();
+        for (long balance : new long[] {0, 1, Long.MAX_VALUE})
+        {
+            var spins = new MasterSpinState(1, id, 1, balance, Optional.empty());
+            var funded = new RunDocument(head.lifecycle(), head.catalogVersion(), head.receipts(),
+                head.fatePoints(), head.inventory(), head.grandFate(), head.grandProgress(),
+                head.grandJournal(), head.grandActivations(), head.grandCurrentAttempt(),
+                head.pendingMasterSelection(), head.masterCreations(), head.masterResolutions(),
+                Optional.of(spins));
+            var pools = new HashMap<String, MasterOrdinaryPoolEvidence>();
+            for (int i = 0; i < 5; i++)
+            {
+                String activity = "activity-" + i;
+                pools.put(activity, new MasterOrdinaryPoolEvidence(id, 1, "snapshot", "catalog", activity,
+                    Set.of("normal"), Map.of("normal", new MasterSelectionReadiness.Classification(
+                        i == 4 ? MasterSelectionReadiness.Availability.ASSIGNABLE
+                            : MasterSelectionReadiness.Availability.VERIFIED_EMPTY, "fixture"))));
+            }
+            var calls = new java.util.concurrent.atomic.AtomicInteger();
+            java.util.function.Supplier<RunDocument> prepare = () -> MasterRetryOperation.prepareFresh(
+                funded, id, new UUID(117, count), 1, pending.transactionId(), count,
+                pending.currentStreamState(), "snapshot", pools, 2, p -> {
+                    calls.incrementAndGet();
+                    return new MasterSelectionProvenance.Step(new DrawCommitment(p.pool(), 0), "next");
+                });
+            if (balance == 0)
+            {
+                rejects(() -> prepare.get());
+                check(calls.get() == 0);
+                pools.put("activity-4", new MasterOrdinaryPoolEvidence(id, 1, "snapshot", "catalog",
+                    "activity-4", Set.of("normal"), Map.of("normal",
+                        new MasterSelectionReadiness.Classification(
+                            MasterSelectionReadiness.Availability.UNKNOWN, "not ready"))));
+                var suspended = prepare.get();
+                check(calls.get() == 0 && suspended.pendingMasterSelection().orElseThrow() == pending
+                    && suspended.receipts().get(1).masterRetry().status()
+                        == MasterRetryContinuation.Status.SUSPENDED
+                    && suspended.masterSpins().orElseThrow().available() == 0);
+            }
+            else
+            {
+                var next = prepare.get();
+                check(calls.get() == 2 && next.masterSpins().orElseThrow().allotted() == balance
+                    && next.masterSpins().orElseThrow().available() == balance
+                    && next.masterSpins().orElseThrow().revision() == 2
+                    && next.pendingMasterSelection().orElseThrow().drawCount() == count + 2);
+            }
+            check(funded.pendingMasterSelection().orElseThrow() == pending
+                && funded.masterSpins().orElseThrow() == spins
+                && funded.lifecycle().revision() == 1);
+        }
     }
 
     private static void freshPreparation(RunDocument head, int count)

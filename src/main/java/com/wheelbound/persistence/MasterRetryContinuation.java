@@ -59,6 +59,13 @@ public final class MasterRetryContinuation
             || fresh.status() != MasterSelectionReadiness.Status.READY
             || !sameEvidence(pending.readiness(), fresh))
         { return new Result(Status.SUSPENDED, pending); }
+        // Empty retries do not debit a spin, but cannot bypass the existing
+        // allocation gate. Legacy absence supplies no balance authority; these
+        // structural proposals remain unwired until storage admission exists.
+        current.masterSpins().ifPresent(spins -> {
+            if (spins.available() <= 0 || spins.reservation().isPresent())
+            { throw new IllegalArgumentException("No unreserved Master spin available"); }
+        });
         var proposed = MasterEmptyRetryBatch.propose(pending,
             transactionId, drawCount, streamState, budget, source);
         // Only unresolved proposals may enter the future pending-prefix command.
