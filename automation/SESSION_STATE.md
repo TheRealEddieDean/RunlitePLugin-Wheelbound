@@ -1,3 +1,47 @@
+## Current local continuation - separate ordinary card ownership, 2026-11-03
+
+IDLE after bounded WB-FAT-02 domain increment (S). Supersedes older next-task prose.
+Read continuation records, WB-D046/049/050/113/124, FATE_CARDS and STATE_CONTRACT.
+Reconciled source/tests locally; no Git operations or merged-state verification.
+Supervisor owns commits/PRs/CI/merges. No I01d. No new gameplay decision.
+
+WB-WHL-09 remains PARTIAL: funded preparation/publication and in-memory recovery
+already exist (DONE offline); schema-20 candidate/JSON and read-only store/session
+recovery remain IMPLEMENTED_UNVERIFIED. Public schema-20 activation, locked evidence
+admission, durable retries and persisted suspension remain UNSTARTED. Focused Gradle
+recovery/codec/operation attempt failed before compilation: inherited wrapper-cache
+lock Access is denied. WB-WHL-08 PARTIAL (ordinary assignment/Sacrifice payloads
+UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED. Existing client/catalog/decision BLOCKED
+holds stand. WB-D138/139 authoritative; A56 deferred. No remote merge claim.
+
+Selected independent WB-FAT-02 prerequisite while retry persistence is verification-
+blocked. FateCardOwnership supplies versioned, run-bound immutable L/S/G ownership
+with separate Bossing/Skilling pools and explicit new-run Standard defaults. Restore
+refuses missing pools/defaults and future versions; no invented legacy unlocks.
+WB-D124 ownership-only predicate requires BOTH Bossing Lesser and Greater; Skilling
+counterparts never qualify. Ownership does not establish current offer eligibility.
+No purchase admission, Challenge/rank/Wilderness ownership, offers or assignments.
+WB-FAT-02 PARTIAL: domain snapshot DONE offline, JUnit UNVERIFIED; aggregate persistence,
+migration, receipt-backed purchases and UI/service integration UNSTARTED. WB-FAT-03/04
+remain unstarted. Existing Master Wheel untouched; incomplete gameplay disabled.
+
+Java 11 compilation and FateCardOwnershipChecks PASSED in
+build/continuation-card-ownership: all 16 L/G ownership combinations, defaults,
+restoration/equality, foreign identity, defensive copies, immutable nested collections,
+missing/null/malformed declarations and unsupported versions. JUnit wrapper added.
+Ownership/legacy Gradle attempt failed BEFORE compilation on inherited wrapper lock;
+no JUnit/legacy pass claimed. GRADLE_USER_HOME unchanged; no cache workaround,
+external inspection, credentials, secrets, workflows or Git operations.
+
+Next eligible gameplay increment: WB-FAT-02 receipt-backed L/S/G acquisition proposal
+with reviewed quote/version and FP debit after reading current purchase contracts.
+No candidate prices may be adopted; aggregate/migration work needs verified codec
+coverage. When inherited dependencies become accessible, run FateCardOwnershipTest,
+MasterRetrySessionRecoveryTest, MasterRetryStoreRecoveryTest,
+MasterRetrySnapshotReadTest, MasterRetryOperationProposalJsonTest, RunCodecTest,
+MasterRetryOperationTest and legacy regressions. Fix failures before schema-20
+activation or retry writes. No complete gameplay or purchase claim.
+
 ## Current local continuation - funded unresolved publication, 2026-11-03
 
 IDLE after bounded WB-WHL-09 increment (XS/S). Supersedes older next-task prose.
