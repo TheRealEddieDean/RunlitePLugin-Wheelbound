@@ -28,15 +28,31 @@ public final class MasterRetryOperation
         Map<String, MasterOrdinaryPoolEvidence> pools,
         int budget, Function<MasterSelectionProvenance, MasterSelectionProvenance.Step> source)
     {
+        var result = prepareFreshSelection(head, identity, commandId, revision, transactionId,
+            drawCount, streamState, snapshotVersion, pools, budget, source);
+        return prepare(head, MasterRetryOperationProposal.prepare(head, commandId, result));
+    }
+
+    /** Prepare either an unresolved batch or a valid landing without losing the
+     * sampled transcript. A terminal caller must consume that exact result through
+     * its supported accounting path; it must not draw the batch again. This pure
+     * preparation neither publishes nor persists either outcome. Evidence and source
+     * must be trusted by the eventual caller under its storage lock.
+     */
+    public static MasterRetryContinuation.Result prepareFreshSelection(RunDocument head,
+        RunIdentity identity, UUID commandId, long revision,
+        UUID transactionId, int drawCount, String streamState, String snapshotVersion,
+        Map<String, MasterOrdinaryPoolEvidence> pools,
+        int budget, Function<MasterSelectionProvenance, MasterSelectionProvenance.Step> source)
+    {
         Objects.requireNonNull(head, "head");
         Objects.requireNonNull(commandId, "commandId");
         // Refuse reuse and overflow before invoking a draw source. Historical replay
         // must use the exact retained response, never freshly sampled work.
         MasterRetryRecovery.requireUnused(head, commandId);
         Math.addExact(revision, 1);
-        var result = MasterRetryContinuation.prepare(head, identity, revision, transactionId,
+        return MasterRetryContinuation.prepare(head, identity, revision, transactionId,
             drawCount, streamState, snapshotVersion, pools, budget, source);
-        return prepare(head, MasterRetryOperationProposal.prepare(head, commandId, result));
     }
 
     public static RunDocument prepare(RunDocument head, MasterRetryOperationProposal request)

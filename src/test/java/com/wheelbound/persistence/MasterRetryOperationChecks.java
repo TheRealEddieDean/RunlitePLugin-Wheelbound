@@ -141,6 +141,32 @@ public final class MasterRetryOperationChecks
                 && journalOnly.pendingMasterSelection().get() == pending);
             if (continued)
             {
+                calls.set(0);
+                var terminal = MasterRetryOperation.prepareFreshSelection(head, id,
+                    new UUID(100, count), 1, pending.transactionId(), count, "repeated",
+                    "snapshot", pools, 4, p -> {
+                        calls.incrementAndGet();
+                        return new MasterSelectionProvenance.Step(
+                            new DrawCommitment(p.pool(), calls.get() == 1 ? 0 : 19), "terminal");
+                    });
+                check(terminal.status() == MasterRetryContinuation.Status.PROPOSED
+                    && terminal.prefix().hasValidLanding()
+                    && terminal.prefix().drawCount() == count + 2 && calls.get() == 2
+                    && terminal.prefix().currentStreamState().equals("terminal"));
+                for (int i = 0; i < count; i++)
+                {
+                    check(terminal.prefix().landings().get(i).step().draw().equals(
+                        pending.landings().get(i).step().draw()));
+                    check(terminal.prefix().landings().get(i).step().streamStateAfter().equals(
+                        pending.landings().get(i).step().streamStateAfter()));
+                }
+                rejects(() -> MasterRetryOperationProposal.prepare(head,
+                    new UUID(100, count), terminal));
+                calls.set(0);
+                rejects(() -> MasterRetryOperation.prepareFreshSelection(journalOnly, id,
+                    pending.transactionId(), 1, pending.transactionId(), count, "repeated",
+                    "snapshot", pools, 4, source));
+                check(calls.get() == 0);
                 rejects(() -> MasterRetryOperation.prepareFresh(head, id, new UUID(97, count), 1,
                     pending.transactionId(), count, "repeated", "snapshot", pools, 2,
                     p -> new MasterSelectionProvenance.Step(new DrawCommitment(p.pool(), 19), "valid")));

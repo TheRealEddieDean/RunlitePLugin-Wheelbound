@@ -1,3 +1,43 @@
+## Current local continuation - sampled terminal handoff, 2026-11-03
+
+IDLE after bounded WB-WHL-09 terminal-handoff prerequisite (XS/S). Supersedes
+older next-task prose. Reconciled source and focused tests: fresh preparation,
+publication, restoration and exact in-memory recovery exist (DONE offline).
+Candidate schema-20 reader/writer and JSON remain IMPLEMENTED_UNVERIFIED.
+No Git or merged-state verification; supervisor owns publication. No I01d.
+
+MasterRetryOperation.prepareFreshSelection now exposes guarded evidence-gated
+batch preparation for both unresolved prefixes and valid landings. A future supported
+terminal handler can consume the exact sampled transcript without drawing again.
+prepareFresh delegates to it and retains its unresolved-only publication guard.
+No terminal accounting, storage admission, persisted suspension or gameplay activation
+is added. Trusted evidence/source under the eventual storage lock remain required.
+Existing Master Wheel unchanged; incomplete gameplay remains disabled. WB-D138/139
+and all unresolved gameplay/evidence holds remain authoritative.
+
+Fresh javac --release 11 compilation PASSED into build/continuation-retry-terminal-handoff
+using the response source manifest plus MasterRetryRecovery. Operation, response,
+proposal, continuation and prefix-binding Checks PASSED. New checks cover retained
+0/1/513 prefixes, empty then valid landing, exact original steps/states, immediate
+stop at valid landing, unresolved-envelope refusal, pre-source command collision
+and unchanged original aggregate. These are dependency-free checks, not JUnit.
+Focused Gradle snapshot/JSON/RunCodec/operation/response/legacy attempt failed BEFORE
+compilation: inherited wrapper-cache lock Access is denied. GRADLE_USER_HOME unchanged;
+no cache workaround, external inspection, credentials, workflows or Git operations.
+
+Reconciliation: WB-WHL-09 PARTIAL; guarded sampled terminal handoff DONE offline.
+Public schema-20 activation, locked evidence admission, exact durable replay,
+automatic durable execution and persisted suspension remain UNSTARTED. WB-WHL-08
+PARTIAL: ordinary assignments and supported Sacrifice route payloads UNSTARTED.
+WB-WHL-10 PARTIAL_UNVERIFIED. Other partial/unstarted/blocked statuses stand.
+
+Next: run MasterRetrySnapshotReadTest, MasterRetryOperationProposalJsonTest,
+RunCodecTest, MasterRetryOperationTest, MasterRetryResponseTest and legacy regression
+with inherited dependencies accessible. Fix failures before schema-20 activation.
+Then integrate locked evidence admission/durable replay and route exact prepared
+valid transcripts to supported terminal accounting without a second source call.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - retry command admission guard, 2026-11-03
 
 IDLE after bounded WB-WHL-09 command-admission increment (XS/S). Supersedes
