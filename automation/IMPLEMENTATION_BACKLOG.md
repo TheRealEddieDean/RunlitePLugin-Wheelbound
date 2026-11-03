@@ -1,3 +1,49 @@
+## Current local continuation - schema-20 retry reader prerequisite, 2026-11-03
+
+IDLE after bounded WB-WHL-09 reader-first persistence increment (S). Supersedes
+older next-task prose. Reconciled code and focused fixtures: historical response
+restoration, historical standalone JSON and terminal copy-path correction already
+exist. Historical domain restoration/copy correction are DONE offline; JSON,
+Taint store/session/async and schema-19 remain IMPLEMENTED_UNVERIFIED. No Git or
+merged-state verification performed; supervisor owns publication. No I01d selected.
+WB-D138/139 remain authoritative; no gameplay decision changed.
+
+RunCodec can now READ schema 20 retry envelopes. It decodes creation history first,
+resolves each retry's own transaction, restores the original historical response,
+checks every outer response field and constructs the aggregate with existing retained
+history/transcript binding. Schema <=19 cannot admit retry envelopes. Writer remains
+schema 19 and explicitly refuses retry-bearing saves until real codec checks pass.
+This is a reader prerequisite, not completed lossless persistence or durable replay.
+Incomplete gameplay stays disabled; existing Master Wheel source unchanged.
+
+Added MasterRetrySnapshotReadTest: handcrafted checksummed schema-20 fixtures for
+0/1/513 prefixes, continuation/suspension, pending/Taint/Pause/Resume, exact original
+receipts and replay, accounting, schema-19 compatibility, downgrade/future rejection,
+envelope mismatch, missing creation/transcript, shortened prefix and unknown fields.
+New codec production and JUnit fixtures are IMPLEMENTED_UNVERIFIED. Focused Gradle
+snapshot/JSON/RunCodec/legacy attempt failed BEFORE compilation: inherited wrapper
+cache lock Access is denied. No JSON/codec/JUnit/legacy pass claimed. Inherited
+GRADLE_USER_HOME unchanged; no cache workaround or external inspection.
+
+Fresh javac --release 11 compilation of build/continuation-retry-response/sources.txt
+into build/continuation-retry-snapshot-read PASSED. Retry response, operation, proposal,
+prefix binding, continuation, special terminal and terminal proposal Checks PASSED.
+This selection excludes Gson/JSON/RunCodec, storage/session adapters and JUnit.
+
+Reconciliation: WB-WHL-09 PARTIAL. Schema-20 reader IMPLEMENTED_UNVERIFIED;
+schema-20 writer/round-trip migration verification, exact durable replay, locked
+current-evidence admission, automatic durable retries and persisted suspension remain
+UNSTARTED. WB-WHL-08 PARTIAL: ordinary assignments and supported Sacrifice route
+payloads UNSTARTED. WB-WHL-10 PARTIAL_UNVERIFIED. Other partial/unstarted statuses
+and client/catalog/decision BLOCKED holds stand; A56 remains deferred by user.
+
+Next: run new reader and existing JSON/codec/migration/legacy fixtures with inherited
+build dependencies accessible. Then add schema-20 writing, replace schema-19 retry
+refusal only with verified lossless round-trip/migration tests, including multiple
+batches and historical responses after later updates. Follow with locked evidence
+admission and durable replay; preserve exact streams/accounting and WB-D139 same-
+transaction suspension. Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - historical retry response JSON, 2026-11-03
 
 IDLE after bounded WB-WHL-09 persistence increment (S). Supersedes earlier next-task
