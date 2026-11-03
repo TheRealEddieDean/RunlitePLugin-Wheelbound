@@ -1,3 +1,46 @@
+## Current local continuation - historical retry response JSON, 2026-11-03
+
+IDLE after bounded WB-WHL-09 persistence increment (S). Supersedes earlier next-task
+prose. Reconciled source/tests: historical structural response restoration and terminal
+copy-path correction already exist (DONE offline); original-head standalone JSON,
+Taint store/session/async and schema-19 remain IMPLEMENTED_UNVERIFIED. No Git or
+merged-state verification performed; supervisor owns publication. I01d not selected.
+WB-D138/139 remain authoritative; no gameplay decision changed.
+
+MasterRetryOperationProposalJson.decodeResponse now decodes version-1 historical
+response fields against the supplied retained creation using restoreResponse. It shares
+strict envelope parsing with original-head decoding. It never treats a later head as
+the original head. Structural decoding alone does not authorize replay: validateRetained
+on the assembled aggregate is required. Schema-19 still refuses retry-bearing aggregates.
+New JSON fixtures cover 0/1/513 prefixes, continuation/suspension, exact serialized
+round trips and equality/hash, terminal Taint publication, Pause/Resume replay, missing
+and unknown fields, invalid versions/revisions/counts, foreign identity, creation command
+collision, altered commands/states refused by retained binding and source immutability.
+
+Focused Gradle JSON/response/legacy attempt failed BEFORE compilation: inherited
+wrapper-cache lock Access is denied. New JSON production and JUnit fixtures remain
+IMPLEMENTED_UNVERIFIED. Fresh javac --release 11 compilation of the dependency-free
+build/continuation-retry-response/sources.txt selection into
+build/continuation-retry-response-json PASSED. Retry response, operation, proposal,
+prefix binding, continuation and empty-batch Checks PASSED. These exclude Gson/JSON,
+RunCodec, storage/session adapters and JUnit; no new JSON or legacy pass claimed.
+GRADLE_USER_HOME unchanged; no cache workaround or external inspection performed.
+
+Reconciliation: WB-WHL-09 remains PARTIAL. Historical standalone JSON is now
+IMPLEMENTED_UNVERIFIED. Versioned aggregate/history encoding and migrations, exact
+durable replay, locked current-evidence admission, automatic durable retries and
+persisted suspension remain UNSTARTED. WB-WHL-08 PARTIAL: ordinary assignments and
+supported Sacrifice route payloads UNSTARTED. WB-WHL-10 PARTIAL_UNVERIFIED. Other
+partial/unstarted statuses and decision/client/catalog BLOCKED holds stand. Existing
+Master Wheel unchanged; incomplete gameplay remains disabled.
+
+Next: verify historical JSON fixtures when inherited build dependencies are accessible;
+implement versioned lossless aggregate/history encoding and migrations, using
+historical decodeResponse for retained retries. Remove codec refusal only with focused
+codec/migration/round-trip checks. Then locked evidence admission and durable replay,
+preserving exact transcripts/accounting and WB-D139 same-transaction suspension.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - historical retry responses and terminal copy fix, 2026-11-03
 
 IDLE after bounded WB-WHL-09 increment (S). Supersedes earlier next-task prose.
