@@ -42,6 +42,18 @@ public final class MasterRetryOperationProposalChecks
                 command, result(MasterRetryContinuationChecks.fixture(count),
                     MasterSelectionReadiness.Availability.ASSIGNABLE, 0, "repeated"));
             check(proposal.equals(restored) && proposal.hashCode() == restored.hashCode());
+            var decoded = MasterRetryOperationProposal.restore(head, proposal.identity(), command,
+                proposal.beforeRevision(), count, proposal.after(), proposal.status());
+            check(decoded.equals(proposal) && decoded.hashCode() == proposal.hashCode());
+            rejects(() -> MasterRetryOperationProposal.restore(head, proposal.identity(), command,
+                0, count, proposal.after(), proposal.status()));
+            rejects(() -> MasterRetryOperationProposal.restore(head, proposal.identity(), command,
+                1, count + 1, proposal.after(), proposal.status()));
+            rejects(() -> MasterRetryOperationProposal.restore(head,
+                new RunIdentity("foreign", proposal.identity().runId()), command,
+                1, count, proposal.after(), proposal.status()));
+            rejects(() -> MasterRetryOperationProposal.restore(head, proposal.identity(), command,
+                1, count, proposal.after(), MasterRetryContinuation.Status.SUSPENDED));
             var envelope = RunReceipt.masterRetry(proposal);
             var restoredEnvelope = RunReceipt.masterRetry(restored);
             check(envelope.equals(restoredEnvelope) && envelope.hashCode() == restoredEnvelope.hashCode()
@@ -74,6 +86,10 @@ public final class MasterRetryOperationProposalChecks
                     && suspended.after() == head.pendingMasterSelection().get()
                     && suspended.before() == suspended.after() && !suspended.equals(proposal));
                 suspended.validateAgainst(head);
+                check(suspended.equals(MasterRetryOperationProposal.restore(head, suspended.identity(),
+                    command, 1, count, suspended.after(), suspended.status())));
+                rejects(() -> MasterRetryOperationProposal.restore(head, suspended.identity(), command,
+                    1, count, suspended.after(), MasterRetryContinuation.Status.PROPOSED));
                 check(!RunReceipt.masterRetry(suspended).equals(envelope)
                     && RunReceipt.masterRetry(suspended).masterRetry().after() == suspended.before());
             }

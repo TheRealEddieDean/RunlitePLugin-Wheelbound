@@ -1,3 +1,51 @@
+## Current local continuation - original-head retry payload restoration, 2026-11-03
+
+IDLE after bounded WB-WHL-09 persistence prerequisite (S). Reconciled production and
+focused fixtures: retry batch, evidence preparation, prefix binding, typed envelope
+and in-memory publication already exist (DONE offline). Taint store/session/async and
+schema-19 remain IMPLEMENTED_UNVERIFIED. Earlier contrary records are superseded.
+No Git operations or merged-state verification; supervisor owns publication. No I01d.
+WB-D138/139 remain authoritative; no gameplay decision changed.
+
+MasterRetryOperationProposal.restore reconstructs an unresolved payload only against
+its exact original head, identity, revision and original draw count. It reuses actual
+prefix/creation validation and continuation-versus-suspension rules. Added standalone
+version-1 MasterRetryOperationProposalJson with strict fields, full resulting transcript,
+original boundary, identity, command and status. The original prefix is retained as the
+validated prefix of that transcript; decoding requires the supplied original head.
+This is NOT a historical response decoder or evidence authentication. RunCodec schema
+19 still explicitly refuses retry-bearing aggregates. No durable replay, persisted
+suspension, locked admission or gameplay wiring; existing Master Wheel unchanged.
+
+Fresh javac --release 11 compilation using build/continuation-retry-publication/sources.txt
+into build/continuation-retry-json PASSED. MasterRetryOperationProposalChecks (including
+new restoration checks), MasterRetryOperationChecks, MasterRetryPrefixBindingChecks,
+MasterRetryContinuationChecks and MasterEmptyRetryBatchChecks PASSED. Restoration
+covers 0/1/513 prefixes, continuation/suspension, identity/revision/count/status mismatch.
+Compilation excludes Gson/JSON/RunCodec, storage/session and JUnit. New JSON JUnit
+fixtures cover exact serialized round trips/envelopes, repeated states, unknown/missing
+fields, versions, revisions, count, changed original prefix, foreign identity, status
+and already-advanced-head rejection, with unchanged input. JSON production and tests
+are IMPLEMENTED_UNVERIFIED. Focused JSON/proposal/publication/legacy Gradle attempt
+failed BEFORE compilation: inherited wrapper-cache lock Access is denied. No JSON,
+JUnit or legacy pass claimed. GRADLE_USER_HOME unchanged; no cache workaround.
+
+Reconciliation: WB-WHL-09 PARTIAL. Original-head restoration DONE offline; standalone
+JSON IMPLEMENTED_UNVERIFIED. Versioned aggregate/history persistence and migrations,
+exact durable replay, locked current-evidence admission, automatic durable retries
+and persisted suspension remain UNSTARTED. WB-WHL-08 PARTIAL: ordinary assignments
+and supported Sacrifice route payloads UNSTARTED. WB-WHL-10 PARTIAL_UNVERIFIED.
+Other partial/unstarted/blocked statuses and client/catalog/decision holds stand.
+No complete gameplay claim; no external inspection, credentials or workflow access.
+
+Next: add terminal-operation copy-path coverage; implement a history-bound retry
+response restoration path and versioned aggregate encoding/migrations before removing
+the codec refusal. The standalone decoder requires the ORIGINAL head and must not be
+used against a later saved head for replay. Then locked evidence admission/durable
+replay, preserving exact transcripts, accounting and WB-D139 same-transaction suspension.
+Run focused JSON/JUnit/codec/migration and legacy tests when inherited dependencies
+are accessible. Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - atomic in-memory retry publication, 2026-11-03
 
 IDLE after bounded WB-WHL-09 aggregate increment (S). Reconciled current source and
