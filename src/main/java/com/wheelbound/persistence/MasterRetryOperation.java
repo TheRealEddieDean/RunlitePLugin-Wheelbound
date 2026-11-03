@@ -33,7 +33,9 @@ public final class MasterRetryOperation
         return new RunDocument(next, head.catalogVersion(), receipts, head.fatePoints(),
             head.inventory(), head.grandFate(), head.grandProgress(), head.grandJournal(),
             head.grandActivations(), head.grandCurrentAttempt(), Optional.of(request.after()),
-            head.masterCreations(), head.masterResolutions(), head.masterSpins(),
+            head.masterCreations(), head.masterResolutions(), head.masterSpins().map(spins ->
+                new com.wheelbound.domain.MasterSpinState(spins.version(), spins.identity(),
+                    next.revision(), spins.allotted(), spins.reservation())),
             head.currentMasterSpecial().map(value -> value.obligation()));
     }
 }

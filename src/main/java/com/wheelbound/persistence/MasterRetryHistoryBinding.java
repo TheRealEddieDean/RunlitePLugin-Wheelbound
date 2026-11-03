@@ -1,6 +1,8 @@
 package com.wheelbound.persistence;
 
 import com.wheelbound.domain.MasterSelectionProvenance;
+import com.wheelbound.domain.MasterSelectionCreationJournal;
+import java.util.List;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -19,10 +21,9 @@ final class MasterRetryHistoryBinding
             if (retry == null) { continue; }
             var creations = head.masterCreations().orElseThrow(
                 () -> new IllegalArgumentException("Retry requires retained creation"));
-            if (!head.lifecycle().identity().equals(retry.identity())
-                || !creations.matchPending(retry.before(), retry.identity(), retry.beforeRevision()).equals(
-                    creations.matchPending(retry.after(), retry.identity(), retry.beforeRevision())))
+            if (!head.lifecycle().identity().equals(retry.identity()))
             { throw new IllegalArgumentException("Retry creation mismatch"); }
+            validateCreation(retry, creations);
             var prior = previous.put(retry.before().transactionId(), retry.after());
             if (prior != null) { requirePrefix(prior, retry.before()); }
             MasterSelectionProvenance retained = head.pendingMasterSelection()
@@ -43,6 +44,19 @@ final class MasterRetryHistoryBinding
             { throw new IllegalArgumentException("Retry requires retained pending or terminal transcript"); }
             requirePrefix(retry.after(), retained);
         }
+    }
+
+    static void validateCreation(MasterRetryOperationProposal retry, MasterSelectionCreationJournal creations)
+    {
+        var creation = creations.receipts().get(retry.before().transactionId());
+        if (creation == null || !creations.identity().equals(retry.identity()))
+        { throw new IllegalArgumentException("Missing or foreign retry creation"); }
+        // matchPending deliberately requires the latest creation. Historical retry
+        // responses instead belong to their own original selection.
+        var original = new MasterSelectionCreationJournal(retry.identity(), retry.beforeRevision(), List.of(creation));
+        if (!original.matchPending(retry.before(), retry.identity(), retry.beforeRevision()).equals(
+            original.matchPending(retry.after(), retry.identity(), retry.beforeRevision())))
+        { throw new IllegalArgumentException("Retry creation mismatch"); }
     }
 
     private static void requirePrefix(MasterSelectionProvenance prefix, MasterSelectionProvenance full)

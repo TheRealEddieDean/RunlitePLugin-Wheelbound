@@ -41,6 +41,9 @@ public final class LifecycleAdmission
         return new RunDocument(next, current.catalogVersion(), receipts, current.fatePoints(),
             current.inventory(), current.grandFate(), current.grandProgress(), current.grandJournal(),
             current.grandActivations(), current.retainedGrandAttempt(next), current.pendingMasterSelection(),
-            current.masterCreations(), current.masterResolutions(), current.masterSpins(), current.currentMasterSpecial().map(value -> value.obligation()));
+            current.masterCreations(), current.masterResolutions(), current.masterSpins().map(spins ->
+                spins.reservation().isPresent() ? spins : new com.wheelbound.domain.MasterSpinState(spins.version(), spins.identity(),
+                    next.revision(), spins.allotted(), spins.reservation())),
+            current.currentMasterSpecial().map(value -> value.obligation()));
     }
 }
