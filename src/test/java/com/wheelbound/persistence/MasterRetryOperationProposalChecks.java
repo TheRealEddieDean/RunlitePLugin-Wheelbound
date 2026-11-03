@@ -42,6 +42,24 @@ public final class MasterRetryOperationProposalChecks
                 command, result(MasterRetryContinuationChecks.fixture(count),
                     MasterSelectionReadiness.Availability.ASSIGNABLE, 0, "repeated"));
             check(proposal.equals(restored) && proposal.hashCode() == restored.hashCode());
+            var envelope = RunReceipt.masterRetry(proposal);
+            var restoredEnvelope = RunReceipt.masterRetry(restored);
+            check(envelope.equals(restoredEnvelope) && envelope.hashCode() == restoredEnvelope.hashCode()
+                && envelope.masterRetry() == proposal && envelope.operation() == RunReceipt.Operation.MASTER_RETRY
+                && envelope.commandId().equals(command) && envelope.beforeRevision() == 1
+                && envelope.afterRevision() == 2 && envelope.state() == RunLifecycle.State.ACTIVE
+                && envelope.obligation() == RunLifecycle.Obligation.NONE
+                && envelope.draw() == null && envelope.debit() == null && envelope.purchase() == null
+                && envelope.taintTerminal() == null);
+            rejects(() -> new RunReceipt(command, RunReceipt.Operation.MASTER_RETRY, 1, 2,
+                RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.NONE));
+            var premature = new ArrayList<>(head.receipts());
+            premature.add(envelope);
+            rejects(() -> new RunDocument(head.lifecycle(), head.catalogVersion(), premature,
+                head.fatePoints(), head.inventory(), head.grandFate(), head.grandProgress(),
+                head.grandJournal(), head.grandActivations(), head.grandCurrentAttempt(),
+                head.pendingMasterSelection(), head.masterCreations(), head.masterResolutions(),
+                head.masterSpins(), Optional.empty()));
             check(!proposal.equals(MasterRetryOperationProposal.prepare(head, new UUID(71, count), continued)));
             check(!proposal.equals(MasterRetryOperationProposal.prepare(head, command,
                 result(head, MasterSelectionReadiness.Availability.ASSIGNABLE, 1, "repeated"))));
@@ -56,6 +74,8 @@ public final class MasterRetryOperationProposalChecks
                     && suspended.after() == head.pendingMasterSelection().get()
                     && suspended.before() == suspended.after() && !suspended.equals(proposal));
                 suspended.validateAgainst(head);
+                check(!RunReceipt.masterRetry(suspended).equals(envelope)
+                    && RunReceipt.masterRetry(suspended).masterRetry().after() == suspended.before());
             }
             rejects(() -> MasterRetryOperationProposal.prepare(head, command,
                 result(head, MasterSelectionReadiness.Availability.ASSIGNABLE, 19, "valid")));

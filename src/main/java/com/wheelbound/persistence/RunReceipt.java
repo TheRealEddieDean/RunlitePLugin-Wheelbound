@@ -10,7 +10,8 @@ import java.util.UUID;
 /** Immutable command identity, request and original response, persisted with the resulting snapshot. */
 public final class RunReceipt
 {
-    public enum Operation { PAUSE, RESUME, DRAW, FP_DEBIT, SLICE_PURCHASE, GRAND_ACTIVATION, MASTER_SELECTION_CREATION, MASTER_TAINT_TERMINAL }
+    public enum Operation { PAUSE, RESUME, DRAW, FP_DEBIT, SLICE_PURCHASE, GRAND_ACTIVATION, MASTER_SELECTION_CREATION, MASTER_TAINT_TERMINAL, MASTER_RETRY }
+    private final MasterRetryOperationProposal masterRetry;
     private final MasterTerminalOperationProposal taintTerminal;
     private final com.wheelbound.domain.MasterSelectionCreationReceipt masterCreation;
     private final com.wheelbound.domain.GrandActivationReceipt activation;
@@ -95,7 +96,32 @@ public final class RunReceipt
         com.wheelbound.domain.GrandActivationReceipt activation,
         com.wheelbound.domain.MasterSelectionCreationReceipt masterCreation,
         MasterTerminalOperationProposal taintTerminal)
+    { this(commandId, operation, beforeRevision, afterRevision, state, obligation, draw, debit,
+        purchase, activation, masterCreation, taintTerminal, null); }
+
+    /** Typed original response only; aggregate publication and persistence remain unsupported. */
+    public static RunReceipt masterRetry(MasterRetryOperationProposal response)
     {
+        Objects.requireNonNull(response, "response");
+        return new RunReceipt(response.commandId(), Operation.MASTER_RETRY,
+            response.beforeRevision(), response.afterRevision(), RunLifecycle.State.ACTIVE,
+            RunLifecycle.Obligation.NONE, null, null, null, null, null, null, response);
+    }
+
+    private RunReceipt(UUID commandId, Operation operation, long beforeRevision, long afterRevision,
+        RunLifecycle.State state, RunLifecycle.Obligation obligation, DrawCommitment draw,
+        FatePointDebits.Receipt debit, SlicePurchaseReceipt purchase,
+        com.wheelbound.domain.GrandActivationReceipt activation,
+        com.wheelbound.domain.MasterSelectionCreationReceipt masterCreation,
+        MasterTerminalOperationProposal taintTerminal, MasterRetryOperationProposal masterRetry)
+    {
+        if ((operation == Operation.MASTER_RETRY) != (masterRetry != null)
+            || (masterRetry != null && (!commandId.equals(masterRetry.commandId())
+                || beforeRevision != masterRetry.beforeRevision()
+                || afterRevision != masterRetry.afterRevision()
+                || obligation != RunLifecycle.Obligation.NONE)))
+        { throw new IllegalArgumentException("Retry requires exact typed original response"); }
+        this.masterRetry = masterRetry;
         if ((operation == Operation.MASTER_TAINT_TERMINAL) != (taintTerminal != null))
         { throw new IllegalArgumentException("Taint terminal requires typed original response"); }
         this.taintTerminal = taintTerminal;
@@ -152,11 +178,14 @@ public final class RunReceipt
             && Objects.equals(purchaseKey(), other.purchaseKey())
             && Objects.equals(activation, other.activation)
             && Objects.equals(masterCreation, other.masterCreation)
-            && Objects.equals(taintTerminal, other.taintTerminal);
+            && Objects.equals(taintTerminal, other.taintTerminal)
+            && Objects.equals(masterRetry, other.masterRetry);
     }
 
     @Override public int hashCode()
-    { return Objects.hash(commandId, operation, beforeRevision, afterRevision, state, obligation, draw, debitKey(), purchaseKey(), activation, masterCreation, taintTerminal); }
+    { return Objects.hash(commandId, operation, beforeRevision, afterRevision, state, obligation, draw, debitKey(), purchaseKey(), activation, masterCreation, taintTerminal, masterRetry); }
+
+    public MasterRetryOperationProposal masterRetry() { return masterRetry; }
 
     public MasterTerminalOperationProposal taintTerminal() { return taintTerminal; }
 
