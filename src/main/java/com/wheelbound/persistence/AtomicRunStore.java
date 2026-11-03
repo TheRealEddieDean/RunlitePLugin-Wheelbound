@@ -61,7 +61,8 @@ public final class AtomicRunStore
     public Optional<RunDocument> load() throws IOException
     { return locked(this::read); }
 
-    /** Commit frozen Taint history, original spin reservation, mandatory obligation
+    /** Commit one terminal draw extending the saved pending prefix, frozen Taint
+     * history, original spin reservation, mandatory obligation
      * and typed response together against the locked durable head. Exact replay
      * returns the retained response without rewriting later lifecycle state.
      * This boundary does not authenticate sampling or client evidence, select a
@@ -78,7 +79,18 @@ public final class AtomicRunStore
             if (uncertain) { throw new IOException("Reopen and reconcile after failed persistence"); }
             RunDocument current = read().orElseThrow(() -> new IOException("Saved run is unavailable"));
             final RunDocument next;
-            try { next = MasterTaintTerminalOperation.prepare(current, request); }
+            try
+            {
+                if (!current.masterResolutions()
+                    .filter(history -> history.receipts().containsKey(request.commandId())).isPresent())
+                {
+                    var pending = current.pendingMasterSelection().orElseThrow(() ->
+                        new IllegalArgumentException("Missing pending Master selection"));
+                    if ((long) request.resolved().drawCount() != (long) pending.drawCount() + 1)
+                    { throw new IllegalArgumentException("Taint commit requires one terminal draw from the saved prefix"); }
+                }
+                next = MasterTaintTerminalOperation.prepare(current, request);
+            }
             catch (IllegalArgumentException ex)
             { throw new IOException("Invalid Master Taint transition", ex); }
             if (next != current) { persist(codec.encode(next), true); }
