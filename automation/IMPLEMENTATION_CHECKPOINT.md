@@ -1,3 +1,42 @@
+## Current local continuation - funded unresolved publication, 2026-11-03
+
+IDLE after bounded WB-WHL-09 increment (XS/S). Supersedes older next-task prose.
+Reconciled current source/tests: retry sampling, publication, restoration and exact
+in-memory recovery exist (DONE offline). Read-only store/session recovery and schema-20
+candidate/JSON remain IMPLEMENTED_UNVERIFIED. No Git or merged-state verification.
+
+MasterRetryOperation.prepareFunded composes accounting-required selection with typed
+unresolved proposal construction and aggregate publication. Absent accounting refuses
+before sampling. Empty batches preserve balances and advance accounting revision with
+the aggregate; zero-balance changed evidence can suspend the exact prefix without draws.
+Valid landings refuse this unresolved path without changing the head; terminal callers
+must use the exact result from prepareFundedSelection. No RNG/evidence authentication,
+locked admission, durable writes or activation. Legacy Master Wheel unchanged; incomplete
+gameplay disabled. WB-D138/139 authoritative; A56 deferred. No decision invented.
+
+Fresh Java 11 compilation into build/continuation-retry-funded-publication PASSED using
+build/continuation-retry-sampled-taint/sources.txt. Focused operation checks PASSED,
+including 0/1/513 retained draws, absent accounting, 0/1/Long.MAX_VALUE balances,
+continuation, suspension, terminal refusal, exact replay and input immutability.
+Gradle focused store/session/snapshot/JSON/RunCodec/operation/legacy attempt failed
+BEFORE compilation: inherited wrapper-cache lock Access is denied. No JUnit, codec,
+storage or legacy pass claimed; GRADLE_USER_HOME unchanged, no cache workaround.
+
+Reconciliation: WB-WHL-09 PARTIAL; funded unresolved publication DONE offline.
+Public schema-20 activation, verified durable replay, locked current-evidence admission,
+automatic durable retry execution and persisted suspension remain UNSTARTED. WB-WHL-08
+PARTIAL: ordinary assignment and supported Sacrifice payloads UNSTARTED. WB-WHL-10
+PARTIAL_UNVERIFIED. Other partial/unstarted and client/catalog/decision BLOCKED holds
+stand. No I01d selected. Supervisor owns commits/PRs/CI/merges.
+
+Next: run MasterRetrySessionRecoveryTest, MasterRetryStoreRecoveryTest,
+MasterRetrySnapshotReadTest, MasterRetryOperationProposalJsonTest, RunCodecTest,
+MasterRetryOperationTest and session/store/legacy regressions when inherited dependencies
+are accessible. Fix failures before schema-20 activation or retry writes. Then implement
+locked current-evidence admission/durable execution with explicit accounting, exact
+responses/streams and same-transaction suspension. Stream declarations remain opaque;
+no existing deterministic sampler was found or new algorithm adopted this session.
+
 ## Current local continuation - explicit funded retry preparation, 2026-11-03
 
 IDLE after bounded WB-WHL-09 admission prerequisite (XS/S). Supersedes older
