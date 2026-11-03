@@ -18,6 +18,50 @@ public final class MasterSpecialTerminalPreparationChecks
             var request = MasterSelectionResolutionReceipt.prepare(UUID.randomUUID(), 5, creation, pending,
                 new MasterSelectionProvenance.Step(new DrawCommitment(pending.pool(), pending.pool().totalWeight() - 1), "terminal"));
             var prepared = MasterSpecialTerminalPreparation.prepare(source, request);
+            var calls = new java.util.concurrent.atomic.AtomicInteger();
+            var sampled = MasterEmptyRetryBatch.propose(pending, pending.transactionId(),
+                count, pending.currentStreamState(), 8, p -> {
+                    int index = calls.incrementAndGet();
+                    return new MasterSelectionProvenance.Step(new DrawCommitment(p.pool(),
+                        index < 3 ? 0 : p.pool().totalWeight() - 1), "batch-" + index);
+                });
+            check(calls.get() == 3 && sampled.drawCount() == count + 3);
+            var batchCommand = new UUID(123, count);
+            if (kind == ActiveWheel.Kind.TAINT)
+            {
+                var batch = MasterTaintTerminalOperation.prepareSampled(source, batchCommand, sampled);
+                var exact = batch.receipts().get(0).taintTerminal().resolution();
+                check(exact.resolved() == sampled && calls.get() == 3
+                    && batch.lifecycle().revision() == 6
+                    && batch.lifecycle().obligation() == RunLifecycle.Obligation.PUNISHMENT_PENDING
+                    && batch.pendingMasterSelection().isEmpty()
+                    && batch.masterSpins().orElseThrow().available() == balance - 1
+                    && batch.fatePoints().equals(source.fatePoints()));
+                check(MasterTaintTerminalOperation.prepare(batch, exact) == batch);
+                rejects(() -> MasterTaintTerminalOperation.prepareSampled(batch, batchCommand, sampled));
+                rejects(() -> MasterTaintTerminalOperation.prepareSampled(source,
+                    creation.transactionId(), sampled));
+                rejects(() -> MasterTaintTerminalOperation.prepareSampled(
+                    fixture(kind, count, 0), batchCommand, sampled));
+                var pausedBatch = LifecycleAdmission.prepare(source, source.lifecycle().identity(),
+                    new UUID(124, count), 5, RunReceipt.Operation.PAUSE);
+                rejects(() -> MasterTaintTerminalOperation.prepareSampled(pausedBatch, batchCommand, sampled));
+                if (count > 0)
+                {
+                    var changedPrefix = fixture(kind, 0, balance).pendingMasterSelection().orElseThrow();
+                    for (int i = 0; i < sampled.drawCount(); i++)
+                    {
+                        var step = sampled.landings().get(i).step();
+                        changedPrefix = changedPrefix.append(changedPrefix.transactionId(),
+                            changedPrefix.drawCount(), changedPrefix.currentStreamState(), i == 0
+                                ? new MasterSelectionProvenance.Step(step.draw(), "changed-prefix") : step);
+                    }
+                    var altered = changedPrefix;
+                    rejects(() -> MasterTaintTerminalOperation.prepareSampled(source, batchCommand, altered));
+                }
+            }
+            else { rejects(() -> MasterTaintTerminalOperation.prepareSampled(source, batchCommand, sampled)); }
+            rejects(() -> MasterTaintTerminalOperation.prepareSampled(source, batchCommand, pending));
             check(prepared.obligation().resolution().equals(prepared.response().resolution()));
             check(prepared.obligation().requirement() == (kind == ActiveWheel.Kind.TAINT
                 ? MasterSpecialObligation.Requirement.MANDATORY_PUNISHMENT
@@ -116,6 +160,7 @@ public final class MasterSpecialTerminalPreparationChecks
             rejects(() -> MasterTaintLifecyclePreparation.prepare(retained, changed));
             var ordinary = MasterSelectionResolutionReceipt.prepare(UUID.randomUUID(), 5, creation, pending,
                 new MasterSelectionProvenance.Step(new DrawCommitment(pending.pool(), 16), "ordinary"));
+            rejects(() -> MasterTaintTerminalOperation.prepareSampled(source, batchCommand, ordinary.resolved()));
             rejects(() -> MasterSpecialTerminalPreparation.prepare(source, ordinary));
             rejects(() -> MasterTaintLifecyclePreparation.prepare(source, ordinary));
             rejects(() -> MasterTaintTerminalOperation.prepare(source, ordinary));

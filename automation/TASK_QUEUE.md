@@ -1,3 +1,47 @@
+## Current local continuation - sampled Taint batch publication, 2026-11-03
+
+IDLE after bounded WB-WHL-09 / WB-WHL-08 terminal increment (S). Supersedes
+older next-task prose. Reconciled source/tests: guarded fresh sampling, unresolved
+publication, restoration and exact in-memory recovery already exist (DONE offline).
+Candidate schema-20 reader/writer and JSON remain IMPLEMENTED_UNVERIFIED. No Git
+or merged-state verification; supervisor owns publication. I01d not selected.
+
+MasterTaintTerminalOperation.prepareSampled now passes the exact prepared valid
+transcript into existing atomic Taint history/reservation/mandatory-obligation
+publication without another draw. Fresh command collisions are refused. Terminal
+binding reconstructs the entire sampled suffix from the retained pending prefix,
+allowing multiple empty landings before the terminal step while rejecting changed
+prior history. Only supported Taint is admitted; ordinary and Sacrifice payloads
+remain unfinished. Existing replay retains the original response/accounting.
+This is pure in-memory preparation, not evidence/RNG authentication or storage
+admission. Existing Master Wheel unchanged; incomplete gameplay remains disabled.
+WB-D120/138/139 and unresolved gameplay/evidence holds remain authoritative.
+
+Fresh javac --release 11 compilation PASSED into build/continuation-retry-sampled-taint.
+Dependency-free special terminal, retry operation/response/proposal/continuation/
+prefix-binding, resolution aggregate and empty-batch Checks PASSED. Focused tests
+cover 0/1/513 retained draws, two new empty draws then Taint, exact transcript,
+one allocation at balances 1/7/Long.MAX_VALUE, replay, changed-prefix rejection,
+command reuse, Pause, zero balance, unresolved/ordinary/Sacrifice refusal and source
+immutability. Existing JUnit wrapper includes the new checks but JUnit is UNVERIFIED.
+Gradle snapshot/JSON/RunCodec/operation/response/legacy attempt failed BEFORE compilation:
+inherited wrapper-cache lock Access is denied. GRADLE_USER_HOME unchanged. An initial
+empty-batch invocation used the wrong package; the correct domain invocation PASSED.
+No cache workaround, external inspection, credentials, workflows or Git operations.
+
+Reconciliation: WB-WHL-09 PARTIAL; sampled Taint batch publication DONE offline.
+Public schema-20 activation, locked current-evidence admission, exact durable replay,
+automatic durable execution and persisted suspension remain UNSTARTED. WB-WHL-08
+PARTIAL: ordinary assignments and supported Sacrifice route payloads UNSTARTED.
+WB-WHL-10 PARTIAL_UNVERIFIED. Other partial/unstarted/blocked statuses stand.
+
+Next: run MasterRetrySnapshotReadTest, MasterRetryOperationProposalJsonTest,
+RunCodecTest, MasterSpecialTerminalPreparationTest, MasterRetryOperationTest,
+MasterRetryResponseTest and legacy regression with inherited dependencies accessible.
+Fix failures before schema-20 activation. Then implement locked evidence admission
+and durable replay, preserving exact streams/accounting and same-transaction suspension.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - sampled terminal handoff, 2026-11-03
 
 IDLE after bounded WB-WHL-09 terminal-handoff prerequisite (XS/S). Supersedes
