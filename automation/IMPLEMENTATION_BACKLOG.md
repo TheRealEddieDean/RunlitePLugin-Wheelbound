@@ -1,3 +1,45 @@
+## Current local continuation - bounded empty retry proposal, 2026-11-03
+
+IDLE after bounded WB-WHL-09 supplied-draw orchestration increment (S). Reconciled
+existing code/tests with the newer Taint session continuation and WB-D013/018/058/
+120/138/139/155/157. Taint locked store, synchronous/session and async admission,
+schema-19 and standalone JSON already exist as IMPLEMENTED_UNVERIFIED; older
+UNSTARTED statements are superseded. No Git operations or merged-state verification;
+supervisor owns publication. I01d not selected. No complete gameplay claim.
+
+MasterEmptyRetryBatch proposes a bounded sequence over the exact frozen prefix.
+Transaction/count/state checks precede source invocation; full-pool append validation
+retains every empty reason and opaque stream state. It stops immediately on ordinary
+or special valid landing. Budget exhaustion yields the retained prefix without a
+failure, charge, reward, punishment or stream reset. Source exceptions leave input
+immutable. Source must be side-effect-free; no RNG authentication, live revalidation,
+suspension persistence, durable batch admission, terminal settlement or plugin wiring.
+Existing Master Wheel behavior unchanged; incomplete gameplay remains disabled.
+
+Fresh javac --release 11 compilation of prior dependency-free source manifest plus
+new production class and Checks fixture PASSED into build/continuation-empty-retry.
+MasterEmptyRetryBatchChecks PASSED: 513 empties, resume, mixed empty/valid batch,
+ordinary/Taint/Sacrifice stop, repeated states, stale/foreign/count/state rejection,
+invalid budgets, changed pool, null/source failure and input immutability.
+Focused Gradle retry/Taint-session/Taint-store/legacy attempt failed BEFORE compilation:
+inherited wrapper-cache lock Access is denied. JUnit wrapper IMPLEMENTED_UNVERIFIED;
+no JUnit/store/codec/session/legacy pass claimed. GRADLE_USER_HOME unchanged; no cache
+workaround or external inspection.
+
+Reconciliation: WB-WHL-09 remains PARTIAL: bounded supplied-draw batch proposal DONE
+offline; automatic durable retry execution remains UNSTARTED. WB-WHL-08 PARTIAL;
+ordinary assignment and supported Sacrifice route payloads UNSTARTED. WB-WHL-10
+PARTIAL_UNVERIFIED. Other partial/unstarted/blocked statuses and client/catalog/
+decision evidence holds stand. WB-D155 adopts no retirement rule.
+
+Next: integrate a bounded retry continuation with actual pending-prefix admission
+and trusted current evidence, preserving WB-D139 same-transaction suspension when
+evidence becomes unknown. Do not silently reconcile changed snapshots/catalogs or
+reseed. Reuse existing append/readiness/session commands. Execute focused Gradle
+and legacy checks when inherited dependencies are accessible. Sampling, durable retry
+execution, suspension/revalidation, assignments and settlement remain unfinished.
+Local edits only; supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - Taint session admission, 2026-11-03
 
 IDLE after bounded WB-WHL-08 session/async admission increment (S). Reconciled
