@@ -1,3 +1,50 @@
+## Current local continuation - interleaved card operation retention, 2026-11-03
+
+IDLE after bounded WB-FAT-02 aggregate retention increment (S). Supersedes older
+next-task prose. Reconciled local source and tests: ownership, proposals, receipts,
+trusted-prefix and lifecycle reconstruction, aggregate copies and command guards
+already exist (DONE offline). No Git operations or merged-state verification;
+supervisor owns commits, PRs, CI and merges. No I01d selected.
+
+RunDocument now validates generic/card operation revision coverage from the first
+generic receipt through the head, including card-headed segments, preserving generic
+ordering, lifecycle transitions, command collisions and exact head checks. Earlier
+card-only history remains a trusted prefix, preserving existing structural retention;
+this is not global history authentication. A private temporary debit view is used
+only for structural chain checks; typed card payloads remain in their own journal.
+Retained generic and card payments are checked together in revision order against the
+FP ledger suffix. FateCardLifecycleHistory can now reconstruct interleaved purchases
+and Pause/Resume, with exact complete segment coverage from its explicit trusted seed.
+No publication, quote authentication, codec migration, service/UI or gameplay activation.
+Existing Master Wheel unchanged; WB-D049/050/090/105/113/124 and supersessions stand.
+
+Fresh javac --release 11 compilation PASSED into build/continuation-card-interleaving
+using build/continuation-card-lifecycle-history/sources.txt. Nine dependency-free Checks
+PASSED individually: lifecycle history, aggregate, preparation, journal, history,
+receipt, proposal, ownership and retry operation. Expanded lifecycle checks recompiled
+and PASSED: four interleaved paid pool/type combinations, card-headed segment,
+missing operations, reversed generic order and overlapping revisions. Existing
+populated-journal lifecycle copies and trusted-prefix gap retention also pass.
+Focused Gradle lifecycle/aggregate/legacy attempt failed BEFORE compilation because
+the inherited wrapper-cache lock returned Access is denied. JUnit/legacy/codec/durable
+remain UNVERIFIED. GRADLE_USER_HOME unchanged; no cache workaround/external inspection.
+
+WB-FAT-02 remains PARTIAL. Interleaved structural aggregate retention and restricted
+card/lifecycle reconstruction DONE offline. Broader FP-operation reconstruction,
+complete mixed-domain admission, atomic purchase publication, durable replay, codec
+migration, authenticated reviewed quotes and UI/services UNSTARTED. WB-FAT-03/04
+UNSTARTED. WHL-09 PARTIAL (candidate codec/JSON/read-only recovery IMPLEMENTED_UNVERIFIED;
+locked evidence/durable execution/suspension/public activation UNSTARTED). WHL-08
+PARTIAL (ordinary assignment/Sacrifice payloads UNSTARTED); WHL-10 PARTIAL_UNVERIFIED.
+Other existing blocked/partial/unstarted holds stand; A56 deferred. No prices adopted
+or unfinished gameplay marked complete.
+
+Next bounded unit: extend trusted-seed card/lifecycle reconstruction to supported
+plain FP debit operations, with exact accounting and fail-closed unsupported histories,
+before atomic purchase publication. Keep codec write refusal until lossless migration
+is tested. Run focused JUnit/codec/store/session/legacy suites when inherited dependencies
+are accessible. Local edits only; no Git, secrets, credentials or workflows accessed.
+
 ## Current local continuation - card lifecycle segment reconstruction, 2026-11-03
 
 IDLE after bounded WB-FAT-02 lifecycle-history prerequisite (S). Supersedes older

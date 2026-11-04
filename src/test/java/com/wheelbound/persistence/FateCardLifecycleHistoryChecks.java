@@ -31,8 +31,13 @@ public final class FateCardLifecycleHistoryChecks
             ledger = proposal.ledger();
             ownership = proposal.ownership();
             lifecycle = proposal.lifecycle();
+            var pause = lifecycle.pause(id, lifecycle.revision());
+            events.add(event(lifecycle, pause, RunReceipt.Operation.PAUSE));
+            var resume = pause.resume(id, pause.revision());
+            events.add(event(pause, resume, RunReceipt.Operation.RESUME));
+            lifecycle = resume;
         }
-        // RunDocument currently retains only a contiguous generic-operation suffix.
+        // Retain a lifecycle suffix after the interleaved purchases.
         for (int index = 0; index < 4; index++)
         {
             var paused = lifecycle.pause(id, lifecycle.revision());
@@ -43,13 +48,28 @@ public final class FateCardLifecycleHistoryChecks
             lifecycle = resumed;
         }
         var head = head(lifecycle, ledger, ownership, purchases, events);
+        // A card may itself be the head after earlier generic lifecycle events.
+        var firstResult = purchases.get(0).reconstruct(seed, money, cards);
+        var secondSeed = firstResult.lifecycle().pause(id, 8).resume(id, 9);
+        var secondResult = purchases.get(1).reconstruct(secondSeed, firstResult.ledger(), firstResult.ownership());
+        var cardHead = head(secondResult.lifecycle(), secondResult.ledger(), secondResult.ownership(),
+            purchases.subList(0, 2), events.subList(0, 2));
+        FateCardLifecycleHistory.validate(cardHead, seed, money, cards);
+        // Generic ordering and overlapping revisions remain structural failures.
+        var reordered = new ArrayList<>(events);
+        java.util.Collections.swap(reordered, 0, 1);
+        rejects(() -> head(head.lifecycle(), head.fatePoints().get(), head.fateCards().get(), purchases, reordered));
+        var overlap = new ArrayList<>(events);
+        overlap.add(0, new RunReceipt(new UUID(190, 1), RunReceipt.Operation.RESUME, 7, 8,
+            RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.NONE));
+        rejects(() -> head(head.lifecycle(), head.fatePoints().get(), head.fateCards().get(), purchases, overlap));
         FateCardLifecycleHistory.validate(head, seed, money, cards);
         var pausedHead = LifecycleAdmission.prepare(head, id, new UUID(189, 1),
             head.lifecycle().revision(), RunReceipt.Operation.PAUSE);
         FateCardLifecycleHistory.validate(pausedHead, seed, money, cards);
         FateCardLifecycleHistory.validate(LifecycleAdmission.prepare(pausedHead, id, new UUID(189, 2),
             pausedHead.lifecycle().revision(), RunReceipt.Operation.RESUME), seed, money, cards);
-        check(head.lifecycle().revision() == 19 && ledger.balance() == 60);
+        check(head.lifecycle().revision() == 27 && ledger.balance() == 60);
         check(money.entries().isEmpty() && cards.equals(FateCardOwnership.starting(id)));
         // Missing leading, internal and trailing operations must not become trusted gaps.
         for (int index : new int[] {0, 3, events.size() - 1})
@@ -136,7 +156,9 @@ public final class FateCardLifecycleHistoryChecks
     private static RunDocument head(RunLifecycle lifecycle, FatePointLedger ledger,
         FateCardOwnership cards, List<FateCardPurchaseReceipt> purchases, List<RunReceipt> events)
     {
-        return FateCardAggregateChecks.attach(new RunDocument(lifecycle, "fixture", events, Optional.of(ledger)),
+        return new RunDocument(lifecycle, "fixture", events, Optional.of(ledger),
+            Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(),
+            Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.of(cards), Optional.of(new FateCardPurchaseJournal(lifecycle.identity(),
                 lifecycle.revision(), purchases)));
     }
