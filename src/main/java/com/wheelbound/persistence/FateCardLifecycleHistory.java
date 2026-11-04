@@ -2,6 +2,7 @@ package com.wheelbound.persistence;
 
 import com.wheelbound.domain.FateCardOwnership;
 import com.wheelbound.domain.FatePointLedger;
+import com.wheelbound.domain.FatePointDebits;
 import com.wheelbound.domain.RunLifecycle;
 import java.util.HashSet;
 import java.util.Objects;
@@ -9,7 +10,7 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.UUID;
 
-/** Pure reconstruction of a complete card/Pause/Resume segment from a trusted seed.
+/** Pure reconstruction of a complete card/Pause/Resume/plain-debit segment from a trusted seed.
  * This restricted validator does not authenticate the seed or quotes, admit other
  * gameplay histories, publish a purchase, or authorize storage or feature activation.
  */
@@ -39,7 +40,7 @@ public final class FateCardLifecycleHistory
             || head.grandActivations().isPresent() || head.grandCurrentAttempt().isPresent()
             || head.grandJournal().isPresent() || head.grandProgress().isPresent()
             || head.masterSpins().filter(s -> s.reservation().isPresent()).isPresent())
-        { throw new IllegalArgumentException("Unsupported activity context in lifecycle-only card history"); }
+        { throw new IllegalArgumentException("Unsupported activity context in card/lifecycle/debit history"); }
         var journal = head.cardPurchases().orElseThrow(() ->
             new IllegalArgumentException("Explicit card journal required"));
         var headOwnership = head.fateCards().orElseThrow(() ->
@@ -53,8 +54,9 @@ public final class FateCardLifecycleHistory
         for (var receipt : head.receipts())
         {
             if (receipt.operation() != RunReceipt.Operation.PAUSE
-                && receipt.operation() != RunReceipt.Operation.RESUME)
-            { throw new IllegalArgumentException("Unsupported operation in lifecycle-only card history"); }
+                && receipt.operation() != RunReceipt.Operation.RESUME
+                && receipt.operation() != RunReceipt.Operation.FP_DEBIT)
+            { throw new IllegalArgumentException("Unsupported operation in card/lifecycle/debit history"); }
             retain(revisions, commands, receipt.beforeRevision(), receipt.commandId());
             lifecycleEvents.put(receipt.beforeRevision(), receipt);
         }
@@ -73,8 +75,19 @@ public final class FateCardLifecycleHistory
             var event = lifecycleEvents.get(revision);
             if (event != null)
             {
-                var next = event.operation() == RunReceipt.Operation.PAUSE
-                    ? lifecycle.pause(identity, revision) : lifecycle.resume(identity, revision);
+                RunLifecycle next;
+                if (event.operation() == RunReceipt.Operation.FP_DEBIT)
+                {
+                    var restored = FatePointDebits.restore(lifecycle, ledger,
+                        java.util.List.of(event.debit()));
+                    next = restored.lifecycle();
+                    ledger = restored.ledger();
+                }
+                else
+                {
+                    next = event.operation() == RunReceipt.Operation.PAUSE
+                        ? lifecycle.pause(identity, revision) : lifecycle.resume(identity, revision);
+                }
                 if (next.revision() != event.afterRevision() || next.state() != event.state()
                     || next.obligation() != event.obligation())
                 { throw new IllegalArgumentException("Lifecycle receipt disagrees with original state"); }
