@@ -1,3 +1,50 @@
+## Current local continuation - mixed-revision card purchase journal, 2026-11-03
+
+IDLE after bounded WB-FAT-02 retention prerequisite (S). Supersedes older next-task
+prose. Reconciled current code/tests: ownership, coupled proposals, typed receipts,
+contiguous card-only history and aggregate-bound fresh preparation already exist
+(DONE offline). Mixed-revision typed journal was UNSTARTED and is now DONE offline.
+No Git operations or merged-state verification; supervisor owns publication. No I01d.
+WB-D049/050/090/105/113/124 and supersession records remain authoritative.
+
+FateCardPurchaseJournal retains immutable original typed responses in commit order,
+allowing intervening non-card revisions. Checks identity, head bounds, ordering,
+overlap and duplicate commands; exact request lookup returns the original response.
+This is structural retention, not mixed-history balance/ownership reconstruction,
+aggregate collision admission, reviewed pricing, durable replay or persistence.
+No production caller wired; existing Master Wheel unchanged and incomplete gameplay
+remains disabled. No gameplay decision, candidate price or ownership inference added.
+
+Fresh javac --release 11 compiled all domain production sources and focused card
+Checks into build/continuation-card-journal. Journal, history, receipt, proposal and
+ownership Checks PASSED. New checks cover all four separate pool/type purchases,
+revision gaps and adjacent commits, original response identity, stale replay heads,
+foreign context, changed requests, unknown commands, duplicate IDs at distinct
+revisions, reordering/overlap, future entries, negative/empty heads, defensive copy
+and immutable output. JUnit wrapper added. Focused Gradle journal/history/legacy
+attempt failed BEFORE compilation: inherited wrapper-cache lock Access is denied.
+JUnit/legacy remain UNVERIFIED; GRADLE_USER_HOME unchanged, no cache workaround.
+
+Reconciliation: WB-FAT-02 PARTIAL. Structural mixed-revision journal DONE offline;
+RunDocument ownership/journal retention and preservation through ALL copy paths,
+cross-operation command admission, mixed-history reconstruction, explicit codec
+migration, atomic publication/durable replay, trusted reviewed quote admission and
+UI/services remain UNSTARTED. WB-FAT-03/04 UNSTARTED. WB-WHL-09 PARTIAL with
+candidate schema-20/JSON and read-only store/session recovery IMPLEMENTED_UNVERIFIED;
+public activation, locked evidence admission, durable retries and saved suspension
+UNSTARTED. WB-WHL-08 PARTIAL; ordinary assignment/Sacrifice payloads UNSTARTED.
+WB-WHL-10 PARTIAL_UNVERIFIED. Other partial/unstarted/blocked holds stand; A56 deferred.
+
+Next bounded unit: integrate explicit optional FateCardOwnership and
+FateCardPurchaseJournal into RunDocument, preserving absence in legacy constructors
+and retaining both across every aggregate copy/publication path. Reject unsupported
+codec writes to prevent silent loss until explicit migration exists. Check global
+command collisions before permitting publication. Do not use structural journal
+lookup as proof of valid historical balances or ownership. Then implement validated
+mixed history, atomic publication and explicit migration as separate tested units.
+Retry codec/store/session and legacy verification still required before activation.
+Local edits only; supervisor handles Git/PR/CI/merge. No secrets/workflows accessed.
+
 ## Current local continuation - aggregate-bound card purchase preparation, 2026-11-03
 
 IDLE after bounded WB-FAT-02 admission prerequisite (S). Supersedes older next-task
