@@ -1,3 +1,52 @@
+## Current local continuation - coupled ordinary card acquisition proposal, 2026-11-03
+
+IDLE after bounded WB-FAT-02 purchase prerequisite (S). Supersedes older next-task
+prose. Read required current continuation sections and targeted WB-D046/049/050/090/
+105/113/124, FATE_CARDS, STATE_CONTRACT and PERSISTENCE. Reconciled local ownership,
+FP debit, slice purchase and retry production/tests; no Git or remote merge verification.
+Historical merged-work records remain unverified; supervisor owns publication. No I01d.
+
+FateCardPurchaseProposal couples a single previously unowned Lesser/Greater unlock in
+its explicit Skilling/Bossing pool to one proposed FP debit and lifecycle revision.
+Quote freezes pool/type/key/version/positive amount; Standard cannot be sold. Requires
+matching ownership/run identity, current active revision and no lifecycle obligation.
+Returns immutable ownership, ledger, lifecycle and payment evidence together. Inputs
+remain unchanged on success/refusal. Uses existing FatePointDebits arithmetic; no prices
+adopted. Quote construction is NOT review authentication. Trusted aggregate admission
+must still validate quote authority, all pending boundaries and retained command IDs.
+This is NOT a typed durable card receipt, replay service, persistence or live purchase.
+No Challenge/rank/bundle grants, offers or assignments. Master Wheel unchanged;
+incomplete gameplay remains unwired/disabled. No new gameplay decision.
+
+Fresh javac --release 11 compiled all domain sources and focused checks into
+build/continuation-card-purchase. FateCardPurchaseProposalChecks and
+FateCardOwnershipChecks PASSED, rerun after adding sequential purchase and maximum
+balance cases. Coverage: separate pools/types, exact quote/debit/revision, all lifecycle
+states/obligations, stale/foreign identity, already-owned refusal, insufficient/negative
+balance, revision overflow, malformed quote, input immutability, sequential Bossing
+Lesser+Greater ownership predicate and Long.MAX_VALUE payment. JUnit wrapper added.
+Focused purchase/ownership/legacy Gradle attempt failed BEFORE compilation: inherited
+wrapper-cache lock Access is denied. JUnit/legacy UNVERIFIED. GRADLE_USER_HOME unchanged;
+no cache workaround, external inspection, credentials, secrets, workflows or Git operations.
+
+Reconciliation: WB-FAT-02 PARTIAL; ownership snapshot and coupled acquisition proposal
+DONE offline, JUnit UNVERIFIED. Typed card receipt, aggregate/migration integration,
+receipt-backed durable replay, reviewed quote admission and UI/services UNSTARTED.
+WB-FAT-03/04 UNSTARTED. WB-WHL-09 PARTIAL: funded preparation/publication and domain
+recovery DONE offline; schema-20 candidate/JSON and read-only store/session recovery
+IMPLEMENTED_UNVERIFIED. Public schema-20 activation, locked evidence admission, durable
+retries and persisted suspension UNSTARTED. WB-WHL-08 PARTIAL (ordinary assignment/
+Sacrifice payloads UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED. Other audited statuses and
+client/catalog/decision BLOCKED holds stand. WB-D138/139 authoritative; A56 deferred.
+
+Next bounded gameplay increment: typed ordinary card acquisition receipt binding
+identity, pool/type, frozen quote and debit, with exact reconstruction/collision checks.
+Then aggregate ownership/purchase persistence with explicit migration and verified codec
+coverage before store/session admission. No legacy unlock synthesis or candidate prices.
+Run FateCardPurchaseProposalTest, FateCardOwnershipTest and legacy regression when
+inherited build dependencies are accessible; retry recovery/codec suites remain required
+before schema-20 activation or retry writes. Local edits only; supervisor handles Git/CI.
+
 ## Current local continuation - separate ordinary card ownership, 2026-11-03
 
 IDLE after bounded WB-FAT-02 domain increment (S). Supersedes older next-task prose.
