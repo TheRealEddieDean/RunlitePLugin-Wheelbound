@@ -1,3 +1,56 @@
+## Current local continuation - typed ordinary card acquisition receipt, 2026-11-03
+
+IDLE after bounded WB-FAT-02 receipt increment (S). Supersedes older next-task prose.
+Reconciled current card ownership/proposal, debit and slice receipt source/tests against
+WB-D049/050/090/105/113/124 and current supersessions. Existing card ownership and
+coupled acquisition proposal already DONE offline; typed receipt was UNSTARTED.
+No Git operations or merged-state verification; supervisor owns publication. No I01d.
+
+FateCardPurchaseReceipt binds run/account identity, separate pool/type, original
+command/revision, frozen quote key/version/amount and original debit response.
+FateCardPurchaseProposal.receipt exposes proposed evidence. Exact matching distinguishes
+changed requests even when their command and payment references coincide. Reconstruction
+requires trusted ORIGINAL lifecycle/ledger/ownership, reuses purchase admission and
+arithmetic, and checks the recorded balance/revision. Later saved heads cannot be used
+as original seeds. Constructor validates structural quote/debit agreement only; it does
+not authenticate the quoted price or prove historical ownership. No new gameplay decision.
+No journal, cross-operation collision admission, durable replay or persistence added.
+Existing Master Wheel unchanged; incomplete gameplay stays unwired/disabled.
+
+Fresh javac --release 11 compiled all domain sources plus focused checks into
+build/continuation-card-receipt. FateCardPurchaseReceiptChecks,
+FateCardPurchaseProposalChecks and FateCardOwnershipChecks PASSED. Receipt coverage:
+both pools/Lesser/Greater; amounts 1/11/Long.MAX_VALUE; independent decoded values;
+exact request collisions for every field; altered debit result/quote refusal; foreign
+account/run; stale/later seed; already-owned/inactive/obligated state refusal; repeated
+reconstruction, sequential purchases and unchanged inputs. JUnit wrapper added.
+Focused receipt/proposal/ownership/legacy Gradle attempt failed BEFORE compilation:
+inherited wrapper-cache lock Access is denied. JUnit and legacy remain UNVERIFIED.
+GRADLE_USER_HOME unchanged; no workaround or external inspection, secrets, credentials,
+workflow access or Git operations.
+
+Reconciliation: WB-FAT-02 PARTIAL. Ownership, coupled proposal and typed receipt with
+original-state reconstruction DONE offline; JUnit UNVERIFIED. Aggregate ownership/card
+journal integration, mixed-history validation/collision admission, explicit migration,
+receipt-backed durable replay, reviewed quote authority and UI/services UNSTARTED.
+WB-FAT-03/04 UNSTARTED. WB-WHL-09 PARTIAL: funded preparation/publication and domain
+recovery DONE offline; schema-20 candidate/JSON and read-only store/session recovery
+IMPLEMENTED_UNVERIFIED. Public schema-20 activation, locked evidence admission,
+durable retries and persisted suspension UNSTARTED. WB-WHL-08 PARTIAL (ordinary
+assignment/Sacrifice payloads UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED. Other prior
+statuses and client/catalog/decision BLOCKED holds stand. A56 deferred. No full gameplay
+completion or remote merge claim.
+
+Next bounded increment: validated ordinary card purchase history from an explicit
+trusted ownership/lifecycle/ledger seed, retaining exact original responses, refusing
+reused command IDs and repeat unlocks without debiting twice. Then integrate aggregate
+ownership/journal persistence and explicit migration; codec/storage changes require
+real verification before activation. No legacy unlock synthesis or candidate pricing.
+Run FateCardPurchaseReceiptTest, FateCardPurchaseProposalTest, FateCardOwnershipTest
+and legacy regression when inherited dependencies are accessible; retry recovery/codec
+suites still required before schema-20 activation or retry writes. Local edits only;
+supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - coupled ordinary card acquisition proposal, 2026-11-03
 
 IDLE after bounded WB-FAT-02 purchase prerequisite (S). Supersedes older next-task
