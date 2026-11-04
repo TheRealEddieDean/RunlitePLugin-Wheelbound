@@ -82,6 +82,10 @@ public final class FateCardPurchaseProposal
     public FatePointDebits.Receipt debit() { return payment.receipt(); }
     public Quote quote() { return quote; }
 
+    /** Proposed evidence only; acknowledge it after atomic aggregate persistence. */
+    public FateCardPurchaseReceipt receipt()
+    { return new FateCardPurchaseReceipt(lifecycle().identity(), quote, debit()); }
+
     private static String text(String value)
     {
         if (Objects.requireNonNull(value, "quote reference").isEmpty()
