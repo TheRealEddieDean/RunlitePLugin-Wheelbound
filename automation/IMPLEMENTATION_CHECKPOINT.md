@@ -1,3 +1,47 @@
+## Current local continuation - plain FP debit reconstruction, 2026-11-03
+
+IDLE after bounded WB-FAT-02 mixed-history prerequisite (S). Supersedes older
+next-task prose. Reconciled production code and focused tests: ownership, proposals,
+receipts, trusted prefixes, interleaved retention, lifecycle reconstruction and
+aggregate command guards already exist (DONE offline). No Git operations or merged
+state verification; supervisor owns commits, PRs, CI and merges. I01d not selected.
+
+FateCardLifecycleHistory now reconstructs supported plain FP_DEBIT envelopes alongside
+card purchases and Pause/Resume from one explicit trusted lifecycle/ledger/ownership
+seed. Reuses FatePointDebits.restore for active-state, funds, arithmetic and original
+response validation; verifies envelope lifecycle and exact final ledger/ownership.
+Requires complete revision coverage and refuses unsupported operation/activity histories.
+Seed and quote authentication remain caller duties. No production caller, publication,
+codec migration, price adoption, UI/service or gameplay activation. Existing Master
+Wheel unchanged. WB-D049/050/090/105/113/124 and recorded supersessions stand.
+
+Fresh javac --release 11 compilation PASSED into build/continuation-card-debits using
+build/continuation-card-lifecycle-history/sources.txt. Nine dependency-free Checks
+PASSED individually: lifecycle history, aggregate, preparation, journal, history,
+receipt, proposal, ownership and retry operation. Added debit-only and interleaved
+debit/card/Pause/Resume checks, insufficient seed funds, inactive seed, forged debit
+balance, missing debit, equal-balance ledger rewrite and unsupported DRAW refusal.
+One initial check invocation used the wrong journal package; corrected domain invocation
+PASSED. Focused Gradle lifecycle/aggregate/legacy attempt failed BEFORE compilation:
+inherited wrapper-cache lock Access is denied. JUnit/legacy/codec/durable remain
+UNVERIFIED. GRADLE_USER_HOME unchanged; no cache workaround or external inspection.
+
+WB-FAT-02 remains PARTIAL. Restricted card/lifecycle/plain-debit reconstruction DONE
+offline. Complete mixed-domain admission, atomic purchase publication, durable replay,
+codec migration, authenticated reviewed quotes and UI/services UNSTARTED. WB-FAT-03/04
+UNSTARTED. WHL-09 PARTIAL (candidate codec/JSON/read-only recovery IMPLEMENTED_UNVERIFIED;
+locked evidence/durable execution/suspension/public activation UNSTARTED). WHL-08
+PARTIAL (ordinary assignment/Sacrifice payloads UNSTARTED); WHL-10 PARTIAL_UNVERIFIED.
+Other recorded partial/unstarted/blocked holds stand; A56 deferred. No unfinished
+gameplay marked complete. Local edits only; no secrets, credentials or workflows.
+
+Next bounded unit: implement pure atomic in-memory card purchase publication for this
+explicitly supported trusted-seed card/lifecycle/plain-debit history subset, preserving
+all aggregate fields and exact original command replay, refusing unsupported domains.
+Broader domain admission remains separate. Keep codec write refusal until lossless
+migration is tested. Run focused JUnit/codec/store/session/legacy checks when inherited
+dependencies are accessible. Supervisor handles all publication and merge work.
+
 ## Current local continuation - interleaved card operation retention, 2026-11-03
 
 IDLE after bounded WB-FAT-02 aggregate retention increment (S). Supersedes older
