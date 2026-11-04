@@ -1,3 +1,51 @@
+## Current local continuation - trusted mixed card prefixes, 2026-11-03
+
+IDLE after bounded WB-FAT-02 trusted-prefix validation increment (S). Supersedes
+older next-task prose. Reconciled source/tests: ownership, coupled proposals,
+receipts, contiguous history, structural mixed journal, aggregate retention/copy
+preservation and command collision guards already exist (DONE offline). Codec
+refusal remains IMPLEMENTED_UNVERIFIED with real dependencies. No Git operations
+or merged-state verification; supervisor owns publication. No I01d selected.
+
+FateCardPurchaseJournal.validateTransitions now reconstructs retained purchases in
+journal order using an explicit trusted ownership seed and one trusted original
+lifecycle/FP prefix per receipt. It reuses purchase admission/payment rules, checks
+receipt results, requires prior payment ledger entries to survive intervening
+operations unchanged, and compares reconstructed ownership with the retained head.
+Revision gaps and intervening FP entries are permitted only on the caller's trusted
+prefix authority. This does NOT authenticate prefixes, validate intervening operation
+semantics/completeness, establish global history admission, adopt prices, publish
+an aggregate, migrate saves or enable gameplay. Empty journals preserve the explicit
+seed without synthesizing ownership. No new gameplay decision; WB-D049/050/090/105/
+113/124 and supersessions remain authoritative. Existing Master Wheel unchanged.
+
+Fresh javac --release 11 compilation PASSED into build/continuation-card-mixed-prefix
+using the existing aggregate-retention source manifest. Eight dependency-free Checks
+PASSED individually: journal, history, receipt, proposal, ownership, aggregate,
+preparation and retry operation. New coverage: all four paid pool/type combinations,
+revision gaps with intervening earnings, incorrect head ownership, paid seed misuse,
+missing/foreign/stale prefixes, future journal, ledger replacement/rewrite, paused
+purchase, corrupt balance and empty journal. Existing JUnit wrapper updated.
+Focused Gradle journal/aggregate/legacy attempt failed BEFORE compilation: inherited
+wrapper-cache lock Access is denied. JUnit, codec, durable and legacy remain
+UNVERIFIED. GRADLE_USER_HOME unchanged; no external inspection or cache workaround.
+
+Reconciliation: WB-FAT-02 PARTIAL. Trusted-prefix card reconstruction DONE offline;
+full mixed-operation prefix authentication/admission, atomic purchase publication,
+durable replay, explicit codec migration, reviewed quotes and UI/services UNSTARTED.
+WB-FAT-03/04 UNSTARTED. WB-WHL-09 PARTIAL: candidate codec/JSON and read-only durable
+recovery IMPLEMENTED_UNVERIFIED; locked evidence, durable execution/suspension and
+public activation UNSTARTED. WB-WHL-08 PARTIAL (ordinary assignment/Sacrifice payloads
+UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED. Other decision/client/catalog BLOCKED holds
+stand; A56 deferred. No unfinished gameplay marked complete.
+
+Next bounded unit: bind trusted card prefixes to supported aggregate operation
+history (including complete accounting/lifecycle gap validation) before atomic
+in-memory purchase publication. Keep codec write refusal until lossless migration
+is tested. Run focused JUnit/codec/store/session/legacy suites when inherited build
+dependencies are accessible. Local edits only; no credentials, secrets, workflows
+or Git operations accessed. Supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - aggregate card retention, 2026-11-03
 
 IDLE after bounded WB-FAT-02 aggregate retention increment (S). Supersedes older
