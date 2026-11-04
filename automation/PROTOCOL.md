@@ -1,3 +1,56 @@
+## Current local continuation - separate card journal admission, 2026-11-03
+
+IDLE after bounded WB-FAT-02 admission prerequisite (XS/S). Supersedes older
+next-task prose. Reconciled current source/tests: ordinary ownership, proposals,
+receipts, contiguous history, mixed-revision structural journal and aggregate-bound
+preparation already exist (DONE offline). Explicit separate-journal preparation
+admission was UNSTARTED and is now DONE offline. No Git operations or merged-state
+verification; supervisor owns publication. No I01d or new gameplay decision/price.
+WB-D049/050/090/105/113/124 and recorded supersessions remain authoritative.
+
+FateCardPurchasePreparation.prepareFresh now has an explicit-journal overload.
+It checks journal/head identity, revalidates entries against the current revision,
+refuses fresh command reuse in that journal and rejects retained card commands
+colliding with generic envelopes or supported domain-only aggregate journals.
+It then delegates to existing pending-work/accounting/lifecycle/ownership checks.
+Revision gaps remain allowed. This is pure structural preparation, not proof of
+journal completeness or historical balance/ownership validity, authenticated quotes,
+aggregate retention/publication, durable replay or storage admission. Caller must
+supply trusted current ownership/journal under one head. Existing signature remains
+available with its documented separate-journal validation duty. No caller wired;
+existing Master Wheel unchanged; incomplete gameplay stays disabled.
+
+Fresh javac --release 11 compilation PASSED into build/continuation-card-journal-admission.
+Dependency-free preparation, journal, history, receipt, proposal, ownership and retry
+operation Checks all PASSED with individual exit checks. Focused coverage includes
+revision-gap success, original retained command reuse, future entries, foreign empty
+journal, generic envelope overlap, domain-only creation overlap, empty journal and
+unchanged inputs. Existing JUnit wrapper updated. Focused Gradle preparation/journal/
+legacy attempt failed BEFORE compilation: inherited wrapper-cache lock Access is denied.
+JUnit/legacy remain UNVERIFIED; GRADLE_USER_HOME unchanged, no cache workaround or
+external inspection. No credentials, secrets, workflows or Git operations accessed.
+
+Reconciliation: WB-FAT-02 PARTIAL. Separate-journal collision preparation DONE offline;
+RunDocument ownership/journal retention through ALL copy/publication paths, global
+admission for other operation families, mixed-history reconstruction, explicit codec
+migration/refusal, atomic publication/durable replay, reviewed quote admission and
+UI/services remain UNSTARTED. WB-FAT-03/04 UNSTARTED. WB-WHL-09 PARTIAL; candidate
+schema-20/JSON and read-only store/session recovery IMPLEMENTED_UNVERIFIED; public
+activation, locked evidence admission, durable retries and saved suspension UNSTARTED.
+WB-WHL-08 PARTIAL (ordinary assignment/Sacrifice payloads UNSTARTED); WB-WHL-10
+PARTIAL_UNVERIFIED. Other partial/unstarted/client/catalog/decision BLOCKED holds
+stand; A56 deferred. No unfinished gameplay marked complete.
+
+Next bounded unit: integrate explicit optional FateCardOwnership and
+FateCardPurchaseJournal into RunDocument and preserve both across EVERY aggregate
+copy/publication path; reject unsupported codec writes to prevent silent loss.
+Extend shared command admission to card journal IDs before permitting any publication.
+Do not mistake this separate-journal overload for aggregate-wide admission. Then
+implement validated mixed history, atomic publication and explicit migration in
+separate tested increments. Run focused JUnit, retry codec/store/session and legacy
+regressions when inherited build dependencies are accessible. Local edits only;
+supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - aggregate-bound card purchase preparation, 2026-11-03
 
 IDLE after bounded WB-FAT-02 admission prerequisite (S). Supersedes older next-task
