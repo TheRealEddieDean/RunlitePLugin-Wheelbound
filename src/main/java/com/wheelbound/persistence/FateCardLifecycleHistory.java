@@ -22,8 +22,6 @@ public final class FateCardLifecycleHistory
      * no missing revision or unexplained FP entry is allowed. Other activity state
      * is refused conservatively, including domain-only history without envelopes.
      * Callers must establish the original seed's authority independently.
-     * RunDocument currently permits only a contiguous generic receipt suffix, so
-     * interleaved card and lifecycle retention needs a separate aggregate change.
      */
     public static void validate(RunDocument head, RunLifecycle seedLifecycle,
         FatePointLedger seedLedger, FateCardOwnership seedOwnership)

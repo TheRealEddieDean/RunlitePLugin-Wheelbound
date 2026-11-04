@@ -282,7 +282,7 @@ public final class RunDocument
         this.receipts = List.copyOf(receipts);
         Set<UUID> commands = new HashSet<>();
         RunReceipt previous = null;
-        for (RunReceipt receipt : this.receipts)
+        for (RunReceipt receipt : operationChain())
         {
             if (receipt.masterCreation() != null
                 && (this.masterCreations == null || !receipt.masterCreation().equals(
@@ -295,7 +295,10 @@ public final class RunDocument
             if ((this.grandFate != null && this.grandFate.commandId().equals(receipt.commandId()))
                 || !commands.add(receipt.commandId())) { throw new IllegalArgumentException("Duplicate command ID"); }
             if (previous != null && (receipt.beforeRevision() != previous.afterRevision()
-                || !follows(previous, receipt)))
+                || !follows(previous, receipt)
+                || (this.cardPurchases != null
+                    && this.cardPurchases.receipts().containsKey(receipt.commandId())
+                    && previous.obligation() != RunLifecycle.Obligation.NONE)))
             { throw new IllegalArgumentException("Broken lifecycle receipt chain"); }
             previous = receipt;
         }
@@ -398,6 +401,34 @@ public final class RunDocument
         { throw new IllegalArgumentException("Receipt head does not match snapshot"); }
     }
 
+    /** Internal structural view; typed card receipts remain in their own journal.
+     * History before the first generic receipt remains a trusted prefix. From that
+     * receipt through the head the generic/card union must be contiguous. */
+    private List<RunReceipt> operationChain()
+    {
+        var combined = new java.util.ArrayList<>(receipts);
+        long previous = -1;
+        for (var receipt : receipts)
+        {
+            if (receipt.beforeRevision() <= previous)
+            { throw new IllegalArgumentException("Unordered operation journal"); }
+            previous = receipt.beforeRevision();
+        }
+        if (cardPurchases != null)
+        {
+            for (var card : cardPurchases.receipts().values())
+            {
+                var debit = card.debit();
+                if (receipts.isEmpty() || debit.beforeRevision() < receipts.get(0).beforeRevision())
+                { continue; }
+                combined.add(new RunReceipt(debit.commandId(), RunReceipt.Operation.FP_DEBIT,
+                    debit.beforeRevision(), debit.afterRevision(), RunLifecycle.State.ACTIVE,
+                    RunLifecycle.Obligation.NONE, null, debit));
+            }
+        }
+        combined.sort(java.util.Comparator.comparingLong(RunReceipt::beforeRevision));
+        return combined;
+    }
     private boolean matchingCreation(UUID transaction)
     {
         return masterCreations != null && receipts.stream().anyMatch(r ->
@@ -409,17 +440,28 @@ public final class RunDocument
      * operations preserve FP; future earning operations require their own validation. */
     private void validateDebits()
     {
-        long count = receipts.stream().filter(r -> payment(r) != null).count();
+        var payments = new java.util.TreeMap<Long, FatePointDebits.Receipt>();
+        for (var receipt : receipts)
+        {
+            if (payment(receipt) != null) { payments.put(receipt.beforeRevision(), payment(receipt)); }
+        }
+        if (cardPurchases != null)
+        {
+            for (var card : cardPurchases.receipts().values())
+            {
+                if (payments.putIfAbsent(card.debit().beforeRevision(), card.debit()) != null)
+                { throw new IllegalArgumentException("Overlapping card payment"); }
+            }
+        }
+        long count = payments.size();
         if (count == 0) { return; }
         if (fatePoints == null || count > fatePoints.entries().size())
         { throw new IllegalArgumentException("Debit journal lacks ledger entries"); }
         int index = fatePoints.entries().size() - Math.toIntExact(count);
         FatePointLedger reconstructed = new FatePointLedger(fatePoints.startingBalance(),
             fatePoints.entries().subList(0, index));
-        for (RunReceipt receipt : receipts)
+        for (FatePointDebits.Receipt debit : payments.values())
         {
-            FatePointDebits.Receipt debit = payment(receipt);
-            if (debit == null) { continue; }
             FatePointLedger.Entry entry = fatePoints.entries().get(index++);
             if (entry.kind() != FatePointLedger.Kind.DISCRETIONARY_COST
                 || entry.amount() != debit.amount())
