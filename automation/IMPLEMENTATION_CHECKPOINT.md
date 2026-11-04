@@ -1,3 +1,50 @@
+## Current local continuation - aggregate-bound card purchase preparation, 2026-11-03
+
+IDLE after bounded WB-FAT-02 admission prerequisite (S). Supersedes older next-task
+prose. Reconciled current source/tests: ownership, coupled proposals, typed receipts
+and contiguous card-only history exist (DONE offline). Aggregate-bound fresh preparation
+was UNSTARTED and is now DONE offline. No Git operations or merged-state verification;
+supervisor owns publication. No I01d. WB-D049/050/090/105/113/124 and recorded
+supersessions remain authoritative; no new gameplay decision or price adopted.
+
+FateCardPurchasePreparation.prepareFresh checks one RunDocument head for pending
+Master selection/special/reservation, retained command IDs (including domain-only
+journals), explicit FP accounting, current identity/revision, active unencumbered
+lifecycle, available funds and separate ordinary card ownership before returning a
+coupled proposal. Uses existing retained-command guard and domain arithmetic. Trusted
+current ownership and quote authority remain caller duties; separate card-journal
+collision validation remains required. This is preparation only: no aggregate
+publication, mixed-history restoration, migration, durable replay or service wiring.
+Existing Master Wheel unchanged; incomplete gameplay stays disabled.
+
+Fresh javac --release 11 compilation PASSED into build/continuation-card-aggregate-preparation.
+Dependency-free preparation, card history/receipt/proposal/ownership and retry operation
+Checks PASSED. New coverage includes both pools/Lesser/Greater, funded pending prefixes
+0/1/513, generic and domain-only creation command collisions, unused-command positive
+control, absent accounting, insufficient funds, stale/foreign requests, paused/obligated
+state and unchanged inputs. JUnit wrapper added. Focused Gradle preparation/history/
+legacy attempt failed BEFORE compilation: inherited wrapper-cache lock Access is denied.
+JUnit/legacy UNVERIFIED; GRADLE_USER_HOME unchanged, no workaround or external inspection.
+
+Reconciliation: WB-FAT-02 PARTIAL. Pure aggregate-bound preparation DONE offline;
+aggregate ownership/card-journal retention, mixed-history validation and card-journal
+command admission, explicit migration, atomic publication/durable replay, authenticated
+reviewed quotes and UI/services UNSTARTED. WB-FAT-03/04 UNSTARTED. WB-WHL-09 PARTIAL:
+funded preparation/publication/domain recovery DONE offline; candidate schema-20/JSON
+and read-only store/session recovery IMPLEMENTED_UNVERIFIED. Public schema activation,
+locked evidence admission, durable retries and saved suspension UNSTARTED. WB-WHL-08
+PARTIAL (ordinary assignment/Sacrifice payloads UNSTARTED); WB-WHL-10 PARTIAL_UNVERIFIED.
+Other previous partial/unstarted/client/catalog/decision BLOCKED holds stand. A56 deferred.
+
+Next bounded task: integrate explicit optional card ownership and typed card purchase
+journal into RunDocument, preserving absence in legacy constructors/copy paths and
+checking mixed-operation command collisions. Then atomic publication, history validation
+and explicit codec migration, split into independently testable increments. Never infer
+paid ownership or activate candidate prices. Run preparation/history/receipt/proposal/
+ownership JUnit and legacy tests when inherited dependencies are accessible. Retry
+codec/store/session verification still required before schema-20 activation or writes.
+Local edits only; supervisor handles Git/PR/CI/merge. No secrets or workflows accessed.
+
 ## Current local continuation - validated ordinary card purchase history, 2026-11-03
 
 IDLE after bounded WB-FAT-02 history increment (S). Supersedes older next-task prose.
