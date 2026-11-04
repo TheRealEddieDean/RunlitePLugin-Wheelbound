@@ -4,6 +4,6 @@ import org.junit.Test;
 
 public class FateCardPurchasePreparationTest
 {
-    @Test public void preparesAgainstAggregateAndRefusesPendingOrReusedCommands()
+    @Test public void preparesAgainstAggregateAndJournalAndRefusesPendingOrReusedCommands()
     { FateCardPurchasePreparationChecks.main(new String[0]); }
 }
