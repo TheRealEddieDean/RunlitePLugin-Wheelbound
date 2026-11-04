@@ -41,6 +41,7 @@ public final class DurableFatePointDebits
             { throw new IllegalArgumentException("Command ID reused for different debit request"); }
             return debit;
         }
+        MasterRetryRecovery.requireUnused(current, commandId);
         FatePointDebits.Result result = new FatePointDebits(current.lifecycle(),
             current.fatePoints().orElseThrow(() -> new IllegalStateException("FP state unavailable")))
             .debit(identity, commandId, expectedRevision, quoteKey, quoteVersion, amount);
@@ -51,7 +52,7 @@ public final class DurableFatePointDebits
         List<RunReceipt> history = new ArrayList<>(current.receipts());
         history.add(receipt);
         store.write(new RunDocument(proposed.lifecycle(), current.catalogVersion(), history,
-            Optional.of(proposed.ledger()), current.inventory(), current.grandFate(), current.grandProgress(), current.grandJournal(), current.grandActivations(), current.retainedGrandAttempt(proposed.lifecycle()), current.pendingMasterSelection(), current.masterCreations(), current.masterResolutions(), current.masterSpins(), current.currentMasterSpecial().map(value -> value.obligation())), expectedRevision);
+            Optional.of(proposed.ledger()), current.inventory(), current.grandFate(), current.grandProgress(), current.grandJournal(), current.grandActivations(), current.retainedGrandAttempt(proposed.lifecycle()), current.pendingMasterSelection(), current.masterCreations(), current.masterResolutions(), current.masterSpins(), current.currentMasterSpecial().map(value -> value.obligation()), current.fateCards(), current.cardPurchases()), expectedRevision);
         return result.receipt();
     }
 }

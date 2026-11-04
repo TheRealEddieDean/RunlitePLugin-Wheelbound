@@ -29,6 +29,7 @@ public final class LifecycleAdmission
             { throw new IllegalArgumentException("Command ID reused for different request"); }
             return current;
         }
+        MasterRetryRecovery.requireUnused(current, commandId);
         RunLifecycle next = operation == RunReceipt.Operation.PAUSE
             ? current.lifecycle().pause(identity, expectedRevision)
             : current.lifecycle().resume(identity, expectedRevision);
@@ -44,6 +45,6 @@ public final class LifecycleAdmission
             current.masterCreations(), current.masterResolutions(), current.masterSpins().map(spins ->
                 spins.reservation().isPresent() ? spins : new com.wheelbound.domain.MasterSpinState(spins.version(), spins.identity(),
                     next.revision(), spins.allotted(), spins.reservation())),
-            current.currentMasterSpecial().map(value -> value.obligation()));
+            current.currentMasterSpecial().map(value -> value.obligation()), current.fateCards(), current.cardPurchases());
     }
 }

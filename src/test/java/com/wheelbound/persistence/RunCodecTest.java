@@ -10,6 +10,21 @@ import static org.junit.Assert.*;
 
 public class RunCodecTest
 {
+    @Test public void refusesCardStateInBothWriters()
+    {
+        var legacy = new RunDocument(new RunLifecycle(id, 0, RunLifecycle.State.ACTIVE,
+            RunLifecycle.Obligation.NONE), "fixture");
+        var cards = FateCardOwnership.starting(id);
+        for (var journal : java.util.List.of(java.util.Optional.<FateCardPurchaseJournal>empty(),
+            java.util.Optional.of(new FateCardPurchaseJournal(id, 0, java.util.List.of()))))
+        {
+            var document = FateCardAggregateChecks.attach(legacy, java.util.Optional.of(cards), journal);
+            try { codec.encode(document); fail("Card state must not be silently lost"); }
+            catch (IllegalArgumentException expected) { }
+            try { codec.encodeRetryCandidate(document); fail("Candidate writer must also refuse"); }
+            catch (IllegalArgumentException expected) { }
+        }
+    }
     private final Gson gson = new Gson(); // Test fixture; production uses RuneLite's injected instance.
     private final RunCodec codec = new RunCodec(gson);
     private final RunIdentity id = new RunIdentity("opaque-account:profile", UUID.randomUUID());

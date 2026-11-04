@@ -37,6 +37,7 @@ public final class DurableWheelDraws
             { throw new IllegalArgumentException("Command ID reused for different draw request"); }
             return receipt.draw();
         }
+        MasterRetryRecovery.requireUnused(current, commandId);
         if (run.revision() != expectedRevision || !current.catalogVersion().equals(pool.version()))
         { throw new IllegalArgumentException("Stale revision/catalog snapshot"); }
         if (run.state() != RunLifecycle.State.ACTIVE || run.obligation() != RunLifecycle.Obligation.NONE)
@@ -47,7 +48,7 @@ public final class DurableWheelDraws
         RunReceipt receipt = new RunReceipt(commandId, RunReceipt.Operation.DRAW, expectedRevision, nextRevision,
             next.state(), next.obligation(), draw);
         List<RunReceipt> receipts = new ArrayList<>(current.receipts()); receipts.add(receipt);
-        store.write(new RunDocument(next, current.catalogVersion(), receipts, current.fatePoints(), current.inventory(), current.grandFate(), current.grandProgress(), current.grandJournal(), current.grandActivations(), current.retainedGrandAttempt(next), current.pendingMasterSelection(), current.masterCreations(), current.masterResolutions(), current.masterSpins(), current.currentMasterSpecial().map(value -> value.obligation())), expectedRevision);
+        store.write(new RunDocument(next, current.catalogVersion(), receipts, current.fatePoints(), current.inventory(), current.grandFate(), current.grandProgress(), current.grandJournal(), current.grandActivations(), current.retainedGrandAttempt(next), current.pendingMasterSelection(), current.masterCreations(), current.masterResolutions(), current.masterSpins(), current.currentMasterSpecial().map(value -> value.obligation()), current.fateCards(), current.cardPurchases()), expectedRevision);
         return draw;
     }
 }

@@ -1,3 +1,55 @@
+## Current local continuation - aggregate card retention, 2026-11-03
+
+IDLE after bounded WB-FAT-02 aggregate retention increment (S). Supersedes older
+next-task prose. Reconciled source/tests: ownership, proposals, typed responses,
+contiguous card history, mixed-revision structural journal and separate-journal
+preparation already existed (DONE offline). Aggregate retention, copy preservation,
+card command overlap refusal and unsupported codec write refusal now DONE offline
+except codec/durable paths remain IMPLEMENTED_UNVERIFIED under real dependencies.
+No Git operations or merged-state verification; supervisor owns publication. No I01d.
+WB-D049/050/090/105/113/124 and supersessions remain authoritative; no new decision.
+
+RunDocument accepts explicit optional ordinary card ownership and purchase journal;
+legacy constructors retain absence. It checks identity, journal head bounds and
+command overlap with supported aggregate histories. All production aggregate copy
+sites were audited: lifecycle, draws, debits, Grand activation, Master creation,
+retry and Taint terminal pass both fields. Historical retry restoration deliberately
+constructs its original limited context; legacy codec reads retain absence.
+Shared retry admission includes card commands; lifecycle/draw/debit, creation
+recovery and Grand activation also refuse card collisions. Aggregate-based card
+preparation requires explicit ownership/journal; separate inputs cannot override
+retained state. Public and candidate codecs refuse card-bearing writes until a
+lossless versioned representation exists. No storage/service/UI caller enabled.
+This is structural retention, NOT mixed-history accounting/ownership reconstruction,
+authenticated quote admission, atomic purchase publication or durable replay.
+
+Fresh javac --release 11 compilation PASSED into build/continuation-card-aggregate-retention.
+Dependency-free aggregate, preparation, journal, history, receipt, proposal, ownership,
+retry operation, continuation and response Checks PASSED with individual exit checks.
+Final expanded aggregate Checks rerun PASSED: legacy absence, same-run state, foreign/
+future/missing ownership refusal, generic/domain-only command overlap, external-input
+mismatch, populated-journal Pause/Resume/Grand retention and empty-journal creation,
+retry/Taint retention at 0/1/513 retained draws. JUnit wrapper and codec refusal tests
+added. Gradle focused aggregate/preparation/codec/legacy attempt failed BEFORE
+compilation: inherited wrapper-cache lock Access is denied. JUnit/codec/durable/
+legacy UNVERIFIED. GRADLE_USER_HOME unchanged; no external inspection/workaround.
+
+Reconciliation: WB-FAT-02 PARTIAL. Mixed-history ownership/FP validation, atomic
+purchase publication/durable replay, explicit codec migration, reviewed quote admission
+and UI/services UNSTARTED. WB-FAT-03/04 UNSTARTED. WB-WHL-09 PARTIAL: candidate
+schema-20/JSON and read-only store/session recovery IMPLEMENTED_UNVERIFIED; public
+activation, locked evidence admission, durable retry/suspension UNSTARTED. WB-WHL-08
+PARTIAL (ordinary assignment/Sacrifice payloads UNSTARTED); WB-WHL-10
+PARTIAL_UNVERIFIED. Other partial/unstarted/client/catalog/decision BLOCKED holds
+stand; A56 deferred. No unfinished gameplay marked complete.
+
+Next bounded unit: validate ordinary-card ownership and FP transitions against
+mixed operation history and trusted prefixes before atomic purchase publication.
+Keep codec write refusal until explicit lossless migration is tested. Run focused
+JUnit/codec/store/session and legacy regressions when inherited dependencies are
+accessible. Existing Master Wheel remains unwired to incomplete gameplay. Local
+edits only; no credentials, secrets, workflows or Git operations accessed.
+
 ## Current local continuation - separate card journal admission, 2026-11-03
 
 IDLE after bounded WB-FAT-02 admission prerequisite (XS/S). Supersedes older

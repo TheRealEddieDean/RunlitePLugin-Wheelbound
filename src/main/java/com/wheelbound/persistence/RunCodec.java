@@ -57,6 +57,8 @@ public final class RunCodec
 
     private byte[] encode(RunDocument document, int schema)
     {
+        if (document.fateCards().isPresent() || document.cardPurchases().isPresent())
+        { throw new IllegalArgumentException("Card persistence requires a versioned lossless payload"); }
         RunLifecycle run = document.lifecycle();
         JsonObject payload = new JsonObject();
         payload.addProperty("accountKey", run.identity().accountKey());

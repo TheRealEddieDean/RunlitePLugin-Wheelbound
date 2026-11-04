@@ -35,6 +35,14 @@ public final class MasterRetryRecovery
     /** Shared fresh-command guard; call before invoking any retry draw source. */
     static void requireUnused(RunDocument current, UUID id)
     {
+        requireUnusedExceptCards(current, id);
+        if (current.cardPurchases().filter(h -> h.receipts().containsKey(id)).isPresent())
+        { throw new IllegalArgumentException("Command retained in card purchase journal"); }
+    }
+
+    /** Aggregate construction checks overlap before admitting the separate card journal. */
+    static void requireUnusedExceptCards(RunDocument current, UUID id)
+    {
         Objects.requireNonNull(current, "current");
         Objects.requireNonNull(id, "commandId");
         if (current.receipts().stream().anyMatch(r -> r.commandId().equals(id)))

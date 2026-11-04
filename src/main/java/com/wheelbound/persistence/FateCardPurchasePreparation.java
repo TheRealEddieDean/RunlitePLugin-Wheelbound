@@ -12,6 +12,18 @@ public final class FateCardPurchasePreparation
 {
     private FateCardPurchasePreparation() { }
 
+    /** Preparation from explicit aggregate state; still requires trusted quote admission. */
+    public static FateCardPurchaseProposal prepareFresh(RunDocument head, RunIdentity identity,
+        UUID commandId, long expectedRevision, FateCardPurchaseProposal.Quote quote)
+    {
+        Objects.requireNonNull(head, "head");
+        var ownership = head.fateCards().orElseThrow(() ->
+            new IllegalArgumentException("Explicit ordinary card ownership required"));
+        head.cardPurchases().orElseThrow(() ->
+            new IllegalArgumentException("Explicit card purchase journal required"));
+        return prepareFresh(head, ownership, identity, commandId, expectedRevision, quote);
+    }
+
     /**
      * Prepares with an explicit separate card journal. Validates its identity and
      * revision bounds and rejects command overlap with currently supported aggregate
@@ -25,6 +37,9 @@ public final class FateCardPurchasePreparation
     {
         Objects.requireNonNull(head, "head");
         Objects.requireNonNull(journal, "journal");
+        if (head.cardPurchases().filter(h -> !h.identity().equals(journal.identity())
+            || !h.receipts().equals(journal.receipts())).isPresent())
+        { throw new IllegalArgumentException("Separate card journal disagrees with aggregate"); }
         if (!head.lifecycle().identity().equals(journal.identity()))
         { throw new IllegalArgumentException("Foreign card purchase journal"); }
         // A journal constructed against a later head cannot authorize this request.
@@ -34,7 +49,7 @@ public final class FateCardPurchasePreparation
         { throw new IllegalArgumentException("Card purchase command already retained"); }
         for (var retained : journal.receipts().keySet())
         {
-            MasterRetryRecovery.requireUnused(head, retained);
+            MasterRetryRecovery.requireUnusedExceptCards(head, retained);
         }
         return prepareFresh(head, ownership, identity, commandId, expectedRevision, quote);
     }
@@ -52,6 +67,8 @@ public final class FateCardPurchasePreparation
     {
         Objects.requireNonNull(head, "head");
         Objects.requireNonNull(ownership, "ownership");
+        if (head.fateCards().filter(cards -> !cards.equals(ownership)).isPresent())
+        { throw new IllegalArgumentException("Separate card ownership disagrees with aggregate"); }
         if (head.pendingMasterSelection().isPresent()
             || head.currentMasterSpecial().isPresent()
             || head.masterSpins().filter(s -> s.reservation().isPresent()).isPresent())

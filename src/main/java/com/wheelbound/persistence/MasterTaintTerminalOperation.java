@@ -50,6 +50,6 @@ public final class MasterTaintTerminalOperation
             head.fatePoints(), head.inventory(), head.grandFate(), head.grandProgress(), head.grandJournal(),
             head.grandActivations(), head.grandCurrentAttempt(), Optional.empty(), head.masterCreations(),
             Optional.of(prepared.terminal().resolutions()), Optional.of(prepared.terminal().spins()),
-            Optional.of(prepared.current().obligation()));
+            Optional.of(prepared.current().obligation()), head.fateCards(), head.cardPurchases());
     }
 }

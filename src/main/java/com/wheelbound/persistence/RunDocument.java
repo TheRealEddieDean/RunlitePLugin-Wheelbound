@@ -17,6 +17,8 @@ import java.util.UUID;
 /** Foundation snapshot and lifecycle/draw/payment journal, not the playable-mode aggregate. */
 public final class RunDocument
 {
+    private final com.wheelbound.domain.FateCardOwnership fateCards;
+    private final com.wheelbound.domain.FateCardPurchaseJournal cardPurchases;
     private final com.wheelbound.domain.GrandCurrentAttempt grandCurrentAttempt;
     private final com.wheelbound.domain.GrandActivationHistory grandActivations;
     private final com.wheelbound.domain.GrandEvidenceJournal grandJournal;
@@ -180,6 +182,38 @@ public final class RunDocument
         Optional<com.wheelbound.domain.MasterSpinState> masterSpins,
         Optional<com.wheelbound.domain.MasterSpecialObligation> currentMasterSpecial)
     {
+        this(lifecycle, catalogVersion, receipts, fatePoints, inventory, grandFate, grandProgress,
+            grandJournal, grandActivations, grandCurrentAttempt, pendingMasterSelection, masterCreations,
+            masterResolutions, masterSpins, currentMasterSpecial, Optional.empty(), Optional.empty());
+    }
+
+    /** Explicit ordinary-card state; structural retention only, no purchase admission.
+     * Absence is unavailable legacy state. Journal retention does not reconstruct
+     * historical ownership or FP balances and cannot authorize durable publication. */
+    public RunDocument(RunLifecycle lifecycle, String catalogVersion, List<RunReceipt> receipts,
+        Optional<FatePointLedger> fatePoints, Optional<SliceInventory> inventory,
+        Optional<com.wheelbound.domain.SealedGrandFate> grandFate,
+        Optional<com.wheelbound.domain.GrandFateProgress> grandProgress,
+        Optional<com.wheelbound.domain.GrandEvidenceJournal> grandJournal,
+        Optional<com.wheelbound.domain.GrandActivationHistory> grandActivations,
+        Optional<com.wheelbound.domain.GrandCurrentAttempt> grandCurrentAttempt,
+        Optional<com.wheelbound.domain.MasterSelectionProvenance> pendingMasterSelection,
+        Optional<com.wheelbound.domain.MasterSelectionCreationJournal> masterCreations,
+        Optional<com.wheelbound.domain.MasterSelectionResolutions> masterResolutions,
+        Optional<com.wheelbound.domain.MasterSpinState> masterSpins,
+        Optional<com.wheelbound.domain.MasterSpecialObligation> currentMasterSpecial,
+        Optional<com.wheelbound.domain.FateCardOwnership> fateCards,
+        Optional<com.wheelbound.domain.FateCardPurchaseJournal> cardPurchases)
+    {
+        Objects.requireNonNull(lifecycle, "lifecycle");
+        this.fateCards = Objects.requireNonNull(fateCards, "fateCards").orElse(null);
+        if (this.fateCards != null && !this.fateCards.identity().equals(lifecycle.identity()))
+        { throw new IllegalArgumentException("Foreign ordinary card ownership"); }
+        var cards = Objects.requireNonNull(cardPurchases, "cardPurchases").orElse(null);
+        if (cards != null && (this.fateCards == null || !cards.identity().equals(lifecycle.identity())))
+        { throw new IllegalArgumentException("Card journal requires explicit same-run ownership"); }
+        this.cardPurchases = cards == null ? null : new com.wheelbound.domain.FateCardPurchaseJournal(
+            cards.identity(), lifecycle.revision(), cards.receipts().values());
         this.masterSpins = Objects.requireNonNull(masterSpins, "masterSpins").orElse(null);
         Objects.requireNonNull(lifecycle, "lifecycle");
         this.masterResolutions = Objects.requireNonNull(masterResolutions, "masterResolutions")
@@ -351,6 +385,11 @@ public final class RunDocument
                 this.currentMasterSpecial.obligation().validateResolution(receipt.taintTerminal().resolution());
             }
         }
+        if (this.cardPurchases != null)
+        {
+            for (UUID command : this.cardPurchases.receipts().keySet())
+            { MasterRetryRecovery.requireUnusedExceptCards(this, command); }
+        }
         MasterRetryHistoryBinding.validate(this);
         validateDebits();
         validatePurchases();
@@ -474,6 +513,10 @@ public final class RunDocument
     { return Optional.ofNullable(masterSpins); }
     public Optional<com.wheelbound.domain.MasterCurrentSpecialObligation> currentMasterSpecial()
     { return Optional.ofNullable(currentMasterSpecial); }
+    public Optional<com.wheelbound.domain.FateCardOwnership> fateCards()
+    { return Optional.ofNullable(fateCards); }
+    public Optional<com.wheelbound.domain.FateCardPurchaseJournal> cardPurchases()
+    { return Optional.ofNullable(cardPurchases); }
     public RunLifecycle lifecycle() { return lifecycle; }
     public Optional<com.wheelbound.domain.MasterSelectionProvenance> pendingMasterSelection()
     { return Optional.ofNullable(pendingMasterSelection); }
