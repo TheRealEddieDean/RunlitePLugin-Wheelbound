@@ -116,6 +116,6 @@ public final class MasterRetryOperation
             head.masterCreations(), head.masterResolutions(), head.masterSpins().map(spins ->
                 new com.wheelbound.domain.MasterSpinState(spins.version(), spins.identity(),
                     next.revision(), spins.allotted(), spins.reservation())),
-            head.currentMasterSpecial().map(value -> value.obligation()));
+            head.currentMasterSpecial().map(value -> value.obligation()), head.fateCards(), head.cardPurchases());
     }
 }
