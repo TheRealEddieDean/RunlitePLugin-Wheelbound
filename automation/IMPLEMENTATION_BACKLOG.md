@@ -1,3 +1,45 @@
+## Current local continuation - reader-first card aggregate migration, 2026-11-06
+
+IDLE after bounded WB-FAT-02 reader migration increment (S). Supersedes older next-task
+prose. Reconciled local code/tests: ownership/proposals/receipts/journals, restricted
+trusted-seed reconstruction and in-memory admission DONE offline; candidate JSON
+components IMPLEMENTED_UNVERIFIED. No Git or merged-state verification; supervisor
+owns commits/PRs/CI/merges. No I01d. Committed decisions and supersessions unchanged.
+
+RunCodec now reads schema 21 with explicit nullable fateCards/cardPurchases fields,
+strict component decoders and existing aggregate identity/revision/command/lifecycle/
+ledger validation. Schemas 1-20 preserve absence. Public writer remains schema 19;
+retry candidate remains schema 20 using a separate constant. BOTH still refuse card
+writes. Structural retention does not authenticate seed/history or reviewed prices.
+No durable purchase publication, UI/services, price adoption or gameplay activation.
+Existing Master Wheel source unchanged.
+
+Added FateCardAggregateCodecTest covering four paid pool/type combinations, long
+balances, exact paused replay through admission, legacy absence versus explicit empty
+journal, writer refusal/schema stability, old/future schema refusal, malformed/foreign/
+orphaned fields and inconsistent ledger refusal. New reader and Gson/JUnit tests are
+IMPLEMENTED_UNVERIFIED: focused Gradle component/aggregate/RunCodec/retry-reader/legacy
+attempt failed BEFORE compilation: inherited wrapper-cache lock Access is denied.
+GRADLE_USER_HOME unchanged; no workaround, stubs or external inspection. Fresh javac
+--release 11 via build/continuation-card-admission/sources.txt into
+build/continuation-card-reader PASSED. Four existing dependency-free Checks PASSED:
+admission, lifecycle history, aggregate and purchase journal. These do NOT compile or
+exercise Gson or the new reader. Python unavailable for checkpoint editing; native
+PowerShell used instead.
+
+WB-FAT-02 PARTIAL: candidate components and schema-21 reader IMPLEMENTED_UNVERIFIED.
+Writer migration/full round-trip, durable publication/replay, complete mixed-domain
+admission, authenticated reviewed quotes and UI/services UNSTARTED. FAT-03/04 UNSTARTED.
+WHL-08/09 PARTIAL; WHL-10 PARTIAL_UNVERIFIED. Other partial/unstarted/blocked holds stand;
+A56 deferred. No unfinished gameplay marked complete. Local edits only; no credentials,
+secrets or workflows accessed.
+
+Next task: run real Gson/JUnit components/aggregate reader, RunCodec/retry/store/session/
+legacy suites when inherited build access returns; fix failures before writer work.
+Then add package-private schema-21 candidate writer and full round-trip/refusal/migration
+checks. Keep public card writes refused until full verification passes. Locked durable
+purchase publication/replay follows that prerequisite.
+
 ## Current local continuation - candidate card purchase journal payload, 2026-11-06
 
 IDLE after bounded WB-FAT-02 persistence prerequisite (S). Supersedes older next-task
