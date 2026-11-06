@@ -27,7 +27,9 @@ public final class RunCodec
     public static final int SCHEMA = 19;
     // Reader-first migration: keep the writer's retry refusal until schema-20
     // round-trip and migration checks can run with the real Gson dependency.
-    private static final int READ_SCHEMA = 20;
+    private static final int RETRY_SCHEMA = 20;
+    // Reader-first card migration; neither writer publishes schema 21 yet.
+    private static final int READ_SCHEMA = 21;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -52,7 +54,7 @@ public final class RunCodec
     byte[] encodeRetryCandidate(RunDocument document)
     {
         MasterRetryHistoryBinding.validate(Objects.requireNonNull(document, "document"));
-        return encode(document, READ_SCHEMA);
+        return encode(document, RETRY_SCHEMA);
     }
 
     private byte[] encode(RunDocument document, int schema)
@@ -223,7 +225,9 @@ public final class RunCodec
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions")
                     : schema == 18
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions", "masterSpins")
-                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions", "masterSpins", "currentMasterSpecial"));
+                    : schema < 21
+                    ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions", "masterSpins", "currentMasterSpecial")
+                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions", "masterSpins", "currentMasterSpecial", "fateCards", "cardPurchases"));
             RunIdentity identity = new RunIdentity(string(payload, "accountKey"), UUID.fromString(string(payload, "runId")));
             if (!identity.equals(expected)) { throw new IOException("Foreign account/profile/run snapshot"); }
             RunLifecycle lifecycle = new RunLifecycle(identity, integer(payload, "revision"),
@@ -422,7 +426,13 @@ public final class RunCodec
                     ? Optional.of(MasterSelectionProvenanceJson.decode(payload.getAsJsonObject("pendingMasterSelection")))
                     : Optional.empty(),
                 creations,
-                resolutions, spins, special);
+                resolutions, spins, special,
+                schema >= 21 && !payload.get("fateCards").isJsonNull()
+                    ? Optional.of(FateCardOwnershipCodec.decode(payload.getAsJsonObject("fateCards"), identity))
+                    : Optional.empty(),
+                schema >= 21 && !payload.get("cardPurchases").isJsonNull()
+                    ? Optional.of(FateCardPurchaseJournalCodec.decode(payload.getAsJsonObject("cardPurchases"),
+                        identity, lifecycle.revision())) : Optional.empty());
         }
         catch (RuntimeException ex) { throw new IOException("Invalid snapshot; preserve original", ex); }
     }
