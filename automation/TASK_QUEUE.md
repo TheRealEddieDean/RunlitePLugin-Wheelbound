@@ -1,3 +1,10 @@
+## Current continuation pointer - qualified Questing selection binding, 2026-11-06
+
+See current checkpoint/session/backlog sections. WB-QST-02 remains PARTIAL:
+supplied eligibility-bound selection verified offline; complete durable assignment,
+client qualification and activation unfinished. No new pending gameplay/balance
+decision. Existing holds stand. No Git; supervisor owns publication. Next bounded
+review: objective-bound Questing reward quote payload requirements.
 ## Current local continuation - fresh quest transition prerequisite, 2026-11-06
 
 IDLE after bounded WB-QST-05 pure transition increment (XS/S). Supersedes older
