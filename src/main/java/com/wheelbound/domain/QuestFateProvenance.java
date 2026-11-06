@@ -54,6 +54,20 @@ public final class QuestFateProvenance
     public String finalStreamState() { return finalStreamState; }
     public QuestFateReward reward() { return reward; }
 
+    /**
+     * Require the accounting proposal for this exact Master resolution, including
+     * its complete retry transcript. Transaction/slice IDs alone are insufficient.
+     * This does not debit spins or prove that an allocation was durably retained.
+     * The enclosing aggregate must authenticate the original balance and publish
+     * allocation and assignment atomically; ordinary settlement timing is unchanged.
+     */
+    public void requireAllocation(MasterSpinAllocation allocation)
+    {
+        Objects.requireNonNull(allocation, "allocation");
+        if (!resolution.equals(allocation.resolution()))
+        { throw new IllegalArgumentException("Foreign or changed Questing spin allocation"); }
+    }
+
     /** Compare the complete frozen payload, including the Master retry prefix. */
     public void requireSameProvenance(QuestFateProvenance expected)
     {

@@ -1,3 +1,11 @@
+## Current continuation pointer - Questing allocation linkage, 2026-11-06
+
+See current checkpoint/session/backlog sections. QST-02/WHL-08 remain PARTIAL:
+exact supplied allocation linkage verified offline; complete durable assignment,
+reviewed catalogs and activation unfinished. No new pending gameplay/balance decision.
+Existing holds stand. No Git; supervisor publishes. Next: fresh Questing baseline
+and allowed-evidence session context against existing observation contracts.
+
 ## Current continuation pointer - Questing Master and generation provenance, 2026-11-06
 
 See current checkpoint/session/backlog sections. QST-02/WHL-08 remain PARTIAL:

@@ -27,12 +27,37 @@ public final class QuestFateProvenanceChecks
             original.initialStreamState(), original.readiness(), steps);
         MasterSelectionResolutionReceipt changedResolution = new MasterSelectionResolutionReceipt(
             resolution.commandId(), resolution.beforeRevision(), resolution.creation(), changedPrefix);
+        // Same transaction/command/slice cannot hide a changed empty-retry prefix.
+        rejects(() -> value.requireAllocation(MasterSpinAllocation.restore(changedResolution, 5)));
+        rejects(() -> value.requireAllocation(MasterSpinAllocation.restore(resolution(false, false), 5)));
+        rejects(() -> value.requireAllocation(MasterSpinAllocation.restore(resolution(true, false), 5)));
+        rejects(() -> value.requireAllocation(newAllocationWithCommand(resolution)));
+        rejects(() -> value.requireAllocation(MasterSpinAllocation.restore(
+            new MasterSelectionResolutionReceipt(resolution.commandId(), resolution.beforeRevision() + 1,
+                resolution.creation(), resolution.resolved()), 5)));
+        MasterSelectionCreationReceipt foreignAccount = new MasterSelectionCreationReceipt(
+            new RunIdentity("other-account", resolution.identity().runId()),
+            resolution.creation().beforeRevision(), resolution.creation().initial());
+        rejects(() -> value.requireAllocation(MasterSpinAllocation.restore(
+            new MasterSelectionResolutionReceipt(resolution.commandId(), resolution.beforeRevision(),
+                foreignAccount, resolution.resolved()), 5)));
+        rejects(() -> value.requireAllocation(null));
         rejects(() -> value.requireSameProvenance(make(changedResolution, questSlice, reward,
             "rng-v1:seed-7", "0", "3")));
         MasterSelectionProvenance restoredTranscript = new MasterSelectionProvenance(original.transactionId(),
             original.snapshotVersion(), original.catalogVersion(), original.streamDescriptor(),
             original.initialStreamState(), original.readiness(), original.landings().stream()
                 .map(MasterSelectionProvenance.Landing::step).collect(java.util.stream.Collectors.toList()));
+        MasterSelectionResolutionReceipt restoredResolution = new MasterSelectionResolutionReceipt(
+            resolution.commandId(), resolution.beforeRevision(), resolution.creation(), restoredTranscript);
+        for (long spins : new long[] {1, 5, Long.MAX_VALUE})
+        {
+            MasterSpinAllocation allocation = MasterSpinAllocation.restore(restoredResolution, spins);
+            value.requireAllocation(allocation);
+            value.requireAllocation(allocation);
+            check(allocation.spinsBefore() == spins && allocation.spinsAfter() == spins - 1);
+            check(allocation.resolution().equals(resolution));
+        }
         value.requireSameProvenance(make(new MasterSelectionResolutionReceipt(resolution.commandId(),
             resolution.beforeRevision(), resolution.creation(), restoredTranscript), questSlice,
             reward("q1", "v1"), "rng-v1:seed-7", "0", "3"));
@@ -71,6 +96,12 @@ public final class QuestFateProvenanceChecks
     private static QuestFateProvenance make(MasterSelectionResolutionReceipt resolution,
         UUID slice, QuestFateReward reward, String descriptor, String before, String after)
     { return new QuestFateProvenance(resolution, slice, "questing", descriptor, before, after, reward); }
+
+    private static MasterSpinAllocation newAllocationWithCommand(MasterSelectionResolutionReceipt resolution)
+    {
+        return MasterSpinAllocation.restore(new MasterSelectionResolutionReceipt(UUID.randomUUID(),
+            resolution.beforeRevision(), resolution.creation(), resolution.resolved()), 5);
+    }
 
     private static QuestFateReward reward(String selected, String quoteVersion)
     {
