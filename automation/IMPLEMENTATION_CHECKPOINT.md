@@ -1,3 +1,49 @@
+## Current local continuation - fresh quest transition prerequisite, 2026-11-06
+
+IDLE after bounded WB-QST-05 pure transition increment (XS/S). Supersedes older
+next-task prose. Reconciled local QuestFateOffers/Eligibility and focused tests:
+frozen choices/selection and supplied eligibility existed; mode completion did not.
+No Git operations or merged-state verification; supervisor owns publication.
+I01d not selected. No new gameplay or balance decision adopted.
+
+QuestFateCompletion retains the complete supplied selection and explicit
+NOT_STARTED/IN_PROGRESS/COMPLETE baseline. Requires an ACTIVE observation of the
+exact selected quest transitioning from a non-complete baseline to COMPLETE;
+foreign selections (including catalog/order changes), subquest identity, inactive
+states and already-complete baselines fail closed. WB-D070/102 and technical quest
+completion contract govern. Pure validation is repeatable, not settlement or replay
+protection. Caller must authenticate adjacent observations in an uninterrupted
+active window, capture fresh login/resume baselines and resolve actual assignment
+and supported quest mappings. Supplied IDs/state cannot establish those facts.
+No reward XP exemption, codec, production caller, settlement or activation.
+Existing Master Wheel unchanged; incomplete gameplay remains disabled.
+
+Verification: fresh javac --release 11 compiled all domain sources and three quest
+Checks into build/continuation-quest-completion. QuestFateCompletionChecks,
+QuestFateEligibilityChecks and QuestFateOffersChecks PASSED. New checks cover the
+full baseline/observed/run-state matrix, foreign/full-set/version/order binding,
+parent/subquest separation, restored equality/immutability and null/malformed inputs.
+JUnit wrapper added. Focused Gradle quest/legacy attempt failed BEFORE compilation:
+inherited wrapper-cache lock Access is denied. No JUnit or legacy pass claimed;
+GRADLE_USER_HOME unchanged; no cache workaround or external-path inspection.
+
+Reconciliation: WB-QST-05 now PARTIAL: pure supplied transition prerequisite DONE
+offline; current-assignment admission, fresh session/source evidence, deduplication,
+durable once-only completion and client mapping UNSTARTED/prerequisite-blocked.
+QST-01/02 remain PARTIAL; authored routes/client qualification and complete durable
+assignment unfinished. QST-03/04 PARTIAL legacy; QST-06/07 UNSTARTED mode integration.
+WHL-08 PARTIAL; reviewed XP catalog/restriction authority and full aggregate commitment
+unfinished. FAT-05 PARTIAL; actual assignment admission BLOCKED on commitment.
+FAT-02 schema-21 reader/components IMPLEMENTED_UNVERIFIED; writer/full migration and
+services UNSTARTED. Other recorded statuses and decision/client/balance holds stand.
+Public card-bearing writes remain refused. No complete gameplay claim.
+
+Next bounded task: reconcile selected quest commitment payload requirements with
+STATE_CONTRACT and existing Master resolution before implementing a settled binding
+increment. Do not treat a selected quest or lifecycle marker as aggregate assignment
+authority. Authored route catalogs and supported client mappings remain evidence-gated.
+Run real JUnit/Gson/codec/store/session/legacy suites when inherited build access returns.
+Local edits only; no credentials, secrets or workflows accessed.
 ## Current local continuation - supplied Questing eligibility, 2026-11-06
 
 IDLE after bounded WB-QST-01 eligibility snapshot increment (S). Supersedes older
