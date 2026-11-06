@@ -1,3 +1,10 @@
+## Recovery verification limit - 2026-11-06
+
+WB-FAT-02 admission recovery: inherited Gradle wrapper distribution lock returned
+Access is denied before compilation. No Gradle/JUnit/legacy/codec/durable pass
+claimed. Java 11 compilation and ten dependency-free Checks passed. Inherited
+GRADLE_USER_HOME unchanged; no external inspection or cache workaround.
+
 # Blockers and limitations
 
 | ID | Limitation | Evidence/state | Affected work | Safe independent work |
