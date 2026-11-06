@@ -1,3 +1,52 @@
+## Current local continuation - frozen XP eligibility observations, 2026-11-06
+
+IDLE after bounded WB-WHL-08 eligibility-payload prerequisite (S). Supersedes
+older next-task prose. Reconciled current production/tests: objective, starting
+pair, reward, permission and assignment-origin payloads already existed; none
+establish complete ordinary assignment commitment. No Git or merged-state checks.
+Supervisor owns publication. I01d not selected; no gameplay/balance rule invented.
+
+FateXpOfferEligibility retains the full FateXpOfferSet, an eligibility catalog
+version and ordered immutable nonempty requirement observations for each slot.
+QUALIFIED, INELIGIBLE, UNKNOWN and UNSUPPORTED remain distinct. Duplicate keys
+(including conflicting statuses), malformed keys/versions and nulls are refused.
+requireQualified compares the complete frozen offer set and requires every supplied
+observation to be QUALIFIED. It rejects changed account/run/assignment/revision,
+seeds, reward quotes and permission profiles. This checks supplied observations
+only: it proves neither catalog completeness nor authenticated live eligibility.
+Authority: FATE_CARDS eligibility-before-display, STATE_CONTRACT frozen assignment,
+WB-D090/091/098 and WB-D138/139 unavailable-state constraints. WB-D054 supersession
+stands. No pool-empty inference, reroll, quote authority, default by-product mapping,
+codec, production caller or activation. Existing Master Wheel source unchanged.
+Incomplete gameplay remains disabled.
+
+Fresh javac --release 11 compilation of all domain sources and FateXp*Checks into
+build/continuation-xp-eligibility PASSED. Eight checks PASSED: eligibility, offer
+origin, permissions, rewards, starting pair, objective, XP totals and XP journal.
+JUnit wrapper added. Focused eligibility/origin/legacy Gradle attempt failed BEFORE
+compilation: inherited wrapper-cache lock Access is denied. No JUnit/legacy pass
+claimed. GRADLE_USER_HOME unchanged; no cache workaround/external-path inspection.
+
+Reconciliation: WB-WHL-08 PARTIAL: supplied eligibility payload now DONE offline,
+alongside objective/pair/reward/permission/origin components. Reviewed eligibility
+catalog completeness/authentication, full restriction payloads, explicit selection,
+aggregate commitment, upgraded/purchased pools and Sacrifice remain UNSTARTED.
+WB-FAT-05 PARTIAL: accounting/journals/supplied-history checks DONE offline; actual
+current-assignment admission BLOCKED on complete aggregate commitment. Attribution,
+coverage, thresholds and settlement UNSTARTED. WB-FAT-02 PARTIAL: schema-21 reader
+components IMPLEMENTED_UNVERIFIED; writer/migration, durable purchase/replay and
+complete mixed-domain admission/services UNSTARTED. FAT-03/04 UNSTARTED; WHL-09
+PARTIAL; WHL-10 PARTIAL_UNVERIFIED. Other statuses/decision/client/balance holds
+stand; A56 deferred. Public card-bearing writes remain refused.
+
+Next bounded task: reconcile ordinary Standard XP restriction scope against approved
+contracts; implement an independently testable complete-offer validation increment
+only where settled. Supplied requirement keys are not a reviewed eligibility catalog
+or evidence classifier. Explicit selection and complete aggregate commitment must
+precede current-assignment evidence admission. Do not invent restricted methods,
+prices, rewards or generation tables. Run real JUnit/Gson/codec/store/session/legacy
+suites when inherited build access returns. Local edits only; no credentials, secrets
+or workflows accessed. Supervisor handles Git/PR/CI/merge.
 ## Current local continuation - assignment-bound XP offer origin, 2026-11-06
 
 IDLE after bounded WB-WHL-08 origin-binding prerequisite (S). Supersedes earlier
