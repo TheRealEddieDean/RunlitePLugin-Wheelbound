@@ -5,7 +5,8 @@ import java.util.Objects;
 /**
  * Explicit supplied current Questing binding. Does not infer an assignment from
  * history, authenticate catalogs/evidence or authorize persistence or settlement.
- * Aggregate retention and codec integration remain required before gameplay use.
+ * RunDocument retains this context in memory; codec and durable admission remain
+ * required before gameplay use.
  */
 public final class QuestFateCurrentAssignment
 {

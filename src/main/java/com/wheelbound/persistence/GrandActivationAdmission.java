@@ -36,7 +36,7 @@ public final class GrandActivationAdmission
         return new RunDocument(proposal.lifecycle(), current.catalogVersion(), receipts,
             current.fatePoints(), current.inventory(), current.grandFate(), current.grandProgress(),
             current.grandJournal(), Optional.of(proposal.history()), proposal.currentAttempt(),
-            current.pendingMasterSelection(), current.masterCreations(), current.masterResolutions(), current.masterSpins(), current.currentMasterSpecial().map(value -> value.obligation()), current.fateCards(), current.cardPurchases());
+            current.pendingMasterSelection(), current.masterCreations(), current.masterResolutions(), current.masterSpins(), current.currentMasterSpecial().map(value -> value.obligation()), current.fateCards(), current.cardPurchases(), current.currentQuestAssignment().map(value -> value.assignment()));
     }
 
     public static GrandActivationProposal propose(RunDocument current,

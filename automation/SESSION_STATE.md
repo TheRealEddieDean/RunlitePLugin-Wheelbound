@@ -1,3 +1,43 @@
+## Current continuation - in-memory current Questing aggregate, 2026-11-06
+
+IDLE after bounded WB-QST-02/WB-WHL-08 aggregate retention increment (S).
+Supersedes older next-task prose. Reconciled local code/tests, not merged state;
+no Git operations. I01d not selected. No new gameplay or balance decision.
+
+RunDocument now accepts an explicit optional QuestFateAssignment and exposes the
+validated QuestFateCurrentAssignment. Requires exact retained Master creation and
+terminal history, original reservation/accounting, matching catalog/account/run,
+revision and ACTIVE/PAUSED ACTIVE_OBJECTIVE lifecycle. Pending Master selection,
+Grand attempt and current special cannot coexist. Legacy constructors retain absence;
+history never synthesizes a current assignment. All production aggregate copy paths
+now carry the explicit commitment; incompatible transitions reject rather than drop
+it. Pause/resume preserves the original commitment/window and reservation unchanged.
+Both ordinary and candidate codec writers refuse Questing-bearing documents pending
+a versioned lossless payload. No durable publication, evidence admission, reward or
+activation was added. Existing Master Wheel source unchanged; gameplay stays disabled.
+
+Verification: Java 11 domain and aggregate dependency compilation plus all eight
+Questing Checks passed, including new aggregate retention/pause/resume/missing-history,
+missing-reservation, catalog and lifecycle refusal cases. Added JUnit codec-refusal
+coverage; it has not run. Focused Gradle assignment/legacy attempt failed before
+compilation: inherited wrapper-cache lock Access is denied. GRADLE_USER_HOME unchanged;
+no cache workaround or external inspection. No JUnit/Gson/store/legacy pass claimed.
+
+Reconciliation: QST-02/WHL-08 remain PARTIAL; supplied commitment/current binding and
+in-memory aggregate retention DONE offline. Codec, durable assignment admission,
+reviewed catalog/quote authority and trusted evidence remain UNSTARTED dependencies.
+QST-01/05 PARTIAL; QST-03/04 legacy PARTIAL; QST-06/07 mode integration UNSTARTED.
+FAT-05 current-assignment admission remains BLOCKED on durable complete commitment.
+FAT-02 schema-21 reader/components IMPLEMENTED_UNVERIFIED; writer/full migration and
+services UNSTARTED. Other recorded statuses and decision/balance/client holds stand.
+Public card writes remain refused. Historical merged work not remotely reverified.
+
+Next: implement a bounded versioned lossless Questing assignment codec prerequisite,
+reconciling all nested payloads and schema/migration rules first. Keep public writes
+refused until real Gson round-trip/mutation/migration and durable admission checks
+pass. Durable current-assignment authority and once-only settlement remain unfinished.
+Supervisor owns commits, PRs, CI and merges. Local edits only; no secrets/workflows.
+
 ## Current continuation - supplied current Questing binding, 2026-11-06
 
 IDLE after bounded WB-QST-02/WB-WHL-08 prerequisite (S); supersedes older next-task

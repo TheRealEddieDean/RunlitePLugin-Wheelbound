@@ -5,6 +5,15 @@ import java.util.UUID;
 /** Supplied-value fixtures; no live or durable authority claims. */
 public final class QuestFateAssignmentChecks
 {
+    public static QuestFateAssignment fixture()
+    {
+        var resolution = QuestFateProvenanceChecks.resolution(false, true);
+        var reward = QuestFateProvenanceChecks.reward("q1", "v1");
+        return new QuestFateAssignment(new QuestFateProvenance(resolution, new UUID(0, 2),
+            "questing", "rng", "0", "3", reward), MasterSpinAllocation.restore(resolution, 5),
+            window(resolution.identity(), resolution.afterRevision(), UUID.randomUUID(), reward));
+    }
+
     public static void main(String[] args)
     {
         MasterSelectionResolutionReceipt resolution = QuestFateProvenanceChecks.resolution(false, true);
@@ -54,6 +63,7 @@ public final class QuestFateAssignmentChecks
         rejects(() -> value.requireWindow(null));
         check(allocation.spinsBefore() == 5 && allocation.spinsAfter() == 4);
         currentBinding(value);
+        com.wheelbound.persistence.QuestFateAggregateChecks.verify(value);
         System.out.println("QuestFateAssignmentChecks PASSED");
     }
 

@@ -68,7 +68,8 @@ public final class FateCardPurchaseAdmission
             head.masterResolutions(), head.masterSpins().map(spins -> new MasterSpinState(
                 spins.version(), spins.identity(), next.revision(), spins.allotted(), spins.reservation())),
             head.currentMasterSpecial().map(value -> value.obligation()), Optional.of(purchase.ownership()),
-            Optional.of(new FateCardPurchaseJournal(identity, next.revision(), retained)));
+            Optional.of(new FateCardPurchaseJournal(identity, next.revision(), retained)),
+            head.currentQuestAssignment().map(value -> value.assignment()));
         FateCardLifecycleHistory.validate(proposed, seedLifecycle, seedLedger, seedOwnership);
         return new Result(proposed, receipt, false);
     }
