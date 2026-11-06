@@ -1,3 +1,49 @@
+## Current local continuation - qualified Questing selection binding, 2026-11-06
+
+IDLE after bounded WB-QST-02 selection prerequisite (XS/S). Supersedes older
+next-task prose. Reconciled local QuestFateOffers/Eligibility/Completion and tests:
+frozen choices, supplied eligibility and pure transitions existed; selection did
+not retain eligibility. No Git or merged-state verification; supervisor publishes.
+I01d not selected. No new gameplay or balance decision adopted.
+
+QuestFateSelection binds the complete supplied eligibility snapshot to the exact
+selected quest and ordered/versioned offer set. All displayed choices must have
+qualified quest-state, prerequisites and account-route observations. Foreign offer
+order/catalog and unqualified unselected choices fail closed. Full retained-value
+comparison rejects changed selection or route key/version. WB-D028/046/070/102 and
+STATE_CONTRACT govern. This is structural payload validation, not authenticated
+route/catalog authority, a complete assignment, once-only choice or evidence admission.
+No production caller, codec, reward exemption or gameplay activation. Existing Master
+Wheel source unchanged; incomplete gameplay remains disabled.
+
+Verification: fresh javac --release 11 compiled all domain sources and four quest
+Checks into build/continuation-quest-selection. QuestFateSelectionChecks,
+QuestFateCompletionChecks, QuestFateEligibilityChecks and QuestFateOffersChecks PASSED.
+New checks cover all 3/4/5 capacities and selected choices, every qualification axis
+and nonqualified status at every position, foreign catalog/order, route/version
+changes, restored equality/hash and nulls. Added JUnit wrapper. Focused quest/legacy
+Gradle attempt failed BEFORE compilation: inherited wrapper-cache lock Access is
+denied. No JUnit/legacy pass claimed; GRADLE_USER_HOME unchanged, no cache workaround.
+
+Reconciliation: WB-QST-02 remains PARTIAL: choices, supplied eligibility-bound
+selection DONE offline; capacity unlock authority, UI and full durable assignment
+UNSTARTED. QST-01 PARTIAL: authored route catalog/client qualification unfinished.
+QST-05 PARTIAL: pure transition DONE offline; actual assignment/session/source
+admission and durable once-only completion prerequisite-blocked. QST-03/04 PARTIAL
+legacy; QST-06/07 UNSTARTED mode integration. WHL-08 PARTIAL; complete ordinary
+assignment/aggregate binding unfinished. FAT-05 actual assignment admission BLOCKED.
+FAT-02 schema-21 reader/components IMPLEMENTED_UNVERIFIED; writer/full migration
+and services UNSTARTED. Existing other statuses, decision/client/balance holds and
+public card-write refusal stand. No unfinished gameplay claimed complete.
+
+Next bounded gameplay task: reconcile objective-bound Questing reward quote payloads
+against committed reward contracts, then implement only the settled supplied-value
+binding. Complete assignment still needs frozen randomness, allowed context,
+restrictions, reward/debit provenance and aggregate/session/revision admission;
+never promote this selection to current-assignment authority. Authored route catalogs
+and client mappings remain evidence-gated. Run real JUnit/Gson/codec/store/session/
+legacy suites when inherited build access returns. Local edits only; no credentials,
+secrets or workflows accessed. Supervisor owns all Git/publication operations.
 ## Current local continuation - fresh quest transition prerequisite, 2026-11-06
 
 IDLE after bounded WB-QST-05 pure transition increment (XS/S). Supersedes older
