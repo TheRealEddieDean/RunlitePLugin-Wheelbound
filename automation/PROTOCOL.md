@@ -1,3 +1,55 @@
+## Current local continuation - objective-bound XP reward offers, 2026-11-06
+
+IDLE after bounded WB-WHL-08 reward-payload prerequisite (S). This section
+supersedes older next-task prose, including stale source-history continuations.
+Reconciled local code/tests against latest checkpoint/backlog: frozen XP objective
+and distinct starting pair already exist; ordinary assignment authority does not.
+No Git operations or merged-state verification. Supervisor owns publication.
+I01d not selected. No new gameplay decision or balance constant adopted.
+
+FateXpRewardOffers now retains the original ordered starting Standard XP pair and
+two immutable objective-bound FP reward quotes with canonical quote key/version.
+Rejects swapped/foreign objective quotes, including identical XP deltas from a
+changed skill/kind/level/baseline/catalog/generator context. Value equality retains
+seeds, order, quote identities/versions and amounts. Nonnegative long quote amounts
+are structural inputs, including zero; this does not authorize free or zero-reward
+content. No calculation, quote authentication, ledger credit, audit judgment or
+settlement ordering. STATE_CONTRACT, FATE_CARDS and WB-D050/087/091/098 govern;
+WB-D054 supersession stands. Required restrictions/permission profiles, eligibility,
+identity and durable publication remain missing. No production caller, codec,
+selection or gameplay activation. Existing Master Wheel source unchanged.
+
+Fresh javac --release 11 compilation into build/continuation-xp-reward-offers PASSED.
+FateXpRewardOffersChecks, FateXpStartingOffersChecks and FateXpObjectiveChecks PASSED.
+Added JUnit wrapper. Checks cover objective mismatches, combat/skilling distinction,
+ordered immutable restoration, quote/version/amount equality, seed retention,
+repricing preservation, nulls, malformed keys and negative/long-boundary amounts.
+Focused Gradle reward/starting/objective/legacy attempt failed BEFORE compilation:
+inherited wrapper-cache lock Access is denied. No JUnit/legacy pass claimed;
+GRADLE_USER_HOME unchanged. No cache workaround or external-path inspection.
+
+Reconciliation: WB-WHL-08 remains PARTIAL. XP objective, starting pair and supplied
+objective-bound reward component DONE offline. Complete offers (restrictions,
+eligibility/identity), upgraded/purchased pools, selected assignment, aggregate
+binding and Sacrifice UNSTARTED. WB-FAT-05 PARTIAL: accounting/journals/source-history
+DONE offline; current-assignment admission BLOCKED by missing full commitment.
+Client attribution/coverage, thresholds, settlement and durable evidence UNSTARTED.
+WB-FAT-02 PARTIAL: schema-21 components/reader IMPLEMENTED_UNVERIFIED; writer/full
+migration, durable purchase/replay, complete mixed-domain admission and services
+UNSTARTED. FAT-03/04 UNSTARTED; WHL-09 PARTIAL; WHL-10 PARTIAL_UNVERIFIED. Other
+recorded completed/partial/unstarted/blocked statuses and decision/client/balance
+holds stand; A56 deferred. Public card writes still refused.
+
+Next bounded gameplay task: reconcile supported ordinary XP permission/restriction
+profiles with WB-D087/091/098 and current detector contracts, then implement their
+explicit frozen payload only where settled. Do not treat opaque profile strings as
+verified permissions or blanket by-product exemptions. Complete offers and explicit
+assignment selection/identity/aggregate binding must precede current-assignment
+evidence admission. Generation tables/modifiers/increments and reward schedules
+remain reviewed-input dependencies; do not adopt hypothesis amounts. When inherited
+build access returns, run real JUnit/Gson/codec/store/session/legacy suites.
+Local edits only; no credentials, secrets or workflows accessed.
+
 ## Current local continuation - cross-assignment evidence source validation, 2026-11-06
 
 IDLE after bounded WB-FAT-05 source-history prerequisite (S). Supersedes older
