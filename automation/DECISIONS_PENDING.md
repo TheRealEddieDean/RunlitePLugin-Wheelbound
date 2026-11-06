@@ -1,3 +1,10 @@
+## Current continuation pointer - frozen Questing choices, 2026-11-06
+
+See current checkpoint/session/backlog sections. WB-QST-02 PARTIAL: supplied
+choice/selection payload only, no eligibility or assignment authority. WB-WHL-08
+catalog/restriction holds remain. No new pending decision or balance approval.
+Existing holds stand. No Git; supervisor owns publication.
+
 ## Current continuation pointer - exact XP eligibility coverage, 2026-11-06
 
 See the current exact XP eligibility coverage sections in IMPLEMENTATION_CHECKPOINT.md,

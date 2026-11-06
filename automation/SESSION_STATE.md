@@ -1,3 +1,48 @@
+## Current local continuation - frozen Questing choices, 2026-11-06
+
+IDLE after bounded WB-QST-02 payload increment (S). Supersedes older next-task
+prose. Reconciled local domain/tests: XP objective, pair, reward, permissions,
+origin, supplied eligibility/manifest comparison and selection exist. Full ordinary
+assignment authority remains absent. No Git or merged-state verification; supervisor
+owns publication. I01d not selected. No new gameplay/balance decision.
+
+QuestFateOffers retains an ordered immutable three/four/five distinct supplied quest
+IDs, capacity and catalog version, and explicit selection bound to the entire set.
+Restore uses no RNG. Duplicate/null/malformed IDs, foreign selections and incomplete
+sets fail closed. WB-D028/046 and FATE_CARDS supersede stale 1-3 backlog wording.
+Capacity is not unlock authority. Exact-count validation defines this complete-set
+payload only, not behavior for fewer eligible quests or empty-pool retry authority.
+WB-D070/089/102 require current prerequisites and account-compatible routes; no
+universal quest/vendor exemption. No generation algorithm/distribution, eligibility
+claim, rewards/restrictions, assignment authority, durable selection, codec or caller.
+Existing Master Wheel source unchanged; incomplete gameplay remains disabled.
+
+Reconciliation: WB-QST-02 PARTIAL: supplied frozen choice/selection payload DONE
+offline; UI, upgrade gates/ownership and complete/durable assignment UNSTARTED.
+Legacy QST-01/03/04 remain PARTIAL, not complete mode eligibility/generation;
+authored routes/client evidence still needed. Other QST rows retain recorded status.
+WB-WHL-08 PARTIAL: reviewed catalog/profile authority and full restrictions block
+complete XP commitment. WB-FAT-05 PARTIAL: accounting/journals/history exist;
+current-assignment admission BLOCKED on aggregate commitment; attribution/coverage/
+thresholds/settlement UNSTARTED. WB-FAT-02 reader/components IMPLEMENTED_UNVERIFIED;
+writer/migration/full services UNSTARTED. Other statuses/decision/client/balance holds
+stand. Historical merged work not reverified. Public card-bearing writes refused.
+
+Verification: fresh javac --release 11 compiled all domain sources, QuestFateOffersChecks
+and all nine FateXp checks into build/continuation-quest-offers. Quest checks PASSED
+for all capacities, ordered restoration, version/full-set selection binding, membership,
+immutability, malformed/null/duplicate IDs and short/long sets. XP starting/reward/
+permission/objective checks also reported PASSED. Focused Gradle quest/XP-selection/
+legacy attempt failed BEFORE compilation: inherited wrapper-cache lock Access is
+denied. No JUnit or legacy pass claimed; GRADLE_USER_HOME unchanged.
+
+Next task: reconcile authored quest eligibility snapshots (quest state, prerequisites,
+account-compatible route) against WB-D070/089/102; implement a bounded settled component
+where eligible. Supplied IDs are not reviewed catalog, qualified offers or assignment
+authority. Missing route/catalog content stays blocked. Run real JUnit/Gson/codec/store/
+session/legacy suites when build access returns. Local edits only; no external paths,
+credentials, secrets or workflows read. Supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - exact XP eligibility coverage, 2026-11-06
 
 IDLE after bounded WB-WHL-08 validation prerequisite (XS/S). Supersedes older
