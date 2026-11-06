@@ -1,3 +1,46 @@
+## Current local continuation - consecutive Penance state, 2026-11-06
+
+IDLE after bounded WB-FAT-05 gameplay increment (XS/S). Supersedes older next-task
+prose. Reconciled source/tests and latest continuation: WB-FAT-02 ownership,
+proposals, journals, restricted reconstruction and in-memory admission DONE offline;
+candidate JSON components/schema-21 reader IMPLEMENTED_UNVERIFIED. Public writer
+schema 19 and retry candidate schema 20 still refuse card writes. Real Gson/JUnit
+verification remains a prerequisite to candidate writer work. No Git or merged-state
+verification; supervisor owns commits/PRs/CI/merges. No I01d selected.
+
+Implemented ConsecutivePenance, an immutable explicit trusted streak and pure
+end-of-Fate audit transition under WB-D054/087 and STATE_CONTRACT. CLEAN resets the
+whole streak; VIOLATION increments with checked arithmetic; INCOMPLETE/null cannot
+reset or advance it. Same rule applies to completed assigned Fate/Penance. This is
+not evidence judgment, completion admission, replay protection, punishment severity,
+FP settlement or persistence. No numeric threshold, event fine, third-offense rule,
+production caller or gameplay activation introduced. Existing Master Wheel unchanged.
+
+Fresh javac --release 11 compilation into build/continuation-penance PASSED;
+ConsecutivePenanceChecks PASSED (violation chains, clean resets/restart, restored
+boundaries, incomplete/null refusal, immutability, negative and overflow refusal).
+JUnit wrapper added. Focused Gradle new-test/legacy attempt failed BEFORE compilation:
+inherited Gradle wrapper cache lock Access is denied. Separate card components/reader/
+RunCodec/legacy attempt hit the same blocker. No JUnit, Gson, durable or legacy pass
+claimed. GRADLE_USER_HOME unchanged; no cache workaround or external inspection.
+
+Reconciliation: WB-FAT-05 PARTIAL, only consecutive-state arithmetic DONE offline;
+evidence collection/classification, objective-specific tolerances, completion admission,
+severity/FP settlement, atomic streak/obligation retention and UI/services UNSTARTED.
+Unknown evidence cannot be treated as clean. WB-FAT-02 remains PARTIAL; writer/full
+round-trip, durable purchase publication/replay, complete mixed-domain admission,
+authenticated reviewed quotes and services UNSTARTED. FAT-03/04 UNSTARTED. WHL-08/09
+PARTIAL; WHL-10 PARTIAL_UNVERIFIED. Other recorded holds stand; A56 deferred. No
+unfinished gameplay marked complete. All edits local; no credentials/secrets/workflows.
+
+Next remaining card dependency: execute real Gson/JUnit component/aggregate reader,
+RunCodec/retry/store/session/legacy suites when inherited build access returns; repair
+failures before package-private schema-21 candidate writer/full migration checks.
+Keep public card writes refused. Audit integration additionally needs supported active
+assignment evidence and replay-safe atomic completion/obligation retention; thresholds,
+punishment severity and FP ordering must not be guessed. Continue another independently
+testable approved gameplay increment while unavailable build dependencies block migration.
+
 ## Current local continuation - reader-first card aggregate migration, 2026-11-06
 
 IDLE after bounded WB-FAT-02 reader migration increment (S). Supersedes older next-task
@@ -6237,7 +6280,7 @@ Do not select I01d without a concrete failing test or required dependency.
 | WB-FAT-02 | Implement Lesser/Standard/Greater card ownership | PARTIAL |
 | WB-FAT-03 | Implement card offering pool and count upgrades | TODO |
 | WB-FAT-04 | Implement Fate card selection before target reveal | TODO |
-| WB-FAT-05 | Implement XP tolerance and penalties | TODO |
+| WB-FAT-05 | Implement XP tolerance and penalties | PARTIAL |
 | WB-FAT-06 | Implement completion and Reject settlement | TODO |
 | WB-FAT-07 | Implement Fate assignment history and audit trail | TODO |
 | WB-FAT-08 | Implement no-reroll and stale callback protection | PARTIAL |
