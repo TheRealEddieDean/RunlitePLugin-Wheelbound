@@ -1,3 +1,11 @@
+## Current continuation pointer - exact XP eligibility coverage, 2026-11-06
+
+See the current exact XP eligibility coverage sections in IMPLEMENTATION_CHECKPOINT.md,
+SESSION_STATE.md and IMPLEMENTATION_BACKLOG.md. WB-WHL-08 remains PARTIAL. Exact
+comparison with explicit caller-resolved manifests is implemented; actual reviewed
+catalog authority, complete assignment and durable admission remain unfinished.
+No new pending gameplay decision or balance approval. Existing holds stand. No Git.
+
 ## Current continuation pointer - frozen starting XP selection, 2026-11-06
 
 Latest reconciled continuation: IMPLEMENTATION_CHECKPOINT.md and SESSION_STATE.md,

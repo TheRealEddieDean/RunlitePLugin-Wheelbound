@@ -94,6 +94,42 @@ public final class FateXpOfferEligibility
         }
     }
 
+    /**
+     * Checks exact coverage against a caller-resolved catalog manifest for each slot.
+     * Expected keys are sets: observation order need not match catalog order. Empty,
+     * duplicate or malformed manifests are refused rather than implying qualification.
+     * The caller must authenticate the catalog/version and resolve the full applicable
+     * requirements for these offers; this method cannot establish that authority.
+     * It grants neither display permission nor current-assignment evidence authority.
+     */
+    public void requireQualifiedAgainst(FateXpOfferSet expectedOffers, String expectedCatalogVersion,
+        List<String> firstRequiredKeys, List<String> secondRequiredKeys)
+    {
+        if (!catalogVersion.equals(canonical(expectedCatalogVersion)))
+        { throw new IllegalArgumentException("Eligibility catalog version mismatch"); }
+        List<Set<String>> expected = List.of(manifest(firstRequiredKeys), manifest(secondRequiredKeys));
+        for (int slot = 0; slot < requirements.size(); slot++)
+        {
+            Set<String> observed = new HashSet<>();
+            for (Requirement requirement : requirements.get(slot)) { observed.add(requirement.key()); }
+            if (!observed.equals(expected.get(slot)))
+            { throw new IllegalArgumentException("Eligibility requirement coverage mismatch"); }
+        }
+        requireQualified(expectedOffers);
+    }
+
+    private static Set<String> manifest(List<String> supplied)
+    {
+        Set<String> keys = new HashSet<>();
+        for (String key : List.copyOf(supplied))
+        {
+            if (!keys.add(canonical(key)))
+            { throw new IllegalArgumentException("Duplicate catalog requirement"); }
+        }
+        if (keys.isEmpty()) { throw new IllegalArgumentException("Missing catalog requirements"); }
+        return keys;
+    }
+
     @Override public boolean equals(Object value)
     {
         if (!(value instanceof FateXpOfferEligibility)) { return false; }
