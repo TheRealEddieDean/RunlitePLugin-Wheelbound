@@ -1,3 +1,12 @@
+## Current continuation pointer - frozen starting XP selection, 2026-11-06
+
+Latest reconciled continuation: IMPLEMENTATION_CHECKPOINT.md and SESSION_STATE.md,
+"frozen starting XP selection". WB-WHL-08 remains PARTIAL: structural selection
+payload verified offline; complete/durable assignment and actual evidence admission
+remain unfinished. No new pending gameplay decision or balance approval recorded.
+Existing holds remain. JUnit/legacy Gradle blocked before compilation by inherited
+wrapper-cache lock access; nine dependency-free XP checks passed. No Git operations.
+
 ## Current local continuation - frozen XP permission payloads, 2026-11-06
 
 IDLE after bounded WB-WHL-08 permission-payload prerequisite (S). Supersedes older
