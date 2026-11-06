@@ -485,7 +485,14 @@ public final class RunCodec
         JsonElement value = object.get(key);
         if (value == null || !value.isJsonPrimitive() || !value.getAsJsonPrimitive().isNumber())
         { throw new IllegalArgumentException("Expected integer: " + key); }
-        return value.getAsBigDecimal().longValueExact();
+        try
+        {
+            return value.getAsBigDecimal().longValueExact();
+        }
+        catch (ArithmeticException ex)
+        {
+            throw new IllegalArgumentException("Expected integer within long bounds: " + key, ex);
+        }
     }
 
     public static String sha256(byte[] bytes)
