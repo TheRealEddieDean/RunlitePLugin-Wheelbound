@@ -1,3 +1,54 @@
+## Current local continuation - starting Standard XP offer component, 2026-11-06
+
+IDLE after bounded WB-WHL-08 payload prerequisite (S). Supersedes older next-task
+prose. Reconciled source/tests: FateXpObjective already exists; Master resolution
+commits a landing, RunLifecycle has no assignment identity, and RunDocument has no
+ordinary assignment payload. XP/kill totals, journals and supplied-history uniqueness
+remain DONE offline. No Git operations or merged-state verification; supervisor owns
+publication. I01d not selected.
+
+FateXpStartingOffers now retains the ordered immutable XP portion of exactly two
+starting Standard offers, each with an explicit supplied generation-stream seed.
+Rejects equal required-XP targets and mismatched skill/kind/real-level/baseline/catalog/
+generation context. Supports the existing five combat choices after skill selection.
+Value equality preserves order, payloads and seeds. WB-D024/049/050/091 and current
+FATE_CARDS govern; no balance constants, generator or collision algorithm adopted.
+Seeds do not prove independent/fair generation. Caller must authenticate generation,
+legal domain and snapshots. This component is NOT a complete offering or assignment:
+reward/restriction/identity context, atomic persistence and display admission remain
+missing. No production caller, codec, selection, debit/reward or gameplay activation.
+Existing Master Wheel source unchanged; incomplete gameplay remains disabled.
+
+Fresh javac --release 11 compilation PASSED into build/continuation-xp-starting-offers.
+FateXpStartingOffersChecks and FateXpObjectiveChecks PASSED. New coverage includes
+ordered restoration/equality, every context mismatch, duplicate targets, nulls,
+immutable list, seed boundaries, all combat choices, cross-kind/skill rejection and
+later-snapshot preservation. JUnit wrapper added. Focused Gradle starting-offer/
+objective/legacy attempt failed BEFORE compilation: inherited wrapper-cache lock
+Access is denied. No JUnit or legacy pass claimed; GRADLE_USER_HOME unchanged.
+No external-path inspection or cache workaround.
+
+Reconciliation: WB-WHL-08 remains PARTIAL: frozen XP objective and starting-pair XP
+component DONE offline; complete offers (including rewards/restrictions), upgraded/
+purchased pools, selected assignment, aggregate binding and Sacrifice UNSTARTED.
+WB-FAT-05 PARTIAL: accounting/journals/source-history DONE offline; actual current-
+assignment admission BLOCKED by missing complete commitment. Client attribution/
+coverage, thresholds, settlement and durable evidence UNSTARTED. WB-FAT-02 PARTIAL:
+schema-21 reader/components IMPLEMENTED_UNVERIFIED; writer/full migration, durable
+purchase/replay and complete mixed-domain admission UNSTARTED. FAT-03/04 UNSTARTED;
+WHL-09 PARTIAL; WHL-10 PARTIAL_UNVERIFIED. Other recorded completed/partial/unstarted/
+blocked statuses stand; decision/client/balance holds and A56 deferral remain.
+Public card writes still refused. No unfinished gameplay marked implemented.
+
+Next bounded gameplay task: reconcile approved ordinary XP reward/restriction quote
+payload contracts, then add complete starting Standard offer payload around these XP
+components only where settled. Preserve both generated offers and generation context;
+never regenerate on selection/restart. Reviewed generation tables/modifiers/increments
+remain BALANCE_TBD. Complete assignment identity/selection/aggregate binding must
+precede current-assignment evidence admission. When inherited build access returns,
+run real JUnit/Gson/codec/store/session/legacy suites. Local edits only; no credentials,
+secrets or workflows accessed. Supervisor handles commits, PRs, CI and merges.
+
 ## Current local continuation - frozen XP objective payload, 2026-11-06
 
 IDLE after bounded WB-WHL-08 assignment-payload prerequisite (S). This section
