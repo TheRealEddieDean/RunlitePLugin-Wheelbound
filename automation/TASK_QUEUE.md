@@ -1,3 +1,59 @@
+## Current local continuation - assignment XP event journal, 2026-11-06
+
+IDLE after bounded WB-FAT-05 evidence increment (S). Supersedes older next-task
+prose. Reconciled current production/tests: restricted card admission DONE offline;
+schema-21 card components/reader IMPLEMENTED_UNVERIFIED. Public schema-19 and retry
+schema-20 writers still refuse cards. Reattempted real card codec/legacy Gradle
+verification; inherited wrapper-cache lock Access is denied before compilation.
+Candidate writer remains blocked on that verification, not selected. No I01d,
+Git operations or merged-state verification; supervisor owns commits/PRs/CI/merges.
+
+FateXpEvidenceJournal now retains immutable run/assignment-bound source events
+(session, namespace, event key, attribution and delta), reconstructs XP totals from
+full explicit observations, rejects duplicate restored identities, and proposes
+active/current-revision/current-session observations. Exact event replay returns
+the unchanged current journal after later observations; changed attribution/delta
+is refused. Foreign run/assignment, stale revision/session, inactive observations,
+noncanonical keys, negative deltas and overflow are refused without mutation.
+Session/namespace are distinct key fields. Zero deltas retain their event identity.
+WB-D087/098 and WB-D054 supersession remain authoritative. No numeric rules adopted.
+
+This is pure structural accounting, not authenticated client evidence or durable
+admission. Caller must resolve the actual active assignment and session, authenticate
+source/attribution, prevent cross-assignment reuse and atomically persist the journal.
+No completeness/clean-audit inference, threshold judgment, kill audit, settlement,
+production caller, codec or gameplay activation. Existing Master Wheel unchanged.
+
+Fresh javac --release 11 compilation into build/continuation-xp-journal PASSED.
+FateXpEvidenceJournalChecks, FateXpEvidenceChecks and ConsecutivePenanceChecks each
+PASSED. Journal coverage includes all attribution buckets, original replay after
+later observations, payload conflicts, namespace/session separation, foreign binding,
+stale/inactive refusal, immutable restore, duplicate restore, zero events and overflow.
+JUnit wrapper added. Focused journal/XP/Penance/legacy Gradle attempt failed BEFORE
+compilation on the same inherited cache lock. No JUnit/Gson/durable/legacy pass claimed.
+GRADLE_USER_HOME unchanged; no cache workaround or external inspection.
+
+Reconciliation: WB-FAT-05 PARTIAL: streak arithmetic, XP totals and structural
+assignment-bound deduplication DONE offline. Supported client attribution/coverage,
+objective-specific audit/thresholds, kill evidence, completion admission, severity/FP
+settlement, durable streak/obligation/evidence retention and services UNSTARTED.
+WB-FAT-02 PARTIAL: writer/full migration, durable purchase/replay, complete mixed-domain
+admission, reviewed quote authentication and services UNSTARTED. FAT-03/04 UNSTARTED;
+WHL-08/09 PARTIAL; WHL-10 PARTIAL_UNVERIFIED. Other recorded completed/partial/unstarted/
+blocked holds stand; A56 deferred. Historical merged receipts not independently checked.
+No unfinished gameplay marked complete. Local edits only; no credentials, secrets,
+external paths or workflows accessed.
+
+Next remaining prerequisite: execute real Gson/JUnit card components/aggregate reader,
+RunCodec/retry/store/session/legacy checks when inherited build access returns; repair
+failures before schema-21 candidate writer/full migration work. Keep public card writes
+refused. For further independently testable gameplay while blocked, implement supported
+kill-objective evidence accounting under WB-D087, preserving unknown attribution and
+requiring explicit trusted source context; do not invent audit thresholds or settlement
+ordering. Full XP admission still needs trusted assignment/session resolution, source
+authentication, global event reuse checks and atomic durable retention.
+
+
 ## Current local continuation - XP evidence accounting, 2026-11-06
 
 IDLE after bounded WB-FAT-05 gameplay increment (XS/S). Supersedes older next-task
