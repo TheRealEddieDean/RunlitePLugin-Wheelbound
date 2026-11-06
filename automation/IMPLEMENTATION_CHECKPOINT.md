@@ -1,3 +1,38 @@
+## Current continuation - nested Questing reward codec, 2026-11-06
+
+IDLE after bounded WB-QST-02/WB-WHL-08 codec prerequisite (S). Supersedes older
+next-task prose. Reconciled local code/tests only; no Git or merged-state verification.
+Existing commitment/current binding and in-memory RunDocument retention remain
+verified offline. I01d not selected; no new gameplay or balance decision.
+
+Added package-private QuestFateRewardCodec, nested payload version 1: full ordered
+three/four/five quest choices, catalog, eligibility route/status observations,
+selected quest and exact reward quote. Strict fields/types/version and validated
+constructors; no reflective domain restore. Added focused JUnit real-Gson round-trip,
+mutation and altered-context tests. No aggregate schema change or public writer
+enablement. Master Wheel unchanged; incomplete gameplay remains disabled.
+
+Verification: Java 11 domain/aggregate dependency compilation and all eight existing
+Questing Checks passed. Focused new codec/aggregate/legacy Gradle attempt failed
+before compilation: inherited wrapper-cache lock Access is denied. New codec and
+JUnit/Gson tests remain IMPLEMENTED_UNVERIFIED, with no migration/store/legacy pass.
+GRADLE_USER_HOME unchanged; no cache workaround or external inspection.
+
+Reconciliation: QST-02/WHL-08 PARTIAL; nested reward codec IMPLEMENTED_UNVERIFIED.
+Original window/provenance/enclosing assignment codec, durable admission, reviewed
+catalog/quote authority and trusted evidence UNSTARTED. FAT-05 current-assignment
+admission BLOCKED on durable complete commitment. QST-01/05 PARTIAL; QST-03/04
+legacy PARTIAL; QST-06/07 mode integration UNSTARTED. FAT-02 schema-21 reader and
+components IMPLEMENTED_UNVERIFIED; writer/full migration/services UNSTARTED.
+Other statuses and client/balance/decision holds stand. No new pending decision.
+
+Payload inventory and schema/migration boundaries:
+docs/wheelbound/QUESTING_CODEC_CONTINUATION.md. Next: run real Gson verification
+when inherited build access returns; implement original observation-window payload,
+then exact provenance/allocation binding and a future enclosing schema with explicit
+legacy absence. Public Questing/card writes stay refused pending complete validation.
+Supervisor owns commits, PRs, CI and merges. Local changes only.
+
 ## Current continuation - in-memory current Questing aggregate, 2026-11-06
 
 IDLE after bounded WB-QST-02/WB-WHL-08 aggregate retention increment (S).
