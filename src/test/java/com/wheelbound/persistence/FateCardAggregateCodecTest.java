@@ -12,7 +12,8 @@ import static org.junit.Assert.*;
 /** Reader-first fixtures; fixture prices confer no quote authority. */
 public class FateCardAggregateCodecTest
 {
-    private final Gson gson = new Gson();
+    // Schema fixtures must retain explicit nulls for unavailable legacy state.
+    private final Gson gson = new GsonBuilder().serializeNulls().create();
     private final RunCodec codec = new RunCodec(gson);
     private final RunIdentity id = new RunIdentity("card-migration", new UUID(201, 1));
 
