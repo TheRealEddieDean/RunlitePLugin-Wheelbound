@@ -1,3 +1,54 @@
+## Recovered local continuation - atomic card snapshot proposal, 2026-11-06
+
+IDLE after recovering only the interrupted WB-FAT-02 in-memory admission increment
+(S). Supersedes older next-task prose. Reviewed the existing partial
+FateCardPurchaseAdmission implementation against preparation, trusted-seed history,
+aggregate copy invariants and WB-D049/050/090/105/113/124 with recorded supersessions.
+Prior ownership/proposal/receipt/journal/reconstruction prerequisites remain DONE
+offline. No new task selected, no I01d, no Git or merged-state verification.
+
+FateCardPurchaseAdmission.prepare now has focused dependency-free checks and a JUnit
+wrapper. It validates the complete supported trusted-seed card/Pause/Resume/plain-FP-
+debit segment, proposes ownership/payment/revision/journal together, preserves all
+other aggregate fields, and revalidates the proposed head. Exact command replay
+returns the unchanged current head and original receipt after later purchases,
+debits and Pause; conflicting requests and unsupported histories are refused.
+Seed/quote authority remains the caller's duty. This is a pure snapshot proposal,
+not durable publication or a purchase acknowledgement. No prices, UI/service caller,
+codec migration or gameplay enabled. Existing Master Wheel unchanged.
+
+Fresh javac --release 11 compilation PASSED using
+build/continuation-card-admission/sources.txt into build/continuation-card-admission.
+Ten dependency-free Checks PASSED individually: admission, lifecycle history,
+aggregate, preparation, journal, history, receipt, proposal, ownership and retry
+operation. New coverage includes all four paid pool/type combinations, fresh purchase
+after debit, inventory/seal/spin preservation, legacy absence, exact paused replay,
+changed quote fields/revision/identity, wrong trusted seed on fresh/replay, duplicate
+ownership, generic command collision, insufficient funds and unsupported Master work.
+Initial test compilation used a nonexistent receipt accessor, and the inventory
+fixture initially omitted required acquisition history; both corrected before the
+successful fresh compilation and complete check run.
+Focused Gradle admission/lifecycle/aggregate/legacy attempt failed BEFORE compilation:
+inherited wrapper-cache lock Access is denied. JUnit/legacy/codec/durable remain
+UNVERIFIED. GRADLE_USER_HOME unchanged; no cache workaround or external inspection.
+
+Reconciliation: WB-FAT-02 remains PARTIAL. Supported in-memory atomic snapshot proposal
+and exact original replay DONE offline. Complete mixed-domain admission, durable
+purchase publication/replay, codec migration, authenticated reviewed quotes and
+UI/services UNSTARTED. WB-FAT-03/04 UNSTARTED. WHL-09 remains PARTIAL (candidate codec/
+read-only recovery IMPLEMENTED_UNVERIFIED; locked evidence/durable execution/public
+activation UNSTARTED); WHL-08 PARTIAL (ordinary assignment/Sacrifice payloads UNSTARTED);
+WHL-10 PARTIAL_UNVERIFIED. Other recorded partial/unstarted/blocked holds stand; A56
+deferred. No unfinished gameplay marked complete. Local edits only; supervisor owns
+commits, PRs, CI and merges. No credentials, secrets or workflows accessed.
+
+Next remaining dependency, NOT started in this recovery: explicit lossless versioned
+card ownership/purchase-journal codec migration and refusal/regression checks before
+locked durable purchase publication/replay for the supported subset. Broader-domain
+admission remains separate. Keep existing card-bearing codec write refusal until
+migration is verified; run focused JUnit/codec/store/session/legacy checks when the
+inherited dependencies become accessible.
+
 ## Current local continuation - terminal aggregate binding prerequisite, 2026-10-31
 
 IDLE after bounded WB-WHL-08 structural binding increment (S).
