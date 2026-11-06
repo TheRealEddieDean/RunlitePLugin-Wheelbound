@@ -1,3 +1,38 @@
+## Current continuation - supplied current Questing binding, 2026-11-06
+
+IDLE after bounded WB-QST-02/WB-WHL-08 prerequisite (S); supersedes older next-task
+prose. Reconciled production and tests: supplied QuestFateAssignment exists;
+RunDocument still has no ordinary assignment retention. Implemented
+QuestFateCurrentAssignment.restore: explicit commitment must match retained full
+terminal history and original spin reservation/accounting, account/run, creation
+revision and ACTIVE/PAUSED ACTIVE_OBJECTIVE lifecycle. Later terminal resolutions
+supersede the binding. No inference from history, debit, settlement or activation.
+Refresh windows remain separate; paused binding does not authorize evidence/rewards.
+
+QST-02/WHL-08 remain PARTIAL: supplied current binding DONE offline; RunDocument
+retention, preservation across aggregate operations, codec and durable admission
+UNSTARTED. Reviewed catalog/quote authority and trusted client evidence remain
+required. QST-01/05 PARTIAL; QST-06/07 mode integration UNSTARTED. FAT-05 actual
+current-assignment admission remains BLOCKED on durable complete commitment.
+FAT-02 schema-21 reader/components IMPLEMENTED_UNVERIFIED; writer/full migration
+and services UNSTARTED. Other prior statuses/decision/balance/client holds stand.
+No merged-state verification or Git operations; supervisor owns publication.
+I01d not selected. No new gameplay decision. Existing Master Wheel unchanged.
+
+Verification: Java 11 domain/Questing Checks compilation passed; all eight Questing
+Checks exited 0. Focused current-binding cases exercise all lifecycle states and
+obligations, exact allocation amount, missing reservation/history, foreign identity,
+stale head, nulls, supersession and immutable accounting. Existing JUnit assignment
+wrapper includes these cases. Gradle focused assignment/legacy attempt failed before
+compilation: inherited wrapper-cache lock Access is denied. No JUnit/legacy pass;
+GRADLE_USER_HOME unchanged and no cache workaround or external inspection.
+
+Next: integrate explicit current Questing payload into RunDocument with exact retained
+Master creation/resolution/reservation binding and preservation across all aggregate
+copy paths. Keep public writes fail-closed until codec and complete admission are
+verified. This increment supplies binding only, not aggregate retention or trusted
+current-assignment authority. Local edits only; no credentials/secrets/workflows.
+
 ## Current continuation pointer - supplied Questing assignment binding, 2026-11-06
 
 See current checkpoint/session/backlog sections. QST-02/WHL-08 remain PARTIAL:

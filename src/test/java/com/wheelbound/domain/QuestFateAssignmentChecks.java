@@ -53,7 +53,58 @@ public final class QuestFateAssignmentChecks
         rejects(() -> new QuestFateAssignment(provenance, allocation, null));
         rejects(() -> value.requireWindow(null));
         check(allocation.spinsBefore() == 5 && allocation.spinsAfter() == 4);
+        currentBinding(value);
         System.out.println("QuestFateAssignmentChecks PASSED");
+    }
+
+    private static void currentBinding(QuestFateAssignment value)
+    {
+        var resolution = value.provenance().resolution();
+        var history = new MasterSelectionResolutions(value.identity(), value.creationRevision(),
+            java.util.List.of(resolution));
+        var spins = new MasterSpinState(MasterSpinState.VERSION, value.identity(),
+            value.creationRevision(), 5, java.util.Optional.of(value.allocation()));
+        for (RunLifecycle.State state : RunLifecycle.State.values())
+        {
+            for (RunLifecycle.Obligation obligation : RunLifecycle.Obligation.values())
+            {
+                var head = new RunLifecycle(value.identity(), value.creationRevision(), state, obligation);
+                if ((state == RunLifecycle.State.ACTIVE || state == RunLifecycle.State.PAUSED)
+                    && obligation == RunLifecycle.Obligation.ACTIVE_OBJECTIVE)
+                {
+                    var bound = QuestFateCurrentAssignment.restore(value, history, spins, head);
+                    check(bound.assignment() == value && bound.lifecycle() == head);
+                }
+                else { rejects(() -> QuestFateCurrentAssignment.restore(value, history, spins, head)); }
+            }
+        }
+        var head = context(value.identity(), value.creationRevision() + 1);
+        QuestFateCurrentAssignment.restore(value, history, spins, head);
+        var changedSpins = new MasterSpinState(MasterSpinState.VERSION, value.identity(),
+            value.creationRevision(), 6, java.util.Optional.of(MasterSpinAllocation.restore(resolution, 6)));
+        rejects(() -> QuestFateCurrentAssignment.restore(value, history, changedSpins, head));
+        var emptySpins = new MasterSpinState(MasterSpinState.VERSION, value.identity(),
+            value.creationRevision(), 5, java.util.Optional.empty());
+        rejects(() -> QuestFateCurrentAssignment.restore(value, history, emptySpins, head));
+        var emptyHistory = new MasterSelectionResolutions(value.identity(), head.revision(), java.util.List.of());
+        rejects(() -> QuestFateCurrentAssignment.restore(value, emptyHistory, spins, head));
+        var other = QuestFateProvenanceChecks.resolution(false, false);
+        var later = new MasterSelectionResolutionReceipt(other.commandId(), head.revision() + 1,
+            new MasterSelectionCreationReceipt(value.identity(), head.revision(), other.creation().initial()),
+            other.resolved());
+        var superseding = new MasterSelectionResolutions(value.identity(), later.afterRevision(),
+            java.util.List.of(resolution, later));
+        rejects(() -> QuestFateCurrentAssignment.restore(value, superseding, spins,
+            context(value.identity(), later.afterRevision())));
+        rejects(() -> QuestFateCurrentAssignment.restore(value, history, spins,
+            context(new RunIdentity("other", value.identity().runId()), head.revision())));
+        rejects(() -> QuestFateCurrentAssignment.restore(value, history, spins,
+            context(value.identity(), value.creationRevision() - 1)));
+        rejects(() -> QuestFateCurrentAssignment.restore(null, history, spins, head));
+        rejects(() -> QuestFateCurrentAssignment.restore(value, null, spins, head));
+        rejects(() -> QuestFateCurrentAssignment.restore(value, history, null, head));
+        rejects(() -> QuestFateCurrentAssignment.restore(value, history, spins, null));
+        check(spins.allotted() == 5 && spins.available() == 4);
     }
 
     private static RunLifecycle context(RunIdentity identity, long revision)
