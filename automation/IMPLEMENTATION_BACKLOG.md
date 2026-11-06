@@ -1,3 +1,54 @@
+## Current local continuation - Questing Master and generation provenance, 2026-11-06
+
+IDLE after bounded WB-QST-02/WB-WHL-08 provenance prerequisite (S).
+Supersedes older next-task prose. Reconciled local production/tests: Questing offers,
+eligibility-bound selection, reward binding and pure completion already existed;
+Master-resolution/generation binding was unstarted. Historical merged receipts were
+not reverified; no Git operations. Supervisor owns publication. I01d not selected.
+
+QuestFateProvenance retains the full Master resolution (including run/account,
+revisions and retry transcript), exact ordinary slice and supplied Questing activity
+key, opaque offer-generation descriptor (algorithm/version/seed), before/after
+stream states and full selected reward payload. Rejects special/foreign landings,
+activity mismatch and changed retained context. Restoration runs no RNG. Selection
+is the player's existing supplied choice, not a random quest draw. STATE_CONTRACT
+and WB-D028/070/102 govern; no new gameplay/balance decision adopted. Supplied
+activity/stream declarations do not authenticate catalog meaning, generation,
+continuity, route evidence, reward schedules or current-assignment authority.
+No codec, production caller, debit, aggregate admission or activation. Existing
+Master Wheel source unchanged; incomplete gameplay stays disabled.
+
+Verification: fresh javac --release 11 compiled all domain sources and six Questing
+Checks into build/continuation-quest-provenance. Completion, Eligibility, Offers,
+Provenance, Reward and Selection Checks PASSED. Added JUnit wrapper. New coverage:
+restored transcript/value equality/hash, exact slice/activity binding, special
+refusal, changed retry-prefix state with unchanged resolution IDs, foreign resolution,
+changed choice/quote/stream descriptor/seed/states, nulls and malformed fields.
+Repeated opaque states remain legal; no RNG advancement policy invented.
+Focused Gradle provenance/reward/selection/legacy attempt failed BEFORE compilation:
+inherited wrapper-cache lock Access is denied. No JUnit or legacy pass claimed.
+GRADLE_USER_HOME unchanged; no cache workaround or external-path inspection.
+
+Reconciliation: QST-02 remains PARTIAL: supplied choices, qualified selection,
+selected quote and generation/Master provenance DONE offline. Capacity ownership,
+UI, reviewed generation/quote authority and complete durable assignment UNSTARTED.
+QST-01 PARTIAL: supplied snapshot DONE offline; authored routes/client qualification
+unfinished. QST-05 PARTIAL: pure transition DONE offline; actual assignment/session/
+source admission and once-only durable settlement prerequisite-blocked. QST-03/04
+PARTIAL legacy; QST-06/07 UNSTARTED mode integration. WHL-08 PARTIAL: complete ordinary
+assignment/aggregate binding unfinished. FAT-05 current-assignment admission BLOCKED
+on that commitment. FAT-02 schema-21 components/reader IMPLEMENTED_UNVERIFIED;
+writer/full migration and services UNSTARTED. Other recorded statuses and decision,
+client and balance holds stand. Public card writes remain refused.
+
+Next bounded gameplay task: reconcile Questing assignment allowed-evidence context,
+fresh baseline and debit/allocation linkage against MasterSpinAllocation and existing
+completion contracts. Implement a settled independently testable prerequisite without
+promoting supplied provenance into current-assignment authority. Authored catalogs,
+supported client mappings, reviewed quotes and atomic aggregate admission remain
+required. Run real JUnit/Gson/codec/store/session/legacy suites when inherited build
+access returns. Local edits only; no credentials, secrets or workflows accessed.
+
 ## Current local continuation - selection-bound Questing reward quote, 2026-11-06
 
 IDLE after bounded WB-QST-02/WB-WHL-08 reward-payload prerequisite (XS/S).

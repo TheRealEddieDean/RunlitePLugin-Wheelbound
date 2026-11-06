@@ -1,3 +1,11 @@
+## Current continuation pointer - Questing Master and generation provenance, 2026-11-06
+
+See current checkpoint/session/backlog sections. QST-02/WHL-08 remain PARTIAL:
+supplied Master-resolution/generation binding verified offline; full durable
+assignment, reviewed catalog/quote authority and activation unfinished. No new
+pending gameplay/balance decision. Existing holds stand. No Git; supervisor publishes.
+Next bounded review: Questing evidence context, fresh baseline and allocation linkage.
+
 ## Current continuation pointer - selection-bound Questing reward quote, 2026-11-06
 
 See current checkpoint/session/backlog sections. QST-02/WHL-08 remain PARTIAL:
