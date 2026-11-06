@@ -15,6 +15,31 @@ public final class FateXpOfferEligibilityChecks
         FateXpOfferEligibility snapshot = new FateXpOfferEligibility(offers, "eligibility-v1", supplied, List.of(access));
         supplied.clear();
         snapshot.requireQualified(offers("account", 0, 7));
+        snapshot.requireQualifiedAgainst(offers("account", 0, 7), "eligibility-v1",
+            List.of("support", "access"), List.of("access"));
+        // A qualified subset still passes the legacy supplied-only check, but cannot
+        // satisfy a manifest containing a missing requirement in either slot.
+        invalid(() -> snapshot.requireQualifiedAgainst(offers, "eligibility-v1",
+            List.of("access", "support", "missing"), List.of("access")));
+        invalid(() -> snapshot.requireQualifiedAgainst(offers, "eligibility-v1",
+            List.of("access", "support"), List.of("access", "missing")));
+        invalid(() -> snapshot.requireQualifiedAgainst(offers, "eligibility-v1",
+            List.of("access"), List.of("access")));
+        invalid(() -> snapshot.requireQualifiedAgainst(offers, "eligibility-v1",
+            List.of("access", "support"), List.of("support")));
+        invalid(() -> snapshot.requireQualifiedAgainst(offers, "v2",
+            List.of("access", "support"), List.of("access")));
+        for (List<String> malformed : List.of(List.<String>of(), List.of("access", "access"),
+            List.of(""), List.of(" access"), List.of("access ")))
+        {
+            invalid(() -> snapshot.requireQualifiedAgainst(offers, "eligibility-v1", malformed, List.of("access")));
+            invalid(() -> snapshot.requireQualifiedAgainst(offers, "eligibility-v1", List.of("access", "support"), malformed));
+        }
+        invalid(() -> snapshot.requireQualifiedAgainst(offers, null, List.of("access"), List.of("access")));
+        invalid(() -> snapshot.requireQualifiedAgainst(offers, "eligibility-v1", null, List.of("access")));
+        invalid(() -> snapshot.requireQualifiedAgainst(offers, "eligibility-v1", List.of("access"), null));
+        invalid(() -> snapshot.requireQualifiedAgainst(offers, "eligibility-v1",
+            java.util.Arrays.asList("access", null), List.of("access")));
         check(snapshot.offers() == offers && snapshot.requirements().get(0).equals(List.of(access, support)));
         check(snapshot.catalogVersion().equals("eligibility-v1"));
         FateXpOfferEligibility restored = new FateXpOfferEligibility(offers("account", 0, 7),
@@ -33,14 +58,23 @@ public final class FateXpOfferEligibilityChecks
                 FateXpOfferEligibility candidate = new FateXpOfferEligibility(offers, "eligibility-v1",
                     List.of(first ? observation : access), List.of(first ? access : observation));
                 if (status == FateXpOfferEligibility.Status.QUALIFIED) { candidate.requireQualified(offers); }
-                else { invalid(() -> candidate.requireQualified(offers)); }
+                else
+                {
+                    invalid(() -> candidate.requireQualified(offers));
+                    invalid(() -> candidate.requireQualifiedAgainst(offers, "eligibility-v1",
+                        List.of("access"), List.of("access")));
+                }
                 check(candidate.requirements().get(first ? 0 : 1).get(0).status() == status);
             }
         }
         for (FateXpOfferSet foreign : List.of(offers("other", 0, 7), offers("account", 1, 7), offers("account", 0, 8),
             new FateXpOfferSet(offers.identity(), UUID.randomUUID(), 0, offers.offers()),
             new FateXpOfferSet(new RunIdentity("account", UUID.randomUUID()), offers.assignmentId(), 0, offers.offers())))
-        { invalid(() -> snapshot.requireQualified(foreign)); }
+        {
+            invalid(() -> snapshot.requireQualified(foreign));
+            invalid(() -> snapshot.requireQualifiedAgainst(foreign, "eligibility-v1",
+                List.of("access", "support"), List.of("access")));
+        }
         FateXpRewardOffers rewards = offers.offers().rewards();
         FateXpObjective a = rewards.targets().offers().get(0).objective();
         FateXpObjective b = rewards.targets().offers().get(1).objective();

@@ -1,3 +1,52 @@
+## Current local continuation - exact XP eligibility coverage, 2026-11-06
+
+IDLE after bounded WB-WHL-08 validation prerequisite (XS/S). Supersedes older
+next-task prose. Reconciled production and tests: objective/pair/reward/permissions,
+offer identity, supplied eligibility and explicit selection already exist. Complete
+ordinary assignment and durable selection remain absent. No Git operations or merged
+state verification; supervisor owns publication. I01d not selected.
+
+FateXpOfferEligibility.requireQualifiedAgainst checks both slots against explicit
+caller-resolved catalog requirement manifests: exact key coverage, catalog version,
+complete frozen offer equality and qualified observations. Missing/extra keys,
+duplicate/empty/malformed manifests, unknown/unsupported/ineligible observations and
+foreign origins fail closed. Requirement order need not match manifest order; retained
+observation order remains unchanged. Existing supplied-only validation is preserved.
+FATE_CARDS eligibility-before-display and STATE_CONTRACT frozen assignments govern;
+WB-D087/091/098 and WB-D054 supersession stand. No gameplay/balance rule invented.
+
+This validates supplied manifest coverage, not reviewed catalog authenticity or
+completeness of the manifest itself. No restriction catalog, client classifier,
+assignment authority, codec, production caller or feature activation. Existing Master
+Wheel source unchanged; incomplete gameplay remains disabled.
+
+Reconciliation: WB-WHL-08 PARTIAL; manifest comparison implemented, existing frozen
+components remain offline verified. Reviewed catalog resolution/authentication, full
+restriction payloads, durable selection/aggregate commitment, upgraded/purchased pools
+and Sacrifice UNSTARTED. WB-FAT-05 PARTIAL; accounting/journals/supplied history exist,
+current-assignment admission BLOCKED on complete aggregate commitment; attribution,
+coverage, thresholds and settlement UNSTARTED. WB-FAT-02 PARTIAL; schema-21 reader/
+components IMPLEMENTED_UNVERIFIED; writer/migration, durable purchases/replay and full
+mixed-domain services UNSTARTED. FAT-03/04 UNSTARTED; WHL-09 PARTIAL; WHL-10
+PARTIAL_UNVERIFIED. Other recorded statuses/decision/client/balance holds stand; A56
+deferred. Card-bearing public writes remain refused. No unfinished gameplay is DONE.
+
+Verification: fresh javac --release 11 compiled all domain sources and FateXp*Checks
+into build/continuation-xp-coverage. Focused Gradle eligibility/selection/legacy attempt
+failed BEFORE compilation on inherited wrapper-cache lock Access is denied. No JUnit
+or legacy pass claimed; GRADLE_USER_HOME unchanged, no external-path inspection/cache
+workaround. All nine dependency-free FateXp checks PASSED: objective, starting pair, rewards,
+permissions, offer origin, eligibility, selection, XP accounting and XP journal.
+
+Next remaining task: resolve reviewed applicable eligibility manifest/profile authority
+and complete starting Standard XP restriction scope before aggregate commitment.
+The new comparison accepts explicit inputs only; do not mistake it for an approved
+runtime catalog. Where catalog content is not settled, retain that block and select
+another eligible gameplay increment after prerequisite review. Actual assignment
+commitment/durable selection must precede current-assignment evidence admission.
+Run real JUnit/Gson/codec/store/session/legacy suites when inherited build access returns.
+Local edits only; no credentials, secrets or workflows accessed.
+
 ## Current local continuation - frozen starting XP selection, 2026-11-06
 
 IDLE after bounded WB-WHL-08 explicit-selection payload (S). Supersedes older
