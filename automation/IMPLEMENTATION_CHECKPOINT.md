@@ -1,3 +1,50 @@
+## Current local continuation - kill evidence accounting, 2026-11-06
+
+IDLE after bounded WB-FAT-05 kill-accounting increment (XS/S). Supersedes older
+next-task prose. Reconciled production and tests: XP totals/event journal and
+restricted card admission exist (DONE offline). Schema-21 card components/reader
+remain IMPLEMENTED_UNVERIFIED; public schema-19/retry schema-20 card writes still
+refused. No Git operations or merged-state verification; supervisor owns publication.
+I01d not selected. No new gameplay decision or balance number adopted.
+
+FateKillEvidence now retains immutable assigned/unauthorized/unknown kill totals
+for one explicitly trusted Fate/Penance context under WB-D087/098 and WB-D054's
+supersession. Active-only nonnegative observations, checked bucket/total arithmetic,
+explicit trusted restoration and unknown attribution retention. Combat XP remains
+separate; kill counts never infer unauthorized XP or penalties. Focused checks cover
+bucket separation, immutable snapshots, all inactive states, zero/negative deltas,
+nulls, negative restored totals and every bucket's same/cross-bucket overflow.
+
+This is pure accounting. Caller must authenticate supported personal kill and target
+attribution, resolve the current run/session/assignment, deduplicate source events
+and atomically retain evidence. No event classifier, journal, coverage assertion,
+incidental-kill classification, audit threshold, clean/completion judgment, settlement,
+production caller or gameplay activation. Existing Master Wheel source unchanged.
+
+Fresh javac --release 11 compilation into build/continuation-kill-evidence PASSED.
+FateKillEvidenceChecks and FateXpEvidenceChecks each PASSED. JUnit wrapper added.
+Focused kill/XP/journal/legacy Gradle run failed BEFORE compilation: inherited wrapper
+cache lock Access is denied. No JUnit/Gson/durable/legacy pass claimed. Inherited
+GRADLE_USER_HOME unchanged; no cache workaround or external-path inspection.
+
+Reconciliation: WB-FAT-05 remains PARTIAL. Streak arithmetic, XP totals/journal and
+pure kill totals DONE offline. Kill journal/deduplication, supported client attribution/
+coverage, objective-specific thresholds, completion admission, severity/FP settlement,
+durable evidence/streak/obligations and services remain UNSTARTED. WB-FAT-02 PARTIAL:
+writer/full migration, durable purchase/replay, complete mixed-domain admission,
+reviewed quote authentication and services UNSTARTED. FAT-03/04 UNSTARTED; WHL-08/09
+PARTIAL; WHL-10 PARTIAL_UNVERIFIED. Other recorded completed/partial/unstarted/blocked
+holds stand; A56 deferred. No unfinished gameplay marked complete. Local edits only;
+no credentials, secrets or workflows accessed. Historical merge receipts unverified.
+
+Next bounded independently testable gameplay unit: assignment-bound kill event journal
+with explicit trusted session/source context, exact replay/conflict checks and immutable
+reconstruction, retaining unknown attribution. Global event reuse/authentication and
+durable admission remain separate prerequisites. When inherited build access returns,
+run real Gson/JUnit card component/aggregate-reader, RunCodec/retry/store/session/legacy
+checks and repair failures before candidate schema-21 writer/full migration work.
+Keep public card writes refused and incomplete gameplay disabled.
+
 ## Current local continuation - assignment XP event journal, 2026-11-06
 
 IDLE after bounded WB-FAT-05 evidence increment (S). Supersedes older next-task
