@@ -1,6 +1,6 @@
 # Questing persistence prerequisite, 2026-11-06
 
-Status: nested reward/selection codec IMPLEMENTED_UNVERIFIED. No run schema
+Status: nested reward/selection and observation-window codecs IMPLEMENTED_UNVERIFIED. No run schema
 change, migration or publication is enabled. WB-QST-02/WB-WHL-08 remain PARTIAL.
 
 Authority: WB-D028/046 retain three/four/five choices; WB-D070/102 require
@@ -26,7 +26,7 @@ Reconciled remaining assignment payload dependencies:
 | Reward and selection | Full ordered choices, eligibility routes/statuses, quote | IMPLEMENTED_UNVERIFIED |
 | Quest provenance | Exact Master terminal resolution with creation and retry transcript, slice/activity, stream descriptor and initial/final states, nested reward | Codec UNSTARTED; domain exists |
 | Spin allocation | Original spinsBefore and exact same terminal resolution; retained reservation/accounting | Codec integration UNSTARTED; domain exists |
-| Original observation window | Account/run, baseline revision, assignment/session/window UUIDs, baseline position, exact same selection, unfinished quest baseline | Codec UNSTARTED; domain exists |
+| Original observation window | Account/run, baseline revision, assignment/session/window UUIDs, baseline position, shared exact selection, quest baseline | Nested codec IMPLEMENTED_UNVERIFIED; enclosing unfinished-original validation remains required |
 | Aggregate | Explicit optional assignment, exact retained creation/resolution/reservation and compatible lifecycle/catalog | In-memory retention verified offline; codec integration UNSTARTED |
 
 The future assignment payload may store shared selection/resolution data once,
@@ -48,6 +48,23 @@ overflow and changed valid route context. They have not run: focused Gradle fail
 before compilation on the inherited wrapper-cache lock (Access is denied).
 No new codec compilation, Gson, migration, store or legacy pass is claimed.
 
-Next: validate this component with real Gson when build access returns, then add
-the original observation-window payload and enclosing provenance/allocation binding
-in bounded increments. Keep gameplay and public Questing writes disabled.
+`QuestFateObservationWindowCodec` version 1 stores observation context only. The
+future enclosing payload must decode the shared selection once, pass it into this
+codec, and construct QuestFateAssignment to bind identity/revision/selection and
+reject COMPLETE original baselines. Encode requires the supplied shared selection
+to equal the window selection. The window codec retains COMPLETE observation
+baselines without making them valid new assignments. It reconstructs the original
+ACTIVE/ACTIVE_OBJECTIVE baseline independently of the current paused run and does
+not rotate session/window IDs. UUIDs must use canonical lowercase full text.
+
+New JUnit/Gson tests cover all baseline states, zero/long numeric bounds, original
+identity/session/window retention, pause refusal for completion, strict fields and
+types, malformed UUIDs and altered valid declarations. They remain unrun: focused
+Gradle failed before compilation at the inherited wrapper-cache lock. All eight
+existing Questing Checks passed after Java 11 domain/aggregate dependency compilation.
+No fresh Gson, migration, store or legacy pass is claimed. Existing local reward
+test XML reports three passing tests but was not regenerated against current source.
+
+Next: validate components with real Gson when build access returns, then add exact
+provenance/allocation binding and the enclosing assignment schema/migrations in
+bounded increments. Keep gameplay and public Questing writes disabled.
