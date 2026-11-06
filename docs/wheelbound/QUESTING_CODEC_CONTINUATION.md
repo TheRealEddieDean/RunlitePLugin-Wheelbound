@@ -87,3 +87,21 @@ Questing checks passed after fresh Java 11 domain/aggregate compilation. Next:
 verify nested codecs, compose enclosing assignment with retained accounting and
 original observation window, then separately implement versioned run migration
 and durable admission. Keep public writes refused and gameplay disabled.
+
+## Enclosing nested assignment increment, 2026-11-06
+
+QuestFateAssignmentCodec version 1 now composes provenance/allocation and original
+window. Selection is decoded once through provenance and supplied to the window.
+Decode binds the complete retained allocation, then invokes QuestFateAssignment
+validation for identity, revision, selection and unfinished original baseline.
+Original window/session and accounting are preserved. Valid altered declarations
+remain declarations requiring future aggregate/catalog authority checks.
+
+Status: enclosing nested codec IMPLEMENTED_UNVERIFIED, with three JUnit/Gson tests.
+Fresh Java 11 domain/aggregate dependency compilation and eight domain Questing
+checks passed (assignment checks invoke aggregate retention checks). Gradle failed
+before compilation at inherited wrapper-cache lock access; no new codec/Gson/JUnit
+or legacy pass. Run schema/migrations, durable admission and authenticated catalog
+integration remain UNSTARTED. No public writer, schema or gameplay enablement.
+Next: real Gson verification, then bounded future run-schema reader/migration with
+explicit legacy absence. Current continuation records supersede older next steps.

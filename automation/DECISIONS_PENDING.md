@@ -1,3 +1,9 @@
+## Current continuation pointer - enclosing Questing assignment codec, 2026-11-06
+
+See current SESSION_STATE/checkpoint/backlog sections. Nested enclosing codec is
+IMPLEMENTED_UNVERIFIED; run schema/migrations and durable admission unfinished.
+No new decision. Public writes remain refused. No Git; supervisor publishes.
+
 ## Current continuation - Questing provenance and allocation codec, 2026-11-06
 
 IDLE after bounded WB-QST-02/WB-WHL-08 persistence prerequisite (S). Supersedes
