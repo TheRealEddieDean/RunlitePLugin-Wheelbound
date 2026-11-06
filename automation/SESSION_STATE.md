@@ -1,3 +1,47 @@
+## Current local continuation - candidate card purchase journal payload, 2026-11-06
+
+IDLE after bounded WB-FAT-02 persistence prerequisite (S). Supersedes older next-task
+prose. Reconciled local source/tests: ownership, proposals, receipts/journals,
+restricted trusted-seed reconstruction and in-memory admission DONE offline;
+candidate ownership JSON component IMPLEMENTED_UNVERIFIED. No Git operations or
+merged-state verification; supervisor owns commits, PRs, CI and merges. No I01d.
+
+Added package-private FateCardPurchaseJournalCodec candidate version-1 component.
+Preserves identity, commit order, revision gaps, separate ordinary pool/type,
+frozen quote key/version/amount, command UUID, original revisions and balance.
+Strict scalar/field checks, canonical UUIDs and domain constructors refuse foreign,
+unsupported, malformed, duplicate, overlapping and future declarations. This is
+structural retention only, not trusted-seed/price authentication or durability.
+Public/candidate aggregate card-write refusal remains intact. No aggregate schema
+reserved, migration, service/UI caller, price adoption or gameplay activation.
+Existing Master Wheel unchanged. WB-D049/050/090/105/113/124 and recorded
+WB-D112/122/126/147 supersessions remain authoritative; no new design decision.
+
+Added focused JUnit round-trip/replay checks for all four paid pool/type combinations,
+revision gaps, original long balances and empty journal; refusal cases cover fields,
+types, versions, identities, UUIDs, unsupported cards, quote text, payment arithmetic,
+command collisions, overlap and future receipts. Focused Gradle journal/ownership/
+RunCodec/legacy attempt failed BEFORE compilation: inherited wrapper-cache lock
+Access is denied. New Gson codec and JUnit tests remain IMPLEMENTED_UNVERIFIED.
+GRADLE_USER_HOME unchanged; no cache workaround, dependency stubs or external inspection.
+Fresh javac --release 11 using build/continuation-card-admission/sources.txt into
+build/continuation-card-journal-codec PASSED. Four existing dependency-free Checks
+PASSED individually: purchase journal, receipt, admission and lifecycle history.
+These checks do NOT compile or exercise the new Gson codec.
+
+Reconciliation: WB-FAT-02 PARTIAL; candidate ownership and typed journal JSON components
+IMPLEMENTED_UNVERIFIED. Full lossless aggregate migration, durable publication/replay,
+authenticated reviewed quotes, complete mixed-domain admission and UI/services UNSTARTED.
+WB-FAT-03/04 UNSTARTED. WHL-08/09 PARTIAL; WHL-10 PARTIAL_UNVERIFIED. Other recorded
+partial/unstarted/decision/client/catalog holds stand; A56 deferred. No unfinished
+gameplay marked complete. Local edits only; no credentials, secrets or workflows accessed.
+
+Next bounded task: verify both candidate card payloads with real Gson/JUnit when
+inherited build access is restored, then reader-first aggregate migration preserving
+legacy absence and strict schema/refusal behavior. Keep card-bearing aggregate writes
+refused until complete round-trip/migration/store/session/legacy verification succeeds;
+locked durable purchase publication/replay follows that prerequisite.
+
 ## Current local continuation - candidate card ownership payload, 2026-11-06
 
 IDLE after a bounded WB-FAT-02 persistence prerequisite. Supersedes older next-task
