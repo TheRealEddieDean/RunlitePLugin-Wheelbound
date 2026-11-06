@@ -1,3 +1,44 @@
+## Current continuation - Questing provenance and allocation codec, 2026-11-06
+
+IDLE after bounded WB-QST-02/WB-WHL-08 persistence prerequisite (S). Supersedes
+older next-task prose. Local source/test reconciliation only; no Git or merged-state
+verification. I01d not selected; no new gameplay or balance decision.
+
+Added package-private QuestFateProvenanceCodec, nested version 1. Stores complete
+Master resolution (including creation and retry transcript), original spinsBefore,
+selected slice/activity, opaque stream descriptor/states and nested reward. Decode
+requires exact equality with the supplied retained allocation's full resolution and
+original balance; encode rejects foreign resolution linkage. Strict fields/types,
+version, canonical slice UUID and validated domain restoration. Supplied retained
+context is not authenticated authority. Valid changed stream/reward declarations
+still require enclosing commitment/catalog checks. No debit, evidence admission,
+run schema change, migration or public writer enablement. Master Wheel unchanged;
+incomplete gameplay remains disabled.
+
+Verification: Java 11 domain and aggregate dependency compilation PASSED into
+build/continuation-quest-provenance-codec; all eight QuestFate*Checks exited 0.
+Added three JUnit/Gson tests for full-retry round trips, spin boundaries, changed
+retry prefixes/retained balances/foreign identity, malformed payloads and altered
+valid declarations. Focused provenance/window/reward/legacy Gradle attempt failed
+BEFORE compilation: inherited wrapper-cache lock Access is denied. New codec/tests
+IMPLEMENTED_UNVERIFIED; no fresh Gson/JUnit/migration/store/legacy pass claimed.
+GRADLE_USER_HOME unchanged; no cache workaround or external inspection.
+
+Reconciliation: QST-02/WHL-08 PARTIAL. In-memory assignment/current binding and
+aggregate retention verified offline. Reward/window/provenance-allocation nested
+codecs IMPLEMENTED_UNVERIFIED. Enclosing assignment codec/schema/migrations,
+durable admission and reviewed catalog/quote authority UNSTARTED. FAT-05 current
+assignment admission BLOCKED on durable complete commitment. QST-01/05 PARTIAL;
+QST-03/04 legacy PARTIAL; QST-06/07 mode integration UNSTARTED. FAT-02 schema-21
+reader/components IMPLEMENTED_UNVERIFIED; writer/full migration/services UNSTARTED.
+Other task statuses and client/balance/decision holds stand. No new pending decision.
+
+Next: fresh real-Gson verification when inherited build access returns, then bounded
+enclosing assignment composition using exact retained allocation and original
+window/selection, before future run schema/migrations with explicit legacy absence.
+Keep public Questing/card writes refused pending complete validation and durable
+admission. Supervisor owns commits, PRs, CI and merges; local edits only.
+
 ## Current continuation - nested Questing reward codec, 2026-11-06
 
 IDLE after bounded WB-QST-02/WB-WHL-08 codec prerequisite (S). Supersedes older
