@@ -1,3 +1,10 @@
+## Current continuation pointer - supplied Questing eligibility, 2026-11-06
+
+See current checkpoint/session/backlog sections. WB-QST-01 remains PARTIAL:
+supplied ordered quest-state/prerequisite/access-route observations validated offline;
+reviewed authored routes, client evidence and runtime qualification remain unfinished.
+No new pending gameplay/balance decision. Existing holds stand. No Git; supervisor
+owns publication. Next bounded review: fresh assigned quest-completion transition.
 ## Current continuation pointer - frozen Questing choices, 2026-11-06
 
 See current checkpoint/session/backlog sections. WB-QST-02 PARTIAL: supplied
