@@ -1,3 +1,13 @@
+## Current continuation pointer - supplied Questing assignment binding, 2026-11-06
+
+See current checkpoint/session/backlog sections. QST-02/WHL-08 remain PARTIAL:
+supplied assignment/provenance/allocation/original-baseline binding verified offline;
+durable aggregate retention/admission and catalog/quote authority remain unfinished.
+QST-05 remains PARTIAL; refreshed windows are separate from original commitment.
+Next: reconcile RunDocument/Master-resolution aggregate retention prerequisite.
+No new gameplay/balance decision. Existing holds stand. No Git; supervisor publishes.
+Gradle remains blocked before compilation by inherited wrapper-cache lock access.
+
 ## Current continuation pointer - Questing observation window, 2026-11-06
 
 See current checkpoint/session/backlog sections. QST-05 remains PARTIAL: supplied
