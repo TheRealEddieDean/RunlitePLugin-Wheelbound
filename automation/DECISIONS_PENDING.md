@@ -1,3 +1,55 @@
+## Current local continuation - assignment kill event journal, 2026-11-06
+
+IDLE after bounded WB-FAT-05 kill-journal increment (S). Supersedes older next-task
+prose. Reconciled local production/tests: XP totals/journal, kill totals and restricted
+card admission exist; assignment-bound kill journal was unstarted and is now DONE
+offline. No Git operations or merged-state verification; supervisor owns publication.
+No I01d, new gameplay decision or numeric balance adoption.
+
+FateKillEvidenceJournal retains immutable run/assignment/session/namespace/event-key
+observations with assigned/unauthorized/unknown kill deltas. Reconstructs totals from
+explicit observations; rejects duplicate restored source identities (including exact
+duplicates), foreign bindings, changed replay payloads, inactive/stale context,
+noncanonical keys, negatives and overflow. Exact replay preserves the current head
+after later events. Unknown attribution stays unknown. WB-D087/098 and WB-D054's
+supersession remain authoritative; combat XP is separate and no penalty is inferred.
+
+This is pure structural accounting. Caller must resolve the actual active assignment,
+authenticate personal kill/target attribution and session/source keys, prevent global
+cross-assignment reuse, establish coverage and atomically persist evidence. No client
+adapter, codec, durable admission, threshold/audit judgment, settlement, production
+caller or gameplay activation. Existing Master Wheel source unchanged.
+
+Fresh javac --release 11 compilation into build/continuation-kill-journal PASSED.
+Four dependency-free Checks PASSED: FateKillEvidenceJournalChecks,
+FateKillEvidenceChecks, FateXpEvidenceChecks and FateXpEvidenceJournalChecks.
+Journal tests include retained original replay, conflicts, all inactive states,
+foreign run/assignment, stale revision/session, namespace/session separation, field
+boundary collisions, immutable ordered reconstruction, duplicate restore, zero-event
+identity, nulls, malformed keys and overflow. JUnit wrapper added. Focused Gradle
+kill-journal/kill/XP-journal/legacy attempt failed BEFORE compilation: inherited
+wrapper-cache lock Access is denied. No JUnit or legacy pass claimed. Inherited
+GRADLE_USER_HOME unchanged; no external-path inspection or cache workaround.
+
+Reconciliation: WB-FAT-05 remains PARTIAL. Streak arithmetic, XP totals/journal and
+kill totals/journal DONE offline. Supported client attribution/coverage, objective-
+specific thresholds, completion admission, severity/FP settlement, durable evidence/
+streak/obligations and services UNSTARTED. WB-FAT-02 remains PARTIAL: schema-21
+components/reader IMPLEMENTED_UNVERIFIED; writer/full migration, durable purchase/
+replay, complete mixed-domain admission, reviewed quote authentication and services
+UNSTARTED. FAT-03/04 UNSTARTED; WHL-08/09 PARTIAL; WHL-10 PARTIAL_UNVERIFIED. Other
+recorded completed/partial/unstarted/blocked holds stand; A56 deferred. Public card
+writes remain refused. No unfinished gameplay marked complete. Local edits only.
+
+Next bounded gameplay prerequisite: inspect existing assignment commitment and
+session/evidence boundaries, then implement an explicit current-assignment admission
+check for XP/kill journal proposals, refusing mismatched active assignment contexts.
+Do not infer assignment identity from caller IDs alone or invent missing objective
+payloads. Global event reuse, authenticated attribution, coverage and durable admission
+remain separate. When inherited build access returns, run real Gson/JUnit card reader,
+RunCodec/retry/store/session/legacy checks before schema-21 writer/full migration.
+Keep incomplete gameplay disabled. No credentials, secrets or workflows accessed.
+
 ## Recovered local continuation - atomic card snapshot proposal, 2026-11-06
 
 IDLE after recovering only the interrupted WB-FAT-02 in-memory admission increment
