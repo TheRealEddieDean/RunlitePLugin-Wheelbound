@@ -1,3 +1,47 @@
+## Current local continuation - XP evidence accounting, 2026-11-06
+
+IDLE after bounded WB-FAT-05 gameplay increment (XS/S). Supersedes older next-task
+prose. Reconciled production/tests against latest continuation: WB-FAT-02 restricted
+in-memory admission DONE offline; schema-21 components/reader IMPLEMENTED_UNVERIFIED.
+Public schema-19 and retry-candidate schema-20 writers still refuse cards. Real
+Gson/JUnit verification blocks candidate writer work. No Git/merged-state verification;
+supervisor owns commits/PRs/CI/merges. I01d not selected. No new gameplay decisions.
+
+FateXpEvidence now provides immutable assigned/verified-by-product/unauthorized/unknown
+XP totals for one explicitly trusted assignment. Active-only observations, nonnegative
+deltas and checked bucket/combined arithmetic; unknown attribution remains separate.
+WB-D087/098 and WB-D054 supersession control. No threshold/default-1000 adoption,
+clean/violation judgment, event attribution/authentication, coverage assertion, replay
+protection, kill audit, completion admission, persistence or penalties. Caller must
+bind unique evidence to account/session/assignment; no production caller or gameplay
+activation. Existing Master Wheel unchanged.
+
+Fresh javac --release 11 compilation into build/continuation-xp-evidence PASSED.
+FateXpEvidenceChecks and ConsecutivePenanceChecks PASSED individually. Coverage includes
+bucket separation, inherent by-product exemption from unauthorized totals, unknown
+retention, zero/negative deltas, all inactive states, nulls, restored boundaries,
+cross-bucket overflow and immutable snapshots. Added JUnit wrapper. Focused new-test/
+Penance/legacy Gradle attempt failed BEFORE compilation: inherited wrapper-cache lock
+Access is denied. Card reader/legacy retry hit the same blocker. No Gson/JUnit/durable/
+legacy pass claimed. GRADLE_USER_HOME unchanged; no cache workaround/external inspection.
+
+WB-FAT-05 PARTIAL: streak arithmetic and pure XP accounting DONE offline; supported
+attribution/coverage, objective-specific audit, thresholds, completion admission,
+severity/FP settlement, atomic streak/obligation retention and UI/services UNSTARTED.
+WB-FAT-02 PARTIAL; candidate writer/full round-trip, durable purchase publication/replay,
+complete mixed-domain admission, authenticated reviewed quotes and services UNSTARTED.
+FAT-03/04 UNSTARTED; WHL-08/09 PARTIAL; WHL-10 PARTIAL_UNVERIFIED. Other recorded
+partial/unstarted/blocked holds remain; A56 deferred. No unfinished gameplay marked done.
+
+Next remaining prerequisite: run real Gson/JUnit card components/aggregate reader,
+RunCodec/retry/store/session/legacy suites when inherited build access returns; repair
+failures before package-private schema-21 writer/full migration checks. Public card
+writes stay refused. Audit integration needs supported assignment-bound evidence,
+unique event admission and replay-safe atomic completion/obligation retention; do not
+infer thresholds or settlement ordering. Select another independently testable approved
+gameplay increment if build access still blocks migration. Local edits only; no external
+paths, credentials, secrets or workflows inspected; no Git operations.
+
 ## Current local continuation - consecutive Penance state, 2026-11-06
 
 IDLE after bounded WB-FAT-05 gameplay increment (XS/S). Supersedes older next-task
