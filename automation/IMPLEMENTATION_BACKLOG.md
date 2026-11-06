@@ -1,3 +1,54 @@
+## Current local continuation - supplied Questing eligibility, 2026-11-06
+
+IDLE after bounded WB-QST-01 eligibility snapshot increment (S). Supersedes older
+next-task prose. Reconciled QuestPool, QuestFateOffers and domain/tests: legacy
+QuestPool reads released journal state and optional game requirements; it does not
+resolve Wheelbound access routes. Frozen 3/4/5 choices and selection already exist.
+No Git operations or merged-state verification; supervisor owns publication.
+I01d not selected. No gameplay/balance decision adopted.
+
+QuestFateEligibility now retains immutable ordered observations for every frozen
+quest choice: explicit quest-state, prerequisites and account-route qualification,
+plus supplied authored route key/version. Exact offer order/identity/count required;
+foreign catalog versions/offer sets fail closed. Unknown, unsupported or ineligible
+in any axis refuses supplied qualification. Failed observations remain restorable.
+WB-D070/102 and TECHNICAL_SPECIFICATIONS govern: journal eligibility cannot waive
+vendor access. Route identifiers do not prove a reviewed legal route or completeness.
+No catalog authoring, client detector, freshness/account authentication, reward XP
+exemption, display authority, assignment commitment, codec, caller or activation.
+Existing Master Wheel unchanged; incomplete gameplay remains disabled.
+
+Verification: fresh javac --release 11 compiled all domain sources and both Quest
+Checks into build/continuation-quest-eligibility. QuestFateEligibilityChecks and
+QuestFateOffersChecks PASSED. Coverage includes all capacities, three independent
+qualification axes/statuses, restored value equality, immutability, route/version
+changes, malformed/null keys and foreign/reordered/versioned offers. JUnit wrapper
+added. Focused Gradle quest eligibility/offers/legacy attempt failed BEFORE compilation:
+inherited wrapper-cache lock Access is denied. No JUnit or legacy pass claimed;
+GRADLE_USER_HOME unchanged. No cache workaround or external-path inspection.
+
+Reconciliation: WB-QST-01 remains PARTIAL: supplied snapshot validator DONE offline;
+authored route catalog, supported completion/dependency mappings, client evidence and
+runtime qualification UNSTARTED/evidence-gated. WB-QST-02 PARTIAL: frozen choices/
+selection DONE offline; upgrade authority, UI and complete durable assignment
+UNSTARTED. QST-03/04 remain PARTIAL legacy behavior; QST-05/06/07 UNSTARTED mode
+integration. WB-WHL-08 PARTIAL: reviewed XP catalogs/full restrictions/aggregate
+commitment unfinished. WB-FAT-05 PARTIAL: accounting/journals/history implemented;
+current assignment admission BLOCKED by complete commitment; client attribution,
+coverage, thresholds and settlement UNSTARTED. WB-FAT-02 PARTIAL: schema-21 reader/
+components IMPLEMENTED_UNVERIFIED; writer/migration/full services UNSTARTED. Other
+recorded statuses and decision/client/balance holds stand. No complete gameplay claim.
+Public card-bearing writes remain refused. Historical merged work not reverified.
+
+Next bounded task: reconcile fresh assigned quest-completion evidence contract under
+WB-D070 and TECHNICAL_SPECIFICATIONS; implement a pure transition validator retaining
+explicit not-started/in-progress/complete baseline and refusing paused, foreign or
+already-complete observations, only where settled. Actual current-assignment admission
+still requires full aggregate commitment and supported completion mappings. Authored
+routes/runtime qualification remain blocked on reviewed content and client evidence;
+do not infer them from the supplied snapshots. Run real JUnit/Gson/codec/store/session/
+legacy suites when inherited build access returns. Local edits only; no external paths,
+credentials, secrets or workflows accessed. Supervisor handles Git/PR/CI/merge.
 ## Current local continuation - frozen Questing choices, 2026-11-06
 
 IDLE after bounded WB-QST-02 payload increment (S). Supersedes older next-task
