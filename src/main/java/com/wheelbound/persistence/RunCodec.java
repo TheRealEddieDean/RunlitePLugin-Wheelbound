@@ -59,6 +59,8 @@ public final class RunCodec
 
     private byte[] encode(RunDocument document, int schema)
     {
+        if (document.currentQuestAssignment().isPresent())
+        { throw new IllegalArgumentException("Questing persistence requires a versioned lossless payload"); }
         if (document.fateCards().isPresent() || document.cardPurchases().isPresent())
         { throw new IllegalArgumentException("Card persistence requires a versioned lossless payload"); }
         RunLifecycle run = document.lifecycle();

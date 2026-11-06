@@ -23,6 +23,7 @@ public final class RunDocument
     private final com.wheelbound.domain.GrandActivationHistory grandActivations;
     private final com.wheelbound.domain.GrandEvidenceJournal grandJournal;
     private final com.wheelbound.domain.GrandFateProgress grandProgress;
+    private final com.wheelbound.domain.QuestFateCurrentAssignment currentQuestAssignment;
     private final RunLifecycle lifecycle;
     private final com.wheelbound.domain.MasterCurrentSpecialObligation currentMasterSpecial;
     private final com.wheelbound.domain.MasterSpinState masterSpins;
@@ -205,6 +206,28 @@ public final class RunDocument
         Optional<com.wheelbound.domain.FateCardOwnership> fateCards,
         Optional<com.wheelbound.domain.FateCardPurchaseJournal> cardPurchases)
     {
+        this(lifecycle, catalogVersion, receipts, fatePoints, inventory, grandFate, grandProgress,
+            grandJournal, grandActivations, grandCurrentAttempt, pendingMasterSelection, masterCreations,
+            masterResolutions, masterSpins, currentMasterSpecial, fateCards, cardPurchases, Optional.empty());
+    }
+
+    /** Explicit in-memory Questing commitment; no codec, catalog or evidence authority. */
+    public RunDocument(RunLifecycle lifecycle, String catalogVersion, List<RunReceipt> receipts,
+        Optional<FatePointLedger> fatePoints, Optional<SliceInventory> inventory,
+        Optional<com.wheelbound.domain.SealedGrandFate> grandFate,
+        Optional<com.wheelbound.domain.GrandFateProgress> grandProgress,
+        Optional<com.wheelbound.domain.GrandEvidenceJournal> grandJournal,
+        Optional<com.wheelbound.domain.GrandActivationHistory> grandActivations,
+        Optional<com.wheelbound.domain.GrandCurrentAttempt> grandCurrentAttempt,
+        Optional<com.wheelbound.domain.MasterSelectionProvenance> pendingMasterSelection,
+        Optional<com.wheelbound.domain.MasterSelectionCreationJournal> masterCreations,
+        Optional<com.wheelbound.domain.MasterSelectionResolutions> masterResolutions,
+        Optional<com.wheelbound.domain.MasterSpinState> masterSpins,
+        Optional<com.wheelbound.domain.MasterSpecialObligation> currentMasterSpecial,
+        Optional<com.wheelbound.domain.FateCardOwnership> fateCards,
+        Optional<com.wheelbound.domain.FateCardPurchaseJournal> cardPurchases,
+        Optional<com.wheelbound.domain.QuestFateAssignment> currentQuestAssignment)
+    {
         Objects.requireNonNull(lifecycle, "lifecycle");
         this.fateCards = Objects.requireNonNull(fateCards, "fateCards").orElse(null);
         if (this.fateCards != null && !this.fateCards.identity().equals(lifecycle.identity()))
@@ -378,6 +401,15 @@ public final class RunDocument
         this.currentMasterSpecial = special == null ? null
             : com.wheelbound.domain.MasterCurrentSpecialObligation.restore(
                 special, this.masterResolutions, this.masterSpins, lifecycle);
+        var quest = Objects.requireNonNull(currentQuestAssignment, "currentQuestAssignment").orElse(null);
+        if (quest != null && (this.masterResolutions == null || this.masterSpins == null
+            || this.pendingMasterSelection != null || this.grandCurrentAttempt != null
+            || this.currentMasterSpecial != null
+            || !quest.provenance().resolution().resolved().catalogVersion().equals(catalogVersion)))
+        { throw new IllegalArgumentException("Current Questing requires exclusive retained Master context"); }
+        this.currentQuestAssignment = quest == null ? null
+            : com.wheelbound.domain.QuestFateCurrentAssignment.restore(
+                quest, this.masterResolutions, this.masterSpins, lifecycle);
         for (RunReceipt receipt : this.receipts)
         {
             if (receipt.taintTerminal() != null)
@@ -559,6 +591,8 @@ public final class RunDocument
     { return Optional.ofNullable(fateCards); }
     public Optional<com.wheelbound.domain.FateCardPurchaseJournal> cardPurchases()
     { return Optional.ofNullable(cardPurchases); }
+    public Optional<com.wheelbound.domain.QuestFateCurrentAssignment> currentQuestAssignment()
+    { return Optional.ofNullable(currentQuestAssignment); }
     public RunLifecycle lifecycle() { return lifecycle; }
     public Optional<com.wheelbound.domain.MasterSelectionProvenance> pendingMasterSelection()
     { return Optional.ofNullable(pendingMasterSelection); }
