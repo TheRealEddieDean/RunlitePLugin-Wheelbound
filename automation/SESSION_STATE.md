@@ -1,3 +1,41 @@
+## Current continuation - enclosing Questing assignment codec, 2026-11-06
+
+IDLE after bounded WB-QST-02/WB-WHL-08 nested composition increment (S).
+Supersedes older next-task prose. Reconciled local source/tests and recorded work;
+merged state not verified, no Git operations. Supervisor owns publication.
+
+Added package-private QuestFateAssignmentCodec version 1, composing exact retained
+allocation/provenance with the original observation window and shared selection.
+Validated assignment construction rejects foreign identity, regressing revision and
+COMPLETE original baseline. Original session/window and accounting are retained;
+no refresh, debit, schema change, public writer enablement or gameplay activation.
+Valid altered declarations are not authenticated by supplied retained accounting.
+
+Verification: fresh Java 11 domain/aggregate-dependency compilation passed into
+build/continuation-quest-assignment-codec; all eight domain QuestFate*Checks passed.
+Added three focused JUnit/Gson composition tests (round trips/accounting boundaries,
+strict malformed/context rejection, altered declarations). Gradle focused new/nested
+codec and legacy attempt failed BEFORE compilation: inherited wrapper-cache lock
+Access is denied. New codec/tests IMPLEMENTED_UNVERIFIED; no fresh Gson/JUnit,
+migration/store/legacy pass claimed. GRADLE_USER_HOME unchanged; no external
+inspection or cache workaround. Aggregate retention checks ran through
+QuestFateAssignmentChecks; the aggregate helper has no standalone main method.
+
+Reconciliation: QST-02/WHL-08 PARTIAL. In-memory assignment/current binding/retention
+verified offline. Reward/window/provenance/enclosing nested codecs now
+IMPLEMENTED_UNVERIFIED. Run schema/migrations, durable admission and reviewed
+catalog/quote authority remain UNSTARTED. FAT-05 current-assignment admission stays
+BLOCKED on durable complete commitment. QST-01/05 PARTIAL; QST-03/04 legacy PARTIAL;
+QST-06/07 mode integration UNSTARTED. FAT-02 schema-21 reader/components remain
+IMPLEMENTED_UNVERIFIED; writer/full migration/services UNSTARTED. Other statuses
+and client/balance/decision holds stand. I01d not selected; no new pending decision.
+
+Next: fresh real-Gson nested codec/assignment verification when inherited build
+access returns, then a bounded future run-schema reader/migration increment with
+explicit legacy absence and exact retained accounting. Public Questing/card writes
+remain refused pending complete validation and durable admission. Existing Master
+Wheel unchanged; incomplete gameplay disabled. Local edits only.
+
 ## Current continuation - Questing provenance and allocation codec, 2026-11-06
 
 IDLE after bounded WB-QST-02/WB-WHL-08 persistence prerequisite (S). Supersedes
