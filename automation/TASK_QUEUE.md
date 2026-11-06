@@ -1,3 +1,54 @@
+## Current local continuation - cross-assignment evidence source validation, 2026-11-06
+
+IDLE after bounded WB-FAT-05 source-history prerequisite (S). Supersedes older
+next-task prose. Local reconciliation confirms XP/kill totals and journals, restricted
+card admission and candidate schema-21 reader components exist. No Git operations
+or merged-state verification; supervisor owns publication. I01d not selected.
+
+FateEvidenceSourceHistory.validate now checks one explicit run's retained XP and kill
+journals for source reuse across assignments. Rejects foreign runs/accounts and
+multiple journal heads for one assignment, including empty/identical heads. Source
+identity retains separate session/namespace/key fields. XP and kill uniqueness are
+independent; the same game event may supply both metrics. Pure validation leaves
+journal events, totals and replay unchanged. WB-D087/098 and WB-D054 supersession
+remain authoritative. No thresholds, prices, audit judgment or new gameplay rule.
+
+Important reconciliation correction: current-assignment admission is NOT implemented.
+RunLifecycle has an ACTIVE_OBJECTIVE marker but no assignment identity/payload;
+RunDocument has Grand/current-special state but no ordinary Fate/Penance assignment
+payload. Matching caller UUIDs cannot establish the actual current assignment.
+The prior suggested admission unit is prerequisite-blocked on explicit assignment
+commitment. This increment checks only supplied retained history; completeness,
+source/attribution authentication and atomic publication remain caller obligations.
+No production caller, codec or gameplay enabled; existing Master Wheel unchanged.
+
+Fresh javac --release 11 compilation into build/continuation-evidence-history PASSED.
+Five dependency-free Checks PASSED: FateEvidenceSourceHistoryChecks,
+FateKillEvidenceJournalChecks, FateKillEvidenceChecks, FateXpEvidenceJournalChecks
+and FateXpEvidenceChecks. Added JUnit wrapper. Focused source-history/kill-journal/
+XP-journal/legacy Gradle attempt failed BEFORE compilation: inherited wrapper-cache
+lock Access is denied. No JUnit or legacy pass claimed. GRADLE_USER_HOME unchanged;
+no cache workaround or external-path inspection.
+
+WB-FAT-05 remains PARTIAL: accounting/journals and supplied-history uniqueness DONE
+offline; actual current assignment admission BLOCKED by missing commitment payload.
+Supported client attribution/coverage, thresholds, completion/settlement, durable
+evidence/streak/obligations and services UNSTARTED. WB-FAT-02 remains PARTIAL:
+schema-21 components/reader IMPLEMENTED_UNVERIFIED; writer/full migration, durable
+purchase/replay, complete mixed-domain admission and services UNSTARTED. FAT-03/04
+UNSTARTED; WHL-08/09 PARTIAL; WHL-10 PARTIAL_UNVERIFIED. Other recorded statuses and
+decision/client/balance holds stand; A56 deferred. Public card writes still refused.
+
+Next remaining gameplay task: WB-WHL-08 ordinary assignment commitment prerequisite.
+Read approved assignment/card/target and STATE_CONTRACT requirements, reconcile
+existing Master resolution payload boundaries, then implement a bounded explicit
+assignment identity/commitment increment only where required payloads are settled.
+Do not substitute a caller UUID or lifecycle marker for current assignment authority.
+Then add current-assignment XP/kill admission and integrate supplied-history validation.
+When inherited build access returns, verify real JUnit/Gson/codec/store/session/legacy
+suites before schema-21 writer/full migration. Keep incomplete gameplay disabled.
+Local edits only; no credentials, secrets or workflows accessed.
+
 ## Current local continuation - assignment kill event journal, 2026-11-06
 
 IDLE after bounded WB-FAT-05 kill-journal increment (S). Supersedes older next-task
