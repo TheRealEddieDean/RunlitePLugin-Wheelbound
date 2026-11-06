@@ -68,3 +68,22 @@ test XML reports three passing tests but was not regenerated against current sou
 Next: validate components with real Gson when build access returns, then add exact
 provenance/allocation binding and the enclosing assignment schema/migrations in
 bounded increments. Keep gameplay and public Questing writes disabled.
+
+## Provenance/allocation nested increment, 2026-11-06
+
+QuestFateProvenanceCodec now implements version-1 full resolution/creation/retry
+transcript, original spinsBefore, slice/activity and stream states, composing the
+reward codec. Decode compares the full restored resolution and original balance
+to an explicitly supplied retained allocation; IDs alone cannot hide a changed
+retry prefix. This comparison supplies structural binding, not authentication.
+Encode also requires exact resolution linkage. The provenance/allocation row above
+is now IMPLEMENTED_UNVERIFIED; enclosing aggregate codec integration remains
+UNSTARTED. No schema or writer change. Valid altered opaque stream/reward values
+remain declarations for enclosing commitment/catalog authority to check.
+
+Three focused JUnit/Gson tests added; Gradle failed before compilation at inherited
+wrapper-cache lock access. No fresh codec/JUnit/Gson pass. All eight dependency-free
+Questing checks passed after fresh Java 11 domain/aggregate compilation. Next:
+verify nested codecs, compose enclosing assignment with retained accounting and
+original observation window, then separately implement versioned run migration
+and durable admission. Keep public writes refused and gameplay disabled.
