@@ -103,7 +103,7 @@ public final class QuestFateProvenanceChecks
             resolution.beforeRevision(), resolution.creation(), resolution.resolved()), 5);
     }
 
-    private static QuestFateReward reward(String selected, String quoteVersion)
+    static QuestFateReward reward(String selected, String quoteVersion)
     {
         QuestFateOffers offers = new QuestFateOffers(QuestFateOffers.Capacity.THREE,
             "quests-v1", List.of("q1", "q2", "q3"));
@@ -118,7 +118,7 @@ public final class QuestFateProvenanceChecks
             new QuestFateEligibility(offers, observations), offers.select(selected)), "quote", quoteVersion, 17);
     }
 
-    private static MasterSelectionResolutionReceipt resolution(boolean special, boolean retry)
+    static MasterSelectionResolutionReceipt resolution(boolean special, boolean retry)
     {
         List<ActiveWheel.Slice> slices = new ArrayList<>();
         Map<UUID, MasterSelectionReadiness.Classification> statuses = new HashMap<>();

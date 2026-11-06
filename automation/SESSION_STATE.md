@@ -1,3 +1,56 @@
+## Current local continuation - supplied Questing assignment binding, 2026-11-06
+
+IDLE after bounded WB-QST-02/WB-WHL-08 supplied commitment increment (S).
+Supersedes older next-task prose. Reconciled existing production/tests: Questing
+choices, eligibility, selection, reward, Master/generation provenance, allocation
+linkage and observation windows existed; their assignment binding was missing.
+No Git operations or merged-state verification; supervisor owns publication.
+I01d not selected. No new gameplay decision or balance constant adopted.
+
+QuestFateAssignment now retains explicit assignment/account/run identity, original
+creation revision/window, complete supplied provenance and exact spin allocation.
+Rejects mismatched allocation, full selection, identity and pre-resolution baseline;
+a new commitment requires an unfinished baseline. Original spin accounting participates
+in equality. Refreshed windows remain separate, must match the full selection and
+assignment, and cannot regress before creation. A COMPLETE refreshed baseline may
+be retained but cannot establish fresh completion. No debit or settlement occurs.
+WB-D002/070/102/114, STATE_CONTRACT and TECHNICAL_SPECIFICATIONS govern.
+
+This is supplied structural binding, not durable current-assignment authority.
+Catalog/quote authentication, trusted source/session coverage, canonical Questing
+activity resolution and atomic aggregate publication remain required. No codec,
+production caller, reward-XP exemption, replay consumption or activation added.
+Existing Master Wheel source unchanged; incomplete gameplay remains disabled.
+
+Verification: javac --release 11 compiled all domain sources and eight Questing
+Checks into build/continuation-quest-assignment. Assignment, Completion, Eligibility,
+ObservationWindow, Offers, Provenance, Reward and Selection Checks all exited 0.
+Added focused assignment checks and JUnit wrapper. Coverage includes restoration,
+account/assignment/selection/allocation mismatches, revision regression, changed
+spin accounting, original-window retention, refreshed COMPLETE baseline and nulls.
+Focused Gradle assignment/window/provenance/legacy attempt failed BEFORE compilation:
+inherited wrapper-cache lock Access is denied. No JUnit or legacy pass claimed.
+GRADLE_USER_HOME unchanged; no cache workaround or external-path inspection.
+
+Reconciliation: QST-02/WHL-08 remain PARTIAL: supplied commitment binding DONE offline;
+complete durable assignment/aggregate admission and reviewed catalogs/quotes unfinished.
+QST-01 PARTIAL: authored routes/client qualification unfinished. QST-05 PARTIAL:
+pure transition/window validation DONE offline; trusted current-assignment admission,
+live freshness/mapping and durable once-only settlement unfinished. QST-03/04 PARTIAL
+legacy; QST-06/07 UNSTARTED mode integration. FAT-05 current-assignment admission
+BLOCKED on durable complete commitment. FAT-02 schema-21 reader/components remain
+IMPLEMENTED_UNVERIFIED; writer/full migration/services UNSTARTED. Other recorded
+statuses and decision/client/balance holds stand; public card writes remain refused.
+Historical merged work was not remotely reverified.
+
+Next bounded task: reconcile supplied Questing assignment retention against RunDocument
+and existing Master-resolution aggregate binding; implement the smallest testable
+aggregate binding/retention prerequisite without enabling public writes or treating
+caller-supplied assignment IDs as trusted authority. Keep refresh windows separate.
+Reviewed catalog/quote authority and supported evidence remain explicit dependencies.
+Run real JUnit/Gson/codec/store/session/legacy suites when inherited build access returns.
+Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - Questing observation window, 2026-11-06
 
 IDLE after bounded WB-QST-05 observation-context prerequisite (S). Supersedes older
