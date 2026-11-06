@@ -1,3 +1,13 @@
+## Current continuation pointer - Questing observation window, 2026-11-06
+
+See current checkpoint/session/backlog sections. QST-05 remains PARTIAL: supplied
+active quest baseline/session/window binding verified offline; actual assignment,
+client freshness/mapping and durable once-only settlement unfinished. No new pending
+gameplay/balance decision; existing holds stand. No Git; supervisor publishes.
+Next: reconcile supplied Questing assignment commitment using existing provenance,
+allocation and identity/context components; refreshed windows are separate from
+original commitment. Gradle remains blocked before compilation by wrapper-cache lock.
+
 ## Current continuation pointer - Questing allocation linkage, 2026-11-06
 
 See current checkpoint/session/backlog sections. QST-02/WHL-08 remain PARTIAL:
