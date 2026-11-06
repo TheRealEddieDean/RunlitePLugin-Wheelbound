@@ -554,3 +554,6 @@ P1/S; verified predecessorce39c550145d2d7b421932e5c471a0536b2f4079.30 illustrati
 ## UI-GF4 — selected visual reference and constraints (P0/S)
 
 Verified claim049316fdf2510fb596af1a806b0d04fca1b24ac9. WB-D156 selected GF4 for now; original1,666,269-byte PNG/hash/provenance retained under docs only. WB-D157 confirms separate Taint slice. Official listing-icon48×72/JAR-resource guidance checked, separate from recommendations. Validate original blob/hash, decision uniqueness, Markdown links, current rank manifest and protected-source equality; guarded publication/remote verification required. Owner released in owning checkpoint. No runtime/main changes. A102 reserved ordinary reward work remains independent.
+
+## 2026-11-06 - WB-WHL-08 XP permission payload prerequisite
+Added objective-bound immutable supplied by-product requirements and ordered reward/permission binding. Four dependency-free Java 11 checks passed; focused Gradle failed before compilation on inherited wrapper lock access. JUnit/legacy unverified. Full offers, supported attribution and ordinary assignment commitment remain unfinished; see current IMPLEMENTATION_CHECKPOINT. No Git operations or gameplay activation.
