@@ -1,3 +1,44 @@
+## Current local continuation - Questing allocation linkage, 2026-11-06
+
+IDLE after bounded WB-QST-02/WB-WHL-08 allocation prerequisite (XS).
+Supersedes older next-task prose. Local production/tests reconciled: supplied offers,
+qualified selection, reward, Master/generation provenance and pure completion existed;
+exact allocation linkage was missing and is now DONE offline. No Git operations or
+merged-state verification; supervisor owns publication. I01d not selected.
+
+QuestFateProvenance.requireAllocation requires the complete Master resolution from
+its supplied MasterSpinAllocation. Rejects changed retry-prefix state, command,
+revision, account, foreign resolution and special outcome; accepts independently
+restored equal resolutions. Repeated checking does not change original spin accounting.
+STATE_CONTRACT assignment/debit linkage and existing MasterSpinAllocation timing govern.
+This is structural validation only: no debit, balance authentication, retention proof,
+current-assignment authority, codec, production caller or gameplay activation. Master
+Wheel behavior unchanged; incomplete gameplay remains disabled. No balance decision.
+
+Verification: javac --release 11 compiled all domain sources and six Questing Checks
+into build/continuation-quest-allocation. Completion, Eligibility, Offers, Provenance,
+Reward and Selection Checks PASSED. Existing JUnit wrapper includes the new checks.
+Focused Gradle provenance/legacy attempt failed BEFORE compilation: inherited wrapper
+cache lock Access is denied. No JUnit or legacy pass claimed. GRADLE_USER_HOME unchanged;
+no cache workaround or external-path inspection.
+
+Reconciliation: QST-02/WHL-08 remain PARTIAL; supplied allocation linkage DONE offline,
+complete durable assignment/aggregate admission UNSTARTED. QST-01 PARTIAL: authored
+routes/client qualification unfinished. QST-05 PARTIAL: pure transition DONE offline;
+actual assignment/session/source admission and durable once-only settlement remain
+prerequisite-blocked. QST-03/04 PARTIAL legacy; QST-06/07 UNSTARTED mode integration.
+FAT-05 current-assignment admission BLOCKED on complete commitment. FAT-02 schema-21
+reader/components IMPLEMENTED_UNVERIFIED; writer/full migration/services UNSTARTED.
+Other recorded statuses and decision/client/balance holds stand; public card writes
+remain refused. Historical merged receipts were not remotely verified.
+
+Next bounded task: reconcile fresh Questing baseline and allowed-evidence session
+context against existing session/observation contracts, then implement an independently
+testable binding where settled. Allocation equality alone must not admit evidence or
+establish current assignment. Authored catalogs, reviewed quotes and atomic aggregate
+admission remain required. Run real JUnit/Gson/codec/store/session/legacy suites when
+inherited build access returns. Local edits only; supervisor handles Git/PR/CI/merge.
+
 ## Current local continuation - Questing Master and generation provenance, 2026-11-06
 
 IDLE after bounded WB-QST-02/WB-WHL-08 provenance prerequisite (S).
