@@ -1,3 +1,10 @@
+## Current continuation pointer - selection-bound Questing reward quote, 2026-11-06
+
+See current checkpoint/session/backlog sections. QST-02/WHL-08 remain PARTIAL:
+supplied selected reward quote binding verified offline; full durable assignment,
+reviewed quote authority and activation unfinished. No new pending gameplay/balance
+decision. Existing holds stand. No Git; supervisor publishes. Next bounded review:
+frozen Questing randomness/selection provenance against Master resolution contracts.
 ## Current continuation pointer - qualified Questing selection binding, 2026-11-06
 
 See current checkpoint/session/backlog sections. WB-QST-02 remains PARTIAL:
