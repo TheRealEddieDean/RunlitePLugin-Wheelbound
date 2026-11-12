@@ -21,6 +21,37 @@ public final class QuestFateOfferDraw
     private final String catalogVersion;
     private final ActiveWheel.Slice slice;
 
+    /**
+     * Construct a transcript from supplied tickets against successively smaller
+     * pools. Ordering, weights and tickets are declarations, not reviewed policy
+     * or authenticated randomness. No state is consumed or assignment admitted.
+     */
+    public static QuestFateOfferDraw fromSuppliedTickets(QuestFatePoolEvidence evidence,
+        RunIdentity identity, long revision, String snapshotVersion, String catalogVersion,
+        ActiveWheel.Slice slice, WeightedPool initialPool, List<Integer> tickets)
+    {
+        Objects.requireNonNull(evidence, "evidence");
+        Objects.requireNonNull(initialPool, "initialPool");
+        var suppliedTickets = List.copyOf(tickets);
+        if (suppliedTickets.size() != evidence.capacity().count())
+        { throw new IllegalArgumentException("Incomplete Questing ticket sequence"); }
+        var draws = new ArrayList<DrawCommitment>();
+        var remaining = initialPool;
+        for (int i = 0; i < suppliedTickets.size(); i++)
+        {
+            var draw = new DrawCommitment(remaining, suppliedTickets.get(i));
+            draws.add(draw);
+            if (i + 1 < suppliedTickets.size())
+            {
+                var entries = new ArrayList<>(remaining.entries());
+                entries.removeIf(entry -> entry.id().equals(draw.selectedId()));
+                remaining = new WeightedPool(initialPool.version(), entries);
+            }
+        }
+        return new QuestFateOfferDraw(evidence, identity, revision, snapshotVersion,
+            catalogVersion, slice, draws);
+    }
+
     public QuestFateOfferDraw(QuestFatePoolEvidence evidence, RunIdentity identity,
         long revision, String snapshotVersion, String catalogVersion, ActiveWheel.Slice slice,
         List<DrawCommitment> draws)

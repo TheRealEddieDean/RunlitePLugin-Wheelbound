@@ -1,3 +1,30 @@
+## Current continuation - Questing supplied-ticket construction, 2026-11-12
+
+WB-QST-04 remains PARTIAL. Added QuestFateOfferDraw.fromSuppliedTickets: builds
+without-replacement draw commitments from an explicit ordered weighted pool and
+exactly 3/4/5 supplied tickets, then applies existing complete-pool/context replay
+validation. No RNG algorithm, weighting policy, reviewed catalog authority, durable
+admission or player reroll is supplied. Master Wheel unchanged; gameplay and public
+writers remain disabled. No new decision, I01d or Git operation.
+
+Reconciliation: existing supplied replay/retention implemented; nested Gson codecs,
+versioned assignment composition and schema-24 reader remain IMPLEMENTED_UNVERIFIED.
+QST-02/04/05/06 and WHL-08 remain PARTIAL. Authenticated observations, reviewed
+catalog/capacity authority, generation policy, retry admission, durable prefix and
+atomic settlement remain UNSTARTED; FAT-05 admission BLOCKED and QST-07 recovery
+hold unchanged. FND-01 DONE. Recorded merged receipts not independently reverified.
+
+Focused executable checks cover all capacities, exact transcript/offer equivalence,
+first/last ticket boundaries, shrinking-pool bounds, wrong counts, foreign revision/
+catalog, excluded quests and caller-list immutability. Fresh javac --release 11 compilation PASSED using the existing schema-24 source manifest into build/continuation-quest-ticket-construction; all fourteen executable domain QuestFate*Checks PASSED (aggregate checks run through assignment checks). These exclude Gson/JUnit codecs and schema fixtures.
+Gradle QuestFate/FateCard/RunCodec/legacy attempt failed BEFORE compilation on the
+inherited wrapper-cache lock (Access is denied). GRADLE_USER_HOME unchanged; no
+external inspection or cache workaround. Gson/JUnit/migration/legacy remain unverified.
+
+Next: run real Gson/JUnit schema-24/23/22, nested codecs, migrations and legacy tests
+when inherited build access returns, resolving failures before writer/durable admission.
+Reviewed generation policy and authenticated admission remain unfinished prerequisites.
+Supervisor owns publication; local work is not claimed committed. Local state IDLE.
 Verification for schema-24 continuation: fresh javac --release 11 domain/aggregate
 compilation PASSED into build/continuation-quest-schema24; all fourteen discovered
 executable domain QuestFate*Checks entry points PASSED (aggregate checks invoked
