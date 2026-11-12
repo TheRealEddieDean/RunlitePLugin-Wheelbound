@@ -1,3 +1,42 @@
+## Current continuation - Questing versioned assignment draw composition, 2026-11-12
+
+IDLE after bounded WB-QST-04 assignment persistence increment (S). Reconciled local
+replay, pool envelope, assignment domain, codecs and schema call sites against
+WB-D028/046/070/102/111/120/138/139 and supersessions. Existing supplied replay and
+retention were not duplicated. No Git operations or independent merged-state
+verification; supervisor owns publication. I01d not selected; no new decision.
+
+QuestFateAssignmentCodec now has explicit opt-in version-2 encode/decode composing
+the lossless complete-pool/transcript envelope. Required offerDraw is an object or
+explicit null (unavailable evidence). The opt-in decoder also reads version 1 as
+unavailable absence. Existing encode/decode remain version-1-only, including loss-
+prevention refusal, so existing schemas cannot silently accept the new payload.
+Original provenance, spin accounting and observation window remain bound. No
+catalog/client authentication, schema activation, generation policy or payout added.
+Master Wheel unchanged; public writers and incomplete gameplay remain disabled.
+
+Focused real-Gson/JUnit fixtures added for all 3/4/5 capacities, stable assignment
+round trips, equality/hash, original window/accounting retention, legacy absence,
+explicit null, strict version isolation, missing/wrong evidence type, altered route
+and corrupted transcript. Production changes and fixtures IMPLEMENTED_UNVERIFIED:
+focused Gradle (assignment/draw/run codec and legacy behavior) failed BEFORE
+compilation on inherited wrapper-cache lock Access is denied. No test pass claimed.
+GRADLE_USER_HOME unchanged; no external inspection/cache workaround, credentials,
+secrets, workflows or Git access.
+
+Reconciliation: QST-04 PARTIAL. Supplied domain replay/in-memory retention remain
+implemented with previously recorded verification; nested draw/pool codecs and new
+versioned assignment composition IMPLEMENTED_UNVERIFIED. Run-schema integration
+and reviewed generation/admission UNSTARTED. QST-02/06/WHL-08 PARTIAL; reviewed
+catalog/current observation/capacity authority, retry and durable admission UNSTARTED.
+QST-05 PARTIAL; authenticated evidence/durable prefix/atomic settlement UNSTARTED.
+FAT-05 admission BLOCKED; QST-07 UNSTARTED under recovery hold; FND-01 DONE.
+Other statuses and decision/client/balance holds stand; no complete gameplay claim.
+
+Next: bounded run-schema reader integration for version-2 assignment evidence with
+explicit legacy absence, preserving older schema rejection and public writer refusal.
+Run real Gson/JUnit/schema/migration/legacy suites when inherited build access returns;
+resolve failures before durable admission.
 ## Current continuation - Questing complete-pool draw envelope, 2026-11-12
 
 IDLE after bounded WB-QST-04 nested evidence persistence increment (S). Reconciled

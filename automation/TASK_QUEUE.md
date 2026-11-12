@@ -1,3 +1,11 @@
+## Current continuation pointer - Questing versioned assignment draw composition, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-04 PARTIAL: opt-in version-2
+assignment draw/pool composition and focused tests IMPLEMENTED_UNVERIFIED.
+Existing version-1 schema paths stay strict; public writers/gameplay disabled.
+Gradle blocked before compilation by inherited cache lock. Next: bounded schema
+reader integration, then reviewed generation/admission. No new decision/I01d/Git.
+Supervisor publishes. IDLE.
 ## Current continuation pointer - Questing complete-pool draw envelope, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-04 PARTIAL: nested lossless

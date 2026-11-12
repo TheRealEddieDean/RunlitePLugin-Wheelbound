@@ -140,6 +140,62 @@ public class QuestFateOfferDrawCodecTest
         catch (IllegalArgumentException expected) { }
     }
 
+    @Test public void versionTwoAssignmentRetainsCompleteEvidenceAndExplicitAbsence()
+    {
+        for (var capacity : QuestFateOffers.Capacity.values())
+        {
+            var fixture = new Fixture(capacity, 1);
+            var resolution = fixture.provenance.resolution();
+            var window = new QuestFateObservationWindow(new RunLifecycle(resolution.identity(),
+                resolution.afterRevision(), RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.ACTIVE_OBJECTIVE),
+                UUID.randomUUID(), UUID.randomUUID(), UUID.randomUUID(), 0,
+                fixture.provenance.reward().selection(), QuestFateCompletion.QuestState.IN_PROGRESS);
+            var allocation = MasterSpinAllocation.restore(resolution, 5);
+            var legacy = new QuestFateAssignment(fixture.provenance, allocation, window);
+            var original = new QuestFateAssignment(fixture.provenance, allocation, window,
+                Optional.of(fixture.draw));
+            for (var assignment : List.of(legacy, original))
+            {
+                var value = QuestFateAssignmentCodec.encodeWithDrawEvidence(assignment);
+                var parsed = new JsonParser().parse(new GsonBuilder().serializeNulls().create()
+                    .toJson(value)).getAsJsonObject();
+                var restored = QuestFateAssignmentCodec.decodeWithDrawEvidence(parsed, allocation);
+                assertEquals(assignment, restored);
+                assertEquals(assignment.hashCode(), restored.hashCode());
+                assertEquals(value, QuestFateAssignmentCodec.encodeWithDrawEvidence(restored));
+                assertEquals(assignment.offerDraw().isPresent(), restored.offerDraw().isPresent());
+                assertEquals(assignment.originalWindow(), restored.originalWindow());
+                assertSame(allocation, restored.allocation());
+                try { QuestFateAssignmentCodec.decode(parsed, allocation); fail("Legacy reader accepted version 2"); }
+                catch (IllegalArgumentException expected) { }
+            }
+            assertTrue(QuestFateAssignmentCodec.decodeWithDrawEvidence(
+                QuestFateAssignmentCodec.encode(legacy), allocation).offerDraw().isEmpty());
+            var invalidLegacy = QuestFateAssignmentCodec.encode(legacy);
+            invalidLegacy.add("offerDraw", JsonNull.INSTANCE);
+            try { QuestFateAssignmentCodec.decodeWithDrawEvidence(invalidLegacy, allocation);
+                fail("Version 1 accepted an evidence field"); }
+            catch (IllegalArgumentException expected) { }
+            var valid = QuestFateAssignmentCodec.encodeWithDrawEvidence(original);
+            Consumer<Consumer<JsonObject>> mutate = edit -> {
+                var copy = valid.deepCopy();
+                edit.accept(copy);
+                try { QuestFateAssignmentCodec.decodeWithDrawEvidence(copy, allocation);
+                    fail("Accepted malformed assignment evidence"); }
+                catch (IllegalArgumentException | IllegalStateException expected) { }
+            };
+            mutate.accept(v -> v.remove("offerDraw"));
+            mutate.accept(v -> v.add("offerDraw", new JsonArray()));
+            mutate.accept(v -> v.addProperty("offerDraw", true));
+            mutate.accept(v -> v.addProperty("version", 1));
+            mutate.accept(v -> v.addProperty("version", 3));
+            mutate.accept(v -> v.getAsJsonObject("offerDraw").getAsJsonArray("observations")
+                .get(0).getAsJsonObject().addProperty("routeKey", "foreign-route"));
+            mutate.accept(v -> step(v.getAsJsonObject("offerDraw").getAsJsonObject("transcript"), 0)
+                .addProperty("ticket", -1));
+        }
+    }
+
     @Test public void retainsEveryPoolWeightOrderAndExactTicketThroughGson()
     {
         var gson = new Gson();
