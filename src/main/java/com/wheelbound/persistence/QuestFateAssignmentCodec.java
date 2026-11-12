@@ -62,7 +62,7 @@ final class QuestFateAssignmentCodec
         MasterSpinAllocation retained, boolean allowDrawEvidence)
     {
         Objects.requireNonNull(retained, "retained");
-        int version = RunCodec.integer(value, "version");
+        long version = RunCodec.integer(value, "version");
         if (version != 1 && !(allowDrawEvidence && version == 2))
         { throw new IllegalArgumentException("Unsupported Questing assignment version"); }
         RunCodec.keys(value, version == 1 ? Set.of("version", "provenance", "originalWindow")

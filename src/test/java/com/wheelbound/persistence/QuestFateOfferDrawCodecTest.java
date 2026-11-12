@@ -157,7 +157,8 @@ public class QuestFateOfferDrawCodecTest
             for (var assignment : List.of(legacy, original))
             {
                 var value = QuestFateAssignmentCodec.encodeWithDrawEvidence(assignment);
-                var parsed = new JsonParser().parse(new Gson().toJson(value)).getAsJsonObject();
+                var parsed = new JsonParser().parse(new GsonBuilder().serializeNulls().create()
+                    .toJson(value)).getAsJsonObject();
                 var restored = QuestFateAssignmentCodec.decodeWithDrawEvidence(parsed, allocation);
                 assertEquals(assignment, restored);
                 assertEquals(assignment.hashCode(), restored.hashCode());
