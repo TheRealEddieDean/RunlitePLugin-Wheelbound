@@ -1,3 +1,10 @@
+## Current continuation pointer - Questing schema-24 draw reader, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-04 PARTIAL: schema-24 reader for
+version-2 current assignment evidence IMPLEMENTED_UNVERIFIED. Schemas 22/23 stay
+version-1-only. Gradle blocked before compilation by inherited cache lock. Next:
+real Gson/JUnit/migration/legacy verification before reviewed generation/admission.
+No new decision/I01d/Git. Public writers/gameplay disabled. Supervisor publishes. IDLE.
 ## Current continuation pointer - Questing versioned assignment draw composition, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-04 PARTIAL: opt-in version-2

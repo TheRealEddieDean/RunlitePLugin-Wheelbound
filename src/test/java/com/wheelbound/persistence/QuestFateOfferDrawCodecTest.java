@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 
 public class QuestFateOfferDrawCodecTest
 {
-    private static final class Fixture
+    static final class Fixture
     {
         final QuestFatePoolEvidence evidence;
         final QuestFateOfferDraw draw;

@@ -138,7 +138,75 @@ public class QuestFateRunCodecTest
         }
     }
 
+    @Test public void schema24RetainsDrawEvidenceWithoutWeakeningOlderReaders() throws Exception
+    {
+        for (var capacity : QuestFateOffers.Capacity.values())
+        {
+            var fixture = new QuestFateOfferDrawCodecTest.Fixture(capacity, 1);
+            var resolution = fixture.provenance.resolution();
+            var window = new QuestFateObservationWindow(new RunLifecycle(resolution.identity(),
+                resolution.afterRevision(), RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.ACTIVE_OBJECTIVE),
+                java.util.UUID.randomUUID(), java.util.UUID.randomUUID(), java.util.UUID.randomUUID(), 0,
+                fixture.provenance.reward().selection(), QuestFateCompletion.QuestState.IN_PROGRESS);
+            var original = new QuestFateAssignment(fixture.provenance,
+                MasterSpinAllocation.restore(resolution, 5), window, java.util.Optional.of(fixture.draw));
+            for (boolean paused : new boolean[] {false, true})
+            {
+                var payload = payload(paused, original);
+                payload.add("questCompletionHistory", JsonNull.INSTANCE);
+                payload.add("currentQuestAssignment", QuestFateAssignmentCodec.encodeWithDrawEvidence(original));
+                byte[] bytes = envelope(payload, 24);
+                byte[] copy = bytes.clone();
+                var restored = codec.decode(bytes, original.identity());
+                assertArrayEquals(copy, bytes);
+                var retained = restored.currentQuestAssignment().get().assignment();
+                assertEquals(original, retained);
+                assertEquals(original.offerDraw().get().draws(), retained.offerDraw().get().draws());
+                assertEquals(original.offerDraw().get().evidence().observations(),
+                    retained.offerDraw().get().evidence().observations());
+                assertFalse(restored.questCompletionHistory().isPresent());
+                assertThrows(IllegalArgumentException.class, () -> codec.encode(restored));
+                assertThrows(IllegalArgumentException.class, () -> codec.encodeRetryCandidate(restored));
+                assertThrows(IOException.class, () -> codec.decode(envelope(payload, 23), original.identity()));
+                var schema22 = payload.deepCopy();
+                schema22.remove("questCompletionHistory");
+                assertThrows(IOException.class, () -> codec.decode(envelope(schema22, 22), original.identity()));
+                for (Consumer<JsonObject> edit : java.util.List.<Consumer<JsonObject>>of(
+                    p -> p.remove("questCompletionHistory"),
+                    p -> p.getAsJsonObject("currentQuestAssignment").remove("offerDraw"),
+                    p -> p.getAsJsonObject("currentQuestAssignment").addProperty("offerDraw", true),
+                    p -> p.getAsJsonObject("currentQuestAssignment").getAsJsonObject("offerDraw")
+                        .getAsJsonObject("transcript").getAsJsonArray("draws").get(0)
+                        .getAsJsonObject().addProperty("ticket", -1)))
+                {
+                    var changed = payload.deepCopy();
+                    edit.accept(changed);
+                    byte[] invalid = envelope(changed, 24);
+                    byte[] before = invalid.clone();
+                    assertThrows(IOException.class, () -> codec.decode(invalid, original.identity()));
+                    assertArrayEquals(before, invalid);
+                }
+                // Null and version-1 absence do not fabricate original evidence.
+                payload.getAsJsonObject("currentQuestAssignment").add("offerDraw", JsonNull.INSTANCE);
+                assertFalse(codec.decode(envelope(payload, 24), original.identity())
+                    .currentQuestAssignment().get().assignment().offerDraw().isPresent());
+                payload.add("currentQuestAssignment", QuestFateAssignmentCodec.encode(
+                    new QuestFateAssignment(original.provenance(), original.allocation(), window)));
+                assertFalse(codec.decode(envelope(payload, 24), original.identity())
+                    .currentQuestAssignment().get().assignment().offerDraw().isPresent());
+                payload.add("currentQuestAssignment", JsonNull.INSTANCE);
+                assertFalse(codec.decode(envelope(payload, 24), original.identity()).currentQuestAssignment().isPresent());
+                assertThrows(IOException.class, () -> codec.decode(envelope(payload, 25), original.identity()));
+            }
+        }
+    }
+
     private JsonObject payload(boolean paused)
+    {
+        return payload(paused, assignment);
+    }
+
+    private JsonObject payload(boolean paused, QuestFateAssignment assignment)
     {
         var lifecycle = new RunLifecycle(assignment.identity(), assignment.creationRevision() + (paused ? 1 : 0),
             paused ? RunLifecycle.State.PAUSED : RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.ACTIVE_OBJECTIVE);
@@ -154,7 +222,9 @@ public class QuestFateRunCodecTest
             assignment.identity(), lifecycle.revision(), java.util.List.of(resolution)), lifecycle.revision()));
         payload.add("masterSpins", MasterSpinStateJson.encode(new MasterSpinState(1, assignment.identity(),
             lifecycle.revision(), assignment.allocation().spinsBefore(), java.util.Optional.of(assignment.allocation())), lifecycle.revision()));
-        payload.add("currentQuestAssignment", QuestFateAssignmentCodec.encode(assignment));
+        payload.add("currentQuestAssignment", assignment.offerDraw().isPresent()
+            ? QuestFateAssignmentCodec.encodeWithDrawEvidence(assignment)
+            : QuestFateAssignmentCodec.encode(assignment));
         return payload;
     }
 
