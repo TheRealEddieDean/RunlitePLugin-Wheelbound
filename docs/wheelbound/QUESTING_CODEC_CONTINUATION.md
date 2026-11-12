@@ -173,3 +173,17 @@ Next: run real-Gson schema-22/nested codec, schema-21 card, migration and legacy
 suites when inherited build access returns; resolve failures before introducing a
 bounded candidate lossless writer and durable admission. Keep public writes refused
 pending complete validation. Local edits only; no credentials/secrets/workflows.
+
+## In-memory historical completion retention - 2026-11-12
+
+RunDocument now retains optional QuestFateCompletionHistory (journal plus immutable
+ordered historical active contexts). Existing constructors and schemas through 22
+retain unavailable absence; they never synthesize an empty journal. An explicitly
+empty supplied history remains present. No run schema was changed in this increment.
+Both public and candidate writers reject every present history, including empty,
+even without a current assignment. Future payloads must retain historical contexts
+independently of current reservation/assignment and preserve journal prefixes.
+Domain/aggregate compilation and nine executable Questing checks passed offline;
+new history-bearing writer-refusal JUnit coverage remains unverified because Gradle
+failed before compilation on the inherited wrapper-cache lock. Next: cross-family
+completion-command uniqueness; trusted evidence and atomic settlement remain absent.

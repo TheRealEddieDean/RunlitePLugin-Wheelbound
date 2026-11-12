@@ -1,3 +1,54 @@
+## Current continuation - Questing aggregate completion history, 2026-11-12
+
+IDLE after bounded WB-QST-05 in-memory aggregate retention increment (S).
+Reconciled local receipt/journal domain, nested codecs, schema-22 reader and all
+production RunDocument construction sites. No Git or remote merged-state check;
+recorded merged receipts remain unverified. Supervisor handles publication.
+I01d not selected. No new gameplay, balance or pending decision.
+
+Added immutable QuestFateCompletionHistory, retaining the supplied journal and one
+validated historical active context per receipt. RunDocument accepts explicit
+optional history, binds each receipt to exact retained Master creation/resolution,
+account/run, catalog and nonfuture revision, and exposes the original contexts.
+Historical data does not require today's assignment or spin reservation. Existing
+constructors retain unavailable legacy absence; explicit empty history stays
+separate. All eight production aggregate copy paths preserve the optional history;
+pause/resume never rewrites historical active contexts. Public and candidate codec
+writers refuse any present history, including empty history, to prevent data loss.
+No schema bump, trusted evidence admission, completion payout or activation.
+
+Verification: javac --release 11 domain/aggregate dependency compilation PASSED into
+build/continuation-quest-history using the existing source manifest plus the new
+history class. All nine executable QuestFate*Checks PASSED. Expanded aggregate
+checks (executed by AssignmentChecks and the existing JUnit wrapper) cover immutable
+contexts, missing contexts/originals, foreign run/catalog, future receipt context,
+legacy absence, explicit empty history, historical data without current reservation,
+prefix truncation refusal and exact preservation through pause/resume. Existing
+JUnit codec-refusal callback now also checks populated and empty historical-only
+documents. Focused Gradle QuestFate*, FateCard*, RunCodecTest and
+WheelboundBehaviorTest failed BEFORE compilation: inherited wrapper-cache lock
+Access is denied. No fresh Gson/JUnit/migration/store/legacy pass claimed.
+GRADLE_USER_HOME unchanged; no external inspection or cache workaround.
+
+Reconciliation: QST-05 PARTIAL: supplied receipt/journal/history and aggregate
+retention DONE offline; nested codecs/JUnit IMPLEMENTED_UNVERIFIED. Versioned
+history absence/payload, cross-family completion-command uniqueness, authenticated
+evidence, prefix-preserving durable admission and atomic settlement UNSTARTED.
+QST-02/WHL-08 PARTIAL: in-memory assignment binding exists; codecs/schema-22 reader
+IMPLEMENTED_UNVERIFIED; writer, durable admission and reviewed catalog/quote
+authority UNSTARTED. FAT-05 current-assignment admission BLOCKED. QST-01 PARTIAL;
+QST-03/04 legacy PARTIAL; QST-06/07 mode integration UNSTARTED. Other backlog statuses
+and client/balance/decision holds stand. Master Wheel behavior source unchanged;
+public Questing/card writes and incomplete gameplay remain disabled.
+
+Next: run real-dependency codec/schema/card/migration/legacy suites when inherited
+build access returns. Next bounded implementation prerequisite is cross-family
+completion-command uniqueness against retained generic/card/Master/Grand commands,
+including fresh-command guards; do not confuse historical receipt retention with
+settlement. Reconcile explicit legacy-unavailable versus empty journal semantics
+before a future schema adds history and contexts. Keep all writers refused pending
+lossless verification and durable admission; no payout is implemented.
+
 ## Current continuation - Questing journal retention guards, 2026-11-12
 
 IDLE after bounded WB-QST-05 historical-context/prefix validation prerequisite (S).
