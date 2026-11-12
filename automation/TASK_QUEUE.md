@@ -1,3 +1,11 @@
+## Current continuation pointer - Questing supplied offer draw replay, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-04 PARTIAL: deterministic supplied
+weighted draw replay produces distinct 3/4/5 offers; Java 11 compilation passed.
+Reviewed generation policy/service and durable transcript binding UNSTARTED.
+QST-02/05/06 remain PARTIAL. Gradle blocked before compilation by inherited cache
+lock. Gameplay/public writers disabled. No Git/new decision/I01d. Supervisor
+publishes. IDLE.
 ## Current continuation pointer - Questing supplied readiness agreement, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-06 PARTIAL: supplied complete-pool

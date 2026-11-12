@@ -126,6 +126,7 @@ public final class QuestFatePoolEvidence
     }
 
     public List<QuestFateEligibility.Observation> observations() { return observations; }
+    public QuestFateOffers.Capacity capacity() { return capacity; }
     public MasterSelectionReadiness.Classification classification() { return classification; }
     public MasterOrdinaryPoolEvidence masterEvidence() { return masterEvidence; }
 }
