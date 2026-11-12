@@ -1,3 +1,39 @@
+## Current continuation - Questing historical draw context, 2026-11-12
+
+WB-QST-04/05 remain PARTIAL. Added opt-in version-2 historical context
+encode/decode composing assignment draw evidence. Version-1 paths stay strict and
+refuse draw-bearing assignments/new envelopes; opt-in decoding preserves legacy
+unavailable evidence. Historical accounting/lifecycle validation remains required.
+No enclosing history/schema change, writer activation, RNG policy or admission.
+Master Wheel unchanged; incomplete gameplay disabled. No new decision/I01d/Git.
+
+Reconciled supplied ticket construction, replay/retention and schema-24 readers
+against current code and WB-D028/046/070/102/111/120/138/139 supersessions.
+FND-01 DONE; QST-02/04/05/06 and WHL-08 PARTIAL. Nested Gson codecs/schema
+fixtures, including this increment, IMPLEMENTED_UNVERIFIED. Reviewed catalog/
+capacity authority, generation, authenticated evidence, retry/durable prefix
+admission and atomic settlement UNSTARTED. FAT-05 admission BLOCKED; QST-07
+UNSTARTED under postcommit recovery hold. Other statuses stand. Recorded merged
+work not independently reverified; supervisor owns publication.
+
+Focused Gson/JUnit fixtures added for all 3/4/5 capacities, active/paused historical
+heads, exact retained draw/assignment, legacy/null absence, old-path refusal,
+downgrade/missing evidence rejection, missing historical reservation and input
+preservation. Gradle failed BEFORE compilation on inherited wrapper-cache lock
+Access is denied. GRADLE_USER_HOME unchanged; no external inspection or workaround.
+Changed codec/JUnit sources remain uncompiled here; domain checks exclude them.
+
+Fresh javac --release 11 compilation using the existing schema-24 manifest PASSED
+into build/continuation-quest-historical-draw. All fourteen executable domain
+QuestFate*Checks PASSED (aggregate checks invoked by assignment checks).
+This excludes changed Gson codec and JUnit fixtures; no codec/regression pass claimed.
+
+Next: real Gson/JUnit schema-24/23/22, history/nested codecs, migrations and legacy
+verification when inherited build access returns. Then opt-in enclosing completion
+history draw retention before any schema integration. Reviewed generation and
+trusted/durable admission remain unfinished. Local work not claimed committed.
+Local state IDLE; supervisor handles commits/PRs/CI/merges.
+
 ## Current continuation - Questing supplied-ticket construction, 2026-11-12
 
 WB-QST-04 remains PARTIAL. Added QuestFateOfferDraw.fromSuppliedTickets: builds
