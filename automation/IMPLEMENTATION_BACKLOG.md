@@ -1,3 +1,42 @@
+## Current continuation - Questing supplied draw provenance binding, 2026-11-12
+
+IDLE after bounded WB-QST-04 structural provenance binding (S), split from the
+larger versioned durable transcript task. Reconciled local draw/pool/provenance/
+assignment code and focused checks with WB-D028/046/070/102/111/120/138/139 and
+supersessions. No Git or remote merged-state verification; supervisor publishes.
+No I01d or new gameplay decision. Older next-task prose is superseded here.
+
+QuestFateOfferDraw now retains its supplied precommit context and provides
+requireProvenance: checks Master identity, original creation revision, snapshot,
+catalog, selected ordinary slice ID/activity/enhancement/weight, complete replayed
+offer/eligibility snapshot and full Questing readiness agreement. Any selection
+within those offers remains valid. Stream declarations and reward quotes remain
+unauthenticated; no RNG policy, durable storage, admission, payout or activation.
+
+All fourteen executable domain QuestFate*Checks PASSED (aggregate checks invoked by assignment checks). Java 11 dependency compilation and focused QuestFateOfferDrawChecks PASSED into
+build/continuation-quest-draw-binding. Checks include reconstructed slice objects,
+alternate legal choice, changed offers, foreign identity, stale revision, changed
+snapshot/catalog/readiness and null provenance. Initial fixture failures (missing
+third activity and raw rather than composed readiness reason) were corrected.
+Gradle focused JUnit/legacy attempt failed BEFORE compilation on inherited wrapper
+cache lock Access is denied. GRADLE_USER_HOME unchanged; no cache workaround,
+external inspection, credentials, secrets, workflows or Git operations.
+JUnit/Gson/schema/migration/legacy validation remains IMPLEMENTED_UNVERIFIED.
+
+Reconciliation: QST-04 PARTIAL: supplied replay and structural provenance binding
+implemented offline; versioned lossless transcript codec/retention and reviewed
+generation policy/service UNSTARTED. QST-02/QST-06/WHL-08 remain PARTIAL; reviewed
+catalog/current-observation/owned-capacity authority, actual retry and durable
+assignment admission UNSTARTED. QST-05 PARTIAL; authenticated evidence, durable
+prefix admission and atomic settlement UNSTARTED. FAT-05 admission BLOCKED.
+QST-07 UNSTARTED with postcommit recovery decision hold. FND-01 remains DONE;
+other statuses/holds stand. Public writers and incomplete gameplay stay disabled;
+Master Wheel behavior unchanged. No complete gameplay claim.
+
+Next: versioned lossless draw transcript codec and retained assignment integration,
+using this structural binding before durable generation admission. Run real Gson/
+JUnit/schema-23/22/21/migration/legacy suites when inherited build access returns.
+Do not invent reduced-choice, stream-generation or postcommit recovery rules.
 ## Current continuation - Questing supplied offer draw replay, 2026-11-12
 
 IDLE after bounded WB-QST-04 deterministic supplied-transcript increment (S).

@@ -14,6 +14,12 @@ public final class QuestFateOfferDraw
 {
     private final List<DrawCommitment> draws;
     private final QuestFateEligibility eligibility;
+    private final QuestFatePoolEvidence evidence;
+    private final RunIdentity identity;
+    private final long revision;
+    private final String snapshotVersion;
+    private final String catalogVersion;
+    private final ActiveWheel.Slice slice;
 
     public QuestFateOfferDraw(QuestFatePoolEvidence evidence, RunIdentity identity,
         long revision, String snapshotVersion, String catalogVersion, ActiveWheel.Slice slice,
@@ -55,6 +61,40 @@ public final class QuestFateOfferDraw
         }
         var offers = new QuestFateOffers(evidence.capacity(), catalogVersion, selected);
         eligibility = evidence.bindSuppliedOffers(identity, revision, snapshotVersion, catalogVersion, slice, offers);
+        this.evidence = evidence;
+        this.identity = identity;
+        this.revision = revision;
+        this.snapshotVersion = snapshotVersion;
+        this.catalogVersion = catalogVersion;
+        this.slice = slice;
+    }
+
+    /**
+     * Bind replayed offers to supplied frozen Master context and reward selection.
+     * Does not authenticate streams, quotes, observations or durable admission.
+     * Opaque stream states cannot establish a ticket-generation algorithm.
+     */
+    public void requireProvenance(QuestFateProvenance provenance)
+    {
+        Objects.requireNonNull(provenance, "provenance");
+        var resolution = provenance.resolution();
+        var master = resolution.resolved();
+        if (!identity.equals(resolution.identity())
+            || revision != resolution.creation().beforeRevision()
+            || !snapshotVersion.equals(master.snapshotVersion())
+            || !catalogVersion.equals(master.catalogVersion())
+            || !slice.id().equals(provenance.sliceId())
+            || !slice.activity().equals(provenance.activityKey())
+            || !eligibility.equals(provenance.reward().selection().eligibility()))
+        { throw new IllegalArgumentException("Foreign or changed Questing draw provenance"); }
+        var retained = master.readiness().wheel().slices().stream()
+            .filter(candidate -> candidate.id().equals(slice.id())).findFirst()
+            .orElseThrow(() -> new IllegalArgumentException("Missing replayed Questing slice"));
+        if (slice.kind() != retained.kind() || slice.enhancement() != retained.enhancement()
+            || slice.weightUnits() != retained.weightUnits())
+        { throw new IllegalArgumentException("Changed replayed Questing slice"); }
+        evidence.requireSuppliedReadiness(identity, revision, snapshotVersion,
+            catalogVersion, slice.activity(), master.readiness());
     }
 
     public List<DrawCommitment> draws() { return draws; }
