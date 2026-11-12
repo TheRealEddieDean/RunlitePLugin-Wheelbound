@@ -1,3 +1,9 @@
+## Current continuation pointer - Questing aggregate observed append, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: aggregate derives its
+own current assignment for supplied observed append; no authenticated admission,
+durable write or settlement. Gradle blocked before compilation by inherited cache
+lock. No new decision or Git operations. Gameplay/public writers disabled. IDLE.
 ## Current continuation pointer - Questing observed receipt preparation, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: supplied explicit

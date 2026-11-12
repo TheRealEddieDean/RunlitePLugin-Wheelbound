@@ -1,3 +1,47 @@
+## Current continuation - Questing aggregate observed append, 2026-11-12
+
+IDLE after bounded WB-QST-05 supplied aggregate observation increment (XS/S).
+Reconciled current local source, executable checks and recorded continuations. No
+Git or merged-state verification; historical merge receipts remain unverified.
+WB-D028/046/070/102 and supersession records retained; no new decision or I01d work.
+
+RunDocument.appendSuppliedQuestObservation now checks expected account/run and head
+revision, derives the current assignment exclusively from the aggregate, prepares
+an explicit quest/state observation receipt with independently supplied live IDs,
+and delegates to the existing immutable history append and command-collision guards.
+Legacy unavailable history and history without a current assignment are refused.
+Lifecycle, current commitment, reservation, balances and other journals are retained.
+This package-private supplied-data path proves no source authenticity or coverage,
+performs no durable write and pays no reward. Historical replay retains the original
+receipt API; a stale observation is never rebuilt as new evidence.
+
+Focused aggregate checks cover successful append, same-head exact replay, immutable
+input, foreign/stale head, live session/window mismatch, position, unrelated quest,
+non-complete/unknown state, paused head, absent history/assignment and Master command
+collisions. Existing JUnit aggregate test invokes these checks. Initial executable
+run exposed a test exception-category mismatch; corrected the observation assertion
+to accept the domain's IllegalStateException as well as IllegalArgumentException.
+
+Reconciliation: QST-05 PARTIAL. Supplied receipt/history/aggregate append and observed
+aggregate preparation implemented. Authenticated evidence, durable prefix admission
+and atomic settlement UNSTARTED. QST-02/WHL-08 PARTIAL; public writer, durable
+assignment admission and reviewed catalog authority UNSTARTED. FAT-05 admission
+BLOCKED. Other task statuses and client/balance/decision holds stand. No complete
+gameplay claimed. Master Wheel unchanged; incomplete gameplay and public writers
+disabled. Supervisor owns publication; local edits only.
+
+Validation: javac --release 11 with existing schema-23 source manifest PASSED into
+build/continuation-quest-aggregate-observation. All eleven executable domain
+QuestFate*Checks PASSED, including the aggregate checks invoked by assignment checks.
+Focused Gradle QuestFate/FateCard/
+RunCodec/legacy attempt failed BEFORE compilation on inherited wrapper-cache lock
+Access is denied. GRADLE_USER_HOME unchanged; no cache workaround or external
+inspection. Gson/JUnit/schema/migration/legacy remain IMPLEMENTED_UNVERIFIED.
+
+Next: execute real Gson/JUnit/schema-23/nested, schema-22 assignment, schema-21 card,
+migration and legacy verification when inherited build access returns; resolve
+failures before writer/durable admission. Then authenticated source/current-head/
+coverage admission and once-only atomic settlement remain required. No payout added.
 ## Recovered local continuation - atomic card snapshot proposal, 2026-11-06
 
 IDLE after recovering only the interrupted WB-FAT-02 in-memory admission increment

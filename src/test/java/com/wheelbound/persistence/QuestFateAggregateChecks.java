@@ -82,6 +82,26 @@ public final class QuestFateAggregateChecks
             head.fateCards(), head.cardPurchases(), Optional.of(assignment), Optional.of(emptyHistory));
         var appended = appendable.appendSuppliedQuestCompletion(receipt, lifecycle.revision(),
             window.sessionId(), window.windowId());
+        var observed = observe(appendable, assignment.identity(), lifecycle.revision(), window,
+            window.sessionId(), window.windowId(), window.baselinePosition() + 1,
+            window.selection().selection().questId(), QuestFateCompletion.QuestState.COMPLETE, receipt.commandId());
+        check(observed.questCompletionHistory().orElseThrow().journal().receipts().equals(List.of(receipt)));
+        check(observed.lifecycle() == lifecycle && observed.masterSpins().orElseThrow() == spins);
+        check(observed.currentQuestAssignment().orElseThrow().assignment() == assignment);
+        check(observed.fatePoints().equals(appendable.fatePoints()) && observed.receipts().equals(appendable.receipts()));
+        check(observe(observed, assignment.identity(), lifecycle.revision(), window,
+            window.sessionId(), window.windowId(), window.baselinePosition() + 1,
+            window.selection().selection().questId(), QuestFateCompletion.QuestState.COMPLETE,
+            receipt.commandId()) == observed);
+        for (UUID collision : List.of(resolution.creation().transactionId(), resolution.commandId()))
+        {
+            rejects(() -> observe(appendable, assignment.identity(), lifecycle.revision(), window,
+                window.sessionId(), window.windowId(), window.baselinePosition() + 1,
+                window.selection().selection().questId(), QuestFateCompletion.QuestState.COMPLETE, collision));
+        }
+        verifyObservationRefusals(appendable, receipt);
+        verifyObservationRefusals(head, receipt); // Legacy history absence is never initialized.
+        verifyObservationRefusals(historical, receipt); // History cannot synthesize a current assignment.
         check(appended != appendable && appendable.questCompletionHistory().orElseThrow() == emptyHistory);
         check(appended.questCompletionHistory().orElseThrow().journal().receipts().equals(List.of(receipt)));
         check(appended.lifecycle() == lifecycle && appended.masterSpins().orElseThrow() == spins);
@@ -101,6 +121,7 @@ public final class QuestFateAggregateChecks
             UUID.randomUUID(), window.windowId()));
         var pausedAppendable = LifecycleAdmission.prepare(appendable, assignment.identity(), UUID.randomUUID(),
             lifecycle.revision(), RunReceipt.Operation.PAUSE);
+        verifyObservationRefusals(pausedAppendable, receipt);
         rejects(() -> pausedAppendable.appendSuppliedQuestCompletion(receipt,
             pausedAppendable.lifecycle().revision(), window.sessionId(), window.windowId()));
         for (UUID collision : List.of(resolution.creation().transactionId(), resolution.commandId()))
@@ -142,6 +163,60 @@ public final class QuestFateAggregateChecks
         rejects(() -> document(new RunLifecycle(assignment.identity(), lifecycle.revision(),
             RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.NONE), catalog,
             Optional.of(creations), Optional.of(history), Optional.of(spins), Optional.of(assignment)));
+    }
+
+    private static RunDocument observe(RunDocument head, RunIdentity identity, long revision,
+        QuestFateObservationWindow window, UUID session, UUID liveWindow, long position,
+        String quest, QuestFateCompletion.QuestState state, UUID command)
+    {
+        return head.appendSuppliedQuestObservation(identity, revision, window, session, liveWindow,
+            position, quest, state, command, "quests", "completion");
+    }
+
+    private static void verifyObservationRefusals(RunDocument head, QuestFateCompletionReceipt receipt)
+    {
+        var window = receipt.window();
+        var identity = head.lifecycle().identity();
+        long revision = head.lifecycle().revision();
+        long position = receipt.observedPosition();
+        String quest = window.selection().selection().questId();
+        var complete = QuestFateCompletion.QuestState.COMPLETE;
+        var command = receipt.commandId();
+        rejectsObservation(() -> observe(head, new RunIdentity("foreign", UUID.randomUUID()), revision, window,
+            window.sessionId(), window.windowId(), position, quest, complete, command));
+        rejectsObservation(() -> observe(head, identity, revision + 1, window,
+            window.sessionId(), window.windowId(), position, quest, complete, command));
+        rejectsObservation(() -> observe(head, identity, revision, window,
+            UUID.randomUUID(), window.windowId(), position, quest, complete, command));
+        rejectsObservation(() -> observe(head, identity, revision, window,
+            window.sessionId(), UUID.randomUUID(), position, quest, complete, command));
+        rejectsObservation(() -> observe(head, identity, revision, window,
+            window.sessionId(), window.windowId(), window.baselinePosition(), quest, complete, command));
+        rejectsObservation(() -> observe(head, identity, revision, window,
+            window.sessionId(), window.windowId(), position, "unrelated", complete, command));
+        for (var state : QuestFateCompletion.QuestState.values())
+        {
+            if (state != complete)
+            {
+                rejectsObservation(() -> observe(head, identity, revision, window,
+                    window.sessionId(), window.windowId(), position, quest, state, command));
+            }
+        }
+        // Valid observations still require available history and an active current assignment.
+        if (head.questCompletionHistory().isEmpty() || head.currentQuestAssignment().isEmpty()
+            || head.lifecycle().state() != RunLifecycle.State.ACTIVE)
+        {
+            try { observe(head, identity, revision, window, window.sessionId(), window.windowId(),
+                position, quest, complete, command); throw new AssertionError("Expected rejection"); }
+            catch (IllegalArgumentException | IllegalStateException expected) { /* Fail closed. */ }
+        }
+    }
+
+    private static void rejectsObservation(Runnable action)
+    {
+        try { action.run(); }
+        catch (IllegalArgumentException | IllegalStateException expected) { return; }
+        throw new AssertionError("Expected observation rejection");
     }
 
     private static RunDocument document(RunLifecycle lifecycle, String catalog,
