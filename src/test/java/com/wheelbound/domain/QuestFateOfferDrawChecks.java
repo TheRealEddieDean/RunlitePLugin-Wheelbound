@@ -20,6 +20,37 @@ public final class QuestFateOfferDrawChecks
             var pool = evidence(capacity, QUALIFIED);
             var transcript = transcript(capacity.count());
             var result = replay(pool, transcript);
+            var tickets = new ArrayList<Integer>();
+            for (var draw : transcript) { tickets.add(draw.ticket()); }
+            var initial = transcript.get(0).pool();
+            var constructed = QuestFateOfferDraw.fromSuppliedTickets(pool, ID, 7,
+                "snapshot", "catalog", SLICE, initial, tickets);
+            check(constructed.draws().equals(transcript));
+            check(constructed.eligibility().equals(result.eligibility()));
+            check(initial.entries().size() == 5 && tickets.size() == capacity.count());
+            tickets.clear();
+            check(constructed.draws().size() == capacity.count());
+            var zeroes = java.util.Collections.nCopies(capacity.count(), 0);
+            var ascending = QuestFateOfferDraw.fromSuppliedTickets(pool, ID, 7,
+                "snapshot", "catalog", SLICE, initial, zeroes);
+            check(ascending.eligibility().offers().questIds().equals(
+                List.of("a", "b", "c", "d", "e").subList(0, capacity.count())));
+            rejects(() -> QuestFateOfferDraw.fromSuppliedTickets(pool, ID, 7,
+                "snapshot", "catalog", SLICE, initial, List.of()));
+            var invalid = new ArrayList<>(zeroes);
+            invalid.set(1, initial.totalWeight() - 1); // Valid initially, outside reduced pool.
+            rejects(() -> QuestFateOfferDraw.fromSuppliedTickets(pool, ID, 7,
+                "snapshot", "catalog", SLICE, initial, invalid));
+            rejects(() -> QuestFateOfferDraw.fromSuppliedTickets(pool, ID, 7,
+                "snapshot", "catalog", SLICE, initial,
+                java.util.Collections.nCopies(capacity.count(), -1)));
+            rejects(() -> QuestFateOfferDraw.fromSuppliedTickets(pool, ID, 8,
+                "snapshot", "catalog", SLICE, initial, zeroes));
+            rejects(() -> QuestFateOfferDraw.fromSuppliedTickets(pool, ID, 7,
+                "snapshot", "catalog", SLICE,
+                new WeightedPool("foreign", initial.entries()), zeroes));
+            rejects(() -> QuestFateOfferDraw.fromSuppliedTickets(
+                evidence(capacity, INELIGIBLE), ID, 7, "snapshot", "catalog", SLICE, initial, zeroes));
             check(result.eligibility().offers().questIds().equals(List.of("e", "d", "c", "b", "a")
                 .subList(0, capacity.count())));
             check(result.eligibility().equals(replay(pool, transcript).eligibility()));
