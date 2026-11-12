@@ -667,6 +667,36 @@ public final class RunDocument
     }
 
     /**
+     * Prepare through supplied ongoing coverage using this aggregate's current binding.
+     * Refusal closes coverage. No source authentication, durable write or settlement.
+     */
+    RunDocument appendCoveredSuppliedQuestObservation(
+        com.wheelbound.domain.RunIdentity expectedIdentity, long expectedRevision,
+        com.wheelbound.domain.QuestFateObservationCoverage coverage,
+        UUID sessionId, UUID windowId, long position, String questId,
+        com.wheelbound.domain.QuestFateCompletion.QuestState state,
+        UUID commandId, String sourceNamespace, String eventKey)
+    {
+        Objects.requireNonNull(coverage, "coverage");
+        try
+        {
+            if (!lifecycle.identity().equals(Objects.requireNonNull(expectedIdentity, "expectedIdentity"))
+                || lifecycle.revision() != expectedRevision || currentQuestAssignment == null
+                || questCompletionHistory == null)
+            { throw new IllegalArgumentException("Foreign, stale or unavailable Questing coverage context"); }
+            var request = coverage.prepareSuppliedCompletionReceipt(currentQuestAssignment,
+                expectedRevision, sessionId, windowId, position, questId, state,
+                commandId, sourceNamespace, eventKey);
+            return appendSuppliedQuestCompletion(request, expectedRevision, sessionId, windowId);
+        }
+        catch (RuntimeException failure)
+        {
+            coverage.interrupt();
+            throw failure;
+        }
+    }
+
+    /**
      * Structural supplied-data preparation only. Requires explicit available history;
      * never upgrades legacy absence, authenticates evidence or settles an objective.
      * The lifecycle, reservation, current assignment and balances remain retained.
