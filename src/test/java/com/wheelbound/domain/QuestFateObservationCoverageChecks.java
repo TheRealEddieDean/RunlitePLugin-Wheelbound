@@ -62,7 +62,55 @@ public final class QuestFateObservationCoverageChecks
             check(!invalid.isOpen() && invalid.lastPosition() == 10);
         }
         check(assignment.originalWindow().baselinePosition() == 0);
+        receiptPreparation(current, later);
         System.out.println("QuestFateObservationCoverageChecks PASSED");
+    }
+
+    private static void receiptPreparation(QuestFateCurrentAssignment current,
+        QuestFateCurrentAssignment later)
+    {
+        var covered = guard(current, QuestFateCompletion.QuestState.NOT_STARTED);
+        observe(covered, later, 11, QuestFateCompletion.QuestState.IN_PROGRESS);
+        UUID command = UUID.randomUUID();
+        var receipt = covered.prepareSuppliedCompletionReceipt(later, later.lifecycle().revision(),
+            covered.window().sessionId(), covered.window().windowId(), 14, "q1",
+            QuestFateCompletion.QuestState.COMPLETE, command, "quest-state", "event-14");
+        check(!covered.isOpen() && covered.lastPosition() == 14);
+        check(receipt.window().equals(covered.window()) && receipt.commandId().equals(command)
+            && receipt.assignment().equals(current.assignment())
+            && receipt.expectedRevision() == later.lifecycle().revision()
+            && receipt.observedPosition() == 14 && receipt.eventKey().equals("event-14")
+            && receipt.sourceNamespace().equals("quest-state"));
+        receipt.requireCurrent(later, later.lifecycle().revision(),
+            covered.window().sessionId(), covered.window().windowId());
+        rejects(() -> prepare(covered, later, 15, command, "quest-state", "event-15"));
+
+        for (int fault = 0; fault < 8; fault++)
+        {
+            var invalid = guard(current, QuestFateCompletion.QuestState.IN_PROGRESS);
+            observe(invalid, later, 12, QuestFateCompletion.QuestState.IN_PROGRESS);
+            final int kind = fault;
+            if (kind == 6) { invalid.interrupt(); }
+            if (kind == 7) { observe(invalid, later, 13, QuestFateCompletion.QuestState.COMPLETE); }
+            rejects(() -> prepare(invalid, kind == 4 ? current : later,
+                kind == 3 ? 11 : kind == 5 ? 12 : 14, kind == 0 ? null : command,
+                kind == 1 ? " quest-state" : "quest-state", kind == 2 ? "" : "event-14"));
+            check(!invalid.isOpen() && invalid.lastPosition() == (kind == 7 ? 13 : 12));
+            rejects(() -> prepare(invalid, later, 15, command, "quest-state", "event-15"));
+        }
+        var incomplete = guard(current, QuestFateCompletion.QuestState.NOT_STARTED);
+        rejects(() -> incomplete.prepareSuppliedCompletionReceipt(current, current.lifecycle().revision(),
+            incomplete.window().sessionId(), incomplete.window().windowId(), 11, "q1",
+            QuestFateCompletion.QuestState.IN_PROGRESS, command, "quest-state", "event-11"));
+        check(!incomplete.isOpen() && incomplete.lastPosition() == 10);
+    }
+
+    private static QuestFateCompletionReceipt prepare(QuestFateObservationCoverage coverage,
+        QuestFateCurrentAssignment current, long position, UUID command, String source, String event)
+    {
+        return coverage.prepareSuppliedCompletionReceipt(current, current.lifecycle().revision(),
+            coverage.window().sessionId(), coverage.window().windowId(), position,
+            "q1", QuestFateCompletion.QuestState.COMPLETE, command, source, event);
     }
 
     private static QuestFateCurrentAssignment current(QuestFateAssignment assignment,

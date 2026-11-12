@@ -1,3 +1,9 @@
+## Current continuation pointer - Questing covered receipt preparation, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: supplied coverage-to-
+receipt bridge implemented; authenticated admission/durable prefix/settlement remain
+UNSTARTED. Gradle blocked before compilation by inherited wrapper-cache lock.
+Gameplay/public writers disabled. No Git/new decision/I01d. Supervisor publishes. IDLE.
 ## Current continuation pointer - Questing observation coverage guard, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: ephemeral supplied
