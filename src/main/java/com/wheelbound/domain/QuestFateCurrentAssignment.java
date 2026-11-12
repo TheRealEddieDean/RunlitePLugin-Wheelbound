@@ -44,4 +44,20 @@ public final class QuestFateCurrentAssignment
 
     public QuestFateAssignment assignment() { return assignment; }
     public RunLifecycle lifecycle() { return lifecycle; }
+
+    /**
+     * Bind a supplied uninterrupted observation window to this retained commitment
+     * before checking its completion transition. The caller must authenticate the
+     * current head, session, window and source ordering; this pure check neither
+     * consumes evidence nor authorizes a reward or durable settlement.
+     */
+    public void requireFreshCompletion(QuestFateObservationWindow window, long expectedRevision,
+        java.util.UUID currentSessionId, java.util.UUID currentWindowId,
+        long observedPosition, String observedQuestId, QuestFateCompletion.QuestState observedState)
+    {
+        assignment.requireWindow(window);
+        window.requireFreshCompletion(lifecycle, expectedRevision, assignment.assignmentId(),
+            currentSessionId, currentWindowId, assignment.provenance().reward().selection(),
+            observedPosition, observedQuestId, observedState);
+    }
 }
