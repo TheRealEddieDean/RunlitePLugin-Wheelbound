@@ -222,7 +222,9 @@ public class QuestFateRunCodecTest
             assignment.identity(), lifecycle.revision(), java.util.List.of(resolution)), lifecycle.revision()));
         payload.add("masterSpins", MasterSpinStateJson.encode(new MasterSpinState(1, assignment.identity(),
             lifecycle.revision(), assignment.allocation().spinsBefore(), java.util.Optional.of(assignment.allocation())), lifecycle.revision()));
-        payload.add("currentQuestAssignment", QuestFateAssignmentCodec.encode(assignment));
+        payload.add("currentQuestAssignment", assignment.offerDraw().isPresent()
+            ? QuestFateAssignmentCodec.encodeWithDrawEvidence(assignment)
+            : QuestFateAssignmentCodec.encode(assignment));
         return payload;
     }
 
