@@ -629,6 +629,28 @@ public final class RunDocument
     { return Optional.ofNullable(questCompletionHistory); }
 
     /**
+     * Prepare a new supplied observation against this aggregate's retained assignment.
+     * Expected identity/revision qualify the supplied callback context, not its source.
+     * Requires independently supplied live IDs and available history. No authentication,
+     * coverage proof, durable write or settlement occurs. Historical replay uses the
+     * original receipt via appendSuppliedQuestCompletion instead of rebuilding evidence.
+     */
+    RunDocument appendSuppliedQuestObservation(com.wheelbound.domain.RunIdentity expectedIdentity,
+        long expectedRevision, com.wheelbound.domain.QuestFateObservationWindow window,
+        UUID sessionId, UUID windowId, long observedPosition, String observedQuestId,
+        com.wheelbound.domain.QuestFateCompletion.QuestState observedState,
+        UUID commandId, String sourceNamespace, String eventKey)
+    {
+        if (!lifecycle.identity().equals(Objects.requireNonNull(expectedIdentity, "expectedIdentity"))
+            || lifecycle.revision() != expectedRevision || currentQuestAssignment == null)
+        { throw new IllegalArgumentException("Foreign, stale or unavailable Questing observation context"); }
+        var request = com.wheelbound.domain.QuestFateCompletionReceipt.fromObservation(
+            currentQuestAssignment, window, expectedRevision, sessionId, windowId,
+            observedPosition, observedQuestId, observedState, commandId, sourceNamespace, eventKey);
+        return appendSuppliedQuestCompletion(request, expectedRevision, sessionId, windowId);
+    }
+
+    /**
      * Structural supplied-data preparation only. Requires explicit available history;
      * never upgrades legacy absence, authenticates evidence or settles an objective.
      * The lifecycle, reservation, current assignment and balances remain retained.
