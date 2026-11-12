@@ -63,7 +63,42 @@ public final class QuestFateObservationCoverageChecks
         }
         check(assignment.originalWindow().baselinePosition() == 0);
         receiptPreparation(current, later);
+        headNotifications(current, later);
         System.out.println("QuestFateObservationCoverageChecks PASSED");
+    }
+
+    private static void headNotifications(QuestFateCurrentAssignment current,
+        QuestFateCurrentAssignment later)
+    {
+        var valid = guard(current, QuestFateCompletion.QuestState.IN_PROGRESS);
+        valid.observeCurrentHead(current, current.lifecycle().revision());
+        valid.observeCurrentHead(later, later.lifecycle().revision());
+        valid.observeCurrentHead(later, later.lifecycle().revision());
+        check(valid.isOpen() && valid.lastPosition() == 10);
+        check(observe(valid, later, 11, QuestFateCompletion.QuestState.COMPLETE));
+        rejects(() -> valid.observeCurrentHead(later, later.lifecycle().revision()));
+
+        var foreign = QuestFateAssignmentChecks.fixture();
+        var heads = new QuestFateCurrentAssignment[] { null,
+            current(current.assignment(), later.lifecycle().revision() + 1, RunLifecycle.State.PAUSED),
+            current, current(foreign, foreign.creationRevision(), RunLifecycle.State.ACTIVE), later };
+        for (int fault = 0; fault < heads.length; fault++)
+        {
+            var invalid = guard(current, QuestFateCompletion.QuestState.NOT_STARTED);
+            invalid.observeCurrentHead(later, later.lifecycle().revision());
+            var head = heads[fault];
+            long expected = head == null ? later.lifecycle().revision()
+                : head.lifecycle().revision() + (fault == 4 ? 1 : 0);
+            rejects(() -> invalid.observeCurrentHead(head, expected));
+            check(!invalid.isOpen() && invalid.lastPosition() == 10);
+            // An active head after pause cannot resurrect the old baseline.
+            rejects(() -> invalid.observeCurrentHead(later, later.lifecycle().revision()));
+            rejects(() -> observe(invalid, later, 11, QuestFateCompletion.QuestState.COMPLETE));
+        }
+        var regressing = guard(current, QuestFateCompletion.QuestState.NOT_STARTED);
+        regressing.observeCurrentHead(later, later.lifecycle().revision());
+        rejects(() -> observe(regressing, current, 11, QuestFateCompletion.QuestState.COMPLETE));
+        check(!regressing.isOpen() && regressing.lastPosition() == 10);
     }
 
     private static void receiptPreparation(QuestFateCurrentAssignment current,

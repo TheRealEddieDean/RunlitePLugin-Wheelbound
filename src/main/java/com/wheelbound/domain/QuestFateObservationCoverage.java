@@ -38,6 +38,40 @@ public final class QuestFateObservationCoverage
     public void interrupt() { open = false; }
 
     /**
+     * Check a supplied head without a quest event. Lifecycle callers must deliver
+     * pause/assignment changes before further observations; logout, hop or an
+     * unavailable head must interrupt coverage. Refusal closes coverage permanently.
+     * This does not authenticate the head or advance the observation position.
+     */
+    public void observeCurrentHead(QuestFateCurrentAssignment current, long expectedRevision)
+    {
+        if (!open) { throw new IllegalStateException("Quest observation coverage is closed"); }
+        try
+        {
+            requireCurrentHead(current, expectedRevision);
+            lastRevision = expectedRevision;
+        }
+        catch (RuntimeException failure)
+        {
+            open = false;
+            throw failure;
+        }
+    }
+
+    private void requireCurrentHead(QuestFateCurrentAssignment current, long expectedRevision)
+    {
+        Objects.requireNonNull(current, "current");
+        var lifecycle = current.lifecycle();
+        current.assignment().requireWindow(window);
+        if (!window.identity().equals(lifecycle.identity())
+            || !assignment.equals(current.assignment())
+            || lifecycle.revision() != expectedRevision || expectedRevision < lastRevision
+            || lifecycle.state() != RunLifecycle.State.ACTIVE
+            || lifecycle.obligation() != RunLifecycle.Obligation.ACTIVE_OBJECTIVE)
+        { throw new IllegalArgumentException("Interrupted or stale quest observation head"); }
+    }
+
+    /**
      * Prepare a supplied completion receipt while this coverage is still open.
      * Retain the returned receipt for retries: this guard closes on success or
      * refusal and cannot prepare another receipt. Source identities remain caller
@@ -80,16 +114,9 @@ public final class QuestFateObservationCoverage
         if (!open) { throw new IllegalStateException("Quest observation coverage is closed"); }
         try
         {
-            Objects.requireNonNull(current, "current");
             Objects.requireNonNull(state, "state");
-            var lifecycle = current.lifecycle();
-            current.assignment().requireWindow(window);
-            if (!window.identity().equals(lifecycle.identity())
-                || !assignment.equals(current.assignment())
-                || lifecycle.revision() != expectedRevision || expectedRevision < lastRevision
-                || lifecycle.state() != RunLifecycle.State.ACTIVE
-                || lifecycle.obligation() != RunLifecycle.Obligation.ACTIVE_OBJECTIVE
-                || !window.sessionId().equals(sessionId) || !window.windowId().equals(windowId)
+            requireCurrentHead(current, expectedRevision);
+            if (!window.sessionId().equals(sessionId) || !window.windowId().equals(windowId)
                 || !window.selection().selection().questId().equals(questId)
                 || position <= lastPosition)
             { throw new IllegalArgumentException("Interrupted or unordered quest observation coverage"); }

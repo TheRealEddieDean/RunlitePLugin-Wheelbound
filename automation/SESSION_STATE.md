@@ -1,3 +1,40 @@
+## Current continuation - Questing coverage head notifications, 2026-11-12
+
+IDLE after bounded WB-QST-05 supplied lifecycle increment (XS/S). Reconciled current
+coverage/current-assignment/receipt/aggregate code and executable tests with backlog.
+No Git or merged-state verification; historical merge records remain unverified.
+WB-D028/046/070/094/102 and supersessions retained; no new decision or I01d work.
+
+QuestFateObservationCoverage.observeCurrentHead now validates a supplied current
+binding without requiring a quest event. Active same/later heads preserve baseline
+and position; pause, missing/foreign binding, stale/mismatched revision permanently
+close coverage. Quest observations share the same head validation. Head updates
+advance only the revision floor; subsequent older observations are refused. Callers
+must deliver lifecycle interruptions; source authentication/client wiring are absent.
+Master Wheel behavior unchanged; public writers and incomplete gameplay stay disabled.
+
+Validation: Java 11 dependency/domain/executable-check compilation PASSED using
+build/continuation-quest-coverage/sources.txt into build/continuation-quest-head-notification.
+All twelve executable domain QuestFate*Checks exited 0, including aggregate checks
+invoked by assignment checks. Focused tests cover repeated/later heads, pause without
+quest events, missing/foreign
+heads, revision mismatch/regression and refusal to reopen coverage after interruption.
+Gradle QuestFate/RunCodec/legacy attempt failed BEFORE compilation on inherited
+wrapper-cache lock Access is denied. GRADLE_USER_HOME unchanged; no cache workaround,
+external inspection, credentials, workflows or Git. JUnit/Gson remain unverified.
+
+Reconciliation: QST-05 PARTIAL; supplied coverage head notification implemented.
+Authenticated client/current-head admission, durable prefix admission and atomic
+settlement UNSTARTED. QST-02/WHL-08 PARTIAL; writer/durable assignment admission and
+reviewed catalog authority UNSTARTED. FAT-05 admission BLOCKED. Other recorded
+statuses and client/balance/decision holds stand; no complete gameplay/payout claim.
+
+Next: real Gson/JUnit schema-23/nested, schema-22 assignment, schema-21 card,
+migration and legacy verification when inherited build access returns. Resolve
+failures before writer/durable admission. Verified client identity, supported quest
+mapping and delivery of pause/logout/hop/lost-coverage notifications remain required
+before authenticated admission/settlement. Supervisor owns publication; local edits only.
+
 ## Current continuation - Questing covered receipt preparation, 2026-11-12
 
 IDLE after bounded WB-QST-05 coverage-to-receipt increment (S). Reconciled local
