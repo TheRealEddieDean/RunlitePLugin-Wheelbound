@@ -1,3 +1,12 @@
+## Current continuation pointer - Questing journal retention guards, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-05 remains PARTIAL: supplied
+historical-context and prefix guards verified offline; aggregate retention, trusted
+evidence and atomic settlement remain unfinished. Nested codecs/JUnit remain
+IMPLEMENTED_UNVERIFIED. Nine executable QuestFate checks passed; Gradle blocked
+before compilation by inherited wrapper-cache lock access. No new decision.
+Public writes disabled. No Git; supervisor publishes. Local checkpoint IDLE.
+
 ## Recovered increment - Questing schema-22 reader, 2026-11-12
 
 Recovery scope is the existing WB-QST-02/WB-WHL-08 schema-22 reader only. Reviewed

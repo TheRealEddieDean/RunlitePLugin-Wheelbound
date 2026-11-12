@@ -1,3 +1,49 @@
+## Current continuation - Questing journal retention guards, 2026-11-12
+
+IDLE after bounded WB-QST-05 historical-context/prefix validation prerequisite (S).
+Reconciled local production and tests with the latest journal codec continuation.
+Receipt/journal domain and nested codecs exist; aggregate journal retention does
+not. No Git or remote merged-state verification; supervisor owns publication.
+I01d not selected. No gameplay, balance or pending decision added.
+
+QuestFateCompletionJournal now validates one ordered historical active context per
+receipt, including exact commitment and admission revision. It also requires a
+proposed journal to preserve the previous run's complete ordered receipt prefix.
+Equal history permits replay; truncation, reorder, changed receipt and foreign
+identity reject. These are supplied-value guards for future aggregate integration,
+not authenticated historical authority, cross-family command admission or settlement.
+No run schema, codec payload, public writer, Master Wheel or runtime enablement changed.
+
+Verification: fresh javac --release 11 compilation using the existing domain/aggregate
+manifest into build/continuation-quest-journal-retention PASSED. All nine executable
+QuestFate*Checks PASSED. Expanded journal checks (also invoked by its JUnit wrapper)
+cover context count/order/nulls, stale/paused/altered commitments, exact replay,
+extension, truncation, reorder, replacement, changed observed position and foreign
+run. Final focused recompile/journal check PASSED after added mutation cases.
+This corrects the prior continuation's count of eleven executable checks; nine
+matching source files currently declare main. Gson/JUnit sources are excluded.
+Focused Gradle QuestFate*, FateCard*, RunCodecTest and WheelboundBehaviorTest failed
+BEFORE compilation: inherited wrapper-cache lock Access is denied. No new Gson,
+JUnit, migration, store or legacy pass claimed. GRADLE_USER_HOME unchanged; no
+external inspection, cache workaround or dependency substitution.
+
+Reconciliation: QST-05 remains PARTIAL. Receipt/journal domain and these guards
+verified offline; receipt/journal codecs and JUnit fixtures IMPLEMENTED_UNVERIFIED.
+Aggregate historical-context/journal retention, versioned absence semantics,
+authenticated evidence and atomic settlement remain UNSTARTED. QST-02/WHL-08 remain
+PARTIAL: current aggregate binding exists; codecs/schema-22 reader
+IMPLEMENTED_UNVERIFIED; candidate writer, durable admission and reviewed catalog
+authority UNSTARTED. FAT-05 current-assignment admission remains BLOCKED. Other
+recorded statuses and client/balance/decision holds stand. Public Questing/card
+writes and incomplete gameplay stay disabled.
+
+Next: execute real dependency suites when inherited build access returns. Next
+bounded implementation is explicit aggregate retention of journal plus its
+historical contexts, preserving all aggregate copy paths and refusing unsupported
+writers; reconcile versioned absence before changing the run schema. Use the new
+context/prefix guards, but retain separate cross-family command uniqueness and
+trusted evidence/atomic publication requirements. No completion payout is implemented.
+
 ## Current continuation - supplied Questing journal codec, 2026-11-12
 
 IDLE after bounded WB-QST-05 nested journal codec increment (S). Reconciled local

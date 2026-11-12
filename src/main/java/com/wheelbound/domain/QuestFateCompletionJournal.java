@@ -36,6 +36,38 @@ public final class QuestFateCompletionJournal
     public List<QuestFateCompletionReceipt> receipts() { return receipts; }
 
     /**
+     * Validate one ordered historical active context per retained receipt. These
+     * must be the contexts at admission, not a reconstruction from today's head.
+     * Supplied contexts remain unauthenticated; this check grants no write authority.
+     */
+    public void requireHistoricalContexts(List<QuestFateCurrentAssignment> historicalContexts)
+    {
+        List<QuestFateCurrentAssignment> contexts = List.copyOf(historicalContexts);
+        if (contexts.size() != receipts.size())
+        { throw new IllegalArgumentException("Missing or surplus historical Questing contexts"); }
+        for (int index = 0; index < receipts.size(); index++)
+        {
+            QuestFateCompletionReceipt receipt = receipts.get(index);
+            QuestFateCurrentAssignment context = contexts.get(index);
+            receipt.requireCurrent(context, context.lifecycle().revision(),
+                receipt.window().sessionId(), receipt.window().windowId());
+        }
+    }
+
+    /**
+     * Require a lossless ordered extension before a future aggregate publication.
+     * Equality permits replay; truncation, replacement and reordering are refused.
+     * This does not check cross-family commands, authenticate evidence or settle FP.
+     */
+    public void requireExtensionOf(QuestFateCompletionJournal previous)
+    {
+        Objects.requireNonNull(previous, "previous");
+        if (!identity.equals(previous.identity) || receipts.size() < previous.receipts.size()
+            || !receipts.subList(0, previous.receipts.size()).equals(previous.receipts))
+        { throw new IllegalArgumentException("Changed retained Questing journal prefix"); }
+    }
+
+    /**
      * Exact replay returns this journal before checking the live head. New requests
      * must match the supplied active head and live IDs. Caller authenticates them.
      * Replay acknowledges retained data only; it must never trigger another payout.
