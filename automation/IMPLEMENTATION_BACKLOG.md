@@ -1,3 +1,42 @@
+## Current continuation - Questing nested draw transcript codec, 2026-11-12
+
+WB-QST-04 PARTIAL after bounded nested transcript codec increment (S). Local
+source/test reconciliation confirmed supplied replay and provenance binding already
+exist; they were not duplicated. No Git or remote merged-state verification;
+recorded merged receipts remain historical. No I01d or new gameplay decision.
+WB-D028/046/070/102/111/120/138/139 and supersessions remain authoritative.
+
+Added package-private QuestFateOfferDrawCodec version 1 and focused Gson/JUnit
+fixtures. Payload preserves every ordered weighted pool and exact ticket, including
+different tickets selecting the same quest. Encode checks provenance; decode requires
+explicit original complete-pool evidence plus provenance, replays all draws and
+checks the resulting offers/readiness/context. This payload deliberately stores only
+the transcript; it is not a standalone evidence/provenance envelope. Retention of
+original complete-pool observations and assignment integration remain UNSTARTED.
+No RNG policy, source authentication, durable admission, payout or run-schema change.
+Public writers/incomplete gameplay remain disabled; Master Wheel code unchanged.
+
+New codec and JUnit tests IMPLEMENTED_UNVERIFIED: focused Gradle draw-codec/domain/
+legacy attempt failed BEFORE compilation on inherited wrapper-cache lock Access is
+denied. GRADLE_USER_HOME unchanged; no cache workaround or external-path inspection,
+credentials, secrets, workflows or Git. Fresh javac --release 11 domain/dependency compilation PASSED into
+build/continuation-quest-draw-codec; all fourteen executable domain QuestFate*Checks
+PASSED (aggregate checks invoked by assignment checks). These exclude the Gson
+codec and JUnit/schema/migration/legacy suites.
+
+Reconciliation: QST-04 PARTIAL; nested codec IMPLEMENTED_UNVERIFIED, enclosing
+lossless evidence retention/assignment integration and reviewed generation service
+UNSTARTED. QST-02/QST-06/WHL-08 PARTIAL; reviewed catalog/current observations/owned
+capacity authority, actual retry and durable assignment admission UNSTARTED.
+QST-05 PARTIAL; authenticated evidence, durable prefix admission and atomic settlement
+UNSTARTED. FAT-05 admission BLOCKED. QST-07 UNSTARTED with postcommit recovery hold.
+FND-01 DONE; all other statuses/decision/client/balance holds stand.
+
+Next: execute real Gson/JUnit draw-codec, schema-23/22/21, migration and legacy suites
+when inherited build access returns. Then retain original complete-pool observations
+and transcript alongside assignment provenance with explicit legacy absence; do not
+infer complete evidence from offered quests. No reduced-choice, stream-generation or
+postcommit recovery rule is authorized. Supervisor owns publication. Local state IDLE.
 ## Current continuation - Questing supplied draw provenance binding, 2026-11-12
 
 IDLE after bounded WB-QST-04 structural provenance binding (S), split from the

@@ -1,3 +1,9 @@
+## Current continuation pointer - Questing nested draw transcript codec, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-04 PARTIAL: nested lossless
+transcript codec/tests IMPLEMENTED_UNVERIFIED; Gradle blocked before compilation
+by inherited cache lock. Original complete-pool retention and assignment integration
+UNSTARTED. Public writers/gameplay disabled. No new decision/I01d/Git. IDLE.
 ## Current continuation pointer - Questing supplied draw provenance binding, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-04 PARTIAL: supplied draw to
