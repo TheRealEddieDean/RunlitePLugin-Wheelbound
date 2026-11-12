@@ -43,6 +43,22 @@ public final class MasterRetryRecovery
     /** Aggregate construction checks overlap before admitting the separate card journal. */
     static void requireUnusedExceptCards(RunDocument current, UUID id)
     {
+        requireUnusedExceptCardsAndQuest(current, id);
+        if (current.questCompletionHistory().filter(h -> h.journal().receipts().stream()
+            .anyMatch(r -> r.commandId().equals(id))).isPresent())
+        { throw new IllegalArgumentException("Command retained in Questing completion history"); }
+    }
+
+    /** Check a Questing receipt against every other retained command family. */
+    static void requireUnusedExceptQuest(RunDocument current, UUID id)
+    {
+        requireUnusedExceptCardsAndQuest(current, id);
+        if (current.cardPurchases().filter(h -> h.receipts().containsKey(id)).isPresent())
+        { throw new IllegalArgumentException("Command retained in card purchase journal"); }
+    }
+
+    private static void requireUnusedExceptCardsAndQuest(RunDocument current, UUID id)
+    {
         Objects.requireNonNull(current, "current");
         Objects.requireNonNull(id, "commandId");
         if (current.receipts().stream().anyMatch(r -> r.commandId().equals(id)))

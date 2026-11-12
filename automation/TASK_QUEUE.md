@@ -1,3 +1,12 @@
+## Current continuation pointer - Questing completion command uniqueness, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-05 remains PARTIAL: structural
+cross-family command checks implemented and verified offline, eleven executable
+Questing checks passed. No trusted admission/settlement. Gradle blocked before
+compilation by inherited wrapper-cache lock. Next bounded prerequisite: versioned
+lossless completion history/context payload and explicit legacy absence semantics.
+No new decision. Public writes disabled. No Git; supervisor publishes. IDLE.
+
 ## Current continuation - Questing aggregate completion history, 2026-11-12
 
 IDLE after bounded WB-QST-05 in-memory aggregate retention increment (S).

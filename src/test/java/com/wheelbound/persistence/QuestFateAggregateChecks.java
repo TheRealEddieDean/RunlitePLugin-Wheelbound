@@ -40,11 +40,33 @@ public final class QuestFateAggregateChecks
         var historical = historical(lifecycle, catalog, Optional.of(creations), Optional.of(history), completions);
         check(historical.currentQuestAssignment().isEmpty() && historical.masterSpins().isEmpty());
         checkCodec.accept(historical);
+        rejects(() -> MasterRetryRecovery.requireUnused(historical, receipt.commandId()));
+        rejects(() -> MasterRetryRecovery.requireUnusedExceptCards(historical, receipt.commandId()));
+        MasterRetryRecovery.requireUnused(historical, UUID.randomUUID());
+        rejects(() -> LifecycleAdmission.prepare(historical, assignment.identity(), receipt.commandId(),
+            lifecycle.revision(), RunReceipt.Operation.PAUSE));
+        // Completion commands cannot reuse either the original draw or its terminal resolution.
+        for (UUID collision : List.of(resolution.creation().transactionId(), resolution.commandId()))
+        {
+            var conflicting = new QuestFateCompletionReceipt(context, window, lifecycle.revision(),
+                window.baselinePosition() + 1, collision, "quests", "completion");
+            var conflictingHistory = new QuestFateCompletionHistory(
+                new QuestFateCompletionJournal(assignment.identity(), List.of(conflicting)), List.of(context));
+            rejects(() -> historical(lifecycle, catalog, Optional.of(creations), Optional.of(history), conflictingHistory));
+        }
         var historicalPaused = LifecycleAdmission.prepare(historical, assignment.identity(), UUID.randomUUID(),
             lifecycle.revision(), RunReceipt.Operation.PAUSE);
         var historicalResumed = LifecycleAdmission.prepare(historicalPaused, assignment.identity(), UUID.randomUUID(),
             historicalPaused.lifecycle().revision(), RunReceipt.Operation.RESUME);
         check(historicalPaused.questCompletionHistory().orElseThrow() == completions);
+        rejects(() -> MasterRetryRecovery.requireUnused(historicalPaused, receipt.commandId()));
+        UUID pauseCommand = historicalPaused.receipts().get(0).commandId();
+        var genericCollision = new QuestFateCompletionReceipt(context, window, lifecycle.revision(),
+            window.baselinePosition() + 1, pauseCommand, "quests", "completion");
+        var genericHistory = new QuestFateCompletionHistory(
+            new QuestFateCompletionJournal(assignment.identity(), List.of(genericCollision)), List.of(context));
+        rejects(() -> historical(historicalPaused.lifecycle(), catalog, Optional.of(creations),
+            Optional.of(history), genericHistory, historicalPaused.receipts()));
         check(historicalResumed.questCompletionHistory().orElseThrow() == completions);
         check(completions.contexts().get(0).lifecycle() == lifecycle);
         completions.requireExtensionOf(completions);
@@ -94,8 +116,13 @@ public final class QuestFateAggregateChecks
     private static RunDocument historical(RunLifecycle lifecycle, String catalog,
         Optional<MasterSelectionCreationJournal> creations, Optional<MasterSelectionResolutions> resolutions,
         QuestFateCompletionHistory history)
+    { return historical(lifecycle, catalog, creations, resolutions, history, List.of()); }
+
+    private static RunDocument historical(RunLifecycle lifecycle, String catalog,
+        Optional<MasterSelectionCreationJournal> creations, Optional<MasterSelectionResolutions> resolutions,
+        QuestFateCompletionHistory history, List<RunReceipt> receipts)
     {
-        return new RunDocument(lifecycle, catalog, List.of(), Optional.empty(), Optional.empty(),
+        return new RunDocument(lifecycle, catalog, receipts, Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), creations, resolutions, Optional.empty(), Optional.empty(), Optional.empty(),
             Optional.empty(), Optional.empty(), Optional.of(history));
