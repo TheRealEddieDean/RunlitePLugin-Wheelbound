@@ -1,3 +1,39 @@
+## Current continuation - Questing supplied pool-to-offer binding, 2026-11-12
+
+IDLE after bounded WB-QST-02/QST-06 supplied binding increment (S). Reconciled
+current pool, offers, eligibility, readiness and focused checks with backlog and
+WB-D028/046/070/102/111/120/138/139 supersessions. Local source only; recorded
+merged receipts were not reverified. No Git operations, new decision or I01d work.
+
+QuestFatePoolEvidence.bindSuppliedOffers validates supplied identity/revision/
+snapshot/catalog/ordinary activity, exact capacity/catalog and assignable complete
+pool. It derives eligibility from retained observations in resolved offer order,
+rejecting foreign or unqualified quests. No RNG/offer generation, authentication,
+postcommit revalidation, retry admission, durable write, reward or settlement.
+Master Wheel unchanged; public writers and incomplete gameplay remain disabled.
+
+Java 11 compilation using build/continuation-quest-pool/sources.txt into
+build/continuation-quest-offer-binding PASSED; focused QuestFatePoolEvidenceChecks
+PASSED for all capacities, ordering, original observations, stale/foreign contexts,
+capacity/catalog/membership mismatches and unqualified/unknown/unsupported inputs.
+Gradle focused/JUnit/legacy attempt failed BEFORE compilation on inherited wrapper
+cache lock Access is denied. GRADLE_USER_HOME unchanged; no external inspection,
+cache workaround, credentials, workflows or Git. Gson/JUnit/migration/legacy remain
+IMPLEMENTED_UNVERIFIED; no completed gameplay claim.
+
+Reconciliation: QST-02/QST-06 remain PARTIAL; supplied pool-to-offer binding is
+implemented and verified offline. Actual generation/retry/durable admission and
+reviewed catalog/owned-capacity authority remain UNSTARTED. QST-05 remains PARTIAL:
+supplied receipt/history/coverage work implemented offline; authenticated client/
+current-head admission, durable prefix and atomic settlement UNSTARTED. WHL-08
+PARTIAL; FAT-05 admission BLOCKED. Other recorded statuses and decision/client/
+balance holds stand. Supersedes older next-task prose only for this increment.
+
+Next: real Gson/JUnit/schema-23/schema-22/schema-21/migration/legacy validation when
+inherited build access returns. Reviewed complete catalog, owned-capacity and current
+observation authority remain required before frozen Master readiness/retry admission;
+do not infer empty pools from offer subsets or invent reduced-choice behavior.
+Supervisor owns commits, PRs, CI and merges. Local changes await publication.
 ## Current continuation - Questing complete-pool readiness, 2026-11-12
 
 IDLE after bounded WB-QST-06 precommit readiness increment (S). Reconciled current
@@ -8767,3 +8803,5 @@ added, Java 11 compilation and focused current-completion checks passed again.
 
 All discovered domain QuestFate*Checks entry points also completed with exit code 0
 against the fresh compilation; aggregate checks run through assignment checks.
+
+Fresh broader verification for supplied pool-to-offer binding: all thirteen discovered domain QuestFate*Checks entry points PASSED against build/continuation-quest-offer-binding (aggregate checks invoked by assignment checks). Excludes Gson/JUnit/schema/migration/legacy suites.
