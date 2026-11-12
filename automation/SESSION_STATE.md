@@ -1,3 +1,46 @@
+## Current continuation - Questing supplied offer draw replay, 2026-11-12
+
+IDLE after bounded WB-QST-04 deterministic supplied-transcript increment (S).
+Reconciled local pool/offer/readiness/provenance and tests against current records
+and WB-D028/046/070/102/111/120/138/139 with supersessions. Recorded merged work
+not independently verified; user prohibits Git. No I01d or new gameplay decision.
+
+QuestFateOfferDraw replays an immutable supplied DrawCommitment transcript into
+3/4/5 distinct offers and retains original eligibility observations in draw order.
+The first ordered weighted pool must contain exactly all qualified quests; later
+pools remove only the selected quest, preserving version, order and weights.
+Exact context, readiness and capacity are required. No RNG or weighting policy
+is activated: initial weights/tickets are caller declarations, not reviewed or
+authenticated authority. No durable transcript codec, generation service, assignment
+admission, retry, payout or gameplay wiring. Master behavior unchanged; public
+writers and incomplete gameplay remain disabled.
+
+Java 11 dependency compilation PASSED using the prior pool source manifest plus
+the new production/check sources, output build/continuation-quest-offer-draw.
+All fourteen executable domain QuestFate*Checks PASSED (aggregate checks invoked
+by assignment checks). Focused replay checks cover capacities, ticket boundaries,
+immutable retention, excluded quests, incomplete/extra transcripts, changed
+membership/version/order/weights, repeated selections and stale/foreign contexts.
+Gradle focused pool/draw/JUnit and legacy attempt failed BEFORE compilation on
+the inherited wrapper-cache lock: Access is denied. GRADLE_USER_HOME unchanged;
+no cache workaround, external inspection, credentials, workflows or Git.
+JUnit/Gson/schema/migration/legacy validation remains IMPLEMENTED_UNVERIFIED.
+
+Reconciliation: QST-04 PARTIAL (supplied deterministic draw replay implemented;
+reviewed generation policy/service and durable transcript binding UNSTARTED).
+QST-02/QST-06/WHL-08 remain PARTIAL; reviewed catalog/current-observation and
+owned-capacity authority, actual retry and durable assignment admission UNSTARTED.
+QST-05 PARTIAL; authenticated observation admission, durable prefix and atomic
+settlement UNSTARTED. FAT-05 admission BLOCKED. QST-07 UNSTARTED with postcommit
+recovery decision hold. FND-01 remains DONE; other recorded statuses/holds stand.
+No completed gameplay claim. Completed prior supplied bindings were not duplicated.
+
+Next: bind a versioned lossless draw transcript to retained assignment/provenance
+before any durable generator admission; reviewed complete catalog, weights/current
+observations and owned capacity remain required. Execute real Gson/JUnit/schema-23/
+schema-22/schema-21/migration/legacy checks when inherited build access returns.
+Do not infer empty pools from subsets or invent reduced-choice/postcommit recovery.
+Supervisor owns publication; local changes await review/commit/CI/merge.
 ## Current continuation - Questing supplied readiness agreement, 2026-11-12
 
 IDLE after bounded WB-QST-06 structural readiness increment (S). Reconciled local
