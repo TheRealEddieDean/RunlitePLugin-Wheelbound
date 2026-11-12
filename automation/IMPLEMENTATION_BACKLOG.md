@@ -1,3 +1,41 @@
+## Current continuation - Questing historical context payload, 2026-11-12
+
+IDLE after bounded WB-QST-05 nested historical-context codec prerequisite (S).
+Local code/test reconciliation only; no Git or merged-state verification. Supervisor
+owns publication. I01d not selected. No new gameplay/balance/pending decision.
+
+Added package-private QuestFateHistoricalContextCodec, nested version 1. Retains
+complete assignment and historical lifecycle revision/state/obligation. Decode uses
+explicit retained historical Master terminal history and spin reservation, validates
+the nested assignment against that allocation and restores through domain guards.
+No reconstruction from today's head or inferred absent accounting. Unknown/missing/
+null fields, invalid types/enums/versions and incompatible historical context refuse.
+Supplied historical inputs remain structural declarations, not authenticated evidence.
+Focused JUnit/Gson fixtures cover active/paused round trips, malformed payloads,
+stale revision, missing terminal history and missing reservation.
+
+Reconciliation: QST-05 remains PARTIAL. Existing receipt/journal/aggregate history
+and command guards remain DONE offline. New context codec/tests are
+IMPLEMENTED_UNVERIFIED, like existing nested codecs/schema-22 reader. Enclosing
+versioned history composition, explicit legacy-unavailable versus present-empty
+schema semantics, authenticated evidence, durable prefix admission and atomic
+settlement remain UNSTARTED. QST-02/WHL-08 PARTIAL; writer/durable assignment
+admission/reviewed catalog authority UNSTARTED. FAT-05 admission remains BLOCKED.
+Other backlog statuses and decision/client/balance holds stand. Public writers
+remain refused; incomplete gameplay disabled; Master Wheel behavior unchanged.
+
+Focused Gradle QuestFate*, FateCard*, RunCodecTest and WheelboundBehaviorTest failed
+BEFORE compilation: inherited wrapper-cache lock Access is denied. GRADLE_USER_HOME
+unchanged; no external inspection or workaround. No Gson/JUnit/migration/store/legacy
+pass claimed. Fresh javac --release 11 domain/aggregate manifest compilation PASSED into
+build/continuation-quest-historical-context; all eleven executable domain
+QuestFate*Checks PASSED. These checks exclude the new Gson codec/tests.
+
+Next bounded task: compose versioned completion history using this context payload
+and existing journal codec, with retained historical accounting supplied explicitly.
+Then reconcile run-schema absence semantics before integration. Execute real Gson,
+migration/card/legacy suites when inherited build access returns. Keep writers
+refused pending lossless verification and durable admission; no payout implemented.
 ## Current continuation - Questing completion command uniqueness, 2026-11-12
 
 IDLE after bounded WB-QST-05 cross-family command guard increment (S).

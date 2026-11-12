@@ -1,3 +1,10 @@
+## Current continuation pointer - Questing historical context payload, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: nested historical
+context codec/tests IMPLEMENTED_UNVERIFIED. Gradle blocked before compilation by
+inherited wrapper-cache lock. Next: enclosing history/context composition, then
+explicit legacy absence schema semantics. No new decision. Public writers disabled.
+No Git; supervisor publishes. IDLE.
 ## Current continuation pointer - Questing completion command uniqueness, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-05 remains PARTIAL: structural
