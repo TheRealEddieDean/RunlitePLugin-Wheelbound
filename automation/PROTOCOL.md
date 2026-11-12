@@ -1,3 +1,13 @@
+## Current continuation pointer - Questing aggregate completion history, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-05 remains PARTIAL: explicit
+journal plus historical contexts retained in memory and preserved through aggregate
+copies, verified by nine executable Questing checks. No schema/admission/settlement.
+Gson/JUnit still IMPLEMENTED_UNVERIFIED; Gradle blocked before compilation by the
+inherited wrapper-cache lock. Next bounded prerequisite: cross-family completion
+command uniqueness. No new decision. Public writes disabled. No Git; supervisor
+publishes. Local checkpoint IDLE.
+
 ## Current continuation pointer - Questing journal retention guards, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-05 remains PARTIAL: supplied

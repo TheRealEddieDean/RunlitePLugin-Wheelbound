@@ -45,6 +45,6 @@ public final class LifecycleAdmission
             current.masterCreations(), current.masterResolutions(), current.masterSpins().map(spins ->
                 spins.reservation().isPresent() ? spins : new com.wheelbound.domain.MasterSpinState(spins.version(), spins.identity(),
                     next.revision(), spins.allotted(), spins.reservation())),
-            current.currentMasterSpecial().map(value -> value.obligation()), current.fateCards(), current.cardPurchases(), current.currentQuestAssignment().map(value -> value.assignment()));
+            current.currentMasterSpecial().map(value -> value.obligation()), current.fateCards(), current.cardPurchases(), current.currentQuestAssignment().map(value -> value.assignment()), current.questCompletionHistory());
     }
 }
