@@ -18,6 +18,8 @@ final class QuestFateAssignmentCodec
     static JsonObject encode(QuestFateAssignment assignment)
     {
         Objects.requireNonNull(assignment, "assignment");
+        if (assignment.offerDraw().isPresent())
+        { throw new IllegalArgumentException("Assignment version 1 cannot retain original offer draw evidence"); }
         JsonObject value = new JsonObject();
         value.addProperty("version", 1);
         value.add("provenance", QuestFateProvenanceCodec.encode(

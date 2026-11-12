@@ -66,6 +66,28 @@ public class QuestFateOfferDrawCodecTest
         }
     }
 
+    @Test public void legacyAssignmentCodecRefusesToDiscardRetainedDraw()
+    {
+        var fixture = new Fixture(QuestFateOffers.Capacity.THREE, 0);
+        var resolution = fixture.provenance.resolution();
+        var window = new QuestFateObservationWindow(new RunLifecycle(resolution.identity(),
+            resolution.afterRevision(), RunLifecycle.State.ACTIVE, RunLifecycle.Obligation.ACTIVE_OBJECTIVE),
+            UUID.randomUUID(), UUID.randomUUID(), UUID.randomUUID(), 0,
+            fixture.provenance.reward().selection(), QuestFateCompletion.QuestState.IN_PROGRESS);
+        var allocation = MasterSpinAllocation.restore(resolution, 5);
+        var legacy = new QuestFateAssignment(fixture.provenance, allocation, window);
+        assertTrue(QuestFateAssignmentCodec.decode(QuestFateAssignmentCodec.encode(legacy), allocation)
+            .offerDraw().isEmpty());
+        var retained = new QuestFateAssignment(fixture.provenance, allocation, window,
+            Optional.of(fixture.draw));
+        try
+        {
+            QuestFateAssignmentCodec.encode(retained);
+            fail("Expected refusal to discard original draw evidence");
+        }
+        catch (IllegalArgumentException expected) { }
+    }
+
     @Test public void retainsEveryPoolWeightOrderAndExactTicketThroughGson()
     {
         var gson = new Gson();

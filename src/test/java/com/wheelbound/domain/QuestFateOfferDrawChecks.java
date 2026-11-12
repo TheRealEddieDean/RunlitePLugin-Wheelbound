@@ -50,6 +50,26 @@ public final class QuestFateOfferDrawChecks
         var reward = new QuestFateReward(selection, "quote", "v1", 0);
         var provenance = provenance(pool, ID, 7, "snapshot", "catalog", reward, false);
         replayed.requireProvenance(provenance);
+        var allocation = MasterSpinAllocation.restore(provenance.resolution(), 5);
+        var window = new QuestFateObservationWindow(new RunLifecycle(ID,
+            provenance.resolution().afterRevision(), RunLifecycle.State.ACTIVE,
+            RunLifecycle.Obligation.ACTIVE_OBJECTIVE), UUID.randomUUID(), UUID.randomUUID(),
+            UUID.randomUUID(), 0, selection, QuestFateCompletion.QuestState.IN_PROGRESS);
+        var legacy = new QuestFateAssignment(provenance, allocation, window);
+        var retained = new QuestFateAssignment(provenance, allocation, window,
+            java.util.Optional.of(replayed));
+        check(legacy.offerDraw().isEmpty() && !legacy.equals(retained));
+        check(retained.offerDraw().get().evidence() == pool);
+        check(retained.offerDraw().get().evidence().observations().size() == 5);
+        var reconstructed = new QuestFateAssignment(provenance, allocation, window,
+            java.util.Optional.of(replay(evidence(QuestFateOffers.Capacity.THREE, QUALIFIED), transcript(3))));
+        check(retained.equals(reconstructed) && reconstructed.equals(retained)
+            && retained.hashCode() == reconstructed.hashCode());
+        rejects(() -> new QuestFateAssignment(provenance, allocation, window, null));
+        var foreignDraw = transcript(3);
+        foreignDraw.set(2, new DrawCommitment(foreignDraw.get(2).pool(), 0));
+        rejects(() -> new QuestFateAssignment(provenance, allocation, window,
+            java.util.Optional.of(replay(pool, foreignDraw))));
         // Every offered player choice is legal; replay binds the full offer snapshot.
         replayed.requireProvenance(provenance(pool, ID, 7, "snapshot", "catalog",
             new QuestFateReward(new QuestFateSelection(replayed.eligibility(),

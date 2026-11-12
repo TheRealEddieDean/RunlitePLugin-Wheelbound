@@ -15,19 +15,31 @@ public final class QuestFateAssignment
     private final QuestFateProvenance provenance;
     private final MasterSpinAllocation allocation;
     private final QuestFateObservationWindow originalWindow;
+    private final java.util.Optional<QuestFateOfferDraw> offerDraw;
 
     public QuestFateAssignment(QuestFateProvenance provenance,
         MasterSpinAllocation allocation, QuestFateObservationWindow originalWindow)
     {
+        this(provenance, allocation, originalWindow, java.util.Optional.empty());
+    }
+
+    /** Supplied original draw retention; absence means unavailable legacy evidence. */
+    public QuestFateAssignment(QuestFateProvenance provenance,
+        MasterSpinAllocation allocation, QuestFateObservationWindow originalWindow,
+        java.util.Optional<QuestFateOfferDraw> offerDraw)
+    {
+        this.offerDraw = Objects.requireNonNull(offerDraw, "offerDraw");
         this.provenance = Objects.requireNonNull(provenance, "provenance");
         this.allocation = Objects.requireNonNull(allocation, "allocation");
         this.originalWindow = Objects.requireNonNull(originalWindow, "originalWindow");
         provenance.requireAllocation(allocation);
+        offerDraw.ifPresent(draw -> draw.requireProvenance(provenance));
         requireWindow(originalWindow);
         if (originalWindow.baseline() == QuestFateCompletion.QuestState.COMPLETE)
         { throw new IllegalArgumentException("New quest assignment requires an unfinished baseline"); }
     }
 
+    public java.util.Optional<QuestFateOfferDraw> offerDraw() { return offerDraw; }
     public UUID assignmentId() { return originalWindow.assignmentId(); }
     public RunIdentity identity() { return originalWindow.identity(); }
     public long creationRevision() { return originalWindow.baselineRevision(); }
@@ -57,9 +69,13 @@ public final class QuestFateAssignment
         QuestFateAssignment other = (QuestFateAssignment) value;
         return provenance.equals(other.provenance)
             && allocation.spinsBefore() == other.allocation.spinsBefore()
-            && originalWindow.equals(other.originalWindow);
+            && originalWindow.equals(other.originalWindow)
+            && offerDraw.map(QuestFateOfferDraw::draws).equals(other.offerDraw.map(QuestFateOfferDraw::draws))
+            && offerDraw.map(draw -> draw.evidence().observations())
+                .equals(other.offerDraw.map(draw -> draw.evidence().observations()));
     }
 
     @Override public int hashCode()
-    { return Objects.hash(provenance, allocation.spinsBefore(), originalWindow); }
+    { return Objects.hash(provenance, allocation.spinsBefore(), originalWindow,
+        offerDraw.map(QuestFateOfferDraw::draws), offerDraw.map(draw -> draw.evidence().observations())); }
 }

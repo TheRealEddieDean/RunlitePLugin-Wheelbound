@@ -1,3 +1,45 @@
+## Current continuation - Questing assignment draw retention, 2026-11-12
+
+Verification: fresh javac --release 11 domain/aggregate dependency compilation PASSED
+into build/continuation-quest-draw-retention. All fourteen executable domain
+QuestFate*Checks entry points PASSED (aggregate checks invoked by assignment).
+Excludes Gson/JUnit/schema/migration/legacy suites. Initial test-local naming
+collision corrected before successful compilation/run.
+
+WB-QST-04 remains PARTIAL after bounded supplied in-memory retention increment (S).
+Reconciled existing replay, nested codec, assignment and tests; no duplication of
+completed replay work. Historical merged receipts not independently verified (no
+Git permitted). I01d not selected. WB-D028/046/070/102/111/120/138/139 and
+supersessions preserved; no new gameplay or balance decision.
+
+QuestFateAssignment now optionally retains original QuestFateOfferDraw, including
+its immutable complete-pool observations and exact transcript. Construction requires
+provenance agreement. Old constructor explicitly retains unavailable absence;
+assignment equality/hash distinguish absent evidence, exact draws and complete
+observations. QuestFateOfferDraw exposes original supplied evidence. Version-1
+assignment encoder refuses present evidence to prevent silent loss; legacy decode
+retains absence. No schema change, trusted admission, RNG policy or payout.
+Master Wheel unchanged; public writers and incomplete gameplay stay disabled.
+
+Focused executable retention checks cover complete pool beyond offers, legacy
+absence, reconstructed equality/hash, null container and foreign-offer refusal.
+Added Gson/JUnit fixture for version-1 loss prevention and legacy absence; it is
+IMPLEMENTED_UNVERIFIED. Gradle failed BEFORE compilation on inherited wrapper-cache
+lock Access is denied. GRADLE_USER_HOME unchanged; no cache workaround, external
+inspection, credentials, secrets, workflows or Git operations.
+
+Reconciliation: QST-04 in-memory assignment retention implemented; enclosing
+lossless evidence codec/schema persistence and reviewed generation service remain
+UNSTARTED. Nested Gson codecs remain IMPLEMENTED_UNVERIFIED. QST-02/06/WHL-08
+PARTIAL; reviewed catalog/current observation/capacity authority, retry and durable
+admission UNSTARTED. QST-05 PARTIAL; authenticated evidence/durable prefix/atomic
+settlement UNSTARTED. FAT-05 admission BLOCKED; QST-07 UNSTARTED under recovery
+hold. FND-01 DONE; other statuses and holds stand. No complete gameplay claimed.
+
+Next: lossless enclosing complete-pool evidence codec, then versioned assignment
+persistence with explicit legacy absence. Run real Gson/JUnit/schema/migration and
+legacy suites when inherited build access returns before durable admission.
+Supervisor handles publication. Local continuation IDLE after verification below.
 ## Current continuation - Questing nested draw transcript codec, 2026-11-12
 
 WB-QST-04 PARTIAL after bounded nested transcript codec increment (S). Local
