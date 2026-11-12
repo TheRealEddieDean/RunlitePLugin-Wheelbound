@@ -46,6 +46,30 @@ public final class QuestFateCurrentAssignment
     public RunLifecycle lifecycle() { return lifecycle; }
 
     /**
+     * Prepare a supplied baseline from this retained head and selection. The caller
+     * must establish live source identity, ordering and coverage, and supply a new
+     * window ID after any interruption. This does not replace the original window
+     * or register a live observation session. A complete baseline cannot later earn
+     * fresh completion credit.
+     */
+    public QuestFateObservationWindow prepareSuppliedObservationWindow(
+        RunIdentity expectedIdentity, long expectedRevision, java.util.UUID sessionId,
+        java.util.UUID windowId, long baselinePosition, String observedQuestId,
+        QuestFateCompletion.QuestState baseline)
+    {
+        if (!lifecycle.identity().equals(Objects.requireNonNull(expectedIdentity, "expectedIdentity"))
+            || lifecycle.revision() != expectedRevision)
+        { throw new IllegalArgumentException("Foreign or stale Questing baseline head"); }
+        var selection = assignment.provenance().reward().selection();
+        if (!selection.selection().questId().equals(observedQuestId))
+        { throw new IllegalArgumentException("Baseline observation is for another quest"); }
+        var window = new QuestFateObservationWindow(lifecycle, assignment.assignmentId(),
+            sessionId, windowId, baselinePosition, selection, baseline);
+        assignment.requireWindow(window);
+        return window;
+    }
+
+    /**
      * Bind a supplied uninterrupted observation window to this retained commitment
      * before checking its completion transition. The caller must authenticate the
      * current head, session, window and source ordering; this pure check neither

@@ -1,3 +1,40 @@
+## Current continuation - Questing supplied baseline preparation, 2026-11-12
+
+IDLE after bounded WB-QST-05 supplied baseline preparation (S). Reconciled current
+local domain/aggregate paths, executable checks and recorded continuations. No Git
+or merged-state verification; historical merged receipts remain unverified. I01d
+not selected. WB-D028/046/070/102 and supersessions retained; no new decision.
+
+QuestFateCurrentAssignment.prepareSuppliedObservationWindow derives assignment ID,
+selection and baseline revision from its retained current binding, checks expected
+account/run/head and the explicitly observed quest ID, and validates supplied active
+baseline/session/window/position. Original assignment/window and accounting remain
+unchanged. COMPLETE baselines are retained but cannot establish fresh completion.
+Caller must authenticate source, ordering, current durable head and coverage, and
+rotate IDs after interruptions. No live-session registration, durable write or reward.
+
+Validation: javac --release 11 using existing schema-23 source manifest PASSED into
+build/continuation-quest-baseline. Focused executable current-completion checks PASSED,
+including foreign account/run, stale/future revision, wrong/null quest, paused head,
+null IDs/state, negative position, successful later transition and complete baseline
+refusal. Existing JUnit entry point invokes these checks. Gradle QuestFate/FateCard/
+RunCodec/legacy attempt failed BEFORE compilation: inherited wrapper-cache lock
+Access is denied. GRADLE_USER_HOME unchanged; no cache workaround/external inspection.
+Gson/JUnit/schema/migration/legacy validation remains IMPLEMENTED_UNVERIFIED.
+
+Reconciliation: QST-05 PARTIAL; supplied receipt/history/aggregate append and baseline
+preparation implemented offline. Authenticated source/current-head/coverage admission,
+durable prefix admission and atomic settlement UNSTARTED. QST-02/WHL-08 PARTIAL;
+public writer, durable assignment admission and reviewed catalog authority UNSTARTED.
+FAT-05 admission BLOCKED. Other recorded statuses and client/balance/decision holds
+stand. No full gameplay completion claimed. Master Wheel unchanged; incomplete
+gameplay/public writers disabled. Supervisor owns publication; local edits only.
+
+Next: real Gson/JUnit schema-23/nested, schema-22 assignment, schema-21 card, migration
+and legacy verification when inherited build access returns; resolve failures before
+writer/durable admission. Authenticated admission and once-only atomic settlement
+remain required. No payout added.
+
 ## Current continuation - Questing aggregate observed append, 2026-11-12
 
 IDLE after bounded WB-QST-05 supplied aggregate observation increment (XS/S).
@@ -8565,3 +8602,7 @@ Planned sequential bounded deliverables (S/M each): A74 Killerwatt/Molanisk full
 Owner wb-hour-a84; acquired 2026-10-15T16:28:41.240949+00:00; expires 2026-10-15T18:28:41.240949+00:00. User requests approximately one hour of authorized design/documentation/research work. Verified start ea63bc89da766595d549ef4aedeea1bf379c4f2a; protected main c8cc38ac9a7ab74d9bc10125388da7cc75af99fa.
 
 Priority/size/dependencies: A84 S targeted exact/range gem evidence check from captured links and current primary lookup, stop at source limitation; A85 M water-snake stage/access/receipt/effort packet; A86 M bounded Greater/Superior semantic source/context/quote packet; A87 M ordinary-income/spin/expense price sensitivity; A88 S honest project workstream/backlog/readiness summary so checkpoint counts are not a completion percentage. Each bounded deliverable publishes/verifies before successor. Reserve final work for validation/checkpoint/release. No production/main changes, no repeated whole-inventory crawl, no arbitrary source proof or silent unrelated decision adoption. Scope may finish fewer or more bounded deliverables according to actual evidence/time. No background work promised.
+
+All eleven executable domain QuestFate*Checks completed with exit code 0, including
+aggregate checks invoked by assignment checks. After foreign-account/run cases were
+added, Java 11 compilation and focused current-completion checks passed again.

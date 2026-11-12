@@ -1,3 +1,40 @@
+## Current continuation - Questing supplied baseline preparation, 2026-11-12
+
+IDLE after bounded WB-QST-05 supplied baseline preparation (S). Reconciled current
+local domain/aggregate paths, executable checks and recorded continuations. No Git
+or merged-state verification; historical merged receipts remain unverified. I01d
+not selected. WB-D028/046/070/102 and supersessions retained; no new decision.
+
+QuestFateCurrentAssignment.prepareSuppliedObservationWindow derives assignment ID,
+selection and baseline revision from its retained current binding, checks expected
+account/run/head and the explicitly observed quest ID, and validates supplied active
+baseline/session/window/position. Original assignment/window and accounting remain
+unchanged. COMPLETE baselines are retained but cannot establish fresh completion.
+Caller must authenticate source, ordering, current durable head and coverage, and
+rotate IDs after interruptions. No live-session registration, durable write or reward.
+
+Validation: javac --release 11 using existing schema-23 source manifest PASSED into
+build/continuation-quest-baseline. Focused executable current-completion checks PASSED,
+including foreign account/run, stale/future revision, wrong/null quest, paused head,
+null IDs/state, negative position, successful later transition and complete baseline
+refusal. Existing JUnit entry point invokes these checks. Gradle QuestFate/FateCard/
+RunCodec/legacy attempt failed BEFORE compilation: inherited wrapper-cache lock
+Access is denied. GRADLE_USER_HOME unchanged; no cache workaround/external inspection.
+Gson/JUnit/schema/migration/legacy validation remains IMPLEMENTED_UNVERIFIED.
+
+Reconciliation: QST-05 PARTIAL; supplied receipt/history/aggregate append and baseline
+preparation implemented offline. Authenticated source/current-head/coverage admission,
+durable prefix admission and atomic settlement UNSTARTED. QST-02/WHL-08 PARTIAL;
+public writer, durable assignment admission and reviewed catalog authority UNSTARTED.
+FAT-05 admission BLOCKED. Other recorded statuses and client/balance/decision holds
+stand. No full gameplay completion claimed. Master Wheel unchanged; incomplete
+gameplay/public writers disabled. Supervisor owns publication; local edits only.
+
+Next: real Gson/JUnit schema-23/nested, schema-22 assignment, schema-21 card, migration
+and legacy verification when inherited build access returns; resolve failures before
+writer/durable admission. Authenticated admission and once-only atomic settlement
+remain required. No payout added.
+
 ## Current continuation - Questing aggregate observed append, 2026-11-12
 
 IDLE after bounded WB-QST-05 supplied aggregate observation increment (XS/S).
@@ -8501,3 +8538,7 @@ The user approved the 36-screen simple UI and explicitly authorized this plannin
 Existing WB-UI-10..52 IDs remain; 32 increments are initial plain-UI scope and 11 optional visual/art increments are DEFERRED (21,22,23,24,25,27,30,35,36,46,51). Four independent initial foundations: WB-UI-10/11/12/18. WB-UI-26 and WB-UI-29 no longer wait for a custom canvas. Earlier Category B labels in the original index refer to future decorative concepts; the initial ordinary controls are now approved. Do not mark any Java UI task DONE from this documentation/prototype merge.
 
 Respect the current in-flight gameplay task and existing claim/refresh procedure. Once a UI task is legitimately selected, follow the new handoff's dependency order; do not restart or reconfigure the supervisor. Read-only panels can proceed without missing mutation services; unavailable actions stay disabled and explained. Live account, evidence, reviewed quote and atomic transaction dependencies remain required. No new gameplay rules, pricing, Plugin Hub submission or feature enablement is authorized by visual approval.
+
+All eleven executable domain QuestFate*Checks completed with exit code 0, including
+aggregate checks invoked by assignment checks. After foreign-account/run cases were
+added, Java 11 compilation and focused current-completion checks passed again.
