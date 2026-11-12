@@ -1,3 +1,42 @@
+## Current continuation - Questing observation coverage guard, 2026-11-12
+
+IDLE after bounded WB-QST-05 ephemeral coverage prerequisite (S). Reconciled local
+assignment/window/aggregate code and recorded backlog; no Git or merged-state
+verification. WB-D028/046/070/102 and supersessions retained; I01d not selected.
+
+Added QuestFateObservationCoverage: single-thread-confined supplied observation guard
+pinned to an exact retained assignment and freshly prepared baseline. Tracks strictly
+increasing positions and nonregressing current-head revisions; accepts position gaps
+for unrelated events. Invalid context/order/state closes coverage. Explicit interruption
+is irreversible; completion closes once. A fresh COMPLETE resume baseline cannot earn
+retroactive credit. Original assignment/window, accounting and history are unchanged.
+No client integration, source authentication, durable write, evidence consumption or
+reward. Client boundary must interrupt on pause/logout/hop/lost coverage and establish
+current durable head and supported quest mapping. Guard remains unwired.
+
+Validation: Java 11 production/dependency/check compilation PASSED using existing
+schema-23 source manifest plus new guard/check. Focused executable coverage checks
+PASSED, including ordering, gaps, stale/moving heads, interruption, complete baseline,
+foreign assignment, paused context, mismatched session/window/quest and unknown state.
+All twelve executable domain QuestFate*Checks exited 0, including aggregate checks
+invoked by assignment checks. JUnit entry point added. Gradle QuestFate/RunCodec/legacy attempt failed BEFORE
+compilation on inherited wrapper-cache lock Access is denied; GRADLE_USER_HOME
+unchanged, no cache workaround. Real Gson/JUnit/schema/migration/legacy validation
+remains IMPLEMENTED_UNVERIFIED.
+
+Reconciliation: QST-05 PARTIAL. Supplied baseline/receipt/history/aggregate preparation
+and ephemeral coverage guard implemented offline. Authenticated client/current-head
+admission, durable prefix admission and atomic settlement UNSTARTED. QST-02/WHL-08
+PARTIAL; public writers, durable assignment admission and reviewed catalog authority
+UNSTARTED. FAT-05 admission BLOCKED. Other existing task and decision/client/balance
+holds stand. Master Wheel unchanged; incomplete gameplay/public writers disabled.
+
+Next: run real Gson/JUnit schema-23/nested, schema-22 assignment, schema-21 card,
+migration and legacy verification when inherited build access returns; resolve
+failures before writer/durable admission. Then connect verified client identity,
+quest mapping and interruption coverage before once-only atomic settlement.
+No new gameplay decision or payout. Supervisor owns publication; local edits only.
+
 ## Current continuation - Questing aggregate baseline preparation, 2026-11-12
 
 IDLE after bounded WB-QST-05 aggregate baseline preparation (XS/S). Reconciled local

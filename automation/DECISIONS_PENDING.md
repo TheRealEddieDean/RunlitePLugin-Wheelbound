@@ -1,3 +1,11 @@
+## Current continuation pointer - Questing observation coverage guard, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: ephemeral supplied
+coverage guard implemented and focused executable checks passed. Authenticated
+client admission, durable prefix admission and settlement UNSTARTED. Gradle blocked
+before compilation by inherited cache lock. Gameplay/public writers disabled.
+No Git/new decision; I01d not selected. Supervisor publishes. IDLE.
+
 ## Current continuation pointer - Questing aggregate baseline preparation, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: aggregate supplied
