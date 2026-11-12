@@ -31,6 +31,10 @@ public class QuestFateOfferDrawCodecTest
                     QuestFateEligibility.Status.QUALIFIED));
                 entries.add(new WeightedPool.Entry(id, i + 2));
             }
+            required.add("unavailable");
+            observations.add(new QuestFateEligibility.Observation("unavailable", "locked-route", "v2",
+                QuestFateEligibility.Status.INELIGIBLE, QuestFateEligibility.Status.QUALIFIED,
+                QuestFateEligibility.Status.INELIGIBLE));
             evidence = new QuestFatePoolEvidence(identity, 7, "snapshot", "catalog", "questing",
                 capacity, required, observations);
             var draws = new ArrayList<DrawCommitment>();
@@ -64,6 +68,54 @@ public class QuestFateOfferDrawCodecTest
                 new QuestFateReward(new QuestFateSelection(draw.eligibility(), offers.select(offers.questIds().get(0))),
                     "quote", "v1", 0));
         }
+    }
+
+    @Test public void completeEvidenceEnvelopeRetainsUnofferedAndIneligibleObservations()
+    {
+        for (var capacity : QuestFateOffers.Capacity.values())
+        {
+            var fixture = new Fixture(capacity, 1);
+            var gson = new Gson();
+            String json = gson.toJson(QuestFateDrawEvidenceCodec.encode(fixture.draw, fixture.provenance));
+            var restored = QuestFateDrawEvidenceCodec.decode(
+                new JsonParser().parse(json).getAsJsonObject(), fixture.provenance);
+            assertEquals(fixture.evidence.observations(), restored.evidence().observations());
+            assertEquals(7, restored.evidence().observations().size());
+            assertEquals(fixture.draw.draws(), restored.draws());
+            assertEquals(fixture.draw.eligibility(), restored.eligibility());
+            assertEquals(json, gson.toJson(QuestFateDrawEvidenceCodec.encode(restored, fixture.provenance)));
+        }
+    }
+
+    @Test public void completeEvidenceEnvelopeRejectsMalformedAndInconsistentPayloads()
+    {
+        rejectsEvidence(v -> v.remove("version"));
+        rejectsEvidence(v -> v.addProperty("version", 2));
+        rejectsEvidence(v -> v.addProperty("version", "1"));
+        rejectsEvidence(v -> v.addProperty("extra", true));
+        rejectsEvidence(v -> v.addProperty("capacity", "FOUR"));
+        rejectsEvidence(v -> v.addProperty("capacity", "invalid"));
+        rejectsEvidence(v -> v.remove("observations"));
+        rejectsEvidence(v -> v.add("observations", JsonNull.INSTANCE));
+        rejectsEvidence(v -> v.getAsJsonArray("observations").add(JsonNull.INSTANCE));
+        rejectsEvidence(v -> v.getAsJsonArray("observations").add(v.getAsJsonArray("observations").get(0)));
+        rejectsEvidence(v -> v.getAsJsonArray("observations").remove(0));
+        rejectsEvidence(v -> v.getAsJsonArray("observations").get(0).getAsJsonObject()
+            .addProperty("routeKey", "changed"));
+        rejectsEvidence(v -> v.getAsJsonArray("observations").get(6).getAsJsonObject()
+            .addProperty("accountRoute", "UNKNOWN"));
+        rejectsEvidence(v -> v.remove("transcript"));
+        rejectsEvidence(v -> v.add("transcript", JsonNull.INSTANCE));
+        rejectsEvidence(v -> step(v.getAsJsonObject("transcript"), 0).addProperty("ticket", -1));
+    }
+
+    private static void rejectsEvidence(Consumer<JsonObject> change)
+    {
+        var fixture = new Fixture(QuestFateOffers.Capacity.THREE, 0);
+        var value = QuestFateDrawEvidenceCodec.encode(fixture.draw, fixture.provenance);
+        change.accept(value);
+        try { QuestFateDrawEvidenceCodec.decode(value, fixture.provenance); fail("Accepted changed evidence"); }
+        catch (IllegalArgumentException | IllegalStateException | ArithmeticException expected) { }
     }
 
     @Test public void legacyAssignmentCodecRefusesToDiscardRetainedDraw()

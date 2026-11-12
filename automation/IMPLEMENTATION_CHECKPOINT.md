@@ -1,3 +1,44 @@
+## Current continuation - Questing complete-pool draw envelope, 2026-11-12
+
+IDLE after bounded WB-QST-04 nested evidence persistence increment (S). Reconciled
+local draw replay, complete-pool evidence, assignment retention and nested codecs.
+Existing replay/retention work was not duplicated. Historical merged receipts were
+not independently verified; no Git operations permitted. I01d not selected.
+WB-D028/046/070/102/111/120/138/139 and supersessions remain authoritative.
+
+Added package-private QuestFateDrawEvidenceCodec version 1. Retains ordered complete
+supplied pool observations (including unoffered/ineligible quests), capacity and the
+exact nested weighted transcript. Decode takes explicit original provenance, derives
+its context, reconstructs supplied pool evidence and replays/checks offers/readiness.
+The retained membership is a supplied declaration, not proof of reviewed catalog
+completeness; structurally identical evidence is not authenticated to an account by
+this nested envelope. No RNG policy, schema integration, admission or payout added.
+Assignment version-1 loss-prevention refusal remains. Master Wheel unchanged;
+public writers and incomplete gameplay remain disabled.
+
+Focused Gson/JUnit fixtures cover 3/4/5 capacities, complete ordered observations,
+exact transcript/tickets, stable re-encoding, duplicate/missing pool entries,
+changed offered routes, unknown readiness, malformed versions/types/capacity and
+nested transcript corruption. New codec and fixtures IMPLEMENTED_UNVERIFIED:
+focused Gradle failed BEFORE compilation on inherited wrapper-cache lock Access
+is denied. No JUnit, Gson, migration or legacy pass claimed. GRADLE_USER_HOME
+unchanged; no external inspection/cache workaround, secrets, workflows or Git.
+
+Reconciliation: QST-04 PARTIAL. Supplied domain replay/in-memory retention remain
+implemented with previously recorded offline verification; transcript and new
+enclosing codecs IMPLEMENTED_UNVERIFIED. Versioned assignment/schema persistence
+and reviewed generation/admission service UNSTARTED. QST-02/06/WHL-08 PARTIAL;
+reviewed catalog/current observation/capacity authority, retry and durable admission
+UNSTARTED. QST-05 PARTIAL; authenticated evidence/durable prefix/atomic settlement
+UNSTARTED. FAT-05 admission BLOCKED; QST-07 UNSTARTED under recovery hold.
+FND-01 DONE; all other statuses and decision/client/balance holds stand.
+
+Next: versioned assignment persistence composing this complete-pool envelope, with
+explicit legacy absence and unchanged public writer refusal; then run-schema
+integration. Execute real Gson/JUnit/schema/migration/legacy suites when inherited
+build access returns, resolving failures before durable admission. Supervisor owns
+publication. No complete gameplay claimed.
+
 ## Current continuation - Questing assignment draw retention, 2026-11-12
 
 Verification: fresh javac --release 11 domain/aggregate dependency compilation PASSED

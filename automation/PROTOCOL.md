@@ -1,3 +1,12 @@
+## Current continuation pointer - Questing complete-pool draw envelope, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-04 PARTIAL: nested lossless
+complete-pool/transcript envelope and focused tests IMPLEMENTED_UNVERIFIED.
+Gradle blocked before compilation by inherited cache lock. Next: versioned
+assignment composition with explicit legacy absence, then schema integration.
+Reviewed generation/admission remains UNSTARTED. No new decision/I01d/Git.
+Master Wheel unchanged; gameplay/public writers disabled. Supervisor publishes.
+
 ## Current continuation pointer - Questing assignment draw retention, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-04 PARTIAL: supplied in-memory
