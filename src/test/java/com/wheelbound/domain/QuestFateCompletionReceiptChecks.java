@@ -23,6 +23,29 @@ public final class QuestFateCompletionReceiptChecks
             && receipt.eventKey().equals("event-1"));
         receipt.requireCurrent(current, revision, window.sessionId(), window.windowId());
         receipt.requireCurrent(current, revision, window.sessionId(), window.windowId());
+        var observed = QuestFateCompletionReceipt.fromObservation(current, window, revision,
+            window.sessionId(), window.windowId(), 1, window.selection().selection().questId(),
+            QuestFateCompletion.QuestState.COMPLETE, command, "quests", "event-1");
+        check(observed.equals(receipt));
+        for (var state : QuestFateCompletion.QuestState.values())
+        {
+            if (state == QuestFateCompletion.QuestState.COMPLETE) { continue; }
+            rejects(() -> QuestFateCompletionReceipt.fromObservation(current, window, revision,
+                window.sessionId(), window.windowId(), 1, window.selection().selection().questId(),
+                state, command, "quests", "event-1"));
+        }
+        rejects(() -> QuestFateCompletionReceipt.fromObservation(current, window, revision,
+            window.sessionId(), window.windowId(), 1, "unrelated-quest",
+            QuestFateCompletion.QuestState.COMPLETE, command, "quests", "event-1"));
+        rejects(() -> QuestFateCompletionReceipt.fromObservation(current, window, revision,
+            UUID.randomUUID(), window.windowId(), 1, window.selection().selection().questId(),
+            QuestFateCompletion.QuestState.COMPLETE, command, "quests", "event-1"));
+        rejects(() -> QuestFateCompletionReceipt.fromObservation(current, window, revision,
+            window.sessionId(), UUID.randomUUID(), 1, window.selection().selection().questId(),
+            QuestFateCompletion.QuestState.COMPLETE, command, "quests", "event-1"));
+        rejects(() -> QuestFateCompletionReceipt.fromObservation(current, window, revision,
+            window.sessionId(), window.windowId(), 1, window.selection().selection().questId(),
+            null, command, "quests", "event-1"));
         check(assignment.originalWindow() == window && assignment.allocation().spinsBefore() == 5);
 
         var changedPosition = receipt(current, window, revision, Long.MAX_VALUE, command, "quests", "event-1");
@@ -35,6 +58,25 @@ public final class QuestFateCompletionReceiptChecks
         var refreshed = window(assignment, revision, window.sessionId(), UUID.randomUUID(),
             QuestFateCompletion.QuestState.IN_PROGRESS);
         var refreshedReceipt = receipt(current, refreshed, revision, 11, command, "quests", "event-1");
+        check(QuestFateCompletionReceipt.fromObservation(current, refreshed, revision,
+            refreshed.sessionId(), refreshed.windowId(), 11, refreshed.selection().selection().questId(),
+            QuestFateCompletion.QuestState.COMPLETE, command, "quests", "event-1").equals(refreshedReceipt));
+        rejects(() -> QuestFateCompletionReceipt.fromObservation(current, refreshed, revision,
+            refreshed.sessionId(), refreshed.windowId(), 10, refreshed.selection().selection().questId(),
+            QuestFateCompletion.QuestState.COMPLETE, command, "quests", "event-1"));
+        rejects(() -> QuestFateCompletionReceipt.fromObservation(current, refreshed, revision + 1,
+            refreshed.sessionId(), refreshed.windowId(), 11, refreshed.selection().selection().questId(),
+            QuestFateCompletion.QuestState.COMPLETE, command, "quests", "event-1"));
+        rejects(() -> QuestFateCompletionReceipt.fromObservation(
+            current(assignment, revision, RunLifecycle.State.PAUSED), refreshed, revision,
+            refreshed.sessionId(), refreshed.windowId(), 11, refreshed.selection().selection().questId(),
+            QuestFateCompletion.QuestState.COMPLETE, command, "quests", "event-1"));
+        var completedBaseline = window(assignment, revision, refreshed.sessionId(), refreshed.windowId(),
+            QuestFateCompletion.QuestState.COMPLETE);
+        rejects(() -> QuestFateCompletionReceipt.fromObservation(current, completedBaseline, revision,
+            completedBaseline.sessionId(), completedBaseline.windowId(), 11,
+            completedBaseline.selection().selection().questId(), QuestFateCompletion.QuestState.COMPLETE,
+            command, "quests", "event-1"));
         check(!receipt.equals(refreshedReceipt) && receipt.sameSourceEvent(refreshedReceipt));
         var newSession = window(assignment, revision, UUID.randomUUID(), UUID.randomUUID(),
             QuestFateCompletion.QuestState.NOT_STARTED);

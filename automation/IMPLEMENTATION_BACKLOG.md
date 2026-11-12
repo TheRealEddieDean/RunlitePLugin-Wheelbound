@@ -1,3 +1,39 @@
+## Current continuation - Questing observed receipt preparation, 2026-11-12
+
+IDLE after bounded WB-QST-05 supplied observation-to-receipt prerequisite (XS/S).
+Reconciled local source/tests with current continuation; no Git or merged-state
+verification. Historical merged receipts remain unverified. I01d not selected.
+WB-D028/046/070/102 and supersessions retained; no new gameplay decision.
+
+QuestFateCompletionReceipt.fromObservation requires explicit observed quest/state
+and independently supplied live session/window IDs before receipt construction.
+Focused executable checks cover original/refreshed windows, unrelated quest,
+non-complete/unknown state, stale revision/position, paused head, complete baseline
+and mismatched live IDs. Supplied values are not authenticated evidence. Existing
+constructor remains for supplied payload restoration; no public writer, client
+wiring, event consumption, durable admission, reward or settlement was enabled.
+The suspected history-context prefix gap was not reproduced: existing receipt
+validation already constrains the historical lifecycle. No prefix change made.
+
+Reconciliation: QST-05 PARTIAL. Supplied receipt/journal/history/aggregate append
+implemented; observed receipt preparation added. Authenticated evidence, durable
+prefix admission and atomic settlement UNSTARTED. QST-02/WHL-08 PARTIAL; writer,
+durable assignment admission and reviewed catalog authority UNSTARTED. FAT-05
+admission BLOCKED. Other recorded statuses and client/balance/decision holds stand.
+Master Wheel unchanged; incomplete gameplay disabled. Supervisor publishes.
+
+Validation: javac --release 11 compilation using existing schema-23 manifest PASSED
+into build/continuation-quest-observation-receipt. Focused Gradle QuestFate/FateCard/
+RunCodec/legacy attempt failed BEFORE compilation on inherited wrapper-cache lock
+Access is denied. Gson/JUnit/schema/migration/legacy remain IMPLEMENTED_UNVERIFIED.
+GRADLE_USER_HOME unchanged; no cache workaround, external inspection, credentials,
+workflows or Git operations. All eleven executable domain QuestFate*Checks exited 0, including aggregate checks.
+
+Next: real Gson/JUnit schema-23/nested, schema-22 assignment, schema-21 card, migration
+and legacy verification when inherited build access returns; resolve failures before
+writer/durable admission. Then authenticated source/current-head/coverage admission
+and once-only atomic settlement. Local changes only; no payout implemented.
+
 ## Current continuation - Questing aggregate supplied append, 2026-11-12
 
 IDLE after bounded WB-QST-05 structural aggregate increment (XS/S). Reconciled

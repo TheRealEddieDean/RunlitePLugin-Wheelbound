@@ -1,3 +1,10 @@
+## Current continuation pointer - Questing observed receipt preparation, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: supplied explicit
+observation-to-receipt preparation added; no authenticated admission or settlement.
+Gradle blocked before compilation by inherited cache lock. No new decision or Git.
+Public writers refused; gameplay disabled. IDLE.
+
 ## Current continuation pointer - Questing aggregate supplied append, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: supplied aggregate

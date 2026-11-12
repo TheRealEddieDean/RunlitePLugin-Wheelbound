@@ -18,6 +18,25 @@ public final class QuestFateCompletionReceipt
     private final String sourceNamespace;
     private final String eventKey;
 
+    /**
+     * Prepare a supplied receipt from an explicit observation, checking the observed
+     * quest/state and independently supplied live IDs before retaining completion.
+     * The caller still authenticates source mapping, current head and uninterrupted
+     * coverage. This factory consumes no event and grants no admission authority.
+     */
+    public static QuestFateCompletionReceipt fromObservation(QuestFateCurrentAssignment current,
+        QuestFateObservationWindow window, long expectedRevision,
+        UUID currentSessionId, UUID currentWindowId, long observedPosition,
+        String observedQuestId, QuestFateCompletion.QuestState observedState,
+        UUID commandId, String sourceNamespace, String eventKey)
+    {
+        Objects.requireNonNull(current, "current").requireFreshCompletion(window,
+            expectedRevision, currentSessionId, currentWindowId, observedPosition,
+            observedQuestId, observedState);
+        return new QuestFateCompletionReceipt(current, window, expectedRevision,
+            observedPosition, commandId, sourceNamespace, eventKey);
+    }
+
     /** Retain exact source identities and original commitment for full replay comparison. */
     public QuestFateCompletionReceipt(QuestFateCurrentAssignment current,
         QuestFateObservationWindow window, long expectedRevision, long observedPosition,
