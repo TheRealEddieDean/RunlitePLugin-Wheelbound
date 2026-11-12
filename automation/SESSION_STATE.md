@@ -1,3 +1,37 @@
+## Current continuation - Questing history append, 2026-11-12
+
+IDLE after bounded WB-QST-05 supplied history append prerequisite (XS/S).
+Reconciled current source, executable checks and recorded continuation; no Git or
+merged-state verification. I01d not selected. WB-D028/046/070/102 and supersessions
+retained; no new gameplay or balance decision.
+
+QuestFateCompletionHistory.append now retains a new receipt and its validated active
+historical context in one immutable result. Exact retained replay returns the same
+history without replacing its original context or requalifying a changed live head.
+Journal guards reject stale/paused new requests and command/source/assignment reuse.
+Focused executable checks cover ordered retention, prefix compatibility, replay,
+failed append immutability and collision/stale/paused refusals.
+
+Java 11 domain/aggregate dependency compilation PASSED using the existing schema-23
+source manifest into build/continuation-quest-history-append. Focused
+QuestFateCompletionJournalChecks PASSED; all executable domain QuestFate*Checks also
+PASSED (including aggregate checks invoked by assignment checks). Gson/JUnit/schema/migration/legacy checks
+remain IMPLEMENTED_UNVERIFIED: focused Gradle failed BEFORE compilation on inherited
+wrapper-cache lock Access is denied. GRADLE_USER_HOME unchanged; no external inspection,
+cache workaround, credentials, workflows or Git operations.
+
+Reconciliation: QST-05 PARTIAL. Structural retention, journal/prefix/command guards
+and supplied in-memory append implemented; authenticated evidence, durable prefix
+admission and atomic settlement UNSTARTED. QST-02/WHL-08 PARTIAL; writer/durable
+assignment admission and reviewed catalog authority UNSTARTED. FAT-05 admission
+BLOCKED. Other recorded partial/unstarted/blocked statuses stand. Recorded merged
+receipts not independently reverified. Public/candidate Questing writers still refuse
+present history. Master Wheel unchanged; incomplete gameplay disabled; no payout.
+
+Next: execute real Gson/JUnit schema-23/nested, schema-22 assignment, schema-21 card,
+migration and legacy suites when inherited build access returns; resolve failures
+before writer/durable admission. Supplied append is not trusted admission or settlement.
+Supervisor owns publication. Local edits only.
 ## Current continuation - Questing schema-23 history reader, 2026-11-12
 
 IDLE after bounded WB-QST-05 reader integration (S). Reconciled local domain,

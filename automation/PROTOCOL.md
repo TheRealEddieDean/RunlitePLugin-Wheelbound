@@ -1,3 +1,10 @@
+## Current continuation pointer - Questing history append, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: supplied immutable
+history append implemented and focused executable checks passed; no authenticated
+admission or settlement. Gradle blocked before compilation by inherited cache lock.
+Other recorded statuses/holds stand. No new decision, I01d or Git operations.
+Public writers refused; gameplay disabled. Supervisor publishes. IDLE.
 ## Current continuation - Questing schema-23 history reader, 2026-11-12
 
 IDLE after bounded WB-QST-05 reader integration (S). Reconciled local domain,

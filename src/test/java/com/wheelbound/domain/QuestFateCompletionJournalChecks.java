@@ -51,6 +51,30 @@ public final class QuestFateCompletionJournalChecks
         rejects(() -> journal.append(reusedCommand, otherCurrent, revision,
             otherWindow.sessionId(), otherWindow.windowId()));
         var next = journal.append(distinct, otherCurrent, revision, otherWindow.sessionId(), otherWindow.windowId());
+        var emptyHistory = new QuestFateCompletionHistory(empty, List.of());
+        var firstHistory = emptyHistory.append(receipt, current, revision,
+            window.sessionId(), window.windowId());
+        var nextHistory = firstHistory.append(distinct, otherCurrent, revision,
+            otherWindow.sessionId(), otherWindow.windowId());
+        check(emptyHistory.contexts().isEmpty() && emptyHistory.journal().receipts().isEmpty());
+        check(firstHistory.contexts().equals(List.of(current)));
+        check(nextHistory.contexts().equals(List.of(current, otherCurrent)));
+        check(nextHistory.journal().receipts().equals(next.receipts()));
+        nextHistory.requireExtensionOf(firstHistory);
+        // Replay must retain the admitted context, without requiring a live context.
+        check(nextHistory.append(replay, null, revision + 10,
+            UUID.randomUUID(), UUID.randomUUID()) == nextHistory);
+        rejects(() -> firstHistory.append(distinct, otherCurrent, revision + 1,
+            otherWindow.sessionId(), otherWindow.windowId()));
+        rejects(() -> firstHistory.append(distinct,
+            current(other, revision, RunLifecycle.State.PAUSED), revision,
+            otherWindow.sessionId(), otherWindow.windowId()));
+        rejects(() -> firstHistory.append(collision, otherCurrent, revision,
+            otherWindow.sessionId(), otherWindow.windowId()));
+        rejects(() -> firstHistory.append(reusedCommand, otherCurrent, revision,
+            otherWindow.sessionId(), otherWindow.windowId()));
+        check(firstHistory.contexts().equals(List.of(current))
+            && firstHistory.journal().receipts().equals(List.of(receipt)));
         check(next.receipts().equals(List.of(receipt, distinct)) && journal.receipts().size() == 1);
         empty.requireHistoricalContexts(List.of());
         next.requireHistoricalContexts(List.of(current, otherCurrent));
