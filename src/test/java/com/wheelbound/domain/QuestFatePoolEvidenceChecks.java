@@ -17,6 +17,7 @@ public final class QuestFatePoolEvidenceChecks
     public static void main(String[] args)
     {
         suppliedOfferBinding();
+        suppliedReadinessBinding();
         for (var capacity : QuestFateOffers.Capacity.values())
         {
             for (int count = 0; count <= 5; count++)
@@ -78,6 +79,52 @@ public final class QuestFatePoolEvidenceChecks
         rejects(() -> pool(QuestFateOffers.Capacity.THREE, foreign));
         rejects(() -> new QuestFatePoolEvidence(ID, 4, "snapshot", "catalog", "questing",
             QuestFateOffers.Capacity.THREE, Set.of(), List.of()));
+    }
+
+    private static void suppliedReadinessBinding()
+    {
+        var slices = new ArrayList<ActiveWheel.Slice>();
+        for (int i = 0; i < 5; i++)
+        { slices.add(ActiveWheel.Slice.ordinary(UUID.randomUUID(), i < 2 ? "questing" : "other-" + i,
+            ActiveWheel.Enhancement.values()[i])); }
+        var wheel = new ActiveWheel(slices);
+        for (var status : QuestFateEligibility.Status.values())
+        {
+            var observations = new ArrayList<QuestFateEligibility.Observation>();
+            for (String quest : QUESTS) { observations.add(observation(quest, status, QUALIFIED, QUALIFIED)); }
+            var evidence = pool(QuestFateOffers.Capacity.THREE, observations);
+            var classifications = new java.util.HashMap<UUID, MasterSelectionReadiness.Classification>();
+            for (var slice : slices)
+            {
+                classifications.put(slice.id(), slice.activity().equals("questing")
+                    ? evidence.masterEvidence().classifyFor(ID, 4, "snapshot", "catalog", slice)
+                    : new MasterSelectionReadiness.Classification(ASSIGNABLE, "Other supplied pool"));
+            }
+            var readiness = new MasterSelectionReadiness(wheel, classifications);
+            evidence.requireSuppliedReadiness(ID, 4, "snapshot", "catalog", "questing", readiness);
+            check(readiness.wheel() == wheel);
+            rejects(() -> evidence.requireSuppliedReadiness(ID, 5, "snapshot", "catalog", "questing", readiness));
+            rejects(() -> evidence.requireSuppliedReadiness(ID, 4, "stale", "catalog", "questing", readiness));
+            rejects(() -> evidence.requireSuppliedReadiness(ID, 4, "snapshot", "foreign", "questing", readiness));
+            rejects(() -> evidence.requireSuppliedReadiness(new RunIdentity("fixture:foreign", UUID.randomUUID()),
+                4, "snapshot", "catalog", "questing", readiness));
+            rejects(() -> evidence.requireSuppliedReadiness(ID, 4, "snapshot", "catalog", "absent", readiness));
+            rejects(() -> evidence.requireSuppliedReadiness(ID, 4, "snapshot", "catalog", "other-2", readiness));
+            // A changed duplicate must be checked even when the first copy agrees.
+            for (var availability : MasterSelectionReadiness.Availability.values())
+            {
+                classifications.put(slices.get(1).id(),
+                    new MasterSelectionReadiness.Classification(availability, "Changed reason"));
+                var changed = new MasterSelectionReadiness(wheel, classifications);
+                rejects(() -> evidence.requireSuppliedReadiness(ID, 4, "snapshot", "catalog", "questing", changed));
+            }
+            var original = readiness.classifications().get(slices.get(1).id());
+            var different = original.availability() == ASSIGNABLE ? VERIFIED_EMPTY : ASSIGNABLE;
+            classifications.put(slices.get(1).id(),
+                new MasterSelectionReadiness.Classification(different, original.reason()));
+            var changed = new MasterSelectionReadiness(wheel, classifications);
+            rejects(() -> evidence.requireSuppliedReadiness(ID, 4, "snapshot", "catalog", "questing", changed));
+        }
     }
 
     private static void suppliedOfferBinding()

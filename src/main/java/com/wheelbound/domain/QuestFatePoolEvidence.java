@@ -97,6 +97,34 @@ public final class QuestFatePoolEvidence
         return eligibility;
     }
 
+    /**
+     * Check every active copy of the supplied Questing activity against a frozen
+     * precommit readiness declaration. This checks structural agreement only;
+     * neither matching labels nor classifications authenticate live evidence.
+     * Does not reclassify a pending selection or authorize its advancement.
+     */
+    public void requireSuppliedReadiness(RunIdentity expectedIdentity, long expectedRevision,
+        String expectedSnapshotVersion, String expectedCatalogVersion,
+        String questingActivity, MasterSelectionReadiness readiness)
+    {
+        Objects.requireNonNull(readiness, "readiness");
+        Objects.requireNonNull(questingActivity, "questingActivity");
+        boolean found = false;
+        for (var slice : readiness.wheel().slices())
+        {
+            if (slice.kind() != ActiveWheel.Kind.ORDINARY
+                || !questingActivity.equals(slice.activity())) { continue; }
+            found = true;
+            var expected = masterEvidence.classifyFor(expectedIdentity, expectedRevision,
+                expectedSnapshotVersion, expectedCatalogVersion, slice);
+            var frozen = readiness.classifications().get(slice.id());
+            if (frozen.availability() != expected.availability()
+                || !frozen.reason().equals(expected.reason()))
+            { throw new IllegalArgumentException("Changed supplied Questing readiness"); }
+        }
+        if (!found) { throw new IllegalArgumentException("Missing active Questing slice"); }
+    }
+
     public List<QuestFateEligibility.Observation> observations() { return observations; }
     public MasterSelectionReadiness.Classification classification() { return classification; }
     public MasterOrdinaryPoolEvidence masterEvidence() { return masterEvidence; }
