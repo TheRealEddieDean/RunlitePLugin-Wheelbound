@@ -1,3 +1,47 @@
+## Current continuation - supplied Questing completion receipt, 2026-11-12
+
+IDLE after bounded WB-QST-05 receipt payload increment (S). Supersedes older
+next-task prose. Local source/tests and recorded work reconciled; branch/merged
+state not verified because user prohibits Git operations. Supervisor publishes.
+
+QuestFateCompletionReceipt now retains the complete supplied assignment, original
+or refreshed window, expected revision, later completion position, command UUID
+and canonical source namespace/event key. Construction validates the supplied
+completion against retained assignment context. requireCurrent rechecks exact
+commitment, active current revision and supplied live session/window IDs. Full
+request equality supports future replay comparison; sameSourceEvent detects the
+same run/session/source event across changed commands/windows/positions. Neither
+method authenticates a source or prevents replay without a durable journal.
+No evidence is consumed, no reward/spin/lifecycle mutation occurs, no write enabled.
+
+Reconciliation: QST-05 PARTIAL; supplied completion receipt DONE offline. Trusted
+client admission, durable receipt journal and once-only reward settlement UNSTARTED.
+QST-02/WHL-08 PARTIAL: in-memory retention/binding verified offline; nested codecs
+and schema-22 reader IMPLEMENTED_UNVERIFIED. Writer, durable assignment admission
+and reviewed catalog/quote authority UNSTARTED; FAT-05 admission BLOCKED on those
+prerequisites. QST-01 PARTIAL; QST-03/04 legacy PARTIAL; QST-06/07 mode integration
+UNSTARTED. FAT-02 reader/components IMPLEMENTED_UNVERIFIED; writer/full migrations/
+services UNSTARTED. Other recorded holds stand; no merged completion inferred.
+I01d not selected. WB-D028/046/070/102/114 and STATE_CONTRACT preserved; no decision.
+
+Validation: javac --release 11 into build/continuation-quest-completion-receipt
+and all ten domain QuestFate*Checks PASSED. New tests cover full replay equality,
+source collisions across command/window changes, changed provenance under the same
+assignment ID, refreshed windows, stale/newer/paused heads, source IDs, ordering,
+COMPLETE baselines, long boundaries and malformed/null source keys. JUnit wrapper
+added but unverified. Focused Gradle QuestFate*, FateCard*, RunCodecTest and legacy
+WheelboundBehaviorTest failed BEFORE compilation on inherited wrapper-cache lock
+Access is denied. GRADLE_USER_HOME unchanged; no workaround/external inspection.
+No fresh Gson/JUnit/migration/store/legacy pass claimed.
+
+Next: run the real-Gson schema-22/nested, schema-21 card, migration, receipt and legacy
+suites once inherited build access returns; resolve failures before candidate
+writer/durable admission. Next bounded gameplay prerequisite is the in-memory
+Questing receipt journal enforcing command/source/assignment collision rules;
+actual once-only settlement and runtime integration remain unfinished. Keep public
+Questing/card writes and incomplete gameplay disabled. Master Wheel unchanged.
+Local source/test/document edits only; no Git, secrets or workflows accessed.
+
 ## Current continuation - retained Questing completion binding, 2026-11-12
 
 IDLE after bounded WB-QST-05 supplied-evidence composition increment (S).

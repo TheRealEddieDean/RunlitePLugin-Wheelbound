@@ -1,3 +1,12 @@
+## Current continuation pointer - supplied Questing completion receipt, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog sections. QST-05 remains PARTIAL:
+supplied completion receipt implemented and verified offline; trusted evidence,
+durable receipt journal and settlement unfinished. Next validation is real-Gson/
+JUnit/migration/legacy suites when inherited wrapper-cache access returns, before
+candidate writer or durable admission. Public Questing/card writes stay refused.
+No new decision or Git operations; supervisor publishes. Local checkpoint IDLE.
+
 ## Recovered increment - Questing schema-22 reader, 2026-11-12
 
 Recovery scope is the existing WB-QST-02/WB-WHL-08 schema-22 reader only. Reviewed
