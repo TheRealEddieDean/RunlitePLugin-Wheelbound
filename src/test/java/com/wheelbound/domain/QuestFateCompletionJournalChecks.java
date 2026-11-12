@@ -52,6 +52,43 @@ public final class QuestFateCompletionJournalChecks
             otherWindow.sessionId(), otherWindow.windowId()));
         var next = journal.append(distinct, otherCurrent, revision, otherWindow.sessionId(), otherWindow.windowId());
         check(next.receipts().equals(List.of(receipt, distinct)) && journal.receipts().size() == 1);
+        empty.requireHistoricalContexts(List.of());
+        next.requireHistoricalContexts(List.of(current, otherCurrent));
+        rejects(() -> next.requireHistoricalContexts(List.of(otherCurrent, current)));
+        rejects(() -> next.requireHistoricalContexts(List.of(current)));
+        rejects(() -> journal.requireHistoricalContexts(List.of(current, otherCurrent)));
+        rejects(() -> journal.requireHistoricalContexts(List.of(
+            current(assignment, revision + 1, RunLifecycle.State.ACTIVE))));
+        rejects(() -> journal.requireHistoricalContexts(List.of(
+            current(assignment, revision, RunLifecycle.State.PAUSED))));
+        var provenance = assignment.provenance();
+        var altered = new QuestFateAssignment(new QuestFateProvenance(provenance.resolution(),
+            provenance.sliceId(), "questing", "changed-stream", "0", "3", provenance.reward()),
+            assignment.allocation(), window);
+        rejects(() -> journal.requireHistoricalContexts(List.of(
+            current(altered, revision, RunLifecycle.State.ACTIVE))));
+        rejects(() -> journal.requireHistoricalContexts(null));
+        var nullContext = new ArrayList<QuestFateCurrentAssignment>();
+        nullContext.add(null);
+        rejects(() -> journal.requireHistoricalContexts(nullContext));
+        next.requireExtensionOf(empty);
+        next.requireExtensionOf(journal);
+        next.requireExtensionOf(new QuestFateCompletionJournal(assignment.identity(), next.receipts()));
+        empty.requireExtensionOf(empty);
+        rejects(() -> empty.requireExtensionOf(journal));
+        rejects(() -> journal.requireExtensionOf(next));
+        var reordered = new QuestFateCompletionJournal(assignment.identity(), List.of(distinct, receipt));
+        rejects(() -> reordered.requireExtensionOf(journal));
+        var changedReceipt = receipt(current, window, revision, receipt.commandId(), "changed");
+        var replaced = new QuestFateCompletionJournal(assignment.identity(), List.of(changedReceipt, distinct));
+        rejects(() -> replaced.requireExtensionOf(journal));
+        var changedPosition = new QuestFateCompletionReceipt(current, window, revision,
+            Long.MAX_VALUE, receipt.commandId(), receipt.sourceNamespace(), receipt.eventKey());
+        rejects(() -> new QuestFateCompletionJournal(assignment.identity(), List.of(changedPosition))
+            .requireExtensionOf(journal));
+        rejects(() -> next.requireExtensionOf(new QuestFateCompletionJournal(
+            new RunIdentity("foreign", UUID.randomUUID()), List.of())));
+        rejects(() -> next.requireExtensionOf(null));
         var supplied = new ArrayList<>(next.receipts());
         var restored = new QuestFateCompletionJournal(assignment.identity(), supplied);
         supplied.clear();
