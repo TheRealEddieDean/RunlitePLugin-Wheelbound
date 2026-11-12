@@ -30,7 +30,7 @@ public final class RunCodec
     private static final int RETRY_SCHEMA = 20;
     // Reader-first card migration; neither writer publishes schema 21 yet.
     // Reader-first Questing migration; public writers still refuse assignments.
-    private static final int READ_SCHEMA = 22;
+    private static final int READ_SCHEMA = 23;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -232,7 +232,9 @@ public final class RunCodec
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions", "masterSpins", "currentMasterSpecial")
                     : schema == 21
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions", "masterSpins", "currentMasterSpecial", "fateCards", "cardPurchases")
-                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions", "masterSpins", "currentMasterSpecial", "fateCards", "cardPurchases", "currentQuestAssignment"));
+                    : schema == 22
+                    ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions", "masterSpins", "currentMasterSpecial", "fateCards", "cardPurchases", "currentQuestAssignment")
+                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions", "masterSpins", "currentMasterSpecial", "fateCards", "cardPurchases", "currentQuestAssignment", "questCompletionHistory"));
             RunIdentity identity = new RunIdentity(string(payload, "accountKey"), UUID.fromString(string(payload, "runId")));
             if (!identity.equals(expected)) { throw new IOException("Foreign account/profile/run snapshot"); }
             RunLifecycle lifecycle = new RunLifecycle(identity, integer(payload, "revision"),
@@ -447,7 +449,10 @@ public final class RunCodec
                     : Optional.empty(),
                 schema >= 21 && !payload.get("cardPurchases").isJsonNull()
                     ? Optional.of(FateCardPurchaseJournalCodec.decode(payload.getAsJsonObject("cardPurchases"),
-                        identity, lifecycle.revision())) : Optional.empty(), quest);
+                        identity, lifecycle.revision())) : Optional.empty(), quest,
+                schema >= 23 && !payload.get("questCompletionHistory").isJsonNull()
+                    ? Optional.of(QuestFateRunHistoryCodec.decode(
+                        payload.getAsJsonObject("questCompletionHistory"), lifecycle)) : Optional.empty());
         }
         catch (RuntimeException ex) { throw new IOException("Invalid snapshot; preserve original", ex); }
     }

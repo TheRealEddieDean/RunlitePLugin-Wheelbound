@@ -39,7 +39,7 @@ public class QuestFateRunCodecTest
         payload.remove("currentQuestAssignment");
         assertFalse(codec.decode(envelope(payload, 21), assignment.identity()).currentQuestAssignment().isPresent());
         assertThrows(IOException.class, () -> codec.decode(envelope(payload, 22), assignment.identity()));
-        assertThrows(IOException.class, () -> codec.decode(envelope(payload, 23), assignment.identity()));
+        assertThrows(IOException.class, () -> codec.decode(envelope(payload, 24), assignment.identity()));
     }
 
     @Test public void rejectsInconsistentCommitmentsAndPreservesInput()
@@ -73,6 +73,7 @@ public class QuestFateRunCodecTest
             }
             var restored = codec.decode(envelope(payload, schema), assignment.identity());
             assertFalse(restored.currentQuestAssignment().isPresent());
+            assertFalse(restored.questCompletionHistory().isPresent());
             assertTrue(restored.masterSpins().get().reservation().isPresent());
             // Even explicit null is a foreign field before schema 22.
             payload.add("currentQuestAssignment", JsonNull.INSTANCE);
@@ -80,6 +81,60 @@ public class QuestFateRunCodecTest
             byte[] copy = original.clone();
             assertThrows(IOException.class, () -> codec.decode(original, assignment.identity()));
             assertArrayEquals(copy, original);
+        }
+    }
+
+    @Test public void schema23DistinguishesUnavailableEmptyAndHistoricalCompletion() throws Exception
+    {
+        var payload = payload(false);
+        assertFalse(codec.decode(envelope(payload, 22), assignment.identity()).questCompletionHistory().isPresent());
+        payload.add("questCompletionHistory", JsonNull.INSTANCE);
+        assertFalse(codec.decode(envelope(payload, 23), assignment.identity()).questCompletionHistory().isPresent());
+        assertThrows(IOException.class, () -> codec.decode(envelope(payload, 22), assignment.identity()));
+        var history = new JsonObject();
+        history.addProperty("version", 1);
+        history.add("history", QuestFateCompletionHistoryCodec.encode(new QuestFateCompletionHistory(
+            new QuestFateCompletionJournal(assignment.identity(), java.util.List.of()), java.util.List.of())));
+        history.add("accounting", new JsonArray());
+        payload.add("questCompletionHistory", history);
+        var empty = codec.decode(envelope(payload, 23), assignment.identity());
+        assertTrue(empty.questCompletionHistory().isPresent());
+        assertTrue(empty.questCompletionHistory().get().journal().receipts().isEmpty());
+        assertThrows(IllegalArgumentException.class, () -> codec.encode(empty));
+        assertThrows(IllegalArgumentException.class, () -> codec.encodeRetryCandidate(empty));
+
+        var context = empty.currentQuestAssignment().get();
+        var receipt = new QuestFateCompletionReceipt(context, assignment.originalWindow(),
+            context.lifecycle().revision(), 1, java.util.UUID.randomUUID(), "quests", "completion");
+        history.add("history", QuestFateCompletionHistoryCodec.encode(new QuestFateCompletionHistory(
+            new QuestFateCompletionJournal(assignment.identity(), java.util.List.of(receipt)), java.util.List.of(context))));
+        var accounting = new JsonObject();
+        accounting.add("resolutions", payload.get("masterResolutions").deepCopy());
+        accounting.add("spins", payload.get("masterSpins").deepCopy());
+        history.getAsJsonArray("accounting").add(accounting);
+        // A completed historical assignment does not require today's reservation.
+        payload.add("currentQuestAssignment", JsonNull.INSTANCE);
+        payload.add("masterSpins", JsonNull.INSTANCE);
+        var restored = codec.decode(envelope(payload, 23), assignment.identity());
+        assertEquals(java.util.List.of(receipt), restored.questCompletionHistory().get().journal().receipts());
+        assertFalse(restored.masterSpins().isPresent());
+        for (Consumer<JsonObject> mutation : java.util.List.<Consumer<JsonObject>>of(
+            p -> p.remove("questCompletionHistory"),
+            p -> p.getAsJsonObject("questCompletionHistory").addProperty("version", 2),
+            p -> p.addProperty("questCompletionHistory", false),
+            p -> p.getAsJsonObject("questCompletionHistory").addProperty("extra", true),
+            p -> p.getAsJsonObject("questCompletionHistory").add("accounting", new JsonArray()),
+            p -> p.getAsJsonObject("questCompletionHistory").getAsJsonArray("accounting")
+                .get(0).getAsJsonObject().add("spins", JsonNull.INSTANCE),
+            p -> p.add("masterResolutions", JsonNull.INSTANCE),
+            p -> p.addProperty("revision", assignment.creationRevision() - 1)))
+        {
+            var changed = payload.deepCopy();
+            mutation.accept(changed);
+            byte[] bytes = envelope(changed, 23);
+            byte[] original = bytes.clone();
+            assertThrows(IOException.class, () -> codec.decode(bytes, assignment.identity()));
+            assertArrayEquals(original, bytes);
         }
     }
 
