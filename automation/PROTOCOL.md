@@ -1,3 +1,10 @@
+## Current continuation pointer - Questing coverage head notifications, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: supplied lifecycle
+head notification implemented; authenticated admission/durable prefix/settlement
+UNSTARTED. Gradle blocked before compilation by inherited cache lock. Public writers
+and incomplete gameplay disabled. No Git/new decision/I01d. Supervisor publishes. IDLE.
+
 ## Current continuation pointer - Questing covered receipt preparation, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: supplied coverage-to-
