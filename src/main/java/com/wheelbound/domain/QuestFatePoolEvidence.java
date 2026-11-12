@@ -17,6 +17,8 @@ public final class QuestFatePoolEvidence
     private final List<QuestFateEligibility.Observation> observations;
     private final MasterSelectionReadiness.Classification classification;
     private final MasterOrdinaryPoolEvidence masterEvidence;
+    private final QuestFateOffers.Capacity capacity;
+    private final String catalogVersion;
 
     public QuestFatePoolEvidence(RunIdentity identity, long revision, String snapshotVersion,
         String catalogVersion, String questingActivity, QuestFateOffers.Capacity capacity,
@@ -60,6 +62,39 @@ public final class QuestFatePoolEvidence
         masterEvidence = new MasterOrdinaryPoolEvidence(identity, revision, snapshotVersion,
             catalogVersion, questingActivity, Set.of(questingActivity),
             Map.of(questingActivity, classification));
+        this.capacity = capacity;
+        this.catalogVersion = catalogVersion;
+    }
+
+    /**
+     * Bind already resolved choices to this supplied precommit pool. Preserves the
+     * original observations in offer order; never draws, refreshes or authenticates
+     * an offer. Must not be used to revalidate an already committed assignment.
+     */
+    public QuestFateEligibility bindSuppliedOffers(RunIdentity expectedIdentity,
+        long expectedRevision, String expectedSnapshotVersion, String expectedCatalogVersion,
+        ActiveWheel.Slice slice, QuestFateOffers offers)
+    {
+        masterEvidence.classifyFor(expectedIdentity, expectedRevision,
+            expectedSnapshotVersion, expectedCatalogVersion, slice);
+        Objects.requireNonNull(offers, "offers");
+        if (offers.capacity() != capacity || !offers.catalogVersion().equals(catalogVersion))
+        { throw new IllegalArgumentException("Foreign Questing offer capacity/catalog"); }
+        if (classification.availability() != MasterSelectionReadiness.Availability.ASSIGNABLE)
+        { throw new IllegalStateException("Questing pool is not assignable"); }
+        Map<String, QuestFateEligibility.Observation> indexed = new java.util.HashMap<>();
+        for (var observation : observations) { indexed.put(observation.questId(), observation); }
+        var ordered = new java.util.ArrayList<QuestFateEligibility.Observation>();
+        for (String quest : offers.questIds())
+        {
+            var observation = indexed.get(quest);
+            if (observation == null)
+            { throw new IllegalArgumentException("Offered quest outside complete pool"); }
+            ordered.add(observation);
+        }
+        var eligibility = new QuestFateEligibility(offers, ordered);
+        eligibility.requireQualified(offers);
+        return eligibility;
     }
 
     public List<QuestFateEligibility.Observation> observations() { return observations; }

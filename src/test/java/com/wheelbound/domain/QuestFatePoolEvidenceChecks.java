@@ -16,6 +16,7 @@ public final class QuestFatePoolEvidenceChecks
 
     public static void main(String[] args)
     {
+        suppliedOfferBinding();
         for (var capacity : QuestFateOffers.Capacity.values())
         {
             for (int count = 0; count <= 5; count++)
@@ -77,6 +78,60 @@ public final class QuestFatePoolEvidenceChecks
         rejects(() -> pool(QuestFateOffers.Capacity.THREE, foreign));
         rejects(() -> new QuestFatePoolEvidence(ID, 4, "snapshot", "catalog", "questing",
             QuestFateOffers.Capacity.THREE, Set.of(), List.of()));
+    }
+
+    private static void suppliedOfferBinding()
+    {
+        var slice = ActiveWheel.Slice.ordinary(UUID.randomUUID(), "questing", ActiveWheel.Enhancement.BASE);
+        for (var capacity : QuestFateOffers.Capacity.values())
+        {
+            var evidence = pool(capacity, allQualified());
+            var order = List.of("e", "c", "a", "d", "b").subList(0, capacity.count());
+            var offers = new QuestFateOffers(capacity, "catalog", order);
+            var bound = evidence.bindSuppliedOffers(ID, 4, "snapshot", "catalog", slice, offers);
+            bound.requireQualified(offers);
+            for (int i = 0; i < order.size(); i++)
+            {
+                String quest = order.get(i);
+                check(bound.observations().get(i) == evidence.observations().stream()
+                    .filter(o -> o.questId().equals(quest)).findFirst().orElseThrow());
+            }
+            rejects(() -> evidence.bindSuppliedOffers(ID, 5, "snapshot", "catalog", slice, offers));
+            rejects(() -> evidence.bindSuppliedOffers(ID, 4, "other", "catalog", slice, offers));
+            rejects(() -> evidence.bindSuppliedOffers(ID, 4, "snapshot", "other", slice, offers));
+            rejects(() -> evidence.bindSuppliedOffers(new RunIdentity("other", UUID.randomUUID()),
+                4, "snapshot", "catalog", slice, offers));
+            rejects(() -> evidence.bindSuppliedOffers(ID, 4, "snapshot", "catalog",
+                ActiveWheel.Slice.special(UUID.randomUUID(), ActiveWheel.Kind.TAINT, 4), offers));
+            rejects(() -> evidence.bindSuppliedOffers(ID, 4, "snapshot", "catalog", slice,
+                new QuestFateOffers(capacity, "foreign", order)));
+        }
+        var offers = new QuestFateOffers(QuestFateOffers.Capacity.THREE, "catalog", List.of("a", "b", "c"));
+        var evidence = pool(QuestFateOffers.Capacity.THREE, allQualified());
+        rejects(() -> evidence.bindSuppliedOffers(ID, 4, "snapshot", "catalog", slice,
+            new QuestFateOffers(QuestFateOffers.Capacity.FOUR, "catalog", List.of("a", "b", "c", "d"))));
+        rejects(() -> evidence.bindSuppliedOffers(ID, 4, "snapshot", "catalog", slice,
+            new QuestFateOffers(QuestFateOffers.Capacity.THREE, "catalog", List.of("a", "b", "foreign"))));
+        for (var status : QuestFateEligibility.Status.values())
+        {
+            if (status == QUALIFIED) { continue; }
+            var observations = allQualified();
+            observations.set(0, observation("a", status, QUALIFIED, QUALIFIED));
+            var blocked = pool(QuestFateOffers.Capacity.THREE, observations);
+            refusesBinding(() -> blocked.bindSuppliedOffers(ID, 4, "snapshot", "catalog", slice, offers));
+            // A different qualified subset is valid only when the whole pool is known.
+            var subset = new QuestFateOffers(QuestFateOffers.Capacity.THREE, "catalog", List.of("e", "d", "c"));
+            if (status == INELIGIBLE)
+            { blocked.bindSuppliedOffers(ID, 4, "snapshot", "catalog", slice, subset).requireQualified(subset); }
+            else
+            { refusesBinding(() -> blocked.bindSuppliedOffers(ID, 4, "snapshot", "catalog", slice, subset)); }
+        }
+    }
+
+    private static void refusesBinding(Runnable action)
+    {
+        try { action.run(); throw new AssertionError("Expected binding refusal"); }
+        catch (IllegalStateException expected) { }
     }
 
     private static ArrayList<QuestFateEligibility.Observation> allQualified()

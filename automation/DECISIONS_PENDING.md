@@ -1,3 +1,10 @@
+## Current continuation pointer - Questing supplied pool-to-offer binding, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-02/QST-06 PARTIAL: supplied
+pool-to-offer eligibility binding implemented; focused Java 11 checks passed.
+Generation/retry/durable admission and authority remain unfinished. QST-05 PARTIAL.
+Gradle blocked before compilation by inherited cache lock. Gameplay/public writers
+disabled. No Git/new decision/I01d. Supervisor publishes. IDLE.
 ## Current continuation pointer - Questing aggregate covered append, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: aggregate covered
