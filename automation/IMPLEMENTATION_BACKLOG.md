@@ -1,3 +1,45 @@
+## Current continuation - Questing completion command uniqueness, 2026-11-12
+
+IDLE after bounded WB-QST-05 cross-family command guard increment (S).
+Reconciled local RunDocument, completion history and shared command-guard callers.
+No Git or remote merged-state verification; supervisor owns publication. I01d not
+selected. No new gameplay, balance or pending decision.
+
+RunDocument now rejects Questing completion IDs overlapping generic operations,
+card purchases, Master creation/resolution/pending selection, Grand seal/activation
+or Grand progress evidence. The shared fresh-command guard and card-excluding
+recovery guard now reject retained Questing IDs. A separate Questing-excluding
+aggregate guard avoids self-collision while retaining card checks. Supplied history
+is still structural data, not authenticated evidence or a settlement receipt.
+
+Verification: javac --release 11 domain/aggregate manifest compilation PASSED into
+build/continuation-quest-commands. All ELEVEN executable domain QuestFate*Checks
+PASSED; this corrects the prior continuation's count of nine. Expanded aggregate
+checks cover Master creation and resolution collisions, generic Pause collision,
+fresh-command/card-excluding refusal, unused-ID acceptance and lifecycle preservation.
+AssignmentChecks PASSED again after the final generic-collision fixture was added.
+Focused Gradle QuestFate*, FateCard*, RunCodecTest and WheelboundBehaviorTest failed
+BEFORE compilation: inherited wrapper-cache lock Access is denied. No new Gson,
+JUnit, migration, store or legacy regression pass claimed. GRADLE_USER_HOME unchanged;
+no external inspection or cache workaround. Master Wheel source unchanged.
+
+Reconciliation: QST-05 remains PARTIAL. Supplied receipt/journal/history retention
+and structural cross-family command guards DONE offline. Nested codecs/JUnit and
+schema-22 assignment reader remain IMPLEMENTED_UNVERIFIED. Versioned history
+payload/legacy-unavailable semantics, authenticated evidence, prefix-preserving
+durable admission and atomic settlement UNSTARTED. QST-02/WHL-08 PARTIAL;
+writer/durable assignment admission/reviewed catalog authority UNSTARTED. FAT-05
+current assignment admission BLOCKED. QST-01 PARTIAL; QST-03/04 legacy PARTIAL;
+QST-06/07 integration UNSTARTED. Other recorded statuses and decision/client/balance
+holds stand. Public Questing/card writers and incomplete gameplay stay disabled.
+
+Next: run real-dependency codec/schema/card/migration/legacy suites when inherited
+build access returns. Next bounded implementation prerequisite: versioned lossless
+Questing completion history plus historical context payload, explicitly distinguishing
+legacy unavailable history from present empty history; reconcile run schema before
+integration. Keep writers refused until lossless verification and durable admission.
+No payout or trusted completion admission is implemented.
+
 ## Current continuation - Questing aggregate completion history, 2026-11-12
 
 IDLE after bounded WB-QST-05 in-memory aggregate retention increment (S).

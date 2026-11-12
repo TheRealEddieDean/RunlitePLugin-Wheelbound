@@ -440,6 +440,8 @@ public final class RunDocument
         {
             this.questCompletionHistory.requireRetained(lifecycle, catalogVersion,
                 this.masterCreations, this.masterResolutions);
+            for (var receipt : this.questCompletionHistory.journal().receipts())
+            { MasterRetryRecovery.requireUnusedExceptQuest(this, receipt.commandId()); }
         }
         for (RunReceipt receipt : this.receipts)
         {
