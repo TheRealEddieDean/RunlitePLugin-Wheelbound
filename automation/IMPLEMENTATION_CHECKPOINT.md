@@ -1,3 +1,45 @@
+## Current continuation - supplied Questing journal codec, 2026-11-12
+
+IDLE after bounded WB-QST-05 nested journal codec increment (S). Reconciled local
+receipt/journal domain, receipt codec, schema-22 reader and focused fixtures; no Git
+or remote merged-state verification. Historical merge records remain unverified.
+User restrictions supersede publication/claim instructions; supervisor publishes.
+I01d not selected. No new gameplay, balance or pending decision.
+
+Added package-private QuestFateCompletionJournalCodec version 1. Retains explicit
+account/run identity and ordered full receipts; decode requires one supplied
+historical active assignment context per receipt. Exact context count, strict
+keys/types/version, identity equality and receipt binding required. Domain restore
+rejects command/source/assignment collisions, including exact duplicate receipts.
+Empty journal is explicit; no older run schema synthesizes receipts. No aggregate,
+run schema, writer, durable evidence admission, settlement or runtime enablement.
+
+QST-05 remains PARTIAL: receipt/journal domain primitives verified offline; nested
+receipt and journal codecs/JUnit fixtures IMPLEMENTED_UNVERIFIED. Aggregate retention,
+authenticated evidence and atomic settlement UNSTARTED. QST-02/WHL-08 PARTIAL:
+aggregate binding exists, codecs/schema-22 reader IMPLEMENTED_UNVERIFIED; candidate
+writer/durable admission/reviewed catalog authority UNSTARTED. FAT-05 admission
+BLOCKED. Other backlog statuses and client/balance/decision holds stand.
+Master Wheel unchanged; public Questing/card writes and incomplete gameplay disabled.
+
+Validation: javac --release 11 compiled existing domain/aggregate/check manifest into
+build/continuation-quest-journal-codec. All eleven executable QuestFate*Checks passed;
+aggregate helper has no main and is exercised by AssignmentChecks. New Gson/JUnit
+sources excluded. Focused
+Gradle QuestFate*, FateCard*, RunCodecTest and WheelboundBehaviorTest attempt failed
+BEFORE compilation: inherited wrapper-cache lock Access is denied. GRADLE_USER_HOME
+unchanged; no external inspection, cache workaround or dependency substitution.
+New real-Gson fixtures cover ordered/empty history, historical context order/count,
+malformed payloads, foreign identity and independent command/source/assignment
+collisions. No new codec/JUnit/migration/store/legacy pass claimed.
+
+Next: run real dependency suites when inherited build access returns and resolve
+failures before candidate writer/durable admission. Next implementation prerequisite:
+reconcile aggregate historical context retention and versioned journal absence/
+retention requirements before adding aggregate journal support. Cross-family command
+uniqueness, trusted evidence and atomic prefix-preserving publication remain required.
+No Git, credentials, secrets or workflows accessed.
+
 ## Current continuation - supplied Questing receipt codec, 2026-11-12
 
 IDLE after bounded WB-QST-05 nested receipt codec prerequisite (S). Local code,
