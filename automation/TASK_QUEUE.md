@@ -1,3 +1,46 @@
+## Current continuation - supplied Questing receipt codec, 2026-11-12
+
+IDLE after bounded WB-QST-05 nested receipt codec prerequisite (S). Local code,
+tests and continuation reconciled; no Git or merged-state verification. Supervisor
+owns branch/publication/CI/merges. I01d not selected; no gameplay decision added.
+
+Added package-private QuestFateCompletionReceiptCodec version 1, retaining full
+assignment, original/refreshed window, revision, later position, command and source
+identity. Decode requires an explicitly supplied historical active assignment
+context at the receipt revision and exact full commitment equality, including
+provenance and accounting. Strict keys/types/version and canonical command UUID;
+validated domain constructors enforce completion binding. Supplied context is not
+authenticated authority. No run schema, writer, journal integration or payout enabled.
+
+QST-05 remains PARTIAL: receipt/journal domain primitives verified offline; nested
+receipt codec and focused Gson/JUnit fixtures IMPLEMENTED_UNVERIFIED. Journal codec,
+aggregate retention, authenticated evidence and atomic settlement UNSTARTED.
+QST-02/WHL-08 PARTIAL: aggregate binding exists; nested codecs/schema-22 reader
+IMPLEMENTED_UNVERIFIED. Candidate writer/durable admission/reviewed catalog authority
+UNSTARTED; FAT-05 admission BLOCKED. QST-01 PARTIAL; QST-03/04 legacy PARTIAL;
+QST-06/07 integration UNSTARTED. FAT-02 reader/components IMPLEMENTED_UNVERIFIED;
+writer/full migrations/services UNSTARTED. Other recorded holds/statuses stand.
+Recorded merged work was not remotely verified. Master Wheel unchanged; public
+Questing/card writes and incomplete gameplay remain disabled.
+
+Fresh javac --release 11 compilation of the existing domain/aggregate source manifest into build/continuation-quest-receipt-codec PASSED; all eleven QuestFate*Checks exited 0. This excludes Gson codec and JUnit sources and does not validate the new codec.
+
+Validation: focused Gradle QuestFate*, FateCard*, RunCodecTest and legacy behavior
+attempt failed BEFORE compilation: inherited wrapper-cache lock Access is denied.
+GRADLE_USER_HOME unchanged; no external inspection or workaround. New real-Gson
+round-trip/mutation tests cover original/refreshed windows, long positions, stale
+and paused contexts, changed commitment and malformed payloads; not executed.
+No Gson/JUnit/migration/store/legacy pass claimed.
+
+Next: run real dependency suites when inherited build access returns and resolve
+failures before candidate writer/durable admission. Next bounded prerequisite is
+journal codec composition with explicit historical contexts per receipt, run/command/
+source/assignment collision validation and future legacy absence semantics. Receipt
+codec version 1 is nested only; no older run schema acquires synthetic receipts.
+Cross-family command uniqueness, trusted source coverage and atomic prefix-preserving
+publication remain required before gameplay completion or settlement can be claimed.
+No Git, credentials, secrets or workflows accessed.
+
 ## Current continuation - in-memory Questing completion journal, 2026-11-12
 
 IDLE after bounded WB-QST-05 journal prerequisite (S). Supersedes older next-task
