@@ -1,3 +1,34 @@
+## Current continuation - Questing aggregate baseline preparation, 2026-11-12
+
+IDLE after bounded WB-QST-05 aggregate baseline preparation (XS/S). Reconciled local
+current-assignment, aggregate, completion checks and recorded state. No Git or merged
+work verification. WB-D028/046/070/102 and supersessions retained; I01d not selected.
+
+RunDocument.prepareSuppliedQuestObservationWindow delegates through its own retained
+current assignment with expected account/run/head, supplied live IDs, quest and state.
+No caller assignment is accepted. Tests cover resumed-head baseline and fresh completion,
+stale/foreign heads, absent assignment, paused head and legacy-history non-initialization.
+Original assignment/window, spin accounting and history remain unchanged. This supplied
+preparation does not authenticate events, register live coverage, write durably or pay.
+
+Validation: javac --release 11 using existing schema-23 source manifest PASSED into
+build/continuation-quest-aggregate-baseline. Initial test compile used nonexistent
+INCOMPLETE enum; corrected to IN_PROGRESS before successful compilation. Focused
+all eleven QuestFate executable checks (including aggregate cases) PASSED. Gradle QuestFate,
+FateCard, RunCodec and legacy attempt failed BEFORE compilation on inherited wrapper
+cache lock Access is denied. GRADLE_USER_HOME unchanged; no cache workaround.
+
+Reconciliation: QST-05 PARTIAL; supplied baseline/receipt/history/aggregate preparation
+implemented offline. Authenticated source/current-head/coverage admission, durable
+prefix admission and atomic settlement UNSTARTED. QST-02/WHL-08 PARTIAL; public writer,
+durable assignment admission and reviewed catalog authority UNSTARTED. FAT-05 admission
+BLOCKED. Gson/JUnit/schema/migration/legacy remain IMPLEMENTED_UNVERIFIED. Other holds
+stand. Master Wheel unchanged; incomplete gameplay/public writers disabled.
+
+Next: execute real Gson/JUnit schema-23/nested, schema-22 assignment, schema-21 card,
+migration and legacy verification when inherited build access returns; resolve failures
+before writer/durable admission. Then authenticated coverage admission and once-only
+atomic settlement remain. No new decision or payout. Supervisor owns publication.
 ## Current continuation - Questing supplied baseline preparation, 2026-11-12
 
 IDLE after bounded WB-QST-05 supplied baseline preparation (S). Reconciled current
