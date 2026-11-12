@@ -1,3 +1,35 @@
+## Current continuation - Questing aggregate covered append, 2026-11-12
+
+IDLE after bounded WB-QST-05 covered supplied append increment (S). Reconciled
+coverage, aggregate and focused checks with current continuation/backlog. Local
+source only; no Git or merged-state verification. No new decision or I01d work.
+
+RunDocument.appendCoveredSuppliedQuestObservation derives its current assignment
+from the aggregate, prepares through the supplied coverage guard and appends using
+existing immutable history/prefix/command guards. Every refusal interrupts coverage,
+including missing history and stale aggregate context. Successful preparation closes
+the guard; receipt-based historical replay remains separate. Focused checks cover
+success, replay, interrupted coverage, legacy history absence, stale revision, wrong
+session and terminal-command collision, with original aggregate/balances retained.
+
+Java 11 compilation using build/continuation-quest-coverage/sources.txt into
+build/continuation-quest-covered-append PASSED. QuestFateAssignmentChecks, including
+aggregate checks, PASSED. Gradle QuestFate/RunCodec/legacy attempt failed BEFORE
+compilation on inherited wrapper-cache lock Access is denied. GRADLE_USER_HOME
+unchanged; no cache workaround, external inspection, workflows or Git operations.
+Gson/JUnit/schema/migration/legacy verification remains IMPLEMENTED_UNVERIFIED.
+
+Reconciliation: QST-05 PARTIAL; aggregate covered supplied append implemented offline.
+Authenticated client/current-head admission, durable prefix admission and atomic
+settlement UNSTARTED. QST-02/WHL-08 PARTIAL; writer/durable assignment admission and
+reviewed catalog authority UNSTARTED. FAT-05 admission BLOCKED. Other statuses and
+client/balance/decision holds stand. Master Wheel unchanged; public writers and
+incomplete gameplay remain disabled. No gameplay completion or payout claimed.
+
+Next: execute real Gson/JUnit schema-23/nested, schema-22 assignment, schema-21 card,
+migration and legacy verification when inherited build access returns. Verified client
+identity, supported quest mapping and lifecycle interruption integration remain
+required before authenticated admission/settlement. Supervisor owns publication.
 ## Current continuation - Questing coverage head notifications, 2026-11-12
 
 IDLE after bounded WB-QST-05 supplied lifecycle increment (XS/S). Reconciled current
@@ -8750,3 +8782,6 @@ Priority/size/dependencies: A84 S targeted exact/range gem evidence check from c
 All eleven executable domain QuestFate*Checks completed with exit code 0, including
 aggregate checks invoked by assignment checks. After foreign-account/run cases were
 added, Java 11 compilation and focused current-completion checks passed again.
+
+All discovered domain QuestFate*Checks entry points also completed with exit code 0
+against the fresh compilation; aggregate checks run through assignment checks.

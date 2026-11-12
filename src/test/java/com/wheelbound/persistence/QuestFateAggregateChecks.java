@@ -80,6 +80,34 @@ public final class QuestFateAggregateChecks
             head.grandActivations(), head.grandCurrentAttempt(), head.pendingMasterSelection(),
             head.masterCreations(), head.masterResolutions(), head.masterSpins(), Optional.empty(),
             head.fateCards(), head.cardPurchases(), Optional.of(assignment), Optional.of(emptyHistory));
+        for (int fault = 0; fault < 6; fault++)
+        {
+            var coverage = new QuestFateObservationCoverage(context, assignment.identity(), lifecycle.revision(),
+                window.sessionId(), window.windowId(), window.baselinePosition(),
+                window.selection().selection().questId(), QuestFateCompletion.QuestState.IN_PROGRESS);
+            final int kind = fault;
+            if (kind == 1) { coverage.interrupt(); }
+            java.util.function.Supplier<RunDocument> prepare = () -> (kind == 2 ? head : appendable)
+                .appendCoveredSuppliedQuestObservation(assignment.identity(),
+                    lifecycle.revision() + (kind == 3 ? 1 : 0), coverage,
+                    kind == 4 ? UUID.randomUUID() : window.sessionId(), window.windowId(),
+                    receipt.observedPosition(), window.selection().selection().questId(),
+                    QuestFateCompletion.QuestState.COMPLETE,
+                    kind == 5 ? resolution.commandId() : receipt.commandId(), "quests", "completion");
+            if (kind == 0)
+            {
+                var covered = prepare.get();
+                check(covered.questCompletionHistory().orElseThrow().journal().receipts().equals(List.of(receipt)));
+                check(covered.lifecycle() == lifecycle && covered.masterSpins().orElseThrow() == spins);
+                check(covered.fatePoints().equals(appendable.fatePoints()));
+                check(covered.appendSuppliedQuestCompletion(receipt, lifecycle.revision(),
+                    window.sessionId(), window.windowId()) == covered);
+            }
+            else { rejectsObservation(() -> prepare.get()); }
+            check(!coverage.isOpen());
+            check(appendable.questCompletionHistory().orElseThrow() == emptyHistory);
+            rejectsObservation(() -> prepare.get());
+        }
         var appended = appendable.appendSuppliedQuestCompletion(receipt, lifecycle.revision(),
             window.sessionId(), window.windowId());
         var observed = observe(appendable, assignment.identity(), lifecycle.revision(), window,

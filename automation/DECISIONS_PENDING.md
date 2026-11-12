@@ -1,3 +1,9 @@
+## Current continuation pointer - Questing aggregate covered append, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: aggregate covered
+supplied append implemented and focused aggregate checks passed. Authenticated
+admission/durable prefix/settlement UNSTARTED. Gradle blocked before compilation
+by inherited cache lock. Gameplay/public writers disabled. No Git/new decision/I01d.
 ## Current continuation pointer - Questing coverage head notifications, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: supplied lifecycle
