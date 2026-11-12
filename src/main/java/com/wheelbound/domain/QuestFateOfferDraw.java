@@ -97,6 +97,9 @@ public final class QuestFateOfferDraw
             catalogVersion, slice.activity(), master.readiness());
     }
 
+    /** Original complete supplied pool, including quests outside the offers. */
+    public QuestFatePoolEvidence evidence() { return evidence; }
+
     public List<DrawCommitment> draws() { return draws; }
     public QuestFateEligibility eligibility() { return eligibility; }
 }

@@ -1,3 +1,10 @@
+## Current continuation pointer - Questing assignment draw retention, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-04 PARTIAL: supplied in-memory
+assignment draw/complete-pool retention implemented; durable evidence codec/schema
+and generation admission remain UNSTARTED. Gradle cache lock blocks Gson/JUnit.
+Gameplay/public writers disabled. No new decision/I01d/Git. Supervisor publishes.
+
 ## Current continuation pointer - Questing nested draw transcript codec, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-04 PARTIAL: nested lossless
