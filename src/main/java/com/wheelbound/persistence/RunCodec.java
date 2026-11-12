@@ -29,7 +29,8 @@ public final class RunCodec
     // round-trip and migration checks can run with the real Gson dependency.
     private static final int RETRY_SCHEMA = 20;
     // Reader-first card migration; neither writer publishes schema 21 yet.
-    private static final int READ_SCHEMA = 21;
+    // Reader-first Questing migration; public writers still refuse assignments.
+    private static final int READ_SCHEMA = 22;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -229,7 +230,9 @@ public final class RunCodec
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions", "masterSpins")
                     : schema < 21
                     ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions", "masterSpins", "currentMasterSpecial")
-                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions", "masterSpins", "currentMasterSpecial", "fateCards", "cardPurchases"));
+                    : schema == 21
+                    ? Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions", "masterSpins", "currentMasterSpecial", "fateCards", "cardPurchases")
+                    : Set.of("accountKey", "runId", "revision", "state", "obligation", "catalogVersion", "receipts", "fatePoints", "inventory", "grandFate", "grandProgress", "grandJournal", "grandActivations", "grandCurrentAttempt", "pendingMasterSelection", "masterCreations", "masterResolutions", "masterSpins", "currentMasterSpecial", "fateCards", "cardPurchases", "currentQuestAssignment"));
             RunIdentity identity = new RunIdentity(string(payload, "accountKey"), UUID.fromString(string(payload, "runId")));
             if (!identity.equals(expected)) { throw new IOException("Foreign account/profile/run snapshot"); }
             RunLifecycle lifecycle = new RunLifecycle(identity, integer(payload, "revision"),
@@ -421,6 +424,16 @@ public final class RunCodec
                     spins.orElseThrow(() -> new IllegalArgumentException("Current special requires spins")),
                     lifecycle).obligation());
             }
+            Optional<com.wheelbound.domain.QuestFateAssignment> quest = Optional.empty();
+            if (schema >= 22 && !payload.get("currentQuestAssignment").isJsonNull())
+            {
+                var retained = spins.orElseThrow(() ->
+                    new IllegalArgumentException("Current Questing assignment requires spins"))
+                    .reservation().orElseThrow(() ->
+                        new IllegalArgumentException("Current Questing assignment requires reservation"));
+                quest = Optional.of(QuestFateAssignmentCodec.decode(
+                    payload.getAsJsonObject("currentQuestAssignment"), retained));
+            }
             return new RunDocument(lifecycle, string(payload, "catalogVersion"), receipts, fatePoints,
                 schema >= 6 && !payload.get("inventory").isJsonNull()
                     ? Optional.of(InventoryJson.decode(payload.getAsJsonObject("inventory"))) : Optional.empty(), grandFate, progress, journal, activations, currentAttempt,
@@ -434,7 +447,7 @@ public final class RunCodec
                     : Optional.empty(),
                 schema >= 21 && !payload.get("cardPurchases").isJsonNull()
                     ? Optional.of(FateCardPurchaseJournalCodec.decode(payload.getAsJsonObject("cardPurchases"),
-                        identity, lifecycle.revision())) : Optional.empty());
+                        identity, lifecycle.revision())) : Optional.empty(), quest);
         }
         catch (RuntimeException ex) { throw new IOException("Invalid snapshot; preserve original", ex); }
     }

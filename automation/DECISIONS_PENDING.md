@@ -1,3 +1,37 @@
+## Recovered increment - Questing schema-22 reader, 2026-11-12
+
+Recovery scope is the existing WB-QST-02/WB-WHL-08 schema-22 reader only. Reviewed
+RunCodec, nested assignment binding and focused fixtures against WB-D028/046/070/102.
+No new task selected, Git operation or merged-state verification performed.
+
+Retained production reader and writer refusals. Extended QuestFateRunCodecTest with
+schema-19/20/21 retained-history absence checks, rejection of explicit null Questing
+fields before schema 22, input-byte preservation, and explicit empty creation/terminal
+history rejection. These are reader migration boundaries, not durable admission.
+
+Focused Gradle attempt (QuestFate*, FateCard*, RunCodecTest, legacy behavior) failed
+BEFORE compilation: inherited wrapper-cache lock Access is denied. GRADLE_USER_HOME
+unchanged; no external inspection, cache workaround or dependency substitution.
+Reader/JUnit/Gson fixtures remain IMPLEMENTED_UNVERIFIED; no migration/store/legacy
+pass claimed. Fresh javac --release 11 compilation of domain/aggregate dependencies
+and Checks PASSED into build/recovered-quest-schema22; all eight QuestFate*Checks
+PASSED. Codec/Gson sources are excluded from that dependency-free compilation.
+
+Reconciliation: QST-02/WHL-08 remain PARTIAL; schema-22 reader present, validation
+incomplete. Writer/durable admission/reviewed catalog authority remain UNSTARTED;
+FAT-05 admission remains BLOCKED. Other statuses/decision/client/balance holds stand.
+Master Wheel unchanged; incomplete gameplay stays disabled. I01d not selected.
+
+Next remaining action: execute real-Gson schema-22/nested, schema-21 card, migration
+and legacy suites when inherited build access returns, resolving failures within this
+increment. Candidate writer and durable admission are subsequent work, not started
+by this recovery. Supervisor owns publication. Local recovery checkpoint is IDLE.
+
+## Current continuation pointer - Questing schema-22 reader, 2026-11-06
+
+See current SESSION_STATE/checkpoint/backlog sections. Schema-22 reader and focused
+migration fixtures IMPLEMENTED_UNVERIFIED; full validation/writer/durable admission
+unfinished. No new decision. Existing holds stand. Public writes refused. No Git.
 ## Current continuation pointer - enclosing Questing assignment codec, 2026-11-06
 
 See current SESSION_STATE/checkpoint/backlog sections. Nested enclosing codec is

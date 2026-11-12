@@ -1,3 +1,32 @@
+## Recovered increment - Questing schema-22 reader, 2026-11-12
+
+Recovery scope is the existing WB-QST-02/WB-WHL-08 schema-22 reader only. Reviewed
+RunCodec, nested assignment binding and focused fixtures against WB-D028/046/070/102.
+No new task selected, Git operation or merged-state verification performed.
+
+Retained production reader and writer refusals. Extended QuestFateRunCodecTest with
+schema-19/20/21 retained-history absence checks, rejection of explicit null Questing
+fields before schema 22, input-byte preservation, and explicit empty creation/terminal
+history rejection. These are reader migration boundaries, not durable admission.
+
+Focused Gradle attempt (QuestFate*, FateCard*, RunCodecTest, legacy behavior) failed
+BEFORE compilation: inherited wrapper-cache lock Access is denied. GRADLE_USER_HOME
+unchanged; no external inspection, cache workaround or dependency substitution.
+Reader/JUnit/Gson fixtures remain IMPLEMENTED_UNVERIFIED; no migration/store/legacy
+pass claimed. Fresh javac --release 11 compilation of domain/aggregate dependencies
+and Checks PASSED into build/recovered-quest-schema22; all eight QuestFate*Checks
+PASSED. Codec/Gson sources are excluded from that dependency-free compilation.
+
+Reconciliation: QST-02/WHL-08 remain PARTIAL; schema-22 reader present, validation
+incomplete. Writer/durable admission/reviewed catalog authority remain UNSTARTED;
+FAT-05 admission remains BLOCKED. Other statuses/decision/client/balance holds stand.
+Master Wheel unchanged; incomplete gameplay stays disabled. I01d not selected.
+
+Next remaining action: execute real-Gson schema-22/nested, schema-21 card, migration
+and legacy suites when inherited build access returns, resolving failures within this
+increment. Candidate writer and durable admission are subsequent work, not started
+by this recovery. Supervisor owns publication. Local recovery checkpoint is IDLE.
+
 # Questing persistence prerequisite, 2026-11-06
 
 Status: nested reward/selection and observation-window codecs IMPLEMENTED_UNVERIFIED. No run schema
@@ -105,3 +134,42 @@ or legacy pass. Run schema/migrations, durable admission and authenticated catal
 integration remain UNSTARTED. No public writer, schema or gameplay enablement.
 Next: real Gson verification, then bounded future run-schema reader/migration with
 explicit legacy absence. Current continuation records supersede older next steps.
+
+## Current continuation - Questing schema-22 reader, 2026-11-06
+
+IDLE after bounded WB-QST-02/WB-WHL-08 reader-first persistence increment (S).
+Supersedes older next-task prose. Reconciled local source/tests and recorded work;
+no Git operations or remote/merged-state verification. Supervisor owns publication.
+I01d not selected; no new gameplay/balance decision. Master Wheel unchanged.
+
+RunCodec reads schema 22 with required explicit currentQuestAssignment (null means
+absent). Schemas 1-21 retain absence and reject the new field. Present commitments
+decode against the exact retained spin reservation, then RunDocument validates
+creation/terminal history, catalog, identity and lifecycle. Future schemas fail;
+public schema-19 and candidate schema-20 writers still refuse Questing/card state.
+No durable admission, settlement, evidence authority or gameplay activation.
+
+Added QuestFateRunCodecTest: active/paused restoration without original-window
+refresh, original accounting, explicit/legacy absence, missing/future/schema-confused
+fields, malformed payloads, missing histories/reservations, mismatched declarations,
+writer refusal and original-byte preservation on failure.
+
+Verification: fresh javac --release 11 domain/aggregate-dependency compilation into
+build/continuation-quest-schema-reader PASSED; all eight QuestFate*Checks PASSED.
+Focused schema/enclosing/card/legacy Gradle attempt failed BEFORE compilation:
+inherited wrapper-cache lock Access is denied. New reader and JUnit/Gson fixtures
+IMPLEMENTED_UNVERIFIED. No fresh Gson/migration/store/legacy pass claimed.
+GRADLE_USER_HOME unchanged; no cache workaround or external inspection.
+
+Reconciliation: QST-02/WHL-08 PARTIAL. In-memory binding/retention verified offline;
+nested codecs and schema-22 reader IMPLEMENTED_UNVERIFIED. Full migration validation,
+writer, durable assignment admission and reviewed catalog/quote authority UNSTARTED.
+FAT-05 current-assignment admission BLOCKED on durable complete commitment.
+QST-01/05 PARTIAL; QST-03/04 legacy PARTIAL; QST-06/07 mode integration UNSTARTED.
+FAT-02 schema-21 reader/components IMPLEMENTED_UNVERIFIED; writer/full migration/
+services UNSTARTED. Other statuses and client/balance/decision holds stand.
+
+Next: run real-Gson schema-22/nested codec, schema-21 card, migration and legacy
+suites when inherited build access returns; resolve failures before introducing a
+bounded candidate lossless writer and durable admission. Keep public writes refused
+pending complete validation. Local edits only; no credentials/secrets/workflows.
