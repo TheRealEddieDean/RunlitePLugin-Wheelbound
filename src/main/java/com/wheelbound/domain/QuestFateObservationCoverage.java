@@ -38,6 +38,36 @@ public final class QuestFateObservationCoverage
     public void interrupt() { open = false; }
 
     /**
+     * Prepare a supplied completion receipt while this coverage is still open.
+     * Retain the returned receipt for retries: this guard closes on success or
+     * refusal and cannot prepare another receipt. Source identities remain caller
+     * supplied; this neither authenticates evidence nor admits a durable write.
+     */
+    public QuestFateCompletionReceipt prepareSuppliedCompletionReceipt(
+        QuestFateCurrentAssignment current, long expectedRevision,
+        UUID sessionId, UUID windowId, long position, String questId,
+        QuestFateCompletion.QuestState state, UUID commandId,
+        String sourceNamespace, String eventKey)
+    {
+        if (!open) { throw new IllegalStateException("Quest observation coverage is closed"); }
+        try
+        {
+            // Validate metadata before advancing coverage; failed preparation must
+            // not leave a reusable baseline or an apparently accepted position.
+            var receipt = QuestFateCompletionReceipt.fromObservation(current, window,
+                expectedRevision, sessionId, windowId, position, questId, state,
+                commandId, sourceNamespace, eventKey);
+            observe(current, expectedRevision, sessionId, windowId, position, questId, state);
+            return receipt;
+        }
+        catch (RuntimeException failure)
+        {
+            open = false;
+            throw failure;
+        }
+    }
+
+    /**
      * Observe the assigned quest only. Positions must strictly increase, but need
      * not be contiguous: unrelated client events may occupy intervening positions.
      * Returns true once for a fresh completion. Invalid input closes coverage;
