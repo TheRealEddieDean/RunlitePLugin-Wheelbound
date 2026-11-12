@@ -30,7 +30,8 @@ public final class RunCodec
     private static final int RETRY_SCHEMA = 20;
     // Reader-first card migration; neither writer publishes schema 21 yet.
     // Reader-first Questing migration; public writers still refuse assignments.
-    private static final int READ_SCHEMA = 23;
+    // Schema 24 opts current assignments into retained original draw evidence.
+    private static final int READ_SCHEMA = 24;
     public static final int MAX_BYTES = 1_048_576;
     private final Gson gson;
 
@@ -433,8 +434,11 @@ public final class RunCodec
                     new IllegalArgumentException("Current Questing assignment requires spins"))
                     .reservation().orElseThrow(() ->
                         new IllegalArgumentException("Current Questing assignment requires reservation"));
-                quest = Optional.of(QuestFateAssignmentCodec.decode(
-                    payload.getAsJsonObject("currentQuestAssignment"), retained));
+                quest = Optional.of(schema >= 24
+                    ? QuestFateAssignmentCodec.decodeWithDrawEvidence(
+                        payload.getAsJsonObject("currentQuestAssignment"), retained)
+                    : QuestFateAssignmentCodec.decode(
+                        payload.getAsJsonObject("currentQuestAssignment"), retained));
             }
             return new RunDocument(lifecycle, string(payload, "catalogVersion"), receipts, fatePoints,
                 schema >= 6 && !payload.get("inventory").isJsonNull()

@@ -1,3 +1,42 @@
+Verification for schema-24 continuation: fresh javac --release 11 domain/aggregate
+compilation PASSED into build/continuation-quest-schema24; all fourteen discovered
+executable domain QuestFate*Checks entry points PASSED (aggregate checks invoked
+by assignment checks). This excludes changed Gson reader and JUnit fixtures.
+An unavailable prior manifest and then an outdated schema-23 source list failed;
+regenerating the workspace source manifest resolved the verification setup.
+## Current continuation - Questing schema-24 draw reader, 2026-11-12
+
+IDLE after bounded WB-QST-04 reader integration (S). Reconciled supplied domain
+replay/retention, version-2 assignment codec and schema-22/23 readers. No duplicate
+implementation or independent merged-state verification; no Git operations.
+WB-D028/046/070/102/111/120/138/139 and supersessions retained. I01d not selected.
+
+RunCodec accepts schema 24 with the schema-23 required fields and opts only its
+current assignment into version-2 draw evidence decoding. Version 1 remains explicit
+unavailable evidence; version 2 requires offerDraw object or null. Schemas 22/23
+remain version-1-only. History remains independently versioned; historical draw
+retention is not added. No writer, RNG policy, reviewed catalog/client authority,
+retry admission or payout enabled. Master Wheel behavior unchanged; gameplay disabled.
+
+Focused Gson/JUnit fixtures cover 3/4/5 offers, active/paused heads, exact draw and
+complete observation retention, public/candidate writer refusal, older schema
+rejection, legacy/null absence, malformed/missing evidence, corrupt tickets, future
+schema refusal and original-byte preservation. Reader and fixtures remain
+IMPLEMENTED_UNVERIFIED: focused Gradle failed BEFORE compilation on inherited
+wrapper-cache lock Access is denied. GRADLE_USER_HOME unchanged; no cache workaround,
+external inspection, secrets, credentials or workflow access.
+
+Reconciliation: QST-04 PARTIAL; supplied replay/retention implemented, nested codecs,
+versioned composition and schema-24 reader IMPLEMENTED_UNVERIFIED. Reviewed generation
+and durable admission UNSTARTED. QST-02/06/WHL-08 PARTIAL; reviewed catalog/current
+observation/capacity authority and retry admission UNSTARTED. QST-05 PARTIAL;
+authenticated evidence/durable prefix/atomic settlement UNSTARTED. FAT-05 admission
+BLOCKED; QST-07 UNSTARTED under recovery hold; FND-01 DONE. Other statuses stand.
+
+Next: execute real Gson/JUnit schema-24/23/22, nested codecs, migrations and legacy
+regressions when inherited build access returns; resolve failures before writer or
+durable admission. Reviewed generation/admission remains subsequent unfinished work.
+Supervisor owns publication; local edits are not claimed committed.
 ## Current continuation - Questing versioned assignment draw composition, 2026-11-12
 
 IDLE after bounded WB-QST-04 assignment persistence increment (S). Reconciled local
