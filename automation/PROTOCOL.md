@@ -1,3 +1,11 @@
+## Current continuation pointer - Questing complete-pool readiness, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-06 PARTIAL: supplied complete-pool
+readiness classifier implemented; focused Java 11 executable checks passed. Actual
+retry/durable admission UNSTARTED. QST-05 remains PARTIAL. Gradle blocked before
+compilation by inherited cache lock. Gameplay/public writers disabled. No Git/new
+decision/I01d. Supervisor publishes. IDLE.
+
 ## Current continuation pointer - Questing aggregate covered append, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: aggregate covered

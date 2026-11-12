@@ -1,3 +1,49 @@
+## Current continuation - Questing complete-pool readiness, 2026-11-12
+
+IDLE after bounded WB-QST-06 precommit readiness increment (S). Reconciled current
+Questing assignment/coverage/history, complete ordinary-pool readiness, code and
+focused tests with the backlog. Local source only; no Git/merged-state verification.
+WB-D028/046/070/102/111/120/138/139 and supersessions retained. No new decision/I01d.
+
+QuestFatePoolEvidence requires exact nonempty supplied complete-catalog membership
+with one observation per quest. Retains immutable quest-state/prerequisite/access
+route observations and binds Master ordinary evidence to identity, revision,
+snapshot, catalog and caller-resolved Questing activity. Unsupported/unknown input
+blocks readiness. Fully known zero-qualified pools are VERIFIED_EMPTY; enough known
+qualified quests for the declared 3/4/5 capacity are ASSIGNABLE. A nonzero pool below
+capacity is UNKNOWN, preserving the unresolved reduced-choice boundary. This is
+supplied precommit classification only: no catalog/source/ownership authentication,
+offer generation, retry commitment, durable admission, settlement or gameplay wiring.
+Master Wheel behavior unchanged; public writers/incomplete gameplay remain disabled.
+
+Validation: Java 11 compilation with build/continuation-quest-pool/sources.txt PASSED;
+focused QuestFatePoolEvidenceChecks PASSED, covering all capacities/counts, incomplete/
+duplicate/foreign catalogs, each eligibility status/component, mixed uncertainty,
+empty access/prerequisite exclusions, immutable inputs and stale/foreign/special
+Master contexts. JUnit wrapper added. Focused and broader Gradle attempts failed
+BEFORE compilation on inherited wrapper-cache lock Access is denied. Inherited
+GRADLE_USER_HOME unchanged; no cache workaround/external inspection/Git/workflows.
+JUnit/Gson/schema/migration/legacy checks remain IMPLEMENTED_UNVERIFIED.
+
+Reconciliation: QST-06 now PARTIAL (supplied complete-pool readiness implemented and
+focused executable checks passed); actual retry integration/durable admission still
+UNSTARTED. QST-05 remains PARTIAL: supplied coverage/receipt/history/aggregate work
+implemented offline; authenticated client/current-head admission, durable prefix and
+atomic settlement UNSTARTED. QST-02/WHL-08 PARTIAL, writer/durable assignment admission
+and reviewed catalog authority UNSTARTED; FAT-05 admission BLOCKED. Other recorded
+statuses and decision/client/balance holds stand. No completed gameplay/payout claim.
+
+Next: execute real Gson/JUnit schema-23/nested, schema-22 assignment, schema-21 card,
+migration and legacy checks when inherited build access returns. QST-06 next requires
+reviewed complete catalog/current observations and owned-capacity authority before
+connecting classification to frozen Master readiness/retry admission. Do not infer
+empty pools from offer subsets or invent reduced-choice behavior. Supervisor publishes.
+
+All thirteen discovered domain QuestFate*Checks entry points PASSED against the new
+Java 11 compilation, including aggregate checks invoked by assignment checks. The
+expanded complete-pool checks passed again after adding foreign/special contexts
+and known access/prerequisite exhaustion cases. This excludes Gson/JUnit/legacy.
+
 ## Current continuation - Questing aggregate covered append, 2026-11-12
 
 IDLE after bounded WB-QST-05 covered supplied append increment (S). Reconciled
