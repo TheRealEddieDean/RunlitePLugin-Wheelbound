@@ -72,6 +72,46 @@ public final class QuestFateAggregateChecks
         completions.requireExtensionOf(completions);
         var emptyHistory = new QuestFateCompletionHistory(
             new QuestFateCompletionJournal(assignment.identity(), List.of()), List.of());
+        // Aggregate preparation requires explicit history and retains all other state.
+        rejects(() -> head.appendSuppliedQuestCompletion(receipt, lifecycle.revision(),
+            window.sessionId(), window.windowId()));
+        var appendable = new RunDocument(lifecycle, catalog, head.receipts(), head.fatePoints(),
+            head.inventory(), head.grandFate(), head.grandProgress(), head.grandJournal(),
+            head.grandActivations(), head.grandCurrentAttempt(), head.pendingMasterSelection(),
+            head.masterCreations(), head.masterResolutions(), head.masterSpins(), Optional.empty(),
+            head.fateCards(), head.cardPurchases(), Optional.of(assignment), Optional.of(emptyHistory));
+        var appended = appendable.appendSuppliedQuestCompletion(receipt, lifecycle.revision(),
+            window.sessionId(), window.windowId());
+        check(appended != appendable && appendable.questCompletionHistory().orElseThrow() == emptyHistory);
+        check(appended.questCompletionHistory().orElseThrow().journal().receipts().equals(List.of(receipt)));
+        check(appended.lifecycle() == lifecycle && appended.masterSpins().orElseThrow() == spins);
+        check(appended.currentQuestAssignment().orElseThrow().assignment() == assignment);
+        check(appended.fatePoints().equals(head.fatePoints()) && appended.receipts().equals(head.receipts()));
+        check(appended.appendSuppliedQuestCompletion(receipt, lifecycle.revision() + 10,
+            UUID.randomUUID(), UUID.randomUUID()) == appended);
+        var changedReplay = new QuestFateCompletionReceipt(context, window, lifecycle.revision(),
+            window.baselinePosition() + 1, receipt.commandId(), "quests", "changed-completion");
+        rejects(() -> appended.appendSuppliedQuestCompletion(changedReplay, lifecycle.revision(),
+            window.sessionId(), window.windowId()));
+        check(historical.appendSuppliedQuestCompletion(receipt, lifecycle.revision() + 10,
+            UUID.randomUUID(), UUID.randomUUID()) == historical);
+        rejects(() -> appendable.appendSuppliedQuestCompletion(receipt, lifecycle.revision() + 1,
+            window.sessionId(), window.windowId()));
+        rejects(() -> appendable.appendSuppliedQuestCompletion(receipt, lifecycle.revision(),
+            UUID.randomUUID(), window.windowId()));
+        var pausedAppendable = LifecycleAdmission.prepare(appendable, assignment.identity(), UUID.randomUUID(),
+            lifecycle.revision(), RunReceipt.Operation.PAUSE);
+        rejects(() -> pausedAppendable.appendSuppliedQuestCompletion(receipt,
+            pausedAppendable.lifecycle().revision(), window.sessionId(), window.windowId()));
+        for (UUID collision : List.of(resolution.creation().transactionId(), resolution.commandId()))
+        {
+            var conflicting = new QuestFateCompletionReceipt(context, window, lifecycle.revision(),
+                window.baselinePosition() + 1, collision, "quests", "completion");
+            rejects(() -> appendable.appendSuppliedQuestCompletion(conflicting, lifecycle.revision(),
+                window.sessionId(), window.windowId()));
+        }
+        check(appendable.questCompletionHistory().orElseThrow().journal().receipts().isEmpty());
+        checkCodec.accept(appended);
         completions.requireExtensionOf(emptyHistory);
         rejects(() -> emptyHistory.requireExtensionOf(completions));
         checkCodec.accept(historical(lifecycle, catalog, Optional.empty(), Optional.empty(), emptyHistory));

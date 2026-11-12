@@ -1,3 +1,9 @@
+## Current continuation pointer - Questing aggregate supplied append, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: supplied aggregate
+append implemented and executable aggregate checks passed. No authenticated evidence,
+durable admission or settlement. Gradle blocked before compilation by inherited cache
+lock. No new decision or Git operations. Writers refused; gameplay disabled. IDLE.
 ## Current continuation pointer - Questing history append, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: supplied immutable

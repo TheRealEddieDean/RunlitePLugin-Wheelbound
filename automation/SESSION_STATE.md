@@ -1,3 +1,39 @@
+## Current continuation - Questing aggregate supplied append, 2026-11-12
+
+IDLE after bounded WB-QST-05 structural aggregate increment (XS/S). Reconciled
+local domain/history, aggregate/copy paths and executable/JUnit entry points. No Git
+or merged-state verification; historical merge receipts remain unverified locally.
+I01d not selected. WB-D028/046/070/102 and supersessions retained; no new decision.
+
+RunDocument.appendSuppliedQuestCompletion is package-private supplied-data preparation.
+Requires explicitly present history; legacy unavailable absence is never initialized.
+Uses the aggregate's current binding, immutable history append/prefix checks and full
+aggregate validation for retained Master context and cross-family command collisions.
+Exact replay returns the same document without requalifying against a changed head
+or requiring a current assignment. New stale/paused/window-mismatched requests fail.
+Preserves lifecycle/revision, current assignment, spin reservation, balances and all
+other journals. This is not authenticated admission, a durable write or settlement.
+
+Verification: javac --release 11 with existing schema-23 source manifest PASSED into
+build/continuation-quest-aggregate-append; all eleven executable domain QuestFate*Checks
+PASSED, including aggregate checks invoked by assignment checks. After adding changed
+replay refusal coverage, recompiled and reran QuestFateAssignmentChecks PASSED. Focused
+Gradle QuestFate/FateCard/RunCodec/legacy attempt failed BEFORE compilation on inherited
+wrapper-cache lock Access is denied. Gson/JUnit/schema/migration/legacy verification
+remains IMPLEMENTED_UNVERIFIED. GRADLE_USER_HOME unchanged; no cache workaround,
+external inspection, credentials, workflows or Git operations.
+
+Reconciliation: QST-05 PARTIAL. Structural history retention and supplied in-memory
+aggregate append DONE offline. Authenticated evidence, durable prefix admission and
+atomic settlement UNSTARTED. QST-02/WHL-08 PARTIAL; writer/durable assignment admission
+and reviewed catalog authority UNSTARTED. FAT-05 admission BLOCKED. Other recorded
+partial/unstarted/blocked statuses and client/balance holds stand. Public/candidate
+writers still refuse Questing history. Master Wheel unchanged; gameplay disabled.
+
+Next: real Gson/JUnit schema-23/nested, schema-22 assignment, schema-21 card, migration
+and legacy verification when inherited build access returns; fix failures before
+writer/durable admission. Trusted evidence and once-only atomic settlement still need
+implementation. Supervisor owns publication. Local changes only; no payout implemented.
 ## Current continuation - Questing history append, 2026-11-12
 
 IDLE after bounded WB-QST-05 supplied history append prerequisite (XS/S).

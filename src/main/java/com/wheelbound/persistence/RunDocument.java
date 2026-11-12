@@ -628,6 +628,28 @@ public final class RunDocument
     public Optional<com.wheelbound.domain.QuestFateCompletionHistory> questCompletionHistory()
     { return Optional.ofNullable(questCompletionHistory); }
 
+    /**
+     * Structural supplied-data preparation only. Requires explicit available history;
+     * never upgrades legacy absence, authenticates evidence or settles an objective.
+     * The lifecycle, reservation, current assignment and balances remain retained.
+     */
+    RunDocument appendSuppliedQuestCompletion(
+        com.wheelbound.domain.QuestFateCompletionReceipt request, long expectedRevision,
+        UUID sessionId, UUID windowId)
+    {
+        if (questCompletionHistory == null)
+        { throw new IllegalArgumentException("Questing completion history unavailable"); }
+        var next = questCompletionHistory.append(request, currentQuestAssignment,
+            expectedRevision, sessionId, windowId);
+        if (next == questCompletionHistory) { return this; }
+        next.requireExtensionOf(questCompletionHistory);
+        return new RunDocument(lifecycle, catalogVersion, receipts, fatePoints(), inventory(),
+            grandFate(), grandProgress(), grandJournal(), grandActivations(), grandCurrentAttempt(),
+            pendingMasterSelection(), masterCreations(), masterResolutions(), masterSpins(),
+            currentMasterSpecial().map(value -> value.obligation()), fateCards(), cardPurchases(),
+            currentQuestAssignment().map(value -> value.assignment()), Optional.of(next));
+    }
+
     public Optional<com.wheelbound.domain.QuestFateCurrentAssignment> currentQuestAssignment()
     { return Optional.ofNullable(currentQuestAssignment); }
     public RunLifecycle lifecycle() { return lifecycle; }
