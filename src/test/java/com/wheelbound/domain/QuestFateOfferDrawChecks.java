@@ -44,6 +44,38 @@ public final class QuestFateOfferDrawChecks
                 transcript(capacity.count())));
         }
         var pool = evidence(QuestFateOffers.Capacity.THREE, QUALIFIED);
+        var replayed = replay(pool, transcript(3));
+        var selection = new QuestFateSelection(replayed.eligibility(),
+            replayed.eligibility().offers().select("e"));
+        var reward = new QuestFateReward(selection, "quote", "v1", 0);
+        var provenance = provenance(pool, ID, 7, "snapshot", "catalog", reward, false);
+        replayed.requireProvenance(provenance);
+        // Every offered player choice is legal; replay binds the full offer snapshot.
+        replayed.requireProvenance(provenance(pool, ID, 7, "snapshot", "catalog",
+            new QuestFateReward(new QuestFateSelection(replayed.eligibility(),
+                replayed.eligibility().offers().select("c")), "quote", "v1", 0), false));
+        rejects(() -> replayed.requireProvenance(null));
+        rejects(() -> replayed.requireProvenance(provenance(pool,
+            new RunIdentity("foreign", UUID.randomUUID()), 7, "snapshot", "catalog", reward, false)));
+        rejects(() -> replayed.requireProvenance(provenance(pool, ID, 6,
+            "snapshot", "catalog", reward, false)));
+        rejects(() -> replayed.requireProvenance(provenance(pool, ID, 7,
+            "changed", "catalog", reward, false)));
+        rejects(() -> replayed.requireProvenance(provenance(pool, ID, 7,
+            "snapshot", "changed", reward, false)));
+        rejects(() -> replayed.requireProvenance(provenance(pool, ID, 7,
+            "snapshot", "catalog", reward, true)));
+        var otherDraws = new ArrayList<DrawCommitment>();
+        var otherEntries = new ArrayList<>(transcript(3).get(0).pool().entries());
+        for (int i = 0; i < 3; i++)
+        {
+            otherDraws.add(new DrawCommitment(new WeightedPool("catalog", otherEntries), 0));
+            otherEntries.remove(0);
+        }
+        var otherEligibility = replay(pool, otherDraws).eligibility();
+        rejects(() -> replayed.requireProvenance(provenance(pool, ID, 7, "snapshot", "catalog",
+            new QuestFateReward(new QuestFateSelection(otherEligibility,
+                otherEligibility.offers().select("a")), "quote", "v1", 0), false)));
         var zeroTickets = new ArrayList<DrawCommitment>();
         var remaining = new ArrayList<>(transcript(3).get(0).pool().entries());
         for (int i = 0; i < 3; i++)
@@ -123,6 +155,32 @@ public final class QuestFateOfferDrawChecks
 
     private static QuestFateOfferDraw replay(QuestFatePoolEvidence evidence, List<DrawCommitment> draws)
     { return new QuestFateOfferDraw(evidence, ID, 7, "snapshot", "catalog", SLICE, draws); }
+
+    private static QuestFateProvenance provenance(QuestFatePoolEvidence pool, RunIdentity identity,
+        long revision, String snapshot, String catalog, QuestFateReward reward, boolean changedReason)
+    {
+        var slices = new ArrayList<ActiveWheel.Slice>();
+        slices.add(ActiveWheel.Slice.ordinary(SLICE.id(), "questing", ActiveWheel.Enhancement.BASE));
+        var statuses = new java.util.HashMap<UUID, MasterSelectionReadiness.Classification>();
+        statuses.put(SLICE.id(), changedReason ? new MasterSelectionReadiness.Classification(
+            MasterSelectionReadiness.Availability.ASSIGNABLE, "changed")
+            : pool.masterEvidence().classifyFor(ID, 7, "snapshot", "catalog", SLICE));
+        for (int i = 0; i < 4; i++)
+        {
+            var slice = ActiveWheel.Slice.ordinary(UUID.randomUUID(), i % 2 == 0 ? "combat" : "mining",
+                ActiveWheel.Enhancement.BASE);
+            slices.add(slice);
+            statuses.put(slice.id(), new MasterSelectionReadiness.Classification(
+                MasterSelectionReadiness.Availability.ASSIGNABLE, "supplied"));
+        }
+        var zero = new MasterSelectionProvenance(UUID.randomUUID(), snapshot, catalog,
+            "master-stream", "0", new MasterSelectionReadiness(new ActiveWheel(slices), statuses), List.of());
+        var resolved = zero.append(zero.transactionId(), 0, "0",
+            new MasterSelectionProvenance.Step(new DrawCommitment(zero.pool(), 0), "1"));
+        var resolution = new MasterSelectionResolutionReceipt(UUID.randomUUID(), revision + 1,
+            new MasterSelectionCreationReceipt(identity, revision, zero), resolved);
+        return new QuestFateProvenance(resolution, SLICE.id(), "questing", "quest-stream", "0", "3", reward);
+    }
     private static void check(boolean value) { if (!value) { throw new AssertionError(); } }
     private static void rejects(Runnable action)
     {

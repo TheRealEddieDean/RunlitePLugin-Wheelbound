@@ -1,3 +1,10 @@
+## Current continuation pointer - Questing supplied draw provenance binding, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-04 PARTIAL: supplied draw to
+provenance structural binding implemented; focused Java 11 checks passed.
+Versioned transcript codec/retention and generation/admission UNSTARTED.
+Gradle blocked before compilation by inherited cache lock. Gameplay/public writers
+disabled. No Git/new decision/I01d. Supervisor publishes. IDLE.
 ## Current continuation pointer - Questing supplied offer draw replay, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-04 PARTIAL: deterministic supplied
