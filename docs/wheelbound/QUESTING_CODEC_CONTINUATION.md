@@ -261,3 +261,18 @@ Domain/aggregate compilation and nine executable Questing checks passed offline;
 new history-bearing writer-refusal JUnit coverage remains unverified because Gradle
 failed before compilation on the inherited wrapper-cache lock. Next: cross-family
 completion-command uniqueness; trusted evidence and atomic settlement remain absent.
+
+## Reader-only history schema 23 - 2026-11-12
+
+Schema 23 requires questCompletionHistory. Null means unavailable; present empty is
+not inferred for schemas 1-22. Present shape is {version:1, history:<nested v1>,
+accounting:[{resolutions:<terminal journal v1>, spins:<spin state v1>}]} with one
+accounting entry per ordered historical context. Decode validates each entry at its
+context revision, bounded by the run head, and then restores nested history and
+RunDocument retention guards. No reconstruction from current reservation or encoding
+API is provided. Explicit accounting remains a structural declaration, not evidence
+of an authenticated completion or settled payout. Writers remain refused.
+
+Reader and focused fixtures are IMPLEMENTED_UNVERIFIED: Gradle could not acquire the
+inherited wrapper-cache lock before compilation. Next: real Gson/JUnit/migration and
+legacy verification before writer or durable admission.

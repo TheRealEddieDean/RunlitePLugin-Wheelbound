@@ -1,3 +1,41 @@
+## Current continuation - Questing schema-23 history reader, 2026-11-12
+
+IDLE after bounded WB-QST-05 reader integration (S). Reconciled local domain,
+aggregate, nested codecs and schema-22 fixtures; no Git or merged-state verification.
+Recorded merged receipts not independently reverified. I01d not selected. Decisions
+WB-D028/046/070/102 and supersessions retained; no new gameplay/balance decision.
+
+RunCodec now accepts schema 23 with required questCompletionHistory: null retains
+unavailable absence; a present version-1 envelope carries nested history and ordered
+explicit historical resolutions/spin states. Empty history remains present. Schemas
+1-22 retain absence and reject the added field. Context revisions cannot exceed the
+head; historical accounting validates at each context revision, not against today's
+reservation. RunDocument checks retained original creation/terminal membership,
+catalog/identity and command collisions. Public/candidate writers still refuse all
+present Questing history, including empty. Master Wheel unchanged; gameplay disabled.
+
+Focused JUnit/Gson fixtures added for legacy/null/empty distinction, historical
+restoration without today's reservation, writer refusal, malformed/missing accounting,
+missing retained terminals, future head and original-byte preservation. Reader/codecs
+and Gson/JUnit fixtures IMPLEMENTED_UNVERIFIED: focused Gradle failed BEFORE
+compilation on inherited wrapper-cache lock Access is denied. GRADLE_USER_HOME
+unchanged; no external inspection/cache workaround, secrets, workflows or Git.
+
+Reconciliation: QST-05 PARTIAL. Structural receipt/journal/aggregate retention and
+command guards remain DONE offline. Nested codecs and schema-23 reader are
+IMPLEMENTED_UNVERIFIED. Authenticated evidence, durable prefix admission and atomic
+settlement UNSTARTED. QST-02/WHL-08 PARTIAL; writer/durable assignment admission and
+reviewed catalog authority UNSTARTED. FAT-05 admission BLOCKED. Other recorded
+statuses and client/balance/decision holds stand; no complete gameplay claimed.
+
+Fresh javac --release 11 domain/aggregate dependency compilation PASSED into
+build/continuation-quest-schema23; all eleven executable domain QuestFate*Checks
+PASSED, including aggregate checks invoked by assignment checks. Gson codecs and
+JUnit fixtures are excluded. Initial manifest named a nonexistent helper; corrected
+to existing QuestFateAggregateChecks before the successful compile/run.
+Next: execute real Gson/JUnit schema-23/nested, schema-22 assignment, schema-21 card,
+migration and legacy suites when inherited build access returns; resolve failures
+before writer/durable admission. Supervisor owns publication. No payout implemented.
 ## Current continuation - enclosing Questing completion history payload, 2026-11-12
 
 IDLE after bounded WB-QST-05 nested history composition (S). Reconciled local
