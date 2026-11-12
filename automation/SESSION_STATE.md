@@ -1,3 +1,50 @@
+## Current continuation - in-memory Questing completion journal, 2026-11-12
+
+IDLE after bounded WB-QST-05 journal prerequisite (S). Supersedes older next-task
+prose. Reconciled local source/tests and recorded continuation; no Git or remote
+merged-state verification. Supervisor handles branch/publication/CI/merges.
+
+QuestFateCompletionJournal retains an immutable run-scoped receipt list. Restore
+rejects foreign runs and duplicate command, source-event or assignment identities.
+Append checks full command equality: exact replay returns the retained journal
+before live-head qualification; changed command payloads fail. New receipts require
+supplied active current assignment/revision/live session/window binding. Different
+commands/windows cannot consume the same source event or complete an assignment
+twice. Caller collections cannot mutate retained history. This is supplied-value
+in-memory collision enforcement, not durable evidence consumption or settlement.
+No aggregate/schema/writer/runtime integration, rewards or spin mutations added.
+
+Reconciliation: QST-05 PARTIAL; receipt payload and in-memory journal DONE offline.
+Trusted client admission, durable journal/codec and once-only atomic settlement
+UNSTARTED. QST-02/WHL-08 PARTIAL: aggregate retention/binding verified offline;
+nested codecs/schema-22 reader IMPLEMENTED_UNVERIFIED. Candidate writer, durable
+assignment admission and reviewed catalog/quote authority UNSTARTED; FAT-05 actual
+admission BLOCKED. QST-01 PARTIAL; QST-03/04 legacy PARTIAL; QST-06/07 mode
+integration UNSTARTED. FAT-02 reader/components IMPLEMENTED_UNVERIFIED; writer,
+full migrations and services UNSTARTED. Other statuses and decision/client/balance
+holds stand. I01d not selected; Master Wheel unchanged. No new gameplay decision.
+STATE_CONTRACT command/evidence replay rules and WB-D028/046/070/102/114 preserved.
+Public Questing/card writes and incomplete gameplay stay disabled.
+
+Validation: fresh javac --release 11 compilation into
+build/continuation-quest-completion-journal PASSED; all eleven domain QuestFate*Checks
+exited 0. Journal checks cover exact replay after changed/paused head, changed
+command, source reuse across distinct assignments, repeated assignment, stale/live
+context refusal, defensive copying and immutable history. Final expanded command
+collision checks recompiled and reran successfully. JUnit wrapper added, unverified.
+Focused Gradle QuestFate*, FateCard*, RunCodecTest and WheelboundBehaviorTest failed
+BEFORE compilation: inherited wrapper-cache lock Access is denied. GRADLE_USER_HOME
+unchanged; no external inspection/cache workaround. No Gson/JUnit/migration/store
+or legacy pass claimed. No Git, credentials, secrets or workflows accessed.
+
+Next: run real-Gson schema-22/nested, schema-21 card, migration, journal and legacy
+suites when inherited build access returns; resolve failures before candidate
+writer/durable admission. Next bounded receipt prerequisite: versioned lossless
+completion receipt/journal codec design and strict supplied-context composition,
+with explicit absence for older schemas; keep durable admission/settlement disabled.
+Cross-family command uniqueness, authenticated evidence and atomic prefix-preserving
+publication remain required before any gameplay completion can be claimed.
+
 ## Current continuation - supplied Questing completion receipt, 2026-11-12
 
 IDLE after bounded WB-QST-05 receipt payload increment (S). Supersedes older
