@@ -1,3 +1,10 @@
+## Current continuation pointer - Questing supplied baseline preparation, 2026-11-12
+
+See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: retained-current-binding
+supplied baseline preparation implemented and focused executable checks passed.
+Authenticated admission/settlement remain unstarted. Gradle blocked before compilation
+by inherited cache lock. Public writers/gameplay disabled. No Git or new decision. IDLE.
+
 ## Current continuation pointer - Questing aggregate observed append, 2026-11-12
 
 See current SESSION_STATE/checkpoint/backlog. QST-05 PARTIAL: aggregate derives its

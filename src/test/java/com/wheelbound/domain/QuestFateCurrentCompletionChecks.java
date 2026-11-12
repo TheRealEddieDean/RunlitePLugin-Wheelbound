@@ -19,6 +19,46 @@ public final class QuestFateCurrentCompletionChecks
             RunLifecycle.Obligation.ACTIVE_OBJECTIVE);
         var current = QuestFateCurrentAssignment.restore(assignment, history, spins, head);
         var original = assignment.originalWindow();
+        var sessionId = UUID.randomUUID();
+        var windowId = UUID.randomUUID();
+        var prepared = current.prepareSuppliedObservationWindow(assignment.identity(), revision,
+            sessionId, windowId, 20, "q1", QuestFateCompletion.QuestState.IN_PROGRESS);
+        check(prepared.identity().equals(assignment.identity())
+            && prepared.assignmentId().equals(assignment.assignmentId())
+            && prepared.baselineRevision() == revision && prepared.baselinePosition() == 20
+            && prepared.sessionId().equals(sessionId) && prepared.windowId().equals(windowId)
+            && prepared.selection().equals(assignment.provenance().reward().selection()));
+        complete(current, prepared, revision, 21);
+        rejects(() -> complete(current, prepared, revision, 20));
+        rejects(() -> current.prepareSuppliedObservationWindow(assignment.identity(), revision - 1,
+            sessionId, windowId, 20, "q1", QuestFateCompletion.QuestState.NOT_STARTED));
+        rejects(() -> current.prepareSuppliedObservationWindow(assignment.identity(), revision + 1,
+            sessionId, windowId, 20, "q1", QuestFateCompletion.QuestState.NOT_STARTED));
+        for (String questId : new String[] { "q2", "", null })
+        {
+            rejects(() -> current.prepareSuppliedObservationWindow(assignment.identity(), revision,
+                sessionId, windowId, 20, questId, QuestFateCompletion.QuestState.NOT_STARTED));
+        }
+        rejects(() -> current.prepareSuppliedObservationWindow(null, revision,
+            sessionId, windowId, 20, "q1", QuestFateCompletion.QuestState.NOT_STARTED));
+        for (var foreignIdentity : List.of(
+            new RunIdentity(assignment.identity().accountKey(), UUID.randomUUID()),
+            new RunIdentity(assignment.identity().accountKey() + "-other", assignment.identity().runId())))
+        {
+            rejects(() -> current.prepareSuppliedObservationWindow(foreignIdentity, revision,
+                sessionId, windowId, 20, "q1", QuestFateCompletion.QuestState.NOT_STARTED));
+        }
+        rejects(() -> current.prepareSuppliedObservationWindow(assignment.identity(), revision,
+            null, windowId, 20, "q1", QuestFateCompletion.QuestState.NOT_STARTED));
+        rejects(() -> current.prepareSuppliedObservationWindow(assignment.identity(), revision,
+            sessionId, null, 20, "q1", QuestFateCompletion.QuestState.NOT_STARTED));
+        rejects(() -> current.prepareSuppliedObservationWindow(assignment.identity(), revision,
+            sessionId, windowId, -1, "q1", QuestFateCompletion.QuestState.NOT_STARTED));
+        rejects(() -> current.prepareSuppliedObservationWindow(assignment.identity(), revision,
+            sessionId, windowId, 20, "q1", null));
+        var completeBaseline = current.prepareSuppliedObservationWindow(assignment.identity(), revision,
+            sessionId, UUID.randomUUID(), 20, "q1", QuestFateCompletion.QuestState.COMPLETE);
+        rejects(() -> complete(current, completeBaseline, revision, 21));
         complete(current, original, revision, 1);
         var refreshed = window(assignment, head, assignment.assignmentId(),
             QuestFateCompletion.QuestState.IN_PROGRESS);
@@ -55,6 +95,8 @@ public final class QuestFateCurrentCompletionChecks
             new RunLifecycle(assignment.identity(), revision, RunLifecycle.State.PAUSED,
                 RunLifecycle.Obligation.ACTIVE_OBJECTIVE));
         rejects(() -> complete(paused, refreshed, revision, 11));
+        rejects(() -> paused.prepareSuppliedObservationWindow(assignment.identity(), revision,
+            sessionId, windowId, 20, "q1", QuestFateCompletion.QuestState.IN_PROGRESS));
         rejects(() -> current.requireFreshCompletion(null, revision, refreshed.sessionId(),
             refreshed.windowId(), 11, "q1", QuestFateCompletion.QuestState.COMPLETE));
         System.out.println("QuestFateCurrentCompletionChecks PASSED");
