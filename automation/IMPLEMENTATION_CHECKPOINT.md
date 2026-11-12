@@ -1,3 +1,40 @@
+## Current continuation - retained Questing completion binding, 2026-11-12
+
+IDLE after bounded WB-QST-05 supplied-evidence composition increment (S).
+Supersedes older next-task prose. Reconciled local code/tests and recorded work;
+merged state and branch identity not verified (no Git operations). Supervisor publishes.
+
+QST-05 remains PARTIAL. QuestFateCurrentAssignment.requireFreshCompletion now binds
+an explicitly supplied original/refreshed observation window to the retained assignment
+before validating current revision, active lifecycle, session/window IDs, ordering and
+selected-quest completion. Original commitment/accounting remain unchanged. This pure
+check does not authenticate client coverage, consume evidence, settle rewards or admit
+a durable assignment. Caller must authenticate the current head and observation source.
+
+Verification: fresh javac --release 11 compilation into
+build/continuation-quest-current-completion PASSED. All eight existing QuestFate*Checks
+and new QuestFateCurrentCompletionChecks exited 0. New fixtures include foreign windows
+that pass standalone validation but fail retained-assignment binding, valid refreshed
+windows, replay immutability, stale/future context, paused heads, wrong quest/state and
+already-complete baselines. JUnit wrapper added but unverified. Focused Gradle QuestFate*,
+FateCard*, RunCodecTest and legacy WheelboundBehaviorTest attempt failed BEFORE compilation:
+inherited wrapper-cache lock Access is denied. GRADLE_USER_HOME unchanged; no cache
+workaround, external inspection or dependency substitution. No Gson/JUnit/legacy pass.
+
+Reconciliation: QST-02/WHL-08 PARTIAL; in-memory binding/retention verified offline,
+nested codecs/schema-22 reader IMPLEMENTED_UNVERIFIED. Writer, durable admission and
+reviewed catalog/quote authority UNSTARTED; FAT-05 actual admission BLOCKED. QST-01/05
+PARTIAL, QST-03/04 legacy PARTIAL, QST-06/07 mode integration UNSTARTED. FAT-02 reader
+and components IMPLEMENTED_UNVERIFIED; writer/full migration/services UNSTARTED.
+Other existing statuses and client/balance/decision holds stand. I01d not selected.
+No new gameplay decision; WB-D028/046/070/102/114 and STATE_CONTRACT preserved.
+Master Wheel source unchanged; incomplete gameplay and public Questing/card writes disabled.
+
+Next: run real-Gson schema-22/nested, schema-21 card, migration, current-completion and
+legacy suites when inherited build access returns; resolve failures before candidate
+writer/durable admission. Trusted freshness, once-only settlement and runtime wiring
+remain unfinished; do not treat this supplied-value check as completed gameplay.
+
 ## Recovered increment - Questing schema-22 reader, 2026-11-12
 
 Recovery scope is the existing WB-QST-02/WB-WHL-08 schema-22 reader only. Reviewed
