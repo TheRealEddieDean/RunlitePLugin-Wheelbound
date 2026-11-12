@@ -629,6 +629,22 @@ public final class RunDocument
     { return Optional.ofNullable(questCompletionHistory); }
 
     /**
+     * Prepare a supplied baseline using only this aggregate's retained assignment.
+     * Does not initialize unavailable history, register a session, authenticate the
+     * source or replace the original assignment window. Live admission remains gated.
+     */
+    com.wheelbound.domain.QuestFateObservationWindow prepareSuppliedQuestObservationWindow(
+        com.wheelbound.domain.RunIdentity expectedIdentity, long expectedRevision,
+        UUID sessionId, UUID windowId, long baselinePosition, String observedQuestId,
+        com.wheelbound.domain.QuestFateCompletion.QuestState baseline)
+    {
+        if (currentQuestAssignment == null)
+        { throw new IllegalArgumentException("Current Questing assignment unavailable"); }
+        return currentQuestAssignment.prepareSuppliedObservationWindow(expectedIdentity,
+            expectedRevision, sessionId, windowId, baselinePosition, observedQuestId, baseline);
+    }
+
+    /**
      * Prepare a new supplied observation against this aggregate's retained assignment.
      * Expected identity/revision qualify the supplied callback context, not its source.
      * Requires independently supplied live IDs and available history. No authentication,

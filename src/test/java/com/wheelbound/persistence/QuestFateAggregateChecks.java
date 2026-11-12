@@ -152,6 +152,31 @@ public final class QuestFateAggregateChecks
         check(paused.currentQuestAssignment().orElseThrow().assignment() == assignment);
         check(resumed.currentQuestAssignment().orElseThrow().assignment() == assignment);
         check(resumed.currentQuestAssignment().orElseThrow().lifecycle() == resumed.lifecycle());
+        // Baselines derive the resumed head and retained selection, never caller assignments.
+        UUID liveSession = UUID.randomUUID();
+        UUID liveWindow = UUID.randomUUID();
+        String questId = window.selection().selection().questId();
+        var baseline = resumed.prepareSuppliedQuestObservationWindow(assignment.identity(),
+            resumed.lifecycle().revision(), liveSession, liveWindow, 100, questId,
+            QuestFateCompletion.QuestState.IN_PROGRESS);
+        check(baseline.baselineRevision() == resumed.lifecycle().revision());
+        check(baseline.sessionId().equals(liveSession) && baseline.windowId().equals(liveWindow));
+        resumed.currentQuestAssignment().orElseThrow().requireFreshCompletion(baseline,
+            resumed.lifecycle().revision(), liveSession, liveWindow, 101, questId,
+            QuestFateCompletion.QuestState.COMPLETE);
+        rejectsObservation(() -> resumed.prepareSuppliedQuestObservationWindow(assignment.identity(),
+            lifecycle.revision(), liveSession, liveWindow, 100, questId,
+            QuestFateCompletion.QuestState.IN_PROGRESS));
+        rejectsObservation(() -> resumed.prepareSuppliedQuestObservationWindow(
+            new RunIdentity("foreign", UUID.randomUUID()), resumed.lifecycle().revision(),
+            liveSession, liveWindow, 100, questId, QuestFateCompletion.QuestState.IN_PROGRESS));
+        rejectsObservation(() -> historical.prepareSuppliedQuestObservationWindow(assignment.identity(),
+            lifecycle.revision(), liveSession, liveWindow, 100, questId,
+            QuestFateCompletion.QuestState.IN_PROGRESS));
+        rejectsObservation(() -> paused.prepareSuppliedQuestObservationWindow(assignment.identity(),
+            paused.lifecycle().revision(), liveSession, liveWindow, 100, questId,
+            QuestFateCompletion.QuestState.IN_PROGRESS));
+        check(resumed.questCompletionHistory().isEmpty()); // Baseline does not upgrade legacy absence.
         check(resumed.masterSpins().orElseThrow() == spins && spins.available() == spins.allotted() - 1);
         check(head.lifecycle() == lifecycle && assignment.originalWindow().baselineRevision() == lifecycle.revision());
         check(document(lifecycle, catalog, Optional.of(creations), Optional.of(history),
