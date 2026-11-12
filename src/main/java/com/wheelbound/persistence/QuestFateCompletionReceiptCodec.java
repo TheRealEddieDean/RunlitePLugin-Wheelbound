@@ -53,8 +53,16 @@ final class QuestFateCompletionReceiptCodec
         UUID command = UUID.fromString(text);
         if (!command.toString().equals(text))
         { throw new IllegalArgumentException("Expected canonical Questing command UUID"); }
-        return new QuestFateCompletionReceipt(retained, window,
-            RunCodec.integer(value, "expectedRevision"), RunCodec.integer(value, "observedPosition"),
-            command, RunCodec.string(value, "sourceNamespace"), RunCodec.string(value, "eventKey"));
+        try
+        {
+            return new QuestFateCompletionReceipt(retained, window,
+                RunCodec.integer(value, "expectedRevision"), RunCodec.integer(value, "observedPosition"),
+                command, RunCodec.string(value, "sourceNamespace"), RunCodec.string(value, "eventKey"));
+        }
+        catch (IllegalStateException ex)
+        {
+            // Domain lifecycle/transition failures make this supplied payload invalid.
+            throw new IllegalArgumentException("Invalid Questing completion receipt context", ex);
+        }
     }
 }
