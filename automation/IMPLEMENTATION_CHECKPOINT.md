@@ -1,3 +1,39 @@
+## Current continuation - enclosing Questing completion history payload, 2026-11-12
+
+IDLE after bounded WB-QST-05 nested history composition (S). Reconciled local
+history/domain, context/journal codecs and focused fixtures. No Git or merged-state
+verification; recorded merged receipts not independently reverified. I01d not selected.
+Committed decisions WB-D028/046/070/102 retained; no new gameplay/balance decision.
+
+Added package-private QuestFateCompletionHistoryCodec version 1: ordered historical
+contexts plus journal, decoded with explicit per-entry retained Master resolutions
+and spin accounting. Strict envelope/type/version/count validation; nested domain
+restoration binds receipts to their contexts. Explicit empty nested history supported.
+No run-schema integration or inference from today's reservation. Added focused real
+Gson/JUnit round-trip, malformed envelope, mismatched journal/context, stale lifecycle,
+missing accounting/reservation and empty-history cases. Production codec and new tests
+remain IMPLEMENTED_UNVERIFIED: focused Gradle failed BEFORE compilation on inherited
+wrapper-cache lock Access is denied. GRADLE_USER_HOME unchanged; no cache workaround,
+external inspection, credentials, workflows or Git operations.
+
+Reconciliation: QST-05 PARTIAL. Existing structural receipt/journal/history retention
+and command guards DONE offline. Nested history composition IMPLEMENTED_UNVERIFIED,
+as are prior Gson codecs/schema-22 reader. Explicit legacy-unavailable versus present
+empty run-schema semantics, authenticated evidence, durable prefix admission and atomic
+settlement UNSTARTED. QST-02/WHL-08 PARTIAL; writer/durable assignment admission and
+reviewed catalog authority UNSTARTED. FAT-05 admission BLOCKED. Other backlog and
+client/balance/decision holds stand. Public writers refused; incomplete gameplay stays
+disabled; existing Master Wheel behavior unchanged. Supervisor owns publication.
+
+Fresh javac --release 11 domain/aggregate compilation PASSED into
+build/continuation-quest-completion-history; all eleven executable domain
+QuestFate*Checks PASSED. These exclude Gson codecs and JUnit tests. The initial
+compile omitted the aggregate test helper; including that helper resolved compilation.
+
+Next: reconcile run-schema history absence semantics before bounded reader integration.
+Execute real Gson/JUnit/schema/card/migration/legacy suites when inherited build access
+returns; resolve failures before writer or durable admission. No payout implemented.
+
 ## Current continuation - Questing historical context payload, 2026-11-12
 
 IDLE after bounded WB-QST-05 nested historical-context codec prerequisite (S).
